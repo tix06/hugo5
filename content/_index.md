@@ -27,7 +27,7 @@ Berry, Gérard. L' Hyperpuissance de l'informatique: Algorithmes, données, mach
 *s’inscrit dans le prolongement de l’enseignement d’algorithmique, d’informatique et de programmation dispensé au collège en mathématiques et en technologie.*
 ## Objectif principal de SNT 
 permettre d’appréhender les principaux concepts des sciences numériques. Comprendre le poids croissant du numérique et les enjeux qui en découlent.
-### Objectif secondaire
+## Objectif secondaire
 L’enseignement de sciences numériques et technologie aide à mieux comprendre les enjeux scientifiques et sociétaux de la science informatique et de ses applications, à adopter un usage réfléchi et raisonné des technologies numériques dans la vie quotidienne et à se préparer aux mutations présentes et à venir de tous les métiers.
 
 ## Les 7 thematiques du programme : 
