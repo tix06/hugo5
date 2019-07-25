@@ -3,7 +3,10 @@ headless: true
 ---
 
 - [**Introduction**]({{< relref "/" >}})
-- [Internet]({{< relref "/docs/internet/internet.md" >}})
+- [**Données numériques**]({{< relref "/docs/donnees/donnees.md" >}})
+	- [numériser]({{< relref "/docs/donnees/pages/page1/donnees1.md" >}})
+	- [collecter]({{< relref "/docs/donnees/pages/page2/donnees2.md" >}})
+- [**Internet**]({{< relref "/docs/internet/internet.md" >}})
   - [modele OSI]({{< relref "/docs/internet/pages/page1/internet1.md" >}})
   - [page 2]({{< relref "/docs/internet/pages/page2/internet2.md" >}})  
 - [**Le Web**]({{< relref "/docs/web/web.md" >}})
