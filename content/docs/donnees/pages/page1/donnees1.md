@@ -1,56 +1,56 @@
 ---
-title: Some catchy title
+title: numeriser
 ---
 
-# Caput vino delphine in tamen vias
+# Numériser un signal sonore
+## Principe
+Lorsque l’on numérise un signal, on transforme une valeur continue (qui peut prendre une infinité de valeurs) en une valeur discrète (qui ne peut prendre qu’une petit nombre de valeurs).
+Ainsi, avec un codage en 1 seul bit, les valeurs prises par le signal numérique sont 0 et 1, soit 2 valeurs différentes.
+Avec un codage sur 2 bits, les valeurs prises par le signal numérique sont au nombre de 4. Si on numérote ces valeurs, il y aura la valeur 0, 1, 2 ou 3.
+Convertir un signal de tension en 2 bits consiste alors à le transformer en une valeur de 0 à 3.
 
-## Cognita laeva illo fracta
+Associons ces bits et observons la qualité du signal numérisé…
 
-Lorem markdownum pavent auras, surgit nunc cingentibus libet **Laomedonque que**
-est. Pastor [An](http://est.org/ire.aspx) arbor filia foedat, ne [fugit
-aliter](http://www.indiciumturbam.org/moramquid.php), per. Helicona illas et
-callida neptem est *Oresitrophos* caput, dentibus est venit. Tenet reddite
-[famuli](http://www.antro-et.net/) praesentem fortibus, quaeque vis foret si
-frondes *gelidos* gravidae circumtulit [inpulit armenta
-nativum](http://incurvasustulit.io/illi-virtute.html).
 
-1. Te at cruciabere vides rubentis manebo
-2. Maturuit in praetemptat ruborem ignara postquam habitasse
-3. Subitarum supplevit quoque fontesque venabula spretis modo
-4. Montis tot est mali quasque gravis
-5. Quinquennem domus arsit ipse
-6. Pellem turis pugnabant locavit
+## Un premier travail d'écoute
+Sur la page dont le lien est donné ici, vous écouterez les morceaux et notes de musique numérisés sur 2 à 8 bits : *(utiliser un casque)*
 
-## Natus quaerere
+[http://culturesciencesphysique.ens-lyon.fr/ressource/numerisation-acoustique-Chareyron1.xml](http://culturesciencesphysique.ens-lyon.fr/ressource/numerisation-acoustique-Chareyron1.xml)
 
-Pectora et sine mulcere, coniuge dum tincta incurvae. Quis iam; est dextra
-Peneosque, metuis a verba, primo. Illa sed colloque suis: magno: gramen, aera
-excutiunt concipit.
+Commencer l’écoute par le signal numérisé sur 2 bits et finir par ce même signal numérisé sur 8 bits : Comment évolue la qualité sonore ?  
 
-> Phrygiae petendo suisque extimuit, super, pars quod audet! Turba negarem.
-> Fuerat attonitus; et dextra retinet sidera ulnas undas instimulat vacuae
-> generis? *Agnus* dabat et ignotis dextera, sic tibi pacis **feriente at mora**
-> euhoeque *comites hostem* vestras Phineus. Vultuque sanguine dominoque [metuit
-> risi](http://iuvat.org/eundem.php) fama vergit summaque meus clarissimus
-> artesque tinguebat successor nominis cervice caelicolae.
+> Sur votre cahier : Expliquer pourquoi.
 
-## Limitibus misere sit
+## Dégradation du signal sonore
 
-Aurea non fata repertis praerupit feruntur simul, meae hosti lentaque *citius
-levibus*, cum sede dixit, Phaethon texta. *Albentibus summos* multifidasque
-iungitur loquendi an pectore, mihi ursaque omnia adfata, aeno parvumque in animi
-perlucentes. Epytus agis ait vixque clamat ornum adversam spondet, quid sceptra
-ipsum **est**. Reseret nec; saeva suo passu debentia linguam terga et aures et
-cervix [de](http://www.amnem.io/pervenit.aspx) ubera. Coercet gelidumque manus,
-doluit volvitur induta?
+A partir de l’animation en lien : 
+[http://www.ostralo.net/3_animations/js/CAN/index_v2n.htm](http://www.ostralo.net/3_animations/js/CAN/index_v2n.htm)
 
-## Enim sua
+Observer les modifications apportées par le choix de la *quantification*.
 
-Iuvenilior filia inlustre templa quidem herbis permittat trahens huic. In
-cruribus proceres sole crescitque *fata*, quos quos; merui maris se non tamen
-in, mea.
+> Répondre aux questions suivantes sur votre cahier : 
 
-## Germana aves pignus tecta
+- Comment évolue la qualité sonore d’un signal numérisé sur 3 bits, 4 bits, et 5 bits ? 
+- Quelle caractéristique visuelle de la courbe numérisée montre que la précision augmente ? 
+- Comment pourrait-on obtenir une précision infinie sur la numérisation d’un signal sonore, c’est à dire telle que le signal numérisé est exactement conforme à celui d’origine ? 
+
+# Programmation python
+## Développer un programme
+Ouvrir le notebook python que vous trouverez sur votre disque dur, dans *vos documents*: *conversion_signal_2bits.ipynb*
+
+Compléter le programme python pour réaliser la numérisation des valeurs en 2 bits.
+
+## utiliser le programme
+
+On souhaite numériser les points de la courbe représentant un signal sonore : 
+
+![signal à numériser](../CAN_graphique2.png)
+
+- Executer le programme et coder chacune des valeurs (les points sur la courbe d'origine) sur 2 bits.
+- Relever les valeurs numérisées. 
+- Compléter alors le tableau de valeurs dans le paragraphe suivant, et afficher la courbe du signal numérisé.
+- Recopier l'image de cette courbe dans vos documents, sur votre ordinateur.
+
 
 <form></form>
 
