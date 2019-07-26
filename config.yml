@@ -8,7 +8,7 @@ disableKinds: ["taxonomy", "taxonomyTerm"]
 
 # Book configuration
 disablePathToLower: true
-enableGitInfo: true
+enableGitInfo: false
 
 # Code highlight
 pygmentsStyle: monokailight
@@ -41,9 +41,9 @@ params:
   # Enable "Edit this page" links for 'doc' page type.
   # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
   # Path must point to 'content' directory of repo.
-  BookEditPath: edit/master/exampleSite/content
+  # BookEditPath: edit/master/exampleSite/content
 
   # Configure the date format used on the pages
   # - In git information
   # - In blog posts
-  BookDateFormat: "Jan 2, 2006"
+  BookDateFormat: "Sept 2, 2019"

@@ -15,7 +15,7 @@ Associons ces bits et observons la qualité du signal numérisé…
 ## Un premier travail d'écoute
 Sur la page dont le lien est donné ici, vous écouterez les morceaux et notes de musique numérisés sur 2 à 8 bits : *(utiliser un casque)*
 
-[http://culturesciencesphysique.ens-lyon.fr/ressource/numerisation-acoustique-Chareyron1.xml](http://culturesciencesphysique.ens-lyon.fr/ressource/numerisation-acoustique-Chareyron1.xml)
+<a href="http://culturesciencesphysique.ens-lyon.fr/ressource/numerisation-acoustique-Chareyron1.xml" target="_blank">culturesciencesphysique.ens-lyon.fr/ressource/numerisation-acoustique</a>
 
 Commencer l’écoute par le signal numérisé sur 2 bits et finir par ce même signal numérisé sur 8 bits : Comment évolue la qualité sonore ?  
 
@@ -24,7 +24,8 @@ Commencer l’écoute par le signal numérisé sur 2 bits et finir par ce même 
 ## Dégradation du signal sonore
 
 A partir de l’animation en lien : 
-[http://www.ostralo.net/3_animations/js/CAN/index_v2n.htm](http://www.ostralo.net/3_animations/js/CAN/index_v2n.htm)
+
+<a href="http://www.ostralo.net/3_animations/js/CAN/index_v2n.htm" target="_blank">site ostralo.net : animation sur la numérisation</a>
 
 Observer les modifications apportées par le choix de la *quantification*.
 
@@ -61,6 +62,7 @@ On souhaite numériser les points de la courbe représentant un signal sonore :
 
 <style>
 div[id=tableau], form {
+		overflow: scroll;
 	  	display: block;
    	justify-content: center;
 	  }
@@ -80,6 +82,7 @@ div[id=tableau], form {
 }
 </style>
 
+
 <script type="text/javascript">
 
 var canvas = document.getElementById('graph');
@@ -92,6 +95,7 @@ ctx.font = newSize + ' ' + 'serif';
 
 
  window.onload = function(){
+  // tableau de valeurs
   var body = document.getElementsByTagName("form")[0];
  
   // creates a <table> element and a <tbody> element
