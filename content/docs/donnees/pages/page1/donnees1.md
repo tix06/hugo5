@@ -18,8 +18,8 @@ Le travail suivant consiste à définir le rôle des paramètres de conversion a
 ![signal à numériser](../CAN_graphique2.png)
 
 ## Créez vos données numériques : Programmation python
-* Le notebook python se trouve sur votre disque dur à l'emplacement `documents/devoirs/tixidor/notebooks/conversion_signal.ipynb` : il s'agit du programme de numérisation. Pour l'executer, lancer le fichier .bat du dossier *devoirs*.
-* Compléter ou modifier le programme python pour réaliser la numérisation du signal musical (voir graphique plus haut). La numérisation se fera sur 2 bits.
+* Le notebook python se trouve sur votre disque dur à l'emplacement `documents/devoirs/tixidor/notebooks/CAN_3bits.ipynb` : il s'agit du programme de numérisation. Pour l'executer, lancer le fichier .bat du dossier *devoirs*.
+* Compléter ou modifier le programme python pour réaliser la numérisation du signal musical (voir graphique plus haut). La numérisation se fera sur **3 bits**.
 * Executer le programme : utilisez les valeurs de la tension lues sur la courbe.
 
 >  **Question a** : Notez alors sur votre cahier les valeurs issues du programme de numérisation, telles qu'elles seraient enregistrées sur le fichier de données numériques.
