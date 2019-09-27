@@ -13,7 +13,9 @@ headless: true
   - [TP HTML et CSS]({{< relref "/docs/web/pages/page1/web1.md" >}})
   - [langages html et css]({{< relref "/docs/web/pages/page2/web2.md" >}}) 
   - [TP javascript processing P5]({{< relref "/docs/web/pages/page3/web3.md" >}})
-- [Server]({{< relref "/docs/server.md" >}})
-- [Client]({{< relref "/docs/client.md" >}})
-- [Advanced]({{< relref "/docs/advanced.md" >}})  
+  - [Server]({{< relref "/docs/server.md" >}})
+  - [Client]({{< relref "/docs/client.md" >}})
+  - [Advanced]({{< relref "/docs/advanced.md" >}})  
+- [**Physique**]({{< relref "/docs/physique/atome.md" >}})  
 - [**Blog**]({{< relref "/posts" >}})
+
