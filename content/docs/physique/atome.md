@@ -16,7 +16,6 @@ Une transitions électronique vers un niveau inférieur peut s'accompagner d'une
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aoT8HHLRrSQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-[télécharger l'animation](https://phet.colorado.edu/sims/discharge-lamps/discharge-lamps_fr.jar)
 
 ## L'animation : lampe à décharge (utilise java)
 

@@ -15,7 +15,7 @@ Le fichier numérique est alors constitué d'une suite de caractères binaires, 
 
 Le travail suivant consiste à définir le rôle des paramètres de conversion analogique à numérique. On cherche à numériser un signal sonore dont la courbe est donnée ici : 
 
-![signal à numériser](../CAN_graphique2.png)
+<img src="../CAN_graphique2.png" width = 60% alt="signal à numériser">
 
 ## Créez vos données numériques : Programmation python
 * Le notebook python se trouve sur votre disque dur à l'emplacement `documents/devoirs/tixidor/notebooks/CAN_3bits.ipynb` : il s'agit du programme de numérisation. Pour l'executer, lancer le fichier .bat du dossier *devoirs*.
@@ -28,7 +28,10 @@ Le travail suivant consiste à définir le rôle des paramètres de conversion a
 ## Conversion numérique - analogique
 Une fois le signal musical numérisé, et stocké sur disque dur, on peut souhaiter le jouer. Il faut alors le restituer, c'est à dire le (re) transformer en signal analogique. Le signal aura alors suivi la chaine suivante : 
 
-![image issue du site jl.domec sur le traitement numérique](../CAN_CNA.png)
+<figure>
+<img src="../CAN_CNA.png" alt="chaine d'acquisition et restitution du son" width=100%>
+<figcaption>image issue du site jl.domec sur le traitement numérique</figcaption>
+</figure>
 
 * Pour chacune des valeurs binaires que vous avez calculées, convertir cette valeur en décimal.
  * Compléter alors le tableau de valeurs ci dessous, et afficher la courbe du signal numérisé.
@@ -111,7 +114,8 @@ ctx.font = newSize + ' ' + 'serif';
         else 
         {
   
-  		cellText.setAttribute("value",i.toString(16)+j.toString(16));
+  		//cellText.setAttribute("value",i.toString(16)+j.toString(16));
+      cellText.setAttribute("value",i+j);
       }
         
   document.body.appendChild(cellText);
@@ -221,6 +225,7 @@ function updata() {
 
 </script>
 
+# Pour approfondir le sujet
 ## travail d'écoute sur de vrais signaux sonores
 Sur la page dont le lien est donné <a href="http://culturesciencesphysique.ens-lyon.fr/ressource/numerisation-acoustique-Chareyron1.xml" target="_blank">ici</a>, vous écouterez les morceaux et notes de musique numérisés sur 2 à 8 bits : *(utiliser un casque)*
 
@@ -248,3 +253,8 @@ A partir de la page suivante : ouvrir l'application *Conversion analogique/numé
 
 > **Question f:** Quel autre paramètre influe également sur la qualité du signal numérisé ? 
 
+# Quiz en 3 questions : Testez votre compréhension de la séance
+
+<div class="interact_responsive_padding" style="padding:100% 0 0 0;position:relative;margin-bottom:5px;"><div class="interact_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><iframe id="interactApp5d8f38030267e90014140cb6" width="100%" height="100%" style="border:none;max-width:100%;margin:0;" allowTransparency="true" frameborder="0" src="https://quiz.tryinteract.com/#/5d8f38030267e90014140cb6/q/1?method=iframe&mobile=1"></iframe></div></div>
+
+<div id="interact-5d8f38030267e90014140cb6"></div><script type="text/javascript">var app_5d8f38030267e90014140cb6;(function(d, t){var s=d.createElement(t),options={"appId":"5d8f38030267e90014140cb6","aspect_ratio":"100%","async":true,"host":"quiz.tryinteract.com","mobile":true,"no_cover":true,"footer":"show"};s.src='https://i.tryinteract.com/embed/app.js';s.onload=s.onreadystatechange=function(){var rs=this.readyState;if(rs)if(rs!='complete')if(rs!='loaded')return;try{app_5d8f38030267e90014140cb6=new InteractApp();app_5d8f38030267e90014140cb6.initialize(options);app_5d8f38030267e90014140cb6.display();}catch(e){}};var scr=d.getElementsByTagName(t)[0],par=scr.parentNode;par.insertBefore(s,scr);})(document,'script');</script>
