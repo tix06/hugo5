@@ -5,7 +5,8 @@ headless: true
 - [**Introduction**]({{< relref "/" >}})
 - [**Données numériques**]({{< relref "/docs/donnees/donnees.md" >}})
 	- [numériser]({{< relref "/docs/donnees/pages/page1/donnees1.md" >}})
-	- [collecter]({{< relref "/docs/donnees/pages/page2/donnees2.md" >}})
+	- [structurer]({{< relref "/docs/donnees/pages/page2/donnees2.md" >}})
+	- [ipython notebooks]({{< relref "/docs/donnees/pages/page3/donnees3.md" >}})
 - [**Internet**]({{< relref "/docs/internet/internet.md" >}})
   - [modele OSI]({{< relref "/docs/internet/pages/page1/internet1.md" >}})
   - [page 2]({{< relref "/docs/internet/pages/page2/internet2.md" >}})  
@@ -18,4 +19,5 @@ headless: true
   - [Advanced]({{< relref "/docs/advanced.md" >}})  
 - [**Physique**]({{< relref "/docs/physique/atome.md" >}})  
 - [**Blog**]({{< relref "/posts" >}})
+- [**Contact**]({{< relref "/docs/contact/simple-contact-form.html" >}})  
 

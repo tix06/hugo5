@@ -1,60 +1,140 @@
-# Caput vino delphine in tamen vias
+---
+title : meta-données et données structurées
+---
 
-## Cognita laeva illo fracta
+# Peut-on extraire des informations d'une photo numérique ?
+Oui !  Et c'est justement ce que nous allons faire. L'une des questions que l'on peut se poser est :
+> Peut-on **géolocaliser une photographie** à partir des seules données contenu dans le fichier image ?
 
-Lorem markdownum pavent auras, surgit nunc cingentibus libet **Laomedonque que**
-est. Pastor [An](http://est.org/ire.aspx) arbor filia foedat, ne [fugit
-aliter](http://www.indiciumturbam.org/moramquid.php), per. Helicona illas et
-callida neptem est *Oresitrophos* caput, dentibus est venit. Tenet reddite
-[famuli](http://www.antro-et.net/) praesentem fortibus, quaeque vis foret si
-frondes *gelidos* gravidae circumtulit [inpulit armenta
-nativum](http://incurvasustulit.io/illi-virtute.html).
+<img src="../IMG_5900.JPG" width= 60% alt="photographie numerique iphone">
 
-1. Te at cruciabere vides rubentis manebo
-2. Maturuit in praetemptat ruborem ignara postquam habitasse
-3. Subitarum supplevit quoque fontesque venabula spretis modo
-4. Montis tot est mali quasque gravis
-5. Quinquennem domus arsit ipse
-6. Pellem turis pugnabant locavit
+L'appareil qui a pris la photographie nous est à priori inconnu, mais les données numériques, dans le fichier, y sont *structurées*. 
+Cette structure, commune à tous les fichiers du même *format*, permet une grande diversité de logiciels de visualisation et de traitement d'images.
 
-## Natus quaerere
+# Qu'est ce qu'une *meta-donnée* ?
+Il s'agit, entre autres, de la date, de l'heure, des paramètres de prise de vue (vitesse, sensibilité, etc.), de la compression, de la **géolocalisation** de l'image, etc.
+Ce sont des informations qui ne sont pas celles codant les pixels de l'image. On les nomme : *les données EXIF*
 
-Pectora et sine mulcere, coniuge dum tincta incurvae. Quis iam; est dextra
-Peneosque, metuis a verba, primo. Illa sed colloque suis: magno: gramen, aera
-excutiunt concipit.
+# Comment extraire ces données EXIF ?
 
-> Phrygiae petendo suisque extimuit, super, pars quod audet! Turba negarem.
-> Fuerat attonitus; et dextra retinet sidera ulnas undas instimulat vacuae
-> generis? *Agnus* dabat et ignotis dextera, sic tibi pacis **feriente at mora**
-> euhoeque *comites hostem* vestras Phineus. Vultuque sanguine dominoque [metuit
-> risi](http://iuvat.org/eundem.php) fama vergit summaque meus clarissimus
-> artesque tinguebat successor nominis cervice caelicolae.
+* Parcourir le dossier *Documents* de votre session. Retrouver le dossier *scripts*.
+Celui doit contenir l'image à analyser.
+* Utiliser un IDE python  et saisir les lignes de code suivantes. 
+* Enregistrer le programme dans le MÊME dossier que celui contenant l'image. Utiliser le nom suggeré au début de chaque programme
 
-## Limitibus misere sit
+## Programme n°1 : afficher les données EXIF
+```
+# programme print_exif.py
+#chargement des bibliothèques PIL et webbrowser
+from PIL import Image
+#chargement de l'image ( même dossier que le programme)
+im = Image.open( 'IMG_5900.JPG' )
+exif_data = im._getexif()
+#on affiche les données exif
+print(exif_data)
+```
 
-Aurea non fata repertis praerupit feruntur simul, meae hosti lentaque *citius
-levibus*, cum sede dixit, Phaethon texta. *Albentibus summos* multifidasque
-iungitur loquendi an pectore, mihi ursaque omnia adfata, aeno parvumque in animi
-perlucentes. Epytus agis ait vixque clamat ornum adversam spondet, quid sceptra
-ipsum **est**. Reseret nec; saeva suo passu debentia linguam terga et aures et
-cervix [de](http://www.amnem.io/pervenit.aspx) ubera. Coercet gelidumque manus,
-doluit volvitur induta?
+## Programme n°2 : explorer la variable `exif_data[34853]`
+```
+# programme explore_exif.py
+#chargement des bibliothèques PIL et webbrowser
+from PIL import Image
+import webbrowser
+#chargement de l'image ( même dossier que le programme)
+im = Image.open( 'IMG_5900.JPG' )
+# chargement des données exif, c'est un dictionnaire les données gps sont à la clé 34853
+# repéré à l'aide de l'explorateur de variable de l'ide python
+exif_data = im._getexif()
+#chargement des données de la clé 34853
+# on crée un dictionnaire pour contenir les données GPS
+test={}
+test=exif_data[34853]
+# explorer la variable test pour savoir comment elle est structurée
+# ce dictionaire contient des listes
+# la latitude est à la clé 2 qui est une liste de tuples
+print(test)
+```
 
-## Enim sua
+* On pourra ouvrir l'explorateur de variables pour parcourir toutes celles définies dans le programme : View > Panes > variable explorer
+![menu](../menu.png)
 
-Iuvenilior filia inlustre templa quidem herbis permittat trahens huic. In
-cruribus proceres sole crescitque *fata*, quos quos; merui maris se non tamen
-in, mea.
+  * double clic sur `exif_data` permet d'ouvrir l'exporateur avec plus de detail sur les données EXIF. Parcourir les différents champs affichés : Quelles informations relatives à la prise de la photographie pouvez vous deviner ?
+  ![EXIF detail](../explo1.png)
+  * double clic sur `34853` : observer les 4 premiers champs, relatifs à la géolocalisation.
+  ![EXIF 34853](../explo2.png)
 
-## Germana aves pignus tecta
+* On peut afficher directement les données de la variable exif_data : Dans la console, taper `exif_data`
 
-Mortalia rudibusque caelum cognosceret tantum aquis redito felicior texit, nec,
-aris parvo acre. Me parum contulerant multi tenentem, gratissime suis; vultum tu
-occupat deficeret corpora, sonum. E Actaea inplevit Phinea concepit nomenque
-potest sanguine captam nulla et, in duxisses campis non; mercede. Dicere cur
-Leucothoen obitum?
+* On peut aussi avoir la liste de toutes les clé du dictionnaire exif_data: 
+ dans la console : `list(exif_data.keys())`
 
-Postibus mittam est *nubibus principium pluma*, exsecratur facta et. Iunge
-Mnemonidas pallamque pars; vere restitit alis flumina quae **quoque**, est
-ignara infestus Pyrrha. Di ducis terris maculatum At sede praemia manes
-nullaque!
+## Programme 3 : extraire la latitude et la longitude
+
+```
+# programme geolocalisation.py
+#chargement des bibliothèques PIL et webbrowser
+from PIL import Image
+from webbrowser import open
+#chargement de l'image ( même dossier que le programme)
+im = Image.open( 'IMG_5900.JPG' )
+# chargement des données exif, c'est un dictionnaire les données gps sont à la clé 34853
+# repéré à l'aide de l'explorateur de variable de l'ide python
+exif_data = im._getexif()
+#chargement des données de la clé 34853
+# on crée un dictionnaire pour contenir les données GPS
+test={}
+test=exif_data[34853]
+"""
+explorer la variable test pour savoir comment elle est structurée
+ce dictionaire contient des listes
+la latitude est à la clé 2 qui est une liste de tuples, on y accede avec test[2]
+test[2][0] est le le 1er tuple : (degré, 1)
+le second => test[2][1] : (minute,1) 
+le 3ème => test[2][2] : (seconde,100)
+Dans la fonction coordonnee(deg,min,sec) : 
+on divise le 1er terme du tuple par le second par exemple test[2][1][0]/test[2][1][1]
+et on transforme en degré :
+(division par 1, ou 60 ou 100 selon s'il s'agit de deg, min ou sec)
+"""
+
+
+
+
+def coordonnee(deg,min,sec):
+    """transformation des coordonnées au format décimal"""
+    co_deg = deg[0]/deg[1]/1
+    co_min = min[0]/min[1]/60
+    co_sec = sec[0]/sec[1]/3600
+    return co_deg+co_min+co_sec
+
+lat = coordonnee(test[2][0],test[2][1],test[2][2])
+lon = coordonnee(test[4][0],test[4][1],test[4][2])
+
+print("la latitude est: ")
+print(lat)
+print(test[1])
+
+print("la longitude est: ")
+print(lon)
+print(test[3])
+```
+
+## Programme complet
+Ajouter les lignes suivantes au programme *geolocalisation.py*
+```
+# on affiche le tout dans openstreetmap
+zoom='18'
+webbrowser.open('https://www.openstreetmap.org/note/new?lat='+str(lat)+'&lon='+str(lon)+'#map='+zoom+'/'+str(lat)+'/'+str(lon))
+```
+
+### Correction du programme
+La localisation n'est pas la bonne car elle ne tient pas compte des directions cardinales N,S,E,W : 
+Ajouter les instructions qui corrigent les valeurs de latitude et de longitude, avant d'afficher la carte sur Openstreetmap.
+Aidez vous de l'algorithme suivant, écrit en langage naturel : 
+```
+si test[1]=='S` alors:
+  lat ← -lat
+
+si test[3]=='W' alors:
+  lon ← -lon
+``` 
