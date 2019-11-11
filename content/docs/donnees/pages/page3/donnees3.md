@@ -12,9 +12,12 @@ Title : ipython notebooks
 * `ISN_D14_NMEA.ipynb` : idem SNT mais version ISN
 * `ISN_D14_NMEA_csv.ipnb` : lecture d'un fichier *csv* et découpage en listes; traitement des listes; géolocalisation.
 
+## format_csv
+* ISN et SNT : dans le dossier `format_csv` ouvrir le fichier `data_csv.ipynb`
 
-lien sur mybinder : 
-https://mybinder.org/v2/gh/tix06/notebooks.git/master
+Au programme : formulaire, création d'un fichier `.csv`. Ouverture du fichier avec un tableur et analyse des données.
+
+
 
 <form id="fs-frm" name="bouton">
 <a href="https://mybinder.org/v2/gh/tix06/notebooks.git/master" target="_blank">
@@ -23,7 +26,8 @@ https://mybinder.org/v2/gh/tix06/notebooks.git/master
 <style>
 #fs-frm:hover { font-size: 105% }
 
-
+lien sur mybinder : 
+https://mybinder.org/v2/gh/tix06/notebooks.git/master
 
 
 
