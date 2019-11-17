@@ -17,7 +17,9 @@ headless: true
   - [Server]({{< relref "/docs/server.md" >}})
   - [Client]({{< relref "/docs/client.md" >}})
   - [Advanced]({{< relref "/docs/advanced.md" >}})  
-- [**Physique**]({{< relref "/docs/physique/atome.md" >}})  
+- [**Physique**]({{< relref "/docs/physique/atome/atome.md" >}})  
+  - [modèle de Bohr de l'atome]({{< relref "/docs/physique/atome/atome.md" >}})
+  - [ipython notebooks]({{< relref "/docs/physique/notebooks/PC_notebooks.md" >}})
 - [**Blog**]({{< relref "/posts" >}})
 - [**Contact**]({{< relref "/docs/contact/simple-contact-form.html" >}})  
 
