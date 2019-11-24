@@ -10,6 +10,8 @@ Title : ipython notebooks
 ## Simulation d'une onde progressive
 * `P21_simulation onde.ipynb` programmme pour représenter une courbe sinusoidale qui se deplace au cours du temps.
 
+## Graphique et modelisation
+* `graphique modelisation.ipynb` programme pour tracer une droite de regression linéaire et obtenir les coefficients de la modélisation.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tix06/notebooks_Physique.git/master)
 
