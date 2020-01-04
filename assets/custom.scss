@@ -1,2 +1,28 @@
 /* To be overridden by theme user */
 // @import "variables";
+
+div[id=tableau], form {
+	overflow: scroll;
+	display: block;
+   	justify-content: center;
+	}
+
+input[type=button]{
+	display: block;
+	margin-top: 50px;
+	}
+input[type="button"]:hover { font-size: 105% }
+	  
+canvas { 
+    margin-top: 50px;
+    border: 2px solid black;
+    align : center; 
+    }
+   
+input[type="text"]{
+    font-size:12px;
+	}
+	
+img {
+	align : center;
+	}

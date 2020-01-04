@@ -23,7 +23,7 @@ Title : ipython notebooks
 
 <!--lien sur mybinder : 
 https://mybinder.org/v2/gh/tix06/notebooks.git/master
--->
+
 
 <style>
 #fs-frm:hover { font-size: 105% }
@@ -116,3 +116,4 @@ https://mybinder.org/v2/gh/tix06/notebooks.git/master
   margin-right: 3%;
 }
 </style>
+-->

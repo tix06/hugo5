@@ -11,11 +11,18 @@ Convertir un signal de tension en 2 bits consiste alors à le transformer en une
 
 Le fichier numérique est alors constitué d'une suite de caractères binaires, comme sur l'image suivante : 
 
-![un fichier binaire](../bin.png)
+
+
+<figure><img src="../bin.png">
+<figcaption>un fichier binaire</figcaption>
+</figure>
+
 
 Le travail suivant consiste à définir le rôle des paramètres de conversion analogique à numérique. On cherche à numériser un signal sonore dont la courbe est donnée ici : 
 
+<figure>
 <img src="../CAN_graphique2.png" width = 60% alt="signal à numériser">
+</figure>
 
 ## Créez vos données numériques : Programmation python
 * Le notebook python se trouve sur votre disque dur à l'emplacement `documents/devoirs/tixidor/notebooks/CAN_3bits.ipynb` : il s'agit du programme de numérisation. Pour l'executer, lancer le fichier .bat du dossier *devoirs*.
@@ -46,6 +53,7 @@ Une fois le signal musical numérisé, et stocké sur disque dur, on peut souhai
 </div>
 
 <style>
+/**
 div[id=tableau], form {
 		overflow: scroll;
 	  	display: block;
@@ -65,6 +73,7 @@ div[id=tableau], form {
 {
     font-size:12px;
 }
+*/
 </style>
 
 
@@ -224,6 +233,7 @@ function updata() {
 }
 
 </script>
+
 
 # Pour approfondir le sujet
 ## travail d'écoute sur de vrais signaux sonores

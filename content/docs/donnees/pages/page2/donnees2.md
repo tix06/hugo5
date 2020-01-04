@@ -6,7 +6,9 @@ title : meta-données et données structurées
 Oui !  Et c'est justement ce que nous allons faire. L'une des questions que l'on peut se poser est :
 > Peut-on **géolocaliser une photographie** à partir des seules données contenu dans le fichier image ?
 
+<figure>
 <img src="../IMG_5900.JPG" width= 60% alt="photographie numerique iphone">
+</figure>
 
 L'appareil qui a pris la photographie nous est à priori inconnu, mais les données numériques, dans le fichier, y sont *structurées*. 
 Cette structure, commune à tous les fichiers du même *format*, permet une grande diversité de logiciels de visualisation et de traitement d'images.
