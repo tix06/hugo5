@@ -1,0 +1,74 @@
+---
+title: Introduction
+type: docs
+---
+<body>
+<section class="main">
+
+  	
+	<div class="main-inside left">
+		
+		<input type="button" class="btn btn-lg" value="Physique Chimie 2nde" onclick="window.location.href = '../docs/2_PC/2PC_index/index.html'">
+    </div>	
+  	<div class="main-inside right">
+    	<input type="button" class="btn btn-lg" value="Physique Chimie 1ere" onclick='window.location.reload(false)'>
+    	
+	</div>
+</section>	
+  
+  	
+
+  	<section class="main">
+	<div class="main-inside left">
+		
+		<input type="button" class="btn btn-lg" value="SNT" onclick='window.location.reload(false)'>
+    </div>	
+  	<div class="main-inside right">
+    	<input type="button" class="btn btn-lg" value="ISN" onclick='window.location.reload(false)'>
+    	
+	</div>
+    	
+  
+  	</section>
+
+
+</body>
+<style type="text/css">
+	/*container des elements div */
+.main {
+	height: 40%;
+	display : inline-block; /*pour permettre aux div de s'afficher côte à côte. Chacun des div contenus devront posseder la regle float*/
+	width:100%;
+	}
+	/*container div des boutons */
+
+.main-inside{
+	border: 2px outset;	
+	height:45%;
+	width:45%;
+	margin: 0;
+	}
+
+.left{
+	float : left;
+	}
+
+.right{
+	float:left;
+	}	
+	/*règles pour les boutons */
+
+.btn-lg { 
+   padding: 10px 16px; 
+   font-size: 18px; 
+   line-height: 1.33; 
+   border-radius: 6px;
+   width : 50%; 
+   background: rgb(10,200,220);
+   position : relative; /*changement de positionnement necessaire pour utiliser top et left */
+   top : 60%;
+   left :23% ;
+}
+
+
+</style>

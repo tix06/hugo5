@@ -3,6 +3,7 @@ headless: true
 ---
 
 - [**Introduction**]({{< relref "/" >}})
+- [**Physique Chimie 2nde**]({{< relref "/docs/2_PC/2PC_index.md" >}})
 - [**Données numériques**]({{< relref "/docs/donnees/donnees.md" >}})
 	- [numériser]({{< relref "/docs/donnees/pages/page1/donnees1.md" >}})
 	- [structurer]({{< relref "/docs/donnees/pages/page2/donnees2.md" >}})
@@ -17,7 +18,7 @@ headless: true
   - [Server]({{< relref "/docs/server.md" >}})
   - [Client]({{< relref "/docs/client.md" >}})
   - [Advanced]({{< relref "/docs/advanced.md" >}})  
-- [**Physique**]({{< relref "/docs/physique/atome/atome.md" >}})  
+- [**Physique 1ere Spé**]({{< relref "/docs/physique/atome/atome.md" >}})  
   - [modèle de Bohr de l'atome]({{< relref "/docs/physique/atome/atome.md" >}})
   - [ipython notebooks]({{< relref "/docs/physique/notebooks/PC_notebooks.md" >}})
 - [**Blog**]({{< relref "/posts" >}})
