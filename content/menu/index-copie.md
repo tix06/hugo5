@@ -3,7 +3,7 @@ headless: true
 ---
 
 - [**Introduction**]({{< relref "/" >}})
-- [**Physique Chimie 2nde**]({{< relref "/docs/PC_2nde/PC_index.md" >}})
+- [**Physique Chimie 2nde**]({{< relref "/docs/PC_2nde/PC_index/index.md" >}})
 - [**Données numériques**]({{< relref "/docs/donnees/donnees.md" >}})
 	- [numériser]({{< relref "/docs/donnees/pages/page1/donnees1.md" >}})
 	- [structurer]({{< relref "/docs/donnees/pages/page2/donnees2.md" >}})
