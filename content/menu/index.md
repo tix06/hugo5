@@ -4,6 +4,12 @@ headless: true
 
 - [**Introduction**]({{< relref "/" >}})
 - [**Physique Chimie 2nde**]({{< relref "/docs/PC_2nde/PC_index" >}})
+	- [physique du mouvement]({{< relref "/docs/PC_2nde/physique/pages/page1" >}})
+- [**Physique 1ere Spé**]({{< relref "/docs/PC_1ere/PC_index" >}})  
+	-	[Energie]({{< relref "/docs/PC_1ere/energie/energie1" >}})
+  - [modèle de Bohr de l'atome]({{< relref "/docs/PC_1ere/atome/atome.md" >}})
+  - [ipython notebooks]({{< relref "/docs/PC_1ere/notebooks/PC_notebooks.md" >}})
+
 - [**Données numériques**]({{< relref "/docs/donnees/donnees.md" >}})
 	- [numériser]({{< relref "/docs/donnees/pages/page1/donnees1.md" >}})
 	- [structurer]({{< relref "/docs/donnees/pages/page2/donnees2.md" >}})
@@ -18,9 +24,6 @@ headless: true
   - [Server]({{< relref "/docs/server.md" >}})
   - [Client]({{< relref "/docs/client.md" >}})
   - [Advanced]({{< relref "/docs/advanced.md" >}})  
-- [**Physique 1ere Spé**]({{< relref "/docs/physique/atome/atome.md" >}})  
-  - [modèle de Bohr de l'atome]({{< relref "/docs/physique/atome/atome.md" >}})
-  - [ipython notebooks]({{< relref "/docs/physique/notebooks/PC_notebooks.md" >}})
 - [**Blog**]({{< relref "/posts" >}})
 - [**Contact**]({{< relref "/docs/contact/simple-contact-form.html" >}})  
 
