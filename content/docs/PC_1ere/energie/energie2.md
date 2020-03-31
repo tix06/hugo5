@@ -171,23 +171,6 @@ très élevé / très faible?
 
 
 
-<style type="text/css">
 
-  /*règles pour les boutons */
-
-.btn-lg { 
-   padding: 10px 16px; 
-   font-size: 18px; 
-   line-height: 1.33; 
-   border-radius: 6px;
-   width : 50%; 
-   background: rgb(10,200,220);
-   position : relative; /*changement de positionnement necessaire pour utiliser top et left */
-   top : 60%;
-   left :30% ;
-}
-
-
-</style>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>

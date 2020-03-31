@@ -82,7 +82,7 @@ $$E_{kW.h}= \tfrac{E_J}{3 600 000}$$
 et à l'inverse, pour faire : E(kW.h) => E(J) : 
 
 
-$$E_J = E_{kW.h} \times 3 600 000$$
+$$E_J = E\_{kW.h} \times 3 600 000$$
 
 
 *Exemple : Un four électrique de puissance 1 kW est utilisé pendant 2h. Calculer l'énergie consommée, en kW.h; puis calculer l'énergie en J.*
@@ -95,14 +95,16 @@ $$E_J = E_{kW.h} \times 3 600 000$$
 
 * Conversion de l'énergie en J : 
 
+<div class="formule">
   $$E = E_{kW.h} \times 3 600 000 = 2 \times 3600000 = 7200000 J $$
-
+</div>
 
 
 * Calcul direct de l'énergie en J : 
 
+<div class="formule">
   $$E_J = P_W \times t_s = 1000 \times 2 \times 3600 = 7 200 000 J$$
-
+</div>
 
 
 # Principe de conservation de l'énergie
@@ -268,23 +270,6 @@ un QCM pour s'auto-évaluer sur le chapitre : [QCM1ereS](http://qcm-sciencesphys
 
 
 
-<style type="text/css">
 
-  /*règles pour les boutons */
-
-.btn-lg { 
-   padding: 10px 16px; 
-   font-size: 18px; 
-   line-height: 1.33; 
-   border-radius: 6px;
-   width : 40%; 
-   background: rgb(10,200,220);
-   position : relative; /*changement de positionnement necessaire pour utiliser top et left */
-   top : 60%;
-   left :30% ;
-}
-
-
-</style>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>

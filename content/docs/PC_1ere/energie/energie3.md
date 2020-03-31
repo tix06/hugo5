@@ -13,7 +13,7 @@ Des illustrations sur ces grandeurs : voir la vidéo : Volts ou ampères le plus
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Kv8MfeoicRU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-### Le potentiel électrique (V)
+## Le potentiel électrique (V)
 Le potentiel, exprimé en volts (symbole V), désigne l'état électrique d'un point d'un circuit.
 
 Si on prend l'exemple d'une pile : La borne négative d'une pile possède un excès d'électrons (produits par une réaction chimique), alors que ces électrons sont en défaut à la borne positive. Le potentiel électrique désigne alors la concentration des charges.
@@ -40,8 +40,19 @@ Le point du circuit A serait branché sur la *borne V* et le point B sur *COM*.
 ![mesure de tension](../images/mesureV.png)
 
 
-### Le courant électrique (A)
+## Le courant électrique (A)
 Le courant électrique est mesuré par son intensité (notée i ou I), exprimée en ampères (A). Le courant désigne le débit de charge électriques. La valeur de l'intensité est alors d'autant plus importante que la quantité et la vitesse des électrons dans le conducteur est importante.
+
+**Définition à partir du débit de charges électriques :**
+si *i* représente l'intensité du courant éléctrique, la quantité de charge qui circule dans un fil conducteur pendant un temps t est notée Q : 
+
+$$i = \tfrac{Q}{t}$$
+
+unités : 
+
+* i : en ampère (A)
+* t : en s
+* Q en Coulomb (C )
 
 Si un circuit électrique est relié à la pile, les électrons libres du circuit sont attirés par la borne positive, repoussés par la borne négative de la pile. Ils circulent de la borne moins vers la borne plus à l'extérieur du générateur.
 
@@ -55,6 +66,7 @@ Le sens conventionnel du courant est celui qui part de la borne positive vers la
 
 **Effets du courant**
 Le courant qui circule dans un circuit peut avoir un effet : 
+
 * thermique, par effet Joule
 * magnétique (production d'un champs électro magnétique à proximité des cables électriques)
 * chimique (Lorsqu'un courant électrique circule dans un liquide conducteur (électrolyte), il se produit des réactions chimiques au niveau des électrodes (conducteur solide en contact avec le liquide): dégagement gazeux, dépôt d'un métal...)
@@ -88,7 +100,7 @@ Soit le courant i~1~ dans la brache principale, le courant i~2~ dans la branche 
 
 $$i_1 = i\_2 + i\_3$$
 
-### La résistance électrique (&Omega;)
+## La résistance électrique (&Omega;)
 La résistance électrique désigne :  un composant électrique, un élément électrique chauffant utilisant l'effet Joule , ou bien l'aptitude d'un matériau conducteur à ralentir le passage du courant électrique (et donc réduire l'intensité du courant électrique).
 
 La valeur d'une resistance (notée R) est mesurée en Ohm &#937;
@@ -105,11 +117,15 @@ Un conducteur idéal = Resistance nulle
 
 Les résistors sont des composants électroniques fabriqués spécialement pour leur résistance électrique. Ils permettent d'ajuster les courants et les potentiels dans un circuit électrique.
 
-### Loi du potentiel électrique 
+## Loi du potentiel électrique 
 Deux points d'un circuit électrique reliés par un conducteur idéal sont au même potentiel électrique.
 Si l'on branche un voltmètre entre ces 2 points, la différence de potentiel est alors nulle. C'est le cas si ces 2 points sont séparés par un fil électrique ou un interrupteur fermé : 
 
-![schéma branchement voltmètre](../images/mesuretension.jpeg)
+
+<figure>
+<img src="../images/mesuretension.jpeg" width = 80% alt="schéma branchement voltmètre">
+<figcaption>schémas du branchement du voltmètre</figcaption>
+</figure>
 
 Par contre, la tension aux bornes d'un interrupteur ouvert est égale à la tension aux bornes du générateur (circuit simple) ou à la tension aux bornes de la branche dans laquelle il est placé.
 
@@ -155,40 +171,35 @@ L'intensité augmente dans le circuit car la résistance électrique du court-ci
 
 *cours plus complet :*[webtab.ac-bordeaux.fr](http://webetab.ac-bordeaux.fr/Pedagogie/Physique/Physico/Electro/e04tensi.htm)
 
-### Loi d'Ohm 
+## Loi d'Ohm 
 Pour un dipôle de résistance R, parcouru par un courant i, et dont la tension à ses bornes et U~AB~ : d'après la loi d'Ohm : 
 
 $$U_{AB} = R \times I$$
 
-Exercice 1 : 
+*Question 1 :*
 Calculer la résistance du filament d'une lampe 6V - 250 mA en fonctionnement normal.
 
-Exercice 2 : 
+*Question 2 :* 
 Calculer l'intensité du courant qui traverse un résistor de 120 &Omega; lorsqu'il est soumis à une tension de 9V.
 
-Réponse exercice 1 : 
+
+<pre>
+*Réponse question 1 :*
 U = 6V        
-
 I = 250 mA = 0,250 A        
-
 R = U/I        
-
 R = 6V / 0,250 A         
-
 R = 24 ohms
 
-Réponse exercice 2 : 
+*Réponse question 2 :*
 U = 9 V        
-
 R = 120              
-
 I = U / R        
-
 I = 9V / 120            
-
 I = 0,075 A = 75 mA
+</pre>
 
-### Loi des noeuds 
+## Loi des noeuds 
 L'intensité du courant est additive. Au niveau d'un noeud, la somme des courants arrivant est egale à la somme des courants quittant le noeud.
 
 Exercice : Calculer la valeur manquante sur le schéma suivant : 
@@ -197,7 +208,7 @@ Exercice : Calculer la valeur manquante sur le schéma suivant :
 
 *Réponse : i3 = 5,4 A*
 
-### Loi de puissance
+## Loi de puissance
 La puissance électrique est la quantité d'énergie électrique échangée par seconde. (P = E/t). Son unité dans le système international (SI) est le Watt (W)
 Pour une branche d'un circuit : Elle peut être déduite des mesures de courant et de tension.
 $$P = U \times I$$
@@ -207,6 +218,17 @@ Dans un circuit, la puissance fournie par la source (pile, ou alimentation) est 
 La puissance nominale d'un récepteur est la puissance consommée par l'appareil en fonctionnement normal. Elle est en général indiquée par le fabricant : 
 
 Lampe de poche : 1W, lampe fluocompacte : 10W, lampe halogène : 50W, appareil électroménager : 1kW
+
+**Cas particulier d'un conducteur ohmique :**
+Pour un conducteur ohmique de resistance R, la puissance électrique est dissipée par *effet Joule* sous forme de rayonnement thermique. (Chaleur)
+Comme d'après la loi d'Ohm, la tension U aux bornes de la resistance vaut :
+
+$$U = R \times I$$
+
+et que la loi de puissance est : $$P = U\times I$$
+alors : 
+
+$$P = U\times I = (R.I)\times I = R\times I^2$$
 
 **Mesure de la puissance**
 On peut la mesurer directement à l'aide d'un *Wattmètre*.
@@ -220,6 +242,63 @@ Calculer la valeur de la puissance consommée par cette lampe.
 
 *Réponse :* 
 *P = U x I = 12V x 1,5 A = 21W*
+
+
+## Source réelle de tension continue
+Un générateur de tension réel est constituée : 
+
+* d'une source de tension idéale de force électromotrice (tension) noté E
+* d'une resistance interne r
+
+
+<figure>
+<img src="../images/generateur.png" width = 80% alt="générateur de tension">
+<figcaption>générateur réel</figcaption>
+</figure>
+
+Par définition, la tension délivrée par ce générateur branché entre les bornes P et N est : 
+
+$$U_{PN} = E - r\times I$$
+
+En effet, dans le circuit série complet : d'après la loi d'additivité des tensions : 
+
+<div id="formule">
+$$U_{NA} + U_{AP} + U_{PB} + U_{BC} + U_{CN} = 0$$
+</div>
+
+Soit : 
+<div id="formule">
+$$-U_{NA} = U\_{AP} + U\_{PB} + U\_{BC} + U\_{CN}$$
+</div>
+
+<div id="formule">
+$$U_{AN} = U_{AP} + U_{PB} + U_{BC} + U_{CN}$$
+</div>
+
+<div id="formule">
+$$E = r\times I + 0 + R\times I + 0$$
+</div>
+
+On met d'un côté de l'égalité tous les termes qui correspondent aux dipôles du générateur (encadré sur le schéma). Ce terme correpond à : U(PN)
+
+$$U_{PN} = E - r\times I = R \times I$$
+
+Ce qui revient à énoncer que la tension U(PN) aux bornes d'un générateur vaut : 
+
+
+$$U_{PN} = E - r\times I$$
+
+
+*Remarques :* 
+
+* Pour un générateur de tension idéale, la tension U(PN) est égale à E, quelle que soit la valeur du courant I.
+* Pour un générateur réel (non idéal), la tension délivrée par un générateur est décroissante avec I. 
+* Une partie de la puissance chimique est dégradée par effet Joule. On la note P(J), pour *P(effet Joule)* Cette partie dégradée de l'énergie vaut alors : 
+
+$$P_J = r \times I^2$$
+
+**Bilan de puissance pour un génarateur :** 
+(voir livre p 243)
 
 # Testez vous : QCM
 ## Exercice 1 :
@@ -297,7 +376,7 @@ Cette situation présente t-elle un risque de surintensité?
 ## Exercice 8
 Sur un sèche-cheveux français, on lit les indications : 1200 W, 5 A. Ce sèche-cheveux peut-il être branché sur le secteur au Mexique (tension de secteur de 120V)?
 
-## feuille d'exercices pour le cours P1C
+## feuille d'exercices pour le cours P4 Energie
 Ex 1. Parmi les unités suivantes, lesquelles sont des unités d’énergie?
 a) W·h b) W c) J/s d) kJ
 
@@ -359,30 +438,43 @@ Sachant qu’il a un rendement de 80% , calculer la puissance utile.
 
 
 
-**Correction**
+**Correction partielle**
 
 *Réponse Ex 3 : U = 175V*
 
 *Réponse Ex 4 :* 
 
-*4.1 P=0,3mW=0,3×10−3 W U = 2 × 1, 5 V = 3 V*
+**4.1**
+*P=0,3mW=0,3×10−3 W U = 2 × 1, 5 V = 3 V*
 
-*I = P/U =0,3×10^−3 W / 3V = 0,1mA*
+$$I = P/U =0,3×10^{−3} W / 3V = 0,1mA$$
 
-*4.2 E = 2 × 15 390 J = 30 780 J
-∆ t = E/P
-∆t= 30780J
-P=0,3×10^−3^ W
-∆t=1,026×10^8^ s ∆t = 28500 h*
+**4.2**
 
-*Réponse Ex 9 : 
+$$E = 2 × 15 390 J = 30 780 J$$
+
+$$\Delta t = E/P$$
+
+$$\Delta t= 30780J$$
+
+$$P=0,3×10^{−3} W$$
+
+$$\Delta t t=1,026×10^8 s$$
+
+$$\Delta t = 28500 h$$
+
+*Réponse Ex 9 :*  
 pertes = 120W
+
 r = 0,925 
-r = 92,5%*
 
-*Réponse Ex 10 : 
+r = 92,5%
+
+*Réponse Ex 10 :*
 Pa = 2400W
-Pu = = 1920W*
 
+Pu = = 1920W
+
+<input type="button" class="btn btn-lg" value="retour page précédente" onclick="window.location.href = '../energie2/index.html'">
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
