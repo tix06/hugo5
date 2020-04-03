@@ -18,9 +18,15 @@ D'abord, créer un dossier contenant :
 
 * spaceInvader.html
 * jeu.js
-* ship.png (sur fond transparent)
-* ufo.png
-* missile.png
+* <a href="../images/ship.png">ship.png (sur fond transparent)</a>
+* <a href="../images/ufo.png">ufo.png</a>
+* <a href="../images/missile.png">missile.png</a>
+
+
+
+Pour les images, on pourra faire un clic droit sur les liens proposés et choisir de télécharger le fichier.
+
+
 
 ## Code minimal HTML
 Le code html minimal qui permet de positionner un vaisseau aux coordonnées : 200px horizontal et 100px vertical : 
@@ -246,7 +252,7 @@ Pour faire avancer le vaisseau à droite lorsque l'on appuie sur la touche f ou 
 document.onkeydown = function (event) {
     if (event.keyCode==70 || event.keyCode==39 ){
 				vaisseau.left+=10;
-			}
+}
 ```
 
 A vous de jouer : 
