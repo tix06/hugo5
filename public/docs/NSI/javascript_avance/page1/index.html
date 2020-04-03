@@ -1,0 +1,116 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Page1
+| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link rel=stylesheet href=/book.min.b3b437c765b4a53462769ff761c76ce56c62f1afaf615dbc25587eb42ed9170e.css><link rel=icon href=/favicon.png type=image/x-icon></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><h2 class=book-brand><a href=/>Sciences numériques</a></h2><style>nav ul a[href$=\2f docs\2fNSI\2fjavascript_avance\2fpage1\2f ]{color:#004ed0}</style><ul><li><p><a href=/><strong>Accueil</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p><ul><li><a href=/docs/PC_2nde/physique/pages/page1/>physique du mouvement</a></li></ul></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p><ul><li><a href=/docs/PC_1ere/energie/energie1/>Energie</a></li><li><a href=/docs/PC_1ere/atome/atome/>modèle de Bohr de l&rsquo;atome</a></li><li><a href=/docs/PC_1ere/notebooks/PC_notebooks/>ipython notebooks</a></li></ul></li><li><p><a href=/docs/NSI/NSI_index/><strong>ISN</strong></a></p><ul><li><a href=/docs/NSI/mini_projet_spaceInvader/page1/>mini projet Space Invader</a></li></ul></li><li><p><a href=/docs/donnees/donnees/><strong>Données numériques</strong></a></p><ul><li><a href=/docs/donnees/pages/page1/donnees1/>numériser</a></li><li><a href=/docs/donnees/pages/page2/donnees2/>structurer</a></li><li><a href=/docs/donnees/pages/page3/donnees3/>ipython notebooks</a></li></ul></li><li><p><a href=/docs/internet/internet/><strong>Internet</strong></a></p><ul><li><a href=/docs/internet/pages/page1/internet1/>modele OSI</a></li><li><a href=/docs/internet/pages/page2/internet2/>page 2</a><br></li></ul></li><li><p><a href=/docs/web/web/><strong>Le Web</strong></a></p><ul><li><a href=/docs/web/pages/page1/web1/>TP HTML et CSS</a></li><li><a href=/docs/web/pages/page2/web2/>langages html et css</a></li><li><a href=/docs/web/pages/page3/web3/>TP javascript processing P5</a></li><li><a href=/docs/server/>Server</a></li><li><a href=/docs/client/>Client</a></li><li><a href=/docs/advanced/>Advanced</a><br></li></ul></li><li><p><a href=/posts/><strong>Blog</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
+addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-page><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
+<strong>Page1</strong></header><article class=markdown><h1 id=les-fonctions>Les fonctions</h1><h2 id=fonction-nommée>fonction nommée</h2><h3 id=déclarer-et-appeler-une-fonction-avec-argument>déclarer et appeler une fonction avec argument</h3><pre><code>function fn(n){
+  return 3*n+2
+}
+fn(2) // retourne 8
+</code></pre><h3 id=utiliser-un-appel-de-fonction-comme-valeur>utiliser un appel de fonction comme valeur</h3><p>C&rsquo;est un premier pas vers la recursivité&hellip;
+<code>fn(fn(2)) // 18</code></p><h2 id=fonction-anonyme>fonction anonyme</h2><p>(A COMPLETER <a href=https://www.w3schools.com/js/js_function_definition.asp>w3school</a></p><h2 id=fonction-de-rappel-ou-callback>fonction de rappel (ou callback)</h2><p>En javascript, pour réaliser des appels de fonction à intervalle de temps régulier, il faut utiliser un mécanisme de callback, unique solution pour ne pas bloquer une exécution lorsque celle-ci est trop <em>couteuse</em>.</p><p>Par exemple, la fonction suivante va entrainer un blocage du système : (ne pas tester)</p><pre><code>&lt;html&gt;
+    &lt;div id=&quot;bip&quot; class=&quot;display&quot;&gt;&lt;/div&gt;
+&lt;script &gt;
+     function bip () {
+         document.getElementById(&quot;bip&quot;).innerHTML = counter + &quot; secondes restantes&quot;;
+     }
+     
+     for (var i = 200; i &gt;0; i--) {
+         bip();
+     }
+&lt;/script&gt;
+
+</code></pre><p>La pile d&rsquo;appel est alors :</p><table><thead><tr><th>pile d&rsquo;appel</th></tr></thead><tbody><tr><td>main()</td></tr><tr><td>bip()</td></tr><tr><td>bip()</td></tr><tr><td>&hellip;</td></tr></tbody></table><p>Une fonction de rappel (aussi appelée <em>callback</em> en anglais) est une fonction passée dans une autre fonction en tant qu&rsquo;argument, qui est ensuite invoquée à l&rsquo;intérieur de la fonction externe pour accomplir une sorte de routine ou d&rsquo;action.</p><p>On peut utiliser la méthode <code>setInterval</code> de l&rsquo;objet window qui déclenche un compteur et appelle une fonction callback à intervalle de temps régulier (développé plus loin dans le paragraphe suivant).</p><pre><code>&lt;button onclick=&quot;start()&quot;&gt;Lancer le decompte&lt;/button&gt;
+&lt;div id=&quot;bip&quot; class=&quot;display&quot;&gt;&lt;/div&gt;
+
+&lt;script&gt;
+var counter = 10;
+var intervalId = null;
+
+function bip() {
+    counter-=1;
+    if(counter == 0) finish();
+    else {	
+        document.getElementById(&quot;bip&quot;).innerHTML = counter + &quot; secondes restantes&quot;;
+    }
+    	
+}
+
+function start(){
+  intervalId = setInterval(bip, 1000);
+}	
+
+function finish() {
+  clearInterval(intervalId);
+  document.getElementById(&quot;bip&quot;).innerHTML = &quot;TERMINE!&quot;;	
+}
+&lt;/script&gt;
+</code></pre><p>La nouvelle pile d&rsquo;appel est alors :</p><table><thead><tr><th>pile d&rsquo;appel</th></tr></thead><tbody><tr><td>main()</td></tr><tr><td>call1()</td></tr><tr><td>le processus est rendu au document</td></tr><tr><td>call1() après 500ms</td></tr><tr><td>le processus est rendu au document</td></tr><tr><td>&hellip;</td></tr></tbody></table><h2 id=méthode-setinterval>méthode setInterval()</h2><p>Les méthodes setTimeout et setInterval sont des méthodes de l&rsquo;objet Window.
+Ce sont des processus indépendants qui, quand ils sont lancés par une instruction, ne bloquent pas l&rsquo;affichage du reste de la page ni les actions de l&rsquo;utilisateur.
+Elles permettent de placer dans la pile des prochaines fonctions à exécuter une fonction particulière. Javascript exécute cette pile fonction après fonction dans l&rsquo;ordre de la pile.
+* SetTimeout indique un délai avant exécution
+* setInterval déclenche une opération à intervalles réguliers
+* ClearTimeout interrompt le décompte de setTimeout et de setInterval</p><p>Syntax :
+<code>var intervalID = scope.setInterval(function ou bloc de code, [delay (en ms)]);</code></p><p>Ce compteur de temps est identifié de manière unique : <code>window.setInterval</code> renvoie une valeur numérique qui permet cette identification.</p><p>Une fonction lambda peut être un argument</p><h1 id=objets>Objets</h1><h2 id=méthode-d-un-objet>méthode d&rsquo;un objet</h2><p>Méthode d’un object == Propriété d’un object dont la valeur est la définition d’une fonction</p><pre><code>let user = {
+  firstname : &quot;john&quot;,
+  lastname : &quot;Doe&quot;,
+  age : 30,
+  fullname: function() {
+            return this.firstname + &quot; &quot; + this.lastname;
+  }
+};
+console.log(user.fullname()); // &quot;john Doe&quot;
+console.log(user[&quot;fullname&quot;]()); // &quot;john Doe&quot;
+console.log(user.fullname); // function() {return this.firstname + &quot; &quot; + this.lastname;}
+</code></pre><p>et pour ajouter une méthode à un objet :</p><pre><code>user.getage = function () {
+  return this.age;
+  };
+</code></pre><h2 id=constructeur>Constructeur</h2><p>this dans le constructeur n’a pas de valeur
+La valeur de this sera l’object lui-même quand l’object sera créé</p><pre><code>function Person(first,last,age,eyes){
+  this.firstnale = first;
+  this.lastname = last;
+  this.age = age;
+  this.eyescolor = eyes;
+var myFather = nex Person(&quot;John&quot;,&quot;Doe&quot;,50,&quot;blue&quot;);
+}
+</code></pre><h2 id=prototypes>prototypes</h2><p>(A COMPLETER)</p><p><a href=https://www.w3schools.com/js/js_object_prototypes.asp]>lien w3school</a></p><h2 id=exemple-avec-un-petit-élément-de-jeu-d-arcade>Exemple avec un petit élément de jeu d&rsquo;arcade</h2><p>Chacun des objets aura alors des propriétés de postionnement, et deux options d&rsquo;affichage : visible ou caché.
+Commençons par programmer le constructeur et les attributs dont héritera l&rsquo;objet. Dans le fichier <code>jeu.js</code>, mettre les lignes de code :</p><h3 id=le-constructeur-sprite>Le constructeur Sprite</h3><pre><code>function Sprite(filename, left,top){
+	this._node = document.createElement(&quot;img&quot;);
+	this._node.src = filename;
+	this._node.style.position=&quot;absolute&quot;;
+	this._node.style.height=&quot;100px&quot;;
+	this._node.style.width=&quot;auto&quot;;
+	this._node.style.left=left;
+	this._node.style.top=top;
+	document.body.appendChild(this._node);
+}
+</code></pre><p><em>Explications:</em>
+<code>function Sprite(filename, left,top){</code> : C&rsquo;est une fonction de creation d&rsquo;objets (contient des this et commence par majuscule)
+<code>Sprite</code> = l&rsquo;element à créer
+<code>this</code> = l&rsquo;objet lui meme et <code>_node</code> sa propriete que l&rsquo;on créé, on modifie les attributs que l&rsquo;on avait définis de maniere statique dans le premier document html.</p><p>On peut déjà positionner l&rsquo;objet à l&rsquo;écran en écrivant dans la partie <code>&lt;script&gt;</code> de la page html :
+<code>let vaisseau = Sprite('ship.png',100,100);</code>
+Ce qui devrait fabriquer un objet <em>vaisseau</em>, et ajouter un nouvel élément sur la page : l&rsquo;image du vaisseau à la position 100px,100px.</p><h3 id=les-propriétés-de-re-positionnement>Les propriétés de (re)positionnement</h3><p>Enlever l&rsquo;accolade finale du constructeur et ajouter :</p><pre><code>Object.defineProperty(this,&quot;left&quot;, {
+	get: function(){
+		return this._left;
+	},
+	set: function(value){
+		this._left=value;
+		this._node.style.left=this._left+&quot;px&quot;;
+	}
+});
+</code></pre><p><code>Object.defineProperty</code> permet de definir une propriété à l&rsquo;objet que l&rsquo;on a créé : on passe l&rsquo;objet avec l&rsquo;argument <code>this</code></p><pre><code>une propriete est un ensemble de 2 methodes : 
+</code></pre><ul><li>une methode <code>get</code> d&rsquo;acces en lecture.</li><li>une methode <code>set</code> d&rsquo;acces en ecriture
+Remarquer que l&rsquo;on utilise <code>_left</code>pour le nommage d&rsquo;une prorieté qui reste privée (locale) dans ce constructeur.</li></ul><p>Cette methode, on va alors y acceder avec le nom de propriete <code>left</code>:</p><p>On fait par exemple dans le script de la page principale :
+<code>vaisseau.left = 400;</code>
+Le signe <code>=</code> va indiquer que l&rsquo;on invoque la propriété <code>left</code>en <em>ecriture</em> (on dit que l&rsquo;on invoque le <em>setter</em>), et cela va modifier l&rsquo;attribut css <code>style avec la nouvelle règle</code>left : 400px<code>.
+Rafraichissons la page.
+Dans la console : explorons les attributs de l'élément associé à l'objet</code>vaisseau` :
+On peut alors vérifier les valeurs prises pour les propriétés CSS des attributs.</p><pre><code>&gt; vaisseau._node.style
+&lt; CSSStyleDeclaration {0: &quot;position&quot;, 1: &quot;height&quot;, 2: &quot;width&quot;, 3: &quot;left&quot;, 4: &quot;top&quot;, alignContent: &quot;&quot;, alignItems: &quot;&quot;, alignSelf: &quot;&quot;, alignmentBaseline: &quot;&quot;, all: &quot;&quot;, …}
+&gt; vaisseau._node.style[&quot;height&quot;]
+&lt; &quot;100px&quot;
+</code></pre><p>On sait maintenant positionner horizontalement le vaisseau.
+Avec de nouvelles déclarations dans le même format, on peut aussi :
+* positionner verticalement (propriete CSS <code>top</code>)
+* modifier la propriete CSS <code>display</code> dont les valeurs possibles sont :
+* none : n&rsquo;affiche pas
+* block : affiche</p><h1 id=gestion-des-évènements>Gestion des évènements</h1><p>On ajoute un gestionnaire d&rsquo;evenements lié aux touches appuyées avec :
+<code>document.onkeydown = function (event) {</code></p><p>lorsque l&rsquo;on appuie sur une touche, cela genere un evenement &ldquo;event&rdquo; et appelle une fonction avec le parametre l&rsquo;un des attributs possibles de <code>event</code> est <code>keyCode</code> : comme ici, l&rsquo;evenement est lié aux touches appuyées, on peut demander le keyCode de ces touches :</p><ul><li>f : 70</li><li>flèche droite : 39</li><li>flèche gauche : 37</li><li>s : 83</li><li>space : 32</li></ul><p>On peut alors déplacer un élément de la page en modifiant ses attributs de positionnement, directement dans cette même fonction.</p></article></div><aside class="book-toc fixed"><nav id=TableOfContents><ul><li><a href=#les-fonctions>Les fonctions</a><ul><li><a href=#fonction-nommée>fonction nommée</a><ul><li><a href=#déclarer-et-appeler-une-fonction-avec-argument>déclarer et appeler une fonction avec argument</a></li><li><a href=#utiliser-un-appel-de-fonction-comme-valeur>utiliser un appel de fonction comme valeur</a></li></ul></li><li><a href=#fonction-anonyme>fonction anonyme</a></li><li><a href=#fonction-de-rappel-ou-callback>fonction de rappel (ou callback)</a></li><li><a href=#méthode-setinterval>méthode setInterval()</a></li></ul></li><li><a href=#objets>Objets</a><ul><li><a href=#méthode-d-un-objet>méthode d&rsquo;un objet</a></li><li><a href=#constructeur>Constructeur</a></li><li><a href=#prototypes>prototypes</a></li><li><a href=#exemple-avec-un-petit-élément-de-jeu-d-arcade>Exemple avec un petit élément de jeu d&rsquo;arcade</a><ul><li><a href=#le-constructeur-sprite>Le constructeur Sprite</a></li><li><a href=#les-propriétés-de-re-positionnement>Les propriétés de (re)positionnement</a></li></ul></li></ul></li><li><a href=#gestion-des-évènements>Gestion des évènements</a></li></ul></nav></aside></main></body></html>
