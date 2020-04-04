@@ -421,6 +421,10 @@ if (alien1.display != "none" && missile.checkCollision(alien1)){
 		}
 ```
 
+# Prolongement
+Il reste maintenant à programmer les conditions de collision du missile avec les autres aliens, et aussi la condition de collision des aliens avec le vaisseau, ce qui amènerait un *Game Over*.
+
+Enfin, pour aller plus loin, on pourrait imaginer d'ajouter encore plus d'aliens, comme expliqué dans la vidéo (lien en début de document), de gérer un *Score*, et de pouvoir recommencer la partie. 
 
 
 # Annexe
