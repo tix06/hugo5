@@ -103,7 +103,16 @@ Ce qui devrait *construire* un objet *vaisseau*, et ajouter un nouvel élément 
 ## Les propriétés de (re)positionnement
 On souhaite maintenant ajouter des méthodes particulières à l'objet, qui permettront de le déplacer facilement (le *repositionner*).
 
-Enlever l'accolade finale du constructeur et ajouter :
+On peut représenter la classe Sprite avec le schéma suivant : 
+
+<figure>
+<img src="../images/objet.png" width = 80% alt="classe sprite">
+<figcaption>classe Sprite</figcaption>
+</figure>
+
+L'objet que l'on définira à partir de cette classe héritera des propriétés et des méthodes, que l'on appelera avec l'instruction `objet.propriété` ou `objet.methode` 
+
+> Pour ajouter les méthodes : Dans le fichier `jeu.js`, enlever l'accolade finale du constructeur et mettre :
 
 ```
 Object.defineProperty(this,"left", {
@@ -119,7 +128,7 @@ Object.defineProperty(this,"left", {
 
 `Object.defineProperty` permet de definir une propriété pour l'objet que l'on a créé : on passe l'objet avec l'argument `this`
 
-> une propriete est un ensemble de 2 *methodes* : 
+> une propriété est un ensemble de 2 *methodes* : 
 * une methode `get` d'acces en lecture.
 * une methode `set` d'acces en ecriture
 
@@ -300,24 +309,30 @@ Sprite.prototype.stopAnimation = function() {
 };
 ```
 
-La première propriété, startAnimation, va associer un timer à l'objet lorsque l'on fait `nom_de_l_objet.startAnimation(fct,interval)`
-Un timer est alors associé à l'objet, qui appelle à intervalle de temps régulier la fonction qui est passée en paramètre (ce que l'on appelle un callback). L'intervalle de temps est donné par la paramètre `interval`.
+Lorsque la touche `barre espace` est appuyée : on appelle la méthode `startAnimation` pour l'objet *missile*. Cette méthode appelle la fonction `setInterval` qui va associer un timer à l'objet lorsque l'on fait `nom_de_l_objet.startAnimation(fct,interval)`. L'un des paramètres de la fonction `setInterval`est justement une fonction, `fct`. On met `moveMissile` comme fonction de *callback*. 
+Le timer associé à l'objet, appelle à intervalle de temps régulier cette fonction qui est passée en paramètre (ce que l'on appelle un callback). L'intervalle de temps est donné par la paramètre `interval`. Ce qui modifie la *pile d'appel* des fonctions dans le programme.
+
+
+
+<figure>
+<img src="../images/pile.png" width = 80% alt="pile d'appel des fonctions">
+<figcaption>fonction callback et pile d'appel des fonctions</figcaption>
+</figure>
+
+
+
+
 La deuxieme propriété, stopAnimation, permet de retirer le timer avec l'instruction `clearInterval()`.
 
-*Remarques :* 
 
-1. Pour comprendre en détail la manière avec laquelle on a programmé ce timer, il faudra revoir, dans le cours précédent ce que sont : **une fonction callback, une fonction lambda, un objet et son prototype**
-2. Remarque à propos de la portée des variables : Le problème du **this**
 
-Le code executé par setInterval() se fait dans un contexte séparé de celui de la fonction qui l'appelle. Conséquence : le mot clé `this`ne pointe pas vers l'objet local , mais il est associé au contexte global, window.
-En dehors de tout contexte, pour un navigateur, `this` est l'objet window.
+*Remarques :* voir en annexe en bas du document
 
-C'est la raison pour laquelle on choisit ici de déclarer : 
-`var _this = this;` juste avant la fonction anonyme qui fait appel à `_this` 
+
 
 ## animation du missile
 On va alors ajouter la fonction moveMissile(missile) qui sera appelée par setInterval : 
-Dans la partie `<script>` du programme de la page html : en dehors de la fonction anonyme executée par onkeydown, on ajoute : 
+Dans la partie `<script>` du programme de la page **html** : en dehors de la fonction anonyme executée par onkeydown, on ajoute : 
 
 ```
 function moveMissile(missile){
@@ -328,10 +343,23 @@ function moveMissile(missile){
 		}
 	}
 ``` 
-Lorsque la fonction est appelée, cela modifie la position du missile.
+Lorsque la fonction est appelée, cela modifie la position du missile (on soustrait 10 px à sa position par rapport au haut de la page)
 
-Pour démarrer le timer du missile, dans le bloc de code associé à la touche 32 (barre espace), ajouter : 
-`missile.startAnimation(moveMissile,20);` pour démarrer son animation.
+> dans le bloc de code associé à la condition sur l'évenement de la touche appuyée (la n°32), ajouter : `missile.startAnimation(moveMissile,20);` 
+
+Le bloc de code doit maintenant avoir le contenu suivant : 
+```
+if (event.keyCode == 32){
+	if (missile.display=="none"){
+	// condition qui permet de ne lancer un missile que 
+	// si aucun missile n'est deja en vol
+	missile.display="block";
+	missile.left = vaisseau.left+vaisseau._node.width/2;
+	missile.top = vaisseau.top;
+	missile.startAnimation(moveMissile,20);
+	}
+}
+```
 
 ## animation des aliens
 On créé ensuite l'animation des aliens, avec un déplacement à droite puis à gauche, à l'aide de 2 nouvelles fonctions : 
@@ -363,6 +391,7 @@ Puis on lance l'animation pour chacun des autres aliens :
 Enfin, on va programmer une méthode de verification de collision de sprite, mais au niveau de la librairie de sprites.
 
 
+
 # Ajout d'une méthode checkCollision
 Dans le fichier `jeu.js`, ajouter les lignes de code suivantes pour vérifier si deux sprites se chevauchent
 
@@ -391,6 +420,19 @@ if (alien1.display != "none" && missile.checkCollision(alien1)){
 			// on retire l'alien
 		}
 ```
+
+
+
+# Annexe
+1. Pour comprendre en détail la manière avec laquelle on a programmé ce timer, il faudra revoir, dans le cours précédent ce que sont : **une fonction callback, une fonction lambda, un objet et son prototype**
+2. Remarque à propos de la portée des variables : Le problème du **this**
+
+Le code executé par setInterval() se fait dans un contexte séparé de celui de la fonction qui l'appelle. Conséquence : le mot clé `this`ne pointe pas vers l'objet local , mais il est associé au contexte global, window.
+En dehors de tout contexte, pour un navigateur, `this` est l'objet window.
+
+C'est la raison pour laquelle on choisit ici de déclarer : 
+`var _this = this;` juste avant la fonction anonyme qui fait appel à `_this` 
+
 # Programme complet
 ## page html
 ```
