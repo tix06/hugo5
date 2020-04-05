@@ -395,7 +395,7 @@ var myMother = new Person("Cindi","Doe",48,"brown");
 var myBrother = new Person(...
 ```
 
-## prototypes
+## Prototypes
 Dans l'exemple précédent, le constructeur est `Person()`.
 Une fois celui-ci définit, on pourra toujours lui ajouter des propriétés et méthodes. Par exemple, une méthode `hello` en faisant : 
 ```
@@ -569,6 +569,7 @@ On récupère avec cette fonction la valeur numérique, en pixels, de la positio
 Cette fonction va permettre de (re)positionner l'alien à une nouvelle absisse, mise en paramètre lors de l'appel de la fonction.
 
 Par exemple : 
+
 - pour positionner l'alien à l'abscisse 300px, écrire dans le programme javascript : `alien1.posX(300)`
 - pour déplacer l'alien à une abscisse 10px plus à droite, faire : `alien1.posX(alien1.posXQuery()+10)`
 - pour ajouter la valeur stockée dans alien.vitesse à l'abscisse actuelle : ` alien1.posX(alien1.posXQuery()+alien1.vitesse)`
