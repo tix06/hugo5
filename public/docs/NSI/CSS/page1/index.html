@@ -1,0 +1,137 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Page1
+| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link rel=stylesheet href=/book.min.4b98dba2602321fb9d701b966728ddddf580fd1e715660f8c38d337674e5aa5c.css><link rel=icon href=/favicon.png type=image/x-icon></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><h2 class=book-brand><a href=/>Sciences numériques</a></h2><style>nav ul a[href$=\2f docs\2fNSI\2f CSS\2fpage1\2f ]{color:#004ed0}</style><ul><li><p><a href=/><strong>Accueil</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p><ul><li><a href=/docs/PC_2nde/physique/pages/page1/>physique du mouvement</a></li></ul></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p><ul><li><a href=/docs/PC_1ere/energie/energie1/>Energie</a></li><li><a href=/docs/PC_1ere/atome/atome/>modèle de Bohr de l&rsquo;atome</a></li><li><a href=/docs/PC_1ere/notebooks/PC_notebooks/>ipython notebooks</a></li></ul></li><li><p><a href=/docs/NSI/NSI_index/><strong>ISN</strong></a></p><ul><li><a href=/docs/NSI/CSS/page1/>CSS positionnement</a></li><li><a href=/docs/NSI/javascript_avance/page1/>javascript avancé</a></li><li><a href=/docs/NSI/mini_projet_spaceInvader/page1/>mini projet Space Invader</a><br></li></ul></li><li><p><a href=/docs/donnees/donnees/><strong>Données numériques</strong></a></p><ul><li><a href=/docs/donnees/pages/page1/donnees1/>numériser</a></li><li><a href=/docs/donnees/pages/page2/donnees2/>structurer</a></li><li><a href=/docs/donnees/pages/page3/donnees3/>ipython notebooks</a></li></ul></li><li><p><a href=/docs/internet/internet/><strong>Internet</strong></a></p><ul><li><a href=/docs/internet/pages/page1/internet1/>modele OSI</a></li><li><a href=/docs/internet/pages/page2/internet2/>page 2</a><br></li></ul></li><li><p><a href=/docs/web/web/><strong>Le Web</strong></a></p><ul><li><a href=/docs/web/pages/page1/web1/>TP HTML et CSS</a></li><li><a href=/docs/web/pages/page2/web2/>langages html et css</a></li><li><a href=/docs/web/pages/page3/web3/>TP javascript processing P5</a></li><li><a href=/docs/server/>Server</a></li><li><a href=/docs/client/>Client</a></li><li><a href=/docs/advanced/>Advanced</a><br></li></ul></li><li><p><a href=/posts/><strong>Blog</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
+addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-page><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
+<strong>Page1</strong></header><article class=markdown><h1 id=display>Display</h1><h2 id=display-block-inline-inline-block-none>display : block, inline, inline-block, none</h2><p><em>Une difficulté que l&rsquo;on a souvent lorsque l&rsquo;on apprend le CSS, c&rsquo;est de faire la différence entre les propriétés</em> <strong>display</strong> et <strong>position</strong>.</p><p>Chaque navigateur possède une feuille de styles (c’est-à-dire un fichier CSS) qui sera appliquée par défaut pour les différents éléments dont nous ne précisons pas le comportement dans nos propres feuilles de style.</p><p>La plupart des navigateurs suivent les recommandations du W3C (l’organisme en charge de l’évolution et des standards des langages Web). Ce W3C spécifie pour chaque élément HTML quelle devrait être la valeur de son display parmi :</p><ul><li><code>display : block</code> : affichage sous forme d’un bloc ;</li><li><code>display : inline</code> : affichage en ligne ;</li><li><code>display : inline-block</code> : Il s’agit de la valeur par défaut des éléments<code>input</code></li></ul><p>C’est pour cela que l’utilisation de cet élément est aussi simple : il reste à côté de votre label, vous pouvez en changer sa largeur, sa hauteur, ses marges, etc..</p><ul><li><code>display : none</code> : l’élément n’est pas affiché.</li></ul><h2 id=eléments-de-niveau-block>Eléments de niveau block</h2><p>Exemples d&rsquo;éléments block : <code>p</code>, <code>div</code>, <code>form</code>, <code>header</code>, <code>nav</code>, <code>ul</code>, <code>li</code>, et <code>h1</code>.</p><p>Un élément block a les caractéristiques suivantes :</p><ul><li>Si aucune largeur n&rsquo;est définie, il prendra toute la largeur de son élément parent.</li><li>Il peut avoir des marges et des paddings.</li><li>Si aucune hauteur n&rsquo;est définie, il prendra la hauteur de ses éléments enfants (en supposant qu&rsquo;il n&rsquo;y a pas de &ldquo;float&rdquo; ou de positionnement sur des éléments environnants).</li><li>Il ignore la propriété vertical-align.</li></ul><p>Il est donc inutile pour un élément block de définir une largeur ou de lui donner une width: 100%</p><figure><img src=../images/block.jpg width=80% alt="display : block"><figcaption>display : block</figcaption></figure><h2 id=éléments-de-niveau-inline>Éléments de niveau Inline</h2><p>Exemples d&rsquo;éléments inline : <code>a</code>, <code>span</code></p><p>Un élément inline s&rsquo;inscrit dans le flux de texte. On peut l&rsquo;imaginer comme une boîte qui se comporte comme du texte.
+Il ignore le propriétés <code>width</code> et <code>height</code>, mais accepte <code>vertical-align</code>
+Il s&rsquo;inscrit dans le flux du texte.</p><figure><img src=../images/inline.jpg width=80% alt="display : inline"><figcaption>display : inline</figcaption></figure><p>Mais cela peut aussi servir à placer plusieurs éléments de type block sur la même ligne horizontale sans les <em>flotter</em>.
+Ou pour permettre à un élément inline d&rsquo;avoir des marges ou des paddings.</p><h3 id=application-à-la-barre-de-menu-horizontale>application à la barre de menu horizontale</h3><p>Cette barre de menu est conçue avec des éléments de type <code>a</code>, mis dans des éléments de type <code>li</code>. La valeur par défaut d&rsquo;un <code>&lt;li&gt;</code> pour la propriété display est <code>list-item</code>. Cette valeur est connue pour ses styles par défaut (margin-start plus ou moins élevée, puce de liste de type disc, saut de ligne, etc.).</p><p>Cette valeur par défaut du display va nous poser problème si on veut placer tous nos liens sur une seule ligne.</p><ul><li><a class=exemple href=#>Item 1</a></li><li><a class=exemple href=#>Item 2</a></li><li><a class=exemple href=#>Item 3</a></li></ul><style>li{display:inline;list-style:none;margin:1px}.exemple{display:inline;list-style:none;width:100px;padding:5px 10px;text-decoration:none;color:#fff;font-weight:700;background:#999;border-radius:10px}</style><pre><code>&lt;ul &gt;
+	&lt;li&gt;&lt;a class=&quot;exemple&quot; href=&quot;#&quot;&gt;Item 1&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a class=&quot;exemple&quot; href=&quot;#&quot;&gt;Item 2&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a class=&quot;exemple&quot; href=&quot;#&quot;&gt;Item 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;style&gt;
+li {
+	display: inline;
+	list-style: none; 
+	margin: 1px;
+}
+</code></pre><p>On pourra alors ajouter des règles CSS aux éléments <code>a</code> directement enfants de <code>li</code> avec le selecteur <code>li a</code>. (pour définir une couleur de fond, une bordure&hellip;, ou pour des effets de survol, avec la pseudo classe <code>a:hover</code>)</p><h2 id=eléments-de-niveau-inline-block>Eléments de niveau inline-block</h2><p>Avec Inline-block, l&rsquo;élément génère une boîte block qui est mise en forme comme s&rsquo;il s&rsquo;agissait d&rsquo;une boîte inline (c&rsquo;est à dire sur la même ligne que le contenu adjacent).
+Cela offre la possibilité de définir une largeur et une hauteur, des marges et paddings top et bottom, etc.</p><figure><img src=../images/inline-block.jpg width=80% alt="display : inline-block"><figcaption>display : inline-block</figcaption></figure><h3 id=application-aux-formulaires>application aux formulaires</h3><p>Dans cette mise en page les label passent d&rsquo;un display à valeur inline à un display: inline-block; Ces éléments vont pouvoir recevoir une valeur de <code>vertical-align</code></p><p><em>Exemple : FORMULAIRE</em></p><form name=my_form action=#result method=post><p><label for=nom>Nom</label> <input type=text id=nom></p><p><label for=email>E-mail</label> <input type=e-mail id=email></p><p><label for=sujet>Sujet</label> <input type=text id=sujet></p><p><label for=message>Message</label> <textarea id=message></textarea></p></form><style>input,textarea{width:150px;padding:4px;vertical-align:top}label{display:inline-block;width:100px;margin-right:20px;vertical-align:top;text-align:right}</style><pre><code>&lt;form name=&quot;my_form&quot; action=&quot;#result&quot; method=&quot;post&quot;&gt;
+	&lt;p&gt; &lt;label for=&quot;nom&quot;&gt;Nom&lt;/label&gt; &lt;input type=&quot;text&quot; id=&quot;nom&quot;&gt; &lt;/p&gt;
+	&lt;p&gt; &lt;label for=&quot;email&quot;&gt;E-mail&lt;/label&gt; &lt;input type=&quot;e-mail&quot; id=&quot;email&quot;&gt; &lt;/p&gt;
+	&lt;p&gt; &lt;label for=&quot;sujet&quot;&gt;Sujet&lt;/label&gt; &lt;input type=&quot;text&quot; id=&quot;sujet&quot;&gt; &lt;/p&gt;
+	&lt;p&gt; &lt;label for=&quot;message&quot;&gt;Message&lt;/label&gt; &lt;textarea id=&quot;message&quot;&gt;&lt;/textarea&gt; &lt;/p&gt;
+&lt;/form&gt;
+
+&lt;style&gt;
+input, textarea {
+	/*déjà en inline-block*/
+	width: 150px;
+	padding: 4px;
+	vertical-align: top;
+}
+
+label {
+	display: inline-block;
+	width: 100px;
+	margin-right: 20px;
+	vertical-align: top;
+	text-align: right;
+}
+&lt;/style&gt;
+</code></pre><h3 id=application-au-design-responsive>application au design responsive</h3><p>Dans l&rsquo;exemple suivant, <strong>positionnement des éléments en 3 colonnes</strong>, on modifie le display des conteneurs <code>div</code>, qui a pour valeur par defaut <code>block</code> en une nouvelle valeur ìnline-block`.
+Le changement de valeur se fait lorsque l&rsquo;écran est assez grand. En CSS, les déclarations sont alors encapsulées dans un bloc conditionnel, comme le montre l&rsquo;extrait ci-dessous :</p><pre><code>@media screen and (min-width: 800px), handheld and (min-width: 800px) {
+.demo div {
+	display: inline-block;
+	width: 33.33%;
+}
+.demoA {
+	float: left;
+}
+.demoB {
+	float: right;
+}
+}
+</code></pre><p>Le code complet est donné en bas de document.</p><h1 id=position>Position</h1><p>la propriete position determine de quelle manière les éléments se disposent dans une page les uns par rapport aux autres.</p><p>Par defaut, la valeur est <em>static</em> . Top, right, bottom, left, and z-index properties have no effect when used with static.</p><ul><li><p>RELATIVE —L&rsquo;élément est positionné dans le flux normal du document puis décalé, par rapport à lui-même, selon les valeurs fournies par top, right, bottom et left. Le décalage n&rsquo;a pas d&rsquo;impact sur la position des éléments. Aussi, l&rsquo;espace fourni à l&rsquo;élément sur la page est le même que celui fourni avec static.
+Par defaut, right, bottom et left ont pour valeur <em>auto</em></p></li><li><p>ABSOLUTE-L&rsquo;élément est retiré du flux normal et aucun espace n&rsquo;est créé pour l&rsquo;élément sur la page. Il est ensuite positionné par rapport à son ancêtre le plus proche qui est positionné s&rsquo;il y en a un ou par rapport au bloc englobant initial sinon. C&rsquo;est la valeur choisie pour les objets que l&rsquo;on veut placer à l&rsquo;aide de leurs coordonnées : voir les exemples dans les pages <a href=../../javascript_avance/page1/index.html>javascript avancé</a> et <a href=../../mini_projet_spaceInvader/page1/index.html>mini projet Space Invader</a></p></li><li><p>FIXED — Similar to absolute, but positioned relative to the browser window. Scrolling will not move this element.</p></li></ul><h1 id=eléments-en-3-colonnes-le-holy-grail>Eléments en 3 colonnes : le Holy Grail</h1><p>Pour des explications détaillés, on pourra se référer à la <a href=https://www.alsacreations.com/tuto/lire/588-trois-colonnes-float.html>page consacrée sur alsacreation</a></p><p>Le Holy Grail se réfère à une page web qui est constituée de quatre sections — un header, un footer, et une zone principale comportant deux sidebars, un de chaque côté :</p><figure><img src=../images/HolyGrail.png width=40% alt="saint graal css"><figcaption>mise en page en 3 colonnes</figcaption></figure><p>La mise en page respecte les règles suivantes :</p><ul><li>Elle comporte une colonne centrale de largeur fluide et des sidebars de largeur fixe.</li><li>La colonne centrale doit apparaître en premier dans le markup, avant les deux sidebars mais après le header.</li><li>Les trois colonnes doivent avoir la même hauteur, indépendamment de leur contenu.</li><li>Le footer doit toujours se trouver en bas du viewport, même si le contenu ne remplit pas la hauteur du viewport.</li><li>Le layout doit être responsif, toutes les sections doivent se retrouver sur une seule colonne sur les viewports de dimension réduite.</li></ul><p>Le Saint Graal est bien connu pour être difficile à créer en CSS sans aucun tripatouillage.</p><p>Exemple de code html, css respectant la mise en page du saint graal, et de manière <em>responsive</em> (avec adaptation à la largeur des écrans, même de type smartphone).</p><p><strong>Exemple :</strong> Vous pourrez voir ici l&rsquo;effet <em>responsive</em> en réduisant ou augmentant la largeur de la fenêtre.</p><main role=main class=demo><h1>Une mise en page <i>responsive</i> sur trois colonnes.</h1><header class=demoHeader>HEADER</header><div class=demoMain>TOP/CENTER<br>(ex: main content)</div><div class=demoA>MIDDLE/LEFT<br>(ex: menu)</div><div class=demoB>BOTTOM/RIGHT<br>(ex: aside)</div><footer class=demoFooter>FOOTER<nav><h2>Menu.</h2><ul><li><a hreflang=fr href=/lab/>lab</a></li><li><a hreflang=fr href=/>accueil</a></li><li><a class=contact hreflang=fr href=/contact>contact</a></li></ul></nav></footer></main><footer></footer><style type=text/css>.demo *{box-sizing:border-box;text-align:center}.demo div{height:12em}.demoHeader,.demoFooter{background:#aaa}.demoMain{background:#ddd}.demoA{background:#abc}.demoB{background:#def}li{display:inline;list-style:none;margin:1px}@media screen and (min-width:800px),handheld and (min-width:800px){.demo div{display:inline-block;width:33.33%}.demoA{float:left}.demoB{float:right}}</style><p><strong>Code complet :</strong></p><pre><code>&lt;!doctype html&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;UTF-8&quot; /&gt;
+	&lt;title&gt;Une mise en page responsive sur trois colonnes&lt;/title&gt;
+	
+	&lt;style type=&quot;text/css&quot;&gt;
+/*** 3 Columns ***/
+.demo * {
+	box-sizing: border-box;
+	text-align: center;
+}
+.demo div {
+	height: 12em;
+}
+.demoHeader,
+.demoFooter {
+	background: #aaa;
+}
+/*****
+Colors
+*****/
+.demoMain {
+	background: #ddd;
+}
+.demoA {
+	background: #abc;
+}
+.demoB {
+	background: #def;
+}
+
+li {
+	display: inline;
+	list-style: none; 
+	margin: 1px;
+}
+/*********************
+Media queries examples
+**********************/
+@media screen and (min-width: 800px), handheld and (min-width: 800px) {
+.demo div {
+	display: inline-block;
+	width: 33.33%;
+}
+.demoA {
+	float: left;
+}
+.demoB {
+	float: right;
+}
+}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;main role=&quot;main&quot; class=&quot;demo&quot;&gt;
+&lt;h1&gt;Une mise en page &lt;i&gt;responsive&lt;/i&gt; sur trois colonnes.&lt;/h1&gt;
+
+&lt;header class=&quot;demoHeader&quot;&gt;HEADER&lt;/header&gt;
+&lt;div class=&quot;demoMain&quot;&gt;TOP/CENTER&lt;br&gt;(ex: main content)&lt;/div&gt;
+&lt;div class=&quot;demoA&quot;&gt;MIDDLE/LEFT&lt;br&gt;(ex: menu)&lt;/div&gt;
+&lt;div class=&quot;demoB&quot;&gt;BOTTOM/RIGHT&lt;br&gt;(ex: aside)&lt;/div&gt;
+&lt;footer class=&quot;demoFooter&quot;&gt;FOOTER
+&lt;nav&gt;
+	&lt;h2&gt;Menu.&lt;/h2&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a hreflang=&quot;fr&quot; href=&quot;/lab/&quot;&gt;lab&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a hreflang=&quot;fr&quot; href=&quot;/&quot;&gt;accueil&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a class=&quot;contact&quot; hreflang=&quot;fr&quot; href=&quot;/contact&quot;&gt;contact&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/footer&gt;
+
+&lt;/main&gt;
+
+&lt;footer&gt;
+
+
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></article></div><aside class="book-toc fixed"><nav id=TableOfContents><ul><li><a href=#display>Display</a><ul><li><a href=#display-block-inline-inline-block-none>display : block, inline, inline-block, none</a></li><li><a href=#eléments-de-niveau-block>Eléments de niveau block</a></li><li><a href=#éléments-de-niveau-inline>Éléments de niveau Inline</a><ul><li><a href=#application-à-la-barre-de-menu-horizontale>application à la barre de menu horizontale</a></li></ul></li><li><a href=#eléments-de-niveau-inline-block>Eléments de niveau inline-block</a><ul><li><a href=#application-aux-formulaires>application aux formulaires</a></li><li><a href=#application-au-design-responsive>application au design responsive</a></li></ul></li></ul></li><li><a href=#position>Position</a></li><li><a href=#eléments-en-3-colonnes-le-holy-grail>Eléments en 3 colonnes : le Holy Grail</a></li></ul></nav></aside></main></body></html>
