@@ -1,3 +1,12 @@
+# Portée d'une variable
+## portée locale et globale
+La « portée » d’une variable désigne l’espace du script dans laquelle elle va être accessible. En effet, toutes nos variables ne sont pas automatiquement disponibles à n’importe quel endroit dans un script et on ne va donc pas toujours pouvoir les utiliser.
+En JavaScript, il n’existe que deux espaces de portée différents : l’espace global et l’espace local. Pour rester très simple, l’espace global désigne l’entièreté d’un script à l’exception de l’intérieur de nos fonctions. L’espace local désigne, à l’inverse, l’espace dans une fonction.
+
+## let et var
+Lorsqu’on utilise la syntaxe `let` pour définir une variable à l’intérieur d’une fonction en JavaScript, la variable va avoir une portée dite « de bloc » : la variable sera accessible dans le bloc dans lequel elle a été définie et dans les blocs que le bloc contient.
+En revanche, en définissant une variable avec le mot clef `var` dans une fonction, la variable aura une portée élargie puisque cette variable sera alors accessible dans tous les blocs de la fonction. 
+
 # Les fonctions
 
 On crée une fonction personnalisée grâce au mot clef `function` ;
@@ -437,110 +446,304 @@ Un constructeur peut parfois venir lui-même d'un autre constructeur. Il aura al
 
 Il existe un constructeur appellé `Object()` va être le parent de tout objet en JavaScript et il possède aussi un objet *prototype*.
 
-## Exemple avec un petit élément de jeu d'arcade
+# TP : thème jeu d'arcade
+On va voir dans ce TP : 
 
-Chacun des objets aura alors des propriétés de postionnement, et deux options d'affichage : visible ou caché.
-Commençons par programmer le constructeur et les attributs dont héritera l'objet. Dans le fichier `jeu.js`, mettre les lignes de code : 
-### Le constructeur Sprite
+- le positionnement des éléments en CSS
+- la création d'éléments d'une page en pur javascript
+- les objets en javascript
+- les animations en javascript
+
+## Le squelette du fichier game.html
+On commence par créer le squelette **html** de notre mini projet. 
+
+- Dans un dossier de votre disque dur, mettre l'image *ufo.png* que vous téléchargerez avec le lien suivant: 
+<a href="../images/ufo.png">faire un clic droit et choisir : telecharger le fichier</a>
+- dans le même dossier, à l'aide d'un éditeur de code comme par exemple notepadd++, créer un nouveau fichier et choisir une extension `.html`
+
+Mettre les lignes de code suivantes:
 ```
-function Sprite(filename, left,top){
+<!doctype html>
+<html>
+<head>
+	<title>mini programme</title>
+	<meta charset="utf-8">
+<style>
+
+#game{
+	position: absolute;
+	width:480px;
+	height: 400px;
+	background-color: rgb(100,100,100);
+	overflow: scroll;
+}
+
+.alien0 {
+   position:absolute;
+   left:100px;
+   top:100px;
+   height:50px;
+   width:auto;
+}
+
+</style>
+</head>
+
+<body>
+<div id="game">
+	<img class = "alien0" src="ufo.png">
+</div>
+
+<script>
+/************ on mettra le programme javascript ici ********/
+</script>
+</body>
+</html>
+```
+
+Executer le programme (double clic sur le fichier). 
+Dans la fenêtre du navigateur devraient s'afficher : 
+
+- un cadre gris qui occupe la largeur de la feuille, le container 
+- une image d'alien positionné en haut à gauche.
+
+Le règles relatives au positionnement et dimensions de ces 2 éléments sont mises dans les déclarations CSS du debut de programme, entre les balises `<style>`.
+
+## Le constructeur
+Si nous voulons créer plusieurs éléments du même genre (c'est à dire plusieurs aliens), comme nous l'avons vu lors du chapitre précédent, nous allons devoir utiliser un *constructeur*.
+Commençons par programmer ce constructeur et les propriétés dont héritera l'objet : Entre les balises `<script>`, ajouter les lignes suivantes :
+
+```
+let surface = document.getElementById("game");
+
+	function Sprite(filename, left,top){
 	this._node = document.createElement("img");
 	this._node.src = filename;
 	this._node.style.position="absolute";
-	this._node.style.height="100px";
+	this._node.style.height="50px";
 	this._node.style.width="auto";
-	this._node.style.left=left;
-	this._node.style.top=top;
-	document.body.appendChild(this._node);
+	this._node.style.left=left+"px";
+	this._node.style.top=top+"px";
+	this.vitesse = 2;
+	surface.appendChild(this._node);
 }
+let alien1 = new Sprite("ufo.png",200,100);
 ```
 *Explications:*
-`function Sprite(filename, left,top){` : C'est une fonction de creation d'objets (contient des this et commence par majuscule)
-`Sprite`  = l'element à créer
-`this` = l'objet lui meme et  `_node`  sa propriete que l'on créé, on modifie les attributs que l'on avait définis de maniere statique dans le premier document html.
 
-On peut déjà positionner l'objet à l'écran en écrivant dans la partie `<script>` de la page html : 
-`let vaisseau = Sprite('ship.png',100,100);`
-Ce qui devrait fabriquer un objet *vaisseau*, et ajouter un nouvel élément sur la page : l'image du vaisseau à la position 100px,100px.
+- on commence par créer une première variable, `surface`, de portée globale. On y met le noeud contenant l'élément `<div id="game>`.
+- on écrit les règles du constructeur, que l'on appellera *Sprite()*.
+Ce constructeur contiendra 3 paramètres pour sa création: l'adresse de l'image, sa position par rapport au bord gauche *left* et sa position par rapport au bord supérieur *top*.
 
+- `_node`  sera la propriété que l'on créé; elle contiendra le nom de l'élément créé (*img*) ainsi que plusieurs variables. Ces variables seront les différents attributs de l'élément *img*.
+- on ajoute une variable pour la vitesse de déplacement du l'alien.
+- Et l'instruction qui ajoute l'élément *img* de l'alien au cadre `<div id="game>` 
+- la dernière ligne correspond à la construction de l'objet *alien1* à partir de ce constructeur, à la position (200,100).
 
-### Les propriétés de (re)positionnement
-Enlever l'accolade finale du constructeur et ajouter :
+On peut *rafraichir* la page dans le navigateur. On devrait observer 2 aliens côte à côte. Celui de gauche a été placé avec une instruction en *html*. Mais le 2e, celui de droite, en *javascript*.
+
+> **A vous de jouer :** Placer un autre alien à doite du second, que vous appellerez *alien2*, en utilisant le constructeur *Sprite()*.
+
+## Ajouter les méthode au prototype de Sprite()
+A partir des explications vues plus haut (paragraphe *Prototype*), nous allons ajouter des méthodes au constructeur. Les objets *alien1* et *alien2* vont alors en hériter.
+### Ajouter au programme javascript
 ```
-Object.defineProperty(this,"left", {
-	get: function(){
-		return this._left;
-	},
-	set: function(value){
-		this._left=value;
-		this._node.style.left=this._left+"px";
+Sprite.prototype.posXQuery = function(){
+	let chain = this._node.style.left;
+	chain = parseInt(chain);
+	return chain
+}
+
+Sprite.prototype.posX = function(param){
+	this._node.style.left=param+"px";
+}
+```
+### La méthode `posXQuery`
+On utilise une fonction anonyme qui sera executée lorsque l'on fait, par exemple : (ne pas oublier le parathèses () à la fin de la déclaration pour préciser que l'on veut *executer* la fonction)
+
+`alien1.posXQuery()`
+
+On récupère avec cette fonction la valeur numérique, en pixels, de la position horizontale de l'alien, à partir de ses propriétés CSS. 
+
+### La méthode `posX`
+Cette fonction va permettre de (re)positionner l'alien à une nouvelle absisse, mise en paramètre lors de l'appel de la fonction.
+
+Par exemple : 
+- pour positionner l'alien à l'abscisse 300px, écrire dans le programme javascript : `alien1.posX(300)`
+- pour déplacer l'alien à une abscisse 10px plus à droite, faire : `alien1.posX(alien1.posXQuery()+10)`
+- pour ajouter la valeur stockée dans alien.vitesse à l'abscisse actuelle : ` alien1.posX(alien1.posXQuery()+alien1.vitesse)`
+
+## déplacement de l'alien
+On veut créer une fonction qui sera utilisable par tous les aliens, et qui modifiera automatiquement leur abscisse en lui ajoutant la vitesse, à chaque appel de cette fonction. Ajouter à la suite du programme :
+```
+function deplaceX(element){
+	if (element.posXQuery()<480 && element.vitesse>0) {
+		element.posX(element.posXQuery()+element.vitesse);
+	} else if (element.posXQuery()>=480 && element.vitesse>0){
+		element.vitesse = -element.vitesse;
+}
+```
+
+*Explications :* 
+
+- cette fonction nommée *deplaceX* prend en paramètre l'objet pour lequel elle est appelée. Ce paramètre sera *element*.
+- comme *element* correspond à un objet construit avec Sprite(), il a hérité des méthodes *posX* et *posXQuery*. On commence par vérifier si l'alien n'a pas encore atteint le bord droit, afin qu'il ne sorte pas de l'écran. Sa vitesse est supposée *positive*, l'alien se déplçant alors vers la droite. Si cette condition est réalisée, on ajoute *element.vitesse* à l'abscisse.
+- si l'alien touche le bord droit, on modifie le signe de la valeur de la vitesse, pour que l'alien reparte dans l'autre sens.
+
+> **A vous de jouer :** Ajouter les instructions à cette fonction pour que l'alien se déplace à gauche lorsqu'il a touché le bord droit, puis à droite lorsqu'il a touché le bord gauche.
+
+## animer l'alien
+Ajouter les lignes suivantes pour créer une animation continue : 
+```
+Sprite.prototype.startAnimation = function (fct, interval) {
+	var _this=this;
+	this._clock=window.setInterval(function(){
+		fct(_this);
+	},interval);
+};
+```
+
+Cette nouvelle méthode, lorsqu'elle est appellée pour l'un des aliens, attache un *timer* à l'alien, et appelle à intervalle de temps régulier la fonction `fct` mise en paramètre.
+
+Pour animer l'*alien1*, avec un déplacement toutes les 20ms, on ajoutera à la fin du programme : 
+
+`alien1.startAnimation(deplaceX,20);`
+
+Vous devriez maintenant obtenir un déplacement continu de l'alien de gauche à droite de l'écran.
+
+> **Exercice :** Modifiez ce programme pour obtenir un déplacement aléatoire dans toute la fenêtre, comme sur l'image suivante.
+
+# Fenêtre de jeu
+
+<div id="game">
+	<img class = "alien0" src="../images/ufo.png">
+</div>
+
+<script>
+let surface = document.getElementById("game");
+
+	function Sprite(filename,left,top){
+	this._node = document.createElement("img");
+	this._node.src = filename;
+	this._node.style.position="absolute";
+	this._node.style.height="50px";
+	this._node.style.width="auto";
+	this._node.style.left=left+"px";
+	this._node.style.top=top+"px";
+	this.vitesseX = 2;
+	this.vitesseY = 2;
+	surface.appendChild(this._node);
+}
+
+Sprite.prototype.posXQuery = function(){
+	let chain = this._node.style.left;
+	chain = parseInt(chain);
+	return chain
+}
+
+Sprite.prototype.posX = function(param){
+	this._node.style.left=param+"px";
+}
+
+Sprite.prototype.posYQuery = function(){
+	let chain = this._node.style.top;
+	chain = parseInt(chain);
+	return chain
+}
+
+Sprite.prototype.posY = function(param){
+	this._node.style.top=param+"px";
+}
+
+Sprite.prototype.startAnimation = function (fct, interval) {
+	var _this=this;
+	this._clock=window.setInterval(function(){
+		fct(_this);
+	},interval);
+};
+
+function deplaceX(element){
+	if (element.posXQuery()<480 && element.vitesse>0) {
+		element.posX(element.posXQuery()+element.vitesse);
+	} else if (element.posXQuery()>=480 && element.vitesse>0){
+		element.vitesse = -element.vitesse;
+	} else if (element.posXQuery()>0 && element.vitesse<0) {
+		element.posX(element.posXQuery()+element.vitesse);
+	} else if (element.posXQuery()<=0 && element.vitesse<0){
+		element.vitesse = -element.vitesse;
 	}
-});
-```
-`Object.defineProperty` permet de definir une propriété à l'objet que l'on a créé : on passe l'objet avec l'argument `this`
+}
 
-	une propriete est un ensemble de 2 methodes : 
+function deplaceXY(element){
+	if (element.posXQuery()<420 && element.vitesseX>0) {
+		element.posX(element.posXQuery()+element.vitesseX);
+	} else if (element.posXQuery()>=420 && element.vitesseX>0){
+		element.vitesseX = -element.vitesseX;
+	} else if (element.posXQuery()>0 && element.vitesseX<0) {
+		element.posX(element.posXQuery()+element.vitesseX);
+	} else if (element.posXQuery()<=0 && element.vitesseX<0){
+		element.vitesseX = -element.vitesseX;
+	}
+	if (element.posYQuery()>0 && element.vitesseY>0) {
+		element.posY(element.posYQuery()-element.vitesseY);
+	} else if (element.posYQuery()<=0 && element.vitesseY>0){
+		element.vitesseY = -element.vitesseY;
+	} else if (element.posYQuery()<350 && element.vitesseY<0) {
+		element.posY(element.posYQuery()-element.vitesseY);
+	} else if (element.posYQuery()>=350 && element.vitesseY<0){
+		element.vitesseY = -element.vitesseY;
+	}
+}
 
-* une methode `get` d'acces en lecture.
-* une methode `set` d'acces en ecriture
-Remarquer que l'on utilise `_left`pour le nommage d'une prorieté qui reste privée (locale) dans ce constructeur.
+let alien1 = new Sprite("../images/ufo.png",200,100);
+
+//console.log(alien1.posXQuery());
+
+alien1.startAnimation(deplaceXY,20);
+
+</script>
 
 
-Cette methode, on va alors y acceder avec le nom de propriete `left`: 
-
-On fait par exemple dans le script de la page principale : 
-`vaisseau.left = 400;` 
-Le signe `=` va indiquer que l'on invoque la propriété `left`en *ecriture* (on dit que l'on invoque le *setter*), et cela va modifier l'attribut css `style avec la nouvelle règle `left : 400px`. 
-Rafraichissons la page.	
-Dans la console : explorons les attributs de l'élément associé à l'objet `vaisseau` : 
-On peut alors vérifier les valeurs prises pour les propriétés CSS des attributs.
-```
-> vaisseau._node.style
-< CSSStyleDeclaration {0: "position", 1: "height", 2: "width", 3: "left", 4: "top", alignContent: "", alignItems: "", alignSelf: "", alignmentBaseline: "", all: "", …}
-> vaisseau._node.style["height"]
-< "100px"
-```
-
-On sait maintenant positionner horizontalement le vaisseau.
-Avec de nouvelles déclarations dans le même format, on peut aussi : 
-* positionner verticalement (propriete CSS `top`)
-* modifier la propriete CSS `display` dont les valeurs possibles sont : 
-	* none : n'affiche pas
-	* block : affiche
-
-# Gestion des évènements
-On ajoute un gestionnaire d'evenements lié aux touches appuyées avec : 
-`document.onkeydown = function (event) {`
-
-lorsque l'on appuie sur une touche, cela genere un evenement "event" et appelle une fonction avec le parametre l'un des attributs possibles de `event` est `keyCode` : comme ici, l'evenement est lié aux touches appuyées, on peut demander le keyCode de ces touches : 
-
-* f : 70
-* flèche droite : 39
-* flèche gauche : 37
-* s : 83
-* space : 32
-
-On peut alors déplacer un élément de la page en modifiant ses attributs de positionnement, directement dans cette même fonction.
-
-# Portée d'une variable
-## portée locale et globale
-La « portée » d’une variable désigne l’espace du script dans laquelle elle va être accessible. En effet, toutes nos variables ne sont pas automatiquement disponibles à n’importe quel endroit dans un script et on ne va donc pas toujours pouvoir les utiliser.
-En JavaScript, il n’existe que deux espaces de portée différents : l’espace global et l’espace local. Pour rester très simple, l’espace global désigne l’entièreté d’un script à l’exception de l’intérieur de nos fonctions. L’espace local désigne, à l’inverse, l’espace dans une fonction.
-
-## let et var
-Lorsqu’on utilise la syntaxe `let` pour définir une variable à l’intérieur d’une fonction en JavaScript, la variable va avoir une portée dite « de bloc » : la variable sera accessible dans le bloc dans lequel elle a été définie et dans les blocs que le bloc contient.
-En revanche, en définissant une variable avec le mot clef `var` dans une fonction, la variable aura une portée élargie puisque cette variable sera alors accessible dans tous les blocs de la fonction. 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<input type="button" class="btn btn-lg" value="suite du TP : Le jeu Space Invader" onclick="window.location.href = '../../mini_projet_spaceInvader/page1/index.html'">
 
 <style>
-		span {
-			border-style: solid;
+	span {
+		border-style: solid;
 
-		}
-		span:hover{
-			cursor: pointer;
-			background-color: #ccc;
+	}
+	span:hover{
+		cursor: pointer;
+		background-color: #ccc;
+	}
+    #game{
+			position: absolute;
+			width:480px;
+			height: 400px;
+			background-color: rgb(100,100,100);
+			overflow: scroll;
 		}
 
+		.alien0 {
+   		position:absolute;
+   		left:100px;
+   		top:100px;
+   		height:50px;
+   		width:auto;
+		}
 	</style>
 	
 	
