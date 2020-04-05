@@ -36,8 +36,8 @@ Commençons par programmer le constructeur et les attributs dont héritera l&rsq
 	this._node.style.position=&quot;absolute&quot;;
 	this._node.style.height=&quot;100px&quot;;
 	this._node.style.width=&quot;auto&quot;;
-	this._node.style.left=left;
-	this._node.style.top=top;
+	this._node.style.left=left+&quot;px&quot;;
+	this._node.style.top=top+&quot;px&quot;
 	document.body.appendChild(this._node);
 }
 </code></pre><p><em>Explications:</em></p><ul><li>La <code>function Sprite(filename, left,top){</code> : C&rsquo;est une fonction de creation d&rsquo;objets (contient des this et commence par majuscule)</li><li><code>Sprite</code> : l&rsquo;element à créer</li><li><code>this</code> : l&rsquo;objet lui meme et <code>_node</code> , c&rsquo;est l&rsquo;élément correspondant, avec tous ses attributs, tel qu&rsquo;on l&rsquo;avait défini de maniere statique dans le premier document html.</li></ul><p>On peut déjà positionner l&rsquo;objet à l&rsquo;écran en écrivant dans la partie <code>&lt;script&gt;</code> de la <strong>page html</strong> : (ce sera alors la première ligne mise entre les balises <code>&lt;script&gt;</code> et <code>&lt;/script&gt;</code></p><blockquote><p><code>let vaisseau = Sprite('ship.png',400,500);</code></p></blockquote><p>Ce qui devrait <em>construire</em> un objet <em>vaisseau</em>, et ajouter un nouvel élément sur la page : l&rsquo;image du vaisseau à la position 400px,500px.</p><h2 id=les-propriétés-de-re-positionnement>Les propriétés de (re)positionnement</h2><p>On souhaite maintenant ajouter des méthodes particulières à l&rsquo;objet, qui permettront de le déplacer facilement (le <em>repositionner</em>).</p><p>On peut représenter la classe Sprite avec le schéma suivant :</p><figure><img src=../images/objet.png width=80% alt="classe sprite"><figcaption>classe Sprite</figcaption></figure><p>L&rsquo;objet que l&rsquo;on définira à partir de cette classe héritera des propriétés et des méthodes, que l&rsquo;on appelera avec l&rsquo;instruction <code>objet.propriété</code> ou <code>objet.methode</code></p><blockquote><p>Pour ajouter les méthodes : Dans le fichier <code>jeu.js</code>, enlever l&rsquo;accolade finale du constructeur et mettre :</p></blockquote><pre><code>Object.defineProperty(this,&quot;left&quot;, {
@@ -65,8 +65,8 @@ Avec de nouvelles déclarations dans le même format, on peut aussi :</p><ul><li
 	this._node.style.position=&quot;absolute&quot;;
 	this._node.style.height=&quot;100px&quot;;
 	this._node.style.width=&quot;auto&quot;;
-	//this._node.style.left=left;
-	//this._node.style.top=top;
+	//this._node.style.left=left+&quot;px&quot;;
+	//this._node.style.top=top+&quot;px&quot;
 	document.body.appendChild(this._node);
 
   Object.defineProperty(this,&quot;left&quot;, {

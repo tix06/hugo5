@@ -357,8 +357,11 @@ function Person(first,last,age,eyes){
   this.age = age;
   this.eyescolor = eyes;
 }
+Person.prototype.hello = function(){
+  alert('Hello, my name is ' + this.firstname + ', I am ,' + this.age + ' years old');}
+  
 var myFather = new Person("John","Doe",50,"blue");
-
+var myMother = new Person("Cindi","Doe",48,"brown");
 
 function identite2(param){
 	if (param=="Person"){
@@ -385,20 +388,54 @@ var myBrother = new Person(...
 
 ## prototypes
 Dans l'exemple précédent, le constructeur est `Person()`.
-Une fois celui-ci définit, on pourra toujours lui ajouter des propriétés et méthodes. Par exemple, une méthode `bonjour` en faisant : 
+Une fois celui-ci définit, on pourra toujours lui ajouter des propriétés et méthodes. Par exemple, une méthode `hello` en faisant : 
 ```
-Person.prototype.bonjour = function(){
-  alert('Hello, my name is ' + this.firstname + ', I am , + this.age + ' years old');
-}
+Person.prototype.hello = function(){
+  alert('Hello, my name is ' + this.firstname + ', I am ,' + this.age + ' years old');}
 ```
 On ajoute ainsi une nouvelle méthode à l'objet `prototype` contenu dans le constructeur `Person()`. 
 Définir des propriétés et des méthodes dans le prototype d’un constructeur nous permet ainsi de les rendre accessible à tous les objets créés à partir de ce constructeur sans que ces objets aient à les redéfinir.
+
+Ce n'est pas la même chose que l'on réalise lorsque l'on ajoute des *propriétés en propre* à un *objet* : 
+
+> *Exemple :*
+> Lorsque l'on définit un nouvel objet à partir du constructeur `Person()`:
+
+> `var myFather = new Person("John","Doe",50,"blue");`
+
+> Si on veut lui ajouter une méthode `bonjour`, une *méthode en propre*, on fait : 
+> `myFather.bonjour= function(){
+  alert('Bonjour, mon nom est ' + this.firstname + ', mon age ,' + this.age + ' ans');}`
+
+> Elle sera alors particulière à myFather, et n'est pas commune avec myMother et myBrother. Alors que celle ajoutée au prototype Person() appelée `hello`sera commune à tous les objets qui utilisent le constructeur Person().
+
+**Testez le :**
+Ouvrir la console et testez les instructions suivantes :
+<figure>
+<img src="../images/myFather.hello.png" width = 60% alt="myFather.hello()">
+<figcaption>myFather.hello()</figcaption>
+</figure>
+
+<figure>
+<img src="../images/myFather.bonjour.png" width = 60% alt="myFather.bonjour()">
+<figcaption>myFather.bonjour()</figcaption>
+</figure>
+
+<figure>
+<img src="../images/myMother.hello.png" width = 60% alt="myMother.hello()">
+<figcaption>myMother.hello()</figcaption>
+</figure>
+
+<figure>
+<img src="../images/myMother.bonjour.png" width = 60% alt="myMother.bonjour()">
+<figcaption>myMother.bonjour()</figcaption>
+</figure>
 
 Pour avoir le code le plus clair et le plus performant possible, on définit généralement les propriétés des objets (dont les valeurs doivent être spécifiques à l’objet) au sein du constructeur et les méthodes (que tous les objets vont pouvoir appeler de la même façon) dans le prototype du constructeur.
 
 Un constructeur peut parfois venir lui-même d'un autre constructeur. Il aura alors lui aussi hérité des méthodes du prototype de son constructeur.
 
-Il existe un constructeur appellé `Object()` va être le parent de tout objet en JavaScript et il possède aussi une propriété prototype.
+Il existe un constructeur appellé `Object()` va être le parent de tout objet en JavaScript et il possède aussi un objet *prototype*.
 
 ## Exemple avec un petit élément de jeu d'arcade
 

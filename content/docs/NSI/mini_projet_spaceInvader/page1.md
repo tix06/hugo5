@@ -81,8 +81,8 @@ function Sprite(filename, left,top){
 	this._node.style.position="absolute";
 	this._node.style.height="100px";
 	this._node.style.width="auto";
-	this._node.style.left=left;
-	this._node.style.top=top;
+	this._node.style.left=left+"px";
+	this._node.style.top=top+"px"
 	document.body.appendChild(this._node);
 }
 ```
@@ -172,8 +172,8 @@ function Sprite(filename, left,top){
 	this._node.style.position="absolute";
 	this._node.style.height="100px";
 	this._node.style.width="auto";
-	//this._node.style.left=left;
-	//this._node.style.top=top;
+	//this._node.style.left=left+"px";
+	//this._node.style.top=top+"px"
 	document.body.appendChild(this._node);
 
   Object.defineProperty(this,"left", {
