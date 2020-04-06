@@ -259,6 +259,95 @@ Ce compteur de temps est identifié de manière unique : `window.setInterval` re
 
 Une fonction lambda peut être un argument
 
+# Manipuler les éléments de la page
+## accéder à un élément à l'aide d'un sélecteur
+Pour manipuler les éléments d'une page affichée dans le navigateur, on doit *accéder* à cet élément.
+Cela peut se faire à l'aide des *ancres* laissées sur ces éléments. On peut les sélectionner, comme en CSS avec leur classe, leur ID ou le nom de la balise. Pour réaliser ceci, on utilise les fonctions suivantes:
+
+- `document.getElementById()` permet de sélectionner un élément html à partir de son id.
+- `document.querySelector()` un sélecteur plus générique qui sélectionne les éléments à la manière des sélecteurs css.
+
+*Exemple 1 :* soit un élement avec attribut id='elem' de la page :
+On cherche à atteindre cet élément et en modifier la couleur : 
+```
+let elem = document.getElementById('elem');
+elem.style.background = 'red';
+```
+On met cet élément dans une variable `elem`. Puis on peut modifier ses attributs, comme par exemple celui `style` pour la couleur.
+
+
+*Exemple 2 :* manipulation des données d'un formulaire et utilisation de `document.querySelector()` : Voir [Lyceum javascript](https://lyceum.fr/1g/nsi/5-interactions-entre-lhomme-et-la-machine-sur-le-web/4-gestion-des-evenements-en-javascript)
+
+## parcourir l'arbre du DOM
+La propriété `childNodes` de l'interface `Node` renvoie une liste sous forme de tableau des nœuds enfants de l’élément donné. Le premier nœud enfant reçoit l’indice 0 comme pour tout tableau.
+Et pour obtenir l'élément parent d'un noeud, on utilise la propriété `parentElement`.
+
+*Exemple 3 :* 
+Vous pouvez tester cet exemple en enregistrant le code *html*  suivant. 
+
+```
+<div>
+  <p id="myP">Un peu de texte, <a>un lien</a> et <strong>une portion en emphase</strong></p>
+</div>
+``` 
+
+Ouvrir alors la page pour l'afficher dans le navigateur.
+
+Cette page a alors l'arbre de DOM suivant qui lui est associé : 
+
+<figure>
+<img src="../images/dom.png" width = 80% alt="arbre du DOM">
+<figcaption>arbre du DOM</figcaption>
+</figure>
+
+Le premier enfant de `<p>` est un nœud textuel, alors que le dernier enfant est un élément `<strong>`. Cet élément `<strong>` possède pour noeud enfant un noeud textuel dont le contenu et *une portion en emphase*
+
+Dans la console, saisir une à une les instructions suivantes : (sans les commentaires)
+```
+let paragraph = document.getElementById('myP'); // pour stocker le noeud parent.
+let first = paragraph.firstChild; // parcours de l'arbre jusqu'au 1er enfant
+alert(first.nodeValue); // pour récuperer le contenu du noeud textuel
+```
+
+<figure>
+<img src="../images/dom1.png" width = 100% alt="arbre du DOM">
+<figcaption>contenu textuel du premier enfant</figcaption>
+</figure>
+
+Puis :
+```
+let last = paragraph.lastChild;
+alert(last.firstChild.data); // pour recuperer le contenu textuel de la balise
+```
+
+<figure>
+<img src="../images/dom2.png" width = 100% alt="arbre du DOM">
+<figcaption>contenu textuel du dernier enfant</figcaption>
+</figure>
+
+On peut réaliser cette dernière manipulation en ayant recours à la liste de tous les enfants de `paragraph`: en écrivant `paragraph.childnodes` 
+
+<figure>
+<img src="../images/dom3.png" width = 100% alt="arbre du DOM">
+<figcaption>liste de tous les enfants du noeud parent</figcaption>
+</figure>
+
+Puis on affiche sont contenu textuel
+
+<figure>
+<img src="../images/dom4.png" width = 100% alt="arbre du DOM">
+<figcaption>contenu textuel de last</figcaption>
+</figure>
+
+Pour finir, on peut modifier à volonté les éléments textuels en modifiant la valeur renvoyée par `.data` ou `.nodeValue` : 
+
+<figure>
+<img src="../images/dom5.png" width = 100% alt="arbre du DOM">
+<figcaption>modification du contenu textuel de last</figcaption>
+</figure>
+
+
+
 # Objets
 Un objet est une entité qui peut être vue comme indépendante et qui va contenir
 un ensemble de variables (qu’on va appeler propriétés) et de fonctions (qu’on appellera méthodes). Ces objets vont pouvoir interagir entre eux.

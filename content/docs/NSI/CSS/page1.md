@@ -160,8 +160,14 @@ label {
 ```
 
 ### application au design responsive
-Dans l'exemple suivant, **positionnement des éléments en 3 colonnes**, on modifie le display des conteneurs `div`, qui a pour valeur par defaut `block` en une nouvelle valeur ìnline-block`.
-Le changement de valeur se fait lorsque l'écran est assez grand. En CSS, les déclarations sont alors encapsulées dans un bloc conditionnel, comme le montre l'extrait ci-dessous : 
+Dans l'exemple suivant, **positionnement des éléments en 3 colonnes**, on modifie le display des conteneurs `div`, qui a pour valeur par defaut `block` en une nouvelle valeur ìnline-block`. Et on affecte la valeur `right` ou `left` à la nouvelle propriété `float` associée aux éléments contenus, que l'on veut mettre côte à côte.
+
+*Méthode : pour placer les éléments côte à côte*  
+- **Container : display: inline-block;  
+- Contenu : float: left; ou float: right;**
+
+
+Ici, le changement de valeur se fait lorsque l'écran est assez grand. En CSS, les déclarations sont alors encapsulées dans un bloc conditionnel, comme le montre l'extrait ci-dessous : 
 ```
 @media screen and (min-width: 800px), handheld and (min-width: 800px) {
 .demo div {
@@ -176,7 +182,7 @@ Le changement de valeur se fait lorsque l'écran est assez grand. En CSS, les d�
 }
 }
 ```
-Le code complet est donné en bas de document.
+Le code complet est donné en bas de document, avec l'exemple du *Holy Grail*
 
 # Position
 
