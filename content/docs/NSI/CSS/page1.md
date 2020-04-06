@@ -160,7 +160,7 @@ label {
 ```
 
 ### application au design responsive
-Dans l'exemple suivant, **positionnement des éléments en 3 colonnes**, on modifie le display des conteneurs `div`, qui a pour valeur par defaut `block` en une nouvelle valeur ìnline-block`. Et on affecte la valeur `right` ou `left` à la nouvelle propriété `float` associée aux éléments contenus, que l'on veut mettre côte à côte.
+Dans l'exemple suivant, **positionnement des éléments en 3 colonnes**, on modifie le display des conteneurs `div`, qui a pour valeur par defaut `block` en une nouvelle valeur `inline-block`. Et on affecte la valeur `right` ou `left` à la nouvelle propriété `float` associée aux éléments contenus, que l'on veut mettre côte à côte.
 
 *Méthode : pour placer les éléments côte à côte*  
 - **Container : display: inline-block;  
