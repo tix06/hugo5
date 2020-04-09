@@ -15,20 +15,8 @@ headless: true
 	- [javascript avancé]({{< relref "/docs/NSI/javascript_avance/page1" >}})
 	-	[mini projet Space Invader]({{< relref "/docs/NSI/mini_projet_spaceInvader/page1" >}})
    
-- [**Données numériques**]({{< relref "/docs/donnees/donnees.md" >}})
-	- [numériser]({{< relref "/docs/donnees/pages/page1/donnees1.md" >}})
-	- [structurer]({{< relref "/docs/donnees/pages/page2/donnees2.md" >}})
-	- [ipython notebooks]({{< relref "/docs/donnees/pages/page3/donnees3.md" >}})
-- [**Internet**]({{< relref "/docs/internet/internet.md" >}})
-  - [modele OSI]({{< relref "/docs/internet/pages/page1/internet1.md" >}})
-  - [page 2]({{< relref "/docs/internet/pages/page2/internet2.md" >}})  
-- [**Le Web**]({{< relref "/docs/web/web.md" >}})
-  - [TP HTML et CSS]({{< relref "/docs/web/pages/page1/web1.md" >}})
-  - [langages html et css]({{< relref "/docs/web/pages/page2/web2.md" >}}) 
-  - [TP javascript processing P5]({{< relref "/docs/web/pages/page3/web3.md" >}})
-  - [Server]({{< relref "/docs/server.md" >}})
-  - [Client]({{< relref "/docs/client.md" >}})
-  - [Advanced]({{< relref "/docs/advanced.md" >}})  
+- [**SNT secondes**]({{< relref "/docs/SNT_2nde/SNT_index" >}})
+ 
 - [**Blog**]({{< relref "/posts" >}})
 - [**Contact**]({{< relref "/docs/contact/simple-contact-form.html" >}})  
 

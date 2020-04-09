@@ -23,6 +23,10 @@ Le courant passe dans un circuit si celui ci est fermé sur une alimentation él
 L'effet Joule est une conséquence du passage du courant dans un conducteur. Lorsque ce conducteur n'est pas idéal (c'est à dire lorsque sa resistance n'est pas egale à zero), le passage du courant s'accompagne de production de chaleur et de rayonnement.
 Cet effet peut être voulu : dans ce cas, l'électricité sert à produire de la chaleur (radiateur électrique). Ou au contraire, cet effet peut ne pas être souhaité. En effet, la production de chaleur entraine une perte d'énergie électrique, comme vu dans le paragraphe sur la conservation de l'énergie.
 
+Souvent, pour déterminer la puissance thermique rayonnée par effet Joule, on utilise la loi, qui sera expliquée plus loin : 
+
+$$P_J = R \times I^2$$
+
 ### Explications en video
 
 La vidéo suivante, de la chaine Mycéliums, explique la nature de l'électricité, sa production et son transport. (Regarder la première partie, jusqu'à 11min12)

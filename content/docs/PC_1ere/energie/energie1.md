@@ -77,12 +77,12 @@ $$t_s=t_h \times 60 \times 60 = t_h \times 3600$$
 
 *Conséquence : pour changer de système d'unités, et passer d'une unité d'énergie en Joules vers des kiloWatt heure, il faut faire : 
 
-$$E_{kW.h}= \tfrac{E_J}{3 600 000}$$
+$$E_{kW.h}= \tfrac{E_{kJ}}{3 600}$$
 
-et à l'inverse, pour faire : E(kW.h) => E(J) : 
+et à l'inverse, pour faire : E(kW.h) => E(kJ) : 
 
 
-$$E_J = E\_{kW.h} \times 3 600 000$$
+$$E_{kJ} = E\_{kW.h} \times 3 600$$
 
 
 *Exemple : Un four électrique de puissance 1 kW est utilisé pendant 2h. Calculer l'énergie consommée, en kW.h; puis calculer l'énergie en J.*
@@ -96,7 +96,7 @@ $$E_J = E\_{kW.h} \times 3 600 000$$
 * Conversion de l'énergie en J : 
 
 <div class="formule">
-  $$E = E_{kW.h} \times 3 600 000 = 2 \times 3600000 = 7200000 J $$
+  $$E = E_{kW.h} \times 3 600 = 2 \times 3600 = 7200 kJ $$
 </div>
 
 

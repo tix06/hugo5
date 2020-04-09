@@ -332,7 +332,7 @@ On peut réaliser cette dernière manipulation en ayant recours à la liste de t
 <figcaption>liste de tous les enfants du noeud parent</figcaption>
 </figure>
 
-Puis on affiche sont contenu textuel
+Puis on affiche son contenu textuel
 
 <figure>
 <img src="../images/dom4.png" width = 100% alt="arbre du DOM">
