@@ -165,7 +165,11 @@ $$\tfrac{30000}{1024} = 29ko$$
 
 # Caractéristiques des images
 ## Travail pratique
-Ouvrir le notebook en cliquant sur le lien : <a href="https://mybinder.org/v2/gh/tix06/notebook_snt_images.git/master" target="blank">`https://mybinder.org/v2/gh/tix06/notebook_snt_images.git</a>
+Ouvrir le notebook en cliquant sur le lien : <a href="https://mybinder.org/v2/gh/tix06/notebook_snt_images.git/master" target="blank">
+```
+https://mybinder.org/v2/gh/tix06/notebook_snt_images.git/master
+```
+</a>
 
 
 Lorsque l'environnement est créé : cliquer sur le notebook : 
