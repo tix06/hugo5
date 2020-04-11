@@ -165,7 +165,8 @@ $$\tfrac{30000}{1024} = 29ko$$
 
 # Caractéristiques des images
 ## Travail pratique
-Ouvrir le notebook en suivant le lien : [mybinder iphyton notebook](https://mybinder.org/v2/gh/tix06/notebook_snt_images.git/master)
+Ouvrir le notebook en cliquant sur le lien : <a href="https://mybinder.org/v2/gh/tix06/notebook_snt_images.git/master" target="blank">`https://mybinder.org/v2/gh/tix06/notebook_snt_images.git</a>
+
 
 Lorsque l'environnement est créé : cliquer sur le notebook : 
 `image numeriques.ipynb`
