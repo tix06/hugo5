@@ -2,7 +2,7 @@
 Title : Photographie numérique
 ---
 # L'appareil photographique numérique
-Lire le cours et compléter la fiche à télécharger ici <a href="../images/C32_cours photographie numérique.pdf">(faire un clic droit sur le lien et choisir : téléchargement)</a>
+Lire le cours et compléter la fiche à télécharger ici <a href="../images/C32_cours_photographie_numerique.pdf" target="blank">(faire un clic droit sur le lien et choisir : téléchargement)</a>
 
 ## Composants principaux
 On retrouve dans un appareil photographique numérique, ou pour la partie photographie d'un smartphone ou d'une tablette, les constituants suivant : 
