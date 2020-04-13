@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{{- partial "docs/shared" -}}
+<html lang="{{ .Site.Language.Lang }}">
+
+<head>
+  {{ partial "docs/html-head" . }}
+  {{ partial "docs/inject/head" . }}
+</head>
+{{ $content := `
+# Hugo Book Theme
+
+This is a placeholder for home page.  
+You can override this page in:
+
+ - &#96;/content/_index.md&#96;
+ - &#96;/layouts/home.html&#96;
+
+
+` }}
+
+<body>
+  <main class="flex justify-center">
+    <div class="book-home markdown">
+      {{ replace $content "&#96;" "`" | markdownify }}
+    </div>
+
+
+  </main>
+
+  {{ partial "docs/inject/body" . }}
+  {{ template "_internal/google_analytics_async.html" . }}
+
+  <div>
+  	<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">sciences physiques et informatique</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="numerix.netlify.com" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+  </div>
+
+<div class="text-center">{{.Site.Params.CopyrightHTML}}</div>
+</footer>
+
+</body>
+
+</html>

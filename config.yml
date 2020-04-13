@@ -10,11 +10,15 @@ disableKinds: ["taxonomy", "taxonomyTerm"]
 disablePathToLower: true
 enableGitInfo: false
 
+
 # Code highlight
 pygmentsStyle: monokailight
 pygmentsCodeFences: true
 
 params:
+  # pas compris comment ca marche : 
+  #CopyrightHTML: "Copyright &#xA9; 2013 John Doe. All Rights Reserved."
+  
   # (Optional, default true) Show or hide table of contents globally
   # You can also specify this parameter per page in front matter
   BookShowToC: true
