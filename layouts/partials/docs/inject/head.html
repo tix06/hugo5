@@ -4,26 +4,44 @@
 </div>
 
 <div id="myHeader">
-	<div class="titre" style="margin-top:10px;">
+	<div class="titre">
 	<h2><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h2>
     </div>
 </div>
 </div>
 <script>
 
-window.onscroll = function() {myFunction()};
+//window.onscroll = function() {myFunction()};
 
-var header = document.getElementById("myHeader");
-var sticky = header.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset > sticky+50) {
+window.addEventListener("scroll", function(e) {
+	if (window.pageYOffset > 150) {
 
     header.classList.add("sticky");
-    
+    container[0].style.marginTop="65px";
+
 
   } else {
     header.classList.remove("sticky");
+    container[0].style.marginTop="0px";
+  }
+});
+
+
+
+var header = document.getElementById("myHeader");
+var container = document.getElementsByClassName("book-page");
+//var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > 150) {
+
+    header.classList.add("sticky");
+    container[0].style.marginTop="65px";
+
+
+  } else {
+    header.classList.remove("sticky");
+    container[0].style.marginTop="0px";
   }
 }
 

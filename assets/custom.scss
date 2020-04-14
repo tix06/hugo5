@@ -1,6 +1,8 @@
 /* To be overridden by theme user */
 // @import "variables";
-
+@viewport {
+  scroll-behavior: smooth;
+}
 html {
   height: 100%;
 }
@@ -10,11 +12,17 @@ body {
   margin: 0;
   padding-top : 0px;
   padding-bottom: 100px;
+  box-sizing: content-box;
+  
 } 
 
 /* règles relatives au contenu main */
-.flex {
+.flex{
+scroll-behavior: smooth;
+}
+.book-page{
    /*margin-top:100px;*/
+   box-sizing: content-box;
    padding-top:100px;
 } 
 
@@ -64,17 +72,23 @@ h1{border-bottom:solid 1px #ccc;}
 
 	/*container des elements div */
 .main {
-	height: 40%;
+	
+	height:40%;
 	display : inline-block; /*pour permettre aux div de s'afficher côte à côte. Chacun des div contenus devront posseder la regle float*/
 	width:100%;
+	box-sizing: content-box;
 	}
 	/*container div des boutons */
 
 .main-inside{
+	
 	border: 2px outset;	
 	height:45%;
 	width:45%;
+	/*height:100px;*/
+	/*width:300px;*/
 	margin: 0;
+	box-shadow:2px 2px 2px gray, -1px -1px 2px white;
 	}
 
 .left{
@@ -87,17 +101,29 @@ h1{border-bottom:solid 1px #ccc;}
 	/*règles pour les boutons */
 
 .btn-lg { 
-   padding: 10px 16px; 
+   
+   /*padding: 10px 16px; 
    font-size: 12px; 
    line-height: 1.33; 
    border-radius: 6px;
-   width : 80%; 
+   width : 200px; 
    background: rgb(10,200,220);
-   position : relative; /*changement de positionnement necessaire pour utiliser top et left */
-   top : 80%;
-   left : 21% ;
+   position : relative;
+   left:0;*/
+   
+   padding:6px 0 6px 0;
+	font:bold 13px Arial;
+	background:#f5f5f5;
+	color:#555;
+	border-radius:2px;
+	width:200px;
+	border:1px solid #ccc;
+	position : relative;
 }
 
+.btn-lg:hover{
+  color:white;
+}
 /* positionnement scrolling pour le header */
 .my-header-container {
   background-color: #f1f1f1;
@@ -127,6 +153,11 @@ h1{border-bottom:solid 1px #ccc;}
   /*padding-bottom: 10px;*/ /*sert a rien*/
 }
 
+.titre {
+  position : absolute;
+  top: 1 rem; 
+  left: 2rem;
+}
 /* positionnement du footer en bas de page non sticky */
 .site_footer {
   margin-top:10px;
@@ -145,6 +176,7 @@ h1{border-bottom:solid 1px #ccc;}
   }
   .main-inside{
 	width:90%;
+	 
 		}
   .left {
   	clear:both;
@@ -155,7 +187,7 @@ h1{border-bottom:solid 1px #ccc;}
 
   .btn-lg { 
 
-   font-size: 10px; 
+   font-size: 11px; 
    
 }
 }
