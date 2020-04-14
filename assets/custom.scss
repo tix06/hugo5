@@ -8,30 +8,45 @@ body {
   position: relative;
   min-height: 100%;
   margin: 0;
-  padding-bottom: 30px;
-}  
+  padding-top : 0px;
+  padding-bottom: 100px;
+} 
+
+/* règles relatives au contenu main */
+.flex {
+   /*margin-top:100px;*/
+   padding-top:100px;
+} 
+
+/* règles relatives aux 2 menus latéraux */
+#TableOfContents, .book-menu nav{
+   margin-top:220px;
+   }
+
+/* position des tableaux formules formulaires, gestion de l'overflow*/   
 div[id=tableau], form, table, iframe, .formule {
 	overflow: scroll;
 	display: block;
    	justify-content: center;
 	}
-
+/* regle pour les boutons personnalisés*/
 input[type=button]{
 	display: block;
 	margin-top: 50px;
 	}
 input[type="button"]:hover { font-size: 105% }
-	  
+
+/* dessins canvas */	  
 canvas { 
     margin-top: 50px;
     border: 2px solid black;
     align : center; 
     }
-   
+/* champs formulaire */   
 input[type="text"]{
     font-size:12px;
 	}
-	
+/*images et figures*/	
 img, figure {
 	align : center;
 	}
@@ -83,7 +98,36 @@ h1{border-bottom:solid 1px #ccc;}
    left : 21% ;
 }
 
+/* positionnement scrolling pour le header */
+.my-header-container {
+  background-color: #f1f1f1;
+  padding: 0px;
+  text-align: center;
+  text-color: #f1f1f1;
+  margin:0;
+}
+.my-site-header {
+  top:0;left:0;right:0;
+  background: #eeeeee;
 
+}
+
+#myHeader {
+  z-index:1;
+  height : 70px;
+  background: #555;
+  vertical-align:middle;
+}
+#myHeader a {
+  color : white;
+}
+.sticky {
+  position:fixed;
+  top:0;left:0;right:0;
+  /*padding-bottom: 10px;*/ /*sert a rien*/
+}
+
+/* positionnement du footer en bas de page non sticky */
 .site_footer {
   margin:10px;
   position:absolute;
@@ -91,6 +135,8 @@ h1{border-bottom:solid 1px #ccc;}
   background: #eeeeee;
   font-size:small;
 }
+
+/* design responsive */
 @media screen and (max-width: 800px) {
   .main {
     display:block;

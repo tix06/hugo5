@@ -6,13 +6,13 @@ Chaque navigateur possède une feuille de styles (c’est-à-dire un fichier CSS
 
 La plupart des navigateurs suivent les recommandations du W3C (l’organisme en charge de l’évolution et des standards des langages Web). Ce W3C spécifie pour chaque élément HTML quelle devrait être la valeur de son display parmi : 
 
-- `display : block` : affichage sous forme d’un bloc ;
-- `display : inline` : affichage en ligne ;
-- `display : inline-block` : Il s’agit de la valeur par défaut des éléments`input`
+* `display : block` : affichage sous forme d’un bloc ;
 
-C’est pour cela que l’utilisation de cet élément est aussi simple : il reste à côté de votre label, vous pouvez en changer sa largeur, sa hauteur, ses marges, etc..
+* `display : inline` : affichage en ligne ;
 
-- `display : none` : l’élément n’est pas affiché.
+* `display : inline-block` :  permet aux éléments inline de suivre des règles de mise en forme ressemblant au block. Pour permettre par exemple à un élément inline d'avoir des marges ou des paddings. C'est la valeur par defaut de l'élément `input`. C’est pour cela que l’utilisation de cet élément est aussi simple : il reste à côté de son label, et on peut en changer sa largeur, sa hauteur, ses marges, etc..
+
+* `display : none` : l’élément n’est pas affiché.
 
 ## Eléments de niveau block
 Exemples d'éléments block : `p`, `div`, `form`, `header`, `nav`, `ul`, `li`, et `h1`.
@@ -31,6 +31,8 @@ Il est donc inutile pour un élément block de définir une largeur ou de lui do
 <figcaption>display : block</figcaption>
 </figure>
 
+Pour mettre côte à côte des éléments de display `block`, il faudra utiliser la propriété `float` (voir plus loin).
+
 ## Éléments de niveau Inline
 Exemples d'éléments inline : `a`, `span`
 
@@ -43,30 +45,31 @@ Il s'inscrit dans le flux du texte.
 <figcaption>display : inline</figcaption>
 </figure>
 
-Mais cela peut aussi servir à placer plusieurs éléments de type block sur la même ligne horizontale sans les *flotter*.
-Ou pour permettre à un élément inline d'avoir des marges ou des paddings.
 
 ### application à la barre de menu horizontale
 Cette barre de menu est conçue avec des éléments de type `a`, mis dans des éléments de type `li`. La valeur par défaut d'un `<li>` pour la propriété display est `list-item`. Cette valeur est connue pour ses styles par défaut (margin-start plus ou moins élevée, puce de liste de type disc, saut de ligne, etc.).
 
-Cette valeur par défaut du display va nous poser problème si on veut placer tous nos liens sur une seule ligne.
+La valeur par défaut du display de `li` est ressemblant à celui de `block` ce qui va rendre impossible le placement de tous nos liens sur une seule ligne. On va donc le modifier en `inline`
+
+Le display de `a` va être conservé en `inline`.
 
 <ul >
-	<li><a class="exemple" href="#">Item 1</a></li>
-	<li><a class="exemple" href="#">Item 2</a></li>
-	<li><a class="exemple" href="#">Item 3</a></li>
+	<li class="demoLi"><a class="exemple" href="#">Item 1</a></li>
+	<li class="demoLi"><a class="exemple" href="#">Item 2</a></li>
+	<li class="demoLi"><a class="exemple" href="#">Item 3</a></li>
 	
 </ul>
 
 <style>
-li {
+  
+.demoLi{
 	display: inline;
 	list-style: none; 
 	margin: 1px;
 }
 
 .exemple{
-	display: inline;
+	/*display: inline;*/
 	list-style: none; /* pour enlever les puces sur IE7 */
 	width: 100px;
 	padding: 5px 10px;
@@ -91,9 +94,10 @@ li {
 	list-style: none; 
 	margin: 1px;
 }
-```
+``` 
 
 On pourra alors ajouter des règles CSS aux éléments `a` directement enfants de `li` avec le selecteur `li a`. (pour définir une couleur de fond, une bordure..., ou pour des effets de survol, avec la pseudo classe `a:hover`)
+
 
 ## Eléments de niveau inline-block
 Avec Inline-block, l'élément génère une boîte block qui est mise en forme comme s'il s'agissait d'une boîte inline (c'est à dire sur la même ligne que le contenu adjacent).

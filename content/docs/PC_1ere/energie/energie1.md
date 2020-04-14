@@ -272,4 +272,3 @@ un QCM pour s'auto-évaluer sur le chapitre : [QCM1ereS](http://qcm-sciencesphys
 
 
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>

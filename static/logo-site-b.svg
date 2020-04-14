@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" viewBox="97 55 200 196" width="200" height="196">
+  <defs>
+    <font-face font-family="Helvetica Neue" font-size="16" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.9958" descent="-212.99744" font-weight="400">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="Papyrus" font-size="77" panose-1="2 11 6 2 4 2 0 2 3 3" units-per-em="1000" underline-position="-166.5039" underline-thickness="67.38281" slope="0" x-height="446.77734" cap-height="669.9219" ascent="939.9414" descent="-603.02734" font-weight="400">
+      <font-face-src>
+        <font-face-name name="Papyrus"/>
+      </font-face-src>
+    </font-face>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.10.1 
+    <dc:date>2020-04-14 09:04:41 +0000</dc:date>
+  </metadata>
+  <g id="Canevas_1" stroke="none" stroke-dasharray="none" stroke-opacity="1" fill="none" fill-opacity="1">
+    <title>Canevas 1</title>
+    <g id="Canevas_1: Calque 1">
+      <title>Calque 1</title>
+      <g id="Graphic_2">
+        <path d="M 281.49848 144.85394 L 296 153 L 281.49848 161.14606 L 294.06554 171.94604 L 278.30672 177.25 L 288.45818 190.13354 L 271.92716 192.2171 L 279.27494 206.80396 L 262.64492 205.85724 L 266.99696 221.58288 L 250.85006 217.41382 L 251.91332 233.70788 L 237.0257 226.50854 L 234.80216 242.61054 L 221.65298 232.75922 L 216.23966 248.10462 L 205.31402 235.79144 L 197 250 L 188.58896 235.79144 L 177.66332 248.10462 L 172.34702 232.75922 L 159.10082 242.61054 L 156.87728 226.50854 L 141.98966 233.70788 L 143.05292 217.41382 L 126.908 221.58288 L 131.25806 205.85724 L 114.62804 206.80396 L 121.97582 192.2171 L 105.4448 190.13354 L 115.59626 177.25 L 99.83744 171.94604 L 112.4045 161.14606 L 98 153 L 112.4045 144.85394 L 99.83744 134.05396 L 115.59626 128.75 L 105.4448 115.86646 L 121.97582 113.7829 L 114.62804 99.19604 L 131.25806 100.14276 L 126.908 84.41712 L 143.05292 88.58618 L 141.98966 72.29212 L 156.87728 79.49146 L 159.10082 63.38946 L 172.34702 73.24078 L 177.66332 57.89538 L 188.58896 70.02038 L 196.90298 56 L 205.31402 70.02038 L 216.23966 57.89538 L 221.65298 73.24078 L 234.80216 63.38946 L 237.0257 79.49146 L 251.91332 72.29212 L 250.85006 88.58618 L 266.99696 84.41712 L 262.64492 100.14276 L 279.27494 99.19604 L 271.92716 113.7829 L 288.45818 115.86646 L 278.30672 128.75 L 294.06554 134.05396 L 281.49848 144.85394 Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_3">
+        <text fill="#a5a5a5">
+          <path d="M 241.90123 110.6787 C 266.69963 134.05212 266.69963 171.94788 241.90123 195.3213 C 217.10296 218.69484 176.89704 218.69484 152.09877 195.3213 C 127.30037 171.94788 127.30037 134.05212 152.09877 110.6787 C 176.89704 87.30516 217.10296 87.30516 241.90123 110.6787" id="TextPath1"/>
+          <textPath xl:href="#TextPath1" pathLength="390.161327032309">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="#a5a5a5" x="0" y="0">Sciences physiques chimiques et numériques</tspan>
+          </textPath>
+        </text>
+      </g>
+      <g id="Graphic_5">
+        <text transform="translate(154 93)" fill="white">
+          <tspan font-family="Papyrus" font-size="77" font-weight="400" fill="white" x="0" y="72">S</tspan>
+        </text>
+      </g>
+      <g id="Graphic_6">
+        <text transform="translate(188 119)" fill="white">
+          <tspan font-family="Papyrus" font-size="77" font-weight="400" fill="white" x="0" y="72">N</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>
