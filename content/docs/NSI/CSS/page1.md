@@ -384,5 +384,11 @@ Media queries examples
 </html>
 ```
 
+# Liens
+[https://developer.mozilla.org/fr/docs/Web/CSS/display](https://developer.mozilla.org/fr/docs/Web/CSS/display)
+
+[https://la-cascade.io/la-difference-entre-block-et-inline/](https://la-cascade.io/la-difference-entre-block-et-inline/)
+
+[https://www.pierre-giraud.com/html-css-apprendre-coder-cours/display/](https://www.pierre-giraud.com/html-css-apprendre-coder-cours/display/)
 
 
