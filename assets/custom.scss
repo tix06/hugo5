@@ -29,6 +29,7 @@ height:100%;
    /*margin-top:100px;*/
    box-sizing: content-box;
    padding-top:100px;
+   padding-left:40px;
 } 
 
 /* règles relatives aux 2 menus latéraux */
@@ -37,7 +38,8 @@ height:100%;
    }
 
 .book-menu nav{
-	overflow-y:scroll;
+	overflow-y:visible;
+	
    /*margin-top:220px;*/
    }
    
