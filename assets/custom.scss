@@ -36,10 +36,11 @@ height:100%;
    margin-top:220px;
    }
 
-/*.book-menu nav{
-   margin-top:220px;
+.book-menu nav{
+	overflow-y:scroll;
+   /*margin-top:220px;*/
    }
-   */
+   
 /* position des tableaux formules formulaires, gestion de l'overflow*/   
 div[id=tableau], form, table, iframe, .formule {
 	overflow: scroll;
