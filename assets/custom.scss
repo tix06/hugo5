@@ -27,10 +27,14 @@ scroll-behavior: smooth;
 } 
 
 /* règles relatives aux 2 menus latéraux */
-#TableOfContents, .book-menu nav{
+#TableOfContents{
    margin-top:220px;
    }
 
+/*.book-menu nav{
+   margin-top:220px;
+   }
+   */
 /* position des tableaux formules formulaires, gestion de l'overflow*/   
 div[id=tableau], form, table, iframe, .formule {
 	overflow: scroll;
@@ -133,6 +137,7 @@ h1{border-bottom:solid 1px #ccc;}
   height : 70px;
   background: #555;
   vertical-align:middle;
+  will-change: transform;
 }
 #myHeader a {
   color : white;

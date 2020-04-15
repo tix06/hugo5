@@ -14,16 +14,25 @@
 //window.onscroll = function() {myFunction()};
 
 window.addEventListener("scroll", function(e) {
-	if (window.pageYOffset > 150) {
+	let spectral=document.getElementById("spectral");
+	if (window.innerWidth>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		container[0].style.marginTop="65px";
+    	} else {
+    	header.classList.remove("sticky");
+    	container[0].style.marginTop="0px";
+    	spectral.style.display="none";
+    	}
 
-    header.classList.add("sticky");
-    container[0].style.marginTop="65px";
-
-
-  } else {
-    header.classList.remove("sticky");
-    container[0].style.marginTop="0px";
-  }
+    } 
+    if (window.innerWidth<=850) {
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
 });
 
 
