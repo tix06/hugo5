@@ -18,7 +18,8 @@ body {
 
 /* règles relatives au contenu main */
 .flex{
-scroll-behavior: smooth;
+/*scroll-behavior: smooth;*/
+/*will-change: transform;*/
 }
 .book-page{
    /*margin-top:100px;*/

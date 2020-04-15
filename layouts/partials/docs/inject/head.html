@@ -12,8 +12,12 @@
 <script>
 
 //window.onscroll = function() {myFunction()};
+if (window.innerWidth<=850) {
 
-window.addEventListener("scroll", function(e) {
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
 	let spectral=document.getElementById("spectral");
 	if (window.innerWidth>850 ){
 		if (window.pageYOffset > 150) {
@@ -27,6 +31,7 @@ window.addEventListener("scroll", function(e) {
 
     } 
     if (window.innerWidth<=850) {
+
     	if (window.pageYOffset > 150){
     		spectral.style.display="block";
     	} else {
@@ -34,7 +39,7 @@ window.addEventListener("scroll", function(e) {
     	}
     }
 });
-
+}
 
 
 var header = document.getElementById("myHeader");
