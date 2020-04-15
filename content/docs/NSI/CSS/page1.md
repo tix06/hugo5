@@ -190,7 +190,9 @@ Le code complet est donné en bas de document, avec l'exemple du *Holy Grail*
 
 # Position
 
-la propriete position determine de quelle manière les éléments se disposent dans une page les uns par rapport aux autres.
+la propriete position determine de quelle manière les éléments se disposent dans une page les uns par rapport aux autres. Voir le tutoriel à l'adresse : 
+
+[https://developer.mozilla.org/fr/docs/Web/CSS/position](https://developer.mozilla.org/fr/docs/Web/CSS/position)
 
 Par defaut, la valeur est *static* . Top, right, bottom, left, and z-index properties have no effect when used with static.
 
@@ -386,6 +388,8 @@ Media queries examples
 
 # Liens
 [https://developer.mozilla.org/fr/docs/Web/CSS/display](https://developer.mozilla.org/fr/docs/Web/CSS/display)
+
+[https://developer.mozilla.org/fr/docs/Web/CSS/position](https://developer.mozilla.org/fr/docs/Web/CSS/position)
 
 [https://la-cascade.io/la-difference-entre-block-et-inline/](https://la-cascade.io/la-difference-entre-block-et-inline/)
 
