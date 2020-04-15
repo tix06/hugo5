@@ -1,7 +1,7 @@
 /* To be overridden by theme user */
 // @import "variables";
 @viewport {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 html {
   height: 100%;
@@ -22,7 +22,6 @@ main.flex.container {
 height:100%;
 }
 .flex{
-
 /*scroll-behavior: smooth;*/
 /*will-change: transform;*/
 }
