@@ -8,7 +8,7 @@ tags = [
     "themes",
     "development",
 ]
-date = "02-04-2020"
+date = "jan 04,2020"
 categories = [
     "Development",
     "golang",

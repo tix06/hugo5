@@ -37,14 +37,19 @@ height:100%;
    margin-top:220px;
    }
 
+/* suppression barre scroll du menu */
 .book-menu nav{
-	overflow-y:visible;
-	/*overflow: inherit;*/
-	-ms-overflow-style: none; 
+	/*overflow-y:visible;*/
+	/*overflow: hidden;*/
+    overflow: -moz-scrollbars-none;  // Firefox
+	-ms-overflow-style: none;  /* ok pour safari et IE explorer*/
 	overflow: -moz-scrollbars-none; 
    margin-top:20px;
    }
-.book-menu nav::-webkit-scrollbar { width: 0;}   
+.book-menu nav::-webkit-scrollbar { 
+    width: 0 !important;
+    background: transparent;
+    }   /*pour chrome*/
 
 /* position des tableaux formules formulaires, gestion de l'overflow*/   
 div[id=tableau], form, table, iframe, .formule {

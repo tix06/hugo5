@@ -10,7 +10,9 @@
 </div>
 </div>
 <script>
-
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
 //window.onscroll = function() {myFunction()};
 if (window.innerWidth<=850) {
 
@@ -23,10 +25,12 @@ if (window.innerWidth<=850) {
 		if (window.pageYOffset > 150) {
 			header.classList.add("sticky");
     		container[0].style.marginTop="65px";
+            logodiv[0].style.height="120px";
     	} else {
     	header.classList.remove("sticky");
     	container[0].style.marginTop="0px";
     	spectral.style.display="none";
+        logodiv[0].style.height="220px";
     	}
 
     } 
@@ -42,8 +46,8 @@ if (window.innerWidth<=850) {
 }
 
 
-var header = document.getElementById("myHeader");
-var container = document.getElementsByClassName("book-page");
+
+
 //var sticky = header.offsetTop;
 
 function myFunction() {
