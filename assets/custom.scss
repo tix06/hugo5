@@ -39,11 +39,13 @@ height:100%;
 
 .book-menu nav{
 	overflow-y:visible;
+	/*overflow: inherit;*/
 	-ms-overflow-style: none; 
 	overflow: -moz-scrollbars-none; 
-   /*margin-top:220px;*/
+   margin-top:20px;
    }
 .book-menu nav::-webkit-scrollbar { width: 0;}   
+
 /* position des tableaux formules formulaires, gestion de l'overflow*/   
 div[id=tableau], form, table, iframe, .formule {
 	overflow: scroll;
