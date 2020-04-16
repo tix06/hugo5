@@ -9,19 +9,31 @@
     </div>
 </div>
 </div>
+
+
+
 <script>
+window.onload = function () {
 let container = document.getElementsByClassName("book-page");
 let logodiv = document.getElementsByClassName("site-menu-before");
 let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
 //window.onscroll = function() {myFunction()};
-if (window.innerWidth<=850) {
+if (screen<=850) {
 
   document.getElementsByClassName("my-site-header")[0].style.display="none";
 } else {
 
 	window.addEventListener("scroll", function(e) {
 	let spectral=document.getElementById("spectral");
-	if (window.innerWidth>850 ){
+	if (screen>850 ){
 		if (window.pageYOffset > 150) {
 			header.classList.add("sticky");
     		container[0].style.marginTop="65px";
@@ -34,7 +46,7 @@ if (window.innerWidth<=850) {
     	}
 
     } 
-    if (window.innerWidth<=850) {
+    if (screen<=850) {
 
     	if (window.pageYOffset > 150){
     		spectral.style.display="block";
@@ -46,10 +58,10 @@ if (window.innerWidth<=850) {
 }
 
 
-
+}
 
 //var sticky = header.offsetTop;
-
+/*
 function myFunction() {
   if (window.pageYOffset > 150) {
 
@@ -62,5 +74,5 @@ function myFunction() {
     container[0].style.marginTop="0px";
   }
 }
-
+*/
 </script>
