@@ -19,6 +19,9 @@ let logodiv = document.getElementsByClassName("site-menu-before");
 let header = document.getElementById("myHeader");
 let screen = window.innerWidth;
 let site_footer = document.querySelector(".site_footer");
+
+// gestion du probleme du footer qui est mis dans le container main et pas body 
+// par mozilla lors de la construction
 if (site_footer.parentNode != document.body){
     let father = site_footer.parentNode;
     let clone = site_footer.cloneNode;
