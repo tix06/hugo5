@@ -194,14 +194,15 @@ la propriete position determine de quelle manière les éléments se disposent d
 
 [https://developer.mozilla.org/fr/docs/Web/CSS/position](https://developer.mozilla.org/fr/docs/Web/CSS/position)
 
-Par defaut, la valeur est *static* . Top, right, bottom, left, and z-index properties have no effect when used with static.
+Par defaut, la valeur est *static* . Les proriétés `top`, `right`, `bottom`, `left`, et `z-index` n'ont aucun effet lorsque le positionnement est `static`.
 
-- RELATIVE —L'élément est positionné dans le flux normal du document puis décalé, par rapport à lui-même, selon les valeurs fournies par top, right, bottom et left. Le décalage n'a pas d'impact sur la position des éléments. Aussi, l'espace fourni à l'élément sur la page est le même que celui fourni avec static.
+*  RELATIVE —L'élément est positionné dans le flux normal du document puis décalé, par rapport à lui-même, selon les valeurs fournies par top, right, bottom et left. Le décalage n'a pas d'impact sur la position des éléments. Aussi, l'espace fourni à l'élément sur la page est le même que celui fourni avec static.
   Par defaut, right, bottom et left ont pour valeur *auto*
 
-- ABSOLUTE-L'élément est retiré du flux normal et aucun espace n'est créé pour l'élément sur la page. Il est ensuite positionné par rapport à son ancêtre le plus proche qui est positionné s'il y en a un ou par rapport au bloc englobant initial sinon. C'est la valeur choisie pour les objets que l'on veut placer à l'aide de leurs coordonnées : voir les exemples dans les pages <a href="../../javascript_avance/page1/index.html">javascript avancé</a> et <a href="../../mini_projet_spaceInvader/page1/index.html">mini projet Space Invader</a>
+*  ABSOLUTE-L'élément est retiré du flux normal et aucun espace n'est créé pour l'élément sur la page. Il est ensuite positionné par rapport à son ancêtre le plus proche qui est positionné s'il y en a un ou par rapport au bloc englobant initial sinon. C'est la valeur choisie pour les objets que l'on veut placer à l'aide de leurs coordonnées : voir les exemples dans les pages <a href="../../javascript_avance/page1/index.html">javascript avancé</a> et <a href="../../mini_projet_spaceInvader/page1/index.html">mini projet Space Invader</a>
 
-- FIXED — Similar to absolute, but positioned relative to the browser window. Scrolling will not move this element.
+*  FIXED — ressemble à `absolute`mais le positionnement se fait relativement à la fenêtre du navigateur. Il reste *fixe* malgré le scrolling de la page.
+
 
 # Eléments en 3 colonnes : le Holy Grail
 Pour des explications détaillés, on pourra se référer à la [page consacrée sur alsacreation](https://www.alsacreations.com/tuto/lire/588-trois-colonnes-float.html)
@@ -238,9 +239,9 @@ Exemple de code html, css respectant la mise en page du saint graal, et de mani�
 <nav>
 	<h2>Menu.</h2>
 	<ul>
-		<li><a hreflang="fr" href="/lab/">lab</a></li>
-		<li><a hreflang="fr" href="/">accueil</a></li>
-		<li><a class="contact" hreflang="fr" href="/contact">contact</a></li>
+		<li class="maliste"><a hreflang="fr" href="/lab/">lab</a></li>
+		<li class="maliste"><a hreflang="fr" href="/">accueil</a></li>
+		<li class="maliste"><a class="contact" hreflang="fr" href="/contact">contact</a></li>
 	</ul>
 </nav>
 </footer>
@@ -278,10 +279,10 @@ Colors
 	background: #def;
 }
 
-li {
+.maliste {
 	display: inline;
 	list-style: none; 
-	margin: 1px;
+	margin: 0.2;
 }
 /*********************
 Media queries examples
