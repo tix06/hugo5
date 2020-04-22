@@ -70,6 +70,7 @@ input[type=button]{
 input[type="button"]:hover { 
     box-shadow: 4px 4px 0px #aaa; 
     /*voir complement de regles plus bas avec la classe btn-lg:hover*/
+    /* dans les boutons de navigation du site */
     }
 
 /* dessins canvas */	  
@@ -93,12 +94,17 @@ figcaption {
 	font-size: small;
 	font-style : italic;
 }
+
+
 /*****trait de surlignement *******/
 h1{border-bottom:solid 1px #ccc;} 
 
 /********* boutons de navigation entre pages du site ***********/
 
-	/*container des elements div */
+/*****************************/
+/*container des elements div */
+/*****************************/
+
 .main {
 	
 	height:40%;
@@ -106,7 +112,11 @@ h1{border-bottom:solid 1px #ccc;}
 	width:100%;
 	box-sizing: content-box;
 	}
-	/*container div des boutons */
+
+
+/****************************/	
+/*container div des boutons */
+/****************************/
 
 .main-inside{
 	
@@ -143,7 +153,10 @@ h1{border-bottom:solid 1px #ccc;}
 .btn-lg:hover{
   color:white;
 }
+
+/*******************************************/
 /* positionnement scrolling pour le header */
+/*******************************************/
 .my-header-container {
   background-color: #f1f1f1;
   padding: 0px;
@@ -181,7 +194,10 @@ h1{border-bottom:solid 1px #ccc;}
   top: 1 rem; 
   left: 2rem;
 }
+
+/******************************************************/
 /* positionnement du footer en bas de page non sticky */
+/******************************************************/
 .site_footer {
   margin-top:100px;
   margin-bottom:0;
@@ -191,7 +207,9 @@ h1{border-bottom:solid 1px #ccc;}
   font-size:small;
 }
 
+/*********************/
 /* design responsive */
+/*********************/
 @media screen and (max-width: 800px) {
   .main {
     display:block;
@@ -215,3 +233,36 @@ h1{border-bottom:solid 1px #ccc;}
 }
 }
 
+/*******************************************************************/
+/* effet de type lire la suite pour les paragraphes textuels longs */
+/* tips emprunté à https://css-tricks.com/the-checkbox-hack/       */
+/*******************************************************************/
+
+.control-me {
+    display:none;
+}
+
+#toggle:checked ~ .control-me
+{
+    display:block;
+    
+}
+
+label {
+    background: #ddd;
+    padding: 0.5rem 1rem;
+    border-radius: 0.1rem;
+    cursor:pointer;
+    /*texte non selectionable*/
+     -moz-user-select: none; /* Firefox */
+     -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
+     -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+ user-select: none; /* Propriété standard */
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -100vw;
+    
+    /* Note, you may want to position the checkbox over top the label and set the opacity to zero instead. It can be better for accessibilty on some touch devices for discoverability. */
+}

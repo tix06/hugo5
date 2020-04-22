@@ -101,9 +101,34 @@ Ce qui devrait *construire* un objet *vaisseau*, et ajouter un nouvel élément 
 
 		
 ## Les propriétés de (re)positionnement
-On souhaite maintenant ajouter des méthodes particulières à l'objet, qui permettront de le déplacer facilement (le *repositionner*).
 
-On peut représenter la classe Sprite avec le schéma suivant : 
+<div>
+    <label for="toggle">Explications</label>
+    
+    <input type="checkbox" id="toggle" class="visually-hidden">
+
+    <div class="control-me">
+
+      <p>On souhaite maintenant ajouter des méthodes particulières à l'objet, qui permettront de le déplacer facilement (le <span class="italic">repositionner</span>).</p>
+
+      <p>On pourrait le réaliser à l'aide d'une affectation simple, comme on l'a déjà vu dans le cours précédent. Par exemple, avec : 
+      <code>Sprite.posX</code></p>
+
+      <p>Ici, on va utiliser la méthode Object.defineProperty(), qui permet de préciser le comportement attendu, potentiellement différent de celui par défaut.</p>
+
+      <p>On veut maintenant que la nouvelle propriété <code>left</code> soit accessible en ecriture ET en lecture de la manière suivante : 
+      <ul>
+      <li>Ecriture : Avec le signe <code>=</code> d'affectation =>  <code>vaisseau.left = 400;</code> </li>
+      <li>Lecture : Sans le signe <code>=</code> pour accéder à la valeur => <code>vaisseau.left</code> </li>
+      </ul>
+      </p>
+
+    </div>
+</div>
+
+
+
+Une fois cette nouvelle méthode attachée au constructeur *Sprite*, on peut le représenter avec le schéma suivant : 
 
 <figure>
 <img src="../images/objet.png" width = 80% alt="classe sprite">
@@ -622,6 +647,12 @@ Sprite.prototype.checkCollision = function (other){
 }
 
 ```
+
+
+# Liens
+
+* [video du tutoriel tutoriel ](https://www.youtube.com/watch?v=IXDO5pKA9pY)]
+* [Object.defineProperty() sur MDN Mozilla](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/defineProperty)
 
 
 
