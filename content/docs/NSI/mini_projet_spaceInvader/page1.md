@@ -109,7 +109,7 @@ Ce qui devrait *construire* un objet *vaisseau*, et ajouter un nouvel élément 
 
     <div class="control-me">
 
-      <p>On souhaite maintenant ajouter des méthodes particulières à l'objet, qui permettront de le déplacer facilement (le <span class="italic">repositionner</span>).</p>
+      <p>On souhaite maintenant ajouter des méthodes particulières à l'objet, qui permettront de le déplacer facilement (le <span class="ital">repositionner</span>).</p>
 
       <p>On pourrait le réaliser à l'aide d'une affectation simple, comme on l'a déjà vu dans le cours précédent. Par exemple, avec : 
       <code>Sprite.posX</code></p>

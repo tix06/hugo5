@@ -16,7 +16,7 @@ body {
   
 } 
 
-.italique {font-style: italic;}
+.ital {font-style: italic;}
 
 /* règles relatives au contenu main */
 main.flex.container {
@@ -64,9 +64,10 @@ div[id=tableau], form, table, iframe, .formule {
 	display: block;
    	justify-content: center;
 	}
+	
 /* regle pour les boutons personnalisés*/
 input[type=button]{
-	display: block;
+	/*display: block;*/
 	margin-top: 50px;
 	}
 input[type="button"]:hover { 
