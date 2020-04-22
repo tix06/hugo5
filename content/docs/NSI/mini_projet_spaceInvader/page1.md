@@ -103,7 +103,7 @@ Ce qui devrait *construire* un objet *vaisseau*, et ajouter un nouvel élément 
 ## Les propriétés de (re)positionnement
 
 <div>
-    <label for="toggle">Explications</label>
+    <label for="toggle" class="btn-lg">Cliquer pour plus d'explications</label>
     
     <input type="checkbox" id="toggle" class="visually-hidden">
 
@@ -154,8 +154,9 @@ Object.defineProperty(this,"left", {
 `Object.defineProperty` permet de definir une propriété pour l'objet que l'on a créé : on passe l'objet avec l'argument `this`
 
 > une propriété est un ensemble de 2 *methodes* : 
-* une methode `get` d'acces en lecture.
-* une methode `set` d'acces en ecriture
+
+> * une methode `get` d'acces en lecture.
+> * une methode `set` d'acces en ecriture
 
 Remarquer que l'on utilise `_left`pour le nommage d'une prorieté qui reste privée (locale) dans ce constructeur.
 

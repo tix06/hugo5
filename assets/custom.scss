@@ -16,6 +16,8 @@ body {
   
 } 
 
+.italique {font-style: italic;}
+
 /* règles relatives au contenu main */
 main.flex.container {
 
@@ -137,7 +139,9 @@ h1{border-bottom:solid 1px #ccc;}
 .right{
 	float:left;
 	}	
-	/*règles pour les boutons */
+/**************************/	
+/*règles pour les boutons */
+/**************************/
 
 .btn-lg {   
    padding:6px 0 6px 0;
@@ -249,9 +253,7 @@ h1{border-bottom:solid 1px #ccc;}
 }
 
 label {
-    background: #ddd;
-    padding: 0.5rem 1rem;
-    border-radius: 0.1rem;
+    
     cursor:pointer;
     /*texte non selectionable*/
      -moz-user-select: none; /* Firefox */
