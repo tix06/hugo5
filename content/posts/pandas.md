@@ -15,7 +15,10 @@ weight: 10
 ## notebook
 
 Le notebook présenté ici est à télécharger à l'adresse suivante : 
-<a href="https://mybinder.org/v2/gh/tix06/notebook_datas.git/master" target="_blank">https://mybinder.org/v2/gh/tix06/notebooks_datas.git/master</a>
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tix06/notebook_datas.git/master)
+
+[https://mybinder.org/v2/gh/tix06/notebook_datas.git/master](https://mybinder.org/v2/gh/tix06/notebook_datas.git/master)
 
 Puis choisir : `gestionBase_de_donnees_python.ipynb`
 
