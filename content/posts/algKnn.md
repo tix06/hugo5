@@ -15,7 +15,7 @@ weight: 15
 ## notebook
 
 Le notebook présenté ici est à télécharger à l'adresse suivante : 
-<a href="https://mybinder.org/v2/gh/tix06/notebooks_datas.git/master" target="_blank">https://mybinder.org/v2/gh/tix06/notebooks_datas.git/master</a>
+<a href="https://mybinder.org/v2/gh/tix06/notebook_datas.git/master" target="_blank">https://mybinder.org/v2/gh/tix06/notebooks_datas.git/master</a>
 
 Choisir : `algoKNN.ipynb`
 
