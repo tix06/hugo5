@@ -24,8 +24,21 @@ let logodiv = document.getElementsByClassName("site-menu-before");
 let header = document.getElementById("myHeader");
 let screen = window.innerWidth;
 let site_footer = document.querySelector(".site_footer");
-let site_TOC = document.querySelector("#TableOfContents>ul");
-let newP = document.createElement('li');
+
+try {
+  // ajout d'un en-tête dans le book_TOC
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
 // gestion du probleme du footer qui est mis dans le container main et pas body 
 // par mozilla lors de la construction
 if (site_footer.parentNode != document.body){
@@ -35,9 +48,7 @@ if (site_footer.parentNode != document.body){
     document.body.appendChild(clone);
 }
 
-// ajout d'un en-tête dans le book_TOC
-newP.textContent='Contenu de la page';
-site_TOC.appendChild(newP,null);
+
 
 // gestion du bandeau superieur et décalage des autres div avec le scroll : 
 //window.onscroll = function() {myFunction()};
@@ -51,11 +62,11 @@ if (screen<=850) {
 	if (screen>850 ){
 		if (window.pageYOffset > 150) {
 			header.classList.add("sticky");
-    		container[0].style.marginTop="65px";
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
             logodiv[0].style.height="120px";
     	} else {
     	header.classList.remove("sticky");
-    	container[0].style.marginTop="0px";
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
     	spectral.style.display="none";
         logodiv[0].style.height="220px";
     	}

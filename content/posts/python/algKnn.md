@@ -151,6 +151,7 @@ plt.savefig('datas/centre.png')
 plt.show()
 ```
 
+![joueurs au poste 'C' dans la population NBA](../images/centre.png')
 
 ```python
 
@@ -168,17 +169,16 @@ plt.title('caractéristiques des joueurs de NBA 2020')
 plt.xlabel("taille")
 plt.ylabel("poids")
 plt.grid(which='major', linestyle='-', linewidth='0.5', color='red')
-#points(['F','C'])
+points(['G','C'])
 
 points('F',100,'D',1)
-points('G',20,'o',0.5)
-points('C',20,'o',0.5)
 axes = plt.gca()
 plt.legend()
 plt.savefig('datas/ailier.png')
 plt.show()
 ```
 
+![joueurs au poste 'F' dans la population NBA](../images/ailier.png')
 
 ```python
 # Correction
@@ -186,16 +186,16 @@ plt.title('caractéristiques des joueurs de NBA 2020')
 plt.xlabel("taille")
 plt.ylabel("poids")
 plt.grid(which='major', linestyle='-', linewidth='0.5', color='red')
-#points(['F','C'])
+points(['F','C'])
 
-points('F',20,'o',1)
 points('G',100,'D',0.5)
-points('C',20,'o',0.5)
 axes = plt.gca()
 plt.legend()
 plt.savefig('datas/arriere.png')
 plt.show()
 ```
+
+![joueurs au poste 'G' dans la population NBA](../images/arriere.png')
 
 # Prediction du poste du joueur
 ## population dont le poste est inconnu
@@ -271,6 +271,8 @@ def joueur(num, rayon):
 # correction
 joueur(9,20)
 ```
+
+![joueurs n°9 dans la population NBA](../images/joueur9.png')
 
 ## L'algorithme des k-plus proches voisins
 L'algorithme des k-plus proches voisins peut s'écrire en langage naturel : 
