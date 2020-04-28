@@ -270,3 +270,31 @@ label {
     
     /* Note, you may want to position the checkbox over top the label and set the opacity to zero instead. It can be better for accessibilty on some touch devices for discoverability. */
 }
+
+
+/*******************************/
+/*regles CSS pour le formulaire*/
+/*******************************/
+
+form ol li {
+  /* suppression des numeros de liste et application d'une couleur de fond blanche transparente*/
+
+  list-style: none;
+  padding: 5px 10px;
+}
+
+form label {
+  /* display float left des elements */
+  /*float: left;*/
+  display: block;
+  font-size: 13px;
+  width: 100%;
+}
+
+form legend {
+  /* mise en forme du titre de chaque section du formulaire*/
+  color: #6f3c13;
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}

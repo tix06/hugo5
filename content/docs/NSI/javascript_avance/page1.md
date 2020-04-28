@@ -59,7 +59,7 @@ On va créer une fonction anonyme de la même façon qu’une fonction classi
 
 Ici, nous faisons pourtant face à un problème : comment appeler une fonction qui n’a pas de nom ?
 On va avoir plusieurs façons de faire en JavaScript. Pour exécuter une fonction anonyme, on va notamment pouvoir :
-- Enfermer le code de notre fonction dans une variable et utiliser la variable comme une fonction ;
+- Enfermer le code de notre fonction dans une variable et utiliser la variable comme une fonction ;
 - Auto-invoquer notre fonction anonyme ;
 - Utiliser un évènement pour déclencher l’exécution de notre fonction.
 
@@ -296,7 +296,7 @@ Ouvrir alors la page pour l'afficher dans le navigateur.
 Cette page a alors l'arbre de DOM suivant qui lui est associé : 
 
 <figure>
-<img src="../images/dom.png" width = 80% alt="arbre du DOM">
+<img src="../images/dom.png" width = "80%"" alt="arbre du DOM">
 <figcaption>arbre du DOM</figcaption>
 </figure>
 
@@ -310,7 +310,7 @@ alert(first.nodeValue); // pour récuperer le contenu du noeud textuel
 ```
 
 <figure>
-<img src="../images/dom1.png" width = 100% alt="arbre du DOM">
+<img src="../images/dom1.png" width = "100%"" alt="arbre du DOM">
 <figcaption>contenu textuel du premier enfant</figcaption>
 </figure>
 
@@ -321,28 +321,28 @@ alert(last.firstChild.data); // pour recuperer le contenu textuel de la balise
 ```
 
 <figure>
-<img src="../images/dom2.png" width = 100% alt="arbre du DOM">
+<img src="../images/dom2.png" width = "100%"" alt="arbre du DOM">
 <figcaption>contenu textuel du dernier enfant</figcaption>
 </figure>
 
 On peut réaliser cette dernière manipulation en ayant recours à la liste de tous les enfants de `paragraph`: en écrivant `paragraph.childnodes` 
 
 <figure>
-<img src="../images/dom3.png" width = 100% alt="arbre du DOM">
+<img src="../images/dom3.png" width = "100%"" alt="arbre du DOM">
 <figcaption>liste de tous les enfants du noeud parent</figcaption>
 </figure>
 
 Puis on affiche son contenu textuel
 
 <figure>
-<img src="../images/dom4.png" width = 100% alt="arbre du DOM">
+<img src="../images/dom4.png" width = "100%"" alt="arbre du DOM">
 <figcaption>contenu textuel de last</figcaption>
 </figure>
 
 Pour finir, on peut modifier à volonté les éléments textuels en modifiant la valeur renvoyée par `.data` ou `.nodeValue` : 
 
 <figure>
-<img src="../images/dom5.png" width = 100% alt="arbre du DOM">
+<img src="../images/dom5.png" width = "100%"" alt="arbre du DOM">
 <figcaption>modification du contenu textuel de last</figcaption>
 </figure>
 

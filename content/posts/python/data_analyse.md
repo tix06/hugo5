@@ -130,6 +130,7 @@ Les utilisateurs similaires (en vert) n'ont pas aimé le produit que notre utili
 Il existe alors plusieurs méthodes d'association : 
 
 * l'association basée sur les clients (voir exemple ci-dessus)
+
 > On pourrait par exemple, calculer un coefficient de similitude entre Gregory et les autres usagers pour tous les articles renseignés, puis établir une liste triée.
 
 * l'association basée sur les objets (l'exemple dit du *panier de la ménagère*)
@@ -152,7 +153,7 @@ Ces observations peuvent suggérer une règle de la forme : « Si un client ac
 On cherche alors à générer des règles du type : *si A alors D* avec, pour chacune, un pourcentage de confiance. Par exemple, cette règle apparaissant ici apparaissant dans 40% des achats, on considère que le pourcentage de confiance est égal à 40%.
 
 ## Le clustering
-**mots clés :** *Données continues*, *apprenstissage non supervisé*, *algorithme des k-plus proches voisins*
+**mots clés :** *Données continues*, *apprentissage non supervisé*, *algorithme des k-plus proches voisins*
 
 Le clustering désigne les méthodes de regroupement automatique de données qui se ressemblent le plus en un ensemble de "nuages", appelés clusters. On cherche repérer, et mesurer la similarité entre les différentes données. Par exemple, les points sur le graphe ci-dessous peuvent être considérés comme similaires s'ils sont proches en termes de distance.
 
