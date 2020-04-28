@@ -19,6 +19,6 @@ headless: true
    
 - [**SNT secondes**]({{< relref "/docs/SNT_2nde/SNT_index" >}})
  
-- [**Blog**]({{< relref "/posts" >}})
+- [**Posts**]({{< relref "/posts" >}})
 - [**Contact**]({{< relref "/docs/contact/simple-contact-form.html" >}})  
 

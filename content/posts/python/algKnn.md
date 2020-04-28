@@ -5,7 +5,7 @@ linktitle: Python algo KNN
 menu:
   main:
     parent: 
-next: 
+next: donnees_analyse
 prev: pandas.md
 title: Python algo KNN
 weight: 15
@@ -44,7 +44,9 @@ Cette idée est un peu simpliste : le poste occupé sur le parquet ne dépend pa
 
 Mais nous allons chercher dans ce TP si l'idée est plutôt cohérente.
 
-On va pour cela utiliser l'algorithme des _k-plus-proches-voisins_. C'est l'un des 3 algorithmes les plus utilisés dans le domaine de l'*apprentissage automatique* ou *machine learning*.
+On traite alors un jeu de données bi-dimentionnelles à N classes (où N estle nombre de postes occupés par les joueurs).
+
+On va pour cela utiliser l'algorithme des _k-plus-proches-voisins_. C'est l'un des algorithmes les plus utilisés dans le domaine de l'*apprentissage automatique* ou *machine learning*.
 
 Comme pour tous les types d'apprentissage automatique, le principe est le suivant : 
 
@@ -272,7 +274,7 @@ def joueur(num, rayon):
 joueur(9,20)
 ```
 
-![joueurs n°9 dans la population NBA](../images/joueur9.png')
+![joueurs n°9 dans la population NBA](../images/joueur9.png)
 
 ## L'algorithme des k-plus proches voisins
 L'algorithme des k-plus proches voisins peut s'écrire en langage naturel : 
