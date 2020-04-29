@@ -21,7 +21,7 @@ Dans le système international, l'énergie s'exprime en [joules](https://www.fut
 
 ## Pas une mais des énergies
 
-Stockée dans les objets, les molécules, les atomes, l’énergie se manifeste de multiples façons. Mais qu’elle soit mécanique, cinétique, énergie thermique des mers, chimique, rayonnante ou encore nucléaire, elle peut toujours se convertir d’une forme à une autre. 
+Stockée dans les objets, les molécules, les atomes, l’énergie se manifeste de multiples façons. Mais qu’elle soit mécanique, cinétique, énergie thermique, chimique, rayonnante ou encore nucléaire, elle peut toujours se convertir d’une forme à une autre. 
 
 ### L'énergie mécanique 
 
@@ -119,8 +119,12 @@ $$E = Q_1 + Q_2$$
 
 ![diagramme de conversion](../images/img-diagrammeE.png)
 
-On utilisera dans la suite du cours, une représentation des chaines énergétiques avec les symboles suivants : 
+<figure>
+<img src="../images/img-diagrammeE.png" width = 80% alt="elements diagramme">
+<figcaption>Exemple de diagramme d'énergie</figcaption>
+</figure>
 
+*On utilisera dans la suite du cours, une représentation des chaines énergétiques avec les symboles suivants :* 
 
 
 <figure>
