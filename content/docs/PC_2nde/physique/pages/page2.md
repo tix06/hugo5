@@ -41,10 +41,13 @@ On représente ces transferts à l'aide d'une flèche `=>`, qui montre le sens d
 
 * ont un mouvement (de l'agitation). Leur énergie de *mouvement* est proportionnelle à leur température. On peut noter leur énergie avec une relation du type : (q1 : énergie microscopique; C : constante; T : température exprimée en Kelvin)
 $$q_1 = C\times T$$
-* sont en interactions entre elles, et soumises à des forces de contact et d'attraction ou répulsion mutuelle. Cette énergie q2 est plus élevée dans les solides que dans les liquides et les gaz : 
-$$q_2{(solide)} > q_2{(liquide)} > q_2{(gaz)}$$
 
-Cette énergie est plus forte pour les milieux plus condensés : le gaz est le moins condensé et a une énergie q2 plus faible.
+> Cette énergie est plus élevée si le corps est à une température plus élevée : il faut apporter de l'énergie pour augmenter sa température.
+
+* sont en interactions entre elles, et soumises à des forces de contact et d'attraction ou répulsion mutuelle. Cette énergie q2 est plus basse dans les solides, où les forces d'attraction sont plus intenses que dans les liquides et les gaz : 
+$$q_2{(solide)} < q_2{(liquide)} < q_2{(gaz)}$$
+
+> Cette énergie est plus élevée pour les milieux moins condensés : le gaz est le moins condensé et a une énergie q2 plus élevée. Il faut alors fournir de l'énergie à un système Liquide pour l'amener à l'état Gaz.
 
 ## Comment quantifier ces échanges thermiques ?
 A l'échelle macroscopique *(notre échelle, celle où nous pouvons réaliser des mesures de température)*, nous allons quantifier (calculer) les variations de ces énergies à l'aide des 2 lois suivantes : 
