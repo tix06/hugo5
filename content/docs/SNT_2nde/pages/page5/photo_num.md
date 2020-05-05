@@ -204,12 +204,21 @@ Le **contraste** mesure la différence de luminosité entre les tons clairs et l
 
 
 ## Qualité des images imprimées
-La  **définition**  d'une  image  numérique  correspond  à sa **densité** en points (pixels).  On mesure la densité de pixels sur l'écran en pixels par pouce (ppi) et la densité de points sur l'image imprimée en points par pouce (dpi).
+La  **résolution**  R d'une  image  numérique  correspond  à sa **densité** en points (pixels).  On mesure la densité de pixels sur l'écran en pixels par pouce (ppi) et la densité de points sur l'image imprimée en points par pouce (dpi).
 
-La **résolution**  d'une  image  est  définie  par  un  nombre  de  pixels  unité  de  longueur de  l’image  numérique.
-ainsi : *1 pouce valant 2,54 cm* : 72 ppi correspond à 28,3 points par cm
+La **définition**  D d'une  image  est  définie  par  un  nombre  de  pixels  selon la longueur et la largeur de l’image  numérique.
 
-$$resolution(px) = \tfrac{definition(px/pouce)}{2,54(cm/pouce)}\times longueur(cm)$$
+On l'exprime le plus souvent en donnant les dimensions du plan de pixels, par exemple, une image de définition : 
+
+$$1900 \times 1700 pixels$$
+
+Pour les exercices, on prendra la dimension d'un seul des côtés de l'image pour utiliser la relation suivante entre la **Définition** D, la **Résolution** R, et le nombre de cm par pouces (2,54).
+
+$$Definition(px) = \tfrac{resolution(px/pouce)}{2,54(cm/pouce)}\times longueur(cm)$$
+
+En effet : *1 pouce vaut 2,54 cm*. Un petit calcul montre que R = 72 ppi correspond à 28,3 pixels pour 1 cm.
+
+
 
 *Exemple :* Soit une image de définition 800x533 que l'on imprime sur du papier photo de taille 15x10 (en cm), calculez la résolution de cette image en ppp (rappel 1 pouce = 2,54 cm).
 
@@ -225,6 +234,13 @@ En réalité, les images sont compressées. Ce qui permet d'avoir un poids moind
 
 Les formats suivants sont des exemples de formats images compressés : png, jpg.
 
+# Calcul du poids d'une image non compressée
+A partir de ce qui a été vu plus haut, le poids d'une image nn compressée de définition D et de profondeur de couleur C a un poids P : 
+$$P = D \times C$$
+
+*Exemple :* D = 1900 pixels * 1700 pixels et C = 3 octets 
+
+$$P = 1900 \times 1700 \times 3 = 9,7.10^6 octets = 9,7 Mo$$ 
 
 <script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"></script>
 

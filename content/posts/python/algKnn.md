@@ -202,9 +202,10 @@ plt.show()
 # Prediction du poste du joueur
 ## population dont le poste est inconnu
 Certains joueurs ont des caractéristiques qui les rendent plus polyvalents. 
+
 > **Question :** En observant le tableau_reduit en entier : Quels sont ces postes polyvalents ? 
 
-Ces joueurs n\'ont été mis sur aucun des  graphiques d'apprentissage vus plus haut. Et si vous utilisiez un algorithme prédictif pour deviner le meilleur poste auquel ils devraient être ? 
+Ces joueurs n'ont été mis sur aucun des  graphiques d'apprentissage vus plus haut. Et si vous utilisiez un algorithme prédictif pour deviner le meilleur poste auquel ils devraient être ? 
 Nous allons étudier en détail cet algorithme, des k plus proches voisins...
 
 Prenons par exemple les joueurs polyvalents à l'étiquette "G-F". Ces joueurs, sont-ils plutôt pressentis pour être G (arrière), ou F (ailier) ?
