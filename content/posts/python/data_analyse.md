@@ -10,6 +10,11 @@ prev: /AlgoKnn
 title: Datas analyse
 weight: 16
 ---
+# Notebooks
+
+* algorithme de recommandation : [algorithme de recommandation.md](../algorithme_recommandation/index.html)
+* arbres de décision : [graphes_mini_prog.md](../graphes_mini_prog/index.html)
+
 # Analyse de données et machine learning
 
 ## Les domaines professionnels 
@@ -24,36 +29,57 @@ En se basant sur des informations passées, les techniciens spécialisés dans l
 
 Le principe : on récupère les données, on les nettoie, on les explore, puis on utilise nos algorithmes pour créer de l’intelligence (artificielle) qui aide à la décision.
 
+*Exemples :*
+
+* biologie : 
+  * Expressions de gènes (transcriptome, relation gène / protéines) 
+  * Paléontologie et évolutions
+* médecine : Pharmacovigilance
+* chimie :
+  * Prédiction de la toxicité des molécules, mécanismes réactionnels
+* physique :
+  * Astronomie : répertoire des corps célestes
+  * Expériences en physique des particules (LHC au CERN)
+* sciences environnementales :
+  * Comprendre les milieux naturels, l’impact de l’homme, etc
+* sciences sociales :
+  * Analyse d’opinions sur le Web
+  * Analyse des recherches sur le Web : Google Trends
+
 ## Vocabulaire 
 
 * dataset : jeu de données. Ce jeu de données peut en contenir un petit nombre ou un très grand nombre de données (big data). Ces données peuvent être discretes (qualitatives) ou continues (valeurs numériques).
 
-* big data : données massives. Des données qui sont collectées en continu et en grande quantité. Cela constitue un flux si important qu'il est obligatoire d'utiliser des techniques de traitement spécifiques au domaine du machine learning pour pouvoir les exploiter.
+* big data : données massives. Des données qui sont collectées en continu et en grande quantité. Cela constitue un flux si important qu'il est obligatoire d'utiliser des techniques de traitement spécifiques au domaine du machine learning pour pouvoir les exploiter. On décrit le big data à l'aide des 3V : Volume, Velocity (peu de temps pour traiter les données), Variety (des données diverses)
 
 * Une classe : c'est un champ particulier à valeurs discrètes.
+
+* Différents type de programmes en *analyse de données* : programme de classification, de prédiction, d'estimation, d'association.
 
 * La classification : consiste à examiner les caractéristiques d'un objet et lui attribuer une classe : 
 	* attribuer ou non un prêt à un client
 	* établir un diagnostice
 	* placer une roche, une espèce végétale, animale... dans une catégorie
 
-* Prédiction : consiste à prédire la valeur future d'un attribut en fonction d'autres attributs.
-
-* Association : consiste à déterminer les attributs qui sont corrélés : 
-	*	analyse du panier de la ménagère : ex : poisson et vin blanc
-	* prix du loyer en fonction de la surface de l'habitation
-
-* Segmentation : consiste à former des groupes homogène à l'intérieur d'une  population (des *clusters*)
+* Prédiction : consiste à prédire la valeur future d'un attribut en fonction d'autres attributs. Deux exemples : 
+  * Regression : estimer le chiffre d’affaire d’un nouveau magasin, estimer le prix du loyer en fonction de la surface de l'habitation
+  * classification supervisée : estimer la probabilité qu’un client pratique un sport donné à partir de l’historique de ses achats
 
 * Modèles prédictifs : utilisent les données avec des résultats connus pour développer des modèles permettant de prédire les valeurs d'autres données.
 
-* Modèle descriptif : popose des descriptions des données pour aider à la prise de décision. C'est un modèle surtout utilisé en segmentation et association.
+* Modèle descriptif : propose des descriptions des données pour aider à la prise de décision. C'est un modèle surtout utilisé en segmentation et association.
 
 * Apprentissage supervisé : les données à analyser comprennent à la fois des **données d'entrée et de sortie**. On connait la *classe* des objets, et on cherche à prévoir l'appartenance à une de ces classes pour tout nouvel objet.
 
-* Apprentissage non supervisé : Seules les entrées sont fournies.
+Lorsque l'on cherche à *comprendre* ou *définir* une relation entre les données, on peut pratiquer : 
+* une Association : qui consiste à déterminer les attributs qui sont corrélés : 
+  * analyse du panier de la ménagère : ex : poisson et vin blanc
+  
+* Apprentissage non supervisé : Seules les entrées sont fournies. Par exemple : identifier des familles de fournisseurs et de clients pour faire un mailing ciblé
+* Segmentation : consiste à former des groupes homogène à l'intérieur d'une  population (des *clusters*). Utilisé en classification non supervisée.
 
 ## Des exemples de méthodes de fouille de données
+Les programmes d'analyse de données (classification, de prédiction, d'estimation, d'association) utilisent des algorithmes que l'on peut essayer de classer, comme le montre le tableau suivant : 
 
 <table>
 	<tr>
@@ -204,6 +230,7 @@ si x2<0.42 alors classe = 'Vert'
 * Méthodes de fouilles : [http://www.lsis.org/espinasseb/Supports/DWDM/10-MethodesFouille-4p.pdf](http://www.lsis.org/espinasseb/Supports/DWDM/10-MethodesFouille-4p.pdf)
 
 Approfondissement :
+* theorie sur le machine learning : [https://makina-corpus.com/blog/metier/2017/initiation-au-machine-learning-avec-python-theorie](https://makina-corpus.com/blog/metier/2017/initiation-au-machine-learning-avec-python-theorie)
 
 * machine learning : utiliser SciKit [https://makina-corpus.com/blog/metier/2017/initiation-au-machine-learning-avec-python-pratique](https://makina-corpus.com/blog/metier/2017/initiation-au-machine-learning-avec-python-pratique)
 * apprentissage statistique avec scikit-learn : [https://www.math.univ-toulouse.fr/~besse/Wikistat/pdf/st-tutor3-python-scikit.pdf](https://www.math.univ-toulouse.fr/~besse/Wikistat/pdf/st-tutor3-python-scikit.pdf)

@@ -149,7 +149,7 @@ for ind_ligne, contenu_ligne in tableau2D_df.iterrows():
 ## accéder à un seul des objets de la collection
 Cette fois, plutôt que d'utiliser une boucle bornée et d'afficher TOUS les objets de la collection, on cherche à en afficher un seul.
 
-Cette fois le tri ne se fait pas selon une colonne, comme par exemple pour `tableau2D_df['ventre']` mais par ligne, avec : 
+Cette fois le tri ne se fait pas selon une colonne, comme par exemple pour `tableau2D_df['horaire']` mais par ligne, avec : 
 
 `tableau_2D_df.loc['salle 3']  par exemple
 

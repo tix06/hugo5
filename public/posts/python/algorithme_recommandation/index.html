@@ -1,0 +1,279 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>algo de recommandation
+| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><link rel=stylesheet href=/book.min.acd7a8c9ad7ca49e15ec66d25d4790aa27724cfdbdf01dfec18d2de73c6f5036.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
+catch(err)
+{console.log(err.message);}
+if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
+if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
+if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}</script></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2fposts\2fpython\2f algorithme_recommandation\2f ]{color:#004ed0}</style><ul><li><p><a href=/><strong>Accueil</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p><ul><li><a href=/docs/PC_2nde/physique/pages/page1/>physique du mouvement</a></li><li><a href=/docs/PC_2nde/physique/pages/page2/>échanges thermiques</a></li></ul></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p><ul><li><a href=/docs/PC_1ere/energie/energie1/>Energie</a></li><li><a href=/docs/PC_1ere/atome/atome/>modèle de Bohr de l&rsquo;atome</a></li><li><a href=/docs/PC_1ere/notebooks/PC_notebooks/>ipython notebooks</a></li></ul></li><li><p><a href=/docs/NSI/NSI_index/><strong>ISN</strong></a></p><ul><li><a href=/posts/>Python</a></li><li><a href=/docs/NSI/CSS/page1/>CSS positionnement</a></li><li><a href=/docs/NSI/javascript/page1/>javascript : bases</a></li><li><a href=/docs/NSI/javascript_avance/page1/>javascript avancé</a></li><li><a href=/docs/NSI/mini_projet_spaceInvader/page1/>mini projet Space Invader</a><br></li></ul></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
+addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-posts><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
+<strong>algo de recommandation</strong></header><header class=markdown><h1>algo de recommandation</h1><h5><strong>Sept 1, 1019</strong></h5></header><article class=markdown><h1 id=algorithmes-de-recommandation>Algorithmes de recommandation</h1><p>Lien vers le notebook en ligne : <a href=https://mybinder.org/v2/gh/tix06/notebooks_classif/master>https://mybinder.org/v2/gh/tix06/notebooks_classif/master</a></p><blockquote><p>Choisir alors le fichier : <code>algorithme de recommandation.ipynb</code></p></blockquote><p>Il s&rsquo;agit d&rsquo;un cas très classique d&rsquo;algorithme utilisé dans le web marketing. Un client choisit et met dans ses favoris un article, ou dans son panier. Le site lui propose des articles compatibles, ou similaires. La recommandation peut être basée sur la description de ces articles. L&rsquo;algorithme va alors chercher les articles qui ont le plus de points communs dans leur description; c&rsquo;est à dire le plus de mots communs dans leur description.</p><p><img src=../images/articlesCompatibles.png alt=articlesCompatibles.png></p><p>La première étape pour calculer les similarités consiste à découper les descriptions en listes de mots (c&rsquo;est la tokenisation) puis à prendre les racines des mots, les stems.</p><h2 id=extraire-les-mots-d-un-texte>Extraire les mots d&rsquo;un texte</h2><p>Prenons un exemple avec le texte suivant :</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>texte</span> <span style=color:#f92672>=</span> <span style=color:#d88200>&#34;&#34;&#34;
+</span><span style=color:#d88200>Mardi 20 février, à la médiathèque des Mureaux (Yvelines), le chef de l’Etat a accompagné
+</span><span style=color:#d88200>la locataire de la rue de Valois pour la remise officielle du rapport
+</span><span style=color:#d88200>sur les bibliothèques, rédigé par leur ami commun, l’académicien
+</span><span style=color:#d88200>Erik Orsenna, avec le concours de Noël Corbin, inspecteur général
+</span><span style=color:#d88200>des affaires culturelles. L’occasion de présenter les premières
+</span><span style=color:#d88200>mesures en faveur d’un « plan bibliothèques ».
+</span><span style=color:#d88200>&#34;&#34;&#34;</span></code></pre></div><p>On utilise alors une expression regulière, <code>; |, |\' |\n |\s+</code>,pour découper le texte, et conserver les stems dans une liste. C&rsquo;est ce que réalisera ici la fonction <code>decoupe(texte)</code> :</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> <span style=color:#111>re</span>
+<span style=color:#00a8c8>def</span> <span style=color:#75af00>decoupe</span><span style=color:#111>(</span><span style=color:#111>texte</span><span style=color:#111>):</span>
+    <span style=color:#d88200>&#34;&#34;&#34;
+</span><span style=color:#d88200>    utilise une expression regulière pour découper le texte (en paramètre) : 
+</span><span style=color:#d88200>    - le découpage se fait en fonction de ; ou , ou &#39; ou </span><span style=color:#8045ff>\n</span><span style=color:#d88200> ou un (ou +) espaces
+</span><span style=color:#d88200>    - on conserve enfin les stems qui font 4 caractères ou plus
+</span><span style=color:#d88200>    la fonction retourne une liste de stems
+</span><span style=color:#d88200>    un stem peut être présent plusieurs fois dans la liste retournée
+</span><span style=color:#d88200>    &#34;&#34;&#34;</span>
+    <span style=color:#111>texte_decoupe</span> <span style=color:#f92672>=</span> <span style=color:#111>list</span><span style=color:#111>(</span><span style=color:#111>re</span><span style=color:#f92672>.</span><span style=color:#111>split</span><span style=color:#111>(</span><span style=color:#d88200>&#39;; |, |</span><span style=color:#8045ff>\&#39;</span><span style=color:#d88200> |</span><span style=color:#8045ff>\n</span><span style=color:#d88200> |\s+&#39;</span><span style=color:#111>,</span><span style=color:#111>texte</span><span style=color:#111>))</span>
+    <span style=color:#111>texte_mini</span><span style=color:#f92672>=</span><span style=color:#111>[]</span>
+    <span style=color:#00a8c8>for</span> <span style=color:#111>t</span> <span style=color:#f92672>in</span> <span style=color:#111>texte_decoupe</span><span style=color:#111>:</span>
+        <span style=color:#111>match</span> <span style=color:#f92672>=</span> <span style=color:#111>re</span><span style=color:#f92672>.</span><span style=color:#111>match</span><span style=color:#111>(</span><span style=color:#d88200>&#39;[a-z]{4,}&#39;</span><span style=color:#111>,</span><span style=color:#111>t</span><span style=color:#111>)</span>
+        <span style=color:#00a8c8>if</span> <span style=color:#111>match</span><span style=color:#f92672>!=</span><span style=color:#111>None</span><span style=color:#111>:</span>
+            <span style=color:#111>texte_mini</span><span style=color:#f92672>.</span><span style=color:#111>append</span><span style=color:#111>(</span><span style=color:#111>match</span><span style=color:#f92672>.</span><span style=color:#111>group</span><span style=color:#111>(</span><span style=color:#ae81ff>0</span><span style=color:#111>))</span>
+    <span style=color:#00a8c8>return</span> <span style=color:#111>texte_mini</span></code></pre></div><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>texte_mini</span> <span style=color:#f92672>=</span> <span style=color:#111>decoupe</span><span style=color:#111>(</span><span style=color:#111>texte</span><span style=color:#111>)</span>
+<span style=color:#111>texte_mini</span></code></pre></div><pre><code>['chef',
+ 'accompagn',
+ 'locataire',
+ 'pour',
+ 'remise',
+ 'officielle',
+ 'rapport',
+ 'biblioth',
+ 'leur',
+ 'commun',
+ 'avec',
+ 'concours',
+ 'inspecteur',
+ 'affaires',
+ 'culturelles',
+ 'premi',
+ 'mesures',
+ 'faveur',
+ 'plan',
+ 'biblioth']
+</code></pre><h2 id=recommandation-d-un-article-à-partir-de-sa-description>Recommandation d&rsquo;un article à partir de sa description</h2><h3 id=traitement-du-fichier-de-données-en-csv>traitement du fichier de données en csv</h3><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> <span style=color:#111>pandas</span> <span style=color:#f92672>as</span> <span style=color:#111>pd</span>
+<span style=color:#111>df</span> <span style=color:#f92672>=</span> <span style=color:#111>pd</span><span style=color:#f92672>.</span><span style=color:#111>read_csv</span><span style=color:#111>(</span><span style=color:#d88200>&#34;datas/descriptif.csv&#34;</span><span style=color:#111>,</span> <span style=color:#111>sep</span><span style=color:#f92672>=</span><span style=color:#d88200>&#34;;&#34;</span><span style=color:#111>)</span></code></pre></div><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>df</span></code></pre></div><div><style scoped>.dataframe tbody tr th:only-of-type{vertical-align:middle}.dataframe tbody tr th{vertical-align:top}.dataframe thead th{text-align:right}</style><table border=1 class=dataframe><thead><tr style=text-align:right><th></th><th>bande dessinee</th><th>roman</th><th>ordinateur</th><th>console de jeux</th></tr></thead><tbody><tr><th>0</th><td>une bande dessinee est un ouvrage illustre rac...</td><td>un roman est un ouvrage avec du texte raconte...</td><td>un ordinateur est un dispositif pour produire ...</td><td>une console de jeu est un dispositif pour joue...</td></tr></tbody></table></div><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># on créé une liste contenant les articles : </span>
+<span style=color:#111>col</span> <span style=color:#f92672>=</span> <span style=color:#111>list</span><span style=color:#111>(</span><span style=color:#111>df</span><span style=color:#f92672>.</span><span style=color:#111>keys</span><span style=color:#111>())</span>
+<span style=color:#75715e># on créé une liste (descriptif) contenant, pour chaque article, une liste avec TOUS les mots retenus dans la description</span>
+<span style=color:#111>descriptif</span> <span style=color:#f92672>=</span> <span style=color:#111>[]</span>
+<span style=color:#00a8c8>for</span> <span style=color:#111>cle</span> <span style=color:#f92672>in</span> <span style=color:#111>col</span><span style=color:#111>:</span>
+    <span style=color:#111>desc</span> <span style=color:#f92672>=</span> <span style=color:#111>df</span><span style=color:#111>[</span><span style=color:#111>cle</span><span style=color:#111>][</span><span style=color:#ae81ff>0</span><span style=color:#111>]</span>
+    <span style=color:#111>descriptif</span><span style=color:#f92672>.</span><span style=color:#111>append</span><span style=color:#111>(</span><span style=color:#111>decoupe</span><span style=color:#111>(</span><span style=color:#111>desc</span><span style=color:#111>))</span></code></pre></div><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>descriptif</span></code></pre></div><pre><code>[['bande',
+  'dessinee',
+  'ouvrage',
+  'illustre',
+  'racontant',
+  'histoire',
+  'images',
+  'aventure',
+  'fantaisie',
+  'lire'],
+ ['roman',
+  'ouvrage',
+  'avec',
+  'texte',
+  'raconte',
+  'histoire',
+  'biogaphie',
+  'aventure',
+  'documentaire',
+  'lire'],
+ ['ordinateur',
+  'dispositif',
+  'pour',
+  'produire',
+  'consulter',
+  'objets',
+  'numeriques',
+  'communiquer',
+  'calculer',
+  'jouer',
+  'lire',
+  'videos'],
+ ['console',
+  'dispositif',
+  'pour',
+  'jouer',
+  'jeux',
+  'videos',
+  'lire',
+  'videos',
+  'aventure',
+  'fantaisie']]
+</code></pre><h2 id=vecteurs>Vecteurs</h2><p>L&rsquo;étape suivante consiste à stocker chacune des descriptions traitées sous forme de vecteurs en base de données.</p><p>Chaque ligne est un vecteur qui correspond à une description, chaque colonne correspond à un stem.</p><p>La fonction <code>mots</code> retourne une liste contenant tous les mots de <code>descriptif</code>, de manière unique. (les mots qui apparaissent plusieurs fois dans <code>descriptif</code> ne sont renvoyés qu&rsquo;une seule fois dans la liste <code>mot</code></p><p>La fonction <code>tab</code> créé un tableau où les lignes correspondent au nombre d&rsquo;occurences de ce mot dans la description de l&rsquo;objet. La ligne de rang 1 correspond aux occurences pour le premier objet de la description, la ligne de rang 2 au 2e objet de la description,&hellip;</p><p>Pour avoir des valeurs normalisées, on transforme ces occurences en une frequence :
+$$f(mot) = \tfrac{nb\quad occurences}{nb\quad mots}$$</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>def</span> <span style=color:#75af00>mots</span><span style=color:#111>(</span><span style=color:#111>descriptif</span><span style=color:#111>):</span>
+    <span style=color:#d88200>&#34;&#34;&#34;
+</span><span style=color:#d88200>    retourne la liste de tous les mots de descriptif, de manière unique, dans une seule liste
+</span><span style=color:#d88200>    &#34;&#34;&#34;</span>
+    <span style=color:#111>liste_de_mots</span> <span style=color:#f92672>=</span> <span style=color:#111>[]</span>
+    <span style=color:#00a8c8>for</span> <span style=color:#111>desc</span> <span style=color:#f92672>in</span> <span style=color:#111>descriptif</span><span style=color:#111>:</span>
+        <span style=color:#00a8c8>for</span> <span style=color:#111>i</span> <span style=color:#f92672>in</span> <span style=color:#111>desc</span> <span style=color:#111>:</span> 
+            <span style=color:#00a8c8>if</span> <span style=color:#f92672>not</span><span style=color:#111>(</span><span style=color:#111>i</span> <span style=color:#f92672>in</span> <span style=color:#111>liste_de_mots</span><span style=color:#111>):</span>
+                <span style=color:#111>liste_de_mots</span><span style=color:#f92672>.</span><span style=color:#111>append</span><span style=color:#111>(</span><span style=color:#111>i</span><span style=color:#111>)</span>
+    <span style=color:#00a8c8>return</span> <span style=color:#111>liste_de_mots</span>
+
+<span style=color:#111>mots</span><span style=color:#111>(</span><span style=color:#111>descriptif</span><span style=color:#111>)</span></code></pre></div><pre><code>['bande',
+ 'dessinee',
+ 'ouvrage',
+ 'illustre',
+ 'racontant',
+ 'histoire',
+ 'images',
+ 'aventure',
+ 'fantaisie',
+ 'lire',
+ 'roman',
+ 'avec',
+ 'texte',
+ 'raconte',
+ 'biogaphie',
+ 'documentaire',
+ 'ordinateur',
+ 'dispositif',
+ 'pour',
+ 'produire',
+ 'consulter',
+ 'objets',
+ 'numeriques',
+ 'communiquer',
+ 'calculer',
+ 'jouer',
+ 'videos',
+ 'console',
+ 'jeux']
+</code></pre><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>def</span> <span style=color:#75af00>tab</span><span style=color:#111>(</span><span style=color:#111>descriptif</span><span style=color:#111>):</span>
+    <span style=color:#d88200>&#34;&#34;&#34;
+</span><span style=color:#d88200>    retourne la liste tableau avec les occurences pour chaque article (chaque rang) 
+</span><span style=color:#d88200>    des mots retenus (mots)
+</span><span style=color:#d88200>    une colonne par mot
+</span><span style=color:#d88200>    &#34;&#34;&#34;</span>
+    <span style=color:#111>tableau</span> <span style=color:#f92672>=</span> <span style=color:#111>[]</span>
+    <span style=color:#111>mots_elements</span> <span style=color:#f92672>=</span> <span style=color:#111>mots</span><span style=color:#111>(</span><span style=color:#111>descriptif</span><span style=color:#111>)</span>
+    <span style=color:#00a8c8>for</span> <span style=color:#111>desc</span> <span style=color:#f92672>in</span> <span style=color:#111>descriptif</span><span style=color:#111>:</span>
+        <span style=color:#111>ligne</span> <span style=color:#f92672>=</span> <span style=color:#111>[]</span>
+        <span style=color:#111>nombre_de_mots</span> <span style=color:#f92672>=</span> <span style=color:#111>len</span><span style=color:#111>(</span><span style=color:#111>desc</span><span style=color:#111>)</span>
+        <span style=color:#111>ligne</span> <span style=color:#f92672>=</span> <span style=color:#111>[</span><span style=color:#111>desc</span><span style=color:#f92672>.</span><span style=color:#111>count</span><span style=color:#111>(</span><span style=color:#111>mot</span><span style=color:#111>)</span><span style=color:#f92672>/</span><span style=color:#111>nombre_de_mots</span> <span style=color:#00a8c8>for</span> <span style=color:#111>mot</span> <span style=color:#f92672>in</span> <span style=color:#111>mots_elements</span><span style=color:#111>]</span>
+        <span style=color:#111>tableau</span><span style=color:#f92672>.</span><span style=color:#111>append</span><span style=color:#111>(</span><span style=color:#111>ligne</span><span style=color:#111>)</span>
+    <span style=color:#00a8c8>return</span> <span style=color:#111>tableau</span>
+<span style=color:#111>tableau</span> <span style=color:#f92672>=</span> <span style=color:#111>tab</span><span style=color:#111>(</span><span style=color:#111>descriptif</span><span style=color:#111>)</span>
+<span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#111>tableau</span><span style=color:#111>)</span></code></pre></div><pre><code>[[0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.1, 0.0, 0.0, 0.1, 0.0, 0.1, 0.0, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.08333333333333333, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.08333333333333333, 0.08333333333333333, 0.08333333333333333, 0.08333333333333333, 0.08333333333333333, 0.08333333333333333, 0.08333333333333333, 0.08333333333333333, 0.08333333333333333, 0.08333333333333333, 0.08333333333333333, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.2, 0.1, 0.1]]
+</code></pre><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># visualisation</span>
+<span style=color:#111>df2</span><span style=color:#f92672>=</span><span style=color:#111>pd</span><span style=color:#f92672>.</span><span style=color:#111>DataFrame</span><span style=color:#111>(</span><span style=color:#111>tableau</span><span style=color:#111>,</span><span style=color:#111>index</span><span style=color:#f92672>=</span><span style=color:#111>col</span><span style=color:#111>,</span><span style=color:#111>columns</span><span style=color:#f92672>=</span><span style=color:#111>mots</span><span style=color:#111>(</span><span style=color:#111>descriptif</span><span style=color:#111>))</span>
+<span style=color:#111>df2</span></code></pre></div><div><style scoped>.dataframe tbody tr th:only-of-type{vertical-align:middle}.dataframe tbody tr th{vertical-align:top}.dataframe thead th{text-align:right}</style><table border=1 class=dataframe><thead><tr style=text-align:right><th></th><th>bande</th><th>dessinee</th><th>ouvrage</th><th>illustre</th><th>racontant</th><th>histoire</th><th>images</th><th>aventure</th><th>fantaisie</th><th>lire</th><th>...</th><th>produire</th><th>consulter</th><th>objets</th><th>numeriques</th><th>communiquer</th><th>calculer</th><th>jouer</th><th>videos</th><th>console</th><th>jeux</th></tr></thead><tbody><tr><th>bande dessinee</th><td>0.1</td><td>0.1</td><td>0.1</td><td>0.1</td><td>0.1</td><td>0.1</td><td>0.1</td><td>0.1</td><td>0.1</td><td>0.100000</td><td>...</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.0</td><td>0.0</td></tr><tr><th>roman</th><td>0.0</td><td>0.0</td><td>0.1</td><td>0.0</td><td>0.0</td><td>0.1</td><td>0.0</td><td>0.1</td><td>0.0</td><td>0.100000</td><td>...</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.0</td><td>0.0</td></tr><tr><th>ordinateur</th><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.083333</td><td>...</td><td>0.083333</td><td>0.083333</td><td>0.083333</td><td>0.083333</td><td>0.083333</td><td>0.083333</td><td>0.083333</td><td>0.083333</td><td>0.0</td><td>0.0</td></tr><tr><th>console de jeux</th><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.1</td><td>0.1</td><td>0.100000</td><td>...</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.100000</td><td>0.200000</td><td>0.1</td><td>0.1</td></tr></tbody></table><p>4 rows × 29 columns</p></div><h1 id=calcul-des-similarités>Calcul des similarités</h1><p>La dernière étape est celle du calcul des similarités. Cela consiste à appliquer la similarité cosinus 2 à 2 pour tous les produits de la base de données :
+$$s_{ij}=\tfrac{u_i\cdot u_j}{||ui||\cdot||uj||}$$</p><p>On cherche alors une règle de similitude, du type : A=&gt;B (si on aime A alors on aurait tendance à aussi apprécier B)</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> <span style=color:#111>numpy</span> <span style=color:#f92672>as</span> <span style=color:#111>np</span>
+<span style=color:#00a8c8>def</span> <span style=color:#75af00>cosij</span><span style=color:#111>(</span><span style=color:#111>ui</span><span style=color:#111>,</span><span style=color:#111>uj</span><span style=color:#111>):</span>
+    <span style=color:#d88200>&#34;&#34;&#34;
+</span><span style=color:#d88200>    retourne le resultat du calcul de s_ij pour 2 valeurs ui(i) et uj(j)
+</span><span style=color:#d88200>    paramètres :
+</span><span style=color:#d88200>    les vecteurs ui et uj de modules mod(ui) et mod(uj)
+</span><span style=color:#d88200>    &#34;&#34;&#34;</span>
+    <span style=color:#111>s</span><span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>
+    <span style=color:#00a8c8>for</span> <span style=color:#111>i</span> <span style=color:#f92672>in</span> <span style=color:#111>range</span><span style=color:#111>(</span><span style=color:#111>len</span><span style=color:#111>(</span><span style=color:#111>ui</span><span style=color:#111>)):</span>
+        <span style=color:#111>s</span> <span style=color:#f92672>+=</span> <span style=color:#111>ui</span><span style=color:#111>[</span><span style=color:#111>i</span><span style=color:#111>]</span><span style=color:#f92672>*</span><span style=color:#111>uj</span><span style=color:#111>[</span><span style=color:#111>i</span><span style=color:#111>]</span><span style=color:#f92672>/</span><span style=color:#111>(</span><span style=color:#111>mod</span><span style=color:#111>(</span><span style=color:#111>ui</span><span style=color:#111>)</span><span style=color:#f92672>*</span><span style=color:#111>mod</span><span style=color:#111>(</span><span style=color:#111>uj</span><span style=color:#111>))</span>
+    <span style=color:#00a8c8>return</span> <span style=color:#111>s</span>
+
+<span style=color:#00a8c8>def</span> <span style=color:#75af00>mod</span><span style=color:#111>(</span><span style=color:#111>u</span><span style=color:#111>):</span>
+    <span style=color:#d88200>&#34;&#34;&#34;
+</span><span style=color:#d88200>    calcule le module du vecteur mis en paramètre
+</span><span style=color:#d88200>    &#34;&#34;&#34;</span>
+    <span style=color:#111>s</span><span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>
+    <span style=color:#00a8c8>for</span> <span style=color:#111>i</span> <span style=color:#f92672>in</span> <span style=color:#111>range</span><span style=color:#111>(</span><span style=color:#111>len</span><span style=color:#111>(</span><span style=color:#111>u</span><span style=color:#111>)):</span>
+        <span style=color:#111>s</span> <span style=color:#f92672>+=</span> <span style=color:#111>u</span><span style=color:#111>[</span><span style=color:#111>i</span><span style=color:#111>]</span><span style=color:#f92672>*</span><span style=color:#111>u</span><span style=color:#111>[</span><span style=color:#111>i</span><span style=color:#111>]</span>
+    <span style=color:#111>s</span> <span style=color:#f92672>=</span> <span style=color:#111>s</span><span style=color:#f92672>**</span><span style=color:#ae81ff>0.5</span>
+    <span style=color:#00a8c8>return</span> <span style=color:#111>s</span>
+
+<span style=color:#00a8c8>def</span> <span style=color:#75af00>matrice_cos</span><span style=color:#111>(</span><span style=color:#111>A</span><span style=color:#111>,</span><span style=color:#111>B</span><span style=color:#111>):</span>
+    <span style=color:#d88200>&#34;&#34;&#34;
+</span><span style=color:#d88200>    retourne la matrice de similitude entre 2 listes 
+</span><span style=color:#d88200>    de dimension 2 (liste de liste), A et B mises en paramètre
+</span><span style=color:#d88200>    &#34;&#34;&#34;</span>
+    <span style=color:#111>C</span> <span style=color:#f92672>=</span> <span style=color:#111>np</span><span style=color:#f92672>.</span><span style=color:#111>zeros</span><span style=color:#111>(</span><span style=color:#111>shape</span><span style=color:#f92672>=</span><span style=color:#111>(</span><span style=color:#111>len</span><span style=color:#111>(</span><span style=color:#111>A</span><span style=color:#111>),</span><span style=color:#111>len</span><span style=color:#111>(</span><span style=color:#111>B</span><span style=color:#111>)))</span>
+    <span style=color:#00a8c8>for</span> <span style=color:#111>i</span> <span style=color:#f92672>in</span> <span style=color:#111>range</span><span style=color:#111>(</span><span style=color:#111>len</span><span style=color:#111>(</span><span style=color:#111>A</span><span style=color:#111>)):</span>
+        <span style=color:#00a8c8>for</span> <span style=color:#111>j</span> <span style=color:#f92672>in</span> <span style=color:#111>range</span><span style=color:#111>(</span><span style=color:#111>len</span><span style=color:#111>(</span><span style=color:#111>B</span><span style=color:#111>)):</span>
+            <span style=color:#111>C</span><span style=color:#111>[</span><span style=color:#111>i</span><span style=color:#111>,</span><span style=color:#111>j</span><span style=color:#111>]</span><span style=color:#f92672>=</span><span style=color:#111>cosij</span><span style=color:#111>(</span><span style=color:#111>A</span><span style=color:#111>[</span><span style=color:#111>i</span><span style=color:#111>],</span><span style=color:#111>B</span><span style=color:#111>[</span><span style=color:#111>j</span><span style=color:#111>])</span>
+    <span style=color:#00a8c8>return</span> <span style=color:#111>C</span>
+
+<span style=color:#111>mat</span><span style=color:#f92672>=</span><span style=color:#111>matrice_cos</span><span style=color:#111>(</span><span style=color:#111>tableau</span><span style=color:#111>,</span><span style=color:#111>tableau</span><span style=color:#111>)</span>
+<span style=color:#111>mat</span></code></pre></div><pre><code>array([[1.        , 0.4       , 0.09128709, 0.27386128],
+       [0.4       , 1.        , 0.09128709, 0.18257419],
+       [0.09128709, 0.09128709, 1.        , 0.5       ],
+       [0.27386128, 0.18257419, 0.5       , 1.        ]])
+</code></pre><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># visualisation du tableau grace à son DataFrame</span>
+<span style=color:#111>df3</span><span style=color:#f92672>=</span><span style=color:#111>pd</span><span style=color:#f92672>.</span><span style=color:#111>DataFrame</span><span style=color:#111>(</span><span style=color:#111>mat</span><span style=color:#111>,</span><span style=color:#111>index</span><span style=color:#f92672>=</span><span style=color:#111>col</span><span style=color:#111>,</span><span style=color:#111>columns</span><span style=color:#f92672>=</span><span style=color:#111>col</span><span style=color:#111>)</span>
+<span style=color:#111>df3</span></code></pre></div><div><style scoped>.dataframe tbody tr th:only-of-type{vertical-align:middle}.dataframe tbody tr th{vertical-align:top}.dataframe thead th{text-align:right}</style><table border=1 class=dataframe><thead><tr style=text-align:right><th></th><th>bande dessinee</th><th>roman</th><th>ordinateur</th><th>console de jeux</th></tr></thead><tbody><tr><th>bande dessinee</th><td>1.000000</td><td>0.400000</td><td>0.091287</td><td>0.273861</td></tr><tr><th>roman</th><td>0.400000</td><td>1.000000</td><td>0.091287</td><td>0.182574</td></tr><tr><th>ordinateur</th><td>0.091287</td><td>0.091287</td><td>1.000000</td><td>0.500000</td></tr><tr><th>console de jeux</th><td>0.273861</td><td>0.182574</td><td>0.500000</td><td>1.000000</td></tr></tbody></table></div><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># visualisation à l&#39;aide d&#39;un outil en couleur</span>
+<span style=color:#f92672>import</span> <span style=color:#111>seaborn</span> <span style=color:#f92672>as</span> <span style=color:#111>sns</span>
+<span style=color:#f92672>import</span> <span style=color:#111>matplotlib.pyplot</span> <span style=color:#f92672>as</span> <span style=color:#111>plt</span>
+<span style=color:#111>col</span> <span style=color:#f92672>=</span> <span style=color:#111>list</span><span style=color:#111>(</span><span style=color:#111>df3</span><span style=color:#f92672>.</span><span style=color:#111>keys</span><span style=color:#111>())</span>
+<span style=color:#111>sns</span><span style=color:#f92672>.</span><span style=color:#111>heatmap</span><span style=color:#111>(</span><span style=color:#111>mat</span><span style=color:#111>,</span> <span style=color:#111>square</span><span style=color:#f92672>=</span><span style=color:#111>True</span><span style=color:#111>,</span> <span style=color:#111>annot</span><span style=color:#f92672>=</span><span style=color:#111>True</span><span style=color:#111>,</span> <span style=color:#111>cbar</span><span style=color:#f92672>=</span><span style=color:#111>False</span>
+            <span style=color:#111>,</span> <span style=color:#111>xticklabels</span><span style=color:#f92672>=</span><span style=color:#111>list</span><span style=color:#111>(</span><span style=color:#111>col</span><span style=color:#111>)</span>
+            <span style=color:#111>,</span> <span style=color:#111>yticklabels</span><span style=color:#f92672>=</span><span style=color:#111>list</span><span style=color:#111>(</span><span style=color:#111>col</span><span style=color:#111>))</span></code></pre></div><pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1a17767250&gt;
+</code></pre><p><img src=../images/output_15_1.png alt=png></p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># visualisation avec matplotlib (un peu moins lisible)</span>
+<span style=color:#111>plt</span><span style=color:#f92672>.</span><span style=color:#111>matshow</span><span style=color:#111>(</span><span style=color:#111>mat</span><span style=color:#111>,</span> <span style=color:#111>cmap</span><span style=color:#f92672>=</span><span style=color:#d88200>&#39;rainbow&#39;</span><span style=color:#111>);</span></code></pre></div><p><img src=../images/output_16_0.png alt=png></p><h2 id=interpretation>Interpretation</h2><p>On voit assez facilement que :</p><ul><li>la <em>bande dessinée</em> est proche dans sa description avec le <em>roman</em>, avec un score de 0.4, et un un peu moins proche de la <em>console de jeux</em> (score de 0.27)</li><li>l&rsquo;<em>ordinateur</em> est compatible avec la <em>console de jeux</em>, avec un score de 0.5</li><li>La description de la <em>bande dessinnée</em> et du <em>roman</em> ne contient presque aucun point commun avec l&rsquo;<em>ordinateur</em></li></ul><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>def</span> <span style=color:#75af00>articles</span><span style=color:#111>(</span><span style=color:#111>tab</span><span style=color:#111>):</span>
+    <span style=color:#111>tab</span><span style=color:#f92672>=</span><span style=color:#111>tab</span><span style=color:#f92672>.</span><span style=color:#111>sort_values</span><span style=color:#111>(</span><span style=color:#111>ascending</span><span style=color:#f92672>=</span><span style=color:#111>False</span><span style=color:#111>)</span>
+    <span style=color:#111>articles</span> <span style=color:#f92672>=</span> <span style=color:#111>list</span><span style=color:#111>(</span><span style=color:#111>tab</span><span style=color:#f92672>.</span><span style=color:#111>index</span><span style=color:#f92672>.</span><span style=color:#111>values</span><span style=color:#111>)</span>
+    <span style=color:#111>recom</span> <span style=color:#f92672>=</span> <span style=color:#d88200>&#39;l</span><span style=color:#8045ff>\&#39;</span><span style=color:#d88200>article </span><span style=color:#8045ff>\033</span><span style=color:#d88200>[1m {0:15} </span><span style=color:#8045ff>\033</span><span style=color:#d88200>[0;0m est similaire à </span><span style=color:#8045ff>\033</span><span style=color:#d88200>[1m{1:15}</span><span style=color:#8045ff>\033</span><span style=color:#d88200>[0;0m voire peut être un peu à </span><span style=color:#8045ff>\033</span><span style=color:#d88200>[1m{2:15}</span><span style=color:#8045ff>\033</span><span style=color:#d88200>[0;0m&#39;</span><span style=color:#f92672>.</span><span style=color:#111>format</span><span style=color:#111>(</span><span style=color:#111>articles</span><span style=color:#111>[</span><span style=color:#ae81ff>0</span><span style=color:#111>],</span><span style=color:#111>articles</span><span style=color:#111>[</span><span style=color:#ae81ff>1</span><span style=color:#111>],</span><span style=color:#111>articles</span><span style=color:#111>[</span><span style=color:#ae81ff>2</span><span style=color:#111>])</span>
+    <span style=color:#00a8c8>return</span> <span style=color:#111>recom</span>
+
+<span style=color:#00a8c8>def</span> <span style=color:#75af00>recommandation</span><span style=color:#111>(</span><span style=color:#111>dataf</span><span style=color:#111>):</span>
+    <span style=color:#111>texte</span><span style=color:#f92672>=</span><span style=color:#111>[]</span>
+    <span style=color:#111>col</span> <span style=color:#f92672>=</span> <span style=color:#111>list</span><span style=color:#111>(</span><span style=color:#111>dataf</span><span style=color:#f92672>.</span><span style=color:#111>keys</span><span style=color:#111>())</span> 
+    <span style=color:#00a8c8>for</span> <span style=color:#111>c</span> <span style=color:#f92672>in</span> <span style=color:#111>col</span><span style=color:#111>:</span>
+        <span style=color:#111>tab_red</span><span style=color:#f92672>=</span><span style=color:#111>[]</span>
+        <span style=color:#111>tab_red</span> <span style=color:#f92672>=</span> <span style=color:#111>dataf</span><span style=color:#111>[</span><span style=color:#111>c</span><span style=color:#111>]</span>
+        <span style=color:#111>texte</span><span style=color:#f92672>.</span><span style=color:#111>append</span><span style=color:#111>(</span><span style=color:#111>articles</span><span style=color:#111>(</span><span style=color:#111>tab_red</span><span style=color:#111>))</span>
+    <span style=color:#00a8c8>return</span> <span style=color:#111>texte</span>
+
+<span style=color:#111>texte</span> <span style=color:#f92672>=</span> <span style=color:#111>recommandation</span><span style=color:#111>(</span><span style=color:#111>df3</span><span style=color:#111>)</span>
+<span style=color:#00a8c8>for</span> <span style=color:#111>t</span> <span style=color:#f92672>in</span> <span style=color:#111>texte</span><span style=color:#111>:</span>
+    <span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#111>t</span><span style=color:#111>)</span></code></pre></div><pre><code>l'article [1m bande dessinee  [0;0m est similaire à [1mroman          [0;0m voire peut être un peu à [1mconsole de jeux[0;0m
+l'article [1m roman           [0;0m est similaire à [1mbande dessinee [0;0m voire peut être un peu à [1mconsole de jeux[0;0m
+l'article [1m ordinateur      [0;0m est similaire à [1mconsole de jeux[0;0m voire peut être un peu à [1mroman          [0;0m
+l'article [1m console de jeux [0;0m est similaire à [1mordinateur     [0;0m voire peut être un peu à [1mbande dessinee [0;0m
+</code></pre><h1 id=definir-des-classes-à-l-aide-d-une-représentation-en-graphe>definir des classes à l&rsquo;aide d&rsquo;une représentation en graphe</h1><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> <span style=color:#111>matplotlib.pyplot</span> <span style=color:#f92672>as</span> <span style=color:#111>plt</span>
+<span style=color:#f92672>import</span> <span style=color:#111>networkx</span> <span style=color:#f92672>as</span> <span style=color:#111>nx</span>
+
+<span style=color:#111>mat</span><span style=color:#f92672>=</span><span style=color:#111>matrice_cos</span><span style=color:#111>(</span><span style=color:#111>tableau</span><span style=color:#111>,</span><span style=color:#111>tableau</span><span style=color:#111>)</span>
+<span style=color:#111>col</span> <span style=color:#f92672>=</span> <span style=color:#111>list</span><span style=color:#111>(</span><span style=color:#111>df3</span><span style=color:#f92672>.</span><span style=color:#111>keys</span><span style=color:#111>())</span>
+
+<span style=color:#111>G</span> <span style=color:#f92672>=</span> <span style=color:#111>nx</span><span style=color:#f92672>.</span><span style=color:#111>Graph</span><span style=color:#111>()</span>
+
+<span style=color:#00a8c8>def</span> <span style=color:#75af00>makeG</span><span style=color:#111>(</span><span style=color:#111>mat</span><span style=color:#111>,</span><span style=color:#111>col</span><span style=color:#111>):</span>
+    <span style=color:#d88200>&#34;&#34;&#34;
+</span><span style=color:#d88200>    creation du graphe G à partir : 
+</span><span style=color:#d88200>    - du paramètre col : la liste des lés (colonnes) du DataFrame fg3 (equiv à la matrice de similitude)
+</span><span style=color:#d88200>    - du paramètre mat : la matrice de similitude déjà calculée
+</span><span style=color:#d88200>    Les noeuds du graphe sont constitués à partir des articles
+</span><span style=color:#d88200>    Les arêtes sont pondérés d&#39;un poids weight qui est la valeur lue dans la matrice de similitude mat
+</span><span style=color:#d88200>    &#34;&#34;&#34;</span>
+    <span style=color:#00a8c8>for</span> <span style=color:#111>i</span> <span style=color:#f92672>in</span> <span style=color:#111>range</span><span style=color:#111>(</span><span style=color:#111>len</span><span style=color:#111>(</span><span style=color:#111>mat</span><span style=color:#111>[:,</span><span style=color:#ae81ff>0</span><span style=color:#111>])):</span>
+        <span style=color:#00a8c8>for</span> <span style=color:#111>j</span> <span style=color:#f92672>in</span> <span style=color:#111>range</span><span style=color:#111>(</span><span style=color:#111>len</span><span style=color:#111>(</span><span style=color:#111>mat</span><span style=color:#111>[</span><span style=color:#ae81ff>0</span><span style=color:#111>,:])):</span>
+            <span style=color:#111>G</span><span style=color:#f92672>.</span><span style=color:#111>add_edge</span><span style=color:#111>(</span><span style=color:#111>col</span><span style=color:#111>[</span><span style=color:#111>i</span><span style=color:#111>],</span> <span style=color:#111>col</span><span style=color:#111>[</span><span style=color:#111>j</span><span style=color:#111>],</span> <span style=color:#111>weight</span><span style=color:#f92672>=</span><span style=color:#111>mat</span><span style=color:#111>[</span><span style=color:#111>i</span><span style=color:#111>,</span><span style=color:#111>j</span><span style=color:#111>])</span>
+    <span style=color:#00a8c8>return</span> <span style=color:#111>G</span>
+
+
+    
+
+<span style=color:#75715e>#G.add_edge(&#39;a&#39;, &#39;b&#39;, weight=0.6)</span>
+
+
+<span style=color:#00a8c8>def</span> <span style=color:#75af00>drawG</span><span style=color:#111>(</span><span style=color:#111>G</span><span style=color:#111>,</span><span style=color:#111>seuil</span><span style=color:#111>):</span>
+    <span style=color:#d88200>&#34;&#34;&#34;
+</span><span style=color:#d88200>    segmentation de arêtes en fonction du paramètre seuil
+</span><span style=color:#d88200>    - les arêtes de weight &gt;= seuil sont représentées en trait plein sur le graphe
+</span><span style=color:#d88200>    - celle de weight &lt; seuil sont représentées en trait pointillé
+</span><span style=color:#d88200>    &#34;&#34;&#34;</span>
+    <span style=color:#111>elarge</span> <span style=color:#f92672>=</span> <span style=color:#111>[(</span><span style=color:#111>u</span><span style=color:#111>,</span> <span style=color:#111>v</span><span style=color:#111>)</span> <span style=color:#00a8c8>for</span> <span style=color:#111>(</span><span style=color:#111>u</span><span style=color:#111>,</span> <span style=color:#111>v</span><span style=color:#111>,</span> <span style=color:#111>d</span><span style=color:#111>)</span> <span style=color:#f92672>in</span> <span style=color:#111>G</span><span style=color:#f92672>.</span><span style=color:#111>edges</span><span style=color:#111>(</span><span style=color:#111>data</span><span style=color:#f92672>=</span><span style=color:#111>True</span><span style=color:#111>)</span> <span style=color:#00a8c8>if</span> <span style=color:#111>d</span><span style=color:#111>[</span><span style=color:#d88200>&#39;weight&#39;</span><span style=color:#111>]</span> <span style=color:#f92672>&gt;=</span> <span style=color:#111>seuil</span><span style=color:#111>]</span>
+    <span style=color:#111>esmall</span> <span style=color:#f92672>=</span> <span style=color:#111>[(</span><span style=color:#111>u</span><span style=color:#111>,</span> <span style=color:#111>v</span><span style=color:#111>)</span> <span style=color:#00a8c8>for</span> <span style=color:#111>(</span><span style=color:#111>u</span><span style=color:#111>,</span> <span style=color:#111>v</span><span style=color:#111>,</span> <span style=color:#111>d</span><span style=color:#111>)</span> <span style=color:#f92672>in</span> <span style=color:#111>G</span><span style=color:#f92672>.</span><span style=color:#111>edges</span><span style=color:#111>(</span><span style=color:#111>data</span><span style=color:#f92672>=</span><span style=color:#111>True</span><span style=color:#111>)</span> <span style=color:#00a8c8>if</span> <span style=color:#111>d</span><span style=color:#111>[</span><span style=color:#d88200>&#39;weight&#39;</span><span style=color:#111>]</span> <span style=color:#f92672>&lt;</span> <span style=color:#111>seuil</span><span style=color:#111>]</span>
+    <span style=color:#111>pos</span> <span style=color:#f92672>=</span> <span style=color:#111>nx</span><span style=color:#f92672>.</span><span style=color:#111>spring_layout</span><span style=color:#111>(</span><span style=color:#111>G</span><span style=color:#111>)</span>  <span style=color:#75715e># positions for all nodes</span>
+    <span style=color:#75715e># nodes</span>
+    <span style=color:#111>nx</span><span style=color:#f92672>.</span><span style=color:#111>draw_networkx_nodes</span><span style=color:#111>(</span><span style=color:#111>G</span><span style=color:#111>,</span> <span style=color:#111>pos</span><span style=color:#111>,</span> <span style=color:#111>node_size</span><span style=color:#f92672>=</span><span style=color:#ae81ff>700</span><span style=color:#111>)</span>
+    <span style=color:#75715e># edges</span>
+    <span style=color:#111>nx</span><span style=color:#f92672>.</span><span style=color:#111>draw_networkx_edges</span><span style=color:#111>(</span><span style=color:#111>G</span><span style=color:#111>,</span> <span style=color:#111>pos</span><span style=color:#111>,</span> <span style=color:#111>edgelist</span><span style=color:#f92672>=</span><span style=color:#111>elarge</span><span style=color:#111>,</span><span style=color:#111>width</span><span style=color:#f92672>=</span><span style=color:#ae81ff>6</span><span style=color:#111>)</span>
+    <span style=color:#111>nx</span><span style=color:#f92672>.</span><span style=color:#111>draw_networkx_edges</span><span style=color:#111>(</span><span style=color:#111>G</span><span style=color:#111>,</span> <span style=color:#111>pos</span><span style=color:#111>,</span> <span style=color:#111>edgelist</span><span style=color:#f92672>=</span><span style=color:#111>esmall</span><span style=color:#111>,</span><span style=color:#111>width</span><span style=color:#f92672>=</span><span style=color:#ae81ff>2</span><span style=color:#111>,</span> <span style=color:#111>alpha</span><span style=color:#f92672>=</span><span style=color:#ae81ff>0.5</span><span style=color:#111>,</span> <span style=color:#111>edge_color</span><span style=color:#f92672>=</span><span style=color:#d88200>&#39;b&#39;</span><span style=color:#111>,</span> <span style=color:#111>style</span><span style=color:#f92672>=</span><span style=color:#d88200>&#39;dashed&#39;</span><span style=color:#111>)</span>
+    <span style=color:#75715e># labels</span>
+    <span style=color:#111>nx</span><span style=color:#f92672>.</span><span style=color:#111>draw_networkx_labels</span><span style=color:#111>(</span><span style=color:#111>G</span><span style=color:#111>,</span> <span style=color:#111>pos</span><span style=color:#111>,</span> <span style=color:#111>font_size</span><span style=color:#f92672>=</span><span style=color:#ae81ff>20</span><span style=color:#111>,</span> <span style=color:#111>font_family</span><span style=color:#f92672>=</span><span style=color:#d88200>&#39;sans-serif&#39;</span><span style=color:#111>)</span>
+    <span style=color:#111>plt</span><span style=color:#f92672>.</span><span style=color:#111>axis</span><span style=color:#111>(</span><span style=color:#d88200>&#39;off&#39;</span><span style=color:#111>)</span>
+    <span style=color:#111>plt</span><span style=color:#f92672>.</span><span style=color:#111>show</span><span style=color:#111>()</span>
+    
+<span style=color:#111>G</span> <span style=color:#f92672>=</span> <span style=color:#111>makeG</span><span style=color:#111>(</span><span style=color:#111>mat</span><span style=color:#111>,</span><span style=color:#111>col</span><span style=color:#111>)</span>
+<span style=color:#111>drawG</span><span style=color:#111>(</span><span style=color:#111>G</span><span style=color:#111>,</span><span style=color:#ae81ff>0.3</span><span style=color:#111>)</span></code></pre></div><p><img src=../images/output_20_0.png alt=png></p><h2 id=interprétation>Interprétation</h2><p>Il apparait ici clairement 2 classes en choisissant seuil = 0.3 :</p><ul><li>les articles du genre littérature</li><li>les articles du genre électronique</li></ul><h1 id=classification>Classification</h1><p>L&rsquo;arbre de classification peut être utile dans le cas
+L’apprentissage par arbre de décision désigne une méthode basée sur l&rsquo;utilisation d&rsquo;un arbre de décision comme modèle prédictif. Dans ces structures d&rsquo;arbre, les feuilles représentent les valeurs de la variable-cible (les classes) et les embranchements correspondent à des combinaisons de variables d&rsquo;entrée qui mènent à ces valeurs. En analyse de décision, un arbre de décision peut être utilisé pour représenter de manière explicite les décisions réalisées et les processus qui les amènent.</p><p>Une des variables d&rsquo;entrée est sélectionnée à chaque nœud intérieur (ou interne, nœud qui n&rsquo;est pas terminal) de l&rsquo;arbre selon une méthode qui dépend de l&rsquo;algorithme.</p><p>L&rsquo;arbre est en général construit en séparant l&rsquo;ensemble des données en sous-ensembles en fonction de la valeur d&rsquo;une caractéristique d&rsquo;entrée. Il est construit de manière récursive. C&rsquo;est un algorithme glouton.</p><p>Plus de détail : <a href=https://fr.wikipedia.org/wiki/Arbre_de_décision_(apprentissage)>https://fr.wikipedia.org/wiki/Arbre_de<em>décision</em>(apprentissage)</a></p><p>Il existe ainsi les :</p><ul><li>arbres de classification (feuille = classe)</li><li>arbres de regression, qui permettent de prédire une quantité réelle</li></ul><p>Les algorithmes pour construire les arbres de décision sont construits en divisant l&rsquo;arbre du sommet vers les feuilles en choisissant à chaque étape une variable d&rsquo;entrée qui réalise le meilleur partage de l&rsquo;ensemble d&rsquo;objets, comme décrit précédemment. Pour choisir la variable de séparation sur un nœud, les algorithmes testent les différentes variables d&rsquo;entrée possibles et sélectionnent celle qui maximise un critère donné.</p><blockquote><p>suite : voir la page sur les arbres de décision : <a href=../graphes_mini_prog/index.html>graphes_mini_prog.md</a></p></blockquote></article><div style=height:100px></div></div></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
+<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
