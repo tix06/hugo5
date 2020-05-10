@@ -639,10 +639,10 @@ for t in texte:
     print(t)
 ```
 
-    l'article [1m bande dessinee  [0;0m est similaire à [1mroman          [0;0m voire peut être un peu à [1mconsole de jeux[0;0m
-    l'article [1m roman           [0;0m est similaire à [1mbande dessinee [0;0m voire peut être un peu à [1mconsole de jeux[0;0m
-    l'article [1m ordinateur      [0;0m est similaire à [1mconsole de jeux[0;0m voire peut être un peu à [1mroman          [0;0m
-    l'article [1m console de jeux [0;0m est similaire à [1mordinateur     [0;0m voire peut être un peu à [1mbande dessinee [0;0m
+    l'article  bande dessinee   est similaire à roman           voire peut être un peu à console de jeux
+    l'article  roman            est similaire à bande dessinee  voire peut être un peu à console de jeux
+    l'article  ordinateur       est similaire à console de jeux voire peut être un peu à roman          
+    l'article  console de jeux  est similaire à ordinateur      voire peut être un peu à bande dessinee 
 
 
 # definir des classes à l'aide d'une représentation en graphe

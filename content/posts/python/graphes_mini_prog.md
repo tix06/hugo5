@@ -314,7 +314,8 @@ for i in  range(n_nodes):
     ----------
 
 
-## creation d'une structure de type dictionnaire pour contenir la structure
+## creation d'une structure de type dictionnaire pour contenir l'arbre
+Cette struture contiendra aussi les conditions, afin de pouvoir l'utiliser pour *décision*.
 
 
 ```python
@@ -410,7 +411,7 @@ tree.plot_tree(clf)
 
 Contenu de chaque noeud : 
 
-* la condition qui est testée : par ex au noeud 0, X[2]<=82.5 (humidité <=82.5) VRAI => à gauche, FAUX => à droite
+* la condition qui est testée : par ex au noeud 0, X[0]<=0.5 (le temps est moins bien qu'*ensoleillé*) VRAI => à gauche, FAUX => à droite
 * le coefficient de gini (qui doit être égal à 0 ou presque dans les feuilles)
 * le nombre d'éléments dans le noeud
 * value = le nombre d'éléments de chaque classe [classe 0 : ne jouent pas, classe 1 : jouent]

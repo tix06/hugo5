@@ -223,10 +223,10 @@ $$s_{ij}=\tfrac{u_i\cdot u_j}{||ui||\cdot||uj||}$$</p><p>On cherche alors une r�
 
 <span style=color:#111>texte</span> <span style=color:#f92672>=</span> <span style=color:#111>recommandation</span><span style=color:#111>(</span><span style=color:#111>df3</span><span style=color:#111>)</span>
 <span style=color:#00a8c8>for</span> <span style=color:#111>t</span> <span style=color:#f92672>in</span> <span style=color:#111>texte</span><span style=color:#111>:</span>
-    <span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#111>t</span><span style=color:#111>)</span></code></pre></div><pre><code>l'article [1m bande dessinee  [0;0m est similaire à [1mroman          [0;0m voire peut être un peu à [1mconsole de jeux[0;0m
-l'article [1m roman           [0;0m est similaire à [1mbande dessinee [0;0m voire peut être un peu à [1mconsole de jeux[0;0m
-l'article [1m ordinateur      [0;0m est similaire à [1mconsole de jeux[0;0m voire peut être un peu à [1mroman          [0;0m
-l'article [1m console de jeux [0;0m est similaire à [1mordinateur     [0;0m voire peut être un peu à [1mbande dessinee [0;0m
+    <span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#111>t</span><span style=color:#111>)</span></code></pre></div><pre><code>l'article  bande dessinee   est similaire à roman           voire peut être un peu à console de jeux
+l'article  roman            est similaire à bande dessinee  voire peut être un peu à console de jeux
+l'article  ordinateur       est similaire à console de jeux voire peut être un peu à roman          
+l'article  console de jeux  est similaire à ordinateur      voire peut être un peu à bande dessinee 
 </code></pre><h1 id=definir-des-classes-à-l-aide-d-une-représentation-en-graphe>definir des classes à l&rsquo;aide d&rsquo;une représentation en graphe</h1><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> <span style=color:#111>matplotlib.pyplot</span> <span style=color:#f92672>as</span> <span style=color:#111>plt</span>
 <span style=color:#f92672>import</span> <span style=color:#111>networkx</span> <span style=color:#f92672>as</span> <span style=color:#111>nx</span>
 
