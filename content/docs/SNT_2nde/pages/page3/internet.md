@@ -191,6 +191,11 @@ C'est le *protocole TCP* qui gère ce découpage, et rajoute des informations po
 > *Vous devez perturber le transport des paquets afin d'empêcher la reconstitution du message. Au fur et à mesure que vous passez les niveaux, l'ordinateur trouve de nouvelles stratégies pour y parvenir. Vous pouvez : retarder les paquets, les corrompre, ou les détruire.*
 
 
+# Le web
+Le cours se prolonge à l'adresse suivante : 
+[https://isn-icn-ljm.pagesperso-orange.fr/web/co/module_WEB.html](https://isn-icn-ljm.pagesperso-orange.fr/web/co/module_WEB.html)
+
+
 # Liens
 * <a href="https://www.economie.gouv.fr/files/files/directions_services/cge/barometre-numerique-2019.pdf">Etude : le baromètre du numérique 2019</a>
 * <a href="https://www.lemonde.fr/verification/">Le Décodex du journal en ligne Le Monde</a> 
