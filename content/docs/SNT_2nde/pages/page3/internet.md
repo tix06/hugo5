@@ -1,63 +1,205 @@
 ---
-title: modele OSI
+Title : Internet
 ---
-# Internet
+
+# tour d'horizon de l'usage d'internet
+## A quoi vous sert votre équipement informatique ?
+Auparavant, le particulier s'équipait d'un ordinateur pour faire du traitement de texte et des jeux.
+
+Maintenant, c'est l'accès à internet qui est recherché, pour : 
+
+- avoir accès à des informations distantes
+- communication entre personnes (voir plus loin)
+- divertissements interactifs (jeux, musique, vidéo à la carte)
+- commerce électronique (auquel participent même les institutions financières, mais aussi des services de braderie en ligne, du type peer-to-peer entre particuliers, de consommateur à consommateur
+- commande d'un taxi ou d'un repas, avec suivi en temps réel du délai d'attente
+- autres services : téléformation, télémedecine, ...
+
+
+
+## Quel est votre terminal ?
+On entend par *terminal*, l'appareil que vous utilisez pour utiliser les services fournis par internet. Progressivement, l'ordinateur a reculé et a été remplacé par les smartphones, tablettes, assistant vocal ou montre connectées pour la plupart de ces services.
+
+<figure>
+<img src="../images/equipement.png" width = 80% alt="equipement numerique">
+<figcaption>equipement le plus utilisé pour se connecter à internet</figcaption>
+</figure>
+
+<a href="https://www.economie.gouv.fr/files/files/directions_services/cge/barometre-numerique-2019.pdf">Etude : le baromètre du numérique 2019</a>
+
+## une utilisation nomade
+Il y a une convergence des usages que l'on fait avec un ordinateur et un smartphone. Sauf qu'avec le smartphone, le reseau sans fil est un moyen d'avoir un bureau mobile.
+
+Mais c'est aussi d'autres services : taxis connectés, des applications mobiles comme celles par exemple de parcmètres (bornes qui lisent les cartes de credit en effectuant un contrôle immédiat, ou qui rapportent l'expiration), les distributeurs de boisson connectés avec état des stocks, compteurs d'electricité...
+
+Pour le client, la possibilité de lire un code barre et de mettre en relation avec une base de données. (les autres magasins, la composition, le meilleur point de vente...)
+
+La géolocalisation offre de nombreuses possibilités, comme le conseil des restaurants à proximité. Les possibilités sont infinies.
+
+Mais les activités principales liées à l'utilisation d'un smartphone restent la consultation de page à l'aide d'un navigateur, et l'utilisation de messageries ou des réseaux sociaux : 
+
+<figure>
+<img src="../images/sondage1.png" width = 80% alt="usage numerique">
+<figcaption>Proportion de la population qui utilise leur téléphone mobile pour ...</figcaption>
+</figure>
+
+# La communication par internet
+**Des formes de communication interpersonnelles :** 
+
+- Il y a eu au démarrage un fort engouement des adolescents pour *la messagerie instantanée* (inspiré du programme talk de Unix); les *chat rooms*, salles de conversation autorisant un groupe de personnes à taper des messages visibles par tous. (sorte de bavardage). Les formes de communication ne s'y limitent d'ailleurs pas au texte, mais il y a des photos ou de courtes vidéos qui peuvent aussi y être *partagées*.
+- Les *forums de discussion* : où la communication ne fonctionne pas en temps réel, mais permet de poster un message que tous les membres peuvent lire
+- le *peer to peer* : communication entre systèmes homolgues (pairs) : différents du modèle client-serveur. Les utilisateurs forment un groupe indéfini. L'échange se fait sur pied d'egalité et les rôles client-serveur ne sont pas assignés de façon fixe. Chaque utilisateur maintient sa propre base de données ainsi qu'une liste des autres personnes dans le voisinage participant au système. Jeux en réseau, courrier électronique sont d'autres exemples de peer to peer.
+- téléphonie, visiophonie, radio via internet.
+
+
+<a href="https://fr.statista.com/statistiques/491792/france-reseaux-sociaux-messageries-instantanees-penetration/" rel="nofollow"><img src="https://fr.statista.com/graphique/1/491792/france-reseaux-sociaux-messageries-instantanees-penetration.jpg" alt="Statistique: Classement des réseaux sociaux et messageries instantanées ayant le plus fort taux de pénétration en France en 2018 | Statista" style="width: 100%; height: auto !important; max-width:1000px;-ms-interpolation-mode: bicubic;"/></a><br />Trouver plus de statistiques sur  <a href="https://fr.statista.com" rel="nofollow">Statista</a>
+
+# Les données qui circulent sur internet
+
+## Doit-on se protéger du contenu diffusé sur internet ?
+### Aspects societaux, politiques et moraux
+
+Sur des reseaux avec des sujets aux thematiques techniques, les échanges entre personnes ne génèrent pas de problemes.
+
+Par contre, lorsque les sujets touchent à des domaines plus sensibles : religion, politique ou sexualité, les esprits s'enflamment et les messages peuvent devenir choquants, ou blessants.
+
+Il y a 2 courants de pensée :
+
+- ceux qui prônent la tolérance
+- ceux qui pensent que certains messages doivent être censurés
+
+D'ailleurs, les lois diffèrent ou s'opposent selon les pays.
+
+Des personnes ont poursuivi en justtice les opérateurs, les tenant pour reponsables du contenu qui circule sur les reseaux. Mais cela s'apparenterait alors à une censure et porter atteinte à la *liberté d'expression*.
+
+Une autre source de désaccord concerne : 
+
+- le droit respectif des employés et des employeurs
+- des universités et leurs étudiants
+- les gouvernements et leurs citoyens. Par exemple, le FBI avait mis en place un systeme d'espionnage des messages chez plusieurs fournisseurs d'accès afin de collecter des données interessantes. Le 4e amendement de la constitution americaine a mis fin à ce projet.
+- les entreprises et leurs visiteurs : les cookies, qui leur permettent de suivre leur activité et renseignent ceux qui y ont accès à certaines informations confidentielles comme les intérêts des visiteurs pour certains produits, leur mail, leur mot de passe, ou leur numéro de téléphone mobile. 
+
+**<a href="https://www.cnil.fr/fr">La CNIL :</a>** La Commission nationale de l'informatique et des libertés (CNIL) de France est une autorité administrative indépendante française. Elle est chargée de veiller à ce que l’informatique soit au service du citoyen et qu’elle ne porte atteinte ni à l’identité humaine, ni aux droits de l’homme, ni à la vie privée, ni aux libertés individuelles ou publiques.
+
+* Restez informé : Les droits pour maîtriser vos données personnelles !
+  <figure><a href = "https://www.cnil.fr/fr/les-droits-pour-maitriser-vos-donnees-personnelles">
+<img src="../images/informer.png" width = 30% alt="s'informer"></a>
+<figcaption>restez informé : la CNIL</figcaption>
+</figure>
+* paramétrer
+  <figure><a href="https://www.cnil.fr/fr/maitriser-mes-donnees">
+<img src="../images/maitriser.png" width = 30% alt="maitriser ses données"></a>
+<figcaption>maitrisez l'accès à vos données : la CNIL</figcaption>
+</figure>
+
+
+### Des informations vraies.. ou fausses, virales ... ou confidentielles
+Les reseaux permettent d'envoyer des messages anonymes. On peut ainsi dénoncer quelqu'un sans risquer de represailles. Mais, heureusement, dans une societé democratique, une accusation ne fait pas preuve et toute personne a le droit d'être confronté à son accusateur.
+
+Internet permet la diffusion d'informations de manière *virale* : 
+
+* Cela peut contribuer à un reveil de l'opinion publique :
+  * voir l'enchainement des évenements pendant les elections en Espagne : 11 mars 2004, l'attentat de la gare de Madrid. Le gouvernement du président Aznar manipule l'information pour laisser croire que la responsabilité de cet attentat incombe à l'ETA, un parti politique clandestin. Mais rapidement, une chaine de messages (twitter ou autres reseaux sociaux) entre citoyens met au jour ce que l'on pourrait apparenter à un *mensonge d'état*. Aznar perd alors dans la foulée les élections legislatives qui se tiennent 2 jours plus tard. [https://www.monde-diplomatique.fr/2004/04/RAMONET/10895](https://www.monde-diplomatique.fr/2004/04/RAMONET/10895)
+  * voir soulèvement du 15 mai 2011 en espagne : parti politique d'initiatives populaires (les indignados)
+
+* Ou la manipulation de l'opinion publique avec des nouvelles fausses (elections de Donald Trump aux états-unis en 2016).
+
+> Important : Toujours vérifier une information. Quelle est sa source ? Quelle est la qualité du média ou de la personne qui la diffuse ?
+
+* <a href="https://www.lemonde.fr/verification/">Le Décodex du journal en ligne Le Monde</a> est un outil pour vous aider à vérifier les informations qui circulent sur Internet et dénicher les rumeurs, exagérations ou déformations.
+* <a href="https://www.lumni.fr/programme/data-science-vs-fake">Le site Lumni</a> (anciennement France tv éducation) propose une série de vidéos sur le thème : *Data science vs Fake*, et aborde des sujets divers.
+
+### Des problèmes de sécurité
+L'internet c'est aussi aussi des problemes de securité, avec de nombreuses données non chiffrées, ce qui ouvre la possibilté à de nombreux méfaits : 
+
+- recevoir du courrier electronique non sollicité (spam). Notre adresse est revendue à des sociétés qui s'adonnent au marketing sauvage.
+- recevoir des macros avec virus en pièces jointes
+- le vol d'identité
+
+<figure>
+<img src="../images/pirate.pdf" width = 30% alt="securité">
+<figcaption>Sur internet, il y a autant de personnes mal intentionnées que dans la "vraie" vie</figcaption>
+</figure>
+
+Mais le chiffrement est couteux pour les fournisseurs d'équipement et de logiciels.
+
+Un autre problème de sécurité vient d'une technique que l'on appelle le *phishing* : le pirate se fait passer pour un organisme bancaire, un assureur, un opérateur de téléphonie... La technique est souvent celle-ci : 
+Vous recevez un mail de cet organisme, vous demandant de cliquer sur un lien qui devrait vous rediriger vers le site de cet organisme.
+Seulement, lorsque vous *cliquez*, vous pouvez constater que le **nom de domaine** n'est pas rigoureusement identique à celui de l'organisme *original*.
+Ainsi, l'URL `https://twiter.com` *(le faux site, dont le nom de domaine est* twiter) n'est pas identique à `https://twitter.com` *(le vrai site, de nom de domaine* twit**t**er).
+
+<figure>
+<img src="../images/phishing.png" width = 80% alt="phishing">
+<figcaption>un exemple de phishing</figcaption>
+</figure>
+
+Ensuite, on vous demande vos identifiants de connexion, ou coordonnées bancaires, numéro de carte de crédit ou autre, que vous choisissez intentionnellement (et malheureusement) de donner, sans vous méfier. Il existe heureusement des recours, au cas où cette mésaventure vous arrive, mais cela vous aura porté préjudice. Le mieux est de toujours adopter une posture de doute lorsqu'un tel mail vous parvient...
+
+### La diffusion d'ouvrages artistiques
+
+L'utilisation d'un service de téléchargement ou de streaming illégal entraine la violation des droits d'auteur avec la transmission de musique et video numerique.
+
+L'objet étant numérique, cela ne constitue pas à proprement parler d'un vol lorsque l'on s'en procure une copie. On peut d'ailleurs en réaliser un nombre illimité de copies numériques. Un fichier musical, une vidéo, une image ou un livre numérique constituent des biens non *rivaux*. Mais l'existance de *droits d'auteurs* empêche normalement la libre diffusion de l'oeuvre, et les personnes qui pratiquent cet échange enfreignent la loi.
+
+# Aspects techniques : fonctionnement d'internet
+## Le modèle client-serveur
+Un système informatique fonctionne sur le modèle **client-serveur** : L'ordinateur client a besoin d'établir des connexions avec un ordinateur serveur pour une grande partie des services dont il a besoin (consulter une base de données, communiquer, ouvrir des pages internet, charger des vidéos...).
+
+Une fois la connexion établie, l'ordinateur serveur lui répond en lui renvoyant les données necessaires.
+
+## Réseau local et réseau internet
+* Dans un réseau local, les ordinateurs peuvent communiquer entre eux par l'intermédiaire d'un *routeur*.
+Le *routeur* est connecté à tous les ordinateurs du réseau, et possède une table de *routage* qui lui permet de choisir la bonne liaison entre les 2 machines qui veulent communiquer.
+Cette table de routage identifie les ordinateurs de manière unique par leur *adresse IP* : Un code binaire à 32 bits (norme IPv4) ou 128 bits (norme IPv6).
+
+* Internet est un réseau de réseaux qui interconnecte toutes les machines à l'échelle mondiale.
+En pratique, ce sont les routeurs des réseaux qui sont interconnectés. Lorsqu'un routeur reçoit une requête d'une des machines de son réseau, adressée à une machine qui n'appartient pas à son réseau, il se réfère à une table de routage d'internet pour expedier la requête. Il envoie alors la requête à un autre routeur. 
+
+<figure>
+<img src="../images/reseau-internet.png" width = 80% alt="reseau internet">
+<figcaption>reseau local et internet</figcaption>
+</figure>
+
+Le trajet possible entre les 2 machines n'est pas unique : 
+
+<figure>
+<img src="../images/internet-fig1.gif" width = 60% alt="reseau internet">
+<figcaption><a href="https://interstices.info/internet-le-conglomerat-des-reseaux/">reseau local et chemin entre routeurs : interstice.info</a></figcaption>
+</figure>
+
+## adresse IP et adresses symboliques
+Les adresses IP identifient les machines et leur permet de communiquer entre elles. Le problème est que le format de cette adresse n'est pas très intelligible pour un humain. C'est pour cela que les sites et les programmes hébergés sur les serveurs possèdent aussi une adresse symbolique.
+
+Par exemple, l'adresse IP 207.142.131.245 est celle de Wikilivres.com (son nom d'hôte correspondant).
+
+Les tables de correspondance : nom d'hôte <=> adresse IP sont tenues par des serveurs appelés *DNS (domain name system)*. C'est à ce serveur DNS que votre routeur se réfère lorsque vous saisissez une adresse symbolique (une URL) dans la barre de navigation de votre navigateur.
+
+
+## Quelles sont les *informations numériques* transmises ?
 *Internet manipule deux types d’information : les contenus envoyés et les adresses du destinataire et de l’émetteur. Ces deux types d’information sont regroupés dans des paquets de taille fixe, de façon uniforme et indépendante du type de données transportées : texte, images, sons, vidéos, etc.*
 
-# Le modèle OSI
-On peut rentrer un peu plus dans le détail du modèle OSI et en particulier de la communication TCP/IP.
-Le modèle OSI est une norme qui préconise comment les ordinateurs devraient communiquer entre eux avec 5 *couches* technologiques adjacentes, numérotées selon leur *distance* au support d'emission (la couche n°1).
+Ces données sont rassemblées dans des trames de 1500 octets. La plupart du temps, les données à envoyer sont de taille supérieure à 1500 octets, et il faut plusieurs trames.
 
-Ce modèle (theorique) a été conçu pour cloisonner les différents processus, langages et technologies employés. 
+C'est le *protocole TCP* qui gère ce découpage, et rajoute des informations pour pouvoir renvoyer les paquets perdus en chemin (grâce à un accusé de reception), et remettre les paquets dans le bon ordre. Un code de vérification est également ajouté au paquet, pour vérifier s'il est conforme à l'orginal, et non *corrompu* en chemin.
 
-Le modèle OSI ajoute deux règles plus générales entre les couches :
-• chaque couche est indépendante ;
-• chaque couche ne peut communiquer qu'avec une couche adjacente.
+> comprendre le protocole TCP en jouant : 
+<a href="http://www.csfieldguide.org.nz/en/interactives/packet-attack/index.html">
+<figure>
+<img src="../images/packet-attack.png" width = 40% alt="reseau internet">
+<figcaption>reseau local et chemin entre routeurs : interstice.info</figcaption>
+</figure></a>
+> *Vous devez perturber le transport des paquets afin d'empêcher la reconstitution du message. Au fur et à mesure que vous passez les niveaux, l'ordinateur trouve de nouvelles stratégies pour y parvenir. Vous pouvez : retarder les paquets, les corrompre, ou les détruire.*
 
-Lors de l'émission d'une requête par une application, celle-ci doit traverser toutes les couches, depuis la 7 (application), puis de la 4 vers la 1; durant le trajet les données subiront des modifications et chaque couche rajoutera ce qu'elle voudra (généralement des en-têtes) pour mieux exercer sa fonction, mais pas seulement (la couche 1, de transport concerne... le transport). 
 
-Ce mécanisme s'appelle l'encapsulation : la trame de données numériques est constituée de plusieurs parties distinctes et mises dans un ordre particulier.
-Au final, ce qui va circuler sur le réseau est une trame de couche 2, qui contient le datagramme de couche 3 (qui lui-même contiendra l'élément de couche 4)
+# Liens
+* <a href="https://www.economie.gouv.fr/files/files/directions_services/cge/barometre-numerique-2019.pdf">Etude : le baromètre du numérique 2019</a>
+* <a href="https://www.lemonde.fr/verification/">Le Décodex du journal en ligne Le Monde</a> 
+* <a href="https://www.lumni.fr/programme/data-science-vs-fake">data sciences vs fake news sur la chaine Lumni</a>
+* <a href="https://fr.statista.com" rel="nofollow">Site avec visuels sur des enquetes statisiques : Statista.com</a>
+* <a href="https://www.cnil.fr/fr">La CNIL :</a>
+* conglomérat de réseaux (interstice.info) : [https://interstices.info/internet-le-conglomerat-des-reseaux/](https://interstices.info/internet-le-conglomerat-des-reseaux/)
 
-![encapsulation](../images/encapsulation.png)
-Lors de la réception c'est exactement l'inverse qui se produit (désencapsulation).
-![desencapsulation](../images/desencapsulation.png)
 
-**Prenons un exemple simple,** vous demandez à votre navigateur de charger votre site préféré www.informatix.fr. Vous êtes reliés à un modem par un câble à paires torsadées. 
+# Approfondir
 
-## *couche application* 
-Le navigateur demande au système d'envoyer une requête HTTP (couche 7). Dans cette couche, le logiciel lui même n'en fait pas partie. Cette couche concerne *l'interface* entre le logiciel est la couche de transport, et transporte l'information du **protocole application** utilisé (ici http par exemple, c'est à dire le protocole lié à l'affichage des pages html)
-Sortie : [requête HTTP]
-## *couche de transport* 
-La requête arrive dans TCP qui ajoute son en-tête. Le protocole TCP va mettre en forme les données à envoyer et ajouter son en-tête. Ici, les numeros d'identification sont les **port source et le port destination**, qui identifient les **applications** qui entrent en jeu dans la communication. Parmi les informations, on trouve aussi le numéro de séquence ISN (pour séquence : dire à la machine en face combien de données elle est censée avoir reçues) et celui d'acquitement ACK (le numéro du prochain octet des données attendues). Ces numéros vont permettre d'établir une communication avec accusés de reception (pour TCP, pas UDP) et de s'assurer, en principe, de l'identité de la machine avec qui les données sont échangées (avec le numéro de séquence, nécessaire pour l'accusé de reception). L'en-tête contient aussi un *checksum.*
-Sortie : [en-tête TCP][requête HTTP]
-## *couche réseau* 
-Le segment TCP arrive dans IP qui ajoute aussi son en-tête (qui contient entre autres votre **adresse IP**  (pour le **routage**) et celle du serveur demandé). La couche 3 indique à la couche 2 quel protocole a été utilisé (TCP, UDP...). Il y a aussi un numéro de connexions établies (IPID) sur le port en question et d'autres informations qui servent à l'eventuelle fragmentation du datagramme (les données ne peuvent pas exceder 1500 octets.  
-Une autre valeur transportée est le TTL (time to live) qui evite que le paquet ne circule indefiniment sur les reseaux.
-Sortie : [en-tête IP][en tête TCP][requête HTTP].
-## *couche physique*
-Le paquet IP arrive dans Ethernet qui ajoute un en-tête (qui contient entre autres votre **adresse MAC** - pour le **switch** -  et celle du modem) et un checksum (vérification d'erreurs CRC). La couche 2 peut alors former la trame et l'envoyer sur le réseau.
-*Il va ajouter l'adresse MAC de l'emetteur et du destinataire, qu'il aura résolu grâce aux tables de routage et la *table arp* (côté serveur). On imagine ici que le datagramme ne peux contenir les données qu'après établissement de la connexion, ce qui sous entend un protocole de présentation.*
-
-**Sortie : [en-tête Ethernet][en-tête IP][en tête TCP][requête HTTP][checksum Ethernet].**
-
-![en-tête](../images/entete.png)
-
-## *Retour sur le protocole TCP*
-La fiabilité est obtenue par un mécanisme d'acquittement des segments : 
-* À l'émission d'un segment, une alarme est amorcée
-* Elle est désamorcée quand l'acquittement correspondant est reçu 
-* Si elle expire, le segment est réémis
-
-![TCP1](../images/TCP1.png)
-
-* Chaque segment possède un numéro de séquence
-* Les acquittements sont identifiés par un marqueur ACK
-* Le concept même d'acquittement impose des notions de délai
-Par exemple, quel est le délai au delà duquel un segment non acquitté doit être réémis
-
-![TCP2](../images/TCP2.png)
-
-*TCP permet ainsi d'être un protocole fiable sans perte de paquets, qui permet à 2 machines de communiquer entre elles (et seulement 2)*
-
-**Retour sur le protocole IP:** c'est lui qui permet d'envoyer les paquets d'un ordinateur vers un autre ordinateur. Il gère l'adressage, le routage et l'interconnexion des différents réseaux.
+* <a href = '../circulation/index.html'>Compléments de cours : Circulation de données</a>
