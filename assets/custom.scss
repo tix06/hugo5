@@ -298,3 +298,38 @@ form legend {
   font-weight: bold;
   padding-bottom: 10px;
 }
+
+/**********************************/
+/*regles CSS pour la BOX à retenir*/
+/**********************************/
+
+/* creation du container au fond coloré et avec bords arrondis */
+/* aucune marge intérieure pour que les éléments soient contre les bords */
+/* du container */
+.essentiel {
+  background:#f0d0a0;
+  color:#555;
+  border-radius:10px;
+  width:80%;
+  border:1px solid #ccc;
+  padding-top:0; 
+}
+
+/* en-tête : boite qui se positionne à l'interieur du container */
+/* en position la plus haute */
+/* avec un fond coloré plus foncé et une police plus grosse */
+.essentiel>.entete {
+  margin:0;
+  background:#f56611;
+  color:#555;
+  font-size:1.5em;
+  padding:20px;
+  border-radius:10px 10px 0 0 ;
+}
+
+/* le contenu : se place à la suite de l'entête, au dessous */
+/* ajout d'une marge intérieure et police plus petite */
+.essentiel>.resume {
+  padding:20px;
+  font-size:0.8em;
+}

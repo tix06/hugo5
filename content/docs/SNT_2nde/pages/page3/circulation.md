@@ -239,6 +239,7 @@ Par exemple, quel est le délai au delà duquel un segment non acquitté doit ê
 # Approfondir
 
 * <a href = '../securite/index.html'>Sécurité des communications</a>
+* <a href = '../TP_reseau/index.html'>TP simulation d'un reseau</a>
 
 [^1Cloud]: Le cloud : désigne le stockage et l’accès aux données par l’intermédiaire d’internet plutôt que via le disque dur d’un ordinateur. Mais aussi des services rendus par des logiciels hébergés *côté serveur*.
 

@@ -163,9 +163,11 @@ En pratique, ce sont les routeurs des réseaux qui sont interconnectés. Lorsqu'
 Le trajet possible entre les 2 machines n'est pas unique : 
 
 <figure>
-<img src="../images/internet-fig1.gif" width = 60% alt="reseau internet">
+<img src="../images/internet-fig1.png" width = 60% alt="reseau internet">
 <figcaption><a href="https://interstices.info/internet-le-conglomerat-des-reseaux/">reseau local et chemin entre routeurs : interstice.info</a></figcaption>
 </figure>
+
+> Dans cet exemple, les données qui circulent du *client* vers le *serveur* vont probablement emprunter des chemins différents : certains passeront par les reseaux d'accès E, A, B et D, alors que d'autres emprunteront les reseaux E, A, C et D. Les routeurs par lesquels passent ces données seront aussi différents dans un même réseau d'accès. Le calcul de l'itinéraire est réalisé de manière dynamique, par les routeurs eux-même, en fonction du trafic.
 
 ## adresse IP et adresses symboliques
 Les adresses IP identifient les machines et leur permet de communiquer entre elles. Le problème est que le format de cette adresse n'est pas très intelligible pour un humain. C'est pour cela que les sites et les programmes hébergés sur les serveurs possèdent aussi une adresse symbolique.
@@ -179,6 +181,11 @@ Les tables de correspondance : nom d'hôte <=> adresse IP sont tenues par des se
 *Internet manipule deux types d’information : les contenus envoyés et les adresses du destinataire et de l’émetteur. Ces deux types d’information sont regroupés dans des paquets de taille fixe, de façon uniforme et indépendante du type de données transportées : texte, images, sons, vidéos, etc.*
 
 Ces données sont rassemblées dans des trames de 1500 octets. La plupart du temps, les données à envoyer sont de taille supérieure à 1500 octets, et il faut plusieurs trames.
+
+<figure>
+<img src="../images/segment.png" width = 60% alt="trame">
+<figcaption>decoupage de l'information numérique en plusieurs datagrammes</figcaption>
+</figure>
 
 C'est le *protocole TCP* qui gère ce découpage, et rajoute des informations pour pouvoir renvoyer les paquets perdus en chemin (grâce à un accusé de reception), et remettre les paquets dans le bon ordre. Un code de vérification est également ajouté au paquet, pour vérifier s'il est conforme à l'orginal, et non *corrompu* en chemin.
 
@@ -195,6 +202,34 @@ C'est le *protocole TCP* qui gère ce découpage, et rajoute des informations po
 Le cours se prolonge à l'adresse suivante : 
 [https://isn-icn-ljm.pagesperso-orange.fr/web/co/module_WEB.html](https://isn-icn-ljm.pagesperso-orange.fr/web/co/module_WEB.html)
 
+<div class="essentiel">
+  <p class="entete">
+    L'essentiel à retenir
+  </p>
+  <div class="resume">
+    <ul>
+      <li>Modèle client-serveur : <br>
+        La plupart des systèmes informatiques fonctionnent sur le modèle client-serveur. L'ordinateur <span class="ital">client</span> a besoin d'échanger des données avec un ordinateur <span class="ital">serveur</span> pour consulter une base de données, demander l'affichage d'une page, utiliser un logiciel... Il envoie pour cela une <span class="ital">requête</span> à l'ordinateur serveur, qui lui répond en retour avec les données attendues, si la connexion est bien établie.<br>
+        Les ordinateurs communiquent selon des règles précises appelées <span class="ital">protocoles</span>. Les protocoles IP et TCP sont deux exemples.
+      </li>
+      <li>IP : <br>Adresse en format binaire avec suffisamment de chiffres pour identifier les machines du reseau de manière unique.<br>Le protocole IP doit s'assurer que les paquets sont expediés au bon ordinateur par les routeurs, et permettre de retourner la reponse au bon endroit (l'ordinateur qui effectue la requête).</li>
+      <li>Routeur : <br>
+      Dans un réseau local, les ordinateurs communiquent par l'intermédiaire du routeur : une machine qui tient à jour une <span class="ital">table de routage</span> avec l'<span class="ital">adresse IP</span> des différents machines qui lui sont reliées.<br>
+      Dans un réseau de réseaux, les données sont acheminées de routeur en routeur, jusqu'à ce que les 2 machines client et serveur aient été mises en communication.
+      <li>Datagramme : <br>
+      Les données échangées sont découpées et acheminées dans des <span class="ital">datagrammes</span> de longueur maximale égale à 1500 octets environ. Ce datagramme contient :
+        <ul>
+          <li>Une en-tête IP avec les adresses IP de l'ordinateur source ainsi que celle du destinataire.</li>
+          <li>Une en-tête TCP, qui est exploitée par le protocole TCP. Celui-ci va permettre de reconstruire l'information qui a été découpée en plusieurs datagrammes numérotés dans l'ordre. Mais aussi vérifier l'intégrité des données reçues, et eventuellement renvoyer le datagramme qui se serait perdu en route.</li>
+          <li>Les données elles-mêmes.</li>
+        </ul>
+      </li>
+      <li>serveur DNS :<br>Ce sont des serveurs qui effectuent la correspondance entre l'adresse symbolique (le nom d'hôte) et l'adresse IP d'une machine.</li>
+      <li>Internet : un système réparti :<br>Internet est un réseau de réseaux. Pour l'utilisateur, internet apparait comme un système où la diversité des machines et des supports de transmission n'est pas visible.</li>
+      <li>les réseaux P2P (pair à pair) :<br>Architecture système dans laquelle tous les ordinateurs sont à la fois client et serveur. Elles peuvent toutes demander d'envoyer des informations. (exemple du protocole BitTorrent ou celui des cryptomonnaies)</li>
+    </ul>
+  </div>
+</div>
 
 # Liens
 * <a href="https://www.economie.gouv.fr/files/files/directions_services/cge/barometre-numerique-2019.pdf">Etude : le baromètre du numérique 2019</a>
