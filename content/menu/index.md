@@ -7,6 +7,7 @@ headless: true
 - [**Physique Chimie 2nde**]({{< relref "/docs/PC_2nde/PC_index" >}})
 	- [physique du mouvement]({{< relref "/docs/PC_2nde/physique/pages/page1" >}})
   - [échanges thermiques]({{< relref "/docs/PC_2nde/physique/pages/page2" >}}) 
+  - [la mole]({{< relref "/docs/PC_2nde/chimie/pages/mole" >}})
 - [**Physique 1ere Spé**]({{< relref "/docs/PC_1ere/PC_index" >}})  
 	-	[Energie]({{< relref "/docs/PC_1ere/energie/energie1" >}})
   - [modèle de Bohr de l'atome]({{< relref "/docs/PC_1ere/atome/atome.md" >}})
