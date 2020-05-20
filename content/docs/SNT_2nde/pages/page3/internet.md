@@ -70,9 +70,9 @@ Il y a 2 courants de pensée :
 
 D'ailleurs, les lois diffèrent ou s'opposent selon les pays.
 
-Des personnes ont poursuivi en justtice les opérateurs, les tenant pour reponsables du contenu qui circule sur les reseaux. Mais cela s'apparenterait alors à une censure et porter atteinte à la *liberté d'expression*.
+Des personnes ont poursuivi en justice les opérateurs, les tenant pour reponsables du contenu qui circule sur les reseaux. Mais cela s'apparenterait alors à une censure et porter atteinte à la *liberté d'expression*.
 
-Une autre source de désaccord concerne : 
+Une autre source de désaccord, liée à l'utilisation du contenu des messages sur les réseaux sociaux, ou des traces de navigation concerne : 
 
 - le droit respectif des employés et des employeurs
 - des universités et leurs étudiants
@@ -198,9 +198,7 @@ C'est le *protocole TCP* qui gère ce découpage, et rajoute des informations po
 > *Vous devez perturber le transport des paquets afin d'empêcher la reconstitution du message. Au fur et à mesure que vous passez les niveaux, l'ordinateur trouve de nouvelles stratégies pour y parvenir. Vous pouvez : retarder les paquets, les corrompre, ou les détruire.*
 
 
-# Le web
-Le cours se prolonge à l'adresse suivante : 
-[https://isn-icn-ljm.pagesperso-orange.fr/web/co/module_WEB.html](https://isn-icn-ljm.pagesperso-orange.fr/web/co/module_WEB.html)
+<br>
 
 <div class="essentiel">
   <p class="entete">
@@ -238,6 +236,7 @@ Le cours se prolonge à l'adresse suivante :
 * <a href="https://fr.statista.com" rel="nofollow">Site avec visuels sur des enquetes statisiques : Statista.com</a>
 * <a href="https://www.cnil.fr/fr">La CNIL :</a>
 * conglomérat de réseaux (interstice.info) : [https://interstices.info/internet-le-conglomerat-des-reseaux/](https://interstices.info/internet-le-conglomerat-des-reseaux/)
+* Le web :[https://isn-icn-ljm.pagesperso-orange.fr/web/co/module_WEB.html](https://isn-icn-ljm.pagesperso-orange.fr/web/co/module_WEB.html)
 
 
 # Approfondir
