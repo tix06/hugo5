@@ -5,6 +5,8 @@ Title : les bases en javascript
 
 # Javascript : les bases
 ## Présentation de la console javascript
+Javascript est une implémentation dans le navigateur du langage *Ecmascript*.
+
 Javascript est un langage interprété … par le navigateur, donc côté client.
 Pour le vérifier, on peut utiliser la console javascript du navigateur pour tester quelques instructions, et interagir avec la page web en cours.
 
@@ -62,6 +64,7 @@ Javascript, c’est aussi le langage de script des pages web : on peut aussi :
 * *Web console :* Permet de coder, d’interpréter et d’exécuter du code Javascript directement sur le Browser 
 * *Js Engine :* Est intégré dans les Browser. Chaque Browser a son propre interpréteur Javascript qui interprète le code et exécute les scripts associés aux pages Web 
 
+En EcmaScript, on passe la majeure partie de son temps à interagir avec des API fournis par l'environnement d'exécution. En ActionScript c'est Flash (objet flash), en JavaScript dans le navigateur c'est le Document Object Model (objet document).
 
 # Structurer son code
 La javascript utilise certains symboles pour structurer : 

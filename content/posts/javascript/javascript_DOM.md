@@ -14,30 +14,62 @@ weight: 20
 # Le DOM
 le DOM ou Document Object Model, une interface qui fait partie du BOM (Browser Object Model) et grâce à laquelle nous allons pouvoir manipuler le contenu HTML et les styles de nos pages.
 
-Le DOM est ainsi une représentation structurée du document sous forme « d’arbre » crée automatiquement par le navigateur. Chaque branche de cet arbre se termine par ce qu’on appelle un nœud qui va contenir des objets. On va finalement pouvoir utiliser ces objets, leurs propriétés et leurs méthodes en JavaScript.
+Le DOM est ainsi une représentation structurée du document sous forme « d’arbre » crée automatiquement par le navigateur, à partir de sa lecture du document HTML. 
 
-C'est en particulier l’interface `Document` que nous allons utiliser. 
+Chaque branche de cet arbre se termine par ce qu’on appelle un nœud, contenant les éléments HTML. On va finalement pouvoir utiliser ces objets, leurs propriétés et leurs méthodes en JavaScript.
 
-> Par exemple lorsque l’on souhaite injecter du texte dans un paragraphe dont l'attribut `id="ancre"`, un élément que l'on aura défini dans la partie `html` du code avec :
-> `<p id = "ancre"></p>`
+Le DOM fournit le squelette du document
 
-> on utilisera dans la partie javascript:  
+Inspecter le DOM se fait avec le navigateur
 
-> `document.getElementById('ancre').innerHTML = "nouveau texte à afficher"`.
+<figure>
+<img src="../images/browserDOM.png" width = "80%" alt="inspecter le DOM">
+<figcaption>inspecter le DOM dans le navigateur</figcaption>
+</figure>
+
+
+C'est en particulier l’interface `Document` que nous allons utiliser pour parcourir le DOM : Toute opération sur le DOM commence avec l’objet document : 
+
+<figure>
+<img src="../images/arbreDOM.png" width = "80%" alt="arbre du DOM">
+<figcaption>arbre du DOM</figcaption>
+</figure>
+
+Trois noeuds du DOM sont disponibles directement comme des propriétés de l’objet DOM :
+
+*  document.documentElement
+*  document.body
+*  document.head
+
+On verra plus loin les méthodes de parcours de l'arbre du DOM (## parcourir l'arbre du DOM).
 
 # Manipuler les éléments de la page
 ## accéder à un élément à l'aide d'un sélecteur
 Pour manipuler les éléments d'une page affichée dans le navigateur, on doit *accéder* à cet élément.
+
+Or, il n'y a pas de lien direct entre html et javascript :
+En Javascript, on peut récupérer une instance de HTMLElement correspondant à un élément de la page.
+
 Cela peut se faire à l'aide des *ancres* laissées sur ces éléments. On peut les sélectionner, comme en CSS avec leur classe, leur ID ou le nom de la balise. Pour réaliser ceci, on utilise les fonctions suivantes:
 
 - `document.getElementById()` permet de sélectionner un élément html à partir de son id.
 - `document.querySelector()` un sélecteur plus générique qui sélectionne les éléments à la manière des sélecteurs css.
 
-*Exemple 1 :* soit un élement avec attribut id='elem' de la page :
+### Un premier exemple : afficher du texte
+lorsque l’on souhaite injecter du texte dans un paragraphe dont l'attribut `id="ancre"`, un élément que l'on aura défini dans la partie `html` du code avec :
+
+`<p id = "ancre"></p>`
+
+on utilisera dans la partie javascript:  
+
+`document.getElementById('ancre').innerHTML = "nouveau texte à afficher"`.
+
+### Exemple 2 : modifier l'attribut style de l'élément
+soit un élement avec attribut id='elem' de la page :
 On cherche à atteindre cet élément et en modifier la couleur : 
 
 *(écrire le code suivant dans un fichier que vous nommerez `exemple1.html`)*
-```
+```html-css
 <body>
   <h1 id="elem">Un titre qui n'a pas de couleur</h1>
 <script>
@@ -50,17 +82,20 @@ On met cet élément dans une variable `elem`. Puis on peut modifier ses attribu
 
 Ouvrir le fichier avec un navigateur. La couleur du titre devrait apparaitre ... en rouge !
 
-*Exemple 2 :* manipulation des données d'un formulaire et utilisation de `document.querySelector()` : Voir [Lyceum javascript](https://lyceum.fr/1g/nsi/5-interactions-entre-lhomme-et-la-machine-sur-le-web/4-gestion-des-evenements-en-javascript)
+### Exemple 3 : utilisation de querySelector
+Cette méthode associée à *document* permet d'utiliser les mêmes règles de selection que lorsque l'on utilise le CSS. On peut donc utiliser comme paramètre : le nom de la balise 'p', la classe de l'élément '.maclasse', l'identifiant '#elem', ...
+
+voir la [page consacrée sur w3schools](https://www.w3schools.com/jsref/met_document_queryselector.asp)
 
 ## parcourir l'arbre du DOM
 La propriété `childNodes` de l'interface `Node` renvoie une liste sous forme de tableau des nœuds enfants de l’élément donné. Le premier nœud enfant reçoit l’indice 0 comme pour tout tableau.
 
 Et pour obtenir l'élément parent d'un noeud, on utilise la propriété `parentElement`.
 
-*Exemple 3 :* 
+*Exemple  :* 
 Vous pouvez tester cet exemple en enregistrant le code  suivant dans un fichier que vous nommerez `exemple3.html`: 
 
-```
+```html
 <body>
 <div>
   <p id="myP">Un peu de texte, <a>un lien</a> et <strong>une portion en emphase</strong></p>
@@ -80,7 +115,7 @@ Cette page a alors l'arbre de DOM suivant qui lui est associé :
 Le premier enfant de `<p>` est un nœud textuel, alors que le dernier enfant est un élément `<strong>`. Cet élément `<strong>` possède pour noeud enfant un noeud textuel dont le contenu et *une portion en emphase*
 
 Dans la console, saisir une à une les instructions suivantes : (sans les commentaires)
-```
+```javascript
 > let paragraph = document.getElementById('myP'); // pour stocker le noeud parent.
 > let first = paragraph.firstChild; // parcours de l'arbre jusqu'au 1er enfant
 > alert(first.nodeValue); // pour récuperer le contenu du noeud textuel
@@ -92,7 +127,7 @@ Dans la console, saisir une à une les instructions suivantes : (sans les commen
 </figure>
 
 Puis :
-```
+```javascript
 > let last = paragraph.lastChild;
 > alert(last.firstChild.data); // pour recuperer le contenu textuel de la balise
 ```
@@ -115,7 +150,7 @@ On peut lire dans la console que le noeud textuel (`<strong>Une portion avec emp
 
 On affiche alors son contenu textuel : dans la console, écrire : 
 
-```
+```javascript
 > let last = paragraph.childNodes[3]
 > alert(last.firstChild.data)
 ```
@@ -129,7 +164,7 @@ On affiche alors son contenu textuel : dans la console, écrire :
 Pour finir, on peut modifier à volonté les éléments textuels en modifiant la valeur renvoyée par `.data` ou `.nodeValue` : 
 
 Dans la console : 
-```
+```javascript
 > last.firstChild.data = 'un autre texte'
 ```
 <figure>
@@ -147,7 +182,7 @@ Pour créer un nouvel élément dans la page :
 
 *Exemple :*
 
-```
+```html-css
 <head>
 <meta charset="utf-8" />
 <script>
@@ -173,7 +208,7 @@ Pour créer un nouvel élément dans la page :
 </body>
 ```
 
-*Résultat :*
+*Résultat : (cliquer sur le bouton pour tester le programme)*
 
 <button onclick="addXToThePage();">
       Clique ici pour afficher la valeur de la variable x
@@ -263,7 +298,7 @@ L'exemple présenté ici est incomplet et ne renvoie dans le tableau que le cham
 
 
 
- ```
+ ```html-css
 <body>
 <table>
       <thead>
@@ -324,6 +359,73 @@ L'exemple présenté ici est incomplet et ne renvoie dans le tableau que le cham
 </script>
 </body>
 ```
+
+# concevoir une page avec tableau en 100% javascript
+
+Dans l'exemple suivant, on va voir la création d'un tableau d'une seule rangée, mais avec de nombreuses cellules. On va donc utiliser une boucle bornée, pour sa création, mais aussi pour relever les valeurs.
+
+Une table en HTML est réalisée à partir d'éléments qui ont la hierarchie suivante : 
+
+L'élément *form* est parent d'un élément *table*, lui même parent de *tbody*, parent de *tr* (le ou les rangs) qui possède, lui plusieurs enfant *td*, un par cellule : 
+
+<figure>
+<img src="../images/DOM-tab.png" width = "60%" alt="arbre du DOM">
+<figcaption>arbre du DOM pour le tableau</figcaption>
+</figure>
+
+On commence par selectionner le noeud de l'élément *form* : 
+
+```javascript
+let form = document.getElementsByTagName("form")[0];
+```
+
+Au début du script on créé les différents noeuds pour ces éléments. Par exemple : 
+
+```javascript
+let tbl = document.createElement("table");
+```
+
+On créé un noeud pour l'élément `input` qui sera mis dans chaque cellule. Ce noeud est affecté à la variable *cellText*.
+
+On créé les attributs de cet élément. On utilise la méthode `setAttribute(attribut,valeur)` : 
+
+```javascript
+cellText.setAttribute("type", "text");
+```
+
+On ajoute alors le noeud au DOM avec : 
+
+```javascript
+ document.body.appendChild(cellText);
+ ``` 
+
+ L'élément créé est alors : `<input type="text">` 
+
+Pour chaque cellule `td` du tableau, on ajoute l'élément `input` : 
+
+```javascript
+cell.appendChild(cellText);
+```
+
+Puis on ajoute l'élément *td* au noeud *tr* : 
+
+```javascript
+row.appendChild(cell);
+```
+
+Puis l'élément *tr* à *tbody*, lui même à *table*, et *table* à *form*.
+
+<figure>
+<img src="../images/dom-console.png" width = "40%" alt="arbre du DOM">
+<figcaption>inspecteur web : console</figcaption>
+</figure>
+
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="tix06" data-slug-hash="PoPVgEq" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="DOM tableau">
+  <span>See the Pen <a href="https://codepen.io/tix06/pen/PoPVgEq">
+  DOM tableau</a> by tixidor (<a href="https://codepen.io/tix06">@tix06</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 # Liens
 
