@@ -5,6 +5,13 @@ Title : HTML CSS les bases
 # Les langages web
 ## des langages interprétés
 
+HTML : HyperTextMarkup Langage; CSS : Cascading StyleSheets; Javascript sont des langages interprétés par le navigateur, côté client. Ces 3 langages, en combinaison, vont permettre de créer des *sites internet*.
+
+Pour que les pages soient accéssibles à tout le monde, sur le web[^2], ces pages doivent être hébergés sur un serveur. Lorsque le navigateur client envoie une requête au serveur, celui-ci lui renvoie les fichiers HTML, CSS et JS. Les instructions sont alors interprétées et permettent l'affichage des pages.
+
+Ces langages sont en constante évolution. Ce sont des langages *open sources*[^5] et de nombreux contributeurs en proposent des améliorations.
+Il existe plusieurs logiciels navigateurs (Mozilla, Chrome, Safari,...). Et pourtant, malgré cette diversité et ces évolutions du langage, eux-ci vont interpréter ces fichiers et afficher les pages (presque) de la même manière car ils se réferent tous aux même recommandations, celles du w3c[^4].
+
 ## des tâches différentes
 Les langages web se partagent les tâches : 
 Une bonne pratique dans le développement d'un site internet (côté front-end, ce qui est executé sur la machine du client) consiste à utiliser HTML pour le contenu (avec un contenu correctement balisé, sémantique, accessible), CSS pour la mise en forme et la mise en page, et JavaScript pour gérer les interactions (qui peuvent éventuellement amener à modifier le contenu via les méthodes du DOM[^1]).
@@ -33,8 +40,6 @@ Voici le code HTML utilisé :
 
 <html>
     <head>
-        <!-- en-tête de la page -->
-        <!-- encodage des caractères -->
         <meta charset="UTF-8">
         <title>Marignan 1515</title>
     </head>
@@ -188,7 +193,7 @@ Si le lien était vers une page du site (une page *locale*), il n'y aurait pas e
 Ces entités ont toutes la même préfixe : une esperluette « & ». La fin d'une entité est marquée par le caractère point-virgule « ; ».
 
 Ainsi, pour afficher `<em>`, il faudra écrire : `&lt;em&gt;`.
-  
+
 voir lien : [https://fr.wikibooks.org/wiki/Le_langage_HTML/Entités](https://fr.wikibooks.org/wiki/Le_langage_HTML/Entités)
 
 ## Attributs des balises
@@ -241,7 +246,14 @@ Ce sont : `<section>`, `<article>`, `<header>`, `<footer>`, `<nav>`et `<aside>`
 - L'élément HTML `<section>` représente une section générique d'un document, par exemple un groupe de contenu thématique. Une section commence généralement avec un titre.
 - `<article>`Articles contenus dans les sections
 
+## listes
+voir le lien sur [https://developer.mozilla.org/](https://developer.mozilla.org/fr/docs/Apprendre/HTML/Comment/Créer_une_liste_d_éléments_avec_HTML)
 
+## tableaux
+voir le lien sur [https://developer.mozilla.org/](https://developer.mozilla.org/fr/docs/Apprendre/HTML/Tableaux/Basics)
+
+## formulaires
+voir le lien sur [https://developer.mozilla.org/](https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML)
 
 ## Elements de type bloc
 
@@ -319,7 +331,56 @@ Reproduire en HTML et CSS un document représentant l'image suivante :
 * cours complet HTML-CSS (et aussi javascript): [https://www.pierre-giraud.com/html-css-apprendre-coder-cours/](https://www.pierre-giraud.com/html-css-apprendre-coder-cours/)
 
 
+<div class="essentiel">
+ <div class="entete">
+  L'essentiel à retenir
+ </div>
+ <div class="resume">
+  <h3>HTML est un langage interprété</h3>
+    Une fois le fichier HTML chargé depuis le serveur, celui-ci sera interprété et affiché par le navigateur.<br>
+
+    Il existe un organisme qui fait réference pour les langages web et fixe les standards. Il s'agit du w3c, dont les recommandations sont intégrées par les navigateurs.<br>
+
+    Le rôle du langage HTML sera de : 
+    <ul>
+      <li>structurer la page : en emboitant les balises des éléments</li>
+      <li>définir le rôle des différents objets à afficher : titres, liens, listes, tableau, paragraphe, image, médias.</li>
+    </ul>
+
+    Les balises doivent être correctement nommées, afin de profiter des règles  de style par défaut appliquées par le navigateur.
+
+  <h3>La structure d'une page HTML</h3>
+    Le squelette d'un fichier HTML comprend :
+    <ul>
+      <li>le doctype</li>
+      <li>l'élément `html` qui est la balise parente de toutes les autres</li>
+      <li>l'élément `head` : premier enfant de l'élément `html`<br>Cette balise contient : l'information sur l'encodage des symbole (souvent utf-8), les liens vers les fichiers css et javascript, le titre de la page, et d'autres métadonnées.</li>
+      <li>l'élément `body` : deuxième enfant de l'élément `html`. C'est cet élément qui contiendra toutes les autres balises qui structurent la page.</li>
+    </ul>
+  <h3>Elements et attributs</h3>
+      Un attribut va étendre les propriétés d'une balise. Certains sont obligatoires, comme par exemple `src` (localisation de l'image), ou `href` (URL page d'un hyperlien).<br>
+      L'attribut `style` va permettre d'ajouter des règles CSS à l'élément. Mais cette pratique ne doit pas être généralisée.<br>
+
+      Une balise avec attribut, représentant un élement (h1, p, a, img...) s'écrira sous la forme:<br>
+      <em>&lt;element attribut="valeur"&gt;</em>
+      <br><br>
+      Deux attributs spéciaux permettent d'indexer un élément:
+      <ul>
+        <li>`id` : de manière unique avec un attribut <em>identifiant</em></li>
+        <li>`class` : avec un attribut de <em>classe</em>, qui n'est donc pas forcément unique dans le document.</li>
+      </ul>
+
+    
+  <h3>Balises principales</h3>
+    voir paragraphe <a href="http://localhost:1313/docs/NSI/HTML/page1/#balises-principales"># Balises principales</a>
+  <h3>Disposition des éléments</h3>
+    voir paragraphe <a href="#elements-de-type-bloc"># Elements de type bloc</a> et<br>
+    voir paragraphe <a href="#eléments-de-type-inline"># Eléments de type inline</a>
+ </div>
+</div>
 
 [^1]: DOM : Document Object Model
 [^2]: web : (www) world wide web : c'est la toile. On y *surfe*, c'est à dire que l'on va y chercher des ressources. C'est un service, comme il en existe d'autres (FTP, mail,...). C'est un système distribué qui opère au dessus d'internet.
 [^3]: internet (Internet Network) est un réseau de réseaux, à l'echelle mondiale, qui interconnecte les ordinateurs et permet d'echanger des données. C'est système réparti (l'inverse de distribué) : un ensemble d'ordinateurs indépendants, présenté à l'utilisateur comme un système unique cohérent (un seul paradigme). Souvent une couche logicielle intermédiaire appelée middleware située au dessus du système d'exploitation est responsable de son implémentation. Un exemple est le web dans lequel toute information apparait comme un document. C'est dons un logiciel élaboré au dessus du réseau.
+[^4]: le W3C ou « World Wide Web Consortium ». C'est un groupe de travail, qui fait référence et qui est chargé de définir et de veiller au développement des langages HTML et CSS. Il existe un autre groupe de référence : Le WHATWG ou « Web Hypertext Application Technology Working Group ».
+[^5]: langages open source : Ce sont des langages que l’on va pouvoir utiliser sans licence et n’importe qui va (généralement) pouvoir participer à leur développement
