@@ -12,7 +12,7 @@ Une bonne pratique dans le développement d'un site internet (côté front-end, 
 Le langage HTML est un langage constitué de *balises*, comme par exemple : 
 `<title>le titre de ma page</title>` qui permet d'afficher le titre de la page dans l'onglet du navigateur.
 
-Les éléments mis dans le programme à l'aide de ces balises vont permettre d'ajouter et structurer le contenu de la page : des titres de différents niveaux, du texte, des images, mais surtout, des hyperliens : 
+Les éléments mis dans le programme à l'aide de ces balises vont permettre d'ajouter et structurer le contenu de la page : des titres de différents niveaux, du texte, des images, des médias (sons, videos),mais surtout, des hyperliens : 
 
 * entre les pages du sites
 * vers les pages de sites externes
@@ -29,6 +29,16 @@ On pourrait utiliser une ou deux balises uniques pour tous les usages, par exemp
 Voici le code HTML utilisé : 
 
 ```html
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- en-tête de la page -->
+        <!-- encodage des caractères -->
+        <meta charset="UTF-8">
+        <title>Marignan 1515</title>
+    </head>
+
 <body>
 <div class="main">
   <div class="titre">La bataille de Marignan</div>
@@ -101,6 +111,9 @@ Voici le code HTML utilisé :
 
 ## le squelette du document
 
+Cette partie du programme est le contenu minimum à mettre dans vos pages : 
+
+
 ```html
 <!DOCTYPE html>
 
@@ -129,7 +142,7 @@ On peut lui associer l'attribut langue, précisant la langue utilisée dans le d
 
 `<html lang="fr">` 
 
-L'en-tête (élément <head>) donne l'encodage des caractères (ici UTF-8).
+L'en-tête (élément `<head>`) donne l'encodage des caractères (ici UTF-8).
 
 Préciser l'encodage des caractères est primordial pour exploiter la bonne page de code et ne pas se retrouver avec les caractères spéciaux ou accentués. Le choix de l'UTF-8 est désormais préconisé par le W3C pour tous les protocoles échangeant du texte sur internet (dont HTML).
 
@@ -150,7 +163,7 @@ Si vous avez un script qui est très gros mais indépendant, il est préférable
 
 `<p>contenu de la balise</p>`
 
-<p> est la balise ouvrante, </p> est la balise fermante.
+`<p>` est la balise ouvrante, `</p>` est la balise fermante.
 
 Certaines balises sont vides (elles n'ont pas de contenu), la fermeture se fait alors immédiatement :
 
@@ -160,16 +173,55 @@ Certaines balises sont vides (elles n'ont pas de contenu), la fermeture se fait 
 
 `<br>` et `<img>` sont des balises dites *orphelines*.
 
-- Dans ce dernier exemple, on voit qu'une balise est constituée *d'attributs* (par exemple `src` auxquels on affecte des *valeurs. (entre guillemets et après le `=` )*
-- les liens :
+- Dans ces exemples, on voit qu'une balise peut être constituée *d'attributs* (par exemple `src` pour la balise *img*). On affecte alors des *valeurs* à ces attributs (entre guillemets et après le `=` ).
+- Lien hypertexte : on créé un lien *externe* en écrivant l'URL de la page `http://...`:
 
-exemple : 
+`<a href="http://fr.wikipedia.org/">Un lien hypertexte vers le site de Wikipédia</a>` 
 
-`<a href="[http://fr.wikipedia.org](http://fr.wikipedia.org/)">Un lien hypertexte vers le site de Wikipédia</a>` 
+Si le lien était vers une page du site (une page *locale*), il n'y aurait pas eu `http://` au début de l'adresse.
 
 - Les balises doivent être correctement imbriquées :
 
 `<p>Cette syntaxe est <strong>bonne</strong></p>`
+
+- il peut arriver que l'on ait recours à des *entité HTML* pour écrire certains caractères spéciaux : (symbole réservé comme le chevron `>, alphabet grec...).
+Ces entités ont toutes la même préfixe : une esperluette « & ». La fin d'une entité est marquée par le caractère point-virgule « ; ».
+
+Ainsi, pour afficher `<em>`, il faudra écrire : `&lt;em&gt;`.
+  
+voir lien : [https://fr.wikibooks.org/wiki/Le_langage_HTML/Entités](https://fr.wikibooks.org/wiki/Le_langage_HTML/Entités)
+
+## Attributs des balises
+Les attributs sont ajoutés à la balise *ouvrante*. Il vont permettre de préciser certaines de ses caractéristiques, de faire appel à une *fonction* du langage HTML, et parfois, modifier son comportement.
+
+> La syntaxe est : `<element attribut="valeur">`
+
+Certaines balises acceptent les attributs `width` ou `height`. Ce qui permet de définir leur dimension (largeur, hauteur), (voir l'élément `img`).
+Pour certains éléments, des attributs sont obligatoires et doivent être renseignés : la localisation d'une image `src`, ou bien l'adresse d'une page pour un hyperlien `href`.
+
+**Exemple :**
+
+```html
+<section style="background-color: yellow; width:450px">
+  <p>Une section colorée avec un <a href="https://numerix.netlify.app">lien vers mon site</a></p>
+  <img src="../images/moustique.png" width = 40% alt="attention moustiques">
+</section>
+```
+
+*Résultat :*
+
+<section style="background-color: yellow; width:450px">
+    <p>Une section colorée avec un <a href="https://numerix.netlify.app">lien vers mon site</a></p>
+    <img src="../images/moustique.png" width = 40% alt="attention moustiques">
+</section>
+
+**Remarques :**
+
+* L'attribut `style` définit des styles CSS qui auront la priorité sur ceux définis précédemment. Il ne devrait être utilisé qu'à des fins de tests car il est conseillé d'utiliser un/des fichier(s) à part pour gérer la mise en forme.
+* L'attribut `href` de l'élément `a` permet de créer un hyperlien. Celui-ci permet d'ouvrir une autre page (locale ou externe).
+* La balise *img* permet l'affichage d'une image, accepte les attributs *width* et *height*, *alt* (affichage d'un texte alternatif si l'image ne s'affiche pas, ou pour des raisons d'accessibilité), et aussi *src* pour pointer vers l'adresse de l'image. 
+
+*Question :* L'adresse de l'image peut être *relative*, *absolue*, *locale* ou *externe*. Définir chacun de ces termes. Puis expliquer comment chacune de ces adresses a une expression particulière pour valeur de l'attribut *src*.
 
 ## Construction de la page
 Les éléments vont se disposer l'un après l'autre, dans le *flux* de construction de la page, qui correspond à l'ordre dans lequel sont écrites les balises dans le fichier HTML.
@@ -258,6 +310,14 @@ Reproduire en HTML et CSS un document représentant l'image suivante :
 </figure>
 
 *Aide : bien reflechir à l'ordre dans lequel ces éléments vont s'inscrire dans le flux. Utiliser l'imbrication entre éléments pour bien ordonner la construction. Utiliser la règle CSS `display : inline-block;` pour modifier l'affichage de certains éléments.*
+
+# Liens
+* validateur w3c : [http://validator.w3.org](http://validator.w3.org/)
+* Les éléments HTML : [https://developer.mozilla.org/fr/docs/Web/HTML/Element](https://developer.mozilla.org/fr/docs/Web/HTML/Element)
+* entités HTML : [https://fr.wikibooks.org/wiki/Le_langage_HTML/Entités](https://fr.wikibooks.org/wiki/Le_langage_HTML/Entités)
+* liste des attributs de balises en HTML : [https://developer.mozilla.org/fr/docs/Web/HTML/Attributs](https://developer.mozilla.org/fr/docs/Web/HTML/Attributs)
+* cours complet HTML-CSS (et aussi javascript): [https://www.pierre-giraud.com/html-css-apprendre-coder-cours/](https://www.pierre-giraud.com/html-css-apprendre-coder-cours/)
+
 
 
 [^1]: DOM : Document Object Model
