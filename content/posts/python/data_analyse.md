@@ -71,12 +71,13 @@ Le principe : on récupère les données, on les nettoie, on les explore, puis o
 
 * Apprentissage supervisé : les données à analyser comprennent à la fois des **données d'entrée et de sortie**. On connait la *classe* des objets, et on cherche à prévoir l'appartenance à une de ces classes pour tout nouvel objet.
 
-Lorsque l'on cherche à *comprendre* ou *définir* une relation entre les données, on peut pratiquer : 
-* une Association : qui consiste à déterminer les attributs qui sont corrélés : 
-  * analyse du panier de la ménagère : ex : poisson et vin blanc
+Lorsque l'on cherche à *comprendre* ou *définir* une relation entre les données, on peut pratiquer une **association** : qui consiste à déterminer les attributs qui sont corrélés : 
+
+C'est ce que l'on réalise lorsque l'on fait l'analyse d'un panier de courses au supermarché (ou sur un site d'e-commerce) : *poisson* et *vin blanc* sont deux articles qui vont souvent occuper ensembles le *panier*.
   
 * Apprentissage non supervisé : Seules les entrées sont fournies. Par exemple : identifier des familles de fournisseurs et de clients pour faire un mailing ciblé
-* Segmentation : consiste à former des groupes homogène à l'intérieur d'une  population (des *clusters*). Utilisé en classification non supervisée.
+
+Une technique pratiquée en apprentissage non supervisé : la **Segmentation** : consiste à former des groupes homogène à l'intérieur d'une  population (des *clusters*). 
 
 ## Des exemples de méthodes de fouille de données
 Les programmes d'analyse de données (classification, de prédiction, d'estimation, d'association) utilisent des algorithmes que l'on peut essayer de classer, comme le montre le tableau suivant : 

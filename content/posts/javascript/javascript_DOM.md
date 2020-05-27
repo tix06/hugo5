@@ -139,7 +139,7 @@ Puis :
 
 On peut réaliser cette dernière manipulation en ayant recours à la liste de tous les enfants de `paragraph`: en écrivant dans la console : 
 
-`> paragraph.childnodes` 
+`> paragraph.childNodes` 
 
 <figure>
 <img src="../images/dom3.png" width = "600px" alt="arbre du DOM">
