@@ -1,0 +1,157 @@
+div.tab_avan{
+  padding:5px;
+  background: #EEEEEE;
+}
+section {
+  background:#FFFFFF;
+  border: 2px outset; 
+  border-radius:5px;
+  height:45%;
+  width:100%;
+  margin: 0;
+  box-shadow:2px 2px 2px gray, -1px -1px 2px white;
+}
+
+/******** les tableaux **********************/
+.tab_avan, .bilan {
+	  	display: block;
+   		justify-content: center;
+	  }
+/************* regles pour l'alignement et le style du curseur et bouton ***/
+.controls {
+  background: #FFEEEE;
+  text-align:center; 
+  padding-top:2px;
+  padding-bottom:2px;
+}
+
+.controls form{
+  width:200px; /* largeur du bloc */
+  height: 150px;
+  padding:10px; /* aération interne du bloc */
+  border-radius: 5px;
+  border:2px solid #fff;
+  vertical-align:middle;
+  display:inline-block;
+  line-height:1.2; /* on rétablit le line-height */
+  text-align:left; /* ... et l'alignement du texte */ 
+}
+
+/****** bouton de validation *******************/
+input[value=valider]{
+	  	display:block;
+	  	/*margin : 50px;*/
+	  }
+
+/******* regles pour la fenetre graphique ************/
+.graphique{
+  text-align: center;
+}
+canvas { 
+    margin-top: 50px;
+    border: 2px solid black; 
+	  display:inline-block;	
+      }
+/*****************************************************/
+
+/******************* le tableau avancement ***********/
+.tab_resume {
+  padding-top:4px;
+	height:78px;
+}
+
+.tableau {
+  border-collapse: collapse;
+}
+
+.tableau, tr{
+  border: 1px solid black;
+}
+
+th, td {
+  /*padding:0;*/
+	text-align: center;
+  font-size:18px;
+}
+
+th.coef {
+	width:24px;
+}
+
+.stick{
+	width:100px;
+  font-size: 10px;
+}
+
+td.stick {
+  height: 50px;
+}
+
+.reactif,.produit,input[type=text]{
+	width:30px;
+	text-align:center;
+}
+
+.operateur{
+	width:24px;
+	text-align:right;
+}
+
+.R1 {
+	background-color:#ff0000;
+}
+
+.R2 {
+	background-color:#aa2200;
+}
+
+.P1 {
+	background-color:#00ff00;
+}
+
+.P2 {
+	background-color:#00aa22;
+}
+
+/*==================================================*/
+/* regles pour curseur partie commune               */
+/*==================================================*/
+input[type=range].custom-slider.custom-slider-bullet {
+  height: 2em;
+  color: #FFF;
+  background: transparent;
+  background-image: linear-gradient(to bottom, #FFF, #999, #FFF);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 25%;
+}
+/*==============================*/
+/* le curseur                   */
+/*==============================*/
+input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
+  width: 2em;
+  padding: 0.25em;                                              /* largeur du bord */
+  border: 1px solid #888;
+  border-radius: 50%;
+  box-shadow: 0 0 .5em #FFF inset;
+  background: linear-gradient(#888, #FFF) content-box,          /* le centre */
+              linear-gradient(-90deg, #888, #DDD) border-box;   /* le bord */
+}
+input[type=range].custom-slider.custom-slider-bullet::-moz-range-thumb {
+  width: 2em;
+  padding: 0.25em;                                              /* largeur du bord */
+  border: 1px solid #888;
+  border-radius: 50%;
+  box-shadow: 0 0 .5em #FFF inset;
+  background: linear-gradient(#888, #FFF) content-box,          /* le centre */
+              linear-gradient(-90deg, #888, #DDD) border-box;   /* le bord */
+}
+input[type=range].custom-slider.custom-slider-bullet::-ms-thumb {
+  width: 2em;
+  padding: 0.25em;                                              /* largeur du bord */
+  border: 1px solid #888;
+  border-radius: 50%;
+  box-shadow: 0 0 .5em #FFF inset;
+  background: linear-gradient(#888, #FFF) content-box,          /* le centre */
+              linear-gradient(-90deg, #888, #DDD) border-box;   /* le bord */
+}

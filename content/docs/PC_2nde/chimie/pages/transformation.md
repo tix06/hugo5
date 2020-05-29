@@ -16,4 +16,8 @@ On pourra consulter la video suivante de la chaine *mathrix* sur *youtube* :
   <figcaption>lancer la video</figcaption>
 </figure>
 
+### tableau d'avancement
+Utiliser l'animation suivante : [tableau d'avancement](../avancement/index.html)
+
+
 

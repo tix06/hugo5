@@ -1,0 +1,185 @@
+---
+Title : tableau d'avancement
+bookShowToc: false
+---
+
+
+<link rel="stylesheet" href="../src/style.css" type="text/css"/>   
+
+<div class="tab_avan">
+<section class="tab_avan">
+<table class="tableau">
+	<colgroup>
+		<col class="stick">
+		<col class="coef">
+		<col class="R1">
+		<col class="operateur">
+		<col class="coef">
+		<col class="R2">
+		<col class="operateur">
+		<col class="coef">
+		<col class="P1">
+		<col class="operateur">
+		<col class="coef">
+		<col class="P2">
+	</colgroup>
+	<tr>
+		<th>
+		</th>
+		<th class="coef">
+			<input type="text" value="">
+		</th>
+		<th class="reactif">
+			<input type="text" value="CH4">
+		</th>
+		<th>
+			+
+		</th>
+		<th class="coef">
+			<input type="text" value="2">
+		</th>
+		<th class="reactif">
+			<input type="text" value="O2">
+		</th>
+		<th>
+			=
+		</th>
+		<th class="coef">
+			<input type="text" value="">
+		</th>
+		<th class="produit">
+			<input type="text" value="CO2">
+		</th>
+		<th>
+			+
+		</th>
+		<th class="coef">
+			<input type="text" value="2">
+		</th>
+		<th class="produit">
+			<input type="text" value="H2O">
+		</th>
+	</tr>
+	<tr class="EI">
+		<td class="stick">
+			quantité de matière<br>
+			à l'état initial<br>
+			avancement <br>x = 0
+		</td>
+		<td>
+
+		</td>
+		<td class="molR">
+			<input type="text" value="10">
+		</td>
+		<td>
+			
+		</td>
+		<td>
+			
+		</td>
+		<td class="molR">
+			<input type="text" value="10">
+		</td>
+		<td>
+			
+		</td>
+		<td>
+
+		</td>
+		<td class="molP">
+			<input type="text" value="1">
+		</td>
+		<td>
+
+		</td>
+		<td>
+			
+		</td>
+		<td class="molP">
+			<input type="text" value="1">
+		</td>
+	</tr>
+	<tr class="EF">
+		<td class="stick">
+			avancement<br>
+			x = 0
+		</td>
+		<td>
+
+		</td>
+		<td class="molR">
+			2.3
+		</td>
+		<td>
+			
+		</td>
+		<td>
+			
+		</td>
+		<td class="molR">
+			2
+		</td>
+		<td>
+			
+		</td>
+		<td>
+
+		</td>
+		<td class="molP">
+			1
+		</td>
+		<td>
+
+		</td>
+		<td>
+			
+		</td>
+		<td class="molP">
+			1
+		</td>
+	</tr>
+</table>
+
+</section>
+
+
+<section class="controls">
+<form>
+<input type="range" class="input" name="avan"
+         min="0" max="11" value="0" list="tickmarks">
+
+<label for="avan">avancement de la reaction = </label>
+<datalist id="tickmarks">
+  <option value="0" label="0">
+  <option value="10">
+  <option value="20">
+  <option value="30">
+  <option value="40">
+  <option value="50">
+  <option value="60">
+  <option value="70">
+  <option value="80">
+  <option value="90">
+  <option value="100">
+</datalist>
+
+<output></output>
+
+<input type="button" class="btn-lg" value="valider" onclick="updata()">
+</form>
+<!--<p id="valeurs">valeurs</p> -->
+</section>
+
+<section class="tab_resume">
+<form class="bilan"></form>
+<!--
+<input type="button" value="tracer le graphique" onclick="updata()">
+-->
+
+</section>
+<section class="graphique">
+<canvas id="graph" width="400" height="400"></canvas>
+</section>
+</div>
+<script type="text/javascript" src="../src/script.js"></script>
