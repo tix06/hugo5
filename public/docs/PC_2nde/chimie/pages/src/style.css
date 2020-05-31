@@ -17,6 +17,8 @@ section {
 	  	display: block;
    		justify-content: center;
 	  }
+
+
 /************* regles pour l'alignement et le style du curseur et bouton ***/
 .controls {
   background: #FFEEEE;
@@ -57,7 +59,7 @@ canvas {
 /******************* le tableau avancement ***********/
 .tab_resume {
   padding-top:4px;
-	height:78px;
+	/*height:78px;*/
 }
 
 .tableau {

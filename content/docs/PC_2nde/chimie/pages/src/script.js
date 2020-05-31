@@ -13,7 +13,7 @@ var img = new Image();
 
 window.onload = function(){
 img.addEventListener('load', function() {
-  ctx.drawImage(img,0,0,canvas.width,canvas.height);
+  ctx.drawImage(img,-canvas.width * 0.1,-canvas.height*0.1,canvas.width*1.2,canvas.height*1.2);
  //exécute les instructions drawImage ici 
 }, false);
 img.src = "../src/chemistry.png";
@@ -34,6 +34,10 @@ let coef=[];	// coef stoechiometriques
 let xmax; 		// avancement maximal
 
 [tabX,tabY,label,coef] = extract();
+
+etat(); // essai de lancer directement le dessin du tableau puis de mettre visibility : hiiden
+// afin que la section prenne la bonne dimension
+
 
 /*
 xmax=0;
