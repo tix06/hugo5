@@ -61,7 +61,8 @@ let out = document.querySelector('output');
 out.innerHTML = inp.value/10*xmax;
 
 // use 'change' instead to see the difference in response
-inp.addEventListener('input', function () {
+
+inp.addEventListener('input', function curseur() {
   xmax = x_max();
   let val = inp.value/10*xmax; // nouvelle valeur avancement
   val = Math.round(100*val)/100; // arrondi à 2 chiffres si besoin
@@ -79,6 +80,7 @@ function etat(){
   let tabX=[];	// nom des especes
   let tabY=[];	// quantités
   let label=[];	// etiquette des axes
+
   [tabX,tabY,label] = extract(true);
   var bilan = document.querySelector(".bilan");
   //var child = bilan.childNodes;
@@ -412,4 +414,14 @@ function x_max(){
 	xmax = Math.min(...x);
 	xmax = Math.round(xmax*100)/100; // arrondi
 	return xmax
+}
+
+function curseur() {
+// fonction associée au curseur à glisser
+  xmax = x_max();
+  let val = inp.value/10*xmax; // nouvelle valeur avancement
+  val = Math.round(100*val)/100; // arrondi à 2 chiffres si besoin
+  if (val>xmax){val=xmax};
+  out.innerHTML = val;
+  etatFinal(val);
 }
