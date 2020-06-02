@@ -80,15 +80,17 @@ input[type="button"]:hover {
 canvas { 
     margin-top: 50px;
     border: 2px solid black;
+    display:inline-block;
     align : center; 
+    max-width: 100%;
     }
 /* champs formulaire */   
 input[type="text"]{
     font-size:12px;
 	}
 /*images et figures*/	
-img, figure, canvas {
-	align : center;
+img, figure{
+	text-align : center;
 	overflow: scroll;
 	}
 

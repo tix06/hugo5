@@ -49,12 +49,12 @@ input[value=valider]{
 .graphique{
   text-align: center;
 }
-canvas { 
+/*canvas { 
     margin-top: 50px;
     border: 2px solid black; 
 	  display:inline-block;	
     max-width: 100%;
-      }
+      }*/
 /*****************************************************/
 
 /******************* le tableau avancement ***********/
