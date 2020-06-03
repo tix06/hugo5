@@ -7,6 +7,30 @@ bookShowToc: false
 <link rel="stylesheet" href="../src/style.css" type="text/css"/>   
 
 <div class="tab_avan">
+<h1>Modéliser une transformation chimique</h1>
+<h2>Comment utiliser l'animation</h2>
+Vous pouvez modifier, directement dans la 1ere ligne du tableau d'avancement, l'équation de réaction, avec : 
+<ul>
+	<li>le nom des espèces chimiques</li>
+	<li>les coefficients stoechiométriques de l'équation</li>
+</ul>
+Vous pouvez aussi choisir les quantités de matière dans l'état initial pour chacune des espèces chimiques (2e ligne).
+
+Lorsque ces réglages sont effectués : 
+<ol>
+	<li>déplacer le curseur <span class="ital">avancement de la reaction</span> afin de re-calculer les quantités de matière pour un avancement x.</li>
+	<li>une fois le curseur déplacé, cliquer sur VALIDER pour prendre une photographie du système chimique. Le diagramme plus bas donne une image des quantités de matière dans cet état d'avancement x</li>
+</ol>
+
+<h2>Rappel sur la définition d'avancement</h2>
+On rappelle que le curseur est :
+<ul>
+	<li>complétement à gauche pour l'état <span class="ital">initial</span>: x=0</li>
+	<li>complètement à droite pour l'état <span class="ital">final</span>: x = x(max)</li>
+	<li>dans une position intermédiaire pour un état <span class="ital">intermédiaire</span>: 0 < x < x(max)</li>
+</ul>
+
+<h1>Tableau d'avancement</h1>
 <section class="tab_avan">
 <table class="tableau">
 	<colgroup>
@@ -177,19 +201,21 @@ bookShowToc: false
 <input type="button" value="tracer le graphique" onclick="updata()">
 -->
 
-</section>
+</section class="controls">
 <section class="graphique">
 <canvas id="graph" width="400" height="400"></canvas>
 </section>
 </div>
 
 <section>
-<h3>Document</h3>
+<h1>Document</h1>
 telecharger et imprimer : <a href="/pdf/PC_2nde/C52_cours_transformation_chimique.pdf">C52_cours_transformation_chimique.pdf</a>
 
 
-<iframe src="/pdf/PC_2nde/C52_cours_transformation_chimique.pdf" width="100%" height="800" align="middle"></iframe>
+<iframe src="/pdf/PC_2nde/C52_cours_transformation_chimique.pdf" width="96%" height="800" align="middle"></iframe>
 
 </section>
+
+</div>
 
 <script type="text/javascript" src="../src/script.js"></script>
