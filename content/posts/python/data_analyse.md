@@ -40,7 +40,7 @@ Dans les années 1950, vous auriez fait un programme du type « si la superficie
 
 Mais ce type de *problème* ne peut pas être résolu de manière satisfaisante avec de telles approximations: il vaudrait mieux constater le prix de plusieurs appartements, issus de différents quartiers, de *qualités* différentes (des *variables*, comme la superficie, l'exposition, le vis-à-vis...). On pourra alors estimer le prix d’un nouvel appartement non-référencé selon ses caractéristiques (ses variables).
 
-C'est ce type de démarche qui est attendu lorsque l'on fait du *machine learning*, ou de l'*apprentissage autonome*. C'est un sous-domaine de l’intelligence artificielle.
+C'est ce type de démarche qui est attendu lorsque l'on fait du *machine learning*, ou de l'*apprentissage autonome*. C'est un sous-domaine de l’intelligence artificielle. En pratique, le programme va analyser une partie des données pour rechercher les **corrélations** ou les **similitudes** entre les objets. Il va alors former des classes, ou établir des relations, ou des probabilités.
 
 Le machine learning est un domaine large, qui comprend de très nombreux algorithmes. Parmi les plus célèbres, on retrouve :
 
