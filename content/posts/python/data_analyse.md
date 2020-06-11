@@ -10,12 +10,45 @@ prev: /AlgoKnn
 title: Datas analyse
 weight: 16
 ---
-# Notebooks
+# Notebooks associés
 
 * algorithme de recommandation : [algorithme de recommandation.md](../algorithme_recommandation/index.html)
 * arbres de décision : [graphes_mini_prog.md](../graphes_mini_prog/index.html)
 
+# Intelligence artificielle (IA)
+L'intelligence artificielle désigne des algorithmes plus ou moins évolués qui traitent des problèmes dont la résolution fait appel à l'intellignence humaine. Ils imitent des *actions humaines*.
+
+*Exemple :* L'algorithme suivant : 
+
+```
+input(poids)
+if poids > 120 then print('vous êtes en surpoids')
+```
+Ce n'est pas un algorithme digne d'une *intelligence artificielle*.
+On trouvera dans la suite du document, de nombreux exemples qui traitent d'*intelligence artificielle*.
+
 # Analyse de données et machine learning
+## une définition
+imaginons que vous vouliez créer une IA qui vous donne le prix d’un appartement à partir de sa superficie.
+
+<figure>
+  <img src="../images/appartement.jpg" alt="-pixabay" width=60%>
+  <figcaption>comment estimer le prix d'un appartement ?</figcaption>
+</figure>
+
+Dans les années 1950, vous auriez fait un programme du type « si la superficie est inférieure à 20m², le prix vaut 60 000€, si elle est entre 20m² et 30m², le prix vaut 80 000€, etc… », ou peut-être « prix = superficie*3 000 ».
+
+Mais ce type de *problème* ne peut pas être résolu de manière satisfaisante avec de telles approximations: il vaudrait mieux constater le prix de plusieurs appartements, issus de différents quartiers, de *qualités* différentes (des *variables*, comme la superficie, l'exposition, le vis-à-vis...). On pourra alors estimer le prix d’un nouvel appartement non-référencé selon ses caractéristiques (ses variables).
+
+C'est ce type de démarche qui est attendu lorsque l'on fait du *machine learning*, ou de l'*apprentissage autonome*. C'est un sous-domaine de l’intelligence artificielle.
+
+Le machine learning est un domaine large, qui comprend de très nombreux algorithmes. Parmi les plus célèbres, on retrouve :
+
+* Les régressions (linéaires, multivariées, polynomiales, régularisées, logistiques…) : ce sont des courbes qui approximent les données 
+* L’algorithme de Naïve Bayes : l’algorithme donne la probabilité de la prédiction, sachant les événements antérieurs. Par exemple, quel est le prix le plus **probable** sachant que l’appartement X fait 43.7m², qu'il occupe une position privilégiée dans le quartier Montmartre, en rez de jardin, sans parking, sans vis-à-vis... voir à ce sujet l'excellent article sur le [blog sciencesetonnantes de David Louapre : probabilités conditionnelles (Bayes)](https://sciencetonnante.wordpress.com/2012/10/08/les-probabilites-conditionnelles-bayes-level-1/)
+* Le clustering : toujours grâce aux mathématiques, on va grouper les données en paquets de manière à ce que dans chaque paquet les données soient les plus proches possibles les unes des autres. C’est utilisé notamment pour des recommandations (films, articles achetés...)
+* Les arbres de décision : en répondant à un certain nombre de questions et en suivant les branches de l’arbre qui portent ces réponses, on arrive à un résultat (avec un score de probabilité)
+* Ainsi que des algorithmes plus perfectionnés reposant sur plusieurs techniques de statistiques
 
 ## Les domaines professionnels 
 Tous les champs professionnels, du moment où il y a des données qui sont collectées : 
@@ -25,9 +58,9 @@ Ces données sont collectés à partir d’objets connectés, à partir de l’a
 
 Ces données peuvent servir les domaines de la santé (suivi de la propagation d’épidémies, aide au diagnostic,… des transports (analyse de flux,), de l’environnement (prévisions météorologiques, contrôle de la pollution), mais aussi dans l’analyse de la clientèle  dans l’industrie et le commerce.
 
-En se basant sur des informations passées, les techniciens spécialisés dans l’observation des grosses données (big datas) peuvent ainsi faire des prévisions dans chacun de ces domaines.
+En se basant sur des informations passées, les techniciens spécialisés dans l’observation des grosses données (big datas) peuvent ainsi faire des prévisions dans chacun de ces domaines. Ou prendre des décisions en fonction des variables.
 
-Le principe : on récupère les données, on les nettoie, on les explore, puis on utilise nos algorithmes pour créer de l’intelligence (artificielle) qui aide à la décision.
+> Le principe : on récupère les données, on les nettoie, on les explore, puis on utilise nos algorithmes pour créer de l’intelligence (artificielle) qui aide à la prévision/décision. Ces algorithmes sont basés sur des outils statistiques. La machine qui execute un tel algorithme est capable d'apprendre de manière autonome, dans une séquence où les données collectées servent à établir un *modèle*. La machine améliore son modèle grâce à un *score* associé à l'exploitation des données. Puis elle utilise ce *modèle* lorsque le *score* est optimal pour *résoudre* une série de problèmes.
 
 *Exemples :*
 
@@ -227,10 +260,13 @@ si x2<0.42 alors classe = 'Vert'
 
 
 # Liens
+## documents utilisés pour la redaction de la page
 * s'initier au machine learning [https://openclassrooms.com/fr/courses/4011851-initiez-vous-au-machine-learning/4020611-identifiez-les-differents-types-dapprentissage-automatiques](https://openclassrooms.com/fr/courses/4011851-initiez-vous-au-machine-learning/4020611-identifiez-les-differents-types-dapprentissage-automatiques)
 * Méthodes de fouilles : [http://www.lsis.org/espinasseb/Supports/DWDM/10-MethodesFouille-4p.pdf](http://www.lsis.org/espinasseb/Supports/DWDM/10-MethodesFouille-4p.pdf)
 
-Approfondissement :
+## Approfondissement
+* Différence entre Intelligence Artificielle, Machine Learning et Deep Learning : [http://penseeartificielle.fr/difference-intelligence-artificielle-machine-learning-deep-learning/](http://penseeartificielle.fr/difference-intelligence-artificielle-machine-learning-deep-learning/)
+* Inférence bayesienne : Les probabilités conditionnelles (Bayes) - le blog de David Louapre : [https://sciencetonnante.wordpress.com/2012/10/08/les-probabilites-conditionnelles-bayes-level-1/](https://sciencetonnante.wordpress.com/2012/10/08/les-probabilites-conditionnelles-bayes-level-1/)
 * theorie sur le machine learning : [https://makina-corpus.com/blog/metier/2017/initiation-au-machine-learning-avec-python-theorie](https://makina-corpus.com/blog/metier/2017/initiation-au-machine-learning-avec-python-theorie)
 
 * machine learning : utiliser SciKit [https://makina-corpus.com/blog/metier/2017/initiation-au-machine-learning-avec-python-pratique](https://makina-corpus.com/blog/metier/2017/initiation-au-machine-learning-avec-python-pratique)
