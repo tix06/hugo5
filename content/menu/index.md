@@ -14,12 +14,12 @@ headless: true
 	-	[Energie]({{< relref "/docs/PC_1ere/energie/energie1" >}})
   - [modèle de Bohr de l'atome]({{< relref "/docs/PC_1ere/atome/atome.md" >}})
   - [ipython notebooks]({{< relref "/docs/PC_1ere/notebooks/PC_notebooks.md" >}})
-- [**ISN**]({{< relref "/docs/NSI/NSI_index" >}})  
-  - [Python]({{< relref "/posts" >}})
-	- [CSS positionnement]({{< relref "/docs/NSI/CSS/page1" >}})
-  - [javascript : bases]({{< relref "/docs/NSI/javascript/page1" >}}) 
-	- [javascript avancé]({{< relref "/docs/NSI/javascript_avance/page1" >}})
-	-	[mini projet Space Invader]({{< relref "/docs/NSI/mini_projet_spaceInvader/page1" >}})
+- [**NSI**]({{< relref "/docs/NSI/NSI_index" >}})  
+  - [architecture informatique]({{< relref "/docs/NSI/NSI_architecture" >}})
+	- [structure de données]({{< relref "/docs/NSI/NSI_structure" >}})
+  - [bases de données]({{< relref "/docs/NSI/NSI_bases" >}}) 
+	- [langages]({{< relref "/docs/NSI/NSI_langages" >}})
+	-	[algorithmes]({{< relref "/docs/NSI/NSI_algorithmes" >}})
    
 - [**SNT secondes**]({{< relref "/docs/SNT_2nde/SNT_index" >}})
  
