@@ -1,0 +1,383 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>jeu Space Invader
+| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.d50ccdce1d06f68dcb4cc4984bf0da9a3e9df1b991d0fe79d56a549d7af3dd2b.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
+catch(err)
+{console.log(err.message);}
+if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
+if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
+if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}</script></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2fposts\2fjavascript\2fmini_projet_spaceInvader\2fspaceInvader\2f ]{color:#004ed0}</style><ul><li><p><a href=/><strong>Accueil</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p><ul><li><a href=/docs/PC_2nde/physique/pages/page1/>physique du mouvement</a></li><li><a href=/docs/PC_2nde/physique/pages/page2/>échanges thermiques</a></li><li><a href=/docs/PC_2nde/chimie/pages/mole/>la mole</a></li><li><a href=/docs/PC_2nde/chimie/pages/transformation/>transformation chimique</a></li><li><a href=/docs/PC_2nde/chimie/pages/avancement/>animation avancement</a></li></ul></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p><ul><li><a href=/docs/PC_1ere/energie/energie1/>Energie</a></li><li><a href=/docs/PC_1ere/atome/atome/>modèle de Bohr de l&rsquo;atome</a></li><li><a href=/docs/PC_1ere/notebooks/PC_notebooks/>ipython notebooks</a></li></ul></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p><ul><li><a href=/docs/NSI/NSI_architecture/>architecture informatique</a></li><li><a href=/docs/NSI/NSI_structure/>structure de données</a></li><li><a href=/docs/NSI/NSI_bases/>bases de données</a></li><li><a href=/docs/NSI/NSI_langages/>langages</a></li><li><a href=/docs/NSI/NSI_algorithmes/>algorithmes</a><br></li></ul></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
+addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-posts><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
+<strong>jeu Space Invader</strong></header><header class=markdown><h1>jeu Space Invader</h1><h5><strong>Sept 1, 1019</strong></h5></header><article class=markdown><p>Ce mini projet sera l&rsquo;occasion de mettre en oeuvre les notions vues dans le cours précédent sur :</p><ul><li>la définition d&rsquo;un objet en javascript</li><li>la gestion des évènements</li><li>l&rsquo;utilisation d&rsquo;une fonction callback avec un timer</li></ul><p>Vous pourrez également suivre ce tutoriel avec la video à l&rsquo;adresse :
+<a href="https://www.youtube.com/watch?v=IXDO5pKA9pY">lien video</a></p><h1 id=afficher-des-éléments-en-javascript>Afficher des éléments en javascript</h1><h2 id=contenu-du-dossier-du-projet>Contenu du dossier du projet</h2><p>D&rsquo;abord, créer un dossier contenant :</p><ul><li>spaceInvader.html</li><li>jeu.js</li><li><a href=../images/ship.png>ship.png (sur fond transparent)</a></li><li><a href=../images/ufo.png>ufo.png</a></li><li><a href=../images/missile.png>missile.png</a></li></ul><p>Pour les images, on pourra faire un clic droit sur les liens proposés et choisir de télécharger le fichier.</p><h2 id=code-minimal-html>Code minimal HTML</h2><p>Le code html minimal qui permet de positionner un vaisseau aux coordonnées : 200px horizontal et 100px vertical :</p><pre><code>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;My space invader&lt;/title&gt;
+	&lt;script src=&quot;jeu.js&quot;&gt;&lt;/script&gt;
+&lt;style&gt;
+	html,body {margin : 0px; padding: 0px; width : 100%; height: 100%}
+	body {background: url('fond.jpg'); background-size: cover; overflow: hidden;}
+&lt;/style&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;img id=&quot;ship&quot; src=&quot;ship.png&quot;&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+		let v = document.getElementById('ship');
+		v.style.width = '100px';
+		v.style.height = 'auto'; // pour conserver le ratio
+		v.style.position = &quot;absolute&quot;;
+		// regles de positionnement
+		// demarrer par la regle de positionnement absolute pour que 
+		// l'image soit mise par rapport à l'élément precedent dans le flux
+		// de maniere absolute
+		v.style.left= '200px';
+		v.style.top='100px';
+
+	&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><figure><img src=../images/position.png width=80% alt=vaisseau><figcaption>position du vaisseau à 200px à gauche et 100 px en bas</figcaption></figure><p>Le problème est que l&rsquo;on ne veut pas avoir à taper tout ces volumes de code pour positionner un vaisseau un missile ou un alien : on va alors utiliser une librairie que l&rsquo;on va nous même écrire.</p><p>On pourra effacer toutes les lignes écrites entre les balises <code>&lt;body&gt;</code> et <code>&lt;/body&gt;</code></p><h1 id=le-constructeur-de-sprites-function-sprite>le constructeur de Sprites : function Sprite( )</h1><h2 id=les-propriétés-liées-aux-attributs>les propriétés liées aux attributs</h2><p>Nous allors programmer une librairie javascript qui va nous permettre de concevoir un constructeur pour tous les objets à afficher. Chacun des ces objets aura alors des propriétés de positionnement, et deux options d&rsquo;affichage : visible ou caché.
+Commençons par programmer le constructeur et les attributs dont héritera l&rsquo;objet. Dans le fichier <code>jeu.js</code>, mettre les lignes de code :</p><pre><code>function Sprite(filename, left,top){
+	this._node = document.createElement(&quot;img&quot;);
+	this._node.src = filename;
+	this._node.style.position=&quot;absolute&quot;;
+	this._node.style.height=&quot;100px&quot;;
+	this._node.style.width=&quot;auto&quot;;
+	this._node.style.left=left+&quot;px&quot;;
+	this._node.style.top=top+&quot;px&quot;
+	document.body.appendChild(this._node);
+}
+</code></pre><p><em>Explications:</em></p><ul><li>La <code>function Sprite(filename, left,top){</code> : C&rsquo;est une fonction de creation d&rsquo;objets (contient des this et commence par majuscule)</li><li><code>Sprite</code> : l&rsquo;element à créer</li><li><code>this</code> : l&rsquo;objet lui meme et <code>_node</code> , c&rsquo;est l&rsquo;élément correspondant, avec tous ses attributs, tel qu&rsquo;on l&rsquo;avait défini de maniere statique dans le premier document html.</li></ul><p>On peut déjà positionner l&rsquo;objet à l&rsquo;écran en écrivant dans la partie <code>&lt;script&gt;</code> de la <strong>page html</strong> : (ce sera alors la première ligne mise entre les balises <code>&lt;script&gt;</code> et <code>&lt;/script&gt;</code></p><blockquote><p><code>let vaisseau = Sprite('ship.png',400,500);</code></p></blockquote><p>Ce qui devrait <em>construire</em> un objet <em>vaisseau</em>, et ajouter un nouvel élément sur la page : l&rsquo;image du vaisseau à la position 400px,500px.</p><h2 id=les-propriétés-de-re-positionnement>Les propriétés de (re)positionnement</h2><div><label for=toggle class=btn-lg>Cliquer pour plus d'explications</label>
+<input type=checkbox id=toggle class=visually-hidden><div class=control-me><p>On souhaite maintenant ajouter des méthodes particulières à l'objet, qui permettront de le déplacer facilement (le <span class=ital>repositionner</span>).</p><p>On pourrait le réaliser à l'aide d'une affectation simple, comme on l'a déjà vu dans le cours précédent. Par exemple, avec :
+<code>Sprite.posX</code></p><p>Ici, on va utiliser la méthode Object.defineProperty(), qui permet de préciser le comportement attendu, potentiellement différent de celui par défaut.</p><p>On veut maintenant que la nouvelle propriété <code>left</code> soit accessible en ecriture ET en lecture de la manière suivante :<ul><li>Ecriture : Avec le signe <code>=</code> d'affectation => <code>vaisseau.left = 400;</code></li><li>Lecture : Sans le signe <code>=</code> pour accéder à la valeur => <code>vaisseau.left</code></li></ul></p></div></div><p>Une fois cette nouvelle méthode attachée au constructeur <em>Sprite</em>, on peut le représenter avec le schéma suivant :</p><figure><img src=../images/objet.png width=80% alt="classe sprite"><figcaption>classe Sprite</figcaption></figure><p>L&rsquo;objet que l&rsquo;on définira à partir de cette classe héritera des propriétés et des méthodes, que l&rsquo;on appelera avec l&rsquo;instruction <code>objet.propriété</code> ou <code>objet.methode</code></p><blockquote><p>Pour ajouter les méthodes : Dans le fichier <code>jeu.js</code>, enlever l&rsquo;accolade finale du constructeur et mettre :</p></blockquote><pre><code>Object.defineProperty(this,&quot;left&quot;, {
+	get: function(){
+		return this._left;
+	},
+	set: function(value){
+		this._left=value;
+		this._node.style.left=this._left+&quot;px&quot;;
+	}
+});
+</code></pre><p><code>Object.defineProperty</code> permet de definir une propriété pour l&rsquo;objet que l&rsquo;on a créé : on passe l&rsquo;objet avec l&rsquo;argument <code>this</code></p><blockquote><p>une propriété est un ensemble de 2 <em>methodes</em> :</p><ul><li>une methode <code>get</code> d&rsquo;acces en lecture.</li><li>une methode <code>set</code> d&rsquo;acces en ecriture</li></ul></blockquote><p>Remarquer que l&rsquo;on utilise <code>_left</code>pour le nommage d&rsquo;une prorieté qui reste privée (locale) dans ce constructeur.</p><p>Cette <em>methode</em>, on va y acceder avec le nom de <em>proprieté</em> <code>left</code>:</p><p>On fait par exemple dans le script de la page principale : (ligne à écrire à la suite des autres instruction, avant la fermeture <code>&lt;/script&gt;</code> dans la page <strong>html</strong>)</p><blockquote><p><code>vaisseau.left = 400;</code></p></blockquote><p>Le signe <code>=</code> va indiquer que l&rsquo;on invoque la propriété <code>left</code>en <em>ecriture</em> (on dit que l&rsquo;on invoque le <em>setter</em>), et cela va modifier l&rsquo;attribut css <code>style avec la nouvelle règle</code>left : 400px`.</p><p>Rafraichissons la page.
+Dans la console : explorons les attributs de l&rsquo;élément associé à l&rsquo;objet <code>vaisseau</code> :
+On peut alors vérifier les valeurs prises pour les propriétés CSS des attributs.</p><p>Ouvrir la console du navigateur, et saisir :</p><pre><code>&gt; vaisseau._node.style
+&lt; CSSStyleDeclaration {0: &quot;position&quot;, 1: &quot;height&quot;, 2: &quot;width&quot;, 3: &quot;left&quot;, 4: &quot;top&quot;, alignContent: &quot;&quot;, alignItems: &quot;&quot;, alignSelf: &quot;&quot;, alignmentBaseline: &quot;&quot;, all: &quot;&quot;, …}
+&gt; vaisseau._node.style[&quot;height&quot;]
+&lt; &quot;100px&quot;
+</code></pre><p>On sait maintenant positionner horizontalement le vaisseau.
+Avec de nouvelles déclarations dans le même format, on peut aussi :</p><ul><li>positionner <strong>verticalement</strong> (propriete CSS <code>top</code>)</li><li>modifier la propriete CSS <code>display</code> dont les valeurs possibles sont :<ul><li><code>none</code> : n&rsquo;affiche pas</li><li><code>block</code> : affiche</li></ul></li></ul><h2 id=le-script-jeu-js>le script jeu.js</h2><p>Avec le constructeur Sprite( ) tel qu&rsquo;il a été défini dans le paragraphe précédent, le script <code>jeu.js</code> est alors :</p><pre><code>function Sprite(filename, left,top){
+
+	this._node = document.createElement(&quot;img&quot;);
+	this._node.src = filename;
+	this._node.style.position=&quot;absolute&quot;;
+	this._node.style.height=&quot;100px&quot;;
+	this._node.style.width=&quot;auto&quot;;
+	//this._node.style.left=left+&quot;px&quot;;
+	//this._node.style.top=top+&quot;px&quot;
+	document.body.appendChild(this._node);
+
+  Object.defineProperty(this,&quot;left&quot;, {
+   get: function(){
+		return this._left;
+	},
+	set: function(value){
+		this._left=value;
+		this._node.style.left=this._left+&quot;px&quot;;
+	}
+	});
+
+	Object.defineProperty(this,&quot;top&quot;, {
+	get: function(){
+		return this._top;
+	},
+	set: function(value){
+		this._top=value;
+		this._node.style.top=this._top+&quot;px&quot;;
+	}
+	});
+
+	Object.defineProperty(this,&quot;display&quot;, {
+	get: function(){
+		return this._node.style.display;
+	},
+	set: function(value){
+		this._top=value;
+		this._node.style.display=value;
+	}
+	});
+
+	this.left=left;
+	this.top = top;
+}
+</code></pre><h2 id=positionner-les-éléments>Positionner les éléments</h2><p>Le reste du script sera mis entre les balises <code>&lt;script&gt;</code>de la page <strong>html</strong>.
+On peut avoir accès à la dimension de l&rsquo;écran avec un propriété de l&rsquo;objet :</p><p><em>document</em> : <code>document.body.clientWidth</code></p><p>Centrer le vaisseau, au mileu de l&rsquo;écran, en position basse avec l&rsquo;instruction : remplacer <code>let vaisseau = Sprite('ship.png',400,500);</code> par :</p><blockquote><p><code>let vaisseau = new Sprite(&quot;ship.png&quot;, document.body.clientWidth/2, 500);</code></p></blockquote><p><em>A vous de jouer :</em> ajouter 3 aliens que vous devrez repartir sur la largeur de l&rsquo;écran, en position haute. Nommez les : <em>alien1, alien 2, alien3</em>.</p><p>Et ajoutez le missile, à une position quelconque, mais modifiez immédiatement sa propriété <code>display</code>pour qu&rsquo;il reste caché :
+ajouter :</p><blockquote><p><code>missile.display=&quot;none&quot;;</code></p></blockquote><figure><img src=../images/positionTous.png width=80% alt=éléments><figcaption>à gauche : missile visible, à droite : missile caché</figcaption></figure><h1 id=gestionnaires-d-évènements>Gestionnaires d&rsquo;évènements</h1><p>On ajoute un gestionnaire d&rsquo;evenements lié aux touches appuyées avec :</p><p><code>document.onkeydown = function (event) {</code></p><p>lorsque l&rsquo;on appuie sur une touche, cela genere un evenement <code>&quot;event&quot;</code> et appelle une fonction avec le parametre l&rsquo;un des attributs possibles de <code>event</code> qui est <code>keyCode</code> : comme ici, l&rsquo;evenement est lié aux touches appuyées, on peut demander le keyCode de ces touches :</p><blockquote><p>Mettre les lignes suivantes dans le programme de la page <strong>html</strong> :</p></blockquote><pre><code>document.onkeydown = function (event) {
+	console.log(event.keyCode);
+	}
+</code></pre><p>Cliquer alors dans la fenêtre du navigateur pour lui donner le focus, puis tester en appuyant sur diverses touches du clavier la valeur affichée dans la console :</p><ul><li>f : 70</li><li>flèche droite : 39</li><li>flèche gauche : 37</li><li>s : 83</li><li>space : 32</li></ul><p>Pour faire avancer le vaisseau à droite lorsque l&rsquo;on appuie sur la touche f ou la flèche droite, il faut alors mettre :</p><pre><code>document.onkeydown = function (event) {
+    if (event.keyCode==70 || event.keyCode==39 ){
+				vaisseau.left+=10;
+}
+</code></pre><p>A vous de jouer :
+ajouter alors, dans le même bloc de code lié à la gestion d&rsquo;evenements du clavier, les instructions consitionnelles qui feront :
+* avancer le vaisseau à gauche pour s ou pour flèche gauche
+* faire apparaitre le missile juste devant le vaisseau lorsque l&rsquo;on appuie sur la barre espace.
+* limiter le déplacement à gauche et à droite pour ne pas que le vaisseau sorte de l&rsquo;écran.</p><h1 id=animer-les-éléments>Animer les éléments</h1><p>On va modifier à intervalle de temps réguliers les aliens et le missile, ce qui donnera l&rsquo;illusion d&rsquo;une trajectoire.</p><h2 id=méthode-setinterval>méthode setInterval()</h2><p>Les méthodes setTimeout et setInterval sont des méthodes de l&rsquo;objet Window.
+Ce sont des processus indépendants qui, quand ils sont lancés par une instruction, ne bloquent pas l&rsquo;affichage du reste de la page ni les actions de l&rsquo;utilisateur.
+Elles permettent de placer dans la pile des prochaines fonctions à exécuter une fonction particulière. Javascript exécute cette pile fonction après fonction dans l&rsquo;ordre de la pile.
+* SetTimeout indique un délai avant exécution
+* setInterval déclenche une opération à intervalles réguliers
+* ClearTimeout interrompt le décompte de setTimeout et de setInterval</p><blockquote><p>Syntaxe :
+<code>var intervalID = scope.setInterval(func ou bloc de code, [delay (en ms)]);</code></p></blockquote><p>Ce compteur de temps est identifié de manière unique : <code>window.setInterval</code> renvoie une valeur numérique qui permet cette identification.</p><blockquote><p>Dans le fichier <code>jeu.js</code>, en dehors du constructeur Sprite( ) (à la suite), ajouter :</p></blockquote><pre><code>Sprite.prototype.startAnimation = function (fct, interval) {
+	if (this._clock) window.clearInterval (this._clock);
+	// s'il y a deja un missile qui est envoyé, clearInterval
+	// retire le timer qui lui était lié et en met un nouveau
+	var _this=this;
+	// on demarre un intervalle que l'on associe à l'objet this
+	// on déclare une nouvelle variable locale avec l'underscore _this
+	// dont la portée sera descendante. Cette variable pourra être utilisée 
+	// par la fonction executée par setInterval
+	this._clock=window.setInterval(function(){
+		fct(_this);
+	},interval);
+};
+
+Sprite.prototype.stopAnimation = function() {
+	window.clearInterval(this._clock);
+};
+</code></pre><p>Lorsque la touche <code>barre espace</code> est appuyée : on appelle la méthode <code>startAnimation</code> pour l&rsquo;objet <em>missile</em>. Cette méthode appelle la fonction <code>setInterval</code> qui va associer un timer à l&rsquo;objet lorsque l&rsquo;on fait <code>nom_de_l_objet.startAnimation(fct,interval)</code>. L&rsquo;un des paramètres de la fonction <code>setInterval</code>est justement une fonction, <code>fct</code>. On met <code>moveMissile</code> comme fonction de <em>callback</em>.
+Le timer associé à l&rsquo;objet, appelle à intervalle de temps régulier cette fonction qui est passée en paramètre (ce que l&rsquo;on appelle un callback). L&rsquo;intervalle de temps est donné par la paramètre <code>interval</code>. Ce qui modifie la <em>pile d&rsquo;appel</em> des fonctions dans le programme.</p><figure><img src=../images/pile.png width=80% alt="pile d'appel des fonctions"><figcaption>fonction callback et pile d'appel des fonctions</figcaption></figure><p>La deuxieme propriété, stopAnimation, permet de retirer le timer avec l&rsquo;instruction <code>clearInterval()</code>.</p><p><em>Remarques :</em> voir en annexe en bas du document</p><h2 id=animation-du-missile>animation du missile</h2><p>On va alors ajouter la fonction moveMissile(missile) qui sera appelée par setInterval :
+Dans la partie <code>&lt;script&gt;</code> du programme de la page <strong>html</strong> : en dehors de la fonction anonyme executée par onkeydown, on ajoute :</p><pre><code>function moveMissile(missile){
+		missile.top -=10;
+		if (missile.top&lt;100) {
+		  missile.stopAnimation(); // sortie de l'écran : on retire le timer de l'objet
+		  missile.display = &quot;none&quot;;
+		}
+	}
+</code></pre><p>Lorsque la fonction est appelée, cela modifie la position du missile (on soustrait 10 px à sa position par rapport au haut de la page)</p><blockquote><p>dans le bloc de code associé à la condition sur l&rsquo;évenement de la touche appuyée (la n°32), ajouter : <code>missile.startAnimation(moveMissile,20);</code></p></blockquote><p>Le bloc de code doit maintenant avoir le contenu suivant :</p><pre><code>if (event.keyCode == 32){
+	if (missile.display==&quot;none&quot;){
+	// condition qui permet de ne lancer un missile que 
+	// si aucun missile n'est deja en vol
+	missile.display=&quot;block&quot;;
+	missile.left = vaisseau.left+vaisseau._node.width/2;
+	missile.top = vaisseau.top;
+	missile.startAnimation(moveMissile,20);
+	}
+}
+</code></pre><h2 id=animation-des-aliens>animation des aliens</h2><p>On créé ensuite l&rsquo;animation des aliens, avec un déplacement à droite puis à gauche, à l&rsquo;aide de 2 nouvelles fonctions :</p><pre><code>function moveAlienToRight(alien){
+		alien.left += 10;
+		if (alien.left &gt; document.body.clientWidth-vaisseau._node.width){
+			alien.stopAnimation();
+			alien.top += 50;
+			alien.startAnimation(moveAlienToLeft,40);
+		}
+	}
+
+	function moveAlienToLeft(alien){
+		alien.left -= 10;
+		if (alien.left &lt; 0){
+			alien.stopAnimation();
+			alien.top += 50;
+			alien.startAnimation(moveAlienToRight,40);
+		}
+	}
+	
+	alien1.startAnimation(moveAlienToRight,40);
+</code></pre><p>Puis on lance l&rsquo;animation pour chacun des autres aliens :
+<code>alien2.startAnimation(moveAlienToRight,40);</code> par exemple pour le 2e alien.</p><p>Enfin, on va programmer une méthode de verification de collision de sprite, mais au niveau de la librairie de sprites.</p><h1 id=ajout-d-une-méthode-checkcollision>Ajout d&rsquo;une méthode checkCollision</h1><p>Dans le fichier <code>jeu.js</code>, ajouter les lignes de code suivantes pour vérifier si deux sprites se chevauchent</p><pre><code>Sprite.prototype.checkCollision = function (other){
+	return (( this.top + this._node.height &gt; other.top) &amp;&amp; 
+		(this.top&lt;(other.top+other._node.height)) &amp;&amp;
+		(this.left+this._node.width&gt;other.left) &amp;&amp;
+		(this.left&lt;other.left+other._node.width))
+}
+</code></pre><p>Si on veut savoir si le sprite missile chevauche le sprite alien1, on fait, dans la fonction de déplacement du missile :
+<code>missile.checkCollision(alien1)</code></p><p>La fonction retourne alors <code>true</code> si les 2 sprites se chevauchent.
+L&rsquo;appel de cette méthode de missile se fera dans la fonction moveMissile(missile). Ajouter les lignes suivantes :</p><pre><code>if (alien1.display != &quot;none&quot; &amp;&amp; missile.checkCollision(alien1)){
+			// on ne fait un test QUE si l'alien est visible
+			// sinon le missile traverse l'écran
+			missile.display=&quot;none&quot;;
+			missile.stopAnimation();
+			alien1.display=&quot;none&quot;;
+			alien1.stopAnimation();
+			// on retire l'alien
+		}
+</code></pre><h1 id=prolongement>Prolongement</h1><p>Il reste maintenant à programmer les conditions de collision du missile avec les autres aliens, et aussi la condition de collision des aliens avec le vaisseau, ce qui amènerait un <em>Game Over</em>.</p><p>Enfin, pour aller plus loin, on pourrait imaginer d&rsquo;ajouter encore plus d&rsquo;aliens, comme expliqué dans la vidéo (lien en début de document), de gérer un <em>Score</em>, et de pouvoir recommencer la partie.</p><h1 id=annexe>Annexe</h1><ol><li>Pour comprendre en détail la manière avec laquelle on a programmé ce timer, il faudra revoir, dans le cours précédent ce que sont : <strong>une fonction callback, une fonction lambda, un objet et son prototype</strong></li><li>Remarque à propos de la portée des variables : Le problème du <strong>this</strong></li></ol><p>Le code executé par setInterval() se fait dans un contexte séparé de celui de la fonction qui l&rsquo;appelle. Conséquence : le mot clé <code>this</code>ne pointe pas vers l&rsquo;objet local , mais il est associé au contexte global, window.
+En dehors de tout contexte, pour un navigateur, <code>this</code> est l&rsquo;objet window.</p><p>C&rsquo;est la raison pour laquelle on choisit ici de déclarer :
+<code>var _this = this;</code> juste avant la fonction anonyme qui fait appel à <code>_this</code></p><h1 id=programme-complet>Programme complet</h1><h2 id=page-html>page html</h2><pre><code>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;My space invader&lt;/title&gt;
+	&lt;script src=&quot;jeu.js&quot;&gt;&lt;/script&gt;
+&lt;style&gt;
+	html,body {margin : 0px; padding: 0px; width : 100%; height: 100%}
+	body {background: url('fond.jpg'); background-size: cover; overflow: hidden;}
+&lt;/style&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+	
+	&lt;script type=&quot;text/javascript&quot;&gt;
+		let vaisseau = new Sprite(&quot;ship.png&quot;,400,500);
+		let alien1 = new Sprite(&quot;ufo.png&quot;,100,100);
+		let alien2 = new Sprite(&quot;ufo.png&quot;,400,100);
+		let alien3 = new Sprite(&quot;ufo.png&quot;,700,100);
+		
+		let missile = new Sprite(&quot;missile.png&quot;,100,100);
+		missile.display=&quot;none&quot;;
+		
+		document.onkeydown = function (event) {
+			console.log(event.keyCode);
+			// l'un des attributs possibles de event est keyCode : 
+			// comme ici, l'evenement est lié aux touches appuyées
+			// on peut demander le keyCode de ces touches.
+			// f : 70
+			// s : 83
+			// space : 32
+			if (event.keyCode==70 || event.keyCode==39 ){
+				vaisseau.left+=10;
+			}
+			if (event.keyCode==83 || event.keyCode==37 ){
+				vaisseau.left-=10;
+			}
+			
+
+
+			if (vaisseau.left&lt;=0) vaisseau.left = 0;
+			if (vaisseau.left &gt;= document.body.clientWidth-vaisseau._node.width) vaisseau.left=document.body.clientWidth-vaisseau._node.width;
+			if (event.keyCode == 32){
+				if (missile.display==&quot;none&quot;){
+				// condition qui permet de ne lancer un missile que 
+				// si aucun missile n'est deja en vol
+
+				missile.display=&quot;block&quot;;
+				missile.left = vaisseau.left+vaisseau._node.width/2;
+				missile.top = vaisseau.top;
+				missile.startAnimation(moveMissile,20);
+				// on appelle la methode startAnimation
+				// associée à l'objet missile
+				// avec la fonction missile comme premier parametre (callback)
+				// et 20 ms comme seconde parametre (mis dans interval
+				// par la fonction anonyme executée lorsque l'on appelle 
+				// la methode)
+				}
+			}
+			
+		}
+			
+	function moveMissile(missile){
+		missile.top -=10;
+		if (missile.top&lt;100) {
+		missile.stopAnimation(); // sortie de l'écran : on retire le timer de l'objet
+		missile.display = &quot;none&quot;;
+		}
+		if (alien1.display != &quot;none&quot; &amp;&amp; missile.checkCollision(alien1)){
+			// on ne fait un test QUE si l'alien est visible
+			// sinon le missile traverse l'écran
+			missile.display=&quot;none&quot;;
+			missile.stopAnimation();
+			alien1.display=&quot;none&quot;;
+			alien1.stopAnimation();
+			// on retire l'alien
+		}
+	}
+
+	function moveAlienToRight(alien){
+		alien.left += 10;
+		if (alien.left &gt; document.body.clientWidth-vaisseau._node.width){
+			alien.stopAnimation();
+			alien.top += 50;
+			alien.startAnimation(moveAlienToLeft,40);
+		}
+	}
+
+	function moveAlienToLeft(alien){
+		alien.left -= 10;
+		if (alien.left &lt; 0){
+			alien.stopAnimation();
+			alien.top += 50;
+			alien.startAnimation(moveAlienToRight,40);
+		}
+	}
+	
+	alien1.startAnimation(moveAlienToRight,40);
+	alien2.startAnimation(moveAlienToRight,40);
+	alien3.startAnimation(moveAlienToRight,40);
+
+	&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id=fichier-jeu-js>fichier jeu.js</h2><pre><code>function Sprite(filename, left,top){
+
+	this._node = document.createElement(&quot;img&quot;);
+	this._node.src = filename;
+	this._node.style.position=&quot;absolute&quot;;
+	this._node.style.height=&quot;100px&quot;;
+	this._node.style.width=&quot;auto&quot;;
+	//this._node.style.left=left;
+	//this._node.style.top=top;
+	document.body.appendChild(this._node);
+
+
+
+	Object.defineProperty(this,&quot;left&quot;, {
+	
+
+	get: function(){
+		return this._left;
+	},
+	set: function(value){
+		this._left=value;
+		this._node.style.left=this._left+&quot;px&quot;;
+	}
+	});
+
+	Object.defineProperty(this,&quot;top&quot;, {
+	get: function(){
+		return this._top;
+	},
+	set: function(value){
+		this._top=value;
+		this._node.style.top=this._top+&quot;px&quot;;
+	}
+	});
+
+	Object.defineProperty(this,&quot;display&quot;, {
+	get: function(){
+		return this._node.style.display;
+	},
+	set: function(value){
+		this._top=value;
+		this._node.style.display=value;
+	}
+	});
+
+	this.left=left;
+	this.top = top;
+}
+
+Sprite.prototype.startAnimation = function (fct, interval) {
+	if (this._clock) window.clearInterval (this._clock);
+	// s'il y a deja un missile qui est envoyé, clearInterval
+	// retire le timer qui lui était lié et en met un nouveau
+	var _this=this;
+	// on demarre un intervalle que l'on associe à l'objet this
+	// on déclare une nouvelle variable locale avec l'underscore _this
+	// dont la portée sera descendante. Cette variable pourra être utilisée 
+	// par la fonction déclarée  
+	this._clock=window.setInterval(function(){
+		fct(_this);
+	},interval);
+};
+
+Sprite.prototype.stopAnimation = function() {
+	window.clearInterval(this._clock);
+};
+
+
+Sprite.prototype.checkCollision = function (other){
+	return (( this.top + this._node.height &gt; other.top) &amp;&amp; 
+		(this.top&lt;(other.top+other._node.height)) &amp;&amp;
+		(this.left+this._node.width&gt;other.left) &amp;&amp;
+		(this.left&lt;other.left+other._node.width))
+}
+
+</code></pre><h1 id=liens>Liens</h1><ul><li><a href="https://www.youtube.com/watch?v=IXDO5pKA9pY">video du tutoriel tutoriel </a>]</li><li><a href=https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/defineProperty>Object.defineProperty() sur MDN Mozilla</a></li></ul></article><div style=height:100px></div></div></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
+<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
