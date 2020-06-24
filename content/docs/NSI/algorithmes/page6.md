@@ -1,5 +1,5 @@
 ---
-Title : algorithme de Boyer Moore 
+Title : programmation dynamique
 ---
 
-# algorithme de Boyer-Moore
+# programmation dynamique

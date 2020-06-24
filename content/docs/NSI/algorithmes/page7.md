@@ -1,5 +1,5 @@
 ---
-Title : securisation des communications 
+Title : algorithme de Boyer Moore 
 ---
 
-# securisation des communications
+# algorithme de Boyer Moore
