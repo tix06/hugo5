@@ -4,7 +4,7 @@ Title : recursivité
 
 # Récursivité
 ## Principe 
-Un algorithme récursif est un algorithme qui fait appel à lui-même dans le corps de sa propre définition.
+Un algorithme récursif est un algorithme qui fait appel à lui-même dans le corps de sa propre définition. Ce principe est aussi appelé : *de l'autoréférence*. 
 
 Les questions à se poser pour élaborer l'algorithme : 
 
@@ -19,6 +19,23 @@ Définir alors :
 
 Une grande partie des problèmes peut se résoudre avec une implémentation récursive, comme avec une implémentation itérative. L'une ou l'autre peut paraître plus ou moins naturelle suivant le problème, ou suivant les habitudes du programmeur.
 
+## Complexité d'un algorithme recursif
+Pour un algorithme récursif, on compte le nombre d’appel récursif et il suffit en général de se ramener à une relation définissant une suite récurrente. On se ramène souvent à évaluer une relation du type : 
+
+$$C_n =a\times C_{f(n)} + C$$
+
+où : 
+
+* C<sub>n</sub> est la complexité pour une donnée de taille n ; o a est le nombre d’appel récursif ;
+* f(n) décrit la variation de n dans l’appel récursif;
+* C est la complexité des calculs hors appel récursif.
+
+| relation de récurrence | solution | comportement asymtotique |
+| --- | --- | --- |
+| C(n) = C(n-1) + b | C(n) = C(0) + b×n (suite arithmétique) | O(a<sup>n</sup>) |
+| C(n) = a×C(n-1) + b, a ≠ 1 | C(n) = an × (C(0) – b/(1-a)) + b/(1-a) (suite géométrique)| O(a<sup>n</sup>) |
+| C(n) = C(n-1) + a×n + b | C(n) = C(0) + a×n×(n+1)/2 + n×b | O(n<sup>2</sup>) |
+| C(n) = C(n/2) + b | C(n) = C(1) + b×log<sub>2</sub>(n) | O(log<sub>2</sub>n) |
 ## exemple : factorielle
 ### programme itératif
 
@@ -61,8 +78,31 @@ def fact(n):
 ### Programme recursif
 
 ```python
-def fact(n):
-  if (n=0) :return 1 else: return n*fact(n-1)
+def fact_recur(n):
+  if (n=0) :return 1 else: return n*fact_recur(n-1)
+```
+
+On pourrait représenter la pile d'execution de cette fonction de la manière suivante : 
+
+```
+Appel à fact_recur(4)
+| 4*fact_recur(3) = ? 
+| Appel à fact_recur(3)
+| | 3*fact_recur(2) = ? 
+| | Appel à fact_recur(2)
+| | | 2*fact_recur(1) = ? 
+| | | Appel à fact_recur(1)
+| | | | 1*fact_recur(0) = ? 
+| | | | Appel à fact_recur(0) 
+| | | | Retour de la valeur 1
+| | | | 1*1
+| | | Retour de la valeur 1
+| | | 2*1
+| | Retour de la valeur 2
+| | 3*2
+| Retour de la valeur 6
+| 4*6
+Retour de la valeur 24
 ```
 
 <div class="preuve">
@@ -263,6 +303,8 @@ Le problème initial (déplacer N disques de A à C en utilisant B) devient donc
 </figure></a>
 
 ## algorithme récursif
+L'algorithme récursif pour ce problème est étonnament réduit : 
+
 ```python
 def hanoi(n,a=1,b=2,c=3):
     if (n > 0):
@@ -271,20 +313,88 @@ def hanoi(n,a=1,b=2,c=3):
         hanoi(n-1,b,a,c)
 ```
 
+# D'autres domaines exploitant la récursivité
+La récursivité se retrouvent dans d'autres situations, où elle prend parfois d'autres noms.
+
+L'**autosimilarité** est le caractère d'un objet dans laquelle on peut trouver des similarités en l'observant à différentes échelles.
+*Exemple :* le Tapis de Sierpiński.
+
+<figure>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Sierpinski_carpet_6%2C_white_on_black.svg/440px-Sierpinski_carpet_6%2C_white_on_black.svg.png" width=300px alt="le Tapis de Sierpiński">
+  <figcaption>le Tapis de Sierpiński et l'autosimilarité</figcaption>
+</figure>
+
+Les **fractales** ont cette propriété d'autosimilarité, mais elles ont plutôt à voir avec un phénomène un peu différent qui s'appel la corécurisivité (ou corécursion). Le tapis de Sierpiński, du nom de Wacław Sierpiński, est une fractale obtenue à partir d'un carré. Le tapis se fabrique en découpant le carré en neuf carrés égaux avec une grille de trois par trois, et en supprimant la pièce centrale, et en appliquant cette procédure récursivement aux huit carrés restants.
+
+La **mise en abyme** est un procédé consistant à représenter une œuvre dans une œuvre similaire, par exemple en incrustant dans une image cette image elle-même. 
+
+*Approfondir :* voir la page [https://fr.wikipedia.org/wiki/Algorithme_récursif](https://fr.wikipedia.org/wiki/Algorithme_récursif)
 
 # Exercices
+## Ex 1 : 
 Pour les algorithmes itératifs proposés : 
 
 * réaliser la preuve de l'algorithme. 
 * écrire l'algorithme récursif
 * prouver l'algorithme récursif
 
-## Ex 1 : Exponentiation
+### algorithme 1 : longueur d'une liste
+```python
+def len_iterative(seq): 
+    """
+    Return the length of a list (iterative) 
+    """
+    count = 0
+    for elt in seq:
+        count = count + 1 
+    return count
+```
+*Aide pour l'écriture de l'algorithme recursif :* la fonction récursive s'appelera `len_recursive`, et aura aussi pour argument `seq`. Si on veut passer en argument la liste `seq` de laquelle on retire le premier élément, on fait : `len_recursive(seq[1:])`. Il faudra alors s'inspirer de la relation de récurence suivante : $$u_{n+1} = 1 + u_n$$
 
+### algorithme 2 : retournement d'une liste
+```python
+def reverse_iterative(seq): 
+    """
+    Return the reverse of a string 
+    use insert(index, elem) -- inserts the element at the given index, shifting elements to the right.
+    """
+    reversed_seq = []
+    for i in range(len(seq)):
+        reversed_seq.insert(0, seq[i])
+    return reversed_seq
+```
+
+On peut tester cette fonction dans une cellule d'un jupyter notebook : 
+
+<table>
+    <tr>
+        <th scope="row">IN</th>
+        <td>seq = 'abcd'<br>
+        reverse_iterative(seq)
+        </td>
+    </tr>
+   
+    <tr>
+        <th scope="row">OUT</th>
+        <td>
+         ['d', 'c', 'b', 'a']
+        </td>
+    </tr>
+</table>
+
+*Aide pour l'écriture de l'algorithme récursif :* 
+La première étape est de définir notre scénario de base, qui vérifiera si la chaîne est égale à 0 et, si oui, retourne la chaîne elle-même.
+
+La deuxième étape est d'appeler de manière récursif la fonction d'inversion afin d'extraire le premier caractère et ensuite l'ajouter à la fin de la chaîne (par concaténation).
+On pourra s'inspirer de la relation de recurence suivante : 
+$$seq_{n+1} = seq_n[1:] + seq_n[0]$$
+
+## Ex 2 : Exponentiation
+Etudions l'exponentiation à travers deux exemples.
 ```python
 def exp1(n,x) : 
   """
-  programme qui donne x^n en sortie
+  programme qui donne x^n en sortie sans utiliser **
   n : entier
   x : reel
   exp1 : reel
@@ -293,9 +403,22 @@ def exp1(n,x) :
   for i in range(1,n+1):
     acc*=x
   return acc
+
+def exp2(n,x):
+    """
+    n : entier
+    x : reel
+    exp1 : reel
+    """
+    if n==0 : return 1
+    else : return exp2(n-1,x)*x
 ```
+1. Combien de produits sont necessaires pour calculer une puissance n-ième avec la fonction `exp1` ?
+2. Pour la fonction `exp2` : Soit u<sub>n</sub> le nombre de produits nécessaires pour calculer une puissance n-ième. Quelle est la relation de récurrence vérifiée par u<sub>n+1</sub> ? $$u_{n+1} = u_n + ...$$
+3. En déduire la complexité pour ces 2 fonctions.
 
 # Liens
 * article sur les tours de Hanoi [http://accromath.uqam.ca/2016/02/les-tours-de-hanoi-et-la-base-trois/](http://accromath.uqam.ca/2016/02/les-tours-de-hanoi-et-la-base-trois/)
+* algorithmes recursifs : [https://fr.wikipedia.org/wiki/Algorithme_récursif](https://fr.wikipedia.org/wiki/Algorithme_récursif)
 
 

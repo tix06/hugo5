@@ -20,7 +20,50 @@ Pour le tri, par exemple : ces opérations fondamentales sont le nombre de compa
 Il faut souvent définir une mesure sur les données qui réflète la quantité d'informations contenues. Exemple : nombre de chiffre des nombres, le nombre d'éléments manipulés, dimension d'une matrice, nombre de noeuds d'un graphe...
 C'est la complexité spatiale.
 
-# Premier exemple : la recherche dans une liste triée
+# Evaluer la complexité (temporelle)
+La complexité d’un algorithme sera (sauf mention contraire) exprimée sous la forme : *O*(*g*(*n*)). Il s'agira d'estimer, le plus souvent, la complexité dans le pire des cas (sa borne supérieure), ou bien, lorsque cela est pertinent, la complexité asymptotique.
+
+En pratique, on ne comptera que les opérations estimées **importantes** : celles qui ne changent pas selon les nuances du langage utilisées lors de la programmation (boucle while et boucle for...) mais qui changent selon le problème.
+
+Voici le principe de base pour calculer la complexité d’une boucle bornée. Soit (deb,fin) ∈ Z<sup>2</sup>, considérons une boucle de type `for i in range(deb, fin):`
+
+Alors la complexité de cette boucle est :
+$$\sum_{i=deb}^{fin-1} C_i$$
+où C représente la complexité de l’itération[^2] i
+
+Le principe est le même pour une boucle bornée (non conditionnelle), mais il est moins facile de déterminer le nombre d’itérations de la boucle. Pour ce faire, la méthode classique est d’étudier plus en détails le variant de boucle déjà utilisé pour prouver la terminaison de la boucle. On détermine :
+
+* La valeur initiale du variant de boucle ;
+* Sa valeur finale ;
+* De combien il diminue strictement à chaque étape.
+
+on peut alors en déduire le nombre d’itérations de la boucle.
+
+On utilise les notations de **Landau :**
+
+* **Notation O : la borne superieure :** g domine f
+on note f = O(g) s'il existe un nombre réel positif a et un rang n de f<sub>n</sub> tels que f(n) ≤ a.g(n) : 
+
+$$\exists c \in \mathbb{R}^+, tels \quad que\quad   \forall n_o \in \mathbb{N},  |f(n_o)|\leq c.|g(n)| $$
+
+En pratique, la recherche de la complexité revient à déterminer cette fonction (ou cette suite) g. On note la complexité **O(g)**. On ignore l'eventuel coefficient multiplicateur c et on ne conserve que le terme le plus divergent dans le cas où g contienne plusieurs termes. **T(n) = O(g(n))**. 
+
+* **Notation &Theta; :** Lorsqu'il est possible de déterminer une fonction asymptotique de la complexité, la notation devient &Theta;(g).
+
+* Principales classes de la complexité :*
+Ces complexités sont classées par temps d'execution croissant de l'agorithme correspondant.
+
+| complexité | classe |
+| --- | --- |
+| &Theta;(1) | temps constant |
+| &Theta;(log n) | logarithmique | 
+| &Theta;(n) | linéaire |
+| &Theta;(n*log n) | quasi linéaire  |
+| &Theta;(n<sup>2</sup>) | quadratique, polynômial   |
+| &Theta;(n<sup>3</sup>) | cubique, polynômial   |
+| &Theta;(2<sup>n</sup>) |  exponentiel (problème très difficiles) |
+
+# Exemple 1 : la recherche dans une liste triée
 ## Enoncé du problème[^1]
 Supposons que le problème posé soit de trouver un nom X dans un annuaire téléphonique qui consiste en une liste triée alphabétiquement. On peut s'y prendre de plusieurs façons différentes. En voici deux :
 
@@ -75,15 +118,260 @@ où p(d) est la probabilité que l'on ait la donnée d en entrée de l'algorithm
 et coût_A(d) représente la complexité en temps de l'algorithme A sur la donnée d.
 
 ## Algorithme de recherche dichotomique
-Le second algorithme demandera dans le pire des cas de séparer en deux l'annuaire, puis de séparer à nouveau cette sous-partie en deux, ainsi de suite jusqu'à n'avoir qu'un seul nom. Le nombre d'étapes nécessaire sera le nombre entier qui est immédiatement plus grand que log_2(N), qui vaut 15 lorsque N=30 000.
+### Programme python
+```python
+def rechDichoAux(tabTrie,x,debut,fin):
+    if debut == fin :
+        if tabTrie[debut] == x:
+            return debut
+        else:
+            return -1
+    else:
+        milieu= (fin-debut)//2
+        if x <= tabTrie[debut+milieu]:
+            return rechDichoAux(tabTrie,x,debut,debut+milieu)
+        else : return rechDichoAux(tabTrie,x,debut+milieu+1,fin)
 
-La complexité est alors O(log_2(N))
+def rechDich(tab,x):
+    n=len(tab)
+    return rechDichoAux(tab,x,0,n-1)
+```
 
-# Evaluer la complexité
-La complexité d’un algorithme sera (sauf mention contraire) exprimée sous la forme : *O*(*f*(*n*))
+On peut alors tester le programme (jupyter notebook):
 
-Notation O : borne superieure : f = O(g) s'il existe un nombre réel positif a et un rang n de fn tels que f(n) ≤ a.g(n) : 
+<table>
+    <tr>
+        <th scope="row">IN</th>
+        <td>tab = [23, 34, 45, 56, 67, 104]<br>
+          rechDich(tab,67)
+        </td>
+    </tr>
+   
+    <tr>
+        <th scope="row">OUT</th>
+        <td>
+         4
+        </td>
+    </tr>
+</table>
 
-$$\exists c \in \mathbb{R}^+, tels \quad que\quad   \forall n_o \in \mathbb{N},  |f(n_o)|\leq c.|g(n)| $$
+
+
+### Complexité
+Le second algorithme demandera dans le pire des cas de séparer en deux l'annuaire, puis de séparer à nouveau cette sous-partie en deux, ainsi de suite jusqu'à n'avoir qu'un seul nom. Le nombre d'étapes nécessaire sera le nombre entier qui est immédiatement plus grand que log<sub>2</sub>(N), qui vaut 15 lorsque N=30 000.
+
+La complexité est alors O(log<sub>2</sub>(N))
+
+# Exemple 2 : multiplication de matrices carrées
+## Enoncé du problème
+soit A = (a<sub>ij</sub>) et B = (b<sub>ij</sub>) deux matrices n*n à coefficients dans **R**.
+
+i = numero de ligne et j = colonne
+
+L'algorithme suivant devra calculer les coefficients (c i j) de la matrice C = A*B selon la formule : 
+
+<p>$$c_{ij} = \sum_{k=1}^n a_{ik}.b_{kj}$$</p>
+
+## Algorithme
+```python
+import numpy as np
+def matrice(a,b):
+    """
+    calcule et retourne la matrice c produit des matrices a*b
+    a et b sont supposées être des matrices carrées, de même dimension
+    """
+    nblignes = a.shape[0]
+    nbcolonnes = b.shape[1]
+    if nblignes != nbcolonnes:
+        raise "value error !"
+    c = np.zeros(nblignes*nbcolonnes).reshape(nblignes,nbcolonnes)
+    for i in range(nblignes):
+        for j in range(nbcolonnes):
+            for k in range(nbcolonnes):
+                c[i,j] += a[i,k]*b[k,j]
+    return c
+```
+
+Voici un exemple d'utilisation de ce programme (avec jupyter notebook) : 
+
+<table>
+    <tr>
+        <th scope="row">IN</th>
+        <td>M1 = np.matrix((1,2,3,4,5,6,7,8,9)).reshape(3,3)<br>
+          M2 = np.matrix((2,4,6,8,10,12,14,16,18)).reshape(3,3)<br>
+        matrice(M1,M2)
+        </td>
+    </tr>
+   
+    <tr>
+        <th scope="row">OUT</th>
+        <td>
+          $$\begin{align}
+        array([&[60.&, 72.&, 84.],\\
+       &[132.&, 162.&, 192.],\\
+       &[204.&, 252.&, 300.]])\\
+       \end{align}$$
+
+        </td>
+    </tr>
+</table>
+
+## Complexité
+La complexité de l'algorithme matrice, comptée en nombre de multiplications de réels ne dépend que de la taille des matrices :  
+
+* Le nombre de multiplication est :
+$$\sum_{i=1}^n \sum_j \sum_k 1 = n^3 $$
+
+* Le nombre d'additions est :
+$$n^2(n-1)$$
+
+* La complexité asymptotique est alors : 
+$$Min(n) = Max(n) = Moy(n) = n^3 $$
+
+
+
+# Exercices
+## Exercice 1
+Déterminer la complexité des fonctions suivantes en terme de nombre d’additions et de soustractions. On donnera d’abord la valeur exacte T(n) puis l’ordre de grandeur O(n).
+
+
+```python
+def truc(n): 
+  res=0
+  for i in range(0,n): 
+    res +=1
+  return res
+
+
+def machin(n):
+  res=truc(n)
+  for i in range(0,n):
+    res -=1 
+  return res
+
+def chose(n):
+  res=0
+  for i in range(n):
+    res+=machin(i) 
+  return res
+
+def fonctionFinale(n):
+  res =[]
+  for i in range(0,n):
+    res.append(chose(n)) 
+  return res
+```
+
+## Exercice 2 : polynôme de Horner
+Soit x ∈ R. On souhaite calculer 3x<sup>2</sup> + 2x + 1. 
+
+On propose dans un un premier temps, un algorithme *naîf*, qui calcule les puissances au fur et à mesure des itérations dans la boucle : 
+```python
+def poly(a,x):
+    """
+    fonction qui calcule la valeur d'un polynôme en x
+    a : liste des coefficients du polynôme de dimension quelconque
+    x : valeur à renseigner
+    """
+    c=0
+    p=1
+    for i in range(len(a)):
+        c += a[i] * p
+        p *= x
+    return c
+```
+
+1. Déterminer la liste des coefficients `a` qu'il faudra renseigner avant d'appeller la fonction `poly`.
+
+2. Calculer le nombre d'additions et de multiplications qui sont réalisées par cette fonction, lorsque le polynôme est 3x<sup>2</sup> + 2x + 1. 
+3. Généraliser ce calcul pour un polynôme de degré n, où n serait la longueur de la liste a.
+4. Deuxième exemple : pour  3x<sup>3</sup> + 2x<sup>2</sup> − x + 7 : mettre l'expression sous une forme nécessitant trois multiplications. (s'aider de l'écriture de P(x) plus bas)
+5. Soit x ∈ R, soit P un polynôme, soit n son degré, a<sub>0</sub>, ..., a<sub>n</sub> ses coefficients. On écrit P (x) sous la forme :
+􏰃􏰁$$P(x) = a_0 + x\times(a_1+x\times(a_2+x\times(a_3+...x\times(a_n)...)))$$
+Écrire un algorithme pour calculer P(x) selon cette méthode. (méthode de Horner)<br>
+Combien de multiplications sont effectuées pour calculer P(x) avec cet algorithme ?
+
+## Exercice 3 : calcul de la complexité en moyenne
+On considère une liste de 4 éléments, différents, mis dans un tableau aux rangs 1 à 4. 
+
+Si on cherche une valeur X aléatoire dans ce tableau par une méthode itérative, et que l'on fait 16 essais, il y a de plus nombreuses chances que l'on ait des résultats équiprobables : 
+
+| n° essai | valeur aléatoire cherchée X | parcours de la liste | nombre de comparaisons T |
+| --- | --- | --- | --- |
+| 1 | 1 | 1 | 1 |
+| 2 | 1 | 1 | 1 |
+| 3 | 1 | 1 | 1 |
+| 4 | 1 | 1 | 1 |
+| 5 | 2 | 1 -> 2 | 2 |
+| 6 | 2 | 1 -> 2 | 2 |
+| 7 | 2 | 1 -> 2 | 2 |
+| 8 | 2 | 1 -> 2 | 2 |
+| 9 | 3 | 1 -> 2 -> 3 | 3 |
+| ... | ... | ... | ... |
+| 16 | 4 | 1 -> 2 -> 3 -> 4 | 4 |
+
+On supposera que X est bien présent dans le tableau.
+
+1. Déterminer le nombre total de comparaisons qui sont faites avec 16 essais.
+2. Déterminer le nombre moyen de comparaisons qui sont effectuées.
+3. Généraliser le résultat à un tableau comprenant n éléments, équiprobables, de probabilité p. Montrer que l'on trouve :
+$$T(n) = p \times \tfrac{n(n+1)}{2}$$ (somme des termes d'une suite arithmétique)
+4. Déterminer alors que la compléxité &Theta; de l'algorithme de recherche itérative  est linéaire en n.
+
+## Exercice 4 : 
+Vous êtes face à un mur qui s’étend à l’infini dans les deux directions. Il y a une porte dans ce 􏰒􏰑
+mur, mais vous ne connaissez ni la distance, ni la direction dans laquelle elle se trouve. Par ailleurs, l’obscurité vous empêche de voir la porte à moins d’être juste devant elle.
+Décrire un algorithme vous permettant de trouver cette porte en un temps linéaire vis-à-vis de la distance qui vous sépare de celle-ci.
+
+## Exercice 5 : 
+Dans un groupe de n individus , une star est quelqu’un que tout le monde connait mais qui ne 􏰒􏰑
+connait personne. Pour trouver une star, s’il en existe une, vous ne pouvez poser aux individus de ce groupe que des questions du type : « connaissez-vous x ? ».
+Combien de stars au maximum peut-il exister dans un groupe ?
+Donner un algorithme trouvant une star s’il en existe une (ou déterminant qu’il n’en existe pas) et de coût linéaire (en prenant comme mesure de la complexité le nombre de questions posées).
+
+## Exercice 6 : 
+Le problème est de déterminer à partir de quel étage d’un immeuble sauter par une fenêtre est 􏰒􏰑
+fatal. Vous êtes dans un immeuble à n étages (numérotés de 1 à n) et vous disposez de k étudiants. Il n’y a qu’une opération possible pour tester si la hauteur d’un étage est fatale : faire sauter un étudiant par la fenêtre. S’il survit, vous pouvez le réutiliser ensuite, sinon vous ne pouvez plus.
+Vous devez proposer un algorithme pour trouver la hauteur à partir de laquelle un saut est fatal en faisant le minimum de sauts.
+
+*Donnée :* on suppose k > log n
+
+
+# Corrections
+## correction de l'ex 2
+```python
+def PHorner(taba,x):
+    """
+    calcul de la valeur de l'expression polynome avec la methode 
+    de Horner
+    taba : tableau des coefficient a_i
+    x : valeur de x
+    sortie : P(X)=a0.1 + a1.X + a2.X^2 + ... an.X^n
+    sans utiliser ** pour la puissance
+    """
+    v = 0 # variable accumulateur
+    n = len(taba) # longueur tableau
+    for i in range(0,n-1):
+        v = v * x + taba[n-i-1]
+    return v
+```
+On peut alors tester le programme (jupyter notebook):
+
+<table>
+    <tr>
+        <th scope="row">IN</th>
+        <td>tab = [0,1,2]<br>
+        PHorner(tab,3)
+        </td>
+    </tr>
+   
+    <tr>
+        <th scope="row">OUT</th>
+        <td>
+         7
+        </td>
+    </tr>
+</table>
 
 [^1]: wikipedia : analyse de la complexité : [https://fr.wikipedia.org/wiki/Analyse_de_la_complexité_des_algorithmes](https://fr.wikipedia.org/wiki/Analyse_de_la_complexité_des_algorithmes)
+[^2]: itération : succession d'états dans un processus

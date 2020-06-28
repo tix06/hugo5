@@ -10,11 +10,31 @@ Title : diviser
 # Diviser pour regner
 C'est une technique informatique qui consiste à : 
 
-1. Diviser : découper un problème initial en sous-problèmes ;
+1. Diviser : découper un problème initial en sous-problèmes de tailles équivalentes;
 2. Régner : résoudre les sous-problèmes (récursivement ou directement s'ils sont assez petits) ;
 3. Combiner : calculer une solution au problème initial à partir des solutions des sous-problèmes.
 
 Cette méthode, lorsqu'elle s'applique, fournit un algorithme de complexité plus réduite, et donc plus efficace.
+
+**Definition :** Un problème est de type *diviser pour regner* si sa complexité u<sub>n</sub> se ramène à l'étude de suites vérifiant : 
+$$u\_n = a.u\_{\tfrac{n}{2}} + b.u_{\tfrac{n}{2}} + f(n)$$
+
+# Exemple introductif : téléphone en chaîne
+Les 15 joueuses d’une équipe de volleyball ont la liste des joueuses de l’équipe avec leur numéro de téléphone. La capitaine reçoit l’information que le prochain match a été déplacé. Il faut prévenir toutes les autres joueuses.
+
+* Solution 1 : la capitaine se charge d’appeler toutes les autres joueuses. Si elle passe 5 minutes au téléphone avec chacune d’entre-elles.
+**Question** : En combien de temps (noté t1) l’ensemble de l’équipe est informé? En déduire la complexité de cette solution en fonction de n (taille de l’équipe)
+
+* Solution 2 : Une solution plus efficace et plus confortable pour la capitaine est qu’elle divise la liste de joueuses en deux moitiés. Elle appelle alors la première joueuse de chacune des deux listes obtenues. Elle leur donne l’information de report de match et leur demande à leur tour de faire la même chose : diviser en deux la demi-liste à laquelle elles appartiennent, appeler la première joueuse de chacune des parties et ainsi de suite ... jusqu’à ce qu’il n’y ait plus personne à prévenir.
+
+Représentons l’arbre des appels pour la liste de 15 joueuses numérotées de 1 à 15.
+
+<figure>
+  <img src="../images/page5_appels.png" width="250px" alt="arbre binaire des appels">
+  <figcaption>arbre des appels</figcaption>
+</figure>
+
+**Question :** Si on suppose qu’un appel téléphonique dure 5 min. En combien de temps (noté t2) l’ensemble de l’équipe est informé ? En déduire la complexité de cette solution en fonction de n (taille de l’équipe)
 
 # Exponentiation
 ## Programme itératif
