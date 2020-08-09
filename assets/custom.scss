@@ -59,7 +59,7 @@ height:100%;
     }   /*pour chrome*/
 
 /* position des tableaux formules formulaires, gestion de l'overflow*/   
-div[id=tableau], form, table, iframe, .formule {
+div[id=tableau], form, table, iframe, .formule, .timeline {
 	overflow: scroll;
 	display: block;
    	justify-content: center;

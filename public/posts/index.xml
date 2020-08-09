@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sciences numériques</title><link>/posts/</link><description>Recent content in Posts on Sciences numériques</description><generator>Hugo -- gohugo.io</generator><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Python les bases</title><link>/posts/python/python_les_bases/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/python/python_les_bases/</guid><description> Page en cours de construction. Cliquer pour voir les liens
 Liens L&amp;rsquo;essentiel. Python et sciences physiques : https://pyspc.readthedocs.io/fr/latest/05-bases/index.html
-Fiche. Utiliser un notebook ipython : https://pyspc.readthedocs.io/fr/latest/03-guide/</description></item><item><title>Python Pandas</title><link>/posts/python/pandas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/python/pandas/</guid><description>Python : la librairie pandas notebook Le notebook présenté ici est à télécharger à l&amp;rsquo;adresse suivante :
+Fiche. Utiliser un notebook ipython : https://pyspc.readthedocs.io/fr/latest/03-guide/
+lecture ecriture dans un fichier : https://python.sdv.univ-paris-diderot.fr/07_fichiers/</description></item><item><title>Python Pandas</title><link>/posts/python/pandas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/python/pandas/</guid><description>Python : la librairie pandas notebook Le notebook présenté ici est à télécharger à l&amp;rsquo;adresse suivante :
 https://mybinder.org/v2/gh/tix06/notebook_datas.git/master
 Puis choisir : gestionBase_de_donnees_python.ipynb
 Exercez vous en suivant le tutoriel avec ce notebook.

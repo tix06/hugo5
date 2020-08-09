@@ -17,4 +17,5 @@ Page en cours de construction. Cliquer pour voir les liens
 * L'essentiel. Python et sciences physiques : <a href="https://pyspc.readthedocs.io/fr/latest/05-bases/index.html" target="_blank">https://pyspc.readthedocs.io/fr/latest/05-bases/index.html</a>
 
 * Fiche. Utiliser un notebook ipython : <a href ="https://pyspc.readthedocs.io/fr/latest/03-guide/" target="_blank">https://pyspc.readthedocs.io/fr/latest/03-guide/</a>
+* lecture ecriture dans un fichier : <a href ="https://python.sdv.univ-paris-diderot.fr/07_fichiers/" target="blank">https://python.sdv.univ-paris-diderot.fr/07_fichiers/</a>
 
