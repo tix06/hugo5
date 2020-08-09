@@ -61,6 +61,7 @@ for (let i = 0; i < data.length; i++) {
 }
 </script>
 
+
 <style>
   .grid {
   display:grid;
@@ -95,6 +96,7 @@ for (let i = 0; i < data.length; i++) {
   width:2040px;
 }
 </style>
+
 
 # La naissance du nombre
 
