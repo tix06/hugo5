@@ -112,7 +112,7 @@ Au VII millénaire avant JC : des vestiges de jetons en pierre montrent l'activi
 
 Au quotidien, les hommes ont d'abord utilisé leurs doigts ou leur phalanges pour compter. Selon la méthode employée, ils ont alors compté en base 10 (10 doigts de la main), ou en base 20 (en incluant les doigts de pied), en base 12 (en utilisant les phalanges), ou en base 60.
 
-Au IV millénaire avant JC : On trouve les plus anciennes traces de chiffres écrits (Mésopotamiens et Egyptiens).
+Au IV millénaire avant JC : On trouve les plus anciennes traces de chiffres écrits (Mésopotamiens[^1] et Egyptiens).
 
 > Comment ces chiffres constituent-ils des nombres ?
 
@@ -186,5 +186,31 @@ Les données manipulées par une machine sont des nombres binaires. Pour toutes 
 
 # Liens
 
+* Histoire illustrée de l'informatique, 2e Edition, EDP sciences
 * les grandes civilisations anciennes et leur chronologie : [http://www.essential-humanities.net/history-overview/world-history-timeline/](http://www.essential-humanities.net/history-overview/world-history-timeline/)
 * La numération par civilisation :[https://fr.wikipedia.org/wiki/Catégorie:Numération_par_civilisation](https://fr.wikipedia.org/wiki/Cat%C3%A9gorie:Num%C3%A9ration_par_civilisation)
+
+[^1]: Mésopotamiens : La civilisation babylonienne est héritière de Sumer, et elle s'est épanouie en Mésopotamie du Sud du début du IIe millénaire av. J.-C. jusqu'au début de notre ère. Elle est marquée par l'affirmation progressive, de la cité de Babylone, capitale de l'État qui connait son apogée à partir du VIe siècle av. J.-C. Cette cité prospère étend son influence du nord-est de la Syrie, au nord de l'Irak actuel, ainsi que les plaines plus au sud. Les milliers de tablettes cunéiformes découvertes sur les différents sites de Babylonie (Babylone, Ur, Uruk, Nippur, Sippar, etc.) ont permis de dresser le tableau d'une civilisation urbaine reposant sur une agriculture irriguée potentiellement très productive. [https://fr.wikipedia.org/wiki/Babylone](https://fr.wikipedia.org/wiki/Babylone)
+
+# Exercices 
+## Numération Babylonienne
+### La première représentation écrite des nombres
+L'image suivante est le dessin d'une tablette sumérienne datant de 2 000 ans environ avant notre ère.
+
+Cette tablette en argile indique le nombre d'animaux de chaque espèce possédés par un propriétaire de bétail. 
+
+Les symboles des chiffres sont écrits à gauche. Il s'agit de dessins en forme de clou et de chevron. Il s'agit d'une numération en base 60. (les unités vont de 0 à 60, tout comme les *soixantaines*).
+
+<figure>
+  <img src="../images/tabletteBab.png" width="300px" alt="tablette Babylonienne">
+</figure>
+
+1. En vous aidant du documents suivant, traduire les inscriptions de la tablette sumérienne : compter le nombre d’animaux de chacune des espèces.
+2. Combien de symboles différents utilisent les sumériens pour écrire les chiffres ? 
+<figure>
+  <img src="../images/base60.png" width="300px" alt="equivalence base 60 vers decimale">
+  <figcaption>Equivalence entre la base 60 sumérienne et notre base décimale</figcaption>
+</figure>
+3. Ces symboles, sont-ils différents pour les unités, les soixantaines, et les soixantaines de soixantaines ? 
+4. Expliquer en quoi on peut considérer que les sumériens utilisaient une numération de position ?
+

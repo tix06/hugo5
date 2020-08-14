@@ -6,18 +6,22 @@ bookShowToc: false
 # Exercices sur les variables et opérations
 
 # Révisions : flash cards
+1. Lire la question
+2. Chercher la réponse
+3. Cliquer sur la carte pour vérifier la reponse.
+
 ## Flash card 1
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
       <h1>Questions</h1>
-      <ol><li>Quels sont les 3 types simples de variables en python ?</li>
+      <ol><li>Quels sont les 3 types simples de variables en informatique ?</li>
         <li>Comment fait-on pour affecter la valeur 3 à une variable a? </li>
       </ol>
     </div>
     <div class="flip-card-back">
       <h1>Réponses</h1>
-      <ol><li>Caractères, Boléens (True, False), Number (Integer et Float)</li>
+      <ol><li>Caractères, Booléens (True, False), Nombres (Integer et Float)</li>
         <li><code style="color:black">a = 3</code></li>
       </ol>
     </div>
