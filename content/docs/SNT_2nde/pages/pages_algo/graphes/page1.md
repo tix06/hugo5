@@ -60,6 +60,8 @@ Voici un autre exemple de cycle dans ce même graphe:
 
 # Graphes
 ## Un graphe
+G(V,E) est un graphe G où E est l'ensemble des sommets et V l'ensemble des arêtes.
+
 Le graphe 1 contient 6 sommets et 8 arêtes.
 
 ## Sommets voisins
@@ -80,11 +82,21 @@ Un cycle est un chemin fermé (qui revient à son sommet de départ), sans passe
 Un arbre est un graphe connexe sans cycle. La figure suivante en est une illustration : 
 
 <figure>
-  <img src="../images/fig9.png" width=350px alt="arbre couvrant">
+  <img src="../images/fig11.png" width=350px alt="arbre couvrant">
   <figcaption>Graphe 6 : arbre couvrant</figcaption>
 </figure>
 
-Cet arbre a la propriété de couvrir complètement tous les noeuds du graphe.
+Cet arbre a la propriété de couvrir complètement tous les noeuds du graphe 1 vu en exemple.
+
+<figure>
+  <img src="../images/fig9.png" width=350px alt="arbre couvrant">
+  
+</figure>
+
+**Propriétés :** 
+
+* Tout arbre à n sommets a exactement n-1 arêtes.
+* un arbre T est un graphe connexe, par définition, mais pour n'importe quelle paire de sommets u et v, il existe exactement un chemin entre u et v dans T.
 
 ## Couplage
 Un couplage est un ensemble d'arêtes qui n'ont aucun sommet en commun.
@@ -97,7 +109,7 @@ Un couplage est un ensemble d'arêtes qui n'ont aucun sommet en commun.
 # Applications
 
 * Un graphe représente les relations entre les sommets. C'est la représentation naturelle pour les réseaux sociaux (sommets = personnes) ou les réseaux internet (sommets = routeurs).
-* Avant d'écrire le code d'un logiciel, il faut savoir comment faire les opérations qui sont demandées. Il faut un plan. Le schéma de ce plan peut être représenté par un graphe.
+* Des pages web : chaque page est un sommet et le lien d'une page A vers une page B est représentée par une arête *orientée*. Le Web peut ainsi être représenté par un graphe. Les moteurs de recherche utilisent ainsi ce type de modélisation pour répondre aux critères de recherche des internautes.
 * Le plan d'un métro représente les stations (les sommets du graphe) reliées entre-elles par une ligne de métro. C'est un graphe.
 * Le plan routier peut aussi montrer les liaisons entre marqueurs sur une carte. A la différence du graphe de métro, le graphe routier est un graphe *pondéré* : pour ce type de graphe, on porte la mention du nombre de km pour chacune des arêtes. La longueur du *chemin* n'est alors plus égale au nombre d'arêtes, mais à la somme des longueurs de chaque arête.
 
