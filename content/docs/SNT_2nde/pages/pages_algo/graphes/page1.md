@@ -113,6 +113,9 @@ Un couplage est un ensemble d'arêtes qui n'ont aucun sommet en commun.
 * Le plan d'un métro représente les stations (les sommets du graphe) reliées entre-elles par une ligne de métro. C'est un graphe.
 * Le plan routier peut aussi montrer les liaisons entre marqueurs sur une carte. A la différence du graphe de métro, le graphe routier est un graphe *pondéré* : pour ce type de graphe, on porte la mention du nombre de km pour chacune des arêtes. La longueur du *chemin* n'est alors plus égale au nombre d'arêtes, mais à la somme des longueurs de chaque arête.
 
+# Algorithmes sur les graphes
+Voir la page suivante : [algorithmes de parcours d'un graphe](../page2/index.html)
+
 # Liens
 * A la découverte des graphes, Edition EDP sciences
 

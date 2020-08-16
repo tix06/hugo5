@@ -238,8 +238,11 @@ h1{border-bottom:solid 1px #ccc;}
   .btn-lg { 
 
    font-size: 11px; 
-   
-}
+  }
+  
+  img, figure{
+  text-align : left;
+  }
 }
 
 /*******************************************************************/
@@ -394,7 +397,7 @@ form legend {
 }
 */
 
-.flip-card:hover .flip-card-inner:active {
+.flip-card:hover .flip-card-inner:active, flip-card:target {
   transform: rotateY(180deg);
 }
 
