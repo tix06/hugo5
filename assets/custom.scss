@@ -402,11 +402,14 @@ form legend {
 }
 */
 
+/*
 .flip-card-inner:active {
   transform: rotateY(180deg);
 }
+*/
 
 .flip-card-inner.active {
+  /* activé grace au code javascript de la page contenant la flip-card*/
   transform: rotateY(180deg);
 }
 

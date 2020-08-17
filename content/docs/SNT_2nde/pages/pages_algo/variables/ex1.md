@@ -59,7 +59,7 @@ bookShowToc: false
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <h1>Questions</h1>
+      <h1>Questions 3</h1>
       <ol><li>classer les nombres binaires constitués de 2 bits du plus petit au plus grand : 11  01  00  10</li>
         <li>Ecrire 19 (dix-neuf) en numération binaire</li>
         <li>Trouver combien fait  11111 en base 10</li>
@@ -78,6 +78,7 @@ bookShowToc: false
 <script>
   let selector, cards, makeActive;
   let elems = [];
+  var check = false;
 
 selector = '.flip-card';
 
@@ -86,12 +87,13 @@ cards = document.querySelectorAll(selector);
 
 makeActive = function () {
     for (let i = 0; i < cards.length; i++){
-      console.log(cards[i].childNodes[1]);
-        elems[i] = cards[i].childNodes[1];
-        elems[i].classList.remove('active');
-        }
-
-    this.childNodes[1].classList.add('active');
+      check=!check;
+      //console.log(cards[i].childNodes[1].classList);
+      elems[i] = cards[i].childNodes[1];
+      elems[i].classList.remove('active');
+      }
+    if (check) {
+    this.childNodes[1].classList.add('active');}
 };
 
 for (let i = 0; i < cards.length; i++)
