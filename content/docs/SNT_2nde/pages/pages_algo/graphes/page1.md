@@ -12,7 +12,7 @@ On peut faire un schéma où l'on fera justement apparaitre ces *relations* entr
 Voici l'un des schémas possibles : 
 
 <figure>
-  <img src="../images/fig4.png" width=350px alt="graphe reseau social">
+  <img src="../images/fig4.png" alt="graphe reseau social">
   <figcaption>Graphe 1 : connexe</figcaption>
 </figure>
 
@@ -22,7 +22,7 @@ On peut imaginer qu'un individu se joigne à la fête sans y avoir été invité
 
 Le graphe a alors l'allure suivante : 
 <figure>
-  <img src="../images/fig5.png" width=350px alt="graphe non connexe">
+  <img src="../images/fig5.png" alt="graphe non connexe">
   <figcaption>Graphe 2 : non connexe</figcaption>
 </figure>
 
@@ -38,14 +38,14 @@ Ce chemin peut être décrit :
 Ce chemin a une longueur égale à 2 (il faut 2 transmissions du message pour qu'il parvienne à Oriane). C'est le nombre d'arêtes.
 
 <figure>
-  <img src="../images/fig6.png" width=350px alt="graphe avec chemin">
+  <img src="../images/fig6.png" alt="graphe avec chemin">
   <figcaption>Graphe 3 : chemin Kévin-Oriane</figcaption>
 </figure>
 
 Dans la soirée, les personnes qui se connaissent déjà ont tendance à former de plus petits groupes au sein des participants. On peut matérialiser l'un de ces petits groupes avec le schéma suivant : 
 
 <figure>
-  <img src="../images/fig7.png" width=350px alt="graphe avec cycle">
+  <img src="../images/fig7.png" alt="graphe avec cycle">
   <figcaption>Graphe 4 : cycle Paul-Kévin-Vous</figcaption>
 </figure>
 
@@ -54,7 +54,7 @@ Il s'agit d'un *cycle* dans le graphe. C'est une figure fermée (qui part de Pau
 Voici un autre exemple de cycle dans ce même graphe:
 
 <figure>
-  <img src="../images/fig8.png" width=350px alt="graphe avec cycle">
+  <img src="../images/fig8.png" alt="graphe avec cycle">
   <figcaption>Graphe 5 : autres cycle</figcaption>
 </figure>
 
@@ -82,14 +82,14 @@ Un cycle est un chemin fermé (qui revient à son sommet de départ), sans passe
 Un arbre est un graphe connexe sans cycle. La figure suivante en est une illustration : 
 
 <figure>
-  <img src="../images/fig11.png" width=350px alt="arbre couvrant">
+  <img src="../images/fig11.png" alt="arbre couvrant">
   <figcaption>Graphe 6 : arbre couvrant</figcaption>
 </figure>
 
 Cet arbre a la propriété de couvrir complètement tous les noeuds du graphe 1 vu en exemple.
 
 <figure>
-  <img src="../images/fig9.png" width=350px alt="arbre couvrant">
+  <img src="../images/fig9.png" alt="arbre couvrant">
   
 </figure>
 
@@ -102,7 +102,7 @@ Cet arbre a la propriété de couvrir complètement tous les noeuds du graphe 1 
 Un couplage est un ensemble d'arêtes qui n'ont aucun sommet en commun.
 
 <figure>
-  <img src="../images/fig10.png" width=350px alt="couplage">
+  <img src="../images/fig10.png" alt="couplage">
   <figcaption>Graphe 7 : couplage</figcaption>
 </figure>
 

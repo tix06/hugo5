@@ -16,7 +16,7 @@ Pour le graphe exemple suivant (Graphe 1), la distance du sommet A au sommet J, 
 $$dist_G(A,J)=4$$.
 
 <figure>
-  <img src="../images/fig20.png" width=350px alt="graphe illustratif">
+  <img src="../images/fig20.png" alt="graphe illustratif">
   <figcaption>Graphe 1 : exemple</figcaption>
 </figure>
 
@@ -50,7 +50,7 @@ La méthode vue plus haut permet de rapidement établir la liste L = [E,B,F,H,I]
 Une fois cette première partie de l'exploration terminée, on retire E de la liste L, et on colore le sommet en rouge.
 
 <figure>
-  <img src="../images/fig21.png" width=350px alt="premiere partie parcours BFS">
+  <img src="../images/fig21.png" alt="premiere partie parcours BFS">
   <figcaption>L = [B,F,H,I]</figcaption>
 </figure>
 
@@ -64,7 +64,7 @@ dist<sub>G</sub>(E,A) = 2, tout comme dist<sub>G</sub>(E,C) et dist<sub>G</sub>(
 On colore alors le sommet B en rouge et on le retire de la liste L.
 
 <figure>
-  <img src="../images/fig22.png" width=350px alt="premiere partie parcours BFS">
+  <img src="../images/fig22.png" alt="premiere partie parcours BFS">
   <figcaption>L = [F,H,I]</figcaption>
 </figure>
 
@@ -77,7 +77,7 @@ On poursuivra l'exploration par le sommet H, suivant dans la liste. Ce qui perme
 A la fin du traitement, on peut représenter à l'aide d'un *arbre* tous les chemins issus de l'exploration du graphe : 
 
 <figure>
-  <img src="../images/fig23.png" width=350px alt="arbre parcours BFS">
+  <img src="../images/fig23.png" alt="arbre parcours BFS">
   <figcaption>arbre du parcours BFS</figcaption>
 </figure>
 
@@ -95,7 +95,7 @@ Au départ, aucune distance n'est connue. Les distances provisoires notées dist
 Le graphe suivant servira d'exemple : 
 
 <figure>
-  <img src="../images/fig30.png" width=350px alt="graphe exemple Dijkstra">
+  <img src="../images/fig30.png" alt="graphe exemple Dijkstra">
   <figcaption>exemple de graphe pondéré</figcaption>
 </figure>
 
@@ -127,7 +127,7 @@ On démarre du noeud B. Après le parcours de ses noeuds fils, la liste L contie
 * F est à une distance de 10
 
 <figure>
-  <img src="../images/fig31.png" width=350px alt="parcours initial Dijkstra">
+  <img src="../images/fig31.png" alt="parcours initial Dijkstra">
   <figcaption>L = [D,E,F]</figcaption>
 </figure>
 
@@ -140,7 +140,7 @@ Ensuite, on passe au noeud D, le plus proche de B (le plus à gauche dans la lis
 On retire D de la liste et on trie celle-ci en fonction des distances à B : 
 
 <figure>
-  <img src="../images/fig32.png" width=350px alt="parcours 2 Dijkstra">
+  <img src="../images/fig32.png" alt="parcours 2 Dijkstra">
   <figcaption>L = [C,E,H,F,A]</figcaption>
 </figure>
 
@@ -149,7 +149,7 @@ Le sommet suivant à traiter est alors le C. Ses noeuds fils sont E, et G. L'exa
 * G est à une distance 5+2 = 7 du noeud B : 
 
 <figure>
-  <img src="../images/fig33.png" width=350px alt="parcours 3 Dijkstra">
+  <img src="../images/fig33.png" alt="parcours 3 Dijkstra">
   <figcaption>L = [E,H,G,F,A]</figcaption>
 </figure>
 
@@ -159,21 +159,21 @@ On passe au noeud E : il n'y a pas de modification de la distance de B à C en p
 * G est à une distance 6+2 = 8 du noeud B en passant par H. Cette valeur n'est pas enregistrée car il existe un chemin plus court.
 
 <figure>
-  <img src="../images/fig34.png" width=350px alt="parcours 4 Dijkstra">
+  <img src="../images/fig34.png" alt="parcours 4 Dijkstra">
   <figcaption>L = [A,G,F]</figcaption>
 </figure>
 
 On finit rapidement l'exploration : 
 
 <figure>
-  <img src="../images/fig35.png" width=350px alt="parcours 5 Dijkstra">
+  <img src="../images/fig35.png" alt="parcours 5 Dijkstra">
   <figcaption>Fin de l'exploration</figcaption>
 </figure>
 
 L'arbre représentant les plus courts chemins est alors le suivant : 
 
 <figure>
-  <img src="../images/fig36.png" width=350px alt="arbre Dijkstra">
+  <img src="../images/fig36.png" alt="arbre Dijkstra">
   <figcaption>arbre couvrant</figcaption>
 </figure>
 
@@ -182,7 +182,7 @@ C'est un arbre couvrant le graphe.
 On peut le représenter avec une forme plus conventionnelle : 
 
 <figure>
-  <img src="../images/fig37.png" width=350px alt="arbre Dijkstra">
+  <img src="../images/fig37.png" alt="arbre Dijkstra">
   <figcaption>arbre de plus court chemin</figcaption>
 </figure>
 
