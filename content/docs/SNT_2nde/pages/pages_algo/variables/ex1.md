@@ -14,7 +14,7 @@ bookShowToc: false
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <h1>Questions</h1>
+      <h1>Questions 1</h1>
       <ol><li>Quels sont les 3 types simples de variables en informatique ?</li>
         <li>Comment fait-on pour affecter la valeur 3 à une variable a? </li>
       </ol>
@@ -32,7 +32,7 @@ bookShowToc: false
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <h1>Questions</h1>
+      <h1>Questions 2</h1>
       <p style="font-size: 12px">Soit le nombre N entier constitué de 3 chiffres A (centaines), B (dizaines), C (unités), s'écrivant ABC</p>
       <p style="font-size: 12px">Traduire chacune des propositions sous la forme d’une opération. Puis trouver le résultat :</p>
       <ol style="font-size: 12px"><li>Le nombre doit être inférieur à 500</li>
@@ -76,19 +76,24 @@ bookShowToc: false
 </div>
 
 <script>
-  let selector, elems, makeActive;
+  let selector, cards, makeActive;
+  let elems = [];
 
-selector = '.flip-card-inner';
+selector = '.flip-card';
 
-elems = document.querySelectorAll(selector);
+cards = document.querySelectorAll(selector);
+
 
 makeActive = function () {
-    for (let i = 0; i < elems.length; i++)
+    for (let i = 0; i < cards.length; i++){
+      console.log(cards[i].childNodes[1]);
+        elems[i] = cards[i].childNodes[1];
         elems[i].classList.remove('active');
+        }
 
-    this.classList.add('active');
+    this.childNodes[1].classList.add('active');
 };
 
-for (let i = 0; i < elems.length; i++)
-    elems[i].addEventListener('mousedown', makeActive);
+for (let i = 0; i < cards.length; i++)
+    cards[i].addEventListener('mousedown', makeActive);
 </script>
