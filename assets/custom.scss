@@ -394,7 +394,7 @@ form legend {
 }
 */
 
-.flip-card:hover .flip-card-inner:active, .flip-card:target {
+.flip-card-inner:active {
   transform: rotateY(180deg);
 }
 
