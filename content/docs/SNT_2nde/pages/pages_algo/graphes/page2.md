@@ -186,4 +186,67 @@ On peut le représenter avec une forme plus conventionnelle :
   <figcaption>arbre de plus court chemin</figcaption>
 </figure>
 
+# Parcours d'un arbre en profondeur
+Soit un graphe G = (V,E) et r un sommet de G, point de départ de l'exploration.
+Le parcours en profondeur du graphe va permettre de visiter tous les noeuds du graphe, mais selon un chemin où l'on plonge dans la profondeur du graphe. Le prochain sommet visité sera un noeud fils non encore visité.
+
+A chaque étape, c'est à dire à chaque arête suivie, il faudra mémoriser le parent du nouveau sommet visité. Cela permettra de revenir en arrière.
+
+Lorsque le chemin amène à une impasse, (il n'y a plus de noeud fils non visité), lorsque l'on est sur un bord du graphe, alors on remonte d'un niveau, vers un noeud parent, avant de poursuivre l'exploration.
+
+En pratique : 
+
+* tous les sommets qont d'abord colorés en BLANC.
+* On colore chaque noeud u visité en VERT.
+* Lorsque tous les noeuds fils de u sont visités, on colore celui-ci en ROUGE.
+
+**Illustration :**
+Avec le graphe suivant, on démarre l'exploration du noeud G : 
+
+<figure>
+  <img src="../images/fig40.png" alt="graphe parcours profondeur">
+  <figcaption>exemple de graphe pour le parcours en profondeur</figcaption>
+</figure>
+
+La première étape est la phase de descente : On peut démarrer l'exporation par le noeud fils A ou B. Les deux sont possibles. Ils sont de couleur BLANCHE.
+
+Supposons que l'on commence l'exploration par le noeud B (on aurait tout aussi bien choisir le A). On colore alors le noeud B en VERT.
+
+On poursuit l'exploration par les noeuds fils suivants : D,C,A (il y a d'autres possibiltés) : 
+
+<figure>
+  <img src="../images/fig41.png" alt="graphe parcours profondeur">
+  <figcaption>étape 1</figcaption>
+</figure>
+
+Le sommet A est un bord du graphe : il n'y a pas de noeud fils BLANC. On remonte alors d'un niveau : jusqu'au sommet C. Celui ci ne presente pas davantage de noeud fils BLANC. A et C sont colorés en ROUGE et on remonte au noeud D. 
+
+On peut alors poursuivre l'exploration vers le noeud E :
+
+<figure>
+  <img src="../images/fig42.png" alt="graphe parcours profondeur">
+  <figcaption>étape 2</figcaption>
+</figure>
+
+Depuis le sommet E, on peut visiter les noeuds F et I. Choisissons F (mais on pourrait choisir également I) : 
+
+<figure>
+  <img src="../images/fig43.png" alt="graphe parcours profondeur">
+  <figcaption>étape 3</figcaption>
+</figure>
+
+On poursuit l'exploration jusqu'en I. Tous les noeuds sont visités, et l'exploration est terminée.
+
+<figure>
+  <img src="../images/fig44.png" alt="graphe parcours profondeur">
+  <figcaption>fin du parcours</figcaption>
+</figure>
+
+Le schéma suivant illustre le parcours réalisé à partir des arêtes empruntées. Il s'agit d'un arbre couvrant le graphe : 
+
+<figure>
+  <img src="../images/fig45.png" alt="graphe parcours profondeur">
+  <figcaption>arbre couvrant</figcaption>
+</figure>
+
 [^1]: algorithmes : ce sont des méthodes qui, exécutées pas à pas, permettent d'obtenir un résultat final à partir de données de départ.

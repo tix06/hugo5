@@ -141,6 +141,8 @@ Pour indiquer comment on veut répondre à tel évènement, on utilise des g
 </html>
 ```
 
+
+
 ## fonction de rappel (ou callback)
 En javascript, pour réaliser des appels de fonction à intervalle de temps régulier, il faut utiliser un mécanisme de callback, unique solution pour ne pas bloquer une exécution lorsque celle-ci est trop *couteuse*.
 
@@ -347,6 +349,84 @@ Pour finir, on peut modifier à volonté les éléments textuels en modifiant la
 </figure>
 
 
+# Gestion des evenements
+On reprend ici une application du javascript entrevue lors de la présentation des fonctions, avec la gestion du clic de souris sur un des éléments de la page.
+
+La différence cette fois ci, c'est qu'il y aura plusieurs éléments de la page qui sont *cliquables*. Et que tous ces éléments pourront avoir le même comportement : il utiliseront la même fonction lorsqu'on clique dessus. Il utiliseront la même propriété CSS lorsqu'ils sont cliqués.
+
+Le problème est alors : comment détecté l'élément qui est cliqué, afin que lui SEUL devienne rouge lors de l'evenement *clic*.
+
+Ce petit programme va utiliser les trois langages, HTML, CSS et JS : 
+
+HTML
+```
+<ul class="nav">
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+    <li>Four</li>
+</ul>
+```
+
+CSS
+```
+li.active {
+    color: red;
+}
+```
+
+JAVASCRIPT
+```
+let selector, elems, makeActive;
+
+selector = '.nav li';
+
+elems = document.querySelectorAll(selector);
+
+makeActive = function () {
+    for (let i = 0; i < elems.length; i++)
+        elems[i].classList.remove('active');
+    
+    this.classList.add('active');
+};
+
+for (let i = 0; i < elems.length; i++)
+    elems[i].addEventListener('mousedown', makeActive);
+```
+
+Le contenu de la fonction `makeActive` sera expliqué plus loin. En particulier le rôle du mot clé `this`.
+
+**Résultat :** (cliquer sur chacun des éléments de la liste)
+<ul class="navi">
+    <li class='liste'>One</li>
+    <li class='liste'>Two</li>
+    <li class='liste'>Three</li>
+    <li class='liste'>Four</li>
+</ul>
+
+<style>
+  .liste.active {
+    color: red;
+}
+</style>
+
+<script>
+  let selector, elems, makeActive;
+
+selector = '.navi .liste';
+
+elems = document.querySelectorAll(selector);
+
+makeActive = function () {
+    for (let i = 0; i < elems.length; i++)
+        elems[i].classList.remove('active');
+    
+    this.classList.add('active');
+};
+
+for (let i = 0; i < elems.length; i++)
+    elems[i].addEventListener('mousedown', makeActive);
+</script>
 
 # Objets
 Un objet est une entité qui peut être vue comme indépendante et qui va contenir
