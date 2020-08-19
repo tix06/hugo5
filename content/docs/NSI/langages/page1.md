@@ -1,9 +1,7 @@
 ---
-Title : systemes d'exploitation
+Title : programmation orientée objet
 ---
 
-# systemes d'exploitation
+# Programmation orientée objet
 
-# programme en tant que donnée
 
-# compilateurs

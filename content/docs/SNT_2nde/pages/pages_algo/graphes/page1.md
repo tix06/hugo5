@@ -60,9 +60,11 @@ Voici un autre exemple de cycle dans ce même graphe:
 
 # Graphes
 ## Un graphe
-G(V,E) est un graphe G où E est l'ensemble des sommets et V l'ensemble des arêtes.
+G = (V,E) est un graphe G où E est l'ensemble des sommets et V l'ensemble des arêtes.
 
 Le graphe 1 contient 6 sommets et 8 arêtes.
+
+Un graphe est dit **connexe** s'il est en un *seul morceau*.
 
 ## Sommets voisins
 Deux sommets sont voisins s'ils sont reliés par une arête.

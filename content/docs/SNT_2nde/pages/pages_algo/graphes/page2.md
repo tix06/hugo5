@@ -186,7 +186,8 @@ On peut le représenter avec une forme plus conventionnelle :
   <figcaption>arbre de plus court chemin</figcaption>
 </figure>
 
-# Parcours d'un arbre en profondeur
+# Parcours d'un arbre en profondeur (DFS)
+## Principe
 Soit un graphe G = (V,E) et r un sommet de G, point de départ de l'exploration.
 Le parcours en profondeur du graphe va permettre de visiter tous les noeuds du graphe, mais selon un chemin où l'on plonge dans la profondeur du graphe. Le prochain sommet visité sera un noeud fils non encore visité.
 
@@ -248,5 +249,11 @@ Le schéma suivant illustre le parcours réalisé à partir des arêtes emprunt�
   <img src="../images/fig45.png" alt="graphe parcours profondeur">
   <figcaption>arbre couvrant</figcaption>
 </figure>
+
+## Applications
+Le parcours d'un graphe en profondeur s'apparente à un algorithme de type *retour sur trace*, ou *backtracking*. C'est le comportement de joueur que l'on a lorsque l'on a droit à un nouvelle chance : 
+
+* Dans un jeu d'echec, lorsque l'on joue contre l'ordinateur, une option permet de *revenir en arrière*. On peut revenir *un coup* en arrière et prendre une meilleure option. L'ordinateur construit un graphe au fur et à mesure du jeu avec les coups joués ainsi que la configuration du jeu, afin de permettre ce backtracking.
+* Lorsque l'on joue à un jeu de labyrinthe : Si on arrive dans une impasse, on adopte là aussi un algorithme de type *retour sur trace*. On revient jusqu'au noeud parent (le croisement précédent) afin d'explorer une nouvelle voie. Et si toutes ces voies sont sans issues, on remonte encore d'un niveau (le croisement précédent encore celui ci).
 
 [^1]: algorithmes : ce sont des méthodes qui, exécutées pas à pas, permettent d'obtenir un résultat final à partir de données de départ.

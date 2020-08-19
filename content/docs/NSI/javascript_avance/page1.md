@@ -352,9 +352,9 @@ Pour finir, on peut modifier à volonté les éléments textuels en modifiant la
 # Gestion des evenements
 On reprend ici une application du javascript entrevue lors de la présentation des fonctions, avec la gestion du clic de souris sur un des éléments de la page.
 
-La différence cette fois ci, c'est qu'il y aura plusieurs éléments de la page qui sont *cliquables*. Et que tous ces éléments pourront avoir le même comportement : il utiliseront la même fonction lorsqu'on clique dessus. Il utiliseront la même propriété CSS lorsqu'ils sont cliqués.
+La différence cette fois ci, c'est qu'il y aura plusieurs éléments de la page qui sont *cliquables*. Et que tous ces éléments pourront avoir le même comportement : il utiliseront la même fonction lorsqu'on clique dessus. Il utiliseront la même propriété CSS lorsqu'on leur affecte la classe `.active`.
 
-Le problème est alors : comment détecté l'élément qui est cliqué, afin que lui SEUL devienne rouge lors de l'evenement *clic*.
+Le problème est alors : comment détecter l'élément qui est cliqué, afin que lui SEUL devienne rouge lors de l'evenement *clic*.
 
 Ce petit programme va utiliser les trois langages, HTML, CSS et JS : 
 
