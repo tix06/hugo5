@@ -1,0 +1,283 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Python graphe et NPI
+| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.36b33745924de9329e152a60c546a06f19f3f74c24a6fe23d1e2c2502f2b2646.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
+catch(err)
+{console.log(err.message);}
+if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
+if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
+if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}</script></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2fposts\2fpython\2fnsi_graphe_dict_npi\2f ]{color:#004ed0}</style><ul><li><p><a href=/><strong>Accueil</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p><ul><li><a href=/docs/PC_2nde/physique/pages/page1/>physique du mouvement</a></li><li><a href=/docs/PC_2nde/physique/pages/page2/>échanges thermiques</a></li><li><a href=/docs/PC_2nde/chimie/pages/mole/>la mole</a></li><li><a href=/docs/PC_2nde/chimie/pages/transformation/>transformation chimique</a></li><li><a href=/docs/PC_2nde/chimie/pages/avancement/>animation avancement</a></li></ul></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p><ul><li><a href=/docs/PC_1ere/energie/energie1/>Energie</a></li><li><a href=/docs/PC_1ere/atome/atome/>modèle de Bohr de l&rsquo;atome</a></li><li><a href=/docs/PC_1ere/notebooks/PC_notebooks/>ipython notebooks</a></li></ul></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p><ul><li><a href=/docs/NSI/NSI_architecture/>architecture informatique</a></li><li><a href=/docs/NSI/NSI_structure/>structure de données</a></li><li><a href=/docs/NSI/NSI_bases/>bases de données</a></li><li><a href=/docs/NSI/NSI_langages/>langages</a></li><li><a href=/docs/NSI/NSI_algorithmes/>algorithmes</a><br></li></ul></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
+addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-posts><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
+<strong>Python graphe et NPI</strong></header><header class=markdown><h1>Python graphe et NPI</h1><h5><strong>Sept 1, 1019</strong></h5></header><article class=markdown><h1 id=tracer-un-arbre-à-partir-d-une-expression-npi>tracer un arbre à partir d&rsquo;une expression NPI</h1><p>NPI : notation polonaise inversée</p><p>En particulier : on dispose d&rsquo;une expression en NPI, du type :</p><p><code>L3 = [7,8,'-',6,'*',10,3,'+','*']</code></p><p>Et on veut créer et afficher le graphe correspondant :
+<img src=../images/output_3_0.png alt></p><p>On utilisera le script :</p><pre><code>L3 = [7,8,'-',6,'*',10,3,'+','*']
+
+D = makeTree(L3)
+G = nx.Graph()
+graphDict(D)
+</code></pre><p>Dont l&rsquo;instruction suivante va générer le dictionnaire à partir de l&rsquo;expression NPI (fonction <code>npiTree</code> recursive):</p><pre><code>D = makeTree(L3)
+D
+# affiche {'*': ({'*': ({'-': (7, 8)}, 6)}, {'+': (10, 3)})}
+</code></pre><p>Ce dictionnaire peut être alors parcouru avec des elgorithmes recursifs, comme par exemple celui de la fonction <code>createEdges</code> qui est un parcours en profondeur.</p><p>Le script permet aussi de créer une structure intermédiaire sous forme de dictionnaire, et permet d&rsquo;afficher le graphe à partir de tout dictionnaire D :</p><pre><code>G = nx.Graph()
+graphDict(D)
+</code></pre><p>Le graphe est dans le format networkx. On pourra consulter la notice à l&rsquo;adresse suivante :</p><ul><li><a href=https://networkx.github.io/documentation/stable/reference/algorithms/traversal.html>différents algorithmes de parcours de graphe avec networkx</a></li><li><a href=https://networkx.github.io/documentation/stable/reference/introduction.html>netwokx general</a></li></ul><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>def</span> <span style=color:#75af00>hierarchy_pos</span><span style=color:#111>(</span><span style=color:#111>G</span><span style=color:#111>,</span> <span style=color:#111>root</span><span style=color:#f92672>=</span><span style=color:#111>None</span><span style=color:#111>,</span> <span style=color:#111>width</span><span style=color:#f92672>=</span><span style=color:#ae81ff>1.</span><span style=color:#111>,</span> <span style=color:#111>vert_gap</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.2</span><span style=color:#111>,</span> <span style=color:#111>vert_loc</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span><span style=color:#111>,</span> <span style=color:#111>xcenter</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.5</span><span style=color:#111>):</span>
+
+    <span style=color:#d88200>&#39;&#39;&#39;
+</span><span style=color:#d88200>    From Joel&#39;s answer at https://stackoverflow.com/a/29597209/2966723.  
+</span><span style=color:#d88200>    Licensed under Creative Commons Attribution-Share Alike 
+</span><span style=color:#d88200>
+</span><span style=color:#d88200>    If the graph is a tree this will return the positions to plot this in a 
+</span><span style=color:#d88200>    hierarchical layout.
+</span><span style=color:#d88200>
+</span><span style=color:#d88200>    G: the graph (must be a tree)
+</span><span style=color:#d88200>
+</span><span style=color:#d88200>    root: the root node of current branch 
+</span><span style=color:#d88200>    - if the tree is directed and this is not given, 
+</span><span style=color:#d88200>      the root will be found and used
+</span><span style=color:#d88200>    - if the tree is directed and this is given, then 
+</span><span style=color:#d88200>      the positions will be just for the descendants of this node.
+</span><span style=color:#d88200>    - if the tree is undirected and not given, 
+</span><span style=color:#d88200>      then a random choice will be used.
+</span><span style=color:#d88200>
+</span><span style=color:#d88200>    width: horizontal space allocated for this branch - avoids overlap with other branches
+</span><span style=color:#d88200>
+</span><span style=color:#d88200>    vert_gap: gap between levels of hierarchy
+</span><span style=color:#d88200>
+</span><span style=color:#d88200>    vert_loc: vertical location of root
+</span><span style=color:#d88200>
+</span><span style=color:#d88200>    xcenter: horizontal location of root
+</span><span style=color:#d88200>    &#39;&#39;&#39;</span>
+    <span style=color:#00a8c8>if</span> <span style=color:#f92672>not</span> <span style=color:#111>nx</span><span style=color:#f92672>.</span><span style=color:#111>is_tree</span><span style=color:#111>(</span><span style=color:#111>G</span><span style=color:#111>):</span>
+        <span style=color:#00a8c8>raise</span> <span style=color:#75af00>TypeError</span><span style=color:#111>(</span><span style=color:#d88200>&#39;cannot use hierarchy_pos on a graph that is not a tree&#39;</span><span style=color:#111>)</span>
+
+    <span style=color:#00a8c8>if</span> <span style=color:#111>root</span> <span style=color:#f92672>is</span> <span style=color:#111>None</span><span style=color:#111>:</span>
+        <span style=color:#00a8c8>if</span> <span style=color:#111>isinstance</span><span style=color:#111>(</span><span style=color:#111>G</span><span style=color:#111>,</span> <span style=color:#111>nx</span><span style=color:#f92672>.</span><span style=color:#111>DiGraph</span><span style=color:#111>):</span>
+            <span style=color:#111>root</span> <span style=color:#f92672>=</span> <span style=color:#111>next</span><span style=color:#111>(</span><span style=color:#111>iter</span><span style=color:#111>(</span><span style=color:#111>nx</span><span style=color:#f92672>.</span><span style=color:#111>topological_sort</span><span style=color:#111>(</span><span style=color:#111>G</span><span style=color:#111>)))</span>  <span style=color:#75715e>#allows back compatibility with nx version 1.11</span>
+        <span style=color:#00a8c8>else</span><span style=color:#111>:</span>
+            <span style=color:#111>root</span> <span style=color:#f92672>=</span> <span style=color:#111>random</span><span style=color:#f92672>.</span><span style=color:#111>choice</span><span style=color:#111>(</span><span style=color:#111>list</span><span style=color:#111>(</span><span style=color:#111>G</span><span style=color:#f92672>.</span><span style=color:#111>nodes</span><span style=color:#111>))</span>
+
+    <span style=color:#00a8c8>def</span> <span style=color:#75af00>_hierarchy_pos</span><span style=color:#111>(</span><span style=color:#111>G</span><span style=color:#111>,</span> <span style=color:#111>root</span><span style=color:#111>,</span> <span style=color:#111>width</span><span style=color:#f92672>=</span><span style=color:#ae81ff>1.</span><span style=color:#111>,</span> <span style=color:#111>vert_gap</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.2</span><span style=color:#111>,</span> <span style=color:#111>vert_loc</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span><span style=color:#111>,</span> <span style=color:#111>xcenter</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.5</span><span style=color:#111>,</span> <span style=color:#111>pos</span> <span style=color:#f92672>=</span> <span style=color:#111>None</span><span style=color:#111>,</span> <span style=color:#111>parent</span> <span style=color:#f92672>=</span> <span style=color:#111>None</span><span style=color:#111>):</span>
+        <span style=color:#d88200>&#39;&#39;&#39;
+</span><span style=color:#d88200>        see hierarchy_pos docstring for most arguments
+</span><span style=color:#d88200>
+</span><span style=color:#d88200>        pos: a dict saying where all nodes go if they have been assigned
+</span><span style=color:#d88200>        parent: parent of this branch. - only affects it if non-directed
+</span><span style=color:#d88200>
+</span><span style=color:#d88200>        &#39;&#39;&#39;</span>
+
+        <span style=color:#00a8c8>if</span> <span style=color:#111>pos</span> <span style=color:#f92672>is</span> <span style=color:#111>None</span><span style=color:#111>:</span>
+            <span style=color:#111>pos</span> <span style=color:#f92672>=</span> <span style=color:#111>{</span><span style=color:#111>root</span><span style=color:#111>:(</span><span style=color:#111>xcenter</span><span style=color:#111>,</span><span style=color:#111>vert_loc</span><span style=color:#111>)}</span>
+        <span style=color:#00a8c8>else</span><span style=color:#111>:</span>
+            <span style=color:#111>pos</span><span style=color:#111>[</span><span style=color:#111>root</span><span style=color:#111>]</span> <span style=color:#f92672>=</span> <span style=color:#111>(</span><span style=color:#111>xcenter</span><span style=color:#111>,</span> <span style=color:#111>vert_loc</span><span style=color:#111>)</span>
+        <span style=color:#111>children</span> <span style=color:#f92672>=</span> <span style=color:#111>list</span><span style=color:#111>(</span><span style=color:#111>G</span><span style=color:#f92672>.</span><span style=color:#111>neighbors</span><span style=color:#111>(</span><span style=color:#111>root</span><span style=color:#111>))</span>
+        <span style=color:#00a8c8>if</span> <span style=color:#f92672>not</span> <span style=color:#111>isinstance</span><span style=color:#111>(</span><span style=color:#111>G</span><span style=color:#111>,</span> <span style=color:#111>nx</span><span style=color:#f92672>.</span><span style=color:#111>DiGraph</span><span style=color:#111>)</span> <span style=color:#f92672>and</span> <span style=color:#111>parent</span> <span style=color:#f92672>is</span> <span style=color:#f92672>not</span> <span style=color:#111>None</span><span style=color:#111>:</span>
+            <span style=color:#111>children</span><span style=color:#f92672>.</span><span style=color:#111>remove</span><span style=color:#111>(</span><span style=color:#111>parent</span><span style=color:#111>)</span>  
+        <span style=color:#00a8c8>if</span> <span style=color:#111>len</span><span style=color:#111>(</span><span style=color:#111>children</span><span style=color:#111>)</span><span style=color:#f92672>!=</span><span style=color:#ae81ff>0</span><span style=color:#111>:</span>
+            <span style=color:#111>dx</span> <span style=color:#f92672>=</span> <span style=color:#111>width</span><span style=color:#f92672>/</span><span style=color:#111>len</span><span style=color:#111>(</span><span style=color:#111>children</span><span style=color:#111>)</span> 
+            <span style=color:#111>nextx</span> <span style=color:#f92672>=</span> <span style=color:#111>xcenter</span> <span style=color:#f92672>-</span> <span style=color:#111>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span> <span style=color:#f92672>-</span> <span style=color:#111>dx</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>
+            <span style=color:#00a8c8>for</span> <span style=color:#111>child</span> <span style=color:#f92672>in</span> <span style=color:#111>children</span><span style=color:#111>:</span>
+                <span style=color:#111>nextx</span> <span style=color:#f92672>+=</span> <span style=color:#111>dx</span>
+                <span style=color:#111>pos</span> <span style=color:#f92672>=</span> <span style=color:#111>_hierarchy_pos</span><span style=color:#111>(</span><span style=color:#111>G</span><span style=color:#111>,</span><span style=color:#111>child</span><span style=color:#111>,</span> <span style=color:#111>width</span> <span style=color:#f92672>=</span> <span style=color:#111>dx</span><span style=color:#111>,</span> <span style=color:#111>vert_gap</span> <span style=color:#f92672>=</span> <span style=color:#111>vert_gap</span><span style=color:#111>,</span> 
+                                    <span style=color:#111>vert_loc</span> <span style=color:#f92672>=</span> <span style=color:#111>vert_loc</span><span style=color:#f92672>-</span><span style=color:#111>vert_gap</span><span style=color:#111>,</span> <span style=color:#111>xcenter</span><span style=color:#f92672>=</span><span style=color:#111>nextx</span><span style=color:#111>,</span>
+                                    <span style=color:#111>pos</span><span style=color:#f92672>=</span><span style=color:#111>pos</span><span style=color:#111>,</span> <span style=color:#111>parent</span> <span style=color:#f92672>=</span> <span style=color:#111>root</span><span style=color:#111>)</span>
+        <span style=color:#00a8c8>return</span> <span style=color:#111>pos</span>
+
+
+    <span style=color:#00a8c8>return</span> <span style=color:#111>_hierarchy_pos</span><span style=color:#111>(</span><span style=color:#111>G</span><span style=color:#111>,</span> <span style=color:#111>root</span><span style=color:#111>,</span> <span style=color:#111>width</span><span style=color:#111>,</span> <span style=color:#111>vert_gap</span><span style=color:#111>,</span> <span style=color:#111>vert_loc</span><span style=color:#111>,</span> <span style=color:#111>xcenter</span><span style=color:#111>)</span></code></pre></div><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> <span style=color:#111>matplotlib.pyplot</span> <span style=color:#f92672>as</span> <span style=color:#111>plt</span>
+<span style=color:#f92672>import</span> <span style=color:#111>networkx</span> <span style=color:#f92672>as</span> <span style=color:#111>nx</span>
+<span style=color:#f92672>import</span> <span style=color:#111>re</span>
+
+
+
+
+
+<span style=color:#00a8c8>def</span> <span style=color:#75af00>deversepile</span><span style=color:#111>(</span><span style=color:#111>p1</span><span style=color:#111>,</span><span style=color:#111>p2</span><span style=color:#111>):</span>
+    <span style=color:#00a8c8>while</span> <span style=color:#111>p1</span><span style=color:#f92672>!=</span><span style=color:#111>[]:</span>
+        <span style=color:#111>p2</span><span style=color:#f92672>.</span><span style=color:#111>append</span><span style=color:#111>(</span><span style=color:#111>p1</span><span style=color:#f92672>.</span><span style=color:#111>pop</span><span style=color:#111>())</span>
+    <span style=color:#00a8c8>return</span> <span style=color:#111>p2</span>
+
+<span style=color:#00a8c8>def</span> <span style=color:#75af00>npiTree</span><span style=color:#111>(</span><span style=color:#111>L</span><span style=color:#111>):</span>
+    <span style=color:#d88200>&#34;&#34;&#34;transforme l&#39;expression NPI en un dictionnaire
+</span><span style=color:#d88200>    respectant les priorités de calcul
+</span><span style=color:#d88200>    Attention : la liste doit d&#39;abord être mise à l&#39;envers
+</span><span style=color:#d88200>    Utilise un algorithme recursif
+</span><span style=color:#d88200>    
+</span><span style=color:#d88200>    Params :
+</span><span style=color:#d88200>    --------
+</span><span style=color:#d88200>    L : list : expression NPI
+</span><span style=color:#d88200>    Returns : 
+</span><span style=color:#d88200>    ---------
+</span><span style=color:#d88200>    dictionnaire 
+</span><span style=color:#d88200>    
+</span><span style=color:#d88200>    exemple : 
+</span><span style=color:#d88200>    ---------
+</span><span style=color:#d88200>    [7,8,&#39;-&#39;,6,&#39;*&#39;,10,3,&#39;+&#39;,&#39;*&#39;] =&gt; {&#39;*&#39;: ({&#39;*&#39;: ({&#39;-&#39;: (7, 8)}, 6)}, {&#39;+&#39;: (10, 3)})}
+</span><span style=color:#d88200>    &#34;&#34;&#34;</span>
+    <span style=color:#75715e>#print(&#39;npiTree&#39;)</span>
+    <span style=color:#00a8c8>if</span> <span style=color:#111>len</span><span style=color:#111>(</span><span style=color:#111>L</span><span style=color:#111>)</span><span style=color:#f92672>==</span><span style=color:#ae81ff>1</span><span style=color:#111>:</span> <span style=color:#75715e># condition d&#39;arret de l&#39;appel recursif</span>
+        <span style=color:#00a8c8>return</span> <span style=color:#111>L</span><span style=color:#111>[</span><span style=color:#ae81ff>0</span><span style=color:#111>]</span>
+    <span style=color:#111>fg</span> <span style=color:#f92672>=</span> <span style=color:#111>L</span><span style=color:#f92672>.</span><span style=color:#111>pop</span><span style=color:#111>()</span>
+    <span style=color:#111>fd</span> <span style=color:#f92672>=</span> <span style=color:#111>L</span><span style=color:#f92672>.</span><span style=color:#111>pop</span><span style=color:#111>()</span>
+    <span style=color:#111>pere</span> <span style=color:#f92672>=</span> <span style=color:#111>L</span><span style=color:#f92672>.</span><span style=color:#111>pop</span><span style=color:#111>()</span>
+    <span style=color:#75715e>#print(&#39;L : {}&#39;.format(L))</span>
+    <span style=color:#111>D</span><span style=color:#f92672>=</span><span style=color:#111>{}</span>
+    <span style=color:#00a8c8>if</span> <span style=color:#111>pere</span> <span style=color:#f92672>in</span> <span style=color:#111>[</span><span style=color:#d88200>&#39;*&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;+&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;-&#39;</span><span style=color:#111>]:</span> <span style=color:#75715e># données sous la forme : &#39;op&#39;,fg,fd</span>
+        <span style=color:#111>D</span><span style=color:#111>[</span><span style=color:#111>pere</span><span style=color:#111>]</span><span style=color:#f92672>=</span><span style=color:#111>fg</span><span style=color:#111>,</span><span style=color:#111>fd</span>
+        <span style=color:#111>L</span><span style=color:#f92672>.</span><span style=color:#111>append</span><span style=color:#111>(</span><span style=color:#111>D</span><span style=color:#111>)</span>
+    <span style=color:#00a8c8>else</span> <span style=color:#111>:</span> <span style=color:#75715e># données sous la forme : &#39;op0&#39;,(&#39;op1&#39;,fg1,fd1),fg0 =&gt; &#39;op0&#39;,fg0,fg0</span>
+        <span style=color:#111>fg0</span> <span style=color:#f92672>=</span> <span style=color:#111>fg</span>
+        <span style=color:#111>fg1</span> <span style=color:#f92672>=</span> <span style=color:#111>fd</span>
+        <span style=color:#111>fd1</span> <span style=color:#f92672>=</span> <span style=color:#111>pere</span>
+        <span style=color:#111>pere1</span> <span style=color:#f92672>=</span> <span style=color:#111>L</span><span style=color:#f92672>.</span><span style=color:#111>pop</span><span style=color:#111>()</span>
+        <span style=color:#111>D</span><span style=color:#111>[</span><span style=color:#111>pere1</span><span style=color:#111>]</span><span style=color:#f92672>=</span><span style=color:#111>fg1</span><span style=color:#111>,</span><span style=color:#111>fd1</span>
+        <span style=color:#111>L</span><span style=color:#f92672>.</span><span style=color:#111>append</span><span style=color:#111>(</span><span style=color:#111>D</span><span style=color:#111>)</span>
+        <span style=color:#111>L</span><span style=color:#f92672>.</span><span style=color:#111>append</span><span style=color:#111>(</span><span style=color:#111>fg0</span><span style=color:#111>)</span>
+    <span style=color:#75715e>#print(&#39;L : {}&#39;.format(L))</span>
+    <span style=color:#00a8c8>return</span> <span style=color:#111>npiTree</span><span style=color:#111>(</span><span style=color:#111>L</span><span style=color:#111>)</span>
+
+<span style=color:#00a8c8>def</span> <span style=color:#75af00>makeTree</span><span style=color:#111>(</span><span style=color:#111>L_NPI</span><span style=color:#111>):</span>
+    <span style=color:#d88200>&#34;&#34;&#34;transforme liste issue d&#39;une NPI
+</span><span style=color:#d88200>    en un dictionnaire D
+</span><span style=color:#d88200>    La liste est d&#39;abord mise à l&#39;envers avec deversepile
+</span><span style=color:#d88200>    puis on appelle la fonction npiTree
+</span><span style=color:#d88200>    Params :
+</span><span style=color:#d88200>    --------
+</span><span style=color:#d88200>    L_NPI : liste
+</span><span style=color:#d88200>    Returns :
+</span><span style=color:#d88200>    ---------
+</span><span style=color:#d88200>    D : dictionnaire à transformer en graphe
+</span><span style=color:#d88200>    &#34;&#34;&#34;</span>
+    <span style=color:#111>D</span><span style=color:#f92672>=</span><span style=color:#111>{}</span>
+    <span style=color:#111>p1</span> <span style=color:#f92672>=</span> <span style=color:#111>[]</span>
+    <span style=color:#111>deversepile</span><span style=color:#111>(</span><span style=color:#111>L_NPI</span><span style=color:#111>,</span><span style=color:#111>p1</span><span style=color:#111>)</span> 
+    <span style=color:#111>D</span> <span style=color:#f92672>=</span> <span style=color:#111>npiTree</span><span style=color:#111>(</span><span style=color:#111>p1</span><span style=color:#111>)</span>
+    <span style=color:#00a8c8>return</span> <span style=color:#111>D</span>
+
+<span style=color:#00a8c8>def</span> <span style=color:#75af00>decoupe</span><span style=color:#111>(</span><span style=color:#111>texte</span><span style=color:#111>):</span>
+    <span style=color:#d88200>&#34;&#34;&#34;transforme la chaine de caractere correspondant au dictionnaire de l&#39;arbre
+</span><span style=color:#d88200>    en une liste
+</span><span style=color:#d88200>    Params : 
+</span><span style=color:#d88200>    --------
+</span><span style=color:#d88200>    texte : string : la chaine à découper
+</span><span style=color:#d88200>    Returns :
+</span><span style=color:#d88200>    ---------
+</span><span style=color:#d88200>    texte_decoupe : la liste
+</span><span style=color:#d88200>    &#34;&#34;&#34;</span>
+    <span style=color:#111>texte_decoupe</span> <span style=color:#f92672>=</span> <span style=color:#111>list</span><span style=color:#111>(</span><span style=color:#111>re</span><span style=color:#f92672>.</span><span style=color:#111>findall</span><span style=color:#111>(</span><span style=color:#d88200>&#39;[{}():,*+-]|\w+&#39;</span><span style=color:#111>,</span><span style=color:#111>texte</span><span style=color:#111>))</span>
+    <span style=color:#00a8c8>return</span> <span style=color:#111>texte_decoupe</span>
+
+<span style=color:#00a8c8>def</span> <span style=color:#75af00>creerNodes</span><span style=color:#111>(</span><span style=color:#111>D</span><span style=color:#111>):</span>
+    <span style=color:#d88200>&#34;&#34;&#34;modifie la liste ou chaque item (valeur numerique ou operateur) est remplacé par le no de noeud
+</span><span style=color:#d88200>    on créé aussi le noeud et son etiquette à partir de l&#39;item
+</span><span style=color:#d88200>    Params : 
+</span><span style=color:#d88200>    --------
+</span><span style=color:#d88200>    D : dict : dictionnaire correspondant a l&#39;arbre
+</span><span style=color:#d88200>    Returns :
+</span><span style=color:#d88200>    ---------
+</span><span style=color:#d88200>    eval(chaine) : dict : dictionnaire avec les no de noeud à la place des items
+</span><span style=color:#d88200>    &#34;&#34;&#34;</span>
+    <span style=color:#111>texte</span> <span style=color:#f92672>=</span> <span style=color:#111>decoupe</span><span style=color:#111>(</span><span style=color:#111>str</span><span style=color:#111>(</span><span style=color:#111>D</span><span style=color:#111>))</span>
+    <span style=color:#111>index</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
+    <span style=color:#00a8c8>for</span> <span style=color:#111>i</span><span style=color:#111>,</span><span style=color:#111>c</span> <span style=color:#f92672>in</span> <span style=color:#111>enumerate</span><span style=color:#111>(</span><span style=color:#111>texte</span><span style=color:#111>):</span>
+        <span style=color:#00a8c8>if</span> <span style=color:#111>c</span><span style=color:#111>[</span><span style=color:#ae81ff>0</span><span style=color:#111>]</span> <span style=color:#f92672>in</span> <span style=color:#111>[</span><span style=color:#d88200>&#39;*&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;+&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;-&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;0&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;1&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;2&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;3&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;4&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;5&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;6&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;7&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;8&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;9&#39;</span><span style=color:#111>]:</span>
+            <span style=color:#111>G</span><span style=color:#f92672>.</span><span style=color:#111>add_node</span><span style=color:#111>(</span><span style=color:#111>index</span><span style=color:#111>,</span><span style=color:#111>label</span><span style=color:#f92672>=</span><span style=color:#111>c</span><span style=color:#111>)</span>
+            <span style=color:#111>texte</span><span style=color:#111>[</span><span style=color:#111>i</span><span style=color:#111>]</span><span style=color:#f92672>=</span><span style=color:#111>str</span><span style=color:#111>(</span><span style=color:#111>index</span><span style=color:#111>)</span>
+            <span style=color:#111>index</span><span style=color:#f92672>+=</span><span style=color:#ae81ff>1</span>
+    <span style=color:#111>chaine</span> <span style=color:#f92672>=</span> <span style=color:#d88200>&#39;&#39;</span><span style=color:#f92672>.</span><span style=color:#111>join</span><span style=color:#111>(</span><span style=color:#111>texte</span><span style=color:#111>)</span>        
+    <span style=color:#00a8c8>return</span> <span style=color:#111>eval</span><span style=color:#111>(</span><span style=color:#111>chaine</span><span style=color:#111>)</span>
+
+
+<span style=color:#00a8c8>def</span> <span style=color:#75af00>createEdges</span><span style=color:#111>(</span><span style=color:#111>D</span><span style=color:#111>,</span><span style=color:#111>key0</span><span style=color:#f92672>=</span><span style=color:#111>None</span><span style=color:#111>):</span>
+    <span style=color:#d88200>&#34;&#34;&#34;créé une liste de tuple correspondant aux aretes de l&#39;arbre
+</span><span style=color:#d88200>    l&#39;algorithme utilise un parcours en profondeur recursif et ajoute la nouvelle arete
+</span><span style=color:#d88200>    à une liste LL
+</span><span style=color:#d88200>    Params : 
+</span><span style=color:#d88200>    --------
+</span><span style=color:#d88200>    D : dict : represente l&#39;arbre à parcourir
+</span><span style=color:#d88200>    key0 : list ou int : le noeud parent
+</span><span style=color:#d88200>    Returns : 
+</span><span style=color:#d88200>    ---------
+</span><span style=color:#d88200>    LL[0] : contient un seul element : la liste de toutes le aretes
+</span><span style=color:#d88200>    tous les operateurs sont mis dans une liste de 1 élément. Il faudra sortir ces elements de la liste pour pouvoir 
+</span><span style=color:#d88200>    acceder au aretes seuls.
+</span><span style=color:#d88200>    &#34;&#34;&#34;</span>
+    <span style=color:#00a8c8>if</span> <span style=color:#f92672>not</span> <span style=color:#111>isinstance</span><span style=color:#111>(</span><span style=color:#111>D</span><span style=color:#111>,</span><span style=color:#111>dict</span><span style=color:#111>):</span>
+        <span style=color:#75715e>#print((key0,D))</span>
+        <span style=color:#111>LL</span><span style=color:#f92672>.</span><span style=color:#111>append</span><span style=color:#111>((</span><span style=color:#111>key0</span><span style=color:#111>,</span><span style=color:#111>D</span><span style=color:#111>))</span>
+        <span style=color:#00a8c8>return</span> <span style=color:#111>LL</span><span style=color:#111>[</span><span style=color:#ae81ff>0</span><span style=color:#111>]</span>
+    <span style=color:#00a8c8>else</span><span style=color:#111>:</span>
+        <span style=color:#111>key</span> <span style=color:#f92672>=</span> <span style=color:#111>list</span><span style=color:#111>(</span><span style=color:#111>D</span><span style=color:#f92672>.</span><span style=color:#111>keys</span><span style=color:#111>())</span>
+        <span style=color:#75715e>#return key</span>
+        <span style=color:#00a8c8>if</span> <span style=color:#111>key0</span><span style=color:#f92672>!=</span><span style=color:#111>None</span> <span style=color:#111>:</span>
+            <span style=color:#75715e>#print((key0,key))</span>
+            <span style=color:#111>LL</span><span style=color:#f92672>.</span><span style=color:#111>append</span><span style=color:#111>((</span><span style=color:#111>key0</span><span style=color:#111>,</span><span style=color:#111>key</span><span style=color:#111>))</span>
+
+    <span style=color:#111>createEdges</span><span style=color:#111>(</span><span style=color:#111>D</span><span style=color:#111>[</span><span style=color:#111>key</span><span style=color:#111>[</span><span style=color:#ae81ff>0</span><span style=color:#111>]][</span><span style=color:#ae81ff>0</span><span style=color:#111>],</span><span style=color:#111>key</span><span style=color:#111>)</span>
+    <span style=color:#111>createEdges</span><span style=color:#111>(</span><span style=color:#111>D</span><span style=color:#111>[</span><span style=color:#111>key</span><span style=color:#111>[</span><span style=color:#ae81ff>0</span><span style=color:#111>]][</span><span style=color:#ae81ff>1</span><span style=color:#111>],</span><span style=color:#111>key</span><span style=color:#111>)</span>
+    
+
+
+
+<span style=color:#00a8c8>def</span> <span style=color:#75af00>graphDict</span><span style=color:#111>(</span><span style=color:#111>D</span><span style=color:#111>):</span>
+    <span style=color:#d88200>&#34;&#34;&#34;construction du graphe G au format de la lib networkx
+</span><span style=color:#d88200>    et affiche le graphe
+</span><span style=color:#d88200>    Params : 
+</span><span style=color:#d88200>    --------
+</span><span style=color:#d88200>    D : dict issu de la chaine NPI ou autre
+</span><span style=color:#d88200>    Returns :
+</span><span style=color:#d88200>    ---------
+</span><span style=color:#d88200>    G : graphe format networkx
+</span><span style=color:#d88200>    
+</span><span style=color:#d88200>    
+</span><span style=color:#d88200>    &#34;&#34;&#34;</span>
+    <span style=color:#111>Dnum</span> <span style=color:#f92672>=</span><span style=color:#111>creerNodes</span><span style=color:#111>(</span><span style=color:#111>D</span><span style=color:#111>)</span>
+    
+
+    <span style=color:#00a8c8>global</span> <span style=color:#111>LL</span> <span style=color:#75715e># necessaire pour utiliser LL dans la fonction createEdges recursive</span>
+    <span style=color:#111>LL</span><span style=color:#f92672>=</span><span style=color:#111>[]</span>
+    <span style=color:#111>createEdges</span><span style=color:#111>(</span><span style=color:#111>Dnum</span><span style=color:#111>)</span>
+
+    <span style=color:#75715e># arranger le format des elements de la liste d&#39;aretes (suprimer le format list de certains elements)</span>
+    <span style=color:#00a8c8>for</span> <span style=color:#111>i</span><span style=color:#111>,</span><span style=color:#111>c</span> <span style=color:#f92672>in</span> <span style=color:#111>enumerate</span><span style=color:#111>(</span><span style=color:#111>LL</span><span style=color:#111>):</span>
+        <span style=color:#111>c0</span> <span style=color:#f92672>=</span> <span style=color:#111>c</span><span style=color:#111>[</span><span style=color:#ae81ff>0</span><span style=color:#111>]</span>
+        <span style=color:#111>c1</span> <span style=color:#f92672>=</span> <span style=color:#111>c</span><span style=color:#111>[</span><span style=color:#ae81ff>1</span><span style=color:#111>]</span>
+        <span style=color:#00a8c8>if</span> <span style=color:#111>isinstance</span><span style=color:#111>(</span><span style=color:#111>c0</span><span style=color:#111>,</span><span style=color:#111>list</span><span style=color:#111>):</span><span style=color:#111>c0</span><span style=color:#f92672>=</span><span style=color:#111>c</span><span style=color:#111>[</span><span style=color:#ae81ff>0</span><span style=color:#111>][</span><span style=color:#ae81ff>0</span><span style=color:#111>]</span>
+        <span style=color:#00a8c8>if</span> <span style=color:#111>isinstance</span><span style=color:#111>(</span><span style=color:#111>c1</span><span style=color:#111>,</span><span style=color:#111>list</span><span style=color:#111>):</span><span style=color:#111>c1</span><span style=color:#f92672>=</span><span style=color:#111>c</span><span style=color:#111>[</span><span style=color:#ae81ff>1</span><span style=color:#111>][</span><span style=color:#ae81ff>0</span><span style=color:#111>]</span>
+        <span style=color:#111>c</span> <span style=color:#f92672>=</span> <span style=color:#111>c0</span><span style=color:#111>,</span><span style=color:#111>c1</span>
+        <span style=color:#111>LL</span><span style=color:#111>[</span><span style=color:#111>i</span><span style=color:#111>]</span><span style=color:#f92672>=</span><span style=color:#111>c</span>
+    <span style=color:#75715e>#print(LL)   </span>
+
+    <span style=color:#75715e># Dict d&#39;etiquette des noeuds</span>
+    <span style=color:#111>liste</span> <span style=color:#f92672>=</span> <span style=color:#111>list</span><span style=color:#111>(</span><span style=color:#111>G</span><span style=color:#f92672>.</span><span style=color:#111>nodes</span><span style=color:#111>(</span><span style=color:#111>data</span><span style=color:#f92672>=</span><span style=color:#d88200>&#39;label&#39;</span><span style=color:#111>))</span>
+    <span style=color:#111>labels_nodes</span> <span style=color:#f92672>=</span> <span style=color:#111>{}</span>
+    <span style=color:#00a8c8>for</span> <span style=color:#111>noeud</span> <span style=color:#f92672>in</span> <span style=color:#111>liste</span><span style=color:#111>:</span>
+        <span style=color:#111>labels_nodes</span><span style=color:#111>[</span><span style=color:#111>noeud</span><span style=color:#111>[</span><span style=color:#ae81ff>0</span><span style=color:#111>]]</span><span style=color:#f92672>=</span><span style=color:#111>noeud</span><span style=color:#111>[</span><span style=color:#ae81ff>1</span><span style=color:#111>]</span>
+    
+    <span style=color:#75715e>#labels_nodes</span>
+    <span style=color:#111>G</span><span style=color:#f92672>.</span><span style=color:#111>root</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
+    <span style=color:#111>G</span><span style=color:#f92672>.</span><span style=color:#111>add_edges_from</span><span style=color:#111>(</span><span style=color:#111>LL</span><span style=color:#111>)</span>
+    <span style=color:#75715e>#print(list(G.edges()))</span>
+    <span style=color:#111>pos1</span> <span style=color:#f92672>=</span> <span style=color:#111>hierarchy_pos</span><span style=color:#111>(</span><span style=color:#111>G</span><span style=color:#111>,</span><span style=color:#111>G</span><span style=color:#f92672>.</span><span style=color:#111>root</span><span style=color:#111>)</span>    
+    <span style=color:#111>nx</span><span style=color:#f92672>.</span><span style=color:#111>draw</span><span style=color:#111>(</span><span style=color:#111>G</span><span style=color:#111>,</span> <span style=color:#111>pos</span><span style=color:#f92672>=</span><span style=color:#111>pos1</span><span style=color:#111>,</span> <span style=color:#111>labels</span><span style=color:#f92672>=</span><span style=color:#111>labels_nodes</span><span style=color:#111>,</span> <span style=color:#111>with_labels</span><span style=color:#f92672>=</span><span style=color:#111>True</span><span style=color:#111>,</span> <span style=color:#111>font_size</span><span style=color:#f92672>=</span><span style=color:#ae81ff>15</span><span style=color:#111>,</span> <span style=color:#111>font_family</span><span style=color:#f92672>=</span><span style=color:#d88200>&#39;sans-serif&#39;</span><span style=color:#111>,</span> <span style=color:#111>node_color</span><span style=color:#f92672>=</span><span style=color:#d88200>&#39;pink&#39;</span><span style=color:#111>,</span><span style=color:#111>alpha</span><span style=color:#f92672>=</span><span style=color:#ae81ff>0.9</span><span style=color:#111>)</span>
+    <span style=color:#111>plt</span><span style=color:#f92672>.</span><span style=color:#111>savefig</span><span style=color:#111>(</span><span style=color:#d88200>&#39;datas/NPI1.png&#39;</span><span style=color:#111>)</span>
+    <span style=color:#111>plt</span><span style=color:#f92672>.</span><span style=color:#111>show</span><span style=color:#111>()</span>
+    <span style=color:#00a8c8>return</span> <span style=color:#111>G</span>
+    </code></pre></div><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># expression NPI</span>
+<span style=color:#111>L3</span> <span style=color:#f92672>=</span> <span style=color:#111>[</span><span style=color:#ae81ff>7</span><span style=color:#111>,</span><span style=color:#ae81ff>8</span><span style=color:#111>,</span><span style=color:#d88200>&#39;-&#39;</span><span style=color:#111>,</span><span style=color:#ae81ff>6</span><span style=color:#111>,</span><span style=color:#d88200>&#39;*&#39;</span><span style=color:#111>,</span><span style=color:#ae81ff>10</span><span style=color:#111>,</span><span style=color:#ae81ff>3</span><span style=color:#111>,</span><span style=color:#d88200>&#39;+&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;*&#39;</span><span style=color:#111>]</span>
+
+<span style=color:#111>D</span> <span style=color:#f92672>=</span> <span style=color:#111>makeTree</span><span style=color:#111>(</span><span style=color:#111>L3</span><span style=color:#111>)</span>
+<span style=color:#111>G</span> <span style=color:#f92672>=</span> <span style=color:#111>nx</span><span style=color:#f92672>.</span><span style=color:#111>Graph</span><span style=color:#111>()</span>
+<span style=color:#111>graphDict</span><span style=color:#111>(</span><span style=color:#111>D</span><span style=color:#111>)</span></code></pre></div><p><img src=../images/output_3_0.png alt></p><pre><code>&lt;networkx.classes.graph.Graph at 0x7fc60ce94a10&gt;
+</code></pre><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>list</span><span style=color:#111>(</span><span style=color:#111>G</span><span style=color:#f92672>.</span><span style=color:#111>nodes</span><span style=color:#111>(</span><span style=color:#111>data</span><span style=color:#f92672>=</span><span style=color:#d88200>&#39;label&#39;</span><span style=color:#111>))</span></code></pre></div><pre><code>[(1, '*'),
+ (2, '*'),
+ (3, '-'),
+ (4, '7'),
+ (5, '8'),
+ (6, '6'),
+ (7, '+'),
+ (8, '10'),
+ (9, '3')]
+</code></pre><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>list</span><span style=color:#111>(</span><span style=color:#111>G</span><span style=color:#f92672>.</span><span style=color:#111>edges</span><span style=color:#111>())</span></code></pre></div><pre><code>[(1, 2), (1, 7), (2, 3), (2, 6), (3, 4), (3, 5), (7, 8), (7, 9)]
+</code></pre><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>D</span></code></pre></div><pre><code>{'*': ({'*': ({'-': (7, 8)}, 6)}, {'+': (10, 3)})}
+</code></pre><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>Dnum</span> <span style=color:#f92672>=</span><span style=color:#111>creerNodes</span><span style=color:#111>(</span><span style=color:#111>D</span><span style=color:#111>)</span>
+<span style=color:#111>Dnum</span></code></pre></div><pre><code>{1: ({2: ({3: (4, 5)}, 6)}, {7: (8, 9)})}
+</code></pre><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python></code></pre></div></article><div style=height:100px></div></div></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
+<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>

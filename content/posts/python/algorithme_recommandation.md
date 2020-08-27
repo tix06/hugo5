@@ -1,13 +1,13 @@
 ---
 author: "Eric Tixidor"
 date: 06-28-2020
-linktitle: algo de recommandation
+linktitle: Python algo de recommandation
 menu:
   main:
     parent: 
 next: 
 prev: /Datas analyse
-title: algo de recommandation
+title: Python algo de recommandation
 weight: 17
 ---
 

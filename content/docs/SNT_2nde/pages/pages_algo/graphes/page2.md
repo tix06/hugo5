@@ -197,7 +197,7 @@ Lorsque le chemin amène à une impasse, (il n'y a plus de noeud fils non visit�
 
 En pratique : 
 
-* tous les sommets qont d'abord colorés en BLANC.
+* tous les sommets ont d'abord colorés en BLANC.
 * On colore chaque noeud u visité en VERT.
 * Lorsque tous les noeuds fils de u sont visités, on colore celui-ci en ROUGE.
 

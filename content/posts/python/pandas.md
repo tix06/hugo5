@@ -5,7 +5,7 @@ linktitle: Python Pandas
 menu:
   main:
     parent: 
-next: /AlgoKnn
+next: /Python AlgoKnn
 prev: /python_les_bases
 title: Python Pandas
 weight: 10

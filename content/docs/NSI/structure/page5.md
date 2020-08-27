@@ -16,3 +16,6 @@ L'ensemble E de liens peut être vu comme une relation **R** sur V &#xD7; V.
 Un **chemin** P = (S,A) est défini par : S = {s<sub>1</sub>, s<sub>2</sub>, ..., s<sub>k</sub>}, A = {s<sub>0</sub>s<sub>1</sub>, s<sub>1</sub>s<sub>2</sub>, ..., s<sub>k-1</sub>s<sub>k</sub>} avec S &sub; V et A &sub; E.
 
 Autrement dit, un chemin est une suite consécutive d'arêtes ou d'arcs.
+
+# Liens
+* Algorithmes et structure de données utilisant la programmation orientée objets : [https://notebooks.lecluse.fr/python/nsi/terminale/graphes/algorithmique/poo/tp/2020/08/17/nsi_t_algo_graphes.html#Exemples-de-graphes](https://notebooks.lecluse.fr/python/nsi/terminale/graphes/algorithmique/poo/tp/2020/08/17/nsi_t_algo_graphes.html#Exemples-de-graphes)
