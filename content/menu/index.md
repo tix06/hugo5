@@ -22,7 +22,8 @@ headless: true
 	-	[algorithmes]({{< relref "/docs/NSI/NSI_algorithmes" >}})
    
 - [**SNT secondes**]({{< relref "/docs/SNT_2nde/SNT_index" >}})
- 
+
+- [**Python**]({{< relref "/docs/python/index_python" >}})
 - [**Posts**]({{< relref "/posts" >}})
 - [**Contact**]({{< relref "/docs/contact/simple-contact-form.html" >}})  
 

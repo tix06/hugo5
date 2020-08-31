@@ -5,13 +5,13 @@ Title : variables
 # Variables et valeurs
 ## Valeur et référence
 Pour pouvoir accéder aux données, le programme d’ordinateur (quel que soit le langage dans lequel il est écrit) fait abondamment usage d’un grand nombre de variables de différents types.
-Une variable apparaît dans un langage de programmation sous un nom de variable à peu près quelconque (voir ci-après), mais pour l’ordinateur il s’agit d’une **référence** désignant une **adresse mémoire**, c’est-à-dire un emplacement précis dans la mémoire vive.
+Une variable est un nom associé à une donnée. Ce nom est à peu près quelconque (voir ci-après), mais pour l’ordinateur il s’agit d’une **référence** désignant une **adresse mémoire**, c’est-à-dire un emplacement précis dans la mémoire vive.
 À cet emplacement est stockée une **valeur** bien déterminée. 
 
 Cela peut être en fait à peu près n’importe quel « objet » susceptible d’être placé dans la mémoire d’un ordinateur, par exemple : un nombre entier, un nombre réel, un nombre complexe, un vecteur, une chaîne de caractères, un tableau, une fonction, etc.
 
-## Les différents types de valeurs 
-La valeur d’une expression ou d’une variable a un type : 
+## Les types élementaires 
+Les types élementaires que peuvent prendre les variables et expressions sont : 
 
 * LES ENTIERS (int)
 valeurs possibles: 1, 2492042932330932, -23, etc expressions possibles : 13 + 3928, 34 * 2 + 10 // 3 % 5, etc
@@ -28,6 +28,7 @@ valeurs possibles : None
 expressions possibles : print(‘hello’), x = a + b, etc 11
 
 ## Typage dynamique 
+(à compléter)
 
 ## nommer une variable
 Un nom de variable est une séquence de lettres (a→z,A→Z) et de chiffres (0→9), qui doit toujours commencer par une lettre.
