@@ -83,7 +83,17 @@ print(resultat)
 
 ## Objets mutables : copie par référence
 
-> refaire le même exercice, mais cette fois avec la liste en argument : 
+> refaire le même exercice, mais cette fois avec le script suivant. Cette fois, c'est une liste (objet mutable) qui est passée en argument : 
+
+```python
+L1 = [1,2,3]
+def mafonction(L2):
+    L2[2]=4
+    print(L1 is L2)
+    return L2
+mafonction(L1)
+```
+
 
 > tester le script avec pythontutor (ne pas ré-écrire les commentaires)
 
