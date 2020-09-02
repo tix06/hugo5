@@ -4,11 +4,12 @@ Title : variables
 
 # Variables et valeurs
 
-Cette rubrique contient 3 pages : 
+Cette rubrique contient 4 pages : 
 
 * page 1 : variables, valeurs et structures de données
 * page 2 : [méthodes et types](../page2/)
 * page 3 : [TP sur les variables](../page3/)
+* page 4 : [flash-card sur les variables](../ex1/)
 
 
 ## Les structures de données
@@ -174,6 +175,15 @@ a + b
 a * 3
 # affiche AlanAlanAlan
 ```
+
+## Opérations sur les booléens
+| operateur | symbole | exemple d'expression | resultat |
+| --- | --- |--- | --- |
+| intersection | and | True and False | False |
+| reunion | or | True or False | True |
+| negation | not | not False | True |
+| est égal à | == | True == False | False |
+| est différent de | != | True != False | True |
 
 # Séquences : les listes et les tuples
 Une séquence est une structure de données qui stocke une collection d'éléments dans un ordre déterminé.

@@ -10,25 +10,28 @@ bookShowToc: false
 2. Chercher la réponse
 3. Cliquer sur la carte pour vérifier la reponse.
 
-## Flash card 1
+### Flash card 1
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
       <h1>Questions 1</h1>
-      <ol><li>Quels sont les 3 types simples de variables en informatique ?</li>
+      <ol><li>Quels sont les principaux types élementaires de variables en informatique ?</li>
         <li>Comment fait-on pour affecter la valeur 3 à une variable a? </li>
+        <li>Comment fait-on l'affectation multiple de la valeur 3 à la variable
+        a et 55 à la variable b?</li>
       </ol>
     </div>
     <div class="flip-card-back">
       <h1>Réponses</h1>
-      <ol><li>Caractères, Booléens (True, False), Nombres (Integer et Float)</li>
+      <ol><li>Nombres (Integer et Float), Caractères (et chaines de caractères), Booléens (True, False)</li>
         <li><code style="color:black">a = 3</code></li>
+        <li><code style="color:black">a, b = 3, 55</code></li>
       </ol>
     </div>
   </div>
 </div>
 
-## Flash card 2
+### Flash card 2
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
@@ -53,7 +56,7 @@ bookShowToc: false
   </div>
 </div>
 
-## Flash card 3
+### Flash card 3
 
 
 <div class="flip-card">
@@ -62,7 +65,8 @@ bookShowToc: false
       <h1>Questions 3</h1>
       <ol><li>classer les nombres binaires constitués de 2 bits du plus petit au plus grand : 11  01  00  10</li>
         <li>Ecrire 19 (dix-neuf) en numération binaire</li>
-        <li>Trouver combien fait  11111 en base 10</li>
+        <li>Trouver combien fait  11111 (binaire) en base 10</li>
+        <li>Convertir en Gbits le nombre : 400Mo</li>
       </ol>
     </div>
     <div class="flip-card-back">
@@ -70,15 +74,125 @@ bookShowToc: false
       <ol><li>00, 01, 10, 11</li>
         <li>10011</li>
         <li>31</li>
+        <li>3,2 Gb (avec 1Go = 1000Mo) ou 3,1 Gb (1Go = 1024 Mo)</li>
       </ol>
     </div>
   </div>
 </div>
 
+### Flash card 4
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h1>Questions 4</h1>
+      Que valent chacune des expressions suivantes ?
+      <ol><li>3.12e-3</li>
+        <li>3 / 4</li>
+        <li>2**3</li>
+        <li>5 // 4</li>
+        <li>6 % 4</li>
+      </ol>
+    </div>
+    <div class="flip-card-back">
+      <h1>Réponses</h1>
+      <ol><li>0.00312 (l'evaluation du nombre renvoie un flottant)</li>
+        <li>0.75</li>
+        <li>8 (** est le symbôle pour exposant)</li>
+        <li>1 (valeur entiere de la division)</li>
+        <li>2 (module = reste de la division)</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+### Flash card 5
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h1>Questions 5</h1>
+      Que valent chacune des expressions suivantes ?
+      <ol><li>("Pa"+"La") * 2</li>
+        <li>str(4) * int("3") </li>
+        <li>int("3") + float("3.2")</li>
+        <li>True == False or not True == False</li>
+      </ol>
+    </div>
+    <div class="flip-card-back">
+      <h1>Réponses</h1>
+      <ol><li>'PaLaPaLa'</li>
+        <li>'444'</li>
+        <li>6.2</li>
+        <li>True</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+
+### Flash card 6
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front" style="font-size: 14px">
+      <h1>Questions 6</h1>
+      Quel est l&lsquo;affichage dans la console au fur et à mesure des instructions suvantes ?
+      <ol><li>voyelles = ['a','e','i','o']<br>
+      voyelles[1]
+      </li>
+        <li>voyelles[-2]</li>
+        <li>voyelles.pop()<br>voyelles</li>
+        <li>voyelles.append('u')<br>voyelles</li>
+        
+      </ol>
+    </div>
+    <div class="flip-card-back">
+      <h1>Réponses</h1>
+      <ol><li>'e'</li>
+        <li>'i'</li>
+        <li>'o'<br>['a','e','i']</li>
+        <li>['a','e','i','u']</li>
+        
+      </ol>
+    </div>
+  </div>
+</div>
+
+### Flash card 7
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front" style="font-size: 12px">
+      <h1>Questions 7</h1>
+      
+      <ol><li>capitales = {'France':'Paris',\<br>'Italie':'Rome',\<br>'Angleterre':'Londres'}
+<br>list(capitales.keys())</li>
+        <li>capitales['France']</li>
+        <li>list(capitales.values())</li>
+        <li>capitales['Espagne']='Madrid'<br>list(capitales.items())</li>
+
+      </ol>
+    </div>
+    <div class="flip-card-back" style="font-size: 12px">
+      <h1>Réponses</h1>
+      <ol><li>['France', 'Italie', 'Angleterre']</li>
+        <li>'Paris'</li>
+        <li>['Paris', 'Rome', 'Londres']</li>
+        <li>[('France', 'Paris'),<br>
+ ('Italie', 'Rome'),<br>
+ ('Angleterre', 'Londres'),<br>
+ ('Espagne', 'Madrid')]</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+
 <script>
-  let selector, cards, makeActive;
-  let elems = [];
-  var check = false;
+let selector, cards, makeActive;
+let elems = [];
+var check = false;
 
 selector = '.flip-card';
 
@@ -86,6 +200,9 @@ cards = document.querySelectorAll(selector);
 
 
 makeActive = function () {
+    /* attention petite erreur de script
+    pour que ca fonctionne il faut un nombre impair de cartes
+    */ 
     for (let i = 0; i < cards.length; i++){
       check=!check;
       //console.log(cards[i].childNodes[1].classList);

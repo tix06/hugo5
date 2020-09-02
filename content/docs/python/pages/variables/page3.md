@@ -60,10 +60,10 @@ print('a = {}'.format(a))
 
 
 
-# fonctions et objets mutables/non mutables
+# Fonctions et objets mutables/non mutables
 Les objets mutables passés en argument d'une fonction sont copié par **référence**.
 
-## objets non mutables : copie par valeur
+## Objets non mutables : copie par valeur
 
 ```python
 # définition d'une fonction carre()
@@ -124,6 +124,8 @@ b.append(4)
 
 print('a = {}'.format(a))
 # affiche a = [1, 2, 3, 4]
+a is b
+# affiche True car a et b sont deux noms pour un même objet.
 ``` 
 
 Pour faire une copie de la liste a par *valeur*, il faudra la découper sans mentionner les 2 indices, ou bien utiliser la fonction `list` : 
