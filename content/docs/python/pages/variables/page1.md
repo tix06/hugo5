@@ -229,7 +229,7 @@ elementaire
 ``` 
 
 # Mappages : les dictionnaires
-Un *mappage* est une structure de données qui relie 2 informations ou plus, appelées *paires clé-valeur*. En python, cette structure est le dictionnaire.
+Un *mappage* est une structure de données qui relie 2 informations ou plus, appelées *paires clé : valeur*. En python, cette structure est le dictionnaire.
 
 Un dictionnaire est entouré d'*accolades* `{ }`. Les paires sont séparées par une virgule.
 

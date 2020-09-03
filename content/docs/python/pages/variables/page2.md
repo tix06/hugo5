@@ -49,10 +49,10 @@ aeroports
 
 ```python
 aeroports = ['CDG','ORY','LIS','NY']
-aeroport.remove('LIS')
+aeroports.remove('LIS')
 aeroports
 # affiche ['CDG','ORY','NY']
-del aeroport[0]
+del aeroports[0]
 aeroports
 # affiche ['ORY','NY']
 ```
