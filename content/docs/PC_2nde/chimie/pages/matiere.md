@@ -2,7 +2,8 @@
 Title : struture de la matière
 ---
 
-<h1>Etats de la matière </h1>
+<h1>De l'échelle macroscopique à l'échelle moléculaire</h1>
+<h2>Les états de la matière</h2>
 <p>Toute matière existe sous l’un des 3 états : Solide, Liquide, ou gaz<sup>(a)</sup>. On donne ici une représentation des particules constituant la matière à chacun de ces états. La dimension typique de ces particules est 10<sup>-10</sup> à 10<sup>-11</sup>m. Il peut s’agir d’atomes ou de molécules.</p>
 <p><img src="../img/matiere_etats.png" style="display: block; margin-left: auto; margin-right: auto;" width="300" height="102" /></p>
 <p><i>(a)   </i><i>Il existe toutefois une exception à ces 3 états de la matière : il s’agit des substances colloïdales, que l’on trouve souvent en alimentation (gels, aérosols...) ; ce sont des états où la matière est très divisée lorsqu’on l’observe à une échelle moyenne.</i></p>
@@ -26,6 +27,7 @@ Title : struture de la matière
 <p><em>Quelle est son état à température ambiante ?</em></p>
 <p style="text-align: right;"><em>Réponse : liquide car Tf&lt;T&lt;Te </em></p>
 <p> </p>
+<h2>Masse volumique</h2>
 <p>Une autre caractéristique d’un corps est sa <b>masse volumique </b><b>µ</b> :</p>
 <p>Formule :</p>
 <p>$$\mu = \tfrac{m}{V}$$</p>
@@ -35,11 +37,19 @@ Title : struture de la matière
 <p><em>Calculer la masse m d’heptane dans un volume de 50cm<sup>-3</sup>, sachant que sa masse volumique est µ = 0,68 g.cm<sup>-3</sup></em></p>
 <p style="text-align: right;"><em>Réponse : </em></p>
 <p>$$m = \mu \times V = 0,68 \times 50 = 34g$$</p>
-<p></p>
+<p>
+
+<h2>Cohésion de la matière</h2>
+<p>
+les molécules, constituées d’atomes reliés entre eux, peuvent être plus ou moins rapprochées entre elles (influence sur la masse volumique). Ces molécules sont en interactions par des forces d’attraction et de repulsion. La nature chimique des molécule peut expliquer la cohésion des substances, leur température de changement d’état, ainsi que leur masse volumique. </p>
+<p>
+Ainsi, on a pu voir que les solides sont plus denses que les liquides, en général. Ce n’est pas le cas pour l’eau, dont la phase liquide est la plus dense, et c’est pour cela que la glace flotte sur l’eau. C’est à cause de la très forte cohésion de l’eau liquide.</p>
+<p>
+A l’echelle moléculaire, enfin, on peut observer qu’une solution aqueuse est un mélange d’espèces chimiques : les espèces majoritaires, qui constituent le solvant, et les espèces minoritaires, qui constituent le soluté. Ce sont les forces de cohésion dans la matière qui font qu'un solvant donné va dissoudre et solubiliser un soluté.</p>
 
 
-<h1>Solutions, solvant, soluté : rappels</h1>
-<h2>Définition de solvant</h2> : il s’agit d’une espèce chimique le plus souvent liquide qui va accueillir en elle une autre espèce chimique (ce sera le soluté) pour former un mélange homogène<span class="spip_note_ref"> [<a href="http://www.educonline.net/spip/spip.php?article366#nb1" class="spip_note" rel="appendix" title="Mélange homogène : mélange dont on ne peut distinguer les deux constituants à (...)" id="nh1">1</a>]</span>. De plus l’espèce chimique qui compose le solvant reste majoritaire devant l’espèce chimique introduite.</i></p>
+<h1>Solutions, solvant, soluté</h1>
+<h2>Définition de solvant</h2>il s’agit d’une espèce chimique le plus souvent liquide qui va accueillir en elle une autre espèce chimique (ce sera le soluté) pour former un mélange homogène<span class="spip_note_ref"> [<a href="http://www.educonline.net/spip/spip.php?article366#nb1" class="spip_note" rel="appendix" title="Mélange homogène : mélange dont on ne peut distinguer les deux constituants à (...)" id="nh1">1</a>]</span>. De plus l’espèce chimique qui compose le solvant reste majoritaire devant l’espèce chimique introduite.</i></p>
 <h2>Définition du soluté</h2> : Il s’agit d’une espèce chimique qui est mélangée à une autre (le solvant). Le soluté est dissout dans le solvant. Le soluté peut être un liquide mais aussi un solide ou encore un gaz ! </i></p>
 <p><i> <strong>Définition de la solution :</strong><br class="autobr" /> Le soluté peut être à l’état solide, liquide ou gazeux et il se dissout dans le solvant. La solution obtenue (mélange homogène du soluté et du solvant) peut être solide ou liquide (en pratique on ne parle pas de solution pour un mélange homogène de gaz). </i></p>
 <p><strong>Des exemples :</strong></p>
@@ -116,7 +126,7 @@ C'est le terme qui désigne la réalisation du mélange entre l’espèce chimiq
 <p></p>
 
 
-<h1>la matière l'échelle microscopique</h1>
+<h1>La matière l'échelle microscopique</h1>
 <p>Pour prévoir les propriétés de la matière à l'échelle macroscopique, il faudra explorer celle ci à l'échelle de l'atome et de ses électrons. Ce sont justement ces électrons qui sont responsables de la stabilité des atomes et des ions, et de leur association en molécules ou en édifice ionique.</p>
 <p><b><img src="../img/matiere-echelles.jpg" width="583" height="343" /></b></p>
 <p>L’eau est une <b>substance </b>(A) constituée de <b>molécules</b> d’eau (B) constituées elles mêmes d’<b>atomes</b> (C) d’hydrogène (E) et d’oxygène (D).</p>
