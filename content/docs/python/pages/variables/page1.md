@@ -72,7 +72,7 @@ Certaines opérations nécessitent que la donnée associée à une variable soit
 ```python
 float(3)
 # affiche 3.0
-float('3.5')
+float('3.8')
 # affiche 3.0
 ```
 

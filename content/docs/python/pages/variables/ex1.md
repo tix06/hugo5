@@ -165,7 +165,7 @@ bookShowToc: false
   <div class="flip-card-inner">
     <div class="flip-card-front" style="font-size: 12px">
       <h1>Questions 7</h1>
-      
+      Quel est l&lsquo;affichage dans la console au fur et à mesure des instructions suvantes ?
       <ol><li>capitales = {'France':'Paris',\<br>'Italie':'Rome',\<br>'Angleterre':'Londres'}
 <br>list(capitales.keys())</li>
         <li>capitales['France']</li>
