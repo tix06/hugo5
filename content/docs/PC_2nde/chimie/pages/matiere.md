@@ -41,12 +41,17 @@ Title : struture de la matière
 
 <h2>Cohésion de la matière</h2>
 <p>
-les molécules, constituées d’atomes reliés entre eux, peuvent être plus ou moins rapprochées entre elles (influence sur la masse volumique). Ces molécules sont en interactions par des forces d’attraction et de repulsion. La nature chimique des molécule peut expliquer la cohésion des substances, leur température de changement d’état, ainsi que leur masse volumique. </p>
+les molécules peuvent être plus ou moins rapprochées entre elles en phase liquide et solide. Cela a une influence sur la masse volumique. Ces molécules sont en interactions par des forces d’attraction plus ou moins fortes. La nature chimique des molécules peut expliquer la force de ces liaisons, et donc la cohésion des substances, leur température de changement d’état, ainsi que leur masse volumique:</p>
 <p>
-Ainsi, on a pu voir que les solides sont plus denses que les liquides, en général. Ce n’est pas le cas pour l’eau, dont la phase liquide est la plus dense, et c’est pour cela que la glace flotte sur l’eau. C’est à cause de la très forte cohésion de l’eau liquide.</p>
+Plus la <b>cohésion</b> est forte, plus les molécules ont tendance à se rapprocher. Cala a pour effet d'expliquer pourquoi 2 substances sont miscibles (forte cohésion entre elles). Mais aussi pourquoi la température de vaporisation est plus élevée pour l'eau que pour de nombreux autres liquides.</p>
+<p>
+On a pu voir que les solides sont en général plus denses que les liquides. Ce n’est pas le cas pour l’eau, dont la phase liquide est la plus dense, et c’est pour cela que la glace flotte sur l’eau. C’est encore à cause de la très forte cohésion de l’eau liquide. Plus forte encore que dans la phase solide.</p>
 <p>
 A l’echelle moléculaire, enfin, on peut observer qu’une solution aqueuse est un mélange d’espèces chimiques : les espèces majoritaires, qui constituent le solvant, et les espèces minoritaires, qui constituent le soluté. Ce sont les forces de cohésion dans la matière qui font qu'un solvant donné va dissoudre et solubiliser un soluté.</p>
 
+*Question :* Le Pentane a pour température d'ebullition : T1 = 35°C. L'Hexane a pour température d'ébullition T2 = 69°C. Lequel des deux liquides, Pentane ou Hexane présente la plus forte cohésion entre ses molécules ? 
+
+*Réponse : l'Hexane*
 
 <h1>Solutions, solvant, soluté</h1>
 <h2>Définition de solvant</h2>il s’agit d’une espèce chimique le plus souvent liquide qui va accueillir en elle une autre espèce chimique (ce sera le soluté) pour former un mélange homogène<span class="spip_note_ref"> [<a href="http://www.educonline.net/spip/spip.php?article366#nb1" class="spip_note" rel="appendix" title="Mélange homogène : mélange dont on ne peut distinguer les deux constituants à (...)" id="nh1">1</a>]</span>. De plus l’espèce chimique qui compose le solvant reste majoritaire devant l’espèce chimique introduite.</i></p>
@@ -129,7 +134,7 @@ C'est le terme qui désigne la réalisation du mélange entre l’espèce chimiq
 <h1>La matière l'échelle microscopique</h1>
 <p>Pour prévoir les propriétés de la matière à l'échelle macroscopique, il faudra explorer celle ci à l'échelle de l'atome et de ses électrons. Ce sont justement ces électrons qui sont responsables de la stabilité des atomes et des ions, et de leur association en molécules ou en édifice ionique.</p>
 <p><b><img src="../img/matiere-echelles.jpg" width="583" height="343" /></b></p>
-<p>L’eau est une <b>substance </b>(A) constituée de <b>molécules</b> d’eau (B) constituées elles mêmes d’<b>atomes</b> (C) d’hydrogène (E) et d’oxygène (D).</p>
+<p>L’eau est une <b>substance </b>(A) constituée de <b>molécules</b> d’eau (B) constituées elles mêmes d’<b>atomes</b> (C ) d’hydrogène (E) et d’oxygène (D).</p>
 <p> </p>
 <p> </p>
 <h2>Formule des molécules</h2>
@@ -139,29 +144,16 @@ C'est le terme qui désigne la réalisation du mélange entre l’espèce chimiq
 <p><b>L’atome</b></p>
 <p style="text-align: center;"><b><img src="../img/matiere atome.png" style="display: block; margin-left: auto; margin-right: auto;" width="249" height="229" /></b>une représentation de l’atome</p>
 
+Dans cette représentation, le noyau est constitué de 2 types de particules (rouges et bleues). On verra qu'il s'agit de protons et de neutrons. Des électrons tournent autour de ce noyau. Le cercle en pointillé représente la limite de l'atome, c'est à dire la distance maximale à laquelle tournent les électrons.
+
 <h2>Constitution de l’atome</h2>
 <ul>
 <li>Un atome est constitué d’un noyau et d’un cortège électronique</li>
-<li>Le <b>rayon</b> de l'atome est voisin de 10 000 fois celui du noyau.</li>
+<li>Le <b>rayon</b> de l'atome est voisin de 10 000 fois celui du noyau, ce qui signifie que son noyau est minuscule par rapport aux dimensions de l'atome.</li>
 </ul>
 <p> </p>
-<h3>Noyau de l’atome :</h3>
-<ul>
-<li>Le noyau d’un atome est constitué de nucléons de 2 sortes : les protons et les neutrons</li>
-<li>Le nombre total de nucléons est appelé nombre de masse et se note <b>A </b></li>
-<li>Le nombre de protons du noyau est égal à son numéro atomique et se note <b>Z</b></li>
-<li>La <b>charge électrique </b>portée par le proton est notée <b>e</b> et appelée: charge élémentaire.</li>
 </ul>
-<p align="center"><b>e = 1,6.10<sup>-19</sup> C (coulomb)</b></p>
-<p>Son nombre de charge est noté +1</p>
-<p>le noyau de l’atome a donc une charge électrique notée q, égale à :</p>
-<p align="center">$$q = Z \times e$$</p>
-<p align="center"> </p>
-<ul>
-<li>Le neutron est une particule neutre</li>
-<li>Les <b>masses</b> du proton et du neutron sont presque identiques et proche de 2000 fois celle de l'électron.</li>
-</ul>
-<p><i>Résumé : </i></p>
+<p><i>Valeurs : </i></p>
 <div align="center">
 <table cellspacing="0" cellpadding="0" border="1">
 <tbody>
@@ -185,7 +177,7 @@ C'est le terme qui désigne la réalisation du mélange entre l’espèce chimiq
 <p>Proton</p>
 </td>
 <td width="85" valign="top">
-<p>» 10<sup>-15</sup></p>
+<p> 10<sup>-15</sup></p>
 </td>
 <td width="66">
 <p>+ e</p>
@@ -199,7 +191,7 @@ C'est le terme qui désigne la réalisation du mélange entre l’espèce chimiq
 <p>Neutron</p>
 </td>
 <td width="85" valign="top">
-<p>» 10<sup>-15</sup></p>
+<p> 10<sup>-15</sup></p>
 </td>
 <td width="66">
 <p>0</p>
@@ -213,7 +205,7 @@ C'est le terme qui désigne la réalisation du mélange entre l’espèce chimiq
 <p>Electron</p>
 </td>
 <td width="85" valign="top">
-<p>» 10<sup>-15</sup></p>
+<p> 10<sup>-15</sup></p>
 </td>
 <td width="66">
 <p>- e</p>
@@ -226,9 +218,24 @@ C'est le terme qui désigne la réalisation du mélange entre l’espèce chimiq
 </table>
 </div>
 <p> </p>
+
+
+
+<h3>Noyau de l’atome :</h3>
+<h4>Masse:</h4>
+Pour faciliter la description du noyau d'un atome, on utilise deux nombres A et Z, qui sont respectivement les *nombres de masse* **A**, et le *numéro atomique* **Z**. Ces nombres ont un rapport avec les particules du noyau, les nucléons (protons et neutrons) :  
 <ul>
-<li>La masse de l'atome se concentre presque totalement dans le noyau.</li>
+<li>Le noyau d’un atome est constitué de nucléons de 2 sortes : les protons et les neutrons</li>
+<li>Le nombre total de nucléons est appelé nombre de masse et se note <b>A </b></li>
+<li>Le nombre de protons du noyau est égal à son numéro atomique et se note <b>Z</b></li>
 </ul>
+
+*Question :* L'atome de Chlore a pour nombre de masse A = 35 et numero atomique Z = 17. Déterminer le genre et le nombre des particules de son noyau.
+
+*Réponse :  Z = 17 => 17 protons. Il y a donc A-Z = 35-17 = 18 neutrons.*
+
+Les <b>masses</b> du proton et du neutron sont presque identiques et proche de 2000 fois celle de l'électron. On peut dire que le noyau de l'atome concentre toute la masse de l'atome. 
+
 <div align="center">
 <table cellspacing="0" cellpadding="0" border="1">
 <tbody>
@@ -254,7 +261,7 @@ C'est le terme qui désigne la réalisation du mélange entre l’espèce chimiq
 <p>Noyau</p>
 </td>
 <td width="85" valign="top">
-<p>» 10<sup>-14</sup></p>
+<p> 10<sup>-14</sup></p>
 </td>
 <td width="66">
 <p>+ Z.e</p>
@@ -268,7 +275,7 @@ C'est le terme qui désigne la réalisation du mélange entre l’espèce chimiq
 <p>Atome</p>
 </td>
 <td width="85" valign="top">
-<p>» 10<sup>-10</sup></p>
+<p> 10<sup>-10</sup></p>
 </td>
 <td width="66">
 <p>0</p>
@@ -285,10 +292,35 @@ C'est le terme qui désigne la réalisation du mélange entre l’espèce chimiq
 <p align="center">$$m = A \times m_{nucléon}$$</p>
 <p><i> </i></p>
 <h3>Application</h3>
-alculer la valeur de la masse de l’atome d’Helium He, de nombre de masse A = 4.
+Calculer la valeur de la masse de l’atome d’Helium He, de nombre de masse A = 4.
 
 <p><i>Réponse : </i>$$ m =A  \times m_{nucléon} = 4 \times 1,67.10^{-27} = 6,7.10^{-27}kg$$</p>
 <p><b> </b></p>
+
+<h4>Charge électrique</h4>
+Le noyau est toujours chargé d'électricité de nature *positive*. C'est grâce à l'une de ses particules, le *proton*. Chaque proton porte un *nombre de charge* +1. 
+
+*Ne pas confondre* : *nombre de charges*, et *charge électrique*.
+
+Le **nombre de charges** du noyau est égal à son nombre de protons : 1 proton => nombre de charge  = +1 ; 2 protons => nombre de charges +2 ; etc...
+
+La **charge** du noyau dépend du *nombre de charges*. Elle se note **q**. Elle peut se déduire du nombre de charges. Il s'agit d'une grandeur électrique mesurable, en Coulombs. C'est la grandeur qui permet de mesurer la quantité d'électricité contenue dans une pile ou une batterie.
+
+<ul>
+<li>La <b>charge électrique </b>portée par le proton est notée <b>e</b> et appelée: charge élémentaire.</li>
+</ul>
+
+<p align="center"><b>e = 1,6.10<sup>-19</sup> C (coulomb)</b></p>
+<p>On a vu que le nombre de charge du proton est noté +1</p>
+<p>le noyau de l’atome a donc une charge électrique notée <b>q</b>, égale à :</p>
+<p align="center">$$q = Z \times e$$</p>
+<p align="center"> </p>
+<ul>
+<li>Le neutron est une particule neutre</li>
+</ul>
+
+
+
 
 <h2>Electrons :</h2>
 <ul>
@@ -299,11 +331,22 @@ alculer la valeur de la masse de l’atome d’Helium He, de nombre de masse A =
 <ul>
 <li>Un atome possède autant d’électrons dans son cortège électronique que de protons dans son noyau (donc autant que son numéro atomique Z)</li>
 <li>Des électrons peuvent quitter le <b>cortège électronique</b>, d'autres peuvent venir. L'énergie mise en jeu est assez faible (réaction chimique, friction mécanique)</li>
-<li><b>Un ion </b>est un édifice qui possède une charge électrique, par excès ou défaut d’électrons dans son cortège électronique. Son nombre de charge, qui est noté en haut à droite de son symbole se calcule d'après la relation : Z(protons) - N(electrons)</li>
+<li>Lorsque l'édifice atomique n'est plus neutre, on dit qu'il s'agit d'un **ion**.</li>
 </ul>
+
+<h2>Neutralité électrique de l'atome</h2>
+ Un atome est une particule électriquement neutre, ce qui signifie que sa charge électrique globale est nulle: $$q = 0$$ Les charges électriques négatives des électrons sont compensées par les charges positives du noyau.
+
+Puisque chaque électron porte une charge -e et chaque proton une charge +e cette neutralité implique qu’un atome possède le même nombre d’électrons que de protons.
+
+<h2>Un ion</h2>
+Un ion est un édifice qui possède une charge électrique, par excès ou défaut d’électrons dans son cortège électronique. Son <b>nombre de charges</b>, qui est noté en haut à droite de son symbole se calcule d'après la relation : <b>Z(protons) - N(electrons)</b>
+
 <p style="margin-left: 30px;">La charge électrique q d'un ion, en Coulombs, se calcule alors d'après la relation :</p>
 <p style="margin-left: 30px;">$$q = (Z-N) \times e$$</p>
 <p style="margin-left: 30px;"></p>
+
+
 <h3>Application 1 :</h3>
 Déterminer le nombre de charge de l'ion aluminium, si son numéro atomique est Z = 13, et qu'il possède 10 électrons.
 <p><i>Réponse : Z - N = 13 - 10 = +3, on note alors cet ion : <i>Al<sup>3+</sup></i></i></p>
