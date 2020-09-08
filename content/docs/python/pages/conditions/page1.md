@@ -21,6 +21,8 @@ if prix_camion > 10000:
 ## Tests logiques
 Il s'agit d'une expression booléenne qui est évaluée est qui renvoie `True` si elle est vrai, `False` sinon.
 
+### Opérateurs de comparaison
+
 *Quelques exemples de tests logiques :*
 
 ```python
@@ -30,6 +32,16 @@ age <= 18   # inferieur ou egal
 nom == 'John' # egalité de chaines
 ```
 
+### Opérateurs logiques
+L'expression peut aussi contenir des opérateurs logiques : `and`, `or`, `not`:
+
+```python
+n = int(input('entrer un nombre entier: '))
+if n%2 == 0 and n > 0:
+    print('vous avez entré un entier pair et positif')
+```
+
+### Test sur une liste
 On peut aussi vérifier si un élement existe dans une liste : 
 
 ```python

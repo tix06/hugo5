@@ -55,7 +55,7 @@ print(somme)
 ```
 
 #### Parcourir les seuls indices de la liste
-Le programme suivant est équivalent au précédent. Sauf qu'ici, on ne parcours que les indices de la liste et non ses éléments : 
+Le programme suivant est équivalent au précédent. Sauf qu'ici, on ne parcourt que les indices de la liste et non ses éléments : 
 
 ```python
 notes = [6,5,10,18]
@@ -66,6 +66,8 @@ print(somme)
 # affiche : 39
 ```
 
+`len(notes)` est une fonction qui renvoie la longueur de la liste, c'est à dire son nombre d'éléments. (ici 4).
+
 #### recherche d'un élément de liste et son indice
 Soit no la liste des valeurs d'une population radioactive, decroissante au cours du temps. On recherche le moment où cette population est inférieure à 50. (Le rang i correspond à une durée comptée de manière itérative) : 
 
@@ -75,6 +77,7 @@ for i,no in enumerate(popu):
   if no<=50:
     print(i)
     break
+# affiche : 7
 ```
 
 
