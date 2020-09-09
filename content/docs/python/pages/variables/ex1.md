@@ -188,6 +188,9 @@ bookShowToc: false
   </div>
 </div>
 
+# Relire le cours
+Lien vers la page : <a href="/docs/python/pages/variables/page1/">Variables</a>
+
 
 <script>
 let selector, cards, makeActive;

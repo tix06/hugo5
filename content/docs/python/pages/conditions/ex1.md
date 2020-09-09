@@ -117,6 +117,9 @@ else :
   </div>
 </div>
 
+# Relire le cours
+Lien vers la page [structures conditionnelles](/docs/python/pages/conditions/page1/index.html)
+
 <script>
 let selector, cards, makeActive;
 let elems = [];

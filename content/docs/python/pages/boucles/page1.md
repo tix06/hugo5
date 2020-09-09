@@ -129,5 +129,8 @@ Bonjour, John!<br>
 Quel est votre nom ? **quitter** <br>
 sortie de la boucle<br>
 
+# Flash cards
+Lien vers les flash cards sur le theme <a href="/docs/python/pages/boucles/ex1/index.html">Boucles</a>
+
 # Liens
 * comprehension de listes : [voir complement de cours sur python.org](https://docs.python.org/fr/2/tutorial/datastructures.html) 

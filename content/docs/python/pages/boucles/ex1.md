@@ -146,6 +146,9 @@ le devoir de math est fait<br></li>
   </div>
 </div>
 
+# Relire le cours
+Lien vers la page [boucles for et while](/docs/python/pages/boucles/page1/index.html)
+
 <script>
 let selector, cards, makeActive;
 let elems = [];

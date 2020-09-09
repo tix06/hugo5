@@ -89,7 +89,8 @@ else :
   print('Pret pour la recolte')
 ```
 
-# Remarque : 0 et None dans le test logique
+# Remarque : 0 et None 
+Dans le test logique, 0 et None se comportent comme s'il s'agissait de `False`:
 
 ```python
 ch = input('Entrez un nombre entier quelconque')
@@ -104,3 +105,6 @@ Ce petit script, lorsqu'il est executé, renvoie toujours `True` quel que soit l
 
 * 0     # zero
 * None  # le type Rien
+
+# Flash cards
+Lien vers les flash cards sur le theme <a href="/docs/python/pages/conditions/ex1/index.html">Structures conditionnelles</a>

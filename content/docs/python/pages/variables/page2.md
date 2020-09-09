@@ -129,4 +129,6 @@ Sans cette *astuce*, la copie se ferait par référence (Dictionnaire = mutable)
 
 <input type="button" class="btn btn-lg" value="Retour à la page : Variables" onclick="window.location.href = '../page1/'">
 
+# Flash cards
+Lien : [flash-card sur les variables](../ex1/)
 
