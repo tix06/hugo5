@@ -99,6 +99,10 @@ for (let i = 0; i < data.length; i++) {
 }
 </style>
 
+<figure>
+  <img src="../images/carte.png" alt="IREM Lille">
+  <figcaption>Carte du monde. IREM Lille</figcaption>
+</figure>
 
 # La naissance de l'écriture... et du nombre
 
@@ -203,6 +207,7 @@ Les données manipulées par une machine sont des nombres binaires. Pour toutes 
 * Histoire illustrée de l'informatique, 2e Edition, EDP sciences
 * les grandes civilisations anciennes et leur chronologie : [http://www.essential-humanities.net/history-overview/world-history-timeline/](http://www.essential-humanities.net/history-overview/world-history-timeline/)
 * La numération par civilisation :[https://fr.wikipedia.org/wiki/Catégorie:Numération_par_civilisation](https://fr.wikipedia.org/wiki/Cat%C3%A9gorie:Num%C3%A9ration_par_civilisation)
+* site [maths-rometus.org](http://www.maths-rometus.org/mathematiques/maths-et-nombres/histoire-de-la-numeration.asp)
 
 [^1]: Mésopotamiens : La civilisation babylonienne est héritière de Sumer, et elle s'est épanouie en Mésopotamie du Sud du début du IIe millénaire av. J.-C. jusqu'au début de notre ère. Elle est marquée par l'affirmation progressive, de la cité de Babylone, capitale de l'État qui connait son apogée à partir du VIe siècle av. J.-C. Cette cité prospère étend son influence du nord-est de la Syrie, au nord de l'Irak actuel, ainsi que les plaines plus au sud. Les milliers de tablettes cunéiformes découvertes sur les différents sites de Babylonie (Babylone, Ur, Uruk, Nippur, Sippar, etc.) ont permis de dresser le tableau d'une civilisation urbaine reposant sur une agriculture irriguée potentiellement très productive. [https://fr.wikipedia.org/wiki/Babylone](https://fr.wikipedia.org/wiki/Babylone)
 
@@ -227,4 +232,23 @@ Les symboles des chiffres sont écrits à gauche. Il s'agit de dessins en forme 
 </figure>
 3. Ces symboles, sont-ils différents pour les unités, les soixantaines, et les soixantaines de soixantaines ? 
 4. Expliquer en quoi on peut considérer que les sumériens utilisaient une numération de position ?
+
+## Numération egyptienne
+C’est une numération de type additif.
+
+Les Égyptiens de l’Antiquité utilisaient des hiéroglyphes pour écrire leurs nombres. Ce système de hiéroglyphes est assez proche de notre système de numération décimale : chaque symbole possède une valeur (1,10,100,1 000...) et peut être écrit jusqu’à neuf fois.
+
+1. En étudiant les trois exemples donnés ci-dessous, retrouver la valeur des sept hiéroglyphes utilisés. (voir images)
+2. Comparer les numérations Babylonienne et Egyptienne : laquelle des deux est une numération de position ? Justifiez.
+
+<figure>
+  <img src="../images/egyptien1.png" alt="exemple de numeration egyptienne">
+  <figcaption>exemples, numeration egyptienne</figcaption>
+</figure>
+
+<figure>
+  <img src="../images/egyptien2.png" alt="tableau a remplir">
+  <figcaption>tableau a remplir</figcaption>
+</figure>
+
 
