@@ -7,6 +7,8 @@ bookShowToc: false
 # Civilisations anciennes
 Le document suivant donne un aperçu des périodes d'existence d'anciennes civilisations. On pourra se référer à la page suivante pour plus de détails : [http://www.essential-humanities.net/history-overview/world-history-timeline/](http://www.essential-humanities.net/history-overview/world-history-timeline/)
 
+L'apparition des grandes civilisations commence alors que le néolithique prend fin. C'est l'usage de la metallurgie qui aura pour conséquence de structurer davantege la société, avec l'usage d'armes en métal par des soldats spécialisés. La protection des richesses accumulées par les producteurs est confiée à des guerriers professionnels. La société se hiérarchise.
+
 <div class="timeline">
 <div class="grid">
   <div>-7000</div>
@@ -98,7 +100,7 @@ for (let i = 0; i < data.length; i++) {
 </style>
 
 
-# La naissance du nombre
+# La naissance de l'écriture... et du nombre
 
 Dans les temps préhistoriques, les hommes ont eu besoin de recourir à une numération. Ils ont naturellement utilisé des artefacs pour compter (des objets, des os...). L'écriture n'existait pas. 
 
@@ -112,7 +114,16 @@ Au VII millénaire avant JC : des vestiges de jetons en pierre montrent l'activi
 
 Au quotidien, les hommes ont d'abord utilisé leurs doigts ou leur phalanges pour compter. Selon la méthode employée, ils ont alors compté en base 10 (10 doigts de la main), ou en base 20 (en incluant les doigts de pied), en base 12 (en utilisant les phalanges), ou en base 60.
 
-Au IV millénaire avant JC : On trouve les plus anciennes traces de chiffres écrits (Mésopotamiens[^1] et Egyptiens).
+> Et l'écriture des chiffres ?
+
+Au IV millénaire avant JC : On trouve les plus anciennes traces de chiffres écrits (Mésopotamiens[^1] et Egyptiens), gravés sur des supports en argile.
+
+Les symboles que l'on peut observer sur la photographie suivante sont des formes de clous ou des barres verticales |, des chevrons <.
+
+<figure>
+  <img src="../images/tabletteArgile.png" width="300px" alt="tablette en argile. 3000 ajc">
+  <figcaption>tablette en argile. 3000 ajc. Mésopotamie</figcaption>
+</figure>
 
 > Comment ces chiffres constituent-ils des nombres ?
 
@@ -139,11 +150,12 @@ Au départ, une opération aussi simple que l'addition demande de la mémoire, d
 Les Sumériens ont progressivement remplacé les petits objets en argile représentant les nombres par l'écriture sur des tablettes en argiles. Ils gravaient dessus avec un calame en roseau. Le comptage *matériel* est alors devenu un comptage *conceptuel*. Ainsi sont nés les plus vieux chiffres connus de l'histoire, et surtout, l'invention du ZERO. C'est justement le zero qui va faciliter les opérations arithmétiques, comme on va le voir plus loin.
 
 
+
 > Comment est apparu le ZERO ?
 
-Sans l'écriture du ZERO, l'usage des nombres ne permet pas de réaliser facilement des opérations. On ne peut pas facilement reporter des retenues depuis les unités vers les dizaines par exemple (base 10). L'invention du ZERO implique que l'écriture du nombre va suivre la règle de la position des symboles : les dizaines sont écrites avec un symbole mis à la position des *dizaines*, les unités sont écrites avec un symbole mis à la position des *unités*. Et lorsque le nombre par exemple ne comporte pas de dizaine, on met un ZERO à la position du chiffre des dizaines. 
+Sans l'écriture du ZERO, l'usage des nombres ne permet pas de réaliser facilement des opérations. On ne peut pas facilement reporter des retenues depuis les unités vers les dizaines par exemple (base 10). L'invention du ZERO implique que l'écriture du nombre va suivre la règle de la **position** des symboles : les dizaines sont écrites avec un symbole mis à la position des *dizaines*, les unités sont écrites avec un symbole mis à la position des *unités*. Et lorsque le nombre par exemple ne comporte pas de dizaine, on met un ZERO à la position du chiffre des dizaines. 
 
-Par exemple : pour écrire 307, un scribe *babylonien* écrit un 3, puis un signe représentant le zero à la place des dizaines, et enfin un 7 pour les unités. Ainsi, 307 et 37 ne s'écrivent pas de la même façon, et on ne les confond pas à la lecture. L'avantage de l'utilisation du zero est alors essentiellement dans le but d'utiliser les même chiffres pour représenter les unités, les dizaines, les centaines et autres. C'est la position du chiffre qui permet de savoir si celui-ci représente unité, dizaine ou centaine. C'est ce que l'on appelle la numération de POSITION.
+Par exemple : pour écrire 307, en base décimale, on écrit un 3, puis un signe représentant le zero à la place des dizaines, et enfin un 7 pour les unités. Ainsi, 307 et 37 ne s'écrivent pas de la même façon, et on ne les confond pas à la lecture. L'avantage de l'utilisation du zero est alors essentiellement dans le but d'utiliser les même chiffres pour représenter les unités, les dizaines, les centaines et autres. C'est la position du chiffre qui permet de savoir si celui-ci représente unité, dizaine ou centaine. C'est ce que l'on appelle la **numération de POSITION**.
 
 Ce signe signifiant *RIEN*, et appelé le ZERO sera décisif pour l'apparition de la science du calcul, *l'arithmétique*.
 
@@ -160,22 +172,24 @@ Au IXe siècle, les Arabes emprunteront aux Indiens le zéro, le mot sunya deven
 
 # Epoque médievale
 
-Le savoir circule à travers le monde, au rythme lent des voyageurs à pied ou à cheval, des mulets portant des malles de manuscrits, des bateaux à voile qui naviguent de l'Extrême-Orient à l'Egypte, de la Méditerranée à l'lslande.
+Le savoir circule à travers le monde de l'Extrême-Orient à l'Egypte, de la Méditerranée à l'lslande.
 
-Les chiffres dits arabo-indiens supplantent progressivement les chiffres romains. Plus que les chiffres eux-mêmes, c'est surtout la numérotation positionnelle qui va assurer leur succès: un chiffre qui peut représenter plusieurs valeurs, suivant sa position dans le nombre, simplifie les calculs et permet d'en aborder de plus difficiles. Le système actuel de numérotation, appelé système décimal de position, qui nous semble si naturel, est donc le résultat de plusieurs milliers d'années d'évolution, d'échanges et de réflexions.
+Les chiffres dits arabo-indiens remplacent progressivement les chiffres romains. La numérotation positionnelle est bien plus efficace: un chiffre qui peut représenter plusieurs valeurs, suivant sa position dans le nombre, simplifie que l'on va pouvoir **calculer** et permet d'aborder des problèmes mathématiques plus complexes. Le système actuel de numérotation, appelé système décimal de position, qui nous semble si naturel, est donc le résultat de plusieurs milliers d'années d'évolution, d'échanges et de réflexions.
 
 # A quoi ça sert de calculer ?
 Ou bien, en reformulant la question : 
 
 > comment est venu le besoin d'automatiser le calcul ?
 
-Au départ, les besoins scientifiques sont limitées à l'astronomie. Les mouvements des corps célestes pouvant seulement s'exprimer en termes mathématiques, on a utilisé les nombres pour décrire et prévoir les ephémérides. Cela a servi à reprérer le temps, pour la navigation, et également pour la divination.
+Au départ, les besoins scientifiques sont limitées à l'astronomie. Les mouvements des corps célestes pouvant seulement s'exprimer en termes mathématiques, on a utilisé les nombres pour décrire et prévoir les ephémérides. Cela a servi à repérer et mesurer le temps, le cycle des astres, utile pour la navigation, et également pour la divination.
 
-Les progrès du calcul répondront ensuite principalement à des besoins pratiques: comptabilité, commerce, calculs d'intérêts sur les prêts, arpentage ou architecture. La géométrie, elle, progresse en relation avec l'architecture et la représentation graphique: I'invention de la perspective par des artistes italiens révolutionne la vision en Occident et marie les mathématiques avec la peinture, deux mille ans après la musique. A la même époque sont construites les premières horloges, donnant naissance du même coup à un nouveau rapport au temps et à une nouvelle industrie.
+Les progrès du calcul répondront ensuite principalement à des besoins pratiques: comptabilité, commerce, calculs d'intérêts sur les prêts, arpentage ou architecture. La géométrie, elle, progresse en relation avec l'architecture et la représentation graphique: I'invention de la perspective par des artistes italiens révolutionne la vision en Occident et marie les mathématiques avec la peinture. A la même époque sont construites les premières horloges, donnant naissance du même coup à un nouveau rapport au temps et à une nouvelle industrie.
 
-On va enfin remplacer la méthode de calcul utilisant le boulier, où les opérations et le report des retenues sont réalisés par un humain.
+On va enfin remplacer la méthode de calcul utilisant le boulier, où les opérations et le report des retenues sont réalisés par un humain, par une machine qui va automatiser les calculs.
 
 la mécanique de précision, créera les conditions de possibilité matérielle des futures machines à calculer.
+
+Au XX<sup>e</sup> siècle, la société vit une révolution numérique, où toutes les tâches que l'on parvient à numériser seront résolues par une machine.
 
 # Informatique et numérique
 Le numérique regroupe toutes les activités qui ont été modifiées par la *numérisation* : le calcul, la photographie numérique, la cartographie, les médias numériques, la communication, l'usage de machines à commande numérique...
@@ -195,7 +209,7 @@ Les données manipulées par une machine sont des nombres binaires. Pour toutes 
 # Exercices 
 ## Numération Babylonienne
 ### La première représentation écrite des nombres
-L'image suivante est le dessin d'une tablette sumérienne datant de 2 000 ans environ avant notre ère.
+L'image suivante est le dessin d'une tablette sumérienne datant de 3 000 ans environ avant notre ère.
 
 Cette tablette en argile indique le nombre d'animaux de chaque espèce possédés par un propriétaire de bétail. 
 
