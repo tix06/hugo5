@@ -5,7 +5,7 @@ Title : struture de la matière
 <h1>De l'échelle macroscopique à l'échelle moléculaire</h1>
 <h2>Les états de la matière</h2>
 <p>Toute matière existe sous l’un des 3 états : Solide, Liquide, ou gaz<sup>(a)</sup>. On donne ici une représentation des particules constituant la matière à chacun de ces états. La dimension typique de ces particules est 10<sup>-10</sup> à 10<sup>-11</sup>m. Il peut s’agir d’atomes ou de molécules.</p>
-<p><img src="../img/matiere_etats.png" style="display: block; margin-left: auto; margin-right: auto;" width="300" height="102" /></p>
+<p><img src="../img/matiere_etats.png" style="display: block; margin-left: auto; margin-right: auto;" width="300" /></p>
 <p><i>(a)   </i><i>Il existe toutefois une exception à ces 3 états de la matière : il s’agit des substances colloïdales, que l’on trouve souvent en alimentation (gels, aérosols...) ; ce sont des états où la matière est très divisée lorsqu’on l’observe à une échelle moyenne.</i></p>
 <p><b> </b></p>
 <p>Un corps est caractérisé par sa <strong>température de fusion(Tf) et sa température d’ébullition (Te)</strong></p>
@@ -74,7 +74,7 @@ C'est le terme qui désigne la réalisation du mélange entre l’espèce chimiq
 
 <h1>Extraction</h1>
 <p><span style="font-family: Segoe UI;">Les extractions sont parmi les méthodes les plus utilisées en analyse pour séparer les mélanges. Elles reposent sur la différence de solubilité d'un soluté entre deux phases non-miscibles entre elles. L'idée est de transférer un soluté d'une phase liquide à une autre phase liquide non-miscible à la première.</span></p>
-<p><span style="font-family: Segoe UI;"><img src="../img/extraction Liquide Liquide.jpg" style="display: block; margin-left: auto; margin-right: auto;" width="580" height="654" /></span></p>
+<p><span style="font-family: Segoe UI;"><img src="../img/extraction Liquide Liquide.jpg" style="display: block; margin-left: auto; margin-right: auto;" width="580" /></span></p>
 <p><span style="font-family: Segoe UI;"><span class="bold">Exemple : l'extraction du diiode d'une solution aqueuse par le cyclohexane</span></span></p>
 <p><span style="font-family: Segoe UI;"><span class="bold">On donne le tableau de solubilité/miscibilité des espèces : </span></span></p>
 <p></p>
@@ -127,22 +127,22 @@ C'est le terme qui désigne la réalisation du mélange entre l’espèce chimiq
 <p></p>
 <p></p>
 <p>On choisit d'extraire le diiode dissout dans une solution aqueuse par du cyclohexane. D'après le tableau des solubilités, celui ci est plus soluble dans le cyclohexane que dans l'eau. On verse alors la solution de diiode dans l'ampoule à décanter, suivie de cyclohexane. Les 2 liquides sont non miscibles. Le cyclohexane occupe la phase supérieure, sa densité étant plus faible que l'eau :</p>
-<p><img src="../img/extraction de liode.jpg" style="display: block; margin-left: auto; margin-right: auto;" width="580" height="629" /></p>
+<p><img src="../img/extraction de liode.jpg" style="display: block; margin-left: auto; margin-right: auto;" width="580" /></p>
 <p></p>
 
 
 <h1>La matière l'échelle microscopique</h1>
 <p>Pour prévoir les propriétés de la matière à l'échelle macroscopique, il faudra explorer celle ci à l'échelle de l'atome et de ses électrons. Ce sont justement ces électrons qui sont responsables de la stabilité des atomes et des ions, et de leur association en molécules ou en édifice ionique.</p>
-<p><b><img src="../img/matiere-echelles.jpg" width="583" height="343" /></b></p>
+<p><b><img src="../img/matiere-echelles.jpg" width="583" /></b></p>
 <p>L’eau est une <b>substance </b>(A) constituée de <b>molécules</b> d’eau (B) constituées elles mêmes d’<b>atomes</b> (C ) d’hydrogène (E) et d’oxygène (D).</p>
 <p> </p>
 <p> </p>
 <h2>Formule des molécules</h2>
 <p>Une molécule est un édifice neutre constituée d’atomes liés entre eux par des liaisons covalentes. La formule de la molécule de méthane s’écrit CH<sub>4</sub></p>
 <p>Cette écriture signifie qu’elle possède un atome de carbone et 4 atomes d’hydrogène, liés entre eux comme sur la formule développée suivante :</p>
-<p><img src="../img/matiere-ch4.png" style="display: block; margin-left: auto; margin-right: auto;" width="155" height="147" /></p>
+<p><img src="../img/matiere-ch4.png" style="display: block; margin-left: auto; margin-right: auto;" width="155" /></p>
 <p><b>L’atome</b></p>
-<p style="text-align: center;"><b><img src="../img/matiere atome.png" style="display: block; margin-left: auto; margin-right: auto;" width="249" height="229" /></b>une représentation de l’atome</p>
+<p style="text-align: center;"><b><img src="../img/matiere atome.png" style="display: block; margin-left: auto; margin-right: auto;" width="249"  /></b>une représentation de l’atome</p>
 
 Dans cette représentation, le noyau est constitué de 2 types de particules (rouges et bleues). On verra qu'il s'agit de protons et de neutrons. Des électrons tournent autour de ce noyau. Le cercle en pointillé représente la limite de l'atome, c'est à dire la distance maximale à laquelle tournent les électrons.
 

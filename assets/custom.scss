@@ -102,7 +102,20 @@ figure img{ /*modif*/
 	overflow: scroll;
 	}
 
-img:hover{
+figure > img {
+      /* Syntaxe standard */
+    transition-property: width;
+    transition-duration: 0.4s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    
+    /* Hack Safari */
+    -webkit-transition-property: width, background;
+    -webkit-transition-duration: 0.4s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0s;  
+}
+figure > img:hover{
   width : 80%;
 }
 
