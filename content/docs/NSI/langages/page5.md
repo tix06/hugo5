@@ -9,6 +9,44 @@ Pour créer une cohérence dans le code, il est recommandé d'utiliser un *guide
 
 Une première façon de gérer les erreurs passe par la documentation. Le but de la documentation est de permettre à l'utilisateur d'une fonction de savoir comment l'appeler correctement et comment interpréter sa valeur de retour.
 
+## Spécification d'un algorithme
+Construire un algorithme consiste à découvrir les actions qu'il faut organiser dans le temps, et à choisir la manière de les organiser pour obtenir le résultat escompté par leurs effets cumulés. La *spécification* doit permettre d'aider à cette construction, sans ambiguïté.
+
+La spécification de l'agorithme doit comprendre : 
+
+* Le nom donné à cet algorithme. Ce nom soit être explicite, en rapport avec la tâche effectuée par l'algorithme
+* Une description du résultat de cet algorithme, ainsi que la manière avec laquelle on va s'y prendre
+* Le type et la nature des données en *entrée* 
+* Le type et la nature des données en *sortie*
+* eventuellement, le type et la nature des variables internes
+
+*Exemple :* recherche_maximum
+```
+"""
+L'algorithme recherche la valeur maximale dans la liste.
+variables en entrée : 
+------------------
+ma_liste : list, une liste de valeurs entieres, uniques, mises dans un ordre aléatoires.
+max : int, stocke la valeur maximale actuelle. Initialisé à 0.
+Sortie :
+------
+max : int, prend la valeur de l'élément le plus grand de la liste
+Principe : 
+--------
+on parcourt la liste avec une boucle bornée.
+si la valeur la valeur de max est inferieure à la valeur courante, max est actualisée avec cette valeur courante
+"""
+max := 0
+pour i allant du premier au dernier element de ma_liste faire
+    si i > max  
+        max := i
+    fin
+fin
+afficher max
+```
+
+Le *pseudo langage* adopté est celui utilisé dans wikipedia : [exemple](https://fr.wikipedia.org/wiki/Tri_fusion)
+
 ## Prototypage d'une fonction
 Une fonction doit être déclarée avant son utilisation. Cette déclaration est le prototype de la fonction. Le prototype doit indiquer à l'utilisateur le nom de la fonction, le type de la valeur de retour et le type des paramètres.
 
@@ -56,6 +94,8 @@ def a_rect(larg,long):
     a = larg * long
     return a
 ``` 
+
+On voit que le prototypage d'une fonction donne à peu près les mêmes informations que la *spécification d'un algorithme*.
 
 On pourra consulter la page du site [Lyceum](https://lyceum.fr/1g/nsi/7-langages-et-programmation/6-fonctions) pour plus d'informations.
 
