@@ -3,7 +3,7 @@ Title : Exercices boucles
 ---
 
 # Exercices sur les boucles
-## Flash card 1
+### Flash card 1
 
 Script A
 
@@ -44,7 +44,7 @@ for i in range(len(L)) :
   </div>
 </div>
 
-## Flash card 2
+### Flash card 2
 
 Script A 
 
@@ -88,7 +88,7 @@ On lance alors le script B. Qu'affiche ce programme?
 </div>
 
 
-## Flash card 3
+### Flash card 3
 
 Script A : 
 
@@ -121,13 +121,14 @@ print(i)
 
 
 
+
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front" style="font-size: 12px">
       <h1>while</h1>
       <p>Quelle valeur est affichée par chacun des scripts suivants:</p>
       <ol>
-        <li>script A</code></li>
+        <li>script A</li>
         <li>script B</li>
         <li>script C</li>
       </ol>
@@ -145,6 +146,136 @@ le devoir de math est fait<br></li>
     </div>
   </div>
 </div>
+
+### Flash card 4
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front" style="font-size: 12px">
+      <h1>while</h1>
+      <p>Quelle est la valeur de la variable n à la fin de l'exécution du script ci-dessous ?:<br>
+        n = 1<br>
+while n != 20:<br>
+... n += 2<br></p>
+<p>
+Choisir parmi les reponses : <br>
+A- 1<br>
+B- 20<br>
+C- 22<br>
+D- le programme ne termine pas, la boucle tourne indéfiniment
+</p>
+     
+    </div>
+    <div class="flip-card-back">
+      <h1>Réponse</h1>
+Reponse D : la variable n n'est jamais egale à 20, qui est la condition d'arrêt
+    </div>
+  </div>
+</div>
+
+### Flash card 5
+
+On définit une liste L de 12 nombres entiers, de 1 à 12, mélangés : <br>
+
+
+```
+L = [12,4,5,1,3,2,6,7,8,11,10,9]
+```
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front" style="font-size: 12px">
+      <h1>algorithmes sur les listes</h1>
+      
+
+      <ol>
+        <li>Quelle est la valeur de la variable m à la fin de l'exécution du script ci-dessous ?<br>
+        m = L[0]<br>
+        for j in range(len(L)):<br>
+        ... if m < L[j]:<br>
+        ...... m = L[j]<br>
+        </li>
+        <li>Que vaut alors la variable `j`?</li>
+        <li>Quelle est l'étendue des valeurs prises par j, du debut à la fin de la boucle bornée ?</li>
+        <li>Que vaut len(L)?</li>
+      </ol>
+
+    </div>
+    <div class="flip-card-back">
+      <h1>Réponses</h1>
+        <ol>
+          <li>1 : la valeur minimum de la liste</li>
+          <li>3 : la valeur min se trouve au rang 3</li>
+          <li>j va de 0 à 11</li>
+          <li>12</li>
+    </div>
+  </div>
+</div>
+
+### Flash card 6
+
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front" style="font-size: 12px">
+      <h1>comprehension de listes</h1>
+      
+      <ol>
+        <li>Que vaut u à la fin du script suivant ?<br>
+        t = [1, 6, 8, 3, 21]<br>
+        u = [x-2 for x in t]</li>
+        <li>Que vaut v à la fin du script suivant ?<br>
+t = [1, 2, 3, 4, 5]<br>
+v = {x: x*3 for x in t}</li>
+        <li>Que vaut w à la fin du script suivant ?<br>
+t = [1,2,3,4,5,6,7,8,9]<br>
+w = [c for c in t if c%3 == 0]</li>
+      </ol>
+    </div>
+    <div class="flip-card-back">
+      <h1>Réponses</h1>
+      <ol><li>[-1, 4, 6, 1, 19]</li>
+  
+        <li>{1: 3, 2: 6, 3: 9, 4: 12, 5: 15}</li>
+        <li>[3, 6, 9]</li>
+       
+      </ol>
+    </div>
+  </div>
+</div>
+
+### Flash card 7
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front" style="font-size: 12px">
+      <h1>comprehension de liste - suite</h1>
+      <p><code>tab = [ ('Léa', 14), ('Guillaume', 12), ('Anthony', 16), ('Anne', 15) ]</code><br>
+Quelle est la valeur de l'expression <br>[x[0] for x in tab if x[1]>=15] ?<br>
+</p>
+<p>
+Choisir parmi les reponses : <br>
+A- [('Anthony', 16), ('Anne', 15)]<br>
+
+B- ['Anthony', 'Anne']<br>
+
+C- [16, 15]<br>
+
+D- TypeError : 'tuple' object is not callable<br>
+</p>
+     
+    </div>
+    <div class="flip-card-back">
+      <h1>Réponse</h1>
+Reponse B 
+    </div>
+  </div>
+</div>
+
 
 # Relire le cours
 Lien vers la page [boucles for et while](/docs/python/pages/boucles/page1/index.html)

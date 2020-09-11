@@ -98,6 +98,25 @@ popu
 # affiche : [100, 90, 81, 74, 67, 60, 54, 49, 45, 40, 36, 33]
 ``` 
 
+**exemples avancés :** 
+
+* Avec expression conditionnelle : `[f(x) for x in <iterable> if <condition>]`
+
+  ```python
+  [x*x for x in range(10) if x % 2 == 0 and x*x > 20]
+  # affiche : [36, 64]
+  ```
+
+  Dans cet exemple, la valeur de x se situe dans l'étendue `range(10)`, mais doit en plus être paire `x % 2 == 0` et le carré doit être supérieur à 20 avec `x*x > 20`.
+
+* avec des boucles imbriquées :
+
+  ```python
+  L = [(1,2), (3,4), (5,6)]
+  [x for couple in L for x in couple]
+  # affiche [1, 2, 3, 4, 5, 6]
+  ```
+
 # Boucle `while`
 Un boucle `while` (tant que) s'éxecute tant qu'une condition est `True` : 
 
