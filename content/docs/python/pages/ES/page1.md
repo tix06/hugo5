@@ -16,7 +16,7 @@ print('We are the ' + clan + ' who say' + ' "'+ message + '!"')
 # We are the Vikings who say "Fight Invaders!"
 ```
 
-Pour afficher une chaine de caractère construite avec des variables, il faudra formater la chaine.
+Le problème de cette méthode de concaténation est que chaque partie composant la chaine doit être de type `str`. Cela est possible avec la fonction `str(variable`, mais il existe une méthode plus efficace : **formater la chaine**.
 
 La méthode `str.format()` sur les chaines de caractères : 
 
@@ -122,6 +122,13 @@ chat
 ```
 
 Exemple issu de la page [python.sdv.univ-paris-diderot.fr/07_fichiers](https://python.sdv.univ-paris-diderot.fr/07_fichiers/#72-ecriture-dans-un-fichier)
+
+## Caractères speciaux
+Certains caractères sont fort utiles lors de l’écriture de fichiers texte afin d’organiser les données. Le symbole ; est très utilisé comme séparateur de colonnes pour une matrice, on utilise également le passage à la ligne ou la tabulation. Comme ce ne sont pas des caractères « visibles », ils ont des codes :
+
+* `\` caractère d'echapement (par exemple pour écrire des guillemets dans une chaine)
+* `\n` : passage à la ligne
+* `\t` : tabulation, indique un passage à la colonne suivante dans le format tsv (Tabulation-separated values).
 
 # Liens
 * Voir cours sur le formatage des sorties : [Lien python.org](https://docs.python.org/fr/3/tutorial/inputoutput.html)

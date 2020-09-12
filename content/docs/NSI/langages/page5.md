@@ -102,7 +102,7 @@ On pourra consulter la page du site [Lyceum](https://lyceum.fr/1g/nsi/7-langages
 
 
 # Méthodes de gestion des erreurs
-## assertions
+## Traceback
 L'exécution d'un programme peut provoquer une erreur. Lorsque c'est le cas, l'exécution s'arrête immédiatement et l'interpréteur Python affiche une trace d'erreur.
 
 Cette dernière fournit des informations quant au chemin d'exécution qui a mené jusqu'à l'erreur et sur la cause de cette dernière.
@@ -115,11 +115,129 @@ On peut distinguer 3 types d'erreurs :
 * erreur d'execution
 * erreur de logique
 
+```python
+def inverse (x):
+    y = 1.0 / x
+    return y
+
+a = inverse(2)
+print(a)
+b = inverse(0)
+print(b)
+```
+L’interpréteur Python affiche ce qu’on appelle la pile d’appels ou pile d’exécution. La pile d’appel permet d’obtenir la liste de toutes les fonctions pour remonter jusqu’à celle où l’erreur s’est produite.
+
+```python
+ZeroDivisionError                         Traceback (most recent call last)
+<ipython-input-24-bdb719052d31> in <module>
+      5 a = inverse(2)
+      6 print(a)
+----> 7 b = inverse(0)
+      8 print(b)
+
+<ipython-input-24-bdb719052d31> in inverse(x)
+      1 def inverse (x):
+----> 2     y = 1.0 / x
+      3     return y
+      4 
+      5 a = inverse(2)
+
+ZeroDivisionError: float division by zero
+``` 
+
+## assertions
 Le rajout *provisoire* d'assertions dans le script va permettre d'anticiper sur les erreurs possibles de logique.
 
-Le mécanisme d'assertion est là pour empêcher des erreurs qui ne devraient pas se produire, en arrêtant prématurément le programme.
+Le mécanisme d'assertion est là pour empêcher des erreurs qui ne devraient pas se produire, en arrêtant prématurément le programme. C'est un mode de programmation *défensif*, dans lequel on vérifie les *préconditions*.
 
-Lien : [python.developpez.com](https://python.developpez.com/tutoriels/apprendre-programmation-python/notions-avancees/?page=gestion-d-erreurs)
+*Méthode :*  `asset <expression logique>, 'commentaire facumtatif'`
+
+L'expression logique doit être egale à `True` pour que le programme se poursuive.
+
+*Exemple avec une erreur d'execution :*
+
+```python
+def inverse (x):
+    assert b!=0,'argument nul'
+    y = 1.0 / x
+    return y
+```
+
+Lorsque l'on execute la fonction `inverse` avec zero comme argument, le programme s'arrête et renvoie le message suivant dans le `Traceback` : 
+
+```python
+inverse(0)
+
+AssertionError : argument nul
+```
+
+Mais l'interêt réside surtout dans l'utilisation d'*assertion* pour prévenir une possible erreur logique : 
+
+On souhaite maintenant obtenir le même comportement (arrêt pour une valeur sortant de l'ensemble de définition d'une fonction) pour la fonction de conversion de degré Celsius en degré Fahrenheit. En effet, il n’y aurait aucun sens de convertir une température inférieure à la température correspondant au zéro absolu. (exemple issu de [univ.lille](https://www.fil.univ-lille1.fr/~wegrzyno/portail/Info/Doc/HTML/seq2_booleens_conditionnelles.html))
+
+```python
+def en_fahrenheit(c) :
+    """
+      conversion en Fahrenheit d'une température donnée en Celsius
+      C.U. c doit être supérieure au zéro absolu.
+
+    """
+    assert c>-273.15, valeur inferieure au zero absolu
+    return 9*c/5+32
+```
+
+Alors : 
+
+```python
+en_fahrenheit(-500)
+# Affichage
+AssertionError valeur inferieure au zero absolu
+``` 
+
+
+
+
+## Mécanisme d'exception `try-except`
+Le mécanisme des exceptions permet au programme de « rattraper » les erreurs, de détecter qu’une erreur s’est produite et d’agir en conséquence afin que le programme ne s’arrête pas.
+
+Afin de rattraper l’erreur, on insère le code susceptible de produire une erreur entre les mots clés `try` et `except`.
+
+*Méthode :*
+
+```python
+try:
+    # ... instructions à protéger
+except:
+    # ... que faire en cas d'erreur
+else:
+    # ... que faire lorsque aucune erreur n'est apparue
+```
+
+*Exemple :*
+
+```python
+def inverse(x):
+    y = 1.0 / x
+    return y
+
+
+try:
+    a = inverse(2)
+    print(a)
+    b = inverse(0)  # déclenche une exception
+    print(b)
+except:
+    print("le programme a déclenché une erreur")
+
+# affiche : 
+0.5
+le programme a déclenché une erreur
+```
+
+
+# Liens
+* [python.developpez.com](https://python.developpez.com/tutoriels/apprendre-programmation-python/notions-avancees/?page=gestion-d-erreurs)
+* Pour aller plus loin sur la gestion des Exceptions : [xavierdupre.fr les bases en python](http://www.xavierdupre.fr/app/teachpyx/helpsphinx/c_exception/exception.html)
 
 
 
