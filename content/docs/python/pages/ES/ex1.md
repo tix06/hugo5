@@ -41,14 +41,14 @@ print(somme(x,y))
 
 <div class="flip-card">
   <div class="flip-card-inner">
-    <div class="flip-card-front" style="font-size: 12px">
+    <div class="flip-card-front" style="font-size: 14px">
       <h1>Input</h1>
       On lance le programme et on répond :<br>
       entrer un nombre : <b>12</b><br>
       entrer un 2e nombre : <b>13</b><br>
       <p>Qu'est ce qui est affiché après la saisie par l'utilisateur ?</p>
       <p>
-        A- 25
+        A- 25<br>
         B- '1213'
       </p>
     </div>
@@ -89,7 +89,7 @@ with open('liste_francais.txt', encoding='iso-8859-1') as f:
 
 <div class="flip-card">
   <div class="flip-card-inner">
-    <div class="flip-card-front" style="font-size: 12px">
+    <div class="flip-card-front" style="font-size: 14px">
       <h1>Lecture d'un fichier</h1> 
       <ol>
        <li>Que contient la variable mot ?</li> 
