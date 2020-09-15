@@ -21,8 +21,8 @@ def servir_sucre(client,nombre=0):
       Que retourne la fonction dans les cas suivants?
 
       <ol>
-      <li>servir_cafe('James')</li>
-      <li>servir_cafe('Johanna',3)</li>
+      <li>servir_sucre('James')</li>
+      <li>servir_sucre('Johanna',3)</li>
       </ol>
     </div>
     <div class="flip-card-back" style="font-size: 14px">

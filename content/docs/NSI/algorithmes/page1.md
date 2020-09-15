@@ -29,7 +29,7 @@ Voici le principe de base pour calculer la complexité d’une boucle bornée. 
 
 Alors la complexité de cette boucle est :
 $$\sum_{i=deb}^{fin-1} C_i$$
-où C représente la complexité de l’itération[^2] i
+où C représente la complexité de l’itération[^1] i
 
 Le principe est le même pour une boucle bornée (non conditionnelle), mais il est moins facile de déterminer le nombre d’itérations de la boucle. Pour ce faire, la méthode classique est d’étudier plus en détails le variant de boucle déjà utilisé pour prouver la terminaison de la boucle. On détermine :
 
@@ -63,8 +63,10 @@ Ces complexités sont classées par temps d'execution croissant de l'agorithme c
 | &Theta;(n<sup>3</sup>) | cubique, polynômial   |
 | &Theta;(2<sup>n</sup>) |  exponentiel (problème très difficiles) |
 
+Approfondir la notion de complexité : voir annexe[^2]
+
 # Exemple 1 : la recherche dans une liste triée
-## Enoncé du problème[^1]
+## Enoncé du problème[^3]
 Supposons que le problème posé soit de trouver un nom X dans un annuaire téléphonique qui consiste en une liste triée alphabétiquement. On peut s'y prendre de plusieurs façons différentes. En voici deux :
 
 1. Recherche linéaire : parcourir les pages dans l'ordre (alphabétique) jusqu'à trouver le nom X cherché. C'est l'algorithme de lecture exhaustif, aussi appelé algorithme de recherche linéaire.
@@ -74,7 +76,40 @@ Supposons que le problème posé soit de trouver un nom X dans un annuaire tél�
 ## Algorithme de lecture exhaustif (recherche linéaire)
 Cet algorithme pourrait fonctionner même si les mots sont rangés dans le désordre : il s'agit de parcourir tous les mots, du premier au dernier, jusqu'à tomber sur le mot recherché dans cet annuaire.
 
+*Illustration avec un jeu de cartes non trié:* Cherchons la dame de coeur dans la main d'un joueur.
 
+<figure>
+  <img src="../images/cartes_coeur.png">
+  <figcaption>main du joueur</figcaption>
+</figure>
+
+On suppose que la seule manière de parcourir le jeu du joueur est de retourner les cartes une à une. On s'arrête si on trouve la carte. Ou bien si on arrive à la fin sans avoir trouvé la bonne carte.
+
+La fonction suivante réalise une *recherche linéaire* de la valeur X sur une liste L de valeurs numériques. Pour la recherche d'une carte dans un jeu de cartes, ou d'un nom X dans un dictionnaire, il faudra adpater légèrement le script, mais la structure est la même.
+
+```python
+def recherche(X,L):
+    """
+    recherche une valeur dans une liste et renvoie l'indice si la valeur est trouvée, -1 sinon
+    Params :
+    -------------------
+    X : int, valeur à trouver
+    L : list, une liste de valeurs entieres, dans un ordre quelconque.
+    Sortie : 
+    ------
+    j : int, indice de la position de la valeur dans la liste
+    Principe :
+    --------
+    on parcourt la liste avec une boucle non bornée, tant que X n'est pas trouvé dans la liste
+    on augmente la valeur de j à chaque nouvelle itération
+    """
+    j = 0
+    n = len(L)
+    while j<n and X!=L[j]:
+        j += 1
+    if j==n : return -1
+    return j
+```
 
 ### Complexité
 Pour chacune de ces méthodes il existe un **pire** des cas et un **meilleur** des cas. 
@@ -100,7 +135,7 @@ L'analyse se fait en établissant des **invariants de boucle**, c'est à dire de
 
 * invariant de boucle : au debut de la première itération, j=1. Et au début de la kieme itération, j=k et L[i]≠X
 
-* condition d'arrêt : si au debut de la kieme itération de la boucle on a : k≤ n et L[k]=X, alors on s'arrête avec j=k; si on a k=n+1, alors on va s'arrêter avec j=0.
+* condition d'arrêt : si au debut de la kieme itération de la boucle on a : k≤ n et L[k]=X, alors on s'arrête avec j=k; si on a k=n+1, alors on va s'arrêter avec j=-1.
 
 *Remarque :* La complexité dépend de la taille des données, mais aussi, pour une taille fixée, des différentes données possibles, de leur possible redondance.
 
@@ -118,7 +153,7 @@ où p(d) est la probabilité que l'on ait la donnée d en entrée de l'algorithm
 et coût_A(d) représente la complexité en temps de l'algorithme A sur la donnée d.
 
 ## Algorithme de recherche dichotomique
-### Programme python
+### Programme python recursif
 ```python
 def rechDichoAux(tabTrie,x,debut,fin):
     if debut == fin :
@@ -373,5 +408,11 @@ On peut alors tester le programme (jupyter notebook):
     </tr>
 </table>
 
-[^1]: wikipedia : analyse de la complexité : [https://fr.wikipedia.org/wiki/Analyse_de_la_complexité_des_algorithmes](https://fr.wikipedia.org/wiki/Analyse_de_la_complexité_des_algorithmes)
-[^2]: itération : succession d'états dans un processus
+
+
+
+[^1]: itération : succession d'états dans un processus
+[^2]: wikipedia : analyse de la complexité : [wikipedia.org/wiki/Analyse_de_la_complexité_des_algorithmes](https://fr.wikipedia.org/wiki/Analyse_de_la_complexité_des_algorithmes)
+
+[^3]: recherche linéaire et dichotomique : [document eduscol 1ere NSI](https://cache.media.eduscol.education.fr/file/NSI/76/3/RA_Lycee_G_NSI_algo-dichoto_1170763.pdf)
+
