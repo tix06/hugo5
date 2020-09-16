@@ -56,12 +56,41 @@ Ces complexités sont classées par temps d'execution croissant de l'agorithme c
 | complexité | classe |
 | --- | --- |
 | &Theta;(1) | temps constant |
-| &Theta;(log n) | logarithmique | 
+| &Theta;(log n) | logarithmique en base 2 : log<sub>2</sub>(n) | 
 | &Theta;(n) | linéaire |
 | &Theta;(n*log n) | quasi linéaire  |
 | &Theta;(n<sup>2</sup>) | quadratique, polynômial   |
 | &Theta;(n<sup>3</sup>) | cubique, polynômial   |
 | &Theta;(2<sup>n</sup>) |  exponentiel (problème très difficiles) |
+
+On peut observer l'evolution des courbes t(n) en fonction de n (nombre de données). t(n) sera le *temps linéaire*:
+
+<figure>
+  <img src="../images/graphique1.png">
+  <figcaption>1 et log(n) : log(n) a une croissance faible</figcaption>
+</figure>
+
+<figure>
+  <img src="../images/graphique2.png">
+  <figcaption>n*log(n) et n ont une croissance comparable</figcaption>
+</figure>
+
+<figure>
+  <img src="../images/graphique3.png">
+  <figcaption>n<sup>2</sup> domine largement, et diverge</figcaption>
+</figure>
+
+<figure>
+  <img src="../images/graphique4.png">
+  <figcaption>n<sup>3</sup> domine largement et diverge</figcaption>
+</figure>
+
+<figure>
+  <img src="../images/graphique5.png">
+  <figcaption>2<sup>n</sup> domine largement et diverge encore plus</figcaption>
+</figure>
+
+Les problèmes à résoudre ont le plus souvent un nombre n de données bien supérieur à 15, comme présenté sur le dernier graphique. Les effets de convergence sont donc encore plus marqués.
 
 Approfondir la notion de complexité : voir annexe[^2]
 
@@ -153,6 +182,31 @@ où p(d) est la probabilité que l'on ait la donnée d en entrée de l'algorithm
 et coût_A(d) représente la complexité en temps de l'algorithme A sur la donnée d.
 
 ## Algorithme de recherche dichotomique
+### Programme python itératif
+L'algorithme de recherche dichotomique a été traité en classe de math pour rechercher la position sur l'axe des x qui donne une image nulle par la fonction f : [Lien vers l'activité de Y Monka sur maths-et-tiques.fr](https://www.maths-et-tiques.fr/telech/Algo_SolEqua.pdf)
+
+L'idée est de réduire l'intervale des abscisses de moitié à chaque itération, jusqu'à ce que l'encadrement [a,b] de la valeur x soit inférieur à l'intervale de confiance voulu (valeur &epsilon;) : jusqu'à ce que : $b-a < \epsilon$
+
+On va adapter le raisonnement réalisé avec la recherche du zero de la manière suivante : 
+
+Soit une liste L d'objets triés dans l'ordre croissant (une liste de mots, ou de cartes à jouer...), et un objet X à trouver dans cette liste : On recherche la position (l'indice) de X dans la liste L en procédant par dichotomie si : 
+
+* On part d'un intervale [a,b] sur les indices de la liste.
+* On calcule le milieu (ou du moins la valeur proche) `m = (b-a) // 2`
+* si X se trouve dans la partie inférieur, c'est à dire si `X < L[m]` : on prend l'intervale [a,m]
+* sinon on prend l'intervale [m,b]
+
+A chaque itération, l'intervale est réduit de moitié. Le programme s'arrête lorsque l'intervale ne contient qu'un seul indice (a et b son égaux).
+
+*Illustration avec un jeu de cartes trié : rechercher la Dame de coeur*
+
+<figure>
+  <img src="../images/cartes_rechercheD.png">
+  <figcaption>recherche dans un jeu de cartes triées</figcaption>
+</figure>
+
+Le script python se trouve ici : [lyceum rappels sur la recherche dichotomique](https://lyceum.fr/tg/nsi/5-algorithmique/0-rappels/#un-algorithme-efficace-la-recherche-dichotomique)
+
 ### Programme python recursif
 ```python
 def rechDichoAux(tabTrie,x,debut,fin):
