@@ -7,7 +7,7 @@ bookShowToc: false
 # Civilisations anciennes
 Le document suivant donne un aperçu des périodes d'existence d'anciennes civilisations. On pourra se référer à la page suivante pour plus de détails : [http://www.essential-humanities.net/history-overview/world-history-timeline/](http://www.essential-humanities.net/history-overview/world-history-timeline/)
 
-L'apparition des grandes civilisations commence alors que le néolithique prend fin. C'est l'usage de la metallurgie qui aura pour conséquence de structurer davantege la société, avec l'usage d'armes en métal par des soldats spécialisés. La protection des richesses accumulées par les producteurs est confiée à des guerriers professionnels. La société se hiérarchise.
+L'apparition des grandes civilisations commence alors que le néolithique prend fin. C'est l'usage de la metallurgie qui aura pour conséquence de structurer davantage la société, avec l'usage d'armes en métal par des soldats spécialisés. La protection des richesses accumulées par les producteurs est confiée à des guerriers professionnels. La société se hiérarchise.
 
 <div class="timeline">
 <div class="grid">

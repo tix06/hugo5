@@ -88,7 +88,7 @@ Si l'on veut afficher un texte, il sera préférable d'utiliser la fonction `scr
 Ce mini TP peut faire partie d'une séance plus soutenue, avec le scénario proposé par la DANE de Normandie : 
 
 * [voir ici (radar de recul)](https://numerique-sciences-informatiques.discip.ac-caen.fr/IMG/pdf/radar-de-recul.pdf)
-* [page principale avec telechargement de [micro_grove.py](https://numerique-sciences-informatiques.discip.ac-caen.fr/kit-grove-pour-micro-bit-et-applications-en-snt)
+* page principale avec telechargement de [micro_grove.py](https://numerique-sciences-informatiques.discip.ac-caen.fr/kit-grove-pour-micro-bit-et-applications-en-snt)
 
 ## Script 
 A l'aide de l'un des editeurs proposés plus haut, saisir le script suivant : 
