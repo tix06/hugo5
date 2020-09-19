@@ -221,6 +221,8 @@ et coût_A(d) représente la complexité en temps de l'algorithme A sur la donn�
 
 ## Algorithme de recherche dichotomique
 ### Programme python itératif
+> Principe
+
 L'algorithme de recherche dichotomique a été traité en classe de math pour rechercher la position sur l'axe des x qui donne une image nulle par la fonction f : [Lien vers l'activité de Y Monka sur maths-et-tiques.fr](https://www.maths-et-tiques.fr/telech/Algo_SolEqua.pdf)
 
 L'idée est de réduire l'intervale des abscisses de moitié à chaque itération, jusqu'à ce que l'encadrement [a,b] de la valeur x soit inférieur à l'intervale de confiance voulu (valeur &epsilon;) : jusqu'à ce que : $b-a < \epsilon$
@@ -243,7 +245,42 @@ A chaque itération, l'intervale est réduit de moitié. Le programme s'arrête 
   <figcaption>recherche dans un jeu de cartes triées</figcaption>
 </figure>
 
-Le script python se trouve ici : [lyceum rappels sur la recherche dichotomique](https://lyceum.fr/tg/nsi/5-algorithmique/0-rappels/#un-algorithme-efficace-la-recherche-dichotomique)
+Le script python complet se trouve ici : [lyceum rappels sur la recherche dichotomique](https://lyceum.fr/tg/nsi/5-algorithmique/0-rappels/#un-algorithme-efficace-la-recherche-dichotomique)
+
+> Extrait du script 
+
+```python
+...
+gauche = 0
+droite = len(mots) 
+trouve = False
+while gauche <= droite and not trouve:
+  milieu = (gauche + droite) // 2 # il, s'agit d'une division entière
+...
+``` 
+
+
+> Complexité
+
+* La dimension des données sera prise comme egale à `len(mots)`. Appelons cette valeur n.
+* Le variant de boucle, c'est $droite-gauche$, qui vaut au départ n, et 0 à la fin de la boucle, si la valeur n'a pas été trouvée (pire des cas).
+* Les instructions essentielles de la boucle, ce sont les comparaisons 
+  * `mots[milieu] == X`
+  * et `mots[milieu] > X`
+
+Pour simplifier le raisonnement, disons qu'il n'y a qu'une seule instruction essentielle par itération.
+
+A la fin de la première itération, le variant de boucle vaut n/2.
+
+On peut alors exprimer le nombre d'opérations T(n) pour cet algorithme comme égal à : $$T(n) = 1 + T(n/2)$$
+
+On aura, avec le même raisonnement, $$T(n/2) = 1 + T(n/4)$$
+
+Et ainsi de suite jusqu'à ce que n//2, et le variant de boucle, soient egaux à 0. 
+
+On a alors $T(n) = 1 + 1 + ...$ un nombre de fois égal au nombre de divisions par 2 de n, nécessaires pour amener n à 0. Cette valeur est egale à $log_2(n)$.
+
+La complexité est alors **O(log(n))**.
 
 ### Programme python recursif
 ```python
@@ -530,18 +567,21 @@ $$T(n) = p \times \tfrac{n(n+1)}{2}$$ (somme des termes d'une suite arithmétiqu
 ## Exercice 4 : 
 Vous êtes face à un mur qui s’étend à l’infini dans les deux directions. Il y a une porte dans ce 􏰒􏰑
 mur, mais vous ne connaissez ni la distance, ni la direction dans laquelle elle se trouve. Par ailleurs, l’obscurité vous empêche de voir la porte à moins d’être juste devant elle.
-Décrire un algorithme vous permettant de trouver cette porte en un temps linéaire vis-à-vis de la distance qui vous sépare de celle-ci.
+
+> Décrire un algorithme vous permettant de trouver cette porte en un temps linéaire vis-à-vis de la distance qui vous sépare de celle-ci.
 
 ## Exercice 5 : 
 Dans un groupe de n individus , une star est quelqu’un que tout le monde connait mais qui ne 􏰒􏰑
 connait personne. Pour trouver une star, s’il en existe une, vous ne pouvez poser aux individus de ce groupe que des questions du type : « connaissez-vous x ? ».
-Combien de stars au maximum peut-il exister dans un groupe ?
-Donner un algorithme trouvant une star s’il en existe une (ou déterminant qu’il n’en existe pas) et de coût linéaire (en prenant comme mesure de la complexité le nombre de questions posées).
+
+1. Combien de stars au maximum peut-il exister dans un groupe ?
+2. Donner un algorithme trouvant une star s’il en existe une (ou déterminant qu’il n’en existe pas) et de coût linéaire (en prenant comme mesure de la complexité le nombre de questions posées).
 
 ## Exercice 6 : 
 Le problème est de déterminer à partir de quel étage d’un immeuble sauter par une fenêtre est 􏰒􏰑
 fatal. Vous êtes dans un immeuble à n étages (numérotés de 1 à n) et vous disposez de k étudiants. Il n’y a qu’une opération possible pour tester si la hauteur d’un étage est fatale : faire sauter un étudiant par la fenêtre. S’il survit, vous pouvez le réutiliser ensuite, sinon vous ne pouvez plus.
-Vous devez proposer un algorithme pour trouver la hauteur à partir de laquelle un saut est fatal en faisant le minimum de sauts.
+
+> Vous devez proposer un algorithme pour trouver la hauteur à partir de laquelle un saut est fatal en faisant le minimum de sauts.
 
 *Donnée :* on suppose k > log n
 
