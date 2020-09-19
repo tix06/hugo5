@@ -3,13 +3,14 @@ Title : Complexité
 ---
 
 # cout spatial et temporel
-
-## Complexité temporelle
-
 L'execution d'un algorithme nécessite l'utilisation des ressources de l'ordinateur : 
 
 - complexité en temps : temps de calcul pour executer les operations. On supposera qu'il correspond au nombre d'opérations effectuées par le programme.
 - complexité spatiale : occupation de la mémoire pour contenir et manipuler le programme et ses données. Peut s'exprimer en nombre de mots mémoires.
+
+## Complexité temporelle
+C'est une estimation du temps d'execution d'un programme, independamment de la machine.
+En pratique, cela correspond au nombre d'opérations effectuées par le programme.
 
 Pour evaluer la complexité temporelle, on peut mettre en evidence plusieurs opérations fondamentales. Le temps d'éxecution d'un algorithme resolvant ce genre de problème est toujours proportionnel au nombre de ces opérations : 
 
@@ -21,17 +22,44 @@ Il faut souvent définir une mesure sur les données qui réflète la quantité 
 C'est la complexité spatiale.
 
 # Evaluer la complexité (temporelle)
-La complexité d’un algorithme sera (sauf mention contraire) exprimée sous la forme : *O*(*g*(*n*)). Il s'agira d'estimer, le plus souvent, la complexité dans le pire des cas (sa borne supérieure), ou bien, lorsque cela est pertinent, la complexité asymptotique.
+## Principe
+Étant donné que la durée d'exécution d'un algorithme peut varier entre différentes entrées, on considère généralement la complexité temporelle dans le cas le plus défavorable, qui correspond à la durée maximale. 
+
+Par exemple, avec l'algorithme de recherche séquentielle, ce temps correspondrait à trouver l'élément dans la liste comme s'il occupait la dernière position (voir [plus loin](#algorithme-de-lecture-exhaustif-recherche-linéaire)).
+
+La complexité d’un algorithme sera alors (sauf mention contraire) exprimée sous la forme : *O*(*g*(*n*)). Ce qui correspond à la complexité *dans le pire des cas* (sa borne supérieure), ou bien, lorsque cela est pertinent, la complexité asymptotique.
 
 En pratique, on ne comptera que les opérations estimées **importantes** : celles qui ne changent pas selon les nuances du langage utilisées lors de la programmation (boucle while et boucle for...) mais qui changent selon le problème.
 
+## Exemple avec une boucle bornée
 Voici le principe de base pour calculer la complexité d’une boucle bornée. Soit (deb,fin) ∈ Z<sup>2</sup>, considérons une boucle de type `for i in range(deb, fin):`
 
 Alors la complexité de cette boucle est :
 $$\sum_{i=deb}^{fin-1} C_i$$
 où C représente la complexité de l’itération[^1] i
 
-Le principe est le même pour une boucle bornée (non conditionnelle), mais il est moins facile de déterminer le nombre d’itérations de la boucle. Pour ce faire, la méthode classique est d’étudier plus en détails le variant de boucle déjà utilisé pour prouver la terminaison de la boucle. On détermine :
+```python
+def multiplie1(b,n)
+for i in range(n):
+  L.append(b*i)
+```
+
+Le programme execute n fois la ligne 3. Sa complexité est égale à n : 
+$$g(n) = n$$
+
+Si on ajoute des lignes dans la boucle `for`, pour faire par exemple : 
+
+```python
+def multiplie2(b,n)
+for i in range(n):
+  y = b * i
+  L.append(y)
+```
+
+On pourrait penser que la complexité est $g(n) = 2\times n$. Or cette différence ne vient que d'une différence d'implémentation du même algorithme, et ne doit pas être considérée pour le calcul de la complexité. On aura alors pour cette 2^e fonction: $$g(n) = n$$.
+
+## Boucle non bornée : variant de boucle
+Le principe est le même pour une boucle non bornée (non conditionnelle), mais il est moins facile de déterminer le nombre d’itérations de la boucle. Pour ce faire, la méthode classique est d’étudier plus en détails le **variant de boucle** déjà utilisé pour prouver la terminaison de la boucle. On détermine :
 
 * La valeur initiale du variant de boucle ;
 * Sa valeur finale ;
@@ -39,18 +67,34 @@ Le principe est le même pour une boucle bornée (non conditionnelle), mais il 
 
 on peut alors en déduire le nombre d’itérations de la boucle.
 
-On utilise les notations de **Landau :**
+*Exemple :* Avec `multiplie3`, le variant de boucle, c'est `i`. Sa valeur passe de n - 1 à 0. Le nombre d'instructions élementaires dans la boucle est de 3.
+
+```python
+def multiplie3(b,n)
+i = n - 1
+while i >=0 : 
+  y = b * i
+  L.append(y)
+  i -= 1
+```
+
+La complexité serait alors $g(n) = 3 \times n$, mais on prendra $g(n) = n$
+
+
+## Notations de **Landau** 
 
 * **Notation O : la borne superieure :** g domine f
 on note f = O(g) s'il existe un nombre réel positif a et un rang n de f<sub>n</sub> tels que f(n) ≤ a.g(n) : 
 
 $$\exists c \in \mathbb{R}^+, tels \quad que\quad   \forall n_o \in \mathbb{N},  |f(n_o)|\leq c.|g(n)| $$
 
-En pratique, la recherche de la complexité revient à déterminer cette fonction (ou cette suite) g. On note la complexité **O(g)**. On ignore l'eventuel coefficient multiplicateur c et on ne conserve que le terme le plus divergent dans le cas où g contienne plusieurs termes. **T(n) = O(g(n))**. 
+En pratique, la recherche de la complexité revient à déterminer cette fonction (ou cette suite) g. On note la complexité **O(g)**. On ignore l'eventuel coefficient multiplicateur c et on ne conserve que le terme le plus divergent dans le cas où g contienne plusieurs termes. **T(n) = O(g(n))**.
+
+Pour l'exemple précédent, la complexité est notée **O(n)** en notation de Landau.
 
 * **Notation &Theta; :** Lorsqu'il est possible de déterminer une fonction asymptotique de la complexité, la notation devient &Theta;(g).
 
-* Principales classes de la complexité :*
+# Principales classes de la complexité 
 Ces complexités sont classées par temps d'execution croissant de l'agorithme correspondant.
 
 | complexité | classe |
@@ -154,26 +198,20 @@ Les **éléments significatifs** pour analyser la complexité en nombre d'opéra
 
 L'instruction `j←j+1` est dépendante du type de boucle, par exemple, while ≠ for. Elle disparait si on programme différemment.
 
-Il en est de même pour la comparaison `j≤n` : il ne faudra pas les prendre en compte pour évaluer l'algorithme.
+Il en est de même pour la comparaison `j<n` : il ne faudra pas les prendre en compte pour évaluer l'algorithme.
 
 Les opérations significatives sont donc les comparaisons de X avec les elements de la liste : il en existe une par itération.
 
-### Invariant de boucle et condition d'arrêt
 
-L'analyse se fait en établissant des **invariants de boucle**, c'est à dire des propositions qui sont vraies à chaque itération, et des **conditions d'arrêt**.
-
-* invariant de boucle : au debut de la première itération, j=1. Et au début de la kieme itération, j=k et L[i]≠X
-
-* condition d'arrêt : si au debut de la kieme itération de la boucle on a : k≤ n et L[k]=X, alors on s'arrête avec j=k; si on a k=n+1, alors on va s'arrêter avec j=-1.
-
-*Remarque :* La complexité dépend de la taille des données, mais aussi, pour une taille fixée, des différentes données possibles, de leur possible redondance.
-
+### Calcul de la complexité
 * **Complexité dans le meilleur et le pire des cas:** La complexité se situe entre 
 
   - Min(n) = 1 : meilleur des cas
   - et Max(n) = n : pire des cas
 
-* **Complexité en moyenne:**  
+En notation de Landau, on écrit que la complexité (dans le pire des cas) est: **O(n)**
+
+* **Complexité en moyenne &Theta;(g(n)):**  
 
 <p>$$Moy_A(n) = \sum_{d \in D_n} p(d).coût_A(d)$$</p>
 
@@ -317,6 +355,88 @@ $$n^2(n-1)$$
 * La complexité asymptotique est alors : 
 $$Min(n) = Max(n) = Moy(n) = n^3 $$
 
+
+<div class="essentiel">
+ <div class="entete">
+  L'essentiel à retenir
+ </div>
+ <div class="resume">
+ </div>
+ <h2>Complexité temporelle</h2>
+
+<h3>Definition</h3>
+
+<p>C&#8217;est une estimation du temps d&#8217;execution d&#8217;un programme, independamment de la machine.
+En pratique, cela correspond au nombre d&#8217;opérations effectuées par le programme. Ce nombre d&#8217;opérations dépendant de la taille n des données en entrée, on évalue une fonction <strong>g(n)</strong>. </p>
+
+<h3>Notation de Landau</h3>
+
+<p>Le plus souvent, il s&#8217;agira d&#8217;estimer la complexité dans le pire des cas, exprimée sous la forme : <em>O</em>(<em>g</em>(<em>n</em>)).</p>
+
+<p>Pour l&#8217;exemple sur la fonction <code>multiplie</code>, la complexité est notée <strong>O(n)</strong> en notation de Landau.</p>
+
+<p>Lorsqu&#8217;il est possible de déterminer une fonction asymptotique de la complexité, la notation devient &Theta;(g).</p>
+
+<h2>Règles pour estimer la complexité O(g(n))</h2>
+
+<ul>
+<li>Poser n = &#8220;la taille des paramètres&#8221;.</li>
+<li>Ne compter que les instructions essentielles. Celles-ci apportent une unité au calcul de g(n).</li>
+<li>Pour chacune des boucles du programme, repérer le <strong>variant de boucle</strong> et calculer le nombre d&#8217;itérations : combien de fois on passe dans la boucle.</li>
+<li>Si g(n) contient une somme de termes, conserver uniquement le plus divergent.</li>
+<li>Ne pas considérer les multiplicateurs C : si g(n) = C.f(n), alors g(n) = f(n). Par exemple, si g(n) = 3*n, prendre g(n) = n.</li>
+<li>Sauf précision contraire, la complexité demandée est la complexité au pire en temps.</li>
+</ul>
+
+<h2>Principales classes de complexité</h2>
+
+<p>Ces complexités sont classées par temps d&#8217;execution croissant de l&#8217;agorithme correspondant.</p>
+
+<table>
+<colgroup>
+<col/>
+<col/>
+</colgroup>
+
+<thead>
+<tr>
+  <th>complexité</th>
+  <th>classe</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+  <td>&Theta;(1)</td>
+  <td>temps constant</td>
+</tr>
+<tr>
+  <td>&Theta;(log n)</td>
+  <td>logarithmique en base 2 : log<sub>2</sub>(n)</td>
+</tr>
+<tr>
+  <td>&Theta;(n)</td>
+  <td>linéaire</td>
+</tr>
+<tr>
+  <td>&Theta;(n*log n)</td>
+  <td>quasi linéaire</td>
+</tr>
+<tr>
+  <td>&Theta;(n<sup>2</sup>)</td>
+  <td>quadratique, polynômial</td>
+</tr>
+<tr>
+  <td>&Theta;(n<sup>3</sup>)</td>
+  <td>cubique, polynômial</td>
+</tr>
+<tr>
+  <td>&Theta;(2<sup>n</sup>)</td>
+  <td>exponentiel (problème très difficiles)</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 
 # Exercices
@@ -469,4 +589,5 @@ On peut alors tester le programme (jupyter notebook):
 [^2]: wikipedia : analyse de la complexité : [wikipedia.org/wiki/Analyse_de_la_complexité_des_algorithmes](https://fr.wikipedia.org/wiki/Analyse_de_la_complexité_des_algorithmes)
 
 [^3]: recherche linéaire et dichotomique : [document eduscol 1ere NSI](https://cache.media.eduscol.education.fr/file/NSI/76/3/RA_Lycee_G_NSI_algo-dichoto_1170763.pdf)
+[^4]: invariant de boucle : [wikipedia](https://fr.wikipedia.org/wiki/Invariant_de_boucle)
 
