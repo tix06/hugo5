@@ -568,7 +568,16 @@ $$T(n) = p \times \tfrac{n(n+1)}{2}$$ (somme des termes d'une suite arithmétiqu
 Vous êtes face à un mur qui s’étend à l’infini dans les deux directions. Il y a une porte dans ce 􏰒􏰑
 mur, mais vous ne connaissez ni la distance, ni la direction dans laquelle elle se trouve. Par ailleurs, l’obscurité vous empêche de voir la porte à moins d’être juste devant elle.
 
+Vous avez l'idée, naïve, d'explorer petit à petit dans les 2 directions du mur, en revenant en arrière à chaque nouveau mètre exploré.
+
+1. Faites un schéma de la situation.
+2. Etablir, à l'aide d'un tableau, le nombre de pas effectués en fonction de la distance explorée dans les 2 directions.
+3. Montrer que l'algorithme naïf utilisé est de complexité quadratique en L, la distance à la porte.
+4. Existe t-il une méthode plus efficace, permettant de trouver cette porte en un temps linéaire vis-à-vis de la distance qui vous sépare de celle-ci. ?
+
+<!--
 > Décrire un algorithme vous permettant de trouver cette porte en un temps linéaire vis-à-vis de la distance qui vous sépare de celle-ci.
+
 
 ## Exercice 5 : 
 Dans un groupe de n individus , une star est quelqu’un que tout le monde connait mais qui ne 􏰒􏰑
@@ -584,7 +593,7 @@ fatal. Vous êtes dans un immeuble à n étages (numérotés de 1 à n) et
 > Vous devez proposer un algorithme pour trouver la hauteur à partir de laquelle un saut est fatal en faisant le minimum de sauts.
 
 *Donnée :* on suppose k > log n
-
+-->
 
 # Corrections
 ## correction de l'ex 2
