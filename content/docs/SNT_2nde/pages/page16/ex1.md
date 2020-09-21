@@ -91,19 +91,33 @@ Title : codage exercices
 </div>
 
 ### Flash card 4
+
+On peut vouloir convertir les données avec des valeurs **exactes** et non approchées. Pour eviter les confusions avec le kilobit, on utilise un autre nom pour l'unité : le **Kibibit (Kibit)**, qui vaut **1024 bits** (soit 2<sup>10</sup>). 
+
+Les multiples de l'octet deviennent: Kibioctet (Kio), Mébioctet (Mio), Gibioctet (Gio), Tébioctet (Tio), Pébioctet (Pio).
+
+Le tableau de convertion est alors le suivant : 
+
+| unité | valeur exacte, en octets |
+|--- | --- |
+| Kibioctets (Kio) | 2<sup>10</sup> |
+| Mébioctet (Mio) | 2<sup>20</sup> |
+| Gibioctet (Gio) | 2<sup>30</sup> |
+| Tébioctet (Tio) | 2<sup>40</sup> |
+| Pébioctet (Pio) | 2<sup>50</sup> |
+
+<br>
+
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front" style="font-size: 13px">
 <h1>Conversions binaires</h1>
-      <p>Convertir en octets (<b>valeurs exactes</b>).<br>
-        Rappels : <br>
-        1 kb = 1024 bits<br>
-      1Mo = 1024 ko = 1024 * 1024 octets</p>
+      <p>Convertir en octets (<b>valeurs exactes</b>)</p>
       <ol>
-      <li>10 kb</li>
-      <li>100 Mb</li>
-      <li>125 ko</li>
-      <li>1 Go</li>
+      <li>10 Kibibits</li>
+      <li>100 Mibits</li>
+      <li>125 Kibioctets</li>
+      <li>1 Gibioctet</li>
 
 
       </ol>
@@ -114,7 +128,7 @@ Title : codage exercices
         <li>10 * 1024 /8 = 1280</li>
         <li>100*1024*1024/8 = 1.31*10<sup>7</sup></li>
         <li>125*1024 = 1.28*10<sup>5</sup></li>
-        <li>1024<sup>3</sup> = 1.07*10<sup>9</sup></li>
+        <li>2<sup>30</sup> = 1.07*10<sup>9</sup></li>
       </ol>
     </div>
   </div>

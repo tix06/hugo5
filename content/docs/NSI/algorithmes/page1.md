@@ -44,7 +44,7 @@ for i in range(n):
   L.append(b*i)
 ```
 
-Le programme execute n fois la ligne 3. Sa complexité est égale à n : 
+Le programme execute n fois la ligne 4. Sa complexité est égale à n : 
 $$g(n) = n$$
 
 Si on ajoute des lignes dans la boucle `for`, pour faire par exemple : 
@@ -56,7 +56,7 @@ for i in range(n):
   L.append(y)
 ```
 
-On pourrait penser que la complexité est $g(n) = 2\times n$. Or cette différence ne vient que d'une différence d'implémentation du même algorithme, et ne doit pas être considérée pour le calcul de la complexité. On aura alors pour cette 2^e fonction: $$g(n) = n$$.
+On pourrait penser que la complexité est $g(n) = 2\times n$. Or cette différence ne vient que d'une différence des **details d'implémentation** du même algorithme, et ne doit pas être considérée pour le calcul de la complexité. On aura alors pour cette 2<sup>e</sup> fonction: $$g(n) = n$$.
 
 ## Boucle non bornée : variant de boucle
 Le principe est le même pour une boucle non bornée (non conditionnelle), mais il est moins facile de déterminer le nombre d’itérations de la boucle. Pour ce faire, la méthode classique est d’étudier plus en détails le **variant de boucle** déjà utilisé pour prouver la terminaison de la boucle. On détermine :
@@ -93,6 +93,113 @@ En pratique, la recherche de la complexité revient à déterminer cette fonctio
 Pour l'exemple précédent, la complexité est notée **O(n)** en notation de Landau.
 
 * **Notation &Theta; :** Lorsqu'il est possible de déterminer une fonction asymptotique de la complexité, la notation devient &Theta;(g).
+
+# Règles pour estimer la complexité O(g(n))
+## Règles
+
+<ul>
+<li>Poser n = &#8220;la taille des paramètres&#8221;.</li>
+<li>Ne compter que les instructions essentielles, à partir d'une unité de mesure: noter la somme des instructions élémentaires T(n).
+</li>
+<li>Pour chacune des boucles du programme, repérer le <strong>variant de boucle</strong> et calculer le nombre d&#8217;itérations : combien de fois on passe dans la boucle.</li>
+<li>Si T(n) contient une somme de termes, conserver uniquement le plus divergent.</li>
+<li>Prendre pour g(n) une fonction approchée de T(n). Ne pas considérer les multiplicateurs C : si T(n) = C.f(n), alors g(n) = f(n). Par exemple, si T(n) = 3*n, prendre g(n) = n.</li>
+<li>Sauf précision contraire, la complexité demandée est la complexité au pire en temps.</li>
+</ul>
+
+## Instructions élémentaires T(n)
+T(n) est la somme des unités de mesure, comptée pour chaque instruction.
+
+La première étape est d’identifier les séquences dans un algorithme. Si votre algorithme est composé des séquences :
+```
+  I1
+  I2
+  I3
+  ...
+``` 
+
+$$T(n) = T(I_1) + T(I_2) + T(I_3) + ...$$
+
+
+Dans la fonction `multiplie1`, il y a 3 séquences I<sub>1</sub>, I<sub>2</sub>, I<sub>3</sub> : 
+
+```python
+# sequence I1
+  L=[]
+```
+
+```python
+# sequence I2
+  for i in range(n):
+    y = b * i
+    L.append(y)
+```
+
+```python
+# sequence I3
+  return L
+```
+
+Les séquences I<sub>1</sub> et I<sub>3</sub> contiennent chacune une seule instruction élémentaires. Cependant, I<sub>2</sub> est une séquence complexe. De ce fait : $$T(Somme) = 2 + T(I_2)$$
+
+**Une unité de mesure** peut-être :
+
+* une addition
+* une soustraction
+* une multiplication, une division, Mod (%), Div
+* une opération arithmétique simple (sans appel de fonctions)
+* une comparaison, les opérations booléennes (et,ou,non)
+* une affectation
+* des opérations de lectures et écritures simples
+
+
+En pratique, on considèrera qu’il n’y a pas de différence entre les 3 opérations suivantes (à moins que l'énoncé donne une consigne différente):
+
+* a =b; 
+* a=b*c; 
+* a=a+b*c;
+
+## Boucles
+Le calcul de la complexité ne doit pas dépendre du type de boucle, et donc du type d'algorithme. On ne considèrera pas, sauf mention contraire : 
+
+* l'initialisation de la variable utilisée comme variant de boucle
+* l'incrémentation de cette variable
+* la comparaison avec la valeur d'arrêt
+
+<!--
+Sinon, il faudra compter de la manière suivante : 
+$$T(n)=1+ \Sigma_{j=1,...,n} (2+T_j(I))$$
+-->
+
+## Instructions conditionnelles
+### conditionnel simple
+
+```
+Si Condition Alors :
+  I ;
+```
+
+Dans le cas défavorable, où l'expression conditionnelle revoie `True`, le bloc d'instruction I est exécuté. On a alors : 
+
+$$T (n) = Tcondition (n) + T_I (n)$$
+
+* T(n) représente le nombre total d’instructions
+* Tcondition(n) représente le nombre d’instructions nécessaire pour tester la condition (qui peut-être 1 s’il s’agit par exemple d’une simple comparaison entre deux expressions arithmétiques).
+* T<sub>I</sub> représente le nombre d’instructions dans I.
+
+### Conditionnel avec alternative
+
+```
+Si Condition Alors :
+  I1 ;
+Sinon :
+  I2;
+```
+
+Dans le cas défavorable, on comptera : 
+
+$$T (n) = Tcondition (n) + max (T_{I_1} (n), T_{I_2} (n))$$
+
 
 # Principales classes de la complexité 
 Ces complexités sont classées par temps d'execution croissant de l'agorithme correspondant.
@@ -403,7 +510,7 @@ $$Min(n) = Max(n) = Moy(n) = n^3 $$
 
 <h3>Definition</h3>
 
-<p>C&#8217;est une estimation du temps d&#8217;execution d&#8217;un programme, independamment de la machine.
+<p>C&#8217;est une estimation du temps d&#8217;execution d&#8217;un programme, independamment de la machine, et des details d'implementation.
 En pratique, cela correspond au nombre d&#8217;opérations effectuées par le programme. Ce nombre d&#8217;opérations dépendant de la taille n des données en entrée, on évalue une fonction <strong>g(n)</strong>. </p>
 
 <h3>Notation de Landau</h3>
@@ -418,10 +525,11 @@ En pratique, cela correspond au nombre d&#8217;opérations effectuées par le pr
 
 <ul>
 <li>Poser n = &#8220;la taille des paramètres&#8221;.</li>
-<li>Ne compter que les instructions essentielles. Celles-ci apportent une unité au calcul de g(n).</li>
+<li>Ne compter que les instructions essentielles, à partir d'une unité de mesure: noter la somme T(n)
+</li>
 <li>Pour chacune des boucles du programme, repérer le <strong>variant de boucle</strong> et calculer le nombre d&#8217;itérations : combien de fois on passe dans la boucle.</li>
-<li>Si g(n) contient une somme de termes, conserver uniquement le plus divergent.</li>
-<li>Ne pas considérer les multiplicateurs C : si g(n) = C.f(n), alors g(n) = f(n). Par exemple, si g(n) = 3*n, prendre g(n) = n.</li>
+<li>Si T(n) contient une somme de termes, conserver uniquement le plus divergent.</li>
+<li>Prendre pour g(n) une fonction approchée de T(n). Ne pas considérer les multiplicateurs C : si T(n) = C.f(n), alors g(n) = f(n). Par exemple, si T(n) = 3*n, prendre g(n) = n.</li>
 <li>Sauf précision contraire, la complexité demandée est la complexité au pire en temps.</li>
 </ul>
 
@@ -537,7 +645,20 @@ def poly(a,x):
 Écrire un algorithme pour calculer P(x) selon cette méthode. (méthode de Horner)<br>
 Combien de multiplications sont effectuées pour calculer P(x) avec cet algorithme ?
 
-## Exercice 3 : calcul de la complexité en moyenne
+
+
+## Exercice 3 : enigme mathematique
+Vous êtes face à un mur qui s’étend à l’infini dans les deux directions. Il y a une porte dans ce 􏰒􏰑
+mur, mais vous ne connaissez ni la distance, ni la direction dans laquelle elle se trouve. Par ailleurs, l’obscurité vous empêche de voir la porte à moins d’être juste devant elle.
+
+Vous avez l'idée, naïve, d'explorer petit à petit dans les 2 directions du mur, en revenant en arrière à chaque nouveau mètre exploré.
+
+1. Faites un schéma de la situation.
+2. Etablir, à l'aide d'un tableau, le nombre de pas effectués en fonction de la distance explorée dans les 2 directions.
+3. Montrer que l'algorithme naïf utilisé est de complexité quadratique en L, la distance à la porte.
+4. Existe t-il une méthode plus efficace, permettant de trouver cette porte en un temps linéaire O(L), ou O(L*log(L)) vis-à-vis de la distance L qui vous sépare de celle-ci?
+
+## Exercice 4 : calcul de la complexité en moyenne
 On considère une liste de 4 éléments, différents, mis dans un tableau aux rangs 1 à 4. 
 
 Si on cherche une valeur X aléatoire dans ce tableau par une méthode itérative, et que l'on fait 16 essais, il y a de plus nombreuses chances que l'on ait des résultats équiprobables : 
@@ -564,16 +685,6 @@ On supposera que X est bien présent dans le tableau.
 $$T(n) = p \times \tfrac{n(n+1)}{2}$$ (somme des termes d'une suite arithmétique)
 4. Déterminer alors que la compléxité &Theta; de l'algorithme de recherche itérative  est linéaire en n.
 
-## Exercice 4 : 
-Vous êtes face à un mur qui s’étend à l’infini dans les deux directions. Il y a une porte dans ce 􏰒􏰑
-mur, mais vous ne connaissez ni la distance, ni la direction dans laquelle elle se trouve. Par ailleurs, l’obscurité vous empêche de voir la porte à moins d’être juste devant elle.
-
-Vous avez l'idée, naïve, d'explorer petit à petit dans les 2 directions du mur, en revenant en arrière à chaque nouveau mètre exploré.
-
-1. Faites un schéma de la situation.
-2. Etablir, à l'aide d'un tableau, le nombre de pas effectués en fonction de la distance explorée dans les 2 directions.
-3. Montrer que l'algorithme naïf utilisé est de complexité quadratique en L, la distance à la porte.
-4. Existe t-il une méthode plus efficace, permettant de trouver cette porte en un temps linéaire vis-à-vis de la distance qui vous sépare de celle-ci. ?
 
 <!--
 > Décrire un algorithme vous permettant de trouver cette porte en un temps linéaire vis-à-vis de la distance qui vous sépare de celle-ci.

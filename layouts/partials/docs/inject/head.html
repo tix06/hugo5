@@ -102,7 +102,49 @@ function myFunction() {
 }
 */
 
+/* boutons de navigation dans le header */
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+// debut creation du lien de navigation
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';
+// ajouter ici une ou plusieurs classes à newH
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); // le lien s'ajoute à la baniere
+}
 </script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+    /*display: inline-block;*/
+    
+  }
+</style>
 <!--
  <link type="text/css" rel="stylesheet" href="css/https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
