@@ -23,13 +23,15 @@ C'est la complexité spatiale.
 
 # Evaluer la complexité (temporelle)
 ## Principe
-Étant donné que la durée d'exécution d'un algorithme peut varier entre différentes entrées, on considère généralement la complexité temporelle dans le cas le plus défavorable, qui correspond à la durée maximale. 
+Étant donnée que la durée d'exécution d'un algorithme peut varier entre différentes entrées, on considère généralement la complexité temporelle dans le cas le plus défavorable, qui correspond à la durée maximale. 
 
 Par exemple, avec l'algorithme de recherche séquentielle, ce temps correspondrait à trouver l'élément dans la liste comme s'il occupait la dernière position (voir [plus loin](#algorithme-de-lecture-exhaustif-recherche-linéaire)).
 
 La complexité d’un algorithme sera alors (sauf mention contraire) exprimée sous la forme : *O*(*g*(*n*)). Ce qui correspond à la complexité *dans le pire des cas* (sa borne supérieure), ou bien, lorsque cela est pertinent, la complexité asymptotique.
 
-En pratique, on ne comptera que les opérations estimées **importantes** : celles qui ne changent pas selon les nuances du langage utilisées lors de la programmation (boucle while et boucle for...) mais qui changent selon le problème.
+En pratique, on ne comptera que les opérations estimées **importantes** : celles qui ne changent pas selon les nuances du langage utilisées lors de la programmation (boucle while et boucle for...) mais qui changent selon le problème. Ce nombre d'opérations sera appelé T(n).
+
+On en déduira alors la **classe de complexité g(n)** (voir [tableau plus loin](#principales-classes-de-la-complexité)). Puis la complexité O(g(n)).
 
 ## Exemple avec une boucle bornée
 Voici le principe de base pour calculer la complexité d’une boucle bornée. Soit (deb,fin) ∈ Z<sup>2</sup>, considérons une boucle de type `for i in range(deb, fin):`
@@ -44,8 +46,8 @@ for i in range(n):
   L.append(b*i)
 ```
 
-Le programme execute n fois la ligne 4. Sa complexité est égale à n : 
-$$g(n) = n$$
+Le programme execute n fois la ligne 3. Le nombre d'opérations T(n) est égal à n : 
+$$g(n) = n$$. La complexité est O(n).
 
 Si on ajoute des lignes dans la boucle `for`, pour faire par exemple : 
 
@@ -56,7 +58,17 @@ for i in range(n):
   L.append(y)
 ```
 
-On pourrait penser que la complexité est $g(n) = 2\times n$. Or cette différence ne vient que d'une différence des **details d'implémentation** du même algorithme, et ne doit pas être considérée pour le calcul de la complexité. On aura alors pour cette 2<sup>e</sup> fonction: $$g(n) = n$$.
+Le nombre d'opérations fondamentales est T(n) = 2*n. 
+
+On aura besoin de définir plusieurs niveaux de description:
+
+* T(n), qui représente le nombre d'opérations significatives rélisées par cette fonction : *T(n) = 2\times n$.
+* g(n) est une approximation de T(n). Ici, $g(n) = n$
+* La complexité O(g(n)) détermine la classe de complexité de la fonction, dans le pire des cas. Dans le cas de notre fonction `multiplie2`, ce sera **O(n)**. La complexité est **linéaire**.
+
+La petite différence d'implementation des 2 algorithmes est visible en calculant T(n), mais pas en déterminant g(n) ni O(g(n)).
+
+Cette différence ne vient que d'une différence des **details d'implémentation** du même algorithme, et ne doit pas être considérée pour le calcul de la complexité. 
 
 ## Boucle non bornée : variant de boucle
 Le principe est le même pour une boucle non bornée (non conditionnelle), mais il est moins facile de déterminer le nombre d’itérations de la boucle. Pour ce faire, la méthode classique est d’étudier plus en détails le **variant de boucle** déjà utilisé pour prouver la terminaison de la boucle. On détermine :
@@ -67,7 +79,7 @@ Le principe est le même pour une boucle non bornée (non conditionnelle), mais
 
 on peut alors en déduire le nombre d’itérations de la boucle.
 
-*Exemple :* Avec `multiplie3`, le variant de boucle, c'est `i`. Sa valeur passe de n - 1 à 0. Le nombre d'instructions élementaires dans la boucle est de 3.
+*Exemple :* Avec `multiplie3`, le variant de boucle, c'est `i`. Sa valeur passe de n - 1 à 0. La boucle est executée n fois. Et le nombre d'instructions significatives dans la boucle est de 3 : $$T(n) = 3 \times n$$
 
 ```python
 def multiplie3(b,n)
@@ -78,7 +90,8 @@ while i >=0 :
   i -= 1
 ```
 
-La complexité serait alors $g(n) = 3 \times n$, mais on prendra $g(n) = n$
+
+On aura alors $g(n) = n$. Et une complexité linéaire, O(n).
 
 
 ## Notations de **Landau** 
@@ -158,6 +171,11 @@ En pratique, on considèrera qu’il n’y a pas de différence entre les 3 opé
 * a =b; 
 * a=b*c; 
 * a=a+b*c;
+
+**Remarques :**
+
+* C'est souvent le genre du problème qui va décider de ce qui constitue une *instruction fondamentale*: Pour un algorithme de tri, ce sera : le nombre de comparaison de deux éléments, et le déplacement de deux éléments.
+* En faisant varier le degré de précision dans la mesure du nombre d'insttruction élémentaires, on fait varier aussi le degré d'abstraction, c'est à dire l'independance par rapport à l'implementation de cet algorithme.
 
 ## Boucles
 Le calcul de la complexité ne doit pas dépendre du type de boucle, et donc du type d'algorithme. On ne considèrera pas, sauf mention contraire : 
@@ -295,7 +313,7 @@ def recherche(X,L):
 Pour chacune de ces méthodes il existe un **pire** des cas et un **meilleur** des cas. 
 
 * Dans le meilleur des cas, le nom X est trouvé dès l'ouverture de l'annuaire: il n'y aura alors qu'**une seule étape**.
-* Supposons que l'annuaire contienne N = 30 000 noms, si le mot recherché est le dernier du dictionnaire, le pire cas, cela demandera 30 000 étapes. La complexité  est proportionnelle au nombre **N**. On la note **O(N)**, ça veut dire que dans le pire des cas, le temps de calcul est de l'ordre de grandeur de N.
+* Supposons que l'annuaire contienne N = 30 000 noms, si le mot recherché est le dernier du dictionnaire, le pire cas, cela demandera 30 000 étapes. La complexité  est proportionnelle au nombre **n**. On la note **O(n)**, ça veut dire que dans le pire des cas, le temps de calcul est de l'ordre de grandeur de n.
 
 ### Détail des opérations réalisées
 Les **éléments significatifs** pour analyser la complexité en nombre d'opérations sont : 

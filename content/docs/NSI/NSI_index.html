@@ -67,23 +67,23 @@ bookShowToc: false
   </ul>
 </p>
 
--->
+
 <p>Seance du 18 septembre :<br>
   <ul>
     <li>test d'evaluation</li>
     <li>algorithmes classiques de recherche dichotomique</li>
   </ul>
 </p>
+-->
 
-<!--
 <p>Seance du 22 septembre :<br>
   <ul>
-    <li>Algo1 - cours : Complexité</li>
-    <li>analyse des algorithmes de recherche dichotomique</li>
+    <li>Algo1 - cours : <a href="../algorithmes/page1/index.html">Complexité</a></li>
     <li>Exercices</li>
+    <li>Reviser le cours pour vendredi 25</li>
   </ul>
 </p>
-
+<!--
 <p>Seance du 25 septembre :<br>
   <ul>
     <li>test d'evaluation</li>
@@ -142,47 +142,5 @@ bookShowToc: false
 
 <div style="height:400px;"></div>
 
-<script>
-let chemin = window.location.pathname;
-if (chemin.search('NSI')>-1) {
-baniere=document.querySelector("#myHeader");
 
-// debut creation du lien de navigation
-let linkBox = document.createElement('div');
-linkBox.classList.add('linkBox');
-let newH = document.createElement('a');
-newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';
-// ajouter ici une ou plusieurs classes à newH
-newH.classList.add('nsi');
-
-linkBox.appendChild(newH);
-baniere.appendChild(linkBox); // le lien s'ajoute à la baniere
-}
-</script>
-
-<style>
-  #myHeader{
-    display:flex;
-    flex-direction: row-reverse;
-  }
-  #myHeader>.titre{
-    width:80%;
-    min-width:300px;
-    text-align: left;
-
-    
-  }
-  .linkBox{
-    margin:10px;
-    padding-top:10px;
-    background-color: pink;
-    
-    min-width:50px;
-
-  }
-  .isn{
-    /*display: inline-block;*/
-    
-  }
-</style>
 
