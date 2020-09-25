@@ -40,16 +40,18 @@ Alors la complexité de cette boucle est :
 $$\sum_{i=deb}^{fin-1} C_i$$
 où C représente la complexité de l’itération[^1] i
 
+Supposons pour cet exemple que seules les opérations multiplier et additionner sont significatives. On compte le nombre de ces opérations pour les fonctions suivantes.
+
 ```python
-def multiplie1(b,n)
-for i in range(n):
-  L.append(b*i)
+def multiplie1(b,n):
+  for i in range(n):
+    L.append(b*i)
 ```
 
-Le programme execute n fois la ligne 3. Le nombre d'opérations T(n) est égal à n : 
-$$g(n) = n$$. La complexité est O(n).
+Le programme execute n fois la ligne 3. On suppose qu'une seule opération est réalisée à chaque itération (l'opération b*i). Le nombre d'opérations T(n) est donc égal à n.
 
-Si on ajoute des lignes dans la boucle `for`, pour faire par exemple : 
+
+Le script suivant est une variation du premier. Il diffère par de petis détails d'implémentation. 
 
 ```python
 def multiplie2(b,n)
@@ -58,28 +60,19 @@ for i in range(n):
   L.append(y)
 ```
 
-Le nombre d'opérations fondamentales est T(n) = 2*n. 
-
-On aura besoin de définir plusieurs niveaux de description:
-
-* T(n), qui représente le nombre d'opérations significatives rélisées par cette fonction : *T(n) = 2\times n$.
-* g(n) est une approximation de T(n). Ici, $g(n) = n$
-* La complexité O(g(n)) détermine la classe de complexité de la fonction, dans le pire des cas. Dans le cas de notre fonction `multiplie2`, ce sera **O(n)**. La complexité est **linéaire**.
-
-La petite différence d'implementation des 2 algorithmes est visible en calculant T(n), mais pas en déterminant g(n) ni O(g(n)).
-
-Cette différence ne vient que d'une différence des **details d'implémentation** du même algorithme, et ne doit pas être considérée pour le calcul de la complexité. 
+La seule opération significative est b*i. 
+Le nombre d'opérations fondamentales est encore T(n) = n. 
 
 ## Boucle non bornée : variant de boucle
-Le principe est le même pour une boucle non bornée (non conditionnelle), mais il est moins facile de déterminer le nombre d’itérations de la boucle. Pour ce faire, la méthode classique est d’étudier plus en détails le **variant de boucle** déjà utilisé pour prouver la terminaison de la boucle. On détermine :
+Le principe est le même pour une boucle non bornée (non conditionnelle), mais il est moins facile de déterminer le nombre d’itérations de la boucle. Pour ce faire, la méthode classique est d’étudier plus en détails le **variant de boucle**. On détermine :
 
 * La valeur initiale du variant de boucle ;
 * Sa valeur finale ;
 * De combien il diminue strictement à chaque étape.
 
-on peut alors en déduire le nombre d’itérations de la boucle.
+On peut alors en déduire le nombre d’itérations de la boucle.
 
-*Exemple :* Avec `multiplie3`, le variant de boucle, c'est `i`. Sa valeur passe de n - 1 à 0. La boucle est executée n fois. Et le nombre d'instructions significatives dans la boucle est de 3 : $$T(n) = 3 \times n$$
+*Exemple :* Avec `multiplie3`, le variant de boucle, c'est `i`. Sa valeur passe de n - 1 à 0. La boucle est executée n fois. Et le nombre d'instructions significatives dans la boucle est de 2 : $$T(n) = 2 \times n$$
 
 ```python
 def multiplie3(b,n)
@@ -90,9 +83,20 @@ while i >=0 :
   i -= 1
 ```
 
+La fonction semble réaliser plus d'opérations que les 2 premières implémentations, d'où la petite différence pour la valeur de T(n) avec les deux fonctions precedentes.
 
-On aura alors $g(n) = n$. Et une complexité linéaire, O(n).
+## Limite asymptotique en n
+Lorsque l'on étudie la complexité d'une fonction ou d'un algorithme, on s'intéressera souvent à son comportement pour de grandes taille du paramètre d'entrée n. Car si pour des données de petite dimension, la qualité de l'algorithme importe peu, pour de grandes tailles de données, la différence de performance peut être enorme. On dit que l'on observe le comportement asymtotique de T(n), c'est à dire pour n qui tend vers de grandes valeurs.
 
+On aura besoin de définir plusieurs niveaux de description:
+
+* T(n), qui représente le nombre d'opérations significatives réalisées par cette fonction : par exemple $T(n) = 2\times n$.
+* g(n) est une approximation de T(n). Ici, $g(n) = n$
+* La complexité O(g(n)) détermine la classe de complexité de la fonction, dans le pire des cas. Dans le cas de nos 3 fonctions `multiplie`, ce sera à chaque fois **O(n)**. La complexité est **linéaire**.
+
+La petite différence d'implementation de ces 3 fonctions est visible en calculant T(n), mais pas en déterminant g(n) ni O(g(n)).
+
+Cette différence ne vient que d'une différence des **details d'implémentation** du même algorithme, et ne doit pas être considérée pour le calcul de la complexité. 
 
 ## Notations de **Landau** 
 
@@ -105,18 +109,20 @@ En pratique, la recherche de la complexité revient à déterminer cette fonctio
 
 Pour l'exemple précédent, la complexité est notée **O(n)** en notation de Landau.
 
-* **Notation &Theta; :** Lorsqu'il est possible de déterminer une fonction asymptotique de la complexité, la notation devient &Theta;(g).
+* **Notation &Theta; :** Lorsqu'il est possible de déterminer une valeur exacte de la complexité, la notation devient &Theta;(g).
 
 # Règles pour estimer la complexité O(g(n))
 ## Règles
 
 <ul>
 <li>Poser n = &#8220;la taille des paramètres&#8221;.</li>
+<li>Enoncer les instructions que vous compterez comme significatives</li>
+<li>définir des blocs d'instructions dans le script</li>
 <li>Ne compter que les instructions essentielles, à partir d'une unité de mesure: noter la somme des instructions élémentaires T(n).
 </li>
 <li>Pour chacune des boucles du programme, repérer le <strong>variant de boucle</strong> et calculer le nombre d&#8217;itérations : combien de fois on passe dans la boucle.</li>
 <li>Si T(n) contient une somme de termes, conserver uniquement le plus divergent.</li>
-<li>Prendre pour g(n) une fonction approchée de T(n). Ne pas considérer les multiplicateurs C : si T(n) = C.f(n), alors g(n) = f(n). Par exemple, si T(n) = 3*n, prendre g(n) = n.</li>
+<li>Prendre pour g(n) une fonction approchée de T(n). Ne pas considérer les multiplicateurs C : si T(n) = C.f(n), alors g(n) = f(n). Par exemple, si T(n) = 3*n, prendre g(n) = n</li>
 <li>Sauf précision contraire, la complexité demandée est la complexité au pire en temps.</li>
 </ul>
 
@@ -134,7 +140,7 @@ La première étape est d’identifier les séquences dans un algorithme. Si vot
 $$T(n) = T(I_1) + T(I_2) + T(I_3) + ...$$
 
 
-Dans la fonction `multiplie1`, il y a 3 séquences I<sub>1</sub>, I<sub>2</sub>, I<sub>3</sub> : 
+Dans la fonction `multiplie2`, il y a 3 séquences I<sub>1</sub>, I<sub>2</sub>, I<sub>3</sub> : 
 
 ```python
 # sequence I1
@@ -153,7 +159,7 @@ Dans la fonction `multiplie1`, il y a 3 séquences I<sub>1</sub>, I<sub>2</sub>,
   return L
 ```
 
-Les séquences I<sub>1</sub> et I<sub>3</sub> contiennent chacune une seule instruction élémentaires. Cependant, I<sub>2</sub> est une séquence complexe. De ce fait : $$T(Somme) = 2 + T(I_2)$$
+Les séquences I<sub>1</sub> et I<sub>3</sub> contiennent chacune une seule instruction élémentaires. Cependant, I<sub>2</sub> est une séquence comprenant 2 operations (voir plus haut). De ce fait : $$T(n) = 2 + T(I_2)$$
 
 **Une unité de mesure** peut-être :
 
@@ -174,8 +180,8 @@ En pratique, on considèrera qu’il n’y a pas de différence entre les 3 opé
 
 **Remarques :**
 
-* C'est souvent le genre du problème qui va décider de ce qui constitue une *instruction fondamentale*: Pour un algorithme de tri, ce sera : le nombre de comparaison de deux éléments, et le déplacement de deux éléments.
-* En faisant varier le degré de précision dans la mesure du nombre d'insttruction élémentaires, on fait varier aussi le degré d'abstraction, c'est à dire l'independance par rapport à l'implementation de cet algorithme.
+* C'est souvent le genre du problème qui va décider de ce qui constitue une *instruction significative*: Pour un algorithme de tri, ce sera : le nombre de comparaison de deux éléments, et le déplacement de deux éléments.
+* En faisant varier le degré de précision dans la mesure du nombre d'instruction élémentaires, on fait varier aussi le degré d'abstraction, c'est à dire l'independance par rapport à l'implementation de cet algorithme.
 
 ## Boucles
 Le calcul de la complexité ne doit pas dépendre du type de boucle, et donc du type d'algorithme. On ne considèrera pas, sauf mention contraire : 
@@ -272,7 +278,7 @@ Supposons que le problème posé soit de trouver un nom X dans un annuaire tél�
 
 
 ## Algorithme de lecture exhaustif (recherche linéaire)
-Cet algorithme pourrait fonctionner même si les mots sont rangés dans le désordre : il s'agit de parcourir tous les mots, du premier au dernier, jusqu'à tomber sur le mot recherché dans cet annuaire.
+Cet algorithme pourrait fonctionner même si les éléments (mots, cartes, valeurs...) sont rangés dans le désordre : il s'agit de parcourir tous les mots, du premier au dernier, jusqu'à tomber sur le mot recherché dans cet liste ou annuaire.
 
 *Illustration avec un jeu de cartes non trié:* Cherchons la dame de coeur dans la main d'un joueur.
 
@@ -309,30 +315,74 @@ def recherche(X,L):
     return j
 ```
 
-### Complexité
+Pour evaluer la complexité de cette fonction, on suivra la méthode suivante:
+
+### evaluer la taille des paramètres n
 Pour chacune de ces méthodes il existe un **pire** des cas et un **meilleur** des cas. 
 
 * Dans le meilleur des cas, le nom X est trouvé dès l'ouverture de l'annuaire: il n'y aura alors qu'**une seule étape**.
 * Supposons que l'annuaire contienne N = 30 000 noms, si le mot recherché est le dernier du dictionnaire, le pire cas, cela demandera 30 000 étapes. La complexité  est proportionnelle au nombre **n**. On la note **O(n)**, ça veut dire que dans le pire des cas, le temps de calcul est de l'ordre de grandeur de n.
 
-### Détail des opérations réalisées
-Les **éléments significatifs** pour analyser la complexité en nombre d'opérations sont : 
+### faire le détail des opérations réalisées et calculer T(n)
+
+L'algorithme est constitué de 3 blocs d'instruction : 
+
+```pyhton
+# bloc I1
+j = 0
+n = len(L)
+```
+
+
+```python
+# bloc I2
+while j<n and X!=L[j]:
+  j += 1
+```
+
+```python
+# bloc I3
+if j==n : return -1
+return j
+``` 
+
+
+
+Les **éléments significatifs** pour analyser le nombre d'opérations sont : 
 
 - le nombre d'itérations
 - le nombre d'opérations par itération
 
-L'instruction `j←j+1` est dépendante du type de boucle, par exemple, while ≠ for. Elle disparait si on programme différemment.
+> I1 contient 2 instructions.
 
-Il en est de même pour la comparaison `j<n` : il ne faudra pas les prendre en compte pour évaluer l'algorithme.
+<br>
 
-Les opérations significatives sont donc les comparaisons de X avec les elements de la liste : il en existe une par itération.
+>I3 contient 2 instructions (une comparaison et une instruction return)
 
+<br>
+
+> Pour le bloc I2 : La variant de boucle, c'est n-j qui doit être >0 pour que la boucle continue. 
+
+Si la condition `X!=L[j]` n'est jamais realisée, cette boucle est alors executée n fois, avec j qui varie de 0 à n-1.
+
+L'instruction `j+=1` peut compter pour une instruction
+
+Chacune des conditions d'arrêt `j<n` et `X!=L[j]` peuvent être considérées comme significatives. Il y aura alors 3 instructions par itération.
+
+On aura, dans ce que l'on appelle le PIRE des cas (l'élément n'est pas trouvé): T<sub>2</sub>(n) = 3*n
+
+
+
+> On fait alors la somme des 3 termes : T(n) = T<sub>1</sub>(n) + T<sub>2</sub>(n) + T<sub>3</sub>(n)
+
+
+$$T(n) = 2 + 3\times n + 2$$
 
 ### Calcul de la complexité
 * **Complexité dans le meilleur et le pire des cas:** La complexité se situe entre 
 
-  - Min(n) = 1 : meilleur des cas
-  - et Max(n) = n : pire des cas
+  - Min(n) = 6 : meilleur des cas (l'élément cherché occupe la premiere position dans la liste)
+  - et Max(n) = n : pire des cas (l'élément cherché n'est pas dans la liste)
 
 En notation de Landau, on écrit que la complexité (dans le pire des cas) est: **O(n)**
 
@@ -380,7 +430,17 @@ gauche = 0
 droite = len(mots) 
 trouve = False
 while gauche <= droite and not trouve:
-  milieu = (gauche + droite) // 2 # il, s'agit d'une division entière
+  milieu = (gauche + droite) // 2 # il, s'agit d'une division entiere
+
+  if liste[milieu] == element:
+            print(element, "trouve à l'indice:", milieu , liste[milieu])
+            return True
+            # on arrête la boucle
+            debut = fin - 1
+        elif liste[milieu] < element:       
+            debut = milieu + 1
+        else:
+            fin = milieu - 1
 ...
 ``` 
 
@@ -389,7 +449,7 @@ while gauche <= droite and not trouve:
 
 * La dimension des données sera prise comme egale à `len(mots)`. Appelons cette valeur n.
 * Le variant de boucle, c'est $droite-gauche$, qui vaut au départ n, et 0 à la fin de la boucle, si la valeur n'a pas été trouvée (pire des cas).
-* Les instructions essentielles de la boucle, ce sont les comparaisons 
+* Les instructions essentielles de la boucle, ce seront les comparaisons 
   * `mots[milieu] == X`
   * et `mots[milieu] > X`
 
@@ -529,7 +589,8 @@ $$Min(n) = Max(n) = Moy(n) = n^3 $$
 <h3>Definition</h3>
 
 <p>C&#8217;est une estimation du temps d&#8217;execution d&#8217;un programme, independamment de la machine, et des details d'implementation.
-En pratique, cela correspond au nombre d&#8217;opérations effectuées par le programme. Ce nombre d&#8217;opérations dépendant de la taille n des données en entrée, on évalue une fonction <strong>g(n)</strong>. </p>
+En pratique, cela correspond au nombre d&#8217;opérations effectuées par le programme. Ce nombre d&#8217;opérations dépendant de la taille n des données en entrée, on évalue d'abord une fonction <strong>T(n)</strong>. </p>
+<p>Ensuite, on fera une simplification de T(n) que l'on note g(n)<br>g(n) peut être égal à 1, log(n), n, n.log(n), n<sup>2</sup>, ... 2<sup>n</sup></p>
 
 <h3>Notation de Landau</h3>
 
@@ -537,7 +598,7 @@ En pratique, cela correspond au nombre d&#8217;opérations effectuées par le pr
 
 <p>Pour l&#8217;exemple sur la fonction <code>multiplie</code>, la complexité est notée <strong>O(n)</strong> en notation de Landau.</p>
 
-<p>Lorsqu&#8217;il est possible de déterminer une fonction asymptotique de la complexité, la notation devient &Theta;(g).</p>
+<p>Lorsqu&#8217;il est possible de déterminer une valeur exacte de la complexité, la notation devient &Theta;(g).</p>
 
 <h2>Règles pour estimer la complexité O(g(n))</h2>
 
@@ -657,7 +718,8 @@ def poly(a,x):
 
 2. Calculer le nombre d'additions et de multiplications qui sont réalisées par cette fonction, lorsque le polynôme est 3x<sup>2</sup> + 2x + 1. 
 3. Généraliser ce calcul pour un polynôme de degré n, où n serait la longueur de la liste a.
-4. Deuxième exemple : pour  3x<sup>3</sup> + 2x<sup>2</sup> − x + 7 : mettre l'expression sous une forme nécessitant trois multiplications. (s'aider de l'écriture de P(x) plus bas)
+4. Deuxième exemple : pour  3x<sup>3</sup> + 2x<sup>2</sup> − x + 7 : Vérifier que l'expression de la fonction peut se mettre sous une forme nécessitant trois multiplications : 
+`7 + x * (-1 + x * (2 + x * 3))` 
 5. Soit x ∈ R, soit P un polynôme, soit n son degré, a<sub>0</sub>, ..., a<sub>n</sub> ses coefficients. On écrit P (x) sous la forme :
 􏰃􏰁$$P(x) = a_0 + x\times(a_1+x\times(a_2+x\times(a_3+...x\times(a_n)...)))$$
 Écrire un algorithme pour calculer P(x) selon cette méthode. (méthode de Horner)<br>
