@@ -211,10 +211,16 @@ Title : matiere 2 elements chimiques
 <p> </p>
 
 ## Les autres éléments chimiques
-<p>Les autres éléments ont plutôt des propriétés covalentes (ils forment facilement des molécules et s’associent avec d’autres atomes).</p>
+<p>Les autres éléments (colonnes de B, C, N, O)ont plutôt des propriétés covalentes (ils forment facilement des molécules et s’associent avec d’autres atomes).</p>
 <p> </p>
 
 # tableau périodique des éléments
+
+<figure>
+  <img src="../images/tab_reduit.png" alt="tableau reduit des elements">
+  <figcaption>tableau reduit des elements</figcaption>
+</figure>
+
 <p>La tableau des éléments classe ceux-ci par <b>numéro atomique croissant</b>. On rappelle qu'à chaque élément correspond un SEUL numéro atomique, et donc, que le numéro atomique permet de deviner l'élément (exemple : Z = 6 : c'est le carbone..!)</p>
 <p>Chaque case du tableau renseigne sur le numéro atomique, le nom, le symbole, et la masse molaire atomique de l’élément.</p>
 <p>On peut déduire de ce tableau des propriétés particulières, comme :</p>
@@ -223,3 +229,6 @@ Title : matiere 2 elements chimiques
 <li>le numéro de la couche électronique externe (égal au numéro de la ligne)</li>
 <li>l’électronégativité de ces éléments (d’autant plus élevée que l’élément est en haut, à droite dans le tableau).</li>
 </ul>
+
+<h1>Suite du cours</h1>
+[modele electronique](../matiere3/)

@@ -24,7 +24,9 @@ On pourra utiliser les coordonnées absolues, à l'aide de l'instruction `goto`.
 
 Utiliser `from random import randint` 
 
-La fonction `randint` prend 2 arguments : la borne inferieure et la borne superieur du tirage aleatoire.
+Lorsque la fonction `randint` prend 2 arguments : il s'agit de la borne inferieure et de la borne superieur du tirage aleatoire : `randint(inferieur,superieur)`.
+
+*Exemple:* `randint(0,100)` retourne un entier entre 0 et 100.
 
 ## Explorer les fonctions
 On pourra parcourir les documents suivants:
