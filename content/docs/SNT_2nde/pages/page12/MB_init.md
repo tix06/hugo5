@@ -78,71 +78,29 @@ Ici, le programme affiche l'un ou l'autre des smileys, selon si le bouton A est 
 <figcaption>smiley HAPPY</figcaption>
 </figure>
 
+> Liste des images : [https://microbit-micropython.readthedocs.io/fr/latest/tutorials/images.html](https://microbit-micropython.readthedocs.io/fr/latest/tutorials/images.html)
+
+<br>
+
+## Affichage d'un texte
 Si l'on veut afficher un texte, il sera préférable d'utiliser la fonction `scroll` à la place de `show`, afin de faire défiler les caractères sur l'écran de LED. 
 
 *Exemple avec un texte :* ```display.scroll("Hello World")``` 
 
-*Exemple avec la valeur d'une variable dt :* ```display.scroll(str(dt))``` 
+*Exemple avec la valeur d'une variable dt :* ```display.scroll(dt)``` 
 
-# TP : Mesure d'une durée de propagation d'ultra-sons
-Ce mini TP peut faire partie d'une séance plus soutenue, avec le scénario proposé par la DANE de Normandie : 
-
-* [voir ici (radar de recul)](https://numerique-sciences-informatiques.discip.ac-caen.fr/IMG/pdf/radar-de-recul.pdf)
-* page principale avec telechargement de [micro_grove.py](https://numerique-sciences-informatiques.discip.ac-caen.fr/kit-grove-pour-micro-bit-et-applications-en-snt)
-
-## Script 
-A l'aide de l'un des editeurs proposés plus haut, saisir le script suivant : 
+## Affichage de formes
+Ce script met en oeuvre une boucle bornée qui permet de parcourir les pixels (selon x ou y):
 
 ```python
+# trace un trait horizontal (-)
 from microbit import *
-from machine import time_pulse_us
-import time, music, math
-
-analogiq_in = [pin1]
-
-
-def mesure_temps_A_R(broche = pin1):
-    """Module Grove - Ultrasonic Ranger
-    Retourne la durée d'un aller/retour des ultra_sons en microsecondes
-    Paramètre : Nom de la broche utilisée
-    """
-    broche.write_digital(0)
-    time.sleep_ms(2)
-    broche.write_digital(1)
-    time.sleep_ms(10)
-    broche.write_digital(0)
-    broche.read_digital()
-    dt = time_pulse_us(broche, 1)
-    return dt
-
-while True:
-  if button_a.is_pressed():
-    dt = mesure_temps_A_R()
-    display.show(dt)
-``` 
-
-## Principe
-Brancher l'emetteur-capteur à ultra-son sur la carte micro:bit. Choisir le port groove appelé PIN1 sur la carte.
-
-Diriger l'emetteur-capteur à ultra-sons vers un support rigide, afin que les ondes ultrasonores se reflechissent et reviennent vers le recepteur.
-
-<figure>
-  <img scr="../images/mu_us2.png">
-</figure>
-
-## Mesures
-Une fois le script téléversé : 
-
-Lorsque l'on appuie sur le bouton A, la fonction mesure_temps_A_R permet de communiquer avec l'emetteur-capteur à ultra-son. L'affichage de la durée de propagation pour un aller-retour s'affiche sur l'écran LED du microcontrôleur, chiffre après chiffre (`scroll`). La durée est en &micro;s.
-
-<em>Exemple d'affichage d'une durée dt = 833&micro;s:</em>
-En positionnant l'emetteur-capteur à environ 15 cm d'un support reflechissant, on lit : 
-
-<img src="../images/mu_833.png">
-
-En supposant que la célérité du son vaut 340m/s au moment de l'experience, cela donne une distance parcourue de $340 \times 833.10^{-6} = 0,28m$, double de la distance au support.
-
-Cela semble cohérent. Mais il faudra discuter de la précision attendue sur les 2 derniers digits mesurés par le dispositif...
+y=2
+for x in range(5):
+  display.set_pixel(x,y,b)
+```
+x,y : int, valeur de 0 à 4
+b : int, 0 à 9 (intensité lumineuse de la diode en x,y)
 
 
 # Liens
