@@ -64,12 +64,13 @@ Cela semble cohérent. Mais il faudra discuter de la précision attendue sur les
 * Diriger alors les ondes emises par le circuit microbit vers un autre recepteur à US, lui même relié à un oscilloscope.
 * Analyser le signal, et interpréter alors les instructions dans la fonction `mesure_temps_A_R`:
 
-```
+
+```python
     broche.write_digital(0)
     time.sleep_ms(2)
     broche.write_digital(1)
     time.sleep_ms(10)
-```
+``` 
 
 # Liens
 Ce mini TP peut faire partie d'une séance plus soutenue, avec le scénario proposé par la DANE de Normandie : 
