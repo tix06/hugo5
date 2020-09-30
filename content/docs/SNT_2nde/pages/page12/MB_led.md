@@ -11,17 +11,23 @@ Il faudra utiliser les connecteurs avec fils de couleur sur prise grove:
 
 
 
-* Jaune: pour la mesure de tension avec l'instruction 
-* Noir: GND
-* Rouge et Blanc: non utilisés
+* Jaune: tension commandée : relier au + de la LED  
+* Noir: GND : relier à la resistance 1k
+* Rouge (3V fixe) et Blanc: non utilisés
 
 <figure>
   <div>
-<img src="../images/MB_led.JPG">
+<img src="../images/led_pin.png">
 <figcaption>circuit avec LED et Resistance</figcaption>
 </div>
 </figure>
 
+<figure>
+  <div>
+<img src="../images/MB_led.JPG">
+<figcaption>montage complet</figcaption>
+</div>
+</figure>
 
 
 ## Matériel
@@ -37,6 +43,9 @@ Il faudra utiliser les connecteurs avec fils de couleur sur prise grove:
 ## Script
 
 ```python
+# Jaune: tension commandée : relier au + de la LED  
+# Noir: GND : relier à la resistance 1k
+# Rouge et Blanc: non utilisés
 from microbit import *
 
 while True:

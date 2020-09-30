@@ -147,12 +147,29 @@ les atomes du milieu du tableau périodique assurent leur stabilité en partagea
 
 *Exemples :*
 
-* Dihydrogène H2 : il manque 1 electron à chaque hydrogène pour être entourés de 2 electrons de valence.
+* Dihydrogène H<sub>2</sub> : il manque 1 electron à chaque hydrogène pour être entourés de 2 electrons de valence.
 
 En partageant leur électron, il se forme une liaison covalente entre chaque H. Ce qui permet à chaque hydrogène d’être entouré de 2 électrons.
 
-* Méthane CH4 : il manque 1 electron à chaque hydrogène et 4 électrons au carbone pour être entouré de 8 electrons de valence. Le carbone va alors faire 4 liaisons simples avec les atomes H. Le carbone sera entouré de 8 électrons de valence. Et chaque H de 2 électrons de valence.
+* Méthane CH<sub>4</sub> : il manque 1 electron à chaque hydrogène et 4 électrons au carbone pour être entouré de 8 electrons de valence. Le carbone va alors faire 4 liaisons simples avec les atomes H. 
+  * Le carbone sera entouré de 8 électrons de valence. 
+  
+<figure>
+  <div>
+  <img src="../images/CH4_lewis1.png" alt="octet carbone">
+  <figcaption>C est entouré de 8 electrons de valence</figcaption>
+</div>
+</figure>
 
+
+  * Et chaque H de 2 électrons de valence.
+
+<figure>
+  <div>
+  <img src="../images/CH4_lewis2.png" alt="octet H">
+  <figcaption>H est entouré de 2 electrons de valence</figcaption>
+</div>
+</figure>
 
 ### liaisons doubles, triples
 
