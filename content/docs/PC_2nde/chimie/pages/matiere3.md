@@ -114,9 +114,45 @@ Les autres atomes vont former des ions, en gagnant ou en perdant des electrons, 
 Une liaison covalente résulte de la mise en commun de 2 électrons de valence par deux atomes. Ces 2 électrons sont localisés entre les 2 atomes, et sont **matérialisés par un trait** entre les 2 atomes lorsque l’on dessine la molécule. C’est une **liaison chimique**.
 
 <figure>
+  <div>
   <img src="../images/H2.png" alt="dihydrogène H2">
   <figcaption>dihydrogène H<sub>2</sub></figcaption>
+</div>
 </figure>
+
+Pour représenter le schéma de Lewis de la molécule H2:
+
+* On représente les schémas de Lewis des atomes, en dirigeant les électrons marqués par un point, vers l'autre atome. (étape 1)
+* On trace un trait entre 2 électrons de valence portés par 2 atomes. (2)
+* On efface ensuite les points qui ont aidé au tracé, mais ne présentent plus d'intérêt: On sait maintenant que le trait droit est constitué d'un doublet d'électrons. (3)
+
+<figure>
+  <div>
+  <img src="../images/H2_lewis.png" alt="dihydrogène H2">
+  <figcaption>construction du schéma de Lewis H2<sub>2</sub></figcaption>
+</div>
+</figure>
+
+<p>On peut former ainsi toutes <b>les molécules</b> à partir de <b>leur schéma de Lewis</b> : voir la vidéo pour plus d’explications :</p>
+<p><b>Kan academie : schema de Lewis des molécules :</b></p>
+<figure>
+<a href="https://www.youtube.com/embed/uCY2wPI9Qy8?rel=0" target="blank"><img src="../images/khan.png"></a>
+</figure>
+
+### Liaison covalente et règle de l’octet
+les atomes du milieu du tableau périodique assurent leur stabilité en partageant leurs électrons avec un autre atome : Le doublet d’électrons est alors compté pour chacun des atomes, ce qui assure leur stabilité chimique : Les atomes DOIVENT être entourés de :
+
+- 2 electrons de valence si leur numero atomique est inferieur ou egal à 5
+- 8 electrons de valence sinon.
+
+*Exemples :*
+
+* Dihydrogène H2 : il manque 1 electron à chaque hydrogène pour être entourés de 2 electrons de valence.
+
+En partageant leur électron, il se forme une liaison covalente entre chaque H. Ce qui permet à chaque hydrogène d’être entouré de 2 électrons.
+
+* Méthane CH4 : il manque 1 electron à chaque hydrogène et 4 électrons au carbone pour être entouré de 8 electrons de valence. Le carbone va alors faire 4 liaisons simples avec les atomes H. Le carbone sera entouré de 8 électrons de valence. Et chaque H de 2 électrons de valence.
+
 
 ### liaisons doubles, triples
 
@@ -125,13 +161,37 @@ Une liaison covalente résulte de la mise en commun de 2 électrons de valence p
   <figcaption>liaisons multiples</figcaption>
 </figure>
 
-Chaque atome d'oxygène met en commun deux de ses électrons. De cette façon, chaque atome d'oxygène possède 8 électrons sur sa couche de valence (règle de l'octet). Comme ils se complètent mutuellement, ils sont "attachés" l'un à autre et forment une liaison chimique (ici covalente).
+Chaque atome d'oxygène met en commun deux de ses électrons. De cette façon, chaque atome d'oxygène possède 8 électrons sur sa couche de valence (règle de l'octet). Comme ils se complètent mutuellement, ils sont "attachés" l'un à autre et forment une liaison **chimique double**.
 
-Un atome peut aussi former des liaisons avec plusieurs atomes. Ce nombre total de liaisons est toujours donné par la valence de l'atome en question. 
+On trouve une liaison **triple** dans le diazote par exemple.
+
+## Liaison polarisée
+On dit qu’une liaison covalente est <strong>polarisées : </strong> lorsqu’il y a une différence d’électronegativité importante entre les 2 atomes. Les électrons sont plus souvent sur l’un des atomes, le plus électronégatif. Si la différence d’électronégativité est importante (&gt;0,5).
 
 
+<figure>
+  <img src="../images/electronega.png" alt="table electronegativité">
+  <figcaption>table d'electronegativité des elements</figcaption>
+</figure>
 
+Ainsi, sur la molécule d'eau: La différence d'électronegativité entre O et H est importante (>0,5) $$3,5 - 2,1 = 1,4$$
 
+Les électrons sont donc les plus souvent sur O. Cela génère une polarisation des liaisons:
 
+<figure>
+<div>
+  <img src="../images/polarite-4.png" alt="H2O polarise">
+  <figcaption>deplacement des electrons vers O<sub>2</sub></figcaption>
+</div>
+</figure>
+
+On représente ceci en notant des charges partielles sur les atomes de la molecule:
+
+<figure>
+  <div>
+  <img src="../images/polarite-5.png" alt="H2O polarise">
+  <figcaption>charges partielles sur O et H<sub>2</sub></figcaption>
+</div>
+</figure>
 
 
