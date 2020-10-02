@@ -146,11 +146,13 @@ ZeroDivisionError: float division by zero
 ``` 
 
 ## assertions
+**Les assertions sont les hypothèses avec vérification**.
+
 Le rajout *provisoire* d'assertions dans le script va permettre d'anticiper sur les erreurs possibles de logique.
 
 Le mécanisme d'assertion est là pour empêcher des erreurs qui ne devraient pas se produire, en arrêtant prématurément le programme. C'est un mode de programmation *défensif*, dans lequel on vérifie les *préconditions*.
 
-*Méthode :*  `asset <expression logique>, 'commentaire facumtatif'`
+*Méthode :*  `asset <expression logique>, 'commentaire facultatif'`
 
 L'expression logique doit être egale à `True` pour que le programme se poursuive.
 
@@ -194,10 +196,79 @@ en_fahrenheit(-500)
 AssertionError valeur inferieure au zero absolu
 ``` 
 
+## Créer un module de test avec `unittest`
+Le module `unittest` offre des outils de test de code, comme la classe TestCase. Le but est des vérifier que votre code génère des résultats corrects, conformes au attentes.
+
+> En pratique: test du calcul de la liste de nombres premiers
+
+* Créer un premier fichier python avec les fonctions à tester, par exemple `prime.py`
+* Créer un autre fichier avec les fonctions de test, que l'on appelera par exemple `test_unitaire.py`. Ce sera le fichier `main` à executer.
+
+> Contenu du fichier `prime.py`
+
+```python
+def prem1(n) :
+    """Renvoie True si l’entier est premier et False sinon"""
+    # script à completer
+    return True
+    
+
+def liste_prime1(N):
+    """etablit une liste de nombres premiers de 0 a N"""
+    L=[]
+    for j in range(N+1):
+        if prem1(j):
+            L.append(j)
+    return L
+```
+
+> Contenu du fichier `test_unitaire.py`
+
+```python
+import unittest
+import prime 
+
+class PrimeTestCase(unittest.TestCase):
+  """Test pour prime.py"""
+  
+  def test_prime(self):
+    """compare avec liste de nombres premiers"""
+    
+    wiki =[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+    
+    premiers = prime.liste_prime1(100)
+    self.assertEqual(premiers,wiki)
+    
+if __name__=='__main__':
+  unittest.main()
+``` 
+
+Dans le fichier à executer, `test_unitaire.py`: On commence par importer le module `unittest` ainsi que le module `prime` qui contient les fonctions à tester.
+
+Les noms des classes de test se terminent généralement par `TestCase` (scenario de test). La classe doit être une classe enfant de `unittest.TestCase`.
+
+Chaque test à créer est une méthode. Toute méthode dont le nom commence par `test_` est exécutée lors du test. La méthode `test_prime1` appelle donc la fonction `liste_prime` du module `prime` avec la valeur 100, puis vérifie que son résultat est conforme à la liste `wiki`.
+
+Ici, la fonction `prem1` n'est pas renseignée, et le test échoue: 
+
+```
+Tests failed in  PrimeTestCase.test_prime  
+Ran 1 tests, passed: 0 failed: 1
+```
+
+Cet exemple peut être testé dans l'diteur en ligne *Trinket*:
+
+<iframe src="https://trinket.io/embed/python/88b7bfcc89?toggleCode=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 
+> A vous de jouer
+Le légendaire mathématicien suisse Léonhard EULER(1707-1783), proposait la formule suivante pour obtenir des nombres premiers : pour tout entier naturel n,
+$$f(n) = n^2 − n + 41$$
 
-## Mécanisme d'exception `try-except`
+> Tester si cette fonction renvoie bien les nombres premiers entre 0 et 100.
+
+
+# Mécanisme d'exception `try-except`
 Le mécanisme des exceptions permet au programme de « rattraper » les erreurs, de détecter qu’une erreur s’est produite et d’agir en conséquence afin que le programme ne s’arrête pas.
 
 Afin de rattraper l’erreur, on insère le code susceptible de produire une erreur entre les mots clés `try` et `except`.
