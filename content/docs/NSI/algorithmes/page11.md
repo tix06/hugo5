@@ -58,9 +58,10 @@ C'est à dire des entiers dont le carré est inférieur ou égal à n.
 3. Programmer une fonction qui détermine si votre liste est identique à celle `wiki`.
 4. Si ce n'est pas le cas, corrigez votre fonction `prem2`.
 
-*Prolongement:* On peut mesurer le temps d’exécution des programmes à l’aide du module time. Après avoir importer le module, il suffit de créer une variable t = time.time() que l'on mettra dans la fonction `liste_prime`.
+## Sil reste du temps : Prolongement
+ On peut mesurer le temps d’exécution des programmes à l’aide du module time. Après avoir importer le module, il suffit de créer une variable t = time.time() que l'on mettra dans la fonction `liste_prime`.
 
-Puis avant la sortie, d’imprimer le temps écoulé avec l’instruction : print(time.time()-t).
+Puis avant la sortie, d’afficher en console (print) le temps écoulé avec l’instruction : print(time.time()-t).
 
 Tester les différentes fonctions prem1, prem2 (et prem3?) avec les entiers premiers. Choisir une plus grande valeur pour N.
 
@@ -80,22 +81,22 @@ En mathématiques, la spirale d'Ulam, ou spirale des nombres premiers (dans d'au
 Vous devrez réaliser la spirale de Ulam dans une fenêtre `turtle` en vous inspirant du modèle proposé plus haut. Le programme sera réalisé en langage python. Le programme sera organisé en modules. On pourra consulter [la page suivante](/docs/NSI/langages/page3/) pour la mise en module du script.
 
 ## Démarche de projet
-Vous commencerez par identifer le cahier des charges: Quelles sont les données initiales pour résoudrre le problème? Quel est le résultat attendu?
+1. Vous commencerez par identifer le cahier des charges: Quelles sont les données initiales pour résoudrre le problème? Quel est le résultat attendu?
 
-Vous ferez une recherche documentaire utile pour déterminer les fonctions et instructions python dont vous aurez besoin.
+2. Vous ferez une recherche documentaire utile pour déterminer les fonctions et instructions python dont vous aurez besoin.
 
-Vous définirez les différentes parties qui constituent le projet.
+3. Vous définirez les différentes parties qui constituent le projet.
 
-Vous établirez un plan d'action: par quoi allez vous commencer? (une premiere approche du dessin turtle, une fonction qui calcule des nombres premiers...). Comment le programme sera t-il écrit au début? (un IDE en ligne, un notebook, un IDE installé sur votre ordinateur)...
+4. Vous établirez un plan d'action: par quoi allez vous commencer? (une premiere approche du dessin turtle, une fonction qui calcule des nombres premiers...). Comment le programme sera t-il écrit au début? (un IDE en ligne, un notebook, un IDE installé sur votre ordinateur)...
 
-Enfin, vous ajouterez des [assertions](http://localhost:1313/docs/NSI/langages/page5/#assertions) ou des tests unitaires à votre projet afin de valider les différentes étapes: voir la page [langage/mise au point](/docs/NSI/langages/page5/#créer-un-module-de-test-avec-unittest)
+5. Enfin, vous ajouterez des [assertions](http://localhost:1313/docs/NSI/langages/page5/#assertions) ou des tests unitaires à votre projet afin de valider les différentes étapes: voir la page [langage/mise au point](/docs/NSI/langages/page5/#créer-un-module-de-test-avec-unittest)
 
 ## IDLE python
 L'IDLE python fait partie de l'environnement *Winpython*. L'interêt de cet IDE est sa bonne gestion des fenêtre graphiques que vous allez ouvrir et fermer.
 
 Pour le lancer, aller dans le menu Démarrer du PC, puis choisir IDE python.
 
-Seule la fenêtre d'edition s'ouvre alors. Vous ppouvez y taper ou coller votre script python. Pour executer : Touche **F5**.
+Seule la fenêtre d'edition s'ouvre alors. Vous pouvez y taper ou coller votre script python. Pour executer : Touche **F5**.
 
 Deux autres fenêtres s'ouvrent alors: 
 
