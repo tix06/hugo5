@@ -4,7 +4,8 @@ Title: nombres premiers
 
 # Algorithmes des nombres premiers
 ## Definition
-Nombres premiers = un nombre divisible uniquement par lui-même et par un.
+Nombre premier: un nombre premier est un nombre qui accepte DEUX diviseurs : uniquement lui-même et 1.
+
 ## Algorithme naïf
 Un test de primalité est un algorithme permettant de savoir si un nombre entier est premier.
 
