@@ -29,7 +29,7 @@ On a souvent l'impression que pour chaque problème on peut trouver un algorithm
 </a>
 </figure>
 
-**David Hilbert** (1862 – 1943), professeur à Göttingen, présente en 1920 un programme de recherche visant à clarifier les fondaments des mathématiques : “tout enoncé mathématique peut être soit prouvé ou refuté”. Plus tard il enonce le “Entscheidungsproblem” : montrer de façon “mécanique” si un enoncé mathématique est vrai ou faux.
+**David Hilbert** (1862 – 1943), professeur à Göttingen, présente en 1920 un programme de recherche visant à clarifier les fondaments des mathématiques : “tout enoncé mathématique peut être soit prouvé ou refuté”. Plus tard il enonce le “Entscheidungsproblem” : montrer de façon “mécanique” si un enoncé mathématique est vrai ou faux. Selon lui, tout est *décidable*, selon le terme qui sera employé plus tard.
 
 
 <figure>
@@ -153,11 +153,11 @@ D'après ce qui a été vu auparavent, il n'EXISTE PAS d'algorithme capable de c
 
 
 ## méthodes pour les algorithmes itératifs
-> Pour la terminaison : étude du VARIANT de boucle
+> Pour la **terminaison** : étude du VARIANT de boucle
 
 > Il faudra exhiber, pour chaque boucle `while`, un VARIANT de boucle.
 
-> Pour la correction : 
+> Pour la **correction** : 
 
 > Exhiber un INVARIANT de boucle qui permet de montrer le résultat voulu.
 
@@ -202,8 +202,13 @@ Il faut montrer que si les appels internes à l'algorithme font ce qu'on attend 
 
 # Résumé
 
+- Un Problème: Ensemble *Nom + Données d'entrée + Question*
+- Pour la suite: Problème = Fonction
 - L’ensemble des algorithmes, donc des fonctions calculables, est dénombrable.
 - L’ensemble des fonctions est indénombrable, donc il existe des fonctions incalculables.
+- Calculable: il existe une fonction f programmable dans un langage courant (python)
+- Calculable = Décidable
+- Indécidable (ou inclaculable): c'est l'impossibilité définitivement démontré de résoudre par un algorithme un problème donné.
 - Le problème de l’arrêt est un exemple de fonction incalculable.
 - L'étude de la terminaison d'une fonction est liée à l'étude de sa complexité. Il faut pouvoir évaluer si un problème décidable, l'est en un temps raisonnable.
 - Il n'existe pas de programme permettant de savoir si une fonction *termine*, et si elle *fait bien* ce qui est attendu d'elle. C'est pour cela qu'il faudra savoir *prouver* une fonction. Pour cela, il faudra:

@@ -72,63 +72,6 @@ C'est le terme qui désigne la réalisation du mélange entre l’espèce chimiq
 <p><span style="font-family: Segoe UI;">Un composé sera dit  "peu soluble" si sa solubilité est inférieure à 0,1 mole par litre de solution. Le terme "insoluble" sera utilisé pour des composés très peu solubles.</span></p>
 <p><strong><span style="font-family: Segoe UI;">Extraction par solvant</span></strong></p>
 
-<h1>Extraction</h1>
-<p><span style="font-family: Segoe UI;">Les extractions sont parmi les méthodes les plus utilisées en analyse pour séparer les mélanges. Elles reposent sur la différence de solubilité d'un soluté entre deux phases non-miscibles entre elles. L'idée est de transférer un soluté d'une phase liquide à une autre phase liquide non-miscible à la première.</span></p>
-<p><span style="font-family: Segoe UI;"><img src="../img/extraction Liquide Liquide.jpg" style="display: block; margin-left: auto; margin-right: auto;" width="580" /></span></p>
-<p><span style="font-family: Segoe UI;"><span class="bold">Exemple : l'extraction du diiode d'une solution aqueuse par le cyclohexane</span></span></p>
-<p><span style="font-family: Segoe UI;"><span class="bold">On donne le tableau de solubilité/miscibilité des espèces : </span></span></p>
-<p></p>
-<table style="width: 486px;" cellspacing="0" cellpadding="0" border="0">
-<tbody>
-<tr>
-<td style="text-align: center;" width="133">
-<p align="center"><b>Solubilité</b></p>
-</td>
-<td style="text-align: center;" width="118">
-<p align="center"><b>Diiode</b></p>
-</td>
-<td style="text-align: center;" width="117">
-<p align="center"><b>Eau</b></p>
-</td>
-<td style="text-align: center;" width="117">
-<p align="center"><b>Cyclohexane</b></p>
-</td>
-</tr>
-<tr>
-<td style="text-align: center;" width="133">
-<p>Dans l’eau</p>
-</td>
-<td style="text-align: center;" width="118">
-<p align="center">Faible</p>
-</td>
-<td style="text-align: center;" width="117">
-<p align="center"> </p>
-</td>
-<td style="text-align: center;" width="117">
-<p align="center">Non miscible</p>
-</td>
-</tr>
-<tr>
-<td style="text-align: center;" width="133">
-<p>Dans le cyclohexane</p>
-</td>
-<td style="text-align: center;" width="118">
-<p align="center">Grande</p>
-</td>
-<td style="text-align: center;" width="117">
-<p align="center">Non miscible</p>
-</td>
-<td style="text-align: center;" width="117">
-<p align="center"> </p>
-</td>
-</tr>
-</tbody>
-</table>
-<p></p>
-<p></p>
-<p>On choisit d'extraire le diiode dissout dans une solution aqueuse par du cyclohexane. D'après le tableau des solubilités, celui ci est plus soluble dans le cyclohexane que dans l'eau. On verse alors la solution de diiode dans l'ampoule à décanter, suivie de cyclohexane. Les 2 liquides sont non miscibles. Le cyclohexane occupe la phase supérieure, sa densité étant plus faible que l'eau :</p>
-<p><img src="../img/extraction de liode.jpg" style="display: block; margin-left: auto; margin-right: auto;" width="580" /></p>
-<p></p>
 
 
 <h1>La matière l'échelle microscopique</h1>

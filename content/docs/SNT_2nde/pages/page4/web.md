@@ -118,7 +118,7 @@ Ce mode P2P connait un regain d'interet avec les *Blockchains* qui consistent à
 * et Vie privée : blocage de contenus : toujours, afin de bloquer les contenus tiers qui peuvent ralentir la navigation ou distraire.
 
 ## Impacts sur les pratiques humaines
-* Le web permet à chacun de publier des informations sans contrôle préalable par une autorité. Cette revoluiton democratique amène la présence de fausses nouvelles (fake news) et le besoin de verification. Libération (désintox) et Le Monde (le blog des decodeurs) possèdent des espaces dédiés à la pratique, dédiant des journalistes à cette seule tâche.
+* Le web permet à chacun de publier des informations sans contrôle préalable par une autorité. Cette revolution democratique amène la présence de fausses nouvelles (fake news) et le besoin de verification. Libération (désintox) et Le Monde (le blog des decodeurs) possèdent des espaces dédiés à la pratique, dédiant des journalistes à cette seule tâche.
 * Wikipedia est un exemple d'encyclopedie libre et participative, où des centaines d'internautes publient et relisent et effectuent des milliers de changement par heure.
 * Le web et le droit d'auteur, licences creatice commun
 * Les traces laissées de manière voulue ou non lors de sa navigation

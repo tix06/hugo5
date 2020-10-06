@@ -211,4 +211,5 @@ On représente ceci en notant des charges partielles sur les atomes de la molecu
 </div>
 </figure>
 
-
+# suite du cours
+[Lien vers la page Forces intermoleculaires](../matiere4/)
