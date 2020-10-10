@@ -7,7 +7,7 @@ menu:
     parent: 
 next: donnees_analyse
 prev: pandas.md
-title: fiche exercices python
+title: Python fiche exercices 
 weight: 15
 ---
 

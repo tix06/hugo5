@@ -99,7 +99,29 @@ On voit que le prototypage d'une fonction donne à peu près les mêmes informat
 
 On pourra consulter la page du site [Lyceum](https://lyceum.fr/1g/nsi/7-langages-et-programmation/6-fonctions) pour plus d'informations.
 
+## Ajouter un Doctest
+Le doctest est un module qui recherche dans le prototypage (docstring) de la fonction ce qui pourrait s'apparenter à des tests sur la fonction.
 
+Comme par exemple:
+
+```
+>>> multiplie(2,3)
+6
+```
+
+
+Supposons que l'on ait programmé une fonction qui multiplie 2 nombres passés en arguments. On écrit alors une simulation d'un essai directement dans le docstring, en écrivant de manière explicite les 3 chevrons. Ainsi que la valeur attendue pour des arguments choisis.
+
+Pour réaliser des tests sur la fonction, on ajoutera alors à la suite du script les lignes suivantes:
+
+```python
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
+```
+
+
+Documentation officielle :[Lien](https://docs.python.org/fr/3/library/doctest.html#module-doctest)
 
 # Méthodes de gestion des erreurs
 ## Traceback
@@ -144,6 +166,20 @@ ZeroDivisionError                         Traceback (most recent call last)
 
 ZeroDivisionError: float division by zero
 ``` 
+### Erreurs de syntaxe (messages d'exception)
+Les messages d'exception affichés par le Traceback. 
+
+
+| message | type erreur |
+|--- |--- |
+| SyntaxError | parenthèse, crochet ou guillemet mal fermé |
+| IndentationError | mauvaise indentation |
+| ZeroDivisionError | division par zero |
+| NameError | nom de fonction ou de variable mal orthographié|
+| IndexError | accès à une position en dehors d’une liste |
+| AttributeError | accès à une méthode ou à un attribut inconnu.  *Exemple: 'list' object has no attribute 'appand'* |
+| TypeError | types incompatibles pour l’opération demandée.  *Exemple: unsupported operand type(s) for '-': 'range' and 'int'*|
+
 
 ## assertions
 **Les assertions sont les hypothèses avec vérification**.
@@ -196,82 +232,142 @@ en_fahrenheit(-500)
 AssertionError valeur inferieure au zero absolu
 ``` 
 
-## Créer un module de test avec `unittest`
-Le module `unittest` offre des outils de test de code, comme la classe TestCase. Le but est des vérifier que votre code génère des résultats corrects, conformes au attentes.
+## Créer un module de test unitaires avec `unittest`
+**Définition:** Un test unitaire est un test réalisé sur une portion du programme, typiquement sur une fonction.
 
-> En pratique: test du calcul de la liste de nombres premiers
+Le module `unittest` offre des outils de test de code, comme la classe TestCase. Le but est de vérifier que votre code génère des résultats corrects, conformes au attentes.
 
-* Créer un premier fichier python avec les fonctions à tester, par exemple `prime.py`
-* Créer un autre fichier avec les fonctions de test, que l'on appelera par exemple `test_unitaire.py`. Ce sera le fichier `main` à executer.
-
-> Contenu du fichier `prime.py`
-
-```python
-def prem1(n) :
-    """Renvoie True si l’entier est premier et False sinon"""
-    # script à completer
-    return True
-    
-
-def liste_prime1(N):
-    """etablit une liste de nombres premiers de 0 a N"""
-    L=[]
-    for j in range(N+1):
-        if prem1(j):
-            L.append(j)
-    return L
-```
-
-> Contenu du fichier `test_unitaire.py`
+> Exemple
 
 ```python
 import unittest
-import prime 
 
-class PrimeTestCase(unittest.TestCase):
-  """Test pour prime.py"""
-  
-  def test_prime(self):
-    """compare avec liste de nombres premiers"""
-    
-    wiki =[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
-    
-    premiers = prime.liste_prime1(100)
-    self.assertEqual(premiers,wiki)
-    
-if __name__=='__main__':
-  unittest.main()
-``` 
+def add(x,y):
+    return x + y
 
-Dans le fichier à executer, `test_unitaire.py`: On commence par importer le module `unittest` ainsi que le module `prime` qui contient les fonctions à tester.
+class MyTest(unittest.TestCase):
+    def test_add(self):
+        self.assertEqual(add(3,4), 7)
 
-Les noms des classes de test se terminent généralement par `TestCase` (scenario de test). La classe doit être une classe enfant de `unittest.TestCase`.
+if __name__ == '__main__':
+    unittest.main()
+```
 
-Chaque test à créer est une méthode. Toute méthode dont le nom commence par `test_` est exécutée lors du test. La méthode `test_prime1` appelle donc la fonction `liste_prime` du module `prime` avec la valeur 100, puis vérifie que son résultat est conforme à la liste `wiki`.
 
-Ici, la fonction `prem1` n'est pas renseignée, et le test échoue: 
+> Explications 
+
+On commence par importer le module `unittest`.
+
+Les noms des classes de test se terminent généralement par `TestCase` (scenario de test). La classe créée pour le test, `MyTest` doit être une classe enfant de `unittest.TestCase`, d'où l'instruction `class MyTest(unittest.TestCase):`
+
+
+Chaque test à créer est une méthode. Toute méthode dont le nom commence par `test_` est exécutée lors du test. La méthode `test_add` appelle donc la fonction `add`  avec les arguments 3 et 4, puis vérifie que son résultat est conforme, grâce à un test d'assertion `assertEqual`.
+
+Ici, le test reussit:
+
+En console:
 
 ```
-Tests failed in  PrimeTestCase.test_prime  
+Ran 1 tests, passed: 1 failed: 0
+```
+
+On ajoute maintenant un deuxième test:
+
+```python
+import unittest
+
+def add(x,y):
+    return x + y
+
+class MyTest(unittest.TestCase):
+    def test_add1(self):
+        self.assertEqual(add(3,4), 7)
+        
+    def test_add2(self):
+        self.assertEqual(add(3,4), 8)
+
+if __name__ == '__main__':
+    unittest.main()
+```
+
+Le deuxième test échoue. On peut remonter jusqu'à l'erreur dans le Traceback qui est affiché en console: 
+
+```
+# Traceback
+Fail: Expected 7 to equal 8
+Tests failed in  MyTest.test_add2  
+Ran 2 tests, passed: 1 failed: 1
+```
+
+Le module `unittest` fournit d'autres fonctions comme par exemple `assertRaises`. La liste complète est [ici](#autres-tests-d-assertion)
+
+```python
+  def test_split(self):
+    s = 'hello world'
+    # check that s.split fails when the separator is not a string
+    self.assertRaises(TypeError,s.split,1)
+``` 
+
+Console:
+```
+Ran 1 tests, passed: 1 failed: 0
+```
+
+> Explications
+
+La fonction `split` prend en argument un caractère et decoupe la chaine de caractères au niveau de ce caractère. (et retourne une liste).
+
+Par exemple:
+
+```python
+s = 'hello world'
+print(s.split(' '))
+# affiche
+['hello','world']
+```
+
+L'argument DOIT être un caractère et non un nombre entier ou autre type. Sinon, l'execution génère un *TypeError*.
+
+Or, ici, on fait le test d'assertion suivant: on vérifie si lorsque l'on appelle la fonction `s.split` avec l'argument *1*, cela génère un *TypeError*, ce qui est VRAI. Donc le test REUSSI!
+
+Par contre, avec `self.assertRaises(TypeError,s.split,' ')`, cela echoue...
+
+```
+Fail: 
+Tests failed in  MyTest.test_split  
 Ran 1 tests, passed: 0 failed: 1
 ```
 
-Cet exemple peut être testé dans l'diteur en ligne *Trinket*:
+> Testez ces exemples
 
-<iframe src="https://trinket.io/embed/python/88b7bfcc89?toggleCode=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+Ces exemples peuvent être testés dans l'éditeur en ligne *Trinket*:
+
+<iframe src="https://trinket.io/embed/python/b55ced5652" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 
-> A vous de jouer
-Le légendaire mathématicien suisse Léonhard EULER(1707-1783), proposait la formule suivante pour obtenir des nombres premiers : pour tout entier naturel n,
-$$f(n) = n^2 − n + 41$$
+### Autres tests d'assertion
+En fait, `unittest.TestCase` propose plusieurs méthodes d'assertion que nous utiliserons dans nos tests unitaires. 
 
-> Tester si cette fonction renvoie bien les nombres premiers entre 0 et 100.
-
+| Méthode | Explications |
+|--- |--- |
+| assertEqual(a, b) | a == b |
+| assertNotEqual(a, b) | a != b |
+| assertTrue(x) | x is True |
+| assertFalse(x) | x is False |
+| assertIs(a, b) | a is b |
+| assertIsNot(a, b) | a is not b |
+| assertIsNone(x) | x is None |
+| assertIsNotNone(x) | x is not None |
+| assertIn(a, b) | a in b |
+| assertNotIn(a, b) | a not in b |
+| assertIsInstance(a, b) | isinstance(a, b) |
+| assertNotIsInstance(a, b) | not isinstance(a, b) |
+| assertRaises(exception, fonction, *args, **kwargs) | Vérifie que la fonction lève l'exception attendue.|
 
 # Mécanisme d'exception `try-except`
 Le mécanisme des exceptions permet au programme de « rattraper » les erreurs, de détecter qu’une erreur s’est produite et d’agir en conséquence afin que le programme ne s’arrête pas.
 
-Afin de rattraper l’erreur, on insère le code susceptible de produire une erreur entre les mots clés `try` et `except`.
+Afin de rattraper l’erreur, on insère le code susceptible de produire une erreur entre les mots clés `try` et `except`. 
 
 *Méthode :*
 
@@ -284,7 +380,13 @@ else:
     # ... que faire lorsque aucune erreur n'est apparue
 ```
 
-*Exemple :*
+L’instruction try fonctionne comme ceci.
+
+* Premièrement, la clause try (instruction(s) placée(s) entre les mots-clés try et except) est exécutée.
+* Si aucune exception n’intervient, la clause except est sautée et l’exécution de l’instruction try est terminée.
+* Si une exception intervient pendant l’exécution de la clause “try”, le reste de cette clause est sauté. Si son type correspond à un nom d’exception indiqué après le mot-clé except, la clause “except” correspondante est exécutée, puis l’exécution continue après l’instruction try.
+
+*Exemple 1:*
 
 ```python
 def inverse(x):
@@ -305,10 +407,45 @@ except:
 le programme a déclenché une erreur
 ```
 
+*Exemple 2:*
+Si on veut convertir un caractère en entier, cela génère une erreur de type *ValueError*:
+```python
+>>> int(input("Please enter a number: "))
+Please enter a number: q
+ValueError: invalid literal for int() with base 10: 'q'
+```
 
-# Liens
+On peut utiliser un mecanisme d'exception pour rattraper cette erreur possible:
+
+
+```python
+while True:
+     try:
+         x = int(input("Please enter a number: "))
+         break
+     except ValueError as typ:
+         print("Oops!  That was no valid number.  Try again...: {}".format(typ))
+print('=> vous avez entré le nombre {}'.format(x))
+```
+
+Executons ce script:
+```
+Please enter a number: d
+Oops!  That was no valid number.  Try again...: invalid literal for int() with base 10: 'd'
+Please enter a number: Z
+Oops!  That was no valid number.  Try again...: invalid literal for int() with base 10: 'Z'
+Please enter a number: 2
+=> vous avez entré le nombre 2
+``` 
+
+
+# Flash cards
+[Lien vers les flash cards](/docs/NSI/langages/ex1/)
+
+# Sources
 * [python.developpez.com](https://python.developpez.com/tutoriels/apprendre-programmation-python/notions-avancees/?page=gestion-d-erreurs)
 * Pour aller plus loin sur la gestion des Exceptions : [xavierdupre.fr les bases en python](http://www.xavierdupre.fr/app/teachpyx/helpsphinx/c_exception/exception.html)
+* Documentation officielle : [unittest](https://docs.python.org/3/library/unittest.html)
 
 
 

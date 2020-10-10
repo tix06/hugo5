@@ -31,22 +31,28 @@ Le dossier contient alors:
 Le fichier principal `nombresPrem.py` sera organisé comme ceci:
 
 ```python
-#####partie import des modules######
+#####partie import des modules############
 import fcts_turtle
 
-#####variables globales#############
+#####variables globales####################
 # declaration des variables globales
 
-#######definition des fonctions#####
+#######definition des fonctions############
 # def des fonctions du fichier main
 # pour le calcul des nombres premiers
 
-######corps du programme############
-# calcul d'une liste de nombres premiers
-# appel de la fonction de dessin du module:
-fcts_turtle.ulam(liste_premiers,N)
-###########################
+######corps du programme : ################
+### à executer si fichier main ############
+if __name__=='__main__':
+    # calcul d'une liste de nombres premiers
+    # appel de la fonction de dessin du module:
+    fcts_turtle.ulam(liste_premiers,N)
+###########################################
 ```
+
+Il est recommandé de mettre les instructions du programme principal dans un bloc avec le test `if __name__=='__main__':` 
+
+Ceci permet d'importer le contenu du fichier sans déclencher son execution; et permettre de realiser des tests sur les fonctions. Voir <a href="/docs/NSI/langages/page5/#créer-un-module-de-test-avec-unittest">tests sur les modules avec unittest</a>
 
 Le module `fcts_turtle.py` : 
 

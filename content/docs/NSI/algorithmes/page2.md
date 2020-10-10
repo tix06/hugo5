@@ -207,8 +207,8 @@ Il faut montrer que si les appels internes à l'algorithme font ce qu'on attend 
 - L’ensemble des algorithmes, donc des fonctions calculables, est dénombrable.
 - L’ensemble des fonctions est indénombrable, donc il existe des fonctions incalculables.
 - Calculable: il existe une fonction f programmable dans un langage courant (python)
-- Calculable = Décidable
-- Indécidable (ou inclaculable): c'est l'impossibilité définitivement démontré de résoudre par un algorithme un problème donné.
+- Calculable = Décidable: un problème *calculable* peut être traduit en un problème équivalent *décidable*. La différence est que, pour un problème *calculable*, on doit calculer une image f(x), alors que pour un problème *décidable*, la fonction retourne une valeur booléenne (True,False). Le problème est exprimé différemment.
+- Indécidable (ou incalculable): c'est l'impossibilité définitivement démontré de résoudre par un algorithme un problème donné.
 - Le problème de l’arrêt est un exemple de fonction incalculable.
 - L'étude de la terminaison d'une fonction est liée à l'étude de sa complexité. Il faut pouvoir évaluer si un problème décidable, l'est en un temps raisonnable.
 - Il n'existe pas de programme permettant de savoir si une fonction *termine*, et si elle *fait bien* ce qui est attendu d'elle. C'est pour cela qu'il faudra savoir *prouver* une fonction. Pour cela, il faudra:
