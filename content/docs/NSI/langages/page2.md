@@ -22,7 +22,7 @@ Une grande partie des problèmes peut se résoudre avec une implémentation réc
 ## Complexité d'un algorithme recursif
 Pour un algorithme récursif, on compte le nombre d’appel récursif et il suffit en général de se ramener à une relation définissant une suite récurrente. On se ramène souvent à évaluer une relation du type : 
 
-$$C_n =a\times C_{f(n)} + C$$
+C<sub>n</sub> =a * C<sub>f(n)</sub> + C
 
 où : 
 
@@ -32,9 +32,9 @@ où :
 
 | relation de récurrence | solution | comportement asymtotique |
 | --- | --- | --- |
-| C(n) = C(n-1) + b | C(n) = C(0) + b×n (suite arithmétique) | O(a<sup>n</sup>) |
+| C(n) = C(n-1) + b | C(n) = C(0) + b×n (somme de termes constants)| O(n) |
 | C(n) = a×C(n-1) + b, a ≠ 1 | C(n) = an × (C(0) – b/(1-a)) + b/(1-a) (suite géométrique)| O(a<sup>n</sup>) |
-| C(n) = C(n-1) + a×n + b | C(n) = C(0) + a×n×(n+1)/2 + n×b | O(n<sup>2</sup>) |
+| C(n) = C(n-1) + a×n + b | C(n) = C(0) + a×n×(n+1)/2 + n×b (suite arithmetique pour le 2e terme) | O(n<sup>2</sup>) |
 | C(n) = C(n/2) + b | C(n) = C(1) + b×log<sub>2</sub>(n) | O(log<sub>2</sub>n) |
 ## exemple : factorielle
 ### programme itératif

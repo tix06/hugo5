@@ -184,13 +184,14 @@ ZeroDivisionError: division by zero
   <div class="flip-card-inner">
     <div class="flip-card-front" style="font-size: 14px">
       <h1>mécanisme d'exception</h1>
-      
+     
 <p>
-Qu'est ce qui est affiché dans la console lorsque l'on execute le script suivant?<br>
+Qu'est ce qui est affiché dans la console lorsque l'on execute le script suivant?<br><br>
+<b>
 try:<br>
 &nbsp&nbsp print(divise(10,0))<br>
 except ZeroDivisionError as err:<br>
-&nbsp&nbsp print('Handling run-time error:', err)<br>
+&nbsp&nbsp print('Handling run-time error:', err)<br></b>
 </p>
      
     </div>
