@@ -33,7 +33,7 @@ Fonction prem1(n):
 
 <br>
 
-> Amélioration:
+> Amélioration: modifier la borne supérieure dans la boucle
 
 Soit n un entier supérieur ou égal à 2.
 Si n n’est pas premier, et si d est son plus petit diviseur supérieur ou égal à 2, on peut écrire :
@@ -49,23 +49,32 @@ C'est à dire des entiers dont le carré est inférieur ou égal à n.
 
 > 1. Modifier le code dans une nouvelle fonction (que vous renommerez `prem2`) pour que celle-ci execute le moins d'opérations possibles. (soit le plus efficace).
 
-> 2. Déterminer le nombres d'opérations T(100) réalisées pour n = 100.
+> 2. Déterminer le nombre d'opérations T(100) réalisées pour n = 100.
 
 
 
 ## Votre fonction, calcule t-elle bien?
 1. Faites une recherche documentaire pour trouver la liste des nombres premiers entre 0 et 100. Appelons cette liste `wiki`
 2. Programmer une fonction `liste_prime` qui utilise votre fonction `prem2` pour établir la liste des nombres premiers de 0 à 100.
-3. Programmer une fonction qui détermine si votre liste est identique à celle `wiki`.
+3. Programmer une fonction `compare` qui détermine si votre liste est identique à celle `wiki`.
 4. Si ce n'est pas le cas, corrigez votre fonction `prem2`.
 
-## Sil reste du temps : Prolongement
- On peut mesurer le temps d’exécution des programmes à l’aide du module time. Après avoir importer le module, il suffit de créer une variable t = time.time() que l'on mettra dans la fonction `liste_prime`.
+## L'algorithme le plus efficace
+L'algorithme le plus **efficace** est celui qui prend le moins de temps pour effectuer la même tâche.
 
-Puis avant la sortie, d’afficher en console (print) le temps écoulé avec l’instruction : print(time.time()-t).
+On peut mesurer le temps d’exécution des programmes à l’aide du module `time`. Après avoir importer le module, il suffit de créer une variable `t = time.time()` que l'on mettra au debut de la fonction `liste_prime`.
 
-Tester les différentes fonctions prem1, prem2 (et prem3?) avec les entiers premiers. Choisir une plus grande valeur pour N.
+Puis avant la sortie, d’afficher en console (print) le temps écoulé avec l’instruction : `print(time.time()-t)`.
 
+Tester les différentes fonctions prem1, prem2 avec les entiers premiers. Choisir une plus grande valeur pour N (10000 par exemple).
+
+## Créer vos modules de test
+Vous allez maintenant realiser un test unitaire sur votre fonction `prem2`.
+Pour faire cela, vous allez réorganiser vos fonctions dans différents fichiers, et créer des *modules*.
+
+Suivre l'énoncé du TP à la page [/posts/python/Python_unittest_np/](/posts/python/Python_unittest_np/)
+
+<!--
 # Spirale de Ulam
 ## Principe
 En mathématiques, la spirale d'Ulam, ou spirale des nombres premiers (dans d'autres langues, elle est appelée aussi horloge d'Ulam) est une méthode simple pour la représentation des nombres premiers qui révèle un motif qui n'a jamais été pleinement expliqué. Elle fut découverte par le mathématicien Stanislaw Marcin Ulam, lors d'une conférence scientifique en 1963.
@@ -110,3 +119,5 @@ Vous pouvez alors organiser vos fenêtres comme sur l'image suivante.
   <img src="../images/idlePython.png">
   <figcaption>A gauche, l'editeur python, à droite les fenêtres graphique et le shell</figcaption>
 </figure>
+
+-->

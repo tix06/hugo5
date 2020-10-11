@@ -308,7 +308,7 @@ Le module `unittest` fournit d'autres fonctions comme par exemple `assertRaises`
     self.assertRaises(TypeError,s.split,1)
 ``` 
 
-Console:
+Console: Test reussi
 ```
 Ran 1 tests, passed: 1 failed: 0
 ```
@@ -326,9 +326,21 @@ print(s.split(' '))
 ['hello','world']
 ```
 
-L'argument DOIT être un caractère et non un nombre entier ou autre type. Sinon, l'execution génère un *TypeError*.
+L'argument DOIT être un caractère et non un nombre entier ou autre type. Sinon, l'execution génère un *TypeError*:
 
-Or, ici, on fait le test d'assertion suivant: on vérifie si lorsque l'on appelle la fonction `s.split` avec l'argument *1*, cela génère un *TypeError*, ce qui est VRAI. Donc le test REUSSI!
+
+```python
+s = 'hello world'
+print(s.split(1))
+# affiche
+TypeError          Traceback (most recent call last)
+<ipython-input-32-6acfb0b512b4> in <module>
+      1 s = 'hello world'
+----> 2 print(s.split(1))
+TypeError: must be str or None, not int
+```
+
+Or, ici, on fait le test d'assertion suivant: on vérifie si lorsque l'on appelle la fonction `s.split` avec l'argument **1**, cela génère un *TypeError*, ce qui est VRAI. Donc le test REUSSI!
 
 Par contre, avec `self.assertRaises(TypeError,s.split,' ')`, cela echoue...
 

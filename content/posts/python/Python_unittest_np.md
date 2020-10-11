@@ -13,14 +13,26 @@ weight: 14
 
 # Utilisation du module unittest avec le calcul des nombres premiers
 
+> avant de démarrer cette partie, il est recommandé de consulter le cours sur [les tests unitaires](/docs/NSI/langages/page5/#créer-un-module-de-test-unitaires-avec-unittest)
+
 **Définition:** Un test unitaire est un test réalisé sur une portion du programme, typiquement sur une fonction.
 
 Le module `unittest` offre des outils de test de code, comme la classe TestCase. Le but est des vérifier que votre code génère des résultats corrects, conformes au attentes.
 
 > En pratique: test du calcul de la liste de nombres premiers
 
-* Créer un premier fichier python contenant les fonctions à tester, par exemple `prime.py`
-* Créer un autre fichier avec les fonctions de test, que l'on appelera par exemple `test_unitaire.py`. Ce sera le fichier `main` à executer.
+* Ouvrir l'editeur <a href="https://trinket.io/library/trinkets/create?lang=python">Trinket.io editeur python</a>
+
+* Dans le fichier `main.py`, on mettra les fonctions de test. Ce sera le fichier `main` que l'on executera.
+* Créer un deuxieme fichier python, que l'on renommera `prime.py`. Celui-ci contiendra les fonctions à tester.
+
+
+<figure>
+  <div>
+  <img src="../images/modules.png" alt="modules nombres premiers et test unitaire">
+  <figcaption>modules associés au programme de test</figcaption>
+</div>
+</figure>
 
 > Contenu du fichier `prime.py`
 
@@ -40,7 +52,7 @@ def liste_prime1(N):
     return L
 ```
 
-> Contenu du fichier `test_unitaire.py`
+> Contenu du fichier `main.py`
 
 ```python
 import unittest
@@ -75,13 +87,17 @@ Tests failed in  PrimeTestCase.test_prime
 Ran 1 tests, passed: 0 failed: 1
 ```
 
+<!--
 Cet exemple peut être testé dans l'éditeur en ligne *Trinket*:
 
-<iframe src="https://trinket.io/embed/python/88b7bfcc89?toggleCode=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-
+<iframe src="https://trinket.io/embed/python/88b7bfcc89" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+-->
 
 > A vous de jouer
-Le légendaire mathématicien suisse Léonhard EULER(1707-1783), proposait la formule suivante pour obtenir des nombres premiers : pour tout entier naturel n,
-$$f(n) = n^2 − n + 41$$
 
-> Tester dans l'editeur Trinket précédent si cette fonction renvoie bien les nombres premiers entre 0 et 100.
+Compléter la fonction `prem1` afin que celle-ci calcule bien les nombres premiers entre 0 et 100. Puis lancer le test à l'aide de la classe `PrimeTestCase`. 
+
+* Le test se déroule t-il correctement?
+* Que se passe t-il si on modifie la valeur 100 dans l'instruction `premiers = prime.liste_prime1(100)` de la méthode `test_prime` de la classe `PrimeTestCase`? Conclure
+
+
