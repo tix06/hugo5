@@ -1,0 +1,505 @@
+/* To be overridden by theme user */
+// @import "variables";
+@viewport {
+  scroll-behavior: auto;
+}
+html {
+  height: 100%;
+}
+body {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  padding-top : 0px;
+  padding-bottom: 100px;
+  box-sizing: content-box;
+  
+} 
+
+.ital {font-style: italic;}
+
+/* règles relatives au contenu main */
+main.flex.container {
+
+height:100%;
+}
+.flex{
+
+/*will-change: transform;*/
+}
+.book-page{
+   /*margin-top:100px;*/
+   box-sizing: content-box;
+   padding-top:100px;
+   padding-left:40px;
+} 
+
+/* règles relatives aux 2 menus latéraux */
+#TableOfContents{
+   margin-top:220px;
+   margin-bottom:50px;
+   padding:6px;
+   background:#f5f5f5;
+   border-radius:2px;
+   border:1px solid #ccc;
+   }
+
+/* suppression barre scroll du menu */
+.book-menu nav{
+	/*overflow-y:visible;*/
+	/*overflow: hidden;*/
+    overflow: -moz-scrollbars-none;  // Firefox
+	-ms-overflow-style: none;  /* ok pour safari et IE explorer*/
+	overflow: -moz-scrollbars-none; 
+   margin-top:20px;
+   }
+.book-menu nav::-webkit-scrollbar { 
+    width: 0 !important;
+    background: transparent;
+    }   /*pour chrome*/
+
+/* position des tableaux formules formulaires, gestion de l'overflow*/   
+div[id=tableau], form, table, iframe, .formule, .timeline {
+	overflow: scroll;
+	display: block;
+   	justify-content: center;
+	}
+	
+/* regle pour les boutons personnalisés*/
+input[type=button]{
+	/*display: block;*/
+	margin-top: 50px;
+	}
+input[type="button"]:hover { 
+    box-shadow: 4px 4px 0px #aaa; 
+    /*voir complement de regles plus bas avec la classe btn-lg:hover*/
+    /* dans les boutons de navigation du site */
+    }
+
+/* dessins canvas */	  
+canvas { 
+    margin-top: 50px;
+    border: 2px solid black;
+    display:inline-block;
+    align : center; 
+    max-width: 100%;
+    }
+/* champs formulaire */   
+input[type="text"]{
+    font-size:12px;
+	}
+/*images et figures*/	
+figure{
+  text-align : center;
+  width : 100%;
+  
+  }
+
+/*figure img, figure{*/
+figure img{ /*modif*/
+	text-align : center;
+  width : 320px;
+	overflow: scroll;
+	}
+
+figure > img {
+      /* Syntaxe standard */
+    transition-property: width;
+    transition-duration: 0.4s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    
+    /* Hack Safari */
+    -webkit-transition-property: width, background;
+    -webkit-transition-duration: 0.4s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0s;  
+}
+figure > img:hover{
+  width : 80%;
+}
+
+/*etiquette des figures*/
+figcaption { 
+	text-align: center;
+	font-size: small;
+	font-style : italic;
+}
+
+/************************/
+/* bandeau informations */
+/************************/
+.info {
+  display: flex;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  padding: 5px;
+  margin: 2em auto;
+  align-items: center;
+}
+div.blog {
+  margin: auto;
+}
+.info>svg {
+  width: 40px;
+  height: 40px;
+}
+
+
+  .blog p {
+    text-align: left;
+    margin-left: 5px;
+
+    color: #0094db;
+    font-size: 18px;
+  }
+
+/**************************************/
+/* font et style pour le mot rubrique */
+/**************************************/
+p.rubrik { 
+      font-family: 'Roboto Condensed', sans-serif;
+
+      margin: 2em;
+      justify-content: space-between;
+}
+
+/*****trait de surlignement *******/
+h1{border-bottom:solid 1px #ccc;} 
+
+/********* boutons de navigation entre pages du site ***********/
+
+/*****************************/
+/*container des elements div */
+/*****************************/
+
+.main {
+	
+	height:40%;
+	display : inline-block; /*pour permettre aux div de s'afficher côte à côte. Chacun des div contenus devront posseder la regle float*/
+	width:100%;
+	box-sizing: content-box;
+	}
+
+
+/****************************/	
+/*container div des boutons */
+/****************************/
+
+.main-inside{
+	
+	border: 2px outset;	
+	border-radius:5px;
+	height:45%;
+	width:45%;
+	/*height:100px;*/
+	/*width:300px;*/
+	margin: 0;
+	box-shadow:2px 2px 2px gray, -1px -1px 2px white;
+	}
+
+.left{
+	float : left;
+	}
+
+.right{
+	float:left;
+	}	
+/**************************/	
+/*règles pour les boutons */
+/**************************/
+
+.btn-lg {   
+   padding:6px 0 6px 0;
+	font:bold 13px Arial;
+	background:#f5f5f5;
+	color:#555;
+	border-radius:2px;
+	width:200px;
+	border:1px solid #ccc;
+	position : relative;
+	cursor:pointer;
+}
+
+.btn-lg:hover{
+  color:white;
+}
+
+/*******************************************/
+/* positionnement scrolling pour le header */
+/*******************************************/
+.my-header-container {
+  background-color: #f1f1f1;
+  padding: 0px;
+  text-align: center;
+  text-color: #f1f1f1;
+  margin:0;
+}
+.my-site-header {
+  top:0;left:0;right:0;
+  background: #eeeeee;
+
+}
+
+#myHeader {
+  z-index:1;
+  height : 70px;
+  background: #555;
+  vertical-align:middle;
+  will-change: transform;
+}
+#myHeader a {
+  color : white;
+}
+.sticky {
+  position:fixed;
+  top:0;left:0;right:0;
+  /* amélioration des performances pour un element retiré du flux */
+  /* voir developper mozilla Web/CSS/position */
+  will-change: transform; 
+  
+}
+
+.titre {
+  position : absolute;
+  top: 1 rem; 
+  left: 2rem;
+}
+
+/******************************************************/
+/* positionnement du footer en bas de page non sticky */
+/******************************************************/
+.site_footer {
+  margin-top:100px;
+  margin-bottom:0;
+  position:absolute;
+  bottom: 0; left:0;right:0;
+  background: #eeeeee;
+  font-size:small;
+}
+
+/*********************/
+/* design responsive */
+/*********************/
+@media screen and (max-width: 800px) {
+  .main {
+    display:block;
+    
+  }
+  .main-inside{
+	width:90%;
+	 
+		}
+  .left {
+  	clear:both;
+  }
+  .right {
+  	clear:both;
+  }
+
+  .btn-lg { 
+
+   font-size: 11px; 
+  }
+
+}
+
+/*******************************************************************/
+/* effet de type lire la suite pour les paragraphes textuels longs */
+/* tips emprunté à https://css-tricks.com/the-checkbox-hack/       */
+/*******************************************************************/
+
+.control-me {
+    display:none;
+}
+
+#toggle:checked ~ .control-me
+{
+    display:block;
+    
+}
+
+label {
+    
+    cursor:pointer;
+    /*texte non selectionable*/
+     -moz-user-select: none; /* Firefox */
+     -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
+     -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+ user-select: none; /* Propriété standard */
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -100vw;
+    
+    /* Note, you may want to position the checkbox over top the label and set the opacity to zero instead. It can be better for accessibilty on some touch devices for discoverability. */
+}
+
+
+/*******************************/
+/*regles CSS pour le formulaire*/
+/*******************************/
+
+form ol li {
+  /* suppression des numeros de liste et application d'une couleur de fond blanche transparente*/
+
+  list-style: none;
+  padding: 5px 10px;
+}
+
+form label {
+  /* display float left des elements */
+  /*float: left;*/
+  display: block;
+  font-size: 13px;
+  width: 100%;
+}
+
+form legend {
+  /* mise en forme du titre de chaque section du formulaire*/
+  color: #6f3c13;
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+/**********************************/
+/*regles CSS pour la BOX à retenir*/
+/**********************************/
+
+/* creation du container au fond coloré et avec bords arrondis */
+/* aucune marge intérieure pour que les éléments soient contre les bords */
+/* du container */
+.essentiel {
+  background:#f0d0a0;
+  color:#555;
+  border-radius:10px;
+  width:80%;
+  border:1px solid #ccc;
+  padding-top:0; 
+}
+
+/* en-tête : boite qui se positionne à l'interieur du container */
+/* en position la plus haute */
+/* avec un fond coloré plus foncé et une police plus grosse */
+.essentiel>.entete {
+  margin:0;
+  background:#f56611;
+  color:#fff;
+  font-size:1.5em;
+  padding:20px;
+  border-radius:10px 10px 0 0 ;
+}
+
+/* le contenu : se place à la suite de l'entête, au dessous */
+/* ajout d'une marge intérieure et police plus petite */
+.essentiel>.resume {
+  padding:20px;
+  font-size:0.8em;
+}
+
+/**********************************/
+/*regles CSS pour la BOX preuve   */
+/**********************************/
+
+
+.preuve {
+  background:#888888;
+  color:#FFFFFF;
+  border-radius:10px;
+  width:80%;
+  border:1px solid #ccc;
+  padding-top:0; 
+}
+
+
+.preuve>.entete {
+  margin:0;
+  background:#CCCCCC;
+  color:#555;
+  font-size:1.5em;
+  padding:20px;
+  border-radius:10px 10px 0 0 ;
+}
+
+
+.preuve>.demo {
+  padding:20px;
+  font-size:0.8em;
+}
+
+
+/****************************/  
+/*        flip cards        */
+/****************************/
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  cursor:pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox*/
+}
+
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card-inner h1 {
+  text-align: center;
+}
+
+/*
+.flip-card:hover .flip-card-inner{
+  transform: rotateY(180deg);
+}
+*/
+
+/*
+.flip-card-inner:active {
+  transform: rotateY(180deg);
+}
+*/
+
+.flip-card-inner.active {
+  /* activé grace au code javascript de la page contenant la flip-card*/
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/************PRISM*************/
+
+code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#a67f59;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.function{color:#DD4A68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}
+
