@@ -8,7 +8,7 @@ menu:
 next: 
 prev: 
 title: Python unittest 
-weight: 20
+weight: 16
 ---
 
 # Utilisation du module unittest avec le calcul des nombres premiers
