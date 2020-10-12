@@ -6,36 +6,88 @@ Title : recursivité
 ## Principe 
 Un algorithme récursif est un algorithme qui fait appel à lui-même dans le corps de sa propre définition. Ce principe est aussi appelé : *de l'autoréférence*. 
 
+<!--
 Les questions à se poser pour élaborer l'algorithme : 
 
 - Est-ce que le problème dépend d’un (ou plusieurs) paramètre(s) ?
 - Est-il possible de résoudre le problème lorsque la (les) valeur(s) du paramètre est "petite(s)" ?
 - Est-il possible de résoudre le problème à l’aide de la résolution du problème portant sur une (des) "plus petite(s)" valeur(s) du paramètre ?
+-->
 
-Définir alors : 
+## Analyse d'un exemple: itératif => récursif
+Considérons une fonction `ajoute2_iter` qui prend N comme paramètre, et qui ajoute N fois 2. 
 
-- La **Base** : où on s’arrête, pas d’appel récursif (par exemple `if b = 0 then return a` dans l'algo PGCD)
-- **L'Hérédité**  : calcul à partir de paramètres plus "petits"
+### Algorithme itératif
+Supposons que nous souhaitions éviter la multiplication. L'algorithme itératif utilisera alors une boucle bornée:
 
+```python
+def ajoute2_iter(N):
+  """ajoute 2 un nombre N de fois
+  """
+  s = 0
+  for i in range(N):
+    s = s + 2
+  return s
+``` 
+*Résultat*
+
+```
+>>> ajoute2_iter(10)
+20
+```
+
+### Algorithme récursif
+
+```python
+def ajoute2(N):
+    """fonction qui s'appelle elle-meme N fois
+    """
+    if N==0 : 
+        return 0
+    else:
+        return 2 + ajoute2(N-1)
+```
+*Résultat*
+
+```
+>>> ajoute2(10)
+20
+```
+
+## Principe d'un algorithme récursif
+
+L'algorithme récursif comprend 2 parties importantes: 
+
+- La **Base** : où on s’arrête, pas d’appel récursif (par exemple `if N==0 : 
+        return 0` dans le script `ajoute2`)
+- **L'Hérédité**  : calcul à partir de paramètres plus "petits" : `return 2 + ajoute2(N-1)`.
+
+*Remarque:* Une instruction conditionnelle est incluse dans le corps de la fonction pour forcer la fonction à retourner sans que l’appel de récurrence soit exécuté (La **Base**). Sans cela, le programme pourrait tourner en boucle...
+
+## Comparatif itératif - récursif
 Une grande partie des problèmes peut se résoudre avec une implémentation récursive, comme avec une implémentation itérative. L'une ou l'autre peut paraître plus ou moins naturelle suivant le problème, ou suivant les habitudes du programmeur.
 
-## Complexité d'un algorithme recursif
-Pour un algorithme récursif, on compte le nombre d’appel récursif et il suffit en général de se ramener à une relation définissant une suite récurrente. On se ramène souvent à évaluer une relation du type : 
 
-C<sub>n</sub> =a * C<sub>f(n)</sub> + C
+|  |  Itératif | Récursif |
+|--- |--- |--- |
+| Principe | Permet d'executer plusieurs fois l'ensemble des instructions | La fonction s'appelle elle-même |
+| Format | L'itération comprend  l’initialisation, la condition, l’exécution de l’instruction dans une boucle et la mise à jour (incrémenter et décrémenter) la variable de contrôle. | Seule la condition de terminaison est spécifiée. |
+| Terminaison | L’instruction d’itération est exécutée plusieurs fois jusqu’à ce qu’une certaine condition soit atteinte. | Si la fonction ne converge pas vers une condition appelée (cas de base), elle conduit à une récursion infinie. |
+| Taille du script | L'itération rend le script plus long | Taille du script réduite |
 
-où : 
+Enfin, l'algorithme récursif utilise une *pile d'appels*, comme vu sur l'animation suivante:
 
-* C<sub>n</sub> est la complexité pour une donnée de taille n ; o a est le nombre d’appel récursif ;
-* f(n) décrit la variation de n dans l’appel récursif;
-* C est la complexité des calculs hors appel récursif.
+<figure>
+  <img src="https://lyceum.fr/644c0bfaf567173ce9856250e140d861/animation-puiss-recursive.gif" alt="animation recursivité puissance">
+  <figcaption>animation issue de la page <a href="https://lyceum.fr/tg/nsi/4-langages-et-programmation/4-recursivite">lyceum - puissance recursive</a></figcaption>
+</figure>
 
-| relation de récurrence | solution | comportement asymtotique |
-| --- | --- | --- |
-| C(n) = C(n-1) + b | C(n) = C(0) + b×n (somme de termes constants)| O(n) |
-| C(n) = a×C(n-1) + b, a ≠ 1 | C(n) = an × (C(0) – b/(1-a)) + b/(1-a) (suite géométrique)| O(a<sup>n</sup>) |
-| C(n) = C(n-1) + a×n + b | C(n) = C(0) + a×n×(n+1)/2 + n×b (suite arithmetique pour le 2e terme) | O(n<sup>2</sup>) |
-| C(n) = C(n/2) + b | C(n) = C(1) + b×log<sub>2</sub>(n) | O(log<sub>2</sub>n) |
+Il est facile de traiter des suites avec la méthode récursive:
+
+* factorielle
+* suite de Fibonacci.
+
+
 ## exemple : factorielle
 ### programme itératif
 
@@ -105,6 +157,8 @@ Appel à fact_recur(4)
 Retour de la valeur 24
 ```
 
+
+
 <div class="preuve">
   <div class="entete">
     Prouver l'algorithme recursif
@@ -132,11 +186,30 @@ Retour de la valeur 24
 Calcul de la complexité : Soit T(n) le nombre d'opérations fondamentales. Pour une fonction récurrente, c'est le nombre de résolution de la fonction de récurence.<br>
 On a T(n) = T(n-1) + 1 donc T(n) = n
 
-# Preuve de correction d'un algorithme récursif
+# Analyser un algorithme récursif
+## Preuve de correction d'un algorithme récursif
 
 - terminaison : recherche du convergent
 - correction / validité : recherche de l'invariant de boucle pour démontrer sa variation selon un argument de recurence
 - puis finir en montrant que l'invariant de boucle ou bien le resultat obtenu repond bien à la specification de l'algorithme
+
+## Complexité d'un algorithme recursif
+Pour un algorithme récursif, on compte le nombre d’appel récursif et il suffit en général de se ramener à une relation définissant une suite récurrente. On se ramène souvent à évaluer une relation du type : 
+
+C<sub>n</sub> =a * C<sub>f(n)</sub> + C
+
+où : 
+
+* C<sub>n</sub> est la complexité pour une donnée de taille n ; o a est le nombre d’appel récursif ;
+* f(n) décrit la variation de n dans l’appel récursif;
+* C est la complexité des calculs hors appel récursif.
+
+| relation de récurrence | solution | comportement asymtotique |
+| --- | --- | --- |
+| C(n) = C(n-1) + b | C(n) = C(0) + b×n (somme de termes constants)| O(n) |
+| C(n) = a×C(n-1) + b, a ≠ 1 | C(n) = an × (C(0) – b/(1-a)) + b/(1-a) (suite géométrique)| O(a<sup>n</sup>) |
+| C(n) = C(n-1) + a×n + b | C(n) = C(0) + a×n×(n+1)/2 + n×b (suite arithmetique pour le 2e terme) | O(n<sup>2</sup>) |
+| C(n) = C(n/2) + b | C(n) = C(1) + b×log<sub>2</sub>(n) | O(log<sub>2</sub>n) |
 
 # Application : recherche du PGCD
 ## Problème  
@@ -286,6 +359,15 @@ def fibo(n):
     return fibonacci(n-1) + fibonacci(n-2);
 ```
 
+Parfois, l'algorithme récursif n'est pas le plus performant: Pour l'exemple de la suite de Fibonacci, on constate que les mêmes calculs sont répétés plusieurs fois, comme fibo(2) dans le cas présent pour N = 4):
+
+<figure>
+  <img src="../images/page2/fibo.png">
+  <figcaption>pile d'appels pour la suite de fibonacci recursive</figcaption>
+</figure> 
+
+Mais la récursivité intervient aussi dans de nombreux problèmes où elle s’impose comme la méthode la plus adaptée, pour ne pas dire la seule. Un exemple historique est celui des tours de Hanoi. Un jeu inventé par Edouard Lucas, vers 1880. Son traitement sur ordinateur a fait sensation, grâce à la simplicité de son script récursif...
+
 # Application : les tours de Hanoï
 ## Principe
 On considère trois tiges plantées dans une base. Au départ, sur la première tige sont enfilées N disques de plus en plus étroits. Le but du jeu est de transférer les N disques sur la troisième tige en conservant la configuration initiale.
@@ -306,12 +388,41 @@ Le problème initial (déplacer N disques de A à C en utilisant B) devient donc
 L'algorithme récursif pour ce problème est étonnament réduit : 
 
 ```python
-def hanoi(n,a=1,b=2,c=3):
-    if (n > 0):
-        hanoi(n-1,a,c,b) # on deplace les n-1 disques de A vers B en utilisant C
-        print ("Déplace ",a,"sur",c)
-        hanoi(n-1,b,a,c)
+def hanoi(N,d,i,a):
+    """N disques doivent être déplacés de d vers a
+    Params:
+    N : int
+        nombre de disques
+    d: int
+        depart (vaut 1 au debut)
+    i: int
+        intermediaire (vaut 2 au debut)
+    a: int
+        fin (vaut 3 au debut)
+    Exemple:
+    lancer avec 
+    >>> hanoi(3,1,2,3)
+    """
+    if N==1 : 
+        print('deplacement de {} vers {}'.format(d,a))
+    else:
+        hanoi(N-1,d,a,i)
+        hanoi(1,d,i,a)
+        hanoi(N-1,i,d,a)
 ```
+
+*Résultat*
+```
+>>> hanoi(3,1,2,3)
+deplacement de 1 vers 3
+deplacement de 1 vers 2
+deplacement de 3 vers 2
+deplacement de 1 vers 3
+deplacement de 2 vers 1
+deplacement de 2 vers 3
+deplacement de 1 vers 3
+```
+
 
 # D'autres domaines exploitant la récursivité
 La récursivité se retrouvent dans d'autres situations, où elle prend parfois d'autres noms.
