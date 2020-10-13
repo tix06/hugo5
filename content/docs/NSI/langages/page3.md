@@ -12,7 +12,7 @@ Lorsque vous réalisez un projet en python, votre script s'agrandit, et vous aur
 
 Ainsi, il vous est facile de réutiliser des fonctions écrites pour un programme dans un autre sans avoir à les copier.
 
-## Importer un module
+## Mettre son programme sous forme de modules
 On a vu la différentes manières d'importer un module dans le cours [Python > Fonctions](/docs/python/pages/fonctions/page1/#importer-des-fonctions)
 
 On peut souhaiter, par exemple, créer une représentation graphique des nombres premiers dans une fenêtre `turtle`. On souhaite diviser les fonctions dans 2 fichiers:

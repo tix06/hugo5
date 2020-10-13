@@ -13,7 +13,10 @@ weight: 16
 
 # Utilisation du module unittest avec le calcul des nombres premiers
 
-> avant de démarrer cette partie, il est recommandé de consulter le cours sur [les tests unitaires](/docs/NSI/langages/page5/#créer-un-module-de-test-unitaires-avec-unittest)
+> avant de démarrer cette partie, il est recommandé de consulter :
+
+> * le cours sur [les tests unitaires](/docs/NSI/langages/page5/#créer-un-module-de-test-unitaires-avec-unittest)
+> * Et le paragraphe sur [mettre son programme sous forme de modules](/docs/NSI/langages/page3/#mettre-son-programme-sous-forme-de-modules)
 
 **Définition:** Un test unitaire est un test réalisé sur une portion du programme, typiquement sur une fonction.
 
