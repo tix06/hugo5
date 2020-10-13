@@ -37,6 +37,11 @@ def ajoute2_iter(N):
 ```
 
 ### Algorithme récursif
+On a la **relation de récurence**:
+$$u_{n+1} = 2 + u_n + $$
+
+On va adapter cette relation dans l'appel de la fonction:
+
 
 ```python
 def ajoute2(N):
@@ -58,10 +63,19 @@ def ajoute2(N):
 
 L'algorithme récursif comprend 2 parties importantes: 
 
-- La **Base** : où on s’arrête, pas d’appel récursif (par exemple `if N==0 : 
-        return 0` dans le script `ajoute2`)
+- La **Base** : c'est le cas pour lequel le problème se resoud immediatement (par exemple `if N==0 : 
+        return 0` dans le script `ajoute2`: le problème se resoud immediatement pour N == 0)
 - **L'Hérédité**  : calcul à partir de paramètres plus "petits" : `return 2 + ajoute2(N-1)`.
 
+```
+def fonction_recursive(param):
+  if <cas de base> : 
+    return value
+  else:
+    # instructions
+    fonction_recursive(f(param))
+```
+ 
 *Remarque:* Une instruction conditionnelle est incluse dans le corps de la fonction pour forcer la fonction à retourner sans que l’appel de récurrence soit exécuté (La **Base**). Sans cela, le programme pourrait tourner en boucle...
 
 ## Comparatif itératif - récursif
@@ -128,6 +142,9 @@ def fact(n):
 
 
 ### Programme recursif
+On a la **relation de récurence** suivante: $$u_{n} = n\times u_{n-1}$$
+
+et $$u_0 = 1$$:
 
 ```python
 def fact_recur(n):
@@ -196,20 +213,20 @@ On a T(n) = T(n-1) + 1 donc T(n) = n
 ## Complexité d'un algorithme recursif
 Pour un algorithme récursif, on compte le nombre d’appel récursif et il suffit en général de se ramener à une relation définissant une suite récurrente. On se ramène souvent à évaluer une relation du type : 
 
-C<sub>n</sub> =a * C<sub>f(n)</sub> + C
+T<sub>n</sub> =a * T<sub>f(n)</sub> + T
 
 où : 
 
-* C<sub>n</sub> est la complexité pour une donnée de taille n ; o a est le nombre d’appel récursif ;
+* T<sub>n</sub> est la complexité pour une donnée de taille n ; a est le nombre d’appel récursif ;
 * f(n) décrit la variation de n dans l’appel récursif;
-* C est la complexité des calculs hors appel récursif.
+* T est la complexité des calculs hors appel récursif.
 
-| relation de récurrence | solution | comportement asymtotique |
+| relation de récurrence sur T | solution | comportement asymtotique |
 | --- | --- | --- |
-| C(n) = C(n-1) + b | C(n) = C(0) + b×n (somme de termes constants)| O(n) |
-| C(n) = a×C(n-1) + b, a ≠ 1 | C(n) = an × (C(0) – b/(1-a)) + b/(1-a) (suite géométrique)| O(a<sup>n</sup>) |
-| C(n) = C(n-1) + a×n + b | C(n) = C(0) + a×n×(n+1)/2 + n×b (suite arithmetique pour le 2e terme) | O(n<sup>2</sup>) |
-| C(n) = C(n/2) + b | C(n) = C(1) + b×log<sub>2</sub>(n) | O(log<sub>2</sub>n) |
+| T(n) = T(n-1) + b | T(n) = T(0) + b×n (somme de termes constants)| O(n) |
+| T(n) = a×T(n-1) + b, a ≠ 1 | T(n) = an × (T(0) – b/(1-a)) + b/(1-a) (suite géométrique)| O(a<sup>n</sup>) |
+| T(n) = T(n-1) + a×n + b | T(n) = T(0) + a×n×(n+1)/2 + n×b (suite arithmetique pour le 2e terme) | O(n<sup>2</sup>) |
+| T(n) = T(n/2) + b | T(n) = T(1) + b×log<sub>2</sub>(n) | O(log<sub>2</sub>n) |
 
 # Application : recherche du PGCD
 ## Problème  
