@@ -38,7 +38,7 @@ def ajoute2_iter(N):
 
 ### Algorithme récursif
 On a la **relation de récurence**:
-$$u_{n+1} = 2 + u_n + $$
+$$u_{n+1} = 2 + u_n$$
 
 On va adapter cette relation dans l'appel de la fonction:
 
