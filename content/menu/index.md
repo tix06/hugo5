@@ -7,12 +7,6 @@ headless: false
 - [**SNT secondes**]({{< relref "/docs/SNT_2nde/SNT_index" >}})
 
 - [**NSI**]({{< relref "/docs/NSI/NSI_index" >}})  
-  - [architecture informatique]({{< relref "/docs/NSI/NSI_architecture" >}})
-  - [structure de données]({{< relref "/docs/NSI/NSI_structure" >}})
-  - [bases de données]({{< relref "/docs/NSI/NSI_bases" >}}) 
-  - [langages]({{< relref "/docs/NSI/NSI_langages" >}})
-  - [algorithmes]({{< relref "/docs/NSI/NSI_algorithmes" >}})
-   
 
 
 - [**Python**]({{< relref "/docs/python/index_python" >}})

@@ -2,6 +2,8 @@
 Title : recursivité
 ---
 
+Le cours comprend une [page d'exercices](../page6/) avec un *editeur python online*.
+
 # Récursivité
 ## Principe 
 Un algorithme récursif est un algorithme qui fait appel à lui-même dans le corps de sa propre définition. Ce principe est aussi appelé : *de l'autoréférence*. 
@@ -464,14 +466,10 @@ La **mise en abyme** est un procédé consistant à représenter une œuvre dans
 *Approfondir :* voir la page [https://fr.wikipedia.org/wiki/Algorithme_récursif](https://fr.wikipedia.org/wiki/Algorithme_récursif)
 
 # Exercices
-## Ex 1 : 
-Pour les algorithmes itératifs proposés : 
+## Ex 1 : longueur d'une liste
+ 
 
-* réaliser la preuve de l'algorithme. 
-* écrire l'algorithme récursif
-* prouver l'algorithme récursif
-
-### algorithme 1 : longueur d'une liste
+### algorithme intératif : 
 ```python
 def len_iterative(seq): 
     """
@@ -482,45 +480,16 @@ def len_iterative(seq):
         count = count + 1 
     return count
 ```
-*Aide pour l'écriture de l'algorithme recursif :* la fonction récursive s'appelera `len_recursive`, et aura aussi pour argument `seq`. Si on veut passer en argument la liste `seq` de laquelle on retire le premier élément, on fait : `len_recursive(seq[1:])`. Il faudra alors s'inspirer de la relation de récurence suivante : $$u_{n+1} = 1 + u_n$$
 
-### algorithme 2 : retournement d'une liste
-```python
-def reverse_iterative(seq): 
-    """
-    Return the reverse of a string 
-    use insert(index, elem) -- inserts the element at the given index, shifting elements to the right.
-    """
-    reversed_seq = []
-    for i in range(len(seq)):
-        reversed_seq.insert(0, seq[i])
-    return reversed_seq
-```
+#### 1. réaliser la preuve de cet algorithme. 
 
-On peut tester cette fonction dans une cellule d'un jupyter notebook : 
+### algorithme récursif
 
-<table>
-    <tr>
-        <th scope="row">IN</th>
-        <td>seq = 'abcd'<br>
-        reverse_iterative(seq)
-        </td>
-    </tr>
-   
-    <tr>
-        <th scope="row">OUT</th>
-        <td>
-         ['d', 'c', 'b', 'a']
-        </td>
-    </tr>
-</table>
+#### 2. Ecrire le script python de l'algorithme récursif
 
-*Aide pour l'écriture de l'algorithme récursif :* 
-La première étape est de définir notre scénario de base, qui vérifiera si la chaîne est égale à 0 et, si oui, retourne la chaîne elle-même.
+*Aide pour l'écriture de l'algorithme recursif :* la fonction récursive s'appelera `len_recursive`, et aura aussi pour argument `seq`. Si on veut passer en argument la liste `seq` de laquelle on retire le premier élément, on fait : `len_recursive(seq[1:])`. Il faudra alors s'inspirer de la relation de récurence suivante : $$u_{n+1} = 1 + u_n$$ lors de l'appel recursif.
 
-La deuxième étape est d'appeler de manière récursif la fonction d'inversion afin d'extraire le premier caractère et ensuite l'ajouter à la fin de la chaîne (par concaténation).
-On pourra s'inspirer de la relation de recurence suivante : 
-$$seq_{n+1} = seq_n[1:] + seq_n[0]$$
+
 
 ## Ex 2 : Exponentiation
 Etudions l'exponentiation à travers deux exemples.
@@ -549,6 +518,9 @@ def exp2(n,x):
 1. Combien de produits sont necessaires pour calculer une puissance n-ième avec la fonction `exp1` ?
 2. Pour la fonction `exp2` : Soit u<sub>n</sub> le nombre de produits nécessaires pour calculer une puissance n-ième. Quelle est la relation de récurrence vérifiée par u<sub>n+1</sub> ? $$u_{n+1} = u_n + ...$$
 3. En déduire la complexité pour ces 2 fonctions.
+
+# Autres exercices avec editeur online
+[Lien vers la page des exercices](../page6/)
 
 # Liens
 * article sur les tours de Hanoi [http://accromath.uqam.ca/2016/02/les-tours-de-hanoi-et-la-base-trois/](http://accromath.uqam.ca/2016/02/les-tours-de-hanoi-et-la-base-trois/)

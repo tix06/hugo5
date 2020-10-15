@@ -103,4 +103,6 @@ Compléter la fonction `prem1` afin que celle-ci calcule bien les nombres premie
 * Le test se déroule t-il correctement?
 * Que se passe t-il si on modifie la valeur 100 dans l'instruction `premiers = prime.liste_prime1(100)` de la méthode `test_prime` de la classe `PrimeTestCase`? Conclure
 
+# La suite du TP: La spirale d'Ulam
+[Lien vers la suite du TP](/docs/NSI/algorithmes/page12/)
 
