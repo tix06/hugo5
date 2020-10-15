@@ -297,30 +297,9 @@ def PGCD(a,b):
 ```
 
 
-<div class="preuve">
-  <div class="entete">
-    Complexité
-  </div>
-  <div class="demo">
-On prouve par récurrence que le cas le pire (c'est à dire celui où le nombre d'itérations à exécuter est le plus grand), est celui où a et b sont des termes consécutifs de la <strong>suite de Fibonacci</strong>. Cela revient à montrer que  deux termes successifs de la suite de Fibonacci sont premiers entre eux.
-(si leur plus grand diviseur commun est 1)
 
-<ul><li>La propriété est vraie pour n = 1 : f<sub>2</sub> et f<sub>1</sub> sont premiers entre eux.</li>
-<li>Supposons que f<sub>n</sub> et f<sub>n-1</sub> soient premiers entre eux :<br>
-Soit d le PGCD de fn et fn+1, alors d divise f<sub>n+1</sub>– f<sub>n</sub>.<br>
-d est à la fois diviseur de f<sub>n+1</sub> et f<sub>n</sub><br>
-Or : (suite de Fibonacci)<br>
-$$f_{n+1} = f_n + f_{n-1}$$
-Donc : 
-$$f_{n-1} = f_{n+1} - f_n$$
-Il faut alors que f<sub>n-1</sub>, f<sub>n+1</sub> et f<sub>n</sub> aient un même diviseur, d. Or le diviseur commun de f<sub>n-1</sub> et f<sub>n</sub> est 1, donc d = 1.
-</li>
-</ul>
-Dans ce <strong>pire</strong> cas, la complexité de l'algorithme est alors O(log<sub>10</sub> b). C'est proportionnel au nombre de divisions euclidiennes réalisées.
-</div>
-</div>
 
-Les nombres de Fibonacci apparaissent aussi dans la croissance des plantes. Le nombre de pétales des différentes fleurs est souvent un nombre de la suite de Fibonacci. On remarque que l’ angle entre deux primordia successifs, tend vers L’ANGLE D’OR, et que plus les nombres successifs sont grands, plus le rapport s’approche du NOMBRE D’OR.
+
 
 # Application : suite de Fibonacci
 ## Définitions
@@ -343,6 +322,8 @@ On peut compléter le tableau suivant présentant l'effectif de ces couples de l
 
 On définit la suite (f<sub>n</sub>) des nombres de Fibonacci par :
 $$\left\\{\begin{matrix}\begin{align}f\_0 & =0\\\f\_1 & =1\\\f\_{n+1} & =f\_{n}+f\_{n-1}, \forall n \in \mathbb{N}^+\end{align}\end{matrix}\right.$$
+
+Les nombres de Fibonacci apparaissent aussi dans la croissance des plantes. Le nombre de pétales des différentes fleurs est souvent un nombre de la suite de Fibonacci. On remarque que l’ angle entre deux primordia successifs, tend vers L’ANGLE D’OR, et que plus les nombres successifs sont grands, plus le rapport s’approche du NOMBRE D’OR.
 
 ## Algorithme itératif
 ```python
@@ -373,8 +354,32 @@ def fibo(n):
     """
     if (n==0) : return 0
     if (n==1) : return 1
-    return fibonacci(n-1) + fibonacci(n-2);
+    return fibonacci(n-1) + fibonacci(n-2)
 ```
+
+<div class="preuve">
+  <div class="entete">
+    Complexité
+  </div>
+  <div class="demo">
+On prouve par récurrence que le cas le pire (c'est à dire celui où le nombre d'itérations à exécuter est le plus grand), est celui où a et b sont des termes consécutifs de la <strong>suite de Fibonacci</strong>. Cela revient à montrer que  deux termes successifs de la suite de Fibonacci sont premiers entre eux.
+(si leur plus grand diviseur commun est 1)
+
+<ul><li>La propriété est vraie pour n = 1 : f<sub>2</sub> et f<sub>1</sub> sont premiers entre eux.</li>
+<li>Supposons que f<sub>n</sub> et f<sub>n-1</sub> soient premiers entre eux :<br>
+Soit d le PGCD de fn et fn+1, alors d divise f<sub>n+1</sub>– f<sub>n</sub>.<br>
+d est à la fois diviseur de f<sub>n+1</sub> et f<sub>n</sub><br>
+Or : (suite de Fibonacci)<br>
+$$f_{n+1} = f_n + f_{n-1}$$
+Donc : 
+$$f_{n-1} = f_{n+1} - f_n$$
+Il faut alors que f<sub>n-1</sub>, f<sub>n+1</sub> et f<sub>n</sub> aient un même diviseur, d. Or le diviseur commun de f<sub>n-1</sub> et f<sub>n</sub> est 1, donc d = 1.
+</li>
+</ul>
+Dans ce <strong>pire</strong> cas, la complexité de l'algorithme est alors O(log<sub>10</sub> b). C'est proportionnel au nombre de divisions euclidiennes réalisées.
+</div>
+</div>
+
 
 Parfois, l'algorithme récursif n'est pas le plus performant: Pour l'exemple de la suite de Fibonacci, on constate que les mêmes calculs sont répétés plusieurs fois, comme fibo(2) dans le cas présent pour N = 4):
 
