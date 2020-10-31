@@ -3,6 +3,10 @@ Title : structures lineaires
 ---
 
 # Structure linéaire : La Pile
+## Les structures de données
+<p class="definition">Definition: Une <b>structure de données</b> est une manière de stocker, d’accéder à, et de manipuler des données (comme les types list ou dict de Python).</p>
+<p class="definition">Definition: Un <b>type abstrait</b> décrit essentiellement une interface, indépendamment du  langage de programmation.</p>
+
 ## Un premier exemple
 La pile est une manière de ranger les données.
 
@@ -63,7 +67,7 @@ Puis, lorsqu'elle est parvenu à une bifurcation vers une nouvelle direction, el
   <figcaption>pile du parcours en profondeur</figcaption>
 </figure>
 
-## Application 1 : une expression correctement parenthésée
+## Deuxieme exemple : une expression correctement parenthésée
 
 **Principe :** On lit l'expression de gauche à droite et on empile au fur et à mesure les caractères ouvrants : [, {, (. On dépile lorsqu'on lit le caractère fermant correspondant. A la fin, la pile doit être vide.
 
@@ -74,7 +78,7 @@ Dans l'exemple suivant, on voit que l'expression `[a+(b+c)]` est correctement pa
 </figure>
 
 ## Définitions
-
+### La pile: interface
 La pile est une structure de données appropriée quand :
 
 * On veut stocker des éléments dontle nombre est variable, et inconnu à l’avance.
@@ -94,18 +98,31 @@ Les méthodes (= fonctions) disponibles pour cette structure sont :
 </ul>
 
 
-## Implémenter un pile en Python
+### Implémenter un pile en Python
 Le type *List* en Python possède déjà toutes les méthodes d'une pile :
 
 ```python
 pile = []           # creation d'une pile
 pile == []          # tester si la pile est vide
 pile.append(valeur) # empile valeur dans la pile
-pile.push()         # depiler l'element au sommet
+pile.pop()         # depiler l'element au sommet
 pile[-1]            # lire l'element au sommet de la pile
 ```
 
 Lorsque l'on fait référence à une structure de données de type *pile* en traduisant un algorithme en Python, il faudra se contenter de ces 5 instructions.
+
+### Interface ou implémentation ? 
+
+
+Les types abstraits, comme les piles, sont définis par leur **interface** (comment  on s’en sert) plutôt que par leur **implémentation** (comment ils fonctionnent). Ils permettent d’étudier des algorithmes indépendamment  du langage utilisé.  
+
+<p class="definition">Definition: L’<b>interface</b> de la structure de données décrit de quelle manière on peut la  manipuler, par exemple en utilisant `append` pour le type list ou `get` pour le type  dict.</p>
+<p class="definition">Definition: L’<b>implémentation</b> de la structure de données, contient le code de  ces méthodes (comment fait Python). Il n’est pas nécessaire de connaître l’implémentation pour manipuler la structure de données. Il faut connaitre l'interface.</p>
+ 
+
+ 
+On verra ici deux manières d'implémenter la *pile*.
+
 
 ### Créer ses propres fonctions
 Pour traduire un algorithme utilisant cette structure *pile*, il peut être préférable de définir des instructions portant les noms de ces 5 instructions:
@@ -139,7 +156,7 @@ Les méthodes (fonctions) déclarées précédemment sont alors associées à l'
 pile = Pile()
 pile.est_vide()
 pile.empile(valeur)
-pile.depile(valeur)
+pile.depile()
 pile.sommet()
 ```
 
@@ -155,14 +172,18 @@ La pile d'instruction doit être la même.
 Voir le cours sur la [recursivité](/docs/NSI/langages/page2/)
 
 # Résumé
+
 <div class="essentiel">
  <div class="entete">
   L'essentiel
  </div>
  <div class="resume">
-  Une <b>Pile</b> est une structure de données <b>linéaire</b> (les données sont rangées sur un ligne ou une colonne). Le dernier élément entré sera aussi le premier à sortir (<b>L</b>ast <b>I</b>n <b>F</b>irst <b>O</b>ut : LIFO).
+  Une <b>structure de données</b> est une manière de stocker, d’accéder à, et de manipuler des données.<br>
+  Une <b>Pile</b> est une <em>structure de données</em> <b>linéaire</b> (les données sont rangées sur un ligne ou une colonne). Le dernier élément entré sera aussi le premier à sortir (<b>L</b>ast <b>I</b>n <b>F</b>irst <b>O</b>ut : LIFO).<br>
 
-  Les méthodes (= fonctions) disponibles pour cette structure sont : 
+  <b>Interface</b><br>
+  L’<em>interface</em> d'une structure de données décrit de quelle manière on peut la  manipuler.
+  Les méthodes (= fonctions) disponibles pour la <em>Pile</em> sont : 
   <ul>
   <li> <b>construction</b> (d'une pile vide)</li>
   <li> <b>test</b> d'une pile <b>vide</b> (renvoie `True` si la pile est vide)</li>
@@ -171,36 +192,42 @@ Voir le cours sur la [recursivité](/docs/NSI/langages/page2/)
   <li> lire le sommet de la pile.</li>
   </ul>
 
-  Pour implémenter une pile en Python, on utilisera les méthodes déjà existantes pour le type <b>List</b> : 
+  <b>Implementation</b><br>
+  L'<em>implementation</em> contient le code de  ces méthodes (comment fait Python). Il n’est pas nécessaire de connaître l’implémentation pour manipuler la structure de données. Il faut connaitre l'interface.<br>
+  Pour <b>implémenter</b> une pile en Python, on utilisera les méthodes déjà existantes pour le type <b>List</b> : 
 
   <pre><code class=language-python data-lang=python>
   pile = []           # creation d'une pile
   pile == []          # tester si la pile est vide
   pile.append(valeur) # empile valeur dans la pile
-  pile.push()         # depiler l'element au sommet
+  pile.pop()         # depiler l'element au sommet
   pile[-1]            # lire l'element au sommet de la pile
 </code></pre>
+
  </div>
 </div>
 
+
 # Exercices sur les piles
-## Exercice 1 : pile d'instructions
-Considérons l'exemple suivant : 
+## Exercice 1 : implementer une pile
+1. Programmer les fonctions qui implémentent la *pile*: `Pile`,`est_vide`,`empile`,`depile`,`sommet`. (editeur python en fin d'exerice)
+2. Tester votre implémentation pour resoudre l'exercice suivant: (utiliser l'editeur python):
+* Soit une liste L = ['a',1,'b',2,'c',3,'d',4]
+* Parcourir les éléments de la liste L avec une boucle bornée
+  * empiler tous les nombres entiers dans une pile `p`.
 
-```python
-def h(x):
-  return x+1
+<iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f9d36caf37c6&mode=code"></iframe>
 
-def g(x):
-  return h(x)+2
+## Exercice 2 : lever des exceptions
+Certaines des fonctions que vous avez écrites vont lever des exceptions dans le cas où la pile est vide.
 
-def f(x)
-  return g(x)+1
-```
+1. Pour ces fonctions, ajouter des instructions pour lever les exceptions dans le cas où la pile est vide. (utiliser l'editeur python de l'exercice 1)
+2. Tester vos fonctions avec une pile vide.
 
-Que se passe-t-il lors de l'appel `f(5)` ? Représenter la pile d'instructions correspondante. Puis calculer le résultat.
 
-## Exercice 2 : déverser une pile
+## Exercice 3 : déverser une pile
+Dans l'editeur de l'exercice 1:
+
 Ecrire une fonction `deversepile` qui déverse une pile `p1` dans une pile `p2`.
 
 Cette fonction sera utilisée de la manière suivante : On utilise une pile intermédaire `p3` : 
@@ -211,9 +238,9 @@ deversepile(p1,p3)
 deversepile(p3,p2)
 ```
 
-Les fonctions que vous pourrez utiliser pour les piles seront celles définies en cours : `Pile,est_vide,empile,depile,sommet`.
+Les fonctions que vous pourrez utiliser pour les piles seront celles définies dans l'exercice 1 : `Pile,est_vide,empile,depile,sommet`.
 
-## Exercice 3 : Evaluation d'une opération en notation polonaise inversée
+## Exercice 4 : Evaluation d'une opération en notation polonaise inversée
 Principe : la notation polonaise inversée permet d'écrire une opération sans utiliser de parenthèses. Il faut alors écrire les 2 opérandes avant l'opérateur. L'opérateur se trouve à droite des 2 opérandes.
 
 En parcourant l'expression de gauche à droite, chaque fois que l'on rencontre un opérateur, on remonte vers la gauche pour rechercher les 2 opérandes et on remplace les 3 termes (2 operandes et 1 opérateur) par le resultat de l'opération.
@@ -234,6 +261,20 @@ Exemple : `1 2 + 4 * 3 +`
 </a>
 </figure>
 
-## Exercice 4 : Parcours en profondeur
+La liste L contient les caractères de l'expression POSTFIXE à calculer.
+
+1. Compléter les fonctions `add`, `soust`, et `multip` qui doivent additionner, soustraire, et multiplier les arguments x et y.
+2. Testez vos fonctions à l'aide du tableau associatif: Executer en console l'instruction: `dicoP['-'](3,4)` qui doit renvoyer ... -1
+3. Compléter la fonction evalNPI: Dans une boucle bornée qui parcourt tous les éléments de la liste L: `for a in L:`
+
+* si `a` est un entier: empiler a dans une liste `p` qui sera utilisée comme une *pile*.
+* si `a` est un opérateur présent dans le tableau associatif `dicoP`:
+    * depiler `p` deux fois et stocker les valeurs dans les opérandes x et y. 
+    * empiler la valeur calculée dans la pile `p`
+* retourner la valeur finale stockée dans `p`
+
+<iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f9d305edd765&mode=code"></iframe>
+
+
 
 

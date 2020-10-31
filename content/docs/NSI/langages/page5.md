@@ -123,9 +123,9 @@ if __name__ == "__main__":
 
 Documentation officielle :[Lien](https://docs.python.org/fr/3/library/doctest.html#module-doctest)
 
-# Méthodes de gestion des erreurs
+# Prévoir et gérer les erreurs
 ## Traceback
-L'exécution d'un programme peut provoquer une erreur. Lorsque c'est le cas, l'exécution s'arrête immédiatement et l'interpréteur Python affiche une trace d'erreur.
+L'exécution d'un programme peut provoquer une erreur, une *exception*. Lorsque c'est le cas, l'exécution s'arrête immédiatement et l'interpréteur Python affiche une trace d'erreur.
 
 Cette dernière fournit des informations quant au chemin d'exécution qui a mené jusqu'à l'erreur et sur la cause de cette dernière.
 
@@ -181,14 +181,34 @@ Les messages d'exception affichés par le Traceback.
 | TypeError | types incompatibles pour l’opération demandée.  *Exemple: unsupported operand type(s) for '-': 'range' and 'int'*|
 
 
-## assertions
+## Déclencher des exceptions
+### **`Raise`**
+L’instruction `raise` permet au programmeur de déclencher une exception spécifique: 
+
+*Exemple:*
+
+```python
+raise NameError('HiThere')
+```
+Affiche:
+```
+NameError  Traceback (most recent call last)
+<ipython-input-27-72c183edb298> in <module>
+----> 1 raise NameError('HiThere')
+
+NameError: HiThere
+```
+
+
+
+### **Assertions: `assert`**
 **Les assertions sont les hypothèses avec vérification**.
 
 Le rajout *provisoire* d'assertions dans le script va permettre d'anticiper sur les erreurs possibles de logique.
 
 Le mécanisme d'assertion est là pour empêcher des erreurs qui ne devraient pas se produire, en arrêtant prématurément le programme. C'est un mode de programmation *défensif*, dans lequel on vérifie les *préconditions*.
 
-*Méthode :*  `asset <expression logique>, 'commentaire facultatif'`
+*Méthode :*  `assert <expression logique>, 'commentaire facultatif'`
 
 L'expression logique doit être egale à `True` pour que le programme se poursuive.
 
@@ -201,7 +221,7 @@ def inverse (x):
     return y
 ```
 
-Lorsque l'on execute la fonction `inverse` avec zero comme argument, le programme s'arrête et renvoie le message suivant dans le `Traceback` : 
+Lorsque l'on execute la fonction `inverse` avec zero comme argument, le programme s'arrête et renvoie le message suivant dans le `Traceback`: 
 
 ```python
 inverse(0)
@@ -209,7 +229,7 @@ inverse(0)
 AssertionError : argument nul
 ```
 
-Mais l'interêt réside surtout dans l'utilisation d'*assertion* pour prévenir une possible erreur logique : 
+Mais l'interêt réside surtout dans l'utilisation d'*assertion* pour prévenir une possible erreur logique: 
 
 On souhaite maintenant obtenir le même comportement (arrêt pour une valeur sortant de l'ensemble de définition d'une fonction) pour la fonction de conversion de degré Celsius en degré Fahrenheit. En effet, il n’y aurait aucun sens de convertir une température inférieure à la température correspondant au zéro absolu. (exemple issu de [univ.lille](https://www.fil.univ-lille1.fr/~wegrzyno/portail/Info/Doc/HTML/seq2_booleens_conditionnelles.html))
 
@@ -232,7 +252,7 @@ en_fahrenheit(-500)
 AssertionError valeur inferieure au zero absolu
 ``` 
 
-## Créer un module de test unitaires avec `unittest`
+## Créer un module de test unitaires avec **`unittest`**
 **Définition:** Un test unitaire est un test réalisé sur une portion du programme, typiquement sur une fonction.
 
 Le module `unittest` offre des outils de test de code, comme la classe TestCase. Le but est de vérifier que votre code génère des résultats corrects, conformes au attentes.
@@ -376,7 +396,10 @@ En fait, `unittest.TestCase` propose plusieurs méthodes d'assertion que nous ut
 | assertNotIsInstance(a, b) | not isinstance(a, b) |
 | assertRaises(exception, fonction, *args, **kwargs) | Vérifie que la fonction lève l'exception attendue.|
 
-# Mécanisme d'exception `try-except`
+# Gestion des exceptions: **`try-except`**
+![compléments sur la gestion des exceptions](https://docs.python.org/fr/3.5/tutorial/errors.html#handling-exceptions)
+
+
 Le mécanisme des exceptions permet au programme de « rattraper » les erreurs, de détecter qu’une erreur s’est produite et d’agir en conséquence afin que le programme ne s’arrête pas.
 
 Afin de rattraper l’erreur, on insère le code susceptible de produire une erreur entre les mots clés `try` et `except`. 
