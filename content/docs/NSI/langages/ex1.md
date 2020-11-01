@@ -176,10 +176,6 @@ ZeroDivisionError: division by zero
 ```
 
 
-
-
-
-
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front" style="font-size: 14px">
@@ -197,11 +193,84 @@ except ZeroDivisionError as err:<br>
     </div>
     <div class="flip-card-back">
       <h1>Réponse</h1>
-      Handling run-time error: division by zero
+      Handling run-time error: division by zero<br>
+      Car l'exception est capturée et c'est le bloc except qui est executé.
 
     </div>
   </div>
 </div>
+
+### Flash card 6
+
+**script 5** 
+
+```python
+annee = input() # L'utilisateur saisit l'année
+
+annee = int(annee) # On tente de convertir l'année
+
+if annee<=0:
+    raise ValueError("l'année saisie est négative ou nulle")
+print('ca continu')
+```
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front" style="font-size: 14px">
+      <h1>Levée d'exception avec RAISE</h1>
+     
+<p>
+1. Dans la boite <em>input</em>, l'utilisateur entre la valeur -4. Le programme s'arrête t-il?<br>
+2. Quel est le message affiché en console ?
+</p>
+     
+    </div>
+    <div class="flip-card-back">
+      <h1>Réponses</h1>
+      1. Oui, le programme s'arrête: Raise lève une exception.<br>
+      2. ValueError: l'année saisie est négative ou nulle
+
+    </div>
+  </div>
+</div>
+
+
+### Flash card 7
+
+**script 6** 
+```python
+annee = input() # L'utilisateur saisit l'année
+try:
+    annee = int(annee) # On tente de convertir l'année
+    if annee<=0:
+        raise ValueError("année saisie est négative ou nulle")
+except ValueError:
+    print("Valeur saisie invalide (l'année est peut-être négative).")
+```
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front" style="font-size: 14px">
+      <h1>raise try except: Priorité?</h1>
+     
+<p>
+1. Dans la boite <em>input</em>, l'utilisateur entre la valeur -9. Le programme s'arrête t-il?<br>
+2. Quel est le message affiché en console ?
+</p>
+     
+    </div>
+    <div class="flip-card-back">
+      <h1>Réponses</h1>
+      1. Non, le programme continue. Le mécanisme try-except capture l'exception et execute le bloc except. Puis continue.<br>
+      2. Valeur saisie invalide (l'année est peut-être négative).
+
+    </div>
+  </div>
+</div>
+
+
+
+
 
 # Relire le cours
 Lien vers la page [mise au point d'un programme](/docs/NSI/langages/page5/)

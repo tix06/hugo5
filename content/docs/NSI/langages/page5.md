@@ -166,7 +166,7 @@ ZeroDivisionError                         Traceback (most recent call last)
 
 ZeroDivisionError: float division by zero
 ``` 
-### Erreurs de syntaxe (messages d'exception)
+### Messages d'exception
 Les messages d'exception affichés par le Traceback. 
 
 
@@ -179,6 +179,8 @@ Les messages d'exception affichés par le Traceback.
 | IndexError | accès à une position en dehors d’une liste |
 | AttributeError | accès à une méthode ou à un attribut inconnu.  *Exemple: 'list' object has no attribute 'appand'* |
 | TypeError | types incompatibles pour l’opération demandée.  *Exemple: unsupported operand type(s) for '-': 'range' and 'int'*|
+| ValueError | une valeur est inappropriée pour une certaine opération |
+| KeyError | Une clé est utilisée pour accéder à un élément d’un dictionnaire dont elle ne fait pas partie |
 
 
 ## Déclencher des exceptions
@@ -397,7 +399,7 @@ En fait, `unittest.TestCase` propose plusieurs méthodes d'assertion que nous ut
 | assertRaises(exception, fonction, *args, **kwargs) | Vérifie que la fonction lève l'exception attendue.|
 
 # Gestion des exceptions: **`try-except`**
-![compléments sur la gestion des exceptions](https://docs.python.org/fr/3.5/tutorial/errors.html#handling-exceptions)
+[compléments sur la gestion des exceptions](https://docs.python.org/fr/3.5/tutorial/errors.html#handling-exceptions)
 
 
 Le mécanisme des exceptions permet au programme de « rattraper » les erreurs, de détecter qu’une erreur s’est produite et d’agir en conséquence afin que le programme ne s’arrête pas.

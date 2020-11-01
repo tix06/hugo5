@@ -115,7 +115,7 @@ Le tableau de convertion est alors le suivant :
       <p>Convertir en octets (<b>valeurs exactes</b>)</p>
       <ol>
       <li>10 Kibibits</li>
-      <li>100 Mibits</li>
+      <li>100 Mebibits</li>
       <li>125 Kibioctets</li>
       <li>1 Gibioctet</li>
 
