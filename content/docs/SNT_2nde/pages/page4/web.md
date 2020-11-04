@@ -124,7 +124,9 @@ Ce mode P2P connait un regain d'interet avec les *Blockchains* qui consistent à
 * Les traces laissées de manière voulue ou non lors de sa navigation
 
 <figure>
+  <div>
   <img src="../images/bigdata.png" alt="bigdataiswatchingyou">
+</div>
 </figure>
 
 D’où l’importance d’un cadre juridique permettant de protéger les usagers, préoccupation à laquelle répond le règlement général sur la protection des données (RGPD).
@@ -132,31 +134,25 @@ D’où l’importance d’un cadre juridique permettant de protéger les usag
 
 # Travaux pratiques
 
-<section class="main">
 
     
-  <div class="main-inside left">
+<input type="button" class="btn btn-lg" value="Partie 1: HTML. Présentation" onclick="window.location.href = '../web1/index.html'">
     
-    <input type="button" class="btn btn-lg" value="HTML et CSS. Exemples" onclick="window.location.href = '../web1/index.html'">
-    </div>  
-    <div class="main-inside right">
-      <input type="button" class="btn btn-lg" value="Langages web. Notions" onclick="window.location.href = '../web2/index.html'">
       
-  </div>
-  </section>  
-  
-  <section class="main">
-  <div class="main-inside left"><input type="button" class="btn btn-lg" value="Javascript" onclick="window.location.href = '../web3/index.html'">
-    </div>  
+<input type="button" class="btn btn-lg" value="Partie 2: HTML et CSS" onclick="window.location.href = '../web2/index.html'">
+      
 
- </section>
+<input type="button" class="btn btn-lg" value="Partie 3: Javascript" onclick="window.location.href = '../web3/index.html'">
 
+
+<!--
 ## Compétences
 * [Co] la difference entre internet et le web : le web correspond à la solution pour naviguer sur internet, et internet, c'est la contraction de Interconnected et Network (le maillage physique)
 * [decrire langages] ouvrir une page html simple avec le navigateur, voir le code source; rechercher les correspondances entre les éléments de la page et le code source (texte, image, lien)
 * [decrire données] decrire la structure d'une URL, ses symboles (séparateurs), ses paramètres : l'URL, unique, comporte le nom du protocole, de la machine qui heberge la ressource, le nom de la ressource et eventuellement des paramètres optionnels.
 * [outils] traces laissées dans le navigateur lors de la navigation et paramétrage : historique, cookies
 * [algo données et Co des systèmes] pagerank : repose sur le principe de calculer la popularité d'une page à partir de la popularité des pages qui la citent. C'est une tâche automatique dont on peut avoir un aperçu avec une activité... On peut partir d'un graphe (orienté), avec pour noeuds, les pages, et pour arêtes (ou arcs), les liens. Réaliser alors un parcours aléatoire de ces pages et calculer le nombre de visites pour chacune (avec un grand nombre de visites, c'est long et il faut utiliser un programme)
+-->
 
 ## Liens 
 [article binaire blog le Monde : Le www a 30 ans](http://binaire.blog.lemonde.fr/2019/04/26/le-world-wide-web-il-y-a-trente-ans/)

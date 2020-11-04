@@ -150,7 +150,7 @@ et $$u_0 = 1$$:
 
 ```python
 def fact_recur(n):
-  if (n=0) :return 1 else: return n*fact_recur(n-1)
+  if (n==0) :return 1 else: return n*fact_recur(n-1)
 ```
 
 On pourrait représenter la pile d'execution de cette fonction de la manière suivante : 
