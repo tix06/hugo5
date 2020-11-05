@@ -510,11 +510,12 @@ def exp2(n,x):
     """
     n : entier
     x : reel
-    exp1 : reel
+    exp2 : reel
     """
     if n==0 : return 1
     else : return exp2(n-1,x)*x
 ```
+
 1. Combien de produits sont necessaires pour calculer une puissance n-ième avec la fonction `exp1` ?
 2. Pour la fonction `exp2` : Soit u<sub>n</sub> le nombre de produits nécessaires pour calculer une puissance n-ième. Quelle est la relation de récurrence vérifiée par u<sub>n+1</sub> ? $$u_{n+1} = u_n + ...$$
 3. En déduire la complexité pour ces 2 fonctions.

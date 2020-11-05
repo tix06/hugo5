@@ -39,17 +39,26 @@ Celle-ci doit obligatoirement avoir un attribut *src* suivi du chemin (local ou 
 
 **Les balises principales :** de type `<balise>argument</balise>`
 
-* `<h1>` : titre principal
-* `<h2>` : titre secondaire
+* `<h1>` : titre principal<br>
+  &nbsp; *Exemple d'utilisation:* `<h1>Mon titre principal</h1>` => <span style="font-size: 32px">Mon titre principal</span>
+
+* `<h2>` : titre secondaire<br>
+  &nbsp; *Exemple d'utilisation:* `<h2>Mon titre secondaire</h2>` => <span style="font-size: 24px">Mon titre secondaire</span>
 * `<h3>` : titre de rang 3, etc... jusqu'à `<h6>`
-* `<p> ` : paragraphe
+* `<p> ` : paragraphe<br>
+  &nbsp; *Exemple:* `<p>Voici le contenu d'un paragraphe</p>` =><br><br>
+  &nbsp; &nbsp; Voici le contenu d'un paragraphe
 * `<div>`: est un container qui aide à la mise en page de son contenu
+* `<a>  `: lien<br>
+  &nbsp; *Exemple d'utilisation:* `<a href="lien/vers/la/page2.html">aller a la page 2</a>`<br>
+  &nbsp; &nbsp; <a href="">aller a la page 2</a>
 
-**Balises orpheline:**
+**Balise orpheline:**
 
-* `<a>  `: lien
-* `<img>`: image
+* `<img>`: image<br>
+  &nbsp; *Exemple d'utilisation:* `<img src="lien/vers/l/image.png">`<br>
 
+  &nbsp; &nbsp; <img src="../images/bigdata.png" width=50px>
 
 ## Travail pratique
 
@@ -70,7 +79,7 @@ Testons nos premières instructions en html.
 
 **1)** Traduire et modifier le texte (*Description*) pour qu'il soit rédigé en français.
 
-**2)** Diminuer la dimension de l'image à 150px: Dans l'onglet *style.css*, ajouter la règle suivante:
+**2)** Diminuer la dimension de l'image à 150px: Dans l'onglet *style.css*, ajouter la règle CSS suivante, à la suite de la précédente (donc APRES l'accolade \} ):
 
 ```css
 img { 
@@ -80,7 +89,7 @@ img {
 
 **3)** Ajouter un nouveau paragraphe (vide): Dans l'onglet *index.html*, ajouter une balise enfant `<p>` à celle `<div>`. Penser à ajouter la balise de fermeture `</p>` juste après.
 
-**4)** Ajouter un lien dans ce paragraphe vide vers une nouvelle page du site: `<a href="lune.html">`
+**4)** Ajouter un lien dans ce paragraphe vide vers une nouvelle page du site: `<a href="lune.html">=> Go to Lune Project</a>`
 
 **5)** Créer un nouvel onglet (bouton **+**) que vous renommerez *lune.html*.
 
@@ -168,7 +177,7 @@ Ces instructions {propriété1 : valeur; } sont référencées sur le site : *ht
 # Le langage javascript
 Le langage javascript va permettre de gérer les évènements de la page : les animations, les données des formulaires, les boutons...
 
-* Pour démarrer, **créer un nouveau fichier** sur la page avec le bouton + (en haut à droite), qui sera renommé `script.js`.
+* A l'aide des fonctions de l'editeur, **créer un nouveau fichier** qui sera nommé `script.js`. Mettre ce fichier dans le MËME dossier que celui contenant votre projet (et donc vos autres fichiers).
 
 * Ajouter dans ce fichier l'instruction : 
 

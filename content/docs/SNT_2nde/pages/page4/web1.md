@@ -85,6 +85,8 @@ Dans l'exemple qui suit, on peut lire dans le script html que la balise `html` c
 </html>
 ```
 
+> **Exercice:** A l'aide du script complet, poursuivre le diagramme représentant la hierarchie entre ces balises.
+
 # Lien vers la suite du TP
    
       
