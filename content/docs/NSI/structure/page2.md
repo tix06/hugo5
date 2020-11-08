@@ -15,15 +15,19 @@ Elle correspond exactement à l’image traditionnelle d’une pile de cartes ou
 L'illustration suivante montre que c'est la structure de données à adopter si l'on veut sortir d'un labyrinthe...
 
 <figure>
+  <div>
   <img src="../images/turt.gif" alt="parcours utilisant une pile">
   <figcaption>parcours pour sortir d'un labyrinthe</figcaption>
+</div>
 </figure>
 
 Le labyrinthe peut être modélisé par les coordonnées de ses noeuds, ainsi qu'une liste de directions possibles (ouvertures) pour chacun de ses noeuds : 
 
 <figure>
+  <div>
   <img src="../images/laby.png" alt="labyritnhe modelisation">
   <figcaption>modelisation d'un labyrinthe</figcaption>
+</div>
 </figure>
 
 En observant l'animation de la tortue dans le labyrinthe, on peut supposer que la pile des sommets visités (les cases du labyrinthe) sont, dans l'ordre : 
@@ -276,5 +280,6 @@ La liste L contient les caractères de l'expression POSTFIXE à calculer.
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f9d305edd765&mode=code"></iframe>
 
 
-
+# Autres structures linéaires
+Lien vers la page <a href="../page21/">Listes et Files</a>
 
