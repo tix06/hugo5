@@ -141,8 +141,23 @@ Un autre avantage est la possibilité de faire pointer le dernier élément sur 
 
 
 # Exercices
+## Exercice 1: Créer une liste chainée
+**1.** Completer le script ci-dessous pour créer une liste chainée appelée `ma_liste` qui contiendra la éléments suivants:
 
-## Exercice 1: afficher les éléments de liste
+`'Premier', 'Troisieme'`, `'Quatrieme'`
+
+<iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5faa722d44d4d&mode=code"></iframe>
+
+**2.** Tester dans la console les instructions suivantes:
+
+```python
+>>> ma_liste.tete.val
+>>> ma_liste.tete.suiv.val
+>>> ma_liste.tete.suiv.suiv.val
+```
+
+
+## Exercice 2: afficher les éléments de liste
 On cherche à parcourir les éléments d'une liste chainée `L`.
 
 On propose un premier algorithme itératif. Celui-ci stocke l'élément de tête de `L` dans une variable `M`.
@@ -158,7 +173,7 @@ Et on passe au maillon suivant: `M = M.suiv`
 
 La fonction doit renvoyer une chaine de caractères fabriquée de la manière suivante : `A => ... => ... => D`
 
-Compléter: 
+Compléter après le return: 
 
 ```
 def affiche(M):
@@ -170,10 +185,16 @@ def affiche(M):
 ```
 
 <br>
+
+<iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5faa752e1c9a3&mode=code"></iframe>
+<br>
+
+**3.** Testez votre fonction en console pour afficher les éléments de L, à partir du premier élément `L.tete`.
+
 **3.** Comment appeler cette fonction afin qu'elle affiche TOUS les éléments de la liste L, du premier (*tête*) au dernier? Tester avec la liste **ACD** décrite dans le cours.
 
-## Exercice 2: Insertion d'un élément
-On souhaite maintenant modifier la séquence de L. On va insérer un élément de valeur `B` à la 2<sup>e</sup> position.
+## Exercice 3: Insertion d'un élément
+On souhaite maintenant modifier la séquence de `ma_liste` créée dans l'exercice 1. On va insérer un élément de valeur `Deuxieme` à la 2<sup>e</sup> position.
 
 <figure>
   <div>
@@ -185,12 +206,23 @@ On souhaite maintenant modifier la séquence de L. On va insérer un élément d
 Ajouter dans votre programme les instructions qui permettront de:
  
 **1.** Créer un nouveau maillon `M4`.<br>
-**2.** Affecter 'B' comme valeur à `M4`.<br>
-**3.** Modifier le lien `M4.suiv` pour que celui-ci pointe vers le 3<sup>e</sup> élément de `L`.<br>
-**4.** Modifier le lien `L.tete.suiv` pour recréer la liste chainée.<br>
-**5.** Utiliser la fonction `affiche` pour afficher les éléments de `L`.<br>
+**2.** Affecter 'Deuxieme' comme valeur à `M4`.<br>
+**3.** Modifier le lien `M4.suiv` pour que celui-ci pointe vers le 3<sup>e</sup> élément de `ma_liste`.<br>
+**4.** Modifier le lien `ma_liste.tete.suiv` pour recréer la liste chainée.<br>
+**5.** Utiliser la fonction `affiche` pour afficher les éléments de `ma_liste`.<br>
 
 
+# Correction des exercices
+## Exercice 1
+(à venir)
 
+## Exercice 2
+(à venir)
+
+## Exercice 3
+(à venir)
+
+# Liens
+* Retour vers la page [introduction aux structures de données: les Piles](../page2/)
 
 

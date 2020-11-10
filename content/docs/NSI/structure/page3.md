@@ -155,6 +155,10 @@ skateboard de type long qui ne permet pas de rider en parc
 
 *Remarquer* que l'appel à la méthode `skateboard_pour_parc` se fait en identifiant l'objet qui possède cette méthode: `self.skateboard_pour_parc()`. Et ici, on n'ajoutera pas de nouvel argument. (On ne met pas `self` en argument lors du *message* envoyé à cet objet).
 
+*Surcharge d'une fonction de la librairie standard:* Ce que l'on vient de réaliser est une surcharger de la fonction `print` de la librairie standard. 
+
+Mais il existe d'autres méthodes de surcharge, prévues pour les **opérateurs**, ainsi que pour certaines **fonctions**. On pourra se référer au [lien suivant](https://riptutorial.com/fr/python/example/7334/surcharge-de-l-operateur) pour approfondir le sujet.
+
 # Exercices
 ## Exercice 1: divers
 ![exercices du site Lyceum.fr](https://lyceum.fr/tg/nsi/4-langages-et-programmation/6-programmation-objet/exo)

@@ -280,6 +280,124 @@ La liste L contient les caractères de l'expression POSTFIXE à calculer.
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f9d305edd765&mode=code"></iframe>
 
 
+# Correction des exercices
+## Exercice 1
+
+```python
+# exercice 1
+L = ['a',1,'b',2,'c',3,'d',4]
+
+def Pile():
+    return []
+
+def est_vide(pile):
+    return pile == []
+
+def depile(pile):
+    assert pile != [], 'impossible de depiler : pile vide'
+    return pile.pop()
+
+def empile(a,pile):
+    pile.append(a)
+
+def sommet(pile):
+    assert pile != [], 'la pile n_a pas de sommet : pile vide'
+    return pile[-1]
+
+
+
+p = Pile()
+for a in L:
+    if isinstance(a,int):
+        empile(a,p)
+print(p)
+```
+
+
+
+## Exercice 2
+Les modifications ont été faites directement dans le corrigé de l'exercice 1.
+
+Tester le script suivant à la suite de celui de l'exercice 1:
+
+```python
+# exercice 2
+p2 = Pile()
+depile(p2)
+```
+
+## Exercice 3
+Ajouter la fonction `deversePile` suivante à la suite de celles de l'exercice 1. (Les fonctions `est_vide`, `depile` et `empile` doivent être définies)
+
+
+```python
+# exercice 3
+def deversePile(p1,p2):
+    while not(est_vide(p1)):
+        a = depile(p1)
+        empile(a,p2)
+    return p2
+```
+
+## Exercice 4
+Il faut commencer par définir le dictionaire `dicoP` ainsi que les différentes fonctions des opérations:
+
+```python
+def add(x,y):
+    return x+y
+
+def soust(x,y):
+    return x-y
+
+def multip(x,y):
+    return x*y
+
+dicoP = {'+' : add,
+        '-' : soust,
+        '*' : multip
+}
+```
+
+On peut tester une opération à l'aide de `dicoP`:
+
+```python
+>>> dicoP['-'](3,4)
+-1
+```
+
+Puis on programme la fonction `evalNPI`:
+
+```python
+def evalNPI(L):
+    dico = {'+' : lambda x,y : x+y,
+            '-' : lambda x,y : x-y,
+            '*' : lambda x,y : x*y
+    }
+    p=[]    
+    for a in L:
+        if a in dico:
+            deuxieme = depile(p)
+            premier = depile(p)
+            r = dico[a](premier,deuxieme)
+            empile(r,p)
+        elif isinstance(a,int) : 
+            empile(a,p)
+    return p
+
+evalNPI(L)
+```
+
+> A vous de jouer: Ecrire la liste d'instructions relatives au calcul de g, puis utiliser votre calculatrice en notation polonaise inversée pour résoudre:
+
+> $$g = (3+6)*7 - (10-24)*4$$
+
+*Aide: rappelez vous que l'instruction ne contient pas de parenthèses, alors il faudra bien respecter l'ordre des opérations à realiser, de gauche à droite. Le dernier caractère à saisir sera alors le symbole **-**. Relire la video si vous en avez besoin (énoncé de l'Ex 4).*
+
+
+
+
+
+
 # Autres structures linéaires
 Lien vers la page <a href="../page21/">Listes et Files</a>
 
