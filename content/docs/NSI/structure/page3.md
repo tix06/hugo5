@@ -155,13 +155,28 @@ skateboard de type long qui ne permet pas de rider en parc
 
 *Remarquer* que l'appel à la méthode `skateboard_pour_parc` se fait en identifiant l'objet qui possède cette méthode: `self.skateboard_pour_parc()`. Et ici, on n'ajoutera pas de nouvel argument. (On ne met pas `self` en argument lors du *message* envoyé à cet objet).
 
-*Surcharge d'une fonction de la librairie standard:* Ce que l'on vient de réaliser est une surcharger de la fonction `print` de la librairie standard. 
+*Surcharge d'une fonction de la librairie standard:* Ce que l'on vient de réaliser est une surcharge de la fonction `print` de la librairie standard. 
 
 Mais il existe d'autres méthodes de surcharge, prévues pour les **opérateurs**, ainsi que pour certaines **fonctions**. On pourra se référer au [lien suivant](https://riptutorial.com/fr/python/example/7334/surcharge-de-l-operateur) pour approfondir le sujet.
 
+# L'essentiel
+Un objet est construit à partir d'une classe dans laquelle sont <ital>encapsulées</ital> la déclaration des attributs (les variables) et ses méthodes.
+
+Un objet est une instance de classe. On déclare un objet à l'aide de l'instruction <code>ma_liste = Liste()</code> lorsque l'on veut par exemple, créer un nouvel objet <code>ma_liste</code> à partir de la classe <code>Liste</code>.
+
+C'est alors le bloc de code <code>def __init__(self,attribut1,...);</code> qui est executé, et déclare les attributs associés à <code>ma_liste</code>.
+
+L'<b>encapsulation</b> est un mécanisme consistant à rassembler les données et les méthodes au sein d'une structure en cachant l'implémentation de l'objet, c'est-à-dire en empêchant l'accès aux données par un autre moyen que les services proposés. L'encapsulation permet donc de garantir l'intégrité des données contenues dans l'objet.
+
+Un objet comprend donc :
+
+* une partie **figée** qui représente son **état**, et qui est constituée de champs ou **attributs**.
+* une partie **dynamique** qui décrit son **comportement**, à l'aide de déclarations de **méthodes**, qui doivent répondre à des **messages**. 
+
+
 # Exercices
 ## Exercice 1: divers
-![exercices du site Lyceum.fr](https://lyceum.fr/tg/nsi/4-langages-et-programmation/6-programmation-objet/exo)
+[exercices du site Lyceum.fr](https://lyceum.fr/tg/nsi/4-langages-et-programmation/6-programmation-objet/exo)
 
 ## Exercice 2: Méthodes de la classe Pile
 
