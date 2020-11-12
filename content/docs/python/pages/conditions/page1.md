@@ -55,6 +55,19 @@ if jeu_actif :
   print('jouons !')
 ```
 
+### Test sur un dictionnaire
+Le mot-clé `in` permet de tester si une clé est présente dans le dictonnaire:
+
+```python
+dico = {'cle1':'val1','cle2':'val2','cle3':'val3'}
+
+print('cle1' in dico)
+# affiche True
+
+print('val1' in dico)
+# affiche False car `'val1'` est une valeur et non une clé.
+```
+
 
 ## Les blocs du programme
 En Python, on utilise l'indentation (le retrait de la ligne) pour rendre compte des blocs de code.

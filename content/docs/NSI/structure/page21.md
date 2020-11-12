@@ -57,7 +57,35 @@ Chaque maillon **M** contient:
 * une valeur, de n'importe quel type.
 * un lien (ou pointeur) vers le maillon suivant de la séquence.
 
-La plupart du temps, le lien du dernier maillon a pour valeur *None* en python, signifiant un pointeur vide.
+Il s'agit d'une structure *linéaire*, mais dans laquelle les éléments n'occupent pas *à priori*, des positions contigües dans la mémoire:
+
+*illustration:*
+
+<figure>
+  <div>
+  <img src="../images/listeElem.png" alt="elements d'une liste chainée">
+  <figcaption>elements dans une liste</figcaption>
+</div>
+</figure>
+
+
+Pour relier ces éléments ensembles, dans une même structure de données, il faut alors utiliser des *pointeurs*.
+
+<figure>
+  <div>
+  <img src="../images/listeElemPoint.png" alt="liste chainée grâce aux pointeurs">
+  <figcaption>liste chainée grâce aux pointeurs</figcaption>
+</div>
+</figure>
+
+L'élément **A** pointe sur **B**, qui pointe sur **C**, qui pointe sur **D**. **D**, lui, ne pointe sur ... **rien**!
+
+La plupart du temps, le lien du dernier maillon a pour valeur *None* en python, signifiant un pointeur sur *rien*.
+
+On pourra consulter la vidéo suivante jusqu'à 18min: 
+
+<a href="https://youtu.be/qB00WgCsbqo?t=495" target="blank">listes chainées de Jaques Olivier Lapeyre <img src="../images/video.png"></a>
+
 
 ## Interface
 On trouve en général les opérations suivantes pour l'interface d'une *Liste*:
@@ -108,11 +136,12 @@ On peut alors créer une liste ainsi :
 ```python
 L = Liste()
 M1, M2, M3 = Maillon(), Maillon(), Maillon()
-M1.suiv = M2
-M2.suiv = M3
 M1.val = 'A'
 M2.val = 'C'
 M3.val = 'D'
+M1.suiv = M2
+M2.suiv = M3
+M3.suiv = None
 L.tete = M1
 ```
 
@@ -156,6 +185,25 @@ Un autre avantage est la possibilité de faire pointer le dernier élément sur 
 >>> ma_liste.tete.suiv.suiv.val
 ```
 
+**3.** Rendez-vous sur <a href="http://pythontutor.com/visualize.html#mode=edit" target="blank">pythontutor.com</a> et coller le script dans l'editeur. Dérouler alors le script pour obtenir la représentation complète de la liste chaînée comme sur l'image suivante:
+
+<figure>
+  <div>
+  <img src="../images/pythontutor.png" alt="liste chainée et pythontutor">
+  <figcaption>liste chainée et pythontutor</figcaption>
+</div>
+</figure>
+
+**4.** Modifier le script dans la fenêtre d'edition de *pythontutor*. Ajouter les lignes suivantes et dérouler le programme ligne par ligne:
+
+```python
+s = ma_liste.tete
+s.val = '1'
+print(ma_liste.tete.val)
+print(M1.val)
+```
+
+> Qu'affiche la console? Ce résultat était-il prévisible? Pourquoi?
 
 ## Exercice 2: afficher les éléments de liste
 On cherche à parcourir les éléments d'une liste chainée `L`.
@@ -175,7 +223,7 @@ La fonction doit renvoyer une chaine de caractères fabriquée de la manière su
 
 Compléter après le return: 
 
-```
+```python
 def affiche(M):
     if M.suiv is None:
         return M.val  # affiche la valeur de queue
@@ -188,8 +236,6 @@ def affiche(M):
 
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5faa752e1c9a3&mode=code"></iframe>
 <br>
-
-**3.** Testez votre fonction en console pour afficher les éléments de L, à partir du premier élément `L.tete`.
 
 **3.** Comment appeler cette fonction afin qu'elle affiche TOUS les éléments de la liste L, du premier (*tête*) au dernier? Tester avec la liste **ACD** décrite dans le cours.
 

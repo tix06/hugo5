@@ -117,6 +117,23 @@ popu
   # affiche [1, 2, 3, 4, 5, 6]
   ```
 
+## Boucle `for` et `dictionnaire`
+On peut parcourir les clés d'un dictionnaire avec le mot-clé `in` de la manière suivante:
+
+```python
+dico = {'cle1':'val1','cle2':'val2','cle3':'val3'}
+
+for cle in dico:
+  print(cle)
+
+# affiche
+cle1
+cle2
+cle3
+```
+
+
+
 # Boucle `while`
 Un boucle `while` (tant que) s'éxecute tant qu'une condition est `True` : 
 

@@ -24,6 +24,8 @@ nom.strip()
 ```
 
 # méthodes de listes
+Les listes sont présentées à la page [variables](/docs/python/pages/variables/page1/#séquences-les-listes-et-les-tuples)
+
 ## append
 **append(element)** ajoute un élément en fin de liste
 ```python
@@ -95,6 +97,8 @@ Il y a 2 fonctions de tri :
 **sort** permet de trier la liste en place.
 
 # méthodes de dictionnaires
+Les dictionnaires sont présentés à la page sur les [variables](/docs/python/pages/variables/page1/#mappages-les-dictionnaires)
+
 ## keys
 méthode qui permet d'accéder aux clés d'un dictionnaire (retourne une liste de clés) :
 ```python
