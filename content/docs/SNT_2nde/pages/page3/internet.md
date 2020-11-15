@@ -166,7 +166,7 @@ Le trajet possible entre les 2 machines n'est pas unique :
 > Dans cet exemple, les données qui circulent du *client* vers le *serveur* vont probablement emprunter des chemins différents : certains passeront par les reseaux d'accès E, A, B et D, alors que d'autres emprunteront les reseaux E, A, C et D. Les routeurs par lesquels passent ces données seront aussi différents dans un même réseau d'accès. Le calcul de l'itinéraire est réalisé de manière dynamique, par les routeurs eux-même, en fonction du trafic.
 
 ## adresse IP et adresses symboliques
-Les adresses IP identifient les machines et leur permet de communiquer entre elles. Le problème est que le format de cette adresse n'est pas très intelligible pour un humain. C'est pour cela que les sites et les programmes hébergés sur les serveurs possèdent aussi une adresse symbolique.
+Les adresses IP identifient les machines par un numero (sur 32 bits pour l'IPV4, et 128 bits pour l'IPV6) et leur permet de communiquer entre elles. Le problème est que le format de cette adresse n'est pas très intelligible pour un humain. C'est pour cela que les sites et les programmes hébergés sur les serveurs possèdent aussi une adresse symbolique (nom d'hôte).
 
 Par exemple, l'adresse IP 207.142.131.245 est celle de Wikilivres.com (son nom d'hôte correspondant).
 
