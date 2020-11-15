@@ -150,8 +150,8 @@ L.tete = M1
 > et que vaut `L.tete.suiv.val`?
 
 
-## Interêt par rapport aux listes en python
-L'interface d'une liste chainée fournit des méthodes en O(1) qui n'existent pas avec les listes standarts en python. Par exemple, lorsque l'on veut **insérer** un élément dans la séquence:
+## Interêt et inconvenient par rapport aux listes en python
+L'interface d'une liste chainée fournit des méthodes plus efficaces que la *Pile*, la *File* ou le *tableau*, lorsque l'on veut par exempke: **insérer**, ou **supprimer** un élément dans la séquence.
 
 <figure>
   <div>
@@ -160,13 +160,16 @@ L'interface d'une liste chainée fournit des méthodes en O(1) qui n'existent pa
 </div>
 </figure>
 
-Cette opération est prévue par l'interface d'une liste chainée => O(1): `inserer_apres(i)`, où `i` est l'indice de l'élément après lequel on veut *insérer*.
+Cette opération est prévue par l'interface d'une liste chainée => O(n): `inserer_apres(i)`, où `i` est l'indice de l'élément après lequel on veut *insérer*.
 
-Mais avec une liste python, cela necessite de décaler toutes les valeurs de rang supérieur à `i `. C'est une opération qui est évaluée en O(n) pour sa complexité asymptotique.
+Avec une liste python, qui implémente la Pile (voir cours) cela necessite de décaler toutes les valeurs de rang supérieur à `i `. C'est une opération qui est évaluée en O(n<sup>2</sup>) pour sa complexité asymptotique.
 
-Il s'agit du même problème lorsque l'on veut *supprimer après `i`*, ou accéder au maillon de rang `i`.
+Il s'agit du même problème lorsque l'on veut *supprimer après `i`*.
 
 Un autre avantage est la possibilité de faire pointer le dernier élément sur le premier de la liste. On créé ainsi une liste *périodique*.
+
+**Inconvénient:** Pour accéder à un *maillon* de rang `i` dans une liste chainée, il faut remonter la liste depuis le premier élément (celui de tête), jusqu'à celui de rang `i`. Et cela se fait avec une complexité asymtotique O(n).
+
 
 
 # Exercices

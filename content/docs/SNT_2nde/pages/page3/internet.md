@@ -11,7 +11,7 @@ Maintenant, c'est l'accès à internet qui est recherché, pour :
 - avoir accès à des informations distantes
 - communication entre personnes (voir plus loin)
 - divertissements interactifs (jeux, musique, vidéo à la carte)
-- commerce électronique (auquel participent même les institutions financières, mais aussi des services de braderie en ligne, du type peer-to-peer entre particuliers, de consommateur à consommateur
+- commerce électronique (auquel participent même les institutions financières, mais aussi des services de braderie en ligne, entre particuliers, de consommateur à consommateur
 - commande d'un taxi ou d'un repas, avec suivi en temps réel du délai d'attente
 - autres services : téléformation, télémedecine, ...
 
@@ -44,7 +44,7 @@ Mais les activités principales liées à l'utilisation d'un smartphone restent 
 </figure>
 
 # La communication par internet
-**Des formes de communication interpersonnelles :** 
+**Des formes de communication interpersonnelles :**  (entre 2 personnes ou plus)
 
 - Il y a eu au démarrage un fort engouement des adolescents pour *la messagerie instantanée* (inspiré du programme talk de Unix); les *chat rooms*, salles de conversation autorisant un groupe de personnes à taper des messages visibles par tous. (sorte de bavardage). Les formes de communication ne s'y limitent d'ailleurs pas au texte, mais il y a des photos ou de courtes vidéos qui peuvent aussi y être *partagées*.
 - Les *forums de discussion* : où la communication ne fonctionne pas en temps réel, mais permet de poster un message que tous les membres peuvent lire
@@ -142,10 +142,6 @@ L'utilisation d'un service de téléchargement ou de streaming illégal entraine
 L'objet étant numérique, cela ne constitue pas à proprement parler d'un vol lorsque l'on s'en procure une copie. On peut d'ailleurs en réaliser un nombre illimité de copies numériques. Un fichier musical, une vidéo, une image ou un livre numérique constituent des biens non *rivaux*. Mais l'existance de *droits d'auteurs* empêche normalement la libre diffusion de l'oeuvre, et les personnes qui pratiquent cet échange enfreignent la loi.
 
 # Aspects techniques : fonctionnement d'internet
-## Le modèle client-serveur
-Un système informatique fonctionne sur le modèle **client-serveur** : L'ordinateur client a besoin d'établir des connexions avec un ordinateur serveur pour une grande partie des services dont il a besoin (consulter une base de données, communiquer, ouvrir des pages internet, charger des vidéos...).
-
-Une fois la connexion établie, l'ordinateur serveur lui répond en lui renvoyant les données necessaires.
 
 ## Réseau local et réseau internet
 * Dans un réseau local, les ordinateurs peuvent communiquer entre eux par l'intermédiaire d'un *routeur*.

@@ -67,25 +67,23 @@ Aujourd'hui, ils ont perdu de l'interêt face à la facilité d'utilisation des 
 </figure>
 
 
-## interaction client / serveur
-### protocole http
-* Le web fonctionne sur un modèle où un ordinateur *client* échange des données avec un ordinateur *serveur*. Le *client* demande des services au *serveur*, comme par exemple le chargement d'une page web. 
+## Les standards du Web
+Le Web fonctionne sur grâce aux standards suivants:
+
+### Le modèle client-serveur
+Un système informatique fonctionne sur le modèle **client-serveur** : L'ordinateur client a besoin d'établir des connexions avec un ordinateur serveur pour une grande partie des services dont il a besoin (consulter une base de données, communiquer, ouvrir des pages internet, charger des vidéos...).
+
+Une fois la connexion établie, l'ordinateur serveur lui répond en lui renvoyant les données necessaires.
 
 <figure>
   <img src="../images/client_serveur.png" alt="modele client serveur">
   <figcaption>modele client serveur</figcaption>
 </figure>
 
+### protocole http
 
-Le navigateur utilise souvent les méthodes GET et POST lors de la consultation des pages web:
 
-* GET : C'est la méthode la plus courante pour demander une ressource.
-* POST : Cette méthode est utilisée pour transmettre des données en vue d'un traitement à une ressource (le plus souvent depuis un formulaire HTML). Le résultat peut être la création de nouvelles ressources ou la modification de ressources existantes.
 
-<figure>
-  <img src="../images/requete.png" alt="outil reseau du navigateur">
-  <figcaption>observation de la requete GET à l'aide de l'outil reseau du navigateur</figcaption>
-</figure>
 
 Dans le protocole HTTP, une **méthode est une commande spécifiant un type de requête, c'est-à-dire qu'elle demande au serveur d'effectuer une action**. En général l'action concerne une ressource identifiée par l'URL qui suit le nom de la méthode.
 (definitions issues de https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
@@ -98,7 +96,21 @@ Dans le protocole HTTP, une **méthode est une commande spécifiant un type de r
 
 *Rq:* il existe d'autres modèles que celui client-serveur, comme par exemple, le P2P.
 
-### reseau P2P 
+### L'usage d'un navigateur
+Le navigateur est le logiciel qui permet d'utiliser le Web.
+
+Le navigateur utilise souvent les méthodes GET et POST lors de la consultation des pages web:
+
+* GET : C'est la méthode la plus courante pour demander une ressource.
+* POST : Cette méthode est utilisée pour transmettre des données en vue d'un traitement à une ressource (le plus souvent depuis un formulaire HTML). Le résultat peut être la création de nouvelles ressources ou la modification de ressources existantes.
+
+<figure>
+  <img src="../images/requete.png" alt="outil reseau du navigateur">
+  <figcaption>observation de la requete GET à l'aide de l'outil reseau du navigateur</figcaption>
+</figure>
+
+
+## reseau P2P 
 C'est un mode d'organisation sur internet où toutes les machines se comportent alternativement comme clients ou serveurs.
 
 <figure>
