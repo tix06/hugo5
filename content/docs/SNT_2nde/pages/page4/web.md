@@ -29,7 +29,7 @@ Le World Wide Web Consortium, abrégé par le sigle W3C, est un organisme de sta
 
 Le web fonctionne avec : le **protocole HTTP** (HyperText Transfert Protocol), les **URL** (Uniform Resource Locator) et le langage de description **HTML** (HyperText Markup Language).
 
-La *lecture et l’usage des hyperliens* d’une page html nécessite d’utiliser un **navigateur**.
+La *lecture et l’usage des hyperliens* d’une page html nécessite d’utiliser un **[navigateur](/docs/SNT_2nde/pages/page4/web/#l-usage-d-un-navigateur)**.
 
 ## Adresse d'une page web: URL
 Une **URL** (Uniform Resource Locator) est l'adresse d'une page web. 
@@ -39,9 +39,17 @@ Elle est composée de 3 parties:
 * Un nom de domaine, souvent une marque, une entreprise, une association, ...
 * un chemin qui pointe vers une ressource ou page précise.
 
-Par exemple, la page `html` que vous consultez:
+Par exemple, la page `html` que vous consultez, fait partie du domaine *allophysique.com* et se trouve à l'emplacement `/docs/snt_2nde/pages/page4/web/index.html`:
 
-[https://allophysique.com/docs/snt_2nde/pages/page4/web/index.html](https://allophysique.com/docs/snt_2nde/pages/page4/web/index.html)
+[https://allophysique.com/docs/snt_2nde/pages/page4/web/index.html](/docs/snt_2nde/pages/page4/web/index.html)
+
+On peut donc entrer dans une page directement en saisissant son URL.
+
+> On peut alors se demander: Comment est tissée la *toile du web*? C'est à dire, comment sont reliées ces pages les unes aux autres...
+
+> Tout d'abord, il y a les liens *hypertext*. Ces liens permettent la navigation de page en page, et c'est comme cela que l'on peut utiliser le Web. 
+
+> Ensuite, il y a l'entrée par un moteur de recherche.
 
 ## moteurs de recherche
 Logiciel qui dispose d'une indexation des pages internet. L'indexation est un traitement qui consiste à analyser des pages pour y detecter des mots clés utilisés fréquemment par les internautes.
@@ -68,7 +76,7 @@ Aujourd'hui, ils ont perdu de l'interêt face à la facilité d'utilisation des 
 
 
 ## Les standards du Web
-Le Web fonctionne sur grâce aux standards suivants:
+Le Web fonctionne grâce aux standards suivants:
 
 ### Le modèle client-serveur
 Un système informatique fonctionne sur le modèle **client-serveur** : L'ordinateur client a besoin d'établir des connexions avec un ordinateur serveur pour une grande partie des services dont il a besoin (consulter une base de données, communiquer, ouvrir des pages internet, charger des vidéos...).
@@ -80,10 +88,10 @@ Une fois la connexion établie, l'ordinateur serveur lui répond en lui renvoyan
   <figcaption>modele client serveur</figcaption>
 </figure>
 
-### protocole http
+*Rq:* il existe d'autres modèles que celui client-serveur, comme par exemple, le P2P.
 
-
-
+### protocole HTTP
+HTTP : HyperText Transfert Protocol, permet au navigateur de demander une page sur le reseau et au serveur de la transmettre.
 
 Dans le protocole HTTP, une **méthode est une commande spécifiant un type de requête, c'est-à-dire qu'elle demande au serveur d'effectuer une action**. En général l'action concerne une ressource identifiée par l'URL qui suit le nom de la méthode.
 (definitions issues de https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
@@ -94,12 +102,13 @@ Dans le protocole HTTP, une **méthode est une commande spécifiant un type de r
   <figcaption>mode client-serveur. Un serveur peut repondre aux requetes de multiples clients</figcaption></a>
 </figure>
 
-*Rq:* il existe d'autres modèles que celui client-serveur, comme par exemple, le P2P.
 
 ### L'usage d'un navigateur
 Le navigateur est le logiciel qui permet d'utiliser le Web.
 
-Le navigateur utilise souvent les méthodes GET et POST lors de la consultation des pages web:
+Il envoie une requete pour demander la ressource à l'aide du protocole HTTP.
+
+Le navigateur utilise souvent les méthodes GET et POST lors de l'envoi d'une requete:
 
 * GET : C'est la méthode la plus courante pour demander une ressource.
 * POST : Cette méthode est utilisée pour transmettre des données en vue d'un traitement à une ressource (le plus souvent depuis un formulaire HTML). Le résultat peut être la création de nouvelles ressources ou la modification de ressources existantes.
@@ -109,6 +118,7 @@ Le navigateur utilise souvent les méthodes GET et POST lors de la consultation 
   <figcaption>observation de la requete GET à l'aide de l'outil reseau du navigateur</figcaption>
 </figure>
 
+Le serveur lui repond en renvoyant un (des) fichier(s) HTML. Et eventuellement des fichiers associés, qui peuvent être dans d'autres formats, et complètent la page, son contenu, son style, ses éléments interactifs, ou apportent des ressources (images, videos...). C'est le navigateur qui interprète ces fichiers et assure l'affichage de la page.
 
 ## reseau P2P 
 C'est un mode d'organisation sur internet où toutes les machines se comportent alternativement comme clients ou serveurs.
