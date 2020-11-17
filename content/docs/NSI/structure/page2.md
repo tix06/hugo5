@@ -391,7 +391,9 @@ evalNPI(L)
 
 > $$g = (3+6)*7 - (10-24)*4$$
 
-*Aide: rappelez vous que l'instruction ne contient pas de parenthèses, alors il faudra bien respecter l'ordre des opérations à realiser, de gauche à droite. Le dernier caractère à saisir sera alors le symbole **-**. Relire la video si vous en avez besoin (énoncé de l'Ex 4).*
+
+
+<i>Aide: rappelez vous que l'instruction ne contient pas de parenthèses, alors il faudra bien respecter l'ordre des opérations à realiser, de gauche à droite. Le dernier caractère à saisir sera alors le symbole **-**. Relire la video si vous en avez besoin (énoncé de l'Ex 4).</i>
 
 
 

@@ -86,9 +86,9 @@ Reponse B : IndentationError <br>(à la ligne 5)
 
 **script 3**
 ```python
-f = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+f = [0, 1, 0, 0, 0, 0, 0, 0, 0]
 for i in range(0, 9):
-  f[i + 1] = f[i] + f[i - 1]  
+  if i>0: f[i + 1] = f[i] + f[i - 1]  
 print(f) 
 ```
 
@@ -109,13 +109,15 @@ C- NameError<br>
 
 D- AttributeError<br>
 
-E- IndexError
+E- IndexError<br>
+
+F- il n'y a aucun message d'exception qui est levé.
 </p>
      
     </div>
     <div class="flip-card-back">
       <h1>Réponse</h1>
-Reponse E : IndexError <br>(à la ligne 3, on ne pourra pas calculer f[i-1] pour i=0) 
+Reponse E : IndexError <br>(à la ligne 3, on ne pourra pas calculer f[i+1] pour i=8 car il n'y a pas de rang 9) 
     </div>
   </div>
 </div>
