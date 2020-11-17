@@ -41,26 +41,20 @@ Celle-ci doit obligatoirement avoir un attribut *src* suivi du chemin (local ou 
 
 **Les balises principales :** de type `<balise>argument</balise>`
 
-* `<h1>` : titre principal<br>
-  &nbsp; *Exemple d'utilisation:* `<h1>Mon titre principal</h1>` => <span style="font-size: 32px">Mon titre principal</span>
+| element | exemple d'instruction html | rendu navigateur |
+| --- | --- | --- | 
+| h1 (titre principal)| `<h1>Mon titre principal</h1>` | <span style="font-size: 32px">Mon titre principal</span> |
+| h2 (titre secondaire) | `<h2>Mon titre secondaire</h2>` | <span style="font-size: 24px">Mon titre secondaire</span> |
+| p (paragraphe) | `<p>Voici le contenu d'un paragraphe</p>` | &nbsp; &nbsp; Voici le contenu d'un paragraphe |
+| div (container) | `<div><p>Contenu</p><p>autre contenu</p></div>` | <p>Contenu</p><p>autre contenu</p> |
+| a (lien) | `<a href="lien/vers/la/page2.html">aller a la page 2</a>` | <a href="">aller a la page 2</a> |
+| img (image) | `<img src="lien/vers/l/image.png">` | <img src="../images/bigdata.png" width=50px> |
 
-* `<h2>` : titre secondaire<br>
-  &nbsp; *Exemple d'utilisation:* `<h2>Mon titre secondaire</h2>` => <span style="font-size: 24px">Mon titre secondaire</span>
-* `<h3>` : titre de rang 3, etc... jusqu'à `<h6>`
-* `<p> ` : paragraphe<br>
-  &nbsp; *Exemple:* `<p>Voici le contenu d'un paragraphe</p>` =><br><br>
-  &nbsp; &nbsp; Voici le contenu d'un paragraphe
-* `<div>`: est un container qui aide à la mise en page de son contenu
-* `<a>  `: lien<br>
-  &nbsp; *Exemple d'utilisation:* `<a href="lien/vers/la/page2.html">aller a la page 2</a>`<br>
-  &nbsp; &nbsp; <a href="">aller a la page 2</a>
+
 
 **Balise orpheline:**
+Noter que `<img>` est une balise orpheline, qui ne necessite pas de balise de fermeture: `<img src="lien/vers/l/image.png">`<br>
 
-* `<img>`: image<br>
-  &nbsp; *Exemple d'utilisation:* `<img src="lien/vers/l/image.png">`<br>
-
-  &nbsp; &nbsp; <img src="../images/bigdata.png" width=50px>
 
 ## Travail pratique
 
