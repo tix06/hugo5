@@ -27,11 +27,12 @@ Le World Wide Web Consortium, abrégé par le sigle W3C, est un organisme de sta
 </a>
 </figure>
 
-Le web fonctionne avec : le **protocole HTTP** (HyperText Transfert Protocol), les **URL** (Uniform Resource Locator) et le langage de description **HTML** (HyperText Markup Language).
+> Le web fonctionne avec : le **[protocole HTTP](#le-protocole-http)** (HyperText Transfert Protocol), les **[URL](#adresse-d-une-page-web-url)** (Uniform Resource Locator) et le langage de description **[HTML](/docs/SNT_2nde/pages/page4/web1/)** (HyperText Markup Language).
 
 La *lecture et l’usage des hyperliens* d’une page html nécessite d’utiliser un **[navigateur](/docs/SNT_2nde/pages/page4/web/#l-usage-d-un-navigateur)**.
 
-## Adresse d'une page web: URL
+# Adresse d'une page web: URL
+## Uniform Ressource Locator: où est la page?
 Une **URL** (Uniform Resource Locator) est l'adresse d'une page web. 
 Elle est composée de 3 parties:
 
@@ -43,7 +44,8 @@ Par exemple, la page `html` que vous consultez, fait partie du domaine *allophys
 
 [https://allophysique.com/docs/snt_2nde/pages/page4/web/index.html](/docs/snt_2nde/pages/page4/web/index.html)
 
-On peut donc entrer dans une page directement en saisissant son URL.
+## Naviguer entre les pages: hyperliens
+On peut entrer dans une page directement en saisissant son URL.
 
 > On peut alors se demander: Comment est tissée la *toile du web*? C'est à dire, comment sont reliées ces pages les unes aux autres...
 
@@ -51,7 +53,7 @@ On peut donc entrer dans une page directement en saisissant son URL.
 
 > Ensuite, il y a l'entrée par un moteur de recherche.
 
-## moteurs de recherche
+## Trouver une page: moteurs de recherche
 Logiciel qui dispose d'une indexation des pages internet. L'indexation est un traitement qui consiste à analyser des pages pour y detecter des mots clés utilisés fréquemment par les internautes.
 
 L'utilisateur va alors cliquer sur le lien de son choix parmi les propositions du moteur de recherche. Et se retrouver sur la page proposée, sans avoir à connaitre et mémoriser son URL.
@@ -75,10 +77,10 @@ Aujourd'hui, ils ont perdu de l'interêt face à la facilité d'utilisation des 
 </figure>
 
 
-## Les standards du Web
-Le Web fonctionne grâce aux standards suivants:
+# Le protocole HTTP
 
-### Le modèle client-serveur
+
+## Le modèle client-serveur
 Un système informatique fonctionne sur le modèle **client-serveur** : L'ordinateur client a besoin d'établir des connexions avec un ordinateur serveur pour une grande partie des services dont il a besoin (consulter une base de données, communiquer, ouvrir des pages internet, charger des vidéos...).
 
 Une fois la connexion établie, l'ordinateur serveur lui répond en lui renvoyant les données necessaires.
@@ -90,7 +92,7 @@ Une fois la connexion établie, l'ordinateur serveur lui répond en lui renvoyan
 
 *Rq:* il existe d'autres modèles que celui client-serveur, comme par exemple, le P2P.
 
-### protocole HTTP
+## HTTP
 HTTP : HyperText Transfert Protocol, permet au navigateur de demander une page sur le reseau et au serveur de la transmettre.
 
 Dans le protocole HTTP, une **méthode est une commande spécifiant un type de requête, c'est-à-dire qu'elle demande au serveur d'effectuer une action**. En général l'action concerne une ressource identifiée par l'URL qui suit le nom de la méthode.
@@ -103,7 +105,7 @@ Dans le protocole HTTP, une **méthode est une commande spécifiant un type de r
 </figure>
 
 
-### L'usage d'un navigateur
+## L'usage d'un navigateur
 Le navigateur est le logiciel qui permet d'utiliser le Web.
 
 Il envoie une requete pour demander la ressource à l'aide du protocole HTTP.
@@ -120,7 +122,7 @@ Le navigateur utilise souvent les méthodes GET et POST lors de l'envoi d'une re
 
 Le serveur lui repond en renvoyant un (des) fichier(s) HTML. Et eventuellement des fichiers associés, qui peuvent être dans d'autres formats, et complètent la page, son contenu, son style, ses éléments interactifs, ou apportent des ressources (images, videos...). C'est le navigateur qui interprète ces fichiers et assure l'affichage de la page.
 
-## reseau P2P 
+# reseau P2P 
 C'est un mode d'organisation sur internet où toutes les machines se comportent alternativement comme clients ou serveurs.
 
 <figure>
@@ -134,12 +136,14 @@ Ce mode a pu être utilisé pour partager illégalement des fichiers en infracti
 Ce mode P2P connait un regain d'interet avec les *Blockchains* qui consistent à repliquer sur de nombreuses machines les preuves chifrées et vérifiables d'un ensembles d'informations enregistrées.
 (monnaies virtuelles)
 
-## sécurité et confidentialité
+# sécurité et confidentialité
+
 * dans le navigateur Mozilla : effacer les traces : bouton bibliothèqe, Historique, marques pages et plus encore > **Historique** > Effacer l'historique recent (cocher au choix : historique, historique des formulaires et des recherches, cookies et câche) ET **Données** > préférence des sites 
 * paramétrer le navigateur : menu > Options > Vie privée et sécurité (Il y a plusieurs niveaux de sécurité). Dans Identifiants et mots de passe > afficher les mots de passe. Dans cookies et données > recherche la présence d'un cookie de connexion au site du lycée...
 * et Vie privée : blocage de contenus : toujours, afin de bloquer les contenus tiers qui peuvent ralentir la navigation ou distraire.
 
-## Impacts sur les pratiques humaines
+# Impacts sur les pratiques humaines
+
 * Le web permet à chacun de publier des informations sans contrôle préalable par une autorité. Cette revolution democratique amène la présence de fausses nouvelles (fake news) et le besoin de verification. Libération (désintox) et Le Monde (le blog des decodeurs) possèdent des espaces dédiés à la pratique, dédiant des journalistes à cette seule tâche.
 * Wikipedia est un exemple d'encyclopedie libre et participative, où des centaines d'internautes publient et relisent et effectuent des milliers de changement par heure.
 * Le web et le droit d'auteur, licences creatice commun
@@ -176,5 +180,5 @@ D’où l’importance d’un cadre juridique permettant de protéger les usag
 * [algo données et Co des systèmes] pagerank : repose sur le principe de calculer la popularité d'une page à partir de la popularité des pages qui la citent. C'est une tâche automatique dont on peut avoir un aperçu avec une activité... On peut partir d'un graphe (orienté), avec pour noeuds, les pages, et pour arêtes (ou arcs), les liens. Réaliser alors un parcours aléatoire de ces pages et calculer le nombre de visites pour chacune (avec un grand nombre de visites, c'est long et il faut utiliser un programme)
 -->
 
-## Liens 
+# Liens 
 [article binaire blog le Monde : Le www a 30 ans](http://binaire.blog.lemonde.fr/2019/04/26/le-world-wide-web-il-y-a-trente-ans/)

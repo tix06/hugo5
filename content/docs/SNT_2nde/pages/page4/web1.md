@@ -14,8 +14,8 @@ Le contenu des documents Web est rédigé en langage HTML (acronyme de Hypertext
 * ...
 
 <figure>
-  <a href="">
-    <a href="https://vimeo.com/138623721">
+ 
+<a href="https://vimeo.com/138623721">
     <img src="../images/contenustructure.png">
     <figcaption>Lire la video depuis 20' => 1min40'</figcaption>
 </a>
@@ -25,11 +25,14 @@ Le contenu des documents Web est rédigé en langage HTML (acronyme de Hypertext
 
 ## Les éléments en HTML
 ### Balises
-Les élements sont décrits par des balises.
+Les élements sont décrits par des *balises*, comme par exemple, l'élément paragraphe `p`, est déclaré à l'aide d'une balise `<p>`. Toute balise ouverte doit être refermée, ici avec `</p>`. Et le contenu (souvent textuel), est mis entre ces deux balises:
 
-Toute balise ouverte doit être refermée. 
+<figure>
+  <img src="../images/balises.png" alt="exemple d'une balise paragraphe">
+  <figcaption>exemple d'une balise paragraphe</figcaption>
+</figure> 
 
-Des balises comme `<head>` constituées d'une balise ouvrante et d'une balise fermante, elles s'utilisent comme des *parenthèses* et peuvent être imbriquées. Une mauvaise imbrication de balises constitue une erreur.
+Ces balises s'utilisent comme des *parenthèses* et peuvent être imbriquées. Une mauvaise imbrication de balises constitue une erreur.
 
 Par exemple: Une imbrication **correcte**:
 
@@ -87,6 +90,22 @@ Dans l'exemple qui suit, on peut lire dans le script html que la balise `html` c
 
 > **Exercice:** A l'aide du script complet, poursuivre le diagramme représentant la hierarchie entre ces balises.
 
+## Attribut d'une balise
+On peut ajouter des attributs à une balise. Cela permet de modifier son comportement. Par exemple, la balise de lien `a` prend un argument obligatoire qui est `href`, et qui pointe vers la ressource. Lorsque l'on clique sur le contenu (ce qui est affiché par la balise), on est dirigé vers cette ressource.
+
+*Exemple:* En reprenant l'exemple initial, on souhaite maintenant créer un lien hypertexte sur l'un des mots affichés. On inclue la balise suivante dans le paragraphe:
+
+`<a href = "http://fr.wikipedia.org/restauration_1814">Restauration</a>`
+
+Le lien <a>Restauration</a> va s'afficher en bleu souligné.
+
+Et cela va rediriger sur la page de wikipedia: restauration française de 1814, lorsque l'on clique sur <a href="https://fr.wikipedia.org/wiki/Portail:Restauration_française_1814-1830" target="blank">Restauration</a>.
+
+<figure>
+  <img src="../images/balises_liens.png" alt="rendu navigateur html avec lien">
+  <figcaption>exemple de liens dans un paragraphe</figcaption>
+</figure> 
+
 # Lien vers la suite du TP
    
       
@@ -94,7 +113,7 @@ Dans l'exemple qui suit, on peut lire dans le script html que la balise `html` c
       
 
 
-<input type="button" class="btn btn-lg" value="Retour" onclick="window.location.href = '../web/index.html'">
+<input type="button" class="btn btn-lg" value="Retour: le Web" onclick="window.location.href = '../web/index.html'">
 
 # Lien vers l'exploration d'une page wikipedia
 <a href="https://frederic-junier.org/SNT/Theme1_Web/SNT_Activite3_Web.html">Voir l'exercice 1 de la page du site de Frederic Junier</a>

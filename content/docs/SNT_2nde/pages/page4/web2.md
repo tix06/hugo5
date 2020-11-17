@@ -23,6 +23,8 @@ C’est un langage de balisage. Ces balises sont la plupart du temps emboitées,
 ```
 -->
 ## Instructions en HTML
+Les instructions `HTML` sont mises dans un fichier dont l'extension est `.html`.
+
 **Toutes les instructions** de mise en page seront disposées entre les balises `<body> … </body>`
 
 **Les arguments** pour chaque instruction sont mis entre la balise d’ouverture, par exemple `<h1>` et de fermeture, `</h1>`.
@@ -121,17 +123,24 @@ Penser à adapter le nom de l'image pour la balise `<img>`.
 **4)** Ajouter un lien *Retour* vers la page *index.html*.
 
 # Compléments sur le langage CSS
- CSS est le langage qui décrit la style et la mise en forme du document HTML. Il décrit comment les elements HTML doivent être affichés.  
+ CSS est le langage qui décrit le style et la mise en forme du document HTML. Il décrit comment les elements HTML doivent être affichés et remplace les règles de style par defaut appliquées par le navigateur.
  
- Les règles CSS doivent en principe se trouver dans un fichier avec l'extension .css.
+ Les règles CSS doivent en principe se trouver dans un fichier avec l'extension `.css`.
  
  
 
-Une instruction CSS comprend : 
+Une déclaration CSS comprend : 
 
 * un sélecteur, qui peut être le nom d'une balise HTML (comme par exemple div dans l'exemple proposé) 
-* une ou plusieurs déclaration(s) contenant des propriétés
-* et la valeur pour chacune de ces propriétés. 
+* une ou plusieurs règle(s) contenant 
+  * une propriété
+  * et la valeur correspondante.
+
+<figure>
+  <div>
+    <img src="../images/css.png">
+  </div>
+</figure>
 
 Observez bien les caractères spéciaux {  } : et ; utilisés pour contenir et séparer les instructions.
 Ces instructions peuvent être mises à la ligne, ou bien dans une seule ligne : 
@@ -193,7 +202,14 @@ function decollage() {
 <button onclick="decollage()">s'inscrire</button> avec la balise `<button onclick="decollage()">s'inscrire</button>`
 
 
+# Prolongement
+*S'il vous reste du temps:* ajoutez une **troisième** page à votre projet Web.
 
+Celle-ci pourrait, par exemple, porter sur un sujet lié à l'exploration d'un astre du système solaire pour rester dans le thème des précédentes.
+
+* La page créée pourrait contenir une image (libre de droit si possible).
+* Citer les sources utilisées (sites où vous avez trouvé les renseignements, source de l'image)
+* La page devra être liée aux autres pages à l'aide de liens hypertextes.
 
 
 # Liens et compléments
