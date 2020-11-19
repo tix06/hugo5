@@ -110,18 +110,22 @@ Dans l'onglet *lune.html*, écrire le script HTML pour obtenir la page suivante:
 
 Penser à adapter le nom de l'image pour la balise `<img>`.
 
-**3)** Ajouter la balise suivante dans l'entête du fichier afin de pointer vers le fichier *style.css*. Cette balise doit être placée entre les balise`<head>...</head>` : 
+**3)** Vérifier que le fichier `Lune.html` contient bien la balise suivante dans l'entête du fichier afin de pointer vers le fichier *style.css*. Cette balise doit être placée entre les balise`<head>...</head>` : 
 
 > `<link rel="stylesheet" href="style.css">`
 
+Sinon, ajoutez la.
+
 **4)** Ajouter un lien *Retour* vers la page *index.html*.
 
-# Compléments sur le langage CSS
- CSS est le langage qui décrit le style et la mise en forme du document HTML. Il décrit comment les elements HTML doivent être affichés et remplace les règles de style par defaut appliquées par le navigateur.
+# Le langage CSS
+CSS est le langage qui décrit le style et la mise en forme du document HTML. Il décrit comment les elements HTML doivent être affichés et remplace les règles de style par defaut appliquées par le navigateur.
  
- Les règles CSS doivent en principe se trouver dans un fichier avec l'extension `.css`.
+Les déclaration CSS doivent en principe se trouver dans un fichier à extension `.css`. Chaque *déclaration* se rapporte à un type d'*élément* de la page HTML, grâce au *sélécteur*. Et chaque déclaration contient une ou plusieurs *règles*: 
  
- 
+> **Déclaration: `sélécteur {propriété: valeur;}`**
+
+> **Règle: `propriété: valeur;`**  
 
 Une déclaration CSS comprend : 
 
@@ -133,29 +137,32 @@ Une déclaration CSS comprend :
 <figure>
   <div>
     <img src="../images/css.png">
+    <figcaption>règles CSS associées à tous les éléments p de la page: caractères mis en gras (font-weight: bold) et entourés d'une bordure rouge (border: 2px solid red)</figcaption>
   </div>
 </figure>
 
-Observez bien les caractères spéciaux {  } : et ; utilisés pour contenir et séparer les instructions.
+Observez bien les caractères spéciaux {  } : et ; utilisés pour contenir et séparer les *instructions*.
 Ces instructions peuvent être mises à la ligne, ou bien dans une seule ligne : 
 
+```css
+p {
+  font-weight: bold;
+  border: 2px solid red;
+}
+```
 
-```
-h1 {
-  color : blue;
-  font-size : 12 px;
-  }
-```
 
 est équivalent à :
-`h1 { color : blue; font-size : 12px; }`
+```css
+p {font-weight: bold; border: 2px solid red;}
+```
 
 Ici, TOUTES les balises h1 utilisées dans le document html héritent des propriétés suivantes : 
 
 * la couleur du texte est mise en bleu
 * la taille des caractères est mise à 12 px.
 
-Ces instructions {propriété1 : valeur; } sont référencées sur le site : *http://www.w3schools.com/cssref*
+Ces instructions {propriété1 : valeur; } sont référencées sur le site : *[https://www.w3schools.com/css/default.asp](https://www.w3schools.com/css/default.asp)*
 
 
 > A vous de jouer : Vous allez modifier le fichier de style de votre projet, mais cette fois, à l'aide d'un editeur de texte.
@@ -165,22 +172,84 @@ Ces instructions {propriété1 : valeur; } sont référencées sur le site : *ht
 <figure>
   <div>
   <img src="../images/download.png">
+  <figcaption>Download depuis le menu de l'editeur Trinket</figcaption>
 </div>
 </figure>
 
-**2)** Atteindre le fichier à l'aide de l'explorateur de votre ordinateur. Dézipper le fichier téléchargé et deplacer son contenu dans vos *Documents*.
+<br>
 
-**3)** Ouvrir le fichier avec un editeur de script, comme par exemple *Notepad++*.
+<figure>
+  <div>
+  <img src="../images/enregistrer.png">
+  <figcaption>Choisir l'option Enregistrer sous...</figcaption>
+</div>
+</figure>
 
-**4)** Modifiez la mise en forme du texte à l'aide d'une règle CSS. Par exemple, mettre les titres de niveau 1 (éléments *h1*) en rouge...
+**2)** Atteindre le fichier à l'aide de l'**explorateur** de votre ordinateur.
 
-**5)** Ouvrir alors le fichier *index.html* de votre projet à l'aide du navigateur.
+<figure>
+  <div>
+  <img src="../images/telechargement.png">
+  <figcaption>Dossier téléchargement</figcaption>
+</div>
+</figure>
+
+**Dézipper** le fichier téléchargé et deplacer son contenu dans vos *Documents*.
+
+<figure>
+  <div>
+  <img src="../images/extraire.png">
+  <figcaption>Clic droit sur le dossier .zip et choisir <i>Extraire tout</i></figcaption>
+</div>
+</figure>
+
+Normalement, l'explorateur devrait montrer le contenu du nouveau dossier, avec tous les fichiers du projet.
+
+**3)** Sélectionner tous les fichiers d'extensions `.html` et `.css`: Touche <i>Maj</i> enfoncée séléctionner les 3 fichiers. 
+
+On veut les ouvrir avec un editeur de script, comme par exemple *Notepad++*:
+
+<figure>
+  <div>
+  <img src="../images/editer.png">
+  <figcaption>Clic droit: Ouvrir avec Notepad++</figcaption>
+</div>
+</figure>
+
+<br>
+
+<figure>
+  <div>
+  <img src="../images/notepad2.png">
+  <figcaption>La fenêtre de l'editeur Notepad++</figcaption>
+</div>
+</figure>
+
+**4)** Choisir parmi les différents onglets celui appelé `style.css`. Vous allez modifiez la mise en forme du texte à l'aide d'une déclaration CSS. Pour modifier les titres de niveau 1 (éléments *h1*) en bleu, et la taille des caractères à 12px, vous saisirez à la suite des autres déclarations:
+
+```css
+h1 {
+  color : blue;
+  font-size : 12 px;
+  }
+```
+
+D'autres règles peuvent être ajoutées à partir du tutoriel <a href="https://www.w3schools.com/css" target="blank">https://www.w3schools.com/css/default.asp</a>
+
+**5)** Ouvrir alors le fichier *index.html* de votre projet à l'aide du navigateur: depuis l'*explorateur*, faire un clic droit sur `index.html`.
+
+<figure>
+  <div>
+  <img src="../images/ouvrirAvec.png">
+  <figcaption>Choisir Ouvrir avec: Firefox</figcaption>
+</div>
+</figure>
 
 
 # Le langage javascript
 Le langage javascript va permettre de gérer les évènements de la page : les animations, les données des formulaires, les boutons...
 
-* A l'aide des fonctions de l'editeur, **créer un nouveau fichier** qui sera nommé `script.js`. Mettre ce fichier dans le MËME dossier que celui contenant votre projet (et donc vos autres fichiers).
+* A l'aide des fonctions de l'editeur *Notepad++*, **créer un nouveau fichier** qui sera nommé `script.js`. Mettre ce fichier dans le MËME dossier que celui contenant votre projet (et donc vos autres fichiers).
 
 * Ajouter dans ce fichier l'instruction : 
 
@@ -213,5 +282,5 @@ Celle-ci pourrait, par exemple, porter sur un sujet lié à l'exploration d'un a
 * retour vers la page: Documents Web &nbsp;&nbsp;&nbsp;&nbsp;
 <input type="button" class="btn btn-lg" value="Retour" onclick="window.location.href = '../web/index.html'">
 
-* Programmer des animations en javascript : 
+* Animations en javascript avec P5.js:&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 
 <input type="button" class="btn btn-lg" value="Partie 3: Javascript" onclick="window.location.href = '../web3/index.html'">
