@@ -65,9 +65,18 @@ def ajoute2(N):
 
 L'algorithme récursif comprend 2 parties importantes: 
 
-- La **Base** : c'est le cas pour lequel le problème se resoud immediatement (par exemple `if N==0 : 
-        return 0` dans le script `ajoute2`: le problème se resoud immediatement pour N == 0)
-- **L'Hérédité**  : calcul à partir de paramètres plus "petits" : `return 2 + ajoute2(N-1)`.
+- La **Base** : c'est le cas pour lequel le problème se resoud immediatement, par exemple : 
+
+```
+  if N==0 : 
+        return 0
+```
+
+dans le script `ajoute2`: le problème se resoud immediatement pour N == 0).
+
+- **L'Hérédité**  : calcul à partir de paramètres plus "petits" : `return 2 + ajoute2(N-1)`. 
+
+Une définition plus générale serait que, pour l'hérédité, il y a un appel recursif avec un argument qui se rapproche plus de la condition de base.
 
 ```
 def fonction_recursive(param):
