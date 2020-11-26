@@ -137,6 +137,10 @@ Ce n'est pas très explicite pour un humain. On préfèrera souvent choisir un d
 On ajoute maintenant à la classe `Skateboard` la méthode `__repr__()` qui sera appelée lorsque l'on utilise `print(objet)`: 
 
 ```python
+class Skateboard:
+    def __init__(...
+    ...
+
     def __repr__(self):
         if self.skateboard_pour_parc():
             return "skateboard de type {} qui permet de rider en parc".format(self.deck)
@@ -159,36 +163,231 @@ skateboard de type long qui ne permet pas de rider en parc
 
 Mais il existe d'autres méthodes de surcharge, prévues pour les **opérateurs**, ainsi que pour certaines **fonctions**. On pourra se référer au [lien suivant](https://riptutorial.com/fr/python/example/7334/surcharge-de-l-operateur) pour approfondir le sujet.
 
+# Encapsulation: *getter* et *setter* 
+## Lire un attribut: accesseur ou *getter*
+
+L'utilisateur du programme ne devrait pas utiliser la méthode *pointée* précédente `nom_objet.nom_attribut`, permettant d’accéder aux valeurs des attributs: on ne veut pas forcement que l’utilisateur ait accès à la représentation interne des classes. 
+
+Pour utiliser ou modifier les attributs, on utilisera de préférence des **méthodes dédiées** dont le rôle est de faire l’**interface** entre l’utilisateur de l’objet et la représentation interne de l’objet (ses attributs).
+
+Les **attributs** sont alors en quelque sorte **encapsulés** dans l’objet, c’est à dire non accessibles directement. la liste des **méthodes** devient une sorte de mode d’emploi de la classe.
+
+Pour obtenir la valeur d’un attribut nous utiliserons la méthode des accesseurs (ou "getters") dont le nom est généralement : `getNom_attribut()`.
+
+*Exemple:*
+
+
+```python
+class Skateboard:
+    def __init__(...
+    ...
+    
+    def getTail(self):
+      return self.tail
+```
+
+En console, une fois l'instance de classe `mon_sector_9` définie, on fait:
+
+```
+>>> mon_sector_9.getTail()
+`long`
+```
+
+## Modifier des attributs : les mutateurs ou *setters*
+De la même manière, pour modifier la valeur d'un attribut, on devrait utiliser une méthode dédiée. Le nom de cette méthode commence en principe par `set`:
+
+*Exemple:*
+
+```python
+class Skateboard:
+    def __init__(...
+    ...
+    
+    def setDeco(self, deco):
+      self.deco = deco
+```
+
+En console:
+
+```
+>>> mon_sector_9.setDeco = 'repeinte'
+
+```
+
+## Docstrings
+Chaque classe définit ses propres manières de stocker, d'acceder et de manipuler les données. C'est le Docstring qui permettra de prendre connaissance des détails, comme par exemple celui de la classe `Sept_Familles`:
+
+```python
+class Sept_Familles:
+    """
+    NAME
+        Sept_Familles
+    DESCRIPTION
+        constructeur pour les cartes du jeu
+    PARAMETERS
+        famille (str): nom de la famille
+        qui(str): membre de la famille 
+            choix parmi ('Grand-père','Grand-mère','Pére','Mère','Fils','Fille')
+    FUNCTIONS
+        get_Attributs
+    """
+```
+
+On peut alors prendre connaissance du docstring en faisant:
+
+```
+>>> help(Sept_Familles)
+```
+
+
 # L'essentiel
-Un objet est construit à partir d'une classe dans laquelle sont <ital>encapsulées</ital> la déclaration des attributs (les variables) et ses méthodes.
+Un objet est construit à partir d'une classe, et comporte des attributs (les variables) et des méthodes (fonctions).
 
-Un objet est une instance de classe. On déclare un objet à l'aide de l'instruction <code>ma_liste = Liste()</code> lorsque l'on veut par exemple, créer un nouvel objet <code>ma_liste</code> à partir de la classe <code>Liste</code>.
+<figure>
+  <div>
+    <img src="../images/UML.png">
+    <figcaption>Une représentation d'une classe</figcaption>
+  </div>
+</figure>
 
-C'est alors le bloc de code <code>def __init__(self,attribut1,...);</code> qui est executé, et déclare les attributs associés à <code>ma_liste</code>.
+<ul>
+<li>Les <b>attributs</b> renvoient aux variables contenues dans l’objet : ce sont les données. Ces données peuvent varier au cours du programme. Il s'agit donc de l'état de cet objet à un instant t.</li>
+<li>Les <b>méthodes</b> sont les éléments qui permettent d’interagir avec les attributs. Les méthodes sont des fonctions internes à une classe, qui doivent répondre à des <b>messages</b>.</li>
+</ul>
 
-L'<b>encapsulation</b> est un mécanisme consistant à rassembler les données et les méthodes au sein d'une structure en cachant l'implémentation de l'objet, c'est-à-dire en empêchant l'accès aux données par un autre moyen que les services proposés. L'encapsulation permet donc de garantir l'intégrité des données contenues dans l'objet.
+<em>Exemple:</em><br>
+<pre><code>
+class Sept_Familles:
+    def __init__(self,famille,qui):
+        self.famille = famille
+        self.qui = qui   
+    def get_Attributs(self):
+        return self.famille,self.qui
 
-Un objet comprend donc :
+carte1 = Sept_Familles('Jongleurs','Grand-père')
+</code></pre>
 
-* une partie **figée** qui représente son **état**, et qui est constituée de champs ou **attributs**.
-* une partie **dynamique** qui décrit son **comportement**, à l'aide de déclarations de **méthodes**, qui doivent répondre à des **messages**. 
+<p>
+Un objet est une <em>instance</em> de classe. 
+</p>
+<p>
+On instancie un objet en appelant le nom de sa classe comme s'il s'agissait d'une fonction :
+<br>
+à l'aide de l'instruction <code>carte1 = Sept_Familles('Jongleurs','Grand-père')</code> lorsque l'on veut par exemple, créer un nouvel objet <code>carte1</code> à partir de la classe <code>Sept_Familles</code>.
+<br>
+C'est alors la méthode <code>__init__(self,attribut1,...);</code> qui est automatiquement appelée pour initialiser l'objet. Cette méthode déclare les attributs associés à <code>Sept_Familles</code>.
+</p>
+<p>
+Les attributs sont accessibles au sein de la classe à l'aide d'une notation pointée, du type <code>self.attribut</code>. Le mot-clé <code>self</code> correspondra à l'objet instancié.
+</p>
+<p>
+En principe, il vaudra mieux éviter cette notation pointée en dehors de la classe, et éviter de faire référence aux attributs en faisant <code>objet.attribut</code>. On préfèrera utiliser un mécanisme d'<b>encapsulation</b>.
+</p>
+<p>
+L'<b>encapsulation</b> consiste à rassembler les données et les méthodes au sein d'une structure en cachant l'implémentation de l'objet, c'est-à-dire en empêchant l'accès aux données par un autre moyen que les services proposés. (getters et setters par exemple).
+</p>
+<p>
+On peut, par exemple, accéder à la description de carte1 à l'aide de la méthode <code>get_Attributs()</code>, ce qui donne:
+
+<pre><code>
+>>> carte1.get_Attributs()
+('Jongleurs', 'Grand-père')
+</code></pre>
+
+</p>
+
 
 
 # Exercices
-## Exercice 1: divers
-[exercices du site Lyceum.fr](https://lyceum.fr/tg/nsi/4-langages-et-programmation/6-programmation-objet/exo)
+## Exercice 1: Jeu de cartes des 7 familles : Les cartes
+On définit une classe `Sept_Familles` dont le contenu est défini dans le docstring (voir dans la fenêtre de l'editeur).
 
-## Exercice 2: Méthodes de la classe Pile
+* Question 1: Compléter la classe `Sept_Familles` avec la méthode `get_Attributs`. 
 
+Celle-ci devra retourner un tuple constitué des 2 attributs de classe.
+
+* Question 2: Testez alors votre classe. Définir les *objets-cartes* suivantes:
+
+```
+carte1 = Sept_Familles('Jongleurs','Grand-père')
+carte2 = Sept_Familles('Jongleurs','Fille')
+carte3 = Sept_Familles('Musiciens','Père')
+carte4 = Sept_Familles('Musiciens','Fille')
+```
+
+Puis tester les méthodes de classe:
+
+```
+>>> carte1.get_Attributs()
+```
+
+
+* Question 3: Ajouter la méthode `__repr__` qui permettra de décrire la carte: 
+
+Exemple de message attendu:
+```
+>>> print(carte1)
+La carte est de la famille des Jongleurs. C'est le Grand-père.
+```
+
+<iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5fbff48972f3c&mode=code"></iframe>
+
+## Exercice 2: Jeu de cartes des 7 familles: Les joueurs
+Le joueur est un objet qui possède, pour attributs, les cartes qu'il a en main.
+
+Chaque joueur est une instance de la classe `Joueur`, et sera construit avec `joueur1 = Joueur(carte1,...)`
+
+*Difficulté à venir:* On ne connait pas le nombre de cartes que le joueur peut avoir en main à l'instant t. 
+
+Python permet d'appeler une fonction avec un nombre inconnu d'arguments: il faut ajouter le paramètre `*args` dans la déclaration de la fonction. On parcourt alors les arguments de la manière suivante:
+
+```
+for i in args:
+  ...
+```
+
+La fonction `__init__` aura alors pour arguments `self` (qui est obligatoire), et `*args`. On y definit une liste vide, `self.C`, et on y ajoute des tuples constitués des attributs pour chacune des cartes du joueur. Cette fonction est donnée dans l'editeur, plus bas...
+
+* Question 1: Ecrire une méthode de classe `get_cartes` qui retourne la liste `self.C`, afin de pouvoir accéder à la liste des cartes du joueur.
+
+
+* Question 2: Créer l'objet `joueur1`. Celui-ci devra posséder les cartes `carte1` et `carte2` définies plus haut. 
+
+Tester alors la méthode : `joueur1.get_cartes()` pour afficher la liste.
+
+* Question 3: Créer une méthode de classe `__repr__` pour afficher cette liste dans un message, comme par exemple:
+
+```
+>>> print(joueur1)
+le joueur possède les cartes : [('Jongleurs', 'Grand-père'), ('Jongleurs', 'Fille')]
+```
+
+* Question 4: On souhaite maintenant avoir une interaction plus poussée avec le Joueur, selon les règles du jeu. L'idée est de créer une méthode `demande` qui prend en paramètres `famille` et `qui`, et qui retourne un message selon la main du joueur, comme par exemple:
+
+```
+>>> joueur1.demande('Jongleurs','Fils')
+pioche
+>>> joueur1.demande('Jongleurs','Fille')
+Le joueur a la carte
+```
+
+
+<iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5fbffcb7b75fa&mode=code"></iframe>
+
+<!--
 ## Exercice 3: Classe Pile créée à partir d'une liste chaînée
 La notion de *classe* permet de créer de nouveaux types de structure. Nous allons créer à la main une structure de liste chaînée; pour ce faire, nous allons utiliser une premiere classe *Maillon*; et une deuxième classe Pile, qui se servira de cette structure. Cette nouvelle structure n'utilise pas le type *List* de python.
 
-On rappelle qu'une liste chaînée est une structure linéaire, constituée de cellules. ![voir cours sur les listes chainees](/docs/NSI/structure/page21/#listes)
+On rappelle qu'une liste chaînée est une structure linéaire, constituée de cellules. [voir cours sur les listes chainees](/docs/NSI/structure/page21/#listes)
 
 1. Compléter la méthode `push` fournie dans la fenêtre de l'editeur.
 2. Créer une méthode `pop`.
 3. Créer la méthode `__repr__(self)` qui va être appelée lors de l'affichage d'une pile `P` à l'aide de l'instruction `print(P)`.
 
+-->
 
+# Liens
+* cours sur [python.developpez.com](https://python.developpez.com/cours/apprendre-python-3/?page=la-programmation-orientee-objet): compléments sur les méthodes spéciales de [surcharge des opérateurs](https://python.developpez.com/cours/apprendre-python-3/?page=la-programmation-orientee-objet#L7-4), d'[héritage et polymorphisme](https://python.developpez.com/cours/apprendre-python-3/?page=la-programmation-orientee-objet#L7-5)
+* références : [Classes sur docs.python.org](https://docs.python.org/fr/3.6/tutorial/classes.html)
 
 
