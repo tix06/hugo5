@@ -241,7 +241,8 @@ On peut alors prendre connaissance du docstring en faisant:
 
 
 # L'essentiel
-Un objet est construit à partir d'une classe, et comporte des attributs (les variables) et des méthodes (fonctions).
+<h2> Classe et Objet</h2>
+Un <b>objet</b> est construit à partir d'une <b>classe</b>, et comporte des attributs (les variables) et des méthodes (fonctions).
 
 <figure>
   <div>
@@ -267,22 +268,61 @@ class Sept_Familles:
 carte1 = Sept_Familles('Jongleurs','Grand-père')
 </code></pre>
 
+<h2>Instanciation</h2>
 <p>
-Un objet est une <em>instance</em> de classe. 
+<b>Un objet est une <em>instance</em> de classe.</b>
 </p>
 <p>
-On instancie un objet en appelant le nom de sa classe comme s'il s'agissait d'une fonction :
-<br>
-à l'aide de l'instruction <code>carte1 = Sept_Familles('Jongleurs','Grand-père')</code> lorsque l'on veut par exemple, créer un nouvel objet <code>carte1</code> à partir de la classe <code>Sept_Familles</code>.
-<br>
+On instancie un objet en appelant le nom de sa classe comme s'il s'agissait d'une fonction. Instancier, c'est définir un nouvel objet, donc définir son <b>nom</b>, et la valeur de ses attributs.
+</p>
+<p>
+Par exemple, à l'aide de l'instruction <code>carte1 = Sept_Familles('Jongleurs','Grand-père')</code> lorsque l'on veut créer un nouvel objet <code>carte1</code> à partir de la classe <code>Sept_Familles</code>.
+</p>
+<p>
 C'est alors la méthode <code>__init__(self,attribut1,...);</code> qui est automatiquement appelée pour initialiser l'objet. Cette méthode déclare les attributs associés à <code>Sept_Familles</code>.
 </p>
+<h2> Definir une méthode de classe</h2>
+Les méthodes de classe peuvent modifier l'état de l'objet (ses attributs), ou retourner une valeur.
+
+Une méthode possède au minimum, comme attribut, self. Les autres seront ajoutés après:
+
+<pre><code>
+  def age(self,an_actuelle):
+    """
+    calcule l'age en fonction de l'année de naissance
+    et de la date actuelle
+    Params:
+    self.an_de_naissance (int): attribut de l'objet
+    an_actuelle (int) : date actuelle
+    """
+    return an_actuelle - self.an_de_naissance
+</code></pre>
+<h2>Notation pointée</h2>
+<h3>Attributs</h3>
 <p>
 Les attributs sont accessibles au sein de la classe à l'aide d'une notation pointée, du type <code>self.attribut</code>. Le mot-clé <code>self</code> correspondra à l'objet instancié.
 </p>
 <p>
+<em>En dehors de la classe:</em>
+<br>
+On pourrait acceder aux attributs en faisant `objet.attribut`:
+
+<pre><code>
+carte1.famille
+</code></pre>
+</p>
+
+<p>
 En principe, il vaudra mieux éviter cette notation pointée en dehors de la classe, et éviter de faire référence aux attributs en faisant <code>objet.attribut</code>. On préfèrera utiliser un mécanisme d'<b>encapsulation</b>.
 </p>
+<h3>Méthodes</h3>
+Les méthodes de classe sont accessibles en faisant 
+
+<pre><code>
+objet.methode(arg)
+</code></pre>
+
+<h2>L'encapsulation</h2>
 <p>
 L'<b>encapsulation</b> consiste à rassembler les données et les méthodes au sein d'une structure en cachant l'implémentation de l'objet, c'est-à-dire en empêchant l'accès aux données par un autre moyen que les services proposés. (getters et setters par exemple).
 </p>
