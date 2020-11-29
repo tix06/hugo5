@@ -34,7 +34,7 @@ symbole du voltmètre :
 
 ![symbole voltmètre](../images/syvoltm.png)
 
-Pour mesurer la tension U~AB : 
+Pour mesurer la tension U<sub>AB</sub> : 
 Le point du circuit A serait branché sur la *borne V* et le point B sur *COM*.
 
 ![mesure de tension](../images/mesureV.png)
@@ -96,7 +96,7 @@ Les deux dipôles fonctionnent indépendamment l'un de l'autre.
 
 ![circuit avec derivation](../images/circuitDerive.gif)
 
-Soit le courant i~1~ dans la brache principale, le courant i~2~ dans la branche de la première lampe (courant repéré en bleu), et le courant i~3~ dans la deuxième lampe (en rouge), la loi des noeuds est telle que : 
+Soit le courant i<sub>1</sub> dans la brache principale, le courant i<sub>2</sub> dans la branche de la première lampe (courant repéré en bleu), et le courant i<sub>3</sub> dans la deuxième lampe (en rouge), la loi des noeuds est telle que : 
 
 $$i_1 = i\_2 + i\_3$$
 
@@ -172,7 +172,7 @@ L'intensité augmente dans le circuit car la résistance électrique du court-ci
 *cours plus complet :*[webtab.ac-bordeaux.fr](http://webetab.ac-bordeaux.fr/Pedagogie/Physique/Physico/Electro/e04tensi.htm)
 
 ## Loi d'Ohm 
-Pour un dipôle de résistance R, parcouru par un courant i, et dont la tension à ses bornes et U~AB~ : d'après la loi d'Ohm : 
+Pour un dipôle de résistance R, parcouru par un courant i, et dont la tension à ses bornes et U<sub>AB</sub> : d'après la loi d'Ohm : 
 
 $$U_{AB} = R \times I$$
 
@@ -206,7 +206,7 @@ Exercice : Calculer la valeur manquante sur le schéma suivant :
 
 ![loi des noeuds](../images/loiNoeuds.png)
 
-*Réponse : i3 = 5,4 A*
+*Réponse : i<sub>3</sub> = 5,4 A*
 
 ## Loi de puissance
 La puissance électrique est la quantité d'énergie électrique échangée par seconde. (P = E/t). Son unité dans le système international (SI) est le Watt (W)
@@ -244,7 +244,7 @@ Calculer la valeur de la puissance consommée par cette lampe.
 *P = U x I = 12V x 1,5 A = 21W*
 
 
-## Source réelle de tension continue
+## Source réelle de tension continue (concerne la 1ere Spé Physique Chimie)
 Un générateur de tension réel est constituée : 
 
 * d'une source de tension idéale de force électromotrice (tension) noté E
@@ -297,10 +297,10 @@ $$U_{PN} = E - r\times I$$
 
 $$P_J = r \times I^2$$
 
-**Bilan de puissance pour un génarateur :** 
-(voir livre p 243)
+**Bilan de puissance pour un générateur :** 
+(voir livre de 1ere Spé Physique Chimie p 243)
 
-# Testez vous : QCM
+# Exercices
 ## Exercice 1 :
 Un circuit série est un circuit qui ne possède qu'une seule branche.
 Dans ce circuit série, il y a 3 dipoles : une pile, une lampe et un moteur.
@@ -313,7 +313,7 @@ La tension U mesurée aux bornes de la pile est de 4,45 V. La tension U2 mesuré
 2. Compléter le tableau suivant, donnant les résultats de différentes 
 mesures réalisées au voltmètre : 
 
-| tension | U~PN~| U~PA~| U~AB~ | U~BC~| U~CD~| U~DN~|
+| tension | U<sub>PN</sub>| U<sub>PA</sub>| U<sub>AB</sub> | U<sub>BC</sub>| U<sub>CD</sub>| U<sub>DN</sub>|
 | :--- | :---: |  :---: |  :---: |  :---: |  :---: | :---: |
 | valeur mesurée (V) | 4,45 |  |  |  | 1,95 |  |
 
@@ -337,13 +337,13 @@ On a mesuré deux tensions du montage schématisé ci-contre.
 1. Déterminer la valeur de la tension aux bornes de la lampe L3
 2. Complèter le tableau ci-dessous en inscrivant les valeurs des tensions aux bornes de L1 et de L3:
 
-| tension | U~PN~| U~PA~| U~AB~ | U~BC~| U~CN~|
+| tension | U<sub>PN</sub>| U<sub>PA</sub>| U<sub>AB</sub> | U<sub>BC</sub>| U<sub>CN</sub>|
 | :--- | :---: |  :---: |  :---: |  :---: |  :---: |
 | valeur mesurée (V) | 4,94 |  |  | 1,95 |  |
 
 Réponse : 
 1. U3 = 4,94V
-2. U~PA~ = 0; U~AB~ = 2,99V; U~CN~ = 0
+2. U<sub>PA</sub> = 0; U<sub>AB</sub> = 2,99V; U<sub>CN</sub> = 0
 
 ## Exercice 4 
 
@@ -359,9 +359,9 @@ Réponse :
 
 Lorsqu'il est fermé, le transformateur'interrupteur  est supposé se comporter comme un conducteur idéal.
 
-1. La tension U~CD~ aux bornes de l’interrupteur est : égale, supérieure à U~AB~ infèrieure à U~AB~ ou nulle ?
+1. La tension U<sub>CD</sub> aux bornes de l’interrupteur est : égale, supérieure à U<sub>AB</sub> infèrieure à U<sub>AB</sub> ou nulle ?
 
-2. La tension U~FE~ aux bornes de la lampe est : égale, supérieure à U~AB~ infèrieure à U~AB~ ou nulle ?
+2. La tension U<sub>FE</sub> aux bornes de la lampe est : égale, supérieure à U<sub>AB</sub> infèrieure à U<sub>AB</sub> ou nulle ?
 
 ## Exercice 6 : 
 La situation suivante, présente t-elle un risque de court cicuit pour le générateur ?
@@ -376,6 +376,7 @@ Cette situation présente t-elle un risque de surintensité?
 ## Exercice 8
 Sur un sèche-cheveux français, on lit les indications : 1200 W, 5 A. Ce sèche-cheveux peut-il être branché sur le secteur au Mexique (tension de secteur de 120V)?
 
+<!--
 ## feuille d'exercices pour le cours P4 Energie
 Ex 1. Parmi les unités suivantes, lesquelles sont des unités d’énergie?
 a) W·h b) W c) J/s d) kJ
@@ -475,6 +476,10 @@ Pa = 2400W
 
 Pu = = 1920W
 
+
+
 <input type="button" class="btn btn-lg" value="retour page précédente" onclick="window.location.href = '../energie2/index.html'">
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+-->
