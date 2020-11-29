@@ -237,4 +237,4 @@ C'est le *protocole TCP* qui gère ce découpage, et rajoute des informations po
 
 # Approfondir
 
-* <a href = '../circulation/index.html'>Compléments de cours : Circulation de données</a>
+* <a href = '../circulation/index.html'>Compléments de cours : Les Reseaux</a>

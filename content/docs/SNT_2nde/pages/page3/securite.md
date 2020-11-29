@@ -71,9 +71,13 @@ Il faut juste faire taire la machine A pour qu'elle n'envoie pas le RST et que l
 
 Les ISN sont aujourd'hui aléatoires, donc ils ne sont plus prédictibles. De plus, la mise en oeuvre de firewalls sur les machines et les réseaux protège aussi souvent leurs accès.
 
-## retour à la page précédente
+## retour aux pages précédentes
 
-* <a href = '../circulation/index.html'>Circulation des informations</a>
+
+* <a href = "../modele_OSI/">Retour vers le modèle OSI (1ere NSI)</a>
+* <a href = "../circulation/">Retour vers la page Reseaux</a>
+* <a href = "../internet/"> Retour vers internet (Généralités)</a>
+* <a href = '../TP_reseau/index.html'>TP simulation d'un reseau</a>
 
 # Liens 
 
