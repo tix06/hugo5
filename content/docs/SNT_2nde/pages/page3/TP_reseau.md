@@ -8,7 +8,7 @@ Un reseau, c'est quoi? C'est un système constitué de machines reliées ensembl
 
 L'adresse IP (**Internet Protocol**) identifie un périphérique à l'intérieur d'un réseau. A l'intérieur de ce réseau elle est unique.
 
-## TP Filius 1
+## TP Filius 1 : faire communiquer 2 ordinateurs
 Lancer le logiciel **Filius**.
 
 On réalise un premier réseau simple de 2 ordinateurs reliés par une seule ligne.
@@ -63,7 +63,7 @@ On s'aidera de la video de présentation <a href="https://www.youtube.com/watch?
 
 On cherche maintenant à créer un système de 2 sous-réseaux locaux. Ces reseaux auront pour adresses: 198.168.0.0 et 192.168.2.0
 
-* On ajoutera au système précédent le sous réseau 192.168.2.0 comportant un switch et 3 ordinateurs M4, M5 et M6. Ces machines auront pour adresses IP: 192.168.2.1, 192.168.2.2 et 192.168.2.3
+* On ajoutera au système précédent le sous-réseau 192.168.2.0 comportant un switch et 3 ordinateurs M4, M5 et M6. Ces machines auront pour adresses IP: 192.168.2.1, 192.168.2.2 et 192.168.2.3
 
 Votre système devrait ressembler à l'image suivante:
 
@@ -105,7 +105,7 @@ Votre système devrait ressembler à l'image suivante:
     <figcaption>option routage automatique</figcaption>
 </figure>
 
-  * Pour chacun des ordinateurs du sous-reseau 1, M1, M2, M3, renseigner l'adresse de l'interface reseau 1 du routeur: mettre 192.168.0.0 dans le champs *passerelle*.
+  * Pour chacun des ordinateurs du sous-reseau 1, M1, M2, M3, renseigner l'adresse de l'interface reseau 1 du routeur: mettre **192.168.0.254** dans le champs *passerelle*. Ce sera l'adresse IP de la carte reseau du routeur, du côté du reseau 192.168.0.0 (on met **254** à la place de **0** pour l'adresse routeur)
 
  
 
@@ -114,7 +114,7 @@ Votre système devrait ressembler à l'image suivante:
     <figcaption>renseigner l'adresse reseau pour chaque ordinateur</figcaption>
 </figure>
 
-  * Même travail pour M4, M5, M6: renseigner la passerelle 192.168.2.0
+  * Même travail pour M4, M5, M6: renseigner la passerelle **192.168.2.254**
   * refaire le cablage
 
 * Démarrer le système et tester alors la commande `ping` à nouveau. Que constatez-vous?
@@ -123,6 +123,53 @@ Votre système devrait ressembler à l'image suivante:
 
 *En cas de difficultés: on pourra consulter la <a href="https://www.youtube.com/watch?v=xyK6ThdQeR0" target="blank">video Filius 2 de David Roche</a>*
 
+
+## TP Filius 3 : système avec ordinateur serveur
+On utilisera pour la suite un système informatique constitué de nombreux sous-reseaux:
+
+* télécharger le fichier [filius_sim_reseau.fls](../images/filius_sim_reseau.fls)
+* cliquer sur le fichier pour ouvrir avec *Filius*
+
+### Premier contact avec le système
+Lancer la simulation 
+
+1. Prendre connaissance de l'adresse IP de l'ordinateur n°15
+2. Depuis l'ordinateur n°1: Lancer le logiciel *Ligne de commande*
+3. Faire: `traceroute` suivi de l'adresse IP de la machine 15
+4. Repérer alors quels sont les routeurs par lesquels circulent les données entre ces 2 ordinateurs. Est-ce que le nombre de sauts effectués vous semble cohérent?
+
+### Communication client-serveur
+Toujours en mode *simulation*:
+
+* Ajouter à l'ordinateur n°15 les logiciels: 
+  * explorateur de fichiers
+  * editeur de fichier
+  * webserveur
+
+* Sur l'ordinateur n°15:
+  * lancer l'*explorateur de fichiers*
+  * aller dans le dossier `webserver`: effacer tous les fichiers présents
+  * lancer le logiciel *editeur de texte*
+  * Saisir une ou plusieurs instructions en `html`, comme par exemple:
+
+<figure>
+  <img src="../images/serveur3.png">
+</figure>
+
+* machine n°15:
+  * cliquer sur le bouton *Fichier*
+
+<figure>
+  <img src="../images/serveur4.png">
+</figure>
+
+* machine n°15:
+  * sauvegarder ce fichier dans le dossier *webserver*. Choisir: Nom de fichier: **index.html**
+
+* Ajouter à l'ordinateur n°1 le logiciel : *Navigateur Web*
+* Lancer le *Navigateur web*
+* Dans la barre d'adresse, completer `http://` avec l'adresse IP de l'ordinateur n°15 et cliquer sur *Afficher*
+* Si la page ne se charge pas la première fois, fermer et rouvrir le serveur du poste 15, ainsi que le Navigateur Web côté client.
 
 # Compléments sur les adresses des machines
 
@@ -178,7 +225,7 @@ Une adresse MAC (Media Access Control), parfois nommée adresse physique,
 est un identifiant physique stocké dans une carte réseau ou une 
 interface réseau similaire. Elle est unique au monde
 
-Une adresse MAC est codée en hexadécimal (cf cours sur l'hexadécimal)
+Une adresse MAC est codée en hexadécimal, sur 6 octets (cf cours sur l'hexadécimal)
 
 00-1E-33-1D-6A-79 est une adresse MAC
 
