@@ -2,6 +2,8 @@
 Title : graphes
 ---
 
+Pour une première approche des graphes, consulter le cours [Graphes SNT](/docs/SNT_2nde/pages/pages_algo/graphes/page1/)
+
 # Graphes : définitions
 
 On appelle **graphe** la donnée d'un ensemble fini V de points (ou sommets du graphe, *vertices* en anglais) et d'un ensemble E de liens entre ces points.
@@ -31,7 +33,7 @@ Un graphe peut servir à modéliser un reseau d'ordinateurs, un reseau social, l
 Lorsqu'un graphe non orienté est en *un seul morceau*, c'est à dire lorsqu'il existe pour tous sommets s<sub>1</sub> et s<sub>2</sub> un chemin les reliant, le graphe est dit **connexe**.
 
 <figure>
-  <img src="../images/.png" alt="graphes connexe/non connexe">
+  <img src="../images/connexe.png" alt="graphes connexe/non connexe">
   <figcaption>graphes connexe/non connexe</figcaption>
 </figure>
 
@@ -42,7 +44,7 @@ Des **poids** peuvent être associés aux liens d'un graphe, par exemple pour re
 
 
 <figure>
-  <img src="../images/.png" alt="exemple de graphe pondéré">
+  <img src="../images/fig1.png" alt="exemple de graphe pondéré">
   <figcaption>exemple de graphe pondéré</figcaption>
 </figure>
 
@@ -50,7 +52,7 @@ Et lorsqu'un chemin mène d'un sommet s à lui-même, on parle de **cycle**.
 
 
 <figure>
-  <img src="../images/.png" alt="cycle dans un graphe">
+  <img src="../images/fig7.png" alt="cycle dans un graphe">
   <figcaption>cycle dans un graphe</figcaption>
 </figure>
 
@@ -67,12 +69,14 @@ Et lorsqu'un chemin mène d'un sommet s à lui-même, on parle de **cycle**.
 ## Implémentations
 Plusieurs modes de représentation sont possibles pour stocker des graphes: matrices d'adjacence, listes des voisins, des successeurs ou des prédécesseurs.
 
-### Liste et matrice d'adjacence
+### Liste de voisins et matrice d'adjacence
+#### > **Liste de voisins**
 Un exemple simple présente ici un graphe créé à partir d'une liste de voisins: 
 [[1, 2], [0, 2, 3], [0, 1, 3], [1, 2]] 
 
 La première sous-liste correspond aux liens que forme le sommet 0. Ici, c'est donc avec les sommets 1 et 2.
 
+#### > **Liste d'adjacence**
 Cette liste L peut aussi être mise sous forme d'une matrice M:
 
 `M = [[0, 1, 1, 0], [1, 0, 1, 1], [1, 1, 0, 1], [0, 1, 1, 0]]` 
@@ -93,7 +97,7 @@ Cette représentation en matrice est particulièrement adaptée aux *graphes pon
 
 > *Question:* représenter le graphe pondéré dont la matrice d'adjacence est donnée ci-dessous:
 
-$$\begin{pmatrix} 0 & 10 & 10 & 9 \\\ 3 & 0 & 5 & 0 \\\ 0 & 5 & 0 & 3 \\\ 9 & 10 & 10 & 0 \end{pmatrix}$$
+$$\begin{pmatrix} 0 & 10 & 10 & 9 \\\ 10 & 0 & 5 & 10 \\\ 10 & 5 & 0 & 10 \\\ 9 & 10 & 10 & 0 \end{pmatrix}$$
 
 ### Graphe avec étiquette
 On utilisera un *dictionnaire* comme structure de données. Les clés étant les étiquettes des sommets, et les valeurs, la liste des sommets adjacents:
@@ -138,6 +142,11 @@ Il sera alors necessaire d'établir aussi, pour chaque sommet, une liste de pred
 3 => ... <br>
 
 > *Question:* Compléter la liste de prédécesseurs
+
+
+# Modéliser le réseau internet
+
+[Lien vers la page: réseau internet](/docs/NSI/architecture/page3/)
 
 # Cas particulier d'un arbre: un graphe hierarchique
 

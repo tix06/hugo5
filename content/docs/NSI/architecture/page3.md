@@ -1,5 +1,5 @@
 ---
-Title : protocole routage
+Title : protocoles de routage
 ---
 
 # Modéliser le réseau internet
@@ -9,7 +9,7 @@ Le reseau internet repose sur :
 * l'usage de *datagrammes* pour transmettre l'information
 * le routage de ces *datagrammes* par des ordinateurs spécialisés, ... les *routeurs*.
 
-*rappel de 1ere NSI:*
+Le reseau internet est un reseau qui connecte entre eux des reseaux, à l'echelle mondiale. Voir lien vers la page [Reseaux de seconde SNT pour revisions](/docs/SNT_2nde/pages/page3/circulation/)
 
 ## Le datagramme 
 Dans le modèle TCP/IP, les ordinateurs peuvent établir et réaliser une communication selon plusieurs couches, qui cloisonnent les logiciels et technologies utilisées. D'après la norme, les couches vont de la plus haute (couche 7: l'utilisateur) à la plus basse (couche 1: support physique).
@@ -47,6 +47,8 @@ La machine distante, qui reçoit cette trame, va alors repondre immédiatement e
 </div>
 </figure>
 
+*[compléments et rappels de 1ere NSI: Lien](/docs/SNT_2nde/pages/page3/modele_OSI/)*
+
 ### Les machines
 Les machines reliées dans le réseau internet peuvent être:
 
@@ -62,6 +64,18 @@ Un routeur possède plusieurs cartes réseaux. Sur le modèle suivant, il y a 3 
 
 ## Adresse IP
 Dans le reseau internet, les reseaux et les machines sont identifiés par un numéro unique, l'adresse IP. Pour être exact, ce sont les cartes reseaux des machines qui possèdent une adresse IP.
+
+* Lorsque l'on veut atteindre un ordinateur serveur depuis notre navigateur, on saisit dans la barre d'adresse:[^1]
+
+```
+> http://<adresse IP du serveur>
+```
+
+* Lorsque l'on veut tester la connexion vers une machine distante du reseau, on saisit dans la console (lignes de commande):
+
+```
+> ping <adresse IP du destinataire>
+``` 
 
 Pour plus de précisions sur l'adressage IP ainsi que le masque de sous-reseau, voir la video <a href="https://www.youtube.com/watch?v=RnpSaDSSjR4" target="blank"><img src="../images/video.png"></a>
 
@@ -199,7 +213,9 @@ Les switch et routeurs seront appelés S0, S1, S2, S3, R2, R3, R4 pour simplifer
 * R2 : 192.168.1.2
 * etc... (voir tableau)
 
-**Les coûts (poids des arêtes):**
+Cela permet de recréer la carte globale du reseau, mais cette fois, avec les adresses IP des machines.
+
+## Les coûts (poids des arêtes)
 
 Selon l'agorithme de routage utilisé, le coût correspondra: 
 
@@ -207,4 +223,36 @@ Selon l'agorithme de routage utilisé, le coût correspondra:
 * soit une valeur calculée à partir du nombre de sauts, mais aussi du débit = algorithme à état de liaison OSPF
 
 
-# protocole de routage
+# protocoles de routage
+
+
+
+Pour chacun des videos, au cours de leur visionnage, prendre en notes pour repondre aux questions suivantes:
+
+1. Pour le routage étudié, un routeur connait-il la carte globale du reseau (quel routeur est connecté à tel autre)?
+2. Pour le routage étudié, s'agit-il des protocoles RIP ou OSPF?
+2. communique t-il avec ses voisins directs, ou avec l'ensemble du reseau?
+3. communique t-il aux autres routeurs de gros ou petits volumes d'informations pour établir sa table de routage?
+4. un routeur, connait-il le chemin exact pour atteindre n'importe quel routeur du reseau?
+5. connait-il le nombre de sauts pour atteindre n'importe quel routeur du reseau?
+6. selectionne t-il le routeur voisin qui va donner le plus court chemin en nombre de saut / en durée d'acheminement?
+7. Comment met-il à jour sa table de routage lorsqu'il y a une modification du reseau?
+
+## Le routage à vecteurs de distance
+
+<a href="https://www.youtube.com/watch?v=kzablGaqUXM" target="blank"><img src="../images/video.png"></a>
+
+## Les routage à états de liens
+
+<a href="https://www.youtube.com/watch?v=-utHPKREZV8" target="blank"><img src="../images/video.png"></a>
+
+
+
+# Liens
+## Videos présentées dans cette page
+
+* Video (Youtube): [reseaux, adresses IP et masques de sous-reseaux](https://www.youtube.com/watch?v=RnpSaDSSjR4)
+* Video (Youtube): [Mooc de l'INT (institut des Mines Télécom)](https://www.youtube.com/watch?v=kzablGaqUXM)
+* Video (Youtube): [Mooc de l'INT (institut des Mines Télécom)](https://www.youtube.com/watch?v=-utHPKREZV8)
+
+[^1]: En réalité, on ne saisit pas `http://adresse IP` mais `http://URL de la page` depuis la barre du navigateur. Celui-ci remplace l'URL de la page par l'adresse IP correspondante, après consultation du serveur DNS.

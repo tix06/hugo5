@@ -81,14 +81,14 @@ La *longueur du chemin* est égale au nombre d'arêtes empruntées.
 Un cycle est un chemin fermé (qui revient à son sommet de départ), sans passer 2 fois par la même arête.
 
 ## Arbre
-Un arbre est un graphe connexe sans cycle. La figure suivante en est une illustration : 
+Un arbre est un graphe connexe sans cycle. La figure suivante en est une illustration: 
 
 <figure>
   <img src="../images/fig11.png" alt="arbre couvrant">
   <figcaption>Graphe 6 : arbre couvrant</figcaption>
 </figure>
 
-Cet arbre a la propriété de couvrir complètement tous les noeuds du graphe 1 vu en exemple.
+Cet arbre a la propriété de couvrir complètement tous les noeuds du graphe 1 vu en exemple (liaisons par pointillés) :
 
 <figure>
   <img src="../images/fig9.png" alt="arbre couvrant">
@@ -101,7 +101,7 @@ Cet arbre a la propriété de couvrir complètement tous les noeuds du graphe 1 
 * un arbre T est un graphe connexe, par définition, mais pour n'importe quelle paire de sommets u et v, il existe exactement un chemin entre u et v dans T.
 
 ## Couplage
-Un couplage est un ensemble d'arêtes qui n'ont aucun sommet en commun.
+Un couplage est un ensemble d'arêtes qui n'ont aucun sommet en commun (liaisons par pointillés):
 
 <figure>
   <img src="../images/fig10.png" alt="couplage">
@@ -119,6 +119,7 @@ Un couplage est un ensemble d'arêtes qui n'ont aucun sommet en commun.
 Voir la page suivante : [algorithmes de parcours d'un graphe](../page2/index.html)
 
 # Liens
+* Les graphes, définitions: [page Term NSI](/docs/NSI/structure/page5/)
 * A la découverte des graphes, Edition EDP sciences
 
 

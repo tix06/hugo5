@@ -65,21 +65,33 @@ Les réseaux sont alors reliés entre eux par un *routeur*
 le **routeur** est l'appareil disposant de sa propre adresse IP (voir plus loin) qui fait office de passerelle entre les périphériques sur un réseau local (LAN) et Internet. Dans un réseau de réseaux, c'est aussi une machine qui a plusieurs interfaces (plusieurs cartes réseau), chacune reliée à un réseau. Son rôle va être d'aiguiller les paquets reçus entre les différents réseaux.
 
 ## Différences entre reseau local et reseau internet
-### Reseau local: Systeme distribué
-*Remarque :* Avec un réseau d'ordinateurs, l'utilisateur se trouve devant la réalité des machines et leurs caractéristiques diverses, la varieté des équipements, et de leur système d'exploitation; pour executer un programme sur une machine distante, l'usager doit ouvrir une session. La maitenance d'un reseau local demande une bonne connaissance de tous ces matériels. 
+### Reseau local: Systeme *réparti*[^3]
+Unn système réparti permet de partager des ressources, données et logiciels.
+
+Avec un réseau local d'ordinateurs, qui peut constituer un système réparti, l'utilisateur se trouve devant la réalité des machines et leurs caractéristiques diverses, la varieté des équipements, et de leur système d'exploitation; pour executer un programme sur une machine distante, l'usager doit ouvrir une session. La maitenance d'un reseau local demande une bonne connaissance de tous ces matériels. 
+
+Et si l'un des ordinateurs tombe en panne, les autres ordinateurs risquent de s'en apercevoir (base de donnée inaccessible, etc...).
+
+**Définition:** Un système réparti est un système qui vous empêche de travailler quand une machine dont vous n’avez jamais entendu parler tombe en panne.
+
+Des exemples de systèmes répartis: un centre de documentation, bibliothèque, reseau de lycée, contrôle et organisation d'activité en temps réél,...
 
 *Pour approfondir :*  (Wikihow) comment configurer son réseau local ? [^2]
 
-### Reseau internet: un système *réparti*
+### Reseau internet: un système *distribué*[^4]
 Lorsque l'on utilise internet, on ne voit plus cette variété d'équipement.
 
-le système réparti est un ensemble d'ordinateurs indépendants, présenté à l'utilisateur comme un système unique cohérent (un seul paradigme). Souvent une couche logicielle intermédiaire appelée middleware située au dessus du système d'exploitation est responsable de son implémentation. 
+le système distribué est un ensemble d'ordinateurs indépendants, présenté à l'utilisateur comme un système unique cohérent. Souvent une couche logicielle intermédiaire appelée middleware située au dessus du système d'exploitation est responsable de son implémentation. 
 
 Un exemple est le **[web](https://fr.wikipedia.org/wiki/World_Wide_Web)** dans lequel toute information apparait comme un document. C'est donc un logiciel élaboré au dessus du réseau, qui nous fait oublier la variété des supports utilisés pour transmettre les données (Serveur, Adsl, Box, wifi, bluetooth...).
 
-> Internet n'est pas un réseau d'ordinateurs. C'est un réseau de réseaux.
+## Définitions
 
-> Le web, c'est un système distribué opérant au-dessus d'internet.
+> Un **système distribué**: C'est un ensemble d’ordinateurs indépendants qui apparaît à un utilisateur comme un système unique et cohérent
+
+> **Internet** n'est pas un réseau d'ordinateurs. C'est un réseau de réseaux.
+
+> **Le web**, c'est un système distribué opérant au-dessus d'internet.
 
 
 ### Caractéristiques physiques : canal de transmission:
@@ -106,6 +118,7 @@ Une fois sorties du reseau local, les transmissions peuvent se faire par:
 **http** est le protocole qui permet à une machine de demander et de recevoir une ressource d'un serveur.
 
 *http :* est l'abréviation de HyperText Transfer Protocol. (est-ce plus clair ?)
+
 En plus clair :
 
 * **P**rotocole : c'est une règle.
@@ -119,17 +132,38 @@ On a vu qu'un système informatique fonctionne sur le modèle *client-serveur*. 
 <figcaption>modèle client-serveur</figcaption>
 </figure>
 
-*Questions :* Comment le client s'adresse t-il au *bon* serveur ? Et comment celui-ci renvoie-t-il les données au *bon* client ? 
+*Questions :* 
 
-Nous allons répondre à ces questions avec la définition du *protocole IP...*
+1. Comment le client s'adresse t-il au *bon* serveur ? 
+2. Comment celui-ci renvoie-t-il les données au *bon* client ? 
+3. Comment circulent les données entre le client et le serveur?
+
+*Réponses:* 
+
+* pour les questions 1 et 2, c'est avec la définition du *protocole IP* que nous allons y repondre.
+* pour la question 3: il s'agit d'une partie qui sera étudiée en <a href="/docs/SNT_2nde/pages/page3/modele_OSI/">spécialité NSI de la classe de 1<sup>ere</sup></a>. Tout ce que nous aurons à retenir, c'est que le navigateur (un logiciel de la couche *Application*), confie cette tâche à d'autres logiciels, qui vont saucissonner les messages entre le client et le serveur, en *trames*, et ajouter des données qui vont permettre leur bonne circulation. C'est le **protocole TCP**.
+
 
 **le protocole IP:** c'est lui qui permet d'envoyer les paquets d'un ordinateur vers un autre ordinateur. Il gère l'adressage, le routage et l'interconnexion des différents réseaux.
 
 ## adresses IP
 une adresse IP est un identifiant numérique unique attribué à chaque appareil (appareils mobiles, ordinateurs, routeurs, imprimantes, consoles de jeux, etc.) connecté à un réseau TCP / IP comme Internet. Plus précisemment, **c'est l'identifiant de la *carte reseau*, reelle ou virtuelle.**
-Chaque dispositif peut se connecter grâce à cette adresse IP à d’autres périphériques et partager des informations. Il s'agit du Protocole Internet (IP), l'un des protocoles TCP. 
+Chaque dispositif peut se connecter grâce à cette adresse IP à d’autres périphériques et partager des informations. Il s'agit du Protocole Internet (IP).
 
-On le verra dans la suite :  IPv4 et IPv6 sont deux protocoles réseau sans connexion de la couche 3 du modèle OSI (Open Systems Interconnection).
+* Lorsque l'on veut atteindre un ordinateur serveur depuis notre navigateur, on saisit dans la barre d'adresse:[^5]
+
+```
+> http://<adresse IP du serveur>
+```
+
+* Lorsque l'on veut tester la connexion vers une machine distante du reseau, on saisit dans la console (lignes de commande):
+
+```
+> ping <adresse IP du destinataire>
+``` 
+
+
+On le verra dans la suite :  IPv4 et IPv6 sont deux protocoles réseau de la couche 3 du modèle OSI (Open Systems Interconnection).
 
 **IPv4**
 
@@ -176,3 +210,9 @@ La connaissance que vous avez maintenant de la construction de l'URL / nom de do
 [^1Cloud]: Le cloud : désigne le stockage et l’accès aux données par l’intermédiaire d’internet plutôt que via le disque dur d’un ordinateur. Mais aussi des services rendus par des logiciels hébergés *côté serveur*.
 
 [^2]: configurer son réseau local (Wikihow) : https://fr.wikihow.com/configurer-un-réseau-local
+
+[^3]: Systèmes répartis: Ce sont des systèmes pour lesquels les ordinateurs mis en reseau ont un couplage fort. Des exemples de systèmes répartis: un centre de documentation, bibliothèque, reseau de lycée, contrôle et organisation d'activité en temps réél,...
+
+[^4]: Système distribué: Les ordinateurs du reseau ont un couplage faible, et communiquent par echange de messages de manière asynchrone. La difficulté de mise en oeuvre d'un algorithme sur un système distribué, est que l'on n'a pas connaissance de l'état global du système (routage sur internet).
+
+[^5]: En réalité, on ne saisit pas `http://adresse IP` mais `http://URL de la page` depuis la barre du navigateur. Celui-ci remplace l'URL de la page par l'adresse IP correspondante, après consultation du serveur DNS.
