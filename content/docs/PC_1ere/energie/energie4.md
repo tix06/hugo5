@@ -48,7 +48,7 @@ Un bâtiment à énergie positive doit offrir une consommation d’énergie prim
 
 Lorsque l'on fait le bilan d'énergie dans une habitation, on fait: 
 
-$\Delta U = Q_{produit} - Q_{consommé}$
+**&#x394;U = Q<sub>produit</sub> - Q<sub>consommé</sub>**
 
 * &#x394;U : variation de l'énergie du système (&#x394;U >0 signifie un gain d'énergie)
 * Q<sub>produit</sub> : quantité d'énergie produite
@@ -63,11 +63,11 @@ $\Delta U = Q_{produit} - Q_{consommé}$
 </figure>
 
 # Questions
-## Pourquoi le Grenelle de l’environnement s’intéresse-t-il autant au secteur du bâtiment ? Et pourquoi le secteur du bâtiment est-il autant responsable de l'émission de gaz à effet de serre?
-## Sur l'exemple de bâtiment montré plus haut: 
-### Citer trois ressources d’énergie renouvelable permettant de produire de l’énergie domestique. Quelles sont les deux voies d'utilisation de l'énergie solaire dans cet habitat.
-### Quelles options ont été choisies pour limiter la consommation en énergie?
-## A partir des valeurs données dans le document: faire un bilan et déterminer si celui-ci est à *énergie positive*.
+1. Pourquoi le Grenelle de l’environnement s’intéresse-t-il autant au secteur du bâtiment ? Et pourquoi le secteur du bâtiment est-il autant responsable de l'émission de gaz à effet de serre?
+2. Sur l'exemple de bâtiment montré plus haut: <br>
+2.a Citer trois ressources d’énergie renouvelable permettant de produire de l’énergie domestique. Quelles sont les deux voies d'utilisation de l'énergie solaire dans cet habitat.<br>
+2.b Quelles options ont été choisies pour limiter la consommation en énergie?
+3. A partir des valeurs données dans le document: faire un bilan et déterminer si celui-ci est à *énergie positive*.
 
 # Liens
 * Le grenelle de l'environnement : [wikipedia](https://fr.wikipedia.org/wiki/Grenelle_de_l%27environnement)
