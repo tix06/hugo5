@@ -141,6 +141,9 @@ L'utilisation d'un service de téléchargement ou de streaming illégal entraine
 
 L'objet étant numérique, cela ne constitue pas à proprement parler d'un vol lorsque l'on s'en procure une copie. On peut d'ailleurs en réaliser un nombre illimité de copies numériques. Un fichier musical, une vidéo, une image ou un livre numérique constituent des biens non *rivaux*. Mais l'existance de *droits d'auteurs* empêche normalement la libre diffusion de l'oeuvre, et les personnes qui pratiquent cet échange enfreignent la loi.
 
+### Le coût énergétique d'utilisation d'internet
+Un [article interessant du CNRS](https://lejournal.cnrs.fr/articles/numerique-le-grand-gachis-energetique) montre que l'usage de services dits *dématérialisés* n'est pas sans conséquences au niveau de la consommation énergétique. 
+
 # Aspects techniques : fonctionnement d'internet
 
 ## Réseau local et réseau internet
@@ -233,6 +236,7 @@ C'est le *protocole TCP* qui gère ce découpage, et rajoute des informations po
 * <a href="https://www.cnil.fr/fr">La CNIL :</a>
 * conglomérat de réseaux (interstice.info) : [https://interstices.info/internet-le-conglomerat-des-reseaux/](https://interstices.info/internet-le-conglomerat-des-reseaux/)
 * Le web :[https://isn-icn-ljm.pagesperso-orange.fr/web/co/module_WEB.html](https://isn-icn-ljm.pagesperso-orange.fr/web/co/module_WEB.html)
+* article du CNRS, [Numérique : le grand gâchis énergétique](https://lejournal.cnrs.fr/articles/numerique-le-grand-gachis-energetique)
 
 
 # Approfondir

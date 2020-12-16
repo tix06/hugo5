@@ -17,9 +17,10 @@ Les bâtiments contribuent pour :
 ## Consommation de l'énergie dans l'habitat
 La consommation d'énergie dans l'habitat vient, par ordre d'importance décroissante:
 
-* du chauffage de l'habitat
-* de l'eau chaude sanitaire
-* des équipements électriques, dont l'éclairage
+* du chauffage de l'habitat et de l'eau chaude sanitaire.
+* des équipements électriques et numériques, dont l'éclairage.
+
+Aujourd'hui, les équipements numériques sont responsables d'une part croissante de la consommation énergétique (utilisation, consommation en veille, ou recharge de cet appareil).
 
 ## Les économies d'énergie dans l'habitat
 De nombreux choix de conception vont avoir un effet important sur la consommation énergétique:
