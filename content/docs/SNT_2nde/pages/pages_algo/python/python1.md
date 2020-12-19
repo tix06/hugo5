@@ -155,6 +155,10 @@ Vous aurez parfois besoin de revenir en arrière: Bouton: ![](../images/back.png
 <iframe src="https://trinket.io/embed/python/78730099d1?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 
+# Liens
+[Retour](/docs/SNT_2nde/SNT_python/index.html)
+
+
 
 
 
