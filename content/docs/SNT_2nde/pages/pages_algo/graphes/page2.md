@@ -83,6 +83,9 @@ A la fin du traitement, on peut représenter à l'aide d'un *arbre* tous les che
 
 Pour réaliser cet arbre, il faudra mémoriser à chaque étape du parcours du graphe le parent du sommet visité. Ainsi, il aura faudra se rappeler que le sommet D a pour parent le noeud B, qui a lui même pour parent le noeud E. Ainsi, en remontant le chemin, on sait que le chemin de E à D passe par B : E,B,D.
 
+### Pour aller plus loin (term NSI)
+Consulter la page du *parcours en largeur* sur [wikipedia](https://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_largeur)
+
 ## Graphe pondéré : Algorithme de Dijkstra
 On va voir une variante, plus complexe, de l'algorithme BFS : l'algorithme de **Dijkstra**. Cet algorithme permettra de calculer toutes les distances entre un sommet de départ r et les autres sommets, mais cette fois ci, ce graphe est *pondéré*.
 
@@ -255,5 +258,8 @@ Le parcours d'un graphe en profondeur s'apparente à un algorithme de type *reto
 
 * Dans un jeu d'echec, lorsque l'on joue contre l'ordinateur, une option permet de *revenir en arrière*. On peut revenir *un coup* en arrière et prendre une meilleure option. L'ordinateur construit un graphe au fur et à mesure du jeu avec les coups joués ainsi que la configuration du jeu, afin de permettre ce backtracking.
 * Lorsque l'on joue à un jeu de labyrinthe : Si on arrive dans une impasse, on adopte là aussi un algorithme de type *retour sur trace*. On revient jusqu'au noeud parent (le croisement précédent) afin d'explorer une nouvelle voie. Et si toutes ces voies sont sans issues, on remonte encore d'un niveau (le croisement précédent encore celui ci).
+
+# Liens
+* Approfondir le sujet: les différents algorithmes de parcours des graphes (Term NSI): [site pixees de David Roche](https://pixees.fr/informatiquelycee/n_site/nsi_term_algo_graphe.html)
 
 [^1]: algorithmes : ce sont des méthodes qui, exécutées pas à pas, permettent d'obtenir un résultat final à partir de données de départ.

@@ -10,19 +10,152 @@ Chaque noeud peut être étiqueté  par une information.
 
 Un arbre est donc un cas particulier des graphes. Voir la [page suivante sur les graphes](/docs/NSI/structure/page5/)
 
+Des **exemples** d'arbres:
+
+* l'*arbre généalogique* est un bon exemple. Le vocabulaire sur la structure des arbres s'inspire d'ailleurs de la génélogie (père-fils).
+* L'arbre représentant les sytèmes de dossiers sur ordinateur (dossiers et sous-dossiers puis fichiers).
+* *arbre lexicographique* : représente un ensemble de mots, comme un dictionnaire, où chaque noeud est une lettre. Les prefixes communs à plusieurs mots n'apparaissent qu'une seule fois dans l'arbre:
+
+<figure>
+  <img src="../images/arbre1.png" alt="arbre lexicographique">
+  <figcaption>Retrouver le mot <i>p i l e</i> et rajouter le mot <i>p o r t a i l</i></figcaption>
+</figure>
+
+* arbre représentant des expressions arithmétiques
+
+<figure>
+  <img src="../images/arbre2.png" alt="expression arithmetique">
+  <figcaption>Retrouver l'expression arithmetique correspondante</figcaption>
+</figure>
+
+Les arbres sont très utilisés en informatique, d'abord parce que les données sont souvent hierarchisées, et se prêtent bien à cette structure. Mais aussi parce que l'accès à ces données est alors plus efficace: la recherche d'une valeur se fait en *O(log(n))* dans le cas moyen, où n est la *taille de l'arbre*.
+
 ## Caractéristiques d'un arbre
 
-* Dans un arbre, chaque valeur est stockée dans un nœud.
-* Les nœuds sont connectés par des arêtes qui représentent une relation de type "parent (prédécesseur est le terme exact) – fils".
-* La racine est le seul nœud qui n’a pas de prédécesseur.
-* Les nœuds qui n’ont pas de fils sont appelés desfeuilles.
-* Des nœuds qui ont le même père sont appelés desfrères.
-* Un sous-arbre c’est une portion de l’arbre, tandis qu’une branche c’est une suites de nœuds connectés de père en fils, depuis la racine jusqu’à une feuille.
-* Le niveau d’un nœud est la distance qui le sépare de la racine... Sachant que le niveau de laracine est 0 (logique) et que le niveau d’un nœud quelconque c’est 1+ le niveau de son père (vous la voyez la fonction récursive ou pas ?)
-* La profondeur (ou hauteur) d’un arbre c’est le plus grand des niveaux de tous les nœuds
+<figure>
+  <img src="../images/arbre3.png" alt="caracteristiques d'un arbre">
+  <figcaption>exemple d'arbre binaire et vocabulaire</figcaption>
+</figure>
+
+* Dans un arbre, chaque **valeur** est stockée dans un nœud. On appelle parfois cette *valeur* une **clé**.
+* Les **nœuds** sont connectés par des **arêtes**, ou **branches** qui représentent une relation de type "**parent** (prédécesseur est le terme exact) – **fils**".
+* Chaque noeud ne possède qu'**un seul noeud parent** (sauf le noeud racine).
+* La **racine** est le seul nœud qui n’a pas de prédécesseur.
+* Les nœuds qui n’ont pas de fils sont appelés des **feuilles**.
+* Des nœuds qui ont le même père sont appelés des **frères**.
+* Un **sous-arbre** c’est une portion de l’arbre. C'est une notion utile pour la recursivité.
+* Le **niveau d’un nœud** est la distance qui le sépare de la racine... Sachant que le niveau de la racine est 0 et que le niveau d’un nœud quelconque c’est 1+ le niveau de son père.
+* La **hauteur** d'un arbre, ou sa **profondeur** est égale au *niveau* (à la profondeur) du noeud le plus profond.
+* Le **degré** d'un arbre est egal au plus grand des degrés de ses noeuds.
+* Un arbre de **degré** égal à 1 est ... une **liste**.
+
+<figure>
+  <img src="../images/arbre7.png" alt="degré d'un arbre">
+<figcaption>Quel est le degré de cet arbre?</figcaption>
+</figure>
+
+* La **hauteur** d’un arbre est le plus grand des niveaux de tous les nœuds.
+* La **taille** d'un arbre est son nombre de noeuds.
+
+<figure>
+  <img src="../images/arbre5.png" alt="dimensions d'un arbre">
+<figcaption>dimensions d'un arbre</figcaption>
+</figure>
+
+## Arbres binaires
+* **Arbre binaire:** arbre de degré égal à 2. Chaque noeud a au plus 2 fils: le **fils droit** et le **fils gauche**.
+* **Arbre binaire équilibré:** pour chaque noeud interne, les sous-arbres gauche et droit ont une même hauteur (ou qui diffère d'une unité).
+* **Arbre binaire complet:** tous les niveaux de l’arbre sont remplis.
+
+<figure>
+  <img src="../images/arbre4.png" alt="sous arbres droit et gauche">
+<figcaption>definition recursive des arbres binaires</figcaption>
+</figure>
+
+# Implémenter en python
+On utilisera l'arbre suivant pour l'implémentation en python:
+
+<figure>
+  <img src="../images/arbre6.png" alt="exemple d'arbre binaire">
+<figcaption>exemple d'arbre binaire de taille 9</figcaption>
+</figure>
+
+Comme vu pour les graphes, on pourra utiliser des listes imbriquées, un dictionnaire, ou une classe (programmation objet).
+
+## Liste
+Un noeud peut être représenté par une liste `[clé,fils gauche,fils droit]`.
+
+Et comme les *fils gauche* ou *fils droit* sont des noeuds, on y mettra une nouvelle liste imbriquée `[clé,fils gauche,fils droit]`.
+
+Pour les feuilles, la liste s'écrit: `[clé,None,None]`.
+
+Le petit arbre suivant peut être représenté par `['r'`,['a',None,None],['b',None,None]` 
+
+<figure>
+  <div>
+  <img src="../images/arbre8.png">
+<figcaption>petit arbre de taille 3</figcaption>
+</div>
+</figure>
+
+Avec l'arbre de taille 9 donné en exemple:
+
+`arbre9 = [8,[3,..,..],[10,..,..]`
+
+> Question: compléter cette liste.
+
+## Classe
+La classe suivante va permettre d'implémenter les arbres binaires:
+
+```python
+class ArbreBinaire:
+    def __init__(self, valeur):
+        self.valeur = valeur
+        self.fils_gauche = None
+        self.fils_droit = None
+```
+
+On n'a donné ici que le constructeur, mais il est possible d'y ajouter les méthodes qui permettront de retourner une valeur (getter), ou d'ajouter un noeud (setter); ou encore de déterminer les dimensions de l'arbre.
+
+Avec l'arbre de taille 9 vu plus haut, la classe peut s'utiliser de la manière suivante (avec la notation pointée qui n'est pas recommandée):
+
+```python
+racine = ArbreBinaire(8)
+noeud1 = ArbreBinaire(3)
+noeud2 = ArbreBinaire(10)
+noeud3 = ArbreBinaire(1)
+...
+racine.fils_gauche = noeud1
+racine.fils_droit = noeud2
+noeud1.fils_gauche = noeud3
+...
+```
+
+Ou bien, en supposant que vous ayez ajouté deux méthodes de classe `ajoute_fils_gauche` et `ajoute_fils_droit`:
+
+```python
+racine = ArbreBinaire(8)
+noeud1 = ArbreBinaire(3)
+noeud2 = ArbreBinaire(10)
+noeud3 = ArbreBinaire(1)
+...
+racine.ajoute_fils_gauche(noeud1)
+racine.ajoute_fils_droit(noeud2)
+noeud1.ajoute_fils_gauche(noeud3)
+```
+
+
+
 
 
 # Parcours
+**Definition:** Un **parcours** est un algorithme qui appelle une fonction, ou un méthode sur tous les noeuds d'un arbre.
+
+L'**ordre** sur les noeuds dans lequel la méthode est appelée doit être fixé. Il y a plusieurs choix, qui diffèrent par la seule position de l'instruction `Afficher clef [ r ]`
+
+Le parcours peut avoir pour but de construire une relation entre ces noeuds, ou de calculer sur les valeurs, etc...
+
+Les algorithmes suivants n'ont pour but que d'afficher le chemin parcouru, avec l'instruction `Afficher clef [ r ]`, mais on peut remplacer cette instruction par un traitement sur les valeurs.
 
 ## Parcours postfixe
 
@@ -51,4 +184,11 @@ ParcoursInfixe ( Arbre binaire T de racine r )
   ParcoursInfixe(Arbre de racine fils_droit[r])
 ```
 
+<figure>
+  <img src="../images/arbre10.png">
+<figcaption>exemples de parcours</figcaption>
+</figure>
+
 # Liens
+
+* cours de l'Université Paris Sud: [Lien](https://www.lri.fr/~hivert/COURS/CFA-L3/06-Arbres.pdf)

@@ -4,6 +4,13 @@ Title : graphes
 
 Pour une première approche des graphes, consulter le cours [Graphes SNT](/docs/SNT_2nde/pages/pages_algo/graphes/page1/)
 
+Les graphes et les arbres permettent de construire des schémas qui mettent en évidence une structure sur des données.
+
+<figure>
+  <img src="../images/graphe_intro.png" alt="modelisation reseau social">
+<figcaption>graphe modelisant un reseau social</figcaption>
+</figure>
+
 # Graphes : définitions
 
 On appelle **graphe** la donnée d'un ensemble fini V de points (ou sommets du graphe, *vertices* en anglais) et d'un ensemble E de liens entre ces points.

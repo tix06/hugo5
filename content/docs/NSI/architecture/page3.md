@@ -124,7 +124,7 @@ La table de routage du routeur 1 est alors:
 
 *Exercices:*
 
-*Ex 1:* Donner les tables de routage des autres routeur de ce système informatique n°1
+*Ex 1:* Donner les tables de routage des autres routeurs de ce système informatique n°1
 
 *Ex 2:* Donner les tables de routage des routeurs du système informatique suivant:
 
