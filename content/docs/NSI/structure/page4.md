@@ -45,7 +45,7 @@ Les arbres sont très utilisés en informatique, d'abord parce que les données 
 * Des nœuds qui ont le même père sont appelés des **frères**.
 * Un **sous-arbre** c’est une portion de l’arbre. C'est une notion utile pour la recursivité.
 * Le **niveau d’un nœud** est la distance qui le sépare de la racine... Sachant que le niveau de la racine est 0 et que le niveau d’un nœud quelconque c’est 1+ le niveau de son père.
-* La **hauteur** d'un arbre, ou sa **profondeur** est égale au *niveau* (à la profondeur) du noeud le plus profond.
+* La **hauteur** d'un arbre, ou sa **profondeur** est égale au *niveau* (à la profondeur) du noeud le plus profond. Selon la convention proposée ici (le niveau de la racine vaut 0), la hauteur correspond aussi au **plus grand nombre de branches** depuis la *racine* jusqu'à l'une de ses *feuilles*.
 * Le **degré** d'un arbre est egal au plus grand des degrés de ses noeuds.
 * Un arbre de **degré** égal à 1 est ... une **liste**.
 
@@ -70,6 +70,11 @@ Les arbres sont très utilisés en informatique, d'abord parce que les données 
 <figure>
   <img src="../images/arbre4.png" alt="sous arbres droit et gauche">
 <figcaption>definition recursive des arbres binaires</figcaption>
+</figure>
+
+<figure>
+  <img src="../images/arbre_complet.png" alt="arbre complet">
+<figcaption>arbre complet</figcaption>
 </figure>
 
 # Implémenter en python
@@ -153,9 +158,9 @@ noeud1.ajoute_fils_gauche(noeud3)
 
 L'**ordre** sur les noeuds dans lequel la méthode est appelée doit être fixé. Il y a plusieurs choix, qui diffèrent par la seule position de l'instruction `Afficher clef [ r ]`
 
-Le parcours peut avoir pour but de construire une relation entre ces noeuds, ou de calculer sur les valeurs, etc...
+L'algorithme opère alors un **traitement** sur chacune des clés de l'arbre, dans un ordre choisi. Ici, on cherche à *Afficher la clef*.
 
-Les algorithmes suivants n'ont pour but que d'afficher le chemin parcouru, avec l'instruction `Afficher clef [ r ]`, mais on peut remplacer cette instruction par un traitement sur les valeurs.
+Mais on peut remplacer cette instruction par un traitement sur les valeurs.
 
 ## Parcours postfixe
 
