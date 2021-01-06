@@ -105,13 +105,13 @@ figure img{ /*modif*/
 figure > img {
       /* Syntaxe standard */
     transition-property: width;
-    transition-duration: 0.4s;
+    transition-duration: 0.2s;
     transition-timing-function: linear;
     transition-delay: 0s;
     
     /* Hack Safari */
     -webkit-transition-property: width, background;
-    -webkit-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.2s;
     -webkit-transition-timing-function: linear;
     -webkit-transition-delay: 0s;  
 }
@@ -125,6 +125,28 @@ figcaption {
 	font-size: small;
 	font-style : italic;
 }
+
+/****************************/
+/***** blockquote '>' *******/
+/****************************/
+blockquote {
+    margin: 0;
+}
+
+blockquote p {
+    padding: 15px;
+    background: #eee;
+    border-radius: 5px;
+}
+
+blockquote p::before {
+    content: '\201C';
+}
+
+
+/***** fin blockquote '>' *******/
+/****************************/
+
 
 /************************/
 /* bandeau informations */
