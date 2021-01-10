@@ -105,6 +105,7 @@ Python peut aussi servir de calculatrice. On peut en effet réaliser toutes les 
 | // | division entière | 12 // 10 |
 | - | soustraction | 10 - 12 |
 | ** | exposant | 2**8 |
+| e | puissance de 10 | 12e-3 <br> equivalent à <br> 0.012 |
 
 ## Types de variables
 On vient de voir 3 types de variables possibles en python:

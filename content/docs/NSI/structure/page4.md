@@ -198,7 +198,7 @@ ParcoursInfixe ( Arbre binaire T de racine r )
 * telecharger le fichier module [hierarchyP](/pdf/NSI/hierarchyP.py) (faire un clic droit et *enregistrer sous...*)
 * utiliser le lien suivant pour acceder au <a href= "https://colab.research.google.com/drive/1y3GF5m5UI2ilRLX7wYQsFNnw6gzdvvHV?usp=sharing" target="blank">notebook colab</a>
 
-* lien alternatif: télécharger une [version locale](/pdf/NSI/sd5_notebook.ipynb) du notebook 
+* lien alternatif: télécharger une [version locale](/pdf/NSI/sd5_notebook.ipynb) du notebook (clic droit et *enregistrer sous...*)
 
 
 # Liens

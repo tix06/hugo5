@@ -111,7 +111,7 @@ bookShowToc: false
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <h1>Questions 5</h1>
+      <h1>Opérations sur les variables</h1>
       Que valent chacune des expressions suivantes ?
       <ol><li>("Pa"+"La") * 2</li>
         <li>str(4) * int("3") </li>
@@ -192,30 +192,4 @@ bookShowToc: false
 Lien vers la page : <a href="/docs/python/pages/variables/page1/">Variables</a>
 
 
-<script>
-let selector, cards, makeActive;
-let elems = [];
-var check = false;
-
-selector = '.flip-card';
-
-cards = document.querySelectorAll(selector);
-
-
-makeActive = function () {
-    /* attention petite erreur de script
-    pour que ca fonctionne il faut un nombre impair de cartes
-    */ 
-    for (let i = 0; i < cards.length; i++){
-      check=!check;
-      //console.log(cards[i].childNodes[1].classList);
-      elems[i] = cards[i].childNodes[1];
-      elems[i].classList.remove('active');
-      }
-    if (check) {
-    this.childNodes[1].classList.add('active');}
-};
-
-for (let i = 0; i < cards.length; i++)
-    cards[i].addEventListener('mousedown', makeActive);
-</script>
+<script type="text/javascript" src="/scripts/flash_cards.js"></script>
