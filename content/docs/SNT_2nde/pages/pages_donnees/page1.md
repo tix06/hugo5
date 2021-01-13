@@ -162,3 +162,20 @@ On souhaite maintenant evaluer le nombre total de Pommes vendues en Région Est.
 * faire une selection étendue sur toute la plage correspondant au 2e critère. Ici, la plage de valeurs sous l'etiquette **Produit**. Puis `;`
 * puis ajouter `Pommes` et terminer par `)`
 
+# Prolongement
+Le fichier suivant rescence tous les matchs de football de Ligue 1 depuis 2002.
+
+Les fichier à télecharger: <a href="../datas/L1.ods" target="blank"><i>L1.ods</i></a> 
+
+<a href="../datas/L1.ods" target="blank"><img src="/images/download.png"></a> 
+
+> A l'aide des techniques vue plus haut, vous allez:
+
+> * sélectionner tous les matchs Nice - Marseille (Nice reçoit à domicile)
+* compter le nombre de victoires de Nice
+* calculer le score *moyen* entre ces 2 équipes.
+
+
+
+
+
