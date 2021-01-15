@@ -129,7 +129,7 @@ Pour chacun des exercices: **reflechir** à la reponse puis **cliquer sur la car
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <h1>Questions 4</h1>
+      <h1>Opérations en python</h1>
       Que valent chacune des expressions suivantes ?
       <ol><li>3.12e-3</li>
         <li>3 / 4</li>

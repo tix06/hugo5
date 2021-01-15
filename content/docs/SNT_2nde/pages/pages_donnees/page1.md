@@ -7,7 +7,7 @@ Un logiciel tableur permet de structurer et représenter les informations en tab
 
 Il existe de nombreux logiciels tableurs, comme Excel (Microsoft Office), Calc (Open Office), Number (Apple), ...
 
-La première partie du TP utilise le fichier <a href="../datas/fruits.xlsx" target="blank"><i>fruits.xlsx</i></a> que vous devrez télécharger. 
+La première partie du TP utilise le fichier <a href="../datas/fruits.xlsx" target="blank"><i>fruits.xlsx</i></a> que vous devrez télécharger *(clic droit: Enregistrer sous)*. 
 
 <a href="../datas/fruits.xlsx" target="blank"><img src="/images/download.png"></a> 
 
@@ -26,13 +26,13 @@ Puis vous réaliserez ce *premier travail*:
 * Ouvrir avec Excel le fichier *fruits.xlsx*
 * Ajouter les informations suivantes dans le tableau: *le commercial Sébastien a vendu 9814 Pommes dans la région Sud*.
 
-# Les fonctions de tri
-## La notion de variable
+
+# La notion de variable
 Dans le tableur, une cellule EST une variable.
 
 On peut accéder à la valeur d'une cellule à partir de ses coordonnées. C'est equivalent au nom de la variable que l'on a vu pour le langage Python.
 
-### Copie par valeur
+## Copie par valeur
 
 > Testez vous-même:
 
@@ -42,7 +42,7 @@ On peut accéder à la valeur d'une cellule à partir de ses coordonnées. C'est
 >	* Faites un clic droit dans le cellule **H2**. Choisir *collage special*, puis *valeur*.
 * Modifier alors le mot écrit dans la case **C5**: Est-ce que cela modifie le contenu de la case **C5**?
 
-### Copie par référence
+## Copie par référence
 
 > Testez vous-même:
 
@@ -57,13 +57,13 @@ Que remarque t-on?
 *Cette fois, le contenu de la cellule se met automatiquement à jour: dès que l'on saisie et valide une entrée, toute la feuille est recalculée, et les cellules copiées par référence sont modifiées.*
 
 
-## Filtrer
+# Filtrer
 
-### Recopier le tableau
+## Recopier le tableau
 > Dans une zone située sous le tableau original: 
 
 > * faire un copier coller des **etiquettes** du tableau
-* recopier une cellule: écrire le signe ``=` dans la premiere ligne, et la premiere colonne de ce nouveau tableau. 
+* recopier une cellule: écrire l'opérateur `=` dans la premiere ligne, premiere colonne de ce nouveau tableau. 
 * Puis cliquer dans la case correspondante du tableau d'origine. Que constatez vous? ... Vous venez de faire une copie de la VALEUR de la cellule d'origine.
 * **étendre la formule** de la cellule: en largeur, puis en hauteur. (voir <a href="https://www.cours-gratuit.com/tutoriel-excel/tutoriel-excel-comment-etendre-une-formule#:~:text=Vous%20devez%20faire%20ce%20qui,en%20une%20croix%20noire%20%C3%A9paisse." target="blank">l'image suivante</a>)
 
@@ -72,7 +72,7 @@ Que remarque t-on?
 Vous avez réalisé une copie de votre tableau original. Une modification de ce tableau entraine une modification du 2e tableau.
 
 
-### Filtrer par critère simple
+## Filtrer par critère simple
 Dans le bandeau *Données*, choisir Filtrer (entonoir).
 
 * Sur le filtre appliqué à la première colonne (étiquette: Région), choisir **Est**.
@@ -84,7 +84,7 @@ Dans le bandeau *Données*, choisir Filtrer (entonoir).
 </div>
 </figure>
 
-* Sur le filtre appliqué à la troisième colonne (étiquette: Produits), choisir **Pomme**.
+* Sur le filtre appliqué à la troisième colonne (étiquette: Produits), choisir **Pommes**.
 
 Vous devriez obtenir le tableau suivant:
 
@@ -115,14 +115,14 @@ Vous devriez voir le résultat du calcul...
 > Dans le tableau d'origine: 
 
 > * cliquer dans la cellule juste sous la dernière valeur de la colonne *Unités*. 
-* Ecrire les caractères: `= SOMME` 
+* Ecrire debut de la formule: `= SOMME` 
 * puis faire une sélection étendue de toutes les valeurs de la colonne. 
 * Valider avec la touche *Entrer*
 
 ## Somme conditionnelle: SOMME.SI
 La fonction SOMME.SI permet de sélectionner certaines cellules d'une selection étendue.
 
-> On va s'aider du concepteur de formule:
+> On va s'aider du *concepteur de formule*:
 
 > * Cliquer sur le bouton *Filtre* pour enlever les filtres.
 * Cliquer dans la cellule dans laquelle vous souhaitez rentrer la formule, sous le tableau.
@@ -138,7 +138,7 @@ La fonction SOMME.SI permet de sélectionner certaines cellules d'une selection 
 > * cliquer sur le bouton *fx* de la barre de saisie.
 * Aidez vous des champs suivants pour remplir les plages pour cette formule:
 	* Plage: faire une selection étendue des valeurs de la colonne *Produits*
-	* Critères: écrire "Pommes", ou bien cliquer sur le mot "Pomme" dans l'une des cellules du tableau (la *C24* dans cet exemple.
+	* Critères: écrire "Pommes", ou bien cliquer sur le mot "Pommes" dans l'une des cellules du tableau (la *C24* dans cet exemple.
 	* Somme_plage: selectionner toutes les valeurs numériques de la colonne *Unités*:
 
 <figure>
@@ -151,23 +151,36 @@ La fonction SOMME.SI permet de sélectionner certaines cellules d'une selection 
 On a alors le nombre de Pommes vendues dans toute la France.
 
 ## Somme conditionnelle avec plusieurs critères: SOMME.SI.ENS
-On souhaite maintenant evaluer le nombre total de Pommes vendues en Région Est. C'est une somme conditionnelle avec 2 critères.
+On souhaite maintenant evaluer le nombre total de *Pommes* vendues en Région *Est*. C'est une somme conditionnelle avec cette fois 2 critères.
 
 > Cette fois, vous allez écrire directement la formule dans la cellule:
 
 > * Commencez par écrire `= SOMME.SI.ENS(`
-* faire une selection étendue sur toute la plage de somme (les valeurs numériques. Ajouter à la fin `;` comme séparateur.
-* faire une selection étendue sur toute la plage correspondant au premier critère. Ici, la plage de valeurs sous l'etiquette **Région**. Puis `;`
+* faire une selection étendue sur toute la *somme_plage* (les valeurs numériques). Ajouter à la fin `;` comme séparateur.
+* faire une selection étendue sur toute la *plage 1* correspondant au premier critère. Ici, la plage de valeurs sous l'etiquette **Région**. Puis `;`
 * écrire le critère: `Est`
-* faire une selection étendue sur toute la plage correspondant au 2e critère. Ici, la plage de valeurs sous l'etiquette **Produit**. Puis `;`
+* faire une selection étendue sur toute la *plage 2* correspondant au 2e critère. Ici, la plage de valeurs sous l'etiquette **Produit**. Puis `;`
 * puis ajouter `Pommes` et terminer par `)`
+
+<figure>
+<div>
+<img src="../images/sommesiens.png">
+<figcaption>selection des colonnes pour SOMME.SI.ENS</figcaption>
+</div>
+</figure>
+
+
+
+La formule pourrait, selon la position du tableau,  ressembler à: 
+
+`=SOMME.SI.ENS(D24:D39;A24:A39;"Est";C24:C39;"Pommes")`
 
 # Prolongement
 Le fichier suivant rescence tous les matchs de football de Ligue 1 depuis 2002.
 
-Les fichier à télecharger: <a href="../datas/L1.ods" target="blank"><i>L1.ods</i></a> 
+Les fichier à télecharger: <a href="../datas/L1.xlsx" target="blank"><i>L1.xlsx</i></a> 
 
-<a href="../datas/L1.ods" target="blank"><img src="/images/download.png"></a> 
+<a href="../datas/L1.xlsx" target="blank"><img src="/images/download.png"></a> 
 
 > A l'aide des techniques vue plus haut, vous allez:
 

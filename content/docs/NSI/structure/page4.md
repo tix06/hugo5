@@ -199,6 +199,7 @@ ParcoursInfixe ( Arbre binaire T de racine r )
 * utiliser le lien suivant pour acceder au <a href= "https://colab.research.google.com/drive/1y3GF5m5UI2ilRLX7wYQsFNnw6gzdvvHV?usp=sharing" target="blank">notebook colab</a>
 
 * lien alternatif: télécharger une [version locale](/pdf/NSI/sd5_notebook.ipynb) du notebook (clic droit et *enregistrer sous...*)
+* correction du <a href= "https://colab.research.google.com/drive/18VUCVjH9u9V3jF7JU2VRy0XZWQwyXtqO?usp=sharing" target="blank">notebook colab en ligne</a>, ou version <a href="/pdf/NSI/sd5_notebook_correction.ipynb">locale</a>
 
 
 # Liens
