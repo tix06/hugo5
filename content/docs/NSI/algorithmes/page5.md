@@ -25,7 +25,7 @@ $$u\_n = a.u\_{\tfrac{n}{2}} + b.u_{\tfrac{n}{2}} + f(n)$$
 # Exemple introductif : téléphone en chaîne
 Les 15 joueuses d’une équipe de volleyball ont la liste des joueuses de l’équipe avec leur numéro de téléphone. La capitaine reçoit l’information que le prochain match a été déplacé. Il faut prévenir toutes les autres joueuses.
 
-* Solution 1 : la capitaine se charge d’appeler toutes les autres joueuses. Si elle passe 5 minutes au téléphone avec chacune d’entre-elles.<br>
+* Solution 1 : la capitaine se charge d’appeler toutes les autres joueuses. Et si elle passe 5 minutes au téléphone avec chacune d’entre-elles...<br>
 
 > **Question à propos de la solution 1** *: En combien de temps (noté t1) l’ensemble de l’équipe est informé? En déduire la complexité de cette solution en fonction de n (taille de l’équipe)*
 
