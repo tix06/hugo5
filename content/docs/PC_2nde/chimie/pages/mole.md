@@ -126,9 +126,11 @@ $$n=1,66.10^{-3}mol$$
 C'est la masse d'une mole d'objets. On la note M (majuscule).
 La masse molaire atomique est indiquée dans le tableau périodique des éléments [voir en bas de page](#tableau-périodique-réduit-des-éléments)
 
-On a vu par exemple : 
-La masse d'une mole d'atomes d'oxygène vaut M = 16 g
-La masse d'une mole de dioxygène vaut M = 2*16 = 32 g
+Exemples : 
+
+* La masse d'une mole d'atomes d'oxygène vaut M = 16 g
+* La masse d'une mole de dioxygène vaut M = 2*16 = 32 g
+
 ## méthode
 si **1** mole d'objet pèse **M** : 
 alors **n** mol d'objet pèse **m**.
