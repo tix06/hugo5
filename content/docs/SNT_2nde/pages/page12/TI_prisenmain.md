@@ -88,7 +88,11 @@ Se rendre du la page de téléchargement du site Texas Instrument: <a href="http
   </a>
 </figure>
 
-Téléchargez tous les modules sur votre ordinateur. (il y en a actuellement 9). Ceux-ci devraient se trouver dans votre dossier *téléchargements*.
+Téléchargez tous les modules sur votre ordinateur. (il y en a actuellement 9). 
+
+Vous pouvez aussi télécharger l'ensemble de ces fichiers, en un seul *clic*, ici : [Lien vers le fichier zip](/pdf/SNT_texas/microbit/MB_ti83.zip)
+
+Ceux-ci devraient se trouver dans votre dossier *téléchargements*.
 
 ## Téléverser les modules dans la calculatrice
 

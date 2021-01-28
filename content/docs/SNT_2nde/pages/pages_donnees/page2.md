@@ -1,3 +1,8 @@
+---
+Title: Analyse de données
+---
+
+
 # Modèle prédictif
 ## Principe
 Un modèle prédictif ne peut être établi qu'à partir d'une étude prealable de données. Une étude statistique permet de repérer si certains paramètres sont liés entre eux. Alors, si ces données étaient suffisamment nombreuses et précises, il est possible d'établir des lois mathematiques sur ces données. Une manière de représenter ce lien entre paramètres est d'établir une loi de regression linéaire, par exemple.
@@ -89,7 +94,7 @@ Soit: la masse volumique relative à celle de Jupiter est égale à sa masse rel
 * Entrer alors les données issues de la base de données: celle correspondant à *mass* dans `L1` et celles correspondant à *radius* dans `L2`
 * Ajouter en dernière entrée la valeur 0 dans chacune des 2 colonnes (une planète de rayon 0 aura aussi une masse de 0...)
 * Quitter alors le tableur: `2nde mode` ce qui correspond à `quitter`.
-* Dans la fenêtre de calcul, saisir: `L2^3` &rarr; `L3` 
+* Dans la fenêtre de calcul, saisir: `L2^3` puis touche **STO &rarr;** et `L3` pour obtenir: $$L2^3 \rightarrow L3$$
 
 Si vous revenez sur la fenêtre d'edition du tableau, celui-ci devrait ressembler à ceci:
 
