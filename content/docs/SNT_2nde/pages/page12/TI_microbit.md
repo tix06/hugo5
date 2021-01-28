@@ -2,7 +2,7 @@
 Title: microbit ti83
 ---
 
-La carte micro:bit peut être programmée à partir de la caclulatrice TI-83 edition python. La programmation se fait en langage *Python*.
+La carte micro:bit peut être programmée à partir de la calculatrice TI-83 edition python. La programmation se fait en langage *Python*.
 
 # Préparer le matériel
 
@@ -87,4 +87,16 @@ Votre programme devrait ressembler à ceci:
 ## Executer
 Relier alors la carte micro:bit à la calculatrice à l'aide du cable usb mini B vers micro B.
 
-Puis excuter le script...
+Puis executer le script: Option `Exec` de la fenêtre d'edition...
+
+<figure>
+<div>
+<img src="../images/smiley.png">
+</div>
+</figure>
+
+> A vous de jouer: remplacer l'image HAPPY par celle Image.SAD
+
+# Liens
+* [Découvrir la carte microbit](/pdf/SNT_texas/MBpresentation.pdf) par J.L Balas et A. Yazi
+
