@@ -139,10 +139,12 @@ Si vous revenez sur la fenêtre d'edition du tableau, celui-ci devrait ressemble
 
 Recopier alors le coefficient obtenu pour `a`. Celui-ci représente la masse volumique relative d'une planète tellurique moyenne, rapportée à celle de Jupiter (1,3g.cm<sup>-3</sup>).
 
-# Prolongement
-On pourra faire ce même travail pour une série de planètes gazeuses. Il faudra cette fois choisir des planètes dont les masses et les rayons sont proches de ceux de Jupiter.
+# Prolongement et liens
+* On pourra faire ce même travail pour une série de planètes gazeuses. Il faudra cette fois choisir des planètes dont les masses et les rayons sont proches de ceux de Jupiter.
 
-Les planètes telluriques et gazeuses diffèrent grandement par leur densité, comme on peut le voir sur le dossier suivant: [futura-sciences](https://www.futura-sciences.com/sciences/questions-reponses/astronomie-planete-tellurique-planete-gazeuse-differences-6462/)
+* Les planètes telluriques et gazeuses diffèrent grandement par leur densité, comme on peut le voir sur le dossier suivant: [futura-sciences](https://www.futura-sciences.com/sciences/questions-reponses/astronomie-planete-tellurique-planete-gazeuse-differences-6462/)
+
+* Exoplanète : première mesure de la densité d’une très jeune planète avec SPIRou: [article du CNRS.fr](https://www.cnrs.fr/fr/exoplanete-premiere-mesure-de-la-densite-dune-tres-jeune-planete-avec-spirou)
 
 
 
