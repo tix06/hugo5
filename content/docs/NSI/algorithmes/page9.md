@@ -203,4 +203,7 @@ img.show()
 > * Est-il plus rapide ou plus lent que votre premier algorithme?
 * Le nombre d'opérations significatives suit une loi de recurence: $T(n) = 4 \times T(\tfrac{n}{2}) + C \times n^2$ Cela confirme t-il votre reponse à la question pécédente?
 
-On rappelle que l'intérêt de la méthode est surtout de ne pas utiliser de nouvelle image *planPixels* comme précédemment.
+On rappelle que l'intérêt de la méthode est surtout de ne PAS utiliser de nouvelle image *planPixels* comme précédemment. Il s'agit d'une transformation *en place*.
+
+# Liens et aides
+* En cas de difficulté, consulter la page et les videos du site: [monlyceenumerique.fr](http://www.monlyceenumerique.fr/nsi_terminale/a/a3_div_regner.php)

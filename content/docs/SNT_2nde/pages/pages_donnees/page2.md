@@ -39,7 +39,7 @@ Le logiciel utilise alors un modèle prédictif, établi à partir de l'observat
 
 > A tester vous même: faire un test à l'aide du simulateur.
 
-# Utilisation de la basse de données
+# Utilisation de la base de données
 ## Ouvrir la base de données
 Pour consulter la base de données de toutes les planetes observées, cliquer sur *Tous les catalogues*.
 
