@@ -109,11 +109,19 @@ def echange_pix(image,x0,y0,x1,y1):
 ```
 
 ### Compléter la fonction `echange_quadrant` suivante
+Cette fonction permet d'echanger les pixels de 2 zones carrées de même dimensions.
+
+<figure>
+  <div>
+<img src="../images/deplaceBloc.png">
+<figcaption>exemple: echange des blocs A et B</figcaption>
+</div>
+</figure>
 
 ```python
 def echange_quadrant(image,x0,y0,x1,y1,n):
-    """procedure qui echange tous les pixels du quart d'image A
-    avec ceux du quart d'image B.
+    """procedure qui echange tous les pixels du bloc de pixels A
+    avec ceux du bloc B, de même dimension n*n.
     L'image doit être carrée, de largeur et hauteur égaux à n
     A et B occupent une position quelconque parmi les 4 quarts de l'image
     Params:
@@ -122,16 +130,22 @@ def echange_quadrant(image,x0,y0,x1,y1,n):
     x0,y0: int, int: coordonnées du pixel du coin superieur gauche de A
     x1,y1: int, int: coordonnées du pixel du coin superieur gauche de B
     n : int : largeur ou hauteur de l'image, en nombre de pixels
-    Example: echange du quart d'image en haut à gauche avec celui en haut à droite
-    ------------  sur une image de largeur 420
+    Example: echange du quart d'image en haut à gauche (A) avec celui 
+    ------------ en haut à droite (B) sur une image de largeur 420
+     
    
-    >>> echange_quadrant(imageSource,0,0,120,0,420)
+    >>> echange_quadrant(imageSource,0,0,120,0,120)
     """
     for x in range(n):
         for y in range(n):
             echange_pix(image, # à compléter
 
 ```
+
+> **Questions:**
+
+> * On veut echanger les blocs A et D, qui font chacun 120*120 pixels. Quelle instruction faut-il écrire, utilisant la procedure `echange_quadrant`.
+* Même question pour echanger les blocs A et C.
 
 ### analyser la fonction `rotate`
 La fonction (ou plutôt *méthode*, vue qu'elle ne retourne rien), permet de faire tourner l'image d'un quart de tour par une méthode de type *diviser pour régner*.

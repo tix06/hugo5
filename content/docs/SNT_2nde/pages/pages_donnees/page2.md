@@ -3,44 +3,10 @@ Title: Analyse de données
 ---
 
 
-# Modèle prédictif
-## Principe
-Un modèle prédictif ne peut être établi qu'à partir d'une étude prealable de données. Une étude statistique permet de repérer si certains paramètres sont liés entre eux. Alors, si ces données étaient suffisamment nombreuses et précises, il est possible d'établir des lois mathematiques sur ces données. Une manière de représenter ce lien entre paramètres est d'établir une loi de regression linéaire, par exemple.
-
-A partir de nouvelles données, on peut alors, grâce à une simulation, prédire le comportement futur  du nouvel objet. A condition que celui-ci fasse partie de la même famille d'objets que ceux qui ont permis d'établir le modèle.
-
-## Un exemple de prédiction
-Aller sur la page <a href="http://exoplanet.eu/GCM1D/" target = "blank">Exoplanet.eu</a>.
-
-Cliquer sur le lien *online tool here* au milieu de la page de description.
-
-La page suivante permet de simuler le comportement d'une planete dans son système stellaire. Il suffit de choisir certains paramètres comme par exemple:
-
-* la distance de la planète à son étoile
-* la courbure de sa trajectoire
-* sa période de revolution
-* le type d'étoile
-* sa couverture oceanique
-* ...
-
-<figure>
-<img src = "../images/params.png" alt="choix des paramètres de la planète">
-<figcaption>Choix des paramètres de la planète</figcaption>
-</figure>
-
-La simulation demarre une fois que l'on clique sur le bouton **START**.
-
-<figure>
-<img src = "../images/modeles.png" alt="modeles predictifs">
-<figcaption>Simulation du comportement de la planète</figcaption>
-</figure>
-
-Le logiciel utilise alors un modèle prédictif, établi à partir de l'observation de nombreuses autres planètes ou corps celestes, pour déterminer la temperature de surface de l'astre au cours du temps, sa trajectoire, etc...
-
-> A tester vous même: faire un test à l'aide du simulateur.
-
 # Utilisation de la base de données
 ## Ouvrir la base de données
+Aller sur la page <a href="http://exoplanet.eu/GCM1D/" target = "blank">Exoplanet.eu</a>.
+
 Pour consulter la base de données de toutes les planetes observées, cliquer sur *Tous les catalogues*.
 
 <figure>
@@ -139,12 +105,26 @@ Si vous revenez sur la fenêtre d'edition du tableau, celui-ci devrait ressemble
 
 Recopier alors le coefficient obtenu pour `a`. Celui-ci représente la masse volumique relative d'une planète tellurique moyenne, rapportée à celle de Jupiter (1,3g.cm<sup>-3</sup>).
 
-# Prolongement et liens
-* On pourra faire ce même travail pour une série de planètes gazeuses. Il faudra cette fois choisir des planètes dont les masses et les rayons sont proches de ceux de Jupiter.
+# Prolongement
+On pourra faire ce même travail pour une série de planètes gazeuses. Il faudra cette fois choisir des planètes dont les masses et les rayons sont proches de ceux de Jupiter. Par exemple (vous pouvez tester d'autres combinaisons):
+
+`mass:mjup> 0.7 and mass:mjup <1.5 AND radius:rjup>0.7` 
+
+Choisir alors les 10 premières lignes du tableau (il devrait y en avoir plus d'une centaine...). Et faire le même travail que pour les planetes telluriques:
+
+* effacer les listes
+* remplir les listes `L1` et `L2` avec les valeurs de mass et de radius.
+* Calculer les valeurs de la liste $L_3 = L_2^3$
+* tracer la courbe `L1` en fonction de `L3`
+* Obtenir les coefficients de la regression linéaire pour cette distribution de points.
+
+# liens
+
 
 * Les planètes telluriques et gazeuses diffèrent grandement par leur densité, comme on peut le voir sur le dossier suivant: [futura-sciences](https://www.futura-sciences.com/sciences/questions-reponses/astronomie-planete-tellurique-planete-gazeuse-differences-6462/)
 
 * Exoplanète : première mesure de la densité d’une très jeune planète avec SPIRou: [article du CNRS.fr](https://www.cnrs.fr/fr/exoplanete-premiere-mesure-de-la-densite-dune-tres-jeune-planete-avec-spirou)
+* Modeliser, simuler: [POST](/posts/sciences/modeliser/)
 
 
 
