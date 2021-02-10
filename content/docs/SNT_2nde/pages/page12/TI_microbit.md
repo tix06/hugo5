@@ -68,7 +68,7 @@ qui vient d’être rajouté dans les modules.
 * Choisir `8:micro:bit` puis `1:affichage`, ce qui devrait ajouter la ligne `from mb_disp import *`
 * Dans le menu des `Modules`, il est apparu une nouvelle collection d'instructions: `9:affichage`. Choisir cette collection puis choisir `1.clear()`
 * Faire de même et choisir cette fois `2.show` de cette même collection. Cela devrait afficher `display.show(,delay=400,wait=True)`. 
-* Le curseur clignote au niveau du premier paramètre que vous devrez renseigner: mettez `"Image.HAPPY"` à l'aide de l'editeur de texte (bouton du bas `a A #`). Faites `Coller` lorsque vous avez terminé la saisie.
+* Le curseur clignote au niveau du premier paramètre que vous devrez renseigner: mettez `"Image.HAPPY"` à l'aide de l'editeur de texte (bouton du bas `a A #`). Valider les symboles avec la touche **entrer**. Faites `Coller` lorsque vous avez terminé la saisie.
 
 <figure>
 
