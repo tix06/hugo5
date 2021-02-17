@@ -99,4 +99,5 @@ Puis executer le script: Option `Exec` de la fenêtre d'edition...
 
 # Liens
 * [Découvrir la carte microbit](/pdf/SNT_texas/MBpresentation.pdf) par J.L Balas et A. Yazi
+* Reviser les manipulations de la calculatrice: [TP Python - enigmes mathematiques](/docs/SNT_2nde/pages/pages_algo/python/python3/)
 

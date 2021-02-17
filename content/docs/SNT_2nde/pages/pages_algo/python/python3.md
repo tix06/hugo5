@@ -18,6 +18,7 @@ Le Capitaine dit à son fils : "*Tu viens de fêter ton anniversaire. Dans quelq
 <figure>
 <div>
 <img src="../images/haddock.jpg">
+<figcaption>Le Capitaine...</figcaption>
 </div>
 </figure>
 
@@ -85,6 +86,8 @@ Les boutons du *menu* en bas de l'ecran sont accessibles avec chacune des touche
 <figure>
   <div>
   <img src="../images/menu_shell.png">
+  <figcaption>accès au shell ou aux programmes</figcaption>
+  <figcaption>Navigation entre les menus de la calculatrice</figcaption>
 </div>
 </figure>
 
@@ -93,6 +96,7 @@ Les boutons du *menu* en bas de l'ecran sont accessibles avec chacune des touche
 <figure>
   <div>
   <img src="../images/nom.png">
+  <figcaption>saisie du nom du programme</figcaption>
 </div>
 </figure>
 
@@ -110,6 +114,7 @@ Pour saisir `c = 1`, appuyer sur les touches:
 <figure>
   <div>
   <img src="../images/menu.png">
+  <figcaption>fenêtre d'edition</figcaption>
 </div>
 </figure>
 
@@ -122,6 +127,7 @@ Se déplacer alors avec les flèches (touches doite/gauche de la calculatrice). 
 <figure>
   <div>
   <img src="../images/while.png">
+<figcaption>menu CTL</figcaption>
 </div>
 </figure>
 
@@ -130,6 +136,7 @@ Se déplacer alors avec les flèches (touches doite/gauche de la calculatrice). 
 <figure>
   <div>
   <img src="../images/edit.png">
+  <figcaption>editeur de symbôles</figcaption>
 </div>
 </figure>
 
@@ -138,6 +145,7 @@ Se déplacer alors avec les flèches (touches doite/gauche de la calculatrice). 
 <figure>
   <div>
   <img src="../images/int.png">
+  <figcaption>menu Type</figcaption>
 </div>
 </figure>
 
@@ -151,6 +159,7 @@ Utilisez le tableau suivant pour choisir les valeurs de `a`, `b` et `c`.
 
 <figure>
 <img src="../images/tableur.png">
+<figcaption>valeurs sont le produit fait 2450</figcaption>
 </figure>
 
 ## Solution
@@ -222,6 +231,7 @@ La ligne finit par *deux points* `:`. C'est pour délimiter le bloc de code (ind
 <figure>
   <div>
   <img src="../images/modul.png">
+  <figcaption>menu Modules</figcaption>
 </div>
 </figure>
 

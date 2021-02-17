@@ -7,7 +7,7 @@ Title: rotation quart de tour d'une image
 *Rappels de SNT:* Une image numérique est constituée de pixels colorés (ou noirs et blanc). Le fichier comportant l'image numérique contient alors une succession de valeurs qui codent la couleur de chaque pixels: lire le cours de SNT, paragraphe <a href="/docs/SNT_2nde/pages/page5/photo_num/#codage-de-l-image" target="blank">codage de l'image</a>.
 
 ## Librairie PIL
-Pour manipuler les images, nous pouvons utiliser le module `PIL` de Python. Celui-ci permet de traiter les pixels d'une image, un par un. Souvent, il faudra parcourir l'image pixel par pixel, sur toute la largeur et toute la largeur. Cela est possible avec deux boucles imbriquées, à condition de connaitre ses dimensions `largeur, hauteur`:
+Pour manipuler les images, nous pouvons utiliser le module `PIL` de Python. Celui-ci permet de traiter les pixels d'une image, un par un. Souvent, il faudra parcourir l'image pixel par pixel, sur toute la largeur et toute la hauteur. Cela est possible avec deux boucles imbriquées, à condition de connaitre ses dimensions `largeur, hauteur`:
 
 ```python
 from PIL import Image
@@ -150,14 +150,14 @@ def echange_quadrant(image,x0,y0,x1,y1,n):
 ### analyser la fonction `rotate`
 La fonction (ou plutôt *méthode*, vue qu'elle ne retourne rien), permet de faire tourner l'image d'un quart de tour par une méthode de type *diviser pour régner*.
 
-Une fois la partie **divisée** executée (appels recursifs), lorsque les subdivisions de l'image sont constituées d'un seul pixel, les pixels sont déplacés (**régne**) à l'aide de 3 permutations successives, selon le schéma suivant:
+Une fois la partie **divisée** executée (appels recursifs), lorsque les subdivisions de l'image sont constituées d'un seul pixel, les pixels sont déplacés (**règne**) à l'aide de 3 permutations successives, selon le schéma suivant:
 
 <figure>
 <img src="../images/echanges.png">
 <figcaption>trois permutations réalisées sur les subdivisions de l'image</figcaption>
 </figure>
 
-Il sont alors recombinés pour reformer l'image, tout en suivant les même permutations, mais avec des blocs de pixels plus gros (**fusion**).
+Il sont alors recombinés pour reformer l'image, tout en suivant les mêmes permutations, mais avec des blocs de pixels plus gros (**fusion**).
 
 ```python
 def rotate(image,x0,y0,n):
