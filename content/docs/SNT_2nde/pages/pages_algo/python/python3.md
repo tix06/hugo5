@@ -31,7 +31,7 @@ Le programme est donné ici en partie. Vous devrez le compléter. <br>
 Ce programme utilise les variables suivantes:
 
 * `a` et `b`: entiers, l'age de chacune des filles
-* `c` : entier, l'âge du capitaine
+* `c` : entier, l'âge du père Dupont.
 * `produit` : entier, stocke le calcul $a \times b \times c$
 * `somme` : entier, stocke le résultat de $a + b + c$
 * `age` : nombre décimal à virgule flottante, stocke le resultat de $somme / 4$
