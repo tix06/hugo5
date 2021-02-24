@@ -115,7 +115,7 @@ La base de données doit se conformer aux **contraintes d'intégrité référent
 Utiliser la page des Oscars pour les meilleurs films d'animation: https://fr.wikipedia.org/wiki/Oscar_du_meilleur_film_d%27animation
 
 1. Dans SQLite Browser, commencer par créer une nouvelle Base de Données (en mémoire).
-2. Créer table: créer *Films*((**`ID_film, INT`**),(Title,TEXT),(`ID_rea`,INT)) puis *Realisateurs*((**`ID_rea`, INT**), (`last_name`,TEXT), (`first_name`, TEXT))
+2. Créer table: créer *Films*((**`ID_film, INT`**),(Title,TEXT),(Date,int),(`ID_rea`,INT)) puis *Realisateurs*((**`ID_rea`, INT**), (`last_name`,TEXT), (`first_name`, TEXT))
 3. Compléter chacune des tables avec au minimum 4 nouvelles entrées. Bien renseigner les valeurs de la clé secondaire `ID_rea` correspondante dans la table *Films*.
 4. Tester alors les instructions SQL suivantes... Recopier ensuite l'instruction et expliquer dans chaque cas ce qui est renvoyé:
 
@@ -132,7 +132,7 @@ where ID_rea=1
 
 ```
 SELECT * FROM Films
-where ID_rea=1 or date>2003
+where ID_rea=1 or Date>2003
 ```
 
 * requête 5:
