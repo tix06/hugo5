@@ -168,7 +168,7 @@ Une fois que vous aurez réalisé les essais necéssaires, vous aurez probableme
 > Rédigez alors votre solution, sur cette feuille:
 
 
-<!--
+
 # Jeu de devinette
 ## Principe
 L'ordinateur choisit un nombre aleatoirement entre 1 et 100. Vous devrez le découvrir en un minimum d'essais. A chacune de vos propositions, l'ordinateur répond par: EXACT, PLUS, MOINS, selon si votre proposition est égale (vous avez gagné), infèrieure ou supérieure à la valeur tirée aleatoirement.
@@ -176,11 +176,24 @@ L'ordinateur choisit un nombre aleatoirement entre 1 et 100. Vous devrez le déc
 ## Le script: explications
 ### Librairie
 Pour tirer au sort une valeur de manière aleatoire, il faut importer la librairie `random`.
+
+> Vous pouvez le tester dans un **SHELL Python**: 
+
+> Saisir:
+
+> ```
+>>> from random import * 
+>>> randint(1,100)
+(valeur aleatoire affichée entre 1 et 100)
+>>> randint(1,100)
+(autre valeur)
+```
+
 ### Variables
 * `n` : entier, stocke la valeur choisie par l'ordinateur.
 * `rep`: entier, valeur entrée par l'utilisateur, sa proposition.
 
-### Script Python
+### Script Python à compléter
 
 ```python
 from random import *
@@ -189,11 +202,11 @@ rep = -1
 while rep != n and rep != 0:
     rep = int(input('Choisir  '))
     if rep < n: 
-        print('PLUS')
+        ...
     elif rep > n:
-        print('MOINS')
+        ...
     else:
-        print('EXACT')
+        ...
 print('FIN')
 ```
 
@@ -207,11 +220,11 @@ ligne 6: c'est une structure conditionnelle qui signifie:
 
 ```
 SI rep < n ALORS:
-	afficher 'PLUS'
+	...
 SINON SI rep > n ALORS:
-	afficher 'MOINS'
+	...
 SINON:
-	afficher 'EXACT'
+	...
 ```
 
 En python, les instructions `SI, SINON SI et SINON` se traduisent par: `if, elif, else`. Il n' y a pas besoin de traduire `ALORS`.
@@ -248,7 +261,7 @@ Modifier ensuite le programme pour que l'ordinateur choisisse maintenant une val
 
 > Quel est cette fois le nombre minimum de coups necéssaires pour trouver la valeur comprise entre 1 et 100?
 
--->
+
 
 # Liens
 * s'exercer à la programmation Python sur la TI-83: TI-codes : https://education.ti.com/fr/mises-a-jour-et-logiciels/ti-codes/python/83
