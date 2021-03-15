@@ -3,6 +3,8 @@ Title: TP SQL
 ---
 
 # TP SQL
+Nous allons créer (ou télécharger) une petite base de données à deux tables pour nous exercer aux requêtes SQL.
+
 ## Utiliser SQLite Browser
 * Créer une *Nouvelle Base de données*: `bibliotheque.sqlite` (ajouter `.sqlite`)
 * Editer la definition de la table selon l'image suivante
@@ -66,7 +68,7 @@ VALUES
 
 * sauvegarder ;-)
 
-## Utiliser l'application SQLite
+## Utiliser l'application SQLite (non installée sur PC du lycée)
 La ligne de commande SQLite permet d'entrer deux types de commandes :
 
 * Les commandes spéciales pour la ligne de commande. Elles débutent toutes par un point (il ne faut pas qu'il y ait d'espace avant ni après le point pour que la commande fonctionne). Par exemple, .open, .show, .backup, .exit et toutes les autres commandes listées par .help. (voir la [documentation SQLite](https://sqlite.org/cli.html) ainsi que [Command Line Shell For SQLite](https://tool.oschina.net/uploads/apidocs/sqlite/sqlite.html)). Et la version [windows](https://apical.xyz/fiches/la_ligne_de_commande_sqlite_002/La_ligne_de_commande_SQLite)
@@ -111,9 +113,21 @@ Ce qui devrait afficher:
   * lorsque vous écrivez `select *`, le retour à la ligne n'execute pas le script, mais attend la fin de l'instruction, jusqu'au point virgule `;` final.
   * les requêtes et instructions SQL peuvent être écrites directement dans l'application *sqlite*, comme dans le fichier d'extension `.sql`. Il faudra alors le lire dans la console avec `.read <nom_du_fichier>`.
 
+## Utiliser une application en ligne
+* Aller sur la page <a href="https://sqliteonline.com/" target="blank">sqlonline.com</a>
 
-## Tester quelques requêtes SQL
-### INSERT ... VALUES
+<figure>
+  <div>
+  <img src="../images/sqlonline.png">
+  <figcaption>sqlonline.com</figcaption>
+</div>
+</figure>
+
+* Cliquer sur *Import*, puis choisir un fichier d'extension `.sql`, comme par exemple [bibliotheque.sql](/pdf/NSI/bibliotheque.sql)
+* Utiliser alors la fenêtre *SQLite* pour tester les instructions suivantes.
+
+# Tester quelques requêtes SQL
+## INSERT ... VALUES
 Ajoute une entrée
 
 ```sql
@@ -126,7 +140,7 @@ sqlite> insert into LIVRES
 *Vérifier alors la modification en faisant: `SELECT * FROM LIVRES`*
 
 
-### UPDATE ... WHERE
+## UPDATE ... WHERE
 Mise à jour d'une valeur
 
 ```
@@ -135,13 +149,22 @@ sqlite> UPDATE LIVRES
    ...> WHERE id=17;
 ```
 
-### DELETE ... WHERE
+## DELETE ... WHERE
+* Supprimer une ou plusieurs occurences:
 
 ```sql
 sqlite> DELETE FROM LIVRES WHERE titre='Cinq semaines en ballon';
 ```
 
-### SELECT ... WHERE
+* supprimer la derniere occurence:
+
+```sql
+DELETE FROM LIVRES WHERE id=(SELECT Max(id) from LIVRES);
+```
+
+*A noter:* l’instruction DELETE FROM LIVRES permet de supprimer tous les n-uplets de la table, mais pas de remettre à zero le compteur. Pour une remise à zero du compteur, il faut aussi effacer le seul élément de la table `sqlite_sequence`, créée dans la base de donnée en même temps que la première table. 
+
+## SELECT ... WHERE
 Selectionner une partie de la table, en nommant les attributs:
 
 ```sql
@@ -150,7 +173,7 @@ sqlite> SELECT titre, ann_publi
    ...> WHERE note=10;
 ```
 
-### JOINTURE
+## JOINTURE
 Tester le script suivant:
 
 ```sql
@@ -170,57 +193,14 @@ sqlite> SELECT titre,id_auteur,ann_publi,nom,prenom
    ...> WHERE ann_publi>1950
 ```
 
-### A vous de jouer
+## A vous de jouer
 1. Afficher tous les livre, avec titre, année de parution et note, dont la note est supérieure ou égal à 8.
 2. Afficher tous les livres, avec leur titre et leur année de parution, écrits par Phillip K.Dick.
 3. Ajouter à la clause précédente l'instruction de classement par année de publication: `ORDER BY ann_publi`
 
-# Serveur SQL
-## Necessité d'une interface
-Nous avons utilisé le programme SQLite pour faire interface entre l'utilisateur et la base de données, sur le modèle suivant:
 
-
-
-<figure>
-
-<img src="../images/appli_db.png">
-  <figcaption>SQLite comme interface</figcaption>
-
-</figure>
-
-À titre d’exemple, considérons une application fictive de recherche d’horaires de train. Voici un scénario possible de fonctionnement de cette application :
-1. L’application demande à l’utilisateur : « Quelle est la ville de départ ? ».
-2. L’utilisateur répond « Caussade ».
-3. L’application demande à l’utilisateur : « Quelle est la ville d’arrivée ? ».
-4. L’utilisateur répond « Brive-la-Gaillarde ».
-5. L’application envoie au SGBD la requête SQL :
-
-```
-SELECT heureDep, heureArr FROM trains
-WHERE villeDep = ’Caussade’ AND villeArr = ’Brive-la-Gaillarde’;
-```
-
-6. Le SGBD répond au programme en envoyant l’ensemble de tuples {(15h47, 17h22); (18h21, 19h58)}
-7. Le programme affiche à l’utilisateur : Résultats pour le trajet Caussade -> Brive-la-Gaillarde
-
-```
-Premier train : 15h47 -> 17h22
-Second train : 18h21 -> 19h58
-```
-
-## Interface Python
-
-## Serveur Python
-
-## Architecture Client-Serveur Web
-
-<figure>
-
-<img src="../images/client_serveur.png">
-  <figcaption>client - serveur</figcaption>
-
-</figure>
 
 # Ressources
 * Ce TP est inspiré de celui de [David Roche, du très bon site pixees.fr](https://pixees.fr/informatiquelycee/n_site/nsi_term_bd_sql.html). Merci à lui pour le partage...
+
 * fichier de secours [bibliotheque.sql](/pdf/NSI/bibliotheque.sql)

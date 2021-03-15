@@ -1,0 +1,63 @@
+---
+Title: Aborder l'epreuve
+---
+
+# Le Grand Oral
+## Découvrir l'épreuve du Grand Oral
+Présentation de l'épreuve et Foire aux Questions: [http://quandjepasselebac.education.fr/faq-grand-oral/](http://quandjepasselebac.education.fr/faq-grand-oral/)
+
+## Construire sa question en rapport avec la spécialité NSI
+*Je vous propose d'explorer deux documents qui me semblent essentiel pour construire vos questions en rapport avec la spécialité NSI:*
+
+### Grand Oral et enseignement de spécialité NSI (MEN)
+[lien vers la ressource](https://eduscol.education.fr/media/3919/download)
+
+*Résumé:*<br>
+L'énoncé de la question est le point final d’une réflexion qui fait l’objet d’un temps de maturation. Ce travail est progressif et s'affine avec l'avancée du programme et l'appropriation des notions.
+
+Elle s'appuie sur des connaissances acquises lors de l'enseignement scolaire et permet de se projeter vers la poursuite des études dans l’enseignement supérieur.
+
+L'échange sur le projet d'orientation du candidat repose sur le projet formalisé et sur la maturation de celui-ci. Cette construction personnelle rend authentique le propos. Il permet à l'élève d'y associer ses préoccupations personnelles et sociales, ses engagements, ses réflexions sur l'avenir, etc.
+
+Voici une liste de thèmes dans lequel vous pourrez concevoir votre *Question*.<br>
+Le document propose 45 questions, partagées sur ces thèmes. Cette liste n'est bien sûr absolument pas limitative.
+
+* L’histoire de l’informatique
+* Langages et programmation
+* Données structurées et structures de données
+* Algorithmique
+* Bases de données
+* Architectures matérielles, systèmes d’exploitation et réseaux
+* Interfaces Hommes-Machines (IHM)
+* Impact sociétal et éthique de l’informatique
+
+[https://eduscol.education.fr/media/3919/download](https://eduscol.education.fr/media/3919/download)
+
+### LeRobert.com: Grand Oral
+[Lien vers la ressource](https://grand-oral.lerobert.com/9782321015383/assets/les-ressources-numeriques-pour-la-nsi/preview)
+
+Le document traite 3 *questions*. Vous comprendrez la méthodologie attendue pour en construire la réponse:
+
+* « Les ruches connectées vont-elle sauver les abeilles ? »
+* « Comment faire apprendre un robot ? » 
+* « Comment partager des biens culturels ? »
+
+### Les sites des editeurs
+Les éditeurs publient des pages sur l'épreuve, d'autres exemples de sujets, et des liens pour approfondir les thèmes.
+
+Par exemple, le site [LeLivreScolaire](https://www.lelivrescolaire.fr/page/22790816) propose dans cette page  des exemples de *Questions* combinant Mathématiques et NSI.
+
+## Ressources
+Vous êtes dans une phase de construction du savoir, sur un enseignement qui est nouveau (pour vous). Il est important de commencer à explorer les articles de journaux plus *généralistes* qui vont assurer votre base de connaissances, et approfondir votre réflexion...
+### Le blog Binaire
+Le blog du Monde sur l’informatique avec la société informatique de France (SIF).
+
+[https://www.lemonde.fr/blog/binaire/](https://www.lemonde.fr/blog/binaire/)
+
+**QUOI ?** Vous y trouverez, des articles de vulgarisation, des entretiens autour de l’informatique et des questions qu’elle soulève. Vous y trouverez aussi la rubrique « Petit binaire » pour les plus jeunes, mais pas seulement…
+
+### Le 21e Siècle
+[http://www.21siecle.quebec/](http://www.21siecle.quebec/) : le numérique et ses implications à destination des non informaticien·nes : Internet, communication, connaissances, le citoyen et la citoyenne, la société.
+
+### Le site de l’ONISEP
+**POURQUOI ?** Pour réfléchir aux métiers du numérique et aux possibles parcours d’orientation
