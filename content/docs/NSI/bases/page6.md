@@ -162,7 +162,10 @@ sqlite> DELETE FROM LIVRES WHERE titre='Cinq semaines en ballon';
 DELETE FROM LIVRES WHERE id=(SELECT Max(id) from LIVRES);
 ```
 
-*A noter:* l’instruction DELETE FROM LIVRES permet de supprimer tous les n-uplets de la table, mais pas de remettre à zero le compteur. Pour une remise à zero du compteur, il faut aussi effacer le seul élément de la table `sqlite_sequence`, créée dans la base de donnée en même temps que la première table. 
+**Remarques**
+
+* La dernière requête utilise une instruction imbriquée, mise entre parenthèses de la clause `WHERE id=(SELECT ...)` 
+* l’instruction DELETE FROM LIVRES permet de supprimer tous les n-uplets de la table, mais pas de remettre à zero le compteur. Pour une remise à zero du compteur, il faut aussi effacer le seul élément de la table `sqlite_sequence`, créée dans la base de donnée en même temps que la première table. 
 
 ## SELECT ... WHERE
 Selectionner une partie de la table, en nommant les attributs:
@@ -194,7 +197,7 @@ sqlite> SELECT titre,id_auteur,ann_publi,nom,prenom
 ```
 
 ## A vous de jouer
-1. Afficher tous les livre, avec titre, année de parution et note, dont la note est supérieure ou égal à 8.
+1. Afficher tous les livres, avec titre, année de parution et note, dont la note est supérieure ou égal à 8.
 2. Afficher tous les livres, avec leur titre et leur année de parution, écrits par Phillip K.Dick.
 3. Ajouter à la clause précédente l'instruction de classement par année de publication: `ORDER BY ann_publi`
 
@@ -202,5 +205,6 @@ sqlite> SELECT titre,id_auteur,ann_publi,nom,prenom
 
 # Ressources
 * Ce TP est inspiré de celui de [David Roche, du très bon site pixees.fr](https://pixees.fr/informatiquelycee/n_site/nsi_term_bd_sql.html). Merci à lui pour le partage...
+* Cours complet en SQL, avec référencement des différentes instructions: [https://sql.sh/cours](https://sql.sh/cours)
 
 * fichier de secours [bibliotheque.sql](/pdf/NSI/bibliotheque.sql)
