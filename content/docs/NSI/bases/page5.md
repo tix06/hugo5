@@ -26,6 +26,7 @@ Nous avons utilisé le programme SQLite, ou SQLiteBrowser pour faire interface e
 
 
 Voici un scénario possible de fonctionnement de cette application :
+
 1. L’application demande à l’utilisateur : « Quelle est la ville de départ ? ».
 2. L’utilisateur répond « Caussade ».
 3. L’application demande à l’utilisateur : « Quelle est la ville d’arrivée ? ».
@@ -76,6 +77,13 @@ Alors que la ressource côté client est, elle, programmée en *HTML, Javascript
 
 ## Un exemple de page *statique*
 Le fichier suivant, [formulaire.txt](/scripts/server_py/formulaire.txt) génère un formulaire. Lorsque l'on appuie sur le bouton, les valeurs des champs *nom* et *pass* sont transmises par methode *POST*. 
+
+<figure>
+<div>
+  <img src="../images/page.png">
+  <figcaption>exemple de page statique</figcaption>
+</div>
+</figure>
 
 Mais ici, ces valeurs ne peuvent pas être récupérées. Cela nécessiterait un script écrit en langage serveur. (voir plus haut).
 
@@ -229,8 +237,50 @@ if (form.getvalue("name") != None) :
 
   * <span style="font-size: 24px;">Entrez les identifiants des clients</span> Lorsque les champs de formulaire sont vides.
 
+<figure>
+<div>
+  <img src="../images/page2.png">
+  <figcaption>champs du formulaire video</figcaption>
+</div>
+</figure>
+
   * <span style="font-size: 24px;">VALIDER la saisie: {} => {}</span> Lorsque les champs *name* et *pass* ont été renseignés. Les symboles `{}` devront être remplacés par leur valeur à l'aide d'une expression formatée en python. (utiliser `.format`).
 
+<figure>
+
+<img src="../images/page3.png">
+  <figcaption>champs du formulaire renseigné</figcaption>
+
+</figure>
+
+> Enfin, modifier la variable `table_affiche` pour afficher dans le tableau TOUS les éléments de la table `clients_login`
+
+> ```python
+table_affiche = '<h2>Table clients</h2><table border=1><tr>'
+  
+table_affiche += '<td>ID</td><td>nom</td><td>Pass</td>'
+table_affiche+= '</tr>'
+for row in rows:
+    table_affiche += '<tr>'
+    for i in row:
+        table_affiche += '<td>'+str(i)+'</td>'
+    table_affiche += '</tr>'
+table_affiche += '</table>'
+```
+
+# Mini projet 
+A partir de la base de données du TP précédent, vous allez créer une nouvelle page utilisant des boutons radio.
+Ces boutons radio permettront de choisir les noms clients à afficher, en partageant l'alphabet en 3 parties.
+La page devrait ressembler à l'image ci-dessous:
+
+<figure>
+<div>
+  <img src="../images/page4.png">
+  <figcaption>page avec selection par boutons radio</figcaption>
+</div>
+</figure>
+
+**Aide :** [Boutons radio sur mozzila.com](https://developer.mozilla.org/fr/docs/Web/HTML/Element/Input/radio)
 
 # Frameworks Flask et Django
 Les frameworks python pour créer de veritables applications web:
@@ -254,4 +304,5 @@ Une presentation plus complète des différences entre ces frameworks ici: [Djan
 * python formulaire GET POST [developper.mozilla.org](https://developer.mozilla.org/fr/docs/Learn/Forms/Sending_and_retrieving_form_data)
 * python django [formulaires](https://docs.djangoproject.com/fr/3.1/topics/forms/)
 * Python et SGBD, les bonnes pratiques: [python.developpez.com](https://python.developpez.com/cours/apprendre-python3/?page=page_18)
-* correction du [TP](/scripts/server_py/store_copy.py)
+* correction du [TP partie 1](/scripts/server_py/store_copy.py)
+<!--* correction du [TP partie 2](/script/server_py/liste.py)-->
