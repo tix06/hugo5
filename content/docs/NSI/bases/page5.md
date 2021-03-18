@@ -15,6 +15,8 @@ Nous avons utilisé le programme SQLite, ou SQLiteBrowser pour faire interface e
 
 </figure>
 
+Selon cette architecture, lorsque vous recherchez un billet de train, vous utilisez un logiciel qui fera directement l'interface:
+
 À titre d’exemple, considérons une application fictive de recherche d’horaires de train. 
 
 <figure>
@@ -45,6 +47,8 @@ WHERE villeDep = ’Caussade’ AND villeArr = ’Brive-la-Gaillarde’;
 Premier train : 15h47 -> 17h22
 Second train : 18h21 -> 19h58
 ```
+
+Ce scenario semble plausible. En réalité, nous verrons qu'il y a une couche intermédiaire de plus: l'*application web*, côté *serveur*.
 
 ## Architecture Client-Serveur Web
 Le serveur et ses clients sont des applications distinctes qui s'échangent des informations. Lorsque la connexion est établie, l'application cliente peut interroger le serveur en lui envoyant une requête (une instruction). 
