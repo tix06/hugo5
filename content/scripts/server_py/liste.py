@@ -17,6 +17,7 @@ con = lite.connect('clients.db')
 
 with con:
     cur = con.cursor()
+    cur.execute("CREATE TABLE IF NOT EXISTS clients_login(id INTEGER, name TEXT, pass TEXT)")
     cur.execute("SELECT * FROM clients_login")
     rows = cur.fetchall()
 

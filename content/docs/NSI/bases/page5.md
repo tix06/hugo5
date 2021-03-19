@@ -161,7 +161,7 @@ Contenant son propre SGBDR intégré, Python dispose de manière native de la li
 
 
 ```
-import splite3 as lite
+import sqlite3 as lite
 ``` 
 
 
@@ -219,6 +219,7 @@ con = None
 con = lite.connect('clients.db')
 with con:
     cur = con.cursor()
+    cur.execute("CREATE TABLE IF NOT EXISTS clients_login(id INT, name TEXT, pass TEXT, PRIMARY KEY(id AUTOINCREMENT))")
     cur.execute("SELECT * FROM clients_login")
     rows = cur.fetchall()
 ```
@@ -232,7 +233,6 @@ if (form.getvalue("name") != None) :
     
     with con:
         cur = con.cursor()
-        cur.execute("CREATE TABLE IF NOT EXISTS clients_login(id INT, name TEXT, pass TEXT, PRIMARY KEY(id AUTOINCREMENT))")
         cur.execute("INSERT INTO clients_login (name,pass) VALUES(?,?)",(nom,mdp))
         con.commit()
 ```
@@ -298,7 +298,7 @@ Une presentation plus complète des différences entre ces frameworks ici: [Djan
 
 <figure>
 <a href="https://www.airpair.com/python/posts/django-flask-pyramid">
-  <img src="https://i.imgur.com/d3jNLfN.jpg">
+  <img src="../images/airpair.jpg">
   <figcaption>Choosing a Python Web Framework @airpair</figcaption>
 </a>
 </figure>
@@ -309,4 +309,4 @@ Une presentation plus complète des différences entre ces frameworks ici: [Djan
 * python django [formulaires](https://docs.djangoproject.com/fr/3.1/topics/forms/)
 * Python et SGBD, les bonnes pratiques: [python.developpez.com](https://python.developpez.com/cours/apprendre-python3/?page=page_18)
 * correction du [TP partie 1](/scripts/server_py/store_copy.py)
-<!--* correction du [TP partie 2](/script/server_py/liste.py)-->
+* correction du [TP partie 2](/scripts/server_py/liste.py)
