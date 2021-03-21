@@ -117,12 +117,72 @@ Afficher("Félicitations")
 
 > A vous de jouer: Compléter l'algorithme.
 
-## Variables et opérations 
+## Les ingrédients d'un algorithme
+Les instructions relatives aux ingrédients d'un algorithme seront données en langage naturel, mais à la manière du langage Python.
+
+### Données: Variables et opérations 
 (voir [introduction à la programmation](/docs/SNT_2nde/pages/pages_algo/python/python2/index.html))
-## Entrées/Sorties
-## Boucles
-## Structures conditionnelles
-## Structure: Fonctions et Procedures
+
+### Interface: Entrées/Sorties
+Un algorithme doit fournir une interface qui permet d'interagir avec l'utilisateur. Il doit pouvoir lire et entrer des données.
+
+Ce sont les instructions: *afficher* et *entrer* qui réalisent ceci.
+
+```python
+afficher("un message")
+afficher(une_variable)
+
+x = entrer("position")
+```
+
+
+### Contrôler le programme: Structures conditionnelles
+Cette structure permet d’effectuer une séquence d’opérations selon la valeur d’une condition.
+
+Une condition est une expression logique (on dit également booléenne), dont la valeur est vrai ou faux. 
+
+```python
+Si ( <expression_logique> ) alors 
+  <bloc_alors>
+Sinon 
+  <bloc_sinon>
+```
+
+### Contrôler le programme: Boucles
+* Les structures répétitives permettent d’exécuter plusieurs fois un bloc d’opérations, en faisant varier automatiquement une variable de boucle. 
+
+```python
+Pour <identificateur_variable> de <valeur_début> a <valeur_fin> faire
+ <bloc_opérations> 
+```
+
+* Les structures répétitives permettent d’exécuter plusieurs fois un bloc d’opérations, tant qu’une condition (de continuation) est satisfaite.
+
+```python
+Tantque ( <condition> ) faire
+ <bloc_opérations> 
+```
+
+### Structure: Fonctions et Procedures
+Les fonctions permettent de rendre le script plus efficace, plus facile à lire et à vérifier. Un bonne pratique est de faire régulierement du remaniement de son code : C’est à dire ré-écrire les parties du programme qui fonctionnent et les mettre dans une fonction. Cela evite aussi les répétitions. On remplace alors le code par un appel à une fonction.
+
+La programmation se fait en deux temps: On commence par programmer la fonction
+
+```python
+fonction carre(x)
+  y = x * x
+  return y
+```
+
+Puis on appelle cette fonction:
+
+```python
+a = 10
+carre(10)
+```
+
+Le programme retourne dans ce cas la valeur 100.
+
 
 # Langages informatiques
 Les instructions qu'un ordinateur devra exécuter doivent pouvoir être exprimées de manière précise et non ambiguë.
@@ -142,6 +202,78 @@ C'est une suite finie et non ambigüe d'instructions, permettant de resoudre cer
 
 ## Un bug 
 Un bug est un défaut de construction dans un programme. Les instructions que l'appareil informatique exécute ne correspondent pas à ce qui est attendu, ce qui provoque des dysfonctionnements et des pannes.
+
+# Exercices
+## Ex 1
+On donne le script d'un programme en langage naturel, ainsi que sa traduction en Python. Déterminer, à la fin du programme, les valeurs stockées dans les variables a, b et c.
+
+* Programme 1 en langage naturel
+
+```python
+a = 10
+b = 5
+c = 1
+si ( a == b )
+ c = 2 * c
+sinon
+ a = a + 1
+ b = b div 2
+```
+
+* Programme 1 en langage Python
+
+```python
+a = 10
+b = 5
+c = 1
+if ( a == b ):
+ c = 2 * c
+else:
+ a = a + 1
+ b = b / 2 
+```
+
+## Ex 2
+On donne le script d'un programme en langage naturel, ainsi que sa traduction en Python. Déterminer, à la fin du programme, la valeur stockée dans la variable a.
+
+* Programme 2 en langage naturel
+
+```python
+a = 10
+Tantque ( a different de 0 ) faire
+ afficher ( 2 * a )
+ a = a - 1 
+```
+
+* Programme 2 en langage Python
+
+```python
+a = 10
+while ( a != 0 ):
+ print 2*a
+ a = a - 1 
+```
+
+## Ex 3
+On donne le script d'un programme en langage naturel, ainsi que sa traduction en Python. Déterminer, à la fin du programme, la valeur stockée dans la variable a.
+
+* Programme 3 en langage naturel
+
+```python
+pour i de 1 a n faire
+ a = 3 * i
+ Afficher ( a )
+```
+
+* Programme 3 en langage Python
+
+```python
+for i in range(1,n+1):
+ a = 3 * i
+ print a
+```
+
+*range(a,b) permet de parcourir les valeurs a, a+1, …, b-1 (b non compris)*
 
 # Liens et ressources
 * Programme informatique: [wikipedia](https://fr.wikipedia.org/wiki/Programme_informatique#:~:text=Un%20programme%20informatique%20est%20un,forme%20binaire%20ou%20directement%20interpr%C3%A9t%C3%A9.)
