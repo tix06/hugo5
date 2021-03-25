@@ -182,7 +182,7 @@ cur = con.cursor()
 La requête est exprimée dans une chaîne de caractères, que nous transmettons au curseur par l'intermédiaire de sa méthode `execute()`:
 
 ```
-cur.execute("CREATE TABLE IF NOT EXISTS clients_login(id INT, name TEXT, pass TEXT)")
+cur.execute("CREATE TABLE IF NOT EXISTS clients_login(id INTEGER, name TEXT, pass TEXT)")
 ```
 
 Tant que le curseur reste ouvert, vous pouvez bien entendu ajouter des enregistrements supplémentaires :
@@ -219,7 +219,7 @@ con = None
 con = lite.connect('clients.db')
 with con:
     cur = con.cursor()
-    cur.execute("CREATE TABLE IF NOT EXISTS clients_login(id INT, name TEXT, pass TEXT, PRIMARY KEY(id AUTOINCREMENT))")
+    cur.execute("CREATE TABLE IF NOT EXISTS clients_login(id INTEGER, name TEXT, pass TEXT, PRIMARY KEY(id AUTOINCREMENT))")
     cur.execute("SELECT * FROM clients_login")
     rows = cur.fetchall()
 ```
