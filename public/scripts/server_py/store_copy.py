@@ -27,6 +27,7 @@ con = lite.connect('clients.db')
 
 with con:
     cur = con.cursor()
+    cur.execute("CREATE TABLE IF NOT EXISTS clients_login(id INT, name TEXT, pass TEXT, PRIMARY KEY(id AUTOINCREMENT))")
     cur.execute("SELECT * FROM clients_login")
     rows = cur.fetchall()
 
@@ -40,7 +41,6 @@ if (form.getvalue("name") != None) :
     
     with con:
         cur = con.cursor()
-        cur.execute("CREATE TABLE IF NOT EXISTS clients_login(id INT, name TEXT, pass TEXT, PRIMARY KEY(id AUTOINCREMENT))")
         cur.execute("INSERT INTO clients_login (name,pass) VALUES(?,?)",(nom,mdp))
         con.commit()
 
