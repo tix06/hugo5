@@ -96,13 +96,42 @@ Il y a interblocage lorsque des cycles sont présents dans le graphe réalisé d
   <figcaption>interblocage - wikipedia</figcaption>
 </figure>
 
+# TP en console (UNIX) ou avec l'editeur de commandes (WIN)
+## La commande `ps`
+Pour la liste des processus obtenue par `ps`
+
+* PID : numéro du processus (processus identifier)
+* PPID : identifiant du parent qui a engendré le processus
+* TTY
+* TIME
+* CMD : commande qui a lancé le processus
+
+## La commande `top` :
+Cette commande est l'équivalent du gestionnaire de tâches de Windows. Elle apporte donc des renseignements sur la consommation mémoire, CPU, buffer et tous les processus en cours. Son intérêt est qu'elle apporte des statistiques de consommation en temps réel.
+
+* PID : numéro du processus
+* USER : utilisateur qui fait tourner le process
+* %CPU: la consomation du CPU
+* %MEM: la consomation de la RAM
+* TIME+: le temps d'utilisation CPU depuis que le process est lancé
+* COMMAND: le processus en lui-même
+
+| unix | windows | commande |
+| --- | --- | --- |
+| `ps` | `tasklist / svc`, `tasklist /?` (processus) | liste des processus |
+| `ps -aef` | `tasklist / svc`, `sc /?` (services) | liste des services |
+| `kill <PID>` ou `kill <PPID>` | `taskkill <nom>`  |  fermer un processus, directement ou avec le PID du parent  |
+| `top` |  | suivi en temps réel des processus (sortie avec `q`) |
+
+Sous windows, on peut aussi utiliser le Task manager
 
 
 
-# Terminal
+# Vocabulaire
+## Terminal
 Un terminal est un programme qui permet d'interagir avec le systeme d'exploitation. On peut utiliser le terminal au lieu de passer par une interface utilisateur graphique pour donner des commandes.
 
-# Editeur de texte et IDE
+## Editeur de texte et IDE
 * Editeur de texte : C'est un programme conçu pour ecrire et modifier du code. La plupart des editeurs offrent des fonctions pour faciliter l'edition (coloration syntaxique) : notepad++, sublime text, Vim, Atom, Geany...
 * IDE : c'est un editeur de texte doté de fonctionnalités de gestion de projet. Pour developper en python, c'est par exemple PyCharm, Spyder, Visual studio...
 

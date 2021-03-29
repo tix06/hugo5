@@ -153,8 +153,7 @@ print(html3)
 > * Ajouter les instructions en HTML entre les guillemets affectés à html1, html2 et html3 (partager le script html en 3 parties).
 * Demander l'execution du script à l'aide du navigateur. Le formulaire affiché doit être identique à celui de la page *formulaire.html* précédent.
 
-## Frameworks Flask et Django
-Pour des projets d'applications web plus conséquents, on pourra se tourner vers des frameworks qui vont créer un environnement de travail plus complet. Voir le paragraphe dédié en bas de page.
+
 
 ## Python + SQL
 Contenant son propre SGBDR intégré, Python dispose de manière native de la librairie `sqlite3` au moment de l'écriture de ce TP. Il faudra importer ce module avec par exemple:
@@ -210,6 +209,7 @@ conn.commit()
 
 > A vous de jouer:
 
+
 > * Ajouter la librairie `sqlite3`
 
 > * Ajouter les lignes suivantes après avoir défini le `Content-type` du document client:
@@ -239,25 +239,23 @@ if (form.getvalue("name") != None) :
 
 > * Ajouter à l'interieur de cette structure conditionnelle les instructions qui modifieront la variable `titre_paragraphe`. On veut afficher en tête de page:
 
-  * <span style="font-size: 24px;">Entrez les identifiants des clients</span> Lorsque les champs de formulaire sont vides.
+>  Soit:  <span style="font-size: 24px;">Entrez les identifiants des clients</span> Lorsque les champs de formulaire sont vides.
 
-<figure>
+> <figure>
 <div>
   <img src="../images/page2.png">
   <figcaption>champs du formulaire video</figcaption>
 </div>
 </figure>
 
-  * <span style="font-size: 24px;">VALIDER la saisie: {} => {}</span> Lorsque les champs *name* et *pass* ont été renseignés. Les symboles `{}` devront être remplacés par leur valeur à l'aide d'une expression formatée en python. (utiliser `.format`).
+>   Soit:  <span style="font-size: 24px;">VALIDER la saisie: {} => {}</span> Lorsque les champs *name* et *pass* ont été renseignés. Les symboles `{}` devront être remplacés par leur valeur à l'aide d'une expression formatée en python. (utiliser `.format`).
 
-<figure>
-
+> <figure>
 <img src="../images/page3.png">
   <figcaption>champs du formulaire renseigné</figcaption>
-
 </figure>
 
-> Enfin, modifier la variable `table_affiche` pour afficher dans le tableau TOUS les éléments de la table `clients_login`
+> * Enfin, modifier la variable `table_affiche` pour afficher dans le tableau TOUS les éléments de la table `clients_login`
 
 > ```python
 table_affiche = '<h2>Table clients</h2><table border=1><tr>'
@@ -287,7 +285,8 @@ La page devrait ressembler à l'image ci-dessous:
 **Aide :** [Boutons radio sur mozzila.com](https://developer.mozilla.org/fr/docs/Web/HTML/Element/Input/radio)
 
 # Frameworks Flask et Django
-Les frameworks python pour créer de veritables applications web:
+Pour des projets d'applications web plus conséquents, on pourra se tourner vers des frameworks qui vont créer un environnement de travail plus complet: 
+
 
 * Flask
 * Django
