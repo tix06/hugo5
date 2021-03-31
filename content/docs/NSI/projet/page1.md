@@ -49,12 +49,19 @@ Par exemple, le site [LeLivreScolaire](https://www.lelivrescolaire.fr/page/22790
 
 ## Ressources
 Vous êtes dans une phase de construction du savoir, sur un enseignement qui est nouveau (pour vous). Il est important de commencer à explorer les articles de journaux plus *généralistes* qui vont assurer votre base de connaissances, et approfondir votre réflexion...
+
+Voici les principales ressources pour explorer les articles sur les thèmes de l'informatique. Un recueil et résumé des articles les plus recents sont mis sur la page [thématiques](/docs/NSI/projet/page2/)
+
 ### Le blog Binaire
 Le blog du Monde sur l’informatique avec la société informatique de France (SIF).
 
 [https://www.lemonde.fr/blog/binaire/](https://www.lemonde.fr/blog/binaire/)
 
 **QUOI ?** Vous y trouverez, des articles de vulgarisation, des entretiens autour de l’informatique et des questions qu’elle soulève. Vous y trouverez aussi la rubrique « Petit binaire » pour les plus jeunes, mais pas seulement…
+
+
+### La chronique numérique du journal la recherche:[https://www.larecherche.fr/rubrique/chronique-num](https://www.larecherche.fr/rubrique/chronique-num%C3%A9rique)
+### Chronique éthique de Jean-Gabriel Ganascia:  [https://www.larecherche.fr/rubrique/chronique-%C3%A9thique](https://www.larecherche.fr/rubrique/chronique-%C3%A9thique)
 
 ### Le 21e Siècle
 [http://www.21siecle.quebec/](http://www.21siecle.quebec/) : le numérique et ses implications à destination des non informaticien·nes : Internet, communication, connaissances, le citoyen et la citoyenne, la société.
