@@ -2,6 +2,72 @@
 title : meta-données et données structurées
 ---
 
+# Qu'est ce qu'une photographie numérique ?
+Une photographie numérique, comme tout autre objet numérique, c'est un **fichier de données numériques**, c'est à dire des valeurs codées en binaire.
+
+Une partie des données correspond à des métadonnées, c'est à dire des données *périphériques*. L'autre partie contient les données relatives à l'image.
+
+## métadonnées
+Ce sont des informations relatives à la capture de l'image (données EXIF): 
+
+* la marque et le type d'appareil photographique
+* la lentille de l'objectif
+* les réglages lors de la prise de vue
+* la date, les coordonnées de géolocalisation
+* la dimension de l'image *pixels horizontaux, pixels verticaux*
+* la profondeur de couleurs (nombre de couleurs possibles par pixel)
+* ...
+
+## Format des données EXIF
+Ces données peuvent être mises en forme de *dictionnaire* en Python. Il faut utiliser une librairie particulière (une extension du langage). Ceci est réalisé en langage python avec le programme suivant : 
+
+```Python
+from PIL import Image
+img = Image.open( 'photo.jpg' )
+exif_data = img._getexif()
+```
+
+## Définitions: liste et dictionnaire en Python
+
+* une liste, c'est une collection de données, accessibles à l'aide d'un index. Par exemple, pour la liste L, le premier élément c'est : `L[0]`.
+* Un dictionnaire, c'est une collection de données, accessibles à l'aide d'une clé. `D[clé1]` par exemple.
+
+On peut alors explorer cette variable *dictionnaire* à partir de ses clés.
+
+Un dictionnaire peut contenir plusieurs clés. Elles sont alors séparées par des vigules, comme par exemple : 
+
+`monDictionnaire = {clé1 : valeur1, clé2 : valeur2, clé3 : valeur3}`
+
+Pour accéder à `valeur3` du dictionnaire `monDictionnaire`, il faudra faire par exemple : 
+
+`monDictionnaire[clé3]`
+
+## Exemple de données EXIF d'une image
+Lorsque l'on ouvre un fichier image à l'aide d'instruction en Python, on a accès aux données EXIF qui sont alors stockées dans le dictionnaire `exif_data`.
+
+
+
+> Cliquer sur *Executer* pour executer ces quelques lignes en python, qui retournent les données de localisation:
+
+<br>
+
+<iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=606c3b6b5d61b&mode=code"></iframe>
+
+<br>
+
+> Lire la latitude du lieu où a été prise l'image.
+
+**Compléments sur le programme** 
+
+Le petit programme ci-dessus stocke les données EXIF d'une image dans la variable `exif_data`. On explore ce dictionnaire `exif_data` pour afficher la coordonnée de latitude à laquelle la photographie a été prise.
+
+Pour faire cela, on repère d'abord que les coordonnées de localisation se trouvent à la clé 34853. => `exif_data[34853]` 
+
+La valeur contenue dans cette clé est aussi un dictionnaire. L'angle est exprimé en degrés à la clé 1 : `exif_data[34853][1]`
+La valeur retournée est un tuple de 2 valeurs. On cherche la valeur du premier élement, celui de rang 0 : on fait alors : `exif_data[34853][1][0]`
+
+On complète cette valeur de longitude avec les minutes et secondes d'angle, comme sur l'exemple interactif ci-dessus. 
+
 # Peut-on extraire des informations d'une photo numérique ?
 Oui !  Et c'est justement ce que nous allons faire. L'une des questions que l'on peut se poser est :
 > Peut-on **géolocaliser une photographie** à partir des seules données contenu dans le fichier image ?
@@ -17,7 +83,7 @@ Cette structure, commune à tous les fichiers du même *format*, permet une gran
 Il s'agit, entre autres, de la date, de l'heure, des paramètres de prise de vue (vitesse, sensibilité, etc.), de la compression, de la **géolocalisation** de l'image, etc.
 Ce sont des informations qui ne sont pas celles codant les pixels de l'image. On les nomme : *les données EXIF*
 
-# Comment extraire ces données EXIF ?
+# Comment extraire ces données EXIF (TP en classe)?
 
 * Parcourir le dossier *Documents* de votre session. Retrouver le dossier *scripts*.
 Celui doit contenir l'image à analyser.

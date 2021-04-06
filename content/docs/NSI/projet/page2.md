@@ -5,11 +5,12 @@ Title: thematiques
 # Thématiques en informatique et numérique
 Les liens ci-dessous sont extraits de:
 
+* le blog binaire du journal [le monde](https://www.lemonde.fr/blog/binaire/)
 * flux RSS du blog binaire: [https://www.lemonde.fr/blog/binaire/feed/](https://www.lemonde.fr/blog/binaire/feed/)
 * La chronique numérique du journal la recherche:[https://www.larecherche.fr/rubrique/chronique-num](https://www.larecherche.fr/rubrique/chronique-num%C3%A9rique)
 * Chronique éthique de Jean-Gabriel Ganascia:  [https://www.larecherche.fr/rubrique/chronique-%C3%A9thique](https://www.larecherche.fr/rubrique/chronique-%C3%A9thique)
 
-
+<!-- start feedwind code --> <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Loading" data-fw-param="144917/"></script> <!-- end feedwind code -->
 
 
 # L’histoire de l’informatique

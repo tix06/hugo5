@@ -6,7 +6,9 @@ Title : informatique des objets
 
 # TP : Prise en main de la carte micro:bit
 ## présentation
+La carte microbit peut servir à réaliser des expériences à l'aide de *capteurs*, mais aussi actionner des moteurs. On la trouve à l'origine de la conception de quelques *robots*:
 
+<blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Gipsy est prête. <a href="https://twitter.com/hashtag/microbit?src=hash&amp;ref_src=twsrc%5Etfw">#microbit</a> <a href="https://twitter.com/hashtag/makecode?src=hash&amp;ref_src=twsrc%5Etfw">#makecode</a> <a href="https://t.co/5EJiNya0dw">pic.twitter.com/5EJiNya0dw</a></p>&mdash; Gaelic (@GaetanoLICATA5) <a href="https://twitter.com/GaetanoLICATA5/status/1377319663017803780?ref_src=twsrc%5Etfw">March 31, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## Utiliser l'editeur en ligne python.microbit.org
 Aller sur l'editeur à l'adresse suivante : [https://python.microbit.org/v/2.0](https://python.microbit.org/v/2.0)
