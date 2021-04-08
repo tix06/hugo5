@@ -108,9 +108,20 @@ $$Q = Q/PC = 100 / 93000 = 0,001 m^3 = 1L$$
 # Le pouvoir comburivore
 C’est le volume d’air nécessaire à la combustion de 1m<sup>3</sup> de combustible. 
 
-Ce nombre est lié au le coefficient stœchiométrique de l’équation de combustion de l’alcane (à multiplier par 5) : 
-CH4 + 2O2 => CO2 + 2H2O
-Le méthane a un pouvoir comburivore égal à 2*5 = 10
+Il faudra utiliser l'équation chimique combustion de l’alcane vue plus haut, car ce nombre est lié au coefficient stœchiométrique du dioxygène O<<sub>2</sub>.
+
+L'équation fournit le coefficient de O<sub>2</sub> . Les coefficients de cette équation indiquent les proportions dans lesquelles ces gaz reagissent.
+
+
+$$CH_4 + 2O_2 \rightarrow CO_2 + 2H_2O$$
+
+Pour obtenir le volume d'air équivalent, il faudra multiplier ce coefficient par 5 (l'air contient 20% de O<sub>2</sub> et 80% de N<sub>2</sub>, ce qui fait un ratio de 1/5 d'O<sub>2</sub> dans l'air): 
+
+Le méthane a donc un **pouvoir comburivore** égal à 10, car 2 (le coef de O2) * 5 = **10**.
+
+Ce qui signifie que 1m<sup>3</sup> de méthane necessite 10 m<sup>3</sup> d'air pour sa combustion complète. Ces 10 m<sup>3</sup> vont lui apporter les 2m<sup>3</sup> de O<sub>2</sub> dont il a besoin pour sa combustion.
+
+
 
 # Rappels
 ## Energie thermique
