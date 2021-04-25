@@ -429,6 +429,7 @@ On rappelle qu'une liste chaînée est une structure linéaire, constituée de c
 # Liens
 * cours sur [python.developpez.com](https://python.developpez.com/cours/apprendre-python-3/?page=la-programmation-orientee-objet): compléments sur les méthodes spéciales de [surcharge des opérateurs](https://python.developpez.com/cours/apprendre-python-3/?page=la-programmation-orientee-objet#L7-4), d'[héritage et polymorphisme](https://python.developpez.com/cours/apprendre-python-3/?page=la-programmation-orientee-objet#L7-5)
 * références : [Classes sur docs.python.org](https://docs.python.org/fr/3.6/tutorial/classes.html)
+* prolongement sur les heritages et polymorphismes [python doctor POO - debutants](https://python.doctor/page-apprendre-programmation-orientee-objet-poo-classes-python-cours-debutants)
 * Resumé de cours : [Lyceum.fr > POO](https://lyceum.fr/tg/nsi/4-langages-et-programmation/6-programmation-objet)
 * Autres exercices : [Lyceum.fr > POO > Exercices](https://lyceum.fr/tg/nsi/4-langages-et-programmation/6-programmation-objet/exo)
 
