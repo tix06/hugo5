@@ -138,7 +138,7 @@ Ces algorithmes fonctionnent selon:
 - repetition n fois de substitutions et permutations. Utilise une clé unique pour chiffrer et dechiffrer.
 - Sortie
 
-<!--
+
 # Fondamentaux de la cryptographie moderne
 Les principes de Kerckhoff (6 principes, 3 restent aujourd'hui preponderants malgrès la difference de technologie)
 
@@ -182,7 +182,7 @@ Ainsi, comme la clé de Bob est publique, Alice peut utiliser cette clé pour ch
 <figcaption>Chiffrement asymetrique</figcaption>
 </figure>
 
--->
+
 
 # Exercices
 ## Substitution monoalphabétique: Code de César
