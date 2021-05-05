@@ -22,7 +22,7 @@ Puis changer de cable pour brancher la carte micro:bit sur l'ordinateur (cable U
 </div>
 </figure>
 
-Télécharger le fichier [TI_Runtime_for_Microbit_ver_2.4.hex](/pdf/SNT_texas/microbit/TI_Runtime_for_Microbit_ver_2.4.hex) sur votre ordinateur.
+Télécharger le fichier [TI_Runtime_2.6.hex](/pdf/SNT_texas/microbit/TI_Runtime_2.6.hex) sur votre ordinateur.
 
 Puis, à l'aide de l'explorateur windows, glisser-déposer ce fichier vers la carte micro:bit.
 
