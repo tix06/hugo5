@@ -98,10 +98,11 @@ Ce script met en oeuvre une boucle bornée qui permet de parcourir les pixels (s
 # trace un trait horizontal (-)
 from microbit import *
 y=2
+b=9
 for x in range(5):
   display.set_pixel(x,y,b)
 ```
-x,y : int, valeur de 0 à 4
+x,y : int, valeur de 0 à 4<br>
 b : int, 0 à 9 (intensité lumineuse de la diode en x,y)
 
 
