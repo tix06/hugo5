@@ -171,9 +171,100 @@ def freq(m):
     ...
 ```
 
-Compléter le script de la fonction `freq`.
+* **Question 1:** Compléter le script de la fonction `freq`.
+
+Soient les deux textes chiffrés suivants:
+
+a. DGFHTMOMEIAMTLMFGOKFGOKEGDDTRWEIAKZGFGFSTEKGOMLASTTIFG FOSTLM FTFGOK MGWMFG OKRTSA JWTWTA WDTFMG FDAOLT WMOSSA FGOKET WKRWFD TEIAFM ROAZSG MOFKOT FFTXAW MLARGW ETWKJW AFROSD OAWSTA WDAMOF HGWKDT STEITK SADAOF
+
+b. YOHGMV MFCBRB GWFNIZ ZPSURW FUOIPU WYITFA NIETGG DOCKAC PQE- BEW PMXEMK VGRAIL KWWXZO CILGPM QOVCGE GMYEBQ RYACJM WX- ULFR VQMDCY LZFYZM YTPCRF DCRJNS FIHIQG RZEPRC VWMDIL KGYDQO RVFMXM CRCNIM UGRBKR BOOIUG PQCBVZ NEYACE
+
+* **Question 2:** L'un des 2 a été chiffré avec un algorithme de substitution mon-alphabetique, et l'autre, poly-alphabétique. Lequel est mono-alphabétique?
+
+## Chiffrement symetrique par la fonction XOR
+Cet exercice est inspiré du TP cryptographie du site de [hmalherbe.fe - NSI](http://hmalherbe.fr/thalesm/gestclasse/documents/Terminale_NSI/2020-2021/TP/TP_Term_NSI_cryptographie/TP_Term_NSI_cryptographie.html)
+
+La fonction XOR est la fonction du OU EXCLUSIF.
+
+* **Question 1:** Donner la table de vérité de la fonction XOR
+* **Question 2:** Programmer la fonction `xor` en python qui retourne le resultat de XOR appliqué aux 2 paramètres a et b.
+
+*Exemple:*
+
+```
+>>> xor(0,1)
+>>> 1
+```
+
+On utilisera pour cet exercice les fonctions suivantes, qui permettent de transformer un texte en binaire, à partir du code ascii des lettres:
+
+```python
+def text2bin(texte):
+    """ convertit une chaine de caracteres en binaire
+    param:
+    texte: str, une chaine de caracteres
+    return:
+    bin: str, une sequence de 8 bits par caracteres
+    chaque sequence de 8 bits est la valeur du code ascii du caractere
+    convertie en binaire (sur un octet)
+    exemple:
+    >>> text2bin('HELLO')
+    >>> '0100100001000101010011000100110001001111'
+    """
+    bin = ''
+    for l in texte:
+        bits = f'{ord(l):b}'
+        # f est une fonction de formatage et convertit
+        # une valeur decimale ord(l) en binaire
+        # ord(l) donne la valeur numerique correspondant au caractere ascii l
+        oct = octet(bits)
+        bin += oct
+    return bin
+
+def octet(bits):
+    """ rajoute les 0 au nombre binaire pour mettre en format de 8 bits
+    """
+    byte = str(bits)
+    for i in range(8-len(bits)):
+        byte = '0' + byte
+    return byte
+```
 
 
+
+* **Question 3:** programmer toutes ces fonctions dans un fichier python (ou un notebook). Tester en particulier la fonction `text2bin` sur un texte relativement court (2 caractères). Recopier le résultat obtenu.
+
+La fonction suivante transforme une séquence de chiffres binaires en une valeur décimale:
+
+```python
+def bin2dec(oct):
+    # oct est un str de 8 caracteres
+    n = 0
+    for i in range(len(oct)):
+        n += int(oct[-i-1])*2**i
+    return n
+```
+
+Exemple:
+
+```
+>>> bin2dec('001001')
+>>> 9
+```
+
+* **Question 4:** Utiliser cette fonction pour écrire le script de `bin2text`, la fonction inverse de `text2bin`, qui, pour une sequence binaire donnée, de longueur multiple de 8 bits, retourne la chaine de caracteres correspondants.
+
+Le XOR (OU exclusif) est très utilisé dans les protocoles de chiffrement symétrique. En effet, c’est une opération qui est sa propre réciproque, ce qui n’est pas le cas du ET ni du OU.
+
+On souhaite chiffrer un message (par exemple une chaîne de caractères) à l’aide d’une clé binaire. Seuls des caractères ASCII sont utilisés.
+
+* **Question 5:** Ecrire le script de cette fonction, que l'on appelera `chiffre_xor`. Cette fonction prend 2 paramètres: la séquence de bits à chiffrer, ainsi que la clé de chiffrement. Cette clé est de dimension inférieure ou égale au premier paramètre. Il faudra l'appliquer de manière périodique aux bits de la séquence à chiffrer (voir cours sur le chiffrement poly-alphabetique).
+* **Question 6:** Utiliser les fonctions du programme pour: 
+  * convertir un message secret en une sequence binaire
+  * chiffrer cette sequence binaire avec l'algorithme XOR, en utilisant la clé `10101`
+  * afficher le message chiffré
+  * dechiffrer le message
+  * afficher le message dechiffré
 
 # Liens
 ## Suite du cours: chiffrement asymétrique
