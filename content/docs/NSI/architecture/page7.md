@@ -81,9 +81,13 @@ En pratique, le certificat est un ensemble d'informations sur le propriétaire d
 # Principe d'une communication securisée HTTPS
 Lors d'une communication HTTPS: les objectifs d'authentification, authenticité et de confidentialité sont remplis. Lors du protocole de communication, les chiffrements asymétriques et symétriques sont tous 2 utilisés:
 
-* le client demande au serveur que celui-ci s'authentifie (1) et (2)
-* le client envoie de manière sécurisée une clé de session qui servira pour la communication (3). L'envoie de la clé se fait à l'aide du chiffrement asymétrique. Le client utilise la clé publique du serveur pour cet envoi.
-* Cette clé sera utilisée pour des chiffrements symétriques (4).
+> Que Se Passe-t-il Entre un Navigateur Web (client) et un Serveur ?
+
+* le client demande au serveur que celui-ci s'authentifie (1)
+* Le serveur envoie au navigateur une copie de son certificat SSL (2)
+* Le navigateur vérifie s'il fait confiance à ce certificat SSL. Si oui,le client envoie de manière sécurisée une clé de session qui servira pour la communication (3). L'envoie de la clé se fait à l'aide du chiffrement asymétrique (RSA). Le client utilise la clé publique du serveur pour cet envoi.
+* Cette clé sera utilisée pour des chiffrements symétriques entre le client et le serveur (4).
+
 
 <figure>
   <img src="../images/schema_ssl.jpg">
@@ -91,6 +95,7 @@ Lors d'une communication HTTPS: les objectifs d'authentification, authenticité 
 <figcaption>établissement d'une communication securisée - OVH</figcaption></a>
 </figure>
 
+> **Signature numérique:** Lorsqu'on utilise sa propre clé privée pour envoyer un message, et qu'une autorité de certification peut garantir l'origine de cette clé privée, alors ce message envoyé a valeur de signature numérique. Il permet d'authentifier l'emetteur du message.
 
 # Liens
 * Chiffrement : notre antisèche pour l'expliquer à vos parents [article de NextImpact](https://www.nextinpact.com/article/24930/99777-chiffrement-notre-antiseche-pour-expliquer-a-vos-parents)
