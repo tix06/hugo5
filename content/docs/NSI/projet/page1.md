@@ -7,7 +7,7 @@ Title: Aborder l'epreuve
 Présentation de l'épreuve et Foire aux Questions: [http://quandjepasselebac.education.fr/faq-grand-oral/](http://quandjepasselebac.education.fr/faq-grand-oral/)
 
 ## Construire sa question en rapport avec la spécialité NSI
-*Je vous propose d'explorer deux documents qui me semblent essentiel pour construire vos questions en rapport avec la spécialité NSI:*
+*Je vous propose d'explorer les documents suivants qui me semblent essentiel pour construire vos questions en rapport avec la spécialité NSI:*
 
 ### Grand Oral et enseignement de spécialité NSI (MEN)
 [lien vers la ressource](https://eduscol.education.fr/media/3919/download)
@@ -55,16 +55,25 @@ Voici les principales ressources pour explorer les articles sur les thèmes de l
 ### Le blog Binaire
 Le blog du Monde sur l’informatique avec la société informatique de France (SIF).
 
+<!-- start feedwind code --> <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Loading" data-fw-param="144917/"></script> <!-- end feedwind code -->
+
 [https://www.lemonde.fr/blog/binaire/](https://www.lemonde.fr/blog/binaire/)
 
-**QUOI ?** Vous y trouverez, des articles de vulgarisation, des entretiens autour de l’informatique et des questions qu’elle soulève. Vous y trouverez aussi la rubrique « Petit binaire » pour les plus jeunes, mais pas seulement…
+**Contenu** Vous y trouverez, des articles de vulgarisation, des entretiens autour de l’informatique et des questions qu’elle soulève. Vous y trouverez aussi la rubrique « Petit binaire » pour les plus jeunes, mais pas seulement…
 
+### Autres médias
+#### La chronique numérique du journal la recherche:
+[https://www.larecherche.fr/rubrique/chronique-num](https://www.larecherche.fr/rubrique/chronique-num%C3%A9rique)
 
-### La chronique numérique du journal la recherche:[https://www.larecherche.fr/rubrique/chronique-num](https://www.larecherche.fr/rubrique/chronique-num%C3%A9rique)
-### Chronique éthique de Jean-Gabriel Ganascia:  [https://www.larecherche.fr/rubrique/chronique-%C3%A9thique](https://www.larecherche.fr/rubrique/chronique-%C3%A9thique)
+#### Chronique éthique de Jean-Gabriel Ganascia:  
+[https://www.larecherche.fr/rubrique/chronique-%C3%A9thique](https://www.larecherche.fr/rubrique/chronique-%C3%A9thique)
 
-### Le 21e Siècle
+#### Le 21e Siècle
 [http://www.21siecle.quebec/](http://www.21siecle.quebec/) : le numérique et ses implications à destination des non informaticien·nes : Internet, communication, connaissances, le citoyen et la citoyenne, la société.
 
 ### Le site de l’ONISEP
 **POURQUOI ?** Pour réfléchir aux métiers du numérique et aux possibles parcours d’orientation
+
+<input type="button" class="btn btn-lg" value="Thèmes et articles" onclick="window.location.href = '/docs/NSI/projet/page2/'">
+
+<input type="button" class="btn btn-lg" value="Préparer l'entretien" onclick="window.location.href = '/docs/NSI/projet/page3/'">

@@ -10,8 +10,9 @@ Les liens ci-dessous sont extraits de:
 * La chronique numérique du journal la recherche:[https://www.larecherche.fr/rubrique/chronique-num](https://www.larecherche.fr/rubrique/chronique-num%C3%A9rique)
 * Chronique éthique de Jean-Gabriel Ganascia:  [https://www.larecherche.fr/rubrique/chronique-%C3%A9thique](https://www.larecherche.fr/rubrique/chronique-%C3%A9thique)
 
-<!-- start feedwind code --> <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Loading" data-fw-param="144917/"></script> <!-- end feedwind code -->
 
+
+<!-- start feedwind code --> <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Loading" data-fw-param="144917/"></script> <!-- end feedwind code -->
 
 # L’histoire de l’informatique
   
@@ -144,7 +145,7 @@ Depuis quelques années, on établit souvent un lien entre les voitures autonome
 [https://www.larecherche.fr/chronique-%C3%A9thique/la-voiture-autonome-met-en-%C3%A9chec-lutilitarisme](https://www.larecherche.fr/chronique-%C3%A9thique/la-voiture-autonome-met-en-%C3%A9chec-lutilitarisme)
 
 
-
+<input type="button" class="btn btn-lg" value="Préparer l'entretien" onclick="window.location.href = '/docs/NSI/projet/page3/'">
 
 
 
