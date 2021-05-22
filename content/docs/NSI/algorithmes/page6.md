@@ -42,7 +42,7 @@ voir compléments sur la page wikipedia : <a href="https://fr.wikipedia.org/wiki
 <p>
 Un coefficient quelconque du triangle, situé à la ligne i et à la colonne j est calculé à partir de la formule de récurrence : (i et j superieurs à 1)
 
-$$\left(\begin{matrix}i\\j\end{matrix}\right)=\left(\begin{matrix}i-1\\j-1\end{matrix}\right)+\left(\begin{matrix}i-1\\j\end{matrix}\right)$$
+$$C\left(\begin{matrix}i\\j\end{matrix}\right)=C\left(\begin{matrix}i-1\\j-1\end{matrix}\right)+C\left(\begin{matrix}i-1\\j\end{matrix}\right)$$
 </p>
 
 <figure>
