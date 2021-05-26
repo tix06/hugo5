@@ -134,6 +134,11 @@ Le problème du rendu de monnaie est un problème d'algorithmique. Il s'énonce 
 
 Par exemple, la meilleure façon de rendre 7 euros est de rendre un billet de cinq et une pièce de deux, même si d'autres façons existent (rendre 7 pièces de un euro, par exemple).
 
+<figure>
+  <img src="../images/caisse.png" width="350px" alt="caisse rendu monnaie">
+  <figcaption>Image by <a href="https://pixabay.com/users/conmongt-1226108/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2048569">Christian Dorn</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2048569">Pixabay</a></figcaption></a>
+</figure>
+
 ## algorithme naif 
 Une première idée, naïve serait, pour une somme `cost` à rendre, et un systeme de monnaie appelé `caisse` :
 
@@ -172,6 +177,14 @@ Ce rendu est optimal: on ne peut pas rendre moins de billets/pieces.
 
 Ce rendu n'est pas optimal. On trouve une solution, mais celle-ci contient trop de pieces.
 
+Contrairement aux problèmes étudiés précédement (tri d’un tableau, calcul de x<sub>n</sub>...), où il y avait toujours une unique solution, dans les problèmes d’optimisation, il peut y avoir des solutions valides (satisfaisant les contraintes) non optimales, une ou plusieurs solutions (valides), optimales (minimisant/maximisant une certaine mesure), voire pas du tout de solution valide. 
+
+Si la taille du ou des paramètres en entrée est importante, il n'y a pas d'algorithme déterministe efficace. (on ne peut pas trouver LA solution au problème en parcourant toutes les solutions possibles car la complexité est trop grande).
+
+On utilise alors d'autres stratégies, qui donneront parfois une solution, parfois une solution optimale. C'est ce que l'on réalise avec la programmation dynamique.
+
+Le problème du rendu de monnaie est *NP-difficile* relativement au nombre de pièce et billet du système monétaire considéré. (voir annexe).
+
 ## algorithme de type dynamique
 
 On cherche à créer une liste de rendu de monnaie pour chaque montant de 0 à x. L'idée est que si le rendu de monnaie pour x < `valeur_seuil` est connu de manière optimale, alors pour x > `valeur_seuil`, on recherche le meilleur moyen de rendre la monnaie. 
@@ -205,16 +218,36 @@ Le tableau montre les choix que réalise l'algorithme.
 **Remarque:** Ce problème est [NP-complet](https://fr.wikipedia.org/wiki/Probl%C3%A8me_NP-complet) dans le cas général, c'est-à-dire difficile à résoudre. Cependant pour certains systèmes de monnaie dits canoniques, l'[algorithme glouton](https://fr.wikipedia.org/wiki/Algorithme_glouton) est optimal.
 
 # Le problème du sac à dos
-Un problème très similaire est celui du sac-à-dos. Supposons que vous braquiez une banque, il y a une infinité de billets de valeur `v1, v2, · · · , vn` mais chaque billet de valeur `vi` a un poids de `pi`. Comment remplir votre sac-à-dos avec le plus d’argent sachant que votre sac ne supporte qu’un poids `W`?
+Un problème très similaire est celui du sac-à-dos. Supposons que vous découvriez la caverne d'Ali Baba (et des 40 voleurs), il y a une infinité d'objets de valeur `v1, v2, · · · , vn` mais chaque objet de valeur `vi` a un poids de `pi`. Comment remplir votre sac-à-dos avec le contenu qui rapportera le plus, sachant que votre sac ne supporte qu’un poids `W`?
+
+<figure>
+  <img src="../images/sacados.png" width="350px" alt="probleme du sac a dos">
+  <figcaption>illustration du probleme du sac à dos</figcaption></a>
+</figure>
 
 # Le problème du voyageur du commerce
 le problème du voyageur de commerce, est un problème d'optimisation qui, étant donné une liste de villes, et des distances entre toutes les paires de villes, détermine un plus court circuit qui visite chaque ville une et une seule fois.
 
-Malgré la simplicité de son énoncé, il s'agit d'un problème d'optimisation pour lequel on ne connait pas d'algorithme permettant de trouver une solution exacte rapidement dans tous les cas. Plus précisément, on ne connait pas d'algorithme en temps polynomial, et sa version décisionnelle (pour une distance D, existe-t-il un chemin plus court que D passant par toutes les villes et qui termine dans la ville de départ ?) est un problème [NP-complet](https://fr.wikipedia.org/wiki/Probl%C3%A8me_NP-complet).
+Malgré la simplicité de son énoncé, il s'agit d'un problème d'optimisation pour lequel on ne connait pas d'algorithme permettant de trouver une solution exacte rapidement dans tous les cas. Plus précisément, on ne connait pas d'algorithme en temps polynomial, et sa version décisionnelle (pour une distance D, existe-t-il un chemin plus court que D passant par toutes les villes et qui termine dans la ville de départ ?) est un problème [NP-complet](https://fr.wikipedia.org/wiki/Probl%C3%A8me_NP-complet). Voir annexe pour précisions.
 
 Pour résoudre ce problème, une heuristique gloutonne (programmation dynamique) construit une seule solution, par une suite de décisions définitives sans retour arrière, parmi ces méthodes on cite le plus proche voisin, la plus proche insertion, la plus lointaine insertion et la meilleure insertion. Il n'est pas certain que la méthode donne la meilleure solution.
 
-# Annexe
+La figure suivante aide à la resolution. La solution optimale est celle qui va joindre tous les noeuds du graphe, une seule fois. (Cycle hamiltonien)<br>
+Des solutions possibles, mais non optimales sont celles qui permettent de visiter tous les noeuds une seule fois, mais dont la distance parcourue cumulée n'est peut-être pas la plus courte.
+
+<figure>
+  <img src="../images/hamilton.png" width="350px" alt="cycle hamiltonien">
+  <figcaption>illustration de la recherche d'un cycle hamiltonien dans un graphe.</figcaption></a>
+</figure>
+
+Mais une illustration plus concrête est celle par exemple du problème de la tournée du candidat pour les élections présidentielles aux état-unis:
+
+<figure>
+  <img src="../images/tournee.png" width="350px">
+  <figcaption>tournée du candidat à la presidentielle</figcaption></a>
+</figure>
+
+# Annexes
 ## Programmes python du rendu de monnaie
 ### algo naîf
 ```python
@@ -283,7 +316,36 @@ essais
 {1: 6, 10: 0, 15: 1}
 ``` 
 
+## Complexité
+### Rappels
 
+**Complexité temporelle d’un algorithme**. Il s’agit du nombre d’opérations élémentaires executées par l’algorithme dans un pire cas (une instance en entrée qui demande le plus de calculs). Cette complexité est exprimée en fonction de la “taille de l’entrée”. Par exemple, nous avons vu des algorithmes de tri avec des complexité en O(n2) ou en O(nlogn) avec n la longueur du tableau en entrée.
+
+
+### Problèmes P
+
+Un problème est dit **polynomial** si il existe un algorithme pour le résoudre dont la complexité peut s’exprimer comme un polynôme de la taille de l’entrée (comme c’est le cas pour des problèmes de tri). L’ensemble des problèmes polynomiaux est noté P et est considéré comme un ensemble de problèmes “faciles” (ils peuvent être résolus relativement efficacement).
+
+
+Un *exemple de problème polynomial* est celui de la *connexité dans un graphe*. Étant donné un graphe à n sommets (on considère que la taille de la donnée, donc du graphe, est son nombre de sommets), il s'agit de savoir si toutes les paires de sommets sont reliées par un chemin. Un algorithme de parcours en profondeur construit un arbre couvrant du graphe à partir d'un sommet. Si cet arbre contient tous les sommets du graphe, alors le graphe est connexe.([wikipedia](https://fr.wikipedia.org/wiki/P_(complexité)))
+
+### Problèmes NP
+
+Une autre classe de problèmes importante est celle des problèmes dont on peut tester en temps polynomial si une solution est valide (par exemple, je vous donne un tableau et vous devez non pas le trier mais me dire si il est déjà trié ou non). Cette classe s’appelle NP pour **Non déterministe Polynomial**. 
+
+Si un problème est connu comme étant NP et si une solution au problème est connue, la démonstration de l’exactitude de la solution peut toujours être réduite à une vérification P (temps polynomial). Les algorithmes de cette classe sont non déterministes.
+
+Le problème de savoir si P = NP est un des problèmes du millénaire de l’institut de mathématiques Clay. Informellement, il s’agit de savoir si vérifier efficacement qu’une "solution à un problème est bien une solution valide" revient à "pouvoir trouver efficacement une solution valide au problème."
+
+### Problèmes NP-complets
+
+Les problèmes dits NP-complets sont des problèmes au moins aussi difficiles que les plus difficiles de la classe NP.
+
+Tous les algorithmes connus pour résoudre des problèmes NP-complets ont un temps d'exécution exponentiel en la taille des données d'entrée dans le pire des cas, et sont donc inexploitables en pratique même pour des instances de taille modérée. On peut donc raisonnablement penser qu'il est inutile d'en chercher une solution sous forme d'un algorithme de complexité polynomiale.
+
+*Exemples de problèmes NP-complets:*
+
+On y retrouve les problèmes de décision (oui/non) et d'optimisation (max ou min d'une fonction), dont les problèmes vus plus haut.
 
 # Liens
 * [wikipedia: la programmation dynamique](https://fr.wikipedia.org/wiki/Programmation_dynamique)
