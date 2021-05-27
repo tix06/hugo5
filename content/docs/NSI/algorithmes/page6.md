@@ -187,11 +187,11 @@ Le problème du rendu de monnaie est *NP-difficile* relativement au nombre de pi
 
 ## algorithme de type dynamique
 
-On cherche à créer une liste de rendu de monnaie pour chaque montant de 0 à x. L'idée est que si le rendu de monnaie pour x < `valeur_seuil` est connu de manière optimale, alors pour x > `valeur_seuil`, on recherche le meilleur moyen de rendre la monnaie. 
+On cherche à créer une liste de rendu de monnaie pour chaque montant de 0 à x. 
 
 Pour rendre x, il faut au moins une pièce, à prendre parmi n pieces possibles. Une fois choisie cette pièce, la somme restante inférieure strictement à x, donc on sait la rendre de façon optimale. Il suffit donc d'essayer les n possibilités.
 
-Exemple: Rendre 15 avec des pieces de {1, 7, 9}. Ce type de caisse ne donnerait pas le résultat optimum avec le précédent algorithme. Ici, cela peut-être souvent réalisé, comme le montre le tableau ci-dessous:
+Exemple: Rendre 15 avec des pieces de {1, 7, 9}. Ce type de caisse ne donnerait pas le résultat optimum avec le précédent algorithme. Ici, cela peut-être réalisé, comme le montre le tableau ci-dessous:
 
 | montant à rendre | rendu |
 | --- | --- |
@@ -218,12 +218,34 @@ Le tableau montre les choix que réalise l'algorithme.
 **Remarque:** Ce problème est [NP-complet](https://fr.wikipedia.org/wiki/Probl%C3%A8me_NP-complet) dans le cas général, c'est-à-dire difficile à résoudre. Cependant pour certains systèmes de monnaie dits canoniques, l'[algorithme glouton](https://fr.wikipedia.org/wiki/Algorithme_glouton) est optimal.
 
 # Le problème du sac à dos
+## Enoncé du problème
 Un problème très similaire est celui du sac-à-dos. Supposons que vous découvriez la caverne d'Ali Baba (et des 40 voleurs), il y a une infinité d'objets de valeur `v1, v2, · · · , vn` mais chaque objet de valeur `vi` a un poids de `pi`. Comment remplir votre sac-à-dos avec le contenu qui rapportera le plus, sachant que votre sac ne supporte qu’un poids `W`?
 
 <figure>
   <img src="../images/sacados.png" width="350px" alt="probleme du sac a dos">
   <figcaption>illustration du probleme du sac à dos</figcaption></a>
 </figure>
+
+## Algorithme de type dynamique
+Nous allons chercher à adapter l'algorithme du rendu de monnaie:
+
+*Structure de données:*
+
+| rendu de monnaie | sac à dos |
+|--- |--- |
+| [Nbre de piece, [pieces de 1, pieces de 2, pieces de 5, ...]] | [Gains cumulés, [articles 1, articles 2, articles 3, ...]] |
+
+*Algorithme:*
+
+| rendu de monnaie | sac à dos |
+|--- |--- |
+| Pour toute valeur de montant i jusqu'à x | Pour tout poids i jusqu'à W |
+| Pour tout montant de piece de la caisse | Pour tout objet (vi, pi) du tresor |
+| **Test 1**: le montant de la piece est-il < i? | **Test 1**: Le poids de l'objet est-il < i? |
+| **Test 2**: Si j'ajoute la piece pour rendre la monnaie, le nombre de pieces rendues sera-t-il inférieur à celui stocké pour i? (le reste de la somme à rendre a deja été calculé precedemment) | **Test 2**: Si je prend l'objet, le montant total rapporté est-il supérieur à la valeur stockée pour i? |
+| Si oui: rendre la piece | Si oui: prendre l'objet |
+
+
 
 # Le problème du voyageur du commerce
 le problème du voyageur de commerce, est un problème d'optimisation qui, étant donné une liste de villes, et des distances entre toutes les paires de villes, détermine un plus court circuit qui visite chaque ville une et une seule fois.
@@ -250,6 +272,7 @@ Mais une illustration plus concrête est celle par exemple du problème de la to
 # Annexes
 ## Programmes python du rendu de monnaie
 ### algo naîf
+
 ```python
 def estvide(ensemble):
     """
@@ -261,16 +284,6 @@ def estvide(ensemble):
     for i in ensemble:
         vide = False
     return vide
-
-def nbPieces(monnaie):
-    """
-    calcule le nombre de pieces pour un dictionnaire monnaie
-    clé=type de piece / valeurs=nombre de pieces
-    """
-    nb = 0
-    for i in monnaie:
-        nb = nb+monnaie[i]
-    return nb
 
 def rendre(cost,caisse):
     """
@@ -294,15 +307,6 @@ def rendre(cost,caisse):
         rendu[piece] = n
         caisse.remove(piece)       
     return rendu
-
-
-    
-
-caisse = {1,2,5,10,20,50}
-rendre(93,caisse) # OK optimal
-
-caisse = {1,10,15}
-rendre(21,caisse)
 ```
 
 essais
@@ -315,6 +319,48 @@ essais
 >>> rendre(21,caisse) # non optimal
 {1: 6, 10: 0, 15: 1}
 ``` 
+
+### algorithme dynamique
+```python
+import copy
+def renduMonnaieProgDyn(x,c) :
+    """
+    c : caisse avec les genres de pieces à rendre par ex [1,2,5,10]
+    x : montant à rendre
+    res : tableau contenant : [nbe pieces rendues,[nb pieces de pieces de A, nb de B, nb de C]]
+    temp : nombre de pieces rendues
+    """
+    n = len(c)
+    res = [[x, [0 for j in range(n)]] for i in range(x + 1)]  # initialisation de la table avec des x 
+    # x pieces rendues correspond à la plus mauvaise des reponses (par ex que des pieces de 1)
+    res[0][0] = 0
+    for i in range(1,x+1) :  # valeur du montant à rendre : recherche pour TOUT montant
+        for j in range(n) : # parcours de la caisse
+            if i >= c[j] : # rendre de la monnaie avec cette piece
+                temp = 1 + res[i - c[j]][0] # rend une piece du type de celle de rang j
+                # le nbe de piece au total est egal à 1 + le nbe de piece pour rendre le reste (deja calc)
+                
+                if res[i][0]>=temp:
+                    res[i][0] = temp   # nombre de pieces rendues
+                    res[i][1] = copy.deepcopy(res[i-c[j]][1])   # copier le nb de pieces de A , de B, de C pour le rendu de monnaie
+                    # monnaie du montant i-c[j]
+                    # ici il faudra copy.deepcopy pour faire une copie par valeur
+                    res[i][1][j] += 1 # ajouter 1 au nombre de pieces de c[j] utilisées
+                    print(f'i: {i:2}, j: {j:2}, res[{i}]: {res[i]}, temp: {temp}' )
+    return res[x]
+```
+
+
+<figure>
+  <img src="../images/rendumonnaie1.png">
+  <figcaption>etape i=1 j=0</figcaption></a>
+</figure>
+
+<figure>
+  <img src="../images/rendumonnaie2.png">
+  <figcaption>etapes suivantes</figcaption></a>
+</figure>
+
 ## Le problème du sac à dos
 *Résolution*
 
