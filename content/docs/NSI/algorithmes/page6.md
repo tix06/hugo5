@@ -315,6 +315,34 @@ essais
 >>> rendre(21,caisse) # non optimal
 {1: 6, 10: 0, 15: 1}
 ``` 
+## Le problème du sac à dos
+*Résolution*
+
+```python
+import copy
+
+def sacADosRemise(W, s) :
+    n = len(s)
+    res = [[0, [0 for j in range(n)]] for i in range(W + 1)] # format [valeur totale,[nb_o1, nb_o2, nb_o3, nb_o4]]]
+    for i in range(1,W +1) :
+        j=0
+        while (j < n) and (i-s[j][1]>=0) :
+            if res[i - s[j][1]][0] + s[j][0] > res[i][0] :
+                res[i][0] = res[i - s[j][1]][0] + s[j][0]
+                res[i][1] = copy.deepcopy(res[i - s[j][1]][1])
+                res[i][1][j] += 1
+            j+=1
+    return res[W]
+```
+
+*essais:*
+
+```python
+> W = 15
+> s = [(1,2),(2,3),(4,5),(6,8)] # ensemble de couples (valeur, poids)
+> sacADosRemise(W,s)
+[12, [0, 0, 3, 0]]
+``` 
 
 ## Complexité
 ### Rappels
