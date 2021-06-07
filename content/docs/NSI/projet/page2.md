@@ -28,7 +28,8 @@ vendredi 5 mars 2021 à 07:18
 ## [Le vote électronique, progrès ou danger ?](https://www.larecherche.fr/chronique-num%C3%A9rique/musique-et-informatique-un-mariage-damour)
 Une question s'impose  peut-on faire des machines et logiciels de vote sûrs, et pour quel type de vote ? 
 https://www.larecherche.fr/chronique-num%C3%A9rique/le-vote-%C3%A9lectronique-progr%C3%A8s-ou-danger
-Musique et informatique, un mariage d'amour
+
+## [Musique et informatique, un mariage d'amour](https://www.larecherche.fr/chronique-num%C3%A9rique/musique-et-informatique-un-mariage-damour)
 La portée classique, retranscrivant des notes de hauteurs bien séparées s'enchaînant en rythme, ne suffit plus pour écrire les nouveaux sons, donnés par des courbes, des programmes ou des formules mathématiques, qui peuvent être spatialisés, etc. Quels langages, graphiques ou textuels, faut-il utiliser ? 
 [https://www.larecherche.fr/chronique-num%C3%A9rique/musique-et-informatique-un-mariage-damour](https://www.larecherche.fr/chronique-num%C3%A9rique/musique-et-informatique-un-mariage-damour)
 
@@ -71,6 +72,16 @@ vendredi 12 février 2021 à 07:24
 Dans la rubrique Il était une fois… ma thèse, Mathilde Boltenhagen,  doctorante en informatique à l’Université Paris-Saclay, à l’ENS Paris-Saclay, au CNRS, à l’Inria et au LSV, vient nous raconter ses travaux. Dans cet article, Mathilde fait faire le tour du monde à notre valise, un prétexte pour nous parler de son domaine de recherche …
 [https://www.lemonde.fr/blog/binaire/2021/02/12/fouiller-les-processus-pour-les-ameliorer/](https://www.lemonde.fr/blog/binaire/2021/02/12/fouiller-les-processus-pour-les-ameliorer/)
 
+## [Codecarbon: un programme qui évalue les algorithmes](https://www.cscience.ca/2020/12/22/un-code-pour-connaitre-lempreinte-ecologique-de-lia/)
+« L’IA est une technologie exceptionnelle et essentielle pour le bien commun, mais il faut cependant être conscients de son impact environnemental croissant. C’est l’ambition de CodeCarbon. Nous souhaitons inciter la communauté d’experts de l’IA à mieux évaluer, à révéler et surtout à réduire son empreinte carbone », Yoshua Bengio, fondateur de Mila...
+
+[https://www.cscience.ca/2020/12/22/un-code-pour-connaitre-lempreinte-ecologique-de-lia/](https://www.cscience.ca/2020/12/22/un-code-pour-connaitre-lempreinte-ecologique-de-lia/)
+
+## [Dossier sur l'intelligence artificielle](/posts/python/data_analyse/)
+fiche et liens sur le thème de l'IA.
+
+[allophysique.com > Posts](/posts/python/data_analyse/)
+
 ## [L’algorithme, nouvelle machine à tubes. Vraiment ?](https://www.lemonde.fr/blog/binaire/2021/03/12/lalgorithme-nouvelle-machine-a-tubes-vraiment/)
 Un algorithme peut-il composer de la musique, un texte, un tableau ? C’est le sujet que traite Philippe Rigaux, professeur d’informatique au CNAM…
 
@@ -98,11 +109,15 @@ L'application mobile chargée de tracer les contacts avec des personnes contamin
 
 [https://www.larecherche.fr/chronique-num%C3%A9rique/deux-ou-trois-le%C3%A7ons-%C3%A0-retenir-de-lapplication-stopcovid](https://www.larecherche.fr/chronique-num%C3%A9rique/deux-ou-trois-le%C3%A7ons-%C3%A0-retenir-de-lapplication-stopcovid)
 
-# Architectures matérielles, systèmes d’exploitation et réseaux
+# Architectures matérielles, systèmes d’exploitation, réseaux et securité
 ## [Internet : Un bond de géant pour l'humanité](https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/un-bond-de-g%C3%A9ant-pour-lhumanit%C3%A9)
 cette magnifique invention est porteuse des plus belles valeurs humaines : apporter les connaissances à tous, permettre à tous de communiquer. Mais pourrons-nous continuer longtemps à utiliser Internet ? Peut-être pas. 
 
 [https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/un-bond-de-g%C3%A9ant-pour-lhumanit%C3%A9](https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/un-bond-de-g%C3%A9ant-pour-lhumanit%C3%A9)
+
+## [Comprendre les blockchains : fonctionnement et enjeux de ces nouvelles technologies](http://www.senat.fr/rap/r17-584/r17-584_mono.html)
+les blockchains permettent des échanges décentralisés et sécurisés, sans qu'il soit besoin d'un tiers de confiance. Plus précisément, elles sont des technologies de stockage et de transmission d'informations, permettant la constitution de registres répliqués et distribués, sans organe central de contrôle, sécurisées grâce à la cryptographie, et structurées par des blocs liés les uns aux autres, à intervalles de temps réguliers....
+[des blocs liés entre eux par des fonctions de hachage](http://www.senat.fr/rap/r17-584/r17-584_mono.html#toc75)
 
 # Interfaces Hommes-Machines (IHM)
 ## [Neurosmart, une histoire de cerveau et de passionnés](https://www.lemonde.fr/blog/binaire/2020/11/27/neurosmart-une-histoire-de-cerveau-et-de-passionnes/)

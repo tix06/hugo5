@@ -16,7 +16,7 @@ weight: 16
 * arbres de décision : [graphes_mini_prog.md](../graphes_mini_prog/index.html)
 
 # Intelligence artificielle (IA)
-L'intelligence artificielle désigne des algorithmes plus ou moins évolués qui traitent des problèmes dont la résolution fait appel à l'intellignence humaine. Ils imitent des *actions humaines*.
+L'intelligence artificielle désigne des algorithmes plus ou moins évolués qui traitent des problèmes dont la résolution fait appel à l'intelligence humaine. Ils imitent des *actions humaines*.
 
 *Exemple :* L'algorithme suivant : 
 
@@ -263,6 +263,8 @@ si x2<0.42 alors classe = 'Vert'
 ## documents utilisés pour la redaction de la page
 * s'initier au machine learning [https://openclassrooms.com/fr/courses/4011851-initiez-vous-au-machine-learning/4020611-identifiez-les-differents-types-dapprentissage-automatiques](https://openclassrooms.com/fr/courses/4011851-initiez-vous-au-machine-learning/4020611-identifiez-les-differents-types-dapprentissage-automatiques)
 * Méthodes de fouilles : [http://www.lsis.org/espinasseb/Supports/DWDM/10-MethodesFouille-4p.pdf](http://www.lsis.org/espinasseb/Supports/DWDM/10-MethodesFouille-4p.pdf)
+* La règlementation sur les algorithmes d'IA: Faut-il interdire ces algorithmes dans certains secteurs: [rapport du CNIL: garder la main](https://www.cnil.fr/sites/default/files/atoms/files/cnil_rapport_garder_la_main_web.pdf)
+* Comment rendre les algorithmes responsables? [Le Monde.fr internetactu](https://www.lemonde.fr/blog/internetactu/2018/09/08/concretement-comment-rendre-les-algorithmes-responsables/)
 
 ## Approfondissement
 * Différence entre Intelligence Artificielle, Machine Learning et Deep Learning : [http://penseeartificielle.fr/difference-intelligence-artificielle-machine-learning-deep-learning/](http://penseeartificielle.fr/difference-intelligence-artificielle-machine-learning-deep-learning/)

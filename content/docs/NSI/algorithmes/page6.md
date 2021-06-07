@@ -1,10 +1,15 @@
 ---
-Title : programmation dynamique
+Title : algorithmes avancés
 ---
 # Pré requis
 * Complexité : [lien](/docs/NSI/algorithmes/page1/)
 * Récursivité : [lien](/docs/NSI/langages/page2/)
 
+On verra dans cette page:
+
+* la programmation dynamique
+* les algorithmes gloutons
+* un exemple d'algorithme avec recherche locale. Pour la résolution d'un problème de TSP (Traveling salesman problem)
 
 # Programmation dynamique
 ## Principe de la méthode
@@ -128,8 +133,8 @@ def trianglePascal(n):
 ```
 
 
-# Le problème du rendu de monnaie 
-## énoncé du problème
+# Algorithmes gloutons
+## Le problème du rendu de monnaie 
 Le problème du rendu de monnaie est un problème d'algorithmique. Il s'énonce de la façon suivante : étant donné un système de monnaie (pièces et billets), comment rendre une somme donnée de façon optimale, c'est-à-dire avec le nombre minimal de pièces et billets ?
 
 Par exemple, la meilleure façon de rendre 7 euros est de rendre un billet de cinq et une pièce de deux, même si d'autres façons existent (rendre 7 pièces de un euro, par exemple).
@@ -139,8 +144,10 @@ Par exemple, la meilleure façon de rendre 7 euros est de rendre un billet de ci
   <figcaption>Image by <a href="https://pixabay.com/users/conmongt-1226108/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2048569">Christian Dorn</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2048569">Pixabay</a></figcaption></a>
 </figure>
 
-## algorithme naif 
-Une première idée, naïve serait, pour une somme `cost` à rendre, et un systeme de monnaie appelé `caisse` :
+### algorithme naif 
+Une première idée, naïve serait de commencer par rendre la piece de plus grande valeur, puis sur la somme restante, la pièce un peu moins grande, et ainsi de suite.
+
+Pour une somme `cost` à rendre, et un systeme de monnaie appelé `caisse` :
 
 ```python
 pour chaque piece de caisse, parcouru en sens decroissant:
@@ -181,17 +188,17 @@ Contrairement aux problèmes étudiés précédement (tri d’un tableau, calcul
 
 Si la taille du ou des paramètres en entrée est importante, il n'y a pas d'algorithme déterministe efficace. (on ne peut pas trouver LA solution au problème en parcourant toutes les solutions possibles car la complexité est trop grande).
 
-On utilise alors d'autres stratégies, qui donneront parfois une solution, parfois une solution optimale. C'est ce que l'on réalise avec la programmation dynamique.
+On utilise alors d'autres stratégies, qui donneront parfois une solution, parfois une solution optimale. C'est ce que l'on réalise avec l'utilisation d'un algorithme glouton.
 
 Le problème du rendu de monnaie est *NP-difficile* relativement au nombre de pièce et billet du système monétaire considéré. (voir annexe).
 
-## algorithme de type dynamique
+### algorithme de type glouton
 
 On cherche à créer une liste de rendu de monnaie pour chaque montant de 0 à x. 
 
-Pour rendre x, il faut au moins une pièce, à prendre parmi n pieces possibles. Une fois choisie cette pièce, la somme restante inférieure strictement à x, donc on sait la rendre de façon optimale. Il suffit donc d'essayer les n possibilités.
+Pour rendre x, il faut au moins une pièce, à prendre parmi n pieces possibles. Une fois choisie cette pièce, la somme restante inférieure strictement à x, donc on sait la rendre de façon optimale. Il suffit donc d'essayer les n possibilités. Et de faire un choix parmi les solutions trouvées: celle qui rend le moins de pieces.
 
-Exemple: Rendre 15 avec des pieces de {1, 7, 9}. Ce type de caisse ne donnerait pas le résultat optimum avec le précédent algorithme. Ici, cela peut-être réalisé, comme le montre le tableau ci-dessous:
+Exemple: Rendre 15 avec des pieces de {1, 7, 9}. Ce type de caisse ne donnerait pas le résultat optimum avec le précédent algorithme. Ici, cela peut-être réalisé avec un algorithme *glouton*, comme le montre le tableau ci-dessous:
 
 | montant à rendre | rendu |
 | --- | --- |
@@ -217,8 +224,8 @@ Le tableau montre les choix que réalise l'algorithme.
 
 **Remarque:** Ce problème est [NP-complet](https://fr.wikipedia.org/wiki/Probl%C3%A8me_NP-complet) dans le cas général, c'est-à-dire difficile à résoudre. Cependant pour certains systèmes de monnaie dits canoniques, l'[algorithme glouton](https://fr.wikipedia.org/wiki/Algorithme_glouton) est optimal.
 
-# Le problème du sac à dos
-## Enoncé du problème
+
+### Le problème du sac à dos
 Un problème très similaire est celui du sac-à-dos. Supposons que vous découvriez la caverne d'Ali Baba (et des 40 voleurs), il y a une infinité d'objets de valeur `v1, v2, · · · , vn` mais chaque objet de valeur `vi` a un poids de `pi`. Comment remplir votre sac-à-dos avec le contenu qui rapportera le plus, sachant que votre sac ne supporte qu’un poids `W`?
 
 <figure>
@@ -226,7 +233,7 @@ Un problème très similaire est celui du sac-à-dos. Supposons que vous découv
   <figcaption>illustration du probleme du sac à dos</figcaption></a>
 </figure>
 
-## Algorithme de type dynamique
+## Algorithme de type glouton
 Nous allons chercher à adapter l'algorithme du rendu de monnaie:
 
 *Structure de données:*
@@ -248,11 +255,12 @@ Nous allons chercher à adapter l'algorithme du rendu de monnaie:
 
 
 # Le problème du voyageur du commerce
+## énoncé du problème
 le problème du voyageur de commerce, est un problème d'optimisation qui, étant donné une liste de villes, et des distances entre toutes les paires de villes, détermine un plus court circuit qui visite chaque ville une et une seule fois.
 
 Malgré la simplicité de son énoncé, il s'agit d'un problème d'optimisation pour lequel on ne connait pas d'algorithme permettant de trouver une solution exacte rapidement dans tous les cas. Plus précisément, on ne connait pas d'algorithme en temps polynomial, et sa version décisionnelle (pour une distance D, existe-t-il un chemin plus court que D passant par toutes les villes et qui termine dans la ville de départ ?) est un problème [NP-complet](https://fr.wikipedia.org/wiki/Probl%C3%A8me_NP-complet). Voir annexe pour précisions.
 
-Pour résoudre ce problème, une heuristique gloutonne (programmation dynamique) construit une seule solution, par une suite de décisions définitives sans retour arrière, parmi ces méthodes on cite le plus proche voisin, la plus proche insertion, la plus lointaine insertion et la meilleure insertion. Il n'est pas certain que la méthode donne la meilleure solution.
+Pour résoudre ce problème, une **heuristique gloutonne** construit une seule solution, par une suite de décisions définitives sans retour arrière, parmi ces méthodes on cite le plus proche voisin, la plus proche insertion, la plus lointaine insertion et la meilleure insertion. Il n'est pas certain que la méthode donne la meilleure solution.
 
 La figure suivante aide à la resolution. La solution optimale est celle qui va joindre tous les noeuds du graphe, une seule fois. (Cycle hamiltonien)<br>
 Des solutions possibles, mais non optimales sont celles qui permettent de visiter tous les noeuds une seule fois, mais dont la distance parcourue cumulée n'est peut-être pas la plus courte.
@@ -268,6 +276,46 @@ Mais une illustration plus concrête est celle par exemple du problème de la to
   <img src="../images/tournee.png" width="350px">
   <figcaption>tournée du candidat à la presidentielle</figcaption></a>
 </figure>
+
+On voit que la recherche d'une solution en comparant tous les tours qu'il est mathématiquement possible de faire n'est pas raisonnable. La complexité est trop importante.
+
+## algorithme de recherche locale k-opt
+L'algorithme k-opt est un algorithme de recherche locale proposé par Georges A. Croes en 19581 pour résoudre le problème du voyageur de commerce en améliorant une solution initiale. On représente le tour par un graphe connexe.
+
+à chaque étape, on supprime deux arêtes de la solution courante et on reconnecte les deux tours ainsi formés. Cette méthode permet, entre autres, d'améliorer le coût des solutions en supprimant les arêtes sécantes lorsque l'inégalité triangulaire est respectée (voir figure ci-contre). Sur le schéma de droite, la route {a, b, e, d, c, f, g} est changée en {a, b, c, d, e, f, g} en inversant l'ordre de visite des villes e et c. Il n'est toutefois pas certain que la solution trouvée soit également optimale lorsque l'on additionne ces morceaux de tours.. [source: wikipedia: 2-opt](https://fr.wikipedia.org/wiki/2-opt).
+
+*Plus généralement, lorsqu'on inverse l'ordre de parcours de deux villes, il faut aussi inverser l'ordre de parcours de toutes les villes entre ces deux villes.*
+
+<figure>
+    <img src="../images/2-opt.png" alt="algorithme 2-opt TSP">
+    <figcaption><a href="https://commons.wikimedia.org/w/index.php?curid=8044684">Par PierreSelim — Travail personnel, CC BY-SA 3.0</a></figcaption>
+</figure>
+
+# Résumé
+<div class="essentiel">
+ <div class="entete">
+  L'essentiel à retenir
+ </div>
+ <div class="resume">
+  <h3>Programmation dynamique</h3>
+  L'idée de la programmation dynamique, c'est de <b>gagner en efficacité</b>. On cherche à reduire la complexité temporelle et spatiale.<br>
+  Par exemple, pour la suite de Fibonacci, ou le triangle de Pascal, les coefficients de la suite ou du triangle sont calculés à partir des précédents, ceux de rang inférieur. En stockant ces valeurs dans une liste, on peut les réutiliser sans les calculer à nouveau.
+  <h3>Algorithmes gloutons</h3>
+  Un algorithme glouton dépend du problème que l'on cherche à resoudre. Il n'y a pas d'algorithme glouton universel. Il permet de trouver une solution à un problème d'optimalité. Il part du principe que l'on peut trouver une solution approchante pour un problème NP-complet, en utilisant une stratégie et en faisant des choix. Chacun de ces <b>choix semble être le meilleur sur le moment</b><br>
+  Cette stratégie peut être par exemple: 
+  <ul>
+    <li>pour le rendu de monnaie: de commencer par résoudre le problème d'optimalité pour rendre de plus petites sommes. Puis, on utilise cette solution pour rendre une partie des sommes plus importantes.</li>
+    <li>pour le problème du sac à dos: de commencer par remplir un sac de plus petite contenance. Puis, on utilise ce résultat pour compléter de plus gros sacs.</li>
+</ul>
+On fait des <b>choix à chaque étape</b>, mais selon une stratégie bien définie, et qui <b>ne change plus</b>, en esperant que la somme des solutions intermédiaires va donner finalement une solution optimale. Mais on n'en est pas sûr. Et on ne revient pas en arrière.
+<h3>Algorithme avec recherche locale</h3>
+Pour le problème du TSP (Traveling salesman problem, ou problème du voyageur du commerce), on peut utiliser un algorithme de <i>recherche locale</i>, comme le <i>k-opt</i>. Celui-ci va cette fois remettre en doute les choix précédents.
+<br>
+Les étapes et leurs liens peuvent être représentés par un graphe connexe.
+L'un des algorithmes existant pour la resolution, le 2-opt, va rechercher un minimum local pour un morceau de tour constitué de quelques noeuds. L'algorithme procède par permutation des arêtes entre noeuds. Et il conserve le morceau de tour de plus courte distance.<br>
+Il s'agit d'une succession de choix qui determine la solution. Là aussi, il s'agit d'un <i>algorithme glouton</i>.
+</div>
+</div>
 
 # Annexes
 ## Programmes python du rendu de monnaie
@@ -320,7 +368,7 @@ essais
 {1: 6, 10: 0, 15: 1}
 ``` 
 
-### algorithme dynamique
+### algorithme glouton
 ```python
 import copy
 def renduMonnaieProgDyn(x,c) :
