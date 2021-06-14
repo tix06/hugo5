@@ -121,9 +121,18 @@ for x in range(5):
 x,y : int, valeur de 0 à 4<br>
 b : int, 0 à 9 (intensité lumineuse de la diode en x,y)
 
+## Application: TP évalué
+
+<a href="/pdf/SNT/TP_intro_MB.pdf">
+<figure>
+  <img src="../images/TP.png">
+  <figcaption>Lien vers l'énoncé</figcaption>
+</figure>
+</a>
 
 # Liens
 * Documentation micro:bit [microbit-micropython.readthedocs](https://microbit-micropython.readthedocs.io/en/v1.0.1/)
+* Travaux pratiques: [microbit.org/make-it-code-it](https://microbit.org/projects/make-it-code-it/)
 * Prise en main de la micro:bit avec des exemples [DANE Normandie ac-Caen](https://numerique-sciences-informatiques.discip.ac-caen.fr/IMG/pdf/initiation-mu-microbit.pdf)
 * Une premiere approche de la communication entre microbits : [l'exemple de la luciole](https://microbit-micropython.readthedocs.io/en/v1.0.1/tutorials/radio.html)
 * TP Reseaux : comment faire communiquer [deux cartes microbit par ondes radio](https://www.lossendiere.com/2017/12/10/faire-communiquer-2-microbit-par-onde-radio/)
