@@ -143,9 +143,9 @@ up() : lève le crayon down() : baisse le crayon forward(n) : avance de n left(
 Il faudra organiser ces données et utiliser un langage spécifique pour acceder à ces données.
 Une base de données est constituée:
 de données d&amp;rsquo;un système de gestion de base de données: &amp;hellip;et c&amp;rsquo;est bien plus qu&amp;rsquo;un simple tableur.
-Définitions Exemple:</description></item><item><title>SNT 2nde</title><link>/docs/SNT_2nde/SNT_index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/SNT_2nde/SNT_index/</guid><description>SNT informations Parcours numérique pour SNT proposé par le groupe de formateurs de l&#39;academie de Nice Questionnaire de rentrée :
-Le questionnaire de rentrée est à compléter à l&#39;adresse suivante : Lien Seances de TP du 10 septembre (groupe B) et du 17 septembre (groupe A):
-Recherche documentaire sur la numération au cours des ages : Document à consulter : SNT / codage / histoire de la numeration Fiche réponse à completer Seance du 21 sept</description></item><item><title>SQL</title><link>/docs/NSI/bases/page4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/NSI/bases/page4/</guid><description>langage SQL Structured Query Language, ou langage de requêtes structuré
+Définitions Exemple:</description></item><item><title>SNT 2nde</title><link>/docs/SNT_2nde/SNT_index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/SNT_2nde/SNT_index/</guid><description>SNT informations Parcours numérique pour SNT proposé par le groupe de formateurs de l&#39;academie de Nice Parcours de formation microbit
+programmer la carte microbit microbit et calculatrice TI83 Ed Python Questionnaire de rentrée :
+Le questionnaire de rentrée est à compléter à l&#39;adresse suivante : Lien Seances de TP du 10 septembre (groupe B) et du 17 septembre (groupe A):</description></item><item><title>SQL</title><link>/docs/NSI/bases/page4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/NSI/bases/page4/</guid><description>langage SQL Structured Query Language, ou langage de requêtes structuré
 (cours donné en classe)
 TP Python - SQL: base de données exoplanetes.db Principe Nous allons utiliser un script Python pour nous connecter à la base de données exoplanetes.db et tester quelques requêtes en langage SQLite.
 Nous utiliserons la librairie sqlite3 de Python.
