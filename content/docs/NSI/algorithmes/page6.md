@@ -443,6 +443,14 @@ def sacADosRemise(W, s) :
 
 **Complexité temporelle d’un algorithme**. Il s’agit du nombre d’opérations élémentaires executées par l’algorithme dans un pire cas (une instance en entrée qui demande le plus de calculs). Cette complexité est exprimée en fonction de la “taille de l’entrée”. Par exemple, nous avons vu des algorithmes de tri avec des complexité en O(n2) ou en O(nlogn) avec n la longueur du tableau en entrée.
 
+Pour l'exemple du voyageur du commerce: Le nombre de solutions possibles, où les villes sont toutes parcourues une fois, il y a un nombre TRES élevé d'alternatives:
+
+Supposons un graphe à 50 sommets qui représente la carte de ces villes. Il y a 49! possibiltés. Ce qui fait 6,08.10<sup>62</sup> solutions.
+
+Si l'ordinateur évalue une solution en 0,1 ms, cela fait 6,08.10<sup>58</sup>s, soit 1,9.10<sup>49</sup> siecles de calculs !! (L'Univers a 14 milliards d'années).
+
+
+
 
 ### Problèmes P
 
