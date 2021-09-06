@@ -130,7 +130,7 @@ Une fonction execute une opération sur un ou plusieurs paramètres, et retourne
 ## fonctions programmées
 On peut également créer ses propres fonction. Il faut commencer par le déclarer avec le mot clé `def`, suivi du nom de la fonction, puis des arguments entre parenthèses, et enfin, par 2 points `:`.
 
-Le reste du bloc de la fonction est écrit après l'indentation de 2 ou 4 espaces.
+Le reste du bloc de la fonction doit être écrit après indentation: Mettre 2 espaces avant les instructions.
 
 La fonction finit par le mot clé `return`, suivi de la valeur à retourner.
 
@@ -141,6 +141,8 @@ def bin2int(bit2, bit1, bit0):
   N = bit2 * 4 + bit1 * 2 + bit0 * 1
   return N
 ```
+
+Sortir du bloc de la fonction en appuyant 2 fois sur `Entrée`.
 
 Enfin, pour appeler et utiliser cette fonction, on fera comme précédemment. Il faudra saisir le nom puis les arguments entre parenthèse:
 
