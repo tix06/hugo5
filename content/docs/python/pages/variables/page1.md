@@ -60,7 +60,7 @@ print(citation_python)
 ### le type de « rien » : `None` 
 C'est le type des instrutions. Valeur possible : None
 
-expressions possibles : print(‘hello’), x = a + b, etc 11
+
 
 ## Typage dynamique 
 Python est un langage à typage dynamique, ce qui signifie qu'il n'est pas necessaire de déclarer le type de donnée que représentera une variable (c'est la différence avec le typage *statique*). C'est l'interpréteur qui examine la donnée tout au long de la vie du programme et choisit le type.
