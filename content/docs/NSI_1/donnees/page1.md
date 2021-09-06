@@ -155,7 +155,7 @@ L'intérêt de la base hexadécimale:
 
 ## Capacité de comptage
 ### Nombre de combinaisons
-Le nombre de comninaisons atteignables avec N chiffres, dans la base B, est:
+Le nombre de combinaisons atteignables avec N chiffres, dans la base B, est:
 
 $$B^N$$
 
@@ -310,8 +310,6 @@ Les techniques de stockage mécaniques, par exemple par rubans perforés ont ét
 
 
 ## autres
-autre logiciel de simulation electronique en ligne : https://www.lucidchart.com/pages/fr/exemple/logiciel-schema-electrique
-pdf: activités à completer sur feuille
-page allophysique: compléments et resumés de cours, videos, visuels, flash-cards
-Lien vers le formulaire de rentrée à completer
-Lien vers la machine de Turing pour ajouter 2 nombres
+
+* [flash-cards](/docs/NSI_1/donnees/ex1/)
+* autre logiciel de simulation electronique en ligne : https://www.lucidchart.com/pages/fr/exemple/logiciel-schema-electrique
