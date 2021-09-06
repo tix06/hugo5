@@ -191,8 +191,8 @@ Les mémoires des machines imposent d'utiliser des multiples de l'octet : ko; Mo
 
 > Conversion en bits 
 
-| unité | valeur approchée en bits | 
-|--- | --- | 
+| unité | valeur approchée en bits |
+|--- | --- |
 | kilobits (kb) | 1000 | 
 | megabits (Mb) | 10<sup>6</sup> | 
 | gigabits (Gb) | 10<sup>9</sup> | 
@@ -203,8 +203,8 @@ Les mémoires des machines imposent d'utiliser des multiples de l'octet : ko; Mo
 
 > Conversion en octets
 
-| unité | valeur approchée en octets | 
-|--- | --- | 
+| unité | valeur approchée en octets |
+|--- | --- |
 | kilooctets (ko) | 10<sup>3</sup> | 
 | megaoctets (Mo) | 10<sup>6</sup> | 
 | gigaoctets (Go) | 10<sup>9</sup> | 
