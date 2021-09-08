@@ -9,7 +9,7 @@ headless: false
 - [**NSI Term**]({{< relref "/docs/NSI/NSI_index" >}})  
 
 
-- [**Python avancé**]({{< relref "/docs/python/index_python" >}})
+
 
 
 - [**Physique Chimie 2nde**]({{< relref "/docs/PC_2nde/PC_index" >}})
@@ -17,6 +17,10 @@ headless: false
 - [**Physique 1ere Spé**]({{< relref "/docs/PC_1ere/PC_index" >}})  
 	
 - [**ESF**]({{< relref "/docs/esf/esf_index" >}})
+
+- [**Python avancé**]({{< relref "/docs/python/index_python" >}})
+
+- [**Techno**]({{< relref "/docs/techno/index_microcontroleurs" >}})
 
 
 - [**Posts**]({{< relref "/posts" >}})

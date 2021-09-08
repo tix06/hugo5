@@ -105,6 +105,22 @@ La solution fille et la solution mère ont des concentrations qui montrent un *�
   <figcaption>Dilution à l'aide d'une pipette et fiole jaugée</figcaption>
 </figure>
 
+# Autres domaines
+On a vu que l'utilisation d'une echelle multiplicative est bien adaptée au denombrement, ou aux distances dans l'Univers.
+
+En sciences physiques, on utilise egalement des echelles multiplicatives:
+
+* pour représenter les domaines d'ondes lumineuses, avec un axe multiplicatif en frequences ou longueurs d'ondes
+* pour représenter les domaines d'ondes sonores
+* pour représenter les niveaux sonores (dB)
+* pour l'echelle des pH
+* ...
+
+L'utilisation d'une echelle multiplicative amène naturellement à utiliser les outils mathématiques:
+
+* la notation scientifique
+* la notation en ordre de grandeur
+
 # Liens et bibliographie
 [^1]: Problème issu du livre: Le théorème du parapluie, Mickaël Launay, éd. Flammarion (auteur egalement de la chaine [MicMaths](https://www.youtube.com/watch?v=Fw06FP62Rkc))
 

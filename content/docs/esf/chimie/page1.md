@@ -37,7 +37,7 @@ $$n = \tfrac{66}{12}$$
 $$n=5,5 \quad douzaines$$
 
 ### n moles
-Un échantillon de N = 10<sub>21</sub> atomes contient un nombre n de mol, tel que : 
+Un échantillon de N = 10<sup>21</sup> atomes contient un nombre n de mol, tel que : 
 
 $$n = \tfrac{N}{N_A}$$
 
