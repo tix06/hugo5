@@ -335,11 +335,18 @@ h1{border-bottom:solid 1px #ccc;}
     display:none;
 }
 
-#toggle:checked ~ .control-me
+#toggle:checked ~ .control-me, 
+#bloc1:checked ~ .control-me,
+#bloc2:checked ~ .control-me,
+#bloc3:checked ~ .control-me,
+#bloc4:checked ~ .control-me,
+#bloc5:checked ~ .control-me
 {
     display:block;
     
 }
+
+
 
 label {
     
@@ -351,7 +358,18 @@ label {
  user-select: none; /* Propriété standard */
 }
 
+.derouler{
+  /* pour le message (cliquer pour derouler) */
+  font-size: 0.5em;
+}
+
+label:hover {
+  color: #789;
+  font-size: 1.1em;
+  }
+
 .visually-hidden {
+    /* pour cacher la case à cocher */
     position: absolute;
     left: -100vw;
     

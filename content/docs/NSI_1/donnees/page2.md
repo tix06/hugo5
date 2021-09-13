@@ -158,51 +158,6 @@ bin2int(1,1,1)
 
 *Remarque:* La page suivante montre comment on peut créer une fonction avec un nombre de paramètres à priori non connu. Cela permettra de réaliser la conversion avec un nombre de bits illimité dans le nombre binaire à convertir. [cours Python - Pierre Giraud](https://www.pierre-giraud.com/python-apprendre-programmer-cours/parametre-argument-fonction/)
 
-<!--
-### Variables
-**Variables**: Les langages de programmation permettent de stocker des données afin de pouvoir les réutiliser. Cela peut être un nom, un texte, une date, un identifiant... En python, on assigne une valeur à une variable en utilisant le symbole `=`.
-
-> *Exemple: `mon_nom = Carl`* stocke `Carl` dans la variable `mon_nom`.
-
-Lorsque l'on veut afficher le contenu d'une variable, on met cette variable SANS les guillemets, en argument de la fonction `print` (entre les parenthèses):
-
-```
-print(mon_nom)
-```
-
-Lorsque le programme arrive à cette instruction, il affiche:
-
-`Carl`
-
-*Remarque:* On peut choisir toute chaine de caractère pour nom de variable, de la simple lettre jusqu'à la longue chaine de caractères (sans espaces):
-
-```
-n = 2020
-la_2e_meilleure_annee_de_ma_vie = 2020
-```
+# Suite du TP [python n°2](/docs/NSI_1/donnees/page3/)
 
 
-Les opérations vues plus haut ne peuvent pas mélanger les types:
-
-*Exemple:* Si on essaie d'ajouter une chaine de caractères avec un entier:
-
-```python
-message = 'Bienvenue en ' + 2021
-```
-
-<figure>
-  <img src="../images/spyder2.png" alt="TypeError en console spyder">
-  <figcaption>TypeError en console</figcaption>
-</figure>
-
-cela affiche un message d'erreur dans la console: Le *Traceback* vous permet de remonter jusqu'à la ligne où se situe l'erreur. Le type d'erreur, en rouge (ici, c'est un *TypeError*) ainsi qu'un message explicite, en blanc, vous permet de repérer et corriger l'erreur: L'interpréteur ne peut pas *ajouter* une chaine de caractère avec un entier.
-
-Une solution, pour afficher le bon message, serait de remplacer `2021` par `"2021"`, entre guillemets, afin de le convertir en une autre chaine de caractères.
-
-> **Testez le**. En console, essayez de faire: 
-
-```python
-message = 'Bienvenue en ' + 2021
-print(message)
-```
--->
