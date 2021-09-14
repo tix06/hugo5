@@ -10,51 +10,51 @@ Title: TP2 bases en python
     <div class="control-me">
       <p>On a vu dans le TP précédent qu&rsquo;il était possible de créer des objets avec la console python, par exemple des chaines de caractère, ou valeurs numériques.</p>
 
-      <p>Mais si on veut les réutiliser, il va falloir les stocker dans des variables.</p>
+<p>Mais si on veut les réutiliser, il va falloir les stocker dans des variables.</p>
 
-      <h2 id="nommer-une-variable">Nommer une variable</h2>
+<h2 id="nommer-une-variable">Nommer une variable</h2>
 
-      <p><strong>Variables</strong>: Une variable est un espace de stockage qui porte un nom. En python, on assigne une valeur à une variable en utilisant le symbole <code>=</code>.</p>
+<p><strong>Variables</strong>: Une variable est un espace de stockage qui porte un nom. En python, on assigne une valeur à une variable en utilisant le symbole <code>=</code>.</p>
 
-      <p><em>Exemple:</em> L&rsquo;instruction suivante stocke <code>Carl</code> dans la variable <code>mon_nom</code>.</p>
-      <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">mon_nom</span> <span style="color:#f92672">=</span> <span style="color:#111">Carl</span></code></pre></div>
-      <p>Lorsque l&rsquo;on veut afficher le contenu d&rsquo;une variable, on met cette variable SANS les guillemets, en argument de la fonction <code>print</code> (entre les parenthèses):</p>
-      <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#00a8c8">print</span><span style="color:#111">(</span><span style="color:#111">mon_nom</span><span style="color:#111">)</span></code></pre></div>
-      <p>Lorsque le programme arrive à cette instruction, il affiche:</p>
+<p><em>Exemple:</em> L&rsquo;instruction suivante stocke <code>Carl</code> dans la variable <code>mon_nom</code>.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">mon_nom</span> <span style="color:#f92672">=</span> <span style="color:#111">Carl</span></code></pre></div>
+<p>Lorsque l&rsquo;on veut afficher le contenu d&rsquo;une variable, on met cette variable SANS les guillemets, en argument de la fonction <code>print</code> (entre les parenthèses):</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#00a8c8">print</span><span style="color:#111">(</span><span style="color:#111">mon_nom</span><span style="color:#111">)</span></code></pre></div>
+<p>Lorsque le programme arrive à cette instruction, il affiche:</p>
 
-      <p><code>Carl</code></p>
+<p><code>Carl</code></p>
 
-      <p><em>Remarque sur le nommage:</em> Le nom d&rsquo;une variable contient des lettres et des chiffres. On peut choisir toute chaine de caractère pour nom de variable, de la simple lettre jusqu&rsquo;à la longue chaine de caractères (sans espaces, mais les <em>underscores sont autorisés</em>). Ne pas commencer par un chiffre:</p>
+<p><em>Remarque sur le nommage:</em> Le nom d&rsquo;une variable contient des lettres et des chiffres. On peut choisir toute chaine de caractère pour nom de variable, de la simple lettre jusqu&rsquo;à la longue chaine de caractères (sans espaces, mais les <em>underscores sont autorisés</em>). Ne pas commencer par un chiffre:</p>
 
-      <pre><code>n = 2020
-      la_2e_meilleure_annee_de_ma_vie = 2020
-      </code></pre>
+<pre><code>n = 2020
+la_2e_meilleure_annee_de_ma_vie = 2020
+</code></pre>
 
-      <h2 id="localiser-l-emplacement-mémoire">localiser l&rsquo;emplacement mémoire</h2>
+<h2 id="localiser-l-emplacement-mémoire">localiser l&rsquo;emplacement mémoire</h2>
 
-      <p>Pour localiser l&rsquo;emplacement mémoire d&rsquo;une variable, utiliser la fonction <em>native</em> <code>id</code>.</p>
+<p>Pour localiser l&rsquo;emplacement mémoire d&rsquo;une variable, utiliser la fonction <em>native</em> <code>id</code>.</p>
 
-      <p>Utiliser un editeur python pour saisir les lignes suivantes:</p>
-      <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
-      <span style="color:#111">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
-      <span style="color:#00a8c8">print</span><span style="color:#111">(</span><span style="color:#111">id</span><span style="color:#111">(</span><span style="color:#111">a</span><span style="color:#111">))</span>
-      <span style="color:#00a8c8">print</span><span style="color:#111">(</span><span style="color:#111">id</span><span style="color:#111">(</span><span style="color:#111">b</span><span style="color:#111">))</span></code></pre></div>
-      <p>On peut vérifier que les 2 variables, a et b, pointent vers le même objet, l&rsquo;entier 5, grace à l&rsquo;adresse mémoire qui est identique.</p>
+<p>Utiliser un editeur python pour saisir les lignes suivantes:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+<span style="color:#111">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+<span style="color:#00a8c8">print</span><span style="color:#111">(</span><span style="color:#111">id</span><span style="color:#111">(</span><span style="color:#111">a</span><span style="color:#111">))</span>
+<span style="color:#00a8c8">print</span><span style="color:#111">(</span><span style="color:#111">id</span><span style="color:#111">(</span><span style="color:#111">b</span><span style="color:#111">))</span></code></pre></div>
+<p>On peut vérifier que les 2 variables, a et b, pointent vers le même objet, l&rsquo;entier 5, grace à l&rsquo;adresse mémoire qui est identique.</p>
 
-      <p>Par contre, si vous modifiez le contenu de l&rsquo;une de ces variables, vous devriez voir que l&rsquo;adresse n&rsquo;est plus la même. (à tester vous-même).</p>
+<p>Par contre, si vous modifiez le contenu de l&rsquo;une de ces variables, vous devriez voir que l&rsquo;adresse n&rsquo;est plus la même. (à tester vous-même).</p>
 
-      <h2 id="affectation-multiple">Affectation multiple</h2>
+<h2 id="affectation-multiple">Affectation multiple</h2>
 
-      <p>Il existe plusieurs façons en python d&rsquo;affecter un objet:</p>
-      <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
-      <span style="color:#111">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span></code></pre></div>
-      <p>Ces lignes sont équivalents à l&rsquo;affectation multiple:</p>
-      <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">a</span><span style="color:#111">,</span> <span style="color:#111">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span><span style="color:#111">,</span> <span style="color:#ae81ff">10</span></code></pre></div>
+<p>Il existe plusieurs façons en python d&rsquo;affecter un objet:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+<span style="color:#111">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span></code></pre></div>
+<p>Ces lignes sont équivalents à l&rsquo;affectation multiple:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">a</span><span style="color:#111">,</span> <span style="color:#111">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span><span style="color:#111">,</span> <span style="color:#ae81ff">10</span></code></pre></div>
+
+
+
       
-
-
-      
-    </div>
+</div>
 </div>
 
 <div><h1>
@@ -83,15 +83,15 @@ Title: TP2 bases en python
 
 <h2 id="opérateurs-and-or">Opérateurs AND, OR</h2>
 
-<p>Plusieurs expressions logiques peuvent être combinées à l&rsquo;aide des opérateurs AND, OR.</p>
+<p>Plusieurs expressions logiques peuvent être combinées à l&rsquo;aide des opérateurs <code>and, or</code>.</p>
 
-<p>Lorsque 2 expressions logiques sont reliées avec AND, cela renvoie True si et seulement si chacune des 2 expressions est evaluée à <code>True</code>.</p>
+<p>Lorsque 2 expressions logiques sont reliées avec <code>and</code>, cela renvoie True si et seulement si chacune des 2 expressions est evaluée à <code>True</code>.</p>
 
-<p>Avec OR, il suffit que l&rsquo;une d&rsquo;elles soit évaluée à <code>True</code>.</p>
+<p>Avec <code>or</code>, il suffit que l&rsquo;une d&rsquo;elles soit évaluée à <code>True</code>.</p>
 
 <p><em>Tester l&rsquo;exemple suivant:</em></p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">a</span><span style="color:#111">,</span> <span style="color:#111">b</span><span style="color:#111">,</span> <span style="color:#111">c</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span><span style="color:#111">,</span> <span style="color:#ae81ff">10</span><span style="color:#111">,</span> <span style="color:#ae81ff">10</span>
-<span style="color:#111">a</span> <span style="color:#f92672">==</span> <span style="color:#111">b</span> <span style="color:#111">OR</span> <span style="color:#111">b</span> <span style="color:#f92672">==</span> <span style="color:#111">c</span></code></pre></div>
+<span style="color:#111">a</span> <span style="color:#f92672">==</span> <span style="color:#111">b</span> <span style="color:#111">or</span> <span style="color:#111">b</span> <span style="color:#f92672">==</span> <span style="color:#111">c</span></code></pre></div>
  
 
 </div>

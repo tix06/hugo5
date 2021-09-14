@@ -93,17 +93,17 @@ Ces expressions renvoient `True` ou `False`. Ce sont des opérations logiques.
 **Question** Quels sont les opérateurs: *supérieur à, inferieur à, égal à, différent de, supérieur ou égal à*?
 
 ## Opérateurs AND, OR
-Plusieurs expressions logiques peuvent être combinées à l'aide des opérateurs AND, OR. 
+Plusieurs expressions logiques peuvent être combinées à l'aide des opérateurs `and, or`. 
 
-Lorsque 2 expressions logiques sont reliées avec AND, cela renvoie True si et seulement si chacune des 2 expressions est evaluée à `True`.
+Lorsque 2 expressions logiques sont reliées avec `and`, cela renvoie True si et seulement si chacune des 2 expressions est evaluée à `True`.
 
-Avec OR, il suffit que l'une d'elles soit évaluée à `True`.
+Avec `or`, il suffit que l'une d'elles soit évaluée à `True`.
 
 *Tester l'exemple suivant:*
 
 ```python
 a, b, c = 5, 10, 10
-a == b OR b == c
+a == b or b == c
 ```
 
 # Boucle bornée
