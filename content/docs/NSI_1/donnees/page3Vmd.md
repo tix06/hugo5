@@ -220,3 +220,32 @@ Pour la rentrée 2021, les règles sanitaires suivantes s'appliquent dans les é
 *les élèves non-vaccinés subiront des restrictions plus importantes que les autres. Au premier cas de Covid identifié dans une classe, les cas-contacts non-vaccinés devront s’isoler pendant 7 jours et suivre les cours à distance. Les élèves vaccinés qui seraient cas-contact pourront, eux, venir en classe.*
 
 Réaliser un programme qui indique ce que l'élève doit faire, selon sa situation. Les variables utilisées auront pour valeur 0 ou 1. Par exemple, on pourra utiliser une variable appelée `cas_contact` qui vaudrait 1 si l'élève est cas contact, 0 sinon.
+
+# Mini projet
+## Partir du fichier exemple *discotheque.py*
+* Télécharger le programme suivant sur le disque dur: [discotheque.py](/scripts/tkinter_disco.zip)
+* Déplacer le fichier dans un dossier de vos *documents* que vous nommerez de manière explicite (par exemple `/python`)
+* dezipper le fichier
+* Ouvrir l'IDLE python présent dans la distribution *Winpython*
+* Lancer le programme.
+* Adapter le script du programme pour les 2 exercices précédents. Il s'agit d'une interface graphique TKinter, qui permettra d'illustrer les exercices sur l'entrée en boite de nuit, ainsi que celui du covid.
+
+## IDLE python
+L'IDLE python fait partie de l'environnement *Winpython*. L'interêt de cet IDE est sa bonne gestion des fenêtre graphiques que vous allez ouvrir et fermer.
+
+Pour le lancer, aller dans le menu Démarrer du PC, puis choisir IDE python.
+
+Seule la fenêtre d'edition s'ouvre alors. Vous pouvez y taper ou coller votre script python. Pour executer : Touche **F5**.
+
+Deux autres fenêtres s'ouvrent alors: 
+
+* la fenêtre graphique (turtle, Tkinter)
+* la console interactive (le shell).
+
+Vous pouvez alors organiser vos fenêtres comme sur l'image suivante.
+
+<figure>
+  <img src="../images/idlePython.png">
+  <figcaption>A gauche, l'editeur python, à droite les fenêtres graphique et le shell</figcaption>
+</figure>
+

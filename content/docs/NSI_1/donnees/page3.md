@@ -222,6 +222,51 @@ la_2e_meilleure_annee_de_ma_vie = 2020
 </div>
 </div>
 
+..(suite)..
+
+<div><h1>
+    <label for="bloc6">Mini projet</label><span class="derouler"> <i>(cliquer pour derouler)</i></span></h1>
+    
+    <input type="checkbox" id="bloc6" class="visually-hidden">
+
+    <div class="control-me">
+
+<h2 id="partir-du-fichier-exemple-discotheque-py">Partir du fichier exemple <em>discotheque.py</em></h2>
+
+<ul>
+<li>Télécharger le programme suivant sur le disque dur: <a href="/scripts/tkinter_disco.zip">discotheque.py</a></li>
+<li>Déplacer le fichier dans un dossier de vos <em>documents</em> que vous nommerez de manière explicite (par exemple <code>/python</code>)</li>
+<li>dezipper le fichier</li>
+<li>Ouvrir l&rsquo;IDLE python présent dans la distribution <em>Winpython</em></li>
+<li>Lancer le programme.</li>
+<li>Adapter le script du programme pour les 2 exercices précédents. Il s&rsquo;agit d&rsquo;une interface graphique TKinter, qui permettra d&rsquo;illustrer les exercices sur l&rsquo;entrée en boite de nuit, ainsi que celui du covid.</li>
+</ul>
+
+<h2 id="idle-python">IDLE python</h2>
+
+<p>L&rsquo;IDLE python fait partie de l&rsquo;environnement <em>Winpython</em>. L&rsquo;interêt de cet IDE est sa bonne gestion des fenêtre graphiques que vous allez ouvrir et fermer.</p>
+
+<p>Pour le lancer, aller dans le menu Démarrer du PC, puis choisir IDE python.</p>
+
+<p>Seule la fenêtre d&rsquo;edition s&rsquo;ouvre alors. Vous pouvez y taper ou coller votre script python. Pour executer : Touche <strong>F5</strong>.</p>
+
+<p>Deux autres fenêtres s&rsquo;ouvrent alors:</p>
+
+<ul>
+<li>la fenêtre graphique (turtle, Tkinter)</li>
+<li>la console interactive (le shell).</li>
+</ul>
+
+<p>Vous pouvez alors organiser vos fenêtres comme sur l&rsquo;image suivante.</p>
+
+<figure>
+  <img src="../images/idlePython.png">
+  <figcaption>A gauche, l'editeur python, à droite les fenêtres graphique et le shell</figcaption>
+</figure>
+</ul>
+</div>
+</div>
+
 
 
 
