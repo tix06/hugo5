@@ -47,7 +47,25 @@ Soit l'entier signé - 127 (1000 0001) que l'on additionne à 127 (0111 1111):
 
 # Représentation des nombres décimaux
 ## nombres fractionnaires
+Un nombre avec virgule, exprimé en base décimale peut être représenté comme une somme de puissances de 10:
 
+<figure>
+  <img src="../images/virg10.png">
+  <figcaption>écriture d'un nombre à virgule en base 10</figcaption>
+</figure>
+
+* Les puissances de 10 positives pour la partie entière (à gauche de la virgule)
+* les puissances de 10 negatives pour la partie après la virgule
+
+En base 2, le nombre peut aussi s'écrire avec une virgule, et être lu comme une somme en puissance de 2:
+
+<figure>
+  <img src="../images/virg2.png">
+  <figcaption>écriture du même nombre en base 2</figcaption>
+</figure>
+
+* Les puissances de 2 positives pour la partie entière (à gauche de la virgule)
+* les puissances de 2 negatives pour la partie après la virgule
 
 Pour représenter des nombres avec une partie fractionnaire, décomposer la partie fractionnaire en puissances *inverses* de 2:
 
@@ -76,10 +94,59 @@ $$\tfrac{1}{16} + \tfrac{1}{32} + \tfrac{1}{256} = 0.09765625$$
 
 Ce qui est très éloigné de la réalité...
 
-## codage en virgule fixe (hachette p167)
+Il existe une méthode systématique pour déterminer les bits de la partie fractionnaire. Voir le Bordas p18, §5.
+
+## codage en virgule fixe 
+Une première idée pourrait être d'utiliser 2 octets: 
+
+* 1 octet pour la partie entière. Si le nombre est signé, cela veut dire que le nombre est compris, pour sa partie entière entre -128 et 127.
+* 1 octet pour la partie décimale. Cette partie est alors codée sur 256 valeurs, selon la méthode vue plus haut). L'écart avec la valeur vraie peut être trop important si on veut une précision raisonnable (voir la cas du 0.1 vu plus haut, qui est approximé à 0.09765625).
+
+Ces approximations sont la source d'erreurs de calcul en python:
+
+<figure>
+  <img src="../images/approxi.png">
+  <figcaption>somme de 0.1 + 0.2 en python</figcaption>
+</figure>
 
 ## codage en virgule flottante
+Les nombres relatifs et avec une partie décimale sont représentés sur ordinateur avec une virgule flottante, selon la norme IEEE 754.
+
+Ce codage revient à représenter le nombre sous la forme:
+
+$$+/-1,M.2^E$$
+
+Cette forme rappelle ainsi l'écriture en notation scientifique.
+
+**M** s’appelle la **mantisse** du nombre et **E** l’**exposant**. Comme la mantisse commence toujours par une partie entière égale à 1, on ne l’écrit pas et on n’exprime que la partie fractionnaire, M
+
+Selon la précision, dite *simple* ou *double*, le nombre M est constitué de 23 bits ou bien de 55 bits. 
+
+| precision | bit de signe | E | M |
+| --- | --- | --- | --- |
+| simple | 1 | 8 | 23 |
+| double | 1 | 8 | 55 |
+
+
+Selon cette norme IEEE 754, en 32 bits (simple precision):
+
+* Le premier bit est celui du signe
+* les 8 bits suivants sont les bits de l'exposant E, auquel on a ajouté 127. Ce qui permet de coder l'exposant avec des valeurs comprises dans l'intervalle [-127; 128]
+* les bits restants sont ceux de M
+
+*Remarque :* En raison du nombre limité de bits de la représentation, les calculs en virgule flottante ne peuvent pas atteindre une précision infinie.
+
+*Exemple :* Soit la nombre 500 à coder en IEEE 754: 
+
+$$500=1,953125×2^8 =(1+2^{−1} +2^{−2} +2^{−3} +2^{−4} +2^{−6} )×2^8$$
+
+Rappelez vous que l'on additionne 127 aux bits de l'exposant E. Cela donne alors notation binaire:
+
+$$0~10000111~11110100000000000000000$$
+
+On a un bit de signe égal à 0, un exposant égal à 8 + 127 et les premiers bits de la pseudo-mantisse qui exprime 0,953125.
 
 # Liens
 * [http://mpechaud.fr/scripts/representationnombres/rep.html](http://mpechaud.fr/scripts/representationnombres/rep.html)
 * [https://irem.univ-reunion.fr/spip.php?article692](https://irem.univ-reunion.fr/spip.php?article692)
+* [binary convert](http://www.binaryconvert.com/index.html)

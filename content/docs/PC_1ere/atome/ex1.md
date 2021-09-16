@@ -73,7 +73,7 @@ Title : mol exercices
       <ol>
         <li>C = 1,02.10<sup>-2</sup>mol.L<sup>-1</sup></li>
         <li>n = 0,050 mol</li>
-        <li>V = 4,9.10<sup>-3</sup>L</li>
+        <li>V = 4,9L</li>
 
       </ol>
     </div>
