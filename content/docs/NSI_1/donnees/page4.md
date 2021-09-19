@@ -110,6 +110,7 @@ Ces approximations sont la source d'erreurs de calcul en python:
 </figure>
 
 ## codage en virgule flottante
+### Principe
 Les nombres relatifs et avec une partie décimale sont représentés sur ordinateur avec une virgule flottante, selon la norme IEEE 754.
 
 Ce codage revient à représenter le nombre sous la forme:
@@ -134,9 +135,11 @@ Selon cette norme IEEE 754, en 32 bits (simple precision):
 * les 8 bits suivants sont les bits de l'exposant E, auquel on a ajouté 127. Ce qui permet de coder l'exposant avec des valeurs comprises dans l'intervalle [-127; 128]
 * les bits restants sont ceux de M
 
+<img src="../images/mantisse823bits.png"> 
+
 *Remarque :* En raison du nombre limité de bits de la représentation, les calculs en virgule flottante ne peuvent pas atteindre une précision infinie.
 
-*Exemple :* Soit la nombre 500 à coder en IEEE 754: 
+*Application :* Soit la nombre 500 à coder en IEEE 754: 
 
 $$500=1,953125×2^8 =(1+2^{−1} +2^{−2} +2^{−3} +2^{−4} +2^{−6} )×2^8$$
 
@@ -146,7 +149,60 @@ $$0~10000111~11110100000000000000000$$
 
 On a un bit de signe égal à 0, un exposant égal à 8 + 127 et les premiers bits de la pseudo-mantisse qui exprime 0,953125.
 
+### Exercice
+Pour l'exercice nous inventons une nouvelle norme: la IEEE 754 à 5 bits.
+Avec 5 bits, nous pouvons coder 25 nombres flottants. La precision est alors de 2 chiffres significatifs (taille en bits de la mantisse). Le format binaire est ainsi: <img src="../images/mantisse22bits.png"> 
+
+Voici la liste des 16 positifs :
+
+<figure>
+  <img src="../images/float5bits.png">
+</figure>
+
+Supposons que l'exposant se calcule d'après E selon la règle suivante:
+
+$$exposant = E - 1$$
+
+> Question: écrire les nombres binaires correspondants à ces 16 positifs.
+
+<br>
+Rappelez vous que le nombre s'écrit sous la forme:
+
+$$+/-1,M.2^E$$
+<br>
+
+<div><h1>
+    <label for="bloc1">Correction</label><span class="derouler"> <i>(cliquer pour derouler)</i></span></h1>
+    
+    <input type="checkbox" id="bloc1" class="visually-hidden">
+
+    <div class="control-me">
+
+<table>
+  <tr><td>binaire</td><td>E</td><td>exposant</td><td>M</td><td>flottant représenté</td></tr>
+  <tr><td>0 00 00 </td>
+      <td>00</td>
+      <td>-1</td>
+      <td>00</td>
+      <td>1,0.2<sup>-1</sup> = 0,1<sub>2</sub> = 0,5</td></tr>
+    <tr><td>0 00 01 </td>
+      <td>00</td>
+      <td>-1</td>
+      <td>01</td>
+      <td>1,01.2<sup>-1</sup> = 0,101<sub>2</sub> = 1/2 + 1/8 = 0,625</td></tr>
+
+    <tr><td>...</td></tr>
+</table>
+
+</div>
+</div>
+
+<br>
+
+> Attention, il faut donc bien distinguer un nombre de sa représentation.
+
 # Liens
 * [http://mpechaud.fr/scripts/representationnombres/rep.html](http://mpechaud.fr/scripts/representationnombres/rep.html)
 * [https://irem.univ-reunion.fr/spip.php?article692](https://irem.univ-reunion.fr/spip.php?article692)
 * [binary convert](http://www.binaryconvert.com/index.html)
+* [https://fr.wikipedia.org/wiki/IEEE_754](https://fr.wikipedia.org/wiki/IEEE_754)
