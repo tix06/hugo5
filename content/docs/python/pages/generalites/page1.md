@@ -42,22 +42,87 @@ Python est généralement appelé un langage interprété, cependant, il combine
 
 Le PVM est un interpréteur qui exécute le bytecode et fait partie du système Python. Le bytecode est indépendant de la plate-forme, mais PVM est spécifique à la machine cible. L'implémentation par défaut du langage de programmation Python est CPython qui est écrit dans le langage de programmation C. (il existe d'autres implementations). CPython compile le code source python dans le bytecode, et ce bytecode est ensuite exécuté puis desassemblé par la machine virtuelle CPython.
 
-# Bytecode et norme IEEE 754
+# Bytecode
 On peut verifier comment sont codés les nombres dans la machine en lisant le Bytecode.<br>
 Le **module struct** permet la conversion entre valeurs typées de python, et données binaires du C, le bytecode. C'est ce bytecode qui est passé à la machine après compilation lors de l'execution.
 
-## CONVERSION PYTHON -> C
-On doit alors spécifier le format de ces valeurs, avant d'en demander la conversion.
+## Reconstruction d'un nombre à partir de son complément à 2
+On doit alors spécifier le format de ces valeurs, avant d'en demander la conversion en bytecode.
 
-`conversion = struct.pack('!f', num)`
+Pour faire cela, on importe la librairie `struct` avec `import struct`.
 
-ce qui signifie que, dans la variable `num` se trouve un float. Il sera alors codé en C-bytes selon la norme IEEE 754.
+La fonction `int_to_b` permet de convertir un entier signé en Bytecode, puis de retourner la sequence binaire correspondante. 
+
+```python
+import struct
+def int_to_b(num):
+    bits, = struct.unpack('!I', struct.pack('!i', num))
+    return bin(bits)
+```
+
+Testons cette fonction avec le nombre -129:
+
+```python
+>>> int_to_b(-129)
+'0b11111111111111111111111101111111'
+```
+
+Rappelez vous: pour coder un entier signé, il faut:
+
+
+* inverser tous les bits (chercher le complément à 1)
+* ajouter 1 au nombre binaire pris en valeur absolue
+
+Donc pour retrouver la valeur absolue en binaire, il faudra :
+
+* soustraire 1
+* déterminer le complement à 1 (inverser tous les bits)
+
+'0b11111111111111111111111101111111' <br>-> (-1) <br>'0b11111111111111111111111101111110'
+<br>
+puis inversion de tous les bits:<br>
+N = '0b11111111111111111111111101111110' 
+<br>
+`inverse_bits(N) = ?` 
+
+Il pourra être utile de programmer une fonction `inverse_bits` pour eviter de faire les 32 bits "à la main".
+
+Le debut de cette fonction pourrait être:
+
+```python
+def inverse_bits(N):
+    inverse = ''
+    for bit in N:
+        if bit == '0':
+        ...
+```
+
+Puis pour finir:
+
+```python
+>>> N = '11111111111111111111111101111110'
+>>> int(inverse_bits(N),2)
+129
+```
+
+### à vous de jouer
+Utiliser les fonctions `float_to_bin` puis `int_to_bin` pour obtenir les représentations de -126 dans les 2 représentations vues ici: selon la norme IEEE 754 puis selon le codage à complement à 2.
+
+Verifier alors que le nombre peut être reconstruit selon ces 2 normes, et que l'on retrouve bien -126.
+
+### CONVERSION PYTHON -> C
+S'il s'agit d'un flottant à convertir en bytecode, faire:
+
+`struct.pack('!f', num)`
+
+On précise ici que la variable `num` est de type float. `num` sera alors codé en C-bytes selon la norme IEEE 754.
 
 *Exemple:* en console, on demande le bytecode qui code le flottant 500.0
 
 ```python
->>> struct.pack('!f', 500.0)
-b'C\xfa\x00\x00' 
+import struct
+>>> struct.pack('!f', 129.)
+b'C\x01\x00\x00'
 ```
 
 Les options sont:
@@ -67,12 +132,19 @@ Les options sont:
 * f : float
 
 
-## CONVERSION C -> PYTHON
+### CONVERSION C -> PYTHON
 L'opération inverse s'effectue ainsi :
 
-`bits, = struct.unpack('!I', conversion)`
+`bits,=struct.unpack('!I', b'C\x01\x00\x00')`
 
-La virgule après bits doit bien être écrite afin de que bits soit mis en format numerique. Cela permet de traduire le Bytecode `conversion` en une serie de bits.
+La virgule après bits doit bien être écrite afin de que bits soit mis en format numerique. Cela permet de traduire le Bytecode `b'C\x01\x00\x00'` en une serie de bits.
+
+Si on veut afficher la série de bits:
+
+```python
+bin(bits)
+'0b1000011000000010000000000000000'
+```
 
 ## Programme complet: python -> C -> python
 La fonction `float_to_b` permet de convertir un flottant en Bytecode, puis de retourner la sequence binaire correspondante. Celle-ci suit la norme IEEE 754, en simple precision.
@@ -94,7 +166,7 @@ On peut alors tester avec le nombre -129:
 '0b11000011000000010000000000000000'
 ```  
 
-### Reconstruction du nombre à partir de la représentation en ieee 754
+## Reconstruction d'un nombre à partir de la représentation en ieee 754
 
 On peut alors vérifier si la reconstruction du nombre -129 est possible à partir de ce binaire: Le nombre s'écrit:
 
@@ -131,58 +203,7 @@ $$-1 \times 10000001$$
 
 Cette fois, on peut evaluer ce binaire, et il vaut: $$-127$$
 
-### Reconstruction du nombre à partir de son complément à 2
-La fonction `int_to_b` permet de convertir un entier signé en Bytecode, puis de retourner la sequence binaire correspondante. 
 
-```python
-
-def int_to_b(num):
-    bits, = struct.unpack('!I', struct.pack('!i', num))
-    return bin(bits)
-```
-
-Testons cette fonction avec, à nouveau, le nombre -129:
-
-```python
->>> int_to_b(-129)
-'0b11111111111111111111111101111111'
-```
-
-Rappelez vous: pour coder un entier signé, il faut:
-
-* ajouter 1 au nombre binaire pris en valeur absolue
-* inverser tous les bits
-
-Donc pour retrouver la valeur absolue en binaire, il faudra faire l'inverse:
-
-'0b11111111111111111111111101111111' -> (-1) '0b11111111111111111111111101111110'
-puis inversion de tous les bits:
-'0b11111111111111111111111101111110' -> `inverse_bits(N) = ?` 
-
-Il pourra être utile de programmer une fonction `inverse_bits` pour eviter de faire les 32 bits "à la main".
-
-Le debut de cette fonction pourrait être:
-
-```python
-def inverse_bits(N):
-    inverse = ''
-    for bit in N:
-        if bit == '0':
-        ...
-```
-
-Puis pour finir:
-
-```python
->>> N = '11111111111111111111111101111110'
->>> int(inverse_bits(N),2)
-129
-```
-
-### à vous de jouer
-Utiliser les fonctions `float_to_bin` puis `int_to_bin` pour obtenir les représentations de -126 dans les 2 représentations vues ici: selon la norme IEEE 754 puis selon le codage à complement à 2.
-
-Verifier alors que le nombre peut être reconstruit selon ces 2 normes, et que l'on retrouve bien -126.
 
 # Liens
 

@@ -72,7 +72,7 @@ Pour représenter des nombres avec une partie fractionnaire, décomposer la part
 | 2<sup>-1</sup> | 2<sup>-2</sup> | 2<sup>-3</sup> | 2<sup>-4</sup> | 2<sup>-5</sup> | 2<sup>-6</sup> | 2<sup>-7</sup> | 2<sup>-8</sup> |
 | --- |  --- | --- | --- | --- | --- | --- | --- |
 | 1/2 | 1/4 | 1/8 | 1/16 | 1/32 | 1/64 | 1/128 | 1/256 |
-| 0,5 | 0,25 | 0,125 | 0,0625 | 0,03125 | 0,015625 | 0,0078125 | 0,0078125 | 0,000390625 |
+| 0,5 | 0,25 | 0,125 | 0,0625 | 0,03125 | 0,015625 | 0,0078125 | 0,00390625 | 
 
 Lorsque l'on représente la partie décimale de 0.375, on a une valeur exacte que l'on peut coder sur 1 seul octet:
 
