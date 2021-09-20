@@ -8,12 +8,12 @@ Title: synthese add sous
 
 <figure>
   <img src="../images/PR_oeil.png">
-  <figcaption>pouvoir de redolution de l'oeil</figcaption>
+  <figcaption>pouvoir de resolution de l'oeil</figcaption>
 </figure>
 
 On a d'après les relations de trigonométrie:
 
-$$tan(\tfrac{\alpha}{2} = \tfrac{h}{2d})$$
+$$tan(\tfrac{\alpha}{2}) = \tfrac{h}{2d}$$
 
 Afficher l'image suivante et reculez vous suffisamment pour observer celle-ci à peu près nette. Estimez les valeurs de h et de d. Calculer l'angle *alpha*.
 
@@ -39,6 +39,20 @@ Calculer le nombre de pixels total...
 <figure>
   <img src="../images/trichro.png">
   <figcaption>document à completer</figcaption>
+</figure>
+
+# Synthèse additive
+
+<figure>
+  <img src="../images/additive.png">
+  <figcaption>experience de synthèse additive</figcaption>
+</figure>
+
+# Synthèse soustractive
+
+<figure>
+  <img src="../images/soustractive.png">
+  <figcaption>experience de synthese soustractive</figcaption>
 </figure>
 
 # Spectres de lumières colorées
