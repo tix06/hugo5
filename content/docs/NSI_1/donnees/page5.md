@@ -50,7 +50,7 @@ salut()
 
 ## Travaux pratiques: fonction sans paramètre
 * Ecrire une fonction appelée `etoiles` en python qui écrit une série de 5 symboles `*`, séparés chacun par un espace.
-* Afficher une ligne en appelant une seule fois la fonction: Pour appeler la fonction, faire suivre le nom de la fonction par des parenthèses `()`: `ligne()`<br>Pour afficher la ligne, faire: `print(ligne())`
+* Afficher une ligne en appelant une seule fois la fonction: Pour appeler la fonction, faire suivre le nom de la fonction par des parenthèses `()`: `etoiles`<br>Pour afficher la ligne, faire: `print(etoiles())`
 * Appeler alors 5 fois cette fonction pour afficher l'image suivante:
 
 ```
@@ -75,17 +75,27 @@ Par exemple, si l'on souhaite améliorer la fonction `salut` et personnaliser le
 ```python
 def salut(nom):
   """Accueillir chacun par son nom"""
-  return 'bonjour ', name
+  return 'bonjour '+ nom
 ```
 
 > Tester cette fonction avec les prenoms successifs de John, Paul, Ringo et George.
 
-*Attention, lors de l'appel de la fonction, il devra y avoir autant d'arguments que de paramètres définis*.
+Vous devrez afficher en console:
+
+```
+bonjour John
+bonjour Paul
+bonjour Ringo
+bonjour George
+```  
+
+*Attention, lors de l'appel de la fonction, il devra y avoir autant d'arguments que de paramètres définis (donc un seul pour ce dernier exemple).* 
 
 ### TP: ASCII art
 On cherche à realiser des figures en à partir de caractères, comme vu dans le paragraphe precedent.
 
-**ex1** Vous commencerez par ré-écrire la fonction ligne pour que celle-ci prenne un paramètre(nb). Ce paramètre definit le nombre d'espaces entre les 2 symboles `*` de la ligne. La ligne n'affiche que 2 symboles `*`. <br>Par exemple, `ligne(5)` retourne `*     *` avec 5 espaces.
+**ex1** Vous commencerez par ré-écrire la fonction `etoiles` pour que celle-ci prenne un paramètre **(nb)**. Ce paramètre definit le nombre d'espaces entre les 2 symboles `*` de la ligne. La ligne n'affiche que 2 symboles `*`. <br>Par exemple, `etoiles(5)` retourne `*     *` avec 5 espaces.
+
 **ex2** Vous appelerez ensuite cette fonction avec des arguments judicieusement choisis, afin de dessiner les figures suivantes:
 
 figure 1:
@@ -203,12 +213,12 @@ On cherche maintenant à écrire la fonction qui permettra de calculer l'angle *
 
 $$r = asin(\tfrac{n_1\times sin(i_1)}{n_2})$$
 
-On definira une fonction appelée `angleR`, qui aura pour parametres `angle, n1, n2` et qui contiendra:
+On definira une fonction appelée `angleRefraction`, qui aura pour parametres `i1, n1, n2` et qui contiendra:
 
 ```python
-radian = fonc1(angle)
+radian = fonc1(i1)
 r = math.asin(...a completer...)
-return r
+return r * 180 / math.pi
 ```
 
 > Tester votre fonction: avec un angle d'incidence de 30°, des indices de refraction n<sub>1</sub>=1 et n<sub>2</sub>=1.5, on doit avoir r = 19.47°.
