@@ -248,7 +248,19 @@ def inverse_bits(N):
 **ex2.** Programmer la fonction qui réalise le complément à 2 d'un nombre entier signé. Tester alors cette fonction à partir des résultats donnés pour quelques entiers signés à partir du site [http://www.binaryconvert.com](http://www.binaryconvert.com/index.html)
 
 # Mini projet: jeu du shifumi
-*(projet difficile)*
+## version de niveau intermediaire
+Créer en console un jeu du Shifumi (Pierre-Feuille-Ciseaux)
+
+* Le jeu questionne le joueur pour connaitre son choix (`input en console`)
+* le joueur rentre une valeur de 0 à 2 selon son choix
+* l'ordinateur tire au hasard une valeur entre 0 et 2
+* Le programme evalue lequel des deux, joueur ou ordinateur remporte la manche.
+
+On pourra ajouter un compteur et permettre au joueur de jouer plusieurs parties d'affilée.
+
+* Au fur et à mesure de votre avancée dans le projet, vous devrez tenir à jour un fichier `readme.txt` expliquant les tâches effectuées.
+
+## version du projet difficile
 
 * Telecharger le dossier à l'adresse: [/scripts/TP3_fonctions_shifumi.zip](/scripts/TP3_fonctions_shifumi.zip)
 
