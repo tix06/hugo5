@@ -12,6 +12,11 @@ Pour une personne qui a une bonne acuité visuelle, ce pouvoir de separation est
 
 La *couleur* est une *perception sensorielle* due aux cellules sur la retine de l’œil.
 
+<figure>
+  <img src="../images/vision_couleur.png">
+  <figcaption>Sensibilité des cônes pour vision des couleurs</figcaption>
+</figure>
+
 Ces cellules s’appellent les « cônes », et sont de 3 types :
   
 * Les cellules sensibles au Rouge 
@@ -25,6 +30,19 @@ La synthèse des couleurs est due à la composition des messages nerveux reçus 
 * Lorsque 2 faisceaux de projecteurs se superposent sur un écran, la couleur perçue est la synthèse additive des couleurs de ces faisceaux. (trichromie)
 
 * Lorsque 2 sources colorées, et proches l’une de l’autre ne peuvent pas être résolues (séparées) par l’œil, leur lumières se confondent. Il y a synthèse additive (trichromie)
+
+<figure>
+  <img src="../images/cirque.png">
+  <a href="https://www.panoramadelart.com/seurat-cirque">
+  <figcaption>Détail du Cirque de Georges Seurat – 1891
+impressionnisme et pointillisme </figcaption></a>
+</figure>
+
+<figure>
+  <img src="../images/seurat.png">
+  <a href="https://www.youtube.com/watch?v=XJ0nuBihQyw">
+  <figcaption>Youtube - Georges Seurat, du pointillisme à la télévision </figcaption></a>
+</figure>
 
 ## Trichromie additive
 L’expérience des cercles chromatiques en synthèse additive donne une bonne représentation visuelle de la trichromie..
@@ -57,8 +75,14 @@ Um faisceau d’ondes incidentes se partage entre les ondes *diffusées, transmi
 
 ## Experiences sur la synthèse soustractive
 
-Video : https://youtu.be/q61-Kar6J1A?t=109
-3min opt1 La synthèse additive et soustractive
+<figure>
+  <a href="https://youtu.be/q61-Kar6J1A?t=109">
+  <img src="../images/video_soustractif.png">
+  <figcaption>Youtube 3min opt La synthèse soustractive</figcaption>
+</a>
+</figure>
+
+
 
 * Si l'on place sur le trajet d'une lumière blanche 2 filtres correspondant à une couleur dite secondaire (magenta + jaune), on obtient une couleur primaire (m + j = R)
 
@@ -95,12 +119,14 @@ Le rouge : rgb(255,0,0)
 
 # EXERCICES
 ## Pouvoir de resolution de l'oeil
-> Quelle est la dimension minimum que doit avoir un objet sur la Lune pour être observable à l'oeil nu depuis la Terre?
+> Quelle est la dimension minimum que doit avoir un objet sur la Lune pour être observable à l'oeil nu depuis la Terre? <br><i>(données: PR de l'oeil: 0,02° ou 3,5.10<sup>-5</sup> radian, ditance T-L = 380 000km)</i>
 
 
 *Correction* : detail d’un objet vu sur la Lune, depuis la Terre : 
 
-$$h= \alpha \times d=  0,02 \times \pi/180 \times 380~000=130 km$$
+$$h= \alpha \times d=  0,02 \times \pi/180 \times 380~000$$
+
+$$ h = 3,5\times 10^{-4} \times 380~000=130 km$$
 
 > 19p41 : l'art et les crayons
 argumenter en utilisant la notion de synthèse additive et de pouvoir de résolution
@@ -122,3 +148,13 @@ Prévoyez les résultats obtenus et les conclusions à en tirer.
 
 *un objet jaune éclairé sous lumière blanche R+V+B absorbe sa couleur complémentaire : le bleu. Il diffuse et transmet alors une lumière jaune = R+V
 Si on l’éclaire en rouge, la partie verte de son spectre et atténuée : il apparaît rouge.*
+
+## Citron ou orange dans un Aperol
+
+Expliquer pourquoi il est difficile de repondre à la question: s'agit-il d'une tranche de citron ou bien d'orange dans le verre d'Aperol Spritz?
+
+<figure>
+  <a href="https://youtu.be/U9py7cJlrXg" target="blank">
+    <img src="../images/aperol.png">
+    <figcaption>lien vers la video</figcaption>
+</figure>
