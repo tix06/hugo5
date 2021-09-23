@@ -26,7 +26,7 @@ Puis vous réaliserez ce *premier travail*:
 * Ouvrir avec Excel le fichier *fruits.xlsx*
 * Ajouter les informations suivantes dans le tableau: *le commercial Sébastien a vendu 9814 Pommes dans la région Sud*.
 
-
+<!--
 # La notion de variable
 Dans le tableur, une cellule EST une variable.
 
@@ -56,7 +56,7 @@ Que remarque t-on?
 
 *Cette fois, le contenu de la cellule se met automatiquement à jour: dès que l'on saisie et valide une entrée, toute la feuille est recalculée, et les cellules copiées par référence sont modifiées.*
 
-
+-->
 # Filtrer
 
 ## Recopier le tableau
@@ -65,11 +65,27 @@ Que remarque t-on?
 > * faire un copier coller des **etiquettes** du tableau
 * recopier une cellule: écrire l'opérateur `=` dans la premiere ligne, premiere colonne de ce nouveau tableau. 
 * Puis cliquer dans la case correspondante du tableau d'origine. Que constatez vous? ... Vous venez de faire une copie de la VALEUR de la cellule d'origine.
-* **étendre la formule** de la cellule: en largeur, puis en hauteur. (voir <a href="https://www.cours-gratuit.com/tutoriel-excel/tutoriel-excel-comment-etendre-une-formule#:~:text=Vous%20devez%20faire%20ce%20qui,en%20une%20croix%20noire%20%C3%A9paisse." target="blank">l'image suivante</a>)
+* **étendre la formule** de la cellule: en largeur, puis en hauteur. (voir <a href="https://www.cours-gratuit.com/tutoriel-excel/tutoriel-excel-comment-etendre-une-formule#:~:text=Vous%20devez%20faire%20ce%20qui,en%20une%20croix%20noire%20%C3%A9paisse." target="blank">les explications sur cette page</a>)
 
-
+<figure>
+<div>
+<img src = "../images/select.gif" >
+<figcaption>faire une selection étendue</figcaption>
+</div>
+</figure>
 
 Vous avez réalisé une copie de votre tableau original. Une modification de ce tableau entraine une modification du 2e tableau.
+
+<figure>
+<div>
+<img src="../images/copie_tab.png">
+<figcaption>Copie du tableau</figcaption>
+</div>
+</figure>
+
+> Testez le vous même: Modifiez la valeur de la cellule en rouge du premier tableau. Vous devriez voir une modification sur le 2e tableau.
+
+Annulez ensuite votre modification.
 
 
 ## Filtrer par critère simple
@@ -97,7 +113,7 @@ Vous devriez obtenir le tableau suivant:
 
 # Les fonctions de calcul
 ## Ajouter 2 variables
-On souhate calculer la somme des valeurs filtrées.
+On souhaite calculer la somme des valeurs filtrées.
 
 > Dans la case située sous la dernière ligne du tableau filtré, dans la colonne *Unités*: 
 
@@ -174,6 +190,7 @@ On souhaite maintenant evaluer le nombre total de *Pommes* vendues en Région *E
 La formule pourrait, selon la position du tableau,  ressembler à: 
 
 `=SOMME.SI.ENS(D24:D39;A24:A39;"Est";C24:C39;"Pommes")`
+
 
 # Prolongement
 Le fichier suivant rescence tous les matchs de football de Ligue 1 depuis 2002.
