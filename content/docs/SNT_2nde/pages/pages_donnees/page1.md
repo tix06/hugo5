@@ -7,6 +7,12 @@ Un logiciel tableur permet de structurer et représenter les informations en tab
 
 Il existe de nombreux logiciels tableurs, comme Excel (Microsoft Office), Calc (Open Office), Number (Apple), ...
 
+On verra dans ce TP les opérations:
+
+* de recopie des cases d'un tableau
+* de filtrage
+* de calcul sur les données
+
 La première partie du TP utilise le fichier <a href="../datas/fruits.xlsx" target="blank"><i>fruits.xlsx</i></a> que vous devrez télécharger *(clic droit: Enregistrer sous)*. 
 
 <a href="../datas/fruits.xlsx" target="blank"><img src="/images/download.png"></a> 
@@ -57,9 +63,9 @@ Que remarque t-on?
 *Cette fois, le contenu de la cellule se met automatiquement à jour: dès que l'on saisie et valide une entrée, toute la feuille est recalculée, et les cellules copiées par référence sont modifiées.*
 
 -->
-# Filtrer
+# Travailler sur une copie du tableau
 
-## Recopier le tableau
+## Copier le tableau par référence
 > Dans une zone située sous le tableau original: 
 
 > * faire un copier coller des **etiquettes** du tableau
@@ -85,11 +91,16 @@ Vous avez réalisé une copie de votre tableau original. Une modification de ce 
 
 > Testez le vous même: Modifiez la valeur de la cellule en rouge du premier tableau. Vous devriez voir une modification sur le 2e tableau.
 
-Annulez ensuite votre modification.
+Annulez ensuite votre modification. (CTRL + z)
 
 
+# Filtrer 
 ## Filtrer par critère simple
+* Commencer par selectionner toutes les colonnes A, B, C, D, E dans laquelles se trouvent les données du tableau.
+
 Dans le bandeau *Données*, choisir Filtrer (entonoir).
+
+Devraient alors apparaitre des listes de choix au dessus des descripteurs du tableau. Pour filtrer selon l'un des descripteurs, cliquer sur l'une de ces listes de choix:
 
 * Sur le filtre appliqué à la première colonne (étiquette: Région), choisir **Est**.
 
@@ -100,6 +111,7 @@ Dans le bandeau *Données*, choisir Filtrer (entonoir).
 </div>
 </figure>
 
+## Filtrer selon un 2e critère
 * Sur le filtre appliqué à la troisième colonne (étiquette: Produits), choisir **Pommes**.
 
 Vous devriez obtenir le tableau suivant:
@@ -107,9 +119,11 @@ Vous devriez obtenir le tableau suivant:
 <figure>
 <div>
 <img src="../images/tableau_tri.png">
-<figcaption>exemple de tableau filtré par Région et par Produit</figcaption>
+<figcaption>exemple de tableau filtré par Région ET par Produit</figcaption>
 </div>
 </figure>
+
+
 
 # Les fonctions de calcul
 ## Ajouter 2 variables
@@ -127,12 +141,14 @@ On souhaite calculer la somme des valeurs filtrées.
 Vous devriez voir le résultat du calcul...
 
 ## Fonction Somme
+Pour revenir au tableau initial, rappuyer sur Filtre dans le bandeau d'Excel.
+<br>Cela retire tous les filtres.
 
 > Dans le tableau d'origine: 
 
 > * cliquer dans la cellule juste sous la dernière valeur de la colonne *Unités*. 
-* Ecrire debut de la formule: `= SOMME` 
-* puis faire une sélection étendue de toutes les valeurs de la colonne. 
+* Ecrire debut de la formule: `= SOMME(` 
+* puis faire une **sélection étendue** de toutes les valeurs de la colonne. 
 * Valider avec la touche *Entrer*
 
 ## Somme conditionnelle: SOMME.SI
@@ -140,9 +156,8 @@ La fonction SOMME.SI permet de sélectionner certaines cellules d'une selection 
 
 > On va s'aider du *concepteur de formule*:
 
-> * Cliquer sur le bouton *Filtre* pour enlever les filtres.
 * Cliquer dans la cellule dans laquelle vous souhaitez rentrer la formule, sous le tableau.
-* écrire `= SOMME.SI`
+* écrire `= SOMME.SI(`
 
 <figure>
 <div>
@@ -167,16 +182,17 @@ La fonction SOMME.SI permet de sélectionner certaines cellules d'une selection 
 On a alors le nombre de Pommes vendues dans toute la France.
 
 ## Somme conditionnelle avec plusieurs critères: SOMME.SI.ENS
-On souhaite maintenant evaluer le nombre total de *Pommes* vendues en Région *Est*. C'est une somme conditionnelle avec cette fois 2 critères.
+On souhaite maintenant evaluer le nombre total de *Pommes* vendues en Région *Est*. C'est une somme conditionnelle avec cette fois **2 critères**.
 
-> Cette fois, vous allez écrire directement la formule dans la cellule:
+
 
 > * Commencez par écrire `= SOMME.SI.ENS(`
-* faire une selection étendue sur toute la *somme_plage* (les valeurs numériques). Ajouter à la fin `;` comme séparateur.
-* faire une selection étendue sur toute la *plage 1* correspondant au premier critère. Ici, la plage de valeurs sous l'etiquette **Région**. Puis `;`
-* écrire le critère: `Est`
-* faire une selection étendue sur toute la *plage 2* correspondant au 2e critère. Ici, la plage de valeurs sous l'etiquette **Produit**. Puis `;`
-* puis ajouter `Pommes` et terminer par `)`
+* cliquer sur le bouton *fx* de la barre de saisie.
+* dans la case *somme_plage* (les valeurs numériques). Faire une selection étendue avec la colonne avec les valeurs numeriques.
+* *plage 1* correspondant au premier critère. Ici, la plage de valeurs sous l'etiquette **Région**. 
+* écrire le *critère*: `Est`
+* La boite de dialogue affiche maintenant *plage 2* correspondant au 2e critère. Ici, la plage de valeurs sous l'etiquette **Produit**.
+* puis ajouter `Pommes` et *terminer*
 
 <figure>
 <div>
@@ -186,10 +202,6 @@ On souhaite maintenant evaluer le nombre total de *Pommes* vendues en Région *E
 </figure>
 
 
-
-La formule pourrait, selon la position du tableau,  ressembler à: 
-
-`=SOMME.SI.ENS(D24:D39;A24:A39;"Est";C24:C39;"Pommes")`
 
 
 # Prolongement
