@@ -109,6 +109,14 @@ L'application mobile chargée de tracer les contacts avec des personnes contamin
 
 [https://www.larecherche.fr/chronique-num%C3%A9rique/deux-ou-trois-le%C3%A7ons-%C3%A0-retenir-de-lapplication-stopcovid](https://www.larecherche.fr/chronique-num%C3%A9rique/deux-ou-trois-le%C3%A7ons-%C3%A0-retenir-de-lapplication-stopcovid)
 
+
+## Le cloud pollue davantage qu'un simple nuage - [siecledigital.fr](https://siecledigital.fr/2021/04/06/cloud-pollution/)
+*Article sur les enjeux energetiques et le bilan carbone relatifs au cloud*
+
+Les services cloud s’appuient sur de nombreux serveurs répartis à travers le monde. Contrairement aux déchets pour lesquels les impacts environnementaux sont directement visibles, ceux du matériel informatique le sont moins. Néanmoins, ils ne sont pas pour autant inexistants.
+
+[https://siecledigital.fr/2021/04/06/cloud-pollution/](https://siecledigital.fr/2021/04/06/cloud-pollution/)
+
 # Architectures matérielles, systèmes d’exploitation, réseaux et securité
 ## [Internet : Un bond de géant pour l'humanité](https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/un-bond-de-g%C3%A9ant-pour-lhumanit%C3%A9)
 cette magnifique invention est porteuse des plus belles valeurs humaines : apporter les connaissances à tous, permettre à tous de communiquer. Mais pourrons-nous continuer longtemps à utiliser Internet ? Peut-être pas. 

@@ -111,7 +111,9 @@ Ces approximations sont la source d'erreurs de calcul en python:
 
 ## codage en virgule flottante
 ### Principe
-Les nombres relatifs et avec une partie décimale sont représentés sur ordinateur avec une virgule flottante, selon la norme IEEE 754.
+Pour un ordinateur, TOUT est discrêt: cela signifie que les nombres réels seront *approchés* par des nombres dits *à virgule flottante*.
+
+Ces nombres avec une partie décimale sont représentés sur ordinateur selon la norme IEEE 754.
 
 Ce codage revient à représenter le nombre sous la forme:
 
@@ -159,9 +161,9 @@ Voici la liste des 16 positifs :
   <img src="../images/float5bits.png">
 </figure>
 
-Supposons que l'exposant se calcule d'après E selon la règle suivante:
+Supposons que l'exposant E se calcule d'après e selon la règle suivante:
 
-$$exposant = E - 1$$
+$$E = e - 1$$
 
 > Question: écrire les nombres binaires correspondants à ces 16 positifs.
 
@@ -179,7 +181,7 @@ $$+/-1,M.2^E$$
     <div class="control-me">
 
 <table>
-  <tr><td>binaire</td><td>E</td><td>exposant</td><td>M</td><td>flottant représenté</td></tr>
+  <tr><td>binaire</td><td>e</td><td>E</td><td>M = m</td><td>flottant représenté: 1,b<sub>1</sub>b<sub>0</sub>.2<sup>E</sup><sub>(2)</sub></td></tr>
   <tr><td>0 00 00 </td>
       <td>00</td>
       <td>-1</td>
@@ -206,3 +208,6 @@ $$+/-1,M.2^E$$
 * [https://irem.univ-reunion.fr/spip.php?article692](https://irem.univ-reunion.fr/spip.php?article692)
 * [binary convert](http://www.binaryconvert.com/index.html)
 * [https://fr.wikipedia.org/wiki/IEEE_754](https://fr.wikipedia.org/wiki/IEEE_754)
+
+
+

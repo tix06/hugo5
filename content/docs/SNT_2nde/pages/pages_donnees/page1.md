@@ -190,9 +190,9 @@ On souhaite maintenant evaluer le nombre total de *Pommes* vendues en Région *E
 * cliquer sur le bouton *fx* de la barre de saisie.
 * dans la case *somme_plage* (les valeurs numériques). Faire une selection étendue avec la colonne avec les valeurs numeriques.
 * *plage 1* correspondant au premier critère. Ici, la plage de valeurs sous l'etiquette **Région**. 
-* écrire le *critère*: `Est`
+* écrire pour le *critère*: `Est`
 * La boite de dialogue affiche maintenant *plage 2* correspondant au 2e critère. Ici, la plage de valeurs sous l'etiquette **Produit**.
-* puis ajouter `Pommes` et *terminer*
+* puis ajouter `Pommes` pour le *critère 2* et *terminer*
 
 <figure>
 <div>
