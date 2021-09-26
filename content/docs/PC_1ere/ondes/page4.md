@@ -1,6 +1,7 @@
 ---
 Title: TP filtrage
 ---
+<p class="rubrik"><b>TP Traitement des images numériques</b></p>
 
 # Filtrage simple
 ## Image numérique
@@ -30,7 +31,7 @@ L'algorithme précédent du fitre rouge est donné en langage python.
 
 *Remarquer que les lignes du bloc de code de la fonction sont indentées dans le script (2 espaces par rapport au bors gauche)*.
 
-> **Question a**: Donner le script de la fonction `filtre` en langage python qui applique un filtre cyen (les canaux `v` et `b` sont transmis, pas le rouge). 
+> **Question a**: Donner le script de la fonction `filtre` en langage python qui applique un filtre cyan (les canaux `v` et `b` sont transmis, pas le rouge). 
 <br>
 > **Question b**: Donner Donner le script de la fonction `filtre` en langage python qui applique un filtre orange (voir image plus haut).
 
@@ -64,7 +65,7 @@ Il s'agit d'un programme permettant de créer 2 nouvelles images à partir de la
 
 Vous pouvez créer cette image par appui successif sur ces 3 boutons.
 
-**Comment mofifier le programme?**<br>
+**Comment modifier le programme?**<br>
 Au cours de la seance, vous aurez besoin de modifier les fonctions `filtre1` et `filtre2`. Vous modifierez directement le script du fichier `filtres.py`, dans la fenêtre d'edition deja ouverte. Pour que les modifications soient prises en compte, vous devrez fermer la fenêtre graphique, puis relancer le programme `interface.py`.
 
 ## à vous de jouer
@@ -80,7 +81,7 @@ D'autres images sont proposées dans le dossier *images*.
 ### Photographie astronomique
 Les photographies astronomiques sont prises avec des réglages particuliers. A cause du manque de lumière, les temps de pose sont plus longs. Et les capteurs numériques sont très sensibles aux radiations rouge émises par l'hydrogène. Les photographies sont alors trop "rouges": [ciel profond trop rouge.jpg](../images/ciel profond trop rouge.jpg)
 
-> Adaptez le filtre à appliquer à la photographie `ciel profond trop rouge.jpg` pour que celle-ci soit plus équilibrée au niveau des couleurs.
+> Adaptez le filtre à appliquer à la photographie `ciel profond trop rouge.jpg` pour que celle-ci soit plus équilibrée au niveau des couleurs.<br>
 > **Question d:** Indiquer la fonction pour le filtre utilisé
 
 <figure>
