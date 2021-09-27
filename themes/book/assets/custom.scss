@@ -247,6 +247,17 @@ h1{border-bottom:solid 1px #ccc;}
   color:#000;
 }
 
+/*** pour les liens de telechargement à la place des boutons ***/
+a.btn-lg{
+  display: block;
+  margin-top: 50px;
+  }
+a.btn-lg:hover { 
+    box-shadow: 4px 4px 0px #aaa; 
+    text-decoration:none;
+    }
+/***  ***/
+
 /*******************************************/
 /* positionnement scrolling pour le header */
 /*******************************************/

@@ -100,9 +100,15 @@ Il existe une méthode systématique pour déterminer les bits de la partie frac
 Une première idée pourrait être d'utiliser 2 octets: 
 
 * 1 octet pour la partie entière. Si le nombre est signé, cela veut dire que le nombre est compris, pour sa partie entière entre -128 et 127.
-* 1 octet pour la partie décimale. Cette partie est alors codée sur 256 valeurs, selon la méthode vue plus haut). L'écart avec la valeur vraie peut être trop important si on veut une précision raisonnable (voir la cas du 0.1 vu plus haut, qui est approximé à 0.09765625).
+* 1 octet pour la partie décimale. Cette partie est alors codée sur 256 valeurs, selon la méthode vue plus haut). 
 
-Ces approximations sont la source d'erreurs de calcul en python:
+Il y a alors 2 problèmes avec cette représentation:
+
+*Problème 1:* La partie fractionnaire va manquer de précision. Il n'y aura pas assez de chiffres significatifs lors de l'approximation. L'écart avec la valeur vraie du réel peut être trop important si on veut une précision raisonnable
+
+*Problème 2:*  Certains nombres ont une représentation avec un nombre fini de chiffres après la virgule dans la base 10, mais infinie dans la base 2. (voir la cas du 0.1 vu plus haut, qui est approximé à 0.09765625).
+
+Ces approximations sont alors la source d'erreurs de calcul en python:
 
 <figure>
   <img src="../images/approxi.png">
