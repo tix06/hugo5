@@ -36,8 +36,6 @@ Dire que les data centers sont gourmands en énergie est un euphémisme. L’ali
 </figure>
 
 *Remarques:* 
-
-* le media *Le Temps* manque de qualité scientifique dans son exposé. Il est par exemple maladroit de comparer la lecture d'une video sur Netflix avec l'utilisation de 3 lampes à incandescence: Pendant combien de temps ces lampes sont-elles restées allumées...? Est-ce que la puissance de ces 3 lampes est equivalente à celle necessaire pour streamer la video, comprenant toutes les machines utilisées depuis le serveur de Netflix jusqu'à celle de l'utilisateur?
 * Environ 30 % de cette consommation électrique est imputable aux équipements terminaux – ordinateurs, téléphones, objets connectés –, 30 % aux data centers qui hébergent nos données et, plus surprenant, 40 % de la consommation est liée aux réseaux, les fameuses « autoroutes de l‘information ».
 
 # Questions (p22-23 du livre SNT Delagrave)
