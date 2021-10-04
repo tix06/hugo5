@@ -2,7 +2,19 @@
 Title: Dosage colorimetrique
 ---
 
-# Courbes d'absorbance
+# Colorimétrie
+## Mesurer la coloration
+
+<figure>
+  <img src="../images/colorants_BR.png">
+  <figure>Solutions colorées</figure>
+</figure>
+
+La couleur perçue est celle complémentaire de ce qui est absorbé.
+
+> Question: Quelle est la couleur absorbée pour chacune de ces solutions?
+
+## Courbes d'absorbance
 
 Le spectre d’absorption d’une espece chimique est une courbe obtenue à l’aide d’un spectrophotomètre. Cette courbe donne le profil de l’absorbance en fonction de la longueur d’onde.
 
