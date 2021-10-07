@@ -195,27 +195,15 @@ On souhaite maintenant evaluer le nombre total de *Pommes* vendues en Région *E
 * puis ajouter `Pommes` pour le *critère 2* et *terminer*
 
 <figure>
-<div>
+
 <img src="../images/sommesiens.png">
 <figcaption>selection des colonnes pour SOMME.SI.ENS</figcaption>
-</div>
+
 </figure>
 
 
 
 
-# Prolongement
-Le fichier suivant rescence tous les matchs de football de Ligue 1 depuis 2002.
-
-Les fichier à télecharger: <a href="../datas/L1.xlsx" target="blank"><i>L1.xlsx</i></a> 
-
-<a href="../datas/L1.xlsx" target="blank"><img src="/images/download.png"></a> 
-
-> A l'aide des techniques vue plus haut, vous allez:
-
-> * sélectionner tous les matchs Nice - Marseille (Nice reçoit à domicile)
-* compter le nombre de victoires de Nice
-* calculer le score *moyen* entre ces 2 équipes.
 
 
 
