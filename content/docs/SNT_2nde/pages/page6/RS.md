@@ -27,6 +27,8 @@ Ces évenements sont également largement commentés sur les réseaux sociaux co
   <figcaption>alerte sur twitter à propos de la panne FB</figcaption>
 </figure>
 
+`Dig` est une commande Unix pour interroger les serveurs DNS.
+
 Une fois la panne de serveur DNS résolue, les serveurs ne pouvaient à nouveau pas être rejoints:
 
 <figure>

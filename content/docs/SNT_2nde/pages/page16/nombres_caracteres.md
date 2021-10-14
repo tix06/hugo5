@@ -87,8 +87,13 @@ Il existe plusieurs normes d'encodage des caractères (c'est à dire de correspo
 * **L'ASCII** (American Standard Code for Information Interchange), inventé par Bob Bemer en 1961. C’est un code sur 7 bits, le premier bit étant 0 (Dans le temps on utilisait ce bit comme bit de parité).<br>
 Les caractères de 0 à 31 ainsi que le 127 ne sont pas affichables, et correspondent à des directives de terminal. Le caractère 32 est l’espace blanc. Les autres correspondent à différents symboles de ponctuation, aux chiffres, aux lettres majuscules (à partir du caractère 65) et minuscules (après 97).
 * D'autres normes comprenant **l'ASCII étendu** permettront d'ajouter les caractères accentués à cette première table.
-* Aujourd'hui, en Europe, la norme d'encodage la plus utilisée est la norme **UTF-8**, comprenant l'encodage de tous les caractères nécessaires pour les langues latines. (UTF-8 = 1 octet). Il existe aussi les normes étandues UTF-16 et UTF-32, dont l'encodage prend plus de 8 bits (respectivement 16 et 32).
-* Enfin, la norme la plus riche, englobant également les alphabets grecs,  arabes et asiatiques est la norme **Unicode**. Cette norme dont la première publication remonte à 1991, est compatible avec celle UTF-8 (les caractères ascii et UTF-8 ont la même valeur numérique en Unicode). Unicode permet de normaliser environ 100 000 caractères. Mais l'encodage des caractères se fait sur plus d'un octet et rend les fichiers textes assez lourds (inutilement lourd pour les caractères latins).
+* La norme la plus riche, englobant également les alphabets grecs,  arabes et asiatiques est la norme **Unicode**. Cette norme dont la première publication remonte à 1991, 
+<br>
+Unicode permet de normaliser environ 1 000 000 caractères. Mais l'encodage des caractères se fait sur plus d'un octet et rend les fichiers textes assez lourds (inutilement lourd pour les caractères latins).
+
+* Encodages Unicode comprimés : aujourd'hui, en Europe, la norme d'encodage la plus utilisée est la norme **UTF-8**, comprenant l'encodage de tous les caractères nécessaires pour les langues latines. (UTF-8 = 1 octet). Il existe aussi les normes étandues UTF-16 et UTF-32, dont l'encodage prend plus de 8 bits (respectivement 16 et 32). 
+<br>
+La principale caractéristique d'UTF-8 est qu'elle est rétro-compatible avec le standard ASCII, c'est-à-dire que tout caractère ASCII se code en UTF-8 sous forme d'un unique octet, identique au code ASCII. Par exemple « A » (A majuscule) a pour code ASCII 65 (0x41) et se code en UTF-8 par l'octet 65. Chaque caractère dont le point de code est supérieur à 127 (0x7F) (caractère non ASCII) se code sur 2 à 4 octets. 
 
 <figure>
   <img src="../images/ascii.png" alt="ascii">

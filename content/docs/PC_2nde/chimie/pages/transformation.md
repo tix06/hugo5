@@ -1,21 +1,61 @@
 ---
 Title : transformation chimique
 ---
-# Approche experimentale
+# Transformation chimique
 
-<h2>Définition : transformation chimique</h3>
-il y a **transformation chimique** lorsque la composition d’un système chimique change au cours du temps. On dresse alors le bilan des espèces. 
+<h2>Définition : transformation chimique</h2>
+il y a **transformation chimique** lorsque la composition d’un système chimique change au cours du temps. On dresse alors le bilan des espèces.
 
-Il y a celles dont dont la quantité diminue : LES REACTIFS 
+* Il y a celles qui ont disparu : LES REACTIFS 
 
-Et celles dont la quantité augmente : LES PRODUITS 
+* Et celles qui sont apparues : LES PRODUITS
 
 On écrit alors une équation chimique pour rendre compte du type d’espèces et des quantités qui sont mises en jeu.
 
 <p><span class="formule">\[REACTIFS \rightarrow PRODUITS\]</span></p>
 
-<h2>Experience</h2>
-Lors de la réaction de combustion du méthane : on fait brûler du méthane à l’air libre. Le système chimique contient initialement : du méthane, dioxygène et diazote (de l'air). Au cours de la transformation, la quantité de dioxygène diminue, mais l’air étant en excès, il en restera toujours. La transformation libère du dioxyde de carbone et de la vapeur d’eau. Le tableau suivant permet de rassembler ces informations :</p>
+## Une autre définition des réactifs et produits
+Souvent, le système chimique est étudié en cours de transformation. Ou bien celle-ci ne consomme pas complètement tous les réactifs. On modifie alors la définition de REACTIF et PRODUIT:
+
+* Il y a les espèces dont la quantité diminue : LES REACTIFS 
+
+* Et celles dont la quantité augmente : LES PRODUITS 
+
+# Approche expérimentale
+## Réaliser des tests chimiques: Pourquoi?
+Pour comprendre la transformation: les tests chimiques permettent de savoir quelles espèces chimiques ont *disparues*, et quelles espèces sont *apparues*.  
+
+<figure>
+<a href="https://youtu.be/bMHyNaUeT0g?t=89">
+<img src="/images/video.png">
+<figcaption>Identification d'espèces chimiques par des tests chimiques - Hélène Risler</figcaption>
+</a>
+</figure>
+
+## Expérience 1
+On veut étudier la transformation du Cuivre avec le Fer. On dispose d'une solution de sulfate de **Cuivre II** et de la limaille de **Fer**.
+
+Dans l'hypothèse où la transformation chimique a lieu, on pourrait avoir:
+
+* Cu<sup>2+</sup><sub>(aq)</sub> est REACTIF
+* Fe<sub>(s)</sub> est REACTIF
+
+Après transformation, il peut être interessant de tester la présence:
+
+* des ions Cu<sup>2+</sup> (précipité bleu avec la soude)
+* des ions Fe<sup>2+</sup> (précipité vert avec la soude)
+
+Il faudra dans tous les cas envisager un test avec la soude pour définir l'un des produits de reaction. Celui à l'état d'ion.
+
+
+## Experience 2
+Lors de la réaction de combustion du méthane : on fait brûler du méthane à l’air libre. 
+<ul>
+<li>Le système chimique contient <b>initialement</b> : du méthane, dioxygène et diazote (de l'air). </li>
+<li><b>Au cours</b> de la transformation, la quantité de dioxygène diminue, mais l’air étant en excès, il en restera toujours. Le dioxygène est un <b>réactif, en excès</b></li> 
+<li>La transformation libère du dioxyde de carbone et de la vapeur d’eau. Ce sont des <b>produits</b></li> 
+</ul>
+Le tableau suivant permet de rassembler ces informations :</p>
 <table><colgroup> <col style="text-align: center;" /> <col style="text-align: center;" /> </colgroup>
     <thead>
     <tr><th style="text-align: center;">système chimique avant réaction</th><th style="text-align: center;">système chimique après réaction</th></tr>
@@ -41,7 +81,9 @@ Lors de la réaction de combustion du méthane : on fait brûler du méthane à 
     </table>
 
     
-On peut alors faire un bilan de ces espèces chimiques. Cela servira à modéliser cette transformation chimique.    
+On peut alors faire un bilan de ces espèces chimiques. Cela servira à modéliser cette transformation chimique.   
+
+
     
 # modélisation
 ## réactifs et produits

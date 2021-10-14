@@ -20,8 +20,9 @@ On peut egalement demander un entier aleatoire entre 0 et 100 avec la fonction `
 62
 ```
 
-1. Ecrire un programme qui affiche de manière aléatoire la chaine de phonèmes "Ha", "HaHa", "HaHaHaHa" ou "HaHaHaHaHa", avec "Ha" répété un nombre aléatoire de fois, entre 1 et 10.
-2. On veut maintenant que le programme affiche un rire aléatoire pouvant aussi comporter des séquences de "Ho", comme par exemple: "HaHaHaHaHoHoHoHoHaHaHa...". La séquence devra avoir une longueur inférieure à 50 phonèmes.
+1. Ecrire un programme qui affiche de manière aléatoire la chaine de phonèmes "Ke", "KeKe", "KeKeKe" ou "KeKeKeKe", ..., avec "Ke" répété un nombre aléatoire de fois, entre 1 et 10.
+2. On veut maintenant que le programme affiche un texte aléatoire pouvant aussi comporter des séquences de "Ki", "Di", "Bi" comme par exemple: "KeKiDiBiBi". La séquence devra avoir une longueur inférieure ou egale à 10 phonèmes et pourra comporter des repetitions.
+3. Programmer une fonction `texte_aleatoire` qui prend en paramètres les 4 phonèmes `son1`, 'son2', `son3`, `son4`. La fonction retourne un texte aleatoire de 10 sons maximum. Lors de l'appel de cette fonction avec `texte_aleatoire("Ke","Ki","Di","Bi")`, cette fonction pourrait retourner par exemple : "KeKiDiBiBi"
 
 
 # Calendrier
