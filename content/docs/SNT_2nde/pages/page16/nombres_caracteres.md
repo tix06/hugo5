@@ -80,26 +80,54 @@ Les mémoires des machines imposent d'utiliser des multiples de l'octet : ko; Mo
 * 2<sup>10</sup> = 1024 
 
 # Codage des caractères
-Le texte est constitué de caractères. Chaque caractère est représenté par un entier (sur un certain nombre d’octets).
+## Texte et caractères
+* Un **texte** est une chaine de caractères et de symboles (dont l'espace, virgule...). La représentation du texte dans l'ordinateur suit ce même schéma : c'est le rangement à des emplacements consécutifs de la mémoire des représentations des caractères un à un. Chaque caractère est représenté par un entier (sur un certain nombre d’octets).
 
+Etant donné le nombre n de symboles différents à coder, que peut prendre chaque caractère, il faut un nombre de bits p tel que 2<sup>p</sup> >= n. Ainsi, 2<sup>7</sup> > 100 caractères du clavier.
+
+Dans l’hypothèse où ce nombre p vaut 8: Si le texte contient C caractères, il faut C * 8 bits de données pour coder tout le texte.
+
+<figure>
+  <img src="../images/word.png" alt="word count">
+  <figcaption>Word permet de compter les mots et caractères d'un texte</figcaption>
+  </figure>
+
+> Dans l'hypothèse où chaque caractère serait codé sur un seul octet, quel serait le poids (en ko) de ce fichier texte?
+
+## Coder les caractères
 Il existe plusieurs normes d'encodage des caractères (c'est à dire de correspondance entre caractères et nombres).
 
 * **L'ASCII** (American Standard Code for Information Interchange), inventé par Bob Bemer en 1961. C’est un code sur 7 bits, le premier bit étant 0 (Dans le temps on utilisait ce bit comme bit de parité).<br>
 Les caractères de 0 à 31 ainsi que le 127 ne sont pas affichables, et correspondent à des directives de terminal. Le caractère 32 est l’espace blanc. Les autres correspondent à différents symboles de ponctuation, aux chiffres, aux lettres majuscules (à partir du caractère 65) et minuscules (après 97).
-* D'autres normes comprenant **l'ASCII étendu** permettront d'ajouter les caractères accentués à cette première table.
-* La norme la plus riche, englobant également les alphabets grecs,  arabes et asiatiques est la norme **Unicode**. Cette norme dont la première publication remonte à 1991, 
 <br>
-Unicode permet de normaliser environ 1 000 000 caractères. Mais l'encodage des caractères se fait sur plus d'un octet et rend les fichiers textes assez lourds (inutilement lourd pour les caractères latins).
-
-* Encodages Unicode comprimés : aujourd'hui, en Europe, la norme d'encodage la plus utilisée est la norme **UTF-8**, comprenant l'encodage de tous les caractères nécessaires pour les langues latines. (UTF-8 = 1 octet). Il existe aussi les normes étandues UTF-16 et UTF-32, dont l'encodage prend plus de 8 bits (respectivement 16 et 32). 
-<br>
-La principale caractéristique d'UTF-8 est qu'elle est rétro-compatible avec le standard ASCII, c'est-à-dire que tout caractère ASCII se code en UTF-8 sous forme d'un unique octet, identique au code ASCII. Par exemple « A » (A majuscule) a pour code ASCII 65 (0x41) et se code en UTF-8 par l'octet 65. Chaque caractère dont le point de code est supérieur à 127 (0x7F) (caractère non ASCII) se code sur 2 à 4 octets. 
+La table ASCII propose ainsi un alphabet, mettant en correspondance 127 caractères avec leur représentation binaire.
 
 <figure>
   <img src="../images/ascii.png" alt="ascii">
   <figcaption>extrait de la table ASCII</figcaption>
   </figure>
 
+* D'autres normes comprenant **l'ASCII étendu** permettront d'ajouter les caractères accentués à cette première table.
+* La norme la plus riche, englobant également les alphabets grecs,  arabes et asiatiques est la norme **Unicode**. Cette norme dont la première publication remonte à 1991, 
+<br>
+Unicode permet de normaliser environ 1 000 000 caractères. L'encodage des caractères se fait sur plus d'un octet et, si le nombre de bits était fixe, les fichiers textes seraint inutilement lourds.
+
+* Encodages Unicode comprimés : aujourd'hui, en Europe, la norme d'encodage la plus utilisée est la norme **UTF-8**, comprenant l'encodage de tous les caractères nécessaires pour les langues latines. (UTF-8 = 1 octet). Il existe aussi les normes étandues UTF-16 et UTF-32, dont l'encodage prend plus de 8 bits (respectivement 16 et 32). 
+<br>
+La principale caractéristique d'UTF-8 est qu'elle est rétro-compatible avec le standard ASCII, c'est-à-dire que tout caractère ASCII se code en UTF-8 sous forme d'un unique octet, identique au code ASCII. Par exemple « A » (A majuscule) a pour code ASCII 65 (0x41) et se code en UTF-8 par l'octet 65. 
+
+ 
+
+
+
+Chaque caractère dont le point de code est supérieur à 127 (0x7F) (caractère non ASCII) se code sur 2 à 4 octets:
+
+* Codage des caractères Unicode sur plusieurs octets. 
+
+
+0bbbbbbb                                  1 octet codant 1 à 7 bits
+
+110bbbbb 10bbbbbb                         2 octets codant 8 à 11 bits
 
 
 # Exercices et flash card
