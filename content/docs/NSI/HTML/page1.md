@@ -47,7 +47,7 @@ Voici le code HTML utilisé :
 <body>
 <div class="main">
   <div class="titre">La bataille de Marignan</div>
-    <div class="contenu">
+  <div class="contenu">
       <div class="paragraphe">
         La bataille de Marignan (Marignano en Italie, aujourd’hui Melegnano, ville à 16 km au sud-est de Milan) eut lieu les 13 et 14 septembre 1515 et opposa le roi de France <span class="lien" onclick="window.location.href = 'https://fr.wikipedia.org/wiki/François_Ier_(roi_de_France)'">François Ier</span> et ses alliés vénitiens aux mercenaires suisses qui défendaient le duché de Milan.
       </div>
@@ -60,9 +60,9 @@ Voici le code HTML utilisé :
 ```
 
 * Résultat obtenu SANS aucune règle CSS : 
-<div >
+<div style = "background: rgb(200,200,200)">
   <div>La bataille de Marignan</div>
-    <div>
+  <div>
       <div>
         La bataille de Marignan (Marignano en Italie, aujourd’hui Melegnano, ville à 16 km au sud-est de Milan) eut lieu les 13 et 14 septembre 1515 et opposa le roi de France <span onclick="window.location.href = 'https://fr.wikipedia.org/wiki/François_Ier_(roi_de_France)'">François Ier</span> et ses alliés vénitiens aux mercenaires suisses qui défendaient le duché de Milan.
       </div>
@@ -71,8 +71,21 @@ Voici le code HTML utilisé :
       </div>
   </div>
 </div>
+<br>
+<i>Remarques: le contenu apparait de manière structuré, mais sans aucune mise en forme. Le lien est fonctionnel: cliquer sur le nom François Ier pour vous en apercevoir.</i>
 
 * Résultat obtenu AVEC les règles CSS : 
+<div class="cont">
+  <div class="titreDIV">La bataille de Marignan</div>
+  <div class="contenu">
+      <div class="paragraphe">
+        La bataille de Marignan (Marignano en Italie, aujourd’hui Melegnano, ville à 16 km au sud-est de Milan) eut lieu les 13 et 14 septembre 1515 et opposa le roi de France <span class="lien" onclick="window.location.href = 'https://fr.wikipedia.org/wiki/François_Ier_(roi_de_France)'">François Ier</span> et ses alliés vénitiens aux mercenaires suisses qui défendaient le duché de Milan.
+      </div>
+      <div class="paragraphe">
+        Première victoire du jeune roi François Ier, acquise dès la première année de son règne, elle fit environ 16 000 morts en seize heures de combat.
+      </div>
+  </div>
+</div>
 
 <style>
 .cont{
@@ -95,22 +108,37 @@ Voici le code HTML utilisé :
 
 </style>
 
-<div class="cont">
-  <div class="titreDIV">La bataille de Marignan</div>
-    <div class="contenu">
-      <div class="paragraphe">
-        La bataille de Marignan (Marignano en Italie, aujourd’hui Melegnano, ville à 16 km au sud-est de Milan) eut lieu les 13 et 14 septembre 1515 et opposa le roi de France <span class="lien" onclick="window.location.href = 'https://fr.wikipedia.org/wiki/François_Ier_(roi_de_France)'">François Ier</span> et ses alliés vénitiens aux mercenaires suisses qui défendaient le duché de Milan.
-      </div>
-      <div class="paragraphe">
-        Première victoire du jeune roi François Ier, acquise dès la première année de son règne, elle fit environ 16 000 morts en seize heures de combat.
-      </div>
-  </div>
-</div>
+
+
+Les règles CSS utilisées pour ce 2<sup>e</sup> exemple:
+
+```html
+<style>
+.contenu{
+  border:solid;
+}
+.titre{
+  font-size:1.5em;
+  text-decoration: bold;
+}
+
+.paragraphe{
+  margin:1.2em;
+  text-indent:20px;
+  text-align:justify;
+}
+.lien{
+  color:blue;
+  cursor: pointer;
+}
+
+</style>
+```
 
 **Commentaires :**
 
-* l'exemple montre qu'avec 2 balises seulement, il est possible de segmenter et d'afficher du contenu.
-* Ces balises étant génériques, et souvent ré-employées, il faudra pouvoir distinguer les différents éléments et leur ajouter des attributs de classe.
+* Avec 2 balises seulement, il est possible de segmenter et d'afficher du contenu.
+* Ces balises étant génériques, et souvent ré-employées, il faudra pouvoir distinguer les différents éléments et leur ajouter des attributs de classe (voir le pragraphe [indexer](#indexer-les-parties-du-document)).
 * En ajoutant des règles de mises en forme, écrites dans la partie CSS, les éléments retrouvent leur rôle spécifique (container, paragraphe, lien...).
 * comme vous l'imaginez, ce n'est pas la bonne pratique que d'utiliser seulement 2 balises pour tout le document : le code sera difficile à maintenir. Et vous aurez besoin d'écrire toutes les règles de mise en page CSS pour ces balises. Alors qu'avec des balises bien nommées, le navigateur va pouvoir appliquer les styles par défaut pour ces éléments.
 
@@ -124,9 +152,10 @@ Cette partie du programme est le contenu minimum à mettre dans vos pages :
 
 <html>
     <head>
-        <!-- en-tête de la page -->
+        
         <!-- encodage des caractères -->
         <meta charset="UTF-8">
+        <!-- Titre -->
         <title>Titre de la page web</title>
     </head>
 
