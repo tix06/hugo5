@@ -14,7 +14,7 @@ Un document complet est construit à partir de différents sous-documents qui so
 
 <figure>
   <img src = "../images/fetching_a_page.png">
-  <figcaption>requêtes pour construction d'une page web. Source: MDN Web Docs</figcaption>
+  <figcaption>requêtes pour la construction d'une page web. Source: MDN Web Docs</figcaption>
 </figure>
 
 
@@ -22,14 +22,14 @@ Le navigateur web assemble alors ces ressources pour présenter un document comp
 
 Pour obtenir ces fragments de page, le navigateur web envoie des messages  qui sont appelés des *requêtes* et les messages renvoyés par le serveur sont appelés *réponses*.
 
-Entre une requête et la réponse se trouve de nombreuses entités qu'on désignera de façon générique sous le terme proxys. Celles-ci exécutent différentes opérations et agissent comme passerelles ou comme caches par exemple.
+Entre une requête et la réponse se trouve de nombreuses entités qu'on désignera de façon générique sous le terme proxies. Celles-ci exécutent différentes opérations et agissent comme passerelles ou comme caches par exemple.
 
-En réalité, il y a plus d'un ordinateur entre un navigateur et le serveur qui traite la requête : il y a les routeurs, les modems et bien plus. Grâce à la construction en couche du Web, ces intermédiaires sont cachés dans les couches réseau et transport. HTTP, lui, est bâti sur la couche applicative. 
+En réalité, il y a plus d'un ordinateur entre un navigateur et le serveur qui traite la requête : il y a les routeurs, les modems et bien plus. Grâce à la *construction en couche du Web*, ces intermédiaires sont cachés dans les couches réseau et transport. HTTP, lui, est bâti sur la couche applicative. 
 
 Pour plus de détails, voir la page sur [MDN Web Docs](https://developer.mozilla.org/fr/docs/Web/HTTP/Overview).
 
 ## naviguer sur le web
-Une page web est un document hypertexte. Cela signifie que certaines parties sont des liens hypertextes qui peuvent être activés (généralement avec un clic de souris) afin de récupérer une nouvelle page web, permettant à l'utilisateur de diriger son agent utilisateur et de naviguer sur le Web.
+Une page web est un document hypertexte. Cela signifie que certaines parties sont des liens hypertextes qui peuvent être activés (généralement avec un clic de souris) afin de récupérer une nouvelle page web, permettant à l'utilisateur de naviguer sur le Web.
 
 Encore une fois, c'est le navigateur qui traduit ces instructions en requêtes HTTP.
 
@@ -38,23 +38,34 @@ Plus de détails: [voir page du site IONOS](https://www.ionos.fr/digitalguide/he
 Ce protocole HTTP contrôle la façon dont le client formule ses demandes et la façon dont le serveur y répond, et connaît **différentes méthodes de requête**: GET, POST, HEAD, OPTIONS, TRACE, ou autres méthodes spécifiques.
 
 ## GET
-Méthode utilisée pour demander une ressource, par exemple un fichier HTML, au serveur Web.
+c'est la méthode HTTP qui est utilisée pour demander une ressource, par exemple un fichier HTML, au serveur Web. Dans le navigateur, on fait cette demande grâce à une URL (*uniform ressource locator*)
+
+
+**Comprendre les URL et leur structure:**
+
+<figure>
+<img src="../images/url_detail.png">
+<a href="https://developer.mozilla.org/fr/docs/Learn/Common_questions/What_is_a_URL"><figcaption>Comprendre les URL et leur structure</figcaption></a>
+</figure>
 
 Si l'on saisit l’URL `www.exemple.com/test.html` dans la barre d'adresse du navigateur, celui-ci se connecte au serveur Web et lui envoie la requête GET :      
 
 ```
-www.exemple.com/test.html 
+GET /test.html 
 ```
 
-Le serveur renvoie le fichier `test.html`.
+Le serveur renvoie alors le fichier `test.html`.
 
 ### Paramètres URL
 Des paramètres d’URL qui peuvent être ajoutés à l’URL s'appelent *chaine query*
-
+<br>
+Ce sont des paramètres optionnels.<br>
 Une URL valide est alors **construite de la manière suivante:**
 
 ```
+# nom de domaine symbolique
 http://nom du domaine.org/ressource/chaine query
+# adresse IP du domaine
 http://adresse IP du domaine/ressource/chaine query
 ```
 
@@ -139,8 +150,6 @@ Chaque requête HTTP formulée par le navigateur contient:
 
 Pour le client, voici les principales informations contenues dans le http header:
 
-Pour le client, voici les principales informations contenues dans le http header:
-
 | Champ d’en-tête | Signification | Exemple |
 |--- |--- |--- |
 | Accept  | Les types de contenu que le client peut traiter ; si le champ est vide, il s’agit de tous les types de contenu. | Accept: text/html, application/xml |
@@ -160,7 +169,8 @@ Chaque reponse HTTP retournée par le serveur contient:
   * de la version HTTP
   * du code statut (200, 301, 404, ...)
   * du message de statut (OK, ...)
-* des différents champs de l'en-tête.
+* puis les différents champs de l'en-tête.
+* et enfin le contenu html ou autre.
 
 Sur l'exemple suivant, on voit par exemple, sur la 1ere ligne:
 
@@ -227,7 +237,7 @@ Des couches de protocoles avec et sans état:
 Dans les différentes couches de protocoles de communication: le protocole HTTP (sans état) s'appuie sur le protocole TCP, un protocole avec état, qui s'appuie à son tour sur le protocole IP, un autre protocole sans état. 
 
 ### Cookies
-#### A quoi servent les cookies?
+**1.** A quoi servent les cookies?
 voir [MDN: HTTP cookies](https://developer.mozilla.org/fr/docs/Web/HTTP/Cookies)
 
 Les cookies permettent de conserver de l'information en passant par le procotole **HTTP qui est lui "sans état".**
@@ -246,9 +256,13 @@ Cela permet:
 * Suivi
   Enregistrement et analyse du comportement utilisateur.
 
-#### Protection des données
+**2.** Protection des données
 
-![](images/cookies.png)
+<figure>
+  <img src = "../images/cookies.png">
+  <figcaption>contrôle des cookies par l'utilisateur</figcaption>
+</figure>
+
 
 Les cookies étaient auparavant utilisés pour le stockage côté client. Mais aujourd'hui, la tendance est plutôt d'envoyér ces données avec chaque requête. Cela a pour conséquence de partager ses données pour l'internaute. Son surf n'est plus complètement anonyme.
 
@@ -261,7 +275,7 @@ Pour plus de détails, voir la page: [Quel est le cadre juridique applicable?](h
 # Travaux Pratiques: le moniteur réseau
 TP inspiré de la page [MDN Mozilla](https://developer.mozilla.org/fr/docs/Tools/Network_Monitor)
 
-Le moniteur réseau affiche toutes les requêtes effectuées par Firefox (par exemple, au chargement d'une page).
+Le moniteur réseau du navigateur affiche des informations sur les requêtes effectuées (par exemple, au chargement d'une page).
 
 
 <figure>
@@ -271,14 +285,28 @@ Le moniteur réseau affiche toutes les requêtes effectuées par Firefox (par ex
 
 <p class ="rubrik">Répondre aux questions suivantes sur le cahier</p>
 
-* Après avoir rechargé la page, quel est le nombre de requêtes?
-* Ce nombre évolue t-il alors que vous laissez la page ouverte, sans aucune action de votre part? 
-* Est-ce que toutes les requêtes sont de type GET?
-* Cliquer sur la première ressource téléchargée, `accueil/`. Vous obtenez alors le *détail* de la ressource. 
+> Faire une recherche sur un moteur de recherche pour trouver l'URL de la page d'accueil du site *cité des sciences*.
+
+**1.** Lorsque vous lancez un recherche sur un moteur de recherche, celui-ci utilise t-il une méthode GET ou POST? Justifiez. Quel est l'intérêt d'utiliser cette méthode?
+
+> Aller sur la page d'accueil du site de: *cité des sciences*.
+
+**2.** Ouvrir le moniteur réseau du navigateur.
+
+**3.** Après avoir rechargé la page de cité des sciences, quel est le nombre de requêtes?
+
+**4.** Ce nombre évolue t-il alors que vous laissez la page ouverte, sans aucune action de votre part? 
+
+**5.** Est-ce que toutes les requêtes sont de type GET?
+
+**6.** Cliquer sur la première ressource téléchargée, `accueil/`. Vous obtenez alors le *détail* de la ressource. 
+
   * Quelle est la différence entre les informations transmises par le *Headers* et celles transmises par le *Reponse (ou Response)*? 
   * Pour l'onglet *Headers*: S'agit-il du HTTP header émis par le client ou bien celui serveur? Justifier.
   * Reconnaitre et interpréter certains champs de l'en-tête.
-* Aller sur l'onglet *Cookies* pour cette première ressource. Que remarquez vous?
+  
+**7.** Aller sur l'onglet *Cookies* pour cette première ressource. Que remarquez vous?
+
   * Y-a-t-il des ressources qui ont un code statut différent de 200? Quels sont-ils et que signifient-ils?
   * Quel est le nom de domaine qui revient le plus souvent pour ces requêtes, dont le statut est différent de 200?
   * Pour l'une de ces ressources, on observe en détail l'extension de l'URL que l'on appelle Query String (chaine Query). Celle-ci est écrite en *Base 64*. Elle est constituée de la série de caractères suivante:
@@ -288,9 +316,11 @@ c2l0ZUNvZGU9ZGFjcGJybDR0byZ2aXNpdG9yQ29kZT1mMnBvbGJucXRhNTU5b3YwJnN0YXJ0T2ZWaXNp
 ```
 <br>
 
-> Utiliser un décodeur en base 64, comme par exemple [base64.guru](https://base64.guru/converter/decode/file) et afficher le texte decodé. De quoi peut-il s'agir?
+> Utiliser un décodeur en base 64, comme par exemple [base64.guru](https://base64.guru/converter/decode/file) et afficher le texte decodé. 
 
-* Lorsque vous lancez un recherche sur un moteur de recherche, celui-ci utilise t-il une méthode GET ou POST? Justifiez. Quel est l'intérêt d'utiliser cette méthode?
+**8.** De quoi peut-il s'agir?
+
+
 
 
 *Pour l'outil de developpement du navigateur, on pourra s'aider de la page [MDN Web Docs: Détails des requêtes réseau](https://developer.mozilla.org/fr/docs/Tools/Network_Monitor/request_details)*
