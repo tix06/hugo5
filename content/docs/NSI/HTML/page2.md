@@ -3,11 +3,13 @@ Title: protocole HTTP
 ---
 
 # Le protocole HTTP
-## Des requêtes HTTP à la page Web
+## Des requêtes HTTP jusqu'à la page Web
 HTTP est un protocole de la **couche Application** selon le modèle de communication entre machines **OSI** (sera développé plus tard). 
 
 
 C'est le protocole qui permet de récupérer des ressources telles que des documents HTML. Il est à la base de **tout échange de données** sur le **Web**. C'est un protocole de type **client-serveur**, ce qui signifie que les requêtes sont initiées par le destinataire (qui est généralement un **navigateur web**). 
+
+Le **protocole HTTP** est un protocole **synchrone**: pour chacune des tâches, il faut attendre la réponse avant d'exploiter la ressource chargée.
 
 Un document complet est construit à partir de différents sous-documents qui sont récupérés, par exemple du texte, des descriptions de mise en page, des images, des vidéos, des scripts et bien plus.
 
@@ -37,6 +39,7 @@ Plus de détails: [voir page du site IONOS](https://www.ionos.fr/digitalguide/he
 
 Ce protocole HTTP contrôle la façon dont le client formule ses demandes et la façon dont le serveur y répond, et connaît **différentes méthodes de requête**: GET, POST, HEAD, OPTIONS, TRACE, ou autres méthodes spécifiques.
 
+# Méthodes HTTP
 ## GET
 c'est la méthode HTTP qui est utilisée pour demander une ressource, par exemple un fichier HTML, au serveur Web. Dans le navigateur, on fait cette demande grâce à une URL (*uniform ressource locator*)
 
@@ -142,7 +145,23 @@ L'en-tête HTTP (HTTP *header*) pourrait alors avoir le contenu suivant:
 * GET pour les paramètres d’un site Web (filtres, tri, saisies de recherche, etc.).
 * POST pour la transmission des informations, des fichiers, et des données de l’utilisateur.
 
-### HTTP header Côté client
+
+## Autres méthodes HTTP
+### La méthode HEAD 
+Utilisée pour interroger l’en-tête de la réponse, sans que le fichier ne vous soit envoyé immédiatement. C’est utile, par exemple, si des fichiers volumineux doivent être transférés : grâce à la requête HEAD, le client peut d’abord être informé de la taille du fichier et seulement ensuite décider s’il veut recevoir le fichier.
+
+### OPTIONS
+Avec la méthode OPTIONS, le client peut demander quelles méthodes le serveur supporte pour le fichier en question. Ces méthodes autorisées sont contenues dans le champs d'en-tête "allow".
+
+### TRACE
+La méthode TRACE peut être utilisée pour tracer le chemin qu’une requête HTTP emprunte jusqu’au serveur puis jusqu’au client. Vous pouvez utiliser la commande tracert de Windows pour tracer vous-même cet itinéraire. 
+
+```
+tracert www.exemple.com
+```
+
+# HTTP header
+## HTTP header Côté client
 Chaque requête HTTP formulée par le navigateur contient:
 
 * une premiere ligne constituée de: METHODE suivie du PATH (chemin vers la ressource) suivi de la version HTTP. Exemple: `GET /index.php HTTP/1.1
@@ -162,7 +181,7 @@ Pour le client, voici les principales informations contenues dans le http header
 | Referrer |  URL de la ressource à partir de laquelle la demande est faite (c’est-à-dire à partir de laquelle le lien a été créé)  | Referrer: https://exemple.fr/index.html |
 | User-Agent  | navigateur du client |  Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 |
 
-### HTTP header Côté serveur
+## HTTP header Côté serveur
 Chaque reponse HTTP retournée par le serveur contient:
 
 * une premiere ligne constituée:
@@ -194,9 +213,7 @@ Explications pour les différentes lignes (les champs d'en-tête):
 * Content-Length est la taille du fichier en octets.
 
 
-
-### Classes de statut HTTP
-
+## Classes de statut HTTP
 
 <figure>
   <img src = "../images/error404.png">
@@ -209,32 +226,29 @@ Explications pour les différentes lignes (les champs d'en-tête):
 * **Classe 4xx, erreurs du client :** le code 4xx renvoie à une erreur commise par le client. Le serveur a reçu la requête mais ne peut pas l’exécuter.  La réponse 404 signifie par exemple que la page Internet est introuvable.. En général, il s’agit d’une syntaxe erronée. En général, l’utilisateur est automatiquement dirigé vers  une page HTML.
 * **Classe 5xx, erreurs du serveur :** Le code 5xx fait référence à une erreur commise par le serveur. Ces informations indiquent que la requête en question est complètement ou provisoirement impossible. Une page d’erreur HTML est également présentée.
 
-### Autres méthodes HTTP
-#### La méthode HEAD 
-Utilisée pour interroger l’en-tête de la réponse, sans que le fichier ne vous soit envoyé immédiatement. C’est utile, par exemple, si des fichiers volumineux doivent être transférés : grâce à la requête HEAD, le client peut d’abord être informé de la taille du fichier et seulement ensuite décider s’il veut recevoir le fichier.
 
-#### OPTIONS
-Avec la méthode OPTIONS, le client peut demander quelles méthodes le serveur supporte pour le fichier en question. Ces méthodes autorisées sont contenues dans le champs d'en-tête "allow".
+# HTTP: sécurité et confidentialité
+## Sécurité 
+La sécurité d'un protocole vise à ce que les communications ne soient pas exploitables pour quelqu'un qui intercepte le message.
 
-#### TRACE
-La méthode TRACE peut être utilisée pour tracer le chemin qu’une requête HTTP emprunte jusqu’au serveur puis jusqu’au client. Vous pouvez utiliser la commande tracert de Windows pour tracer vous-même cet itinéraire. 
+Le protocole HTTP possède une version sécurisée des échanges: il s'agit de HTTP**S**.
 
-```
-tracert www.exemple.com
-```
-
-## HTTP: un protocole sans ETAT
+## confidentialité: HTTP, un protocole sans ETAT
 Pour une communication client-serveur: 
 **Un état** est conservé entre 2 requêtes si l'utilisateur, le *client*, s'est identifié.
+
+
 
 ### Protocole sans état
 [wiki: protocole sans état](https://fr.wikipedia.org/wiki/Protocole_sans_%C3%A9tat)
 
 Un *protocole sans état* (en anglais stateless protocol) est un protocole de communication qui n'enregistre pas l'état d'une session de communication entre deux requêtes successives. La communication est formée de paires requête-réponse indépendantes et chaque paire requête-réponse est traitée comme une transaction indépendante, sans lien avec les requêtes précédentes ou suivantes.
 
-Des couches de protocoles avec et sans état:
+Le **protocole HTTP** est donc un protocole *synchrone*, et **sans état**.
 
-Dans les différentes couches de protocoles de communication: le protocole HTTP (sans état) s'appuie sur le protocole TCP, un protocole avec état, qui s'appuie à son tour sur le protocole IP, un autre protocole sans état. 
+*Des couches de protocoles avec et sans état:* 
+
+*Dans les différentes couches de protocoles de communication: le protocole HTTP (sans état) s'appuie sur le protocole TCP, un protocole avec état, qui s'appuie à son tour sur le protocole IP, un autre protocole sans état.* 
 
 ### Cookies
 **1.** A quoi servent les cookies?
@@ -271,6 +285,8 @@ En application de la directive ePrivacy, les internautes doivent être informés
 Les cookies ont un domaine qui leur est associé. Si ce domaine est le même que la page sur laquelle vous êtes, on parle de cookie interne (first-party cookie). Si le domaine est différent, on parle de cookie tiers (third-party cookie).
 
 Pour plus de détails, voir la page: [Quel est le cadre juridique applicable?](https://www.cnil.fr/fr/cookies-et-traceurs-que-dit-la-loi#:~:text=Tant%20que%20la%20personne%20n,ajouter%20aux%20finalit%C3%A9s%20initialement%20pr%C3%A9vues.)
+
+
 
 # Travaux Pratiques: le moniteur réseau
 TP inspiré de la page [MDN Mozilla](https://developer.mozilla.org/fr/docs/Tools/Network_Monitor)

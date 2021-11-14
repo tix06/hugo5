@@ -1,6 +1,14 @@
 ---
 title: reseaux
 ---
+
+<a href="https://youtu.be/aX3z3JoVEdE" target="blank">
+<figure>
+  <img src="/images/video.png">
+  <figcaption>Video SNT: Internet, IP un protocole universel ?</figcaption>
+</figure></a>
+
+
 # Faire communiquer des ordinateurs
 Une première idée naïve : tout usage du numérique met des machines en connexion, et qui échangent des données.
 
@@ -144,7 +152,9 @@ On a vu qu'un système informatique fonctionne sur le modèle *client-serveur*. 
 * pour la question 3: il s'agit d'une partie qui sera étudiée en <a href="/docs/SNT_2nde/pages/page3/modele_OSI/">spécialité NSI de la classe de 1<sup>ere</sup></a>. Tout ce que nous aurons à retenir, c'est que le navigateur (un logiciel de la couche *Application*), confie cette tâche à d'autres logiciels, qui vont saucissonner les messages entre le client et le serveur, en *trames*, et ajouter des données qui vont permettre leur bonne circulation. C'est le **protocole TCP**.
 
 
-**le protocole IP:** c'est lui qui permet d'envoyer les paquets d'un ordinateur vers un autre ordinateur. Il gère l'adressage, le routage et l'interconnexion des différents réseaux.
+**le protocole IP:** c'est lui qui permet de se connecter à un autre ordinateur. Il gère l'adressage.
+
+**le protocole TCP:** permet d'envoyer les paquets d'un ordinateur vers un autre ordinateur. Il gère le routage et l'interconnexion des différents réseaux.
 
 ## adresses IP
 une adresse IP est un identifiant numérique unique attribué à chaque appareil (appareils mobiles, ordinateurs, routeurs, imprimantes, consoles de jeux, etc.) connecté à un réseau TCP / IP comme Internet. Plus précisemment, **c'est l'identifiant de la *carte reseau*, reelle ou virtuelle.**

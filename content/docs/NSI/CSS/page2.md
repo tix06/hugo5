@@ -376,7 +376,7 @@ Par defaut, la valeur est *static* . Les propriétés `top`, `right`, `bottom`, 
 *  RELATIVE —L'élément est positionné dans le flux normal du document puis décalé, par rapport à lui-même, selon les valeurs fournies par top, right, bottom et left. Le décalage n'a pas d'impact sur la position des autres éléments. Aussi, l'espace fourni à l'élément sur la page est le même que celui fourni avec static.
   Par defaut, right, bottom et left ont pour valeur *auto*
 
-*  ABSOLUTE-L'élément est retiré du flux normal et aucun espace n'est créé pour l'élément sur la page. Il est ensuite positionné par rapport à son ancêtre le plus proche qui est positionné s'il y en a un ou par rapport au bloc englobant initial sinon. C'est la valeur choisie pour les objets que l'on veut placer à l'aide de leurs coordonnées : voir les exemples dans les pages <a href="../../javascript_avance/page1/index.html">javascript avancé</a> et <a href="../../mini_projet_spaceInvader/page1/index.html">mini projet Space Invader</a>
+*  ABSOLUTE-L'élément est retiré du flux normal et aucun espace n'est créé pour l'élément sur la page. Il est ensuite positionné par rapport à son élément parent. C'est la valeur choisie pour les objets que l'on veut placer à l'aide de leurs coordonnées : voir les exemples dans les pages <a href="../../javascript_avance/page1/index.html">javascript avancé</a> et <a href="../../mini_projet_spaceInvader/page1/index.html">mini projet Space Invader</a>.<br>**Note:** Le parent, lui, doit avoir la propriété *position: relative;* 
 
 *  FIXED — ressemble à `absolute`mais le positionnement se fait relativement à la fenêtre du navigateur. Il reste *fixe* malgré le scrolling de la page.
 
