@@ -17,7 +17,11 @@ Rappels de SNT sur le <a href="/docs/SNT_2nde/pages/page4/web/" target = "blank"
 
 ## des tâches différentes
 Les langages web se partagent les tâches : 
-Une bonne pratique dans le développement d'un site internet (côté front-end, ce qui est executé sur la machine du client) consiste à utiliser HTML pour le contenu (avec un contenu correctement balisé, sémantique, accessible), CSS pour la mise en forme et la mise en page, et JavaScript pour gérer les interactions (qui peuvent éventuellement amener à modifier le contenu via les méthodes du DOM[^1]).
+Une bonne pratique dans le développement d'un site internet (côté front-end, ce qui est executé sur la machine du client) consiste à utiliser:
+
+*  HTML pour le contenu (avec un contenu correctement balisé, sémantique, accessible), 
+*  CSS pour la mise en forme et le design de la page, 
+*  et JavaScript pour gérer les interactions (qui peuvent éventuellement amener à modifier le contenu via les méthodes du DOM[^1]).
 
 Le langage HTML est un langage constitué de *balises*, comme par exemple : 
 `<title>le titre de ma page</title>` qui permet d'afficher le titre de la page dans l'onglet du navigateur.
@@ -27,13 +31,13 @@ Les éléments mis dans le programme à l'aide de ces balises vont permettre d'a
 * entre les pages du sites
 * vers les pages de sites externes
 
-Le *web*[^2] est justement basé sur l'utilisation de ces *hyperliens*, qui permettent de *naviguer* de pages en pages, sur internet[^3].
+> Le *web* est justement basé sur l'utilisation de ces *hyperliens*, qui permettent de *naviguer* de pages en pages, sur internet.
 
-# Quelques pages web
+# Le HTML et la page Web
 
 ## le squelette du document
 
-Cette partie du programme est le contenu minimum à mettre dans vos pages : 
+Cette partie du programme est le contenu minimum à mettre dans vos pages HTML: 
 
 
 ```html
@@ -55,7 +59,7 @@ Cette partie du programme est le contenu minimum à mettre dans vos pages :
 </html>
 ``` 
 
-Le doctype indique au navigateur la version HTML utilisée par la page (ici HTML5).
+Le **doctype** indique au navigateur la version HTML utilisée par la page (ici HTML5).
 
 L'élément racine `<html>` : C'est lui qui va recueillir les deux principaux éléments de la hiérarchie : `<head>` et `<body>`.
 
@@ -76,12 +80,24 @@ On peut aussi y ajouter des éléments `<link>` et `<script>` :
 
 Si vous avez un script qui est très gros mais indépendant, il est préférable de le placer tout à la fin, afin de ne pas retarder le navigateur dans sa construction de l'arbre du DOM et de l'affichage de la page.
 
-## Imbrication des balises
+## Imbrication et filiation des balises
 Si vous débutez complètement en HTML, consultez les ressources de SNT:
 
 * Une introduction à la redaction d'un document en HTML: <a href="/docs/SNT_2nde/pages/page4/web1/" target="blank">Document Web, contenu et structure</a>.
 
 L'imbrication des balises traduit le lien (la filiation) entre les éléments.
+
+On représente la structure d’un document html à l’aide d’un arbre.
+On parle d’**arbre DOM** (Document Object Model) du document.
+
+<figure>
+  <img src="../images/DOM.png">
+  <figcaption>Exemple d'arbre du DOM</figcaption>
+</figure>
+
+<i>Pour cet exemple: <br>
+Le **nœud** article est le **père** des noeuds h1, p, img et p.<br>
+Les nœuds h1, p, img et p sont les **fils** du nœud article.</i>
 
 Cette filiation entre les éléments se retrouve avec l'indentation des balises.
 
@@ -121,13 +137,26 @@ voir le lien sur [developer.mozilla.org/](https://developer.mozilla.org/fr/docs/
 ## Liens externes et internes
 
 - Dans ces exemples, on voit qu'une balise peut être constituée *d'attributs* (par exemple `src` pour la balise *img*). On affecte alors des *valeurs* à ces attributs (entre guillemets et après le `=` ).
-- Lien hypertexte : on créé un lien *externe* en écrivant l'URL de la page `http://...`:
+- Lien hypertexte : on créé un lien *externe* en écrivant l'URL de la page `http://...`.
 
-`<a href="http://fr.wikipedia.org/">Un lien hypertexte vers le site de Wikipédia</a>` 
+Si le lien était vers une page du site (une page *locale*), il n'y aurait pas eu `http://` au début de l'adresse. Juste le chemin (relatif ou absolu) vers cette nouvelle page depuis la page actuelle.
 
-Si le lien était vers une page du site (une page *locale*), il n'y aurait pas eu `http://` au début de l'adresse.
+*Exemples:*
 
-*Question :* L'adresse de l'image peut être *relative*, *absolue*, *locale* ou *externe*. Définir chacun de ces termes. Puis expliquer comment chacune de ces adresses a une expression particulière pour valeur de l'attribut *src*.
+```html
+<a href="http://fr.wikipedia.org/">Un lien hypertexte vers le site de Wikipédia</a>
+
+<a href="../page2/index.html">Un lien hypertexte vers une autre page du même site (chemin relatif)</a>
+
+<a href="/docs/page2/index.html">Un lien hypertexte vers une autre page du même site (chemin absolu)</a>
+
+<a href="#paragraphe2">Un lien vers un autre paragraphe de la même page</a>
+```  
+
+
+
+
+*Question :* L'adresse de l'image peut être *relative*/ *absolue*, *locale* / externe*. Définir chacun de ces termes. Puis expliquer comment chacune de ces adresses a une expression particulière pour valeur de l'attribut *src*.
 
 # Un outil de vérification de la syntaxe
 

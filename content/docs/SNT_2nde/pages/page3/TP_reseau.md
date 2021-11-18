@@ -20,7 +20,8 @@ On s'aidera de la video de présentation <a href="https://www.youtube.com/watch?
 * Modifier les adresses IP de ces ordinateurs pour avoir, dans l'ordre:
   * 192.168.0.1
   * 192.168.0.2
-  * ...
+  
+  *Remarque: Souvent, dans un même reseau, les 3 premiers octets de l'adresse IP des machines sont identiques. (ici: 192.168.0). Seul le dernier octet change. Pour l'une des machines, ce sera .1, pour la suivante .2, etc...)* 
 
 * Relier ces ordinateurs
 
@@ -44,7 +45,7 @@ On s'aidera de la video de présentation <a href="https://www.youtube.com/watch?
 
   
 
-* tester alors les commandes suivantes:
+* tester alors les commandes suivantes depuis la machine M1:
 
   * `ipconfig` : vérifier la correspondance de l'adresse IP de la machine M1
   * `ping 192.168.0.2` : pour établir une connexion avec la machine M2 
@@ -63,7 +64,9 @@ On s'aidera de la video de présentation <a href="https://www.youtube.com/watch?
 
 On cherche maintenant à créer un système de 2 sous-réseaux locaux. Ces reseaux auront pour adresses: 198.168.0.0 et 192.168.2.0
 
-* On ajoutera au système précédent le sous-réseau 192.168.2.0 comportant un switch et 3 ordinateurs M4, M5 et M6. Ces machines auront pour adresses IP: 192.168.2.1, 192.168.2.2 et 192.168.2.3
+*C'est à dire que toutes les machines du réseau 198.168.0.0 auront en commun les 3 octets 198.168.0 et toutes les machines du reseau 198.168.1.0 auront en commun les octets 198.168.1.* 
+
+* Le sous-réseau 192.168.2.0 comportera un switch et 3 ordinateurs M4, M5 et M6. Ces machines auront pour adresses IP: 192.168.2.1, 192.168.2.2 et 192.168.2.3
 
 Votre système devrait ressembler à l'image suivante:
 

@@ -40,7 +40,8 @@ Le selecteur fait référence à un ou plusieurs éléments du document.
 **Classes et identifiants**
 L'un des attributs des éléments HTML peut servir à indexer cet élément : 
 
-* de manière unique : l'attribut `id="valeur"` : une seule valeur d'attribut `id` peut être utilisée dans tout le document HTML.
+* de manière unique : l'attribut `id="valeur"` : une seule valeur d'attribut `id` peut être utilisée dans tout le document HTML. L’attribut id sert, comme son nom l’indique, à identifier un élément HTML en particulier
+dans une page pour ensuite pouvoir le cibler précisément (pour lui appliquer des styles CSS, ou bien créer un lien vers cet élément).
 * avec un attribut de classe : `class="valeur"` : ici, plusieurs éléments peuvent avoir la même *classe*. On pourra alors séléctionner (en css et en javascript) tous les éléments possédant cette classe, avec une seule instruction.
 
 *Remarque: Plusieurs classes peuvent être associées à un élément HTML en les séparant par un espace : `<h1 class="titre lexique">`*
