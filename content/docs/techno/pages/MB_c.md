@@ -5,7 +5,7 @@ Title: mesure de c du son
 # TP : Mesure d'une durée de propagation d'ultra-sons
 
 
-## Script 
+## Script
 
 ```python
 from microbit import *
@@ -58,8 +58,94 @@ En supposant que la célérité du son vaut 340m/s au moment de l'experience, ce
 
 Cela semble cohérent. Mais il faudra discuter de la précision attendue sur les 2 derniers digits mesurés par le dispositif...
 
-## Prolongement
+# Prolongement
+## exploitation des mesures
+* Répeter les mesures et relever la durée mise par les ultra-sons pour se reflechir sur un support rigide. Sur le cahier, consigner les données dans un tableau:
 
+| distance parcourue (m) | 0 | 0.25 | 0.5 | 1.0 | ... |
+|--- |--- |--- |--- |--- |--- |
+| temps (ms) | 0 | .. | .. | .. | .. |
+
+* Ouvrir un editeur Python, et saisir le script ci-dessous. Enregistrer le programme avec une extension `.py`, comme par exemple: `courbe.py`
+* Modifier les valeurs dans les listes X et Y afin d'afficher la courbe de la distance parcourue en fonction du temps (Y = distance; X = temps).
+* Relever alors l'équation de la courbe modélisée, déterminer la célérité des ondes **c**, ainsi que le coefficient de correlation.
+* Dans le programme python ci-dessous, quelle partie du script correspond à:
+    * l'import de librairie
+    * la définition des listes X et Y
+    * le traitement statistique des données
+    * l'affichage du graphique
+
+```python
+import matplotlib.pyplot as plt
+
+import numpy as np
+from scipy.optimize import curve_fit
+from matplotlib.widgets import Cursor
+
+#--------------------------------------------------
+#création des listes de variables utilisées dans le programme
+#--------------------------------------------------
+
+X=[0,1,2,3,4,5]
+Y=[0.0,1.1,1.9,3.0,4.1,4.9]
+
+
+#--------------------------------------------------
+#partie modélisation
+#--------------------------------------------------
+#variables utilisées dans la modélisation polynomiale standard
+a=0.9
+b=0
+
+#mise en place de l'outil curve fit (scipy)
+def func(x,a,b):
+    return a*x+b
+
+X = np.asarray(X) # conversion des listes en matrices 
+Y = np.asarray(Y) # pour pouvoir calculer a*X+b
+
+y = func(X,a,b)
+
+params, mcov =curve_fit(func,X,Y)
+# params = coefficients retournés par le calcul de modélisation avec R2 minimal
+# mcov = matrice de covariance, permet de quantifier la variation de chaque variable par rapport à chacune des autres
+a = params[0]; b=params[1]
+
+#--------------------------------------------------
+#partie calcul de r2 coefficient de correlation
+#--------------------------------------------------
+residuals = Y- func(X, params[0],params[1])
+ss_res = np.sum(residuals**2)
+ss_tot = np.sum((Y-np.mean(Y))**2)
+r_squared = 1 - (ss_res / ss_tot)
+print(r_squared)
+
+#-------------------------------------------------
+#             partie graphique avec quadrillage
+#-------------------------------------------------
+
+# label et config des axes
+plt.xlabel('X (s)')
+plt.ylabel('Y (m)')
+
+# Plot
+plt.plot(X,Y,'o') # nuage de points de l'acquisition
+plt.plot(X,func(X,a,b),'g',linewidth=1) # courbe modelisee
+equation = "Y = "+str(round(a,3))+" * X + "+str(round(b,3)) + ", coef correlation r2 = " + str(round(r_squared,5))
+plt.legend(["mesures","courbe modélisée"])
+plt.title(equation)
+
+# modifier les axes APRES avoir positionné les points si besoin de choisir l'echelle
+axes = plt.gca()
+cursor = Cursor(axes, useblit=True, color='red', linewidth=2)
+
+# affichage
+plt.show()
+```
+
+
+
+## Analyse du signal ultra-sons (oscilloscope)
 * Modifier le script pour que la boucle `while` n'execute s'une seule instruction : `dt = mesure_temps_A_R()`.
 * Diriger alors les ondes emises par le circuit microbit vers un autre recepteur à US, lui même relié à un oscilloscope.
 * Analyser le signal, et interpréter alors les instructions dans la fonction `mesure_temps_A_R`:
@@ -73,7 +159,7 @@ Cela semble cohérent. Mais il faudra discuter de la précision attendue sur les
 ``` 
 
 # Liens
-Ce mini TP peut faire partie d'une séance plus soutenue, avec le scénario proposé par la DANE de Normandie : 
 
-* [voir ici (radar de recul)](https://numerique-sciences-informatiques.discip.ac-caen.fr/IMG/pdf/radar-de-recul.pdf)
+
+* scénarisation du TP proposé par la DANE de Normandie : [voir ici (radar de recul)](https://numerique-sciences-informatiques.discip.ac-caen.fr/IMG/pdf/radar-de-recul.pdf)
 * page principale avec telechargement de [micro_grove.py](https://numerique-sciences-informatiques.discip.ac-caen.fr/kit-grove-pour-micro-bit-et-applications-en-snt)
