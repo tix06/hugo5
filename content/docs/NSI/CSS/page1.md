@@ -93,7 +93,10 @@ En CSS, tout élément est inclus dans une boîte
 | margin | 1px | marge exterieur, dimension en pixels |
 | padding | 1px | marge intérieure |
 
+## Rappel sur la propriété display
 
+* Les balises s'affichant en "block" (bloc) : elles prennent toute la largeur disponible et s'affichent avec un saut de ligne avant et après. On peut les dimensionner avec les propriétés `width` et `height`. Elles n'accèptent pas `vertical-align` 
+* Les balises s'affichant en "inline" (dans la ligne) : elles prennent uniquement la largeur dont elles ont besoin, sans ajouter de saut de ligne. Elles acceptent `vertical-align`, mais pas `width` et `height`.
 
 # CSS intermediaire
 ## héritage

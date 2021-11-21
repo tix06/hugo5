@@ -49,7 +49,7 @@ On s'aidera de la video de présentation <a href="https://www.youtube.com/watch?
 
   * `ipconfig` : vérifier la correspondance de l'adresse IP de la machine M1
   * `ping 192.168.0.2` : pour établir une connexion avec la machine M2 
-  * `traceroute 193.168.0.2` : pour établir le trajet qui mène jusqu'à M2
+  * `traceroute 192.168.0.2` : pour établir le trajet qui mène jusqu'à M2
 
 
 

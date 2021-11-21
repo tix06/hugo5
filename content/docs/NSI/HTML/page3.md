@@ -97,9 +97,9 @@ On parle d’**arbre DOM** (Document Object Model) du document.
 
 <i>Pour cet exemple: <br>
 Le **nœud** article est le **père** des noeuds h1, p, img et p.<br>
-Les nœuds h1, p, img et p sont les **fils** du nœud article.</i>
+Les nœuds h1, p, img et p sont les **fils** du nœud article.<br>
+Les balises `<h1>, <p>, <img> et <p>`sont imbriquées dans celle `<article>`.</i>
 
-Cette filiation entre les éléments se retrouve avec l'indentation des balises.
 
 # Les éléments importants à connaitre
 ## Page qui repertorie TOUS les éléments HTML
@@ -133,6 +133,72 @@ voir le lien sur [developer.mozilla.org/](https://developer.mozilla.org/fr/docs/
 
 ## formulaires
 voir le lien sur [developer.mozilla.org/](https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML)
+
+Les formulaires permettent à l’utilisateur de saisir **un ensemble de données** et d’envoyer une **requête** à un serveur en cliquant sur un bouton.
+
+Le formulaire est délimité par l’élément HTML `<form>` qui précise :
+
+- L’URL (attribut action)
+- La méthode (attribut method)
+
+Il contient un ensemble d’**éléments interactifs** permettant la saisie de données, spécifiés par l’élément `<input>`. Son attribut type permet de préciser le type de saisie :
+
+- Text
+- Number
+- Range (valeur numerique)
+- Checkbox
+- Radio
+- Button
+- …
+
+Les types *reset* et *submit* sont des boutons speciaux pour reinitialiser ou envoyer la requete verss le serveur.
+L’attribut value spécifie la valeur initiale du champ de saisie.
+
+
+
+*Exemple:*
+
+
+<p><label>Entrez votre nom <input type=text></label></p>
+<p><label>Selectionner une temperature <input type=range></label></p>
+<p><label>Entrer un nombre <input type=number></label></p>
+<p>Aimez vous la soupe ?</p><p><label style="padding:10px">Oui<input type=radio value="Oui" name="soupe"></label></p>
+<p><label style="padding:10px">Non<input type=radio value="Non" name="soupe"></label></p>
+<p>
+<label>Quelle est votre langue marternelle ?
+<select>
+   <nom>langue</nom>
+   <option valeur="fr">Français</option>
+   <option valeur="nl">Néerlandais</option>
+   <option valeur="en">Anglais</option>
+   <option valeur="other">Autre</option>
+</select>
+</label>
+</p>
+
+
+*Code source:*
+
+```html
+<form method="post" action="action.php">
+<p><label>Entrez votre nom <input type=text></label></p>
+<p><label>Selectionner une temperature <input type=range></label></p>
+<p><label>Entrer un nombre <input type=number></label></p>
+<p>Aimez vous la soupe ?</p><p><label style="padding:10px">Oui<input type=radio value="Oui" name="soupe"></label></p>
+<p><label style="padding:10px">Non<input type=radio value="Non" name="soupe"></label></p>
+<label>Quelle est votre langue marternelle ?
+<select>
+   <nom>langue</nom>
+   <option valeur="fr">Français</option>
+   <option valeur="nl">Néerlandais</option>
+   <option valeur="en">Anglais</option>
+   <option valeur="other">Autre</option>
+</select>
+</label>
+</p>
+</form>
+```
+
 
 ## Liens externes et internes
 
