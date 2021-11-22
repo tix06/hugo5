@@ -1,5 +1,6 @@
 ---
 Title : Formulaires
+bookShowToc: false
 ---
 
 
@@ -37,7 +38,7 @@ Par exemple, pour la page 1:
 Pour la mise en forme de la page, il est fortement suggéré de lire:
 
 * la page sur le `display` des éléments HTML: [CSS positionnement et display](/docs/NSI/CSS/page2/)
-* la page sur les *bonnes pratiques* à propos de l'usage des *labels*: [MDN](https://developer.mozilla.org/fr/docs/Web/HTML/Element/Label)]
+* la page sur les *bonnes pratiques* à propos de l'usage des *labels*: [MDN](https://developer.mozilla.org/fr/docs/Web/HTML/Element/Label)
 
 Un formulaire peut posséder plusieurs éléments comme: 
 
@@ -54,7 +55,7 @@ Vous aimez le vélo? Et bien présentez votre passion dans cette page thématiqu
 
 Cette 2<sup>e</sup> page appelée `velo.html` présentera un court texte, et une image libre de droit, comme par exemple: [https://pixabay.com/fr/photos/vélo-enfants-graffiti-art-3045580/](https://pixabay.com/fr/photos/vélo-enfants-graffiti-art-3045580/)
 
-Pour respecter les droits d'auteur, vous pouvez un lien vers la page de l'auteur de l'image lorsque l'on clique sur l'image.
+Pour respecter les droits d'auteur, vous pouvez ajouter un lien vers la page de l'auteur de l'image lorsque l'on clique sur l'image.
 
 Le court texte peut être celui du Poëme de Ernest Pérochon:
 
