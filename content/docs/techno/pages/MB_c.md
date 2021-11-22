@@ -3,9 +3,25 @@ Title: mesure de c du son
 ---
 
 # TP : Mesure d'une durée de propagation d'ultra-sons
+## Principe
+On cherche à mesurer la durée de propagation des ultra-sons lors de leur reflexion sur un obstacle.
 
+<figure>
+    <img src="../images/E_R.png" alt="mesure de la duree de propagation des US">
+    <figcaption>Dispositif</figcaption>
+</figure>
+
+Pour une distance d<sub>1</sub> entre le dispositif ultra-sons et l'écran, on relève la durée de propagation t (en micro secondes) sur la carte microbit.
+
+Cette mesure est déclanchée par l'appui sur le bouton a de la carte microbit.
 
 ## Script
+Commencer par uploader le script ci-dessous dans la carte microbit selon la méthode utilisant l'editeur Mu (flasher): [voir page présentation microbit](/docs/techno/pages/MB_init/#utiliser-l-editeur-mu)
+
+<figure>
+<img src="/docs/techno/pages/images/helloworld.png">
+<figcaption>Mu editor</figcaption>
+</figure>
 
 ```python
 from microbit import *
@@ -35,7 +51,7 @@ while True:
     display.scroll(dt)
 ``` 
 
-## Principe
+## Brancher le dispositif à ultra-sons
 Brancher l'emetteur-capteur à ultra-son sur la carte micro:bit. Choisir le port groove appelé PIN1 sur la carte.
 
 Diriger l'emetteur-capteur à ultra-sons vers un support rigide, afin que les ondes ultrasonores se reflechissent et reviennent vers le recepteur.
@@ -56,20 +72,19 @@ En positionnant l'emetteur-capteur à environ 15 cm d'un support reflechissant, 
 
 En supposant que la célérité du son vaut 340m/s au moment de l'experience, cela donne une distance parcourue de $340 \times 833.10^{-6} = 0,28m$, double de la distance au support.
 
-Cela semble cohérent. Mais il faudra discuter de la précision attendue sur les 2 derniers digits mesurés par le dispositif...
+Cela semble cohérent. Mais il faudrait discuter de la précision attendue sur les 2 derniers digits mesurés par le dispositif...
 
-# Prolongement
-## exploitation des mesures
+# exploitation des mesures
 * Répeter les mesures et relever la durée mise par les ultra-sons pour se reflechir sur un support rigide. Sur le cahier, consigner les données dans un tableau:
 
 | distance parcourue (m) | 0 | 0.25 | 0.5 | 1.0 | ... |
 |--- |--- |--- |--- |--- |--- |
 | temps (ms) | 0 | .. | .. | .. | .. |
 
-* Ouvrir un editeur Python, et saisir le script ci-dessous. Enregistrer le programme avec une extension `.py`, comme par exemple: `courbe.py`
+* Ouvrir un editeur Python, comme par exemple **Pyzo**, et saisir le script ci-dessous. Enregistrer le programme dans vos *Documents* avec une extension `.py`, comme par exemple: `courbe.py`
 * Modifier les valeurs dans les listes X et Y afin d'afficher la courbe de la distance parcourue en fonction du temps (Y = distance; X = temps).
 * Relever alors l'équation de la courbe modélisée, déterminer la célérité des ondes **c**, ainsi que le coefficient de correlation.
-* Dans le programme python ci-dessous, quelle partie du script correspond à:
+* **QUESTIONS:** Dans le programme python ci-dessous, quelle partie du script correspond à:
     * l'import de librairie
     * la définition des listes X et Y
     * le traitement statistique des données
@@ -144,9 +159,9 @@ plt.show()
 ```
 
 
-
+<!--
 ## Analyse du signal ultra-sons (oscilloscope)
-* Modifier le script pour que la boucle `while` n'execute s'une seule instruction : `dt = mesure_temps_A_R()`.
+* Modifier le script pour que la boucle `while` n'execute qu'une seule instruction : `dt = mesure_temps_A_R()`.
 * Diriger alors les ondes emises par le circuit microbit vers un autre recepteur à US, lui même relié à un oscilloscope.
 * Analyser le signal, et interpréter alors les instructions dans la fonction `mesure_temps_A_R`:
 
@@ -157,6 +172,7 @@ plt.show()
     broche.write_digital(1)
     time.sleep_ms(10)
 ``` 
+-->
 
 # Liens
 

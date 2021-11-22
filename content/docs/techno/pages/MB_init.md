@@ -2,10 +2,9 @@
 Title : informatique des objets
 ---
 
-# informatique des objets
 
-# TP : Prise en main de la carte micro:bit
-## présentation
+
+# Prise en main de la carte micro:bit: présentation
 La carte microbit est un nano-ordinateur créé pour la promotion de la programmation dans l'éducation. Elle est très simple d'utilisation, mais peut également s'intégrer dans des applications complexes.
 
 <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Gipsy est prête. <a href="https://twitter.com/hashtag/microbit?src=hash&amp;ref_src=twsrc%5Etfw">#microbit</a> <a href="https://twitter.com/hashtag/makecode?src=hash&amp;ref_src=twsrc%5Etfw">#makecode</a> <a href="https://t.co/5EJiNya0dw">pic.twitter.com/5EJiNya0dw</a></p>&mdash; Gaelic (@GaetanoLICATA5) <a href="https://twitter.com/GaetanoLICATA5/status/1377319663017803780?ref_src=twsrc%5Etfw">March 31, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -17,7 +16,7 @@ Elle possède dans sa version 2:
 * un acceleromètre/gyroscope
 * un capteur de champ magnétique
 * 2 boutons a/b
-* un écran LED 5*5
+* un écran LED `5*5` 
 * un mini haut-parleur
 * un microphone
 * antenne radio 2,4 GHz et bluetooth pour une communication entre cartes
@@ -26,7 +25,7 @@ Elle possède dans sa version 2:
 La programmation se fait depuis un navigateur web en Block Editor pour les débutants ou en langage MicroPython pour les utilisateurs plus expérimentés.
 Le programme se télécharge depuis l'IDE en ligne et se copie simplement dans la micro:bit comme dans une clé USB (cordon USB vers micro-USB non inclus).
 
-## Utiliser l'editeur en ligne python.microbit.org
+# Utiliser l'editeur en ligne python.microbit.org
 Aller sur l'editeur à l'adresse suivante : [https://python.microbit.org/v/2.0](https://python.microbit.org/v/2.0)
 
 <figure>
@@ -38,7 +37,7 @@ Aller sur l'editeur à l'adresse suivante : [https://python.microbit.org/v/2.0](
 3. Charger le programme sur le disque dur de l'ordinateur : *Download* (l'extension est .hex)
 4. Deplacer le programme sur la carte microbit à l'aide de l'explorateur de fichiers.
 
-## Utiliser l'editeur Mu
+# Utiliser l'editeur Mu
 <figure>
   <img src="../images/helloworld.png">
 </figure>
@@ -71,7 +70,7 @@ Une fois le programme chargé, il peut y avoir une erreur de syntaxe qui empêch
   <img src="../images/repl.png">
 </figure>
 
-## Un premier programme `Hello World`
+# Un premier programme `Hello World`
 **Entrées/Sorties :**
 
 La carte dispose d'un petit écran de LED qui peut servir de sortie et d'affichage. Elle est équipée de 2 boutons A et B pour intéragir.
@@ -121,7 +120,7 @@ for x in range(5):
 x,y : int, valeur de 0 à 4<br>
 b : int, 0 à 9 (intensité lumineuse de la diode en x,y)
 
-## Application: TP évalué
+# Application: TP évalué
 
 <a href="/pdf/SNT/TP_intro_MB.pdf">
 <figure>
