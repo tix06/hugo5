@@ -79,7 +79,7 @@ Cela semble cohérent. Mais il faudrait discuter de la précision attendue sur l
 
 | distance parcourue (m) | 0 | 0.25 | 0.5 | 1.0 | ... |
 |--- |--- |--- |--- |--- |--- |
-| temps (ms) | 0 | .. | .. | .. | .. |
+| temps (s) | 0 | .. | .. | .. | .. |
 
 * Ouvrir un editeur Python, comme par exemple **Pyzo**, et saisir le script ci-dessous. Enregistrer le programme dans vos *Documents* avec une extension `.py`, comme par exemple: `courbe.py`
 * Modifier les valeurs dans les listes X et Y afin d'afficher la courbe de la distance parcourue en fonction du temps (Y = distance; X = temps).
