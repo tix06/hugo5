@@ -50,6 +50,8 @@ Cette partie du programme est le contenu minimum à mettre dans vos pages HTML:
         <meta charset="UTF-8">
         <!-- Titre -->
         <title>Titre de la page web</title>
+        <!-- Lien vers la feuille de style -->
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 
     <body>
@@ -75,7 +77,8 @@ Préciser l'encodage des caractères est primordial pour exploiter la bonne page
 
 On peut aussi y ajouter des éléments `<link>` et `<script>` : 
 
-- link : permet de mettre en relation la page avec d'autres documents externes.
+- link : permet de mettre en relation la page avec d'autres documents externes:
+  `<link rel="stylesheet" type="text/css" href="style.css">`
 - `<script>`  permet d'ajouter des scripts (JavaScript) qui vont s'éxécuter côté client dans le navigateur dès leur chargement.
 
 Si vous avez un script qui est très gros mais indépendant, il est préférable de le placer tout à la fin, afin de ne pas retarder le navigateur dans sa construction de l'arbre du DOM et de l'affichage de la page.

@@ -19,13 +19,15 @@ Voici l'arborescence des fichiers proposée pour ce projet, dans ce dossier *sit
 |- page2.html
 |- page3.html
 |- images
-|    |- xxx.png
+     |- xxx.png
 |- static
      |- style.css
 ```
 
 
-Ces pages devront posséder chacune des liens de navigation vers l'ensemble des pages du site. Il est souhaitable que ces liens se situent dans le bandeau de navigation, comme sur l'exemple traité sur la page: [CSS positionnement et display](/docs/NSI/CSS/page2/)
+Ces pages, page1.html, page2.html, et page3.html devront posséder chacune des **liens de navigation** vers l'ensemble des pages du site. 
+
+Il est souhaitable que ces liens se situent dans le bandeau de navigation, comme sur l'exemple traité sur la page: [CSS positionnement et display](/docs/NSI/CSS/page2/)
 
 Par exemple, pour la page 1:
 
@@ -33,6 +35,8 @@ Par exemple, pour la page 1:
   <img src="../images/form.png">
   <figcaption>Exemple de page avec formulaire</figcaption>
 </figure>
+
+Commencer par intégrer le squelette HTML pour chacune des pages comme vu en cours: <a href="/docs/NSI/HTML/page3/#le-html-et-la-page-web">Lien</a>
 
 # Page avec formulaire
 Pour la mise en forme de la page, il est fortement suggéré de lire:
