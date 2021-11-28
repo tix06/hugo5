@@ -2,6 +2,16 @@
 Title : serveur Flask
 ---
 
+# Flask
+Flask est une *bibliothèque* python fournissant les outils pour faire fonctionner un serveur web.
+
+<figure>
+  <img src="../images/flask.png">
+  <figcaption>Fonctionnement de Flask</figcaption>
+</figure>
+
+[lien vers explications](https://lesmathsduyeti.fr/fr/lycee/nsi-premiere/interactions-client-serveur-flask/)
+
 
 # Structure du projet
 TP inspiré de [https://qkzk.xyz/docs/nsi/cours_premiere/ihm_web/flask/](https://qkzk.xyz/docs/nsi/cours_premiere/ihm_web/flask/)
@@ -165,3 +175,7 @@ Ouvrir le moniteur reseau et recommencer l'opération (transmettre les données 
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
 ```
 
+# Liens
+* TP inspiré de: [https://qkzk.xyz/docs/nsi/cours_premiere/ihm_web/flask/](https://qkzk.xyz/docs/nsi/cours_premiere/ihm_web/flask/)
+* Autre TP de NSI utilisant Flask, avec explications sur le modèle MVC: [site du Yeti](https://lesmathsduyeti.fr/fr/lycee/nsi-premiere/interactions-client-serveur-flask/)
+* Flask pas à pas: [liris.cnrs dpt bio informatique](https://perso.liris.cnrs.fr/pierre-antoine.champin/2017/progweb-python/cours/cm2.html)
