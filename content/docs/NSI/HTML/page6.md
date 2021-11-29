@@ -10,6 +10,12 @@ Flask est une *bibliothèque* python fournissant les outils pour faire fonctionn
   <figcaption>Fonctionnement de Flask</figcaption>
 </figure>
 
+L’architecture Modèle-Vue-Contrôleur est composée de trois entités distinctes, chacune ayant son propre rôle:
+
+* Le **contrôleur**: gère le fonctionnement du site Web. Le programme est écrit en python.
+* Les **vues**: cette partie se concentre sur l'affichage, et a pour rôle d'assembler le code HTML issu du *template*. Dans une *vue*, on peut mettre en oeuvre des algorithmes écrits en python. La *vue* va partager des variables avec les *templates*.
+* Les **templates**: c'est le modèle de la page HTML qui sera utilisée par la *vue* pour générer la page HTML envoyée au client. Cette page peut être personnalisée selon les variables partagées avec la vue. C'est grâce à certaines parties écrites en langage *JINJA2*, dans le corps du script du *template* que la substitution des éléments HTML sera réalisée. Un peu comme un *texte à trous*.
+
 [lien vers explications](https://lesmathsduyeti.fr/fr/lycee/nsi-premiere/interactions-client-serveur-flask/)
 
 
@@ -46,6 +52,8 @@ def form():
 app.run(debug=True)
 ```
 
+Ce fichier `main.py` contient les *vues*, et lance le *contrôleur* lorsqu'il est executé.
+
 * **Executer le programme ci-dessus**
   
 * **ouvrez votre navigateur web** et tapez dans la **barre d’adresse “localhost:5000”**
@@ -58,7 +66,7 @@ La barre d’adresse doit être renseignée avec l’adresse du serveur web: `ht
 En exécutant le programme Python ci-dessus, le framework Flask a lancé un serveur web. Ce serveur web attend des requêtes HTTP sur le port 5000. En ouvrant un navigateur web et en tapant “localhost:5000”, nous faisons une requête HTTP.
 
 Cette requête demande au serveur de lui retourner la ressource située à la racine du site Web.
-Le serveur web fourni avec Flask répond à cette requête HTTP en envoyant une page web contenant uniquement `<p>Tout fonctionne parfaitement</p>`. C'est ce qui est retourné par la fonction `index` et la groupe de lignes:
+Le serveur web fourni avec Flask répond à cette requête HTTP en envoyant une page web contenant uniquement `<p>Tout fonctionne parfaitement</p>`. C'est ce qui est retourné par la fonction `index` et le groupe de lignes:
 
 ```python
 @app.route('/')
@@ -140,7 +148,7 @@ app.run(debug=True)
 Observez comment la fonction result va ouvrir la page *result.html* tout en passant les variables *nom* et *prenom*, par la méthode **POST**.
 
 Observez également la ligne précédent la definition de la fonction `result`: 
-celle-ci contient un *décorateur* sur l'objet `app` de la librairie `flask` qui précise le chemin vers le fichier à ouvrir: *`/result.html*`
+celle-ci contient un *décorateur* sur l'objet `app` de la librairie `flask` qui précise le chemin vers le fichier à ouvrir: *`/result.html`* 
 
 # moniteur reseau
 ## méthode POST
@@ -174,6 +182,24 @@ Ouvrir le moniteur reseau et recommencer l'opération (transmettre les données 
 ```html
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
 ```
+
+# Prolongement
+Publiez votre projet en ligne, sur Pythonanywhere.com
+
+* modifier la dernière ligne, `app.run(debug=True)` du fichier *main.py* par:
+
+```python
+if __name__ == '__main__':
+    app.run()
+```
+
+* Aidez vous de la page [suivante (arduino103.blogspot)](https://arduino103.blogspot.com/2015/06/python-flask-pythonanywhere-partie-6.html): adaptez le tuto pour concevoir votre site en ligne, pour l'instant sans base de données.
+
+<figure>
+  <img src="../images/congratulation.png" >
+  
+</figure>
+
 
 # Liens
 * TP inspiré de: [https://qkzk.xyz/docs/nsi/cours_premiere/ihm_web/flask/](https://qkzk.xyz/docs/nsi/cours_premiere/ihm_web/flask/)
