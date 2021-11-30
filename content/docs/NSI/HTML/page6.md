@@ -133,7 +133,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def form():
-  return render_template('index.html')
+  return render_template('form.html')
 
 @app.route('/result',methods = ['POST'])
 def result():
@@ -176,7 +176,12 @@ Ouvrir le moniteur reseau et recommencer l'opération (transmettre les données 
 
 # Ajouter une feuille de style
 * Dans le dossier *static* à la racine du projet: ajouter votre feuille de style avec le nom *style.css*.
-* Dans le debut du fichier *main.py*, ajouter l'import de `url_for` avec: `from flask import url_for`
+* Dans le debut du fichier *main.py*, ajouter l'import de `url_for` avec:
+
+```python
+from flask import url_for
+```
+
 * Dans le fichier *form.html*, entre les balises `<head> et </head>`, ajouter: 
 
 ```html
