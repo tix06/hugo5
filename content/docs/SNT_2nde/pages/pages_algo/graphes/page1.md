@@ -77,7 +77,7 @@ Un chemin entre 2 sommets d'un graphe est le parcours qui relie ces 2 sommets. O
 
 La *longueur du chemin* est égale au nombre d'arêtes empruntées.
 
-## Cycle 
+## Cycle
 Un cycle est un chemin fermé (qui revient à son sommet de départ), sans passer 2 fois par la même arête.
 
 ## Arbre

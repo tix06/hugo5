@@ -43,9 +43,9 @@ Et pour les atomes K et Ca de la 4e ligne, la couche de valence est la couche n=
 Les électrons de la couche de valence sont importants, car ce sont ceux-ci qui joueront un rôle dans les liaisons que formera l'atome puisque ce sont les moins attachés au noyau, les plus libres.
 
 ## Electrons de valence
-La couche la plus éloignée du noyau, celle qui est en principe partiellement remplie (*), est appelée : **couche externe**, ou **couche de valence**.
+La couche la plus éloignée du noyau, celle qui est en principe partiellement remplie (`*`), est appelée : **couche externe**, ou **couche de valence**.
 
-(*) Cette couche est toujours remplie pour les gaz rares.
+(`*`) Cette couche est toujours remplie pour les gaz rares.
 
 La couche de valence contient les **électrons de valence**. Par exemple, dans le cas de l'oxygène, la couche de valence est la couche n=2 qui contient les 6 électrons de valence.
 
@@ -84,7 +84,7 @@ Les **points** sont des electrons de valence **non appariés**. Les **barres** s
 
  
 
-## Valence d'un atome
+## Valence d'un atome = nombre d'électrons LIANTS
 **Regle :** Un point représente un électron liant (qui peut former une liaison), et une barre représente un doublet électronique, c'est-à-dire deux électrons non liants.
 
 Reprenons l'atome d'oxygène comme exemple. Il possède 6 électrons dans sa couche de valence:

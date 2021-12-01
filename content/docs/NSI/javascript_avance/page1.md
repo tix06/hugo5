@@ -33,7 +33,7 @@ fn(2)
 
 
 
-### utiliser une fonction comme argument 
+### utiliser une fonction comme argument
 En javascript, comme pour d'autres langages dits *fonctionnels*, on peut mettre une fonction comme argument d'une autre fonction : 
 ```
 fn(fn(2)) 

@@ -94,16 +94,16 @@ Le typage des variables se fait alors de manière dynamique, comme en python.
 
 Pour connaître le type d’une variable, on utilise la fonction `typeof(variable)` 
 
-## conversions de types  
+## conversions de types
 a.  Convertir en nombre entier : `parseInt(‘valeur’)`
 b.  Convertir en nombre flottant : `parseFloat()`
 c.  Tester si la valeur est NaN (not a number) : `isNaN()`
 d.  Convertir en chaine de caractère : `string(variable)` avec un 'S' majuscule.
 
-## Le type Array 
+## Le type Array
 Les tableaux, array, sont des collections d’objets, mis et ordonnés dans une variable unique. On accède à chaque élément du tableau avec son rang. Cette structure de données est assez proche de la liste que l’on a vu en python.
 
-### Déclarer un tableau vide : 2 manières : 
+### Déclarer un tableau vide : 2 manières :
 `let tab = new Array() ;`
 
 `let tab = [] ;`
@@ -113,7 +113,7 @@ Pour déclarer et affecter directement des éléments, on fait :
 
 `let fruits = ["Apple","Orange", "Pear"]`
 
-### accéder à un élément du tableau : 
+### accéder à un élément du tableau :
 (on peut tester ces exemples avec la console)
 
 
@@ -144,7 +144,7 @@ Pour déclarer et affecter directement des éléments, on fait :
     </tr>
 </table>
 
-### méthodes associées aux tableaux : 
+### méthodes associées aux tableaux :
 dimension du tableau (nombre d’éléments)
 
 <table>
@@ -176,7 +176,7 @@ On utilise l'instruction `array.pop()`
     </tr>
 </table>
 
-### ajouter un élément à la fin 
+### ajouter un élément à la fin
 On utilise l'instruction `array.push(nouvel_element)`
 
 <table>
@@ -207,7 +207,7 @@ On retrouve les opérateurs déjà vus en langage python :
 
 **Question 2 :** Coder un programme qui permet de savoir l’âge d’Alice (28 ans) en secondes. Réaliser les calculs avec des variables aux noms bien explicites pour les heures, jours, années. Si vous pouvez, utilisez des noms en langue anglaise pour les variables.
 
-## Les opérateurs logiques 
+## Les opérateurs logiques
 est égal `==`, est supérieur ou égal `>=`, inferieur ou égal `<=`, et `&&`, ou `||`, non `!`. On peut aussi utiliser `and`, `or`, `not` pour ces 3 derniers opérateurs.
 
 # Fonctions
@@ -323,7 +323,7 @@ En utilisant la méthode `fruits.lenght` :
     </tr>
 </table>
 
-### Boucles non bornées : while : 
+### Boucles non bornées : while :
 syntaxe : 
 
 ```
