@@ -122,7 +122,7 @@ Le navigateur utilise souvent les méthodes GET et POST lors de l'envoi d'une re
 
 Le serveur lui repond en renvoyant un (des) fichier(s) HTML. Et eventuellement des fichiers associés, qui peuvent être dans d'autres formats, et complètent la page, son contenu, son style, ses éléments interactifs, ou apportent des ressources (images, videos...). C'est le navigateur qui interprète ces fichiers et assure l'affichage de la page.
 
-# reseau P2P 
+# reseau P2P
 C'est un mode d'organisation sur internet où toutes les machines se comportent alternativement comme clients ou serveurs.
 
 <figure>
@@ -180,5 +180,5 @@ D’où l’importance d’un cadre juridique permettant de protéger les usag
 * [algo données et Co des systèmes] pagerank : repose sur le principe de calculer la popularité d'une page à partir de la popularité des pages qui la citent. C'est une tâche automatique dont on peut avoir un aperçu avec une activité... On peut partir d'un graphe (orienté), avec pour noeuds, les pages, et pour arêtes (ou arcs), les liens. Réaliser alors un parcours aléatoire de ces pages et calculer le nombre de visites pour chacune (avec un grand nombre de visites, c'est long et il faut utiliser un programme)
 -->
 
-# Liens 
+# Liens
 [article binaire blog le Monde : Le www a 30 ans](http://binaire.blog.lemonde.fr/2019/04/26/le-world-wide-web-il-y-a-trente-ans/)

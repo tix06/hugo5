@@ -4,6 +4,8 @@ bookShowToc: false
 ---
 
 # Le langage HTML
+L’Hypertext Markup Language, généralement abrégé **HTML**, est un langage de contenu et de description interprété par le navigateur.
+
 <!--
 L’Hypertext Markup Language, généralement abrégé **HTML**, est le format de données conçu pour représenter les pages web. C'est un langage interprété (par le navigateur). 
 
@@ -23,23 +25,27 @@ C’est un langage de balisage. Ces balises sont la plupart du temps emboitées,
 ```
 -->
 ## Instructions en HTML
-Les instructions `HTML` sont mises dans un fichier dont l'extension est `.html`.
-
-**Toutes les instructions** de mise en page seront disposées entre les balises `<body> … </body>`
+Testons nos premières instructions en html.
 
 **Les arguments** pour chaque instruction sont mis entre la balise d’ouverture, par exemple `<h1>` et de fermeture, `</h1>`.
 
->  `<h1>Wanted!</h1>` 
+ 
 
-**Pour ajouter une image :** on utilise la balise `<img>`:
 
-> `<img src="robot.png">`
+> Testez le vous même: Allez dans l'editeur en ligne <a href="https://htmledit.squarefree.com/" target="blank">squarefree.com</a> et copier-coller le script suivant:
 
-Celle-ci doit obligatoirement avoir un attribut *src* suivi du chemin (local ou URL de type http://...) vers le fichier image. Les attributs d'une balise, comme ici `src` permettent de configurer les éléments. 
+```html
+<h1>Wanted!</h1>
+```
 
-*Remarque:* La balise `<img>` est une balise orpheline, qui ne possède pas de balise de fermeture. 
+<figure>
+  <img src="../images/squarefree.png">
+</figure>
 
-**Les balises principales :** de type `<balise>argument</balise>`
+> Comment cette instruction est-elle interprétée par le navigateur (partie inférieure de l'écran)?
+
+### **Les balises principales**
+Ce sont la plupart du temps des balises de type `<balise>argument</balise>`
 
 | element | exemple d'instruction html | rendu navigateur |
 | --- | --- | --- | 
@@ -47,25 +53,38 @@ Celle-ci doit obligatoirement avoir un attribut *src* suivi du chemin (local ou 
 | h2 (titre secondaire) | `<h2>Mon titre secondaire</h2>` | <span style="font-size: 24px">Mon titre secondaire</span> |
 | p (paragraphe) | `<p>Voici le contenu d'un paragraphe</p>` | &nbsp; &nbsp; Voici le contenu d'un paragraphe |
 | div (container) | `<div><p>Contenu</p><p>autre contenu</p></div>` | <p>Contenu</p><p>autre contenu</p> |
-| a (lien) | `<a href="lien/vers/la/page2.html">aller a la page 2</a>` | <a href="">aller a la page 2</a> |
-| img (image) | `<img src="lien/vers/l/image.png">` | <img src="../images/bigdata.png" width=50px> |
+| a (lien) | `<a href="https://www.anti-moustique.net/raquette-moustique/">le meilleur antimoustique au monde</a>` | <a href="">le meilleur antimoustique au monde</a> |
+| img (image) | `<img src="https://i.postimg.cc/MHjjW4wg/moustique.png">` | <div><img src="../images/moustique.png" style="width:50px"></div> |
+
+<br>
+> Testez chacun des **exemples d'instruction en html** dans la page de <a href="https://htmledit.squarefree.com/" target="blank">squarefree.com</a>.
+
+### **Balise de lien hypertexte**
+Dans le tableau précédent, la balise `<a href="...">texte à afficher</a>` possède un *attribut* obligatoire: `href="..."`. Cet attribut contient le lien hypertexte vers lequel le navigateur vous mène lorsque vous cliquez sur le *texte à afficher*.
 
 
+### **Balise image**
+**Pour ajouter une image :** on utilise la balise `<img>`:
 
-**Balise orpheline:**
-Noter que `<img>` est une balise orpheline, qui ne necessite pas de balise de fermeture: `<img src="lien/vers/l/image.png">`<br>
+> `<img src="robot.png">`
+
+Celle-ci doit obligatoirement avoir un attribut *src* suivi du chemin (local ou URL de type http://...) vers le fichier image. Les attributs d'une balise, comme ici `src` permettent de configurer les éléments. 
+
+*Remarque:* La balise `<img>` est une balise orpheline, qui ne possède pas de balise de fermeture: `<img src="lien/vers/l/image.png">`<br>
 
 
-## Travail pratique
+# Travail pratique
+Dans une page html, les instructions `HTML` sont mises dans un fichier dont l'extension est `.html`. Ici, nous utiliserons un editeur en ligne, qui donne directement le rendu visuel de la page, sans avoir à manipuler de fichier.
 
-Testons nos premières instructions en html.
+**Tout le contenu** de la page sera disposé entre les balises `<body> … </body>`
+
 
 
 <iframe src="https://trinket.io/embed/html/58318bee1f?runMode=autorun" width="900" height="560" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 *Si l'affichage de l'editeur n'est pas optimal, utiliser le <a href="https://trinket.io/embed/html/58318bee1f#.XNWFAS_M3MJ" target="blank">lien direct sur la page en plein écran</a>*
 
-> Nous  allons **modifier le script** de la page pour obtenir quelque chose ressemblant à celle-ci :
+> Nous  allons **modifier le script** de la page pour obtenir quelque chose ressemblant à celle-ci (mais en français):
 
 <figure>
   <div>
@@ -157,10 +176,10 @@ est équivalent à :
 p {font-weight: bold; border: 2px solid red;}
 ```
 
-Ici, TOUTES les balises h1 utilisées dans le document html héritent des propriétés suivantes : 
+Ici, TOUTES les balises p utilisées dans le document html héritent des propriétés suivantes : 
 
-* la couleur du texte est mise en bleu
-* la taille des caractères est mise à 12 px.
+* une bordure rouge (red) encadre le texte
+* les caractères sont mis en GRAS (bold)
 
 Ces instructions {propriété1 : valeur; } sont référencées sur le site : *[https://www.w3schools.com/css/default.asp](https://www.w3schools.com/css/default.asp)*
 
@@ -207,7 +226,7 @@ Normalement, l'explorateur devrait montrer le contenu du nouveau dossier, avec t
 
 **3)** Sélectionner tous les fichiers d'extensions `.html` et `.css`: Touche <i>Maj</i> enfoncée séléctionner les 3 fichiers. 
 
-On veut les ouvrir avec un editeur de script, comme par exemple *Notepad++*:
+On veut les ouvrir avec un editeur de script, comme par exemple *Notepad++*, ou bien *Visual Studio Code*:
 
 <figure>
   <div>

@@ -24,6 +24,8 @@ TP inspiré de [https://qkzk.xyz/docs/nsi/cours_premiere/ihm_web/flask/](https:/
 
 Créez dans vos *Documents* un dossier *serveur_form*.
 
+Créez les sous-dossiers *templates, static, et images,* comme sur l'arborescence suivante:
+
 ```
 Documents/serveur_form
 /
@@ -32,6 +34,8 @@ Documents/serveur_form
     |- form.html
     |- result.html
     |- images
+|- static
+    |- style.css
 
 ```
 
@@ -75,7 +79,7 @@ def form():
 ```
 
 # La page du formulaire
-Dans le dossier *templates*, vous allez créer la page de formulaire:
+Dans le dossier *templates*, vous allez créer la page de formulaire *form.html*
 
 ```html
 <!doctype html>
@@ -167,7 +171,8 @@ Ouvrir le moniteur reseau. Utiliser la page de formulaire, envoyer les donées. 
 ## méthode GET
 modifier ensuite le projet de la manière suivante:
 
-Dans “form.html”, la méthode POST sera remplacée par la méthode GET. Dans le fichier “main.py” remplacer POST par GET, et utiliser request.args à la place de request.form.
+* Dans “form.html”, la méthode POST sera remplacée par la méthode GET. 
+* Dans le fichier “main.py” remplacer POST par GET, et utiliser `request.args` à la place de `request.form`.
 
 Ouvrir le moniteur reseau et recommencer l'opération (transmettre les données par le formulaire):
 
