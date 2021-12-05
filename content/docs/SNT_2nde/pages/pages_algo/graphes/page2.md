@@ -112,6 +112,14 @@ Pour réaliser cet arbre, il faudra remonter chaque étape du parcours du graphe
 * Consulter la page du *parcours en largeur* sur [wikipedia](https://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_largeur)
 * [Algorithme de Dijkstra](../page4/) (plus court chemin dans un graphe pondéré)
 
+* Application de l'algorithme **BFS** au parcours dans un **labyrinthe**:
+
+<figure>
+  <a href="https://youtu.be/vf817b882Uw">
+  <img src="../images/maze1.png" alt="maze BFS">
+  <figcaption>video: Maze Pathfinder - Breadth First Search (BFS)</figcaption>
+</a>
+</figure>
 
 # Parcours d'un arbre en profondeur (DFS)
 ## Principe

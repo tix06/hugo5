@@ -102,9 +102,13 @@ img {
 }
 ```
 
-**3)** Ajouter un nouveau paragraphe (vide): Dans l'onglet *index.html*, ajouter une balise enfant `<p>` à celle `<div>`. Penser à ajouter la balise de fermeture `</p>` juste après.
+**3)** Ajouter un nouveau paragraphe (vide): Dans *index.html*, ajouter les balises  `<p>  </p>` AVANT la femeture `</div>`. 
 
-**4)** Ajouter un lien dans ce paragraphe vide vers une nouvelle page du site: `<a href="lune.html">=> Go to Lune Project</a>`
+**4)** Ajouter un lien dans ce paragraphe vide `<p>  </p>` vers une nouvelle page du site: 
+
+```html
+<a href="lune.html">=> Go to Lune Project</a>
+```
 
 **5)** Créer un nouvel onglet (bouton **+**) que vous renommerez *lune.html*.
 
