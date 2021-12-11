@@ -38,17 +38,17 @@ Lors de la réception c'est exactement l'inverse qui se produit (désencapsulati
 
 **Prenons un exemple simple,** vous demandez à votre navigateur de charger votre site préféré www.informatix.fr. Vous êtes reliés à un modem par un câble à paires torsadées. 
 
-## *couche application* 
+## *couche application*
 Le navigateur demande au système d'envoyer une requête HTTP (couche 7). Dans cette couche, le logiciel lui même n'en fait pas partie. Cette couche concerne *l'interface* entre le logiciel est la couche de transport, et transporte l'information du **protocole application** utilisé (ici http par exemple, c'est à dire le protocole lié à l'affichage des pages html)
 
 > Sortie : [requête HTTP]
 
-## *couche de transport* 
+## *couche de transport*
 La requête arrive dans TCP qui ajoute son en-tête. Le protocole TCP va mettre en forme les données à envoyer et ajouter son en-tête. Ici, les numeros d'identification sont les **port source et le port destination**, qui identifient les **applications** qui entrent en jeu dans la communication. Parmi les informations, on trouve aussi le numéro de séquence ISN (pour séquence : dire à la machine en face combien de données elle est censée avoir reçues) et celui d'acquitement ACK (le numéro du prochain octet des données attendues). Ces numéros vont permettre d'établir une communication avec accusés de reception (pour TCP, pas UDP) et de s'assurer, en principe, de l'identité de la machine avec qui les données sont échangées (avec le numéro de séquence, nécessaire pour l'accusé de reception). L'en-tête contient aussi un *checksum.*
 
 > Sortie : [en-tête TCP][requête HTTP]
 
-## *couche réseau* 
+## *couche réseau*
 Le segment TCP arrive dans IP qui ajoute aussi son en-tête (qui contient entre autres votre **adresse IP**  (pour le **routage**) et celle du serveur demandé). La couche 3 indique à la couche 2 quel protocole a été utilisé (TCP, UDP...). Il y a aussi un numéro de connexions établies (IPID) sur le port en question et d'autres informations qui servent à l'eventuelle fragmentation du datagramme (les données ne peuvent pas exceder 1500 octets.  
 Une autre valeur transportée est le TTL (time to live) qui evite que le paquet ne circule indefiniment sur les reseaux.
 

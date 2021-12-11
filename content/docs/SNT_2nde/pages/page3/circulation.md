@@ -2,12 +2,6 @@
 title: reseaux
 ---
 
-<a href="https://youtu.be/aX3z3JoVEdE" target="blank">
-<figure>
-  <img src="/images/video.png">
-  <figcaption>Video SNT: Internet, IP un protocole universel ?</figcaption>
-</figure></a>
-
 
 # Faire communiquer des ordinateurs
 Une première idée naïve : tout usage du numérique met des machines en connexion, et qui échangent des données.
@@ -21,6 +15,8 @@ Ce modèle *simpliste* de réseau va devenir irréalisable lorsque celui-ci cont
 
 * grand nombre de connexions (et de liaisons physiques) au départ de chaque ordinateur
 * grand nombre de ports utilisés
+
+*Internet* ne constitue pas un graphe *complet*, c'est à dire un reseau dans lequel chaque machine est directement connectée à une autre.
 
 Il faudra d'autres éléments pour connecter les ordinateurs entre eux.
 
@@ -61,6 +57,8 @@ Un réseau d'ordinateur peut aussi servir à partager du matériel (une impriman
 ### Le commutateur (switch) et le routeur
 Les appareils ne sont pas forcément connectés directement, mais peuvent l'être au moyen d'un *switch*. (concentre les liaisons et possède une table de routage avec les adresses mac des ordinateurs reliés).
 
+les switchs (commutateurs) peuvent lire les adresses matérielles des paquets entrants afin de les transmettre à la destination appropriée.
+
 Les réseaux sont alors reliés entre eux par un *routeur*
 
 <figure>
@@ -74,7 +72,7 @@ le **routeur** est l'appareil disposant de sa propre adresse IP (voir plus loin)
 
 ## Différences entre reseau local et reseau internet
 ### Reseau local: Systeme *réparti*[^3]
-Unn système réparti permet de partager des ressources, données et logiciels.
+Un système réparti permet de partager des ressources, données et logiciels.
 
 Avec un réseau local d'ordinateurs, qui peut constituer un système réparti, l'utilisateur se trouve devant la réalité des machines et leurs caractéristiques diverses, la varieté des équipements, et de leur système d'exploitation; pour executer un programme sur une machine distante, l'usager doit ouvrir une session. La maitenance d'un reseau local demande une bonne connaissance de tous ces matériels. 
 
@@ -119,9 +117,81 @@ Une fois sorties du reseau local, les transmissions peuvent se faire par:
 * ligne de type telephonique ([Adsl](https://fr.wikipedia.org/wiki/ADSL))
 * reseau de telephonie mobile (4G, 5G)
 
-*Remarque:* L'utilisation d'internet demande un *abonnement*.
+*Remarque:* L'utilisation d'internet demande un *abonnement* à un FAI.
 
-# Le fonctionnement d'internet
+# Le modèle client-serveur
+## adressage dans un reseau local: MAC
+une adresse **MAC** (Media Access Control), appelée également adresse Ethernet, est l'adresse physique d'une interface (carte réseau, wifi, ...). Chaque adresse MAC est normalement unique au monde et fournie par le fabricant de l'interface.
+
+Cette adresse est constituée de 6 octets, soit 12 caractères hexadécimaux, comme par exemple:
+
+$$01:b8:43:c4:85:a3$$
+
+
+## adressage IP
+une adresse IP est un identifiant numérique unique attribué à chaque appareil (appareils mobiles, ordinateurs, routeurs, imprimantes, consoles de jeux, etc.) connecté à un réseau TCP / IP comme Internet. Plus précisemment, **c'est l'identifiant de la *carte reseau*,** reelle ou virtuelle.
+Chaque dispositif peut se connecter grâce à cette adresse IP à d’autres périphériques et partager des informations. Il s'agit du Protocole Internet (IP).
+
+> Question: Est-il possible de connaître l'emplacement de mon ordinateur (smartphone, ...) en connaissant son adresse IP?
+
+En principe, non, pas exactement, car mon dispositif possède une adresse IP privée... Il existe 2 types d'adresses IP:
+
+* Adresse IP privée: 2 machines peuvent avoir la même adresse privée à condition qu'elles soient sur 2 reseaux privés distincts. Pour une machine dotée d'une adresse privée qui doit accéder à internet, une traduction de son adresse privée en adresse publique est nécessaire. C'est le mécanisme NAT (Network Adress Translation) qui assure cette fonction. Ce mécanisme de traduction d'adresse réseau se fait par la *passerelle*, qui se situe à l'*interface entre les réseaux* privés et les réseaux publics. Elle est aussi nommée routeur (gateway). Une passerelle possède au moins 2 interfaces reseau.
+
+* adresse IP publique: adresse attribuée aux machines connectées sur Internet. Ce sont les FAI qui sont autorisés à affecter des adresses publiques. Ces adresses sont uniques au niveau mondial. L'essor constant d'internet au niveau mondial fait que l'on migre progressivement de la norme IPv4 vers IPv6. Ce sont deux protocoles réseau de la couche 3 du modèle OSI (Open Systems Interconnection).
+
+### **IPv4**
+
+Ces adresses IP constituées de **4 nombres** sont les plus répandues à l'heure actuelle, on les appelle IPv4. 
+
+*Un exemple d'adresse IPV4: (exprimée par 4 nombres decimaux 0-255)* 
+
+$$192.168.0.10$$
+
+Bien que codés sur 32 bits (4 octets), leur nombre se révèle assez limité : il n'y a en effet "que" $$256×256×256×256$$
+ possibilités d'IP, soit $$256^4=4\phantom*294\phantom*967\phantom*296$$
+(plus de 4 milliards). Ce nombre a l'air grand, mais on finira prochainement par l'atteindre avec la multiplication des ordinateurs et des serveurs reliés à Internet.
+C'est pourquoi ces IP ont vocation à être remplacées par un nouveau système : IPv6 (8 groupes de 2 octets)
+
+### **IPv6**
+Ce sont des adresses IP codées sur 128 bits, soit 16 octets, ou 32 caractères hexadecimaux.
+
+La nouvelle forme d'IP, que l'on va rencontrer de plus en plus, a la forme suivante : (exemple)
+
+$$1703:01b8:43c4:85a3:0000:0000:a213:bba7$$
+
+Leur nombre est d'environ 10^29 fois plus important que pour les adresses IPv4.
+
+## IP et URL
+* Lorsque l'on veut atteindre un ordinateur serveur depuis notre navigateur, possédant une adresse IP publique: on saisit dans la barre d'adresse. [^5]
+
+```
+> http://<adresse IP du serveur>
+```
+
+* Lorsque l'on veut tester la connexion vers une machine distante du reseau, on saisit dans la console (lignes de commande):
+
+```
+> ping <adresse IP du destinataire>
+``` 
+
+**URL** Habituellement, un nom de domaine est associé à une adresse IP qui est celle du serveur et c’est le **serveur DNS** qui permet de connaitre l’adresse IP du serveur, quand on tape une adresse URL dans la barre d’adresse. Le DNS est donc un protocole indispensable au fonctionnement d'Internet. Non pas d'un point de vue technique, mais d'un point de vue de son utilisation (les adresses URL sont plus faciles à retenir pour un humain).
+
+L’URL (Uniform Ressource Locator ) est l’adresse unique qui permet d’accéder à une page web à partir de sa saisie dans la barre d’adresses du navigateur. L‘URL est communément appelée : l’adresse web d’une page.
+
+Prenons l’exemple :  `http://www.coursinfo.fr/` cette URL se compose de 4 blocs :
+
+* `.fr` désigne le domaine de 2er niveau, le top level auquel appartient le domaine
+* `coursinfo`  désigne le nom de domaine du site web – le site coursinfo.fr a souscrit à ce nom de domaine
+* `www`          le www est la norme pour les sites Web (World Wide Web), et c'est un sous domaine dans la hierarchie de l'URL
+* `http://      qui désigne le protocole à utiliser pour accèder au site web : ici c’est donc le protocole http
+* l'URL finit en principe par un point (la racine dans la hierarchie)
+
+Il s'agit donc d'un système hiérarchique qui permet de "découper" le réseau en un ensemble de domaines, eux-mêmes composés de sous-domaines, éventuellement composés de sous-sous-domaines, etc. 
+
+La connaissance que vous avez maintenant de la construction de l'URL / nom de domaine devrait vous permettre d'eviter l'un des grand piege d'internet : le phishing...
+
+
 ## Protocole http
 **http** est le protocole qui permet à une machine de demander et de recevoir une ressource d'un serveur.
 
@@ -149,66 +219,12 @@ On a vu qu'un système informatique fonctionne sur le modèle *client-serveur*. 
 *Réponses:* 
 
 * pour les questions 1 et 2, c'est avec la définition du *protocole IP* que nous allons y repondre.
-* pour la question 3: il s'agit d'une partie qui sera étudiée en <a href="/docs/SNT_2nde/pages/page3/modele_OSI/">spécialité NSI de la classe de 1<sup>ere</sup></a>. Tout ce que nous aurons à retenir, c'est que le navigateur (un logiciel de la couche *Application*), confie cette tâche à d'autres logiciels, qui vont saucissonner les messages entre le client et le serveur, en *trames*, et ajouter des données qui vont permettre leur bonne circulation. C'est le **protocole TCP**.
+* pour la question 3: il s'agit d'une partie qui sera étudiée avec le cours sur <a href="/docs/SNT_2nde/pages/page3/modele_OSI/">le modele OSI et le protocole TCP</a>. Tout ce que nous aurons à retenir, c'est que le navigateur (un logiciel de la couche *Application*), confie cette tâche à d'autres logiciels, qui vont saucissonner les messages entre le client et le serveur, en *trames*, et ajouter des données qui vont permettre leur bonne circulation. (**protocole TCP**).
 
 
 **le protocole IP:** c'est lui qui permet de se connecter à un autre ordinateur. Il gère l'adressage.
 
 **le protocole TCP:** permet d'envoyer les paquets d'un ordinateur vers un autre ordinateur. Il gère le routage et l'interconnexion des différents réseaux.
-
-## adresses IP
-une adresse IP est un identifiant numérique unique attribué à chaque appareil (appareils mobiles, ordinateurs, routeurs, imprimantes, consoles de jeux, etc.) connecté à un réseau TCP / IP comme Internet. Plus précisemment, **c'est l'identifiant de la *carte reseau*, reelle ou virtuelle.**
-Chaque dispositif peut se connecter grâce à cette adresse IP à d’autres périphériques et partager des informations. Il s'agit du Protocole Internet (IP).
-
-* Lorsque l'on veut atteindre un ordinateur serveur depuis notre navigateur, on saisit dans la barre d'adresse:[^5]
-
-```
-> http://<adresse IP du serveur>
-```
-
-* Lorsque l'on veut tester la connexion vers une machine distante du reseau, on saisit dans la console (lignes de commande):
-
-```
-> ping <adresse IP du destinataire>
-``` 
-
-
-On le verra dans la suite :  IPv4 et IPv6 sont deux protocoles réseau de la couche 3 du modèle OSI (Open Systems Interconnection).
-
-**IPv4**
-
-Ces adresses IP constituées de **4 nombres** sont les plus répandues à l'heure actuelle, on les appelle IPv4. Bien que codés sur 32 bits, leur nombre se révèle assez limité : il n'y a en effet "que" $$256×256×256×256$$
- possibilités d'IP, soit $$256^4=4\phantom*294\phantom*967\phantom*296$$
-(plus de 4 milliards). Ce nombre a l'air grand, mais on finira prochainement par l'atteindre avec la multiplication des ordinateurs et des serveurs reliés à Internet.
-C'est pourquoi ces IP ont vocation à être remplacées par un nouveau système : IPv6 (8 groupes de 2 octets)
-
-**IPv6**
-Ce sont des adresses IP codées sur 128 bits.
-La nouvelle forme d'IP, que l'on va rencontrer de plus en plus, a la forme suivante :
-
-`1703:01b8:43c4:85a3:0000:0000:a213:bba7`
-
-Leur nombre est d'environ 10^29 fois plus important que pour les adresses IPv4.
-
-## URL
-**URL** Habituellement, un nom de domaine est associé à une adresse IP qui est celle du serveur et c’est le **serveur DNS** qui permet de connaitre l’adresse IP du serveur, quand on tape une adresse URL dans la barre d’adresse. Le DNS est donc un protocole indispensable au fonctionnement d'Internet. Non pas d'un point de vue technique, mais d'un point de vue de son utilisation (les adresses URL sont plus faciles à retenir pour un humain).
-
-L’URL (Uniform Ressource Locator ) est l’adresse unique qui permet d’accéder à une page web à partir de sa saisie dans la barre d’adresses du navigateur. L‘URL est communément appelée : l’adresse web d’une page.
-
-Prenons l’exemple :  `http://www.coursinfo.fr/` cette URL se compose de 4 blocs :
-
-* `.fr` désigne le domaine de 2er niveau, le top level auquel appartient le domaine
-* `coursinfo`  désigne le nom de domaine du site web – le site coursinfo.fr a souscrit à ce nom de domaine
-* `www`          le www est la norme pour les sites Web (World Wide Web), et c'est un sous domaine dans la hierarchie de l'URL
-* `http://      qui désigne le protocole à utiliser pour accèder au site web : ici c’est donc le protocole http
-* l'URL finit en principe par un point (la racine dans la hierarchie)
-
-Il s'agit donc d'un système hiérarchique qui permet de "découper" le réseau en un ensemble de domaines, eux-mêmes composés de sous-domaines, éventuellement composés de sous-sous-domaines, etc. 
-
-La connaissance que vous avez maintenant de la construction de l'URL / nom de domaine devrait vous permettre d'eviter l'un des grand piege d'internet : le phishing...
-
-
-
 
 
 # Liens

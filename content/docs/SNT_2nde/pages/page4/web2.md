@@ -139,7 +139,7 @@ Penser à adapter le nom de l'image pour la balise `<img>`.
 
 Sinon, ajoutez la.
 
-**4)** Ajouter un lien *Retour* vers la page *index.html*.
+**4)** Ajouter un lien *Retour* vers la page *index.html*
 
 # Le langage CSS
 CSS est le langage qui décrit le style et la mise en forme du document HTML. Il décrit comment les elements HTML doivent être affichés et remplace les règles de style par defaut appliquées par le navigateur.

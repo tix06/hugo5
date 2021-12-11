@@ -1,6 +1,13 @@
 ---
 Title: fonctionnement internet
 ---
+# Video SNT: les protocoles
+
+<a href="https://youtu.be/aX3z3JoVEdE" target="blank">
+<figure>
+  <img src="/images/video.png">
+  <figcaption>Video SNT: Internet, IP un protocole universel ?</figcaption>
+</figure></a>
 
 # Constitution du reseau internet
 ## Réseau local 
@@ -63,7 +70,7 @@ Ces données sont rassemblées dans des trames de 1500 octets. La plupart du tem
 <figcaption>decoupage de l'information numérique en plusieurs datagrammes</figcaption>
 </figure>
 
-C'est le *protocole TCP* qui gère ce découpage, et rajoute des informations pour pouvoir renvoyer les paquets perdus en chemin (grâce à un accusé de reception), et remettre les paquets dans le bon ordre. Un code de vérification est également ajouté au paquet, pour vérifier s'il est conforme à l'orginal, et non *corrompu* en chemin.
+C'est le *protocole TCP* qui gère ce découpage, et rajoute des informations pour pouvoir renvoyer les paquets perdus en chemin (grâce à un accusé de reception), et remettre les paquets dans le bon ordre. Un code de vérification est également ajouté au paquet, pour vérifier s'il est conforme à l'original, et non *corrompu* en chemin.
 
 # TP: comprendre le protocole TCP en jouant :
 <a href="http://www.csfieldguide.org.nz/en/interactives/packet-attack/index.html">
