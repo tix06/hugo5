@@ -33,7 +33,6 @@ Documents/serveur_form
 |- templates 
     |- form.html
     |- result.html
-    |- images
 |- static
     |- style.css
 

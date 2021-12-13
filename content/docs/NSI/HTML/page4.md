@@ -17,11 +17,10 @@ Voici l'arborescence des fichiers proposée pour ce projet, dans ce dossier *sit
 ```
 |- page1.html
 |- page2.html
-|- page3.html
-|- images
-     |- xxx.png
+|- page3.html   
 |- static
      |- style.css
+     |- xxx.png
 ```
 
 

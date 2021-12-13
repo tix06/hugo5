@@ -157,7 +157,33 @@ Votre application Flask sera constituée de 2 patrons (*templates*): *index.html
 * Le premier fichier, *index.html*, contiendra un formulaire qui permettra de choisir la langue et le mot.
 * Le deuxième fichier, *definition.html*, présentera le contenu de la definition, si la reponse du serveur *dictionaryapi.dev* retourne un `status_code` de 200.
 
+## Que faire si le module `requests` ne fonctionne pas?
+Il se peut que le module ne fonctionne pas avec l'installation du lycée.
 
+Dans ce cas, vous pouvez ajouter la classe *dictionnaire* qui contiendra un unique mot, *école*. 
+
+**1.** Ajouter les lignes suivantes, juste après `app = Flask(__name__)`:
+
+```python
+app = Flask(__name__)
+
+class dictionnaire:
+    def __init__(self):
+        self.headers = {'Server': 'nginx/1.18.0', 'Date': 'Mon, 06 Dec 2021 16:27:31 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '216', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'X-RateLimit-Limit': '450', 'X-RateLimit-Remaining': '449', 'X-RateLimit-Reset': '1638808183', 'Access-Control-Allow-Origin': '*', 'ETag': 'W/"d8-MHRbRl1KWQW5GmjcbqbJ8KqZwY4"', 'Vary': 'Accept-Encoding', 'Strict-Transport-Security': 'â\x80\x9cmax-age=15768000â\x80\x9d'}
+        self.status_code = 200
+        self.json = [{'word': 'bonjour', 'phonetics': [{}], 'meanings': [{'partOfSpeech': 'nom masculin', 'definitions': [{'definition': 'Souhait de bonne journée (adressé en arrivant, en rencontrant).', 'synonyms': ['salut'], 'antonyms': []}]}]}]
+```
+
+**2.** Ajouter la ligne `request = dictionnaire()` juste avant `app.run(debug=True)`
+
+**3.** Remplacer alors les lignes 
+
+```python
+reponse = requests.get(url)
+definition = reponse.json()
+```
+
+ par : `reponse = request.json`
  
 
 
