@@ -40,8 +40,18 @@ La *route* sur internet avait alors disparue des serveurs de routage.
 
 
 
-# Qu'est ce qui fait la popularité d'un reseau social 
+# Qu'est ce qui fait la popularité d'un reseau social
 <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x5s10nf" width="100%" height="100%" allowfullscreen > </iframe> </div>
 
 https://www.dailymotion.com/video/x5s10nf
+
+# Moteur de recherche et algorithmes
+Au commencement était... Internet. Des ordinateurs reliés entre eux grâce à une prise téléphonique. Puis vinrent les e-mails, le Web, les pages persos, lointains ancêtres des réseaux sociaux où l'on racontait ses peines de cœur, où l'on affirmait ses opinions politiques et où on partageait des photos de chats mignons... 
+
+A cette époque, Internet était anarchique, confus... et libre. Puis arriva Google et son algorithme de recherche révolutionnaire. 
+
+<figure><a href="https://www.lumni.fr/video/comment-les-algorithmes-nous-enferment">
+  <img src = "../images/algo.png">
+  <figcaption>Video - Lumni</figcaption></a>
+</figure>
 

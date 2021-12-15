@@ -183,8 +183,11 @@ reponse = requests.get(url)
 definition = reponse.json()
 ```
 
- par : `reponse = request.json`
- 
+par : `reponse = request.json`
+
+**4.** Programmez enfin la vue dont la route est `/definition` afin de servir la page de la definition du mot *ecole*, à condition que ce soit bien le mot demandé par le formulaire. Retourner *Page introuvable* sinon.
+
+
 
 
 
