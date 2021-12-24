@@ -2,7 +2,16 @@
 title: modele OSI
 ---
 
-# Le modèle OSI *(concerne la spé NSI de 1ere)*
+# Le modèle OSI
+
+<figure>
+  <a href="https://youtu.be/26jazyc7VNk" target="blank">
+  <img src="../images/video_OSI.png">
+  <figcaption>VIDEO: modèles OSI et TCP IP</figcaption></a>
+</figure>
+
+*source: [comprendre les modèles OSI et TCP/IP - chaine Cookie connecté](https://www.youtube.com/watch?v=26jazyc7VNk)*
+
 ## Les données qui circulent sur internet
 *Internet manipule deux types d’information : les contenus envoyés et les adresses du destinataire et de l’émetteur. Ces deux types d’information sont regroupés dans des paquets de taille fixe, de façon uniforme et indépendante du type de données transportées : texte, images, sons, vidéos, etc.*
 
@@ -44,19 +53,26 @@ Le navigateur demande au système d'envoyer une requête HTTP (couche 7). Dans c
 > Sortie : [requête HTTP]
 
 ## *couche de transport*
-La requête arrive dans TCP qui ajoute son en-tête. Le protocole TCP va mettre en forme les données à envoyer et ajouter son en-tête. Ici, les numeros d'identification sont les **port source et le port destination**, qui identifient les **applications** qui entrent en jeu dans la communication. Parmi les informations, on trouve aussi le numéro de séquence ISN (pour séquence : dire à la machine en face combien de données elle est censée avoir reçues) et celui d'acquitement ACK (le numéro du prochain octet des données attendues). Ces numéros vont permettre d'établir une communication avec accusés de reception (pour TCP, pas UDP) et de s'assurer, en principe, de l'identité de la machine avec qui les données sont échangées (avec le numéro de séquence, nécessaire pour l'accusé de reception). L'en-tête contient aussi un *checksum.*
+La requête arrive dans TCP qui ajoute son en-tête. Le protocole TCP va mettre en forme les données à envoyer et ajouter son en-tête. Ici, les numeros d'identification sont les **port source et le port destination**, qui identifient les **applications** qui entrent en jeu dans la communication. Parmi les informations, on trouve aussi le numéro de séquence initial, **ISN**, appelé aussi **SYN** (pour dire à la machine en face combien de données elle est censée avoir reçues) et celui d'acquitement **ACK** (le numéro du prochain octet des données attendues). Ces numéros vont permettre d'établir une communication avec accusés de reception (pour TCP, pas UDP) et de s'assurer, en principe, de l'identité de la machine avec qui les données sont échangées (avec le numéro de séquence, nécessaire pour l'accusé de reception). L'en-tête contient aussi un *checksum.*
 
 > Sortie : [en-tête TCP][requête HTTP]
 
 ## *couche réseau*
 Le segment TCP arrive dans IP qui ajoute aussi son en-tête (qui contient entre autres votre **adresse IP**  (pour le **routage**) et celle du serveur demandé). La couche 3 indique à la couche 2 quel protocole a été utilisé (TCP, UDP...). Il y a aussi un numéro de connexions établies (IPID) sur le port en question et d'autres informations qui servent à l'eventuelle fragmentation du datagramme (les données ne peuvent pas exceder 1500 octets.  
-Une autre valeur transportée est le TTL (time to live) qui evite que le paquet ne circule indefiniment sur les reseaux.
+Une autre valeur transportée est le **TTL** (time to live) qui evite que le paquet ne circule indefiniment sur les reseaux.
 
 > Sortie : [en-tête IP][en tête TCP][requête HTTP].
 
+
+<figure>
+  <img src="../images/dataTCOIP.png">
+  <figcaption>modèle simplifié du datagramme</figcaption>
+</figure>
+
 ## *couche physique*
 Le paquet IP arrive dans Ethernet qui ajoute un en-tête (qui contient entre autres votre **adresse MAC** - pour le **switch** -  et celle du modem) et un checksum (vérification d'erreurs CRC). La couche 2 peut alors former la trame et l'envoyer sur le réseau.
-*Il va ajouter l'adresse MAC de l'emetteur et du destinataire, qu'il aura résolu grâce aux tables de routage et la *table arp* (côté serveur). On imagine ici que le datagramme ne peux contenir les données qu'après établissement de la connexion, ce qui sous entend un protocole préalable de *présentation.*
+
+Il va ajouter l'adresse MAC de l'emetteur et du destinataire, qu'il aura résolu grâce aux tables de routage et la *table arp* (côté serveur). 
 
 > Sortie : [en-tête Ethernet][en-tête IP][en tête TCP][requête HTTP][checksum Ethernet].
 
@@ -65,38 +81,17 @@ Le paquet IP arrive dans Ethernet qui ajoute un en-tête (qui contient entre aut
 <figcaption>en-tête Ethernet</figcaption>
 </figure>
 
-## *Retour sur le protocole TCP*
-La fiabilité est obtenue par un mécanisme d'acquittement des segments : 
-
-* À l'émission d'un segment, une alarme est amorcée
-* Elle est désamorcée quand l'acquittement correspondant est reçu 
-* Si elle expire, le segment est réémis
 
 
-<figure>
-<img src="../images/TCP1.png" width = 80% alt="TCP1">
-<figcaption>TCP1</figcaption>
-</figure>
+Le document complet sur la structure d'une trame: [Lien](/pdf/NSI/reseau_trame.pdf)
 
-* Chaque segment possède un numéro de séquence
-* Les acquittements sont identifiés par un marqueur ACK
-* Le concept même d'acquittement impose des notions de délai
-Par exemple, quel est le délai au delà duquel un segment non acquitté doit être réémis
-
-
-<figure>
-<img src="../images/TCP2.png" width = 80% alt="TCP2">
-<figcaption>TCP2</figcaption>
-</figure>
-
-*TCP permet ainsi d'être un protocole fiable sans perte de paquets, qui permet à 2 machines de communiquer entre elles (et seulement 2)*
-
+Ce document est issu du cours en ligne du[lycee de Taaone](http://www.mysti2d.net/polynesie2/ETT/C044/31/SerruresBioIP/index.html?Cours4.html), série technologique.
 
 
 # Liens
 
 * <a href = "../circulation/">Retour vers la page Reseaux</a>
-* <a href = "../internet/"> Retour vers internet (Généralités)</a>
+* <a href = "/docs/SNT_2nde/pages/page3/protocoles/"> Les protocoles TCP et IP</a>
 * <a href = '../securite/index.html'>Sécurité des communications (1ere NSI)</a>
 * <a href = '../TP_reseau/index.html'>TP simulation d'un reseau</a>
 

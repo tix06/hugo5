@@ -160,7 +160,7 @@ Votre application Flask sera constituée de 2 patrons (*templates*): *index.html
 ## Que faire si le module `requests` ne fonctionne pas?
 Il se peut que le module ne fonctionne pas avec l'installation du lycée.
 
-Dans ce cas, vous pouvez ajouter la classe *dictionnaire* qui contiendra un unique mot, *école*. 
+Dans ce cas, vous pouvez ajouter la classe *dictionnaire* qui contiendra un unique mot, *bonjour*. 
 
 **1.** Ajouter les lignes suivantes, juste après `app = Flask(__name__)`:
 
@@ -174,18 +174,18 @@ class dictionnaire:
         self.json = [{'word': 'bonjour', 'phonetics': [{}], 'meanings': [{'partOfSpeech': 'nom masculin', 'definitions': [{'definition': 'Souhait de bonne journée (adressé en arrivant, en rencontrant).', 'synonyms': ['salut'], 'antonyms': []}]}]}]
 ```
 
-**2.** Ajouter la ligne `request = dictionnaire()` juste avant `app.run(debug=True)`
+**2.** Ajouter la ligne `requete = dictionnaire()` juste avant `app.run(debug=True)`
 
-**3.** Remplacer alors les lignes 
+**3.** Remplacer alors les 2 lignes 
 
 ```python
 reponse = requests.get(url)
 definition = reponse.json()
 ```
 
-par : `reponse = request.json`
+par : `reponse = requete.json`
 
-**4.** Programmez enfin la vue dont la route est `/definition` afin de servir la page de la definition du mot *ecole*, à condition que ce soit bien le mot demandé par le formulaire. Retourner *Page introuvable* sinon.
+**4.** Programmez enfin la vue dont la route est `/definition` afin de servir la page de la definition du mot *bonjour*, à condition que ce soit bien le mot demandé par le formulaire. Retourner *Page introuvable* sinon.
 
 
 

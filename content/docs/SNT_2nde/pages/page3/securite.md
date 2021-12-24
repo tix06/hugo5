@@ -6,7 +6,7 @@ Title : securite des communications
 *Wireshark* est un programme de type *sniffer* qui écoute sur le réseau, intercepte toutes les trames reçues par votre carte réseau, et les affiche à l'écran.
 Lors d’une requete vers un serveur, comme google ou tout autre page demandée, l’ordinateur echange plusieurs trames. Si on observe le détail de l’une d’entres elles, un logiciel comme wireshark permet d’en séparer les différentes couches. Voyons un exemple :
 
-### un site non sécurisé : http 
+### un site non sécurisé : http
 Le protocole proposé pour la navigation sur internet est actuellement *https*. Il s'agit d'une extension du protocole *http*; il a l'avantage d'être *sécurisé*. (Les informations échangées sont *chiffrées*).
 
 La page suivante est celle d'un site internet demandant de s'identifier pour acceder aux ressources. Mais ici, l'URL montre qu'il s'agit d'une connexion non chiffrée, en *http*: `http://gaia.cs.umass.edu/wireshark-labs/protected_pages/HTTP-wireshark-file5.html`
@@ -79,6 +79,6 @@ Les ISN sont aujourd'hui aléatoires, donc ils ne sont plus prédictibles. De pl
 * <a href = "../internet/"> Retour vers internet (Généralités)</a>
 * <a href = '../TP_reseau/index.html'>TP simulation d'un reseau</a>
 
-# Liens 
+# Liens
 
 * cours sur les reseaux et protocoles : [https://openclassrooms.com/fr/courses/857447-apprenez-le-fonctionnement-des-reseaux-tcp-ip/856345-la-nat-et-le-port-forwarding](https://openclassrooms.com/fr/courses/857447-apprenez-le-fonctionnement-des-reseaux-tcp-ip/856345-la-nat-et-le-port-forwarding)

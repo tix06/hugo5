@@ -66,9 +66,14 @@ Les réseaux sont alors reliés entre eux par un *routeur*
 <figcaption>réseaux d'ordinateurs</figcaption>
 </figure>
 
-*Sur cette image, les serveurs ne sont pas représentés, mais n'importe quel ordinateur du réseau peut assurer ce rôle. Certains sont donc des clients, d'autres des serveurs*.
+*Sur cette image, plusieurs sous-reseaux sont reliés par des routeurs. Par contre, l'appareil qui interconnecte les machines dans un même sous-reseau est un switch*.
 
-le **routeur** est l'appareil disposant de sa propre adresse IP (voir plus loin) qui fait office de passerelle entre les périphériques sur un réseau local (LAN) et Internet. Dans un réseau de réseaux, c'est aussi une machine qui a plusieurs interfaces (plusieurs cartes réseau), chacune reliée à un réseau. Son rôle va être d'aiguiller les paquets reçus entre les différents réseaux.
+le **routeur** est l'appareil disposant plusieurs adresses IP, une adresse par interface (voir plus loin). Il fait office de passerelle entre les périphériques sur un réseau local (LAN) et Internet. Dans un réseau de réseaux, cette machine doit posséder plusieurs interfaces (plusieurs cartes réseau), chacune reliée à un réseau. Son rôle va être d'aiguiller les paquets reçus entre les différents réseaux.
+
+<figure>
+  <img src="../images/routeur_interface.png">
+  <figcaption>Un routeur possède plusieurs interfaces</figcaption>
+</figure>
 
 ## Différences entre reseau local et reseau internet
 ### Reseau local: Systeme *réparti*[^3]
@@ -119,7 +124,7 @@ Une fois sorties du reseau local, les transmissions peuvent se faire par:
 
 *Remarque:* L'utilisation d'internet demande un *abonnement* à un FAI.
 
-# Le modèle client-serveur
+# Adressage des machines.
 ## adressage dans un reseau local: MAC
 une adresse **MAC** (Media Access Control), appelée également adresse Ethernet, est l'adresse physique d'une interface (carte réseau, wifi, ...). Chaque adresse MAC est normalement unique au monde et fournie par le fabricant de l'interface.
 
@@ -127,6 +132,10 @@ Cette adresse est constituée de 6 octets, soit 12 caractères hexadécimaux, co
 
 $$01:b8:43:c4:85:a3$$
 
+Un ordinateur qui reçoit un message par l'une de ses interface, va lire si l'adresse MAC est bien la sienne. Sinon, c'est que le message ne lui est pas destiné: il détruit alors le message.
+
+Dans un reseau local où les machines sont interconnectées via un switch: Pour envoyer la trame vers la bonne machine, le switch se sert de l'adresse MAC destination contenue dans l'en-tête de la trame.
+Il contient en fait une table qui fait l'association entre un port du switch (une prise RJ45 femelle) et une adresse MAC. Cette table est appelée la table CAM.
 
 ## adressage IP
 une adresse IP est un identifiant numérique unique attribué à chaque appareil (appareils mobiles, ordinateurs, routeurs, imprimantes, consoles de jeux, etc.) connecté à un réseau TCP / IP comme Internet. Plus précisemment, **c'est l'identifiant de la *carte reseau*,** reelle ou virtuelle.
@@ -162,24 +171,29 @@ $$1703:01b8:43c4:85a3:0000:0000:a213:bba7$$
 
 Leur nombre est d'environ 10^29 fois plus important que pour les adresses IPv4.
 
-## IP et URL
-* Lorsque l'on veut atteindre un ordinateur serveur depuis notre navigateur, possédant une adresse IP publique: on saisit dans la barre d'adresse. [^5]
+## DNS, IP et URL
+* Lorsque l'on veut atteindre un ordinateur serveur depuis notre navigateur, possédant une adresse IP publique, on pourrait saisir dans la barre d'adresse. [^5]
 
 ```
 > http://<adresse IP du serveur>
 ```
 
-* Lorsque l'on veut tester la connexion vers une machine distante du reseau, on saisit dans la console (lignes de commande):
+* De même, lorsque l'on veut tester la connexion vers une machine distante du reseau, on saisit dans la console (lignes de commande):
 
 ```
 > ping <adresse IP du destinataire>
 ``` 
 
-**URL** Habituellement, un nom de domaine est associé à une adresse IP qui est celle du serveur et c’est le **serveur DNS** qui permet de connaitre l’adresse IP du serveur, quand on tape une adresse URL dans la barre d’adresse. Le DNS est donc un protocole indispensable au fonctionnement d'Internet. Non pas d'un point de vue technique, mais d'un point de vue de son utilisation (les adresses URL sont plus faciles à retenir pour un humain).
+Mais, grâce au format d'adresse symbolique, l'URL, la navigation est plus facile:
+
+**URL** Habituellement, un nom de domaine est associé à une **adresse IP** qui est celle du serveur et c’est le **serveur DNS** qui permet de connaitre l’adresse IP du serveur, quand on tape une adresse URL dans la barre d’adresse. Le DNS est donc un protocole indispensable au fonctionnement d'Internet. Non pas d'un point de vue technique, mais d'un point de vue de son utilisation (les adresses URL sont plus faciles à retenir pour un humain).
 
 L’URL (Uniform Ressource Locator ) est l’adresse unique qui permet d’accéder à une page web à partir de sa saisie dans la barre d’adresses du navigateur. L‘URL est communément appelée : l’adresse web d’une page.
 
-Prenons l’exemple :  `http://www.coursinfo.fr/` cette URL se compose de 4 blocs :
+Prenons l’exemple :  `http://www.coursinfo.fr/` 
+<br>Cette URL correspond à l'adresse IP `213.186.33.16`. Lors du protocole DNS, le serveur DNS va permuter *www.coursinfo.fr* par *213.186.33.16* dans l'URL.
+
+Revenons sur l'URL symbolique. Celle-ci se compose de 4 blocs :
 
 * `.fr` désigne le domaine de 2er niveau, le top level auquel appartient le domaine
 * `coursinfo`  désigne le nom de domaine du site web – le site coursinfo.fr a souscrit à ce nom de domaine
@@ -187,13 +201,13 @@ Prenons l’exemple :  `http://www.coursinfo.fr/` cette URL se compose de 4 bloc
 * `http://      qui désigne le protocole à utiliser pour accèder au site web : ici c’est donc le protocole http
 * l'URL finit en principe par un point (la racine dans la hierarchie)
 
-Il s'agit donc d'un système hiérarchique qui permet de "découper" le réseau en un ensemble de domaines, eux-mêmes composés de sous-domaines, éventuellement composés de sous-sous-domaines, etc. 
+Il s'agit donc d'un système hiérarchique qui permet de "découper" le réseau en un ensemble de domaines, eux-mêmes composés de sous-domaines, éventuellement composés de sous-sous-domaines, etc. Ce découpage va faciliter le classement, le tri et la recherche des URL parmi les serveurs DNS.
 
 La connaissance que vous avez maintenant de la construction de l'URL / nom de domaine devrait vous permettre d'eviter l'un des grand piege d'internet : le phishing...
 
 
-## Protocole http
-**http** est le protocole qui permet à une machine de demander et de recevoir une ressource d'un serveur.
+# Protocole http
+**http** est le protocole qui permet à une machine de demander et de recevoir une ressource d'un serveur. C'est un protocole qui fonctionne selon le modèle *client-serveur*.
 
 *http :* est l'abréviation de HyperText Transfer Protocol. (est-ce plus clair ?)
 
@@ -229,7 +243,6 @@ On a vu qu'un système informatique fonctionne sur le modèle *client-serveur*. 
 
 # Liens
 
-* <a href = "../internet/"> Retour vers internet (Généralités)</a>
 * <a href = '../TP_reseau/index.html'>TP simulation d'un reseau</a>
 * <a href = '../modele_OSI/'>Le modèle OSI (concerne la Spé NSI)</a>
 
