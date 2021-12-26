@@ -8,7 +8,9 @@ Un reseau, c'est quoi? C'est un système constitué de machines reliées ensembl
 
 L'adresse IP (**Internet Protocol**) identifie un périphérique à l'intérieur d'un réseau. A l'intérieur de ce réseau elle est unique.
 
-## TP Filius 1 : faire communiquer 2 ordinateurs
+Les outils utilisés en simulation ne fonctionnent pas tous en mode réel, à partir de votre propre ordinateur du lycée, à cause de restrictions nécessaires pour des problèmes de sécurité.
+
+# TP Filius 1 : faire communiquer 2 ordinateurs
 Lancer le logiciel **Filius**.
 
 On réalise un premier réseau simple de 2 ordinateurs reliés par une seule ligne.
@@ -60,7 +62,7 @@ On s'aidera de la video de présentation <a href="https://www.youtube.com/watch?
   * tester alors la commande de `traceroute` entre M1 et M3
 
 
-## TP Filius 2 : créer un reseau de type lycée
+# TP Filius 2 : créer un reseau de type lycée
 
 On cherche maintenant à créer un système de 2 sous-réseaux locaux. Ces reseaux auront pour adresses: 198.168.0.0 et 192.168.2.0
 
@@ -127,13 +129,13 @@ Votre système devrait ressembler à l'image suivante:
 *En cas de difficultés: on pourra consulter la <a href="https://www.youtube.com/watch?v=xyK6ThdQeR0" target="blank">video Filius 2 de David Roche</a>*
 
 
-## TP Filius 3 : système avec ordinateur serveur
+# TP Filius 3 : système avec ordinateur serveur
 On utilisera pour la suite un système informatique constitué de nombreux sous-reseaux:
 
 * télécharger le fichier [filius_sim_reseau.fls](../images/filius_sim_reseau.fls)
 * cliquer sur le fichier pour ouvrir avec *Filius*
 
-### Premier contact avec le système
+## Premier contact avec le système
 Lancer la simulation 
 
 1. Prendre connaissance de l'adresse IP de l'ordinateur n°15
@@ -141,13 +143,14 @@ Lancer la simulation
 3. Faire: `traceroute` suivi de l'adresse IP de la machine 15
 4. Repérer alors quels sont les routeurs par lesquels circulent les données entre ces 2 ordinateurs. Est-ce que le nombre de sauts effectués vous semble cohérent?
 
-### Communication client-serveur
+
 Toujours en mode *simulation*:
 
 * Ajouter à l'ordinateur n°15 les logiciels: 
   * explorateur de fichiers
   * editeur de fichier
   * webserveur
+  * webbrowser
 
 * Sur l'ordinateur n°15:
   * lancer l'*explorateur de fichiers*
@@ -168,13 +171,87 @@ Toujours en mode *simulation*:
 
 * machine n°15:
   * sauvegarder ce fichier dans le dossier *webserver*. Choisir: Nom de fichier: **index.html**
+  * Ouvrir le l'app *webserveur* et démarrer (**Start**)
 
+* test en local:
+  * ouvrir le webbrowser. Dans la barre d'adresse, saisir `http://localhost`. Voyez vous votre page?
+
+<figure>
+  <img src="../images/localhost.png">
+</figure>
+
+  * Aller sur l'application webserver: Les informations affichées devraient montrer l'entête HTTP avec la requête reçue (méthode GET, ...), l'entête de la reponse (HTTP/1.1 200 OK), ainsi que le script HTML téléchargé.
+
+<figure>
+  <img src="../images/protocoleHTTP.png">
+</figure>
+
+## Communication client-serveur
 * Ajouter à l'ordinateur n°1 le logiciel : *Navigateur Web*
 * Lancer le *Navigateur web*
 * Dans la barre d'adresse, completer `http://` avec l'adresse IP de l'ordinateur n°15 et cliquer sur *Afficher*
 * Si la page ne se charge pas la première fois, fermer et rouvrir le serveur du poste 15, ainsi que le Navigateur Web côté client.
 
-# Compléments sur les adresses des machines
+## protocole HTTP
+* **Côté serveur**
+Comme pour la connexion en localhost: Lire les informations de la fenêtre de l'application Webserver: *Quelles informations ont changé?*
+
+## Protocole TCP
+* **Côté client** 
+Faire un clic droit sur la *machine M1*. Choisir *show data exchange*
+
+<figure><div>
+  <img src="../images/menu_client.png"></div>
+</figure>
+
+Dérouler alors *trames échangées jusqu'à arriver à celles de protocole TCP*
+
+<figure>
+  <img src="../images/trame_tcp.png">
+</figure>
+
+* Dans la série de *trames TCP*:
+  * L'adresse source et celle destination, sont-elles toujours les mêmes? Ou y-a-t-il un alternance?
+  * Observer le détail de la première trame: vous avez accès aux informations de la couche physique (2), reseau (3), ainsi que la couche transport (4): identifier les informations pour chacune de ces couches: IP et TTL pour la couche 3, SEQ et ACK pour la couche 4...
+  * Ces informations, évoluent-elles d'une trame à l'autre?
+
+<figure><div>
+  <img src="../images/detail_tcp_ip.png"></div>
+</figure>
+
+# TP Filius 4: Serveur DNS
+Quitter la simulation précédente et ouvrir ce [nouveau](../images/TP4_DNS.fls) fichier.
+
+Le reseau contient maintenant 2 serveurs (192.168.5.3 et 192.168.4.3) et un serveur DNS.
+
+En mode *construction*, vous pouvez vérifier que l'adresse DNS a bien été renseignée pour chacun des ordinateurs.
+
+En mode *simulation*, vous allez commencer par **démarrer** chacun des serveurs.
+
+Vous allez remplir la table permettant la resolution symbolique du serveur DNS comme indiqué ci-dessous.
+
+| IP | adresse symbolique |
+| --- | --- |
+| 192.168.4.3 | estiennedorves.fr |
+| 192.168.5.3 | autreserveur.com |
+
+<figure><div>
+  <img src="../images/configDNS.png">
+  <figcaption>configuration DNS</figcaption>
+  </div>
+</figure>
+
+Puis, à partir de l'une des machines du reseau, comme par exemple M1, vous allez vous connecter à chacun de ces serveurs, à partir de leur adresse symbolique.
+
+
+<figure><div>
+  <img src="../images/adressesymbolique.png">
+  <figcaption>navigation avec adresse symbolique</figcaption>
+  </div>
+</figure>
+
+
+# Compléments théoriques sur les adresses des machines
 
 On pourra consulter la video sur les [adresses IP et masques de sous-reseau]( https://www.youtube.com/watch?v=RnpSaDSSjR4)
 
@@ -210,7 +287,17 @@ L'adresse possède 2 parties:
 
 La valeur correspondante binaire début donc par une série de 1, marquant les positions relatives à l'adresse reseau dans l'adresse IP.
 
+Par exemple: L'adresse machine suivante est constituée d'une première partie *reseau*, les 24 premiers bits, puis de l'adressage machine dans le reseau (8 derniers bits):
 
+$1100 0000.1010 1000. 0000 0000. 0000 0001 / 24$
+
+Le masque de sous-reseau est alors:
+
+$1111 1111.1111 1111. 1111 1111. 0000 0000$
+
+Que l'on peut aussi écrire:
+
+$255.255.255.0$
 
 ## classes d'adresse IP
 
@@ -238,7 +325,7 @@ Une adresse MAC est codée en hexadécimal, sur 6 octets (cf cours sur l'hexadé
 
 # Liens
 
-* Vidéo de prise en main du logiciel <a href="https://www.youtube.com/watch?v=nzuRSOwdF5I" target="blank">Filius 1 (David Roche</a>
+* Vidéo de prise en main du logiciel <a href="https://www.youtube.com/watch?v=nzuRSOwdF5I" target="blank">Filius 1 (David Roche)</a>
 
 * video [Ping et traceroute utility](https://www.youtube.com/watch?v=vJV-GBZ6PeM)
 

@@ -318,5 +318,11 @@ C- Un protocole de fiabilisation de la transmission.
 D- Un préfixe d'adresse.
 
 # Liens
+
+* <a href = "../circulation/">Retour vers la page Reseaux</a>
+* <a href = '../securite/index.html'>Sécurité des communications (1ere NSI)</a>
+* <a href = '../TP_reseau/index.html'>TP simulation d'un reseau</a>
+
+# Sources
 * adresse IP, partie reseau, partie machine, plages d'adresses: [cours openclassroom](https://openclassrooms.com/fr/courses/857447-apprenez-le-fonctionnement-des-reseaux-tcp-ip/853441-la-couche-3)
 

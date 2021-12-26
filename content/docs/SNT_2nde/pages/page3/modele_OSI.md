@@ -65,7 +65,7 @@ Une autre valeur transportée est le **TTL** (time to live) qui evite que le paq
 
 
 <figure>
-  <img src="../images/dataTCOIP.png">
+  <img src="../images/dataTCPIP.png">
   <figcaption>modèle simplifié du datagramme</figcaption>
 </figure>
 
