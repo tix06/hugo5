@@ -85,7 +85,7 @@ Il va ajouter l'adresse MAC de l'emetteur et du destinataire, qu'il aura résolu
 
 Le document complet sur la structure d'une trame: [Lien](/pdf/NSI/reseau_trame.pdf)
 
-Ce document est issu du cours en ligne du[lycee de Taaone](http://www.mysti2d.net/polynesie2/ETT/C044/31/SerruresBioIP/index.html?Cours4.html), série technologique.
+Ce document est issu du cours en ligne du [lycee de Taaone](http://www.mysti2d.net/polynesie2/ETT/C044/31/SerruresBioIP/index.html?Cours4.html), série technologique.
 
 
 # Liens

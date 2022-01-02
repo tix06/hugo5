@@ -244,7 +244,14 @@ Au bout de ce temps, le paquet est donc forcément stocké au niveau du routeur 
 
 ## Trame et datagramme
 **Ex 1:** 
-Donner les principaux éléments qui composent un datagramme IP et décrire leur utilité.
+
+<figure>
+  <img src="../images/trame_message_OSI.png">
+</figure>
+
+
+1. Commenter le schéma précédent en expliquant l'encapsulation des données.
+2. Donner les principaux éléments qui composent un datagramme IP et décrire leur utilité.
 
 **Ex 2:**
 Voici le modèle simplifié de datagramme IP que nous allons utiliser dans la suite de l'exercice:
