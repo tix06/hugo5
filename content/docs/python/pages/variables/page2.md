@@ -44,6 +44,25 @@ aeroports
 # affiche ['CDG','ORY','LIS']
 ```
 
+## index
+**index(element)** retourne la position (index) de cet élément dans la liste (ou du moins la première occurence s'il y en a plusieurs).
+
+```python
+aeroports = ['CDG','ORY','LIS','NY']
+aeroports.index('ORY')
+# retourne 1
+```
+
+## insert
+**insert(index, element)** insère l'élément à l'index précisé.
+
+```python
+aeroports = ['CDG','ORY','LIS','NY']
+aeroports.insert(2,'LCY')
+# la liste aeroport est alors
+# ['CDG','ORY', 'LCY', LIS','NY']
+```
+
 ## remove et del
 **remove(element)** supprime un élément d'une liste. Si l'élément apparait plusieurs fois dans la liste, seule la premiere occurence est supprimée.
 
@@ -95,6 +114,26 @@ Il y a 2 fonctions de tri :
 **sorted** renvoie une copie de la liste triée dans l'ordre naturel (alphanumerique)
 
 **sort** permet de trier la liste en place.
+
+```python
+L = [9, 5, 1, 3, 4]
+L.sort()
+# L est transformee en
+# [1, 3, 4, 5, 9]
+```
+
+
+## Choix d'un élément aléatoire dans une liste.
+
+Il faut importer la fonction `choice` de la librairie `random`:
+
+```python
+from random import choice
+L = [1, 10, 100, 1000]
+print(choice(L))
+```
+
+Affiche un élément au hasard: 1, 10, 100 ou 1000.
 
 # méthodes de dictionnaires
 Les dictionnaires sont présentés à la page sur les [variables](/docs/python/pages/variables/page1/#mappages-les-dictionnaires)

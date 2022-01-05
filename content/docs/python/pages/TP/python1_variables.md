@@ -100,7 +100,7 @@ Utiliser la cellule suivante pour trouver l'expression qui aura pour valeur : 5
 
 Même exercice, mais on dispose maintenant du dictionnaire : 
 ```
-dico = {'1':'2','3':{'4':'5'}`
+dico = {'1':'2','3':{'4':'5'}}`
 ```
 Utiliser la cellule suivante pour trouver l'expression qui aura pour valeur, **l'entier** 5
 

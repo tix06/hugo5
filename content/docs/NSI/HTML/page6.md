@@ -30,10 +30,10 @@ Créez les sous-dossiers *templates, static, et images,* comme sur l'arborescenc
 Documents/serveur_form
 /
 |- main.py
-|- templates 
+|- templates/ 
     |- form.html
     |- result.html
-|- static
+|- static/
     |- style.css
 
 ```

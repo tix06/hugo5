@@ -124,7 +124,7 @@ print(a)
 # False car on a affecté un nouvel objet à b, qui n'est alors plus rigoureusement identique à a
 ```
 
-## Objets mutables en python 
+## Objets mutables en python
 La copie d'un objet *mutable* se fait par *référence*. Cela peut entrainer des erreurs lors de la manipulation de ces objets, puisque la modification de l'un va aussi modifier toutes les variables mutables possédant la même référence : 
 
 ```python

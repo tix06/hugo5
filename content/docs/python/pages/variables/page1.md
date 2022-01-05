@@ -24,7 +24,7 @@ Une variable est une étiquette associée à une valeur. Ce nom est à peu près
 
 Cette valeur peut être en fait à peu près n’importe quel « objet » susceptible d’être placé dans la mémoire d’un ordinateur, par exemple : un nombre entier, un nombre réel, un nombre complexe, un vecteur, une chaîne de caractères, un tableau, une fonction, etc.
 
-## Les types élementaires 
+## Les types élementaires
 Les types élementaires que peuvent prendre les variables et expressions sont : 
 
 ### les entiers (int)
@@ -57,12 +57,12 @@ print(citation_python)
 # telle est la question
 ```
 
-### le type de « rien » : `None` 
+### le type de « rien » : `None`
 C'est le type des instrutions. Valeur possible : None
 
 
 
-## Typage dynamique 
+## Typage dynamique
 Python est un langage à typage dynamique, ce qui signifie qu'il n'est pas necessaire de déclarer le type de donnée que représentera une variable (c'est la différence avec le typage *statique*). C'est l'interpréteur qui examine la donnée tout au long de la vie du programme et choisit le type.
 
 ## Changer de type
@@ -192,7 +192,13 @@ Une séquence est une structure de données qui stocke une collection d'élémen
 
 Les éléments contenus peuvent être de tout type.
 
-On accède à un élément d'une liste grace à sa position, appelée *indice*. Le premier élément a pour indice zero. Un indice négatif donne accès à la liste à partir du dernier élément.
+On accède à un élément d'une liste grace à sa position, appelée *indice*. Le premier élément a pour indice zero. 
+
+<figure>
+  <img src="../images/liste.png">
+</figure>
+
+Un indice négatif donne accès à la liste à partir du dernier élément.
 
 ```python
 voyelles = ['e','i','o']
