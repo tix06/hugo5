@@ -54,17 +54,6 @@ On peut entrer dans une page directement en saisissant son URL.
 > Ensuite, il y a l'entrée par un moteur de recherche.
 
 ## Trouver une page: moteurs de recherche
-Logiciel qui dispose d'une indexation des pages internet. L'indexation est un traitement qui consiste à analyser des pages pour y detecter des mots clés utilisés fréquemment par les internautes.
-
-L'utilisateur va alors cliquer sur le lien de son choix parmi les propositions du moteur de recherche. Et se retrouver sur la page proposée, sans avoir à connaitre et mémoriser son URL.
-
-<figure>
-  <a href="https://www.1ere-position.fr/blog/10-meilleurs-moteurs-de-recherche-alternatifs-google/" target="blank">
-  <img src="https://www.1ere-position.fr/wp-content/uploads/2017/10/moteurs-recherche-alternatifs-google-seo-1ere-position.jpg" alt="moteurs de recherche">
-  <figcaption>des moteurs de recherche alternatifs à Google</figcaption>
-</a>
-</figure>
-
 Avant l'usage généralisé des moteurs de recherche, les sites étaient référencés par dans des **annuaires web**: répertoire web, annuaire Internet ou répertoire Internet est un site web proposant une liste classée de sites Web.
 
 Le classement se fait typiquement dans une arborescence de catégories, censée couvrir tout ou partie des centres d'intérêt des visiteurs. 
@@ -74,6 +63,40 @@ Aujourd'hui, ils ont perdu de l'interêt face à la facilité d'utilisation des 
 <figure>
   <img src="../images/yahoo-annuaire.png">
   <figcaption>dernière page de l'annuaire Yahoo avant sa fermeture en 2014</figcaption>
+</figure>
+
+
+> Un moteur de recherche: Logiciel qui dispose d'une indexation des pages internet. L'indexation est un traitement qui consiste à analyser des pages pour y detecter des mots clés utilisés fréquemment par les internautes.
+
+L'utilisateur va alors cliquer sur le lien de son choix parmi les propositions du moteur de recherche. Et se retrouver sur la page proposée, sans avoir à connaitre et mémoriser son URL.
+
+
+Les moteurs de recherche – Mediaprovence (juin 2019)
+https://www.youtube.com/watch?v=Y8l4hKNQOEY
+
+<figure>
+  <a href="https://www.youtube.com/watch?v=pMywV9ZLS4M" >
+  <img src="../images/moteur_R_fonc.png" alt="moteurs de recherche : fonctionement">
+  <figcaption>video: Fonctionnement du moteur de recherche – FenetresurWordpress</figcaption>
+</a>
+</figure>
+
+Un moteur de recherche, c’est une entreprise, qui doit faire des profits.
+Ses revenus viennent des annonceurs (sites commerçants) qui sont mis en avant par des  publicités ciblées. C’est un mode de référencement payant, par opposition à celui naturel, réalisé à partir des contenus redactionnels (SEO).
+Les moteurs de recherche mettent en avant une expérience plus personnalisée de l’internaute. Et ils ont besoin pour cela de récupérer vos données.
+
+<figure>
+  <a href="https://www.youtube.com/watch?v=Y8l4hKNQOEY" >
+  <img src="../images/moteur_R_financ.png" alt="moteurs de recherche : fonctionement">
+  <figcaption>video: Les moteurs de recherche – Mediaprovence (juin 2019)</figcaption>
+</a>
+</figure>
+
+<figure>
+  <a href="https://www.1ere-position.fr/blog/10-meilleurs-moteurs-de-recherche-alternatifs-google/" target="blank">
+  <img src="https://www.1ere-position.fr/wp-content/uploads/2017/10/moteurs-recherche-alternatifs-google-seo-1ere-position.jpg" alt="moteurs de recherche">
+  <figcaption>Article: des moteurs de recherche alternatifs à Google</figcaption>
+</a>
 </figure>
 
 
@@ -137,6 +160,10 @@ Ce mode P2P connait un regain d'interet avec les *Blockchains* qui consistent à
 (monnaies virtuelles)
 
 # sécurité et confidentialité
+Ce que le moteur de recherche appelle des données échangées (entre services de la même entreprise), sont vos données personnelles.
+Votre identité, vos contacts, la durée desappels, date, titres de vidéos, musiques consultées, historique des coord GPS, adresse IP, données des capteurs de l’appareil, requete lors des recherches, historique de navigation… 
+
+Pour limiter ses traces sur le Web, et reduire cette collecte de données qui vous concernent, vous pouvez:
 
 * dans le navigateur Mozilla : effacer les traces : bouton bibliothèqe, Historique, marques pages et plus encore > **Historique** > Effacer l'historique recent (cocher au choix : historique, historique des formulaires et des recherches, cookies et câche) ET **Données** > préférence des sites 
 * paramétrer le navigateur : menu > Options > Vie privée et sécurité (Il y a plusieurs niveaux de sécurité). Dans Identifiants et mots de passe > afficher les mots de passe. Dans cookies et données > recherche la présence d'un cookie de connexion au site du lycée...

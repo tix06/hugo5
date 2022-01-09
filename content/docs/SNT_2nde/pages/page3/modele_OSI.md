@@ -90,6 +90,7 @@ Ce document est issu du cours en ligne du [lycee de Taaone](http://www.mysti2d.n
 
 # Liens
 
+* Feuille d'exercices sur les reseaux: <a href="/pdf/NSI/R3_exercices.pdf">Lien</a>
 * <a href = "../circulation/">Retour vers la page Reseaux</a>
 * <a href = "/docs/SNT_2nde/pages/page3/protocoles/"> Les protocoles TCP et IP</a>
 * <a href = '../securite/index.html'>Sécurité des communications (1ere NSI)</a>
