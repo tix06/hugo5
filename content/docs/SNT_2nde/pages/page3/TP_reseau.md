@@ -212,7 +212,7 @@ Dérouler alors *trames échangées jusqu'à arriver à celles de protocole TCP*
 
 * Dans la série de *trames TCP*:
   * L'adresse source et celle destination, sont-elles toujours les mêmes? Ou y-a-t-il un alternance?
-  * Observer le détail de la première trame: vous avez accès aux informations de la couche physique (2), reseau (3), ainsi que la couche transport (4): identifier les informations pour chacune de ces couches: IP et TTL pour la couche 3, SEQ et ACK pour la couche 4...
+  * Observer le détail de la première trame: vous avez accès aux informations de la couche liaison (2), reseau (3), ainsi que la couche transport (4): identifier les informations pour chacune de ces couches: IP et TTL pour la couche 3, SEQ et ACK pour la couche 4...
   * Ces informations, évoluent-elles d'une trame à l'autre?
 
 <figure><div>
