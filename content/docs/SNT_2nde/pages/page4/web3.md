@@ -11,4 +11,9 @@ bookShowToc: false
 <a href="https://trinket.io/html/b93b88859f" target="blank">lien direct sur la page en plein écran</a>
 <iframe src="https://trinket.io/embed/html/b93b88859f" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
-<input type="button" class="btn btn-lg" value="Retour" onclick="window.location.href = '../web/index.html'">
+# Liens
+
+<ul>
+<li><a href="../web1">SNT le langage HTML</a></li>
+<li><a href="../web2">SNT TP 1: HTML et CSS</a></li>
+</ul>

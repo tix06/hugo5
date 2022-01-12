@@ -187,15 +187,12 @@ D’où l’importance d’un cadre juridique permettant de protéger les usag
 
 # Travaux pratiques
 
-
+<ul>
+<li><a href="../web1">SNT le langage HTML</a></li>
+<li><a href="../web2">SNT TP 1: HTML et CSS</a></li>
+<li><a href="../web3">SNT TP 2: Javascript</a></li>
+</ul>
     
-<input type="button" class="btn btn-lg" value="Partie 1: HTML. Présentation" onclick="window.location.href = '../web1/index.html'">
-    
-      
-<input type="button" class="btn btn-lg" value="Partie 2: HTML et CSS" onclick="window.location.href = '../web2/index.html'">
-      
-
-<input type="button" class="btn btn-lg" value="Partie 3: Javascript" onclick="window.location.href = '../web3/index.html'">
 
 
 <!--

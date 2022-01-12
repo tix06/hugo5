@@ -107,13 +107,12 @@ Et cela va rediriger sur la page de wikipedia: restauration française de 1814, 
 </figure> 
 
 # Lien vers la suite du TP
-   
-      
-<input type="button" class="btn btn-lg" value="Partie 2: HTML et CSS" onclick="window.location.href = '../web2/index.html'">
+<ul>
+<li><a href="../web2">SNT TP 1: HTML et CSS</a></li>
+<li><a href="../web3">SNT TP 2: Javascript</a></li>
+</ul>   
       
 
-
-<input type="button" class="btn btn-lg" value="Retour: le Web" onclick="window.location.href = '../web/index.html'">
 
 # Lien vers l'exploration d'une page wikipedia
 <a href="https://frederic-junier.org/SNT/Theme1_Web/SNT_Activite3_Web.html">Voir l'exercice 1 de la page du site de Frederic Junier</a>

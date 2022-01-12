@@ -299,11 +299,7 @@ Celle-ci pourrait, par exemple, porter sur un sujet lié à l'exploration d'un a
 
 
 # Liens et compléments
-* retour vers la page HTML: présentation
-<input type="button" class="btn btn-lg" value="Partie 1: HTML. Présentation" onclick="window.location.href = '../web1/index.html'">
-        
-* retour vers la page: Documents Web &nbsp;&nbsp;&nbsp;&nbsp;
-<input type="button" class="btn btn-lg" value="Retour" onclick="window.location.href = '../web/index.html'">
-
-* Animations en javascript avec P5.js:&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 
-<input type="button" class="btn btn-lg" value="Partie 3: Javascript" onclick="window.location.href = '../web3/index.html'">
+<ul>
+<li><a href="../web3">SNT TP 2: Javascript</a></li>
+<li><a href="../web1">Retour: le langage HTML</a></li>
+</ul>  
