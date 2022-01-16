@@ -23,12 +23,15 @@ Attention : les données ne sont pas sauvegardées sur Binder. Pensez à downloa
 ## Graphique et modelisation
 * `graphique modelisation.ipynb` programme pour tracer une droite de regression linéaire et obtenir les coefficients de la modélisation.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tix06/notebooks_Physique.git/master)
+## Chronophotographie
+* `chronophotographie.py`: programme qui permet le traitement d'une chronophotographie (pointage), et de générer un fichier de coordonnées (*coordonnees.txt*).
+
+<a href="https://mybinder.org/v2/gh/tix06/notebooks_Physique.git/master" target="_blank"><img src="https://mybinder.org/badge_logo.svg"></a>
 
 
 <form id="fs-frm" name="bouton">
 <a href="https://mybinder.org/v2/gh/tix06/notebooks_Physique.git/master" target="_blank">
-    <input type="button" value="Cliquer pour ouvrir le depôt"></a>
+    <input type="button" value="ouvrir le depôt dans un nouvel onglet"></a>
 </form>
 
 <!--lien sur mybinder : 
