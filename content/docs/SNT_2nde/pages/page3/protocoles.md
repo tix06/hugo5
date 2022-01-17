@@ -131,8 +131,8 @@ La fiabilité est obtenue par un mécanisme d'acquittement des segments :
 <figcaption>TCP1</figcaption>
 </figure>
 
-* Chaque segment possède un numéro de séquence SEQ: c'est le numéro du dernier octet envoyé. C'est grâce à ce numero que les segments peuvent être remis dans l'ordre.
-* Les acquittements sont identifiés par un marqueur ACK: c'est le numéro du prochain octet attendu par l'autre machine.
+* Chaque segment possède un numéro de séquence SEQ: c'est le numéro du premier octet envoyé. C'est grâce à ce numero que les segments peuvent être remis dans l'ordre.
+* Les acquittements sont identifiés par un marqueur ACK: c'est le numéro du prochain octet attendu par la machine.
 * Le concept même d'acquittement impose des notions de délai.
 Par exemple, quel est le délai au delà duquel un segment non acquitté doit être réémis
 

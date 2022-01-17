@@ -70,20 +70,30 @@ Le matériel dans la classe permet de réaliser plusieurs situations expériment
 
 Pour chacune de ces expériences, vous réaliserez la chronophotographie la plus précise possible, à l'aide de l'application téléchargée.
 
-Vous téléchargerez ensuite l'image obtenue sur votre ordinateur (envoi en piece jointe d'un mail par exemple).
+Vous téléchargerez ensuite l'image obtenue sur votre ordinateur (envoi en piece jointe d'un mail par exemple, ou partage par *Drive*). Il faut utiliser pour cela le menu *partager* en bas à droite de l'écran.
+
+<figure>
+  <img src="../images/explo5.png">
+</figure> 
 
 ## Pointage des positions
-Télécharger:
+Télécharger le fichier compressé <a href="/scripts/meca/chronophotographie.zip" download="chronophotograpie.zip">chronophotographie.zip</a>
 
-* le programme <a href="/scripts/meca/chronophotographie.py" download="chronophotograpie.py">chronophotographie.py</a>
-* ainsi que <a href="../images/Motion_Shot.jpg" download="imageTest.jpg">l'image test</a>
+Celui-ci contient:
 
-Déplacer les 2 fichiers dans un dossier de vos documents: *Documents/physique/* par exemple.
+* le fichier python à executer: chronophotograpie.py
+* un dossier images avec divers enregistrements tests 
 
-Dans *Winpython*: Lancer un IDE Python, comme par exemple *IDLE Python*. Dans le menu *Fichier*, ouvrir le programme *chronophotographie.py*. Puis *Executer*
 
-Dans la fenêtre graphique, cliquer sur *select image*. Et réaliser le pointage, c'est à dire, cliquer sur la position du même point, au fur et à mesure de son avancée dans le mouvement. Des marqueurs s'ajoutent à l'image.<br>
-Et la liste des coordonnées s'affiche à droite.
+Déplacer et décompresser (dézipper) le fichier dans un dossier de vos documents: *Documents/physique/* par exemple.
+
+Dans *Winpython*: Lancer un IDE Python, comme par exemple *IDLEX Python*. Dans le menu *Fichier*, ouvrir le programme *chronophotographie.py*. Puis *Executer* depuis le menu *Run > Run Module F5*.
+
+Dans la fenêtre graphique, cliquer sur *select image* et suivre les instructions:
+
+* Faire la calibration en cliquant sur le centre du cercle rouge
+* Et réaliser le pointage, c'est à dire, cliquer sur la position du même point, au fur et à mesure de son avancée dans le mouvement. Des marqueurs s'ajoutent à l'image.<br>
+La liste des coordonnées s'affiche alors à droite.
 
 <figure><div>
   <img src="../images/imTest.png" alt ="programme python chronophotographie">
@@ -93,12 +103,13 @@ Et la liste des coordonnées s'affiche à droite.
 Lorsque la saisie est terminée, cliquer sur *valider*. Un fichier *coordonnees.txt* est alors créé dans le même dossier, avec les coordonnées du point. On peut consulter le contenu avec un editeur de texte (Visual Studio, ou Notepad++).
 
 ## Exploitation
-Dans le programme IDLE python: Créer un nouveau script, que vous appelerez *exploitation.py*
+Dans le programme IDLE python: Créer un nouveau script, que vous appelerez *exploitation.py*: Menu *Fichier > Nouveau*. Construisez votre script python au fur et à mesure des instructions. Executez régulièrement le script avec *Run > Run Module F5*.
 
 * Commencer par importer le module *pandas* puis les données des coordonnées:
 
 ```python
-import pandas as pd  # on importe la librairie pandas
+import pandas as pd  # import de la librairie pandas (traitement données)
+import matplotlib.pyplot as plt # et celle matplotlib (graphiques)
 data = pd.read_csv("coordonnees.txt")
 print(data)
 ```
@@ -125,10 +136,11 @@ print(data.Y)
 </div>
 </figure> 
 
-* Pour afficher le tracé (X,Y):
+* Pour afficher le tracé (X,Y), on ajoute le module `matplotlib` et on écrit:
 
 ```python
 data.plot.scatter(x='X', y='Y')
+plt.show()
 ```
 
 <figure><div>
@@ -149,13 +161,13 @@ Le graphique généré est alors le suivant:
 </div>
 </figure>
 
-* Enfin, pour sauvegarder le graphique, il faudra ajouter le module matplotlib. Le programme complet devrait alors être:
+* Enfin, pour sauvegarder le graphique, il faudra remplacer `plt.show()` par `plt.savefig('output.png')`. Le programme complet devrait alors être:
 
 ```python
 import pandas as pd  
 import matplotlib.pyplot as plt
 data = pd.read_csv("coordonnees.txt")
-data.Y = 300- data.Y
+data.Y = 300 - data.Y
 data.plot.scatter(x='X', y='Y')
 plt.savefig('output.png')
 ```
