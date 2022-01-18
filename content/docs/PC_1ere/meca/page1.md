@@ -103,9 +103,9 @@ La liste des coordonnées s'affiche alors à droite.
 Lorsque la saisie est terminée, cliquer sur *valider*. Un fichier *coordonnees.txt* est alors créé dans le même dossier, avec les coordonnées du point. On peut consulter le contenu avec un editeur de texte (Visual Studio, ou Notepad++).
 
 ## Exploitation
-Dans le programme IDLE python: Créer un nouveau script, que vous appelerez *exploitation.py*: Menu *Fichier > Nouveau*. Construisez votre script python au fur et à mesure des instructions. Executez régulièrement le script avec *Run > Run Module F5*.
+Dans le programme IDLE python: ouvrir le programme *traitement.py*: Construisez et complétez votre script python au fur et à mesure des instructions. Executez régulièrement le script avec *Run > Run Module F5*.
 
-* Commencer par importer le module *pandas* puis les données des coordonnées:
+* Après l'import des modules *pandas* et *matplotlib*, ajouter les instructions qui permettent de charger les coordonnées dans la variable *data*:
 
 ```python
 import pandas as pd  # import de la librairie pandas (traitement données)
