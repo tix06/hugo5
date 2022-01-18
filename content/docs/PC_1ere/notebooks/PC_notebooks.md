@@ -30,7 +30,7 @@ Attention : les données ne sont pas sauvegardées sur Binder. Pensez à downloa
 
 
 <form id="fs-frm" name="bouton">
-<a href="https://mybinder.org/v2/gh/tix06/notebooks_Physique.git/master" target="_blank">
+<a href="https://mybinder.org/v2/gh/tix06/notebooks_Physique/HEAD" target="_blank">
     <input type="button" value="ouvrir le depôt dans un nouvel onglet"></a>
 </form>
 
