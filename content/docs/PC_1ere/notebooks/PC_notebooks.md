@@ -24,7 +24,7 @@ Attention : les données ne sont pas sauvegardées sur Binder. Pensez à downloa
 * `graphique modelisation.ipynb` programme pour tracer une droite de regression linéaire et obtenir les coefficients de la modélisation.
 
 ## Chronophotographie
-* `chronophotographie.py`: programme qui permet le traitement d'une chronophotographie (pointage), et de générer un fichier de coordonnées (*coordonnees.txt*).
+* `chronophotographie.py`: programme qui permet le traitement d'une chronophotographie (pointage), et de générer un fichier de coordonnées (*coordonnees.txt*). Il faudra télécharger le dossier complet (fichier .py et dossier images) et executer en local avec un IDE Python. Notice [ici](/docs/PC_1ere/meca/page1/)
 
 <a href="https://mybinder.org/v2/gh/tix06/notebooks_Physique.git/master" target="_blank"><img src="https://mybinder.org/badge_logo.svg"></a>
 
