@@ -24,7 +24,8 @@ Vous pouvez vous aider des liens suivants:
 
 <ul>
 <li><a href="../web1">le langage HTML</a></li>
-<li><a href="../web2">TP 1: HTML et CSS</a></li>
+<li><a href="../web2">TP 1: HTML</a></li>
+<li><a href="../web5">Tutoriel sur CSS</a></li>
 </ul>
 
 ... ou d'autres site sur internet.

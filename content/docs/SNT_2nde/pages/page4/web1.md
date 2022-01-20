@@ -109,6 +109,7 @@ Et cela va rediriger sur la page de wikipedia: restauration française de 1814, 
 # Lien vers la suite du TP
 <ul>
 <li><a href="../web2">SNT TP 1: HTML et CSS</a></li>
+<li><a href="../web5">Tuto sur CSS</a></li>
 <li><a href="../web3">SNT TP 2: Javascript</a></li>
 </ul>   
       

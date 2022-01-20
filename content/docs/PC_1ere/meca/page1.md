@@ -139,7 +139,8 @@ print(data.Y)
 * Pour afficher le tracé (X,Y), on ajoute le module `matplotlib` et on écrit:
 
 ```python
-data.plot.scatter(x='X', y='Y')
+plt.axis([0, 600, 0, 400])  # choix des echelles
+plt.scatter(data.X,data.Y)
 plt.show()
 ```
 
@@ -151,7 +152,7 @@ plt.show()
 On remarque que la coordonnée Y est repérée à partir du bord inférieur de la fenêtre graphique. Alors que pour le pointage, c'était à partir du bord supérieur. On peut modifier les valeurs de TOUTE la colonne Y en faisant par exemple:
 
 ```python
-data.Y = 300 - data.Y
+data.Y = 400 - data.Y
 ```
 
 Le graphique généré est alors le suivant:
@@ -167,8 +168,9 @@ Le graphique généré est alors le suivant:
 import pandas as pd  
 import matplotlib.pyplot as plt
 data = pd.read_csv("coordonnees.txt")
-data.Y = 300 - data.Y
-data.plot.scatter(x='X', y='Y')
+data.Y = 400 - data.Y
+plt.axis([0, 600, 0, 400])
+plt.scatter(data.X,data.Y)
 plt.savefig('output.png')
 ```
 

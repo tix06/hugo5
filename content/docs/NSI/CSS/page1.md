@@ -10,7 +10,7 @@ Le CSS vient résoudre un problème bien différent du HTML : en effet, le HTML 
 
 Si votre navigateur affiche par défaut les contenus textuels que vous avez déclaré comme des titres en HTML en grand et en gras et à l’inverse les paragraphes en plus petit c’est justement parce que chaque navigateur possède sa propre feuille de styles. En fournissant nos styles CSS pour les différents contenus de notre page, nous allons donc pouvoir définir l’apparence de ceux-ci puisque les styles que nous allons fournir vont être considérés comme prioritaires par rapport à ceux du navigateur. C'est le principe du style en cascade (CSS)
 
-## Une règle CSS
+## Une déclaration en CSS
 Une règle typique est composée de trois parties :
 
 - un **sélecteur**,

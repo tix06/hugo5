@@ -55,6 +55,7 @@ Ce sont la plupart du temps des balises de type `<balise>argument</balise>`
 | div (container) | `<div><p>Contenu</p><p>autre contenu</p></div>` | <p>Contenu</p><p>autre contenu</p> |
 | a (lien) | `<a href="https://www.anti-moustique.net/raquette-moustique/">le meilleur antimoustique au monde</a>` | <a href="">le meilleur antimoustique au monde</a> |
 | img (image) | `<img src="https://i.postimg.cc/MHjjW4wg/moustique.png">` | <div><img src="../images/moustique.png" style="width:50px"></div> |
+| ul li | <div><img src="../images/listes3.png" style="height:100px"></div> |  <div><img src="../images/listes4.png" style="width:70px"></div> |
 
 <br>
 > Testez chacun des **exemples d'instruction en html** dans la page de <a href="https://htmledit.squarefree.com/" target="blank">squarefree.com</a>.
@@ -300,6 +301,7 @@ Celle-ci pourrait, par exemple, porter sur un sujet lié à l'exploration d'un a
 
 # Liens et compléments
 <ul>
+<li><a href="../web5">Compléments sur CSS</a></li>
 <li><a href="../web3">SNT TP 2: Javascript</a></li>
 <li><a href="../web1">Retour: le langage HTML</a></li>
 </ul>  
