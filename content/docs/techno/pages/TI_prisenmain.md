@@ -80,17 +80,22 @@ L'explorateur de votre ordinateur devrait vous permettre de retrouver le fichier
 </figure>
 
 ## Télécharger les modules
-Se rendre du la page de téléchargement du site Texas Instrument: <a href="https://education.ti.com/fr/ressources-et-formations/microbit" target=blank>Lien</a>
+Se rendre du la page de téléchargement du site Texas Instrument: <a href="https://resources.t3france.fr/t3france?resource_id=3078&cHash=513acef78cfa6d808465417be9e08cc3t" target=blank>Lien</a>
 
 <figure>
-  <a href="https://education.ti.com/fr/ressources-et-formations/microbit" target=blank>
+  <a href="https://resources.t3france.fr/t3france?resource_id=3078&cHash=513acef78cfa6d808465417be9e08cc3t" target=blank>
     <img src="../images/maj_ti1.png">
   </a>
 </figure>
+ 
 
-Téléchargez tous les modules sur votre ordinateur. (il y en a actuellement 9). 
+Vous pouvez télécharger l'ensemble de ces fichiers, en un seul *clic*, depuis <a href="https://resources.t3france.fr/t3france?resource_id=3078&cHash=513acef78cfa6d808465417be9e08cc3">la page du site Texas instruments</a>
 
-Vous pouvez aussi télécharger l'ensemble de ces fichiers, en un seul *clic*, ici : [Lien vers le fichier zip](/pdf/SNT_texas/microbit/MB_ti83.zip)
+<figure>
+    <img src="../images/maj_TI9.png">
+</figure>
+
+Téléchargez le dossier "modules_microbit V1.zip" ou "modules_microbit V2.zip" selon le modèle de carte dont vous disposez
 
 Ceux-ci devraient se trouver dans votre dossier *téléchargements*.
 

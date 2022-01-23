@@ -12,7 +12,7 @@ La carte micro:bit peut être programmée à partir de la calculatrice TI-83 edi
 </div>
 </figure>
 
-Commencer par mettre à jour la calculatrice TI-83 Premium CE edition Python. [Voir la fiche explicative](/docs/SNT_2nde/pages/page12/TI_prisenmain/).
+Commencer par mettre à jour la calculatrice TI-83 Premium CE edition Python. [Voir la fiche explicative](/docs/techno/pages/TI_prisenmain/#mettre-à-jour-la-calculatrice). Téléchargez également tous les modules necessaires pour piloter la carte microbit, avec la calculatrice. Voir [fiche](/docs/techno/pages/TI_prisenmain/#télécharger-les-modules). 
 
 Puis changer de cable pour brancher la carte micro:bit sur l'ordinateur (cable USB: *ordinateur* vers micro usb B : *microbit*).
 
@@ -22,7 +22,10 @@ Puis changer de cable pour brancher la carte micro:bit sur l'ordinateur (cable U
 </div>
 </figure>
 
-Télécharger le fichier [TI_Runtime_2.6.hex](/pdf/SNT_texas/microbit/TI_Runtime_2.6.hex) sur votre ordinateur.<br>
+Télécharger le fichier sur votre ordinateur:
+
+* <a href="/pdf/microbit/ti_runtime_1.0.0.hex" download="ti_runtime_1.0.0.hex">ti_runtime_1.0.0.hex</a> si vous disposez de la carte microbit V1
+* <a href="/pdf/microbit/ti_runtime_2.0.0.hex" download="ti_runtime_2.0.0.hex">ti_runtime_2.0.0.hex</a> si vous disposez de la carte microbit V2
 
 Puis, à l'aide de l'explorateur windows, glisser-déposer ce fichier vers la carte micro:bit.
 
