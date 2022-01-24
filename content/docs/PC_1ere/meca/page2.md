@@ -2,7 +2,7 @@
 Title: vecteur vitesse
 ---
 
-# Exploiter les enregistrements
+# Seance précédente: enregistrements de trajectoires
 Lors de la [séance précédente](/docs/PC_1ere/meca/page1/#pointage-des-positions), vous avez obtenu 3 chronophotographies:
 
 * mouvement rectiligne uniforme
@@ -19,8 +19,11 @@ Comme indiqué dans le guide du [TP](/docs/PC_1ere/meca/page1/#pointage-des-posi
 
 Vous avez utilisé le programme *traitement.py* pour afficher les graphiques (0,X,Y) pour les positions des points, pour ces 3 expériences. 
 
-# Traitement avec un logiciel tableur
-Avec un logiciel tableur de votre ordinateur:
+# TP: coordonnées du vecteur vitesse
+## Traitement avec un logiciel tableur
+Télécharger le fichier compressé <a href="/scripts/meca/chronophotographie.zip" download="chronophotograpie.zip">chronophotographie.zip</a>. Le déplacer dans vos *Documents* et Extraire.
+
+Avec un logiciel tableur de votre ordinateur (EXCEL):
 
 * ouvrir le fichier *coordonnees1.txt*. Préciser que le séparateur des colonnes est le symbole virgule ",".
 
@@ -55,8 +58,8 @@ Les données sont bien mises en colonnes (prévisualisation)</figcaption>
 
 * Sauvegarder alors le fichier avec l'extension *.csv*. Le séparateur des colonnes est alors le symbole point-virgule ";". Appelez le *coordonnees11.csv* pour conserver aussi le fichier d'origine.
 
-# Traitement en Python: calcul des vitesses
-* Ouvrir le fichier *traitement.py*, qui est à l'origine prévu pour tracer les positions successives du mobile. Remplacer le script par le suivant:
+## Traitement en Python: calcul des vitesses
+* Ouvrir le fichier *vitesse.py*, qui contient le script suivant:
 
 ```python
 import pandas as pd  
@@ -67,6 +70,8 @@ data["t"] = data["T"] * Dt
 data["vx"] = (data.X_suivant - data.X)/Dt
 data["vy"] = (data.Y_suivant - data.Y)/Dt
 print(data)
+plt.scatter(data.t,data.X)
+plt.show()
 ```
 
 On suppose que l'intervale de temps qui s'écoule entre 2 positions successives de la chronophotographie dure 0,5s. On utilise une variable appelée *Dt* pour stocker cette valeur.
@@ -84,16 +89,15 @@ On suppose que l'intervale de temps qui s'écoule entre 2 positions successives 
 * UNITE: Les vitesses sont calculées en pixels par seconde.
 
 
-# Evolution de la vitesse
-## Coordonnées du vecteur vitesse
-Ajouter les instructions suivantes, qui permettent de tracer X = f(t) (X en fonction du temps)
+## Evolution de la vitesse
+Les instructions suivantes permettent de tracer X = f(t) (X en fonction du temps)
 
 ```python
 plt.scatter(data.t,data.X)
 plt.show()
 ```
 
-Tracer les graphiques:
+Adapter ces lignes pour tracer les graphiques:
 
 * Y = f(t)
 * vx = f(t)
