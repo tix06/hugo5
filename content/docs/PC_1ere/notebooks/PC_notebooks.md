@@ -5,12 +5,13 @@ Title : ipython notebooks PC
 
 # Notebooks en PC
 
-Sur chaque TP, clliquer sur le titre ou Binder pour lancer Binder avec le TP ouvert.
+Sur chaque TP, cliquer sur le titre (téléchargement) ou Binder pour lancer *Binder* avec le TP ouvert.
 
-L'environnement de développement utilisé dans cours est Jupyter. Vous pouvez soit le télécharger en local en suivant les instructions sur https://jupyter.org, soit utiliser une version en ligne :
+L'environnement de développement utilisé est Jupyter. 
 
-Utiliser Jupyter avec Binder (serveur distant)
-Attention : les données ne sont pas sauvegardées sur Binder. Pensez à download/upload votre travail.
+* Si vous téléchargez les fichier en local, vous devrez l'executer avec Jupyter notebook déjà installé. Instructions sur https://jupyter.org.
+
+* Si vous utiliser Jupyter avec Binder (serveur distant): Attention : les données ne sont pas sauvegardées sur Binder. Pensez à download/upload votre travail à la fin.
 
 # Contenu du depôt : 
 ## Traitement RVB d'une photographie numerique
