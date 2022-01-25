@@ -9,11 +9,19 @@ Sur chaque TP, cliquer sur le titre (téléchargement) ou Binder pour lancer *Bi
 
 L'environnement de développement utilisé est Jupyter. 
 
-* Si vous téléchargez les fichier en local, vous devrez l'executer avec Jupyter notebook déjà installé. Instructions sur https://jupyter.org.
+* Si vous téléchargez le fichier en local, vous devrez l'executer avec Jupyter notebook déjà installé. Au lycée, le fichier doit être mis dans le dossiers *notebooks*, et lancé avec le programme *ipython_win10.bat*:
 
-* Si vous utiliser Jupyter avec Binder (serveur distant): Attention : les données ne sont pas sauvegardées sur Binder. Pensez à download/upload votre travail à la fin.
+<figure>
+<img src ="/images/environment.png">
+<figcaption>Glisser le fichier d'extension<br>
+<i>.ipynb</i> dans le dossier <i>notebooks</i></figcaption>
+</figure>
 
-# Contenu du depôt : 
+* Si vous utiliser Jupyter avec *Binder* (serveur distant): Attention : les données ne sont pas sauvegardées sur Binder. Pensez à download/upload votre travail à la fin.
+
+# Contenu du depôt :
+Accéder au depot: cliquer sur *launch binder* <a href="https://mybinder.org/v2/gh/tix06/notebooks_Physique.git/master" target="_blank"><img src="/images/binder.svg"></a>
+
 ## Traitement RVB d'une photographie numerique
 * `P13_Traitement_filtre/notebook filtre.ipynb` programme pour parcourir les données d'une image et modifier les composantes RVB de chaque pixel.
 
@@ -27,15 +35,15 @@ L'environnement de développement utilisé est Jupyter.
 ## Chronophotographie
 * `chronophotographie.py`: programme qui permet le traitement d'une chronophotographie (pointage), et de générer un fichier de coordonnées (*coordonnees.txt*). Il faudra télécharger le dossier complet (fichier .py et dossier images) et executer en local avec un IDE Python. Notice [ici](/docs/PC_1ere/meca/page1/)
 
-<a href="https://mybinder.org/v2/gh/tix06/notebooks_Physique.git/master" target="_blank"><img src="https://mybinder.org/badge_logo.svg"></a>
 
 
+<!--
 <form id="fs-frm" name="bouton">
 <a href="https://mybinder.org/v2/gh/tix06/notebooks_Physique/HEAD" target="_blank">
     <input type="button" value="ouvrir le depôt dans un nouvel onglet"></a>
 </form>
 
-<!--lien sur mybinder : 
+lien sur mybinder : 
 https://mybinder.org/v2/gh/tix06/notebooks.git/master
 
 
