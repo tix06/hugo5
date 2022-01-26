@@ -1,5 +1,5 @@
 ---
-Title: vecteur vitesse
+Title: vitesse repère cartésien
 ---
 
 # Seance précédente: enregistrements de trajectoires

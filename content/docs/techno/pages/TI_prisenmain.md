@@ -70,7 +70,17 @@ L'explorateur de votre ordinateur devrait vous permettre de retrouver le fichier
   <figcaption>Video Yvan Monka: prise en main de la Ti83 Ed python</figcaption></a>
 </figure>
 
-# Préparer la calculatrice pour utiliser la carte micro:bit
+# Utiliser des extensions
+## Modules python
+On pourra ajouter des modules pour:
+
+- utiliser turtle python
+- représenter des vecteurs
+- réaliser des diagrammes en barre ou en boîte à moustache.
+
+Lien vers la page de <a href="https://education.ti.com/fr/ressources-et-formations/modules-python">téléchargement des modules</a>
+
+## Préparer la calculatrice pour utiliser la carte micro:bit
 
 <figure>
   <div>
@@ -79,7 +89,7 @@ L'explorateur de votre ordinateur devrait vous permettre de retrouver le fichier
   </div>
 </figure>
 
-## Télécharger les modules
+### Télécharger les modules
 Se rendre du la page de téléchargement du site Texas Instrument: <a href="https://resources.t3france.fr/t3france?resource_id=3078&cHash=513acef78cfa6d808465417be9e08cc3t" target=blank>Lien</a>
 
 <figure>
@@ -99,7 +109,7 @@ Téléchargez le dossier "modules_microbit V1.zip" ou "modules_microbit V2.zip" 
 
 Ceux-ci devraient se trouver dans votre dossier *téléchargements*.
 
-## Téléverser les modules dans la calculatrice
+### Téléverser les modules dans la calculatrice
 
 * Lancer le logiciel TI CONNECT et brancher la calculatrice sur le port USB de votre ordinateur (cable USB vers usb B fourni).
 
