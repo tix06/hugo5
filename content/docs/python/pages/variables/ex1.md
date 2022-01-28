@@ -131,62 +131,7 @@ bookShowToc: false
 </div>
 
 
-### Flash card 6
 
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front" style="font-size: 14px">
-      <h1>Questions 6</h1>
-      Quel est l&lsquo;affichage dans la console au fur et à mesure des instructions suvantes ?
-      <ol><li>voyelles = ['a','e','i','o']<br>
-      voyelles[1]
-      </li>
-        <li>voyelles[-2]</li>
-        <li>voyelles.pop()<br>voyelles</li>
-        <li>voyelles.append('u')<br>voyelles</li>
-        
-      </ol>
-    </div>
-    <div class="flip-card-back">
-      <h1>Réponses</h1>
-      <ol><li>'e'</li>
-        <li>'i'</li>
-        <li>'o'<br>['a','e','i']</li>
-        <li>['a','e','i','u']</li>
-        
-      </ol>
-    </div>
-  </div>
-</div>
-
-### Flash card 7
-
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front" style="font-size: 12px">
-      <h1>Questions 7</h1>
-      Quel est l&lsquo;affichage dans la console au fur et à mesure des instructions suvantes ?
-      <ol><li>capitales = {'France':'Paris',\<br>'Italie':'Rome',\<br>'Angleterre':'Londres'}
-<br>list(capitales.keys())</li>
-        <li>capitales['France']</li>
-        <li>list(capitales.values())</li>
-        <li>capitales['Espagne']='Madrid'<br>list(capitales.items())</li>
-
-      </ol>
-    </div>
-    <div class="flip-card-back" style="font-size: 12px">
-      <h1>Réponses</h1>
-      <ol><li>['France', 'Italie', 'Angleterre']</li>
-        <li>'Paris'</li>
-        <li>['Paris', 'Rome', 'Londres']</li>
-        <li>[('France', 'Paris'),<br>
- ('Italie', 'Rome'),<br>
- ('Angleterre', 'Londres'),<br>
- ('Espagne', 'Madrid')]</li>
-      </ol>
-    </div>
-  </div>
-</div>
 
 # Relire le cours
 Lien vers la page : <a href="/docs/python/pages/variables/page1/">Variables</a>

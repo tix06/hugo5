@@ -1,5 +1,5 @@
 ---
-Title : Ti prise en main
+Title : Ti prise en main Microbit
 ---
 
 # Mettre à jour la calculatrice TI-83 Premium CE
@@ -71,31 +71,33 @@ L'explorateur de votre ordinateur devrait vous permettre de retrouver le fichier
 </figure>
 
 # Utiliser des extensions
-## Modules python
-On pourra ajouter des modules pour:
 
-- utiliser turtle python
-- représenter des vecteurs
-- réaliser des diagrammes en barre ou en boîte à moustache.
-
-Lien vers la page de <a href="https://education.ti.com/fr/ressources-et-formations/modules-python" target=_blank>téléchargement des modules</a>
-
-<figure><div>
-  <img src="../images/modules.png">
-  <figcaption>Exemple de modules au moment de la redaction<br>de ce tuto</figcaption></div>
-</figure>
-
-Pour le module CE_Turtle: la page de téléchargement propose plusieurs fichiers:
-
-* <a href="https://resources.t3france.fr/t3france?resource_id=3040&cHash=16324add172400f9f5dfc57d2aba1f24" target=_blank>TURTLE.8xv </a>
-* <a href="https://resources.t3france.fr/t3france?resource_id=3040&cHash=16324add172400f9f5dfc57d2aba1f24" target=_blank>GRID.8xv </a>
-* [guide de démarrage](https://resources.t3france.fr/fileadmin/user_upload/Turtle_Getting_Started_Guide_CE_Python_FR.pdf)
+## Préparer la calculatrice pour utiliser la carte micro:bit
 
 <figure>
-  <img src="../images/downl_turtle.png">
+  <div>
+    <img src="../images/maj_ti2.png" alt="TI83 et microbit">
+    <figcaption>Ti-83 Premium CE Python et micro:bit</figcaption>
+  </div>
 </figure>
 
-Cliquer pour télécharger TURTLE.8XV et GRID.8XV.
+### Télécharger les modules
+Se rendre du la page de téléchargement du site Texas Instrument: <a href="https://resources.t3france.fr/t3france?resource_id=3078&cHash=513acef78cfa6d808465417be9e08cc3t" target=blank>Lien</a>
+
+<figure>
+  <a href="https://resources.t3france.fr/t3france?resource_id=3078&cHash=513acef78cfa6d808465417be9e08cc3t" target=blank>
+    <img src="../images/maj_ti1.png">
+  </a>
+</figure>
+ 
+
+Vous pouvez télécharger l'ensemble de ces fichiers, en un seul *clic*, depuis <a href="https://resources.t3france.fr/t3france?resource_id=3078&cHash=513acef78cfa6d808465417be9e08cc3">la page du site Texas instruments</a>
+
+<figure>
+    <img src="../images/maj_TI9.png">
+</figure>
+
+Téléchargez le dossier "modules_microbit V1.zip" ou "modules_microbit V2.zip" selon le modèle de carte dont vous disposez
 
 Ceux-ci devraient se trouver dans votre dossier *téléchargements*.
 
@@ -110,7 +112,17 @@ Ceux-ci devraient se trouver dans votre dossier *téléchargements*.
   </div>
 </figure>
 
-Suivre la même procédure que pour la mise à jour de la calculatrice: Cliquer sur *ajouter les données de l'ordinateur à la calculatrice connectée*. Et ajouter le(les) module(s) à installer. Pour Turtle, ajouter TURTLE.8XV et GRID.8XV.
+Suivre la même procédure que pour la mise à jour de la calculatrice: Cliquer sur *ajouter les données de l'ordinateur à la calculatrice connectée*. Et sélectionner en une seule fois tous les modules à installer:
+
+* MICROBIT.8xv
+* MB_GROVE.8xv
+* MB_SENSR.8xv
+* MB_RADIO.8xv
+* MB_PINS.8xv
+* MB_BUTNS.8xv
+* MB_DISP.8xv
+* ...
+
 
 
 # Liens
