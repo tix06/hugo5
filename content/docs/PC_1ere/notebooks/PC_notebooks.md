@@ -17,12 +17,12 @@ L'environnement de développement utilisé est Jupyter.
 <i>.ipynb</i> dans le dossier <i>notebooks</i></figcaption>
 </figure>
 
-* Si vous utiliser Jupyter avec *Binder* <a href="https://mybinder.org/v2/gh/tix06/notebooks_Physique.git/master" target="_blank"><img src="/images/binder.svg"></a> (serveur distant): Attention : les données ne sont pas sauvegardées sur Binder. Pensez à download/upload votre travail à la fin.
+* Si vous utiliser Jupyter avec *Binder* <a href="https://mybinder.org/v2/gh/tix06/notebooks_Physique.git/HEAD" target="_blank"><img src="/images/binder.svg"></a> (serveur distant): Attention : les données ne sont pas sauvegardées sur Binder. Pensez à download/upload votre travail à la fin.
 
 * <a href="https://basthon.fr/" target=_blank>Basthon</a> est l'acronyme de "Bac À Sable pour pyTHON". Permet l'execution d'un notebook sans installer de distribution Python. Il vous faudra choisir: *Notebook* à la page d'accueil, puis charger vos documents depuis le menu *Ouvrir*.
 
 # Contenu du depôt :
-Accéder au depot: cliquer sur *launch binder* <a href="https://mybinder.org/v2/gh/tix06/notebooks_Physique.git/master" target="_blank"><img src="/images/binder.svg"></a>
+Accéder au depot: cliquer sur *launch binder* <a href="https://mybinder.org/v2/gh/tix06/notebooks_Physique.git/HEAD" target="_blank"><img src="/images/binder.svg"></a>
 
 ## Traitement RVB d'une photographie numerique
 * `P13_Traitement_filtre/notebook filtre.ipynb` programme pour parcourir les données d'une image et modifier les composantes RVB de chaque pixel.
