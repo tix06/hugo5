@@ -9,17 +9,26 @@ Sur chaque TP, cliquer sur le titre (téléchargement), ou bien Binder pour lanc
 
 L'environnement de développement utilisé est Jupyter. 
 
-* Si vous téléchargez le fichier en local, vous devrez l'executer avec Jupyter notebook déjà installé. Au lycée, le fichier doit être mis dans le dossiers *notebooks*, et lancé avec le programme *ipython_win10.bat*:
-
-<figure>
-<img src ="/images/environment.png">
-<figcaption>Glisser le fichier d'extension<br>
-<i>.ipynb</i> dans le dossier <i>notebooks</i></figcaption>
-</figure>
 
 * Si vous utiliser Jupyter avec *Binder* <a href="https://mybinder.org/v2/gh/tix06/notebooks_Physique.git/HEAD" target="_blank"><img src="/images/binder.svg"></a> (serveur distant): Attention : les données ne sont pas sauvegardées sur Binder. Pensez à download/upload votre travail à la fin.
 
-* <a href="https://basthon.fr/" target=_blank>Basthon</a> est l'acronyme de "Bac À Sable pour pyTHON". Permet l'execution d'un notebook sans installer de distribution Python. Il vous faudra choisir: *Notebook* à la page d'accueil, puis charger vos documents depuis le menu *Ouvrir*.
+* <a href="https://basthon.fr/" target=_blank>Basthon</a> est l'acronyme de "Bac À Sable pour pyTHON". Permet l'execution d'un notebook sans installer de distribution Python. 
+  * Commencez par télécharger une copie *locale* du notebook sur votre ordinateur.
+  * Ouvrir <a href="https://basthon.fr/" target=_blank>Basthon</a> depuis votre navigateur.
+  * Il vous faudra choisir: *Notebook* à la page d'accueil, 
+<figure><div>
+  <img src="/images/basthon1.png">
+</div>
+</figure>
+
+  * puis charger vos documents depuis le menu *Ouvrir*.
+
+
+<figure><div>
+  <img src="/images/basthon2.png">
+</div>
+</figure>
+
 
 # Contenu du depôt :
 Accéder au depot: cliquer sur *launch binder* <a href="https://mybinder.org/v2/gh/tix06/notebooks_Physique.git/HEAD" target="_blank"><img src="/images/binder.svg"></a>
