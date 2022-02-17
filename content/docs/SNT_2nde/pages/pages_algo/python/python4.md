@@ -51,9 +51,16 @@ Un algorithme traduit le cahier des charges d'un programme en un langage naturel
 <figcaption>extrait de la séquence de pliage</figcaption>
 </figure>
 
+> L'algorithme du pliage de l'origami présente une **structure linéaire**. On peut visualiser celui-ci à l'aide d'un [algorigramme](https://www.playhooky.fr/technologie/algorithmes-algorigrammes/)
+
+<figure>
+<img src="../images/algorigramme1.png">
+<figcaption><a href="https://www.playhooky.fr/technologie/algorithmes-algorigrammes/">algorigramme</a> du pliage</figcaption>
+</figure>
+
 ### Code PIN
 * **Cahier des charges:** *Demander à l'utilisateur du smartphone de saisir son code PIN, et s'il echoue 3 fois, lui demander son code PUK*
-* **Algorithme:** L'un des trois algorithmes correspond bien au cahier des charges
+* **Algorithme:** L'un des deux algorithmes correspond bien au cahier des charges
 
 
 
@@ -63,64 +70,48 @@ Répéter 3 fois:
   demander code PIN
 Si code PIN incorrect
   demander code PUK
+Sinon
+  passer
 ```
+Ce premier algorithme montre une **structure alternative**: on commence par tester la condition ; si elle est vraie, l’action 2 est exécutée, sinon, c'est l'action 3.
+
+<figure>
+<img src="../images/algorigramme2.png">
+<figcaption><a href="https://www.playhooky.fr/technologie/algorithmes-algorigrammes/">algorigramme</a> de l'algo n°1</figcaption>
+</figure>
 
 ```python
 # algorithme 2
 demander code PIN
-Tant que code PIN incorrect:
-  demander code PIN
-demander code PUK
-```
-
-```python
-# algorithme 3
-demander code PIN
 nbessai = 1
-Tant que code PIN incorreect et nbessai < 3:
+Tant que code PIN incorrect et nbessai < 3:
   demander code PIN
-  nbessai = nbessai +1
+  nbessai = nbessai + 1
 Si code PIN incorrect:
   demander code PUK
 ```
 
-> A vous de jouer: Trouver lequel.
+Dans ce 2e algorithme: 
 
-### Diamètre d'ouverture de l'appareil photographique
-* **Cahier des charges:** *Pour l'appareil photo numérique: Mesurer le flux lumineux. Si celui-ci est supérieur à 100 Lux, diminuer le diamètre d'ouverture. S'il est infèrieur ou égal à 100 Lux, ouvrir davantage.*
+* on utilise une *variable* appelée `nbessai`. Sa valeur est d'abord mise à 1, ouis évolue au fur et à mesure que le programme avance.
+* on utilise une structure qui amène une répétition. (une **structure itérative**): `Tant que <condition> …`qui répète le bloc tant que la condition est VRAIE.
 
-* **Algorithme:**
+**Questions:**
 
-```python
-Répeter indefiniment:
-  Mesurer la lumière et stocker dans L
-  Si L ...  :
-    ...
-  Sinon:
-    ...
-``` 
+1. Pour l'algorithme 1, compléter l'algorigramme.
+2. Trouver lequel des 2 algorithmes correspond bien au cahier des charges.
+3. Pour les 2 algorithmes: Expliquer ce que fait le programme si l'utilisateur entre 2 fois un code PIN erroné, puis entre le bon (au 3e essai).
+4. Pour l'algorithme 2: expliquer ce que fait le programme lorsque l'on entre 3 code PIN erronés.
 
 
-> A vous de jouer: Compléter l'algorithme.
 
-### Application pour la course à pied
-* **Cahier des charges:** *Une application de course à pieds sur spartphone propose à l'utilisateur de rentrer les distances parcourues chaque jour. Lorsque l'utilisateur a atteint son objectif, fixé à 45 km, le décompte s'arrête.*
-* **Algorithme:**
-
-```python
-total = 0
-Tant que total ...    :
-  distance = int(input("Entrer la distance : "))
-  ...
-Afficher("Félicitations")
-```
-
-> A vous de jouer: Compléter l'algorithme.
 
 ## Les ingrédients d'un algorithme
 Les instructions relatives aux ingrédients d'un algorithme seront données en langage naturel, mais à la manière du langage Python.
 
-### Données: Variables et opérations 
+### Données: Variables et opérations
+Une variable stocke une valeur et peut être utilisée pour des opérations.
+
 (voir [introduction à la programmation](/docs/SNT_2nde/pages/pages_algo/python/python2/index.html))
 
 ### Interface: Entrées/Sorties
@@ -193,17 +184,67 @@ C'est un ensemble d'opérations destinées à être exécutées par un ordinateu
 
 Un **programme source** est un code écrit par un informaticien dans un **langage de programmation**. Il peut être **compilé** vers une forme binaire ou directement **interprété**. Au final, les instructions seront traduites en **binaire**, afin qu'elles soient exécutées par un microprocesseur.
 
-## Un langage de programmation 
+## Un langage de programmation
 C'est une notation utilisée pour exprimer des algorithmes et écrire des programmes. 
 
-## Un algorithme 
+## Un algorithme
 Un algorithme est un procédé pour obtenir un résultat par une succession de calculs, décrits sous forme de termes simples dans une langue naturelle.
 C'est une suite finie et non ambigüe d'instructions, permettant de resoudre certains problèmes.
 
-## Un bug 
+## Un bug
 Un bug est un défaut de construction dans un programme. Les instructions que l'appareil informatique exécute ne correspondent pas à ce qui est attendu, ce qui provoque des dysfonctionnements et des pannes.
 
 # Exercices
+## Ex 1: code PIN et code PUK
+Le programme suivant, est-il celui utilisé pour le deverouillage d'un smartphone? Pour repondre à la question:
+
+* dessiner l'algorigramme correspondant.
+* Expliquer ce que fait le programme lorsque l'utilisateur se trompe 3 fois de suite de code PIN, puis parvient enfin à rentrer le bon (au 4e essai).
+
+```python
+# algorithme 3
+demander code PIN
+Tant que code PIN incorrect:
+  demander code PIN
+demander code PUK
+```
+
+## Ex 2: Application pour la course à pied
+* **Cahier des charges:** *Une application de course à pieds sur spartphone propose à l'utilisateur de rentrer les distances parcourues chaque jour. Lorsque l'utilisateur a atteint son objectif, fixé à 42 km, le décompte s'arrête. L'ecran affiche alors: **Félicitations***
+* **Algorithme:**
+
+```python
+total = 0
+Tant que total ...    :
+  distance = entrer("Saisir la distance : "))
+  ...
+Afficher("Félicitations")
+```
+
+*Remarque:* l'instruction `distance = entrer("Saisir la distance : "))` va afficher *Saisir la distance :*, puis stocker celle-ci dans la variable *distance*.
+
+* Compléter l'algorithme.
+* Expliquer ce que fait le programme lorsque l'utilisateur entre successivement: 10, 12, 10, 15.
+
+## Ex 3: Diamètre d'ouverture de l'appareil photographique
+* **Cahier des charges:** *Pour l'appareil photo numérique: Mesurer le flux lumineux. Si celui-ci est supérieur à 100 Lux, diminuer le diamètre d'ouverture. S'il est infèrieur ou égal à 100 Lux, ouvrir davantage.*
+
+* **Algorithme:**
+
+```python
+Répeter indefiniment:
+  Mesurer la lumière et stocker dans L
+  Si L ...  :
+    ...
+  Sinon:
+    ...
+``` 
+
+> A vous de jouer: Compléter l'algorithme.
+
+*Remarque:* on peut utiliser les fonctions `diminuer` et `augmenter` pour agir sur l'ouverture de l'appareil photo. 
+
+# Exercices supplementaires
 ## Ex 1
 On donne le script d'un programme en langage naturel, ainsi que sa traduction en Python. Déterminer, à la fin du programme, les valeurs stockées dans les variables a, b et c.
 
