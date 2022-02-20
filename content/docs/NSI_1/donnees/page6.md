@@ -205,7 +205,7 @@ hello()
 # 'Hi'
 ```
 
-Une fonction peut avoir plusieurs **paramètres** qui permettent de transmettre des valeurs au bloc d'instructions. A l'interieur de la fonction, ces paramètres sont traités comme des variables, mais **locales**: Elles n'existent pas à l'exterieur du bloc.
+Une fonction peut avoir plusieurs **paramètres** qui permettent de transmettre des valeurs au bloc d'instructions. A l'interieur de la fonction, ces paramètres sont traités comme des variables, mais **locales**: Elles n'existent pas à l'exterieur du bloc. *(voir plus loin)*
 
 Lors de l'*appel de la fonction*, le nombre d'arguments passés doit correspondre au nombre de paramètres attendus. (sauf si pour les paramètres ayant une valeur par defaut). Il y a alors une affectation: `paramètre = argument` 
 
@@ -223,10 +223,54 @@ carre(5)
   <figcaption>illustration du passage d'argument lors de l'appel de la fonction</figcaption>
 </figure>
 
+## Portée des variables
+Lorsqu’une fonction utilise des variables, celles-ci sont normalement propres à la fonction et ne sont pas accessibles à l’extérieur de celle-ci. On dit qu’il s’agit de variables locales, par opposition aux variables globales, du programme principal.
+
+Exemple: si on définit une variable `a` avant la définition de la fonction, celle-ci sera différente du `a` de la fonction somme:
+
+```python
+a = 10
+def somme(a, b):
+    s = a + b
+    return s
+>>> somme(1,0)
+1
+```
+
+Python permet d’affecter à l’intérieur d’une fonction, une variable globale. Pour cela, il faut déclarer la variable comme étant globale au début de la fonction:
+
+```python
+a = 10
+def somme(b):
+    global a
+    s = a + b
+    return s
+>>> somme(0)
+10
+```
+
+Modifier une variable globale depuis une fonction s’appelle un *effet de bord*. C’est considéré comme une mauvaise pratique, mais parfois indispensable.
+
 
 # Modules
+Une fonction peut être placée dans un autre fichier. On a alors:
 
-**Def:**Un **module** apporte des fonctions et des variables et permet une extension du langage. Il existe différents moyens d'appeler le module et ses fonctions:
+* un fichier principal (le programme main)
+* un ou plusieurs fichiers annexes (modules)
+
+**Def:**Un **module** apporte des fonctions et des variables et permet une extension du langage. 
+
+
+
+Le programme principal doit alors faire référence aux modules. L’une des manières est la suivante:
+
+```python
+import module
+from module import *
+import module as alias
+```
+
+*Exemples:*
 
 | import du module | appel d'une fonction du module |
 |--- |--- |
@@ -235,8 +279,40 @@ carre(5)
 | from math import * | sin(x) |
 | import numpy as np | np.arrange(3, 15, 2) |
 
+*Comment choisir la bonne méthode?* 
 
+* Il est recommandé de ne charger que les fonctions utiles du module, avec: `from module import fonction1, fonction2`
+* Si on importe le module entier, on préfera `import module` pour utiliser la fonction avec la notation pointée `module.fonction`.
+* Pour executer l'un des modules depuis le shell python, on peut écrire:
 
+```python
+>>> from programme import *
+```
+
+Exemple: supposons que le programme suivant soit dans le fichier *test.py*
+
+```python
+# contenu du fichier test.py
+a = 10
+def somme(b):
+    s = a + 10
+    return s
+```
+
+On execute le programme dans le shell:
+
+```python
+>>> from test import *
+>>> a
+10
+>>> somme(0)
+20
+```
+
+le programme occupe alors une place privilégiée dans l’espace de noms de l’interpréteur python: c’est le *main*. On a accès aux variables et aux fonctions comme si elles avaient été définies depuis le programme principal ou depuis le shell.
+
+## Prototyper une fonction
+Une fonction doit être déclarée avant son utilisation. Cette déclaration est le prototype de la fonction. Le prototype doit indiquer à l’utilisateur le nom de la fonction, le type de la valeur de retour et le type des paramètres: [Lien](/docs/NSI/langages/page5/#prototypage-d-une-fonction)
 
 # Erreurs et "bugs"
 ## Les erreurs de syntaxe
