@@ -10,11 +10,18 @@ Aller sur l'interface de programmation python du site <a href="https://fr.vittas
 créer un programme qui demande à l'utilisateur son nom, et lui affiche un message de bienvenue.
 ### VARIABLES:
 le programme utilise les variables:
-* nom, de type texte. Contient le nom renseigné par l'utilisateur
-* debut, de type texte. Contient le mot: "Bonjour "
-* message, de type texte, contient debut + nom
 
-On rappelle qu'une variable, c'est un nom qui fait référence à une valeur stockée dans un espace de la mémoire.
+* `nom`, de type texte. Contient le nom renseigné par l'utilisateur
+* `debut`, de type texte. Contient le mot: "Bonjour "
+* `message`, de type texte, contient `debut` + `nom`
+
+On rappelle qu'une variable, c'est un nom qui fait référence à une valeur stockée dans un espace de la mémoire. *Exemple:*
+
+<figure><div>
+  <img src="../images/memoire0.png">
+  <figcaption>Le nom de variable <b>debut</b> fait reference<br>à la valeur
+  "Bonjour" stockée dans un espace mémoire</figcaption></div>
+</figure>
 
 ### ECRIRE LE PROGRAMME:
 Dans la fenêtre *SCRATCH*, on a un seul bloc de code:
@@ -136,6 +143,7 @@ Votre fonction est vide et ne contient pas encore d'instruction.
 </figure>
 
 > Sur votre cahier, recopier le script python correspondant. Et répondre aux questions: Dans le script python: ...
+
 
 1. Quelle partie du programme associe votre nom à la variable `nom`?
 2. Quelle partie du programme affiche le contenu du message?

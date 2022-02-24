@@ -93,7 +93,7 @@ Si code PIN incorrect:
 
 Dans ce 2e algorithme: 
 
-* on utilise une *variable* appelée `nbessai`. Sa valeur est d'abord mise à 1, ouis évolue au fur et à mesure que le programme avance.
+* on utilise une *variable* appelée `nbessai`. Sa valeur est d'abord mise à 1, puis évolue au fur et à mesure que le programme avance.
 * on utilise une structure qui amène une répétition. (une **structure itérative**): `Tant que <condition> …`qui répète le bloc tant que la condition est VRAIE.
 
 **Questions:**
