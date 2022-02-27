@@ -26,15 +26,19 @@ La spécification de l'agorithme doit comprendre :
 L'algorithme recherche la valeur maximale dans la liste.
 variables en entrée : 
 ------------------
-ma_liste : list, une liste de valeurs entieres, uniques, mises dans un ordre aléatoires.
-max : int, stocke la valeur maximale actuelle. Initialisé à 0.
+:ma_liste : list, une liste de valeurs entieres, uniques, mises dans un ordre aléatoires.
+:max : int, stocke la valeur maximale actuelle. Initialisé à 0.
 Sortie :
 ------
-max : int, prend la valeur de l'élément le plus grand de la liste
+:max : int, prend la valeur de l'élément le plus grand de la liste
 Principe : 
 --------
 on parcourt la liste avec une boucle bornée.
 si la valeur la valeur de max est inferieure à la valeur courante, max est actualisée avec cette valeur courante
+Exemple:
+> recherche_maximum([0,2,3,1])
+3
+--------
 """
 max := 0
 pour i allant du premier au dernier element de ma_liste faire
@@ -70,32 +74,37 @@ En python, on pourra construire le prototypage dans le commentaire, mis tout de 
 ```python
 def a_rect(larg,long):
     """Le produit de 2 nombres.
-    
     Renvoie le produit des 2 nombres passés en argument
     
-    Parameters
-    ----------
-    larg : int ou float
+    :param larg : int ou float
            la largeur du rectangle
            
-    long : int ou float
+    :param long : int ou float
            la longueur du rectangle
     
-    Returns
-    -------
-    int ou float
-
-    Variables
-    ---------
-    a : int ou float
-        larg * long
+    :return a: int ou float
+            larg * long
     
+    Exemple
+    -------
+    >>> a_rect(2,3)
+    6
     """
     a = larg * long
     return a
 ``` 
 
 On voit que le prototypage d'une fonction donne à peu près les mêmes informations que la *spécification d'un algorithme*.
+
+Pour accéder au contenu du prototypage depuis le shell python, il faudra charger le fichier: `> from fichier import *`, puis utiliser `help`:
+
+```python
+> help(a_rect)
+```
+
+Pour sortir de la fenêtre de l'aide, appuyer sur la touche `q`.
+
+
 
 On pourra consulter la page du site [Lyceum](https://lyceum.fr/1g/nsi/7-langages-et-programmation/6-fonctions) pour plus d'informations.
 
@@ -105,12 +114,12 @@ Le doctest est un module qui recherche dans le prototypage (docstring) de la fon
 Comme par exemple:
 
 ```
->>> multiplie(2,3)
+>>> a_rect(2,3)
 6
 ```
 
 
-Supposons que l'on ait programmé une fonction qui multiplie 2 nombres passés en arguments. On écrit alors une simulation d'un essai directement dans le docstring, en écrivant de manière explicite les 3 chevrons. Ainsi que la valeur attendue pour des arguments choisis.
+On écrit alors une simulation d'un essai directement dans le docstring, en écrivant de manière explicite les 3 chevrons. Ainsi que la valeur attendue pour des arguments choisis. (voir le paragraphe précédent)
 
 Pour réaliser des tests sur la fonction, on ajoutera alors à la suite du script les lignes suivantes:
 
@@ -119,7 +128,23 @@ if __name__ == "__main__":
     import doctest
     doctest.testmod()
 ```
+Supposons que l'on ait fait une erreur dans la fonction `a_rect` sur la valeur calculée, et que l'on ait écrit:
 
+```python
+    a = long * long
+    return a
+```
+
+alors la console affichera, à l'execution du programme:
+
+```
+Failed example:
+    a_rect(2,3)
+Expected:
+    6
+Got:
+    9
+```
 
 Documentation officielle :[Lien](https://docs.python.org/fr/3/library/doctest.html#module-doctest)
 
