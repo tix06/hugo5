@@ -12,7 +12,7 @@ On verra dans une autre seance que le canvas peut aussi relever la position de l
 Vous allez poursuivre votre appentissage des algorithmes sur les listes, en positionnant les images *bombes* sur une grille du canvas.
 
 ## Contenu du projet
-Le projet suivant (fichier zip) contient 3 fichiers:
+Le projet <a href="/scripts/Tkinter/tkinter_grille.zip" download="tkinter_grille.zip">suivant (fichier zip)</a> contient 3 fichiers:
 
 * canvas.py: le fichier principal qui contient les fonctions de dessin. Ce sera ce fichier qui faudra executer pour afficher la fenêtre graphique. Dans le shell, faire:
 
