@@ -14,11 +14,7 @@ Vous allez poursuivre votre appentissage des algorithmes sur les listes, en posi
 ## Contenu du projet
 Le projet <a href="/scripts/Tkinter/tkinter_grille.zip" download="tkinter_grille.zip">suivant (fichier zip)</a> contient 3 fichiers:
 
-* canvas.py: le fichier principal qui contient les fonctions de dessin. Ce sera ce fichier qui faudra executer pour afficher la fenêtre graphique. Dans le shell, faire:
-
-```python
-python canvas.py
-```
+* canvas.py: le fichier principal qui contient les fonctions de dessin. Ce sera ce fichier qui faudra executer pour afficher la fenêtre graphique. 
 
 * utils.py: C'est le fichier qui contient les fonctions de calcul des positions des bombes. Au depart, ce fichier ne contient que la fonction `position_bombes`. Cette fonction génère une liste de listes adaptée à la grille $L*h$:
   * chaque sous-liste positionne les bombes d'une même ligne (L cases)
@@ -28,44 +24,24 @@ python canvas.py
 
 Vous devrez modifier le contenu de la fonction `position_bombes` pour réaliser les grilles proposées.
 
-## Prototypage
-Dans chaque cas, compléter le prototypage de la fonction pour:
+> Pour executer le programme, ouvrir *canvas.py* avec un IDE python, et *Executer le module* (F5: Run module)
 
-* spécifier ce qu'elle doit faire (début du prototypage)
-* préciser ce qui est attendu lorsqu'elle est executée avec certaines valeurs choisies pour arguments (fin du prototypage). Ajouter par exemple (compléter):
+## Que génère la fonction `position_bombes`?
+Pour tester la fonction, vous pouvez executer le module `utils.py`, puis appeler dans le shell la fonction avec des arguments choisis.
 
- ```
- >>> position_bombes(...,...)
- [[...,...,...,...],[...,...,...,...]]
- ```
-
-## Programmer un test automatique
-Le doctest est un module qui recherche dans le prototypage de la fonction ce qui pourrait s'apparenter à des tests sur la fonction.
-
-Comme par exemple:
-
-```
->>> position_bombes(2,2)
-[[0, 0], [0, 0]]
-```
-
-Pour réaliser des tests sur la fonction, on ajoutera alors à la suite du script les lignes suivantes:
+> Ouvrir le ficher `utils.py` avec votre IDE python. Puis *Executer* le module. Dans le shell, faire:
 
 ```python
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
+>>> help(position_bombes)
+# retourne les informations sur la fonction
+# Pour sortir de la fenêtre de l’aide, appuyer sur la touche q
+>>> position_bombes(6,6)
+# retourne la liste Bombes générée par la fonction
 ```
 
-Et pour réaliser les tests automatiques, il faudra executer le fichier `utils.py`: Depuis le shell, faire:
-
-```python
->>> python utils.py
-```
-
-*Remarque:* la sortie de la fonction doit suivre le *guide de style* python, sinon des erreurs peuvent être générées (absence d'espaces,...). Il s'agit de PEP8 sur [https://python.org](https://python.org).
 
 ## Les grilles à réaliser
+Il vous faudra modifier la fonction `position_bombes` pour realiser chacune de ces grilles.
 
 ```python
 def position_bombes(L,h):
@@ -197,3 +173,42 @@ def position_bombes(L,h):
 </figure>
 
 *Aide:* on pourra utiliser la fonction `randint(0,1)` du module `random`
+
+
+# Spécifier la fonction et programmer des tests
+## Prototypage
+Dans chaque cas, compléter le prototypage de la fonction pour:
+
+* spécifier ce qu'elle doit faire (début du prototypage)
+* préciser ce qui est attendu lorsqu'elle est executée avec certaines valeurs choisies pour arguments (fin du prototypage). Ajouter par exemple (compléter):
+
+ ```
+ >>> position_bombes(...,...)
+ [[...,...,...,...],[...,...,...,...]]
+ ```
+
+## Programmer un test automatique
+Le doctest est un module qui recherche dans le prototypage de la fonction ce qui pourrait s'apparenter à des tests sur la fonction.
+
+Comme par exemple:
+
+```
+>>> position_bombes(2,2)
+[[0, 0], [0, 0]]
+```
+
+Pour réaliser des tests sur la fonction, on ajoutera alors à la suite du script les lignes suivantes:
+
+```python
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
+```
+
+Et pour réaliser les tests automatiques, il faudra executer le fichier `utils.py`: Depuis le shell, faire:
+
+```python
+>>> python utils.py
+```
+
+*Remarque:* la sortie de la fonction doit suivre le *guide de style* python, sinon des erreurs peuvent être générées (absence d'espaces,...). Il s'agit de PEP8 sur [https://python.org](https://python.org).
