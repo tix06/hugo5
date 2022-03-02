@@ -156,7 +156,7 @@ Le groupe carbonyle donne une bande d'absorption à 1700-1760 cm<sup>-1</sup> fo
 Le groupe carbonyle donne 2 bandes d'absorption caractéristiques de ses liaisons:
 
 * C=O: donne la bande à 1750-1800 cm<sup>-1</sup> forte et fine
-* O-H: bande à 2600-3200 cm<sup>-1</sup> forte et fine
+* O-H: bande à 2600-3200 cm<sup>-1</sup> forte et large
 
 
 
