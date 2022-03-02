@@ -149,7 +149,7 @@ Le groupe hydroxyle est responsable d'une bande d'absorption:
 Le groupe carbonyle donne une bande d'absorption à 1700-1760 cm<sup>-1</sup> forte et fine. 
 
 <figure>
-  <img src = "../images/spectreIR2.png">
+  <img src = "../images/spectreIR3.png">
 </figure>
 
 ## Le groupe carboxyle
