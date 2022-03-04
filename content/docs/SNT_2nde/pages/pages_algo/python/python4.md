@@ -114,6 +114,37 @@ Une variable stocke une valeur et peut être utilisée pour des opérations.
 
 (voir [introduction à la programmation](/docs/SNT_2nde/pages/pages_algo/python/python2/index.html))
 
+* Exemples
+Le signe `=` permet d'affecter une valeur à une variable:
+
+| nom de la variable | affectation d'une valeur | type de variable |
+|--- |--- |--- |
+| nbessai | `nbessai = 1` | nombre entier |
+| message | `message = "bonjour"` | texte |
+| text1 | texte1 = "je suis " | texte |
+| text2 | texte2 = "le prof" | texte| 
+
+Lors de l'affectation, python va choisir un type pour cette variable, ce qui va permettre certaines opérations.
+
+* Opérations sur les variables de type textes:
+
+```python
+>>> text1 = "je suis "
+>>> text2 = "le prof"
+>>> text = text1 + text2
+>>> afficher(text)
+je suis le prof
+``` 
+
+* Opérations sur les variables de type nombres entiers:
+
+```python
+>>> nbessai = 1
+>>> nbessai = nbessai + 1
+>>> afficher(nbessai)
+2
+```
+
 ### Interface: Entrées/Sorties
 Un algorithme doit fournir une interface qui permet d'interagir avec l'utilisateur. Il doit pouvoir lire et entrer des données.
 
@@ -138,6 +169,33 @@ Si ( <expression_logique> ) alors
 Sinon 
   <bloc_sinon>
 ```
+
+* Exemple: le physionomiste d'une discothèque
+
+  * *Programme 1: Vous pouvez entrer si vous avez plus de 18 ans*
+
+<figure>
+  <img src="../images/disco1.png">
+</figure>
+
+```python
+>>> si age >= 18 alors:
+      dire("vous pouvez entrer")
+    sinon : 
+      dire("repasser une prochaine fois")
+``` 
+  * *Vous pouvez entrer si vous avez plus de 18 ans, ET si vous ne portez pas des baskets*
+
+<figure>
+  <img src="../images/disco2.png">
+</figure>
+
+```python
+>>> si age >= 18 ET non porte_des_baskets alors:
+      dire("vous pouvez entrer")
+    sinon : 
+      dire("repasser une prochaine fois")
+``` 
 
 ### Contrôler le programme: Boucles
 * Les structures répétitives permettent d’exécuter plusieurs fois un bloc d’opérations, en faisant varier automatiquement une variable de boucle. 
