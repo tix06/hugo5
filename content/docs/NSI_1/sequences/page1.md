@@ -96,7 +96,7 @@ Supposons que le mobile ait une masse m = 1 kg:
 m = 1
 Ec = []
 for vitesse in v:
-  Ec.append(0.5*m*v**2*)
+  Ec.append(0.5*m*v**2)
 ``` 
 
 *Remarque:* de nombreux types de données peuvent être parcourus avec la syntaxe `for x in t`: par exemple des chaines de caractères. La différence avec `range(100)`, c'est que ce dernier créé une liste itérable de valeurs ordonnées, de 0 à 99. On dit que la valeur x est itérable.
@@ -207,6 +207,12 @@ Une image est représentée par un triplet de valeurs (un *tuple*) pour chacun d
 
 Soit l'image suivante, de dimension 3 pixels * 3 pixels:
 
+<figure><div>
+<img src="../images/spc6.png">
+</div>
+</figure>
+
+Cette image est représentée par la matrice de valeurs (R,V,B):
 ```
 im = [[(128,30,40), (130,32,44), (128,30,40)], 
       [(30,40,128), (44,32,130), (40,30,128)], 
