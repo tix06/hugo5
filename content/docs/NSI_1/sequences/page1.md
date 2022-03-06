@@ -108,7 +108,20 @@ for vitesse in v:
 3. Ajouter une nouvelle liste calculée: $Ec = \tfrac{1}{2}* m * (vx^2+vz^2)$. Prendre m = 1.
 4. Tracer le graphique Ec en fonction de x.
 
+**Aide: Script pour lire les données d'un fichier** 
 
+```python
+fichier = open('data_parabolique.csv','r')   # ouverture du fichier de données
+lignes = fichier.readlines()     # parcours du fichier par ligne 
+
+lignes = lignes[1:]              # eliminer la premiere ligne qui contient les labels 
+x=[]
+t=[]
+
+for ligne in lignes:
+    t.append(float(ligne.split(';')[0]))
+    x.append(float(ligne.split(';')[1]))
+```
 
 ## Parcours d'une liste
 Soit la liste: 
