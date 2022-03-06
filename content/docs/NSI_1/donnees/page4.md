@@ -96,7 +96,7 @@ Ce qui est très éloigné de la réalité...
 
 Il existe une méthode systématique pour déterminer les bits de la partie fractionnaire. Voir le Bordas p18, §5.
 
-## codage en virgule fixe 
+## codage en virgule fixe
 Une première idée pourrait être d'utiliser 2 octets: 
 
 * 1 octet pour la partie entière. Si le nombre est signé, cela veut dire que le nombre est compris, pour sa partie entière entre -128 et 127.

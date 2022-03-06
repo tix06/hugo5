@@ -121,7 +121,7 @@ t=[]
 for ligne in lignes:
     t.append(float(ligne.split(';')[0]))
     x.append(float(ligne.split(';')[1]))
-```
+``
 
 ## Parcours d'une liste
 Soit la liste: 

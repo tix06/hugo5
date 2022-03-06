@@ -75,7 +75,7 @@ Choisir l'une des options:
 
 On détaillera ici la saisie du script à l'aide de la calculatrice.
 
-### Edition du script à l'aide de la calculatrice 
+### Edition du script à l'aide de la calculatrice
 > Ecriture du premier programme:
 
 > * Bouton **prgm** : Choisir `2:Python App`
