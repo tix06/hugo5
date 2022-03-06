@@ -3,6 +3,9 @@ Title: listes en SPC
 ---
 
 # listes et algos sciences physiques et chimie
+* Les exemples et scripts seront à realiser dans un notebook python.
+* On utilisera la <a href="/pdf/NSI/python_listes_SPC.pdf">fiche reponse</a> pour recopier les scripts.
+
 ## Construire un tableau simple
 Pour tracer un graphique, on peut avoir besoin d'une liste de valeurs [0, 1, 2, ... 100] correspondant aux nombres de points relevés.
 
@@ -121,7 +124,7 @@ t=[]
 for ligne in lignes:
     t.append(float(ligne.split(';')[0]))
     x.append(float(ligne.split(';')[1]))
-``
+```
 
 ## Parcours d'une liste
 Soit la liste: 
@@ -148,7 +151,7 @@ On peut représenter une molécule par sa liste d'atomes.
 Par exemple, la formule suivante peut être mise dans la liste:
 
 ```
-molecule ['H','H','H','C','C','O','C','H','H','H']
+molecule = ['H','H','H','C','C','O','C','H','H','H']
 ```
 
 <figure><div>
@@ -167,7 +170,7 @@ for atome in molecule:
   # alors n = n + 1
 ```
 
-> A vous de jouer. En vous inspirant du script précédent, vous allez écrire **une fonction** qui prend une liste en paramètre, appelée *molecule*, ainsi qu'un caractère `c`, et compte le nombre d'occurences de `c` dans la liste *molecule*.
+> A vous de jouer. En vous inspirant du script précédent, vous allez écrire **une fonction** `occurences` qui prend une liste en paramètre, appelée *molecule*, ainsi qu'un caractère `c`, et compte le nombre d'occurences de `c` dans la liste *molecule*.
 
 ## Matrices
 Une liste peut elle-même contenir une liste. Une **matrice** est ainsi une liste de listes, dont les éléments sont tous de même type. La matrice forme une sorte de tableau rectangulaire, dont la premiere ligne correspond à la premiere liste, etc...
