@@ -47,6 +47,8 @@ On commence par créer un objet canvas appelé ici `can1`: c'est l'instruction `
 Puis on positionne `can1` avec la méthode `pack`. Sans cette deuxième ligne `can1.pack(side=LEFT, padx=5, pady=5)`, l'objet esclave est créé mais non attaché à la fenêtre (et donc n'apparait pas).
 
 ```python
+if __name__ == '__main__':
+    ...
     can1 = Canvas(fen1, bg='dark grey', height=400, width=600)
     can1.pack(side=LEFT, padx=5, pady=5)
 ```
@@ -59,6 +61,8 @@ Par exemple, le bouton 1, `bou1` va appeler une fonction de `fen1` héritée lor
 Et le bouton 1, `bou2`, va appeler la fonction `replay` qu'il vous faudra programmer. Que voudrez vous qu'il se passe lorsque l'on clique sur ce bouton...? Effacer le canvas, dessiner une grille,...?
 
 ```python
+if __name__ == '__main__':
+    ...
     # un bouton
     bou1 = Button(fen1, text='Quitter', command=fen1.quit)
     bou1.pack(side=BOTTOM)
@@ -73,6 +77,8 @@ Et le bouton 1, `bou2`, va appeler la fonction `replay` qu'il vous faudra progra
 On peut écrire un texte dont le contenu sera evolutif, comme un panneau d'affichage dont le contenu est variable:
 
 ```python
+if __name__ == '__main__':
+    ...
     text_affichage = StringVar()
     txt1 = Label(fen1, textvariable=text_affichage, justify=LEFT, font='TkFixedFont')
     txt1.pack()
@@ -85,6 +91,8 @@ Plus tard, dans le programme, il suffira d'écrire `text_affichage.set("nouveau 
 Equivalent de `input` mais pour l'environnement tkinter. Il faudra definir le champs de saisie (objet Text), et le bouton pour validation:
 
 ```python
+if __name__ == '__main__':
+    ...
     # Une textBox
     textBox = Text(fen1, height=1, width=15)
     textBox.pack()
@@ -112,6 +120,8 @@ Plusieurs étapes sont necessaires pour:
 * dessiner l'image dans le canvas à la position 100 * 100
 
 ```python
+if __name__ == '__main__':
+    ...
     # une image de dimension 50 pixels * 50 pixels 
     image = Image.open("images/bomb.png")
     image = image.resize((50, 50), Image.ANTIALIAS)
@@ -267,7 +277,8 @@ def clic(event):
     X = event.x_root
     Y = event.y_root
     bomb = can1.create_image(X, Y, anchor="nw", image=image_bomb)
-``` 
+```  
+
 
 Le mieux, serait d'aligner l'image sur la grille de fond lorsque l'on clique dans l'une des cases du quadrillage.
 
