@@ -3,6 +3,12 @@ Title: Tkinter les bases
 ---
 
 # Tkinter les bases
+* télécharger le dossier zip: <a href="/scripts/Tkinter/tuto_tkinter.zip" dowload="tuto_tkinter.zip">tuto_tkinter.zip</a>
+* le placer dans vos *Documents*
+* Extraire tout
+* Ouvrir le fichier *main.py* avec un IDE Python de la suite Winpython
+
+
 ## Import des modules
 Le module `tkinter` apporte l'environnement graphique.
 
@@ -76,9 +82,25 @@ On peut écrire un texte dont le contenu sera evolutif, comme un panneau d'affic
 Plus tard, dans le programme, il suffira d'écrire `text_affichage.set("nouveau \n message")` pour afficher un *nouveau message*, à la même place.
 
 ### textBox
-Equivalent de `input` mais pour l'environnement tkinter
+Equivalent de `input` mais pour l'environnement tkinter. Il faudra definir le champs de saisie (objet Text), et le bouton pour validation:
 
-XXXXXX à compléter XXXXXX
+```python
+    # Une textBox
+    textBox = Text(fen1, height=1, width=15)
+    textBox.pack()
+    # Bouton pour valider la saisie
+    bou3 = Button(fen1, text='Valider', command=readtext)
+    bou3.pack()
+```
+
+Il faudra alors programmer la fonction de rappel `readtext`:
+
+```python
+def readtext():
+    result=textBox.get("1.0","end")
+    text_affichage.set(result)
+```
+
 
 
 ### Image dans le canvas
@@ -100,18 +122,157 @@ Plusieurs étapes sont necessaires pour:
 Plus loin dans le programme, il suffira d'écrire `bomb = can1.create_image(200, 200, anchor="nw", image=image_bomb)` pour dessiner l'image à la position 200 * 200 par exemple.
 
 ### Dessiner dans le canvas
+**Dessiner un carré**<br>
+On utilise la méthode: `.create_rectangle(X0, Y0, X1, Y1)`<br>
+X, Y sont les coordonnées du coin supérieur gauche du carré.<br>
+Il peut y avoir des paramètres optionnels.
+
+<figure>
+  <img src="../images/tkinter_rect.png">
+</figure>
+
+*Exemple: pour dessiner un carré de côté r dans le canvas:*
+
+```python 
+can1.create_rectangle(X, Y, X + r, Y + r, outline='black', fill=couleur)
+```
+
+**Dessiner un cercle:**<br>
+On utilise la méthode: `.create_oval(x-r, y-r, x+r, y+r)` 
+
+<figure>
+  <img src="../images/tkinter_oval.png">
+</figure>
+
+**Dessiner une ligne:**<br>
+On utilise la méthode: `.create_line(x0, y0, x1, y1)` 
 
 # Evenements
 ## Gestion d'un clic de souris dans le canvas
+Pour ajouter un écouteur de clic dans le canvas, il faut ajouter dans le bloc principal (après avoir créé l'objet `fen1` et `can1`:
+
+```python
+if __name__ == '__main__':
+  ...
+  can1.bind('<Button-1>', clic)
+  ...
+```
+
+Ici, la fonction qui sera appelée lorsque l'on clique avec le bouton gauche de la souris dans le canvas est la fonction`clic` qu'il faudra programmer.
+
+Lors de l'appel de cette fonction, il ne faut pas ajouter d'agument ni de parenthèses.
+
+On peut par exemple vouloir afficher les coordonnées de la souris lors du clic:
+
+```python
+def clic(event):
+    """ Gestion de l'événement clic gauche sur la zone graphique """
+    # MODE JEU
+    # (X,Y) : position du pointeur de la souris
+    X = event.x_root
+    Y = event.y_root
+    text_affichage.set("{}, {}".format(X,Y))
+```
+
+*Remarque:* la fonction de rappel `clic` a un paramètre obligatoire, `event` lors de sa création.
+
+## Cliquer sur une image
+Pour ajouter un ecouteur de clic sur une image, on procède d'une manière presque identique:
+
+Après avoir placé l'image dans le canvas, on lui associe une fonction de rappel:
+
+```python
+if __name__ == '__main__':
+    ...
+    # Pierre
+    image = Image.open("images/pierre.png")
+    image = image.resize((image.size[0] // 2, image.size[1] // 2), Image.ANTIALIAS)
+    photo_pierre = ImageTk.PhotoImage(image)
+
+    pierre = can1.create_image(0, 0, anchor="nw", image=photo_pierre)
+    can1.tag_bind(pierre, "<ButtonRelease>", play_pierre)
+    ...
+```
+
+Ici, la fonction de rappel sera `play_pierre`. Le clic sur cette image pourra peut-être afficher un message:
+
+```python
+def play_pierre(event):
+    texte = "Joueur joue: \n PIERRE"
+    text_affichage.set(texte)
+``` 
 
 ## Gestion des touches du clavier
+De nombreux jeux utilisent les touches du clavier pour commandes. L'écoute du clavier se fait avec `fen1.bind("<Key>", nom_de_la_fonction_de_rappel)`:
 
-# Animations
+```python
+if __name__ == '__main__':
+    ...
+    fen1.bind("<Key>", clavier)
+    ...
+```
+
+
+On peut alors programmer une fonction de rappel `clavier` qui affiche le caractère appuyé:
+
+```python
+def clavier(event):
+    t = event.keysym
+    text_affichage.set("Touche pressée : {}".format(t))
+```
 
 # Exemples
 ## Exemple 1: dessiner une grille
-et gestion d'un clic de souris
-## Exemple 2: animation avec rebonds dans le canvas
-avec interface clavier
-## Exemple 3: dessiner selon le texte saisi
+Souvent, le jeu utilise un quadrillage sur tout le canvas.
+
+On peut programmer une fonction `carre` qui dessine un carré de côté r, puis appeler cette fonction lors du dessin initial, dans une autre fonction.
+
+```python
+def carre(r, X, Y, couleur):
+    """
+    dessine le contour d'une case colorée
+    """
+    can1.create_rectangle(X, Y, X + r, Y + r, outline='black', fill=couleur)
+```  
+
+La fonction qui dessine le fond quadrillé utilisera 2 boucles bornées imbriquées. Si chaque carré a pour côté H: L'idée est d'utiliser les dimensions du canvas pour avoir un nombre entier de carrés de côtés H:
+
+```python
+    for j in range(int(can1['height']) // H):
+        for i in range(int(can1['width']) // H):
+            carre(H,...
+``` 
+
+
+*famille de jeux: le morpion, puissance 4, echecs, demineur*
+
+## Exemple 2: dessiner selon le texte saisi
+On pourrait *dessiner avec un ordre*: la fonction de rappel  `readtext` pourrait évaluer les caractères saisis, et, s'il s'agit de:
+
+* `tete`: dessiner la tête du personnage
+* `corps`: dessiner le corps
+* `bras`: dessiner ses bras
+* `jambes`: dessiner ses jambes
+
+*famille de jeux: jeu de devinette, jeu de rôle, jeu du pendu*
+
+## Exemple 3: ajouter une image lors d'un clic
+Avec la fonction `clic`, on peut créer une nouvelle image dans le canvas avec:
+
+```python
+def clic(event):
+    """ Gestion de l'événement clic gauche sur la zone graphique """
+    # MODE JEU
+    # (X,Y) : position du pointeur de la souris
+    X = event.x_root
+    Y = event.y_root
+    bomb = can1.create_image(X, Y, anchor="nw", image=image_bomb)
+``` 
+
+Le mieux, serait d'aligner l'image sur la grille de fond lorsque l'on clique dans l'une des cases du quadrillage.
+
+Si les carrés ont pour côté H: Il faudra que X et Y soient multiples de H. Utiliser la division entière:<br>
+`X = (X // H) * H` et `Y = (Y // H) * H` 
+
+*famille de jeux: demineur, puissance 4, morpion* 
 

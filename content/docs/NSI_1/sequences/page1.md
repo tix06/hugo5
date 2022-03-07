@@ -17,7 +17,7 @@ Cette liste peut être construite à l'aide d'une boucle bornée:
 
 ```python
 T = []
-for i in range(100)
+for i in range(100):
   T.append(i)
 ```
 
@@ -108,7 +108,20 @@ for vitesse in v:
 
 1. quelle instruction permet de créer la même liste Ec, mais cette fois, par compréhension de liste.
 2. télécharger le fichier <a href="../data/data_parabolique.csv" download="data_parabolique.csv">data_parabolique.csv</a>. Compléter le programme python suivant qui va lire les données du fichier, et stocker les valeurs dans des listes. Tracer alors x en fonction de t.
-3. Ajouter une nouvelle liste calculée: $Ec = \tfrac{1}{2}* m * (vx^2+vz^2)$. Prendre m = 1.
+3. Ajouter une nouvelle liste calculée: $Ec = \tfrac{1}{2}* m * (vx^2+vz^2)$. Prendre m = 1. Compléter pour cela le programme:
+
+```python
+m = 1
+Ec = []
+for i in range(len(vx)):
+  # vx et vz sont les 2 composantes de v
+  # et ont la même dimension
+  # v^2 est calculé à partir de
+  # vx**2 + vz**2
+  Ec.append(
+``` 
+
+
 4. Tracer le graphique Ec en fonction de x.
 
 **Aide: Script pour lire les données d'un fichier** 
