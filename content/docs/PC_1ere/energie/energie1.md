@@ -3,7 +3,7 @@ Title : Generalites sur l'energie
 
 ---
 
-#  L'énergie au cœur du monde moderne
+# L'énergie au cœur du monde moderne
 
 L’une des problématiques principales de notre société
 moderne est l’approvisionnement, la transformation et le contrôle de l’énergie.
@@ -11,11 +11,40 @@ Les besoins croissants posent des problèmes de durabilité importants et
 l’économie des ressources énergétiques devient un problème crucial afin de
 maintenir de façon durable et écologique la persistance de notre monde.
 
-# Définitions de l'énergie
+<a href="/pdf/PC_1/enea-lacces_a_lenergiepages3-4.pdf">
+<figure>
+  <img src="../images/enea1.png">
+  <figcaption>Dossier:<br> le problème de l'accès à l'energie</figcaption>
+</figure>
+</a>
 
+<figure>
+  <img src="../images/enea2.png">
+  <figcaption>La problématique de l'énergie</figcaption></a>
+</figure>
+
+A ces trois besoins s'ajoute celui de la *sécurité* de la production d'énergie: *Comment faire pour éviter que la demande ne soit supérieure à la production?* 
+
+<a href="https://www.planetoscope.com/Source-d-energie/951-.html">
+<figure>
+  <img src="../images/enea3.png">
+  <figcaption>Consommation en France: Energie primaire</figcaption>
+</figure>
+</a>
+
+$$1~tep = 11 628~kWh$$ 
+
+<a href="https://youtu.be/p4pDKIEymqg?t=432" target=_blank>
+<figure>
+  <img src="../images/enea4.png">
+<figcaption>Transition énergétique de A à Z: Daniel Suchet</figcaption>
+</figure></a>
+
+# Définitions de l'énergie
+**[Definition - wikipedia](https://fr.wikipedia.org/wiki/%C3%89nergie)**<br>
 L'énergie désigne une capacité à modifier un état ou à produire un travail entraînant un [mouvement](https://www.futura-sciences.com/sciences/definitions/physique-mouvement-316/) ou générant un [rayonnement électromagnétique](https://www.futura-sciences.com/sciences/questions-reponses/matiere-chaleur-rayonnement-infrarouge-1780/) - de la [lumière](https://www.futura-sciences.com/sciences/definitions/physique-lumiere-326/), par exemple - ou de la [chaleur](https://www.futura-sciences.com/sciences/definitions/physique-chaleur-15898/). Le mot vient d'ailleurs du grec et signifie « force en action ».
 
-Dans le système international, l'énergie s'exprime en [joules](https://www.futura-sciences.com/sciences/definitions/physique-joule-352/), mais dans le langage courant, elle s'exprime plus souvent en kilowatt-heure (kWh). Quant à la tonne d'équivalent [pétrole](https://www.futura-sciences.com/sciences/definitions/chimie-petrole-9749/) (tep), elle permet généralement de comparer les différentes [sources d’énergie](https://www.futura-sciences.com/sciences/dossiers/physique-iter-fusion-nucleaire-confinement-magnetique-923/page/3/) entre elles.
+Dans le système international, l'énergie s'exprime en [joules](https://www.futura-sciences.com/sciences/definitions/physique-joule-352/), mais dans le langage courant, elle s'exprime plus souvent en kilowatt-heure (kWh). Quand à la tonne d'équivalent [pétrole](https://www.futura-sciences.com/sciences/definitions/chimie-petrole-9749/) (tep), elle permet généralement de comparer les différentes [sources d’énergie](https://www.futura-sciences.com/sciences/dossiers/physique-iter-fusion-nucleaire-confinement-magnetique-923/page/3/) entre elles.
 
 
 
@@ -24,7 +53,7 @@ Dans le système international, l'énergie s'exprime en [joules](https://www.fut
 
 Stockée dans les objets, les molécules, les atomes, l’énergie se manifeste de multiples façons. Mais qu’elle soit mécanique, cinétique, énergie thermique, chimique, rayonnante ou encore nucléaire, elle peut toujours se convertir d’une forme à une autre. 
 
-### L'énergie mécanique 
+### L'énergie mécanique
 
 L’énergie mécanique, associée aux objets, est la somme de deux autres énergies :
 
@@ -76,7 +105,7 @@ Il y a 2 systèmes d'unités pour l'énergie : le système international et le s
 
 $$t_s=t_h \times 60 \times 60 = t_h \times 3600$$
 
-*Conséquence : pour changer de système d'unités, et passer d'une unité d'énergie en Joules vers des kiloWatt heure, il faut faire : 
+*Conséquence : pour changer de système d'unités, et passer d'une unité d'énergie en Joules vers des kiloWatt heure, il faut faire :*  
 
 $$E_{kW.h}= \tfrac{E_{kJ}}{3 600}$$
 
@@ -135,7 +164,7 @@ $$E = Q_1 + Q_2$$
 <figcaption>symboles utilisés pour les diagrammes d'énergie</figcaption>
 </figure>
 
-### rendement d'une  conversion 
+### rendement d'une  conversion
 
 Le rendement détermine quelle part de l'énergie (ou de la puissance) apportée est utilisée pour le fonctionnement attendu de l'appareil. On la définit avec la relation : 
 
@@ -159,7 +188,13 @@ Les énergies qui nous sont utiles dans la vie de  tous les jours ne sont pas fo
 
 Il peut y avoir plusieurs conversions de l'énergie avant qu'elle ne soit disponible à un utilisateur. Le pétrole est raffiné avant d’arriver dans le réservoir de la voiture, l’électricité a été produite dans une centrale électrique à partir de la conversion d’une source d’énergie primaire. Pour simplifier, on distinguera les sources d'énergie PRIMAIRE des énergies SECONDAIRES.
 
-- [énergie primaire](https://www.futura-sciences.com/planete/definitions/energie-renouvelable-energie-primaire-6933/) quand elle est directement exploitable sans transformation **énergie éolienne** (vent), **énergie solaire (soleil)**, **énergie hydraulique**, **énergie géothermique**, **énergie des combustibles fossiles** (pétrole, charbon gaz) et **nucléaires**, et **énergie biomasse**. ;
+- [énergie primaire](https://www.futura-sciences.com/planete/definitions/energie-renouvelable-energie-primaire-6933/) L'énergie primaire correspond à l'état de l'énergie « au plus près » de la nature. C'est quand elle est directement exploitable sans transformation:
+  * **énergie éolienne** (vent), 
+  * **énergie solaire (soleil)**, 
+  * **énergie hydraulique**, 
+  * **énergie géothermique** (une énergie issue de la radioactivité naturelle de la croute terrestre: <a href="https://www.laradioactivite.com/site/pages/ChaleurTerre.htm">Docu</a>, 
+  * **énergie des combustibles fossiles** (pétrole, charbon gaz) et **nucléaires**, et **énergie biomasse**. ;
+  
 - [énergie secondaire](https://www.futura-sciences.com/planete/definitions/energie-renouvelable-energie-secondaire-6936/) : Lorsqu’une énergie primaire n’est pas utilisable directement, elle peut être transformée en une source d’énergie secondaire, qui elle pourra être utilisée directement. C’est donc l’**énergie issue de la conversion d’une énergie primaire**. (l'énergie électrique, par exemple) ;
 - énergie utile : l'énergie secondaire peut encore subir des transformations. L'énergie utile, c'est celle qui rend réellement service à l'utilisateur (la lumière issue d'une lampe, chaleur fournie par un radiateur ou un four, ...etc)
 
@@ -216,7 +251,7 @@ L'énergie électrique d'origine hydraulique représente une part de 4,5% des so
 
 compléments sur l'énergie hydraulique : [connaissancedesenergie.org](https://www.connaissancedesenergies.org/fiche-pedagogique/hydroelectricite)
 
-### Dossier sur la production d'énergie nucléaire : 
+### Dossier sur la production d'énergie nucléaire :
 
 [Qu'est ce qu'une centrale nucléaire française ? Visite de Graveline](http://lemondeetnous.cafe-sciences.org/2018/10/quest-ce-quune-centrale-nucleaire-francaise-visite-de-gravelines/)
 
@@ -227,7 +262,7 @@ compléments sur l'énergie hydraulique : [connaissancedesenergie.org](https://w
 <figcaption>ensemble des 6 reacteurs de la centrale de Graveline_creditsMAYEUX-LAURENT</figcaption>
 </figure>
 
-### Dossier sur la production d'énergie par méthanisation : 
+### Dossier sur la production d'énergie par méthanisation :
 
 [Essor de la méthanisation, où l'on produit du biogaz](https://sciencepop.fr/2018/10/17/methanisation/)
 
@@ -238,7 +273,7 @@ compléments sur l'énergie hydraulique : [connaissancedesenergie.org](https://w
 <figcaption>unité de méthanisation</figcaption>
 </figure>
 
-### Dossier sur le photovoltaïque : 
+### Dossier sur le photovoltaïque :
 
 [fonctionnement d'une centrale photovoltaïque](https://www.edf.fr/groupe-edf/espaces-dedies/l-energie-de-a-a-z/tout-sur-l-energie/produire-de-l-electricite/le-fonctionnement-d-une-centrale-photovoltaique)
 
