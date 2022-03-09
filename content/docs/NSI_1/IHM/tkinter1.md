@@ -157,6 +157,11 @@ On utilise la méthode: `.create_oval(x-r, y-r, x+r, y+r)`
 **Dessiner une ligne:**<br>
 On utilise la méthode: `.create_line(x0, y0, x1, y1)` 
 
+<figure>
+  <img src="../images/pendu.png">
+  <figcaption>Exemple: le jeu du pendu</figcaption>
+</figure>
+
 # Evenements
 ## Gestion d'un clic de souris dans le canvas
 Pour ajouter un écouteur de clic dans le canvas, il faut ajouter dans le bloc principal (après avoir créé l'objet `fen1` et `can1`:
