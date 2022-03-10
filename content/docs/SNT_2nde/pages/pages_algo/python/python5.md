@@ -161,13 +161,13 @@ Une fois le défi réalisé, recopiez le script dans votre cahier.
 <figure>
   <div>
     <img src="../images/triangleFigure1.png">
-
+    <figcaption>figure 1: triangles alignés</figcaption>
 </div>
 </figure>
 
 <figure>
   <div>
     <img src="../images/triangleFigure2.png">
-
+    <figcaption>figure 2: triangles tournants</figcaption>
 </div>
 </figure>
