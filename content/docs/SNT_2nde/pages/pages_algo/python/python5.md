@@ -26,7 +26,7 @@ Nous nous limiterons aux fonctions:
 
 # Premiers tracés
 ## L'interface Scratch + Python de Vittascience
-* Aller sur le site <a href="https://fr.vittascience.com/" target="blank">Vittascience</a>. Puis choisir *Programmer* et *Python*.
+* Aller sur le site <a href="https://fr.vittascience.com/python/" target="blank">Vittascience.com</a>. Puis choisir *Programmer* et *Python*.
 
 Le site propose un éditeur Scratch en ligne (avec des blocs de code).
 
@@ -116,7 +116,7 @@ Vous voyez ici l'interêt d'utiliser une boucle pour répéter plusieurs fois le
 ### Créer ses propres fonctions
 Une fonction permet de mémoriser des blocs de code afin de les organiser et les réutiliser plusieurs fois.
 
-* Remettre les paramètres qui dessinent un triangle simple (3 fois, 120°)
+* Remettre les arguments qui dessinent un triangle simple (3 fois, 120°)
 * Dans le menu *Fonctions*, prendre le premier bloc *Définir*. Modifier le nom, et renommer cette fonction avec `triangle`.
 
 <figure>
@@ -127,7 +127,10 @@ Une fonction permet de mémoriser des blocs de code afin de les organiser et les
 </figure>
 
 * Mettre alors la boucle entière dans cette fonction. EXECUTER... il ne se passe rien.
-* Revenir dans le menu *Fonctions* et aller chercher le bloc de code appelé `triangle`. Ajouter ce bloc et EXECUTER... voilà qui devrait afficher le triangle. Vous venez de programmer votre propre fonction, puis vous l'avez appelé avec `nom()`.
+* Revenir dans le menu *Fonctions* et:
+  * aller chercher le bloc de code appelé `triangle`. 
+  * Ajouter ce bloc dans la programme, à la suite
+  * et EXECUTER... voilà qui devrait afficher le triangle. Vous venez de programmer votre propre fonction, puis vous l'avez appelé avec son nom,  `triangle()`.
 * Recopiez le script python correspondant dans votre cahier.
 
 ### Réutiliser une fonction
@@ -149,9 +152,18 @@ Voici un extrait de la suite du script qui vous permettra de créer une figurre 
 </div>
 </figure>
 
-Vous aurez besoin pour cela de réutiliser votre fonction `triangle`.
+*Remarque: Vous aurez besoin pour cela de réutiliser votre fonction `triangle`.*
 
-> **Défi 4:** Réaliser maintenant la figure ci-dessous:
+Une fois le défi réalisé, recopiez le script dans votre cahier.
+
+> **Défi 4:** Réaliser maintenant l'une des figures ci-dessous:
+
+<figure>
+  <div>
+    <img src="../images/triangleFigure1.png">
+
+</div>
+</figure>
 
 <figure>
   <div>
