@@ -25,6 +25,10 @@ vendredi 5 mars 2021 à 07:18
 
 
 # Langages et programmation
+## [Réinventer la programmation](https://www.lemonde.fr/blog/internetactu/2017/11/25/reinventer-la-programmation/)
+La manière même dont on code arrive-t-elle à bout de souffle ? C’est la thèse que défend un long et passionnant article de The Atlantic signé par le journaliste et programmeur James Somers (@jsomers). Résumé par Hubert Guillaud.
+
+https://www.lemonde.fr/blog/internetactu/2017/11/25/reinventer-la-programmation/
 ## [Le vote électronique, progrès ou danger ?](https://www.larecherche.fr/chronique-num%C3%A9rique/musique-et-informatique-un-mariage-damour)
 Une question s'impose  peut-on faire des machines et logiciels de vote sûrs, et pour quel type de vote ? 
 https://www.larecherche.fr/chronique-num%C3%A9rique/le-vote-%C3%A9lectronique-progr%C3%A8s-ou-danger

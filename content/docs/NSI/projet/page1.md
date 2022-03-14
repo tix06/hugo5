@@ -65,7 +65,7 @@ Le blog du Monde sur l’informatique avec la société informatique de France (
 #### La chronique numérique du journal la recherche:
 [https://www.larecherche.fr/rubrique/chronique-num](https://www.larecherche.fr/rubrique/chronique-num%C3%A9rique)
 
-#### Chronique éthique de Jean-Gabriel Ganascia:  
+#### Chronique éthique de Jean-Gabriel Ganascia:
 [https://www.larecherche.fr/rubrique/chronique-%C3%A9thique](https://www.larecherche.fr/rubrique/chronique-%C3%A9thique)
 
 #### Le 21e Siècle
