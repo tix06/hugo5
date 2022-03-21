@@ -81,7 +81,7 @@ Sur cette trame:
 * Quel est le caractère de début de la trame?
 * Quel est le séparateur entre les données?
 * Que signifient les lettres N, E, M?
-* Comment convertit-on 4836.5375 en 48°36’32.25’’? *Aide: il s’agit d’une conversion DM vers DD.* 
+* Comment convertit-on 4836.5375 en 48°36’32.25’’? *Aide: il s’agit d’une conversion DD vers DMS.* 
 
 
 # Positionner

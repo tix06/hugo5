@@ -117,7 +117,7 @@ Un conducteur idéal = Resistance nulle
 
 Les résistors sont des composants électroniques fabriqués spécialement pour leur résistance électrique. Ils permettent d'ajuster les courants et les potentiels dans un circuit électrique.
 
-## Loi du potentiel électrique 
+## Loi du potentiel électrique
 Deux points d'un circuit électrique reliés par un conducteur idéal sont au même potentiel électrique.
 Si l'on branche un voltmètre entre ces 2 points, la différence de potentiel est alors nulle. C'est le cas si ces 2 points sont séparés par un fil électrique ou un interrupteur fermé : 
 
@@ -171,7 +171,7 @@ L'intensité augmente dans le circuit car la résistance électrique du court-ci
 
 *cours plus complet :*[webtab.ac-bordeaux.fr](http://webetab.ac-bordeaux.fr/Pedagogie/Physique/Physico/Electro/e04tensi.htm)
 
-## Loi d'Ohm 
+## Loi d'Ohm
 Pour un dipôle de résistance R, parcouru par un courant i, et dont la tension à ses bornes et U<sub>AB</sub> : d'après la loi d'Ohm : 
 
 $$U_{AB} = R \times I$$
@@ -199,7 +199,7 @@ I = 9V / 120
 I = 0,075 A = 75 mA
 </pre>
 
-## Loi des noeuds 
+## Loi des noeuds
 L'intensité du courant est additive. Au niveau d'un noeud, la somme des courants arrivant est egale à la somme des courants quittant le noeud.
 
 Exercice : Calculer la valeur manquante sur le schéma suivant : 
@@ -244,61 +244,7 @@ Calculer la valeur de la puissance consommée par cette lampe.
 *P = U x I = 12V x 1,5 A = 21W*
 
 
-## Source réelle de tension continue (concerne la 1ere Spé Physique Chimie)
-Un générateur de tension réel est constituée : 
 
-* d'une source de tension idéale de force électromotrice (tension) noté E
-* d'une resistance interne r
-
-
-<figure>
-<img src="../images/generateur.png" width = 80% alt="générateur de tension">
-<figcaption>générateur réel</figcaption>
-</figure>
-
-Par définition, la tension délivrée par ce générateur branché entre les bornes P et N est : 
-
-$$U_{PN} = E - r\times I$$
-
-En effet, dans le circuit série complet : d'après la loi d'additivité des tensions : 
-
-<div id="formule">
-$$U_{NA} + U_{AP} + U_{PB} + U_{BC} + U_{CN} = 0$$
-</div>
-
-Soit : 
-<div id="formule">
-$$-U_{NA} = U\_{AP} + U\_{PB} + U\_{BC} + U\_{CN}$$
-</div>
-
-<div id="formule">
-$$U_{AN} = U_{AP} + U_{PB} + U_{BC} + U_{CN}$$
-</div>
-
-<div id="formule">
-$$E = r\times I + 0 + R\times I + 0$$
-</div>
-
-On met d'un côté de l'égalité tous les termes qui correspondent aux dipôles du générateur (encadré sur le schéma). Ce terme correpond à : U(PN)
-
-$$U_{PN} = E - r\times I = R \times I$$
-
-Ce qui revient à énoncer que la tension U(PN) aux bornes d'un générateur vaut : 
-
-
-$$U_{PN} = E - r\times I$$
-
-
-*Remarques :* 
-
-* Pour un générateur de tension idéale, la tension U(PN) est égale à E, quelle que soit la valeur du courant I.
-* Pour un générateur réel (non idéal), la tension délivrée par un générateur est décroissante avec I. 
-* Une partie de la puissance chimique est dégradée par effet Joule. On la note P(J), pour *P(effet Joule)* Cette partie dégradée de l'énergie vaut alors : 
-
-$$P_J = r \times I^2$$
-
-**Bilan de puissance pour un générateur :** 
-(voir livre de 1ere Spé Physique Chimie p 243)
 
 # Exercices
 ## Exercice 1 :
@@ -322,7 +268,7 @@ Réponse :
 2. U~PA~ = 0 ; U~AB~ = 2,5V ; U~BC~ = 0; U~DN~ = 0
 
 
-## Exercice 2 
+## Exercice 2
 On mesure une tension de 20,8 V. Quel est le meilleur calibre à utiliser : 
 
 2V, 20V, 200V, 600V ?
@@ -345,7 +291,7 @@ Réponse :
 1. U3 = 4,94V
 2. U<sub>PA</sub> = 0; U<sub>AB</sub> = 2,99V; U<sub>CN</sub> = 0
 
-## Exercice 4 
+## Exercice 4
 
 ![montage transformateur, lampes, amperemetres](../images/circuit3.png)
 
@@ -353,7 +299,7 @@ Réponse :
 2. Quelle est la loi que l’on a voulu vérifier en réalisant ce montage ? (loi des potentiels, loi d'additivité des tensions, loi des noeuds)
 3. Cette loi, est elle effectivement vérifiée ?
 
-## Exercice 5 : 
+## Exercice 5 :
 
 ![circuit série](../images/circuit4.png)
 
@@ -363,7 +309,7 @@ Lorsqu'il est fermé, le transformateur'interrupteur  est supposé se comporter 
 
 2. La tension U<sub>FE</sub> aux bornes de la lampe est : égale, supérieure à U<sub>AB</sub> infèrieure à U<sub>AB</sub> ou nulle ?
 
-## Exercice 6 : 
+## Exercice 6 :
 La situation suivante, présente t-elle un risque de court cicuit pour le générateur ?
 
 ![court circuit](../images/courtCircuit.png)
