@@ -68,6 +68,12 @@ De nos jours, les notations équivalentes en degrés minutes décimales (DM) ou 
 * DM : Degré : Minute (49°30,0’) ;
 * DD : Degré décimal (49,5000°), généralement avec quatre décimales 
 
+| norme | exemple |
+|--- |--- |
+| Degrés DD | 48.225833 |
+| Degrés, minutes DM | 48°13,54998' |
+| Degrés, minutes, secondes | 48°13'32.9988'' |
+
 
 # Trame NMEA
 Protocole NMEA 0183 : (National Marine Electronics Association): protocole utilisé par les récepteurs GPS pour fournir la localisation sous une forme de trame normalisée facilement décodable. Ces données sont mises dans un format standard :
