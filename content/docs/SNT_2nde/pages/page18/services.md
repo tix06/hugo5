@@ -36,7 +36,7 @@ Les fichiers d’itinéraires sont un autre exemple de données standardisées a
 # Calcul d'initéraire
 La recherche du meilleur itinéraire d'un point à un autre peut être représenté sur un graphe pondéré. Le calcul d'itinéraire se fait à l'aide d'algorithmes prenant de nombreux paramétres en compte.
 
-*Exemple:* 
+*Exemple naïf:* 
 
 ```python
 fonction recherche_itineraire(depart, arrivee, graphe):
@@ -67,7 +67,26 @@ fonction recherche_itineraire(depart, arrivee, graphe):
 </figure>
 3. Cet algorithme donne t-il à coup sûr le chemin le plus court? Pourquoi?
 
-*Remarque:* L'algorithme le plus efficace pour la recherche de l'itinéraire le plus court est l'[algorithme de Dijkstra](/docs/SNT_2nde/pages/pages_algo/graphes/page4/).
+## L'algorithme de Dijkstra
+L'algorithme le plus efficace pour la recherche de l'itinéraire le plus court est l'[algorithme de Dijkstra (voir ici pour une description plus formelle)](/docs/SNT_2nde/pages/pages_algo/graphes/page4/).
+
+L'idée de cet algorithme est de procéder comme pour un parcours de graphe en largeur. On tient à jour une liste de sommets adjacents, qu'il faudra visiter dans l'ordre. Pour un noeud N visité dans la liste, on ajoute les sommets adjacents à N en fin de liste. Puis on progresse dans la liste.
+
+Mais ici:
+
+* Le graphe est pondéré (les arêtes ont un poids qui correspond à la distance)
+* La liste contient pour chaque sommet visité: le noeud et sa distance cumulée au sommet de départ.
+* la liste des sommets à visiter est remise à jour, triée par ordre croissant de distance cumulée.
+
+Une présentation en vidéo de cet algorithme:
+
+<a href="https://youtu.be/QnstZTjiC78">
+<figure>
+  <img src="../images/dijkstra.png">
+  <figcaption>video - Lelivrescolaire.fr
+</figcaption>
+</figure>
+</a>
 
 # Documents
 Livre Delagrave, activité 5 page 89

@@ -3,6 +3,8 @@ Title : grandeurs electriques
 
 ---
 
+Ce cours est en lien avec la <a href="/pdf/PC_1/elec_carte_mentale.pdf" target=_blank>carte mentale à compléter.</a>
+
 # les grandeurs et les lois de l'électricité
 ## Grandeurs U, I, R, P
 *(Rappel) C'est quoi l'électricité?* : L'électricité, ou l'*énergie électrique* désigne le déplacement de porteurs de charges, qui permet d'assurer diverses applications utilisant des *circuits électriques* par conversion de cette énergie : en mouvement, en chaleur, en lumière ou autre. 
