@@ -4,6 +4,14 @@ Title: scratch python TP3
 
 Aller sur la page <a href="https://fr.vittascience.com/TI-83/?mode=mixed&console=bottom&toolbox=texas-instruments" target=_blank>Vittascience.com mode Texas Instruments</a>
 
+# Situation - problème
+La randonnée du Col des Fourches jusqu'au fort de Pelousette est décrite [ici](https://www.visorando.com/randonnee-fortins-de-pelousette-et-du-mont-des-fou/). Il s'agit d'un itinéraire dans les alpes du Sud, près du col de la Bonette.
+
+Le but de la séance est de placer des marqueurs sur la carte IGN, afin de matérialiser l'itinéraire, comme sur l'image suivante:
+
+<figure>
+  <img src="../images/map5.png">
+</figure>
 
 # PROGRAMME 1 : conversion DM => DD
 DM et DD sont des formats de repères d'angles:
@@ -97,7 +105,7 @@ Utiliser alors le programme depuis la fenêtre du shell:
   <img src="../images/math13.png"></div>
 </figure>
 
-# Créer une fonction **conversion**
+# PROGRAMME 2: Créer une fonction **conversion**
 Une meilleure approche du langage python consiste à créer une fonction, puis appeler celle-ci depuis le *Shell* pour afficher le résultat.
 
 ## Aller sur **Editer**
@@ -152,8 +160,54 @@ Dans la fenêtre du Shell, il ne se passe rien. C'est normal, vous allez appeler
   <img src="../images/math18.png"></div>
 </figure>
 
-Voilà, vous pourrez utiliser maintenant la fonction `conversion` pour transformer n'importe quelle valeur du format DM vers le format DD.
+Voilà, vous pourrez utiliser maintenant la fonction `conversion` pour transformer n'importe quelle valeur du format DM vers le format DD. 
 
+Voici celles du départ et de l'arrivée de la randonnée:
+
+| | latitude | longitude |
+|--- |--- |--- |
+| Départ | 44°20,01612' | 6°52,1109' |
+| Arrivée | 44°20,04108'| 6°51,91188' |
+
+# Positionner des marqueurs sur une carte
+
+Vous allez placer 2 marqueurs sur une carte, correspondant au départ et à l'arrivée de la randonnée.
+
+Rendez vous sur le portail <a href="https://www.geoportail.gouv.fr/carte" target=_blank>Geoportail</a>
+
+* Dans le menu outil, choisir *Annoter la carte*:
+
+<figure>
+  <img src="../images/map1.png">
+</figure>
+
+* Dans les outils de creation, choisir le marqueur: Placer des points.
+
+<figure>
+  <img src="../images/map2.png">
+</figure>
+
+* Renseigner alors les coordonnées dans la barre de recherche à partir des résultats calculés en format DD (voir plus haut)
+
+<figure>
+  <img src="../images/map3.png">
+</figure>
+
+* Il vous reste alors à cliquer sur le cercle-cible pour placer un point sur la carte.
+
+<figure>
+  <img src="../images/map4.png">
+</figure>
+
+* On pourra placer d'autres points de l'itinéraire avec la même méthode...
+
+| | latitude | longitude |
+|--- |--- |--- |
+| étape 1 | 20,43636' | 6°51,54288' |
+| étape 2 | 44°20,49468'| 6°51,99768' |
+| étape 3 | 44°20,10228'| 6°52,15908' |
+| étape 4 | 44°19,81248'| 6°52,28124' |
+| étape 5 | 44°19,83708'| 6°52,27248' |
 
 
 
