@@ -193,7 +193,7 @@ Rendez vous sur le portail <a href="https://www.geoportail.gouv.fr/carte" target
   <img src="../images/map3.png">
 </figure>
 
-* Il vous reste alors à cliquer sur le cercle-cible pour placer un point sur la carte.
+* Il vous reste alors à cliquer sur le cercle-cible pour placer les 2 points départ et arrivée sur la carte.
 
 <figure>
   <img src="../images/map4.png">

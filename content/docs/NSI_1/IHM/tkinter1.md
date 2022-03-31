@@ -184,8 +184,8 @@ def clic(event):
     """ Gestion de l'événement clic gauche sur la zone graphique """
     # MODE JEU
     # (X,Y) : position du pointeur de la souris
-    X = event.x_root
-    Y = event.y_root
+    X = event.x
+    Y = event.y
     text_affichage.set("{}, {}".format(X,Y))
 ```
 
@@ -279,16 +279,21 @@ def clic(event):
     """ Gestion de l'événement clic gauche sur la zone graphique """
     # MODE JEU
     # (X,Y) : position du pointeur de la souris
-    X = event.x_root
-    Y = event.y_root
+    X = event.x
+    Y = event.y
     bomb = can1.create_image(X, Y, anchor="nw", image=image_bomb)
 ```  
 
 
 Le mieux, serait d'aligner l'image sur la grille de fond lorsque l'on clique dans l'une des cases du quadrillage.
 
-Si les carrés ont pour côté H: Il faudra que X et Y soient multiples de H. Utiliser la division entière:<br>
-`X = (X // H) * H` et `Y = (Y // H) * H` 
+Si les carrés ont pour côté H: Il faudra que X et Y soient multiples de H. 
+
+**Utiliser la division entière:** 
+
+`X = (X // H) * H` 
+
+et `Y = (Y // H) * H` 
 
 *famille de jeux: demineur, puissance 4, morpion* 
 
