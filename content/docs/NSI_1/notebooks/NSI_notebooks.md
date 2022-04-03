@@ -27,4 +27,7 @@ Accéder au depot: cliquer sur *launch binder* <a href="https://mybinder.org/v2/
 ## TP sur les séquences
 Fichier à télécharger: <a href="/scripts/notebooks/sequence1.ipynb" download="sequence1.ipynb">Notebook</a>
 
+## TP sur les tris par insertion
+Fichier à télécharger: <a href="/scripts/notebooks/tri_insertion.zip" download="tri_insertion.zip">tri_insertion.zip</a>
+
 
