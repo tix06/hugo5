@@ -14,6 +14,27 @@ Title: synthèse en chimie organique
 Un protocole de synthèse suit une série de 3 étapes : transformation, traitement (et purification), identification.
 
 ## Les étapes de la synthèse chimique
+### Préparation
+Pour estimer la quantité de matière des réactifs, il peut y avoir plusieurs possibiltés:
+
+* Si le réactif est mesuré à partir de sa masse m<sub>1</sub>, on utilise la loi masse molaire - quantité de matière:
+
+$$n_1 = \tfrac{m_1}{M_1}$$
+
+* Si le réactif est mesuré en volume, il faudra au préalable utiliser la valeur de masse volumique:
+
+$$m_2 = \rho.V$$
+
+Puis la loi masse molaire - quantité de matière:
+
+$$n_2 = \tfrac{m_2}{M_2}$$
+
+### Avancement maximal
+Soit C<sub>i</sub> le coefficient stoechiométrique du réactif <i>i</i>, l'avancement maximal est estimé en calculant pour chaque réactif:
+
+$$\tfrac{n_i}{C_i}$$
+
+La valeur de l'avancement maximal x<sub>i</sub> est alors la plus petite valeur calculée pour les $\tfrac{n_i}{C_i}$
 
 ### Transformation
 
