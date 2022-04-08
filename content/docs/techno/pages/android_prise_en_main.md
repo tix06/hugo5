@@ -70,9 +70,29 @@ print(DD)
   <img src="../images_android/android9.png">
 </figure>
 
+<br>
+
+> Utilisez alors votre programme pour définir les coordonnées DD du départ de la randonnée:
+
+<br>
+
+| | latitude | longitude |
+|--- |--- |--- |
+| Départ | 44°20,01612' | 6°52,1109' |
+
+*Remarque:* il vous faudra executer une 2e fois le programme pour le calcul de la longitude
+
 # Programme 2 : Créer une fonction **conversion**
 Une meilleure approche du langage python consiste à créer une fonction, puis appeler celle-ci depuis le *Shell* pour afficher le résultat.
 
+## Modifier le programme pour créer une fonction **conversion**
+Revenir dans l'editeur et modifier le programme pour créer une fonction:
+
+<figure>
+  <img src="../images_android/android10.png">
+</figure>
+
+La fonction **conversion** a alors 2 paramètres, `degres` et `minutes` qui devront être renseignés lors de l'appel de la fonction. Cela se fera depuis le *Shell* python.
 
 ## Le Terminal
 * Depuis le menu principal, à gauche, choisir *Terminal* 

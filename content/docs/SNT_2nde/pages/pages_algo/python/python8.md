@@ -21,11 +21,19 @@ DM et DD sont des formats de repères d'angles:
 
 Sur l'interface Scratch de Vittascience:
 
-### Menu **Var** : Créer une variable degres
+### Menu **Var** : Créer une variable que vous nommerez **degres**
+
+<figure>
+  <img src="../images/math0.png">
+</figure>
+
+... puis:
+
 <figure>
   <img src="../images/math1.png">
 </figure>
  
+
 
 ### Menu **Var** : affecter à degres la valeur “ “
 
@@ -104,6 +112,18 @@ Utiliser alors le programme depuis la fenêtre du shell:
 <figure><div>
   <img src="../images/math13.png"></div>
 </figure>
+
+<br>
+
+> Utilisez alors votre programme pour définir les coordonnées DD du départ de la randonnée:
+
+<br>
+
+| | latitude | longitude |
+|--- |--- |--- |
+| Départ | 44°20,01612' | 6°52,1109' |
+
+*Remarque:* il vous faudra executer une 2e fois le programme pour le calcul de la longitude. Aller dans le menu **Script** puis executer à nouveau le programme.
 
 # PROGRAMME 2: Créer une fonction **conversion**
 Une meilleure approche du langage python consiste à créer une fonction, puis appeler celle-ci depuis le *Shell* pour afficher le résultat.
