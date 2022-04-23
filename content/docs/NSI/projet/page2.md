@@ -28,6 +28,13 @@ vendredi 5 mars 2021 à 07:18
 ## [Réinventer la programmation](https://www.lemonde.fr/blog/internetactu/2017/11/25/reinventer-la-programmation/)
 La manière même dont on code arrive-t-elle à bout de souffle ? C’est la thèse que défend un long et passionnant article de The Atlantic signé par le journaliste et programmeur James Somers (@jsomers). Résumé par Hubert Guillaud.
 
+Questions<ul>
+      <li>Combien de lignes de code contiennent les programmes qui font fonctionner une voiture?</li>
+      <li>Citer quelques une des causes de l'existence de bug dans les logiciels</li>
+      <li>Comment on pourrait les résoudre (en partie)</li> 
+      <li>Quels sont les domaines actuels et futurs où le code a un caractère critique</li></ul></li>
+  </ul>
+
 https://www.lemonde.fr/blog/internetactu/2017/11/25/reinventer-la-programmation/
 ## [Le vote électronique, progrès ou danger ?](https://www.larecherche.fr/chronique-num%C3%A9rique/musique-et-informatique-un-mariage-damour)
 Une question s'impose  peut-on faire des machines et logiciels de vote sûrs, et pour quel type de vote ? 
