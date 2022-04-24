@@ -34,7 +34,8 @@ Elles permettent de zoomer, et ainsi de modifier dynamiquement l'echelle, mais a
 Les fichiers d’itinéraires sont un autre exemple de données standardisées afin de pouvoir être échangées entre applis de cartes numériques: c’est le format .GPX
 
 # Calcul d'initéraire
-La recherche du meilleur itinéraire d'un point à un autre peut être représenté sur un graphe pondéré. Le calcul d'itinéraire se fait à l'aide d'algorithmes prenant de nombreux paramétres en compte.
+L’ensemble des itinéraires peut être représenté à l’aide d’un graphe pondéré. Les noeuds sont des intersections, souvent des villes, croisements, points d’interêt. Les arêtes sont les routes.
+Le calcul d'itinéraire se fait à l'aide d'algorithmes prenant de nombreux paramétres en compte. L’itinéraire est alors une liste de coordonnées de noeuds dans ce graphe.
 
 *Exemple naïf:* 
 
@@ -68,6 +69,8 @@ fonction recherche_itineraire(depart, arrivee, graphe):
 3. Cet algorithme donne t-il à coup sûr le chemin le plus court? Pourquoi?
 
 ## L'algorithme de Dijkstra
+On a vu que l'algorithme précédent n'est pas efficace pour trouver le *meilleur* itineraire. Celui-ci n'assure pas non plus de trouver *un* itinéraire, car il n'y a pas de retour en arrière possible.
+
 L'algorithme le plus efficace pour la recherche de l'itinéraire le plus court est l'[algorithme de Dijkstra (voir ici pour une description plus formelle)](/docs/SNT_2nde/pages/pages_algo/graphes/page4/).
 
 L'idée de cet algorithme est de procéder comme pour un parcours de graphe en largeur. On tient à jour une liste de sommets adjacents, qu'il faudra visiter dans l'ordre. Pour un noeud N visité dans la liste, on ajoute les sommets adjacents à N en fin de liste. Puis on progresse dans la liste.
