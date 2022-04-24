@@ -201,6 +201,10 @@ La complexité est *linéaire* dans le meilleur des cas (liste déjà triée), m
 
 Pour le tri par séléction, le nombre d'opérations est constant, et egal à $b.N^2$. La complexité est *quadratique*.
 
+# Documents
+* <a href="/pdf/NSI/Algorithmiques2-algos_tri-cours.pdf" target=_blank> fiche de TD à compléter</a>
+* <a href="/pdf/NSI/algorithmes2_recherche_tri.pdf" target=_blank>fiche d'exercices</a>
+
 # Liens
 * cours et animations sur la [page du site Lyceum](https://www.lyceum.fr/1g/nsi/8-algorithmique/2-algorithmes-de-tri)
 
