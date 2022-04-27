@@ -25,9 +25,13 @@ L'environnement de développement utilisé est Jupyter.
 Accéder au depot: cliquer sur *launch binder* <a href="https://mybinder.org/v2/gh/tix06/notebooks_NSI.git/HEAD" target="_blank"><img src="/images/binder.svg"></a>
 
 ## TP sur les séquences
-Fichier à télécharger: <a href="/scripts/notebooks/sequence1.ipynb" download="sequence1.ipynb">Notebook</a>
+* Fichier à télécharger: <a href="/scripts/notebooks/sequence1.ipynb" download="sequence1.ipynb">Notebook</a>
+* nom du fichier sur le dépôt Mybinder: *sequence1.ipynb*
 
 ## TP sur les tris par insertion
-Fichier à télécharger: <a href="/scripts/notebooks/tri_insertion.zip" download="tri_insertion.zip">tri_insertion.zip</a>
+* Fichier à télécharger: <a href="/scripts/notebooks/tri_insertion.zip" download="tri_insertion.zip">tri_insertion.zip</a>
+* nom du fichier sur le dépôt Mybinder: *algo_tri_insertion.ipynb*
 
-
+## TP sur les données en table
+* Fichier à telecharger: <a href="/scripts/notebooks/TP_donnees_table_csv.zip" download="TP_donnees_table_csv.zip">TP_donnees_table_csv.zip</a>
+* nom du fichier sur le dépôt Mybinder: *exercices_tables_csv.ipynb*
