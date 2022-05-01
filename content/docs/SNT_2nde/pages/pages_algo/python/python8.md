@@ -79,7 +79,7 @@ Le script complet est donné ci-dessous :
 </figure>
  
 Il ne vous reste plus qu’à <a href="/scripts/SNT/degresDM_DD.py" download="degresDM_DD.py">télécharger</a> le programme sur la calculatrice. 
-<img src="../images/math6.png">
+<img src="../images/math9.png">
 
 Utiliser le programme TI-CONNECT pour le transfert de fichier.
 
