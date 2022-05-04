@@ -121,11 +121,13 @@ x,y : int, valeur de 0 à 4<br>
 b : int, 0 à 9 (intensité lumineuse de la diode en x,y)
 
 # Application: TP évalué
+Lien vers <a href="/docs/SNT_2nde/pages/page5/photo_num3/" target=_blank>l'énoncé en ligne</a>
+
+Lien vers le <a href="/pdf/SNT/TP_intro_MB.pdf" target=_blank>Document pdf à rendre</a>
 
 <a href="/pdf/SNT/TP_intro_MB.pdf">
 <figure>
   <img src="../images/TP.png">
-  <figcaption>Lien vers l'énoncé</figcaption>
 </figure>
 </a>
 

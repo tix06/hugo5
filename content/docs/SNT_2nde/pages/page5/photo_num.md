@@ -2,7 +2,13 @@
 Title : Photographie numérique
 ---
 # L'appareil photographique numérique
-Lire le cours et compléter la fiche à télécharger ici <a href="../images/C32_cours_photographie_numerique.pdf" target="blank">(faire un clic droit sur le lien et choisir : téléchargement)</a>
+*Présentation*
+
+<figure><a href="https://youtu.be/Rs5ab3X9Oxo" target=_blank>
+  <img src="../images/video_photo_num.png">
+  <figcaption>Video: Fonctionnement d'un appareil photo numérique<br>
+    Chaine: <i>Monsieur Techno</i></figcaption></a>
+</figure>
 
 ## Composants principaux
 On retrouve dans un appareil photographique numérique, ou pour la partie photographie d'un smartphone ou d'une tablette, les constituants suivant : 
@@ -31,7 +37,7 @@ On retrouve dans un appareil photographique numérique, ou pour la partie photog
 <figcaption>filtre de bayer</figcaption>
 </figure>
 
-Ce filtre de bayer est en réalité constitué de 3 filtres. La lumière issue de l'objectif est partagée en 3 faisceaux, chacun traversant l'un des filtres avant d'éclairer la grille de photosites.
+Ce filtre de bayer est en réalité constitué de 3 filtres. La lumière issue de l'objectif traverse la grille de filtres colorés avant d'éclairer la grille de photosites.
 
 * un capteur, constitué de photosites, répartis sur une grille. Ce capteur se trouve à l'endroit où la lumière est focalisée (nette). Les photosites transforment l’intensité lumineuse en signal électrique. 
  
