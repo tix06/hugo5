@@ -78,7 +78,7 @@ Pour démarrer le programme d'acquisition, appuyer sur le bouton de démarrage d
   <figcaption>Bouton de (re)démarrage</figcaption>
 </figure>
 
-Lors de l'appui sur le bouton **a**, une nouvelle mesure est enregistrée. la liste des valeurs acquises sont alors affichées dans la fenêtre du logiciel.
+Lors de l'appui sur le bouton **a**, une nouvelle mesure est enregistrée. la liste des valeurs acquises est alors affichée dans la fenêtre du logiciel.
 
 
 Lors de l'appui sur le bouton **b**, la liste est remise à zero (recommencer l'acquisition).
