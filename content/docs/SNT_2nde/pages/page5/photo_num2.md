@@ -7,6 +7,11 @@ Les plus petits détails de l'image sont ses *pixels* : des petits carrés rempl
 Coder les pixels de l'image revient à coder les couleurs de ses pixels.
 Les valeurs des couleurs des pixels sont alors mises les unes à la suite des autres, et constituent ainsi le fichier image en s'ajoutant aux métadonnées.
 
+Grâce aux métadonnées du fichier, l'ordinateur va traiter cette suite de chiffres selon une matrice de valeurs:
+
+<figure>
+<img src="../images/matrice1.png"></figure>
+
 On distingue 3 cas : 
 
 ## image en Noir et Blanc
@@ -142,6 +147,12 @@ $$P = D \times C$$
 
 $$P = 1900 \times 1700 \times 3 = 9,7.10^6 octets = 9,7 Mo$$ 
 
+La **compression** d'une imagec’est la réduction de la quantité d’informations nécessaires pour décrire l’image. Les idées générales sont : 
 
+- De rassembler plusieurs pixels de même couleur, et établir une couleur moyenne des pixels sur une zone donnée.
+- supprimer des informations : par exemple en diminuant le nombre de couleurs possibles. On fait une réduction de l'espace des couleurs à celles qui sont  les plus fréquentes dans l'image.
+
+# Suite du cours
+* [Enjeux ethiques et societaux de l'image](/docs/SNT_2nde/pages/page5/photo_num4/)
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>

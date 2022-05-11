@@ -8,7 +8,15 @@ Une photographie numérique, comme tout autre objet numérique, c'est un **fichi
 Une partie des données correspond à des métadonnées, c'est à dire des données *périphériques*. L'autre partie contient les données relatives à l'image.
 
 ## métadonnées
-Ce sont des informations relatives à la capture de l'image (données EXIF): 
+Ce sont des informations relatives à la capture de l'image, qui sont incorporées au fichier d’image lui-même. Ce sont les données EXIF.
+
+Ces métadonnées couvrent un large éventail de données, comme par exemple **l'information de la date et de l’heure** de la prise de vue. <br>Les appareils numériques enregistrent la date et l’heure de la prise de vue et l’insèrent dans les données de la photo;
+
+Ce sont aussi **des réglages de l’appareil**. Cela comprend des informations statiques telles que la marque et le modèle de l’appareil et des informations variables telles que l’orientation, l’ouverture, la vitesse d’obturation, la longueur de focale, la sensibilité…
+
+**Des informations géographiques** provenant d’un éventuel système GPS connecté à l’appareil. 
+
+*En résumé:*
 
 * la marque et le type d'appareil photographique
 * la lentille de l'objectif

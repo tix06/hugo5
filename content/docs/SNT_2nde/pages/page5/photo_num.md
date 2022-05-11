@@ -34,7 +34,7 @@ On retrouve dans un appareil photographique numérique, ou pour la partie photog
 
 <figure>
 <img src="../images/bayer.png" width="60%" alt="filtre de bayer">
-<figcaption>filtre de bayer</figcaption>
+<figcaption>filtre de bayer et photosite <br>(image de Gilles Boisclair)</figcaption>
 </figure>
 
 Ce filtre de bayer est en réalité constitué de 3 filtres. La lumière issue de l'objectif traverse la grille de filtres colorés avant d'éclairer la grille de photosites.
@@ -53,17 +53,61 @@ Sur l'image suivante, on voit que la grille contient des carrés constitués de 
 * Une carte mémoire (SDcard), pour y enregistrer les images.
 * un ordinateur interne capable de traiter des programmes.
 
+## Le plus petit détail d'une image: le PIXEL
+L’image est construite en données numériques qui correspondent aux pixels.
 
-## réglages lors de la prise de photographie
+C’est le grain de coloration d’une image, l’atome de l’image numérique.
 
+Un des algorithmes possibles consiste à créer un pixel à partir de 4 photosites : un bleu, un rouge et deux verts. Un pixel sera alors composé de 3 couleurs : rouge, vert, bleu (RVB). 
+
+
+# réglages lors de la prise de photographie
 Les réglages de l'appareil photographique se font la plupart du temps de manière automatique. 
-Ainsi, l'appareil photographique est capable :
 
-* de mesurer la netteté de l'image, et de corriger la mise au point de l'*objectif* si celle-ci est floue.
-* de mesurer la quantité de lumière, et de régler :
-	* le diapragme : c’est la taille de cette ouverture qui détermine la quantité de lumière arrivant sur le capteur.
-	* la vitesse d'obturation : correspond à l’intervalle de temps durant laquelle l’obturateur de l’appareil photo laisse entrer la lumière. Plus cette vitesse est lente et plus l’appareil photo capte la lumière. L' image sera alors plus lumineuse. *Ce réglage influe aussi sur la profondeur de champs, et la netteté des images pour des sujets en mouvement (mode sport)*.
+**Mise au point:** La mise au point est l'opération qui consiste, pour un photographe, à régler la netteté de l'image qu'il veut obtenir. 
 
+## Algorithmes de prise de vue
+
+l'appareil photographique est capable de mesurer la quantité de lumière, et de régler seul:
+
+* le diapragme : c’est la taille de cette ouverture qui détermine la quantité de lumière arrivant sur le capteur.
+* la vitesse d'obturation : correspond à l’intervalle de temps durant laquelle l’obturateur de l’appareil photo laisse entrer la lumière. Plus cette vitesse est lente et plus l’appareil photo capte la lumière. L' image sera alors plus lumineuse. *Ce réglage influe aussi sur la profondeur de champs, et la netteté des images pour des sujets en mouvement (mode sport)*.
+
+## Algorithme d'aide à la mise au point
+Parfois, la mise au point automatique n'est pas possible. Certains appareils photographiques proposent une option d'aide appelée le *Focus Peaking* (l’intensification de la mise au point). C'est utile lorsque le sujet manque de lumière, ou que l'on utilise un objectif manuel.
+
+<figure>
+<img src="../images/focus.png">
+<figcaption> En rouge, le focus peaking qui indique la zone de mise au point</figcaption>
+</figure>
+
+Voici un exemple d'algorithme utilisé:
+
+```
+pour chaque pixel:
+  si le contraste avec un pixel voisin est fort alors:
+    colorier le pixel en rouge
+```
+
+## Algorithmes de correction
+**Correction du flou**: Une image floue est une image dont la valeur radiométrique de chaque pixel a été altérée localement par les valeurs des pixels au voisinage. Ce problème est du au temps d'exposition qui est trop long.
+
+Les algorithmes de correction de flou on beaucoup progressé avec la cartographie mobile. En effet, il n'était pas possible de ralentir le vehicule lors des prises de vues (circulation routière de jour), ni d'utiliser de flash puissant pour éclairer les façades (nuit).
+
+<figure>
+<img src="../images/img_urbaine1.png">
+<figcaption> véhicules terrestres de
+cartographie mobile</figcaption>
+</figure>
+
+L'[algorithme utilisé](http://recherche.ign.fr/labos/matis/pdf/articles_revues/2017/daval2016_v1.4.pdf) va alors calculer le *mouvement des pixels* pour reconstruire l'*image nette*.
+
+<figure>
+<img src="../images/img_urbaine2.png">
+<figcaption>résultat du traitement par algorithme</figcaption>
+</figure>
+
+**algorithme de correction des couleurs** L'intensité de la couleur est mesurée par la *saturation*. Les applications de traitement d'image permettent la correction de la *saturation* grâce à des *filtres*, qui seront appliqués à tous les pixels de l'image.
 
 # Qu'est ce qu'une photographie numérique ?
 Une photographie numérique, comme tout autre objet numérique, c'est un **fichier de données numériques**, c'est à dire des valeurs codées en binaire.
@@ -73,6 +117,7 @@ Une partie des données correspond à des métadonnées, c'est à dire des donn�
 On pourra consulter la page sur les 
 
 * [codages numeriques](/docs/SNT_2nde/pages/page5/photo_num2/) pour la suite du cours sur le codage de l'image.
+* [enjeux éthiques et sociétaux](/docs/SNT_2nde/pages/page5/photo_num4)  de l'image
 * [Données EXIF](/docs/SNT_2nde/pages/page2/donnees2/) pour plus de détails sur les métadonnées.
 
 
