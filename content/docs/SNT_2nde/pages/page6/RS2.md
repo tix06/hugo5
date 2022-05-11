@@ -40,7 +40,7 @@ La e-reputation est due à l'identité numérique que l'on se construit.
 
 Toute activité sur le Web implique la création de traces. Certaines sont volontaires, d'autres involontaires. Elles sont collectées, partagées entre applications et stockées dans des bases de données. Leur addition construit l'identité numérique de chacun.
 
-> Une iournaliste parisienne inscrite sur un fameux site de rencontre a décidé de réclamer ses données personnelles auprès dti site.
+> Une journaliste parisienne inscrite sur un fameux site de rencontre a décidé de réclamer ses données personnelles auprès dti site.
 Pour 1'équivalent d'une fréquentation de 4 années, el1e a reçu
 pas moins de 800 pages résumant les différents aspects de sa vie privée : ses « likes » sur Facebook, ses photos postées sur Instagram, ses diplômes universitaires, mais aussi ies dates, lieux et contenus de ses conversations... Que pourrait-il se passer dans le cas oit
 ces informations seraient divulguées ou revendues à une autre entreprise ?
