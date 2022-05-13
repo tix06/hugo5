@@ -2,6 +2,18 @@
 Title: codage d'une image
 ---
 
+# Afficher les pixels d'une image
+On a vu en [travaux pratiques](/docs/SNT_2nde/pages/page5/photo_num3/), que le programme qui permet l'affichage des données en tableau utilise 2 boucles bornées, imbriquées:
+
+```python
+  for j in range(5):
+    for i in range(5):
+      if L[j][i] == 1 : 
+        display.set_pixel(i, j, 9)
+  ```
+
+  On obtient alors une image de type Noir et Blanc, sur une matrice de diodes 5 * 5.
+
 # codage de l'image
 Les plus petits détails de l'image sont ses *pixels* : des petits carrés remplis chacun avec une seule couleur.
 Coder les pixels de l'image revient à coder les couleurs de ses pixels.
