@@ -228,6 +228,108 @@ Une expression HTML correctement balisée contient 12 balises.
 Indiquer le nombre d’éléments que pourrait contenir au maximum la pile lors de
 son analyse. 
 
+# Bac 2022 Metropole 2: Exercice 2
+*Cet exercice porte sur les structures de données.*
+
+La *poussette* est un jeu de cartes en solitaire. Cet exercice propose une version simplifiée de ce jeu basée sur des nombres.
+
+On considère une pile constituée de nombres entiers tirés aléatoirement. Le jeu
+consiste à réduire la pile suivant la règle suivante : quand la pile contient du haut vers le bas un triplet dont les termes du haut et du bas sont de même parité, on supprime l'élément central.
+
+Par exemple :
+
+* Si la pile contient du haut vers le bas, le triplet 1 0 3, on supprime le 0.
+* Si la pile contient du haut vers le bas, le triplet 1 0 8, la pile reste inchangée.
+
+On parcourt la pile ainsi de haut en bas et on procède aux réductions. Arrivé en bas de la pile, on recommence la réduction en repartant du sommet de la pile jusqu'à ce que la pile ne soit plus réductible. Une partie est « gagnante » lorsque la pile finale est réduite à deux éléments exactement.
+
+Voici un exemple détaillé de déroulement d'une partie. 
+
+<figure>
+  <img src="../images/page2_3.png">
+  <figcaption>1128 × 412</figcaption>
+</figure>
+
+## Question 1
+A.  Donner les différentes étapes de réduction de la pile suivante : 
+
+<figure>
+  <img src="../images/page2_4.png">
+  <figcaption>524 × 394</figcaption>
+</figure>
+
+B.  Parmi les piles proposées ci-dessous, donner celle qui est gagnante. 
+
+<figure>
+  <img src="../images/page2_5.png">
+  <figcaption>952 × 468</figcaption>
+</figure>
+
+L'interface d'une pile est proposée ci-dessous. On utilisera uniquement les fonctions figurant dans le tableau suivant :
+
+| Structure de données abstraite : Pile  |  |
+|--- |--- |
+| `creer_pile_vide()` | renvoie une pile vide  |
+|  `est_vide(p)` | renvoie `True` si `p` est vide, `False` sinon |
+|  `empiler(p, element)` |  ajoute element au sommet de `p`  | 
+| `depiler(p)`  | retire l'élément au sommet de `p` et le renvoie  |
+| `sommet(p)`  |  renvoie l'élément au sommet de `p` sans le retirer de `p`   |
+| `taille(p)`| renvoie le nombre d'éléments de `p` | 
 
 
+## Question 2
+La fonction `reduire_triplet_au_sommet` permet de supprimer l'élément
+central des trois premiers éléments en partant du haut de la pile, si l'élément du bas et du haut sont de même parité. Les éléments dépilés et non supprimés sont replacés dans le bon ordre dans la pile.
+
+Recopier et compléter sur la copie le code de la fonction
+`reduire_triplet_au_sommet` prenant une pile `p` en paramètre et qui la
+modifie en place. Cette fonction ne renvoie donc rien.
+
+```python
+def reduire_triplet_au_sommet(p):
+  a = depiler(p)
+  b = depiler(p)
+  c = sommet(p)
+  if a % 2 != .... :
+    empiler(p, ...)
+  empiler(p, ...) 
+```
+
+## Question 3
+On se propose maintenant d'écrire une fonction `parcourir_pile_en_reduisant` qui parcourt la pile du haut vers le bas en procédant aux réductions pour chaque triplet rencontré quand cela est possible.
+
+A.  Donner la taille minimale que doit avoir une pile pour être réductible.
+
+B.  Recopier et compléter sur la copie :
+
+```python
+def parcourir_pile_en_reduisant(p):
+  q = creer_pile_vide()
+  while taille(p) >= ....:
+    reduire_triplet_au_sommet(p)
+    e = depiler(p)
+    empiler(q, e)
+  while not est_vide(q):
+    .............
+    .............
+  return p
+```
+
+## Question 4
+Partant d'une pile d'entiers `p`, on propose ici d'implémenter une fonction récursive `jouer` renvoyant la pile `p` entièrement simplifiée. Une fois la pile parcourue de haut en bas et réduite, on procède à nouveau à sa réduction à condition que cela soit possible. Ainsi :
+
+* Si la pile p n’a pas subi de réduction, on la renvoie.
+* Sinon on appelle à nouveau la fonction jouer , prenant en paramètre la
+pile réduite.
+
+Recopier et compléter sur la copie le code ci-dessous :
+
+```python
+def jouer(p):
+  q = parcourir_pile_en_reduisant(p)
+  if .............. :
+    return p
+  else:
+    return jouer(...)
+```  
 

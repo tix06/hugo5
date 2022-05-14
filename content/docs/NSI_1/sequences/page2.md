@@ -140,8 +140,36 @@ On a vu [deux algorithmes de tri](/pdf/NSI/algos_tri_simples.pdf): le tri par in
 ## Le tri par insertion
 Chaque nouvel élément non trié est comparé avec un élément déjà trié, par ordre croissant ou décroissant dans la partie triée. Le nouvel élément est *inséré* à la *bonne place*.
 
+*Exemple d'algorithme*
+
+```python
+def tri1(table):
+    for k in range(len(table)):
+        temp = table[k]
+        j = k
+        while j>0 and table[j-1]>temp:
+            table[j]=table[j-1]
+            j-=1
+        table[j]=temp
+    return table
+```
+
 ## Le tri par selection
 On recherche le plus petit élément dans la partie non triée et on l'insère à la fin de la partie *triée*.
+
+*Exemple d'algorithme*
+
+```python
+def tri2(T):
+    for i in range(len(T)-1):
+        indmin = i
+        for k in range(i+1, len(T)) :
+            if T[k] < T[indmin] :
+                indmin=k
+        if indmin != i :
+            T[i], T[indmin] = T[indmin], T[i]
+    return T
+``` 
 
 ## SORT et SORTED
 ### sorted(t)

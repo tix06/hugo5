@@ -199,3 +199,88 @@ sinon ;
 `arbre`;
 * `arbre_gauche(arbre)` : renvoie le sous arbre gauche de `arbre`;
 * `arbre_droit(arbre)` : renvoie le sous arbre droit de `arbre`. 
+
+
+# Bac 2022 Metropole 2: Exercice 1
+*Cet exercice porte sur les arbres binaires de recherche, la programmation orientée objet et la récursivité.*
+
+Dans cet exercice, la **taille** d’un arbre est le nombre de nœuds qu’il contient. Sa **hauteur** est le nombre de nœuds du plus long chemin qui joint le nœud racine à l’une des feuilles (nœuds sans sous-arbres). On convient que la hauteur d’un arbre ne contenant qu’un nœud vaut 1 et la hauteur de l’arbre vide vaut 0.
+
+## Question 1
+On considère l’arbre binaire représenté ci-dessous:
+
+<figure>
+  <img src=../images/page3_6.png>
+  <figcaption>Figure 1 - 390 × 370</figcaption>
+</figure>
+
+
+
+A.  Donner la taille de cet arbre.
+
+B.  Donner la hauteur de cet arbre.
+
+C.  Représenter sur la copie le sous-arbre droit du nœud de valeur 15.
+
+D.  Justifier que l’arbre de la figure 1 est un arbre binaire de recherche.
+
+E. On insère la valeur 17 dans l’arbre de la figure 1 de telle sorte que 17 soit une nouvelle feuille de l’arbre et que le nouvel arbre obtenu soit encore un arbre binaire de recherche. Représenter sur la copie ce nouvel arbre.
+
+## Question 2
+On considère la classe Noeud définie de la façon suivante en Python :
+
+```python
+class Noeud:
+  def __init__(self, g, v, d):
+    self.gauche = g
+    self.valeur = v
+    self.droit = d
+```
+
+A.  Parmi les trois instructions (A), (B) et (C) suivantes, écrire
+sur la copie la lettre correspondant à celle qui construit et
+stocke dans la variable abr l’arbre représenté ci-contre.
+
+(A) `abr=Noeud(Noeud(Noeud(None,13,None),15,None),21,None)`
+(B) `abr=Noeud(None,13,Noeud(Noeud(None,15,None),21,None))`
+(C) `abr=Noeud(Noeud(None,13,None),15,Noeud(None,21,None))`
+
+B.  Recopier et compléter la ligne 7 du code de la fonction `ins` ci-dessous qui prend en paramètres une valeur `v` et un arbre binaire de recherche `abr` et qui renvoie l’arbre obtenu suite à l’insertion de la valeur `v` dans l’arbre `abr`. Les lignes 8 et 9 permettent de ne pas insérer la valeur `v` si celle-ci est déjà présente dans `abr`. 
+
+```python
+def ins(v, abr):
+  if abr is None:
+    return Noeud(None, v, None)
+  if v > abr.valeur:
+    return Noeud(abr.gauche,abr.valeur,ins(v,abr.droit))
+  elif v < abr.valeur:
+    return ............................................
+  else:
+    return abr 
+```
+
+## Question 3
+La fonction `nb_sup` prend en paramètres une valeur `v` et un arbre binaire de
+recherche `abr` et renvoie le nombre de valeurs supérieures ou égales à la valeur `v` dans l’arbre `abr`.
+
+Le code de cette fonction `nb_sup` est donné ci-dessous : 
+
+```python
+def nb_sup(v, abr):
+  if abr is None:
+    return 0
+  else:
+    if abr.valeur >= v:
+      return 1+nb_sup(v, abr.gauche)+nb_sup(v, abr.droit)
+    else:
+      return nb_sup(v, abr.gauche)+nb_sup(v, abr.droit)
+```
+
+A.  On exécute l’instruction `nb_sup(16, abr)` dans laquelle `abr` est l’arbre
+initial de la figure 1. Déterminer le nombre d’appels à la fonction `nb_sup`.
+
+B.  L’arbre passé en paramètre étant un arbre binaire de recherche, on peut
+améliorer la fonction `nb_sup` précédente afin de réduire ce nombre d’appels.
+Écrire sur la copie le code modifié de cette fonction. 
+
+
