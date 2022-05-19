@@ -103,7 +103,7 @@ Le <a href="https://www.lemonde.fr/verification/">Décodex</a> est un outil pour
  Pourquoi utiliser <a href="https://www.lemonde.fr/les-decodeurs/article/2017/01/23/decodex-verifier-une-rumeur-qui-circule-sur-les-reseaux-sociaux_5067723_4355770.html">Decodex?</a>: Facebook, Twitter, Snapchat, Reddit ou YouTube ne sont pas des sources d’information en soi. Les publications que vous y trouverez peuvent aussi bien émaner de sources réputées sérieuses que d’internautes mal intentionnés.
 
 ## Google images
-**Une photo ou une vidéo n’est jamais une preuve en soi**. Pour vérifier la nature d'une photo, on peut effectuer une recherche sur Google photo, non pas par *mots-clés*, mais par *images* (uploader ou coller l'URL)
+**Une photo ou une vidéo n’est jamais une preuve en soi**. Pour vérifier la nature d'une photo, on peut effectuer une recherche sur Google photo, non pas par *mots-clés*, mais par *images* (uploader ou coller l'URL). On peut aussi faire un clic droit sur l'image et choisir (*Google lens*).
 
 <figure>
   <img src="../images/detour5.png">
