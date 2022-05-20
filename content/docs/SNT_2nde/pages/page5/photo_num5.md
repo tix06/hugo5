@@ -29,7 +29,7 @@ Quelle est la couleur donnée par ce triplet de valeurs ? (247,56,98)
 *Astuce:* On pourra verifier l'exactitude de la reponse avec l'outil de prélèvement de couleur (logiciel **Paint**). Suivre le tuto suivant: <a href="https://www.pcastuces.com/pratique/astuces/5453.htm">https://www.pcastuces.com/pratique/astuces/5453.htm</a>
 
 
-# Partie 3: Les données EXIF
+# Partie 2: Les données EXIF
 Certaines informations, contenues dans le fichier image, donnent des informations sur les conditions de la prise de vue, le type d’appareil utilisé, la géolocalisation, les dimensions de l’image… Ces données suivent un format précis du standard EXIF.
 
 Utilisez un logiciel en ligne de lecture des données EXIF, comme par exemple : <a href="https://onlineexifviewer.com/" target=_blank>onlineexifviewer.com/</a>

@@ -29,14 +29,20 @@ Une conséquence de l’usage d’un ou plusieurs RS est la constitution d’une
 - moyen de sociabilité sur la base de critères d'affinité ; 
 - média réticulaire de communication interpersonnelle et/ou intergroupe.
 
-# e-reputation
-La e-reputation est due à l'identité numérique que l'on se construit.
+# e-reputation et identité numérique
+## e-reputation
+La e-reputation est due à l'identité numérique que l'on se construit, mais aussi par ce qu'en disent les autres.
+
+La **e-réputation** a tendance à définir, aux yeux des autres, ce que vous êtes, **selon la manière dont on parlera de vous**, positivement ou négativement. Cette notoriété Internet peut pencher d’un côté comme de l’autre, en tout cas elle sera très représentative de la manière dont on vous percevra, qui que vous soyez.
 
 <figure>
   <div>
   <img src="../images/rs3.png">
  </div>
 </figure>
+
+## identité numérique
+L’identité numérique est de son côté le lien entre une personne et ses informations virtuelles, pouvant être trouvées par le biais d’une simple recherche sur Internet. Cette identité est **multiple**.
 
 Toute activité sur le Web implique la création de traces. Certaines sont volontaires, d'autres involontaires. Elles sont collectées, partagées entre applications et stockées dans des bases de données. Leur addition construit l'identité numérique de chacun.
 
@@ -48,7 +54,7 @@ ces informations seraient divulguées ou revendues à une autre entreprise ?
 > Ténroignage : elte réclarne ses données et reçoit". " 800 pages !
 *D'après Libération*
 
-Les reseaux sociaux peuvent repondre à un besoin de reconnaissance. Cela peut entrainer un comportement addictif dans leur usage, en multipliant les parutions ou autres activités (partage, like).
+Les **reseaux sociaux** peuvent repondre à un besoin de reconnaissance. Cela peut entrainer un **comportement addictif** dans leur usage, en multipliant les parutions ou autres activités (partage, like).
 
 *C'est à partir de ce constat que Beomseok Yang, réalisateur sud-coréen, a décidé de produire un court-métrage montrant l'addiction aux réseaux sociaux. Notamment chez les jeunes.*
 

@@ -69,6 +69,7 @@ Le jaune : 255 255 0. Le jaune orangé : 238 160 73...etc
 
 Exemple d'une image 100*100 pixels, de profondeur de couleur d'environ 16 millions $$255\times 255 \times 255$$
 
+
 <figure>
 <img src="../images/zlatan.jpg" alt="image pixelisée couleur" width="60%">
 <figcaption>image pixelisée couleur</figcaption>
