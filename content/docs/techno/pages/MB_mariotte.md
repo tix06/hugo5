@@ -193,5 +193,36 @@ $$P \times V = Constante$$
 
 Cette loi est-elle en accord avec la courbe obtenue?
 
+# Prolongement: Modelisation
+Adapter alors le script suivant pour obtenir la courbe modélisée $P = f(\tfrac{1}{V})$
+
+*Cellule python 1*: équation de la courbe modélisée
+
+```python
+from scipy import stats
+import numpy as np
+inv_volume_np = np.asarray(inv_volume)
+pression_np = np.asarray(pression)
+a, b, r_value, p_value, std_err = stats.linregress(inv_volume, pression)
+a, b, r_value
+```
+
+*Cellule python 2* créer une fonction de prédiction à partir du modèle
+
+```python
+def H(x,a,b):
+    return a * x + b
+```
+
+*Cellule python 3* graphique avec courbe modélisée
+
+```python
+plt.clf()
+plt.plot(inv_volume_np,pression_np,'o') # nuage de points de l'acquisition
+plt.plot(inv_volume_np, H(inv_volume_np,a, b), c='r')
+plt.show()
+```
+
+
 
 
