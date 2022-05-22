@@ -179,14 +179,22 @@ La nouvelle liste, `inv_volume` va stocker les valeurs calculées à partir de $
 > Tracer alors le graphique tension = f(`inv_volume`). Que constatez-vous?
 
 ## Utiliser la fonction d'etalonnage
-La tension du capteur correspond à une certaine valeur de pression. La fonction pression = f(tension) est donnée ici...
+La tension du capteur correspond à une certaine valeur de pression. 
 
-**à compléter** 
+* A l'aide d'un manomètre, mesurer la pression atmosphérique **`Po`**
+* Relever la valeur de tension donnée par le capteur à pression **`Uo`** 
 
-Utilisez cette fonction d'etalonnage pour créer une nouvelle liste `pression` à partir de celle `tension`.
+Le coefficient de conversion *tension-pression* est donné à **75 kPa/V**
+
+Pour une *tension* **U** mesurée lors de l'experience, la *pression* **P** correspondante est donnée par:
+
+$$P = Po + 75\times(U-Uo)$$ 
+
+Utilisez cette fonction d'etalonnage pour créer une nouvelle liste `pression` à partir de celle `tension`. Les pressions sont alors en kPa (kiloPascal).
 
 > Tracer alors le graphique pression = f(`inv_volume`). Que constatez-vous?
 
+## Mise en evidence la loi de Mariotte
 La loi de Mariotte s'énonce ainsi:
 
 $$P \times V = Constante$$
