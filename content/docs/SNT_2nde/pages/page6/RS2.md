@@ -42,9 +42,12 @@ La **e-réputation** a tendance à définir, aux yeux des autres, ce que vous ê
 </figure>
 
 ## identité numérique
+### Definition
 L’identité numérique est de son côté le lien entre une personne et ses informations virtuelles, pouvant être trouvées par le biais d’une simple recherche sur Internet. Cette identité est **multiple**.
 
 Toute activité sur le Web implique la création de traces. Certaines sont volontaires, d'autres involontaires. Elles sont collectées, partagées entre applications et stockées dans des bases de données. Leur addition construit l'identité numérique de chacun.
+
+### Les reseaux sociaux parlent pour nous
 
 > Une journaliste parisienne inscrite sur un fameux site de rencontre a décidé de réclamer ses données personnelles auprès dti site.
 Pour 1'équivalent d'une fréquentation de 4 années, el1e a reçu
@@ -54,6 +57,16 @@ ces informations seraient divulguées ou revendues à une autre entreprise ?
 > Ténroignage : elte réclarne ses données et reçoit". " 800 pages !
 *D'après Libération*
 
+Les informations qui nous definissent sur le Net viennent de nos publications, mais aussi de notre activité. Toutes les applications utilisées peuvent partager nos données selon le paramétrage effectué.
+
+<figure><a href="https://youtu.be/F7pYHN9iC9I">
+  <img src="../images/rs12.png">
+  <figcaption>Amazing mind reader reveals his 'gift'<br>
+  Un mentaliste révèle sont secrêt</figcaption>
+</a>
+</figure>
+
+### Addiction
 Les **reseaux sociaux** peuvent repondre à un besoin de reconnaissance. Cela peut entrainer un **comportement addictif** dans leur usage, en multipliant les parutions ou autres activités (partage, like).
 
 *C'est à partir de ce constat que Beomseok Yang, réalisateur sud-coréen, a décidé de produire un court-métrage montrant l'addiction aux réseaux sociaux. Notamment chez les jeunes.*
@@ -63,7 +76,7 @@ Les **reseaux sociaux** peuvent repondre à un besoin de reconnaissance. Cela pe
 <figure>
   <a href="https://youtu.be/QBHMO7PRqs0">
   <img src="../images/rs_video1.png">
-  <figcaption>Are You Living an Insta Lie? Social Media Vs. Reality</figcaption></a>
+  <figcaption>Beomseok Yang: SOCIAL NETWORK</figcaption></a>
 </figure>
 
 <figure>

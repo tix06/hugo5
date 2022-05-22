@@ -85,7 +85,7 @@ Dans l'exemple suivant, on voit que l'expression `[a+(b+c)]` est correctement pa
 ### La pile: interface
 La pile est une structure de données appropriée quand :
 
-* On veut stocker des éléments dontle nombre est variable, et inconnu à l’avance.
+* On veut stocker des éléments dont le nombre est variable, et inconnu à l’avance.
 *  On peut ou on doit se contenter d’accéder au dernier élément stocké.
 
 Dans d'autres cas, il faudra utiliser une autre structure de données, comme par exemple un tableau.
@@ -115,7 +115,7 @@ pile[-1]            # lire l'element au sommet de la pile
 
 Lorsque l'on fait référence à une structure de données de type *pile* en traduisant un algorithme en Python, il faudra se contenter de ces 5 instructions.
 
-### Interface ou implémentation ? 
+### Interface ou implémentation ?
 
 
 Les types abstraits, comme les piles, sont définis par leur **interface** (comment  on s’en sert) plutôt que par leur **implémentation** (comment ils fonctionnent). Ils permettent d’étudier des algorithmes indépendamment  du langage utilisé.  
