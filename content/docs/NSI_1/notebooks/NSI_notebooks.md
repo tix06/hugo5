@@ -38,13 +38,13 @@ Accéder au depot, notebooks en ligne sur jupyterlite: cliquer sur le lien <a hr
 
 ## TP4 sur les algorithmes et l'intelligence artificielle
 <ul>
-    <li>TP4: Analyse de données avec Pandas: <a href="https://tix06.github.io/jupyterlite_NSI/lab/index.html" target="_blank">Lien vers Jupyterlite</a><br>
+    <li>TP4: <b>Analyse de données avec Pandas</b>: <a href="https://tix06.github.io/jupyterlite_NSI/lab/index.html" target="_blank">Lien vers Jupyterlite</a><br>
       Choisir le ficher <em>TP4/data_analyse_pandas.ipynb</em></li>
     <li>IA1-notebook sur la <b>Regression lineaire</b> en ligne sur <a href="https://tix06.github.io/jupyterlite_NSI/lab/index.html" target="_blank">Jupyterlite</a>: Choisir le dossier TP4/linear_regression.ipynb</li>
-    <li>IA2-notebook sur <b>l'algo Knn</b> et le <i>basket US</i> en ligne sur Jupyterlite: <a href="https://tix06.github.io/jupyterlite_NSI/lab/index.html" target="_blank">Lien vers Jupyterlite</a>: Choisir le fichier <i>TP4/AlgoKnn.ipynb</i> et completer la fiche reponse <a href="/pdf/NSI/IA2_algo_KNN_TP.pdf" download="IA2_algo_KNN_TP.pdf">IA2_algo_KNN_TP.pdf</a> pour les questions<br> On pourra s'aider du fichier <i>TP4/AlgoKnn_correction.ipynb</i> si besoin.</li> 
+    <li>IA2-notebook sur <b>l'algo Knn</b> et le <i>basket US</i> en ligne sur  <a href="https://tix06.github.io/jupyterlite_NSI/lab/index.html" target="_blank">Jupyterlite</a>: Choisir le fichier <i>TP4/AlgoKnn.ipynb</i> et completer la fiche reponse <a href="/pdf/NSI/IA2_algo_KNN_TP.pdf" download="IA2_algo_KNN_TP.pdf">IA2_algo_KNN_TP.pdf</a> pour les questions<br> On pourra s'aider du fichier <i>TP4/AlgoKnn_correction.ipynb</i> si besoin.</li> 
 </ul>
 
 ## TP5 sur les algorithmes d'optimisation
 <ul>
-  <li>TP sur l'algorithme du rendu de monnaie: <a href="https://tix06.github.io/jupyterlite_NSI/lab/index.html" target="_blank">Lien vers Jupyterlite</a>: Choisir le fichier <i>TP5/rendu_de_monnaie_NSI_1.ipynb</i></li>
+  <li>TP sur l'<b>algorithme du rendu de monnaie</b>: <a href="https://tix06.github.io/jupyterlite_NSI/lab/index.html" target="_blank">Lien vers Jupyterlite</a>: Choisir le fichier <i>TP5/rendu_de_monnaie_NSI_1.ipynb</i></li>
 </ul>
