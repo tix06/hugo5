@@ -35,3 +35,16 @@ Accéder au depot, notebooks en ligne sur jupyterlite: cliquer sur le lien <a hr
 ## TP3 sur les données en table
 * Pour une utilisation en local: Fichier à telecharger: <a href="/scripts/notebooks/TP_donnees_table_csv.zip" download="TP_donnees_table_csv.zip">TP_donnees_table_csv.zip</a>
 * Cloud: nom du fichier sur le dépôt: *exercices_tables_csv.ipynb*
+
+## TP4 sur les algorithmes et l'intelligence artificielle
+<ul>
+    <li>TP4: Analyse de données avec Pandas: <a href="https://tix06.github.io/jupyterlite_NSI/lab/index.html" target="_blank">Lien vers Jupyterlite</a><br>
+      Choisir le ficher <em>TP4/data_analyse_pandas.ipynb</em></li>
+    <li>IA1-notebook sur la <b>Regression lineaire</b> en ligne sur <a href="https://tix06.github.io/jupyterlite_NSI/lab/index.html" target="_blank">Jupyterlite</a>: Choisir le dossier TP4/linear_regression.ipynb</li>
+    <li>IA2-notebook sur <b>l'algo Knn</b> et le <i>basket US</i> en ligne sur Jupyterlite: <a href="https://tix06.github.io/jupyterlite_NSI/lab/index.html" target="_blank">Lien vers Jupyterlite</a>: Choisir le fichier <i>TP4/AlgoKnn.ipynb</i> et completer la fiche reponse <a href="/pdf/NSI/IA2_algo_KNN_TP.pdf" download="IA2_algo_KNN_TP.pdf">IA2_algo_KNN_TP.pdf</a> pour les questions<br> On pourra s'aider du fichier <i>TP4/AlgoKnn_correction.ipynb</i> si besoin.</li> 
+</ul>
+
+## TP5 sur les algorithmes d'optimisation
+<ul>
+  <li>TP sur l'algorithme du rendu de monnaie: <a href="https://tix06.github.io/jupyterlite_NSI/lab/index.html" target="_blank">Lien vers Jupyterlite</a>: Choisir le fichier <i>TP5/rendu_de_monnaie_NSI_1.ipynb</i></li>
+</ul>
