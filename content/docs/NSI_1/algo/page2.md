@@ -70,7 +70,7 @@ Il existe alors plusieurs méthodes d'association :
 *Ici : le produit A apparaît dans 80% des achats, le produit C n'apparaît jamais en même temps que le produit E, les produits A et D apparaissent simultanément dans 40% des achats.
 Ces observations peuvent suggérer une règle de la forme : « Si un client achète le produit A ALORS il achète le produit D ».*
 
-On cherche alors à générer des règles du type : *si A alors D* avec, pour chacune, un pourcentage de confiance. Par exemple, cette règle apparaissant ici apparaissant dans 40% des achats, on considère que le pourcentage de confiance est égal à 40%. Ces regles d'association vont constituer des **classes**. Ces *classes* étant à priori inconnues, il s'agit alors d'un système d'*apprentissage non supervisé*.*
+On cherche alors à générer des règles du type : *si A alors D* avec, pour chacune, un pourcentage de confiance. Par exemple, cette règle apparaissant ici apparaissant dans 40% des achats, on considère que le pourcentage de confiance est égal à 40%. Ces regles d'association vont constituer des **classes**. Ces *classes* étant à priori inconnues, il s'agit alors d'un système d'*apprentissage non supervisé*.
 
 ## Le clustering
 **mots clés :** *Données continues*, *apprentissage non supervisé*, *algorithme des k-plus proches voisins*
@@ -82,4 +82,3 @@ Le clustering désigne les méthodes de regroupement automatique de données qui
 <figcaption>L'objectif du clustering est de retrouver les différents clusters de données, c'est-à-dire de regrouper les données similaires entre elles</figcaption>
 </figure>
 
-*On pourra étudier cet exemple en détail avec la page `Python algo KNN` de ce même site*.
