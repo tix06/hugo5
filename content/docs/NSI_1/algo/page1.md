@@ -65,8 +65,67 @@ Cet exemple est issu du [Blog mrmint.fr](https://mrmint.fr/regression-lineaire-p
 
 Ce problème est de type apprentissage supervisé modélisable par un algorithme de régression linéaire. Il est de type supervisé car pour chaque ville ayant un certain nombre de population (variable prédictive X), on a le gain effectué dans cette dernière (la variable qu’on cherche à prédire : Y).
 
+## Notebook
 Vous utiliserez le notebook en ligne sur <a href="https://tix06.github.io/jupyterlite_NSI/lab/index.html" target="_blank">Jupyterlite</a>: Dossier `TP4/linear_regression.ipynb`
 
+
+# Algorithme des K proches voisins Knn
+## Principe
+Il s'agit d'un algorithme d'apprentissage supervisé, initialisé par des exemples connus. Pour cela, on part d'un jeu de données existant dont on connait les *classes*.
+
+L'algorithme KNN (k-nearest neightbors) permet de déterminer à quelle classe appartient un nouvel élément.
+
+## Exemple: Les joueurs de NBA
+On cherche une correspondance entre les **caractéristiques physiques** d'un joueur de basket et son **poste** sur le terrain.
+
+Pour simplifier, on considerera que les postes sont au nombre de trois : 
+
+* le joueur Centre, noté **'C'** (position 5 sur le schéma)
+* Le joueur Ailier, noté **'F'** (positions 3 et 4 sur le schéma)
+* Le joueur arrière ou meneur de jeu, noté **'G'** (positions 1 et 2 sur le schéma)
+
+Les données sont issues de la page : [nba.com](https://fr.global.nba.com/playerindex)
+
+La ligue de basket americaine contient environ 400 joueurs professionnels. La plupart de nationalité américaine. On dispose d'un extrait de ce fichier (voir dans le dossier `datas`), constitué de moins de 100 joueurs, classés par ordre alphabetique.
+
+<figure>
+  <img src="../images/nba1.png">
+  <figcaption>extrait du tableau des joueurs NBA en 2020</figcaption>
+</figure>
+
+### Apprentissage supervisé
+Chaque joueur de basket occupe un poste particulier sur le terrain:
+
+<figure>
+  <img src="../images/nba2.png">
+  <figcaption>poste occupé sur le terrain</figcaption>
+</figure>
+
+Une étude des caractéristiques physique des joueurs montre une correlation entre le poids, la taille, et le poste du joueur. Dans un diagramme taille-poids, les joueurs se repartissent en îlots selon leur poste:
+
+<figure>
+  <img src="../images/centre.png">
+  <figcaption>les joueurs <b>Centre</b> se repartissent en haut à droite</figcaption>
+</figure>
+
+### Prédiction
+On peut alors prévoir le poste d'un nouveau joueur. Pour cela on observe ses k plus proches voisins, et on en déduit quel poste corresspnd à son physique, à partir de la classe majoritairement représentée.
+
+<figure>
+  <img src="../images/joueur9.png">
+  <figcaption>Le joueur semble être à la limite des classes <b>F</b> et <b>G</b></figcaption>
+</figure>
+
+*Méthode:*
+
+* on ajoute une nouvelle colonne calculée: Pour le joueur inconnu, on calcule la **distance** avec chaque élément *classé* dans le tableau .
+* on *trie* le tableau selon la **distance**.
+* on observe la classe majoritaire pour les k prremiers éléments classés de la liste triée. La valeur de **k** doit être représentative. On prendra la plupart du temps $k = \sqrt N$
+
+### Notebook
+  <ul>
+    <li>IA2-notebook sur <b>l'algo Knn</b> et le <i>basket US</i> en ligne sur Jupyterlite: <a href="https://tix06.github.io/jupyterlite_NSI/lab/index.html" target="_blank">Lien vers Jupyterlite</a>: Choisir le fichier <i>TP4/AlgoKnn.ipynb</i> sur <i>Jupyterlite</i> et completer la fiche reponse <a href="/pdf/NSI/IA2_algo_KNN_TP.pdf" download="IA2_algo_KNN_TP.pdf">IA2_algo_KNN_TP.pdf</a> pour les questions</li> 
+  </ul>
 
 # Liens
 * [Blog mrmint.fr](https://mrmint.fr/regression-lineaire-python-pratique)
