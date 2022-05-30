@@ -144,7 +144,7 @@ Par exemple, la meilleure façon de rendre 7 euros est de rendre un billet de ci
   <figcaption>Image by <a href="https://pixabay.com/users/conmongt-1226108/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2048569">Christian Dorn</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2048569">Pixabay</a></figcaption></a>
 </figure>
 
-### algorithme naif 
+### algorithme naif
 Une première idée, naïve serait de commencer par rendre la piece de plus grande valeur, puis sur la somme restante, la pièce un peu moins grande, et ainsi de suite.
 
 Pour une somme `cost` à rendre, et un systeme de monnaie appelé `caisse` :

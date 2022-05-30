@@ -50,7 +50,7 @@ Le machine learning est un domaine large, qui comprend de très nombreux algorit
 * Les arbres de décision : en répondant à un certain nombre de questions et en suivant les branches de l’arbre qui portent ces réponses, on arrive à un résultat (avec un score de probabilité)
 * Ainsi que des algorithmes plus perfectionnés reposant sur plusieurs techniques de statistiques
 
-## Les domaines professionnels 
+## Les domaines professionnels
 Tous les champs professionnels, du moment où il y a des données qui sont collectées : 
 dans l'entreprise, le commerce, dans la recherche, .... 
 
@@ -79,7 +79,7 @@ En se basant sur des informations passées, les techniciens spécialisés dans l
   * Analyse d’opinions sur le Web
   * Analyse des recherches sur le Web : Google Trends
 
-## Vocabulaire 
+## Vocabulaire
 
 * dataset : jeu de données. Ce jeu de données peut en contenir un petit nombre ou un très grand nombre de données (big data). Ces données peuvent être discretes (qualitatives) ou continues (valeurs numériques).
 
