@@ -22,7 +22,7 @@ Une fois le compte créé:
 
 <figure>
   <img src="../images/pytanyw1.png">
-  <figcaption>acceder à l'ongle education</figcaption>
+  <figcaption>acceder à l'onglet education</figcaption>
 </figure>
 
 

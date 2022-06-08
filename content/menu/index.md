@@ -18,6 +18,8 @@ headless: false
 	
 - [**ESF**]({{< relref "/docs/esf/esf_index" >}})
 
+-  [**Python debutant**]({{< relref "/docs/python/index_python_D" >}})
+
 - [**Python avancé**]({{< relref "/docs/python/index_python" >}})
 
 - [**Techno**]({{< relref "/docs/techno/index_microcontroleurs" >}})

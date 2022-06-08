@@ -130,7 +130,7 @@ print('Il termine donc avec i = ' + str(i))
 Ecrire un programme qui affiche la table de multiplication par 7.
 
 ## Exercice 2
-Ecrire un programme qui réalise la multiplication de 1024 par 16, en n'utilisant que des additions (par de *): adapter pour cela l'algorithme vu en classe.
+Ecrire un programme qui réalise la multiplication de 1024 par 16, en n'utilisant que des additions (par de *): adapter pour cela l'algorithme vu en classe.* 
 
 # Boucle non bornée
 ## Principe

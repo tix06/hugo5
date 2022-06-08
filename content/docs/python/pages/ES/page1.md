@@ -102,7 +102,7 @@ with open("zoo2.txt", "w") as filout:
          filout.write(animal)
 ```
 
-à la ligne 2 : ouverture du fichier `zoo2.txt` en mode écriture, avec le caractère `w pour write. 
+à la ligne 2 : ouverture du fichier `zoo2.txt` en mode écriture, avec le caractère `w pour write.`
 
 Si nous ouvrons le fichier zoo2.txt avec un éditeur de texte, voici ce que nous obtenons :
 
