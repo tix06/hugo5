@@ -213,6 +213,17 @@ print('le reste de la division de ' + str(a) + ' par ')
 
 * **Question h:** Completer la derniere ligne du script pour afficher la phrase suivante: `Le reste de la division de 45 par 26 est egal a 19` Vous ne devrez pas écrire les chiffres 26 et 19 dans le message. Seulement utiliser les variables, ou une opération sur ces variables.
 
+### Script 8
+Calculer en physique
+
+Dans une cellule Python, 
+
+* commencez par attribuer 100 à la variable `m`, et 20 à la variable `v`
+* calculer puis afficher E, l'energie cinetique pour un systeme de masse 100kg et de vitesse 20m.s<sup>-1</sup>, selon la loi:
+
+$$E = 1/2\times m \times v^2$$
+
+* **Question i:** Quelle est l'expression que vous avez saisie en langage Python? Quelle est la valeur calculée pour l'énergie cinetique?
 
 
 

@@ -188,6 +188,7 @@ a * 3
 # Séquences : les listes et les tuples
 Une séquence est une structure de données qui stocke une collection d'éléments dans un ordre déterminé.
 ## Listes
+**Definition:** Une **liste** est une collection ordonnée d'objets.
  Une **liste** est entourée de **crochets** `[ ]`
 
 Les éléments contenus peuvent être de tout type.
@@ -196,6 +197,8 @@ On accède à un élément d'une liste grace à sa position, appelée *indice*. 
 
 <figure>
   <img src="../images/liste.png">
+  <figcaption>La liste `voyelles` est une collection contenant les caractères<br>
+  "e","i" et "o"</figcaption>
 </figure>
 
 Un indice négatif donne accès à la liste à partir du dernier élément.

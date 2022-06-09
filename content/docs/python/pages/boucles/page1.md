@@ -34,11 +34,34 @@ for i in range(10):
 
 
 ## Boucle `for` et listes
-On peut parcourir une liste de 2 manières avec une boucle `for`, selon si l'on veut avoir accès à l'indice ou seulement aux éléments:
+On peut parcourir une liste de 2 manières avec une boucle `for`, selon si l'on veut avoir accès à l'indice ou seulement aux seuls éléments:
 
 * acceder aux seuls éléments : `for element in Liste:`
-* acceder à l'indice ET aux elements : `for i,element in enumerate(Liste):`
+* parcourir la liste à partir des indice: `for i in range(len(Liste)):`
 
+Enfin, on peut avoir besoin d'acceder à l'indice ET aux elements : `for i,element in enumerate(Liste):`
+
+```python
+L = ["a","b","c"]
+for i in L:
+  print(i)
+# affiche
+a
+b
+c
+for i in range(len(L)):
+  print(i, L[i])
+# affiche
+0 a
+1 b
+2 c
+for i, lettre in enumerate(L):
+  print(i, lettre)
+# affiche
+0 a
+1 b
+2 c
+``` 
 
 ### exemples d'algorithmes sur les listes
 
