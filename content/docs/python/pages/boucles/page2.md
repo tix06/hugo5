@@ -1,41 +1,8 @@
 ---
 Title: listes
-bookShowToc: false
 ---
 
   
-  <!--<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
- -->
-  <style>
-    .editor-box{
-      width: 60%;
-      display: block;
-    }
-    #output > div {
-    font-family: 'monospace';
-    background-color: #e5e5e5;
-    border: 1px solid lightgray;
-    /*border-top: 0;*/
-    font-size: 0.875rem;
-    padding: 0.5rem;
-  
-  }
-
-  #output > div:first-child {
-    border-top: 1px solid lightgray;
-    display: block;
-  }
-
-  #output > div:nth-child(even) {
-    border: 0;
-  } 
-</style>
-
-<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-<py-env>
-    - matplotlib
-</py-env>
-
 # Listes et boucles bornées
 ## Listes
 **1. Definition:** Une **liste** est une collection ordonnée d'objets.
@@ -112,6 +79,38 @@ len(voyelles)
 # affiche 4 
 # car la liste contient 4 éléments
 ```
+
+**4. Liste de listes** 
+Les éléments contenus peuvent aussi être une liste:
+
+```python
+positions = [[0,0], [1,2], [2,4]]
+```
+
+C'est la représentation d'un tableau, qui sur un tableur peut être représenté sous la forme suivante:
+
+<figure>
+  <img src="../images/tableau.png">
+</figure>
+
+Les éléments de la liste `positions` sont `[0,0]`, `[1,2]`, et `[2,4]`
+
+Pour accéder au deuxieme élément `[1,2]`, on fait:
+
+```python
+positions[1]
+# retourne
+[1,2]
+```
+
+Et pour acceder au premier élément du 2e élément de `posiotns`, c'est à dire à la valeur 1, on fait:
+
+```python
+positions[1][0]
+# retourne
+1
+```
+Cela permet d'afficher ou modifier la valeur 1.
 
 ## Boucles bornées
 **1. Definition:** Une **boucle bornée**  est un système d’instructions qui permet de répéter un certain nombre de fois toute une série d’opérations.
@@ -200,26 +199,12 @@ plt.ylabel('Temperature(°C)')
 plt
 ```
 
-<figure><div>
+
+<figure>
   <img src="../images/graphique.png">
-  </div>
 </figure>
 
 
-# Editeur Python
-* L'**editeur** suivant se présente comme un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
 
-<div>
-<py-repl id="my-repl" auto-generate="true"></py-repl>
-</div>
-
-# TP
-
-## Exercice
-Energies en SPC
-
-```python
-t = [0,0.04,0.08,0.12,0.16,0.2,0.24]
-v = [5.2,4.8,4.41,4.02,3.63,3.23,2.84]
-```
-
+# Travaux pratiques
+<a href="../page3" target=_blank>Lien vers l'editeur Python et l'énoncé du TP</a>
