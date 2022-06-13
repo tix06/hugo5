@@ -167,7 +167,7 @@ nombre=nombre-5
 - affecte 3 à la variable nombre
 - Ajoute 7 au triple du nombre donné
 - Multiplie le résultat par le nombre donné
-- Soustrait au résultat le nombre donné ;
+- Soustrait au résultat le nombre 1 ;
 - Affiche le résultat obtenu.
 
 * **Question d:** Quel est le résultat?

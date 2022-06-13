@@ -206,5 +206,6 @@ plt
 
 
 
-# Travaux pratiques
-<a href="../page3" target=_blank>Lien vers l'editeur Python et l'énoncé du TP</a>
+# Travaux pratiques TP1 et TP2
+* <a href="../page3" target=_blank>Lien vers l'editeur Python et l'énoncé du TP1: Listes</a>
+* <a href="../page4" target=_blank>Lien vers l'editeur Python et l'énoncé du TP2: boucles et parcours de listes</a>

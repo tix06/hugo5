@@ -110,6 +110,8 @@ True
 | * | 12 * 0.1 |
 | / | 12 / 10 |
 | // | 12 // 10 |
+| % | 4 % 2 |
+| % | 5 % 2 |
 | - | 10 - 12 |
 | ** | 2**8 |
 | e | 12e-3 |
@@ -120,7 +122,7 @@ True
 
 
 
-* **Question a:** Quel est le rôle pour chacun de ces opérateurs?
+* **Question a:** Quel est le rôle pour chacun de ces opérateurs? Que donne `N%2` pour N pair; pour N impair?
 * **Question b:** Calculer à l'aide de la console le résultat de: 1127 + 9.10<sup>21</sup> / 10<sup>4</sup> <br>Ecrivez sur votre cahier l'expression utilisée en python, ainsi que le résultat, exprimé en langage mathématique.
 * **Question c:** Quel est le signe utilisé pour séparateur décimal en python?
 
