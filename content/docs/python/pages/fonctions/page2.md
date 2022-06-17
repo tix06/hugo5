@@ -41,13 +41,13 @@ bookShowToc: false
 **Appel de fonction:** On peut ensuite exécuter ce bloc en utilsant ce *nom*. On dit qu'on **appelle** cette fonction en écrivant son nom, suivi de parenthèses `()`.
 
 
-**Valeur de retour:** Une fonction retourne en général une valeur. Après le mot-clé `return`:
+**Valeur de retour:** Une fonction retourne en général une valeur. Après le mot-clé `return`
+
 
 * *Exemple 1* Dans ce script, on definit une fonction qui retourne `Hi`. Les lignes commençant par le symbole `#` sont des commentaires, et ne sont pas executées par Python. Elles sont optionnelles.
 
 ```python
 # definition de la fonction
-```python
 def hello():
   return 'Hi'
 
@@ -79,7 +79,7 @@ carre(5)
   <figcaption>illustration du passage d'argument lors de l'appel de la fonction</figcaption>
 </figure>
 
-Lors de l'*appel de la fonction*, le nombre d'arguments passés doit correspondre au nombre de paramètres attendus. (sauf pour les paramètres ayant une valeur par defaut). 
+Lors de l'*appel de la fonction*, le ou les arguments passés doivent correspondre aus paramètres attendus. 
 
 * *Exemple 3*: fonction qui calcule la surface d'un rectangle à partir de la longueur de ses côtés `x` et `y` (les 2 paramètres de la fonction).
 
@@ -90,6 +90,8 @@ def calcul_surface(x,y):
   return S
 
 # appel de la fonction avec x=2 et y=3
+# x sera place en premier argument
+# y sera place en 2e argument
 calcul_surface(2,3)
 # retourne 6
 ```
@@ -102,7 +104,38 @@ calcul_surface(2,3)
 </div>
 
 # TP
-## Ex Bonjour
+## Ex 1: fonction sans paramètre
+La fonction suivante va retourner un dessin réalisé à partir de symboles ascii du clavier:
+
+```python
+def figure():
+  fig = "^---^"
+  print(fig)
+  fig = "_00_"
+  print(fig)
+  fig = "|-=-|"
+  print(fig)
+```
+
+* Saisir le script dans une cellule python et executer.
+* Dans une nouvelle cellule python: appeler la fonction. Ecrire: `figure()`
+
+*La plupart du temps, on evitera d'utiliser la fonction `print` à l'intérieur d'une fonction. Sauf cas particulier comme ci-dessus.*
+
+La fonction suivante va justement utiliser le mot clé `return` prévu pour qu'il y ait une *sortie*.
+
+```python
+def dessine():
+  n = 3
+  dessin = ""
+  for i in range(n):
+    dessin = dessin + "x*x"
+  return dessin
+```
+
+* **Question a:** Tester la fonction du 2e script. Comment a-t-on evité d'utiliser `print` dans cette fonction?
+
+## Ex 2: fonction avec paramètre
 
 > Ecrire une fonction `salut` qui prend pour paramètre `nom` et qui retourne une chaine de caractères `bonjour + "nom"`. 
 
@@ -123,4 +156,5 @@ salut("George")
 bonjour George
 ```  
 
+* **Question b:** Citer un avantage d'utiliser une fonction plutôt qu'une serie d'instructions pour afficher *bonjour* de manière personalisée.
 

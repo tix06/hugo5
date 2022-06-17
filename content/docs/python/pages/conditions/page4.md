@@ -98,3 +98,22 @@ while somme <= 20:
 ``` 
 
 * **Question c:** Quel nombre **x** d'années se sont écoulées? La somme a t-elle exactement doublé au bout de ces **x** années?
+
+## Ex 4: tirage aleatoire
+Le programme suivant utilise la fonction `randint`, qui effectue le tirage aleatoire d'une valeur comprise entre 2 bornes:
+
+`randint(1,6)` permet d'effectuer un tirage aleatoire d'une valeur entiere entre 1 et 6.
+
+```python
+from random import randint
+n = 1
+while randint(1,6) != 6:
+  n = n + 1
+print(n)
+```
+
+* **Question d:** A quoi sert ce programme:
+  * à compter le nombre d'apparion du nombre 6?
+  * ou à calculer le nombre de lancers jusqu’à l’apparition du premier 6?
+
+* **Question e:** La boucle « Tant que » pourrait en théorie ne jamais s’arrêter. Pourquoi ? Corriger le script pour pallier ce problème.
