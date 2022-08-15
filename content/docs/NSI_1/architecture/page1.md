@@ -102,6 +102,9 @@ C'est aussi le *premier ordinateur binaire*, ne comportant plus de pièces méca
   <img src="../images/archi5.png">
 </figure>
 
+## Machine de Turing
+(à compléter)
+
 ## Architecture Von Neumann
 **Definition:** Un **ordinateur** est un **appareil programmable** qui stocke son **programme** dans une **mémoire modifiable**.
 [article wikibook sur l'architecture de base d'un ordinateur](https://fr.wikibooks.org/wiki/Fonctionnement_d%27un_ordinateur/L%27architecture_de_base_d%27un_ordinateur)
@@ -156,3 +159,4 @@ Les données doivent circuler entre les différentes parties d’un ordinateur, 
 * article presentant les technologies de la machine à calculer aux ordinateur de 4e génération: [Evolution des machines à calculer - Alexandre Faribault](https://www.physique.usherbrooke.ca/~afaribau/essai/)
 * 5000 ans d'histoire [Deutsches Museum](https://artsandculture.google.com/story/hQUBvBSY16WtIQ)
 * [Fiche pdf cours architecture - niveau terminale NSI](https://isn-icn-ljm.pagesperso-orange.fr/1-NSI/res/res_histoire_1.pdf)
+* présentation ppt d'un cours de DIU informatique sur l'architecture [ecursus.univ-antilles.fr](https://ecursus.univ-antilles.fr/pluginfile.php/189469/mod_resource/content/1/Cours%20SE.pdf)
