@@ -29,7 +29,11 @@ On a souvent l'impression que pour chaque problème on peut trouver un algorithm
 </a>
 </figure>
 
-**David Hilbert** (1862 – 1943), professeur à Göttingen, présente en 1920 un programme de recherche visant à clarifier les fondaments des mathématiques : “tout enoncé mathématique peut être soit prouvé ou refuté”. Plus tard il enonce le “Entscheidungsproblem” : montrer de façon “mécanique” si un enoncé mathématique est vrai ou faux. Selon lui, tout est *décidable*, selon le terme qui sera employé plus tard.
+**David Hilbert** (1862 – 1943), professeur à Göttingen, présente en 1920 un programme de recherche visant à clarifier les fondaments des mathématiques : “tout enoncé mathématique peut être soit prouvé soit refuté”. Plus tard il enonce le “Entscheidungsproblem” : On doit pouvoir montrer de façon “mécanique” si un enoncé mathématique est vrai ou faux. 
+
+Pour cela, on s'appuie sur un systèmes d'axiomes censés fonder les mathématiques. A partir de ce système d'axiomes, on n'aura jamais des démonstrations contradictoires d'une *proposition* (*d'un problème, d'un énoncé de mathématique*).
+
+Selon lui, tout est *décidable*, selon le terme qui sera employé plus tard.
 
 
 <figure>
@@ -39,7 +43,11 @@ On a souvent l'impression que pour chaque problème on peut trouver un algorithm
 </a>
 </figure>
 
-**Kurt Gödel** (1906 – 1978), un des logiciens les plus fameux de l’histoire, répond en 1931 négativement quand au programme proposé par Hilbert. Il affirme qu'un systeme logique, aussi puissant soit-il, admet des propositions (des problèmes) ne pouvant être ni infirmées ni confirmées à partir des axiomes de la théorie. Ces propositions sont qualifiées d'indécidables.
+**Kurt Gödel** (1906 – 1978), un des logiciens les plus fameux de l’histoire, répond en 1931 négativement quand au programme proposé par Hilbert. Il affirme qu'un systeme logique, aussi puissant soit-il, admet des propositions (des problèmes) ne pouvant être ni infirmées ni confirmées à partir des axiomes de la théorie. Ces propositions sont qualifiées d'*indécidables*.
+
+Il s'agit du théorème d'*incomplétude*.
+
+Paradoxalement, on sait que certaines de ces propositions *indécidables* sont *vraies*, mais on ne peut le démontrer.
 
 <figure>
     <a href="https://fr.wikipedia.org/wiki/Kurt_Gödel" target ="blank">
@@ -49,6 +57,8 @@ On a souvent l'impression que pour chaque problème on peut trouver un algorithm
 </figure>
 
 **Alan Turing** (1912 – 1954) et <a href="https://fr.wikipedia.org/wiki/Alonzo_Church" target="blank"><b>Alonzo Church</b> (1903 – 1995)</a> montrent indépendamment, en 1936, l’indécidabilité de l’Entscheidungsproblem. Turing propose la machine de Turing comme modèle formel de calcul, et Church le lambda-calcul. Ils enoncent le principe selon lequel tout ce qui est calculable peut être calculé sur un de ces deux modèles (“thèse de Church-Turing”).
+
+Turing cherche s'il n'y aurait pas au moins une procédure mécanique pour trouver quelles sont les propositions que l'on peut effectivement déduire d'un système d'axiomes, c'est à dire de décider de leur vérité (équivalent du problème de décision). Il part du principe que ce qu'un humain peut déduire est équivament à ce qu'une machine peut déduire. Ainsi, il suffit de décrire convenablement une machine idéale pour préciser ce qu'est une procédure systématique. Cette machine idéale sera la *machine de Turing*. Il montre, par un raisonnement logique que cette machine ne peut pas démontrer toutes les propositions d'un système d'axiomes (*indécidabilité*).
 
 <figure>
     <a href="https://fr.wikipedia.org/wiki/Alan_Turing" target="blank">
@@ -83,7 +93,7 @@ Question : Le programme est-il syntaxiquement correct ?
 Ce dernier exemple de problème suggère qu'un **algorithme** est une
 **donnée** comme une autre. En effet, le **script** qui traduit l'algorithme est écrit dans un **langage**. Et la machine va le lire et l'interpréter à l'aide d'un autre programme. Pour ce programme, le script est une donnée (**interpréteurs, compilateurs**). 
 
-## Calculabilité 
+## Calculabilité
 > Qu’est-ce que c’est “calculable”? 
 
 
@@ -223,6 +233,7 @@ Il faut montrer que si les appels internes à l'algorithme font ce qu'on attend 
 * cours en pdf université de Grenoble : [calculabilité](https://www.irif.fr/~asarin//calc2k3/calcul_cours.pdf)
 * [cours sur l'algorithmique Bruno Grenet](http://www.lirmm.fr/%7Egrenet/DIUBloc5/AlgoAvancee.pdf)
 * cas des algorithmes recursifs : [https://fr.wikipedia.org/wiki/Algorithme_récursif](https://fr.wikipedia.org/wiki/Algorithme_récursif)
+* théorie des modèles, axiomes, théorèmes: [théorie des modèles: Techno-sciences](https://www.techno-science.net/glossaire-definition/Theorie-des-modeles.html) et [Axiome logique - Définition et Explications: Techno-sciences](https://www.techno-science.net/definition/6178.html) et [Déductions naturelles: Techno-sciences](https://www.techno-science.net/definition/6193.html) et [Déductions naturelles: Wikipedia](https://fr.wikipedia.org/wiki/D%C3%A9duction_naturelle)
 
 # Notes
 [^1]: ceci fait reference au theoreme de completude énoncé par Gödel. Une théorie mathématique pour laquelle tout énoncé est décidable est dite complète, sinon elle est dite incomplète. D'où le Premier Théorème d’incomplétude de Gödel 

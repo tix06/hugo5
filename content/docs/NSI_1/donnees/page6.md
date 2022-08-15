@@ -43,14 +43,14 @@ int
 
 Comme les types de base sont *non mutables*, la variable est écrasée et reconstruite à chaque nouvelle affectation. Ce qui peu donner l'impression que le type peut changer.
 
-Pour transformer le type:
+Pour **transformer le type**:
 
 | type de depart | type d'arrivée | fonction |
 | --- | --- | --- |
 | int | str | str(x) |
 | str | int | int(x) |
 
-## Modifier le type
+
 **Les types de base sont:**
 
 * nombres entiers: **int**

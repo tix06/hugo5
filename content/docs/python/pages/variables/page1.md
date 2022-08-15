@@ -18,30 +18,69 @@ Les *structures de données* définissent la manière avec laquelle sont stocké
 Parmi les structures de données les plus courantes en python, on peut citer : les variables numériques, textuelles, les sequences (listes), les mappages (dictionnaires), les classes et les objets.
 
 ## Valeur et référence
+Les **variables** en Python sont des **références nommées**.
+
 Pour pouvoir accéder aux données, le programme d’ordinateur (quel que soit le langage dans lequel il est écrit) fait abondamment usage d’un grand nombre de variables de différents types.
+
 Une variable est une étiquette associée à une valeur. Ce nom est à peu près quelconque (voir ci-après), mais pour l’ordinateur il s’agit d’une **référence** désignant une **adresse mémoire**, c’est-à-dire un emplacement précis dans la mémoire vive.
-À cet emplacement est stockée une **valeur** bien déterminée. 
+
+À cet emplacement est stockée une **valeur typée** bien déterminée.
+
+<figure>
+  <img src="../images/var_normalesup1.png">
+  <figcaption>image issue du cours <a href="http://www.normalesup.org/~doulcier/teaching/python/01_variables.html">sur les variables, normalesup</a></figcaption>
+</figure>
 
 Cette valeur peut être en fait à peu près n’importe quel « objet » susceptible d’être placé dans la mémoire d’un ordinateur, par exemple : un nombre entier, un nombre réel, un nombre complexe, un vecteur, une chaîne de caractères, un tableau, une fonction, etc.
+
+La programme suivant permet de consulter l'adresse mémoire d'une variable:
+
+```python
+a = 3
+# Créer un objet de type int et lui associe le nom 'a'
+type(a) #=> int
+# Cet objet se trouve dans la mémoire de l'ordinateur
+# à un endroit que l'on peut obtenir avec `id`:
+id(a) #=> La position de l'objet nommé a dans la mémoire de l'ordinateur.
+# AFfiche
+94875962855936
+```
+
 
 ## Les types élementaires
 Les types élementaires que peuvent prendre les variables et expressions sont : 
 
 ### les entiers (int)
-C'est un nombre qui n'a pas de point décimal.
+**Un entier:** C'est un **nombre** qui n'a pas de point décimal. Les *algorithmes* utilisent en général des *entiers*, ce qui est avantageux pour les opérations de comparaison comme `=` ou `!=`.
 
-valeurs possibles: 1, 2492042932330932, -23, etc expressions possibles : 13 + 3928, 34 * 2 + 10 // 3 % 5, etc
+*valeurs possibles*: 1, 2492042932330932, -23, etc expressions possibles : 13 + 3928, 34 * 2 + 10 // 3 % 5, etc
 
 ### les réels (float)
-C'est un nombre qui possède un point décimal.
+**Un flottant:** C'est un nombre qui possède un point décimal. Tout nombre, rationnel, irrationnel peut être représenté par un flottant. Les flottants sont très utiles par exemple en *Physique*, où l'on réalise des *mesures physiques*, ou pour le *calcul scientifique* de manière générale. Le problème, c'est que la plupart du temps, ce nombre n'est qu'*approché* par l'ordinateur lors de sa représentation en binaire. 
 
-Ex : 4.3
+Ex : 4.3, 3.14159265359, 1,414 213 562, 9.02E-11
 
-La virgule se représente par un point. Les float en Python ont une précision limité. Ils sont généralement codés sur 15 chiffres significatifs et encodés sur 53 bits.
+La *virgule* se représente par un *point*. Les float en Python ont une précision limité. Ils sont généralement codés sur 15 chiffres significatifs et encodés sur 53 bits.
 
 ### les booléens (bolean)
-valeurs possibles : True et False
-expressions possibles : 0 == 0, 8+1 == 2 * 3, 13 >= a, etc.
+**Un bolléen** a 2 valeurs possibles : **True** et **False**.
+
+Un bolléen stocke le résultat d'une opération de comparaison. 
+
+*Expressions possibles*: 0 == 0, 8+1 == 2 * 3, 13 >= a, etc.
+
+Le booléen permet un branchement dans un algorithme (voir les structures conditionnelles): 
+
+```python
+if True:
+  # instruction 1
+else:
+  instruction 2
+
+while True:
+  # bloc d'instructions
+```
+
 
 ### les chaines de caractères (str)
 
@@ -188,8 +227,14 @@ a * 3
 # Séquences : les listes et les tuples
 Une séquence est une structure de données qui stocke une collection d'éléments dans un ordre déterminé.
 ## Listes
-**Definition:** Une **liste** est une collection ordonnée d'objets.
- Une **liste** est entourée de **crochets** `[ ]`
+**Definition:** Une **liste** est une **collection ordonnée d'objets**. Au niveau de la mémoire de l'odinateur, une liste *porte un nom*, et fait *référence à des espaces mémoire* pour chaque *élément* de liste. Ces éléments (espaces mémoires) font eux-même reference aux *emplacement mémoire* qui *stockent les valeurs* ou *objets*.
+
+<figure>
+  <img src="../images/var_normalesup2.png">
+  <figcaption>image issue du cours <a href="http://www.normalesup.org/~doulcier/teaching/python/01_variables.html">sur les variables, normalesup</a></figcaption>
+</figure>
+
+En python: Une **liste** est entourée de **crochets** `[ ]`
 
 Les éléments contenus peuvent être de tout type.
 
@@ -268,4 +313,7 @@ Pour plus de précisions sur ces différences, voir le [TP sur les variables](..
 
 # Les méthodes associées aux différents types
 voir la page [méthodes et types](../page2/)
+
+# Liens
+* valeur, references, espace de nom: [Lien vers le cours de normalesup](http://www.normalesup.org/~doulcier/teaching/python/01_variables.html)
 

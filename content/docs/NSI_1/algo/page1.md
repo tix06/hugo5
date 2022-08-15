@@ -9,13 +9,15 @@ Les machines sont-elles intelligentes? On peut en douter, au vu du comportement 
   <img src = "../images/IA1.png">
 </figure>
 
-Et pourtant les logiciels sont souvent comme çà. Leur ergonomie est souvent mal pensée, ce qui peut rendre leur utilisation *énervante*.
+Et pourtant les logiciels sont souvent comme çà. Leur **ergonomie** est souvent mal pensée, ce qui peut rendre leur utilisation *énervante*.
 
 > L'**intelligence artificielle** décrit l'ensemble des techniques permettant à des machines de *simuler l'intelligence humaine*. 
 
 Concrêtement, il s'agit de programmer les machines pour qu'elles s'adaptent en fonction des données reçues afin d'effectuer au mieux les tâches qui leur sont assignées.
 
 Dans certains domaines, l'essor de l'*intelligence artificielle* est lié à l'*explosion des données accessibles* et des *capacités de traitement*.
+
+*Retour sur l'exemple: L'amélioration de l'interface du programme de stationnement n'est pas à proprement parlé de l'intelligence artificielle. Par contre, la prise en compte de la densité de voitures qui stationnent pour différents jours de la semaine, et différents horaires de la journée peut être réalisé selon une technique de programmation relative à l'intelligence artificielle.*
 
 # Apprentissage automatique
 Le *machine learning* est l'un des domaines de l'intelligence artificielle. Il s'agit:

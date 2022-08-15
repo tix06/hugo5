@@ -27,6 +27,8 @@ C’est donc le transistor qui permet la représentation d’un bit de donnée, 
   <figcaption>Le transistor: un composant électronique à 2 états</figcaption>
 </figure>
 
+*Un transistor est un morceau de conducteur, dont la conductivité est contrôlée par sa troisième broche/borne. - Source: [Fonctionnement d'un ordinateur/Les transistors et portes logiques](https://fr.wikibooks.org/wiki/Fonctionnement_d%27un_ordinateur/Les_transistors_et_portes_logiques)* 
+
 # Loi de Moore
 Le nombre de transistors sur une puce électronique devrait être doublé tous les 2 ans, pour le même prix de fabrication. Les transistors deviennent donc de plus en plus petits.
 
