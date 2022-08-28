@@ -3,10 +3,11 @@ Title: architecture 1
 ---
 
 # L'Histoire de l'Ordinateur
-## Des machines mécaniques
-En 1623 Wilhelm Schickard ou bien Blaise Pascal en 1642 créent des machines munies de rouages mécaniques pour faire des additions et des soustractions.
 
-* **1834** La première machine sur le modèle d'un ordinateur. La [machine analytique](https://fr.wikipedia.org/wiki/Machine_analytique) (analytical engine, Charles Babbage) est une machine à calculer programmable imaginée par le mathématicien anglais [Charles Babbage](https://fr.wikipedia.org/wiki/Charles_Babbage). Il ne la réalisera jamais (sauf pour un prototype inachevé), mais il passera le reste de sa vie à la concevoir dans les moindres détails. La machine analytique reprend les différentes parties de nos ordinateurs actuels:
+En 1623 Wilhelm Schickard ou bien Blaise Pascal en 1642 créent des machines munies de rouages mécaniques pour faire des additions et des soustractions. Il ne s'agit pas encore d'ordinateurs, car celles-ci n'ont qu'une seule fonction.
+
+## La premiere *machine universelle*
+* **1834** La première machine sur le modèle d'un ordinateur. La [machine analytique](https://fr.wikipedia.org/wiki/Machine_analytique) (analytical engine, Charles Babbage: 1791-1871) est une machine à calculer programmable imaginée par le mathématicien anglais [Charles Babbage](https://fr.wikipedia.org/wiki/Charles_Babbage). Il ne la réalisera jamais (sauf pour un prototype inachevé), mais il passera le reste de sa vie à la concevoir dans les moindres détails. La machine analytique reprend les différentes parties de nos ordinateurs actuels:
   * Une unité centrale
   * Une mémoire
   * Un lecteur de cartes des métiers à tisser Jacquard (l'équivalent d'un périphérique d'entrée)
@@ -21,6 +22,8 @@ La machine fonctionne en 5 étapes:
   <li>imprime sous la forme demandées.</li> [source - wikidia](https://fr.vikidia.org/wiki/Machine_analytique)
 </ul></ul>
 
+C'est la première machine *Türing-complète*. Sauf que celle-ci ne manipule pas les données en *binaire*.
+
 <figure>
   <img src="../images/archi1.jpeg">
   <figcaption>Prototype (1871) non terminé de la machine analytique de Babbage, exposée au <a href="https://www.sciencemuseum.org.uk/">Science Museum de Londres</a></figcaption>
@@ -29,6 +32,10 @@ La machine fonctionne en 5 étapes:
 C'est son élève, [Ada Lovelace](https://fr.wikipedia.org/wiki/Ada_Lovelace) qui formalise les idées de Babbage et développe le premier algorithme de programmation de l'histoire, devenant la première informaticienne de l'humanité. 
 
 ## Des machines pour chiffrer et decrypter des informations
+La période de la seconde guerre mondiale a vu emerger des machines électromecaniques plus efficaces que celles mécaniques.
+
+Ces machines ne sont pas *Türing-complètes*.
+
 * **1938-1943** La [Bombe](https://fr.wikipedia.org/wiki/Cryptanalyse_d%27Enigma), un supercalculateur est utilisé pour le [décryptage](https://fr.wikipedia.org/wiki/Cryptanalyse_d%27Enigma) d'[Enigma](https://fr.wikipedia.org/wiki/Enigma_(machine), une machine utilisant un système de rotors pour produire un chiffrement mécanique. Les anglais, français et polonais travaillent sur le déchiffrage en testant des combinaisons. La Bombe a été conçue pour les attaques de force brute. Cette machine abat par jour le travail de dix mille décrypteurs.  C'est le mathematicien [Alan Turing](https://fr.wikipedia.org/wiki/Alan_Turing) qui parvient à casser le chiffre grâce à l'utilisation d'une version améliorée de cette machine.
 
 <figure>
@@ -45,14 +52,14 @@ C'est son élève, [Ada Lovelace](https://fr.wikipedia.org/wiki/Ada_Lovelace) qu
 
 Le chiffrement Lorenz est beaucoup moins connu que celui d'Enigma. Il était utilisé par les hauts dirigeants allemands pour communiquer entre eux alors qu'Enigma était utilisée au quotidien pour les autres types de communication.
 
-Colossus n'est pas une machine universelle, mais c'est bien le premier processeur électronique, numérique, et partiellement programmable de l'histoire. Cette machine montre que l'électronique peut être utilisé pour le traitement numérique à grande vitesse.
+Colossus n'est pas une *machine universelle*, mais c'est bien le premier processeur électronique, numérique, et partiellement programmable de l'histoire. Cette machine montre que l'électronique peut être utilisé pour le traitement numérique à grande vitesse.
 
 Vers 1940 plusieurs spécialistes développent des calculateurs à programme externe, suivant le projet de *machine analytique* de Babbage, en y incluant des relais électriques: Zuse, Coufignal, Aiken, Stibitz... Ces machines utilisaient des cartes ou rubans perforés, et étaient donc des calculateurs à *programme externe*.
 
 Aucun n'avait eu l'idée d'une machine à **programme enregistré**, concept essentiel pour les **machines électroniques**.
 
 ## Machines électromécaniques dans la lignée conceptuelle de Babbage
-La période de la seconde guerre mondiale a donc vu emerger des machines électromecaniques plus efficaces que celles mécaniques.
+
 
 * **1938** le Z1, **1941** le [Z3 (Konrad Zuse)](https://fr.wikipedia.org/wiki/Zuse_3), est un ordinateur mécanique utilisant le système binaire et lisant son programme sur une bande perforée. Le Z3 contenait plus de 2000 relais électromécaniques, pesait une Tonne et consommait plus de 4kW. Il comprend une *mémoire*, un *dispositif de contrôle* et une *unité arithmétique* calculant en binaire sur des nombres à virgule flottante! Les données et les instructions sont perforées sur du film de cinema, plus solide que des rubans en papier. Il était capable d'effectuer une addition en 0,8 s. Sa fréquence était de 5,3 Hertz, assez lente à cause des relais. A l'epoque, aucun appareil ne pouvait rivaliser.
 
@@ -78,7 +85,7 @@ Ces machines ont d'autres defauts:
 
 * il n'y a pas de distinction entre la fonction mémoire et la fonction calcul.
 * pas d'unité centrale généraliste, mais une juxtaposition d'accumulateurs et d'unités spécialisées
-* la programmation se fait par cablage ou en positionnant des interrupteurs.
+* la programmation se fait par cablage ou en positionnant des interrupteurs. Ces machines nécessitent que l'on change leur câblage à chaque type d'opération.
 
 
 | année | machine | unité logique | vitesse de calcul | remarques |
@@ -102,8 +109,45 @@ C'est aussi le *premier ordinateur binaire*, ne comportant plus de pièces méca
   <img src="../images/archi5.png">
 </figure>
 
-## Machine de Turing
-(à compléter)
+## La contribution de Turing à l'avènement des ordinateurs
+### Le binaire
+Contrairement à Babbage, Türing se rend compte que les opérations arithmétiques ordinaires peuvent être traduites dans le cadre de la *logique booléenne*, sous forme de circuits logiques (booléens). Il conçoit comme première machine un *multiplicateur booléen* électrique.
+
+Il prolonge l'idée de Gödel de coder les opérateurs, les instructions , et les fonctions (des *propositions*) par des nombres entiers.
+
+Traiter des *instructions* revient à calculer sur des *nombres entiers*, écrits en *binaires*.
+
+### Les algorithmes
+Le raisonnement mathématique est une combinaison:
+
+* d'intuition
+* d'ingéniosité, de procédures
+
+L'idée de Türing est de diminuer la part d'intuition et d'augmenter celle de procédure.
+
+Par exemple, lorsque l'on réalise une opération de tri, on le fait d'abord de manière intuitive. Pour qu'une machine soit capable de le réaliser, il faudra en dégager une *procédure*.
+
+### Machine de Türing
+C'est une machine mathématique permettant la manipulation réglée de signes.
+Son rôle est de transformer les symboles fournis en entrée, en symboles lisibles en sortie. 
+
+Cette machine utilise les instructions d'un programme (une tables d'états) et repère un état d'un registre, états qui définissent les étapes de l'algorithme.
+
+C'est une machine conceptuelle, qui a permi de définir ce qu'est un problème *calculable*. 
+
+Une machine de Tûring est conçue pour résoudre une classe de problèmes donnés: si une machine de Türing est programmée pour résoudre un opération d'addition, alors elle pourra résoudre TOUTES les opérations d'addition, quelles que soient les données en entrée.
+
+Une machine de Türing particulière contient donc, par avance, un programme. 
+
+Une machine de **Türing universelle** est capable de *résoudre TOUS les problèmes possibles* de toutes les machines de Türing possibles (contient tous les programmes existants ou à venir).
+
+John Von Neumann fait référence de manière explicite à ce concept lorsqu'il présente l'architecture à laquelle doivent se conformer les *machines universelles*.
+
+### Calculabilité
+Si un problème (proposition, fonction), que l'on peut *énoncer sous forme mathématique*, peut être résolu par une machine de Tûring, alors celui-ci est *calculable*. Il doit exister un *nombre fini d'instructions* pour résooudre ce problème.
+
+### Comparer des programmes
+Il devrait être possible de comparer des programmes en construction en évaluant le nombre de *pas* de calcul qui serait nécessaire. Tûring fait émerger la notion de *compléxité*.
 
 ## Architecture Von Neumann
 **Definition:** Un **ordinateur** est un **appareil programmable** qui stocke son **programme** dans une **mémoire modifiable**.
@@ -155,8 +199,9 @@ Les données doivent circuler entre les différentes parties d’un ordinateur, 
 
 
 
-# Liens
+# Liens et bibliographie
 * article presentant les technologies de la machine à calculer aux ordinateur de 4e génération: [Evolution des machines à calculer - Alexandre Faribault](https://www.physique.usherbrooke.ca/~afaribau/essai/)
 * 5000 ans d'histoire [Deutsches Museum](https://artsandculture.google.com/story/hQUBvBSY16WtIQ)
 * [Fiche pdf cours architecture - niveau terminale NSI](https://isn-icn-ljm.pagesperso-orange.fr/1-NSI/res/res_histoire_1.pdf)
 * présentation ppt d'un cours de DIU informatique sur l'architecture [ecursus.univ-antilles.fr](https://ecursus.univ-antilles.fr/pluginfile.php/189469/mod_resource/content/1/Cours%20SE.pdf)
+* Sciences et avenir, hors série, Les géants de la Science: Alan Türing
