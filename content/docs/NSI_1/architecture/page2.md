@@ -7,7 +7,7 @@ Title: architecture 2
 Dans l'architecture Von Neumann:
 
 * une machine universelle est contrôlée par un programme.
-* Les données et programmes sont écrits sur une même mémoire (en binaire). Ce qui donne la possibilité de changer les instructions au cours d'un calcul par exemple. C'est le concept de **programme enregistré**.
+* Les données et programmes sont écrits sur une même mémoire (en binaire). Ce qui donne la possibilité de changer les instructions au cours d'un calcul par exemple. C'est le concept de **programme enregistré**. C'est un ordinateur qui enregistre les instructions des programmes qu'il exécute dans sa mémoire vive.
 * Les instructions sontexecutée de manière séquentielle, par un **processeur**.
 
 L'architecture d'un **processeur** (CPU) comporte 2 parties: 
@@ -60,13 +60,15 @@ Par exemple, pour la séquence précédente, les codes **0 et 7** correspondent 
 
 *Tests et branchements:*  Deux instructions supplémentaires seront nécessaires:
 
-**JMP** (jump) suivi de l'argument n charge le nombre n, ou plutôt le nombre n – 2 qui sera augmenté de 2 immédiatement après l'exécution du JMP, dans le registre PC : sert à détourner le programme de sa route et le forcer à continuer son exécution à l'adresse n. 
+**JMP** (jump) suivi de l'argument n charge le nombre n dans le registre PC : sert à détourner le programme de sa route et le forcer à continuer son exécution à l'adresse n. 
 
 **JMZ** (jump if zero): effectue un saut si le contenu du registre A est 0, permet de faire des tests. On ajoute enfin l'instruction END, qui termine le programme. En langage machine, on suppose que JMP s'écrit 6. JMPZ s'écrit 7. END s'écrit 8 avec un argument puisqu'il en faut un : 0.
+
+**JMN** et **JMP** suivi de l'argument n, effectuent un saut si le contenu du registre A est négatif (JMN) ou positif (JMP).
 
 Pour construire une boucle ou un test avec ces nouvelles instructions, il faut tout d'abord trouver une façon de traduire la condition du test ou la condition d'arrêt de la boucle par un test d'égalité à zéro.
 
 # Liens
 * Livre numérique sur le [fonctionnement d'un ordinateur](https://fr.wikibooks.org/wiki/Fonctionnement_d%27un_ordinateur)
-* activité sur [l'architeecture Von Neumann](http://nsi4noobs.fr/IMG/pdf/e1_1nsi_architecture_von_neumann.pdf)
+* activité sur [l'architecture Von Neumann](http://nsi4noobs.fr/IMG/pdf/e1_1nsi_architecture_von_neumann.pdf)
 * architecture von Neumann [wikipedia](https://fr.wikipedia.org/wiki/Architecture_de_von_Neumann)

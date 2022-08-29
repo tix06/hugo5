@@ -61,7 +61,7 @@ Aucun n'avait eu l'idée d'une machine à **programme enregistré**, concept ess
 ## Machines électromécaniques dans la lignée conceptuelle de Babbage
 
 
-* **1938** le Z1, **1941** le [Z3 (Konrad Zuse)](https://fr.wikipedia.org/wiki/Zuse_3), est un ordinateur mécanique utilisant le système binaire et lisant son programme sur une bande perforée. Le Z3 contenait plus de 2000 relais électromécaniques, pesait une Tonne et consommait plus de 4kW. Il comprend une *mémoire*, un *dispositif de contrôle* et une *unité arithmétique* calculant en binaire sur des nombres à virgule flottante! Les données et les instructions sont perforées sur du film de cinema, plus solide que des rubans en papier. Il était capable d'effectuer une addition en 0,8 s. Sa fréquence était de 5,3 Hertz, assez lente à cause des relais. A l'epoque, aucun appareil ne pouvait rivaliser.
+* **1938** le Z1, **1941** le [Z3 (Konrad Zuse)](https://fr.wikipedia.org/wiki/Zuse_3), est un ordinateur électromécanique utilisant le système binaire et lisant son programme sur une bande perforée. Le Z3 contenait plus de 2000 relais électromécaniques, pesait une Tonne et consommait plus de 4kW. Il comprend une *mémoire*, un *dispositif de contrôle* et une *unité arithmétique* calculant en binaire sur des nombres à virgule flottante! Les données et les instructions sont perforées sur du film de cinema, plus solide que des rubans en papier. Il était capable d'effectuer une addition en 0,8 s. Sa fréquence était de 5,3 Hertz, assez lente à cause des relais. A l'epoque, aucun appareil ne pouvait rivaliser.
 
 <figure>
   <img src="../images/archi4.png">
@@ -97,8 +97,9 @@ Ces machines ont d'autres defauts:
 | 1962 | Atlas (Manchester) |  |  | Les 96 ko de mémoire, réalisée en tores de ferrite étaient étendus à l'aide des 576 ko stockés sur tambour magnétique |
 | 1964 | CDC 6600 |  |  entre 1 et 10 mégaflops (millions d'opérations par s) |  |
 
-*Remarque:* l'ENIAC sera améliorée en 1948: elle intègre alors la notion d'instruction et de programme, ce qui correspond au modèle classique d'ordinateur à programme enregistré. 
-C'est aussi le *premier ordinateur binaire*, ne comportant plus de pièces mécaniques. (Mauchly et Eckert)
+*Remarque:* l'ENIAC sera améliorée en 1948: elle intègre alors la notion d'instruction et de programme, ce qui correspond au modèle classique d'ordinateur à programme enregistré.<br>
+C'est aussi le *premier ordinateur binaire*, ne comportant plus de pièces mécaniques. (Mauchly et Eckert).<br>
+Il exécute son premier programme le 12 avril, et son premier programme de production le 17 avril. La simulation de Monté Carlo exécutée le 12 avril 1948 par l'ENIAC est la plus ancienne trace de programme enregistré connue à ce jour.
 
 # Machines universelles
 * **1945** En tirant les conclusions de réalisations électroniques secrètes menées pendant la guerre, deux documents apparaissent et definissent ce que l'on nommera *ordinateur*, le calculateur numérique à programme enregistré. Les motivations des deux hommes sont différentes:
