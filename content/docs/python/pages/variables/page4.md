@@ -221,7 +221,7 @@ Dans une cellule Python,
 * commencez par attribuer 100 à la variable `m`, et 20 à la variable `v`
 * calculer puis afficher E, l'energie cinetique pour un systeme de masse 100kg et de vitesse 20m.s<sup>-1</sup>, selon la loi:
 
-$$E = 1/2\times m \times v^2$$
+E = 1/2 mv<sup>2</sup>
 
 * **Question i:** Quelle est l'expression que vous avez saisie en langage Python? Quelle est la valeur calculée pour l'énergie cinetique?
 

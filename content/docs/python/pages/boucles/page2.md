@@ -62,6 +62,7 @@ voyelles
 ```
 
 **3. Autres méthodes de liste TRES utiles**
+
 > Retirer un élément de liste: méthode `pop`
 
 ```python

@@ -2,7 +2,7 @@
 Title : Exercices boucles
 ---
 
-# Exercices sur les boucles et listes
+# Exercices sur les boucles
 ### Flash card 1
 
 Script A
@@ -44,8 +44,51 @@ for i in range(len(L)) :
   </div>
 </div>
 
-
 ### Flash card 2
+
+Script A 
+
+```python
+for i in client:
+    print(i)
+```
+
+Script B
+
+```python
+def cherche(m):
+    for i in client:
+        if i[3] == m:
+            return i
+    return "aucun élément trouvé"
+        
+cherche('6')
+```
+
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front" style="font-size: 12px">
+      <h1>for et parcours de listes</h1>
+      <p>On execute la script A. La variable client n'est pas indiquée, mais la sortie suivante dans la console peut permettre de deviner sa nature. Il s'agit d'une liste de listes:<br>
+        ['Deuf', 'John', 'Vezuvio', '8']<br>
+['Fassol', 'Rémi', 'fruits de mer', '6']<br>
+['Niole', 'Guy', 'spéciale', '15']<br></p>
+<p>
+On lance alors le script B. Qu'affiche ce programme?
+</p>
+     
+    </div>
+    <div class="flip-card-back">
+      <h1>Réponse</h1>
+['Fassol', 'Rémi', 'fruits de mer', '6']
+    </div>
+  </div>
+</div>
+
+
+### Flash card 3
 
 Script A : 
 
@@ -54,7 +97,7 @@ i = 0
 popu = [100, 90, 81, 74, 67, 60, 54, 49, 45, 40, 36, 33]
 while popu[i] > 50:
   i += 1
-print(i)
+print(i, popu[i])
 ```
 
 <div class="flip-card">
@@ -71,22 +114,21 @@ print(i)
       <h1>Réponses</h1>
       <ol>
         <li>Le variant de boucle i augmente tant que popu[i] est supérieur à 50. Lorsque i vaut 7, popu[7] vaut 49, on sort de la boucle
-        <li>affiche: 7</li>
+        <li>affiche: 7 49</li>
       </ol>
     </div>
   </div>
 </div>
 
-### Flash card 3
+
+### Flash card 4
 
 Script B : 
 
 ```python
 devoirs = ['math','physique','philo']
-i = 0
-while i < 3:
-    print('le devoir de {} est fait'.format(devoirs[i]))
-    i = i + 1
+while devoirs != []:
+    print('le devoir de {} est fait'.format(devoirs.pop()))
 ```
 
 
@@ -103,7 +145,7 @@ while i < 3:
     <div class="flip-card-back">
       <h1>Réponses</h1>
       <ol>
-        <li>Ici le variant de boucle i prend successivement les valeurs 0, 1, 2. le programme continue: il affiche une phrase formatée avec l'élément devoirs[i]. Puis lorsque i vaut 3, on sort de la boucle.</li>
+        <li>Ici le variant de boucle est la liste devoirs. Tant que celle-ci n'est pas vide, le programme continue: il affiche une phrase formatée avec le dernier élément. Celui-ci est aussitôt retiré de la liste.</li>
         <li>le devoir de philo est fait<br>
 le devoir de physique est fait<br>
 le devoir de math est fait<br></li>       
@@ -112,43 +154,9 @@ le devoir de math est fait<br></li>
   </div>
 </div>
 
-### Flash card 4
-
-Script C : 
-
-```python
-i = 10
-while i >= 1:
-    i -= 1
-print(i)
-```
-
-
-
-
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front" style="font-size: 12px">
-      <h1>while</h1>
-      <p></p>
-      <ol>
-        <li>Que fait le script C?</li>
-        <li>Qu'est-ce qui est affichée par le script C?</li>
-      </ol>
-    </div>
-    <div class="flip-card-back">
-      <h1>Réponses</h1>
-      <ol>
-        <li>La condition d'arrêt de la boucle while est réalisée lorsque i est inférieur (strict) à 1. Dans la boucle, on soustrait 1 à i, ce qui fait sortir de la boucle lorsque i vaut 0.</li>
-        <li>affiche 0</li>       
-      </ol>
-    </div>
-  </div>
-</div>
-
 ### Flash card 5
 
-Script D : 
+Script C : 
 
 ```python
 i = 10
@@ -168,8 +176,8 @@ print(i)
       <h1>while</h1>
       <p></p>
       <ol>
-        <li>Que fait le script D?</li>
-        <li>Qu'est-ce qui est affichée par le script D?</li>
+        <li>Que fait le script C?</li>
+        <li>Qu'est-ce qui est affichée par le script C?</li>
       </ol>
     </div>
     <div class="flip-card-back">
@@ -224,6 +232,8 @@ L = [12,4,5,1,3,2,6,7,8,11,10,9]
   <div class="flip-card-inner">
     <div class="flip-card-front" style="font-size: 12px">
       <h1>algorithmes sur les listes</h1>
+      
+
       <ol>
         <li>Quelle est la valeur de la variable m à la fin de l'exécution du script ci-dessous ?<br>
         m = L[0]<br>
@@ -235,6 +245,7 @@ L = [12,4,5,1,3,2,6,7,8,11,10,9]
         <li>Quelle est l'étendue des valeurs prises par j, du debut à la fin de la boucle bornée ?</li>
         <li>Que vaut len(L)?</li>
       </ol>
+
     </div>
     <div class="flip-card-back">
       <h1>Réponses</h1>
@@ -247,9 +258,65 @@ L = [12,4,5,1,3,2,6,7,8,11,10,9]
   </div>
 </div>
 
+### Flash card 8
 
 
 
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front" style="font-size: 12px">
+      <h1>comprehension de listes</h1>
+      
+      <ol>
+        <li>Que vaut u à la fin du script suivant ?<br>
+        t = [1, 6, 8, 3, 21]<br>
+        u = [x-2 for x in t]</li>
+        <li>Que vaut v à la fin du script suivant ?<br>
+t = [1, 2, 3, 4, 5]<br>
+v = {x: x*3 for x in t}</li>
+        <li>Que vaut w à la fin du script suivant ?<br>
+t = [1,2,3,4,5,6,7,8,9]<br>
+w = [c for c in t if c%3 == 0]</li>
+      </ol>
+    </div>
+    <div class="flip-card-back">
+      <h1>Réponses</h1>
+      <ol><li>[-1, 4, 6, 1, 19]</li>
+        <li>{1: 3, 2: 6, 3: 9, 4: 12, 5: 15}</li>
+        <li>[3, 6, 9]</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+### Flash card 9
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front" style="font-size: 12px">
+      <h1>comprehension de liste - suite</h1>
+      <p><code>tab = [ ('Léa', 14), ('Guillaume', 12), ('Anthony', 16), ('Anne', 15) ]</code><br>
+Quelle est la valeur de l'expression <br>[x[0] for x in tab if x[1]>=15] ?<br>
+</p>
+<p>
+Choisir parmi les reponses : <br>
+A- [('Anthony', 16), ('Anne', 15)]<br>
+
+B- ['Anthony', 'Anne']<br>
+
+C- [16, 15]<br>
+
+D- TypeError : 'tuple' object is not callable<br>
+</p>
+     
+    </div>
+    <div class="flip-card-back">
+      <h1>Réponse</h1>
+Reponse B 
+    </div>
+  </div>
+</div>
 
 
 # Relire le cours

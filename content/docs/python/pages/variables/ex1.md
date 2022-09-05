@@ -32,17 +32,19 @@ bookShowToc: false
 </div>
 
 ### Flash card 2
+<p>Soit le nombre N entier constitué de 3 chiffres A (centaines), B (dizaines), C (unités), s'écrivant ABC</p>
+
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
       <h1>Questions 2</h1>
-      <p style="font-size: 12px">Soit le nombre N entier constitué de 3 chiffres A (centaines), B (dizaines), C (unités), s'écrivant ABC</p>
-      <p style="font-size: 12px">Traduire chacune des propositions sous la forme d’une opération. Puis trouver le résultat :</p>
+      <p style="font-size: 12px">Traduire chacune des propositions sous la forme d’une opération, en langage mathématique. </p>
       <ol style="font-size: 12px"><li>Le nombre doit être inférieur à 500</li>
         <li>son chiffre des dizaines est égal à la moitié du chiffre des centaines</li>
         <li>Le chiffre des unités est égal à la moitié du chiffre des dizaines</li>
         <li>La somme des 3 chiffres (centaines, dizaines, unités) est égal à 7</li>
       </ol>
+      <p>Puis trouver le résultat</p>
     </div>
     <div class="flip-card-back">
       <h1>Réponses</h1>
@@ -122,15 +124,127 @@ bookShowToc: false
     <div class="flip-card-back">
       <h1>Réponses</h1>
       <ol><li>'PaLaPaLa'</li>
-        <li>'444'</li>
-        <li>6.2</li>
+        <li>l'expression vaut '4' * 3 donc affiche: 444'</li>
+        <li>vaut 3 + 3.2 donc affiche 6.2</li>
         <li>True</li>
       </ol>
     </div>
   </div>
 </div>
 
+### Flash card 6
 
+```
+L = ['lundi', 'mardi',  'mercredi']
+```
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h1>Listes</h1>
+      Que valent chacune des expressions suivantes ?
+      <ol><li>L[0]</li>
+        <li>L[-1]</li>
+        <li>L[1]</li>
+        <li>L[-2]</li>
+        <li>L[1 :]</li>
+        <li>['lundi', 'mardi'] + ['mercredi', 'jeudi']</li>
+      </ol>
+    </div>
+    <div class="flip-card-back">
+      <h1>Réponses</h1>
+      <ol><li>'lundi'</li>
+        <li>'mercredi'</li>
+        <li>'mardi'</li>
+        <li>'mardi'</li>
+        <li>['mardi',  'mercredi']</li>
+        <li>['lundi', 'mardi', 'mercredi', 'jeudi']</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+### Flash card 7
+
+```
+L = ['lundi', 'mardi',  'mercredi']
+```
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h1>Opérations sur les Listes</h1>
+      Que vaut L après chacune des expressions suivantes ?
+      <ol><li>L.append('jeudi')</li>
+        <li>L.pop()</li>
+        <li>L.insert(0, 'dimanche')</li>
+        <li>L = L[1:]</li>
+      </ol>
+    </div>
+    <div class="flip-card-back">
+      <h1>Réponses</h1>
+      <ol><li>['lundi', 'mardi',  'mercredi', 'jeudi']</li>
+        <li><p style="font-size: 12px">A partir de la liste précédente, on retire le dernier élément: ['lundi', 'mardi',  'mercredi']</p></li>
+        <li>['dimanche', lundi', 'mardi',  'mercredi']</li>
+        <li><p style="font-size: 12px">A partir de la liste précédente, on créé une nouvelle liste de l'élément d'indice 1 jusqu'au dernier: ['lundi', 'mardi',  'mercredi']</p></li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+### Flash card 8
+```
+L = [['a', 'b'], ['c', 'd'], ['e', 'f']]
+```
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h1>Listes 2D</h1>
+      Que valent chacune des expressions suivantes ?
+      <ol><li>len(L)</li>
+        <li>len(L[0])</li>
+        <li>L[1]</li>
+        <li>L[1][0]</li>
+      </ol>
+    </div>
+    <div class="flip-card-back">
+      <h1>Réponses</h1>
+      <ol><li>3 car la liste L comporte 3 éléments (des sous listes)</li>
+        <li>2 car la liste L[0] comporte 2 éléments ('a' et 'b')</li>
+        <li>['c', 'd']</li>
+        <li>'c'</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+### Flash card 9
+```
+tictactoe = [['X', 'O',  'O'],
+             ['O', 'O',  'O'],
+             ['O', 'O',  'X']]
+```
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h1>Listes 2D</h1>
+      Modifier la liste ?
+      <ol><li>Quelle expression permet d'obtenir une diagonale de 'X'?</li>
+        <li>Quelle expression permet d'obtenir une ligne de 'X' sur la premiere ligne?</li>
+        <li>Quelle expression permet d'obtenir une ligne de 'X' sur la dernière ligne?</li>
+      </ol>
+    </div>
+    <div class="flip-card-back">
+      <h1>Réponses</h1>
+      <ol><li>L[1][1] = 'X'</li>
+        <li>L[0] = ['X', 'X',  'X']</li>
+        <li>L[-1] = ['X', 'X',  'X']</li>
+      </ol>
+    </div>
+  </div>
+</div>
 
 
 # Relire le cours

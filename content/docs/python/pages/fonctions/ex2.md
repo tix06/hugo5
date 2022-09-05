@@ -78,7 +78,7 @@ On lance alors le script B. Qu'affiche ce programme?
   </div>
 </div>
 
-### Flash card 3
+### Flash card 2
 
 Script A 
 
@@ -121,7 +121,7 @@ On lance alors le script B. Qu'affiche ce programme?
   </div>
 </div>
 
-### Flash card 4
+### Flash card 2
 
 La fonction ajoute(n,p) codée ci-dessous en Python doit calculer la somme de tous les entiers compris entre n et p (n et p compris).
 
@@ -151,7 +151,7 @@ def ajoute(n,p):
   </div>
 </div>
 
-### Flash card 5
+### Flash card 3
 On souhaite utiliser la fonction `sin` du module `math`.
 
 L'appel de la fonction diffère selon la méthode d'import du module. 
@@ -185,8 +185,90 @@ L'appel de la fonction diffère selon la méthode d'import du module.
   </div>
 </div>
 
+### Flash card 4
+
+On définit la fonction f :
+
+```python
+def f(a,b):
+  assert b!=0,'le deuxième argument est nul'
+  result = a/b
+  return result
+```
 
 
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front" style="font-size: 14px">
+      <h1>Gestion des erreurs</h1>
+      <p>
+      Quelle erreur obtient-on en exécutant la commande r = f(4,0) ?</p>
+      <p>
+        A- ZeroDivisionError: division by zero et l'arrêt de l'exécution<br>
+
+B- NameError: name 'b' is not defined et l'arrêt de l'exécution<br>
+
+C- AssertionError: le deuxième argument est nul et la variable r prend la valeur 0<br>
+
+D- AssertionError: le deuxième argument est nul et l'arrêt de l'exécution
+      </p>
+
+
+    </div>
+    <div class="flip-card-back" style="font-size: 14px">
+      <h1>Réponse</h1>
+      reponse D : AssertionError: le deuxieme argument est nul
+    </div>
+  </div>
+</div>
+
+*si besoin, revoir le cours sur la [mise au point d'un programme](docs/NSI/langages/page5/)*
+
+### Flash card 5
+On exécute le code suivant :
+
+```python
+def f(t):
+  n = len(t)
+  for i in range(n-1):
+    if t[i] > t[i+1]:
+      t[i],t[i+1] = t[i+1],t[i]
+
+L = [4, 8, -7, 0, 1]
+f(L)
+```
+
+
+
+
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front" style="font-size: 14px">
+      <h1>Passage d'une liste en argument</h1>
+      <p>
+      Quelle est la valeur de L après l'exécution de ce code ?</p>
+
+
+      A- [4, -7, 8, 0, 1]<br>
+
+      B- [-7, 0, 1, 4, 8]<br>
+
+      C- [4, 8, -7, 0, 1]<br>
+
+      D- [4, -7, 0, 1, 8]<br>
+
+
+    </div>
+    <div class="flip-card-back" style="font-size: 14px">
+      <h1>Réponse</h1>
+      Reponse D : L vaut [4, -7, 0, 1, 8]<br>
+Lorsque l'on appelle la fonction avec f(L), la liste L est passée par référence : les modifications de t affectent la liste L.<br>
+A chaque itération, 8 est comparé avec l'élément de rang supérieur, et comme 8 est plus grand, on permute les 2 éléments de L. Jusqu'à la fin de la liste.
+    </div>
+  </div>
+</div>
 
 # Relire le cours
 Lien vers la page : <a href="/docs/python/pages/fonctions/page1/">fonctions</a>
