@@ -45,7 +45,7 @@ Voir l'article [Qu’est-ce que ça veut dire additionner ?](https://automathssi
 
 On y lira que **0 + 1 = 1** est l'un des axiomes définissant l'addition, et s'écrit en langage axiomatique:
 
-$$0 + S_0 = SS_0$$ 
+$$0 + S_0 = S_0$$ 
 
 <figure>
     <img src="../images/page7/addition.png">
@@ -174,12 +174,13 @@ On considère qu'il existe une fonction d'affichage
 Mêmes outils que pour l'exercice 1. La relation de prédecesseur est également connue.
 
 ### Ex 3: Trouver une procédure pour calculer 30 * 20
-On peut utiliser toute proposition issue du calcul propositionnel, dont les opérateurs d'implication, ET, OU, NON. On pourra également utiliser les variables simples.
+On peut utiliser toute proposition issue du calcul propositionnel, dont les opérateurs d'implication, ET, OU, NON, les opérations de comparaison.
+On pourra également utiliser les variables simples, les branchements (*aller à* dans le programme), les blocs. On evitera les branchements *tant que* et *pour*.
 
 ## Exercices sur le langage mathématique
-Pour chacun de ces exercices, vous devrez écrire une proposition mathématique qui résoud le problème posé.
+Pour chacun de ces exercices, lorsque cela est possible vous devrez écrire une proposition mathématique qui résoud le problème posé.
 
-### Ex 1: Le du problème peut il être mis sous forme de langage mathématique?
+### Ex 1: Le problème peut il être mis sous forme de langage mathématique?
 
 * Bois<sup>2</sup> = Argent
 * Or - Perle = Porcelaine
