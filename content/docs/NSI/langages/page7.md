@@ -167,6 +167,7 @@ On utilisera uniquemement les propositions suivantes:
 
 * les entiers naturels s'expriment selon la théorie axiomatique vue en classe: SS<sub>0</sub> succede à S<sub>0</sub> qui succede à 0...
 * définitions axiomatique de l'addition
+* variables
 
 On considère qu'il existe une fonction d'affichage
 
