@@ -10,7 +10,7 @@ En 1854 le mathématicien britannique George Boole créé le calcul propositionn
 
 Elle fut utilisée la première fois pour les circuits de commutation téléphonique par Claude Shannon.
 
-Alan Türing a discuté longuement avec Claude Shannon. Cela a pu influencer ses reflexions sur le rôle des machines. Il est à l'origine de la conception du traitement de l'information par une machine, en binaire.
+Alan Türing a discuté longuement avec Claude Shannon. Cela a pu influencer ses reflexions sur le rôle des machines. Il est à l'origine de la conception du traitement automatisé de l'information par une machine. John Von Neumann va proposer l'architecture d'une machine universelle sur laquelle reposent tous les ordinateurs. Leur point commun: ils sont tous capables de traiter de la même manière les calculs sur des nombres ou des propositions, exprimés en binaire.
 
 ## La premiere *machine universelle*
 * **1834** La première machine sur le modèle d'un ordinateur. La [machine analytique](https://fr.wikipedia.org/wiki/Machine_analytique) (analytical engine, Charles Babbage: 1791-1871) est une machine à calculer programmable imaginée par le mathématicien anglais [Charles Babbage](https://fr.wikipedia.org/wiki/Charles_Babbage). Il ne la réalisera jamais (sauf pour un prototype inachevé), mais il passera le reste de sa vie à la concevoir dans les moindres détails. La machine analytique reprend les différentes parties de nos ordinateurs actuels:

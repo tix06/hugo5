@@ -2,9 +2,114 @@
 Title : méthodes et types
 ---
 
-# méthodes de chaines
+  
+  <!--<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+ -->
+  <style>
+    .editor-box{
+      width: 60%;
+      display: block;
+    }
+    #output > div {
+    font-family: 'monospace';
+    background-color: #e5e5e5;
+    border: 1px solid lightgray;
+    /*border-top: 0;*/
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  
+  }
 
-Pour modifier la casse d'une chaine, utiliser les méthodes `title()` (titre), `upper()` (mise en majuscule), `lower()` (minuscule).
+  #output > div:first-child {
+    border-top: 1px solid lightgray;
+    display: block;
+  }
+
+  #output > div:nth-child(even) {
+    border: 0;
+  } 
+</style>
+
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
+# Editeur Python
+* L'**editeur** suivant se présente comme un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
+
+<div>
+<py-repl id="my-repl" auto-generate="true"></py-repl>
+</div>
+
+# méthodes de chaines
+Les chaines sont des objets qui possèdent leurs méthodes. il est difficile de se souvenir de toutes les méthodes travaillant sur les chaînes de caractères. Aussi il est toujours utile de recourir à la documentation embarquée
+
+
+```python
+help(str)
+```
+
+Ce qui donne:
+
+```
+Help on class str in module builtins:
+
+class str(object)
+ |  str(object='') -> str
+ |  str(bytes_or_buffer[, encoding[, errors]]) -> str
+ |  
+ |  Methods defined here:
+ | ...
+ |  format(...)
+ |      S.format(*args, **kwargs) -> str
+ |      
+ |      Return a formatted version of S, using substitutions from args and kwargs.
+ |      The substitutions are identified by braces ('{' and '}').
+ |  ...
+ |  join(self, iterable, /)
+ |      Concatenate any number of strings.
+ |      
+ |      The string whose method is called is inserted in between each given string.
+ |      The result is returned as a new string.
+ |      
+ |      Example: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'
+ | ...
+``` 
+
+
+### Découpage - assemblage : `split` et `join`
+
+Les méthodes `split` et `join` permettent de découper une chaîne selon un séparateur pour obtenir une liste, et à l'inverse de reconstruire une chaîne à partir d'une liste.
+
+`split` permet donc de découper :
+
+
+```python
+'abc=:=def=:=ghi=:=jkl'.split('=:=')
+# affiche ['abc', 'def', 'ghi', 'jkl']
+```
+
+Et à l'inverse :
+
+
+```python
+"=:=".join(['abc', 'def', 'ghi', 'jkl'])
+# affiche abc=:=def=:=ghi=:=jkl
+```
+
+*Remarque:* Si le séparateur est un terminateur, comme par exemple ';', ou`"\n"`, il conviendra d'utiliser d'abord la méthode `strip`. Voir *[compléments](http://localhost:1313/docs/python/pages/variables/page2/#compl%C3%A9ments-sur-les-strings)* en bas de page.
+
+
+### Remplacement : `replace`
+
+`replace` est très pratique pour remplacer une sous-chaîne par une autre, avec une limite éventuelle sur le nombre de remplacements :
+
+
+```python
+"abcdefabcdefabcdef".replace("abc", "zoo")
+```
+
+
+### modifier la casse d'une chaine
+utiliser les méthodes `title()` (titre), `upper()` (mise en majuscule), `lower()` (minuscule).
 
 ```python
 nom = 'charles babbage'
@@ -25,6 +130,12 @@ nom.strip()
 
 # méthodes de listes
 Les listes sont présentées à la page [variables](/docs/python/pages/variables/page1/#séquences-les-listes-et-les-tuples)
+
+Pour commencer, rappelons comment retrouver la liste des méthodes définies sur le type list :
+
+```python
+help(list)
+```
 
 ## append
 **append(element)** ajoute un élément en fin de liste
@@ -111,9 +222,22 @@ Sans cette *astuce*, la copie se ferait par référence (Liste = mutable)
 ## Trier une liste
 Il y a 2 fonctions de tri : 
 
-**sorted** renvoie une copie de la liste triée dans l'ordre naturel (alphanumerique)
+* La fonction **sorted** renvoie une copie de la liste triée dans l'ordre naturel (alphanumerique) sans modifier la liste d'origine.
 
-**sort** permet de trier la liste en place.
+```python
+L = [9, 5, 1, 3, 4]
+sorted(L)
+# affiche [1, 3, 4, 5, 9]
+```
+
+Puis:
+
+```python
+L
+# affiche [9, 5, 1, 3, 4]
+```
+
+* La méthode **sort** permet de trier la liste en place.
 
 ```python
 L = [9, 5, 1, 3, 4]
@@ -171,6 +295,24 @@ mes_capitales = dict(capitales)
 Sans cette *astuce*, la copie se ferait par référence (Dictionnaire = mutable)
 
 <input type="button" class="btn btn-lg" value="Retour à la page : Variables" onclick="window.location.href = '../page1/'">
+
+# Compléments sur les strings
+
+Si le séparateur est un terminateur, comme par exemple ';', ou`\n`, la liste résultat contient alors une dernière chaîne vide. En pratique, on utilisera la méthode `strip`, que nous allons voir ci-dessous, avant la méthode `split` pour éviter ce problème.
+
+
+```python
+"abc;def;ghi;jkl;".split(';')
+# affiche ['abc', 'def', 'ghi', 'jkl', '']
+```
+
+alors que 
+
+```python
+"abc;def;ghi;jkl;".strip(';')
+# affiche abc;def;ghi;jkl
+```
+
 
 # Flash cards
 Lien : [flash-card sur les variables](../ex1/)

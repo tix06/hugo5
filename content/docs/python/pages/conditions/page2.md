@@ -1,9 +1,8 @@
 ---
 Title: conditions
+bookShowToc: false
 ---
-
-  
-  <!--<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+ <!--<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
  -->
   <style>
     .editor-box{
@@ -32,7 +31,13 @@ Title: conditions
 
   <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 
+# Editeur Python
+* L'**editeur** suivant se présente comme un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
 
+<div>
+<py-repl id="my-repl" auto-generate="true"></py-repl>
+</div>
+  
 # Conditions et boucles non bornées
 ## Conditions
 **1. Définition :** Une *instruction conditionnelle* vérifie si une certaine condition est vraie avant d'executer son code : 

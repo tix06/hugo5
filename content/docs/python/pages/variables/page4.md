@@ -1,6 +1,5 @@
 ---
 Title: variables
-bookShowToc: false
 ---
 
   
