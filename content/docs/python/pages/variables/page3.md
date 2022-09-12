@@ -21,26 +21,27 @@ Vous traiterez chacun des exemples suivants en utilisant l'editeur de  [pythontu
 
 ### créer des tests sur l'identité des variables
 
-> Revenir à la page d'edition : cliquer sur le lien : **Create test cases**, puis **add test**.
-
-> Ajouter alors les 3 tests suivants : 
+> Revenir à la page d'edition et ajouter à la suite du script les 3 tests suivants : 
 
 <figure>
   <img src="../images/pythontutor3.png">
 </figure>
 
-> Faire alors : **Run all tests**.
+> Executer le programme
 
-Les smileys vous indiquent alors si le test renvoie `True` ou `False`. Lorsque les test d'assertion sont mis dans un programme, une valeur `False` de l'expression arrête prématuremment le programme. L'interêt est plus grand si on ajoute un commentaire explicite. C'est le message qui serait normalement affiché dans le `Traceback` de la console. (trace d'erreur).
+Chaque test ajouté est une assertion, qui arrête le programme lorsque l'un des tests retourne `False`. Sinon, le programme poursuit normalement, sans rien signaler.
 
-> Reporter dans la fiche de reponses les expressions qui donnent `True`.
+L'interêt est plus grand si on ajoute un commentaire explicite. C'est le message qui serait normalement affiché dans le `Traceback` de la console. (trace d'erreur).
 
-> Revenir dans la fenêtre d'edition et ajouter maintenant la ligne : `b = 3`. 
+> Reporter dans votre cahier de labo les expressions qui donnent `True`.
+
+> Revenir dans la fenêtre d'edition et modifier maintenant la ligne : `b=2` par `b = 3`. 
+
 > Refaire les tests et reporter les expressions qui donnent `True`. 
 
-## Autres types élementaires
+## Autres type numerique
 
-> Sur le modèle du script précédent, vous allez maintenant choisir un autre type élementaire pour les données affectées à `a` et à `b`.
+> Sur le modèle du script précédent, vous allez maintenant choisir un autre type numérique pour les données affectées à `a` et à `b`.
 > Conclure.
 
 
@@ -55,13 +56,13 @@ b.append(4)
 print('a = {}'.format(a))
 ``` 
 > Puis réaliser les mêmes opérations : *Visualiser pas à pas*, tester l'identité des variables avec les assertions.
-> Conclure.
+> Que valent `a` et `b` après l'execution du programme? Conclure.
 
 
 
 
 # Fonctions et objets mutables/non mutables
-Les objets mutables passés en argument d'une fonction sont copié par **référence**.
+Les objets mutables passés en argument d'une fonction sont copiés par **référence**. Les autres sont copiés par **valeur**.
 
 ## Objets non mutables : copie par valeur
 
@@ -138,8 +139,7 @@ a is b
 # affiche True car a et b sont deux noms pour un même objet.
 ``` 
 
-Pour faire une copie de la liste a par *valeur*, il faudra la découper sans mentionner les 2 indices, ou bien utiliser la fonction `list` : 
-voir la page [méthode et types](/docs/python/pages/variables/page2/#copie-d-une-liste)
+Pour faire une copie de la liste a par *valeur*, il faudra la découper sans mentionner les 2 indices avec `b = a[:]`, ou bien utiliser la fonction `list` , avec `b = list(a)`: voir la page [méthode et types](/docs/python/pages/variables/page2/#copie-d-une-liste)
 
 Un objet mutable passé en argument d'une fonction est modifié par ce que l'on appelle : un *effet de bord* dans la fonction.
 
