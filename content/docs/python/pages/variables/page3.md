@@ -33,6 +33,18 @@ Chaque test ajouté est une assertion, qui arrête le programme lorsque l'un des
 
 L'interêt est plus grand si on ajoute un commentaire explicite. C'est le message qui serait normalement affiché dans le `Traceback` de la console. (trace d'erreur).
 
+<figure>
+  <img src="../images/pythontutor4.png">
+</figure>
+
+Si le programme s'arrête sur un test renvoyant `False`, mais que l'on veut poursuivre les autres tests, il faudra mettre la ligne du test en commentaire:
+
+<figure>
+  <img src="../images/pythontutor5.png">
+</figure>
+
+
+
 > Reporter dans votre cahier de labo les expressions qui donnent `True`.
 
 > Revenir dans la fenêtre d'edition et modifier maintenant la ligne : `b=2` par `b = 3`. 
