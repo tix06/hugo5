@@ -71,13 +71,14 @@ Title : codage exercices
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front" style="font-size: 13px">
-<h1>mot-binaire</h1>
-      <p>Combien de valeurs peuvent être codées en :...</p>
+<h1>espace mémoire</h1>
+      <p>Combien de bits/ octets faut-il à peu près pour coder:...</p>
       <ol>
-      <li>4 bits</li>
-      <li>8 bits</li>
-      <li>32 bits</li>
-      <li>64 bits</li>
+      <li>l'age d'une personne (0-100 ans)</li>
+      <li>un fichier texte</li>
+      <li>un morceau de musique</li>
+      <li>une image format jpg</li>
+      <li>un film en 4K</li>
 
 
 
@@ -86,10 +87,11 @@ Title : codage exercices
       <div class="flip-card-back">
       <h1>Réponses</h1>
       <ol>
-        <li>2<sup>4</sup> = 16</li>
-        <li>2<sup>8</sup> = 256</li>
-        <li>2<sup>32</sup> = 4.29*10<sup>9</sup></li>
-        <li>2<sup>64</sup> = 1.84*10<sup>19</sup></li>
+        <li>7 bit (0-127)</li>
+        <li>1 ou plusieurs ko</li>
+        <li>1 ou plusieurs Mo</li>
+        <li>1 ou plusieurs Mo</ll>
+        <li>1 ou plusieurs Go</li>
       </ol>
     </div>
   </div>
