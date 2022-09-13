@@ -117,7 +117,9 @@ Unicode permet de normaliser environ 1 000 000 caractères. L'encodage des carac
 La principale caractéristique d'UTF-8 est qu'elle est rétro-compatible avec le standard ASCII, c'est-à-dire que tout caractère ASCII se code en UTF-8 sous forme d'un unique octet, identique au code ASCII. Par exemple « A » (A majuscule) a pour code ASCII 65 (0x41) et se code en UTF-8 par l'octet 65. 
 
  
-
+<figure>
+  <img src="../images/martine.png" alt="ascii ou utf8">
+</figure>
 
 
 Chaque caractère dont le point de code est supérieur à 127 (0x7F) (caractère non ASCII) se code sur 2 à 4 octets:
