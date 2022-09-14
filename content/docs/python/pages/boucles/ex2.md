@@ -49,20 +49,15 @@ for i in range(len(L)) :
 Script A 
 
 ```python
-for i in client:
-    print(i)
-```
+L1 = [1, 6, 9, 2, 10]
 
-Script B
-
-```python
-def cherche(m):
-    for i in client:
-        if i[3] == m:
+def cherche(L2, m):
+    for i in range(len(L2)):
+        if L2[i] == m:
             return i
     return "aucun élément trouvé"
         
-cherche('6')
+cherche(L1, 6)
 ```
 
 
@@ -71,18 +66,18 @@ cherche('6')
   <div class="flip-card-inner">
     <div class="flip-card-front" style="font-size: 12px">
       <h1>for et parcours de listes</h1>
-      <p>On execute la script A. La variable client n'est pas indiquée, mais la sortie suivante dans la console peut permettre de deviner sa nature. Il s'agit d'une liste de listes:<br>
-        ['Deuf', 'John', 'Vezuvio', '8']<br>
-['Fassol', 'Rémi', 'fruits de mer', '6']<br>
-['Niole', 'Guy', 'spéciale', '15']<br></p>
-<p>
-On lance alors le script B. Qu'affiche ce programme?
-</p>
-     
+      <p>On execute la script A. Que retourne la fonction <i>cherche</i>?</p>
+      <ol>
+        <li>6</li>
+        <li>1</li>
+        <li>2</li>
+        <li>"aucun élément trouvé"</li>
+      </ol>
     </div>
     <div class="flip-card-back">
       <h1>Réponse</h1>
-['Fassol', 'Rémi', 'fruits de mer', '6']
+      retourne 1, le rang de l'élément dont la valeur est 6. La fonction cherche va rechercher dans une liste L2 le rang de la valeur cherchée m.
+      Si l'élément n'y est pas, la fonction retourne "aucun élément trouvé"
     </div>
   </div>
 </div>

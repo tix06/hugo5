@@ -382,5 +382,6 @@ Pour plus de précisions sur ces différences, voir le [TP sur les variables](..
 voir la page [méthodes et types](../page2/)
 
 # Liens
-* valeur, references, espace de nom: [Lien vers le cours de normalesup](http://www.normalesup.org/~doulcier/teaching/python/01_variables.html)
+* Lien vers les [Flash cards](../ex1) sur les variables et séquences
+* Compléments: valeur, references, espace de nom: [Lien vers le cours de normalesup](http://www.normalesup.org/~doulcier/teaching/python/01_variables.html)
 

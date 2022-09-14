@@ -315,5 +315,8 @@ alors que
 
 
 # Flash cards
-Lien : [flash-card sur les variables](../ex1/)
+Lien : 
+
+* Lien vers les [Flash cards](../ex1) sur les variables et séquences C22
+* Lien vers les [Flash cards](../ex3) sur les séquences et boucles C32
 

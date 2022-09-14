@@ -3,7 +3,7 @@ Title : Exercices séquences
 bookShowToc: false
 ---
 
-# Exercices sur les variables et opérations
+# Exercices sur les séquences et boucles
 
 # Révisions : flash cards
 1. Lire la question

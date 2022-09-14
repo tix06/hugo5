@@ -37,57 +37,44 @@ def servir_sucre(client,nombre=0):
 
 ### Flash card 2
 
-Script A 
-
 ```python
-for i in client:
-    print(i)
+def calculeP(s, p):
+  """calculer le pourcentage p d'une somme s"""
+  return s * p / 100
 ```
-
-Script B
-
-```python
-def cherche(m):
-    for i in client:
-        if i[3] == m:
-            return i
-    return "aucun élément trouvé"
-        
-cherche('6')
-```
-
 
 
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front" style="font-size: 12px">
-      <h1>for et parcours de listes</h1>
-      <p>On execute la script A. La variable client n'est pas indiquée, mais la sortie suivante dans la console peut permettre de deviner sa nature. Il s'agit d'une liste de listes:<br>
-        ['Deuf', 'John', 'Vezuvio', '8']<br>
-['Fassol', 'Rémi', 'fruits de mer', '6']<br>
-['Niole', 'Guy', 'spéciale', '15']<br></p>
-<p>
-On lance alors le script B. Qu'affiche ce programme?
-</p>
-     
+      <h1>paramètres d'une fonction</h1>
+      <p>Pour la fonction <i>calculeP</i> comment doivent être placés les arguments pour calculer 33% de la somme 500 euros?</p>
+      <ol>
+      <li>calculeP(500, 30)</li>
+      <li>calculeP(500, 30)</li>
+      <li>calculeP(500, 0.30)</li>
+      <li>calculeP(0.30, 500)</li>
+      </ol>
     </div>
     <div class="flip-card-back">
-      <h1>Réponse</h1>
-['Fassol', 'Rémi', 'fruits de mer', '6']
+      <h1>Réponses</h1>
+      <p>Reponse 2.</p>
+      <p>calcule_P(500, 30)</p>
     </div>
   </div>
 </div>
 
 ### Flash card 3
 
-Script A 
+Soit la liste L:
 
 ```python
-for i in client:
-    print(i)
+L = [['Deuf', 'John', 'Vezuvio', '8']
+    ['Fassol', 'Rémi', 'fruits de mer', '6']
+    ['Niole', 'Guy', 'spéciale', '15']]
 ```
 
-Script B
+Et la fonction *cherche*:
 
 ```python
 def cherche(m):
@@ -96,7 +83,7 @@ def cherche(m):
             return i
     return "aucun élément trouvé"
         
-cherche('6')
+
 ```
 
 
@@ -105,14 +92,18 @@ cherche('6')
   <div class="flip-card-inner">
     <div class="flip-card-front" style="font-size: 12px">
       <h1>for et parcours de listes</h1>
-      <p>On execute la script A. La variable client n'est pas indiquée, mais la sortie suivante dans la console peut permettre de deviner sa nature. Il s'agit d'une liste de listes:<br>
-        ['Deuf', 'John', 'Vezuvio', '8']<br>
-['Fassol', 'Rémi', 'fruits de mer', '6']<br>
-['Niole', 'Guy', 'spéciale', '15']<br></p>
-<p>
-On lance alors le script B. Qu'affiche ce programme?
+      <p>On appelle la fonction <i>cherche</i> de la manière suivante:<br>
+        cherche('6')
+      </p>
+Que retourne la fonction?
 </p>
-     
+  <ol>
+    <li>['Fassol', 'Rémi', 'fruits de mer', '6']</li>
+    <li>6</li>
+    <li>1</li>
+    <li>'fuits de mer'</li>
+    <li>"aucun élément trouvé"</li>
+  </ol> 
     </div>
     <div class="flip-card-back">
       <h1>Réponse</h1>
