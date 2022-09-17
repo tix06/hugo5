@@ -9,15 +9,22 @@ Il existe de nombreux logiciels tableurs, comme Excel (Microsoft Office), Calc (
 
 On verra dans ce TP les opérations:
 
-* de recopie des cases d'un tableau
 * de filtrage
 * de calcul sur les données
 
 La première partie du TP utilise le fichier <a href="../datas/fruits.xlsx" target="blank"><i>fruits.xlsx</i></a> que vous devrez télécharger *(clic droit: Enregistrer sous)*. 
 
+<figure>
 <a href="../datas/fruits.xlsx" target="blank"><img src="/images/download.png"></a> 
+<figcaption>ckiquer pour telecharger</figcaption>
+</figure>
 
-Puis vous réaliserez ce *premier travail*:
+> Une fois le fichier téléchargé:
+
+* Demarrer le logiciel Excel
+* Ouvrir avec Excel le fichier *fruits.xlsx*
+
+
 
 <figure>
 <div>
@@ -26,11 +33,8 @@ Puis vous réaliserez ce *premier travail*:
 </div>
 </figure>
 
-> Testez vous-même:
+> * Ajouter les informations suivantes dans le tableau: *le commercial Sébastien a vendu 9814 Pommes dans la région Sud*.
 
-> * Ouvrir Excel
-* Ouvrir avec Excel le fichier *fruits.xlsx*
-* Ajouter les informations suivantes dans le tableau: *le commercial Sébastien a vendu 9814 Pommes dans la région Sud*.
 
 <!--
 # La notion de variable
@@ -62,7 +66,8 @@ Que remarque t-on?
 
 *Cette fois, le contenu de la cellule se met automatiquement à jour: dès que l'on saisie et valide une entrée, toute la feuille est recalculée, et les cellules copiées par référence sont modifiées.*
 
--->
+
+
 # Travailler sur une copie du tableau
 
 ## Copier le tableau par référence
@@ -93,14 +98,23 @@ Vous avez réalisé une copie de votre tableau original. Une modification de ce 
 
 Annulez ensuite votre modification. (CTRL + z)
 
+-->
 
 # Filtrer 
 ## Filtrer par critère simple
 * Commencer par selectionner toutes les colonnes A, B, C, D, E dans laquelles se trouvent les données du tableau.
 
+<figure>
+  <img src="../images/excel1.png">
+</figure>
+
 Dans le bandeau *Données*, choisir Filtrer (entonoir).
 
-Devraient alors apparaitre des listes de choix au dessus des descripteurs du tableau. Pour filtrer selon l'un des descripteurs, cliquer sur l'une de ces listes de choix:
+Il apparait alors des listes de choix au dessus des descripteurs du tableau. Pour filtrer selon l'un des descripteurs, cliquer sur l'une de ces listes de choix:
+
+<figure>
+  <img src="../images/excel2.png">
+</figure>
 
 * Sur le filtre appliqué à la première colonne (étiquette: Région), choisir **Est**.
 
@@ -160,10 +174,11 @@ La fonction SOMME.SI permet de sélectionner certaines cellules d'une selection 
 * écrire `= SOMME.SI(`
 
 <figure>
-<div>
+
 <img src="../images/cadre_tab.png">
-<figcaption></figcaption>
-</div>
+<figcaption>somme conditionnelle <i>SOMME.SI</i><br>
+Les coordonnées de cases peuvent différer pour vous selon<br>la positon du tableau</figcaption>
+
 </figure>
 
 > * cliquer sur le bouton *fx* de la barre de saisie.
@@ -184,6 +199,7 @@ On a alors le nombre de Pommes vendues dans toute la France.
 ## Somme conditionnelle avec plusieurs critères: SOMME.SI.ENS
 On souhaite maintenant evaluer le nombre total de *Pommes* vendues en Région *Est*. C'est une somme conditionnelle avec cette fois **2 critères**.
 
+Une notice détaillée de cette fonction se trouve <a href="https://support.microsoft.com/fr-fr/office/fonction-somme-si-ens-c9e748f5-7ea7-455d-9406-611cebce642b" target=blank>ici - site du support.microsoft.com</a>.
 
 
 > * Commencez par écrire `= SOMME.SI.ENS(`
@@ -197,7 +213,8 @@ On souhaite maintenant evaluer le nombre total de *Pommes* vendues en Région *E
 <figure>
 
 <img src="../images/sommesiens.png">
-<figcaption>selection des colonnes pour SOMME.SI.ENS</figcaption>
+<figcaption>selection des colonnes pour SOMME.SI.ENS<br>
+Les coordonnées de cases peuvent différer pour vous selon<br>la positon du tableau</figcaption>
 
 </figure>
 
