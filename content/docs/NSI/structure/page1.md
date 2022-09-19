@@ -113,5 +113,13 @@ T = ([6, 7, 8, None, None], 5)
 | remplacer l'élément au rang i par e | `remplacer(T,i,e)` |
 
 
+## Tableaux dynamiques et tableaux statiques
+Les tableaux vus ci-dessus sont des tableaux *statiques*: leur taille ne peut pas être modifiée. Dans le cas où l'on ait besoin d'agrandir le tableau, il faut le copier dans un nouveau tableau, plus grand.
+
+Python implémente naturellement un autre type de tableau, que l'on appelera *dynamique*: Les *Listes Python*. Ce problème de dimension n'apparait pas dans les Listes Python, qui apportent de surcroit des méthodes bien pratiques comme `append` et `pop`.
+
+Attention: les listes chaînées (vues plus haut) et les Listes Python sont différentes, il ne s'agit pas des mêmes objets.
+
+
 # Liens
 * Types séquentiels natifs [cours David Latreyte](https://dlatreyte.github.io/terminales-nsi/chap-6/1-structures-integrees/)
