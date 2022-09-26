@@ -49,8 +49,8 @@ L'*interface* fournit certaines fonctions.
 | créer une liste vide | `creer_liste()` |
 | questionner si la liste est vide | `liste_vide(L)` |
 | insérer un élément **e** en tête de liste et retourne une nouvelle liste | `inserer(L,e)` |
-| retourne l'élément de tête | `tete(L)` |
-| retourne la liste privée de son premier élément | `queue()` |
+| retourne l'élément de tête (premier élément)| `tete(L)` |
+| retourne la liste privée de son premier élément (retourne donc le 2<sup>e</sup> élément)| `queue()` |
 
 Le *contenu* de ces fonctions va dépendre de l'*implémentation* choisie par le programmeur.
 
@@ -120,6 +120,201 @@ Python implémente naturellement un autre type de tableau, que l'on appelera *dy
 
 Attention: les listes chaînées (vues plus haut) et les Listes Python sont différentes, il ne s'agit pas des mêmes objets.
 
+# Exercices sur les listes
+On propose l'implémentation suivante pour les listes chainées:
+
+```python
+def creer_liste():
+  """exemple: 
+  L = creer_liste()
+  """
+  return []
+
+def liste_vide(L):
+  """exemple: 
+  liste_vide(L)
+  """
+  return L == []
+
+def inserer(L,e):
+  """exemple:
+  L = inserer(e,L)
+  """
+  return [e,L]
+
+def tete(L)
+  """exemple:
+  elem = tete(L)
+  """
+  return L[0]
+
+def queue(L):
+  """exemple:
+  L2 = queue(L)
+  """
+  return L[1]
+
+def elements_liste(L):
+  """exemple:
+  L2 = elements_liste(L)
+  """
+  # à completer
+  # 
+  
+```
+
+## Exercice d'introduction aux listes
+On cherche à implémenter l'historique du navigateur pour permettre de revenir en arrière lors de la navigation.
+
+On visite, dans l'ordre les sites suivants:
+
+* site 1 
+* site 2
+* site 3
+
+**1.** Qu'est ce qui est affiché par le programme suivant?
+
+```python
+L1 = creer_liste()
+inserer(L1,'site 1')
+print(L1)
+inserer(L1,'site 2')
+print(L1)
+inserer(L1,'site 3')
+print(L1)
+```
+
+**2.** Lorsque l'on retourne en arrière, on veut acceder au dernier site visité. Supposons que cela retourne la valeur `site 3`. Quelle instruction de l'interface de liste faut-il utiliser?
+
+**3.** On souhaite alors que cela modifie la liste L1 en supprimant  `site 3`. Quelle instruction utilisant l'interface de liste va modifier L1 de cette façon?
+
+**4.** On revient à la liste L1 contenant la navigation sur les 3 sites. Compléter la boucle non bornée pour former la liste python `['site 3', 'site 2', 'site 1']` à partir de la liste chainée L1:
+
+```python
+while not liste_vide(L1):
+  # L2 = []
+  # à completer
+  # 
+  # 
+```
+
+**5.** Ajouter au script les instructions qui vont déverser la liste python L2 dans une liste python L3. Cette liste L3 devra présenter les sites dans l'ordre de la navigation: `['site 1', 'site 2', 'site 3']`
+
+**6.** Ecrire l'implémentation de la fonction `elements_liste` qui va retourner une liste python avec les éléments d'une liste chainée L mise en paramètre. Pour l'exemple précédent, cette fonction retourne la liste python L3 lorsque L est mise en paramètre de la fonction `elements_liste`:
+
+```python
+elements_liste(L)
+# affiche ['site 1', 'site 2', 'site 3']
+```
+
+On utilisera à l'intérieur de la fonction une instruction de copie de la liste L afin de ne pas modifier L lors des traitements:
+
+```python
+def elements_liste(L):
+  L_copie = list(L)
+  L2 = []
+  L3 = []
+  while not liste_vide(L_copie):
+    # à completer
+    # 
+    # 
+    # 
+```
+
+## Exercice sur la separation d'une liste
+Ecrire une fonction `separe` qui sépare les éléments d'une liste en deux listes selon s'ils sont inférieurs (strictement) ou supérieurs (et égal) à une valeur `v`:
+
+```python
+def separe(L):
+  L_copie = list(L)
+  L_inf = creer_liste()
+  L_sup = creer_liste()
+  while not liste_vide(L_copie):
+    # à completer
+    # 
+    # 
+    # 
+```
+
+# Exercices sur les tableaux statiques
+On propose l'implémentation suivante pour les tableaux statiques:
+
+```python
+T = (['lundi','mardi','mercredi','jeudi','vendredi'],5)
+
+def taille(T):
+  """exemple:
+  > taille(T)
+  > 5
+  """
+  return T[1]
+
+def ieme(T,i):
+  """exemple:
+  > ieme(T,3)
+  > 'jeudi'
+  """
+  return T[0][i]
+
+def remplacer(T,i,e):
+  """exemple:
+  > remplacer(T,2,'jour des enfants')
+  > T
+  > (['lundi','mardi','jour des enfants','jeudi','vendredi'],5)
+  """
+  # à completer
+```
+
+## Utiliser l'interface du tableau
+
+**1.** Soit le tableau suivant qui implémente les notes de Kyle dans les matières C1, C2, C3:
+
+```python
+T = ([6, 7, 8], 3) 
+```
+
+**a.** Kyle n'a pas eu 8, mais 12/20 dans la matière C3. Ecrire l'instruction qui retourne la note de Kyle dans la matière C3.
+
+**b.** Compléter le script donné plus haut pour cette fonction.
+
+**2.** Soit le tableau suivant qui implémente les notes de Kyle, Sean, Quentin et Zinedine dans les matières C1, C2, C3:
+
+```python
+T = ([[6, 7, 8],
+      [10, 0, 10],
+      ['?', '?', '?']
+      ['?', '?', '?']], ..)
+```
+
+**a.** Recopier le tableau T et remplacer les '?' et les '..' par les bonnes valeurs (utiliser l'image plus haut).
+
+**b.** Quelle instruction de l'interface va donner le nombre d'élèves dans le tableau?
+
+
+**c.** Modifier la fonction `remplacer` pour que celle-ci modifie la note dans la matière voulue pour un élève donné. Par exemple:
+
+
+```python
+remplacer(T,0,2,12)
+T
+# affiche 
+([[6, 7, 12],
+ [10, 0, 10],
+ ['?', '?', '?']
+ ['?', '?', '?']], ..)
+```
+
+## Un nouveau type abstrait
+Afin de gérer les notes des élèves de la classe de seconde 209, on veut définir un type abstrait qui permet de calculer sur les notes des élèves.
+
+Ce type abstrait, appelé `Classe_209` va utiliser l'interface des tableaux statiques définie plus haut. Mais il va aussi calculer la moyenne des notes grâce à 2 nouvelles fonctions de son interface:
+
+* `moyenne_eleve`: va calculer la moyenne de l'élève au rang `eleve_i` (par exemple, pour Kyle, `eleve_i` vaut 0)
+* `moyenne_matiere`: va calculer la moyenne sur une matière à partir du rang `matiere_i`. Par exemple, pour C3, `matiere_i` vaut 3)
+
+**1.** Programmer l'implémentation en python de `moyenne_eleve`
+
+**2.** Programmer l'implémentation en python de `moyenne_matiere`
 
 # Liens
 * Types séquentiels natifs [cours David Latreyte](https://dlatreyte.github.io/terminales-nsi/chap-6/1-structures-integrees/)

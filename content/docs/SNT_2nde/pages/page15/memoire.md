@@ -76,5 +76,24 @@ Dès l’invention de l’informatique, les ordinateurs ont pu manipuler des tex
 
 Avec la taille des mémoires, et les performances des machines qui ont progressé, il a été possible de coder des données de plus en plus complexes. Il a fallu trouver un moyen de structurer ces données, c’est à dire de les mettre en forme et en lien dans un format approprié.
 
+# Histoire des données
+
+La video suivante présente l'histoire du stockage des données et ses enjeux:
+
+<figure>
+  <img src="../images/visicalc.png">
+  <a href="https://www.youtube.com/watch?v=y_mgaxO0fJY"><figcaption>source de la video: monlyceenumerique</figcaption></a>
+  </figure>
+
+> Répondre à l'aide de la vidéo précédente aux questions suivantes :
+
+1. Quelle invention datant du XVIIe siècle a été mis à profit par les informaticiens pour stocker des données ?
+2. En quelle année a été créé le premier disque dur ?
+3. En quelle année a été développé le premier modèle permettant de structurer et d'indexer des bases de données ?
+4. Comment s'appelle le premier tableur mis à la disposition du grand public ?
+5. En quelle année l'Open Government Initiative a t-elle été mise en place ?
+6. Quelle est le nom du texte de loi européen qui protège les citoyens européens quant à leurs données personnelles ?
+
 # Liens
 * [binaire: interstices](https://interstices.info/nom-de-code-binaire/)
+* Cours SNT [monlycee numerique](http://www.monlyceenumerique.fr/snt_seconde/donnees_structurees_traitement/donnees_structurees.php)
