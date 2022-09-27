@@ -172,13 +172,13 @@ def liste_vide(L):
   """
   return L == []
 
-def inserer(e,L):
+def inserer(L,e):
   """exemple:
-  L = inserer(e,L)
+  L = inserer(L,e)
   """
   return [e,L]
 
-def tete(L)
+def tete(L):
   """exemple:
   elem = tete(L)
   """
@@ -212,11 +212,11 @@ On visite, dans l'ordre les sites suivants:
 
 ```python
 L1 = creer_liste()
-inserer(L1,'site 1')
+L1 = inserer(L1,'site 1')
 print(L1)
-inserer(L1,'site 2')
+L1 = inserer(L1,'site 2')
 print(L1)
-inserer(L1,'site 3')
+L1 = inserer(L1,'site 3')
 print(L1)
 ```
 
@@ -227,8 +227,8 @@ print(L1)
 **4.** On revient à la liste L1 contenant la navigation sur les 3 sites. Compléter la boucle non bornée pour former la liste python `['site 3', 'site 2', 'site 1']` à partir de la liste chainée L1:
 
 ```python
+L2 = []
 while not liste_vide(L1):
-  # L2 = []
   # à completer
   # 
   # 
