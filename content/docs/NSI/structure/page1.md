@@ -1,6 +1,34 @@
 ---
-Title : pseudo langage
+Title : types abstraits
 ---
+
+<style>
+    .editor-box{
+      width: 60%;
+      display: block;
+    }
+    #output > div {
+    font-family: 'monospace';
+    background-color: #e5e5e5;
+    border: 1px solid lightgray;
+    /*border-top: 0;*/
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  
+  }
+
+  #output > div:first-child {
+    border-top: 1px solid lightgray;
+    display: block;
+  }
+
+  #output > div:nth-child(even) {
+    border: 0;
+  } 
+</style>
+
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
 
 # Types abstraits
 
@@ -51,6 +79,7 @@ L'*interface* fournit certaines fonctions.
 | insérer un élément **e** en tête de liste et retourne une nouvelle liste | `inserer(L,e)` |
 | retourne l'élément de tête (premier élément)| `tete(L)` |
 | retourne la liste privée de son premier élément (retourne donc le 2<sup>e</sup> élément)| `queue()` |
+| retourne une liste python avec tous les éléments de la liste chainée | `elements_liste(L)` |
 
 Le *contenu* de ces fonctions va dépendre de l'*implémentation* choisie par le programmeur.
 
@@ -119,6 +148,13 @@ Les tableaux vus ci-dessus sont des tableaux *statiques*: leur taille ne peut pa
 Python implémente naturellement un autre type de tableau, que l'on appelera *dynamique*: Les *Listes Python*. Ce problème de dimension n'apparait pas dans les Listes Python, qui apportent de surcroit des méthodes bien pratiques comme `append` et `pop`.
 
 Attention: les listes chaînées (vues plus haut) et les Listes Python sont différentes, il ne s'agit pas des mêmes objets.
+
+# Editeur Python
+* L'**editeur** suivant se présente comme un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
+
+<div>
+<py-repl id="my-repl" auto-generate="true"></py-repl>
+</div>
 
 # Exercices sur les listes
 On propose l'implémentation suivante pour les listes chainées:
