@@ -172,7 +172,7 @@ def liste_vide(L):
   """
   return L == []
 
-def inserer(L,e):
+def inserer(e,L):
   """exemple:
   L = inserer(e,L)
   """
@@ -261,7 +261,7 @@ def elements_liste(L):
 Ecrire une fonction `separe` qui sépare les éléments d'une liste en deux listes selon s'ils sont inférieurs (strictement) ou supérieurs (et égal) à une valeur `v`:
 
 ```python
-def separe(L):
+def separe(L,v):
   L_copie = list(L)
   L_inf = creer_liste()
   L_sup = creer_liste()
