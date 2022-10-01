@@ -34,6 +34,11 @@ Title : Exercices conditions
 
 ## Flash card 2
 
+```python
+voyelles = ['a','e','i','o','u','y']
+laby = {'1':{'2':{'3':'9','5':'6'},'7':'8'}}
+```
+
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front" style="font-size: 12px">
@@ -43,9 +48,9 @@ Title : Exercices conditions
         laby = {'1':{'2':{'3':'9','5':'6'},'7':'8'}}<br>
       Que retournent les opérations logiques en python :</p>
       <ol><li>a in voyelles</li>
-        li>'a' in voyelles</li>
         <li>type(voyelles) == list</li>
        <li>type(laby) == dict</li>
+       <li>'1' in laby</li>
        <li>list(laby.keys()) == ['1','7']</li>
        <li>int(laby['1']['2']['5']) == 6
       </ol>
@@ -57,7 +62,7 @@ Title : Exercices conditions
         <li>True</li>
         <li>True</li>
         <li>True</li>
-        <li>False # list(laby.keys()) vaut ['1']</li>
+        <li>False # list(laby.keys()) vaut ['1']. laby ne contient qu'une seule clé et la valeur est {'2':{'3':'9','5':'6'},'7':'8'}</li>
         <li>False # c'est int(laby['1']['2']['5']) == 6 qui vaut True</li>
       </ol>
     </div>
