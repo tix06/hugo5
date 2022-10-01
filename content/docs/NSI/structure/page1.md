@@ -309,9 +309,11 @@ def remplacer(T,i,e):
 T = ([6, 7, 8], 3) 
 ```
 
-**a.** Kyle n'a pas eu 8, mais 12/20 dans la matière C3. Ecrire l'instruction qui retourne la note de Kyle dans la matière C3.
+**a.** Ecrire l'instruction qui retourne la note de Kyle dans la matière C3.
 
-**b.** Compléter le script donné plus haut pour cette fonction.
+**b.** Kyle n'a pas eu 8, mais 12/20 dans la matière C3. Ecrire l'instruction qui modifie sa note 8 en 12, à partir d'une fonction de l'interface des tableaux.
+
+**c.** Compléter le script donné plus haut pour cette fonction.
 
 **2.** Soit le tableau suivant qui implémente les notes de Kyle, Sean, Quentin et Zinedine dans les matières C1, C2, C3:
 

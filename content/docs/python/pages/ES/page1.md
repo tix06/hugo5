@@ -130,5 +130,40 @@ Certains caractères sont fort utiles lors de l’écriture de fichiers texte af
 * `\n` : passage à la ligne
 * `\t` : tabulation, indique un passage à la colonne suivante dans le format tsv (Tabulation-separated values).
 
+On peut avoir besoin de supprimer ces caractères spéciaux:
+
+```python
+table = []
+# Lecture du fichier
+with open('datas/rne-cm.csv', encoding='utf-8') as f:
+    for line in f.read().splitlines():
+        table.append(line)
+
+table[2]
+# affiche
+'32\tGers\t\t\t32249\tMauvezin\tPASCOLINI\tJean-Marc\tM\t'
+```
+
+On peut alors remplacer la chaine de caractères `line` par `line.split('\t')` avant de la placer dans `table`, ce qui découpe la chaine au niveau des `\t`:
+
+```python
+with open('datas/rne-cm.csv', encoding='utf-8') as f:
+    for line in f.read().splitlines():
+        table.append(line.split('\t'))
+table[2]
+# affiche
+['32',
+ 'Gers',
+ '',
+ '',
+ '32249',
+ 'Mauvezin',
+ 'PASCOLINI',
+ 'Jean-Marc',
+ 'M',...]
+```
+
+
+
 # Liens
 * Voir cours sur le formatage des sorties : [Lien python.org](https://docs.python.org/fr/3/tutorial/inputoutput.html)

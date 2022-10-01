@@ -3,3 +3,122 @@ Title: Open Datas
 ---
 
 # Open datas
+
+<figure><a href="https://youtu.be/pnrc6ZaYrwg">
+	<img src="../images/sitecookie.png">
+	<figcaption>video du site cookie-connecté</figcaption> </a>
+</figure>
+
+> L'open data (ou données ouvertes) est l'ouverture via le Web de données collectées par des organismes publics (ou entreprises), et dont la diffusion est considerée comme d'interêt général.
+
+Quelques exemples:
+
+* horaires transports publics
+* état des lignes (métro, autobus...)
+* prévisions météorologiques
+* prix des carburants
+* ...
+
+Il y a des conditions à respecter pour la mise à disposision de ces données. Une donnée doit être de nature:
+
+* ouverte
+* primaire
+* libre de droit
+
+# Données
+* Une **collection de données** peut être ordonnée sous forme de liste, ou d'une table.
+
+La façon de *structurer les données* influe fortement sur les opérations de traitement : il est par exemple bien plus efficace de rechercher une donnée dans une collection toujours ordonnée, mais y insérer une information est plus coûteux.
+
+
+* **Donnée :** représentation d'une information au sein d'un système informatique.
+
+* **Métadonnée :** donnée servant à définir ou décrire une autre donnée, pour permettre sa manipulation.
+
+* **Une base de données** regroupe plusieurs collections de données reliées entre elles.
+
+* **Descripteur :** mot ou un groupe de mots choisi pour caractériser les informations contenues dans un document et pour faciliter les recherches.
+
+* Une **collection** regroupe des objets partageant les mêmes descripteurs (par exemple, la collection des contacts d’un carnet d’adresses). La structure de table permet de présenter une collection : les objets en ligne, les descripteurs en colonne et les données à l’intersection. Les données sont alors dites structurées.
+
+# Format des données
+L'OPen Datas exige que les données doivent être au format EXPLOITABLE, et non proprietaire.
+
+Souvent, on va trouver les format csv, json et XML pour les fichiers.
+
+**csv**:
+
+```
+nom, prenom, age
+Dupont, François, 17
+Darcis, Pauline, 16
+```
+
+**json**:
+
+```
+{
+	{
+		"nom": "Dupont",
+		"prenom": "François",
+		"age": 17
+	}
+	{
+		"nom": "Darcis",
+		"prenom": "Pauline",
+		"age": 16		
+	}
+}
+```
+
+**XML**
+
+```
+<membre>
+	<nom>Dupont</nom>
+	<prenom>Francois</prenom>
+	<age>17</age>
+</membre>
+<membre>
+	<nom>Darcis</nom>
+	<prenom>Pauline</prenom>
+	<age>16</age>
+</membre>
+```
+
+# Un exemple de données ouvertes
+<figure><a href="https://www.data.gouv.fr/fr/">
+	<img src="../images/data.gouv.png">
+	<figcaption>Plateforme ouverte des données publiques françaises</figcaption>
+</a>
+</figure>
+
+Le Répertoire National des Élus (RNE) a pour finalité le suivi des titulaires d’un mandat électoral. Il est renseigné et tenu à jour par les préfectures et hauts commissariats et par les services du ministère de l'intérieur, notamment sur la base des éléments fournis par les élus lors de la phase d’enregistrement des candidatures.
+
+<figure>
+	<img src="../images/elus.png">
+	<figcaption>Données du RNE pour les conseillers municipaux - extrait en csv</figcaption>
+</figure>
+
+Les données du RNE sont structurées par mandat. Neuf fichiers sont publiés ici :
+
+1. <a href="https://www.data.gouv.fr/fr/datasets/r/d5f400de-ae3f-4966-8cb6-a85c70c6c24a">les conseillers municipaux ;</a>
+2. les conseillers communautaires ;
+3. les conseillers départementaux ;
+4. les conseillers régionaux ;
+5. les membres des assemblées des collectivités à statut particulier ;
+6. les représentants au Parlement européen ;
+7. les sénateurs ;
+8. les députés ;
+9. les maires.
+
+
+En [bas de page](https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/#community-reuses), vous pourrez observer les réutilisations de ces documents:
+
+<figure><a href="https://www.spallian.com/2020/03/01/donnees-parite-aux-sein-des-conseils-municipaux/">
+	<img src="../images/utilisation.png">
+	<figcaption>exemples de réutilisation des données ouvertes sur les elus municipaux</figcaption>
+</a>
+</figure>
+
+> Ouvrir les données jugées d'intérêt public, c'est encourager leur réutilisation par tout un chacun. Cela permet d'encourager la transparence démocratique, de bénéficier de services au quotidien ou de prendre des décisions plus éclairées.
