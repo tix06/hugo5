@@ -27,11 +27,11 @@ C'est la complexité spatiale.
 
 Par exemple, avec l'algorithme de recherche séquentielle, ce temps correspondrait à trouver l'élément dans la liste comme s'il occupait la dernière position (voir [plus loin](#algorithme-de-lecture-exhaustif-recherche-linéaire)).
 
-La complexité d’un algorithme sera alors (sauf mention contraire) exprimée sous la forme : *O*(*g*(*n*)). Ce qui correspond à la complexité *dans le pire des cas* (sa borne supérieure), ou bien, lorsque cela est pertinent, la complexité asymptotique.
+La complexité d’un algorithme sera alors (sauf mention contraire) exprimée sous la forme : *O*(*g*(*n*)). Ce qui correspond à la complexité asymptotique, *dans le pire des cas* (sa borne supérieure).
 
-En pratique, on ne comptera que les opérations estimées **importantes** : celles qui ne changent pas selon les nuances du langage utilisées lors de la programmation (boucle while et boucle for...) mais qui changent selon le problème. Ce nombre d'opérations sera appelé T(n).
+En pratique, on ne comptera que les opérations estimées **importantes** : **T(n)**. Les opérations qui ne changent pas selon les nuances du langage utilisées lors de la programmation (boucle while et boucle for...) mais qui changent selon le problème. Ce nombre d'opérations sera appelé T(n).
 
-On en déduira alors la **classe de complexité g(n)** (voir [tableau plus loin](#principales-classes-de-la-complexité)). Puis la complexité O(g(n)).
+On en déduira alors la **classe de complexité asymtotique g(n)** (voir [tableau plus loin](#principales-classes-de-la-complexité)). Puis la complexité dans le pire des cas **O(g(n))**.
 
 ## Exemple avec une boucle bornée
 Voici le principe de base pour calculer la complexité d’une boucle bornée. Soit (deb,fin) ∈ Z<sup>2</sup>, considérons une boucle de type `for i in range(deb, fin):`
@@ -60,7 +60,7 @@ for i in range(n):
   L.append(y)
 ```
 
-La seule opération significative est b*i. 
+La seule opération significative est `b*i`. 
 Le nombre d'opérations fondamentales est encore T(n) = n. 
 
 ## Boucle non bornée : variant de boucle
@@ -85,8 +85,8 @@ while i >=0 :
 
 La fonction semble réaliser plus d'opérations que les 2 premières implémentations, d'où la petite différence pour la valeur de T(n) avec les deux fonctions precedentes.
 
-## Limite asymptotique en n
-Lorsque l'on étudie la complexité d'une fonction ou d'un algorithme, on s'intéressera souvent à son comportement pour de grandes taille du paramètre d'entrée n. Car si pour des données de petite dimension, la qualité de l'algorithme importe peu, pour de grandes tailles de données, la différence de performance peut être enorme. On dit que l'on observe le comportement asymtotique de T(n), c'est à dire pour n qui tend vers de grandes valeurs.
+## g(n): Limite asymptotique en n
+Lorsque l'on étudie la complexité d'une fonction ou d'un algorithme, on s'intéressera souvent à son comportement pour de grandes taille du paramètre d'entrée n. Car si pour des données de petite dimension, la qualité de l'algorithme importe peu, pour de grandes tailles de données, la différence de performance peut être énorme. On dit que l'on observe le comportement asymtotique de T(n), c'est à dire pour n qui tend vers de grandes valeurs.
 
 On aura besoin de définir plusieurs niveaux de description:
 
@@ -98,18 +98,7 @@ La petite différence d'implementation de ces 3 fonctions est visible en calcula
 
 Cette différence ne vient que d'une différence des **details d'implémentation** du même algorithme, et ne doit pas être considérée pour le calcul de la complexité. 
 
-## Notations de **Landau** 
 
-* **Notation O : la borne superieure :** g domine f
-on note f = O(g) s'il existe un nombre réel positif a et un rang n de f<sub>n</sub> tels que f(n) ≤ a.g(n) : 
-
-$$\exists c \in \mathbb{R}^+, tels \quad que\quad   \forall n_o \in \mathbb{N},  |f(n_o)|\leq c.|g(n)| $$
-
-En pratique, la recherche de la complexité revient à déterminer cette fonction (ou cette suite) g. On note la complexité **O(g)**. On ignore l'eventuel coefficient multiplicateur c et on ne conserve que le terme le plus divergent dans le cas où g contienne plusieurs termes. **T(n) = O(g(n))**.
-
-Pour l'exemple précédent, la complexité est notée **O(n)** en notation de Landau.
-
-* **Notation &Theta; :** Lorsqu'il est possible de déterminer une valeur exacte de la complexité, la notation devient &Theta;(g).
 
 # Règles pour estimer la complexité O(g(n))
 ## Règles
@@ -174,9 +163,9 @@ Les séquences I<sub>1</sub> et I<sub>3</sub> contiennent chacune une seule inst
 
 En pratique, on considèrera qu’il n’y a pas de différence entre les 3 opérations suivantes (à moins que l'énoncé donne une consigne différente):
 
-* a =b; 
-* a=b*c; 
-* a=a+b*c;
+* `a = b`; 
+* `a = b * c`; 
+* `a = a + b * c`;
 
 **Remarques :**
 
@@ -184,11 +173,13 @@ En pratique, on considèrera qu’il n’y a pas de différence entre les 3 opé
 * En faisant varier le degré de précision dans la mesure du nombre d'instruction élémentaires, on fait varier aussi le degré d'abstraction, c'est à dire l'independance par rapport à l'implementation de cet algorithme.
 
 ## Boucles
-Le calcul de la complexité ne doit pas dépendre du type de boucle, et donc du type d'algorithme. On ne considèrera pas, sauf mention contraire : 
+Pour faire un calcul exact du nombre d'opération, il faut compter:
 
 * l'initialisation de la variable utilisée comme variant de boucle
 * l'incrémentation de cette variable
 * la comparaison avec la valeur d'arrêt
+
+*Parfois, le calcul de la complexité ne doit pas dépendre du type de boucle, et donc du type d'algorithme. Ces opérations ne sont alors pas comptées.*
 
 <!--
 Sinon, il faudra compter de la manière suivante : 
@@ -269,7 +260,7 @@ Les problèmes à résoudre ont le plus souvent un nombre n de données bien sup
 
 Approfondir la notion de complexité : voir annexe[^2]
 
-# Exemple 1 : la recherche dans une liste triée
+# Exemple: la recherche dans une liste triée
 ## Enoncé du problème[^3]
 Supposons que le problème posé soit de trouver un nom X dans un annuaire téléphonique qui consiste en une liste triée alphabétiquement. On peut s'y prendre de plusieurs façons différentes. En voici deux :
 
@@ -379,20 +370,14 @@ On aura, dans ce que l'on appelle le PIRE des cas (l'élément n'est pas trouvé
 $$T(n) = 2 + 3\times n + 2$$
 
 ### Calcul de la complexité
-* **Complexité dans le meilleur et le pire des cas:** La complexité se situe entre 
+* **Complexité dans le meilleur et le pire des cas:** Le nombre d'opérations T(n) se situe entre Min(n) et Max(n)
 
-  - Min(n) = 6 : meilleur des cas (l'élément cherché occupe la premiere position dans la liste)
+  - Min(n) = 7 : meilleur des cas (l'élément cherché occupe la premiere position dans la liste)
   - et Max(n) = n : pire des cas (l'élément cherché n'est pas dans la liste)
 
 En notation de Landau, on écrit que la complexité (dans le pire des cas) est: **O(n)**
 
-* **Complexité en moyenne &Theta;(g(n)):**  
 
-<p>$$Moy_A(n) = \sum_{d \in D_n} p(d).coût_A(d)$$</p>
-
-où p(d) est la probabilité que l'on ait la donnée d en entrée de l'algorithme.
-
-et coût_A(d) représente la complexité en temps de l'algorithme A sur la donnée d.
 
 ## Algorithme de recherche dichotomique
 ### Programme python itératif
@@ -420,38 +405,41 @@ A chaque itération, l'intervale est réduit de moitié. Le programme s'arrête 
   <figcaption>recherche dans un jeu de cartes triées</figcaption>
 </figure>
 
-Le script python complet se trouve ici : [lyceum rappels sur la recherche dichotomique](https://lyceum.fr/tg/nsi/5-algorithmique/0-rappels/#un-algorithme-efficace-la-recherche-dichotomique)
 
-> Extrait du script 
+
+> Le script python complet 
 
 ```python
-...
-gauche = 0
-droite = len(mots) 
-trouve = False
-while gauche <= droite and not trouve:
-  milieu = (gauche + droite) // 2 # il, s'agit d'une division entiere
-
-  if liste[milieu] == element:
-            print(element, "trouve à l'indice:", milieu , liste[milieu])
-            return True
-            # on arrête la boucle
-            debut = fin - 1
-        elif liste[milieu] < element:       
-            debut = milieu + 1
+def rechDico(L, X):
+    gauche = 0
+    droite = len(L) 
+    trouve = False
+    while gauche <= droite and not trouve:
+        # On se place au milieu de la liste
+        milieu = (gauche + droite) // 2 
+        # il, s'agit d'une division entière
+        if L[milieu] == X:
+          #print(élément, "trouvé à l'indice:", milieu , liste[milieu]) 
+          trouve = True
+        # on arrête la boucle
+        elif L[milieu] < X: 
+          gauche = milieu + 1
         else:
-            fin = milieu - 1
-...
+            droite = milieu - 1
+            #print(élément, "non trouvé")
+    if not trouve : 
+        return -1 
+    return milieu
 ``` 
 
 
 > Complexité
 
-* La dimension des données sera prise comme egale à `len(mots)`. Appelons cette valeur n.
+* La dimension des données sera prise comme egale à `len(L)`. Appelons cette valeur n.
 * Le variant de boucle, c'est $droite-gauche$, qui vaut au départ n, et 0 à la fin de la boucle, si la valeur n'a pas été trouvée (pire des cas).
 * Les instructions essentielles de la boucle, ce seront les comparaisons 
-  * `mots[milieu] == X`
-  * et `mots[milieu] > X`
+  * `L[milieu] == X`
+  * et `L[milieu] > X`
 
 Pour simplifier le raisonnement, disons qu'il n'y a qu'une seule instruction essentielle par itération.
 
@@ -511,71 +499,6 @@ Le second algorithme demandera dans le pire des cas de séparer en deux l'annuai
 
 La complexité est alors O(log<sub>2</sub>(N))
 
-# Exemple 2 : multiplication de matrices carrées
-## Enoncé du problème
-soit A = (a<sub>ij</sub>) et B = (b<sub>ij</sub>) deux matrices n*n à coefficients dans **R**.
-
-i = numero de ligne et j = colonne
-
-L'algorithme suivant devra calculer les coefficients (c i j) de la matrice C = A*B selon la formule : 
-
-<p>$$c_{ij} = \sum_{k=1}^n a_{ik}.b_{kj}$$</p>
-
-## Algorithme
-```python
-import numpy as np
-def matrice(a,b):
-    """
-    calcule et retourne la matrice c produit des matrices a*b
-    a et b sont supposées être des matrices carrées, de même dimension
-    """
-    nblignes = a.shape[0]
-    nbcolonnes = b.shape[1]
-    if nblignes != nbcolonnes:
-        raise "value error !"
-    c = np.zeros(nblignes*nbcolonnes).reshape(nblignes,nbcolonnes)
-    for i in range(nblignes):
-        for j in range(nbcolonnes):
-            for k in range(nbcolonnes):
-                c[i,j] += a[i,k]*b[k,j]
-    return c
-```
-
-Voici un exemple d'utilisation de ce programme (avec jupyter notebook) : 
-
-<table>
-    <tr>
-        <th scope="row">IN</th>
-        <td>M1 = np.matrix((1,2,3,4,5,6,7,8,9)).reshape(3,3)<br>
-          M2 = np.matrix((2,4,6,8,10,12,14,16,18)).reshape(3,3)<br>
-        matrice(M1,M2)
-        </td>
-    </tr>
-   
-    <tr>
-        <th scope="row">OUT</th>
-        <td>
-          $$\begin{align}
-        array([&[60.&, 72.&, 84.],\\
-       &[132.&, 162.&, 192.],\\
-       &[204.&, 252.&, 300.]])\\
-       \end{align}$$
-
-        </td>
-    </tr>
-</table>
-
-## Complexité
-La complexité de l'algorithme matrice, comptée en nombre de multiplications de réels ne dépend que de la taille des matrices :  
-
-* Le nombre de multiplication est :
-$$\sum_{i=1}^n \sum_j \sum_k 1 = n^3 $$
-
-* Le nombre d'additions est :
-$$n^2(n-1)$$
-
-* La complexité asymptotique est alors : 
-$$Min(n) = Max(n) = Moy(n) = n^3 $$
 
 
 <div class="essentiel">
@@ -695,6 +618,34 @@ def fonctionFinale(n):
   return res
 ```
 
+## Exercice 2: TP sur la recherche dans une liste de mots
+
+On donne deux algorithmes de recherche dans une liste de mots.
+
+Vous aller comparer l'efficacité de la recherche de ces 2 algorithmes lorsque l'on cherche un mot dans une liste (dictionnaire français).
+
+L'énonce du TP se trouve [ici](/docs/NSI/algorithmes/page14/)
+
+
+
+
+
+## Exercice 3 : 
+Dans un groupe de n individus , une star est quelqu’un que tout le monde connait mais qui ne connait personne. Pour trouver une star, s’il en existe une, vous ne pouvez poser aux individus de ce groupe que des questions du type : « connaissez-vous x ? ».
+
+1. Combien de stars au maximum peut-il exister dans un groupe ?
+2. Donner un algorithme trouvant une star s’il en existe une (ou déterminant qu’il n’en existe pas) et de coût linéaire (en prenant comme mesure de la complexité le nombre de questions posées).
+
+## Exercice 4 : 
+Le problème est de déterminer à partir de quel étage d’un immeuble sauter par une fenêtre est fatal. Vous êtes dans un immeuble à n étages (numérotés de 1 à n) et vous disposez de k étudiants. Il n’y a qu’une opération possible pour tester si la hauteur d’un étage est fatale : faire sauter un étudiant par la fenêtre. S’il survit, vous pouvez le réutiliser ensuite, sinon vous ne pouvez plus.
+
+> Vous devez proposer un algorithme pour trouver la hauteur à partir de laquelle un saut est fatal en faisant le **minimum de sauts**.
+
+* Donnée: on suppose k > n
+
+<!--
+
+# Corrections
 ## Exercice 2 : polynôme de Horner
 Soit x ∈ R. On souhaite calculer 3x<sup>2</sup> + 2x + 1. 
 
@@ -721,72 +672,10 @@ def poly(a,x):
 4. Deuxième exemple : pour  3x<sup>3</sup> + 2x<sup>2</sup> − x + 7 : Vérifier que l'expression de la fonction peut se mettre sous une forme nécessitant trois multiplications : 
 `7 + x * (-1 + x * (2 + x * 3))` 
 5. Soit x ∈ R, soit P un polynôme, soit n son degré, a<sub>0</sub>, ..., a<sub>n</sub> ses coefficients. On écrit P (x) sous la forme :
-􏰃􏰁$$P(x) = a_0 + x\times(a_1+x\times(a_2+x\times(a_3+...x\times(a_n)...)))$$
+$$P(x) = a_0 + x\times(a_1+x\times(a_2+x\times(a_3+...x\times(a_n)...)))$$
 Écrire un algorithme pour calculer P(x) selon cette méthode. (méthode de Horner)<br>
 Combien de multiplications sont effectuées pour calculer P(x) avec cet algorithme ?
 
-
-
-## Exercice 3 : enigme mathematique
-Vous êtes face à un mur qui s’étend à l’infini dans les deux directions. Il y a une porte dans ce 􏰒􏰑
-mur, mais vous ne connaissez ni la distance, ni la direction dans laquelle elle se trouve. Par ailleurs, l’obscurité vous empêche de voir la porte à moins d’être juste devant elle.
-
-Vous avez l'idée, naïve, d'explorer petit à petit dans les 2 directions du mur, en revenant en arrière à chaque nouveau mètre exploré.
-
-1. Faites un schéma de la situation.
-2. Etablir, à l'aide d'un tableau, le nombre de pas effectués en fonction de la distance explorée dans les 2 directions.
-3. Montrer que l'algorithme naïf utilisé est de complexité quadratique en L, la distance à la porte.
-4. Existe t-il une méthode plus efficace, permettant de trouver cette porte en un temps linéaire O(L), ou O(L*log(L)) vis-à-vis de la distance L qui vous sépare de celle-ci?
-
-## Exercice 4 : calcul de la complexité en moyenne
-On considère une liste de 4 éléments, différents, mis dans un tableau aux rangs 1 à 4. 
-
-Si on cherche une valeur X aléatoire dans ce tableau par une méthode itérative, et que l'on fait 16 essais, il y a de plus nombreuses chances que l'on ait des résultats équiprobables : 
-
-| n° essai | valeur aléatoire cherchée X | parcours de la liste | nombre de comparaisons T |
-| --- | --- | --- | --- |
-| 1 | 1 | 1 | 1 |
-| 2 | 1 | 1 | 1 |
-| 3 | 1 | 1 | 1 |
-| 4 | 1 | 1 | 1 |
-| 5 | 2 | 1 -> 2 | 2 |
-| 6 | 2 | 1 -> 2 | 2 |
-| 7 | 2 | 1 -> 2 | 2 |
-| 8 | 2 | 1 -> 2 | 2 |
-| 9 | 3 | 1 -> 2 -> 3 | 3 |
-| ... | ... | ... | ... |
-| 16 | 4 | 1 -> 2 -> 3 -> 4 | 4 |
-
-On supposera que X est bien présent dans le tableau.
-
-1. Déterminer le nombre total de comparaisons qui sont faites avec 16 essais.
-2. Déterminer le nombre moyen de comparaisons qui sont effectuées.
-3. Généraliser le résultat à un tableau comprenant n éléments, équiprobables, de probabilité p. Montrer que l'on trouve :
-$$T(n) = p \times \tfrac{n(n+1)}{2}$$ (somme des termes d'une suite arithmétique)
-4. Déterminer alors que la compléxité &Theta; de l'algorithme de recherche itérative  est linéaire en n.
-
-
-<!--
-> Décrire un algorithme vous permettant de trouver cette porte en un temps linéaire vis-à-vis de la distance qui vous sépare de celle-ci.
-
-
-## Exercice 5 : 
-Dans un groupe de n individus , une star est quelqu’un que tout le monde connait mais qui ne 􏰒􏰑
-connait personne. Pour trouver une star, s’il en existe une, vous ne pouvez poser aux individus de ce groupe que des questions du type : « connaissez-vous x ? ».
-
-1. Combien de stars au maximum peut-il exister dans un groupe ?
-2. Donner un algorithme trouvant une star s’il en existe une (ou déterminant qu’il n’en existe pas) et de coût linéaire (en prenant comme mesure de la complexité le nombre de questions posées).
-
-## Exercice 6 : 
-Le problème est de déterminer à partir de quel étage d’un immeuble sauter par une fenêtre est 􏰒􏰑
-fatal. Vous êtes dans un immeuble à n étages (numérotés de 1 à n) et vous disposez de k étudiants. Il n’y a qu’une opération possible pour tester si la hauteur d’un étage est fatale : faire sauter un étudiant par la fenêtre. S’il survit, vous pouvez le réutiliser ensuite, sinon vous ne pouvez plus.
-
-> Vous devez proposer un algorithme pour trouver la hauteur à partir de laquelle un saut est fatal en faisant le minimum de sauts.
-
-*Donnée :* on suppose k > log n
--->
-
-# Corrections
 ## correction de l'ex 2
 ```python
 def PHorner(taba,x):
@@ -822,9 +711,111 @@ On peut alors tester le programme (jupyter notebook):
     </tr>
 </table>
 
+## Exercice 3 : enigme mathematique
+Vous êtes face à un mur qui s’étend à l’infini dans les deux directions. Il y a une porte dans ce mur, mais vous ne connaissez ni la distance, ni la direction dans laquelle elle se trouve. Par ailleurs, l’obscurité vous empêche de voir la porte à moins d’être juste devant elle.
+
+Vous avez l'idée, naïve, d'explorer petit à petit dans les 2 directions du mur, en revenant en arrière à chaque nouveau mètre exploré.
+
+1. Faites un schéma de la situation.
+2. Etablir, à l'aide d'un tableau, le nombre de pas effectués en fonction de la distance explorée dans les 2 directions.
+3. Montrer que l'algorithme naïf utilisé est de complexité quadratique en L, la distance à la porte.
+4. Existe t-il une méthode plus efficace, permettant de trouver cette porte en un temps linéaire O(L), ou `O(L*log(L))` vis-à-vis de la distance L qui vous sépare de celle-ci?
 
 
 
+-->
+# Compléments
+## Notations de **Landau** 
+
+* **Notation O : la borne superieure :** g domine f
+on note f = O(g) s'il existe un nombre réel positif a et un rang n de f<sub>n</sub> tels que f(n) ≤ a.g(n) : 
+
+$$\exists c \in \mathbb{R}^+, tels \quad que\quad   \forall n_o \in \mathbb{N},  |f(n_o)|\leq c.|g(n)| $$
+
+En pratique, la recherche de la complexité revient à déterminer cette fonction (ou cette suite) g. On note la complexité **O(g)**. On ignore l'eventuel coefficient multiplicateur c et on ne conserve que le terme le plus divergent dans le cas où g contienne plusieurs termes. **T(n) = O(g(n))**.
+
+Pour l'exemple précédent, la complexité est notée **O(n)** en notation de Landau.
+
+* **Notation &Theta; :** Lorsqu'il est possible de déterminer une valeur exacte de la complexité, la notation devient &Theta;(g).
+
+* **Complexité en moyenne &Theta;(g(n)):**  
+
+<p>$$Moy_A(n) = \sum_{d \in D_n} p(d).coût_A(d)$$</p>
+
+où p(d) est la probabilité que l'on ait la donnée d en entrée de l'algorithme.
+
+et coût_A(d) représente la complexité en temps de l'algorithme A sur la donnée d.
+
+<!--
+# Exemple 2 : multiplication de matrices carrées
+## Enoncé du problème
+soit A = (a<sub>ij</sub>) et B = (b<sub>ij</sub>) deux matrices n*n à coefficients dans **R**.
+
+i = numero de ligne et j = colonne
+
+L'algorithme suivant devra calculer les coefficients (c i j) de la matrice C = A*B selon la formule : 
+
+<p>$$c_{ij} = \sum_{k=1}^n a_{ik}.b_{kj}$$</p>
+
+## Algorithme
+```python
+import numpy as np
+def matrice(a,b):
+    """
+    calcule et retourne la matrice c produit des matrices a*b
+    a et b sont supposées être des matrices carrées, de même dimension
+    """
+    nblignes = a.shape[0]
+    nbcolonnes = b.shape[1]
+    if nblignes != nbcolonnes:
+        raise "value error !"
+    c = np.zeros(nblignes*nbcolonnes).reshape(nblignes,nbcolonnes)
+    for i in range(nblignes):
+        for j in range(nbcolonnes):
+            for k in range(nbcolonnes):
+                c[i,j] += a[i,k]*b[k,j]
+    return c
+```
+
+Voici un exemple d'utilisation de ce programme (avec jupyter notebook) : 
+
+<table>
+    <tr>
+        <th scope="row">IN</th>
+        <td>M1 = np.matrix((1,2,3,4,5,6,7,8,9)).reshape(3,3)<br>
+          M2 = np.matrix((2,4,6,8,10,12,14,16,18)).reshape(3,3)<br>
+        matrice(M1,M2)
+        </td>
+    </tr>
+   
+    <tr>
+        <th scope="row">OUT</th>
+        <td>
+          $$\begin{align}
+        array([&[60.&, 72.&, 84.],\\
+       &[132.&, 162.&, 192.],\\
+       &[204.&, 252.&, 300.]])\\
+       \end{align}$$
+
+        </td>
+    </tr>
+</table>
+
+## Complexité
+La complexité de l'algorithme matrice, comptée en nombre de multiplications de réels ne dépend que de la taille des matrices :  
+
+* Le nombre de multiplication est :
+$$\sum_{i=1}^n \sum_j \sum_k 1 = n^3 $$
+
+* Le nombre d'additions est :
+$$n^2(n-1)$$
+
+* La complexité asymptotique est alors : 
+$$Min(n) = Max(n) = Moy(n) = n^3 $$
+
+-->
+
+## Liens
 [^1]: itération : succession d'états dans un processus
 [^2]: wikipedia : analyse de la complexité : [wikipedia.org/wiki/Analyse_de_la_complexité_des_algorithmes](https://fr.wikipedia.org/wiki/Analyse_de_la_complexité_des_algorithmes)
 

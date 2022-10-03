@@ -33,7 +33,7 @@ Tous ces fichiers sont mis dans le même <a href="../datas/enquete.xls">classeur
 > A partir des liens proposées ci-dessous, ou bien d'autres issus d'une recherche personnelle, repondez de manière argumentée à *au moins une* des questions suivantes:
 
 1. Quelles personnes sont renseignées dans le fichier de la police? Des criminels, des personnes ayant eu affaire avec la justice, les victimes, ou bien tout citoyen français?
-2. L'enquête à partir de ces fichiers va-t-elle, à coup sûr, permettre de désigner le coupable?
+2. L'enquête à partir de ces fichiers va-t-elle, à coup sûr, permettre de désigner le coupable? 
 3. La CNIL va s'opposer à l'existance d'un fichier du type de celui appelé *proprietaire* dans le classeur. Pourquoi?
 4. Imaginez que l'on enquête sur une personne soupçonnée d'être responsable d'un délis: Quels renseignements peut-on trouver à partir de ses traces numériques?
 
