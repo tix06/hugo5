@@ -102,3 +102,38 @@ recherche_dicho_mot('tracts',mots)
 ```
 
 > Recopier et compléter le script. Mesurer également le temps mis par la fonction pour trouver le mot *tracts*. Commenter la différence de temps entre les 2 algorithmes. Cette différence est-elle toujours significative, quel que soit le mot recherché? (Faire des tests).
+
+# Comparer les fonctions g(n)
+Comme sur l'image suivante, vous allez représenter sur la même figure les fonctions:
+
+* $y = 1$
+* $y = log_2(x)$
+
+<figure>
+  <img src="../images/graphique1.png">
+  <figcaption>1 et log(n) : log(n) a une croissance faible</figcaption>
+</figure>
+
+> On s'aidera du [lien suivant](https://python.doctor/page-creer-graphiques-scientifiques-python-apprendre) pour représenter des graphiques avec *Matplolib*.
+
+
+Puis vous ajouterez sur le même graphique les fonctions:
+
+* $y = x$
+* $y = x * log_2(x)$
+
+<figure>
+  <img src="../images/graphique2.png">
+  <figcaption>n*log(n) et n ont une croissance comparable</figcaption>
+</figure>
+
+Ajouter enfin:
+
+* $y = x**2$
+* $y = x**3$
+
+Puis 
+
+* $y = 2**x$
+
+> Comparer alors ces fonctions: Sont-elles classées selon leur *divergence* lorsque x augmente?

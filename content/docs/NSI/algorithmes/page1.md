@@ -33,90 +33,37 @@ En pratique, on ne comptera que les opérations estimées **importantes** : **T(
 
 On en déduira alors la **classe de complexité asymtotique g(n)** (voir [tableau plus loin](#principales-classes-de-la-complexité)). Puis la complexité dans le pire des cas **O(g(n))**.
 
-## Exemple avec une boucle bornée
-Voici le principe de base pour calculer la complexité d’une boucle bornée. Soit (deb,fin) ∈ Z<sup>2</sup>, considérons une boucle de type `for i in range(deb, fin):`
+## Instructions élémentaires T(n)
+T(n) est la somme des unités de mesure, comptée pour chaque instruction.
 
-Alors la complexité de cette boucle est :
-$$\sum_{i=deb}^{fin-1} C_i$$
-où C représente la complexité de l’itération[^1] i
+
+
+**Une unité de mesure** peut-être :
+
+* une addition
+* une soustraction
+* une multiplication, une division, Mod (%), Div
+* une opération arithmétique simple (sans appel de fonctions)
+* une comparaison, les opérations booléennes (et,ou,non)
+* une affectation
+* des opérations de lectures et écritures simples
+
+**Exemple**:
+
+Le programme `multiplie` devra écrire dans une liste la série de nombres correspondants à la table de multiplication de b. Pour les `n` premiers termes.
+
+### Exemple avec une boucle bornée
+
 
 Supposons pour cet exemple que seules les opérations multiplier et additionner sont significatives. On compte le nombre de ces opérations pour les fonctions suivantes.
 
 ```python
 def multiplie1(b,n):
+  L= []
   for i in range(n):
     L.append(b*i)
+  return L
 ```
-
-Le programme execute n fois la ligne 3. On suppose qu'une seule opération est réalisée à chaque itération (l'opération b*i). Le nombre d'opérations T(n) est donc égal à n.
-
-
-Le script suivant est une variation du premier. Il diffère par de petis détails d'implémentation. 
-
-```python
-def multiplie2(b,n)
-for i in range(n):
-  y = b * i
-  L.append(y)
-```
-
-La seule opération significative est `b*i`. 
-Le nombre d'opérations fondamentales est encore T(n) = n. 
-
-## Boucle non bornée : variant de boucle
-Le principe est le même pour une boucle non bornée (non conditionnelle), mais il est moins facile de déterminer le nombre d’itérations de la boucle. Pour ce faire, la méthode classique est d’étudier plus en détails le **variant de boucle**. On détermine :
-
-* La valeur initiale du variant de boucle ;
-* Sa valeur finale ;
-* De combien il diminue strictement à chaque étape.
-
-On peut alors en déduire le nombre d’itérations de la boucle.
-
-*Exemple :* Avec `multiplie3`, le variant de boucle, c'est `i`. Sa valeur passe de n - 1 à 0. La boucle est executée n fois. Et le nombre d'instructions significatives dans la boucle est de 2 : $$T(n) = 2 \times n$$
-
-```python
-def multiplie3(b,n)
-i = n - 1
-while i >=0 : 
-  y = b * i
-  L.append(y)
-  i -= 1
-```
-
-La fonction semble réaliser plus d'opérations que les 2 premières implémentations, d'où la petite différence pour la valeur de T(n) avec les deux fonctions precedentes.
-
-## g(n): Limite asymptotique en n
-Lorsque l'on étudie la complexité d'une fonction ou d'un algorithme, on s'intéressera souvent à son comportement pour de grandes taille du paramètre d'entrée n. Car si pour des données de petite dimension, la qualité de l'algorithme importe peu, pour de grandes tailles de données, la différence de performance peut être énorme. On dit que l'on observe le comportement asymtotique de T(n), c'est à dire pour n qui tend vers de grandes valeurs.
-
-On aura besoin de définir plusieurs niveaux de description:
-
-* T(n), qui représente le nombre d'opérations significatives réalisées par cette fonction : par exemple $T(n) = 2\times n$.
-* g(n) est une approximation de T(n). Ici, $g(n) = n$
-* La complexité O(g(n)) détermine la classe de complexité de la fonction, dans le pire des cas. Dans le cas de nos 3 fonctions `multiplie`, ce sera à chaque fois **O(n)**. La complexité est **linéaire**.
-
-La petite différence d'implementation de ces 3 fonctions est visible en calculant T(n), mais pas en déterminant g(n) ni O(g(n)).
-
-Cette différence ne vient que d'une différence des **details d'implémentation** du même algorithme, et ne doit pas être considérée pour le calcul de la complexité. 
-
-
-
-# Règles pour estimer la complexité O(g(n))
-## Règles
-
-<ul>
-<li>Poser n = &#8220;la taille des paramètres&#8221;.</li>
-<li>Enoncer les instructions que vous compterez comme significatives</li>
-<li>définir des blocs d'instructions dans le script</li>
-<li>Ne compter que les instructions essentielles, à partir d'une unité de mesure: noter la somme des instructions élémentaires T(n).
-</li>
-<li>Pour chacune des boucles du programme, repérer le <strong>variant de boucle</strong> et calculer le nombre d&#8217;itérations : combien de fois on passe dans la boucle.</li>
-<li>Si T(n) contient une somme de termes, conserver uniquement le plus divergent.</li>
-<li>Prendre pour g(n) une fonction approchée de T(n). Ne pas considérer les multiplicateurs C : si T(n) = C.f(n), alors g(n) = f(n). Par exemple, si T(n) = 3*n, prendre g(n) = n</li>
-<li>Sauf précision contraire, la complexité demandée est la complexité au pire en temps.</li>
-</ul>
-
-## Instructions élémentaires T(n)
-T(n) est la somme des unités de mesure, comptée pour chaque instruction.
 
 La première étape est d’identifier les séquences dans un algorithme. Si votre algorithme est composé des séquences :
 ```
@@ -128,8 +75,7 @@ La première étape est d’identifier les séquences dans un algorithme. Si vot
 
 $$T(n) = T(I_1) + T(I_2) + T(I_3) + ...$$
 
-
-Dans la fonction `multiplie2`, il y a 3 séquences I<sub>1</sub>, I<sub>2</sub>, I<sub>3</sub> : 
+il y a 3 séquences I<sub>1</sub>, I<sub>2</sub>, I<sub>3</sub> : 
 
 ```python
 # sequence I1
@@ -148,72 +94,75 @@ Dans la fonction `multiplie2`, il y a 3 séquences I<sub>1</sub>, I<sub>2</sub>,
   return L
 ```
 
-Les séquences I<sub>1</sub> et I<sub>3</sub> contiennent chacune une seule instruction élémentaires. Cependant, I<sub>2</sub> est une séquence comprenant 2 operations (voir plus haut). De ce fait : $$T(n) = 2 + T(I_2)$$
+La séquence I<sub>1</sub> contient une seule instruction élémentaires (affectation = ). I<sub>3</sub> ne contient pas d'instruction significative. I<sub>2</sub> est une séquence comprenant 3 operations :
 
-**Une unité de mesure** peut-être :
+* opération * pour b * i
+* affectation = 
+* affectation `append`
 
-* une addition
-* une soustraction
-* une multiplication, une division, Mod (%), Div
-* une opération arithmétique simple (sans appel de fonctions)
-* une comparaison, les opérations booléennes (et,ou,non)
-* une affectation
-* des opérations de lectures et écritures simples
+De ce fait : $$T(n) = 1 + 3\times n$$
+
+### Boucle non bornée : variant de boucle
+Le principe est le même pour une boucle non bornée (non conditionnelle), mais il est moins facile de déterminer le nombre d’itérations de la boucle. Pour ce faire, la méthode classique est d’étudier plus en détails le **variant de boucle**. On détermine :
+
+* La valeur initiale du variant de boucle ;
+* Sa valeur finale ;
+* De combien il diminue strictement à chaque étape.
+
+On peut alors en déduire le nombre d’itérations de la boucle.
+
+*Exemple :* Avec `multiplie2`, le variant de boucle, c'est `i`. Sa valeur passe de n - 1 à 0. La boucle est executée n fois. Et le nombre d'instructions significatives dans la boucle est de 2 : $$T(n) = 2 \times n$$
+
+```python
+def multiplie2(b,n)
+  i = 0
+  while i < n : 
+    y = b * i
+    L.append(y)
+    i = i + 1
+  return L
+```
+
+La fonction semble réaliser plus d'opérations que la première implémentation, d'où la petite différence pour la valeur de T(n) avec les deux fonctions precedentes.
+
+Ici, on peut évaluer T(n) = 2 + 5n
+
+Cette différence ne vient que d'une différence des **details d'implémentation** du même algorithme, et ne doit pas être considérée pour le calcul de la complexité. 
+
+## g(n): Limite asymptotique en n
+Lorsque l'on étudie la complexité d'une fonction ou d'un algorithme, on s'intéressera souvent à son comportement pour de grandes taille du paramètre d'entrée n. Car si pour des données de petite dimension, la qualité de l'algorithme importe peu, pour de grandes tailles de données, la différence de performance peut être énorme. On dit que l'on observe le *comportement asymtotique de T(n)*, c'est à dire pour n qui tend vers de grandes valeurs.
+
+On aura besoin de définir plusieurs niveaux de description:
+
+* T(n), qui représente le nombre d'opérations significatives réalisées par cette fonction : par exemple $T(n) = 2\times n$.
+* g(n) est une approximation de T(n). Ici, $g(n) = n$
+* La complexité O(g(n)) détermine la classe de complexité de la fonction, dans le pire des cas. Dans le cas de nos 3 fonctions `multiplie`, ce sera à chaque fois **O(n)**. La complexité est **linéaire**.
+
+La petite différence d'implementation de ces 2 fonctions est visible en calculant T(n), mais pas en déterminant g(n) ni O(g(n)).
 
 
-En pratique, on considèrera qu’il n’y a pas de différence entre les 3 opérations suivantes (à moins que l'énoncé donne une consigne différente):
+# Règles pour estimer la complexité O(g(n))
+## Règles
 
-* `a = b`; 
-* `a = b * c`; 
-* `a = a + b * c`;
+<ul>
+<li>Poser n = &#8220;la taille des paramètres&#8221;.</li>
+<li>Enoncer les instructions que vous compterez comme significatives</li>
+<li>définir des blocs d'instructions dans le script</li>
+<li>Ne compter que les instructions essentielles, à partir d'une unité de mesure: noter la somme des instructions élémentaires T(n).
+</li>
+<li>Pour chacune des boucles du programme, repérer le <strong>variant de boucle</strong> et calculer le nombre d&#8217;itérations : combien de fois on passe dans la boucle.</li>
+<li>Si T(n) contient une somme de termes, conserver uniquement le plus divergent.</li>
+<li>Prendre pour g(n) une fonction approchée de T(n). Ne pas considérer les multiplicateurs C : si T(n) = C.f(n), alors g(n) = f(n). Par exemple, si T(n) = 3*n, prendre g(n) = n</li>
+<li>Sauf précision contraire, la complexité demandée est la complexité au pire en temps.</li>
+</ul>
+
+
+
 
 **Remarques :**
 
 * C'est souvent le genre du problème qui va décider de ce qui constitue une *instruction significative*: Pour un algorithme de tri, ce sera : le nombre de comparaison de deux éléments, et le déplacement de deux éléments.
 * En faisant varier le degré de précision dans la mesure du nombre d'instruction élémentaires, on fait varier aussi le degré d'abstraction, c'est à dire l'independance par rapport à l'implementation de cet algorithme.
-
-## Boucles
-Pour faire un calcul exact du nombre d'opération, il faut compter:
-
-* l'initialisation de la variable utilisée comme variant de boucle
-* l'incrémentation de cette variable
-* la comparaison avec la valeur d'arrêt
-
-*Parfois, le calcul de la complexité ne doit pas dépendre du type de boucle, et donc du type d'algorithme. Ces opérations ne sont alors pas comptées.*
-
-<!--
-Sinon, il faudra compter de la manière suivante : 
-$$T(n)=1+ \Sigma_{j=1,...,n} (2+T_j(I))$$
--->
-
-## Instructions conditionnelles
-### conditionnel simple
-
-```
-Si Condition Alors :
-  I ;
-```
-
-Dans le cas défavorable, où l'expression conditionnelle revoie `True`, le bloc d'instruction I est exécuté. On a alors : 
-
-$$T (n) = Tcondition (n) + T_I (n)$$
-
-* T(n) représente le nombre total d’instructions
-* Tcondition(n) représente le nombre d’instructions nécessaire pour tester la condition (qui peut-être 1 s’il s’agit par exemple d’une simple comparaison entre deux expressions arithmétiques).
-* T<sub>I</sub> représente le nombre d’instructions dans I.
-
-### Conditionnel avec alternative
-
-```
-Si Condition Alors :
-  I1 ;
-Sinon :
-  I2;
-```
-
-Dans le cas défavorable, on comptera : 
-
-$$T (n) = Tcondition (n) + max (T_{I_1} (n), T_{I_2} (n))$$
 
 
 # Principales classes de la complexité 
@@ -724,8 +673,55 @@ Vous avez l'idée, naïve, d'explorer petit à petit dans les 2 directions du mu
 
 
 -->
-# Compléments
-## Notations de **Landau** 
+# Compléments sur le Calcul de T(n)
+Pour calculer la complexité d’une boucle bornée. Soit (deb,fin) ∈ Z<sup>2</sup>, considérons une boucle de type `for i in range(deb, fin):`
+
+Alors la complexité de cette boucle est :
+$$\sum_{i=deb}^{fin-1} C_i$$
+où C représente la complexité de l’itération[^1] i
+
+## Boucles
+Pour faire un calcul exact du nombre d'opération, il faut compter:
+
+* l'initialisation de la variable utilisée comme variant de boucle
+* l'incrémentation de cette variable
+* la comparaison avec la valeur d'arrêt
+
+*Parfois, le calcul de la complexité ne doit pas dépendre du type de boucle, et donc du type d'algorithme. Ces opérations ne sont alors pas comptées.*
+
+
+
+## Instructions conditionnelles
+### conditionnel simple
+
+```
+Si Condition Alors :
+  I ;
+```
+
+Dans le cas défavorable, où l'expression conditionnelle revoie `True`, le bloc d'instruction I est exécuté. On a alors : 
+
+$$T (n) = Tcondition (n) + T_I (n)$$
+
+* T(n) représente le nombre total d’instructions
+* Tcondition(n) représente le nombre d’instructions nécessaire pour tester la condition (qui peut-être 1 s’il s’agit par exemple d’une simple comparaison entre deux expressions arithmétiques).
+* T<sub>I</sub> représente le nombre d’instructions dans I.
+
+### Conditionnel avec alternative
+
+```
+Si Condition Alors :
+  I1 ;
+Sinon :
+  I2;
+```
+
+Dans le cas défavorable, on comptera : 
+
+$$T (n) = Tcondition (n) + max (T_{I_1} (n), T_{I_2} (n))$$
+
+
+# Compléments sur la notations de **Landau** 
 
 * **Notation O : la borne superieure :** g domine f
 on note f = O(g) s'il existe un nombre réel positif a et un rang n de f<sub>n</sub> tels que f(n) ≤ a.g(n) : 
