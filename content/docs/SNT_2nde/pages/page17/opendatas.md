@@ -25,7 +25,7 @@ Il y a des conditions à respecter pour la mise à disposision de ces données. 
 * primaire
 * libre de droit
 
-# Données
+# Organisation des données
 * Une **collection de données** peut être ordonnée sous forme de liste, ou d'une table.
 
 La façon de *structurer les données* influe fortement sur les opérations de traitement : il est par exemple bien plus efficace de rechercher une donnée dans une collection toujours ordonnée, mais y insérer une information est plus coûteux.
@@ -40,6 +40,8 @@ La façon de *structurer les données* influe fortement sur les opérations de t
 * **Descripteur :** mot ou un groupe de mots choisi pour caractériser les informations contenues dans un document et pour faciliter les recherches.
 
 * Une **collection** regroupe des objets partageant les mêmes descripteurs (par exemple, la collection des contacts d’un carnet d’adresses). La structure de table permet de présenter une collection : les objets en ligne, les descripteurs en colonne et les données à l’intersection. Les données sont alors dites structurées.
+
+* Une **information** est issu du croisement de plusieurs données. On donne un nouveau sens à ces données.
 
 # Format des données
 L'OPen Datas exige que les données doivent être au format EXPLOITABLE, et non proprietaire.
@@ -100,7 +102,7 @@ Le Répertoire National des Élus (RNE) a pour finalité le suivi des titulaires
 	<figcaption>Données du RNE pour les conseillers municipaux - extrait en csv</figcaption>
 </figure>
 
-Les données du RNE sont structurées par mandat. Neuf fichiers sont publiés ici :
+Les [données du RNE](https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/) sont structurées par mandat. Neuf fichiers sont publiés ici :
 
 1. <a href="https://www.data.gouv.fr/fr/datasets/r/d5f400de-ae3f-4966-8cb6-a85c70c6c24a">les conseillers municipaux ;</a>
 2. les conseillers communautaires ;
@@ -120,5 +122,7 @@ En [bas de page](https://www.data.gouv.fr/fr/datasets/repertoire-national-des-el
 	<figcaption>exemples de réutilisation des données ouvertes sur les elus municipaux</figcaption>
 </a>
 </figure>
+
+On voit ici comment des *données numériques* sont transformées en *informations*.
 
 > Ouvrir les données jugées d'intérêt public, c'est encourager leur réutilisation par tout un chacun. Cela permet d'encourager la transparence démocratique, de bénéficier de services au quotidien ou de prendre des décisions plus éclairées.
