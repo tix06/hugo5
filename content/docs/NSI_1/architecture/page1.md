@@ -93,6 +93,11 @@ Ces machines ont d'autres defauts:
 * pas d'unité centrale généraliste, mais une juxtaposition d'accumulateurs et d'unités spécialisées
 * la programmation se fait par cablage ou en positionnant des interrupteurs. Ces machines nécessitent que l'on change leur câblage à chaque type d'opération.
 
+<figure>
+  <img src="../images/architectureN.png">
+  <figcaption>illustration de la différence entre supercalculateurs<br>
+  et ordinateur Von Neumann</figcaption>
+</figure>
 
 | année | machine | unité logique | vitesse de calcul | remarques |
 | --- | --- | --- |--- |--- |
@@ -148,7 +153,9 @@ Une machine de Türing particulière contient donc, par avance, un programme.
 
 Une machine de **Türing universelle** est capable de *résoudre TOUS les problèmes possibles* de toutes les machines de Türing possibles (contient tous les programmes existants ou à venir).
 
-John Von Neumann fait référence de manière explicite à ce concept lorsqu'il présente l'architecture à laquelle doivent se conformer les *machines universelles*.
+John Von Neumann fait référence de manière explicite à ce concept lorsqu'il présente l'architecture à laquelle doivent se conformer les *machines universelles*:
+
+> Un ordinateur se définit comme une instance matérielle, concrète, d'une Machine de Turing Universelle
 
 ### Calculabilité
 Si un problème (proposition, fonction), que l'on peut *énoncer sous forme mathématique*, peut être résolu par une machine de Tûring, alors celui-ci est *calculable*. Il doit exister un *nombre fini d'instructions* pour résooudre ce problème.
@@ -167,6 +174,12 @@ Il devrait être possible de comparer des programmes en construction en évaluan
 * dispositifs d'entrée/sortie
 
 Il est à l'origine du concept de **programme enregistré**: le stockage des données et des instructions sous forme d'impulsions électriques à l'intérieur même de la machine qui pourra les consulter à l'instant et à la vitesse qui lui convient. En remplacement du traitement mécanique alors utilisé, ce qui necessitait une vaste manipulation de cables et de boutons à placer sur la bonne position pour specifier le nouveau problème. Charles Babbage avait déjà eut cette idée un siècle plus tôt.
+
+<figure>
+  <img src="../images/architectureN.png">
+  <figcaption>illustration de la différence entre supercalculateurs<br>
+  et ordinateur Von Neumann</figcaption>
+</figure>
 
 Cette architecture s'oppose à celle de Harvard (mémoires différentes pour les données et les programmes) du Mark1.
 
@@ -207,6 +220,7 @@ Les données doivent circuler entre les différentes parties d’un ordinateur, 
 
 
 # Liens et bibliographie
+* [cours sur l'architecture Von Neumann lattice.cnrs.fr](https://www.lattice.cnrs.fr/sites/itellier/poly_intro_info/informatique004.html#fig:Von%20Neumann)
 * article presentant les technologies de la machine à calculer aux ordinateur de 4e génération: [Evolution des machines à calculer - Alexandre Faribault](https://www.physique.usherbrooke.ca/~afaribau/essai/)
 * 5000 ans d'histoire [Deutsches Museum](https://artsandculture.google.com/story/hQUBvBSY16WtIQ)
 * [Fiche pdf cours architecture - niveau terminale NSI](https://isn-icn-ljm.pagesperso-orange.fr/1-NSI/res/res_histoire_1.pdf)

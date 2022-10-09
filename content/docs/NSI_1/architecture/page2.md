@@ -35,8 +35,109 @@ Le premier programme assembleur a été écrit par Nathaniel Rochester pour l'IB
 </figure>
 
 
-Pour échanger des données avec la mémoire, le processeur utilise deux procédés qui permettent l'un de transférer l'état d'un registre dans une case mémoire et l'autre de transférer l'état d'une case mémoire dans un registre.
+Pour échanger des données avec la mémoire, le processeur transfert l'état d'un registre dans une case mémoire (STA) ou l'état d'une case mémoire dans un registre (LDA). On rappelle que la mémoire contient à la fois les instructions et les données.
 
+Les instructions de traitement que l'on verra ici concernent uniquement les registres. 
+
+L'un de ces registres est le *Program Counter*, PC. Celui-ci repère l'état courant dans le programme (la ligne du script à executer).
+
+Voici une liste non exaustive des instructions du <a href="" target=blank>simulateur ARM</a>:
+
+* `MOV Rd, operand2`: copie la valeur de opérande2 dans Rd (le registre d)<br>
+exemple: `MOV R0, #23` place la valeur R3 dans le registre 0.
+* `ADD Rd, Rn, operand2`: additionne opérande et Rn et place le résultat dans Rd. Opérande peut être un nombre (précédé de dièse) ou la valeur d'un registre Rm
+* `SUB Rd, Rn, operand2`: idem mais soustraction
+* `LSL Rd, Rn, operand2`: déplace les bits de Rn de 'opérande' bits vers la gauche et stocke dans Rd (multiplication par 2, souvenez vous!)
+* `LSR Rd, Rn, operand2`: déplace les bits de Rn de 'opérande' bits vers la droite et stocke dans Rd (division par 2!)
+HALT: arret du programme
+* `INP R0,2`: attent un nombre en entrée
+* `OUT Rd, nombre`: affiche à l'écran. out Rd,4 affiche un nombre signé ou non(Rd,5). Rd,6 affiche en hexadécimal et Rd,7 affiche un caractère.
+* `CMP Rn, operand2`: effectue la comparaison entre Rn et l'opérande. Attention, cette instruction ne traite pas le résultat de la comparaison! C'est le rôle de la commande suivante.<br>
+
+La liste complète des instructions se trouve à la page INFO accessible depuis le bouton [info](https://www.peterhigginson.co.uk/AQA/info.html) du simulateur.
+
+<figure><a href="" target=blank>
+  <img src="../images/ARM.png">
+  <figcaption>simulateur ARM</figcaption></a>
+
+</figure>
+
+Le <a href="" target=blank>simulateur ARM</a> contient quelques exemples dont:
+
+* ADD: programme qui ajoute 2 nombres entrés par l'utilisateur
+
+```
+      INP R0,2
+      INP R1,2
+      ADD R2,R1,R0
+      OUT R2,4
+      HALT
+      // Output the sum of two numbers
+```
+
+* MAX: programme qui retourne le plus grand des 2 nombres saisis par l'utilisateur
+
+```
+      INP R0,2
+      INP R1,2
+      CMP R1,R0
+      BGT HIGHER
+      OUT R0,4
+      B DONE
+HIGHER:
+      OUT R1,4
+DONE:
+      HALT
+      // Input two numbers and output the higher
+```
+
+Dans ce 2<sup>e</sup> exemple, si R1 est supérieur à R0 (test à la ligne 3), alors le programme effectue un *branchement conditionnel* à la ligne 4 (BGT est le branchement pour Greater Than). Il execute à ligne 4 l'appel de la fonction HIGHER), sinon il passe à la ligne 5 (OUT R0,4).
+
+# Travail pratique: Assembleur
+Utiliser le simulateur pour réaliser les exercices suivants.
+
+## Opérations simples
+**1.** Il s'agit d'obtenir le nombre 84 à partir des nombres 50,25,8,7,3 et 1 avec les opérations : addition et soustraction uniquement.
+
+Testez le script dans le simulateur:
+
+```
+MOV R0,#50
+ADD R0,R0,#25
+ADD R0,R0,#8
+ADD R0,R0,#1
+HALT
+```
+
+**2.** Obtenir 84 à partir de 90,25,8,7,3 et 1 avec les opérations : addition et soustraction uniquement.
+
+**3.** Obtenir 128 à partir des instructions de multiplication par 2 du langage. *Voir la documentation du simulateur ARM (cliquer sur INFO) et chercher dans le paragraphe The AQA Instruction Set les commandes LSL et LSR*
+
+## Programmation fonctionnelle
+**1.** Cliquer sur SELECT et choisir le programme `max` en assembleur qui affiche le plus grand de deux entiers entrés au clavier, le comprendre et l'exécuter (Bien comprendre les instructions B, CMP et BGT voir le manuel)
+
+**2.** Ecrire en assembleur un programme utilisant LSL, LSR, B et BNE qui affiche 1 si le nombre est pair , 0 sinon. (BNE: Branchement si Not Equal).
+
+## Calculer 1+2+...+n où n est entré au clavier:
+**1.** Compléter le programme en assembleur ci-dessous pour résoudre le problème puis essayer avec n = 3 en mode pas à pas
+Exécuter avec RUN en vitesse maximale pour n = 10
+
+```
+INP R0,2
+MOV R1,#0 // compteur de boucle
+MOV R2,#0 // somme 
+boucle:
+ADD ...........
+ADD ...........
+CMP ...........
+.... boucle
+OUT R2,4
+HALT
+```
+
+**2.** Estimer le nombre d'opérations significatives effectuées pour n = 10. Combien d'opérations significatives seraient réalisées pour n = 100?
+
+<!--
 Supposons qu'il existe 2 registres, A et B: Les deux opérations qui s'appellent le stockage (**STA**) et le chargement (**LDA**) du contenu d'une case mémoire dans le registre A (ST pour STore, LD pour LoaD). Il y a bien entendu des opérations similaires pour le registre B (**STB** et **LDB**).
 
 Une autre opération que peut exécuter le processeur est l'addition du contenu du registre A et du contenu du registre B. Et le résultat de l'opération peut être stocké dans le registre A (**ADD A**) ou dans le registre B (**ADD B**). De même, **DEC A** décrémente la valeur contenue dans le registre A, c'est-à-dire soustrait 1 à la valeur contenue dans le registre A et stocke la valeur ainsi obtenue dans le registre A et DEC B réalise le même calcul sur la valeur contenue dans le registre B.
@@ -67,10 +168,11 @@ Par exemple, pour la séquence précédente, les codes **0 et 7** correspondent 
 **JMN** et **JMP** suivi de l'argument n, effectuent un saut si le contenu du registre A est négatif (JMN) ou positif (JMP).
 
 Pour construire une boucle ou un test avec ces nouvelles instructions, il faut tout d'abord trouver une façon de traduire la condition du test ou la condition d'arrêt de la boucle par un test d'égalité à zéro.
-
+-->
 
 
 # Liens
+* TP inspiré de [http://www.mathly.fr/archi.php](http://www.mathly.fr/archi.php)
 * Livre numérique sur le [fonctionnement d'un ordinateur](https://fr.wikibooks.org/wiki/Fonctionnement_d%27un_ordinateur)
 * activité sur [l'architecture Von Neumann](http://nsi4noobs.fr/IMG/pdf/e1_1nsi_architecture_von_neumann.pdf)
 * architecture von Neumann [wikipedia](https://fr.wikipedia.org/wiki/Architecture_de_von_Neumann)
