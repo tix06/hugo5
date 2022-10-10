@@ -3,12 +3,18 @@ Title: architecture 2
 ---
 
 # architecture 2
-# Le processeur
+## Rappels
 Dans l'architecture Von Neumann:
 
 * une machine universelle est contrôlée par un programme.
 * Les données et programmes sont écrits sur une même mémoire (en binaire). Ce qui donne la possibilité de changer les instructions au cours d'un calcul par exemple. C'est le concept de **programme enregistré**. C'est un ordinateur qui enregistre les instructions des programmes qu'il exécute dans sa mémoire vive.
-* Les instructions sontexecutée de manière séquentielle, par un **processeur**.
+* Les instructions sont executée de manière séquentielle, par un **processeur**.
+
+# Le processeur
+<figure>
+  <img src="../images/architectureN2.png">
+  <figcaption>Architecture de Von-Neumann - processeur</figcaption>
+</figure>
 
 L'architecture d'un **processeur** (CPU) comporte 2 parties: 
 
@@ -26,7 +32,14 @@ Le processeur réalise le cycle de Von Neumann:
 3. Ajouter 1 au *program Counter* (PC)
 4. Recommencer
 
+<figure><a href="https://www.youtube.com/watch?v=cQjllS45ReU" target=blank>
+  <img src="../images/architectureN1.png">
+  <figcaption>MooC Arduino #4 - Architecture de Von-Neumann, Harvard et Microcontrôleurs<br> - Youtube</figcaption></a>
+</figure>
+
 # L'assembleur
+Un langage d'assemblage ou langage assembleur est, en programmation informatique, le langage de plus bas niveau qui représente le langage machine sous une forme lisible par un humain. ([wiki](https://fr.wikipedia.org/wiki/Assembleur))
+
 Le premier programme assembleur a été écrit par Nathaniel Rochester pour l'IBM 701 (le premier ordinateur commercialisé par IBM) en 1954.
 
 <figure>
@@ -56,13 +69,13 @@ HALT: arret du programme
 
 La liste complète des instructions se trouve à la page INFO accessible depuis le bouton [info](https://www.peterhigginson.co.uk/AQA/info.html) du simulateur.
 
-<figure><a href="" target=blank>
-  <img src="../images/ARM.png">
-  <figcaption>simulateur ARM</figcaption></a>
 
+<figure>
+  <img src="../images/ARM.png">
+  <a href="https://www.youtube.com/watch?v=mhpwogkbtDU&t=17s" target=blank><figcaption>Explications (video) sur le simulateur ARM -<br> monlyceenumerique.fr</figcaption></a>
 </figure>
 
-Le <a href="" target=blank>simulateur ARM</a> contient quelques exemples dont:
+Le <a href="https://www.peterhigginson.co.uk/AQA/" target=blank>simulateur ARM</a> contient quelques exemples dont:
 
 * ADD: programme qui ajoute 2 nombres entrés par l'utilisateur
 
@@ -94,7 +107,7 @@ DONE:
 Dans ce 2<sup>e</sup> exemple, si R1 est supérieur à R0 (test à la ligne 3), alors le programme effectue un *branchement conditionnel* à la ligne 4 (BGT est le branchement pour Greater Than). Il execute à ligne 4 l'appel de la fonction HIGHER), sinon il passe à la ligne 5 (OUT R0,4).
 
 # Travail pratique: Assembleur
-Utiliser le simulateur pour réaliser les exercices suivants.
+Utiliser le <a href="https://www.peterhigginson.co.uk/AQA/" target=blank>simulateur</a>  pour réaliser les exercices suivants.
 
 ## Opérations simples
 **1.** Il s'agit d'obtenir le nombre 84 à partir des nombres 50,25,8,7,3 et 1 avec les opérations : addition et soustraction uniquement.

@@ -7,7 +7,7 @@ L'identité est construite à partir de données à caractère personnel.
 
 Une donnée à caractère personnel est une information sur une personne.
 
-L'exercice du droit d'une personne passe par la justification de l'identité administrative de la personne (nom, prenom, date de naissance, etc...).
+* L'exercice du droit d'une personne passe par la justification de l'*identité administrative* de la personne (nom, prenom, date de naissance, etc...).
 
 <figure>
 	<img src="../images/rgpd1.png">
@@ -16,7 +16,9 @@ L'exercice du droit d'une personne passe par la justification de l'identité adm
 	</a>
 </figure>
 
-Sur internet, la majorité des utilisateurs ne communiquent pas leur identité administrative. Ils donnent un pseudo, un mot de passe, un email. Le site associe souvent leur adresse IP à ces données. Ce qui constitue aussi une identité numérique.
+* *Identité sur le net*: Sur internet, la majorité des utilisateurs ne communiquent pas leur identité administrative. Ils donnent un *pseudo*, un mot de passe, un email. Le site associe souvent leur adresse IP à ces données. Ce qui constitue aussi une identité numérique.
+
+* *Une identité multiple*: Sur internet, nos traces numériques constituent aussi une certaine face de notre identité.
 
 # Comment sont collectées nos données personnelles
 (voir activité p 16 du livre SNT)

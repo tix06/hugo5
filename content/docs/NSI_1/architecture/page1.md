@@ -217,7 +217,13 @@ Les RWM stockent les variables du programme à exécuter, des données que le pr
 ### Les bus
 Les données doivent circuler entre les différentes parties d’un ordinateur, notamment entre la mémoire vive et le CPU. Le système permettant cette circulation est appelé bus. Il existe, sans entrer dans les détails, 3 grands types de bus: adresses, données, de contrôle.
 
+# Architecture Von Neumann vs Harvard
+Voir la video suivante expliquant la différence entre ces 2 architectures:
 
+<figure><a href="https://www.youtube.com/watch?v=cQjllS45ReU" target=blank>
+  <img src="../images/architectureN1.png">
+  <figcaption>MooC Arduino #4 - Architecture de Von-Neumann, Harvard et Microcontrôleurs<br> - Youtube</figcaption></a>
+</figure>
 
 # Liens et bibliographie
 * [cours sur l'architecture Von Neumann lattice.cnrs.fr](https://www.lattice.cnrs.fr/sites/itellier/poly_intro_info/informatique004.html#fig:Von%20Neumann)

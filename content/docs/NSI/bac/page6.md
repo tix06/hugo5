@@ -1,6 +1,85 @@
 ---
 Title: bac architecture
 ---
+# Bac 2021 Centres étrangers 2: Exercice 3
+*Thèmes abordés : conversion décimal/binaire, table de vérité, codage des caractères*
+
+L’objectif de l’exercice est d’étudier une méthode de cryptage d’une chaîne de
+caractères à l’aide du codage ASCII et de la fonction logique XOR.
+
+1. Le nombre 65, donné ici en écriture décimale, s’écrit 01000001 en notation
+binaire. En détaillant la méthode utilisée, donner l’écriture binaire du nombre
+89.
+2. La fonction logique OU EXCLUSIF, appelée XOR et représentée par le symbole
+$\bigoplus$, fournit une sortie égale à 1 si l’une ou l’autre des deux entrées vaut 1 mais
+pas les deux. 
+
+On donne ci-contre la table de vérité de la fonction XOR: 
+
+<figure>
+  <img src="../images/xor1.png">
+</figure>
+
+
+
+Si on applique cette fonction à un nombre codé en binaire, elle opère bit à bit.
+
+<figure>
+  <img src="../images/xor2.png">
+</figure>
+
+Poser et calculer l’opération : $11001110 \bigoplus 01101011$
+
+3. On donne, ci-dessous, un extrait de la table ASCII qui permet d’encoder les
+caractères de A à Z.
+On peut alors considérer l’opération XOR entre deux caractères en effectuant
+le XOR entre les codes ASCII des deux caractères. Par exemple : 'F' XOR 'S'
+sera le résultat de $01000110 \bigoplus 01010011$.
+
+<figure>
+  <img src="../images/xor3.png">
+</figure>
+
+On souhaite mettre au point une méthode de cryptage à l’aide de la fonction
+XOR.
+
+Pour cela, on dispose d’un message à crypter et d’une clé de cryptage de même
+longueur que ce message. Le message et la clé sont composés uniquement
+des caractères du tableau ci-dessus et on applique la fonction XOR caractère
+par caractère entre les lettres du message à crypter et les lettres de la clé de
+cryptage.
+
+Par exemple, voici le cryptage du mot ALPHA à l’aide de la clé YAKYA :
+
+<figure>
+  <img src="../images/xor4.png">
+</figure>
+
+Ecrire une fonction `xor_crypt(message, cle)` qui prend en paramètres deux
+chaînes de caractères et qui renvoie la liste des entiers correspondant au
+message crypté. 
+
+*Aide :*
+
+* On pourra utiliser la fonction native du langage Python `ord(c)` qui prend en paramètre un caractère c et qui renvoie un nombre représentant le code ASCII du caractère c.
+* On considère également que l’on dispose d’une fonction écrite `xor(n1,n2)` qui prend en paramètre deux nombres n1 et n2 et qui renvoie le résultat de n1 ⊕ n2.
+4. On souhaite maintenant générer une clé de la taille du message à partir d’un
+mot quelconque. On considère que le mot choisi est plus court que le
+message, il faut donc le reproduire un certain nombre de fois pour créer une
+clé de la même longueur que le message.
+
+Par exemple, si le mot choisi est YAK pour crypter le message ALPHABET, la
+clé sera YAKYAKYA.)
+
+Créer une fonction `generer_cle(mot,n)` qui renvoie la clé de longueur n à partir
+de la chaîne de caractères mot.
+5. Recopier et compléter la table de vérité de $(𝑬𝟏 \bigoplus 𝑬𝟐) \bigoplus 𝑬𝟐$.
+
+<figure>
+  <img src="../images/xor5.png">
+</figure>
+
+A l’aide de ce résultat, proposer une démarche pour décrypter un message crypté.
 
 # Bac 2022 Polynesie: Exercice 2
 *Cet exercice traite du thème « architecture matérielle », et principalement d'ordonnancement et d'expressions booléennes.*
