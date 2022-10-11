@@ -62,10 +62,11 @@ exemple: `MOV R0, #23` place la valeur R3 dans le registre 0.
 * `SUB Rd, Rn, operand2`: idem mais soustraction
 * `LSL Rd, Rn, operand2`: déplace les bits de Rn de 'opérande' bits vers la gauche et stocke dans Rd (multiplication par 2, souvenez vous!)
 * `LSR Rd, Rn, operand2`: déplace les bits de Rn de 'opérande' bits vers la droite et stocke dans Rd (division par 2!)
-HALT: arret du programme
-* `INP R0,2`: attent un nombre en entrée
+* HALT: arret du programme
+* `INP R0,2`: attend un nombre en entrée
 * `OUT Rd, nombre`: affiche à l'écran. out Rd,4 affiche un nombre signé ou non(Rd,5). Rd,6 affiche en hexadécimal et Rd,7 affiche un caractère.
-* `CMP Rn, operand2`: effectue la comparaison entre Rn et l'opérande. Attention, cette instruction ne traite pas le résultat de la comparaison! C'est le rôle de la commande suivante.<br>
+* `CMP Rn, operand2`: effectue la comparaison entre Rn et l'opérande. Attention, cette instruction ne traite pas le résultat de la comparaison! C'est le rôle de la commande suivante.
+* B ou BGT, ... sont les opérations de branchement (voir plus loin)<br>
 
 La liste complète des instructions se trouve à la page INFO accessible depuis le bouton [info](https://www.peterhigginson.co.uk/AQA/info.html) du simulateur.
 
@@ -106,6 +107,8 @@ DONE:
 
 Dans ce 2<sup>e</sup> exemple, si R1 est supérieur à R0 (test à la ligne 3), alors le programme effectue un *branchement conditionnel* à la ligne 4 (BGT est le branchement pour Greater Than). Il execute à ligne 4 l'appel de la fonction HIGHER), sinon il passe à la ligne 5 (OUT R0,4).
 
+*Remarque:* la ligne 6 `B DONE` est necessaire pour eviter de repeter les instructions qui suivent le repère `HIGHER: OUT R1,4`. Il s'agit d'un branchement vers le repère `DONE`.
+
 # Travail pratique: Assembleur
 Utiliser le <a href="https://www.peterhigginson.co.uk/AQA/" target=blank>simulateur</a>  pour réaliser les exercices suivants.
 
@@ -124,7 +127,7 @@ HALT
 
 **2.** Obtenir 84 à partir de 90,25,8,7,3 et 1 avec les opérations : addition et soustraction uniquement.
 
-**3.** Obtenir 128 à partir des instructions de multiplication par 2 du langage. *Voir la documentation du simulateur ARM (cliquer sur INFO) et chercher dans le paragraphe The AQA Instruction Set les commandes LSL et LSR*
+**3.** Obtenir 128, en partant de la valeur 1 stockée dans R0. Utilisez les  instructions de multiplication par 2 du langage. *Voir la documentation du simulateur ARM (cliquer sur INFO) et chercher dans le paragraphe The AQA Instruction Set les commandes LSL et LSR*
 
 ## Programmation fonctionnelle
 **1.** Cliquer sur SELECT et choisir le programme `max` en assembleur qui affiche le plus grand de deux entiers entrés au clavier, le comprendre et l'exécuter (Bien comprendre les instructions B, CMP et BGT voir le manuel)
@@ -151,6 +154,27 @@ HALT
 **2.** Estimer le nombre d'opérations significatives effectuées pour n = 10. Combien d'opérations significatives seraient réalisées pour n = 100?
 
 <!--
+# Compléments et corrections
+
+* Exemple de programme qui affiche toutes les puissances de 2 jusqu'à 128:*
+
+
+```
+  0       MOV R0, #1
+  1       MOV R1, #0
+    multiplie:
+  2       LSL R0, R0, #1
+  3       OUT R0,4
+  4       ADD R1,R1,#1
+  5       CMP R1, #7
+  6       BLT multiplie
+  7       B DONE
+    DONE:
+  8       HALT
+  ```
+
+* Assembleur pour  le microprocessor Motorola 6800 8-bit (voir image plus haut):
+
 Supposons qu'il existe 2 registres, A et B: Les deux opérations qui s'appellent le stockage (**STA**) et le chargement (**LDA**) du contenu d'une case mémoire dans le registre A (ST pour STore, LD pour LoaD). Il y a bien entendu des opérations similaires pour le registre B (**STB** et **LDB**).
 
 Une autre opération que peut exécuter le processeur est l'addition du contenu du registre A et du contenu du registre B. Et le résultat de l'opération peut être stocké dans le registre A (**ADD A**) ou dans le registre B (**ADD B**). De même, **DEC A** décrémente la valeur contenue dans le registre A, c'est-à-dire soustrait 1 à la valeur contenue dans le registre A et stocke la valeur ainsi obtenue dans le registre A et DEC B réalise le même calcul sur la valeur contenue dans le registre B.
