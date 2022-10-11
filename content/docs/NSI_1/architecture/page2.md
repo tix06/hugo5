@@ -132,7 +132,7 @@ HALT
 ## Programmation fonctionnelle
 **1.** Cliquer sur SELECT et choisir le programme `max` en assembleur qui affiche le plus grand de deux entiers entrés au clavier, le comprendre et l'exécuter (Bien comprendre les instructions B, CMP et BGT voir le manuel)
 
-**2.** Ecrire en assembleur un programme utilisant LSL, LSR, B et BNE qui affiche 1 si le nombre est pair , 0 sinon. (BNE: Branchement si Not Equal).
+**2.** Ecrire en assembleur un programme utilisant des fonctions parmis LSL, LSR, B et BNE qui affiche 1 si le nombre est pair , 0 sinon. (BNE: Branchement si Not Equal).
 
 ## Calculer 1+2+...+n où n est entré au clavier:
 **1.** Compléter le programme en assembleur ci-dessous pour résoudre le problème puis essayer avec n = 3 en mode pas à pas
@@ -172,6 +172,32 @@ HALT
     DONE:
   8       HALT
   ```
+
+* Exercice pair/impair
+
+```
+      INP R0,2
+compare:
+      CMP R0, #2
+      BGT divise
+      CMP R0, #1
+      BEQ impair
+      CMP R0, #2
+      BEQ pair
+      B compare
+divise:
+      LSR R0, R0, #1
+      OUT R0,4
+      B compare
+impair:
+      OUT R0,4
+      B DONE
+pair:
+      OUT R0,4
+      B DONE
+DONE:
+      HALT
+```
 
 * Assembleur pour  le microprocessor Motorola 6800 8-bit (voir image plus haut):
 
