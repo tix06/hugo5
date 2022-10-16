@@ -33,16 +33,8 @@ La *lecture et l’usage des hyperliens* d’une page html nécessite d’utilis
 
 # Adresse d'une page web: URL
 ## Uniform Ressource Locator: où est la page?
-Une **URL** (Uniform Resource Locator) est l'adresse d'une page web. 
-Elle est composée de 3 parties:
+Une **URL** (Uniform Resource Locator) est l'adresse d'une page web. Voir la page [le web: modele client-serveur](/docs/SNT_2nde/pages/page4/web0/)
 
-* `http://` ou `https://` qui correspond au protocole de communication client-serveur développé pour le web.
-* Un nom de domaine, souvent une marque, une entreprise, une association, ...
-* un chemin qui pointe vers une ressource ou page précise.
-
-Par exemple, la page `html` que vous consultez, fait partie du domaine *allophysique.com* et se trouve à l'emplacement `/docs/snt_2nde/pages/page4/web/index.html`:
-
-[https://allophysique.com/docs/snt_2nde/pages/page4/web/index.html](/docs/snt_2nde/pages/page4/web/index.html)
 
 ## Naviguer entre les pages: hyperliens
 On peut entrer dans une page directement en saisissant son URL.
@@ -100,64 +92,6 @@ Les moteurs de recherche mettent en avant une expérience plus personnalisée de
 </figure>
 
 
-# Le protocole HTTP
-
-
-## Le modèle client-serveur
-Un système informatique fonctionne sur le modèle **client-serveur** : L'ordinateur client a besoin d'établir des connexions avec un ordinateur serveur pour une grande partie des services dont il a besoin (consulter une base de données, communiquer, ouvrir des pages internet, charger des vidéos...).
-
-Une fois la connexion établie, l'ordinateur serveur lui répond en lui renvoyant les données necessaires.
-
-<figure>
-  <img src="../images/client_serveur.png" alt="modele client serveur">
-  <figcaption>modele client serveur</figcaption>
-</figure>
-
-*Rq:* il existe d'autres modèles que celui client-serveur, comme par exemple, le P2P.
-
-## HTTP
-HTTP : HyperText Transfert Protocol, permet au navigateur de demander une page sur le reseau et au serveur de la transmettre.
-
-Dans le protocole HTTP, une **méthode est une commande spécifiant un type de requête, c'est-à-dire qu'elle demande au serveur d'effectuer une action**. En général l'action concerne une ressource identifiée par l'URL qui suit le nom de la méthode.
-(definitions issues de https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
-
-<figure>
-  <a href="https://fr.wikipedia.org/wiki/Client-serveur">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Server-based-network.svg/440px-Server-based-network.svg.png">
-  <figcaption>mode client-serveur. Un serveur peut repondre aux requetes de multiples clients</figcaption></a>
-</figure>
-
-
-## L'usage d'un navigateur
-Le navigateur est le logiciel qui permet d'utiliser le Web.
-
-Il envoie une requete pour demander la ressource à l'aide du protocole HTTP.
-
-Le navigateur utilise souvent les méthodes GET et POST lors de l'envoi d'une requete:
-
-* GET : C'est la méthode la plus courante pour demander une ressource.
-* POST : Cette méthode est utilisée pour transmettre des données en vue d'un traitement à une ressource (le plus souvent depuis un formulaire HTML). Le résultat peut être la création de nouvelles ressources ou la modification de ressources existantes.
-
-<figure>
-  <img src="../images/requete.png" alt="outil reseau du navigateur">
-  <figcaption>observation de la requete GET à l'aide de l'outil reseau du navigateur</figcaption>
-</figure>
-
-Le serveur lui repond en renvoyant un (des) fichier(s) HTML. Et eventuellement des fichiers associés, qui peuvent être dans d'autres formats, et complètent la page, son contenu, son style, ses éléments interactifs, ou apportent des ressources (images, videos...). C'est le navigateur qui interprète ces fichiers et assure l'affichage de la page.
-
-# reseau P2P
-C'est un mode d'organisation sur internet où toutes les machines se comportent alternativement comme clients ou serveurs.
-
-<figure>
-  <a href="https://fr.wikipedia.org/wiki/Pair-à-pair">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/P2P-network.svg/440px-P2P-network.svg.png">
-  <figcaption>mode P2P. Chaque machine joue alternativement le rôle de client et de serveur</figcaption></a>
-</figure>
-
-Ce mode a pu être utilisé pour partager illégalement des fichiers en infraction avec le droit d'auteur. La repartition des documents sur de multiples machines a compliqué les poursuites judiciaires.
-
-Ce mode P2P connait un regain d'interet avec les *Blockchains* qui consistent à repliquer sur de nombreuses machines les preuves chifrées et vérifiables d'un ensembles d'informations enregistrées.
-(monnaies virtuelles)
 
 # sécurité et confidentialité
 Ce que le moteur de recherche appelle des données échangées (entre services de la même entreprise), sont vos données personnelles.

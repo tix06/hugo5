@@ -9,8 +9,34 @@ Dans l'architecture Von Neumann:
 * une machine universelle est contrôlée par un programme.
 * Les données et programmes sont écrits sur une même mémoire (en binaire). Ce qui donne la possibilité de changer les instructions au cours d'un calcul par exemple. C'est le concept de **programme enregistré**. C'est un ordinateur qui enregistre les instructions des programmes qu'il exécute dans sa mémoire vive.
 * Les instructions sont executée de manière séquentielle, par un **processeur**.
+* Les mémoires RAM et mémoires non volatiles (Disques durs, mémoires flash) sont reliées au processeur (donc aux registres du processeur) par une liaison appelée Bus, que l'on peut considérer comme unique.
 
-# Le processeur
+# Description d'un ordinateur
+
+<figure><a href="https://www.youtube.com/watch?v=cQjllS45ReU" target=blank>
+  <img src="../images/architectureN1.png">
+  <figcaption>MooC Arduino #4 - Architecture de Von-Neumann, Harvard et Microcontrôleurs<br> - Youtube</figcaption></a>
+</figure>
+
+## Echelle macro: périphériques
+Un ordinateur comprend des périphériques d'entrée et sortie:
+
+* écran, haut-parleur, souris, clavier...
+
+## Echelle intermédiaire
+A une echelle plus proche du processeur: Un ordinateur a une carte mère sur laquelle on trouve différents ports et supports de cartes:
+
+* port de branchement des mémoires, disques durs, port RJ45 (reseau), carte wifi, carte son, carte graphique, ...
+
+Certains ports vont ajouter des extensions à l'ordinateur (carte son, video, wifi). Certains vont être essentiels au fonctionnement de l'ordinateur (mémoires).
+
+## Echelle micro
+Les constituants de l'ordinateur sont composés de circuits intégrés. On trouve 2 grandes catégories de circuits intégrés:
+
+* les circuits combinatoires: l'état de sortie de ces circuits ne dépend que des états d'entrée.
+* les circuits séquentiels: l'état de sortie dépend des états d'entrée, mais aussi de l'état courant du circuit. Ces circuits peuvent ainsi stocker une valeur appelée état courant. Les registres sont typiquement des circuits intégrant des circuits séquantiels.
+
+## Le processeur
 <figure>
   <img src="../images/architectureN2.png">
   <figcaption>Architecture de Von-Neumann - processeur</figcaption>
@@ -32,10 +58,7 @@ Le processeur réalise le cycle de Von Neumann:
 3. Ajouter 1 au *program Counter* (PC)
 4. Recommencer
 
-<figure><a href="https://www.youtube.com/watch?v=cQjllS45ReU" target=blank>
-  <img src="../images/architectureN1.png">
-  <figcaption>MooC Arduino #4 - Architecture de Von-Neumann, Harvard et Microcontrôleurs<br> - Youtube</figcaption></a>
-</figure>
+
 
 # L'assembleur
 Un langage d'assemblage ou langage assembleur est, en programmation informatique, le langage de plus bas niveau qui représente le langage machine sous une forme lisible par un humain. ([wiki](https://fr.wikipedia.org/wiki/Assembleur))
@@ -129,12 +152,12 @@ HALT
 
 **3.** Obtenir 128, en partant de la valeur 1 stockée dans R0. Utilisez les  instructions de multiplication par 2 du langage. *Voir la documentation du simulateur ARM (cliquer sur INFO) et chercher dans le paragraphe The AQA Instruction Set les commandes LSL et LSR*
 
-## Programmation fonctionnelle
+## Programmmer avec des boucles
 **1.** Cliquer sur SELECT et choisir le programme `max` en assembleur qui affiche le plus grand de deux entiers entrés au clavier, le comprendre et l'exécuter (Bien comprendre les instructions B, CMP et BGT voir le manuel)
 
 **2.** Ecrire en assembleur un programme utilisant des fonctions parmis LSL, LSR, B et BNE qui affiche 1 si le nombre est pair , 0 sinon. (BNE: Branchement si Not Equal).
 
-## Calculer 1+2+...+n où n est entré au clavier:
+## Calculer 1+2+3...+n où n est entré au clavier:
 **1.** Compléter le programme en assembleur ci-dessous pour résoudre le problème puis essayer avec n = 3 en mode pas à pas
 Exécuter avec RUN en vitesse maximale pour n = 10
 
@@ -168,34 +191,21 @@ HALT
   4       ADD R1,R1,#1
   5       CMP R1, #7
   6       BLT multiplie
-  7       B DONE
-    DONE:
-  8       HALT
+  7       HALT
   ```
 
-* Exercice pair/impair
+* Correction de l'exercice somme 1..N
 
 ```
-      INP R0,2
-compare:
-      CMP R0, #2
-      BGT divise
-      CMP R0, #1
-      BEQ impair
-      CMP R0, #2
-      BEQ pair
-      B compare
-divise:
-      LSR R0, R0, #1
-      OUT R0,4
-      B compare
-impair:
-      OUT R0,4
-      B DONE
-pair:
-      OUT R0,4
-      B DONE
-DONE:
+      INP R0,2 // demander n
+      MOV R1, #0 // somme attention inversion / enonce
+      MOV R2, #1 // compteur
+boucle:
+      ADD R1, R1, R2 // somme
+      ADD R2, R2, #1 // compteur incrementer de R1
+      CMP R2, R0
+      BLT boucle
+      OUT R1,4
       HALT
 ```
 
