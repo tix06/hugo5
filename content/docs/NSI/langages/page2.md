@@ -254,6 +254,11 @@ Euclide propose l’algorithme suivant:
 2. Si r est nul alors le pgcd est b
 3. Sinon recommencer l’étape 1 avec a = b et b = r
 
+
+<figure>
+  <img src="../images/page2/euclide.png">
+</figure>
+
 > Exemple d’exécution : a = 32, b = 12 :
 
 > – 32 = (2 x 12) + 8
@@ -271,14 +276,14 @@ def euclide(a,b):
     a et b sont des entiers, a > b
     euclide retourne un entier qui est le PGCD de a et b
     """
-    x=a
-    y=b
-    while y>0 :
-        temp=y
-        y=x%y
-        x=temp
-    return x
+    r = a % b
+    while r>0 :
+        a = b
+        b = r
+        r = a % b
+    return b
 ```
+
 <div class="preuve">
   <div class="entete">
     Prouver l'algorithme itératif
@@ -307,8 +312,8 @@ def PGCD(a,b):
   """
   if b == 0 : return a
   else:
-    c = a % b;
-    return PGCD(b,c)
+    r = a % b;
+    return PGCD(b,r)
 ```
 
 
@@ -318,7 +323,7 @@ def PGCD(a,b):
 
 # Application : suite de Fibonacci
 ## Définitions
-Fibonacci était le surnom de Léonard de Pise ( 1170 -1250) . Il a posé un problème dans lequel il cherche à calculer le nombre de couples de lapins au bout de n années, lorsqu’ils se reproduisent selon les règles suivantes :
+Fibonacci était le surnom de Léonard de Pise (1170 -1250) . Il a posé un problème dans lequel il cherche à calculer le nombre de couples de lapins au bout de n années, lorsqu’ils se reproduisent selon les règles suivantes :
 
 * Lors de la première année, l'éleveur démarre avec un couple de lapins nouveaux nés.
 * Un couple de lapins donne naissance à un nouveau couple tous les ans, à partir de la 2ème année (la 1ère année, il est trop jeune).
@@ -412,6 +417,12 @@ On considère trois tiges plantées dans une base. Au départ, sur la première 
 **On ne peut déplacer qu'un seul disque à la fois et il est interdit de poser un disque sur un autre plus petit.**
 
 il faut à un moment ou à un autre faire la place pour pouvoir déplacer le gros disque du dessous, ce qui impose d’avoir déplacé préalablement les N–1 plus petits sur un seul et même piquet, c’est-à-dire, d’avoir résolu préalablement le problème des tours de Hanoï pour ces N–1 disques : 
+
+<a href="https://www.youtube.com/watch?v=r1Ujcw0UkrI">
+<figure>
+  <img src="../images/page2/hanoi2.png" alt="algorithme iteratif des tours de Hanoï" width=80%>
+  <figcaption>video - resolution itérative des tours de Hanoi</figcaption>
+</figure></a>
 
 Le problème initial (déplacer N disques de A à C en utilisant B) devient donc "déplacer N-1 disques de A à B, déplacer le Nème disque de A à C, puis déplacer les N-1 disques de B à C". Dans les deux déplacements de N-1 disques, on dispose d'un troisième pilier dont on peut se servir...
 

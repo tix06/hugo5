@@ -36,24 +36,25 @@ def fibo(n):
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f8726ff0f497&mode=code"></iframe>
 
 # Ex 3: Les tours de Hanoï
+Le problème des tours de Hanoi est présenté en détails dans le cours sur la recursivité [ici](/docs/NSI/langages/page2/#application-les-tours-de-hanoï)
+
 
 1. Dans l'editeur plus bas: Executer le script. Puis aller dans la console et tester l'exemple proposé dans le prototypage de la fonction.
 2. Tester egalement avec 4 disques. Noter chaque fois le nombre de deplacements effectués.
 
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f8727ed29a8a&mode=code"></iframe>
 
-Les questions relatives à cet exercice sont sur la fiche d'exercices: *Langages 2 - exercices - recursivité*
+*3.* Proposez une loi de recurence entre le nombre de déplacements T(N) pour N disques, et le nombre de déplacements T(N-1) pour N-1 disques.
 
 # Ex 4: Nombre d'occurences dans une chaine de caractères
 il s'agit d'écrire une fonction recursive nombre_r(lettre, phrase) qui renvoit le nombre de fois où la lettre apparaît dans la phrase. 
 
-On réduit la phrase en eliminant le premier caractère après chaque appel recursif: on met comme argument `phrase[1:]` à la place du paramètre `phrase`.
+* Dans le cas de base: on retourne 0 si la phrase est vide `""`.
+* Pour l'heredité: On réduit la phrase en eliminant le premier caractère après chaque appel recursif: on met comme argument `phrase[1:]` à la place du paramètre `phrase`.
 
-* Si le caractère `phrase[0]` est identique à `lettre`: on applique la formule de recurence suivante: u<sub>n</sub> = 1 + u<sub>n-1</sub> 
+    * Si le caractère `phrase[0]` est identique à `lettre`: on applique la formule de recurence suivante: u<sub>n</sub> = 1 + u<sub>n-1</sub> que l'on adapte ici en: `return 1 + nombre_r(lettre,phrase[1:]`
 
-que l'on adapte ici en: `return 1 + nombre_r(lettre,phrase[1:]`
-
-* sinon, on adapte la formule de recurence : u<sub>n</sub> = u<sub>n-1</sub> 
+    * sinon, on adapte la formule de recurence : u<sub>n</sub> = u<sub>n-1</sub> 
 
 > Compléter le script et testez votre fonction avec, par exemple les arguments: `u` et `lustucru`.
 
@@ -114,7 +115,7 @@ La deuxième étape est d'appeler de manière récursive la fonction d'inversion
 > Dans l'editeur ci-dessous:
 
 1. Tester dans la console l'exemple proposé : `reverse_iterative('abcd')
-2. Ecrire le script de la fonction `reverse_recur` qui prend la chaine de caractères `seq` ainsi que l'index `i` en paramètres.
+2. Compléter le script de la fonction `reverse_recur` qui prend la chaine de caractères `seq` ainsi que l'index `i` en paramètres.
 
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f872e51766b0&mode=code"></iframe>
 
