@@ -97,25 +97,39 @@ On peut tester cette fonction dans une cellule d'un jupyter notebook :
 </table>
 
 *Aide pour l'écriture de l'algorithme récursif :* 
-Définition des variables: 
 
-* la chaine seq est transformée en une liste: `seq = list(seq)`.
-* a prend la valeur de l'index i : `a = i`
-* b prend la valeur de l'index `len(seq) - i - 1`, c'est à dire le symétrique de la position i dans la chaine. Par exemple, i = 0 => a est l'index du premier caractère et b celui du dernier caractère.
+* le paramètre est la chaine s
+* pour un caractère au rang `i`, on le permute avec le caractère au rang b: b prend la valeur de l'index `len(s) - i - 1`, c'est à dire le symétrique de la position i dans la chaine. 
+
+Par exemple, i = 0 => a est l'index du premier caractère et b celui du dernier caractère.
 
 <figure>
   <img src="../images/page6/reverse.png">
 </figure>
 
-La première étape est de définir notre scénario de base, qui vérifiera si la différence d'index `b-a` est égale à 0 et, si oui, retourne la chaîne seq.
+**La condition de base:** On traite le retournement des caractères aux extremités d'une chaine dont la taille diminue au fur et à mesure des appels recursifs. 
 
-La deuxième étape est d'appeler de manière récursive la fonction d'inversion après avoir permuté les caractères aux index a et b: `seq[a], seq[b] = seq[b],seq[a]`. La fonction récursive sera appelée avec le nouveaux arguments `seq` et `i+1`.
+* si la longueur de chaine est un nombre impair: Au moment où la longueur de chaine est égale à 1: Le dernier caractère non retourné est au milieu de la chaine. On renvoie ce dernier caractère: `return s`
+
+* si la longueur de chaine est un nombre pair: Au moment où la longueur de chaine est nulle, on termine l'execution de la fonction en renvoyant `s` qui vaut `''`.
+
+
+dans tous les cas, on pourra exprimer cette condition de base avec:
+
+```python
+ if len(s) <= 1:
+        return s
+```
+
+La deuxième étape (la partie heredité) consiste à appeler de manière récursive la fonction après avoir permuté les caractères aux extremités: `return s[m] + milieu + s[0]`
+
+Le milieu est constitué de la chaine retournée par l'appel recursif de la fonction avec pour paramètre le mot privé de ses 2 extremités.
 
 
 > Dans l'editeur ci-dessous:
 
 1. Tester dans la console l'exemple proposé : `reverse_iterative('abcd')
-2. Compléter le script de la fonction `reverse_recur` qui prend la chaine de caractères `seq` ainsi que l'index `i` en paramètres.
+2. Compléter le script de la fonction `reverse_recur` 
 
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f872e51766b0&mode=code"></iframe>
 

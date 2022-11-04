@@ -16,7 +16,7 @@ tt.goto(-100,100)
 tt.down()
 ```
 
-> Maintenant que vous connaissez ses dimensions (width et height sont affichés dans la console), dessinez une bordure autour de l'écran.
+> Maintenant que vous connaissez ses dimensions (width et height sont affichés dans la console), écrire une fonction qui dessine une bordure autour de l'écran graphique. Dessiner ce contour.
 
 On pourra utiliser les coordonnées absolues, à l'aide de l'instruction `goto`.
 
@@ -26,7 +26,7 @@ Utiliser `from random import randint`
 
 Lorsque la fonction `randint` prend 2 arguments : il s'agit de la borne inferieure et de la borne superieur du tirage aleatoire : `randint(inferieur,superieur)`.
 
-*Exemple:* `randint(0,100)` retourne un entier entre 0 et 100.
+*Exemple:* `randint(-100,100)` retourne un entier entre -100 et 100.
 
 ## Explorer les fonctions
 On pourra parcourir les documents suivants:
@@ -38,7 +38,7 @@ On pourra parcourir les documents suivants:
 # Etoiles à 5 branches
 
 ```python
-def etoile(tt,longueur):
+def etoile(longueur):
     """Fonction pour dessiner une étoile
     Params:
     ---------
@@ -54,24 +54,90 @@ def etoile(tt,longueur):
  > Executer la fonction avec une valeur aleatoire pour le paramètre `longueur`.
  
  <br>
+
+ > Sur votre **cahier de labo**: représenter la fenêtre de dessin, son contour, la position (0, 0) de *turtle*, ainsi que les dimensions *width* et *hight* de cette fenêtre.
+
+ <br>
  
- > Ecrire une fonction qui représente un ciel étoilé, contenant N étoiles mises dans une position aléatoire, et de longueurs aleatoires.
+ > Dans l'**editeur Trinket**: Ecrire une fonction qui représente un ciel étoilé, contenant N étoiles mises dans une position aléatoire, et de longueurs aleatoires.
  
  <br>
  
- > Calculer le nombre d'opérations réalisées par la fonction, puis estimez la complexité de cette fonction, en considérant comme instructions significatives : 
+ > Sur votre **cahier de labo**: Calculer le nombre d'opérations réalisées par la fonction, puis estimez la complexité de cette fonction, en considérant comme instructions significatives : 
  	
  	 * chaque appel de la fonction `randint`
  	 * chaque opération arithmetique
- 	 * chaque deplacement réalisé par la tortue
+ 	 * chaque deplacement ou rotation réalisé par la tortue
 
 # Créer un module
 Sur le bandeau de l'editeur, à droite, appuyer sur (+).
 Cela fait apparaitre un nouvel onglet. C'est un nouveau fichier qui s'ajoute à votre projet.
 
-> Renommer ce fichier. Par exemple, avec `figures.py`. Vous deplacerez les fonctions crées precedemment dans ce fichier.
+> Dans l'**editeur Trinket**: Renommer ce fichier. Par exemple, avec *figures.py*. Vous deplacerez les fonctions crées precedemment dans ce fichier, ainsi que les premières lignes:
+
+```python
+import turtle
+from random import *
+tt = turtle.Turtle()
+```
 
 <br>
 
-> Dans le fichier principal, vous devrez maintenant importer ce *module*. Partagez ainsi votre code entre ces 2 fichiers, afin de rendre celui-ci plus lisible.
+> Dans le fichier principal, vous devrez maintenant importer ce *module*. Partagez ainsi votre code entre ces 2 fichiers, afin de rendre celui-ci plus lisible. Les appels de fonctions se feront dans le fichier principal, *main.py*.
+
+# Les dessins récursifs
+> Créer un nouveau fichier dans le même projet, que vous appelerez *recursif.py*
+
+## Des carrés
+On veut réaliser le dessin récursif dont on a mis ci-dessous les premières étapes (profondeur 0,1 et 2):
+
+<figure>
+    <img src = "../images/recur_carre.png">
+</figure>
+
+
+
+
+> Sur votre **cahier de labo**: 
+
+> * Compléter l'arbre des appels de la fonction recursive avec les traits du dessin de la figure.
+<figure>
+    <img src="../images/recur_directions.png">
+</figure>
+* Représenter la figure dessinée avec une profondeur de 2. Numéroter les 3 premiers segments dessinés par le programme.
+
+> Dans l'**editeur Trinket**: Completer le script suivant de la fonction `recur_carre`. 
+
+```python
+def recur_carre(divis):
+  if divis >= 4:
+    return
+```
+
+> Appeler la fonction avec l'instruction: `recur_carre(1)`
+
+<br>
+
+> Sur votre **cahier de labo**: Calculer le nombre d'opérations réalisées par la fonction, puis estimez la complexité de cette fonction, en considérant comme instructions significatives : 
+    
+     * chaque deplacement ou rotation réalisé par la tortue
+
+## Des triangles
+Adapter ensuite cette fonction pour dessiner la figure:
+
+<figure>
+    <img src = "../images/recur_triangle1.png">
+</figure>
+
+## Chalenge avec d'autres triangles
+
+<figure>
+    <img src = "../images/recur_triangle2.png">
+</figure>
+
+
+# Liens
+* Les dessins recursifs sont issus de la page [fourier.ujf-grenoble.fr](https://www-fourier.ujf-grenoble.fr/~parisse/giac/doc/fr/casrouge/casrouge019.html)
+
+
 
