@@ -131,7 +131,9 @@ Le milieu est constitué de la chaine retournée par l'appel recursif de la fonc
 1. Tester dans la console l'exemple proposé : `reverse_iterative('abcd')
 2. Compléter le script de la fonction `reverse_recur` 
 
-<iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f872e51766b0&mode=code"></iframe>
+<iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=63677ac691291&mode=code"></iframe>
+
+
 
 [RETOUR au cours sur la recursivité](../page2/)
 # Ressources

@@ -117,14 +117,16 @@ L'internet c'est aussi aussi des problemes de securité, avec de nombreuses donn
 - le vol d'identité
 
 <figure>
-<img src="../images/pirate.pdf" width = 30% alt="securité">
+<img src="../images/pirate.png" width = 30% alt="securité">
 <figcaption>Sur internet, il y a autant de personnes mal intentionnées que dans la "vraie" vie</figcaption>
 </figure>
 
 Mais le chiffrement est couteux pour les fournisseurs d'équipement et de logiciels.
 
-Un autre problème de sécurité vient d'une technique que l'on appelle le *phishing* : le pirate se fait passer pour un organisme bancaire, un assureur, un opérateur de téléphonie... La technique est souvent celle-ci : 
-Vous recevez un mail de cet organisme, vous demandant de cliquer sur un lien qui devrait vous rediriger vers le site de cet organisme.
+Un autre problème de sécurité vient d'une technique que l'on appelle le **phishing** : le pirate se fait passer pour un organisme bancaire, un assureur, un opérateur de téléphonie... La technique est souvent celle-ci : 
+
+Vous recevez un mail de cet organisme, vous demandant de *cliquer sur un lien* qui devrait vous rediriger vers le site de cet organisme.
+
 Seulement, lorsque vous *cliquez*, vous pouvez constater que le **nom de domaine** n'est pas rigoureusement identique à celui de l'organisme *original*.
 Ainsi, l'URL `https://twiter.com` *(le faux site, dont le nom de domaine est* twiter) n'est pas identique à `https://twitter.com` *(le vrai site, de nom de domaine* twit**t**er).
 
@@ -133,7 +135,17 @@ Ainsi, l'URL `https://twiter.com` *(le faux site, dont le nom de domaine est* tw
 <figcaption>un exemple de phishing</figcaption>
 </figure>
 
-Ensuite, on vous demande vos identifiants de connexion, ou coordonnées bancaires, numéro de carte de crédit ou autre, que vous choisissez intentionnellement (et malheureusement) de donner, sans vous méfier. Il existe heureusement des recours, au cas où cette mésaventure vous arrive, mais cela vous aura porté préjudice. Le mieux est de toujours adopter une posture de doute lorsqu'un tel mail vous parvient...
+<figure>
+<img src="../images/detail.png" width = 80% alt="phishing">
+<figcaption>detail du lien</figcaption>
+</figure>
+
+Ensuite, on vous demande: 
+
+* vos identifiants de connexion, 
+* ou coordonnées bancaires, numéro de carte de crédit ou autre, que vous choisissez intentionnellement (et malheureusement) de donner, sans vous méfier. 
+
+Il existe heureusement des recours, au cas où cette mésaventure vous arrive, mais cela vous aura porté préjudice. Le mieux est de toujours adopter une posture de doute lorsqu'un tel mail vous parvient...
 
 ### La diffusion d'ouvrages artistiques
 

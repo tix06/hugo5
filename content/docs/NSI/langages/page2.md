@@ -31,6 +31,7 @@ def ajoute2_iter(N):
     s = s + 2
   return s
 ``` 
+
 *Résultat*
 
 ```
@@ -157,9 +158,15 @@ def fact(n):
 
 
 ### Programme recursif
-On a la **relation de récurence** suivante: $$u_{n} = n\times u_{n-1}$$
+On a la **relation de récurence** suivante: <b>u<sub>n</sub> = n * u<sub>n-1</sub></b>
 
-et $$u_0 = 1$$:
+La relation d'heredité est alors `return n*fact_recur(n-1)`
+
+Le premier terme est: 
+
+$$u_0 = 1$$
+
+ et le script de la fonction recursive:
 
 ```python
 def fact_recur(n):
@@ -317,7 +324,28 @@ def PGCD(a,b):
 ```
 
 
+<div class="preuve">
+  <div class="entete">
+    Complexité
+  </div>
+  <div class="demo">
+On prouve par récurrence que le cas le pire (c'est à dire celui où le nombre d'itérations à exécuter est le plus grand), est celui où a et b sont des termes consécutifs de la <strong>suite de Fibonacci</strong>. Cela revient à montrer que  deux termes successifs de la suite de Fibonacci sont premiers entre eux.
+(si leur plus grand diviseur commun est 1)
 
+<ul><li>La propriété est vraie pour n = 1 : f<sub>2</sub> et f<sub>1</sub> sont premiers entre eux.</li>
+<li>Supposons que f<sub>n</sub> et f<sub>n-1</sub> soient premiers entre eux :<br>
+Soit d le PGCD de fn et fn+1, alors d divise f<sub>n+1</sub>– f<sub>n</sub>.<br>
+d est à la fois diviseur de f<sub>n+1</sub> et f<sub>n</sub><br>
+Or : (suite de Fibonacci)<br>
+$$f_{n+1} = f_n + f_{n-1}$$
+Donc : 
+$$f_{n-1} = f_{n+1} - f_n$$
+Il faut alors que f<sub>n-1</sub>, f<sub>n+1</sub> et f<sub>n</sub> aient un même diviseur, d. Or le diviseur commun de f<sub>n-1</sub> et f<sub>n</sub> est 1, donc d = 1.
+</li>
+</ul>
+Dans ce <strong>pire</strong> cas, la complexité de l'algorithme est alors O(log<sub>10</sub> b). C'est proportionnel au nombre de divisions euclidiennes réalisées.
+</div>
+</div>
 
 
 
@@ -377,28 +405,7 @@ def fibo(n):
     return fibonacci(n-1) + fibonacci(n-2)
 ```
 
-<div class="preuve">
-  <div class="entete">
-    Complexité
-  </div>
-  <div class="demo">
-On prouve par récurrence que le cas le pire (c'est à dire celui où le nombre d'itérations à exécuter est le plus grand), est celui où a et b sont des termes consécutifs de la <strong>suite de Fibonacci</strong>. Cela revient à montrer que  deux termes successifs de la suite de Fibonacci sont premiers entre eux.
-(si leur plus grand diviseur commun est 1)
 
-<ul><li>La propriété est vraie pour n = 1 : f<sub>2</sub> et f<sub>1</sub> sont premiers entre eux.</li>
-<li>Supposons que f<sub>n</sub> et f<sub>n-1</sub> soient premiers entre eux :<br>
-Soit d le PGCD de fn et fn+1, alors d divise f<sub>n+1</sub>– f<sub>n</sub>.<br>
-d est à la fois diviseur de f<sub>n+1</sub> et f<sub>n</sub><br>
-Or : (suite de Fibonacci)<br>
-$$f_{n+1} = f_n + f_{n-1}$$
-Donc : 
-$$f_{n-1} = f_{n+1} - f_n$$
-Il faut alors que f<sub>n-1</sub>, f<sub>n+1</sub> et f<sub>n</sub> aient un même diviseur, d. Or le diviseur commun de f<sub>n-1</sub> et f<sub>n</sub> est 1, donc d = 1.
-</li>
-</ul>
-Dans ce <strong>pire</strong> cas, la complexité de l'algorithme est alors O(log<sub>10</sub> b). C'est proportionnel au nombre de divisions euclidiennes réalisées.
-</div>
-</div>
 
 
 Parfois, l'algorithme récursif n'est pas le plus performant: Pour l'exemple de la suite de Fibonacci, on constate que les mêmes calculs sont répétés plusieurs fois, comme fibo(2) dans le cas présent pour N = 4):
@@ -474,5 +481,6 @@ def exp2(n,x):
 # Liens
 * article sur les tours de Hanoi [http://accromath.uqam.ca/2016/02/les-tours-de-hanoi-et-la-base-trois/](http://accromath.uqam.ca/2016/02/les-tours-de-hanoi-et-la-base-trois/)
 * algorithmes recursifs : [https://fr.wikipedia.org/wiki/Algorithme_récursif](https://fr.wikipedia.org/wiki/Algorithme_récursif)
+* calcul de complexité de Fibonacci recursif et programmation dynamique: [univ-mlv.fr](http://igm.univ-mlv.fr/~nicaud/poly/IR2_progdyn.pdf)
 
 

@@ -7,9 +7,9 @@ Title: algorithmique
 
 On rappelle qu'une chaîne de caractères peut être représentée en Python par un texte entre guillemets "" et que :
 
-* la fonction len renvoie la longueur de la chaîne de caractères passée en
+* la fonction `len` renvoie la longueur de la chaîne de caractères passée en
 paramètre ;
-* si une variable ch désigne une chaîne de caractères, alors `ch[0]` renvoie son premier caractère, `ch[1]` le deuxième, etc. ;
+* si une variable `ch` désigne une chaîne de caractères, alors `ch[0]` renvoie son premier caractère, `ch[1]` le deuxième, etc. ;
 * l'opérateur + permet de concaténer deux chaînes de caractères.
 
 Exemples :
@@ -41,9 +41,10 @@ caractères construite suivant la règle A ;
 * soit elle est de la forme "b"+chaine+"b", où chaine est une chaîne de
 caractères construite suivant la règle B.
 
-On a reproduit ci-dessous l'aide de la fonction choice du module random.
+On a reproduit ci-dessous l'aide de la fonction `choice` du module `random`.
 
-```
+
+```python
 >>>from random import choice
 >>>help(choice)
 Help on method choice in module random:
@@ -82,6 +83,8 @@ A.  Recopier sur la copie et compléter aux emplacements des points de
 suspension `...` le code de cette nouvelle fonction `A`.
 
 B.  Justifier le fait qu'un appel de la forme `A(n)` avec `n` un nombre entier positif inférieur à 50, termine toujours.
+
+
 On donne ci-après le code de la fonction récursive `B` qui prend en paramètre un entier `n` et qui renvoie une chaîne de caractères construite suivant la règle B.
 
 ```python
