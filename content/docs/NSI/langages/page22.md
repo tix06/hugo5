@@ -1,6 +1,11 @@
 ---
 Title: autres domaines recursivite
 ---
+Dans cette **deuxieme partie du cours sur la recursivité**, nous allons étudier plus en detail la manière de definir la partie héredité d'un problème.
+
+La question à laquelle on cherchera à repondre:
+
+* supposons que le problème est/sera résolu pour *le rang (n-1)*, comment utiliser le resultat du rang (n-1) pour resoudre le *rang n*?
 
 # Application de la recursivité: les tours de Hanoï
 ## Principe
@@ -105,15 +110,17 @@ for x in permut(mot[0:1] + mot[1 + 1:])
 </figure>
 
 ## Exercice
-**1.** Dans un editeur Python: Compléter et tester ce script de la fonction `permut` avec la chaine 'abcd'. 
+**1.** Dans un **editeur Python**: Compléter et tester ce script de la fonction `permut` avec la chaine 'abcd'. 
 
-**2.** Quelle est la longueur de la liste retournée par cette fonction, pour 'abcd'? Cette valeur est-elle prévisible?
+**2.** Repondre sur **cahier de labo**: Représenter l'arbre des appels recursifs, et compléter celui-ci.
 
-**3.** Quelle est la complexité de la fonction `permut`? Indiquez le dans le commentaire associé à cette fonction.
+**3.** **cahier de labo**: Quelle est la longueur de la liste retournée par cette fonction, pour 'abcd'? Cette valeur est-elle prévisible?
 
-**4.** Créer une fonction `verif` qui vérifie si chaque mot permuté dans la liste est unique. Déterminer la complexité de cette nouvelle fonction. Indiquer la complexité en commentaire dans la fonction.
+**4.** **cahier de labo**: Quelle est la complexité de la fonction `permut`? 
 
-**5.** Créer une nouvelle fonction, que vous appelerez `permut_noms` qui donne toutes permutations de noms dans une liste. Par exemple, avec `['Riri', 'Fifi', 'Loulou']`, on aura: `[('Riri', 'Fifi', 'Loulou'), ('Riri', 'Loulou', 'Fifi'), ('Fifi', ...), ... ]`
+**5.** **editeur Python**: Créer une fonction `verif` qui vérifie si chaque mot permuté dans la liste est unique. Déterminer la complexité de cette nouvelle fonction. Indiquer la complexité dans le **cahier de labo**.
+
+**6.** **editeur Python**: Créer une nouvelle fonction, que vous appelerez `permut_noms` qui donne toutes permutations de noms dans une liste. Par exemple, avec `['Riri', 'Fifi', 'Loulou']`, on aura: `[('Riri', 'Fifi', 'Loulou'), ('Riri', 'Loulou', 'Fifi'), ('Fifi', ...), ... ]`
 
 
 # D'autres domaines exploitant la récursivité
@@ -130,6 +137,9 @@ L'**autosimilarité** est le caractère d'un objet dans laquelle on peut trouver
 Les **fractales** ont cette propriété d'autosimilarité, mais elles ont plutôt à voir avec un phénomène un peu différent qui s'appel la corécurisivité (ou corécursion). Le tapis de Sierpiński, du nom de Wacław Sierpiński, est une fractale obtenue à partir d'un carré. Le tapis se fabrique en découpant le carré en neuf carrés égaux avec une grille de trois par trois, et en supprimant la pièce centrale, et en appliquant cette procédure récursivement aux huit carrés restants.
 
 La **mise en abyme** est un procédé consistant à représenter une œuvre dans une œuvre similaire, par exemple en incrustant dans une image cette image elle-même. 
+
+# Travail pratique
+Lien vers le TP: [dessins recursifs](/docs/NSI/algorithmes/page10/) 
 
 # Liens
 * *Approfondir :* voir la page [https://fr.wikipedia.org/wiki/Algorithme_récursif](https://fr.wikipedia.org/wiki/Algorithme_récursif)
