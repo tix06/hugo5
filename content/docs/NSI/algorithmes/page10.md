@@ -106,13 +106,21 @@ On veut réaliser le dessin récursif dont on a mis ci-dessous les premières é
 </figure>
 * Représenter la figure dessinée avec une profondeur de 2. Numéroter les 3 premiers segments dessinés par le programme.
 
-> Dans l'**editeur Trinket**: Completer le script suivant de la fonction `recur_carre`. 
+> Dans l'**editeur Trinket**: Completer la partie heredite du script suivant pour la fonction `recur_carre`. 
 
 ```python
 def recur_carre(divis):
+  # Base de la fonction recursive
   if divis >= 4:
     return
+  # l'instruction return ne retourne rien 
+  # mais termine la fonction
+  # 
+  # --- partie heredite ---
+  # 
 ```
+
+*Dans la partie heredité: la fonction s'appelle elle-même avec un paramètre PLUS GRAND pour divis. Ce paramètre représente le diviseur de la longueur du côté du carré dessiné*
 
 > Appeler la fonction avec l'instruction: `recur_carre(1)`
 
