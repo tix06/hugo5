@@ -7,10 +7,11 @@ Title: bac architecture
 L’objectif de l’exercice est d’étudier une méthode de cryptage d’une chaîne de
 caractères à l’aide du codage ASCII et de la fonction logique XOR.
 
-1. Le nombre 65, donné ici en écriture décimale, s’écrit 01000001 en notation
+**1.** Le nombre 65, donné ici en écriture décimale, s’écrit 01000001 en notation
 binaire. En détaillant la méthode utilisée, donner l’écriture binaire du nombre
 89.
-2. La fonction logique OU EXCLUSIF, appelée XOR et représentée par le symbole
+
+**2.** La fonction logique OU EXCLUSIF, appelée XOR et représentée par le symbole
 $\bigoplus$, fournit une sortie égale à 1 si l’une ou l’autre des deux entrées vaut 1 mais
 pas les deux. 
 
@@ -30,7 +31,7 @@ Si on applique cette fonction à un nombre codé en binaire, elle opère bit à 
 
 Poser et calculer l’opération : $11001110 \bigoplus 01101011$
 
-3. On donne, ci-dessous, un extrait de la table ASCII qui permet d’encoder les
+**3.** On donne, ci-dessous, un extrait de la table ASCII qui permet d’encoder les
 caractères de A à Z.
 On peut alors considérer l’opération XOR entre deux caractères en effectuant
 le XOR entre les codes ASCII des deux caractères. Par exemple : 'F' XOR 'S'
@@ -63,7 +64,8 @@ message crypté.
 
 * On pourra utiliser la fonction native du langage Python `ord(c)` qui prend en paramètre un caractère c et qui renvoie un nombre représentant le code ASCII du caractère c.
 * On considère également que l’on dispose d’une fonction écrite `xor(n1,n2)` qui prend en paramètre deux nombres n1 et n2 et qui renvoie le résultat de n1 ⊕ n2.
-4. On souhaite maintenant générer une clé de la taille du message à partir d’un
+
+**4.** On souhaite maintenant générer une clé de la taille du message à partir d’un
 mot quelconque. On considère que le mot choisi est plus court que le
 message, il faut donc le reproduire un certain nombre de fois pour créer une
 clé de la même longueur que le message.
@@ -71,9 +73,9 @@ clé de la même longueur que le message.
 Par exemple, si le mot choisi est YAK pour crypter le message ALPHABET, la
 clé sera YAKYAKYA.)
 
-Créer une fonction `generer_cle(mot,n)` qui renvoie la clé de longueur n à partir
-de la chaîne de caractères mot.
-5. Recopier et compléter la table de vérité de $(𝑬𝟏 \bigoplus 𝑬𝟐) \bigoplus 𝑬𝟐$.
+Créer une fonction `generer_cle(mot,n)` qui renvoie la clé de longueur n à partir de la chaîne de caractères mot.
+
+**5.** Recopier et compléter la table de vérité de $(𝑬𝟏 \bigoplus 𝑬𝟐) \bigoplus 𝑬𝟐$.
 
 <figure>
   <img src="../images/xor5.png">

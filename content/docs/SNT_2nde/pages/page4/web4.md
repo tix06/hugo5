@@ -8,17 +8,19 @@ La page HTML est un CV (curriculum vitae). <a href="../images/curriculum.zip" do
 
 * dezipper le dossier dans *devoirs/tixidor/curriculum/*
 
-* Modifier le fichier `CV.html` en ajoutant les balises HTML, afin de structurer la page.
+* Modifier le fichier `CV.html` en ajoutant les balises HTML, afin de structurer la page. Votre document devra être BIEN présenté, avec titres et sous-titres.
 
-  * Une photo miniature cliquable renvoie sur la même photo agrandie.
-
-  * Un lien ***Télécharger mon CV*** mène à un fichier pdf réalisé à partir de la page. (utiliser la fonction d'impression du navigateur => enregistrer le pdf)
+  * La photographie devra être centrée sur la page.
 
   * Quatre sections (Expériences professionnelles, Formations, Compétences personnelles, Centres d'intérêt) sont en titre `<h2>`.
 
   * Chaque section contient un paragraphe ou une liste à puce.
 
-* Utiliser quelques règles CSS pour personnaliser la page.
+  * Vous Utiliserez quelques règles CSS pour personnaliser la page.
+
+  * Un lien ***Télécharger mon CV*** mène à un fichier pdf réalisé à partir de la page. (utiliser la fonction d'impression du navigateur => enregistrer le pdf)
+
+
 
 Vous pouvez vous aider des liens suivants:
 

@@ -81,9 +81,9 @@ Dans une page html, les instructions `HTML` sont mises dans un fichier dont l'ex
 
 
 
-<iframe src="https://trinket.io/embed/html/58318bee1f?runMode=autorun" width="900" height="560" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://trinket.io/embed/html/eb704ac5e8" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
-*Si l'affichage de l'editeur n'est pas optimal, utiliser le <a href="https://trinket.io/embed/html/58318bee1f#.XNWFAS_M3MJ" target="blank">lien direct sur la page en plein écran</a>*
+*Si l'affichage de l'editeur n'est pas optimal, utiliser le <a href="https://trinket.io/html/eb704ac5e8" target="blank">lien direct sur la page en plein écran</a>*
 
 > Nous  allons **modifier le script** de la page pour obtenir quelque chose ressemblant à celle-ci (mais en français):
 
@@ -95,13 +95,15 @@ Dans une page html, les instructions `HTML` sont mises dans un fichier dont l'ex
 
 **1)** Traduire et modifier le texte (*Description*) pour qu'il soit rédigé en français.
 
-**2)** Diminuer la dimension de l'image à 150px: Dans l'onglet *style.css*, ajouter la règle CSS suivante, à la suite de la précédente (donc APRES l'accolade \} ):
+**2)** Sous le paragraphe **Description:..** vous ajouterez un nouveau paragraphe `<p>` contenant:
 
-```css
-img { 
-  width: 150px;
-}
 ```
+If you have any information, please contact 6207 332 2310
+```
+
+Ca paragraphe devra être positionné AVANT la femeture `</div>`.
+
+
 
 **3)** Ajouter un nouveau paragraphe (vide): Dans *index.html*, ajouter les balises  `<p>  </p>` AVANT la femeture `</div>`. 
 
@@ -111,14 +113,16 @@ img {
 <a href="lune.html">=> Go to Lune Project</a>
 ```
 
-**5)** Créer un nouvel onglet (bouton **+**) que vous renommerez *lune.html*.
+**5)** Créer un nouvel onglet (bouton **+**) que vous renommerez *lune.html*. Pour l'instant, cette page est vide.
+
+**6)** Sur votre **cahier SNT**: recopier les instructions HTML que vous avez rajoutées dans cette page.
 
 ## Projet de recrutement lunaire
 Dans l'onglet *lune.html*, écrire le script HTML pour obtenir la page suivante:
 
 <figure>
   <div>
-  <img src="../images/lune.png">
+  <img src="../images/lune0.png">
   <figcaption>lune.html</figcaption>
 </div>
 </figure>
@@ -136,16 +140,22 @@ Penser à adapter le nom de l'image pour la balise `<img>`.
 
 **3)** Vérifier que le fichier `Lune.html` contient bien la balise suivante dans l'entête du fichier afin de pointer vers le fichier *style.css*. Cette balise doit être placée entre les balise`<head>...</head>` : 
 
-> `<link rel="stylesheet" href="style.css">`
+```html
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+```
 
 Sinon, ajoutez la.
 
 **4)** Ajouter un lien *Retour* vers la page *index.html*
 
+**5)** Sur votre **cahier SNT**: recopier l'instruction HTML que vous avez ajoutée pour créer ce lien *retour*.
+
 # Le langage CSS
 CSS est le langage qui décrit le style et la mise en forme du document HTML. Il décrit comment les elements HTML doivent être affichés et remplace les règles de style par defaut appliquées par le navigateur.
  
-Les déclaration CSS doivent en principe se trouver dans un fichier à extension `.css`. Chaque *déclaration* se rapporte à un type d'*élément* de la page HTML, grâce au *sélécteur*. Et chaque déclaration contient une ou plusieurs *règles*: 
+Les **déclarations** CSS doivent en principe se trouver dans un fichier à extension `.css`. Chaque *déclaration* se rapporte à un type d'*élément* de la page HTML, grâce au *sélécteur*. Et chaque déclaration contient une ou plusieurs *règles*: 
  
 > **Déclaration: `sélécteur {propriété: valeur;}`**
 
@@ -154,9 +164,7 @@ Les déclaration CSS doivent en principe se trouver dans un fichier à extension
 Une déclaration CSS comprend : 
 
 * un sélecteur, qui peut être le nom d'une balise HTML (comme par exemple div dans l'exemple proposé) 
-* une ou plusieurs règle(s) contenant 
-  * une propriété
-  * et la valeur correspondante.
+* une ou plusieurs règle(s) contenant une propriété ainsi que la valeur correspondante.
 
 <figure>
   <div>
@@ -177,6 +185,7 @@ p {
 
 
 est équivalent à :
+
 ```css
 p {font-weight: bold; border: 2px solid red;}
 ```
@@ -191,6 +200,17 @@ Ces instructions {propriété1 : valeur; } sont référencées sur le site : *[h
 
 > A vous de jouer : Vous allez modifier le fichier de style de votre projet, mais cette fois, à l'aide d'un editeur de texte.
 
+**1)** Cliquer sur l'onglet *style.css*. Combien y-a-t-il de **déclarations**, et de **règles** *css* dans ce fichier? Repondre sur le **cahier SNT**.
+
+**2)** Diminuer la dimension de l'image à 150px: Dans le fichier *style.css*, ajouter la règle CSS suivante, à la suite de la précédente *déclaration* (donc APRES l'accolade \} ):
+
+```css
+img { 
+  width: 150px;
+}
+```
+
+# Prolongement: travailler sur le fichier *local*
 **1)** Téléchargez votre projet sur votre ordinateur. A l'aide du menu en haut à gauche de la fenêtre d'edition, selectionner *Download*:
 
 <figure>
@@ -228,6 +248,12 @@ Ces instructions {propriété1 : valeur; } sont référencées sur le site : *[h
 </figure>
 
 Normalement, l'explorateur devrait montrer le contenu du nouveau dossier, avec tous les fichiers du projet.
+
+> Si votre projet n'est pas complètement terminé, vous pouvez utilisez celui-ci: <a href="/scripts/Tkinter/projet_correction.zip" download="projet_correction.zip">projet_correction</a>
+
+Vous pouvez maintenant ouvrir la page *index.html* avec votre *navigateur*, et vérifier que le lien <a href="">Go to Lune Project</a> vous envoie bien sur la page *Lune.html*.
+
+<!--
 
 **3)** Sélectionner tous les fichiers d'extensions `.html` et `.css`: Touche <i>Maj</i> enfoncée séléctionner les 3 fichiers. 
 
@@ -288,8 +314,17 @@ function decollage() {
 * et ajouter un bouton dans la page *lune.html*: juste avant la fermeture de la balise `</div>`, mettre : 
 <button onclick="decollage()">s'inscrire</button> avec la balise `<button onclick="decollage()">s'inscrire</button>`
 
+*Votre page devrait alors ressembler à ceci...:*
 
-# Prolongement
+<figure>
+  <div>
+  <img src="../images/lune.png">
+  <figcaption>lune.html</figcaption>
+</div>
+</figure>
+
+
+# Prolongement 2
 *S'il vous reste du temps:* ajoutez une **troisième** page à votre projet Web.
 
 Celle-ci pourrait, par exemple, porter sur un sujet lié à l'exploration d'un astre du système solaire pour rester dans le thème des précédentes.
@@ -297,7 +332,7 @@ Celle-ci pourrait, par exemple, porter sur un sujet lié à l'exploration d'un a
 * La page créée pourrait contenir une image (libre de droit si possible).
 * Citer les sources utilisées (sites où vous avez trouvé les renseignements, source de l'image)
 * La page devra être liée aux autres pages à l'aide de liens hypertextes.
-
+-->
 
 # Liens et compléments
 <ul>
