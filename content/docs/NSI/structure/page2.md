@@ -279,7 +279,7 @@ La liste L contient les caractères de l'expression POSTFIXE à calculer.
 
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f9d305edd765&mode=code"></iframe>
 
-
+<!--
 # Correction des exercices
 ## Exercice 1
 
@@ -365,7 +365,9 @@ On peut tester une opération à l'aide de `dicoP`:
 -1
 ```
 
-Puis on programme la fonction `evalNPI`:
+Puis on programme la fonction `evalNPI`.
+
+On donne une autre version (plus avancée) de la fonction `evalNPI` utilisant des fonctions lambda, ce qui raccourcit le script:
 
 ```python
 def evalNPI(L):
@@ -396,7 +398,7 @@ evalNPI(L)
 <i>Aide: rappelez vous que l'instruction ne contient pas de parenthèses, alors il faudra bien respecter l'ordre des opérations à realiser, de gauche à droite. Le dernier caractère à saisir sera alors le symbole **-**. Relire la video si vous en avez besoin (énoncé de l'Ex 4).</i>
 
 
-
+-->
 
 
 
