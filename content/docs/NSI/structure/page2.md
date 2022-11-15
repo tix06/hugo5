@@ -279,6 +279,19 @@ La liste L contient les caractères de l'expression POSTFIXE à calculer.
 
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f9d305edd765&mode=code"></iframe>
 
+## Exercice 5: Reduction d'une chaine de caractères
+Certains jeux comme par exemple *Candie Crush* reposent sur l'*élimination de motifs adjacents*. Je vous propose ici d'utiliser une chaine de caractères dans laquelle les motifs vont être éliminé de la manière suivante:
+
+<figure>
+<img src='../images/reduction.PNG'>
+<figcaption>méthode de reduction avec une chaine contenant<br>
+des caractères a, A, b, B, c, C, d, D</figcaption>
+</figure>
+
+> Programmez la fonction `reduction` qui va permettre de réaliser ceci.
+
+*On se limitera aux caractères 'a', 'A', 'b', 'B', 'c', 'C', 'd', 'D' pour cette chaine.*
+
 <!--
 # Correction des exercices
 ## Exercice 1
