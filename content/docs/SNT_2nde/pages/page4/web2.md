@@ -113,9 +113,9 @@ Ca paragraphe devra être positionné AVANT la femeture `</div>`.
 <a href="lune.html">=> Go to Lune Project</a>
 ```
 
-**5)** Créer un nouvel onglet (bouton **+**) que vous renommerez *lune.html*. Pour l'instant, cette page est vide.
 
-**6)** Sur votre **cahier SNT**: recopier les instructions HTML que vous avez rajoutées dans cette page.
+
+**5)** Sur votre **cahier SNT**: recopier les instructions HTML que vous avez rajoutées dans cette page.
 
 ## Projet de recrutement lunaire
 Dans l'onglet *lune.html*, écrire le script HTML pour obtenir la page suivante:
