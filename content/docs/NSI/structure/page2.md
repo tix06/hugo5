@@ -292,7 +292,7 @@ des caractères a, A, b, B, c, C, d, D</figcaption>
 
 *On se limitera aux caractères 'a', 'A', 'b', 'B', 'c', 'C', 'd', 'D' pour cette chaine.*
 
-<!--
+
 # Correction des exercices
 ## Exercice 1
 
@@ -338,6 +338,8 @@ Tester le script suivant à la suite de celui de l'exercice 1:
 p2 = Pile()
 depile(p2)
 ```
+
+<!--
 
 ## Exercice 3
 Ajouter la fonction `deversePile` suivante à la suite de celles de l'exercice 1. (Les fonctions `est_vide`, `depile` et `empile` doivent être définies)
