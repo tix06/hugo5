@@ -1,47 +1,401 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>HTML CSS
-| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel=stylesheet><script type=text/x-mathjax-config>
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    HTML CSS
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
   });
-</script><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.1c02dc1d2c0b546a84beb71d8f4336d6f5d7b69564e08bdfc04c2fb0595d786d.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
 catch(err)
-{console.log(err.message);}
-if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
-if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
-if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}
-let chemin=window.location.pathname;if(chemin.search('NSI')>-1){baniere=document.querySelector("#myHeader");let linkBox=document.createElement('div');linkBox.classList.add('linkBox');let newH=document.createElement('a');newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';newH.classList.add('nsi');linkBox.appendChild(newH);baniere.appendChild(linkBox);}</script><style>#myHeader{display:flex;flex-direction:row-reverse}#myHeader>.titre{width:80%;min-width:300px;text-align:left}.linkBox{margin:10px;padding-top:10px;background-color:pink;min-width:50px}.isn{}</style></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2f docs\2fSNT_2nde\2fpages\2fpage4\2fweb1\2f ]{color:#004ed0}</style><ul><li><a href=/><strong>Accueil</strong></a></li><li><a href=/docs/esf/esf_index/><strong>ESF</strong></a></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p></li><li><p><a href=/docs/python/index_python/><strong>Python</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
-addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-page><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
-<strong>HTML CSS</strong></header><article class=markdown><h1 id=document-web>Document Web</h1><h2 id=contenu-et-structure>Contenu et Structure</h2><p>Le contenu des documents Web est rédigé en langage HTML (acronyme de Hypertext Markup Language). HTML est un langage interprété (par le navigateur). C&rsquo;est un langage de description qui gère le contenu (le texte et les images), en ajoutant des éléments de structure, comme par exemple:</p><ul><li>mettre le texte dans un paragraphe</li><li>mettre du texte en relief</li><li>insérer un hyperlien sur le texte</li><li>mettre un titre à la page, au paragraphe</li><li>&hellip;</li></ul><figure><a href=https://vimeo.com/138623721><img src=../images/contenustructure.png><figcaption>Lire la video depuis 20' => 1min40'</figcaption></a></figure><h2 id=les-éléments-en-html>Les éléments en HTML</h2><h3 id=balises>Balises</h3><p>Les élements sont décrits par des <em>balises</em>, comme par exemple, l&rsquo;élément paragraphe <code>p</code>, est déclaré à l&rsquo;aide d&rsquo;une balise <code>&lt;p&gt;</code>. Toute balise ouverte doit être refermée, ici avec <code>&lt;/p&gt;</code>. Et le contenu (souvent textuel), est mis entre ces deux balises:</p><figure><img src=../images/balises.png alt="exemple d'une balise paragraphe"><figcaption>exemple d'une balise paragraphe</figcaption></figure><p>Ces balises s&rsquo;utilisent comme des <em>parenthèses</em> et peuvent être imbriquées. Une mauvaise imbrication de balises constitue une erreur.</p><p>Par exemple: Une imbrication <strong>correcte</strong>:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#111>&lt;</span><span style=color:#f92672>body</span><span style=color:#111>&gt;</span>
-    <span style=color:#111>&lt;</span><span style=color:#f92672>div</span><span style=color:#111>&gt;</span>  
-      <span style=color:#111>&lt;</span><span style=color:#f92672>h1</span><span style=color:#111>&gt;</span>Wanted!<span style=color:#111>&lt;/</span><span style=color:#f92672>h1</span><span style=color:#111>&gt;</span>
-    <span style=color:#111>&lt;/</span><span style=color:#f92672>div</span><span style=color:#111>&gt;</span>
-<span style=color:#111>&lt;/</span><span style=color:#f92672>body</span><span style=color:#111>&gt;</span></code></pre></div><p>Une imbrication <strong>non correcte</strong>:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#111>&lt;</span><span style=color:#f92672>body</span><span style=color:#111>&gt;</span>
-    <span style=color:#111>&lt;</span><span style=color:#f92672>div</span><span style=color:#111>&gt;</span>  
-      <span style=color:#111>&lt;</span><span style=color:#f92672>h1</span><span style=color:#111>&gt;</span>Wanted!<span style=color:#111>&lt;/</span><span style=color:#f92672>h1</span><span style=color:#111>&gt;</span>
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
     
-<span style=color:#111>&lt;/</span><span style=color:#f92672>body</span><span style=color:#111>&gt;</span>
-<span style=color:#111>&lt;/</span><span style=color:#f92672>div</span><span style=color:#111>&gt;</span></code></pre></div><p>Il existe une hiérarchie entre ces balises.
-Dans l&rsquo;exemple qui suit, on peut lire dans le script html que la balise <code>html</code> contient celles <code>head</code> et <code>body</code>. <code>html</code> est donc une balise parente de <code>head</code> et <code>body</code>. On peut représenter ces liens de parentée avec le diagramme suivant:</p><figure><div><img src=../images/squelette.png></div></figure><p><strong>Script complet:</strong></p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#111>&lt;</span><span style=color:#f92672>html</span><span style=color:#111>&gt;</span>
-  
-  <span style=color:#111>&lt;</span><span style=color:#f92672>head</span><span style=color:#111>&gt;</span>
-    <span style=color:#111>&lt;</span><span style=color:#f92672>link</span> <span style=color:#75af00>rel</span><span style=color:#f92672>=</span><span style=color:#d88200>&#34;stylesheet&#34;</span> <span style=color:#75af00>href</span><span style=color:#f92672>=</span><span style=color:#d88200>&#34;style.css&#34;</span><span style=color:#111>&gt;</span>
-  <span style=color:#111>&lt;/</span><span style=color:#f92672>head</span><span style=color:#111>&gt;</span>
-  
-  <span style=color:#111>&lt;</span><span style=color:#f92672>body</span><span style=color:#111>&gt;</span>
-  
-    <span style=color:#111>&lt;</span><span style=color:#f92672>div</span><span style=color:#111>&gt;</span>  
-      <span style=color:#111>&lt;</span><span style=color:#f92672>h1</span><span style=color:#111>&gt;</span>Wanted!<span style=color:#111>&lt;/</span><span style=color:#f92672>h1</span><span style=color:#111>&gt;</span>
-      <span style=color:#111>&lt;</span><span style=color:#f92672>h3</span><span style=color:#111>&gt;</span>Have you seen this robot?<span style=color:#111>&lt;/</span><span style=color:#f92672>h3</span><span style=color:#111>&gt;</span>
-      <span style=color:#111>&lt;</span><span style=color:#f92672>img</span> <span style=color:#75af00>src</span><span style=color:#f92672>=</span><span style=color:#d88200>&#34;robot.png&#34;</span><span style=color:#111>&gt;</span>
-      <span style=color:#111>&lt;</span><span style=color:#f92672>p</span><span style=color:#111>&gt;</span>Description: Height: 30cm, Colour: purple and orange, Arms: 4<span style=color:#111>&lt;/</span><span style=color:#f92672>p</span><span style=color:#111>&gt;</span>
-      <span style=color:#111>&lt;</span><span style=color:#f92672>p</span><span style=color:#111>&gt;</span>If you have any information, please contact 6207 332 2310<span style=color:#111>&lt;/</span><span style=color:#f92672>p</span><span style=color:#111>&gt;</span>
-    <span style=color:#111>&lt;/</span><span style=color:#f92672>div</span><span style=color:#111>&gt;</span>
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
     
-  <span style=color:#111>&lt;/</span><span style=color:#f92672>body</span><span style=color:#111>&gt;</span>
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
   
-<span style=color:#111>&lt;/</span><span style=color:#f92672>html</span><span style=color:#111>&gt;</span></code></pre></div><blockquote><p><strong>Exercice:</strong> A l&rsquo;aide du script complet, poursuivre le diagramme représentant la hierarchie entre ces balises.</p></blockquote><h2 id=attribut-d-une-balise>Attribut d&rsquo;une balise</h2><p>On peut ajouter des attributs à une balise. Cela permet de modifier son comportement. Par exemple, la balise de lien <code>a</code> prend un argument obligatoire qui est <code>href</code>, et qui pointe vers la ressource. Lorsque l&rsquo;on clique sur le contenu (ce qui est affiché par la balise), on est dirigé vers cette ressource.</p><p><em>Exemple:</em> En reprenant l&rsquo;exemple initial, on souhaite maintenant créer un lien hypertexte sur l&rsquo;un des mots affichés. On inclue la balise suivante dans le paragraphe:</p><p><code>&lt;a href = &quot;http://fr.wikipedia.org/restauration_1814&quot;&gt;Restauration&lt;/a&gt;</code></p><p>Le lien <a>Restauration</a> va s&rsquo;afficher en bleu souligné.</p><p>Et cela va rediriger sur la page de wikipedia: restauration française de 1814, lorsque l&rsquo;on clique sur <a href=https://fr.wikipedia.org/wiki/Portail:Restauration_française_1814-1830 target=blank>Restauration</a>.</p><figure><img src=../images/balises_liens.png alt="rendu navigateur html avec lien"><figcaption>exemple de liens dans un paragraphe</figcaption></figure><h1 id=lien-vers-la-suite-du-tp>Lien vers la suite du TP</h1><p><input type=button class="btn btn-lg" value="Partie 2: HTML et CSS" onclick="window.location.href='../web2/index.html'"></p><p><input type=button class="btn btn-lg" value="Retour: le Web" onclick="window.location.href='../web/index.html'"></p><h1 id=lien-vers-l-exploration-d-une-page-wikipedia>Lien vers l&rsquo;exploration d&rsquo;une page wikipedia</h1><p><a href=https://frederic-junier.org/SNT/Theme1_Web/SNT_Activite3_Web.html>Voir l&rsquo;exercice 1 de la page du site de Frederic Junier</a></p></article><div style=height:100px></div></div></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
-<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fSNT_2nde\2fpages\2fpage4\2fweb1\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    HTML CSS
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="document-web">Document Web</h1>
+<h2 id="contenu-et-structure">Contenu et Structure</h2>
+<p>Le contenu des documents Web est rédigé en langage HTML (acronyme de Hypertext Markup Language). HTML est un langage interprété (par le navigateur). C&rsquo;est un langage de description qui gère le contenu (le texte et les images), en ajoutant des éléments de structure, comme par exemple:</p>
+<ul>
+<li>mettre le texte dans un paragraphe</li>
+<li>mettre du texte en relief</li>
+<li>insérer un hyperlien sur le texte</li>
+<li>mettre un titre à la page, au paragraphe</li>
+<li>&hellip;</li>
+</ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="les-éléments-en-html">Les éléments en HTML</h2>
+<h3 id="balises">Balises</h3>
+<p>Les élements sont décrits par des <em>balises</em>, comme par exemple, l&rsquo;élément paragraphe <code>p</code>, est déclaré à l&rsquo;aide d&rsquo;une balise <code>&lt;p&gt;</code>. Toute balise ouverte doit être refermée, ici avec <code>&lt;/p&gt;</code>. Et le contenu (souvent textuel), est mis entre ces deux balises:</p>
+<!-- raw HTML omitted -->
+<p>Ces balises s&rsquo;utilisent comme des <em>parenthèses</em> et peuvent être imbriquées. Une mauvaise imbrication de balises constitue une erreur.</p>
+<p>Par exemple: Une imbrication <strong>correcte</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">body</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>  
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;</span><span style="color:#f92672">h1</span><span style="color:#111">&gt;</span>Wanted!<span style="color:#111">&lt;/</span><span style="color:#f92672">h1</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">body</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><p>Une imbrication <strong>non correcte</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">body</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>  
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;</span><span style="color:#f92672">h1</span><span style="color:#111">&gt;</span>Wanted!<span style="color:#111">&lt;/</span><span style="color:#f92672">h1</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">body</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><p>Il existe une hiérarchie entre ces balises.
+Dans l&rsquo;exemple qui suit, on peut lire dans le script html que la balise <code>html</code> contient celles <code>head</code> et <code>body</code>. <code>html</code> est donc une balise parente de <code>head</code> et <code>body</code>. On peut représenter ces liens de parentée avec le diagramme suivant:</p>
+<!-- raw HTML omitted -->
+<p><strong>Script complet:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">html</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">head</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">link</span> <span style="color:#75af00">rel</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;stylesheet&#34;</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;style.css&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;/</span><span style="color:#f92672">head</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">body</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>  
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;</span><span style="color:#f92672">h1</span><span style="color:#111">&gt;</span>Wanted!<span style="color:#111">&lt;/</span><span style="color:#f92672">h1</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;</span><span style="color:#f92672">h3</span><span style="color:#111">&gt;</span>Have you seen this robot?<span style="color:#111">&lt;/</span><span style="color:#f92672">h3</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;</span><span style="color:#f92672">img</span> <span style="color:#75af00">src</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;robot.png&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>Description: Height: 30cm, Colour: purple and orange, Arms: 4<span style="color:#111">&lt;/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>If you have any information, please contact 6207 332 2310<span style="color:#111">&lt;/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;/</span><span style="color:#f92672">body</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">html</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><blockquote>
+<p><strong>Exercice:</strong> A l&rsquo;aide du script complet, poursuivre le diagramme représentant la hierarchie entre ces balises.</p>
+</blockquote>
+<h2 id="attribut-dune-balise">Attribut d&rsquo;une balise</h2>
+<p>On peut ajouter des attributs à une balise. Cela permet de modifier son comportement. Par exemple, la balise de lien <code>a</code> prend un argument obligatoire qui est <code>href</code>, et qui pointe vers la ressource. Lorsque l&rsquo;on clique sur le contenu (ce qui est affiché par la balise), on est dirigé vers cette ressource.</p>
+<p><em>Exemple:</em> En reprenant l&rsquo;exemple initial, on souhaite maintenant créer un lien hypertexte sur l&rsquo;un des mots affichés. On inclue la balise suivante dans le paragraphe:</p>
+<p><code>&lt;a href = &quot;http://fr.wikipedia.org/restauration_1814&quot;&gt;Restauration&lt;/a&gt;</code></p>
+<p>Le lien <!-- raw HTML omitted -->Restauration<!-- raw HTML omitted --> va s&rsquo;afficher en bleu souligné.</p>
+<p>Et cela va rediriger sur la page de wikipedia: restauration française de 1814, lorsque l&rsquo;on clique sur <!-- raw HTML omitted -->Restauration<!-- raw HTML omitted -->.</p>
+<!-- raw HTML omitted -->
+<h1 id="lien-vers-la-suite-du-tp">Lien vers la suite du TP</h1>
+<!-- raw HTML omitted -->
+<h1 id="lien-vers-lexploration-dune-page-wikipedia">Lien vers l&rsquo;exploration d&rsquo;une page wikipedia</h1>
+<p><!-- raw HTML omitted -->Voir l&rsquo;exercice 1 de la page du site de Frederic Junier<!-- raw HTML omitted --></p>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

@@ -1,67 +1,841 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>HTML CSS les bases
-| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel=stylesheet><script type=text/x-mathjax-config>
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    HTML CSS les bases
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
   });
-</script><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.1c02dc1d2c0b546a84beb71d8f4336d6f5d7b69564e08bdfc04c2fb0595d786d.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
 catch(err)
-{console.log(err.message);}
-if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
-if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
-if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}
-let chemin=window.location.pathname;if(chemin.search('NSI')>-1){baniere=document.querySelector("#myHeader");let linkBox=document.createElement('div');linkBox.classList.add('linkBox');let newH=document.createElement('a');newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';newH.classList.add('nsi');linkBox.appendChild(newH);baniere.appendChild(linkBox);}</script><style>#myHeader{display:flex;flex-direction:row-reverse}#myHeader>.titre{width:80%;min-width:300px;text-align:left}.linkBox{margin:10px;padding-top:10px;background-color:pink;min-width:50px}.isn{}</style></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2f docs\2fNSI\2fHTML\2fpage1\2f ]{color:#004ed0}</style><ul><li><a href=/><strong>Accueil</strong></a></li><li><a href=/docs/esf/esf_index/><strong>ESF</strong></a></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p></li><li><p><a href=/docs/python/index_python/><strong>Python</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
-addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-page><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
-<strong>HTML CSS les bases</strong></header><article class=markdown><h1 id=les-langages-web>Les langages web</h1><h2 id=des-langages-interprétés>des langages interprétés</h2><p>HTML : HyperTextMarkup Langage; CSS : Cascading StyleSheets; Javascript sont des langages interprétés par le navigateur, côté client. Ces 3 langages, en combinaison, vont permettre de créer des <em>sites internet</em>.</p><p>Pour que les pages soient accéssibles à tout le monde, sur le web<sup class=footnote-ref id=fnref:2><a href=#fn:2>1</a></sup>, ces pages doivent être hébergés sur un serveur. Lorsque le navigateur client envoie une requête au serveur, celui-ci lui renvoie les fichiers HTML, CSS et JS. Les instructions sont alors interprétées et permettent l&rsquo;affichage des pages.</p><p>Ces langages sont en constante évolution. Ce sont des langages <em>open sources</em><sup class=footnote-ref id=fnref:5><a href=#fn:5>2</a></sup> et de nombreux contributeurs en proposent des améliorations.
-Il existe plusieurs logiciels navigateurs (Mozilla, Chrome, Safari,&hellip;). Et pourtant, malgré cette diversité et ces évolutions du langage, eux-ci vont interpréter ces fichiers et afficher les pages (presque) de la même manière car ils se réferent tous aux même recommandations, celles du w3c<sup class=footnote-ref id=fnref:4><a href=#fn:4>3</a></sup>.</p><h2 id=des-tâches-différentes>des tâches différentes</h2><p>Les langages web se partagent les tâches :
-Une bonne pratique dans le développement d&rsquo;un site internet (côté front-end, ce qui est executé sur la machine du client) consiste à utiliser HTML pour le contenu (avec un contenu correctement balisé, sémantique, accessible), CSS pour la mise en forme et la mise en page, et JavaScript pour gérer les interactions (qui peuvent éventuellement amener à modifier le contenu via les méthodes du DOM<sup class=footnote-ref id=fnref:1><a href=#fn:1>4</a></sup>).</p><p>Le langage HTML est un langage constitué de <em>balises</em>, comme par exemple :
-<code>&lt;title&gt;le titre de ma page&lt;/title&gt;</code> qui permet d&rsquo;afficher le titre de la page dans l&rsquo;onglet du navigateur.</p><p>Les éléments mis dans le programme à l&rsquo;aide de ces balises vont permettre d&rsquo;ajouter et structurer le contenu de la page : des titres de différents niveaux, du texte, des images, des médias (sons, videos),mais surtout, des hyperliens :</p><ul><li>entre les pages du sites</li><li>vers les pages de sites externes</li></ul><p>Le <em>web</em><sup class=footnote-ref id=fnref:2><a href=#fn:2>1</a></sup> est justement basé sur l&rsquo;utilisation de ces <em>hyperliens</em>, qui permettent de <em>naviguer</em> de pages en pages, sur internet<sup class=footnote-ref id=fnref:3><a href=#fn:3>5</a></sup>.</p><h1 id=le-document-html>Le document HTML</h1><h2 id=deux-balises-pour-tout-écrire>Deux balises pour tout écrire</h2><p>On pourrait utiliser une ou deux balises uniques pour tous les usages, par exemple :</p><ul><li>la balise <code>DIV</code> pour des éléments qui devront s&rsquo;afficher l&rsquo;un <strong>sous</strong> l&rsquo;autre.</li><li>la balise <code>SPAN</code> pour des éléments qui devront s&rsquo;afficher l&rsquo;un <strong>à côté</strong> de l&rsquo;autre.</li></ul><p>Voici le code HTML utilisé :</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#75715e>&lt;!DOCTYPE html&gt;</span>
+{
+    console.log(err.message);
+}
 
-<span style=color:#111>&lt;</span><span style=color:#f92672>html</span><span style=color:#111>&gt;</span>
-    <span style=color:#111>&lt;</span><span style=color:#f92672>head</span><span style=color:#111>&gt;</span>
-        <span style=color:#111>&lt;</span><span style=color:#f92672>meta</span> <span style=color:#75af00>charset</span><span style=color:#f92672>=</span><span style=color:#d88200>&#34;UTF-8&#34;</span><span style=color:#111>&gt;</span>
-        <span style=color:#111>&lt;</span><span style=color:#f92672>title</span><span style=color:#111>&gt;</span>Marignan 1515<span style=color:#111>&lt;/</span><span style=color:#f92672>title</span><span style=color:#111>&gt;</span>
-    <span style=color:#111>&lt;/</span><span style=color:#f92672>head</span><span style=color:#111>&gt;</span>
 
-<span style=color:#111>&lt;</span><span style=color:#f92672>body</span><span style=color:#111>&gt;</span>
-<span style=color:#111>&lt;</span><span style=color:#f92672>div</span> <span style=color:#75af00>class</span><span style=color:#f92672>=</span><span style=color:#d88200>&#34;main&#34;</span><span style=color:#111>&gt;</span>
-  <span style=color:#111>&lt;</span><span style=color:#f92672>div</span> <span style=color:#75af00>class</span><span style=color:#f92672>=</span><span style=color:#d88200>&#34;titre&#34;</span><span style=color:#111>&gt;</span>La bataille de Marignan<span style=color:#111>&lt;/</span><span style=color:#f92672>div</span><span style=color:#111>&gt;</span>
-    <span style=color:#111>&lt;</span><span style=color:#f92672>div</span> <span style=color:#75af00>class</span><span style=color:#f92672>=</span><span style=color:#d88200>&#34;contenu&#34;</span><span style=color:#111>&gt;</span>
-      <span style=color:#111>&lt;</span><span style=color:#f92672>div</span> <span style=color:#75af00>class</span><span style=color:#f92672>=</span><span style=color:#d88200>&#34;paragraphe&#34;</span><span style=color:#111>&gt;</span>
-        La bataille de Marignan (Marignano en Italie, aujourd’hui Melegnano, ville à 16 km au sud-est de Milan) eut lieu les 13 et 14 septembre 1515 et opposa le roi de France <span style=color:#111>&lt;</span><span style=color:#f92672>span</span> <span style=color:#75af00>class</span><span style=color:#f92672>=</span><span style=color:#d88200>&#34;lien&#34;</span> <span style=color:#75af00>onclick</span><span style=color:#f92672>=</span><span style=color:#d88200>&#34;window.location.href = &#39;https://fr.wikipedia.org/wiki/François_Ier_(roi_de_France)&#39;&#34;</span><span style=color:#111>&gt;</span>François Ier<span style=color:#111>&lt;/</span><span style=color:#f92672>span</span><span style=color:#111>&gt;</span> et ses alliés vénitiens aux mercenaires suisses qui défendaient le duché de Milan.
-      <span style=color:#111>&lt;/</span><span style=color:#f92672>div</span><span style=color:#111>&gt;</span>
-      <span style=color:#111>&lt;</span><span style=color:#f92672>div</span> <span style=color:#75af00>class</span><span style=color:#f92672>=</span><span style=color:#d88200>&#34;paragraphe&#34;</span><span style=color:#111>&gt;</span>
-        Première victoire du jeune roi François Ier, acquise dès la première année de son règne, elle fit environ 16 000 morts en seize heures de combat.
-      <span style=color:#111>&lt;/</span><span style=color:#f92672>div</span><span style=color:#111>&gt;</span>
-  <span style=color:#111>&lt;/</span><span style=color:#f92672>div</span><span style=color:#111>&gt;</span>
-<span style=color:#111>&lt;/</span><span style=color:#f92672>div</span><span style=color:#111>&gt;</span>
-<span style=color:#111>&lt;/</span><span style=color:#f92672>body</span><span style=color:#111>&gt;</span></code></pre></div><ul><li><p>Résultat obtenu SANS aucune règle CSS :<div><div>La bataille de Marignan</div><div><div>La bataille de Marignan (Marignano en Italie, aujourd’hui Melegnano, ville à 16 km au sud-est de Milan) eut lieu les 13 et 14 septembre 1515 et opposa le roi de France <span onclick="window.location.href='https://fr.wikipedia.org/wiki/François_Ier_(roi_de_France)'">François Ier</span> et ses alliés vénitiens aux mercenaires suisses qui défendaient le duché de Milan.</div><div>Première victoire du jeune roi François Ier, acquise dès la première année de son règne, elle fit environ 16 000 morts en seize heures de combat.</div></div></div></p></li><li><p>Résultat obtenu AVEC les règles CSS :</p></li></ul><style>.cont{border:solid}.titreDIV{font-size:1.5em;text-decoration:bold}.paragraphe{margin:1.2em;text-indent:20px;text-align:justify}.lien{color:blue;cursor:pointer}</style><div class=cont><div class=titreDIV>La bataille de Marignan</div><div class=contenu><div class=paragraphe>La bataille de Marignan (Marignano en Italie, aujourd’hui Melegnano, ville à 16 km au sud-est de Milan) eut lieu les 13 et 14 septembre 1515 et opposa le roi de France <span class=lien onclick="window.location.href='https://fr.wikipedia.org/wiki/François_Ier_(roi_de_France)'">François Ier</span> et ses alliés vénitiens aux mercenaires suisses qui défendaient le duché de Milan.</div><div class=paragraphe>Première victoire du jeune roi François Ier, acquise dès la première année de son règne, elle fit environ 16 000 morts en seize heures de combat.</div></div></div><p><strong>Commentaires :</strong></p><ul><li>l&rsquo;exemple montre qu&rsquo;avec 2 balises seulement, il est possible de segmenter et d&rsquo;afficher du contenu.</li><li>Ces balises étant génériques, et souvent ré-employées, il faudra pouvoir distinguer les différents éléments et leur ajouter des attributs de classe.</li><li>En ajoutant des règles de mises en forme, écrites dans la partie CSS, les éléments retrouvent leur rôle spécifique (container, paragraphe, lien&hellip;).</li><li>comme vous l&rsquo;imaginez, ce n&rsquo;est pas la bonne pratique que d&rsquo;utiliser seulement 2 balises pour tout le document : le code sera difficile à maintenir. Et vous aurez besoin d&rsquo;écrire toutes les règles de mise en page CSS pour ces balises. Alors qu&rsquo;avec des balises bien nommées, le navigateur va pouvoir appliquer les styles par défaut pour ces éléments.</li></ul><h2 id=le-squelette-du-document>le squelette du document</h2><p>Cette partie du programme est le contenu minimum à mettre dans vos pages :</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#75715e>&lt;!DOCTYPE html&gt;</span>
 
-<span style=color:#111>&lt;</span><span style=color:#f92672>html</span><span style=color:#111>&gt;</span>
-    <span style=color:#111>&lt;</span><span style=color:#f92672>head</span><span style=color:#111>&gt;</span>
-        <span style=color:#75715e>&lt;!-- en-tête de la page --&gt;</span>
-        <span style=color:#75715e>&lt;!-- encodage des caractères --&gt;</span>
-        <span style=color:#111>&lt;</span><span style=color:#f92672>meta</span> <span style=color:#75af00>charset</span><span style=color:#f92672>=</span><span style=color:#d88200>&#34;UTF-8&#34;</span><span style=color:#111>&gt;</span>
-        <span style=color:#111>&lt;</span><span style=color:#f92672>title</span><span style=color:#111>&gt;</span>Titre de la page web<span style=color:#111>&lt;/</span><span style=color:#f92672>title</span><span style=color:#111>&gt;</span>
-    <span style=color:#111>&lt;/</span><span style=color:#f92672>head</span><span style=color:#111>&gt;</span>
 
-    <span style=color:#111>&lt;</span><span style=color:#f92672>body</span><span style=color:#111>&gt;</span>
-        <span style=color:#75715e>&lt;!-- corps de la page --&gt;</span>
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
 
-    <span style=color:#111>&lt;/</span><span style=color:#f92672>body</span><span style=color:#111>&gt;</span>
-<span style=color:#111>&lt;/</span><span style=color:#f92672>html</span><span style=color:#111>&gt;</span></code></pre></div><p>Le doctype indique au navigateur la version HTML utilisée par la page (ici HTML5).</p><p>L&rsquo;élément racine <code>&lt;html&gt;</code> : C&rsquo;est lui qui va recueillir les deux principaux éléments de la hiérarchie : <code>&lt;head&gt;</code> et <code>&lt;body&gt;</code>.</p><p>À ce niveau, le code HTML est alors divisé en deux parties.</p><p>On peut lui associer l&rsquo;attribut langue, précisant la langue utilisée dans le document :</p><p><code>&lt;html lang=&quot;fr&quot;&gt;</code></p><p>L&rsquo;en-tête (élément <code>&lt;head&gt;</code>) donne l&rsquo;encodage des caractères (ici UTF-8).</p><p>Préciser l&rsquo;encodage des caractères est primordial pour exploiter la bonne page de code et ne pas se retrouver avec les caractères spéciaux ou accentués. Le choix de l&rsquo;UTF-8 est désormais préconisé par le W3C pour tous les protocoles échangeant du texte sur internet (dont HTML).</p><p>On peut aussi y ajouter des éléments <code>&lt;link&gt;</code> et <code>&lt;script&gt;</code> :</p><ul><li>link : permet de mettre en relation la page avec d&rsquo;autres documents externes.</li><li><code>&lt;script&gt;</code> permet d&rsquo;ajouter des scripts (JavaScript) qui vont s&rsquo;éxécuter côté client dans le navigateur dès leur chargement.</li></ul><p>Si vous avez un script qui est très gros mais indépendant, il est préférable de le placer tout à la fin, afin de ne pas retarder le navigateur dans sa construction de l&rsquo;arbre du DOM et de l&rsquo;affichage de la page.</p><h2 id=quelques-règles-de-syntaxe>quelques règles de syntaxe</h2><ul><li>Les commentaires sont mis entre les balises :</li></ul><p><code>&lt;!-- commentaire --&gt;</code></p><ul><li>Toute balise ouverte doit être refermée :</li></ul><p><code>&lt;p&gt;contenu de la balise&lt;/p&gt;</code></p><p><code>&lt;p&gt;</code> est la balise ouvrante, <code>&lt;/p&gt;</code> est la balise fermante.</p><p>Certaines balises sont vides (elles n&rsquo;ont pas de contenu), la fermeture se fait alors immédiatement :</p><p><code>&lt;br&gt;</code></p><p><code>&lt;img src=&quot;velo.jpg&quot; alt=&quot;vélo&quot;&gt;</code></p><p><code>&lt;br&gt;</code> et <code>&lt;img&gt;</code> sont des balises dites <em>orphelines</em>.</p><ul><li>Dans ces exemples, on voit qu&rsquo;une balise peut être constituée <em>d&rsquo;attributs</em> (par exemple <code>src</code> pour la balise <em>img</em>). On affecte alors des <em>valeurs</em> à ces attributs (entre guillemets et après le <code>=</code> ).</li><li>Lien hypertexte : on créé un lien <em>externe</em> en écrivant l&rsquo;URL de la page <code>http://...</code>:</li></ul><p><code>&lt;a href=&quot;http://fr.wikipedia.org/&quot;&gt;Un lien hypertexte vers le site de Wikipédia&lt;/a&gt;</code></p><p>Si le lien était vers une page du site (une page <em>locale</em>), il n&rsquo;y aurait pas eu <code>http://</code> au début de l&rsquo;adresse.</p><ul><li>Les balises doivent être correctement imbriquées :</li></ul><p><code>&lt;p&gt;Cette syntaxe est &lt;strong&gt;bonne&lt;/strong&gt;&lt;/p&gt;</code></p><ul><li>il peut arriver que l&rsquo;on ait recours à des <em>entité HTML</em> pour écrire certains caractères spéciaux : (symbole réservé comme le chevron `&gt;, alphabet grec&hellip;).
-Ces entités ont toutes la même préfixe : une esperluette « &amp; ». La fin d&rsquo;une entité est marquée par le caractère point-virgule « ; ».</li></ul><p>Ainsi, pour afficher <code>&lt;em&gt;</code>, il faudra écrire : <code>&amp;lt;em&amp;gt;</code>.</p><p>voir lien : <a href=https://fr.wikibooks.org/wiki/Le_langage_HTML/Entités>https://fr.wikibooks.org/wiki/Le_langage_HTML/Entités</a></p><h2 id=attributs-des-balises>Attributs des balises</h2><p>Les attributs sont ajoutés à la balise <em>ouvrante</em>. Il vont permettre de préciser certaines de ses caractéristiques, de faire appel à une <em>fonction</em> du langage HTML, et parfois, modifier son comportement.</p><blockquote><p>La syntaxe est : <code>&lt;element attribut=&quot;valeur&quot;&gt;</code></p></blockquote><p>Certaines balises acceptent les attributs <code>width</code> ou <code>height</code>. Ce qui permet de définir leur dimension (largeur, hauteur), (voir l&rsquo;élément <code>img</code>).
-Pour certains éléments, des attributs sont obligatoires et doivent être renseignés : la localisation d&rsquo;une image <code>src</code>, ou bien l&rsquo;adresse d&rsquo;une page pour un hyperlien <code>href</code>.</p><p><strong>Exemple :</strong></p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#111>&lt;</span><span style=color:#f92672>section</span> <span style=color:#75af00>style</span><span style=color:#f92672>=</span><span style=color:#d88200>&#34;background-color: yellow; width:450px&#34;</span><span style=color:#111>&gt;</span>
-  <span style=color:#111>&lt;</span><span style=color:#f92672>p</span><span style=color:#111>&gt;</span>Une section colorée avec un <span style=color:#111>&lt;</span><span style=color:#f92672>a</span> <span style=color:#75af00>href</span><span style=color:#f92672>=</span><span style=color:#d88200>&#34;https://numerix.netlify.app&#34;</span><span style=color:#111>&gt;</span>lien vers mon site<span style=color:#111>&lt;/</span><span style=color:#f92672>a</span><span style=color:#111>&gt;&lt;/</span><span style=color:#f92672>p</span><span style=color:#111>&gt;</span>
-  <span style=color:#111>&lt;</span><span style=color:#f92672>img</span> <span style=color:#75af00>src</span><span style=color:#f92672>=</span><span style=color:#d88200>&#34;../images/moustique.png&#34;</span> <span style=color:#75af00>width </span><span style=color:#f92672>=</span> <span style=color:#d88200>40%</span> <span style=color:#75af00>alt</span><span style=color:#f92672>=</span><span style=color:#d88200>&#34;attention moustiques&#34;</span><span style=color:#111>&gt;</span>
-<span style=color:#111>&lt;/</span><span style=color:#f92672>section</span><span style=color:#111>&gt;</span></code></pre></div><p><em>Résultat :</em></p><section style=background-color:#ff0;width:450px><p>Une section colorée avec un <a href=https://numerix.netlify.app>lien vers mon site</a></p><img src=../images/moustique.png width=40% alt="attention moustiques"></section><p><strong>Remarques :</strong></p><ul><li>L&rsquo;attribut <code>style</code> définit des styles CSS qui auront la priorité sur ceux définis précédemment. Il ne devrait être utilisé qu&rsquo;à des fins de tests car il est conseillé d&rsquo;utiliser un/des fichier(s) à part pour gérer la mise en forme.</li><li>L&rsquo;attribut <code>href</code> de l&rsquo;élément <code>a</code> permet de créer un hyperlien. Celui-ci permet d&rsquo;ouvrir une autre page (locale ou externe).</li><li>La balise <em>img</em> permet l&rsquo;affichage d&rsquo;une image, accepte les attributs <em>width</em> et <em>height</em>, <em>alt</em> (affichage d&rsquo;un texte alternatif si l&rsquo;image ne s&rsquo;affiche pas, ou pour des raisons d&rsquo;accessibilité), et aussi <em>src</em> pour pointer vers l&rsquo;adresse de l&rsquo;image.</li></ul><p><em>Question :</em> L&rsquo;adresse de l&rsquo;image peut être <em>relative</em>, <em>absolue</em>, <em>locale</em> ou <em>externe</em>. Définir chacun de ces termes. Puis expliquer comment chacune de ces adresses a une expression particulière pour valeur de l&rsquo;attribut <em>src</em>.</p><h2 id=construction-de-la-page>Construction de la page</h2><p>Les éléments vont se disposer l&rsquo;un après l&rsquo;autre, dans le <em>flux</em> de construction de la page, qui correspond à l&rsquo;ordre dans lequel sont écrites les balises dans le fichier HTML.</p><p>Ce flux pourra être modifié par des règles de CSS, que le navigateur interprète au fur et à mesure de la construction de la page.</p><h1 id=balises-principales>Balises principales</h1><h2 id=elements-de-section>Elements de section</h2><p>Ce sont : <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;nav&gt;</code>et <code>&lt;aside&gt;</code></p><ul><li>L&rsquo;élément HTML <code>&lt;aside&gt;</code> (en anglais, &ldquo;aparté&rdquo;) représente une partie d&rsquo;un document dont le contenu n&rsquo;a qu&rsquo;un rapport indirect avec le contenu principal du document.</li><li>L&rsquo;élément HTML <code>&lt;footer&gt;</code> représente le pied de page de la section ou de la racine de sectionnement la plus proche. Un pied de page ou de section contient habituellement des informations sur l&rsquo;auteur de la section, les données relatives au droit d&rsquo;auteur (copyright) ou les liens vers d&rsquo;autres documents en relation.</li><li>L&rsquo;élément HTML <code>&lt;header&gt;</code>représente un groupe de contenu introductif ou de contenu aidant à la navigation. Il peut contenir des éléments de titre, mais aussi d&rsquo;autres éléments tels qu&rsquo;un logo, un formulaire de recherche, etc.</li><li>L’élément HTML <code>&lt;main&gt;</code> représente le contenu majoritaire du <code>&lt;body&gt;</code> du document. Le contenu principal de la zone est constitué de contenu directement en relation, ou qui étend le sujet principal du document ou de la fonctionnalité principale d&rsquo;une application.</li><li>L&rsquo;élément HTML <code>&lt;nav&gt;</code>représente une section d&rsquo;une page ayant des liens vers d&rsquo;autres pages ou des fragments de cette page. Autrement dit, c&rsquo;est une section destinée à la navigation dans un document (avec des menus, des tables des matières, des index, etc.).</li><li>L&rsquo;élément HTML <code>&lt;section&gt;</code> représente une section générique d&rsquo;un document, par exemple un groupe de contenu thématique. Une section commence généralement avec un titre.</li><li><code>&lt;article&gt;</code>Articles contenus dans les sections</li></ul><h2 id=listes>listes</h2><p>voir le lien sur <a href=https://developer.mozilla.org/fr/docs/Apprendre/HTML/Comment/Créer_une_liste_d_éléments_avec_HTML>https://developer.mozilla.org/</a></p><h2 id=tableaux>tableaux</h2><p>voir le lien sur <a href=https://developer.mozilla.org/fr/docs/Apprendre/HTML/Tableaux/Basics>https://developer.mozilla.org/</a></p><h2 id=formulaires>formulaires</h2><p>voir le lien sur <a href=https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML>https://developer.mozilla.org/</a></p><h2 id=elements-de-type-bloc>Elements de type bloc</h2><p>Par défaut, les éléments de type bloc sont affichés par le navigateur avec un saut de ligne au début et à la fin.</p><p>Exemples : <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;table&gt;</code>, <code>&lt;hr&gt;</code>, <code>&lt;pre&gt;</code>, <code>&lt;form&gt;</code> &hellip;</p><ul><li>L’élément de division du contenu div (ou son remplaçant, <code>&lt;section&gt;</code></li><li>Les éléments structurants article, aside, header, footer, nav et section &hellip;</li></ul><p>Le code suivant affichera deux paragraphes, l&rsquo;un en dessous de l&rsquo;autre :</p><p><code>&lt;p&gt;Premier paragraphe.&lt;/p&gt;&lt;p&gt;Deuxième paragraphe.&lt;/p&gt;</code></p><p>Les éléments de type bloc peuvent être dimensionnés à l&rsquo;aide d&rsquo;attributs.</p><h2 id=eléments-de-type-inline>Eléments de type inline</h2><p>Les éléments de type inline se placent normalement l&rsquo;un à côté de l&rsquo;autre (pas de saut de ligne).</p><p>Exemples : <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;sup&gt;</code>, <code>&lt;sub&gt;</code>&hellip;</p><ul><li>Les éléments de formulaire <code>input</code>, <code>label</code>, <code>textarea</code> et de liste de choix <code>select</code> ;</li><li>L’élément d’insertion d’images <code>img</code> </li><li>Les éléments <code>code</code>, <code>script</code>, etc.</li></ul><p>D&rsquo;autres éléments auront une disposition par défaut de type <em>inline</em>, mais cette propriété peut être explicitement modifiée, en CSS avec <code>display</code></p><p>Remarques :</p><ul><li>pour les éléments <em>inline</em>, on ne pourra pas leur ajouter un attribut de dimension (<code>width</code> et <code>height</code>). Leur dimension s&rsquo;adaptera à leur contenu mais ne pourra pas être fixée.</li><li>les paragraphes <code>&lt;p&gt;</code> et les titres <code>&lt;h1&gt;</code> &hellip; ne peuvent contenir que des éléments inline.</li><li>Les éléments inline ne peuvent contenir que des éléments inline.</li></ul><h2 id=indexer-les-parties-du-document>indexer les parties du document</h2><p><strong>Classes et identifiants</strong>
-L&rsquo;un des attributs des élémnents HTML peut servir à indexer cet élément :</p><ul><li>de manière unique : l&rsquo;attribut <code>id=&quot;valeur&quot;</code> : une seule valeur d&rsquo;attribut <code>id</code> peut être utilisée dans tout le document HTML.</li><li>avec un attribut de classe : <code>class=&quot;valeur&quot;</code> : ici, plusieurs éléments peuvent avoir la même <em>classe</em>. On pourra alors séléctionner (en css et en javascript) tous les éléments possédant cette classe, avec une seule instruction.</li></ul><h1 id=un-outil-de-vérification-de-la-syntaxe>Un outil de vérification de la syntaxe</h1><p>Pour vérifier que votre page Web est conforme aux spécifications HTML5, rendez-vous sur le site du W3C (World Wide Web Consortium) : <a href=http://validator.w3.org/>http://validator.w3.org</a></p><p>Pour une page Web locale (pas encore publiée sur le Web) :</p><p>Validate by File Upload → Check</p><p>S&rsquo;il y a des erreurs, elles vous seront indiquées, avec des explications (en anglais, of course).</p><p>Conseil : vérifier et corriger systématiquement vos pages Web avec cet outil.C&rsquo;est contraignant au début, mais cela vous fera prendre rapidement de bonnes habitudes.</p><h1 id=travaux-pratiques>Travaux pratiques</h1><h2 id=tp1-utiliser-les-bonnes-balises-pour>TP1 : utiliser les bonnes balises pour &hellip;</h2><p>Construire le document présenté en début de cours (2 balises uniques DIV et SPAN), mais cette fois ci, en utilisant les balises adequates.</p><h2 id=tp2-sectionnement>TP2 : sectionnement</h2><p>Reproduire en HTML et CSS un document représentant l&rsquo;image suivante :</p><figure><img src=../images/sections.jpg width=60% alt="page avec sections"><figcaption>page avec sectionnements</figcaption></figure><p><em>Aide : bien reflechir à l&rsquo;ordre dans lequel ces éléments vont s&rsquo;inscrire dans le flux. Utiliser l&rsquo;imbrication entre éléments pour bien ordonner la construction. Utiliser la règle CSS <code>display : inline-block;</code> pour modifier l&rsquo;affichage de certains éléments.</em></p><h1 id=liens>Liens</h1><ul><li>validateur w3c : <a href=http://validator.w3.org/>http://validator.w3.org</a></li><li>Les éléments HTML : <a href=https://developer.mozilla.org/fr/docs/Web/HTML/Element>https://developer.mozilla.org/fr/docs/Web/HTML/Element</a></li><li>entités HTML : <a href=https://fr.wikibooks.org/wiki/Le_langage_HTML/Entités>https://fr.wikibooks.org/wiki/Le_langage_HTML/Entités</a></li><li>liste des attributs de balises en HTML : <a href=https://developer.mozilla.org/fr/docs/Web/HTML/Attributs>https://developer.mozilla.org/fr/docs/Web/HTML/Attributs</a></li><li>cours complet HTML-CSS (et aussi javascript): <a href=https://www.pierre-giraud.com/html-css-apprendre-coder-cours/>https://www.pierre-giraud.com/html-css-apprendre-coder-cours/</a></li></ul><div class=essentiel><div class=entete>L'essentiel à retenir</div><div class=resume><h3>HTML est un langage interprété</h3>Une fois le fichier HTML chargé depuis le serveur, celui-ci sera interprété et affiché par le navigateur.<br>Il existe un organisme qui fait réference pour les langages web et fixe les standards. Il s'agit du w3c, dont les recommandations sont intégrées par les navigateurs.<br>Le rôle du langage HTML sera de :<ul><li>structurer la page : en emboitant les balises des éléments</li><li>définir le rôle des différents objets à afficher : titres, liens, listes, tableau, paragraphe, image, médias.</li></ul>Les balises doivent être correctement nommées, afin de profiter des règles de style par défaut appliquées par le navigateur.<h3>La structure d'une page HTML</h3>Le squelette d'un fichier HTML comprend :<ul><li>le doctype</li><li>l'élément `html` qui est la balise parente de toutes les autres</li><li>l'élément `head` : premier enfant de l'élément `html`<br>Cette balise contient : l'information sur l'encodage des symbole (souvent utf-8), les liens vers les fichiers css et javascript, le titre de la page, et d'autres métadonnées.</li><li>l'élément `body` : deuxième enfant de l'élément `html`. C'est cet élément qui contiendra toutes les autres balises qui structurent la page.</li></ul><h3>Elements et attributs</h3>Un attribut va étendre les propriétés d'une balise. Certains sont obligatoires, comme par exemple `src` (localisation de l'image), ou `href` (URL page d'un hyperlien).<br>L'attribut `style` va permettre d'ajouter des règles CSS à l'élément. Mais cette pratique ne doit pas être généralisée.<br>Une balise avec attribut, représentant un élement (h1, p, a, img...) s'écrira sous la forme:<br><em>&lt;element attribut="valeur"&gt;</em><br><br>Deux attributs spéciaux permettent d'indexer un élément:<ul><li>`id` : de manière unique avec un attribut <em>identifiant</em></li><li>`class` : avec un attribut de <em>classe</em>, qui n'est donc pas forcément unique dans le document.</li></ul><h3>Balises principales</h3>voir paragraphe <a href=http://localhost:1313/docs/NSI/HTML/page1/#balises-principales># Balises principales</a><h3>Disposition des éléments</h3>voir paragraphe <a href=#elements-de-type-bloc># Elements de type bloc</a> et<br>voir paragraphe <a href=#eléments-de-type-inline># Eléments de type inline</a></div></div><div class=footnotes><hr><ol><li id=fn:2>web : (www) world wide web : c&rsquo;est la toile. On y <em>surfe</em>, c&rsquo;est à dire que l&rsquo;on va y chercher des ressources. C&rsquo;est un service, comme il en existe d&rsquo;autres (FTP, mail,&hellip;). C&rsquo;est un système distribué qui opère au dessus d&rsquo;internet.
-<a class=footnote-return href=#fnref:2><sup>[return]</sup></a></li><li id=fn:5>langages open source : Ce sont des langages que l’on va pouvoir utiliser sans licence et n’importe qui va (généralement) pouvoir participer à leur développement
-<a class=footnote-return href=#fnref:5><sup>[return]</sup></a></li><li id=fn:4>le W3C ou « World Wide Web Consortium ». C&rsquo;est un groupe de travail, qui fait référence et qui est chargé de définir et de veiller au développement des langages HTML et CSS. Il existe un autre groupe de référence : Le WHATWG ou « Web Hypertext Application Technology Working Group ».
-<a class=footnote-return href=#fnref:4><sup>[return]</sup></a></li><li id=fn:1>DOM : Document Object Model
-<a class=footnote-return href=#fnref:1><sup>[return]</sup></a></li><li id=fn:3>internet (Internet Network) est un réseau de réseaux, à l&rsquo;echelle mondiale, qui interconnecte les ordinateurs et permet d&rsquo;echanger des données. C&rsquo;est système réparti (l&rsquo;inverse de distribué) : un ensemble d&rsquo;ordinateurs indépendants, présenté à l&rsquo;utilisateur comme un système unique cohérent (un seul paradigme). Souvent une couche logicielle intermédiaire appelée middleware située au dessus du système d&rsquo;exploitation est responsable de son implémentation. Un exemple est le web dans lequel toute information apparait comme un document. C&rsquo;est dons un logiciel élaboré au dessus du réseau.
-<a class=footnote-return href=#fnref:3><sup>[return]</sup></a></li></ol></div></article><div style=height:100px></div></div><aside class="book-toc fixed"><nav id=TableOfContents><ul><li><a href=#les-langages-web>Les langages web</a><ul><li><a href=#des-langages-interprétés>des langages interprétés</a></li><li><a href=#des-tâches-différentes>des tâches différentes</a></li></ul></li><li><a href=#le-document-html>Le document HTML</a><ul><li><a href=#deux-balises-pour-tout-écrire>Deux balises pour tout écrire</a></li><li><a href=#le-squelette-du-document>le squelette du document</a></li><li><a href=#quelques-règles-de-syntaxe>quelques règles de syntaxe</a></li><li><a href=#attributs-des-balises>Attributs des balises</a></li><li><a href=#construction-de-la-page>Construction de la page</a></li></ul></li><li><a href=#balises-principales>Balises principales</a><ul><li><a href=#elements-de-section>Elements de section</a></li><li><a href=#listes>listes</a></li><li><a href=#tableaux>tableaux</a></li><li><a href=#formulaires>formulaires</a></li><li><a href=#elements-de-type-bloc>Elements de type bloc</a></li><li><a href=#eléments-de-type-inline>Eléments de type inline</a></li><li><a href=#indexer-les-parties-du-document>indexer les parties du document</a></li></ul></li><li><a href=#un-outil-de-vérification-de-la-syntaxe>Un outil de vérification de la syntaxe</a></li><li><a href=#travaux-pratiques>Travaux pratiques</a><ul><li><a href=#tp1-utiliser-les-bonnes-balises-pour>TP1 : utiliser les bonnes balises pour &hellip;</a></li><li><a href=#tp2-sectionnement>TP2 : sectionnement</a></li></ul></li><li><a href=#liens>Liens</a></li></ul></nav></aside></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
-<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI\2fHTML\2fpage1\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    HTML CSS les bases
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="programmation-html-et-css">Programmation: HTML et CSS</h1>
+<h2 id="rappels-de-snt">Rappels de SNT</h2>
+<p>Si vous débutez complètement en HTML, consultez les ressources de SNT:</p>
+<ul>
+<li>Une introduction à la redaction d&rsquo;un document en HTML: <!-- raw HTML omitted -->Document Web, contenu et structure<!-- raw HTML omitted -->.</li>
+<li>Les balises principales: <!-- raw HTML omitted -->Rappels<!-- raw HTML omitted --></li>
+</ul>
+<h2 id="compléments-théoriques">Compléments théoriques</h2>
+<ul>
+<li>page du site vers le <a href="/docs/NSI/HTML/page3/">HTML</a></li>
+<li>page du site vers le <a href="/docs/NSI/CSS/page1/">CSS</a></li>
+<li>page du site vers le <a href="/docs/NSI/CSS/page2/">CSS display et position</a></li>
+</ul>
+<h2 id="deux-balises-pour-tout-écrire">Deux balises pour tout écrire</h2>
+<p>On pourrait utiliser une ou deux balises uniques pour tous les usages, par exemple :</p>
+<ul>
+<li>la balise <code>DIV</code> pour des éléments qui devront s&rsquo;afficher l&rsquo;un <strong>sous</strong> l&rsquo;autre.</li>
+<li>la balise <code>SPAN</code> pour des éléments qui devront s&rsquo;afficher l&rsquo;un <strong>à côté</strong> de l&rsquo;autre.</li>
+</ul>
+<p>Voici le code HTML utilisé :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">html</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">head</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">meta</span> <span style="color:#75af00">charset</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;UTF-8&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">title</span><span style="color:#111">&gt;</span>Marignan 1515<span style="color:#111">&lt;/</span><span style="color:#f92672">title</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;/</span><span style="color:#f92672">head</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">body</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;main&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;titre&#34;</span><span style="color:#111">&gt;</span>La bataille de Marignan<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;contenu&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;paragraphe&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        La bataille de Marignan (Marignano en Italie, aujourd’hui Melegnano, ville à 16 km au sud-est de Milan) eut lieu les 13 et 14 septembre 1515 et opposa le roi de France <span style="color:#111">&lt;</span><span style="color:#f92672">span</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;lien&#34;</span> <span style="color:#75af00">onclick</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;window.location.href = &#39;https://fr.wikipedia.org/wiki/François_Ier_(roi_de_France)&#39;&#34;</span><span style="color:#111">&gt;</span>François Ier<span style="color:#111">&lt;/</span><span style="color:#f92672">span</span><span style="color:#111">&gt;</span> et ses alliés vénitiens aux mercenaires suisses qui défendaient le duché de Milan.
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;paragraphe&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        Première victoire du jeune roi François Ier, acquise dès la première année de son règne, elle fit environ 16 000 morts en seize heures de combat.
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">body</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><ul>
+<li>Résultat obtenu SANS aucune règle CSS :</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>Résultat obtenu AVEC les règles CSS :</li>
+</ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Les règles CSS utilisées pour ce 2<!-- raw HTML omitted -->e<!-- raw HTML omitted --> exemple:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">style</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">.</span><span style="color:#75af00">contenu</span><span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">border</span><span style="color:#111">:</span><span style="color:#00a8c8">solid</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">margin</span><span style="color:#111">:</span> <span style="color:#ae81ff">0.5</span><span style="color:#00a8c8">em</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">padding</span><span style="color:#111">:</span> <span style="color:#ae81ff">0.5</span><span style="color:#00a8c8">em</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">.</span><span style="color:#75af00">titre</span><span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">font-size</span><span style="color:#111">:</span><span style="color:#ae81ff">1.5</span><span style="color:#00a8c8">em</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">text-decoration</span><span style="color:#111">:</span> <span style="color:#00a8c8">none</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">.</span><span style="color:#75af00">paragraphe</span><span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">text-indent</span><span style="color:#111">:</span><span style="color:#ae81ff">20</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">text-align</span><span style="color:#111">:</span><span style="color:#00a8c8">justify</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">.</span><span style="color:#75af00">lien</span><span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">color</span><span style="color:#111">:</span><span style="color:#00a8c8">blue</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">cursor</span><span style="color:#111">:</span> <span style="color:#00a8c8">pointer</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">style</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><p>Les balises <code>&lt;style&gt;</code> peuvent être insérées n&rsquo;importe où dans le document <em>html</em>. Mais la bonne pratique est de les mettre dans l&rsquo;élément <em>head</em>. Ou, encore mieux, dans un fichier séparé, comme on le verra plus loin.</p>
+<p><strong>Commentaires :</strong></p>
+<ul>
+<li>Avec 2 balises seulement, il est possible de segmenter et d&rsquo;afficher du contenu.</li>
+<li>Ces balises étant génériques, et souvent ré-employées, il faudra pouvoir distinguer les différents éléments et leur ajouter des attributs de classe (voir le pragraphe <a href="#indexer-les-parties-du-document">indexer</a>).</li>
+<li>En ajoutant des règles de mises en forme, écrites dans la partie CSS, les éléments retrouvent leur rôle spécifique (container, paragraphe, lien&hellip;).</li>
+<li>comme vous l&rsquo;imaginez, ce n&rsquo;est pas la bonne pratique que d&rsquo;utiliser seulement 2 balises pour tout le document : le code sera difficile à maintenir. Et vous aurez besoin d&rsquo;écrire toutes les règles de mise en page CSS pour ces balises. Alors qu&rsquo;avec des balises bien nommées, le navigateur va pouvoir appliquer les styles par défaut pour ces éléments.</li>
+</ul>
+<h2 id="quelques-notions-de-css">Quelques notions de CSS</h2>
+<p>Pour le cours complet sur CSS, voir la <!-- raw HTML omitted -->page CSS<!-- raw HTML omitted -->. Pour un aperçu plus bref, voir ci-dessous.</p>
+<p>Les règles CSS sont construites de la manière suivante:</p>
+<!-- raw HTML omitted -->
+<p>La valeur de la propriété se met après le séparateur <code>:</code>.</p>
+<p>Le selecteur fait référence à un ou plusieurs éléments du document (sera développé plus tard).</p>
+<!-- raw HTML omitted -->
+<p><em>Exemple:</em> Pour colorier TOUS les titres <code>h1</code> en bleu, on utilise la règle CSS que l&rsquo;on peut mettre entre les balises <code>&lt;style&gt;</code>:</p>
+<!-- raw HTML omitted -->
+<h2 id="activité-1-construire-un-premier-paragraphe-en-html-et-css">Activité 1: Construire un premier paragraphe en html et css</h2>
+<blockquote>
+<p>Utiliser un editeur en ligne, comme par exemple <!-- raw HTML omitted -->squarefree.com<!-- raw HTML omitted -->, pour tester l&rsquo;exemple précédent:</p>
+</blockquote>
+<p><strong>1.</strong> La bataille de Marignan avec seulement 2 balises <code>&lt;div&gt;</code> et <code>&lt;span&gt;</code></p>
+<ul>
+<li>Copier-coller les instructions html avec le contenu sur la <em>bataille de Marignan</em>.</li>
+<li>ajouter les balises <code>&lt;style&gt;</code> proposées plus haut et leur contenu CSS.</li>
+<li>Modifier les propriétés CSS et compléter le tableau.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>propriété</th>
+<th>valeur</th>
+<th>effet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>border</td>
+<td>solid</td>
+<td></td>
+</tr>
+<tr>
+<td>border</td>
+<td>dashed</td>
+<td></td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>3em</td>
+<td></td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>1em</td>
+<td></td>
+</tr>
+<tr>
+<td>text-decoration</td>
+<td>underline</td>
+<td></td>
+</tr>
+<tr>
+<td>margin</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>margin</td>
+<td>0.5em</td>
+<td></td>
+</tr>
+<tr>
+<td>padding</td>
+<td>0em</td>
+<td></td>
+</tr>
+<tr>
+<td>padding</td>
+<td>0.5em</td>
+<td></td>
+</tr>
+<tr>
+<td>color</td>
+<td>blue</td>
+<td></td>
+</tr>
+<tr>
+<td>background-color</td>
+<td>rgb(230,230,230)</td>
+<td></td>
+</tr>
+<tr>
+<td>color</td>
+<td>#66FF66</td>
+<td></td>
+</tr>
+<tr>
+<td>cursor</td>
+<td>pointer</td>
+<td></td>
+</tr>
+<tr>
+<td>text-align</td>
+<td>left</td>
+<td></td>
+</tr>
+<tr>
+<td>text-align</td>
+<td>right</td>
+<td></td>
+</tr>
+<tr>
+<td>text-align</td>
+<td>justify</td>
+<td></td>
+</tr>
+<tr>
+<td>font-weight</td>
+<td>bold</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>2.</strong> Remplacer maintenant toutes les balises <code>&lt;div&gt;</code> et <code>&lt;span&gt;</code> par les balises adequates. On s&rsquo;aidera du tableau suivant:</p>
+<table>
+<thead>
+<tr>
+<th>balise à remplacer</th>
+<th>balise adequate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;div class=&quot;main&quot;&gt;</code></td>
+<td><code>&lt;main&gt;</code></td>
+</tr>
+<tr>
+<td><code>&lt;div class=&quot;titre&quot;&gt;</code></td>
+<td><code>&lt;h1&gt;</code></td>
+</tr>
+<tr>
+<td><code>&lt;div class=&quot;contenu&quot;&gt;</code></td>
+<td><code>&lt;section&gt;</code></td>
+</tr>
+<tr>
+<td><code>&lt;div class=&quot;paragraphe&quot;&gt;</code></td>
+<td><code>&lt;p&gt;</code></td>
+</tr>
+<tr>
+<td><code>&lt;span class=&quot;lien&quot; onclick=&quot;window.location.href = '...'&gt;</code></td>
+<td><code>&lt;a href=&quot;...&quot;&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="syntaxe-html">Syntaxe HTML</h2>
+<h3 id="généralités">Généralités</h3>
+<ul>
+<li>A chaque élément HTML (paragraphe, titre, image, &hellip;) correspond une <em>balise</em>.</li>
+<li>Les commentaires sont mis entre les balises :</li>
+</ul>
+<p><code>&lt;!-- commentaire --&gt;</code></p>
+<ul>
+<li>
+<p>Toute balise ouverte<code>&lt;balise&gt;</code>doit être refermée<code>&lt;/balise&gt;</code>:</p>
+</li>
+<li>
+<p>le contenu affiché est mis entre ces 2 balises:</p>
+</li>
+</ul>
+<p><code>&lt;p&gt;contenu de la balise&lt;/p&gt;</code></p>
+<p><code>&lt;p&gt;</code> est la balise ouvrante de l&rsquo;élément <code>p</code>, <code>pour *paragraphe*. Et &lt;/p&gt;</code> est sa balise fermante.</p>
+<ul>
+<li>Les balises doivent être correctement imbriquées :</li>
+</ul>
+<p><code>&lt;p&gt;Cette syntaxe est &lt;strong&gt;bonne&lt;/strong&gt;&lt;/p&gt;</code></p>
+<p><code>&lt;p&gt;Cette syntaxe est &lt;strong&gt;mauvaise&lt;/p&gt;&lt;/strong&gt;</code></p>
+<ul>
+<li>
+<p>Certaines balises sont vides (elles n&rsquo;ont pas de contenu), la fermeture se fait alors immédiatement. C&rsquo;est le cas de:</p>
+<ul>
+<li>la balise de saut de ligne:<code>&lt;br&gt;</code></li>
+<li>la balise pour insérer une image:<code>&lt;img src=&quot;velo.jpg&quot; alt=&quot;vélo&quot;&gt;</code></li>
+</ul>
+</li>
+</ul>
+<p><code>&lt;br&gt;</code> et <code>&lt;img&gt;</code> sont des balises dites <em>orphelines</em>.</p>
+<ul>
+<li>il peut arriver que l&rsquo;on ait recours à des <em>entité HTML</em> pour écrire certains caractères spéciaux : (symbole réservé comme le chevron <code>&gt;</code>, alphabet grec&hellip;).
+Ces entités ont toutes le même préfixe : une esperluette « &amp; ». La fin d&rsquo;une entité est marquée par le caractère point-virgule « ; ».</li>
+</ul>
+<p>Ainsi, pour afficher <code>&lt;em&gt;</code>, il faudra écrire : <code>&amp;lt;em&amp;gt;</code>.</p>
+<p>voir lien : <a href="https://fr.wikibooks.org/wiki/Le_langage_HTML/Entit%C3%A9s">https://fr.wikibooks.org/wiki/Le_langage_HTML/Entités</a></p>
+<h3 id="attributs-dune-balise">Attributs d&rsquo;une balise</h3>
+<p>Dans ces exemples, on voit qu&rsquo;une balise peut être constituée <em>d&rsquo;attributs</em>.
+La <em>valeur</em> de l&rsquo;attribut se met après le <code>=</code>(et entre guillemets). <!-- raw HTML omitted -->
+La balise s&rsquo;écrit:</p>
+<!-- raw HTML omitted -->
+<p>Une balise peut avoir des <strong>attributs obligatoires</strong>. Par exemple:</p>
+<ul>
+<li><code>src</code> pour l&rsquo;élément <em>img</em> dont la valeur est l&rsquo;adresse/chemin de l&rsquo;image.</li>
+<li><code>href</code> pour l&rsquo;élement <em>a</em> (lien hypertexte).</li>
+</ul>
+<p>D&rsquo;autres attributs sont optionnels et peuvent être utiles pour ajuster le comportement de la balise. Par exemple:</p>
+<ul>
+<li><code>width</code> et `height pour les dimensions d&rsquo;une image.</li>
+<li><code>alt</code> pour fournir un texte alternatif à une image. (apparait si l&rsquo;image ne peut pas s&rsquo;afficher).</li>
+</ul>
+<h3 id="lien-hypertexte">Lien hypertexte</h3>
+<p>Un lien hypertexte permet de naviguer vers une nouvelle page.</p>
+<p>Il s&rsquo;agit de l&rsquo;élément <strong>a</strong>. La balise <code>&lt;a href=&quot;URL&quot;&gt;</code> nécessite de renseigner l&rsquo;attribut <code>href</code> avec l&rsquo;URL/ou chemin de la nouvelle page.</p>
+<p><em>Exemple:</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;http://fr.wikipedia.org/&#34;</span><span style="color:#111">&gt;</span>Un lien hypertexte vers le site de Wikipédia<span style="color:#111">&lt;/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><p><em>Résultat:</em></p>
+<p><!-- raw HTML omitted -->Un lien hypertexte vers le site de Wikipédia<!-- raw HTML omitted --></p>
+<p>Si le lien était vers une page du site (une page <em>locale</em>), il n&rsquo;y aurait pas eu <code>http://nom_du_domaine.org</code> au début de l&rsquo;adresse.</p>
+<h2 id="activité-2-disposition-des-éléments">Activité 2: Disposition des éléments</h2>
+<p>Cet exercice porte sur la construction d&rsquo;une page: Les éléments vont se disposer l&rsquo;un après l&rsquo;autre, dans le <em>flux</em> de construction de la page, qui correspond à l&rsquo;ordre dans lequel sont écrites les balises dans le fichier HTML.</p>
+<p><strong>Exercice:</strong> Dans un éditeur Web en ligne, comme par exemple <!-- raw HTML omitted -->squarefree.com<!-- raw HTML omitted -->, écrire un script qui affichera le bandeau suivant:</p>
+<!-- raw HTML omitted -->
+<p><em>Aide:</em> Vous devrez utiliser les éléments suivants:</p>
+<ul>
+<li><code>section</code> : élément qui contiendra tous les autres éléments de cette section. Une page peut contenir plusieurs <em>sections</em>.</li>
+<li><code>p</code> : paragraphe</li>
+<li><code>a</code> : lien vers l&rsquo;URL: <code>https://www.anti-moustique.net/raquette-moustique/</code></li>
+<li><code>span</code> : pour écrire du texte à côté de l&rsquo;image, ou à côté d&rsquo;un autre texte. On peut mettre en relief certain mots d&rsquo;un texte de cette manière.</li>
+<li><code>img</code> : image. L&rsquo;adresse à utiliser pour l&rsquo;image est: <code>https://i.postimg.cc/MHjjW4wg/moustique.png</code>. Ajouter l&rsquo;attribut <code>width = 40%</code> pour réduire la taille de celle-ci.</li>
+<li>ajouter les règles CSS aux éléments:
+<ul>
+<li><code>section</code> : colorier le fond en jaune</li>
+<li><code>span</code>: ajouter la propriété <code>vertical-align: top;</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>Remarques :</strong></p>
+<ul>
+<li>les éléments <code>h3 et p</code> se disposent l&rsquo;un au dessous de l&rsquo;autre. Ce sont des éléments de type <strong>bloc</strong>.</li>
+<li>les éléments <code>a, span et img</code> se disposent sur la même ligne: ce sont des éléments de type <strong>inline</strong>.</li>
+<li>Ce flux pourra être modifié par des règles CSS, que le navigateur interprète au fur et à mesure de la construction de la page.</li>
+</ul>
+<h1 id="propriétés-display-des-éléments-html">Propriétés display des éléments HTML</h1>
+<p>Le W3C spécifie pour chaque élément HTML quelle devrait être la valeur de son <em>display</em>.</p>
+<p>Le <em>display</em> (affichage) est la propriété qui fait:</p>
+<ul>
+<li>qu&rsquo;un élément va occuper 100% de la fenêtre en largeur, et se disposer sous l&rsquo;élément précédent: <strong>display: block</strong></li>
+<li>ou que des éléments vont se positionner côté à côte: <strong>display: inline</strong></li>
+<li>ou encore, que des éléments sont invisibles: <strong>display: none</strong></li>
+</ul>
+<h2 id="elements-de-type-block">Elements de type block</h2>
+<p>Par défaut, les éléments de type block sont affichés par le navigateur avec un saut de ligne au début et à la fin.</p>
+<p>Exemples : <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;table&gt;</code>, <code>&lt;hr&gt;</code>, <code>&lt;pre&gt;</code>, <code>&lt;form&gt;</code> &hellip;</p>
+<ul>
+<li>L’élément de division du contenu div (ou son remplaçant, <code>&lt;section&gt;</code></li>
+<li>Les éléments structurants article, aside, header, footer, nav et section &hellip;</li>
+</ul>
+<p>Le code suivant affichera deux paragraphes, l&rsquo;un en dessous de l&rsquo;autre :</p>
+<p><code>&lt;p&gt;Premier paragraphe.&lt;/p&gt;&lt;p&gt;Deuxième paragraphe.&lt;/p&gt;</code></p>
+<p>Les éléments de type block peuvent être dimensionnés à l&rsquo;aide d&rsquo;attributs.</p>
+<table>
+<thead>
+<tr>
+<th>propriétés qui fonctionnent</th>
+<th>valeurs possibles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>weight</code></td>
+<td>100% est la valeur par defaut des éléments bloc</td>
+</tr>
+<tr>
+<td><code>heigth</code></td>
+<td>toute valeur possible (%, px, &hellip;)</td>
+</tr>
+<tr>
+<td><code>margin</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>padding</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<table>
+<thead>
+<tr>
+<th>propriétés qui ne fonctionnent pas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>vertical-align</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="eléments-de-type-inline">Eléments de type inline</h2>
+<p>Les éléments de type inline se placent normalement l&rsquo;un à côté de l&rsquo;autre (pas de saut de ligne).</p>
+<p>Exemples : <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;sup&gt;</code>, <code>&lt;sub&gt;</code>&hellip;</p>
+<ul>
+<li>Les éléments de formulaire <code>input</code>, <code>label</code>, <code>textarea</code> et de liste de choix <code>select</code> ;</li>
+<li>L’élément d’insertion d’images <code>img</code> </li>
+<li>Les éléments <code>code</code>, <code>script</code>, etc.</li>
+</ul>
+<p>D&rsquo;autres éléments auront une disposition par défaut de type <em>inline</em>, mais cette propriété peut être explicitement modifiée, en CSS avec <code>display</code></p>
+<p>Remarques :</p>
+<ul>
+<li>pour les éléments <em>inline</em>, on ne pourra pas leur ajouter un attribut de dimension (<code>width</code> et <code>height</code>). Leur dimension <em>s&rsquo;adaptera à leur contenu</em> mais ne pourra pas être fixée.</li>
+<li>les paragraphes <code>&lt;p&gt;</code> et les titres <code>&lt;h1&gt;</code> &hellip; ne peuvent contenir que des éléments inline.</li>
+<li>Les éléments inline ne peuvent contenir que des éléments inline.</li>
+<li>plusieurs éléments <em>inline</em> disposés sur la même ligne peuvent être alignés verticalement: c&rsquo;est la propriété css <code>vertical-align</code> qui permet ceci.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>propriétés qui fonctionnent</th>
+<th>valeurs possibles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>vertical-align</code></td>
+<td>top, bottom, middle (voir <a href="https://developer.mozilla.org/fr/docs/Web/CSS/vertical-align">MDN</a>)</td>
+</tr>
+<tr>
+<td><code>margin</code></td>
+<td><code>left</code>, <code>right</code></td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<table>
+<thead>
+<tr>
+<th>propriétés qui ne fonctionnent pas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>width</code>, <code>height</code></td>
+</tr>
+<tr>
+<td><code>margin: top</code></td>
+</tr>
+<tr>
+<td><code>margin: bottom</code></td>
+</tr>
+<tr>
+<td><code>padding</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="inline-block">inline-block</h2>
+<p>Cette valeur de <em>display</em> est utile:</p>
+<ul>
+<li>Pour permettre à un élément de type inline d&rsquo;avoir une hauteur et une largeur tout en conservant sa nature inline.</li>
+<li>pour afficher des éléments de type block côte à côte.</li>
+</ul>
+<h2 id="activité-3-sectionnement">Activité 3: sectionnement</h2>
+<p>Reproduire en HTML et CSS un document représentant l&rsquo;image suivante :</p>
+<!-- raw HTML omitted -->
+<p>On pourra utiliser un éditeur Web en ligne, comme par exemple <!-- raw HTML omitted -->squarefree.com<!-- raw HTML omitted -->, écrire un script qui affichera le bandeau suivant:</p>
+<p><strong>Aide :</strong></p>
+<ul>
+<li>bien reflechir à l&rsquo;ordre dans lequel ces éléments vont s&rsquo;inscrire dans le flux. Utiliser l&rsquo;imbrication entre éléments pour bien ordonner la construction.* Utiliser les éléments de sectionnement: <code>header</code>, <code>nav</code>, <code>section</code>, <code>footer</code>. On pourra consulter la page sur <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element">developper.mozilla.org/</a> pour l&rsquo;explication du rôle de ces éléments. (facultatif).</li>
+<li>Utiliser la règle CSS <code>display : inline-block;</code> pour modifier l&rsquo;affichage des éléments <code>section</code> et les disposer côte à côte.</li>
+</ul>
+<h1 id="proprieté-position-des-éléments">Proprieté <em>position</em> des éléments</h1>
+<h2 id="tuto">Tuto</h2>
+<p>Voir le paragraphe <a href="/docs/NSI/CSS/page2/#position">Position des éléments</a></p>
+<h2 id="activité-4-exercices-sur-langage-css">Activité 4: exercices sur langage CSS</h2>
+<!-- raw HTML omitted -->
+<h1 id="liens">Liens</h1>
+<ul>
+<li>validateur w3c : <a href="http://validator.w3.org/">http://validator.w3.org</a></li>
+<li>Les éléments HTML : <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element">https://developer.mozilla.org/fr/docs/Web/HTML/Element</a></li>
+<li>entités HTML : <a href="https://fr.wikibooks.org/wiki/Le_langage_HTML/Entit%C3%A9s">https://fr.wikibooks.org/wiki/Le_langage_HTML/Entités</a></li>
+<li>liste des attributs de balises en HTML : <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Attributs">https://developer.mozilla.org/fr/docs/Web/HTML/Attributs</a></li>
+<li>cours complet HTML-CSS (et aussi javascript): <a href="https://www.pierre-giraud.com/html-css-apprendre-coder-cours/">https://www.pierre-giraud.com/html-css-apprendre-coder-cours/</a></li>
+</ul>
+<!-- raw HTML omitted -->
+<pre><code>Il existe un organisme qui fait réference pour les langages web et fixe les standards. Il s'agit du w3c, dont les recommandations sont intégrées par les navigateurs.&lt;br&gt;
+
+Le rôle du langage HTML sera de : 
+&lt;ul&gt;
+  &lt;li&gt;structurer la page : en emboitant les balises des éléments&lt;/li&gt;
+  &lt;li&gt;définir le rôle des différents objets à afficher : titres, liens, listes, tableau, paragraphe, image, médias.&lt;/li&gt;
+&lt;/ul&gt;
+
+Les balises doivent être correctement nommées, afin de profiter des règles  de style par défaut appliquées par le navigateur.
+</code></pre>
+<!-- raw HTML omitted -->
+<pre><code>  Une balise avec attribut, représentant un élement (h1, p, a, img...) s'écrira sous la forme:&lt;br&gt;
+  &lt;em&gt;&amp;lt;element attribut=&quot;valeur&quot;&amp;gt;&lt;/em&gt;
+  &lt;br&gt;&lt;br&gt;
+  Deux attributs spéciaux permettent d'indexer un élément:
+  &lt;ul&gt;
+    &lt;li&gt;`id` : de manière unique avec un attribut &lt;em&gt;identifiant&lt;/em&gt;&lt;/li&gt;
+    &lt;li&gt;`class` : avec un attribut de &lt;em&gt;classe&lt;/em&gt;, qui n'est donc pas forcément unique dans le document.&lt;/li&gt;
+  &lt;/ul&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#rappels-de-snt">Rappels de SNT</a></li>
+    <li><a href="#compléments-théoriques">Compléments théoriques</a></li>
+    <li><a href="#deux-balises-pour-tout-écrire">Deux balises pour tout écrire</a></li>
+    <li><a href="#quelques-notions-de-css">Quelques notions de CSS</a></li>
+    <li><a href="#activité-1-construire-un-premier-paragraphe-en-html-et-css">Activité 1: Construire un premier paragraphe en html et css</a></li>
+    <li><a href="#syntaxe-html">Syntaxe HTML</a>
+      <ul>
+        <li><a href="#généralités">Généralités</a></li>
+        <li><a href="#attributs-dune-balise">Attributs d&rsquo;une balise</a></li>
+        <li><a href="#lien-hypertexte">Lien hypertexte</a></li>
+      </ul>
+    </li>
+    <li><a href="#activité-2-disposition-des-éléments">Activité 2: Disposition des éléments</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#elements-de-type-block">Elements de type block</a></li>
+    <li><a href="#eléments-de-type-inline">Eléments de type inline</a></li>
+    <li><a href="#inline-block">inline-block</a></li>
+    <li><a href="#activité-3-sectionnement">Activité 3: sectionnement</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#tuto">Tuto</a></li>
+    <li><a href="#activité-4-exercices-sur-langage-css">Activité 4: exercices sur langage CSS</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

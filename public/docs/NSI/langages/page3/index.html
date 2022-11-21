@@ -1,121 +1,469 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>modularité
-| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel=stylesheet><script type=text/x-mathjax-config>
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    modularité
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
   });
-</script><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.1c02dc1d2c0b546a84beb71d8f4336d6f5d7b69564e08bdfc04c2fb0595d786d.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
 catch(err)
-{console.log(err.message);}
-if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
-if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
-if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}
-let chemin=window.location.pathname;if(chemin.search('NSI')>-1){baniere=document.querySelector("#myHeader");let linkBox=document.createElement('div');linkBox.classList.add('linkBox');let newH=document.createElement('a');newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';newH.classList.add('nsi');linkBox.appendChild(newH);baniere.appendChild(linkBox);}</script><style>#myHeader{display:flex;flex-direction:row-reverse}#myHeader>.titre{width:80%;min-width:300px;text-align:left}.linkBox{margin:10px;padding-top:10px;background-color:pink;min-width:50px}.isn{}</style></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2f docs\2fNSI\2flangages\2fpage3\2f ]{color:#004ed0}</style><ul><li><a href=/><strong>Accueil</strong></a></li><li><a href=/docs/esf/esf_index/><strong>ESF</strong></a></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p></li><li><p><a href=/docs/python/index_python/><strong>Python</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
-addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-page><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
-<strong>modularité</strong></header><article class=markdown><h1 id=modularité>Modularité</h1><h2 id=qu-est-ce-qu-un-module>Qu&rsquo;est ce qu&rsquo;un module ?</h2><p>Un module est un fichier python (d&rsquo;extension .py) contenant des fonctions.
-En principe, il n&rsquo;est pas prévu pour être executé. Pour faire référence aux fonctions de ce module, il faut l&rsquo;<em>importer</em> depuis le script principal (ìmport module.py`).</p><h2 id=quand-utiliser-un-module>Quand utiliser un module ?</h2><p>Lorsque vous réalisez un projet en python, votre script s&rsquo;agrandit, et vous aurez certainement le besoin de séparer votre code dans plusieurs fichiers.</p><p>Ainsi, il vous est facile de réutiliser des fonctions écrites pour un programme dans un autre sans avoir à les copier.</p><h2 id=mettre-son-programme-sous-forme-de-modules>Mettre son programme sous forme de modules</h2><p>On a vu la différentes manières d&rsquo;importer un module dans le cours <a href=/docs/python/pages/fonctions/page1/#importer-des-fonctions>Python &gt; Fonctions</a></p><p>On peut souhaiter, par exemple, créer une représentation graphique des nombres premiers dans une fenêtre <code>turtle</code>. On souhaite diviser les fonctions dans 2 fichiers:</p><ul><li>le fichier executable (appelé le fichier <em>main</em>): imaginons que vous lui donniez le nom <code>nombresPrem.py</code>. Ce fichier ne contiendra que les fonctions relatives au calcul des nombres premiers. On y mettre aussi l&rsquo;instruction qui appelera la fonction de dessin du module. C&rsquo;est elle qui construira et dessinera dans la fenêtre graphique.</li><li>le fichier module de nom <code>fcts_turtle.py</code> qui contiendra toutes les fonctions utiles pour la représentation graphique. On supposera que ce fichier contient la fonction <code>ulam</code> qu&rsquo;il faudra appeler pour declencher le tracé.</li></ul><p>Le dossier contient alors:</p><figure><div><img src=../images/page3/modules.png></div></figure><p>Le fichier principal <code>nombresPrem.py</code> sera organisé comme ceci:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e>#####partie import des modules############</span>
-<span style=color:#f92672>import</span> <span style=color:#111>fcts_turtle</span>
+{
+    console.log(err.message);
+}
 
-<span style=color:#75715e>#####variables globales####################</span>
-<span style=color:#75715e># declaration des variables globales</span>
 
-<span style=color:#75715e>#######definition des fonctions############</span>
-<span style=color:#75715e># def des fonctions du fichier main</span>
-<span style=color:#75715e># pour le calcul des nombres premiers</span>
 
-<span style=color:#75715e>######corps du programme : ################</span>
-<span style=color:#75715e>### à executer si fichier main ############</span>
-<span style=color:#00a8c8>if</span> <span style=color:#111>__name__</span><span style=color:#f92672>==</span><span style=color:#d88200>&#39;__main__&#39;</span><span style=color:#111>:</span>
-    <span style=color:#75715e># calcul d&#39;une liste de nombres premiers</span>
-    <span style=color:#75715e># appel de la fonction de dessin du module:</span>
-    <span style=color:#111>fcts_turtle</span><span style=color:#f92672>.</span><span style=color:#111>ulam</span><span style=color:#111>(</span><span style=color:#111>liste_premiers</span><span style=color:#111>,</span><span style=color:#111>N</span><span style=color:#111>)</span>
-<span style=color:#75715e>###########################################</span></code></pre></div><p>Il est recommandé de mettre les instructions du programme principal dans un bloc avec le test <code>if __name__=='__main__':</code></p><p>Ceci permet d&rsquo;importer le contenu du fichier sans déclencher son execution; et permettre de realiser des tests sur les fonctions. Voir <a href=/docs/NSI/langages/page5/#créer-un-module-de-test-avec-unittest>tests sur les modules avec unittest</a></p><p>Le module <code>fcts_turtle.py</code> :</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#d88200>&#34;&#34;&#34;
-</span><span style=color:#d88200>    DOCSTRING
-</span><span style=color:#d88200>&#34;&#34;&#34;</span>
-<span style=color:#75715e>#####partie import des modules externes###</span>
-<span style=color:#f92672>import</span> <span style=color:#111>turtle</span>
 
-<span style=color:#75715e>#######definition des fonctions du module#</span>
-<span style=color:#75715e># fonction de dessin de la fenêtre</span>
-<span style=color:#75715e># fonction ulam(liste_premiers,N)</span>
-<span style=color:#75715e>##########################################</span></code></pre></div><p><strong>Remarque :</strong> Il est essentiel que le module comprenne un docstring BIEN documenté.</p><h1 id=gérer-les-modules>Gérer les modules</h1><h2 id=depuis-le-shell-python>depuis le shell python</h2><p>Il est possible de parcourir les dossiers du disque dur, travailler sur les fichiers, etc, comme avec un shell Unix. Depuis le notebook ou bien depuis un shell python, il faut commencer par importer le module <code>os</code>. Les instructions utiles sont :</p><ul><li><code>listdir()</code> pour lister</li><li><code>getcwd()</code> pour obtenir le chemin (CWD = « Current Working Directory »)</li><li><code>chdir()</code> pour changer de dossier</li></ul><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> <span style=color:#111>os</span>
-<span style=color:#111>os</span><span style=color:#f92672>.</span><span style=color:#111>listdir</span><span style=color:#111>()</span> 
-<span style=color:#75715e># renvoie la liste des fichiers et dossiers:</span>
-<span style=color:#111>[</span><span style=color:#d88200>&#39;fenDestroy.py&#39;</span><span style=color:#111>,</span>
- <span style=color:#d88200>&#39;fcts_turtle.py&#39;</span><span style=color:#111>,</span>
- <span style=color:#d88200>&#39;tk_turtle.py&#39;</span><span style=color:#111>,</span>
- <span style=color:#d88200>&#39;__pycache__&#39;</span><span style=color:#111>,</span>
- <span style=color:#d88200>&#39;spirale_ulam.py&#39;</span><span style=color:#111>,</span>
- <span style=color:#d88200>&#39;nombresPrem.py&#39;</span><span style=color:#111>]</span></code></pre></div><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>os</span><span style=color:#f92672>.</span><span style=color:#111>getcwd</span><span style=color:#111>()</span>
-<span style=color:#75715e># donne le chemin du dossier courant</span>
-<span style=color:#d88200>&#39;/Users/nom_user/Applications/python/dessins&#39;</span></code></pre></div><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>os</span><span style=color:#f92672>.</span><span style=color:#111>chdir</span><span style=color:#111>(</span><span style=color:#d88200>&#39;..&#39;</span><span style=color:#111>)</span> <span style=color:#75715e># permet de remonter au dossier parent</span>
-<span style=color:#111>os</span><span style=color:#f92672>.</span><span style=color:#111>getcwd</span><span style=color:#111>()</span>
-<span style=color:#75715e># affiche &#39;/Users/nom_user/Applications/python`</span>
-<span style=color:#111>os</span><span style=color:#f92672>.</span><span style=color:#111>chdir</span><span style=color:#111>(</span><span style=color:#d88200>`dessin/turtle`</span><span style=color:#111>)</span> <span style=color:#75715e># se deplacer dans un sous dossier</span>
-<span style=color:#111>os</span><span style=color:#f92672>.</span><span style=color:#111>getcwd</span><span style=color:#111>()</span>
-<span style=color:#75715e># affiche &#39;/Users/nom_user/Applications/python/dessins/turtle`</span></code></pre></div><p>Une différence avec le shell Unix est le traitement des noms de fichiers et dossiers qui sont mis entre guillemets. Ce sont des chaines de caracteres pour python.</p><h2 id=afficher-le-contenu-et-l-aide-d-un-module>Afficher le contenu et l&rsquo;aide d&rsquo;un module</h2><p>depuis le shell python, se placer dans le repertoire contenant le module ou adapter le chemin, puis:</p><ul><li>importer le module</li><li>lister les fonctions contenues dans le module avec <code>dir(nom_du_module)</code></li></ul><p><em>Exemple avec le module <code>fcts_python.py</code>:</em></p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> <span style=color:#111>fcts_turtle</span>
-<span style=color:#111>dir</span><span style=color:#111>(</span><span style=color:#111>fcts_turtle</span><span style=color:#111>)</span>
-<span style=color:#75715e># affiche</span>
-<span style=color:#111>[</span><span style=color:#d88200>&#39;fenDestroy.py&#39;</span><span style=color:#111>,</span>
- <span style=color:#d88200>&#39;fcts_turtle.py&#39;</span><span style=color:#111>,</span>
- <span style=color:#d88200>&#39;tk_turtle.py&#39;</span><span style=color:#111>,</span>
- <span style=color:#d88200>&#39;__pycache__&#39;</span><span style=color:#111>,</span>
- <span style=color:#d88200>&#39;spirale_ulam.py&#39;</span><span style=color:#111>,</span>
- <span style=color:#d88200>&#39;nombresPrem.py&#39;</span><span style=color:#111>]</span></code></pre></div><p>Afficher les fonctions et le <em>Docstring</em> du module et des fonctions: <code>help(nom_du_module)</code>:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> <span style=color:#111>fcts_turtle</span>
-<span style=color:#111>help</span><span style=color:#111>(</span><span style=color:#111>fcts_turtle</span><span style=color:#111>)</span>
-<span style=color:#75715e># affiche :</span>
-<span style=color:#111>Help</span> <span style=color:#111>on</span> <span style=color:#111>module</span> <span style=color:#111>fcts_turtle</span><span style=color:#111>:</span>
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
 
-<span style=color:#111>NAME</span>
-    <span style=color:#111>fcts_turtle</span>
 
-<span style=color:#111>FUNCTIONS</span>
-    <span style=color:#111>close_window</span><span style=color:#111>()</span>
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
     
-    <span style=color:#111>ulam</span><span style=color:#111>(</span><span style=color:#111>premiers</span><span style=color:#111>,</span> <span style=color:#111>N</span><span style=color:#111>,</span> <span style=color:#111>L</span><span style=color:#f92672>=</span><span style=color:#ae81ff>220</span><span style=color:#111>,</span> <span style=color:#111>h</span><span style=color:#f92672>=</span><span style=color:#ae81ff>220</span><span style=color:#111>)</span></code></pre></div><p><em>Rq:</em> Notez que le fichier est bien enregistré avec une extension <code>.py</code> et pourtant on ne la précise pas lorsqu&rsquo;on importe le module.</p><p>Et si le <em>Docstring</em> du module est présent:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> <span style=color:#111>fcts_turtle</span>
-<span style=color:#111>help</span><span style=color:#111>(</span><span style=color:#111>fcts_turtle</span><span style=color:#111>)</span>
-<span style=color:#75715e># affiche:</span>
-<span style=color:#111>Help</span> <span style=color:#111>on</span> <span style=color:#111>module</span> <span style=color:#111>fcts_turtle</span><span style=color:#111>:</span>
-
-<span style=color:#111>Help</span> <span style=color:#111>on</span> <span style=color:#111>module</span> <span style=color:#111>fcts_turtle</span><span style=color:#111>:</span>
-
-<span style=color:#111>NAME</span>
-    <span style=color:#111>fcts_turtle</span> <span style=color:#f92672>-</span> <span style=color:#111>module</span> <span style=color:#111>pour</span> <span style=color:#111>visualiser</span> <span style=color:#111>les</span> <span style=color:#111>nombres</span> <span style=color:#111>premiers</span>
-
-<span style=color:#111>DESCRIPTION</span>
-    <span style=color:#111>fonctions</span> <span style=color:#111>utiles</span> <span style=color:#111>pour</span> <span style=color:#111>tracer</span> <span style=color:#111>une</span> <span style=color:#111>spirale</span> <span style=color:#111>avec</span> <span style=color:#111>turtle</span><span style=color:#f92672>.</span>
-
-<span style=color:#111>FUNCTIONS</span>
-    <span style=color:#111>close_window</span><span style=color:#111>()</span>
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
     
-    <span style=color:#111>ulam</span><span style=color:#111>(</span><span style=color:#111>premiers</span><span style=color:#111>,</span> <span style=color:#111>N</span><span style=color:#111>,</span> <span style=color:#111>L</span><span style=color:#f92672>=</span><span style=color:#ae81ff>220</span><span style=color:#111>,</span> <span style=color:#111>h</span><span style=color:#f92672>=</span><span style=color:#ae81ff>220</span><span style=color:#111>)</span>
-        <span style=color:#111>represente</span> <span style=color:#111>la</span> <span style=color:#111>spirale</span> <span style=color:#111>de</span> <span style=color:#111>Ulam</span>
-        
-        <span style=color:#111>Params</span>
-        <span style=color:#f92672>------</span>
-        <span style=color:#111>premiers</span><span style=color:#111>:</span> <span style=color:#111>list</span>
-            <span style=color:#111>les</span> <span style=color:#111>nombres</span> <span style=color:#111>premiers</span>
-        <span style=color:#111>N</span><span style=color:#111>:</span> <span style=color:#111>int</span>
-            <span style=color:#111>derniere</span> <span style=color:#111>valeur</span> <span style=color:#111>de</span> <span style=color:#111>la</span> <span style=color:#111>spirale</span>
-        <span style=color:#111>L</span><span style=color:#111>:</span> <span style=color:#111>int</span>
-            <span style=color:#111>dimension</span> <span style=color:#111>du</span> <span style=color:#111>rectangle</span> <span style=color:#111>en</span> <span style=color:#111>largeur</span><span style=color:#f92672>.</span> <span style=color:#ae81ff>220</span><span style=color:#111>px</span> <span style=color:#111>par</span> <span style=color:#111>defaut</span>
-        <span style=color:#111>h</span><span style=color:#111>:</span> <span style=color:#111>int</span>
-            <span style=color:#111>dimension</span> <span style=color:#111>du</span> <span style=color:#111>rectangle</span> <span style=color:#111>en</span> <span style=color:#111>hauteur</span><span style=color:#f92672>.</span> <span style=color:#ae81ff>220</span> <span style=color:#111>px</span> <span style=color:#111>par</span> <span style=color:#111>defaut</span>
-        
-        <span style=color:#111>Principe</span>
-        <span style=color:#f92672>--------</span>
-        <span style=color:#111>Les</span> <span style=color:#111>nombres</span> <span style=color:#111>sont</span> <span style=color:#111>ecrits</span> <span style=color:#111>sur</span> <span style=color:#111>la</span> <span style=color:#111>spirale</span><span style=color:#f92672>.</span> <span style=color:#111>En</span> <span style=color:#111>rouge</span> <span style=color:#111>si</span> <span style=color:#111>le</span> <span style=color:#111>nombre</span> <span style=color:#111>est</span> <span style=color:#111>premier</span><span style=color:#111>,</span> <span style=color:#111>en</span> <span style=color:#111>noir</span> <span style=color:#111>sinon</span><span style=color:#f92672>.</span>
-        
-        <span style=color:#111>Appel</span>
-        <span style=color:#f92672>-----</span>
-        <span style=color:#111>ulam</span><span style=color:#111>(</span><span style=color:#111>premiers</span><span style=color:#111>,</span><span style=color:#ae81ff>100</span><span style=color:#111>)</span> <span style=color:#75715e># tracé de la spirale avec la liste de nombres premiers mis en argument, jusqu&#39;à N=100.</span></code></pre></div><h2 id=créer-le-docstring-d-un-module>Créer le Docstring d&rsquo;un module</h2><p>Un <em>docstring</em> est un commentaire multi-lignes utilisé pour documenter des modules, des classes, des fonctions et des méthodes. Il doit s&rsquo;agir de la première déclaration du composant qu&rsquo;il décrit.</p><p>Une bonne docstring de fonction doit contenir tout ce dont un utilisateur a besoin pour utiliser cette fonction. Une liste minimale et non exhaustive serait :</p><ul><li>ce que fait la fonction,</li><li>ce qu&rsquo;elle prend en argument,</li><li>ce qu&rsquo;elle renvoie.</li></ul><blockquote><p>En pratique</p></blockquote><ul><li>démarrer le fichier par un commentaire multi-lignes qui documente le module</li><li>ajouter le prototype de chaque fonction selon la méthode vu dans le cours <a href=/docs/NSI/langages/page5/#prototypage-d-une-fonction>langage/mise au point</a></li></ul><p>Voici un exemple de commentaire multi-lignes pour présenter le module (mis à la premiere ligne du fichier):</p><pre><code>&quot;&quot;&quot;module pour visualiser les nombres premiers
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI\2flangages\2fpage3\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    modularité
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="modularité">Modularité</h1>
+<h2 id="quest-ce-quun-module-">Qu&rsquo;est ce qu&rsquo;un module ?</h2>
+<p>Un module est un fichier python (d&rsquo;extension .py) contenant des fonctions.
+En principe, il n&rsquo;est pas prévu pour être executé. Pour faire référence aux fonctions de ce module, il faut l&rsquo;<em>importer</em> depuis le script principal (ìmport module.py`).</p>
+<h2 id="quand-utiliser-un-module-">Quand utiliser un module ?</h2>
+<p>Lorsque vous réalisez un projet en python, votre script s&rsquo;agrandit, et vous aurez certainement le besoin de séparer votre code dans plusieurs fichiers.</p>
+<p>Ainsi, il vous est facile de réutiliser des fonctions écrites pour un programme dans un autre sans avoir à les copier.</p>
+<h2 id="mettre-son-programme-sous-forme-de-modules">Mettre son programme sous forme de modules</h2>
+<p>On a vu la différentes manières d&rsquo;importer un module dans le cours <a href="/docs/python/pages/fonctions/page1/#importer-des-fonctions">Python &gt; Fonctions</a></p>
+<p>On peut souhaiter, par exemple, créer une représentation graphique des nombres premiers dans une fenêtre <code>turtle</code>. On souhaite diviser les fonctions dans 2 fichiers:</p>
+<ul>
+<li>le fichier executable (appelé le fichier <em>main</em>): imaginons que vous lui donniez le nom <code>nombresPrem.py</code>. Ce fichier ne contiendra que les fonctions relatives au calcul des nombres premiers. On y mettre aussi l&rsquo;instruction qui appelera la fonction de dessin du module. C&rsquo;est elle qui construira et dessinera dans la fenêtre graphique.</li>
+<li>le fichier module de nom <code>fcts_turtle.py</code> qui contiendra toutes les fonctions utiles pour la représentation graphique. On supposera que ce fichier contient la fonction <code>ulam</code> qu&rsquo;il faudra appeler pour declencher le tracé.</li>
+</ul>
+<p>Le dossier contient alors:</p>
+<!-- raw HTML omitted -->
+<p>Le fichier principal <code>nombresPrem.py</code> sera organisé comme ceci:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#####partie import des modules############</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#111">fcts_turtle</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#####variables globales####################</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># declaration des variables globales</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#######definition des fonctions############</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># def des fonctions du fichier main</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># pour le calcul des nombres premiers</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">######corps du programme : ################</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### à executer si fichier main ############</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">if</span> <span style="color:#111">__name__</span><span style="color:#f92672">==</span><span style="color:#d88200">&#39;__main__&#39;</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># calcul d&#39;une liste de nombres premiers</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># appel de la fonction de dessin du module:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">fcts_turtle</span><span style="color:#f92672">.</span><span style="color:#111">ulam</span><span style="color:#111">(</span><span style="color:#111">liste_premiers</span><span style="color:#111">,</span><span style="color:#111">N</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">###########################################</span>
+</span></span></code></pre></div><p>Il est recommandé de mettre les instructions du programme principal dans un bloc avec le test <code>if __name__=='__main__':</code></p>
+<p>Ceci permet d&rsquo;importer le contenu du fichier sans déclencher son execution; et permettre de realiser des tests sur les fonctions. Voir <!-- raw HTML omitted -->tests sur les modules avec unittest<!-- raw HTML omitted --></p>
+<p>Le module <code>fcts_turtle.py</code> :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#d88200">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    DOCSTRING
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#####partie import des modules externes###</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#111">turtle</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#######definition des fonctions du module#</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># fonction de dessin de la fenêtre</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># fonction ulam(liste_premiers,N)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">##########################################</span>
+</span></span></code></pre></div><p><strong>Remarque :</strong> Il est essentiel que le module comprenne un docstring BIEN documenté.</p>
+<h1 id="gérer-les-modules">Gérer les modules</h1>
+<h2 id="depuis-le-shell-python">depuis le shell python</h2>
+<p>Il est possible de parcourir les dossiers du disque dur, travailler sur les fichiers, etc, comme avec un shell Unix. Depuis le notebook ou bien depuis un shell python, il faut commencer par importer le module <code>os</code>. Les instructions utiles sont :</p>
+<ul>
+<li><code>listdir()</code> pour lister</li>
+<li><code>getcwd()</code> pour obtenir le chemin (CWD = « Current Working Directory »)</li>
+<li><code>chdir()</code> pour changer de dossier</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#111">os</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">os</span><span style="color:#f92672">.</span><span style="color:#111">listdir</span><span style="color:#111">()</span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># renvoie la liste des fichiers et dossiers:</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">[</span><span style="color:#d88200">&#39;fenDestroy.py&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span> <span style="color:#d88200">&#39;fcts_turtle.py&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span> <span style="color:#d88200">&#39;tk_turtle.py&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span> <span style="color:#d88200">&#39;__pycache__&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span> <span style="color:#d88200">&#39;spirale_ulam.py&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span> <span style="color:#d88200">&#39;nombresPrem.py&#39;</span><span style="color:#111">]</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">os</span><span style="color:#f92672">.</span><span style="color:#111">getcwd</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># donne le chemin du dossier courant</span>
+</span></span><span style="display:flex;"><span><span style="color:#d88200">&#39;/Users/nom_user/Applications/python/dessins&#39;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">os</span><span style="color:#f92672">.</span><span style="color:#111">chdir</span><span style="color:#111">(</span><span style="color:#d88200">&#39;..&#39;</span><span style="color:#111">)</span> <span style="color:#75715e"># permet de remonter au dossier parent</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">os</span><span style="color:#f92672">.</span><span style="color:#111">getcwd</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche &#39;/Users/nom_user/Applications/python`</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">os</span><span style="color:#f92672">.</span><span style="color:#111">chdir</span><span style="color:#111">(</span><span style="color:#960050;background-color:#1e0010">`</span><span style="color:#111">dessin</span><span style="color:#f92672">/</span><span style="color:#111">turtle</span><span style="color:#960050;background-color:#1e0010">`</span><span style="color:#111">)</span> <span style="color:#75715e"># se deplacer dans un sous dossier</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">os</span><span style="color:#f92672">.</span><span style="color:#111">getcwd</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche &#39;/Users/nom_user/Applications/python/dessins/turtle`</span>
+</span></span></code></pre></div><p>Une différence avec le shell Unix est le traitement des noms de fichiers et dossiers qui sont mis entre guillemets. Ce sont des chaines de caracteres pour python.</p>
+<h2 id="afficher-le-contenu-et-laide-dun-module">Afficher le contenu et l&rsquo;aide d&rsquo;un module</h2>
+<p>depuis le shell python, se placer dans le repertoire contenant le module ou adapter le chemin, puis:</p>
+<ul>
+<li>importer le module</li>
+<li>lister les fonctions contenues dans le module avec <code>dir(nom_du_module)</code></li>
+</ul>
+<p><em>Exemple avec le module <code>fcts_python.py</code>:</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#111">fcts_turtle</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">dir</span><span style="color:#111">(</span><span style="color:#111">fcts_turtle</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">[</span><span style="color:#d88200">&#39;fenDestroy.py&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span> <span style="color:#d88200">&#39;fcts_turtle.py&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span> <span style="color:#d88200">&#39;tk_turtle.py&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span> <span style="color:#d88200">&#39;__pycache__&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span> <span style="color:#d88200">&#39;spirale_ulam.py&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span> <span style="color:#d88200">&#39;nombresPrem.py&#39;</span><span style="color:#111">]</span>
+</span></span></code></pre></div><p>Afficher les fonctions et le <em>Docstring</em> du module et des fonctions: <code>help(nom_du_module)</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#111">fcts_turtle</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">help</span><span style="color:#111">(</span><span style="color:#111">fcts_turtle</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche :</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">Help</span> <span style="color:#111">on</span> <span style="color:#111">module</span> <span style="color:#111">fcts_turtle</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">NAME</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">fcts_turtle</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">FUNCTIONS</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">close_window</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#111">ulam</span><span style="color:#111">(</span><span style="color:#111">premiers</span><span style="color:#111">,</span> <span style="color:#111">N</span><span style="color:#111">,</span> <span style="color:#111">L</span><span style="color:#f92672">=</span><span style="color:#ae81ff">220</span><span style="color:#111">,</span> <span style="color:#111">h</span><span style="color:#f92672">=</span><span style="color:#ae81ff">220</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p><em>Rq:</em>  Notez que le fichier est bien enregistré avec une extension <code>.py</code> et pourtant on ne la précise pas lorsqu&rsquo;on importe le module.</p>
+<p>Et si le <em>Docstring</em> du module est présent:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#111">fcts_turtle</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">help</span><span style="color:#111">(</span><span style="color:#111">fcts_turtle</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche:</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">Help</span> <span style="color:#111">on</span> <span style="color:#111">module</span> <span style="color:#111">fcts_turtle</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">Help</span> <span style="color:#111">on</span> <span style="color:#111">module</span> <span style="color:#111">fcts_turtle</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">NAME</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">fcts_turtle</span> <span style="color:#f92672">-</span> <span style="color:#111">module</span> <span style="color:#111">pour</span> <span style="color:#111">visualiser</span> <span style="color:#111">les</span> <span style="color:#111">nombres</span> <span style="color:#111">premiers</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">DESCRIPTION</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">fonctions</span> <span style="color:#111">utiles</span> <span style="color:#111">pour</span> <span style="color:#111">tracer</span> <span style="color:#111">une</span> <span style="color:#111">spirale</span> <span style="color:#111">avec</span> <span style="color:#111">turtle</span><span style="color:#f92672">.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">FUNCTIONS</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">close_window</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#111">ulam</span><span style="color:#111">(</span><span style="color:#111">premiers</span><span style="color:#111">,</span> <span style="color:#111">N</span><span style="color:#111">,</span> <span style="color:#111">L</span><span style="color:#f92672">=</span><span style="color:#ae81ff">220</span><span style="color:#111">,</span> <span style="color:#111">h</span><span style="color:#f92672">=</span><span style="color:#ae81ff">220</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">represente</span> <span style="color:#111">la</span> <span style="color:#111">spirale</span> <span style="color:#111">de</span> <span style="color:#111">Ulam</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#111">Params</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">------</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">premiers</span><span style="color:#111">:</span> <span style="color:#111">list</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">les</span> <span style="color:#111">nombres</span> <span style="color:#111">premiers</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">N</span><span style="color:#111">:</span> <span style="color:#111">int</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">derniere</span> <span style="color:#111">valeur</span> <span style="color:#111">de</span> <span style="color:#111">la</span> <span style="color:#111">spirale</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">L</span><span style="color:#111">:</span> <span style="color:#111">int</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">dimension</span> <span style="color:#111">du</span> <span style="color:#111">rectangle</span> <span style="color:#111">en</span> <span style="color:#111">largeur</span><span style="color:#f92672">.</span> <span style="color:#ae81ff">220</span><span style="color:#111">px</span> <span style="color:#111">par</span> <span style="color:#111">defaut</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">h</span><span style="color:#111">:</span> <span style="color:#111">int</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">dimension</span> <span style="color:#111">du</span> <span style="color:#111">rectangle</span> <span style="color:#111">en</span> <span style="color:#111">hauteur</span><span style="color:#f92672">.</span> <span style="color:#ae81ff">220</span> <span style="color:#111">px</span> <span style="color:#111">par</span> <span style="color:#111">defaut</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#111">Principe</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">--------</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">Les</span> <span style="color:#111">nombres</span> <span style="color:#111">sont</span> <span style="color:#111">ecrits</span> <span style="color:#111">sur</span> <span style="color:#111">la</span> <span style="color:#111">spirale</span><span style="color:#f92672">.</span> <span style="color:#111">En</span> <span style="color:#111">rouge</span> <span style="color:#111">si</span> <span style="color:#111">le</span> <span style="color:#111">nombre</span> <span style="color:#111">est</span> <span style="color:#111">premier</span><span style="color:#111">,</span> <span style="color:#111">en</span> <span style="color:#111">noir</span> <span style="color:#111">sinon</span><span style="color:#f92672">.</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#111">Appel</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">-----</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">ulam</span><span style="color:#111">(</span><span style="color:#111">premiers</span><span style="color:#111">,</span><span style="color:#ae81ff">100</span><span style="color:#111">)</span> <span style="color:#75715e"># tracé de la spirale avec la liste de nombres premiers mis en argument, jusqu&#39;à N=100.</span>
+</span></span></code></pre></div><h2 id="créer-le-docstring-dun-module">Créer le Docstring d&rsquo;un module</h2>
+<p>Un <em>docstring</em> est un commentaire multi-lignes utilisé pour documenter des modules, des classes, des fonctions et des méthodes. Il doit s&rsquo;agir de la première déclaration du composant qu&rsquo;il décrit.</p>
+<p>Une bonne docstring de fonction doit contenir tout ce dont un utilisateur a besoin pour utiliser cette fonction. Une liste minimale et non exhaustive serait :</p>
+<ul>
+<li>ce que fait la fonction,</li>
+<li>ce qu&rsquo;elle prend en argument,</li>
+<li>ce qu&rsquo;elle renvoie.</li>
+</ul>
+<blockquote>
+<p>En pratique</p>
+</blockquote>
+<ul>
+<li>démarrer le fichier par un commentaire multi-lignes qui documente le module</li>
+<li>ajouter le prototype de chaque fonction selon la méthode vu dans le cours <a href="/docs/NSI/langages/page5/#prototypage-d-une-fonction">langage/mise au point</a></li>
+</ul>
+<p>Voici un exemple de commentaire multi-lignes pour présenter le module (mis à la premiere ligne du fichier):</p>
+<pre tabindex="0"><code>&#34;&#34;&#34;module pour visualiser les nombres premiers
 
 fonctions utiles pour tracer une spirale avec turtle.
-&quot;&quot;&quot;
-</code></pre><p>ce qui renvoie à l&rsquo;aide de la commande <code>help(module)</code>:</p><pre><code>Help on module fcts_turtle:
+&#34;&#34;&#34;
+</code></pre><p>ce qui renvoie à l&rsquo;aide de la commande <code>help(module)</code>:</p>
+<pre tabindex="0"><code>Help on module fcts_turtle:
 
 NAME
     fcts_turtle - module pour visualiser les nombres premiers
@@ -125,5 +473,58 @@ DESCRIPTION
 
 FUNCTIONS
     (prototype de chaque fonction)
-</code></pre><h1 id=liens>Liens</h1><ul><li>Modularité - document source : <a href=https://docs.python.org/fr/3/tutorial/modules.html>python.org</a></li><li>Fiche recapitulative des instructions du module <code>os</code> : <a href=https://gist.github.com/YannBouyeron/941817d79b83a4b87c5a63580229cbbd>Github YannBouyeron</a></li><li>conventions d&rsquo;écriture des Docstrings <a href=https://riptutorial.com/fr/python/example/30002/ecrire-de-la-documentation-a-l-aide-de-docstrings>RIPtutorial</a></li></ul></article><div style=height:100px></div></div><aside class="book-toc fixed"><nav id=TableOfContents><ul><li><a href=#modularité>Modularité</a><ul><li><a href=#qu-est-ce-qu-un-module>Qu&rsquo;est ce qu&rsquo;un module ?</a></li><li><a href=#quand-utiliser-un-module>Quand utiliser un module ?</a></li><li><a href=#mettre-son-programme-sous-forme-de-modules>Mettre son programme sous forme de modules</a></li></ul></li><li><a href=#gérer-les-modules>Gérer les modules</a><ul><li><a href=#depuis-le-shell-python>depuis le shell python</a></li><li><a href=#afficher-le-contenu-et-l-aide-d-un-module>Afficher le contenu et l&rsquo;aide d&rsquo;un module</a></li><li><a href=#créer-le-docstring-d-un-module>Créer le Docstring d&rsquo;un module</a></li></ul></li><li><a href=#liens>Liens</a></li></ul></nav></aside></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
-<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
+</code></pre><h1 id="liens">Liens</h1>
+<ul>
+<li>Modularité - document source : <a href="https://docs.python.org/fr/3/tutorial/modules.html">python.org</a></li>
+<li>Fiche recapitulative des instructions du module <code>os</code> : <a href="https://gist.github.com/YannBouyeron/941817d79b83a4b87c5a63580229cbbd">Github YannBouyeron</a></li>
+<li>conventions d&rsquo;écriture des Docstrings <a href="https://riptutorial.com/fr/python/example/30002/ecrire-de-la-documentation-a-l-aide-de-docstrings">RIPtutorial</a></li>
+</ul>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#quest-ce-quun-module-">Qu&rsquo;est ce qu&rsquo;un module ?</a></li>
+    <li><a href="#quand-utiliser-un-module-">Quand utiliser un module ?</a></li>
+    <li><a href="#mettre-son-programme-sous-forme-de-modules">Mettre son programme sous forme de modules</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#depuis-le-shell-python">depuis le shell python</a></li>
+    <li><a href="#afficher-le-contenu-et-laide-dun-module">Afficher le contenu et l&rsquo;aide d&rsquo;un module</a></li>
+    <li><a href="#créer-le-docstring-dun-module">Créer le Docstring d&rsquo;un module</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

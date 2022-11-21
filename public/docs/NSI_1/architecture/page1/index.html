@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    architecture 1
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI_1\2f architecture\2fpage1\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    architecture 1
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="lhistoire-de-lordinateur">L&rsquo;Histoire de l&rsquo;Ordinateur</h1>
+<p>En 1623 Wilhelm Schickard ou bien Blaise Pascal en 1642 créent des machines munies de rouages mécaniques pour faire des additions et des soustractions. Il ne s&rsquo;agit pas encore d&rsquo;ordinateurs, car celles-ci n&rsquo;ont qu&rsquo;une seule fonction.</p>
+<p>En 1854 le mathématicien britannique George Boole créé le calcul propositionnel. Aujourd&rsquo;hui, l&rsquo;algèbre de Boole trouve de nombreuses applications en informatique et dans la conception des circuits électroniques.</p>
+<p>Elle fut utilisée la première fois pour les circuits de commutation téléphonique par Claude Shannon.</p>
+<p>Alan Türing a discuté longuement avec Claude Shannon. Cela a pu influencer ses reflexions sur le rôle des machines. Il est à l&rsquo;origine de la conception du traitement automatisé de l&rsquo;information par une machine. John Von Neumann va proposer l&rsquo;architecture d&rsquo;une machine universelle sur laquelle reposent tous les ordinateurs. Leur point commun: ils sont tous capables de traiter de la même manière les calculs sur des nombres ou des propositions, exprimés en binaire.</p>
+<h2 id="la-premiere-machine-universelle">La premiere <em>machine universelle</em></h2>
+<ul>
+<li><strong>1834</strong> La première machine sur le modèle d&rsquo;un ordinateur. La <a href="https://fr.wikipedia.org/wiki/Machine_analytique">machine analytique</a> (analytical engine, Charles Babbage: 1791-1871) est une machine à calculer programmable imaginée par le mathématicien anglais <a href="https://fr.wikipedia.org/wiki/Charles_Babbage">Charles Babbage</a>. Il ne la réalisera jamais (sauf pour un prototype inachevé), mais il passera le reste de sa vie à la concevoir dans les moindres détails. La machine analytique reprend les différentes parties de nos ordinateurs actuels:
+<ul>
+<li>Une unité centrale</li>
+<li>Une mémoire</li>
+<li>Un lecteur de cartes des métiers à tisser Jacquard (l&rsquo;équivalent d&rsquo;un périphérique d&rsquo;entrée)</li>
+<li>Une imprimante (un périphérique de sortie).</li>
+</ul>
+</li>
+</ul>
+<p>La machine fonctionne en 5 étapes:</p>
+<!-- raw HTML omitted -->
+<p>C&rsquo;est la première machine <em>Türing-complète</em>. Sauf que celle-ci ne manipule pas les données en <em>binaire</em>.</p>
+<!-- raw HTML omitted -->
+<p>C&rsquo;est son élève, <a href="https://fr.wikipedia.org/wiki/Ada_Lovelace">Ada Lovelace</a> qui formalise les idées de Babbage et développe le premier algorithme de programmation de l&rsquo;histoire, devenant la première informaticienne de l&rsquo;humanité.</p>
+<h2 id="des-machines-pour-chiffrer-et-decrypter-des-informations">Des machines pour chiffrer et decrypter des informations</h2>
+<p>La période de la seconde guerre mondiale a vu emerger des machines électromecaniques plus efficaces que celles mécaniques.</p>
+<p>Ces machines ne sont pas <em>Türing-complètes</em>.</p>
+<ul>
+<li><strong>1938-1943</strong> La <a href="https://fr.wikipedia.org/wiki/Cryptanalyse_d%27Enigma">Bombe</a>, un supercalculateur est utilisé pour le <a href="https://fr.wikipedia.org/wiki/Cryptanalyse_d%27Enigma">décryptage</a> d&rsquo;[Enigma](<a href="https://fr.wikipedia.org/wiki/Enigma_(machine)">https://fr.wikipedia.org/wiki/Enigma_(machine)</a>, une machine utilisant un système de rotors pour produire un chiffrement mécanique. Les anglais, français et polonais travaillent sur le déchiffrage en testant des combinaisons. La Bombe a été conçue pour les attaques de force brute. Cette machine abat par jour le travail de dix mille décrypteurs.  C&rsquo;est le mathematicien <a href="https://fr.wikipedia.org/wiki/Alan_Turing">Alan Turing</a> qui parvient à casser le chiffre grâce à l&rsquo;utilisation d&rsquo;une version améliorée de cette machine.</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li><strong>1943-1945</strong> Les machines du projet <a href="https://fr.wikipedia.org/wiki/Colossus_(ordinateur)">Colossus</a> permettent de décrypter les machines de Lorentz. Le premier, Colossus Mark 1, est opérationnel en décembre 1943: constitué de 1500 tubes à vide, il accomplissait 5000 opérations par seconde.</li>
+</ul>
+<!-- raw HTML omitted -->
+<p>Le chiffrement Lorenz est beaucoup moins connu que celui d&rsquo;Enigma. Il était utilisé par les hauts dirigeants allemands pour communiquer entre eux alors qu&rsquo;Enigma était utilisée au quotidien pour les autres types de communication.</p>
+<p>Colossus n&rsquo;est pas une <em>machine universelle</em>, mais c&rsquo;est bien le premier processeur électronique, numérique, et partiellement programmable de l&rsquo;histoire. Cette machine montre que l&rsquo;électronique peut être utilisé pour le traitement numérique à grande vitesse.</p>
+<p>Vers 1940 plusieurs spécialistes développent des calculateurs à programme externe, suivant le projet de <em>machine analytique</em> de Babbage, en y incluant des relais électriques: Zuse, Coufignal, Aiken, Stibitz&hellip; Ces machines utilisaient des cartes ou rubans perforés, et étaient donc des calculateurs à <em>programme externe</em>.</p>
+<p>Aucun n&rsquo;avait eu l&rsquo;idée d&rsquo;une machine à <strong>programme enregistré</strong>, concept essentiel pour les <strong>machines électroniques</strong>.</p>
+<h2 id="machines-électromécaniques-dans-la-lignée-conceptuelle-de-babbage">Machines électromécaniques dans la lignée conceptuelle de Babbage</h2>
+<ul>
+<li><strong>1938</strong> le Z1, <strong>1941</strong> le <a href="https://fr.wikipedia.org/wiki/Zuse_3">Z3 (Konrad Zuse)</a>, est un ordinateur électromécanique utilisant le système binaire et lisant son programme sur une bande perforée. Le Z3 contenait plus de 2000 relais électromécaniques, pesait une Tonne et consommait plus de 4kW. Il comprend une <em>mémoire</em>, un <em>dispositif de contrôle</em> et une <em>unité arithmétique</em> calculant en binaire sur des nombres à virgule flottante! Les données et les instructions sont perforées sur du film de cinema, plus solide que des rubans en papier. Il était capable d&rsquo;effectuer une addition en 0,8 s. Sa fréquence était de 5,3 Hertz, assez lente à cause des relais. A l&rsquo;epoque, aucun appareil ne pouvait rivaliser.</li>
+</ul>
+<!-- raw HTML omitted -->
+<p>L&rsquo;institut de recherche aéronautique allemand l&rsquo;utilisait pour réaliser des analyses statistiques sur les vibrations des ailes.</p>
+<p>Zuse était le premier à concevoir que les <em>fonctions de contrôle</em> pouvaient aussi s&rsquo;exprimer et être stockées sous forme <em>numérique</em>, donc à créer une <em>machine programmable</em>. Ce qui permettait de changer de <strong>programme</strong> sans avoir à modifier les <strong>connexions</strong>.</p>
+<p>Si Ada Lovelace, élève de Babbage, fut la première programmeuse théorique d&rsquo;une machine inexistante, Zuse fut pour sa part le premier programmeur d&rsquo;une machine réelle en pratique.</p>
+<h2 id="les-calculateurs-géants">Les calculateurs géants</h2>
+<p>Les premiers ordinateurs étaient des <em>machines électromecaniques</em>, fabriquées à l&rsquo;unité après des années de recherche et developpement. Leur taille était immense, de même que leur consommation électrique. Le temps passé à leur maintenance et réparation était important (plus de 50%). Leur programmation était très rudimentaire, et leurs pannes, fréquentes.</p>
+<p>On ne pouvait pas implémenter des algorithmes trop complexes. Même s&rsquo;il s&rsquo;agissait, formellement, de machine universelle. Ils repondaient alors à un besoin de <em>calculer</em>.</p>
+<p>Les opérations à réaliser sont entrées à la main. Les données sont lues sur une carte perforée.</p>
+<p>Ces machines ont d&rsquo;autres defauts:</p>
+<ul>
+<li>il n&rsquo;y a pas de distinction entre la fonction mémoire et la fonction calcul.</li>
+<li>pas d&rsquo;unité centrale généraliste, mais une juxtaposition d&rsquo;accumulateurs et d&rsquo;unités spécialisées</li>
+<li>la programmation se fait par cablage ou en positionnant des interrupteurs. Ces machines nécessitent que l&rsquo;on change leur câblage à chaque type d&rsquo;opération.</li>
+</ul>
+<!-- raw HTML omitted -->
+<table>
+<thead>
+<tr>
+<th>année</th>
+<th>machine</th>
+<th>unité logique</th>
+<th>vitesse de calcul</th>
+<th>remarques</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1944</td>
+<td>calculateur Harvard Mark 1 (IBM)</td>
+<td>3300 relais</td>
+<td>3 addition sur 23 chiffres par s</td>
+<td></td>
+</tr>
+<tr>
+<td>1945</td>
+<td>ENIAC</td>
+<td>1800 tubes (technologie superieure aux relais)</td>
+<td>5000 additions par s</td>
+<td>a servi à calculer la faisabilité de la bombe H</td>
+</tr>
+<tr>
+<td>1948</td>
+<td>EDSAC</td>
+<td>lignes à retard sur mercure</td>
+<td></td>
+<td>programme écrit en binaire</td>
+</tr>
+<tr>
+<td>1951</td>
+<td>UNIVAC</td>
+<td>5 200 tubes à vide</td>
+<td>1 905 opérations par seconde</td>
+<td>utilisé par CBS pour prédire l&rsquo;issue de l&rsquo;élection présidentielle de 1952. 13 tonnes. consomme 125 kW. L&rsquo;unité accueillant la mémoire à mercure fait 4,3 m × 2,4 m × 2,6 m à elle seule. Le système au complet occupe 35,5 mètres carrés.</td>
+</tr>
+<tr>
+<td>1962</td>
+<td>Atlas (Manchester)</td>
+<td></td>
+<td></td>
+<td>Les 96 ko de mémoire, réalisée en tores de ferrite étaient étendus à l&rsquo;aide des 576 ko stockés sur tambour magnétique</td>
+</tr>
+<tr>
+<td>1964</td>
+<td>CDC 6600</td>
+<td></td>
+<td>entre 1 et 10 mégaflops (millions d&rsquo;opérations par s)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Remarque:</em> l&rsquo;ENIAC sera améliorée en 1948: elle intègre alors la notion d&rsquo;instruction et de programme, ce qui correspond au modèle classique d&rsquo;ordinateur à programme enregistré.<!-- raw HTML omitted -->
+C&rsquo;est aussi le <em>premier ordinateur binaire</em>, ne comportant plus de pièces mécaniques. (Mauchly et Eckert).<!-- raw HTML omitted -->
+Il exécute son premier programme le 12 avril, et son premier programme de production le 17 avril. La simulation de Monté Carlo exécutée le 12 avril 1948 par l&rsquo;ENIAC est la plus ancienne trace de programme enregistré connue à ce jour.</p>
+<h1 id="machines-universelles">Machines universelles</h1>
+<ul>
+<li><strong>1945</strong> En tirant les conclusions de réalisations électroniques secrètes menées pendant la guerre, deux documents apparaissent et definissent ce que l&rsquo;on nommera <em>ordinateur</em>, le calculateur numérique à programme enregistré. Les motivations des deux hommes sont différentes:
+<ul>
+<li><a href="https://fr.wikipedia.org/wiki/John_von_Neumann">John Von Neumann</a>:  qui cherche à developper des moyens pour les Universités pour leurs besoins de calculs mathématiques.</li>
+<li><a href="https://fr.wikipedia.org/wiki/Alan_Turing">Alan Turing</a>: qui veut réaliser une machine à traiter les informations.</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="la-contribution-de-turing-à-lavènement-des-ordinateurs">La contribution de Turing à l&rsquo;avènement des ordinateurs</h2>
+<h3 id="le-binaire">Le binaire</h3>
+<p>Contrairement à Babbage, Türing se rend compte que les opérations arithmétiques ordinaires peuvent être traduites dans le cadre de la <em>logique booléenne</em>, sous forme de circuits logiques (booléens). Il conçoit comme première machine un <em>multiplicateur booléen</em> électrique.</p>
+<p>Il prolonge l&rsquo;idée de Gödel de coder les opérateurs, les instructions , et les fonctions (des <em>propositions</em>) par des nombres entiers.</p>
+<p>Traiter des <em>instructions</em> revient à calculer sur des <em>nombres entiers</em>, écrits en <em>binaires</em>.</p>
+<h3 id="les-algorithmes">Les algorithmes</h3>
+<p>Le raisonnement mathématique est une combinaison:</p>
+<ul>
+<li>d&rsquo;intuition</li>
+<li>d&rsquo;ingéniosité, de procédures</li>
+</ul>
+<p>L&rsquo;idée de Türing est de diminuer la part d&rsquo;intuition et d&rsquo;augmenter celle de procédure.</p>
+<p>Par exemple, lorsque l&rsquo;on réalise une opération de tri, on le fait d&rsquo;abord de manière intuitive. Pour qu&rsquo;une machine soit capable de le réaliser, il faudra en dégager une <em>procédure</em>.</p>
+<h3 id="machine-de-türing">Machine de Türing</h3>
+<p>C&rsquo;est une machine mathématique permettant la manipulation réglée de signes.
+Son rôle est de transformer les symboles fournis en entrée, en symboles lisibles en sortie.</p>
+<p>Cette machine utilise les instructions d&rsquo;un programme (une tables d&rsquo;états) et repère un état d&rsquo;un registre, états qui définissent les étapes de l&rsquo;algorithme.</p>
+<p>C&rsquo;est une machine conceptuelle, qui a permi de définir ce qu&rsquo;est un problème <em>calculable</em>.</p>
+<p>Une machine de Tûring est conçue pour résoudre une classe de problèmes donnés: si une machine de Türing est programmée pour résoudre un opération d&rsquo;addition, alors elle pourra résoudre TOUTES les opérations d&rsquo;addition, quelles que soient les données en entrée.</p>
+<p>Une machine de Türing particulière contient donc, par avance, un programme.</p>
+<p>Une machine de <strong>Türing universelle</strong> est capable de <em>résoudre TOUS les problèmes possibles</em> de toutes les machines de Türing possibles (contient tous les programmes existants ou à venir).</p>
+<p>John Von Neumann fait référence de manière explicite à ce concept lorsqu&rsquo;il présente l&rsquo;architecture à laquelle doivent se conformer les <em>machines universelles</em>:</p>
+<blockquote>
+<p>Un ordinateur se définit comme une instance matérielle, concrète, d&rsquo;une Machine de Turing Universelle</p>
+</blockquote>
+<h3 id="calculabilité">Calculabilité</h3>
+<p>Si un problème (proposition, fonction), que l&rsquo;on peut <em>énoncer sous forme mathématique</em>, peut être résolu par une machine de Tûring, alors celui-ci est <em>calculable</em>. Il doit exister un <em>nombre fini d&rsquo;instructions</em> pour résooudre ce problème.</p>
+<h3 id="comparer-des-programmes">Comparer des programmes</h3>
+<p>Il devrait être possible de comparer des programmes en construction en évaluant le nombre de <em>pas</em> de calcul qui serait nécessaire. Tûring fait émerger la notion de <em>compléxité</em>.</p>
+<h2 id="architecture-von-neumann">Architecture Von Neumann</h2>
+<p><strong>Definition:</strong> Un <strong>ordinateur</strong> est un <strong>appareil programmable</strong> qui stocke son <strong>programme</strong> dans une <strong>mémoire modifiable</strong>.
+<a href="https://fr.wikibooks.org/wiki/Fonctionnement_d%27un_ordinateur/L%27architecture_de_base_d%27un_ordinateur">article wikibook sur l&rsquo;architecture de base d&rsquo;un ordinateur</a></p>
+<p><strong>John Von Neumann</strong> (1945) est le <em>concepteur</em> de l&rsquo;architecture de la <em>machine universelle</em> et de ses différents dispositifs:</p>
+<ul>
+<li>processeur</li>
+<li>mémoires</li>
+<li>dispositifs d&rsquo;entrée/sortie</li>
+</ul>
+<p>Il est à l&rsquo;origine du concept de <strong>programme enregistré</strong>: le stockage des données et des instructions sous forme d&rsquo;impulsions électriques à l&rsquo;intérieur même de la machine qui pourra les consulter à l&rsquo;instant et à la vitesse qui lui convient. En remplacement du traitement mécanique alors utilisé, ce qui necessitait une vaste manipulation de cables et de boutons à placer sur la bonne position pour specifier le nouveau problème. Charles Babbage avait déjà eut cette idée un siècle plus tôt.</p>
+<!-- raw HTML omitted -->
+<p>Cette architecture s&rsquo;oppose à celle de Harvard (mémoires différentes pour les données et les programmes) du Mark1.</p>
+<p>Von Neumann est également le concepteur de l&rsquo;ordinateur <strong>IAS</strong> à Princeton.</p>
+<p>Le stockage était alors réalisé par des tubes cathodiques, chacun de 1024 bits.</p>
+<p>Dans l&rsquo;architecture de Von Neumann, un ordinateur est constitué de quatre parties distinctes:</p>
+<ol>
+<li>Le <strong>CPU</strong>: Central Processing Unit (unité centrale de traitement) appelé aussi processeur;</li>
+<li>La <strong>mémoire</strong> où sont stockés les données et les programmes. La mémoire se divise entre:</li>
+</ol>
+<ul>
+<li>une mémoire volatile (<strong>RAM</strong> ou mémoire vive) qui gère les programmes et les données</li>
+<li>une mémoire permanente (<strong>ROM</strong>) qui gère les programmes de base de la machine.</li>
+</ul>
+<ol start="3">
+<li>des <strong>bus</strong> qui sont des fils conduisant des impulsions électriques et qui relient les différents composants;</li>
+<li>des <strong>entrées-sorties</strong> (E/S ou I/O input/Output) pour échanger avec l&rsquo;exterieur.</li>
+</ol>
+<p>Les échanges entre la mémoire et les registres du CPU se font via les bus selon une chronologie séquencée par l&rsquo;horloge et suivant la nature des échanges: données ou adresse. Cette horloge est externe au processeur.</p>
+<p>Un <strong>programme</strong> est une suite d’instructions codées sous forme binaire. Il précise la suite d’instructions exécutées par l’ordinateur.  Ces instructions, codées en binaire peuvent être exprimées pour un humain en langage <em>assembleur</em>, le langage de <em>plus bas niveau</em> (une traduction mnémonique du binaire).</p>
+<h3 id="le-processeur-cpu">Le processeur CPU</h3>
+<p>L&rsquo;unité de traitement est un circuit qui s&rsquo;occupe de faire des calculs et de manipuler l&rsquo;information provenant des entrées-sorties ou récupérée dans la mémoire. Dans les ordinateurs, l&rsquo;unité de traitement porte le nom de processeur, ou encore de Central Processing Unit, abrévié en CPU. Tout processeur est conçu pour effectuer un nombre limité d&rsquo;opérations bien précises, comme des calculs, des échanges de données avec la mémoire, etc.</p>
+<h3 id="mémoires-rom-et-rwm">mémoires ROM et RWM</h3>
+<p>Les mémoires ROM stockent des programmes à exécuter et sont lues directement par le processeur. Pour les mémoires RWM ou RAM, on peut y acceder en lecture et écriture.</p>
+<p>Les RWM stockent les variables du programme à exécuter, des données que le programme va manipuler. Selon l&rsquo;architecture de la machine, le programme peut être entièrement stocké dans la ROM, ou bien être partagé entre la ROM et la RWM.</p>
+<!-- raw HTML omitted -->
+<h3 id="les-bus">Les bus</h3>
+<p>Les données doivent circuler entre les différentes parties d’un ordinateur, notamment entre la mémoire vive et le CPU. Le système permettant cette circulation est appelé bus. Il existe, sans entrer dans les détails, 3 grands types de bus: adresses, données, de contrôle.</p>
+<h1 id="architecture-von-neumann-vs-harvard">Architecture Von Neumann vs Harvard</h1>
+<p>Voir la video suivante expliquant la différence entre ces 2 architectures:</p>
+<!-- raw HTML omitted -->
+<h1 id="liens-et-bibliographie">Liens et bibliographie</h1>
+<ul>
+<li><a href="https://www.lattice.cnrs.fr/sites/itellier/poly_intro_info/informatique004.html#fig:Von%20Neumann">cours sur l&rsquo;architecture Von Neumann lattice.cnrs.fr</a></li>
+<li>article presentant les technologies de la machine à calculer aux ordinateur de 4e génération: <a href="https://www.physique.usherbrooke.ca/~afaribau/essai/">Evolution des machines à calculer - Alexandre Faribault</a></li>
+<li>5000 ans d&rsquo;histoire <a href="https://artsandculture.google.com/story/hQUBvBSY16WtIQ">Deutsches Museum</a></li>
+<li><a href="https://isn-icn-ljm.pagesperso-orange.fr/1-NSI/res/res_histoire_1.pdf">Fiche pdf cours architecture - niveau terminale NSI</a></li>
+<li>présentation ppt d&rsquo;un cours de DIU informatique sur l&rsquo;architecture <a href="https://ecursus.univ-antilles.fr/pluginfile.php/189469/mod_resource/content/1/Cours%20SE.pdf">ecursus.univ-antilles.fr</a></li>
+<li>Sciences et avenir, hors série, Les géants de la Science: Alan Türing</li>
+</ul>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#la-premiere-machine-universelle">La premiere <em>machine universelle</em></a></li>
+    <li><a href="#des-machines-pour-chiffrer-et-decrypter-des-informations">Des machines pour chiffrer et decrypter des informations</a></li>
+    <li><a href="#machines-électromécaniques-dans-la-lignée-conceptuelle-de-babbage">Machines électromécaniques dans la lignée conceptuelle de Babbage</a></li>
+    <li><a href="#les-calculateurs-géants">Les calculateurs géants</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#la-contribution-de-turing-à-lavènement-des-ordinateurs">La contribution de Turing à l&rsquo;avènement des ordinateurs</a>
+      <ul>
+        <li><a href="#le-binaire">Le binaire</a></li>
+        <li><a href="#les-algorithmes">Les algorithmes</a></li>
+        <li><a href="#machine-de-türing">Machine de Türing</a></li>
+        <li><a href="#calculabilité">Calculabilité</a></li>
+        <li><a href="#comparer-des-programmes">Comparer des programmes</a></li>
+      </ul>
+    </li>
+    <li><a href="#architecture-von-neumann">Architecture Von Neumann</a>
+      <ul>
+        <li><a href="#le-processeur-cpu">Le processeur CPU</a></li>
+        <li><a href="#mémoires-rom-et-rwm">mémoires ROM et RWM</a></li>
+        <li><a href="#les-bus">Les bus</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

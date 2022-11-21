@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    fonctions en python
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI_1\2f donnees\2fpage5\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    fonctions en python
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="les-fonctions-en-python">Les fonctions en python</h1>
+<h2 id="généralités">Généralités</h2>
+<h3 id="fonctions-natives-du-langage">fonctions natives du langage</h3>
+<p>Tous les langages de programmation fournissent un large ensemble de fonctions prêtes à être utilisées. Nous avons déjà rencontré diverses fonctions prédéfinies, de la librairie standart : <code>print</code>, <code>input</code>, <code>range</code>, <code>len</code>.</p>
+<blockquote>
+<p>Tester dans un notebook, ou en console les fonctions natives suivantes:</p>
+</blockquote>
+<blockquote>
+<p><code>bin(129)</code></p>
+</blockquote>
+<blockquote>
+<p><code>int('0b10000001',2)</code></p>
+</blockquote>
+<p>Dans ces 2 exemples, on a utilisé un ou plusieurs arguments, positionnés entre les parenthèses.</p>
+<ul>
+<li>pour <code>bin(129)</code>, c&rsquo;est l&rsquo;argument 129 qui est passé à la fonction, afin que celle-ci réalise la conversion de 129 en binaire.</li>
+<li>pour <code>int('0b10000001',2)</code>, ce sont 2 arguments qui sont passés à la fonction <code>int</code>: Le binaire &lsquo;0b10000001&rsquo;, ainsi que l&rsquo;argument 2 précisant qu&rsquo;il s&rsquo;agit d&rsquo;un code binaire à convertir en entier.</li>
+</ul>
+<p><em>Remarquer que ces arguments sont séparés par une virgule.</em></p>
+<h3 id="fonctions-programmées">fonctions programmées</h3>
+<p>Les fonctions permettent de rendre le script plus efficace, plus facile à lire et à vérifier. Un bonne pratique est de faire régulierement du <em>remaniement</em> de son code : C&rsquo;est à dire ré-écrire les parties du programme qui <em>fonctionnent</em> et les mettre dans une fonction ou un module. Cela evite aussi les répétitions. On remplace alors le code par un appel à une fonction.</p>
+<blockquote>
+<p>On peut revoir la fin du TP sur les fonctions à la page <a href="/docs/NSI_1/donnees/page2/#fonctions-programm%C3%A9es">TPn°1 Calculs en python</a></p>
+</blockquote>
+<!-- raw HTML omitted -->
+<blockquote>
+<p><em>Définition :</em> Une fonction est un bloc de code auquel on donne un nom en vue de le reutiliser. L&rsquo;appel de son nom exécute tout le bloc de code que cette fonction contient.</p>
+</blockquote>
+<p>Pour créer une fonction, il faut la definir avec le mot clé <code>def</code>, suivi du nom de la fonction, d&rsquo;une paire de parenthèses suivies de <code>:</code>.</p>
+<h3 id="return">Return</h3>
+<p>La fonction peut retourner une valeur. Celle-ci est alors mise après le mot clé <code>return</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">salut</span><span style="color:#111">():</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;&#34;&#34;Accueillir tout le monde&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">return</span> <span style="color:#d88200">&#39;bonjour tout le monde&#39;</span>
+</span></span></code></pre></div><p>On appelle cette fonction à l&rsquo;aide de son nom, suivi des parenthèses :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">salut</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># retourne (et affiche) &#39;bonjour tout le monde&#39;</span>
+</span></span></code></pre></div><h2 id="travaux-pratiques-fonction-sans-paramètre">Travaux pratiques: fonction sans paramètre</h2>
+<ul>
+<li>Ecrire une fonction appelée <code>etoiles</code> en python qui écrit une série de 5 symboles <code>*</code>, séparés chacun par un espace.</li>
+<li>Afficher une ligne en appelant une seule fois la fonction: Pour appeler la fonction, faire suivre le nom de la fonction par des parenthèses <code>()</code>: <code>etoiles</code><!-- raw HTML omitted -->Pour afficher la ligne, faire: <code>print(etoiles())</code></li>
+<li>Appeler alors 5 fois cette fonction pour afficher l&rsquo;image suivante:</li>
+</ul>
+<pre tabindex="0"><code>* * * * * 
+* * * * * 
+* * * * * 
+* * * * * 
+* * * * * 
+</code></pre><p><em>Astuce: avez vous pensé à utiliser une boucle bornée pour répéter 5 fois l&rsquo;appel de la fonction?</em></p>
+<h2 id="fonction-avec-paramètres">Fonction avec paramètres</h2>
+<h3 id="principe">Principe</h3>
+<p>Souvent, la fonction calcule sur un ou plusieurs arguments qui lui sont passés lors de l&rsquo;appel de la fonction.</p>
+<p>Pour prévoir ceci, il faudra définir un ou plusieurs arguments lors de la constuction de la fonction.</p>
+<p>Par exemple, si l&rsquo;on souhaite améliorer la fonction <code>salut</code> et personnaliser le message:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">salut</span><span style="color:#111">(</span><span style="color:#111">nom</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;&#34;&#34;Accueillir chacun par son nom&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">return</span> <span style="color:#d88200">&#39;bonjour &#39;</span><span style="color:#f92672">+</span> <span style="color:#111">nom</span>
+</span></span></code></pre></div><blockquote>
+<p>Tester cette fonction avec les prenoms successifs de John, Paul, Ringo et George.</p>
+</blockquote>
+<p>Vous devrez afficher en console:</p>
+<pre tabindex="0"><code>bonjour John
+bonjour Paul
+bonjour Ringo
+bonjour George
+</code></pre><p><em>Attention, lors de l&rsquo;appel de la fonction, il devra y avoir autant d&rsquo;arguments que de paramètres définis (donc un seul pour ce dernier exemple).</em></p>
+<h3 id="tp-ascii-art">TP: ASCII art</h3>
+<p>On cherche à realiser des figures en à partir de caractères, comme vu dans le paragraphe precedent.</p>
+<p><strong>ex1</strong> Vous commencerez par ré-écrire la fonction <code>etoiles</code> pour que celle-ci prenne un paramètre <strong>(nb)</strong>. Ce paramètre definit le nombre d&rsquo;espaces entre les 2 symboles <code>*</code> de la ligne. La ligne n&rsquo;affiche que 2 symboles <code>*</code>. <!-- raw HTML omitted -->Par exemple, <code>etoiles(5)</code> retourne <code>*     *</code> avec 5 espaces.</p>
+<p><strong>ex2</strong> Vous appelerez ensuite cette fonction avec des arguments judicieusement choisis, afin de dessiner les figures suivantes:</p>
+<p>figure 1:</p>
+<pre tabindex="0"><code>**
+* *
+*  *
+*   *
+*    *
+</code></pre><p>figure 2:</p>
+<pre tabindex="0"><code>*    *
+*   *
+*  *
+* *
+**
+</code></pre><p>figure 3:</p>
+<pre tabindex="0"><code>**
+* *
+*  *
+*   *
+*    *
+*    *
+*   *
+*  *
+* *
+**
+</code></pre><p><em>Astuce: avez vous fait en sorte d&rsquo;utiliser au maximum des boucles bornées avec un variant de boucle?</em></p>
+<p><strong>ex3:</strong> modifier la fonction ainsi que le programme pour afficher maintenant un sapin de Noel:</p>
+<pre tabindex="0"><code>      **
+     *  *
+    *    *
+   *      *
+  *        *
+      **
+      **
+</code></pre><h1 id="fonctions-utiles-pour-calculer">Fonctions utiles pour calculer</h1>
+<h2 id="loi-de-descartes">Loi de Descartes</h2>
+<p>On propose de programmer les fonctions qui seront utiles pour aider au calcul de l&rsquo;angle de refraction <strong>r</strong> lors de la traversée d&rsquo;un rayon à la surface d&rsquo;un dioptre.</p>
+<p>L&rsquo;angle <strong>r</strong> est donné par la relation:</p>
+<p>$$n_1\times sin(i_1) = n_2\times sin(i_2)$$</p>
+<p>Où <strong>i</strong> est l&rsquo;angle d&rsquo;incidence, n<!-- raw HTML omitted -->1<!-- raw HTML omitted --> et n<!-- raw HTML omitted -->2<!-- raw HTML omitted --> sont les indices de refraction des milieux traversés.</p>
+<!-- raw HTML omitted -->
+<h2 id="fonction--degrès---radians">Fonction  degrès - radians</h2>
+<p>Python manipule les angles en radians pour les fonctions trigonometriques.</p>
+<p>Commençont par programmer la fonction qui transforme les angles de degrès en radians:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">fonc1</span><span style="color:#111">(</span><span style="color:#111">angle</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">radian</span> <span style="color:#f92672">=</span> <span style="color:#111">angle</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">3.14</span><span style="color:#f92672">/</span><span style="color:#ae81ff">180</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">radian</span>
+</span></span></code></pre></div><p>On peut alors tester la fonction:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">fonc1</span><span style="color:#111">(</span><span style="color:#ae81ff">90</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
+</span></span></code></pre></div><p>Le résultat manque de précision à cause de la valeur utilisée pour PI. Il faut alors importer le module <code>math</code> pour avoir la valeur precise de PI</p>
+<blockquote>
+<p>Importer ce module. Et afficher en console la valeur de PI:</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#111">math</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">math</span><span style="color:#f92672">.</span><span style="color:#111">pi</span>
+</span></span></code></pre></div><p>Puis modifier la fonction <code>fonc1</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">fonc1</span><span style="color:#111">(</span><span style="color:#111">angle</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">radian</span> <span style="color:#f92672">=</span> <span style="color:#111">angle</span> <span style="color:#f92672">*</span> <span style="color:#111">math</span><span style="color:#f92672">.</span><span style="color:#111">pi</span><span style="color:#f92672">/</span><span style="color:#ae81ff">180</span>
+</span></span></code></pre></div><h2 id="fonctions-sin-et-asin">Fonctions <code>sin</code> et <code>asin</code></h2>
+<p>Le module <code>math</code> apporte aussi les fonctions trigonométriques <code>sin</code> et son inverse <code>asin</code>.</p>
+<!-- raw HTML omitted -->
+<blockquote>
+<p><code>math.sin(1.57)</code></p>
+</blockquote>
+<blockquote>
+<p><code>math.sin(math.pi/2)</code></p>
+</blockquote>
+<blockquote>
+<p><code>math.asin(1)</code></p>
+</blockquote>
+<!-- raw HTML omitted -->
+<p>On cherche maintenant à écrire la fonction qui permettra de calculer l&rsquo;angle <strong>r</strong> selon la relation:</p>
+<p>$$r = asin(\tfrac{n_1\times sin(i_1)}{n_2})$$</p>
+<p>On definira une fonction appelée <code>angleRefraction</code>, qui aura pour parametres <code>i1, n1, n2</code> et qui contiendra:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">radian</span> <span style="color:#f92672">=</span> <span style="color:#111">fonc1</span><span style="color:#111">(</span><span style="color:#111">i1</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">r</span> <span style="color:#f92672">=</span> <span style="color:#111">math</span><span style="color:#f92672">.</span><span style="color:#111">asin</span><span style="color:#111">(</span><span style="color:#f92672">...</span><span style="color:#111">a</span> <span style="color:#111">completer</span><span style="color:#f92672">...</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">return</span> <span style="color:#111">r</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">180</span> <span style="color:#f92672">/</span> <span style="color:#111">math</span><span style="color:#f92672">.</span><span style="color:#111">pi</span>
+</span></span></code></pre></div><blockquote>
+<p>Tester votre fonction: avec un angle d&rsquo;incidence de 30°, des indices de refraction n<!-- raw HTML omitted -->1<!-- raw HTML omitted -->=1 et n<!-- raw HTML omitted -->2<!-- raw HTML omitted -->=1.5, on doit avoir r = 19.47°.</p>
+</blockquote>
+<h1 id="fonctions-utiles-pour-la-représentation-des-nombres-en-binaire">Fonctions utiles pour la représentation des nombres en binaire</h1>
+<h2 id="inversion-de-bits">Inversion de bits</h2>
+<p>On veut créer une fonction <code>inverse_bits</code> qui fait le complement à 1 de la chaine de bits passée en argument.</p>
+<p>La boucle bornée <code>for</code> peut aussi servir à parcourir une chaine de caractères. Le variant de boucle prend alors successivement la valeur de chacun des caractères.</p>
+<p>On utilise N comme paramètre qui devra contenir une chaine de caractères binaires (des 0 et des 1, entre guillemets, comme par ex &lsquo;11000001&rsquo;).</p>
+<p>On definit dans la fonction une variable interne <code>inverse</code>, qui stocke les bits au fur et à mesure de l&rsquo;écriture de la sequence inversée.</p>
+<p>Voici le debut de la fonction:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">inverse_bits</span><span style="color:#111">(</span><span style="color:#111">N</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">inverse</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">for</span> <span style="color:#111">bit</span> <span style="color:#f92672">in</span> <span style="color:#111">N</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">if</span> <span style="color:#111">bit</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#39;0&#39;</span><span style="color:#111">:</span>
+</span></span></code></pre></div><p><strong>ex1.</strong> Compléter cette fonction. Tester alors celle-ci pour vérifier son bon fonctionnement.</p>
+<h2 id="complément-à-2">Complément à 2</h2>
+<p><strong>ex2.</strong> Programmer la fonction qui réalise le complément à 2 d&rsquo;un nombre entier signé. Tester alors cette fonction à partir des résultats donnés pour quelques entiers signés à partir du site <a href="http://www.binaryconvert.com/index.html">http://www.binaryconvert.com</a></p>
+<h1 id="mini-projet-jeu-du-shifumi">Mini projet: jeu du shifumi</h1>
+<h2 id="version-de-niveau-intermediaire">version de niveau intermediaire</h2>
+<p>Créer en console un jeu du Shifumi (Pierre-Feuille-Ciseaux)</p>
+<ul>
+<li>Le jeu questionne le joueur pour connaitre son choix (<code>input en console</code>)</li>
+<li>le joueur rentre une valeur de 0 à 2 selon son choix</li>
+<li>l&rsquo;ordinateur tire au hasard une valeur entre 0 et 2</li>
+<li>Le programme evalue lequel des deux, joueur ou ordinateur remporte la manche.</li>
+</ul>
+<p>On pourra ajouter un compteur et permettre au joueur de jouer plusieurs parties d&rsquo;affilée.</p>
+<ul>
+<li>Au fur et à mesure de votre avancée dans le projet, vous devrez tenir à jour un fichier <code>readme.txt</code> expliquant les tâches effectuées.</li>
+</ul>
+<h2 id="version-du-projet-difficile">version du projet difficile</h2>
+<ul>
+<li>
+<p>Telecharger le dossier à l&rsquo;adresse: <a href="/scripts/TP3_fonctions_shifumi.zip">/scripts/TP3_fonctions_shifumi.zip</a></p>
+</li>
+<li>
+<p>Completer le script du fichier <code>shifumi_gameplay.py</code> afin de proposer un jeu complet contre l&rsquo;ordinateur, avec affichage du score.</p>
+</li>
+<li>
+<p>Remarquer que la sequence Pierre-Feuille-Ciseaux-Pierre suit un ordre que l&rsquo;on peut modéliser à l&rsquo;aide de la fonction modulo (<code>//</code>).</p>
+</li>
+<li>
+<p>Au fur et à mesure de votre avancée dans le projet, vous devrez tenir à jour un fichier <code>readme.txt</code> expliquant les tâches effectuées.</p>
+</li>
+</ul>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#généralités">Généralités</a>
+      <ul>
+        <li><a href="#fonctions-natives-du-langage">fonctions natives du langage</a></li>
+        <li><a href="#fonctions-programmées">fonctions programmées</a></li>
+        <li><a href="#return">Return</a></li>
+      </ul>
+    </li>
+    <li><a href="#travaux-pratiques-fonction-sans-paramètre">Travaux pratiques: fonction sans paramètre</a></li>
+    <li><a href="#fonction-avec-paramètres">Fonction avec paramètres</a>
+      <ul>
+        <li><a href="#principe">Principe</a></li>
+        <li><a href="#tp-ascii-art">TP: ASCII art</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#loi-de-descartes">Loi de Descartes</a></li>
+    <li><a href="#fonction--degrès---radians">Fonction  degrès - radians</a></li>
+    <li><a href="#fonctions-sin-et-asin">Fonctions <code>sin</code> et <code>asin</code></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#inversion-de-bits">Inversion de bits</a></li>
+    <li><a href="#complément-à-2">Complément à 2</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#version-de-niveau-intermediaire">version de niveau intermediaire</a></li>
+    <li><a href="#version-du-projet-difficile">version du projet difficile</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

@@ -1,55 +1,547 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>méthodes et types
-| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel=stylesheet><script type=text/x-mathjax-config>
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    méthodes et types
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
   });
-</script><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.1c02dc1d2c0b546a84beb71d8f4336d6f5d7b69564e08bdfc04c2fb0595d786d.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
 catch(err)
-{console.log(err.message);}
-if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
-if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
-if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}
-let chemin=window.location.pathname;if(chemin.search('NSI')>-1){baniere=document.querySelector("#myHeader");let linkBox=document.createElement('div');linkBox.classList.add('linkBox');let newH=document.createElement('a');newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';newH.classList.add('nsi');linkBox.appendChild(newH);baniere.appendChild(linkBox);}</script><style>#myHeader{display:flex;flex-direction:row-reverse}#myHeader>.titre{width:80%;min-width:300px;text-align:left}.linkBox{margin:10px;padding-top:10px;background-color:pink;min-width:50px}.isn{}</style></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2f docs\2fpython\2fpages\2fvariables\2fpage2\2f ]{color:#004ed0}</style><ul><li><a href=/><strong>Accueil</strong></a></li><li><a href=/docs/esf/esf_index/><strong>ESF</strong></a></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p></li><li><p><a href=/docs/python/index_python/><strong>Python</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
-addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-page><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
-<strong>méthodes et types</strong></header><article class=markdown><h1 id=méthodes-de-chaines>méthodes de chaines</h1><p>Pour modifier la casse d&rsquo;une chaine, utiliser les méthodes <code>title()</code> (titre), <code>upper()</code> (mise en majuscule), <code>lower()</code> (minuscule).</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>nom</span> <span style=color:#f92672>=</span> <span style=color:#d88200>&#39;charles babbage&#39;</span>
-<span style=color:#111>nom</span><span style=color:#f92672>.</span><span style=color:#111>title</span><span style=color:#111>()</span>
-<span style=color:#75715e># affiche Charles Babbage</span>
-<span style=color:#111>nom</span><span style=color:#f92672>.</span><span style=color:#111>upper</span><span style=color:#111>()</span>
-<span style=color:#75715e># affiche CHARLES BABBAGE</span></code></pre></div><p>Les méthodes <code>lstrip()</code> (à gauche), <code>rstrip()</code> (droite), et <code>strip()</code> (à droite et à gauche) suppriment les espaces en trop dans les chaines.</p><blockquote><p>à tester vous-même :</p></blockquote><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>nom</span> <span style=color:#f92672>=</span> <span style=color:#d88200>&#39;charles babbage&#39;</span>
-<span style=color:#111>nom</span><span style=color:#f92672>.</span><span style=color:#111>strip</span><span style=color:#111>()</span></code></pre></div><h1 id=méthodes-de-listes>méthodes de listes</h1><p>Les listes sont présentées à la page <a href=/docs/python/pages/variables/page1/#séquences-les-listes-et-les-tuples>variables</a></p><h2 id=append>append</h2><p><strong>append(element)</strong> ajoute un élément en fin de liste</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>aeroports</span> <span style=color:#f92672>=</span> <span style=color:#111>[</span><span style=color:#d88200>&#39;CDG&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;ORY&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;LIS&#39;</span><span style=color:#111>]</span>
-<span style=color:#111>aeroports</span><span style=color:#f92672>.</span><span style=color:#111>append</span><span style=color:#111>(</span><span style=color:#d88200>&#39;NY&#39;</span><span style=color:#111>)</span>
-<span style=color:#111>aeroports</span>
-<span style=color:#75715e># affiche [&#39;CDG&#39;,&#39;ORY&#39;,&#39;LIS&#39;,&#39;NY&#39;]</span></code></pre></div><h2 id=pop>pop</h2><p><strong>pop()</strong> supprime le dernier élément et renvoie sa valeur.</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>aeroports</span> <span style=color:#f92672>=</span> <span style=color:#111>[</span><span style=color:#d88200>&#39;CDG&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;ORY&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;LIS&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;NY&#39;</span><span style=color:#111>]</span>
-<span style=color:#111>aeroports</span><span style=color:#f92672>.</span><span style=color:#111>pop</span><span style=color:#111>()</span>
-<span style=color:#75715e># affiche &#39;NY&#39;</span>
-<span style=color:#111>aeroports</span>
-<span style=color:#75715e># affiche [&#39;CDG&#39;,&#39;ORY&#39;,&#39;LIS&#39;]</span></code></pre></div><h2 id=remove-et-del>remove et del</h2><p><strong>remove(element)</strong> supprime un élément d&rsquo;une liste. Si l&rsquo;élément apparait plusieurs fois dans la liste, seule la premiere occurence est supprimée.</p><p><strong>del liste[indice]</strong> supprime l&rsquo;élément de la liste à partir de son indice.</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>aeroports</span> <span style=color:#f92672>=</span> <span style=color:#111>[</span><span style=color:#d88200>&#39;CDG&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;ORY&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;LIS&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;NY&#39;</span><span style=color:#111>]</span>
-<span style=color:#111>aeroports</span><span style=color:#f92672>.</span><span style=color:#111>remove</span><span style=color:#111>(</span><span style=color:#d88200>&#39;LIS&#39;</span><span style=color:#111>)</span>
-<span style=color:#111>aeroports</span>
-<span style=color:#75715e># affiche [&#39;CDG&#39;,&#39;ORY&#39;,&#39;NY&#39;]</span>
-<span style=color:#00a8c8>del</span> <span style=color:#111>aeroports</span><span style=color:#111>[</span><span style=color:#ae81ff>0</span><span style=color:#111>]</span>
-<span style=color:#111>aeroports</span>
-<span style=color:#75715e># affiche [&#39;ORY&#39;,&#39;NY&#39;]</span></code></pre></div><h2 id=découpe-d-une-liste>découpe d&rsquo;une liste</h2><p>une <em>découpe</em> est une partie de liste, spécifiée à partir des indices :</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>etats</span> <span style=color:#f92672>=</span> <span style=color:#111>[</span><span style=color:#d88200>&#39;CH&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;GB&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;NL&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;PL&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;RO&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;SK&#39;</span><span style=color:#111>]</span>
-<span style=color:#111>etats</span><span style=color:#111>[</span><span style=color:#ae81ff>2</span><span style=color:#111>:</span><span style=color:#ae81ff>4</span><span style=color:#111>]</span>
-<span style=color:#75715e># affiche [&#39;NL&#39;,&#39;PL&#39;]</span>
-<span style=color:#111>etats</span><span style=color:#111>[:</span><span style=color:#ae81ff>2</span><span style=color:#111>]</span> <span style=color:#75715e># sans specifier le premier indice</span>
-<span style=color:#75715e># affiche [&#39;CH&#39;,&#39;GB&#39;] # commence au debut</span>
-<span style=color:#111>etats</span><span style=color:#111>[</span><span style=color:#ae81ff>3</span><span style=color:#111>:]</span> <span style=color:#75715e># sans specifier l&#39;indice de fin</span>
-<span style=color:#75715e># affiche [&#39;PL&#39;,&#39;RO&#39;,&#39;SK&#39;] # jusqu&#39;à la fin</span></code></pre></div><h2 id=copie-d-une-liste>copie d&rsquo;une liste</h2><p>Une <em>copie</em> d&rsquo;une liste permet d&rsquo;utiliser le contenu de la liste copiée sans affecter la liste d&rsquo;origine (voir <a href=../page3/>TP sur les variables</a>). C&rsquo;est une copie par <em>valeurs</em>.</p><p>Pour copier une liste, on peut : la découper sans mentionner les 2 indices, ou bien utiliser la fonction <code>list</code> :</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>etats</span> <span style=color:#f92672>=</span> <span style=color:#111>[</span><span style=color:#d88200>&#39;CH&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;GB&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;NL&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;PL&#39;</span><span style=color:#111>]</span>
-<span style=color:#111>mes_etats</span> <span style=color:#f92672>=</span> <span style=color:#111>etats</span><span style=color:#111>[:]</span> <span style=color:#75715e># liste copiée par valeur dans mes_etats</span>
-<span style=color:#111>mes_etats</span> <span style=color:#f92672>=</span> <span style=color:#111>list</span><span style=color:#111>(</span><span style=color:#111>etats</span><span style=color:#111>)</span></code></pre></div><p>On peut alors vérifier qu&rsquo;il s&rsquo;agit maintenant d&rsquo;une copie par valeurs :</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>mes_etats</span><span style=color:#f92672>.</span><span style=color:#111>append</span><span style=color:#111>(</span><span style=color:#d88200>&#39;DK&#39;</span><span style=color:#111>)</span>
-<span style=color:#111>mes_etats</span>
-<span style=color:#75715e># affiche [&#39;CH&#39;,&#39;GB&#39;,&#39;NL&#39;,&#39;PL&#39;,&#39;DK&#39;]</span>
-<span style=color:#111>etats</span>
-<span style=color:#75715e># affiche [&#39;CH&#39;,&#39;GB&#39;,&#39;NL&#39;,&#39;PL&#39;]</span></code></pre></div><p>Sans cette <em>astuce</em>, la copie se ferait par référence (Liste = mutable)</p><h2 id=trier-une-liste>Trier une liste</h2><p>Il y a 2 fonctions de tri :</p><p><strong>sorted</strong> renvoie une copie de la liste triée dans l&rsquo;ordre naturel (alphanumerique)</p><p><strong>sort</strong> permet de trier la liste en place.</p><h1 id=méthodes-de-dictionnaires>méthodes de dictionnaires</h1><p>Les dictionnaires sont présentés à la page sur les <a href=/docs/python/pages/variables/page1/#mappages-les-dictionnaires>variables</a></p><h2 id=keys>keys</h2><p>méthode qui permet d&rsquo;accéder aux clés d&rsquo;un dictionnaire (retourne une liste de clés) :</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>capitales</span> <span style=color:#f92672>=</span> <span style=color:#111>{</span><span style=color:#d88200>&#39;France&#39;</span><span style=color:#111>:</span><span style=color:#d88200>&#39;Paris&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;Italie&#39;</span><span style=color:#111>:</span><span style=color:#d88200>&#39;Rome&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;Allemagne&#39;</span><span style=color:#111>:</span><span style=color:#d88200>&#39;Berlin&#39;</span><span style=color:#111>}</span>
-<span style=color:#111>capitales</span><span style=color:#f92672>.</span><span style=color:#111>keys</span><span style=color:#111>()</span>
-<span style=color:#75715e># affiche dict_keys([&#39;France&#39;, &#39;Italie&#39;, &#39;Allemagne&#39;])</span></code></pre></div><h2 id=values>values</h2><p>méthode pour accéder aux valeurs d&rsquo;un dictionnaire (retourne une liste de valeurs):</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>capitales</span> <span style=color:#f92672>=</span> <span style=color:#111>{</span><span style=color:#d88200>&#39;France&#39;</span><span style=color:#111>:</span><span style=color:#d88200>&#39;Paris&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;Italie&#39;</span><span style=color:#111>:</span><span style=color:#d88200>&#39;Rome&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;Allemagne&#39;</span><span style=color:#111>:</span><span style=color:#d88200>&#39;Berlin&#39;</span><span style=color:#111>}</span>
-<span style=color:#111>capitales</span><span style=color:#f92672>.</span><span style=color:#111>values</span><span style=color:#111>()</span>
-<span style=color:#75715e># affiche dict_values([&#39;Paris&#39;, &#39;Rome&#39;, &#39;Berlin&#39;])</span></code></pre></div><h2 id=items>items</h2><p>méthode pour accéder aux paires clé-valeurs d&rsquo;un dictionnaire (retourne une liste de tuples):</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>capitales</span> <span style=color:#f92672>=</span> <span style=color:#111>{</span><span style=color:#d88200>&#39;France&#39;</span><span style=color:#111>:</span><span style=color:#d88200>&#39;Paris&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;Italie&#39;</span><span style=color:#111>:</span><span style=color:#d88200>&#39;Rome&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;Allemagne&#39;</span><span style=color:#111>:</span><span style=color:#d88200>&#39;Berlin&#39;</span><span style=color:#111>}</span>
-<span style=color:#111>capitales</span><span style=color:#f92672>.</span><span style=color:#111>items</span><span style=color:#111>()</span>
-<span style=color:#75715e># affiche dict_items([(&#39;France&#39;, &#39;Paris&#39;), (&#39;Italie&#39;, &#39;Rome&#39;), (&#39;Allemagne&#39;, &#39;Berlin&#39;)])</span></code></pre></div><h2 id=copier-un-dictionnaire>copier un dictionnaire</h2><p>On peut utiliser la fonction <code>dict</code> pour faire une copie par <em>valeur</em> d&rsquo;un dictionnaire :</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>mes_capitales</span> <span style=color:#f92672>=</span> <span style=color:#111>dict</span><span style=color:#111>(</span><span style=color:#111>capitales</span><span style=color:#111>)</span></code></pre></div><p>Sans cette <em>astuce</em>, la copie se ferait par référence (Dictionnaire = mutable)</p><p><input type=button class="btn btn-lg" value="Retour à la page : Variables" onclick="window.location.href='../page1/'"></p><h1 id=flash-cards>Flash cards</h1><p>Lien : <a href=../ex1/>flash-card sur les variables</a></p></article><div style=height:100px></div></div><aside class="book-toc fixed"><nav id=TableOfContents><ul><li><a href=#méthodes-de-chaines>méthodes de chaines</a></li><li><a href=#méthodes-de-listes>méthodes de listes</a><ul><li><a href=#append>append</a></li><li><a href=#pop>pop</a></li><li><a href=#remove-et-del>remove et del</a></li><li><a href=#découpe-d-une-liste>découpe d&rsquo;une liste</a></li><li><a href=#copie-d-une-liste>copie d&rsquo;une liste</a></li><li><a href=#trier-une-liste>Trier une liste</a></li></ul></li><li><a href=#méthodes-de-dictionnaires>méthodes de dictionnaires</a><ul><li><a href=#keys>keys</a></li><li><a href=#values>values</a></li><li><a href=#items>items</a></li><li><a href=#copier-un-dictionnaire>copier un dictionnaire</a></li></ul></li><li><a href=#flash-cards>Flash cards</a></li></ul></nav></aside></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
-<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fpython\2fpages\2fvariables\2fpage2\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    méthodes et types
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="editeur-python">Editeur Python</h1>
+<ul>
+<li>L&rsquo;<strong>editeur</strong> suivant se présente comme un <strong>notebook</strong>. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur <em>Majuscule(Shift)</em> + <em>Entrée</em> pour <strong>executer le code</strong>.</li>
+</ul>
+<!-- raw HTML omitted -->
+<h1 id="méthodes-de-chaines">méthodes de chaines</h1>
+<p>Les chaines sont des objets qui possèdent leurs méthodes. il est difficile de se souvenir de toutes les méthodes travaillant sur les chaînes de caractères. Aussi il est toujours utile de recourir à la documentation embarquée</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">help</span><span style="color:#111">(</span><span style="color:#111">str</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>Ce qui donne:</p>
+<pre tabindex="0"><code>Help on class str in module builtins:
+
+class str(object)
+ |  str(object=&#39;&#39;) -&gt; str
+ |  str(bytes_or_buffer[, encoding[, errors]]) -&gt; str
+ |  
+ |  Methods defined here:
+ | ...
+ |  format(...)
+ |      S.format(*args, **kwargs) -&gt; str
+ |      
+ |      Return a formatted version of S, using substitutions from args and kwargs.
+ |      The substitutions are identified by braces (&#39;{&#39; and &#39;}&#39;).
+ |  ...
+ |  join(self, iterable, /)
+ |      Concatenate any number of strings.
+ |      
+ |      The string whose method is called is inserted in between each given string.
+ |      The result is returned as a new string.
+ |      
+ |      Example: &#39;.&#39;.join([&#39;ab&#39;, &#39;pq&#39;, &#39;rs&#39;]) -&gt; &#39;ab.pq.rs&#39;
+ | ...
+</code></pre><h3 id="découpage---assemblage-split-et-join">Découpage - assemblage : <code>split</code> et <code>join</code></h3>
+<p>Les méthodes <code>split</code> et <code>join</code> permettent de découper une chaîne selon un séparateur pour obtenir une liste, et à l&rsquo;inverse de reconstruire une chaîne à partir d&rsquo;une liste.</p>
+<p><code>split</code> permet donc de découper :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#d88200">&#39;abc=:=def=:=ghi=:=jkl&#39;</span><span style="color:#f92672">.</span><span style="color:#111">split</span><span style="color:#111">(</span><span style="color:#d88200">&#39;=:=&#39;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche [&#39;abc&#39;, &#39;def&#39;, &#39;ghi&#39;, &#39;jkl&#39;]</span>
+</span></span></code></pre></div><p>Et à l&rsquo;inverse :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#d88200">&#34;=:=&#34;</span><span style="color:#f92672">.</span><span style="color:#111">join</span><span style="color:#111">([</span><span style="color:#d88200">&#39;abc&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;def&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;ghi&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;jkl&#39;</span><span style="color:#111">])</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche abc=:=def=:=ghi=:=jkl</span>
+</span></span></code></pre></div><p><em>Remarque:</em> Si le séparateur est un terminateur, comme par exemple &lsquo;;&rsquo;, ou<code>&quot;\n&quot;</code>, il conviendra d&rsquo;utiliser d&rsquo;abord la méthode <code>strip</code>. Voir <em><a href="http://localhost:1313/docs/python/pages/variables/page2/#compl%C3%A9ments-sur-les-strings">compléments</a></em> en bas de page.</p>
+<h3 id="remplacement-replace">Remplacement : <code>replace</code></h3>
+<p><code>replace</code> est très pratique pour remplacer une sous-chaîne par une autre, avec une limite éventuelle sur le nombre de remplacements :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#d88200">&#34;abcdefabcdefabcdef&#34;</span><span style="color:#f92672">.</span><span style="color:#111">replace</span><span style="color:#111">(</span><span style="color:#d88200">&#34;abc&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;zoo&#34;</span><span style="color:#111">)</span>
+</span></span></code></pre></div><h3 id="modifier-la-casse-dune-chaine">modifier la casse d&rsquo;une chaine</h3>
+<p>utiliser les méthodes <code>title()</code> (titre), <code>upper()</code> (mise en majuscule), <code>lower()</code> (minuscule).</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">nom</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;charles babbage&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">nom</span><span style="color:#f92672">.</span><span style="color:#111">title</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche Charles Babbage</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">nom</span><span style="color:#f92672">.</span><span style="color:#111">upper</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche CHARLES BABBAGE</span>
+</span></span></code></pre></div><p>Les méthodes <code>lstrip()</code> (à gauche), <code>rstrip()</code> (droite), et <code>strip()</code> (à droite et à gauche) suppriment les espaces en trop dans les chaines.</p>
+<blockquote>
+<p>à tester vous-même :</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">nom</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;charles babbage&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">nom</span><span style="color:#f92672">.</span><span style="color:#111">strip</span><span style="color:#111">()</span>
+</span></span></code></pre></div><h1 id="méthodes-de-listes">méthodes de listes</h1>
+<p>Les listes sont présentées à la page <a href="/docs/python/pages/variables/page1/#s%C3%A9quences-les-listes-et-les-tuples">variables</a></p>
+<p>Pour commencer, rappelons comment retrouver la liste des méthodes définies sur le type list :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">help</span><span style="color:#111">(</span><span style="color:#111">list</span><span style="color:#111">)</span>
+</span></span></code></pre></div><h2 id="append">append</h2>
+<p><strong>append(element)</strong> ajoute un élément en fin de liste</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">aeroports</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#d88200">&#39;CDG&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;ORY&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;LIS&#39;</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">aeroports</span><span style="color:#f92672">.</span><span style="color:#111">append</span><span style="color:#111">(</span><span style="color:#d88200">&#39;NY&#39;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">aeroports</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche [&#39;CDG&#39;,&#39;ORY&#39;,&#39;LIS&#39;,&#39;NY&#39;]</span>
+</span></span></code></pre></div><h2 id="pop">pop</h2>
+<p><strong>pop()</strong> supprime le dernier élément et renvoie sa valeur.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">aeroports</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#d88200">&#39;CDG&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;ORY&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;LIS&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;NY&#39;</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">aeroports</span><span style="color:#f92672">.</span><span style="color:#111">pop</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche &#39;NY&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">aeroports</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche [&#39;CDG&#39;,&#39;ORY&#39;,&#39;LIS&#39;]</span>
+</span></span></code></pre></div><h2 id="index">index</h2>
+<p><strong>index(element)</strong> retourne la position (index) de cet élément dans la liste (ou du moins la première occurence s&rsquo;il y en a plusieurs).</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">aeroports</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#d88200">&#39;CDG&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;ORY&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;LIS&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;NY&#39;</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">aeroports</span><span style="color:#f92672">.</span><span style="color:#111">index</span><span style="color:#111">(</span><span style="color:#d88200">&#39;ORY&#39;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># retourne 1</span>
+</span></span></code></pre></div><h2 id="insert">insert</h2>
+<p><strong>insert(index, element)</strong> insère l&rsquo;élément à l&rsquo;index précisé.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">aeroports</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#d88200">&#39;CDG&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;ORY&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;LIS&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;NY&#39;</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">aeroports</span><span style="color:#f92672">.</span><span style="color:#111">insert</span><span style="color:#111">(</span><span style="color:#ae81ff">2</span><span style="color:#111">,</span><span style="color:#d88200">&#39;LCY&#39;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># la liste aeroport est alors</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># [&#39;CDG&#39;,&#39;ORY&#39;, &#39;LCY&#39;, LIS&#39;,&#39;NY&#39;]</span>
+</span></span></code></pre></div><h2 id="remove-et-del">remove et del</h2>
+<p><strong>remove(element)</strong> supprime un élément d&rsquo;une liste. Si l&rsquo;élément apparait plusieurs fois dans la liste, seule la premiere occurence est supprimée.</p>
+<p><strong>del liste[indice]</strong> supprime l&rsquo;élément de la liste à partir de son indice.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">aeroports</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#d88200">&#39;CDG&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;ORY&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;LIS&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;NY&#39;</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">aeroports</span><span style="color:#f92672">.</span><span style="color:#111">remove</span><span style="color:#111">(</span><span style="color:#d88200">&#39;LIS&#39;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">aeroports</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche [&#39;CDG&#39;,&#39;ORY&#39;,&#39;NY&#39;]</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">del</span> <span style="color:#111">aeroports</span><span style="color:#111">[</span><span style="color:#ae81ff">0</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">aeroports</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche [&#39;ORY&#39;,&#39;NY&#39;]</span>
+</span></span></code></pre></div><h2 id="découpe-dune-liste">découpe d&rsquo;une liste</h2>
+<p>une <em>découpe</em> est une partie de liste, spécifiée à partir des indices :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">etats</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#d88200">&#39;CH&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;GB&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;NL&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;PL&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;RO&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;SK&#39;</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">etats</span><span style="color:#111">[</span><span style="color:#ae81ff">2</span><span style="color:#111">:</span><span style="color:#ae81ff">4</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche [&#39;NL&#39;,&#39;PL&#39;]</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">etats</span><span style="color:#111">[:</span><span style="color:#ae81ff">2</span><span style="color:#111">]</span> <span style="color:#75715e"># sans specifier le premier indice</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche [&#39;CH&#39;,&#39;GB&#39;] # commence au debut</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">etats</span><span style="color:#111">[</span><span style="color:#ae81ff">3</span><span style="color:#111">:]</span> <span style="color:#75715e"># sans specifier l&#39;indice de fin</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche [&#39;PL&#39;,&#39;RO&#39;,&#39;SK&#39;] # jusqu&#39;à la fin</span>
+</span></span></code></pre></div><h2 id="copie-dune-liste">copie d&rsquo;une liste</h2>
+<p>Une <em>copie</em> d&rsquo;une liste permet d&rsquo;utiliser le contenu de la liste copiée sans affecter la liste d&rsquo;origine (voir <a href="../page3/">TP sur les variables</a>). C&rsquo;est une copie par <em>valeurs</em>.</p>
+<p>Pour copier une liste, on peut : la découper sans mentionner les 2 indices, ou bien utiliser la fonction <code>list</code> :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">etats</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#d88200">&#39;CH&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;GB&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;NL&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;PL&#39;</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">mes_etats</span> <span style="color:#f92672">=</span> <span style="color:#111">etats</span><span style="color:#111">[:]</span> <span style="color:#75715e"># liste copiée par valeur dans mes_etats</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">mes_etats</span> <span style="color:#f92672">=</span> <span style="color:#111">list</span><span style="color:#111">(</span><span style="color:#111">etats</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>On peut alors vérifier qu&rsquo;il s&rsquo;agit maintenant d&rsquo;une copie par valeurs :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">mes_etats</span><span style="color:#f92672">.</span><span style="color:#111">append</span><span style="color:#111">(</span><span style="color:#d88200">&#39;DK&#39;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">mes_etats</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche [&#39;CH&#39;,&#39;GB&#39;,&#39;NL&#39;,&#39;PL&#39;,&#39;DK&#39;]</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">etats</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche [&#39;CH&#39;,&#39;GB&#39;,&#39;NL&#39;,&#39;PL&#39;]</span>
+</span></span></code></pre></div><p>Sans cette <em>astuce</em>, la copie se ferait par référence (Liste = mutable)</p>
+<h2 id="trier-une-liste">Trier une liste</h2>
+<p>Il y a 2 fonctions de tri :</p>
+<ul>
+<li>La fonction <strong>sorted</strong> renvoie une copie de la liste triée dans l&rsquo;ordre naturel (alphanumerique) sans modifier la liste d&rsquo;origine.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">L</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#ae81ff">9</span><span style="color:#111">,</span> <span style="color:#ae81ff">5</span><span style="color:#111">,</span> <span style="color:#ae81ff">1</span><span style="color:#111">,</span> <span style="color:#ae81ff">3</span><span style="color:#111">,</span> <span style="color:#ae81ff">4</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">sorted</span><span style="color:#111">(</span><span style="color:#111">L</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche [1, 3, 4, 5, 9]</span>
+</span></span></code></pre></div><p>Puis:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">L</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche [9, 5, 1, 3, 4]</span>
+</span></span></code></pre></div><ul>
+<li>La méthode <strong>sort</strong> permet de trier la liste en place.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">L</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#ae81ff">9</span><span style="color:#111">,</span> <span style="color:#ae81ff">5</span><span style="color:#111">,</span> <span style="color:#ae81ff">1</span><span style="color:#111">,</span> <span style="color:#ae81ff">3</span><span style="color:#111">,</span> <span style="color:#ae81ff">4</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">L</span><span style="color:#f92672">.</span><span style="color:#111">sort</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># L est transformee en</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># [1, 3, 4, 5, 9]</span>
+</span></span></code></pre></div><h2 id="choix-dun-élément-aléatoire-dans-une-liste">Choix d&rsquo;un élément aléatoire dans une liste.</h2>
+<p>Il faut importer la fonction <code>choice</code> de la librairie <code>random</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> <span style="color:#111">random</span> <span style="color:#f92672">import</span> <span style="color:#111">choice</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">L</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span> <span style="color:#ae81ff">10</span><span style="color:#111">,</span> <span style="color:#ae81ff">100</span><span style="color:#111">,</span> <span style="color:#ae81ff">1000</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">choice</span><span style="color:#111">(</span><span style="color:#111">L</span><span style="color:#111">))</span>
+</span></span></code></pre></div><p>Affiche un élément au hasard: 1, 10, 100 ou 1000.</p>
+<h1 id="méthodes-de-dictionnaires">méthodes de dictionnaires</h1>
+<p>Les dictionnaires sont présentés à la page sur les <a href="/docs/python/pages/variables/page1/#mappages-les-dictionnaires">variables</a></p>
+<h2 id="keys">keys</h2>
+<p>méthode qui permet d&rsquo;accéder aux clés d&rsquo;un dictionnaire (retourne une liste de clés) :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">capitales</span> <span style="color:#f92672">=</span> <span style="color:#111">{</span><span style="color:#d88200">&#39;France&#39;</span><span style="color:#111">:</span><span style="color:#d88200">&#39;Paris&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;Italie&#39;</span><span style="color:#111">:</span><span style="color:#d88200">&#39;Rome&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;Allemagne&#39;</span><span style="color:#111">:</span><span style="color:#d88200">&#39;Berlin&#39;</span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">capitales</span><span style="color:#f92672">.</span><span style="color:#111">keys</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche dict_keys([&#39;France&#39;, &#39;Italie&#39;, &#39;Allemagne&#39;])</span>
+</span></span></code></pre></div><h2 id="values">values</h2>
+<p>méthode pour accéder aux valeurs d&rsquo;un dictionnaire (retourne une liste de valeurs):</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">capitales</span> <span style="color:#f92672">=</span> <span style="color:#111">{</span><span style="color:#d88200">&#39;France&#39;</span><span style="color:#111">:</span><span style="color:#d88200">&#39;Paris&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;Italie&#39;</span><span style="color:#111">:</span><span style="color:#d88200">&#39;Rome&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;Allemagne&#39;</span><span style="color:#111">:</span><span style="color:#d88200">&#39;Berlin&#39;</span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">capitales</span><span style="color:#f92672">.</span><span style="color:#111">values</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche dict_values([&#39;Paris&#39;, &#39;Rome&#39;, &#39;Berlin&#39;])</span>
+</span></span></code></pre></div><h2 id="items">items</h2>
+<p>méthode pour accéder aux paires clé-valeurs d&rsquo;un dictionnaire (retourne une liste de tuples):</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">capitales</span> <span style="color:#f92672">=</span> <span style="color:#111">{</span><span style="color:#d88200">&#39;France&#39;</span><span style="color:#111">:</span><span style="color:#d88200">&#39;Paris&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;Italie&#39;</span><span style="color:#111">:</span><span style="color:#d88200">&#39;Rome&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;Allemagne&#39;</span><span style="color:#111">:</span><span style="color:#d88200">&#39;Berlin&#39;</span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">capitales</span><span style="color:#f92672">.</span><span style="color:#111">items</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche dict_items([(&#39;France&#39;, &#39;Paris&#39;), (&#39;Italie&#39;, &#39;Rome&#39;), (&#39;Allemagne&#39;, &#39;Berlin&#39;)])</span>
+</span></span></code></pre></div><h2 id="copier-un-dictionnaire">copier un dictionnaire</h2>
+<p>On peut utiliser la fonction <code>dict</code> pour faire une copie par <em>valeur</em> d&rsquo;un dictionnaire :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">mes_capitales</span> <span style="color:#f92672">=</span> <span style="color:#111">dict</span><span style="color:#111">(</span><span style="color:#111">capitales</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>Sans cette <em>astuce</em>, la copie se ferait par référence (Dictionnaire = mutable)</p>
+<!-- raw HTML omitted -->
+<h1 id="compléments-sur-les-strings">Compléments sur les strings</h1>
+<p>Si le séparateur est un terminateur, comme par exemple &lsquo;;&rsquo;, ou<code>\n</code>, la liste résultat contient alors une dernière chaîne vide. En pratique, on utilisera la méthode <code>strip</code>, que nous allons voir ci-dessous, avant la méthode <code>split</code> pour éviter ce problème.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#d88200">&#34;abc;def;ghi;jkl;&#34;</span><span style="color:#f92672">.</span><span style="color:#111">split</span><span style="color:#111">(</span><span style="color:#d88200">&#39;;&#39;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche [&#39;abc&#39;, &#39;def&#39;, &#39;ghi&#39;, &#39;jkl&#39;, &#39;&#39;]</span>
+</span></span></code></pre></div><p>alors que</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#d88200">&#34;abc;def;ghi;jkl;&#34;</span><span style="color:#f92672">.</span><span style="color:#111">strip</span><span style="color:#111">(</span><span style="color:#d88200">&#39;;&#39;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche abc;def;ghi;jkl</span>
+</span></span></code></pre></div><h1 id="flash-cards">Flash cards</h1>
+<p>Lien :</p>
+<ul>
+<li>Lien vers les <a href="../ex1">Flash cards</a> sur les variables et séquences C22</li>
+<li>Lien vers les <a href="../ex3">Flash cards</a> sur les séquences et boucles C32</li>
+</ul>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#découpage---assemblage-split-et-join">Découpage - assemblage : <code>split</code> et <code>join</code></a></li>
+        <li><a href="#remplacement-replace">Remplacement : <code>replace</code></a></li>
+        <li><a href="#modifier-la-casse-dune-chaine">modifier la casse d&rsquo;une chaine</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#append">append</a></li>
+    <li><a href="#pop">pop</a></li>
+    <li><a href="#index">index</a></li>
+    <li><a href="#insert">insert</a></li>
+    <li><a href="#remove-et-del">remove et del</a></li>
+    <li><a href="#découpe-dune-liste">découpe d&rsquo;une liste</a></li>
+    <li><a href="#copie-dune-liste">copie d&rsquo;une liste</a></li>
+    <li><a href="#trier-une-liste">Trier une liste</a></li>
+    <li><a href="#choix-dun-élément-aléatoire-dans-une-liste">Choix d&rsquo;un élément aléatoire dans une liste.</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#keys">keys</a></li>
+    <li><a href="#values">values</a></li>
+    <li><a href="#items">items</a></li>
+    <li><a href="#copier-un-dictionnaire">copier un dictionnaire</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

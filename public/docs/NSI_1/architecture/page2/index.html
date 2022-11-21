@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    architecture 2
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI_1\2f architecture\2fpage2\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    architecture 2
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="architecture-2">architecture 2</h1>
+<h2 id="rappels">Rappels</h2>
+<p>Dans l&rsquo;architecture Von Neumann:</p>
+<ul>
+<li>une machine universelle est contrôlée par un programme.</li>
+<li>Les données et programmes sont écrits sur une même mémoire (en binaire). Ce qui donne la possibilité de changer les instructions au cours d&rsquo;un calcul par exemple. C&rsquo;est le concept de <strong>programme enregistré</strong>. C&rsquo;est un ordinateur qui enregistre les instructions des programmes qu&rsquo;il exécute dans sa mémoire vive.</li>
+<li>Les instructions sont executée de manière séquentielle, par un <strong>processeur</strong>.</li>
+<li>Les mémoires RAM et mémoires non volatiles (Disques durs, mémoires flash) sont reliées au processeur (donc aux registres du processeur) par une liaison appelée Bus, que l&rsquo;on peut considérer comme unique.</li>
+</ul>
+<h1 id="description-dun-ordinateur">Description d&rsquo;un ordinateur</h1>
+<!-- raw HTML omitted -->
+<h2 id="echelle-macro-périphériques">Echelle macro: périphériques</h2>
+<p>Un ordinateur comprend des périphériques d&rsquo;entrée et sortie:</p>
+<ul>
+<li>écran, haut-parleur, souris, clavier&hellip;</li>
+</ul>
+<h2 id="echelle-intermédiaire">Echelle intermédiaire</h2>
+<p>A une echelle plus proche du processeur: Un ordinateur a une carte mère sur laquelle on trouve différents ports et supports de cartes:</p>
+<ul>
+<li>port de branchement des mémoires, disques durs, port RJ45 (reseau), carte wifi, carte son, carte graphique, &hellip;</li>
+</ul>
+<p>Certains ports vont ajouter des extensions à l&rsquo;ordinateur (carte son, video, wifi). Certains vont être essentiels au fonctionnement de l&rsquo;ordinateur (mémoires).</p>
+<h2 id="echelle-micro">Echelle micro</h2>
+<p>Les constituants de l&rsquo;ordinateur sont composés de circuits intégrés. On trouve 2 grandes catégories de circuits intégrés:</p>
+<ul>
+<li>les circuits combinatoires: l&rsquo;état de sortie de ces circuits ne dépend que des états d&rsquo;entrée.</li>
+<li>les circuits séquentiels: l&rsquo;état de sortie dépend des états d&rsquo;entrée, mais aussi de l&rsquo;état courant du circuit. Ces circuits peuvent ainsi stocker une valeur appelée état courant. Les registres sont typiquement des circuits intégrant des circuits séquantiels.</li>
+</ul>
+<h2 id="le-processeur">Le processeur</h2>
+<!-- raw HTML omitted -->
+<p>L&rsquo;architecture d&rsquo;un <strong>processeur</strong> (CPU) comporte 2 parties:</p>
+<ul>
+<li>L&rsquo;<strong>UC</strong>: C&rsquo;est l’<em>unité de commande</em>, <strong>UC</strong>, qui traduit chacune des instructions successives du programme en opérations élémentaires. Ces instructions sont déposées dans un <strong>registre</strong> spécial.  L&rsquo;<strong>UC</strong> interprète les instructions des programmes, et provoque leur exécution.</li>
+<li>La <strong>partie opérative</strong> qui comprend les outils permettent de réaliser les actions élémentaires ordonnés par l&rsquo;UC. Cette <strong>unité de traitement</strong> est constituée de:
+<ul>
+<li>l&rsquo;<strong>UAL</strong> (Unité Arithmétique et Logique) qui réalise les opérations arithmétiques sur des entiers.</li>
+<li>des <strong>registres internes</strong>, pour stocker de manière très provisoire les retenues des calculs par exemple.</li>
+</ul>
+</li>
+</ul>
+<p><em>L&rsquo;UC traite une séquence d&rsquo;instructions, alors que l&rsquo;UAL traite une séquence de données</em>. L’<strong>UC</strong> est chargée de la reconnaissance des instructions et de leur exécution par l’unité de traitement au <em>rythme de l’horloge</em>.</p>
+<p>Le processeur réalise le cycle de Von Neumann:</p>
+<ol>
+<li>Lire une case mémoire d’adresse PC (envoyer l’adresse à la mémoire, et recevoir en retour la donnée à cette adresse).</li>
+<li>Interpréter cette donnée comme une instruction, et l’exécuter</li>
+<li>Ajouter 1 au <em>program Counter</em> (PC)</li>
+<li>Recommencer</li>
+</ol>
+<h1 id="lassembleur">L&rsquo;assembleur</h1>
+<p>Un langage d&rsquo;assemblage ou langage assembleur est, en programmation informatique, le langage de plus bas niveau qui représente le langage machine sous une forme lisible par un humain. (<a href="https://fr.wikipedia.org/wiki/Assembleur">wiki</a>)</p>
+<p>Le premier programme assembleur a été écrit par Nathaniel Rochester pour l&rsquo;IBM 701 (le premier ordinateur commercialisé par IBM) en 1954.</p>
+<!-- raw HTML omitted -->
+<p>Pour échanger des données avec la mémoire, le processeur transfert l&rsquo;état d&rsquo;un registre dans une case mémoire (STA) ou l&rsquo;état d&rsquo;une case mémoire dans un registre (LDA). On rappelle que la mémoire contient à la fois les instructions et les données.</p>
+<p>Les instructions de traitement que l&rsquo;on verra ici concernent uniquement les registres.</p>
+<p>L&rsquo;un de ces registres est le <em>Program Counter</em>, PC. Celui-ci repère l&rsquo;état courant dans le programme (la ligne du script à executer).</p>
+<p>Voici une liste non exaustive des instructions du <!-- raw HTML omitted -->simulateur ARM<!-- raw HTML omitted -->:</p>
+<ul>
+<li><code>MOV Rd, operand2</code>: copie la valeur de opérande2 dans Rd (le registre d)<!-- raw HTML omitted -->
+exemple: <code>MOV R0, #23</code> place la valeur R3 dans le registre 0.</li>
+<li><code>ADD Rd, Rn, operand2</code>: additionne opérande et Rn et place le résultat dans Rd. Opérande peut être un nombre (précédé de dièse) ou la valeur d&rsquo;un registre Rm</li>
+<li><code>SUB Rd, Rn, operand2</code>: idem mais soustraction</li>
+<li><code>LSL Rd, Rn, operand2</code>: déplace les bits de Rn de &lsquo;opérande&rsquo; bits vers la gauche et stocke dans Rd (multiplication par 2, souvenez vous!)</li>
+<li><code>LSR Rd, Rn, operand2</code>: déplace les bits de Rn de &lsquo;opérande&rsquo; bits vers la droite et stocke dans Rd (division par 2!)</li>
+<li>HALT: arret du programme</li>
+<li><code>INP R0,2</code>: attend un nombre en entrée</li>
+<li><code>OUT Rd, nombre</code>: affiche à l&rsquo;écran. out Rd,4 affiche un nombre signé ou non(Rd,5). Rd,6 affiche en hexadécimal et Rd,7 affiche un caractère.</li>
+<li><code>CMP Rn, operand2</code>: effectue la comparaison entre Rn et l&rsquo;opérande. Attention, cette instruction ne traite pas le résultat de la comparaison! C&rsquo;est le rôle de la commande suivante.</li>
+<li>B ou BGT, &hellip; sont les opérations de branchement (voir plus loin)<!-- raw HTML omitted --></li>
+</ul>
+<p>La liste complète des instructions se trouve à la page INFO accessible depuis le bouton <a href="https://www.peterhigginson.co.uk/AQA/info.html">info</a> du simulateur.</p>
+<!-- raw HTML omitted -->
+<p>Le <!-- raw HTML omitted -->simulateur ARM<!-- raw HTML omitted --> contient quelques exemples dont:</p>
+<ul>
+<li>ADD: programme qui ajoute 2 nombres entrés par l&rsquo;utilisateur</li>
+</ul>
+<pre tabindex="0"><code>      INP R0,2
+      INP R1,2
+      ADD R2,R1,R0
+      OUT R2,4
+      HALT
+      // Output the sum of two numbers
+</code></pre><ul>
+<li>MAX: programme qui retourne le plus grand des 2 nombres saisis par l&rsquo;utilisateur</li>
+</ul>
+<pre tabindex="0"><code>      INP R0,2
+      INP R1,2
+      CMP R1,R0
+      BGT HIGHER
+      OUT R0,4
+      B DONE
+HIGHER:
+      OUT R1,4
+DONE:
+      HALT
+      // Input two numbers and output the higher
+</code></pre><p>Dans ce 2<!-- raw HTML omitted -->e<!-- raw HTML omitted --> exemple, si R1 est supérieur à R0 (test à la ligne 3), alors le programme effectue un <em>branchement conditionnel</em> à la ligne 4 (BGT est le branchement pour Greater Than). Il execute à ligne 4 l&rsquo;appel de la fonction HIGHER), sinon il passe à la ligne 5 (OUT R0,4).</p>
+<p><em>Remarque:</em> la ligne 6 <code>B DONE</code> est necessaire pour eviter de repeter les instructions qui suivent le repère <code>HIGHER: OUT R1,4</code>. Il s&rsquo;agit d&rsquo;un branchement vers le repère <code>DONE</code>.</p>
+<h1 id="travail-pratique-assembleur">Travail pratique: Assembleur</h1>
+<p>Utiliser le <!-- raw HTML omitted -->simulateur<!-- raw HTML omitted -->  pour réaliser les exercices suivants.</p>
+<h2 id="opérations-simples">Opérations simples</h2>
+<p><strong>1.</strong> Il s&rsquo;agit d&rsquo;obtenir le nombre 84 à partir des nombres 50,25,8,7,3 et 1 avec les opérations : addition et soustraction uniquement.</p>
+<p>Testez le script dans le simulateur:</p>
+<pre tabindex="0"><code>MOV R0,#50
+ADD R0,R0,#25
+ADD R0,R0,#8
+ADD R0,R0,#1
+HALT
+</code></pre><p><strong>2.</strong> Obtenir 84 à partir de 90,25,8,7,3 et 1 avec les opérations : addition et soustraction uniquement.</p>
+<p><strong>3.</strong> Obtenir 128, en partant de la valeur 1 stockée dans R0. Utilisez les  instructions de multiplication par 2 du langage. <em>Voir la documentation du simulateur ARM (cliquer sur INFO) et chercher dans le paragraphe The AQA Instruction Set les commandes LSL et LSR</em></p>
+<h2 id="programmmer-avec-des-boucles">Programmmer avec des boucles</h2>
+<p><strong>1.</strong> Cliquer sur SELECT et choisir le programme <code>max</code> en assembleur qui affiche le plus grand de deux entiers entrés au clavier, le comprendre et l&rsquo;exécuter (Bien comprendre les instructions B, CMP et BGT voir le manuel)</p>
+<p><strong>2.</strong> Ecrire en assembleur un programme utilisant des fonctions parmis LSL, LSR, B et BNE qui affiche 1 si le nombre est pair , 0 sinon. (BNE: Branchement si Not Equal).</p>
+<h2 id="calculer-123n-où-n-est-entré-au-clavier">Calculer 1+2+3&hellip;+n où n est entré au clavier:</h2>
+<p><strong>1.</strong> Compléter le programme en assembleur ci-dessous pour résoudre le problème puis essayer avec n = 3 en mode pas à pas
+Exécuter avec RUN en vitesse maximale pour n = 10</p>
+<pre tabindex="0"><code>INP R0,2
+MOV R1,#0 // compteur de boucle
+MOV R2,#0 // somme 
+boucle:
+ADD ...........
+ADD ...........
+CMP ...........
+.... boucle
+OUT R2,4
+HALT
+</code></pre><p><strong>2.</strong> Estimer le nombre d&rsquo;opérations significatives effectuées pour n = 10. Combien d&rsquo;opérations significatives seraient réalisées pour n = 100?</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="liens">Liens</h1>
+<ul>
+<li>TP inspiré de <a href="http://www.mathly.fr/archi.php">http://www.mathly.fr/archi.php</a></li>
+<li>Livre numérique sur le <a href="https://fr.wikibooks.org/wiki/Fonctionnement_d%27un_ordinateur">fonctionnement d&rsquo;un ordinateur</a></li>
+<li>activité sur <a href="http://nsi4noobs.fr/IMG/pdf/e1_1nsi_architecture_von_neumann.pdf">l&rsquo;architecture Von Neumann</a></li>
+<li>architecture von Neumann <a href="https://fr.wikipedia.org/wiki/Architecture_de_von_Neumann">wikipedia</a></li>
+</ul>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#rappels">Rappels</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#echelle-macro-périphériques">Echelle macro: périphériques</a></li>
+    <li><a href="#echelle-intermédiaire">Echelle intermédiaire</a></li>
+    <li><a href="#echelle-micro">Echelle micro</a></li>
+    <li><a href="#le-processeur">Le processeur</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#opérations-simples">Opérations simples</a></li>
+    <li><a href="#programmmer-avec-des-boucles">Programmmer avec des boucles</a></li>
+    <li><a href="#calculer-123n-où-n-est-entré-au-clavier">Calculer 1+2+3&hellip;+n où n est entré au clavier:</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

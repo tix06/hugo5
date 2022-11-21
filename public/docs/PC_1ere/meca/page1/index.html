@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    enregistrer une trajectoire
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fPC_1ere\2fmeca\2fpage1\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    enregistrer une trajectoire
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="enregistrer-une-trajectoire">Enregistrer une trajectoire</h1>
+<p>Le but de la séance est d&rsquo;enregistrer la trajectoire de plusieurs mouvements, sous la forme d&rsquo;une chronophotographie.</p>
+<p>Les chronophotographies sont utiles pour repérer les phases accélérées du mouvement. C&rsquo;est à dire, les phases du mouvement où il y a une/des interaction(s).</p>
+<h2 id="préparer-la-tablette-android">Préparer la tablette Android</h2>
+<p>Il sera nécessaire de charger, dans cet ordre, les 2 applications suivantes:</p>
+<!-- raw HTML omitted -->
+<ul>
+<li><em>Cx explorateur de fichiers</em> (Play Store, gratuit)</li>
+<li><em>Motion shot</em>, qui n&rsquo;est pas sur le Play store:
+<ul>
+<li>à l&rsquo;aide du navigateur (chrome par exemple), aller à l&rsquo;adresse: <a href="https://motion-shot.fr.uptodown.com/android">https://motion-shot.fr.uptodown.com/android</a></li>
+<li>Télecharger l&rsquo;application (version en cours: 2.2.1)</li>
+</ul>
+</li>
+<li>Ouvrir l&rsquo;application <em>Cx explorateur de fichiers</em>. Choisir le stockage <em>principal</em>.</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>Aller dans le dossier <em>Download</em> et rechercher le fichier <em>motion-shot-2-2-1.apk</em>. Cliquer sur le fichier et <em>accepter l&rsquo;installation</em>. Un message vous avertit des risques encourus pour l&rsquo;installation d&rsquo;une application non distribuée par le Play store. Accepter.</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="premiers-tests">Premiers tests</h2>
+<p>On pourra alors utiliser l&rsquo;application pour enregistrer les trajectoires de quelques mouvements (pas trop rapides). Comme présenté sur la video ci-dessous.</p>
+<!-- raw HTML omitted -->
+<p>Vous pouvez alors vous tester l&rsquo;application avec un premier mouvement.<!-- raw HTML omitted -->
+Choisissez un objet présentant un contraste suffisant par rapport au fond de l&rsquo;image. Démarrez la vidéo, enregistrez le mouvement.</p>
+<p>La chronophtographie est générée lors de l&rsquo;arrêt de l&rsquo;enregistrement. Il s&rsquo;agit d&rsquo;une image qui se trouve dans le dossier <em>Pictures/Motion_Shot</em></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Un exemple de chronophotographie obtenue:</p>
+<!-- raw HTML omitted -->
+<h1 id="travail-pratique">Travail pratique</h1>
+<h2 id="expérimentations">Expérimentations</h2>
+<p>Le matériel dans la classe permet de réaliser plusieurs situations expérimentales:</p>
+<ul>
+<li>Une bille lancée sur un plan horizontal</li>
+<li>Une bille lancée sur un plan incliné</li>
+<li>Une bille lâchée en haut d&rsquo;un plan incliné, guidée par un rail</li>
+<li>Un pendule suspendu au plafond, en oscillation</li>
+<li>&hellip;</li>
+</ul>
+<p>Pour chacune de ces expériences, vous réaliserez la chronophotographie la plus précise possible, à l&rsquo;aide de l&rsquo;application téléchargée.</p>
+<p>Vous téléchargerez ensuite l&rsquo;image obtenue sur votre ordinateur (envoi en piece jointe d&rsquo;un mail par exemple, ou partage par <em>Drive</em>). Il faut utiliser pour cela le menu <em>partager</em> en bas à droite de l&rsquo;écran.</p>
+<!-- raw HTML omitted -->
+<h2 id="pointage-des-positions">Pointage des positions</h2>
+<p>Télécharger le fichier compressé <!-- raw HTML omitted -->chronophotographie.zip<!-- raw HTML omitted --></p>
+<p>Celui-ci contient:</p>
+<ul>
+<li>le fichier python à executer: chronophotograpie.py</li>
+<li>un dossier images avec divers enregistrements tests</li>
+</ul>
+<p>Déplacer et décompresser (dézipper) le fichier dans un dossier de vos documents: <em>Documents/physique/</em> par exemple.</p>
+<p>Dans <em>Winpython</em>: Lancer un IDE Python, comme par exemple <em>IDLEX Python</em>. Dans le menu <em>Fichier</em>, ouvrir le programme <em>chronophotographie.py</em>. Puis <em>Executer</em> depuis le menu <em>Run &gt; Run Module F5</em>.</p>
+<p>Dans la fenêtre graphique, cliquer sur <em>select image</em> et suivre les instructions:</p>
+<ul>
+<li>Faire la calibration en cliquant sur le centre du cercle rouge</li>
+<li>Et réaliser le pointage, c&rsquo;est à dire, cliquer sur la position du même point, au fur et à mesure de son avancée dans le mouvement. Des marqueurs s&rsquo;ajoutent à l&rsquo;image.<!-- raw HTML omitted -->
+La liste des coordonnées s&rsquo;affiche alors à droite.</li>
+</ul>
+<!-- raw HTML omitted -->
+<p>Lorsque la saisie est terminée, cliquer sur <em>valider</em>. Un fichier <em>coordonnees.txt</em> est alors créé dans le même dossier, avec les coordonnées du point. On peut consulter le contenu avec un editeur de texte (Visual Studio, ou Notepad++).</p>
+<h2 id="exploitation">Exploitation</h2>
+<p>Dans le programme IDLE python: ouvrir le programme <em>traitement.py</em>: Construisez et complétez votre script python au fur et à mesure des instructions. Executez régulièrement le script avec <em>Run &gt; Run Module F5</em>.</p>
+<ul>
+<li>Après l&rsquo;import des modules <em>pandas</em> et <em>matplotlib</em>, ajouter les instructions qui permettent de charger les coordonnées dans la variable <em>data</em>:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#111">pandas</span> <span style="color:#00a8c8">as</span> <span style="color:#111">pd</span>  <span style="color:#75715e"># import de la librairie pandas (traitement données)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#111">matplotlib.pyplot</span> <span style="color:#00a8c8">as</span> <span style="color:#111">plt</span> <span style="color:#75715e"># et celle matplotlib (graphiques)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">data</span> <span style="color:#f92672">=</span> <span style="color:#111">pd</span><span style="color:#f92672">.</span><span style="color:#111">read_csv</span><span style="color:#111">(</span><span style="color:#d88200">&#34;coordonnees.txt&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">data</span><span style="color:#111">)</span>
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<ul>
+<li>Ajouter l&rsquo;instruction suivante pour explorer l&rsquo;objet <em>data</em></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">data</span><span style="color:#f92672">.</span><span style="color:#111">columns</span><span style="color:#111">)</span>
+</span></span></code></pre></div><ul>
+<li>Pour obtenir les valeurs de la seule colonne Y, on peut alors faire:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">data</span><span style="color:#f92672">.</span><span style="color:#111">Y</span><span style="color:#111">)</span>
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<ul>
+<li>Pour afficher le tracé (X,Y), on ajoute le module <code>matplotlib</code> et on écrit:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">plt</span><span style="color:#f92672">.</span><span style="color:#111">axis</span><span style="color:#111">([</span><span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#ae81ff">600</span><span style="color:#111">,</span> <span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#ae81ff">400</span><span style="color:#111">])</span>  <span style="color:#75715e"># choix des echelles</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">plt</span><span style="color:#f92672">.</span><span style="color:#111">scatter</span><span style="color:#111">(</span><span style="color:#111">data</span><span style="color:#f92672">.</span><span style="color:#111">X</span><span style="color:#111">,</span><span style="color:#111">data</span><span style="color:#f92672">.</span><span style="color:#111">Y</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">plt</span><span style="color:#f92672">.</span><span style="color:#111">show</span><span style="color:#111">()</span>
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<p>On remarque que la coordonnée Y est repérée à partir du bord inférieur de la fenêtre graphique. Alors que pour le pointage, c&rsquo;était à partir du bord supérieur. On peut modifier les valeurs de TOUTE la colonne Y en faisant par exemple:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">data</span><span style="color:#f92672">.</span><span style="color:#111">Y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">400</span> <span style="color:#f92672">-</span> <span style="color:#111">data</span><span style="color:#f92672">.</span><span style="color:#111">Y</span>
+</span></span></code></pre></div><p>Le graphique généré est alors le suivant:</p>
+<!-- raw HTML omitted -->
+<ul>
+<li>Enfin, pour sauvegarder le graphique, il faudra remplacer <code>plt.show()</code> par <code>plt.savefig('output.png')</code>. Le programme complet devrait alors être:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#111">pandas</span> <span style="color:#00a8c8">as</span> <span style="color:#111">pd</span>  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#111">matplotlib.pyplot</span> <span style="color:#00a8c8">as</span> <span style="color:#111">plt</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">data</span> <span style="color:#f92672">=</span> <span style="color:#111">pd</span><span style="color:#f92672">.</span><span style="color:#111">read_csv</span><span style="color:#111">(</span><span style="color:#d88200">&#34;coordonnees.txt&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">data</span><span style="color:#f92672">.</span><span style="color:#111">Y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">400</span> <span style="color:#f92672">-</span> <span style="color:#111">data</span><span style="color:#f92672">.</span><span style="color:#111">Y</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">plt</span><span style="color:#f92672">.</span><span style="color:#111">axis</span><span style="color:#111">([</span><span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#ae81ff">600</span><span style="color:#111">,</span> <span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#ae81ff">400</span><span style="color:#111">])</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">plt</span><span style="color:#f92672">.</span><span style="color:#111">scatter</span><span style="color:#111">(</span><span style="color:#111">data</span><span style="color:#f92672">.</span><span style="color:#111">X</span><span style="color:#111">,</span><span style="color:#111">data</span><span style="color:#f92672">.</span><span style="color:#111">Y</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">plt</span><span style="color:#f92672">.</span><span style="color:#111">savefig</span><span style="color:#111">(</span><span style="color:#d88200">&#39;output.png&#39;</span><span style="color:#111">)</span>
+</span></span></code></pre></div></article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#préparer-la-tablette-android">Préparer la tablette Android</a></li>
+    <li><a href="#premiers-tests">Premiers tests</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#expérimentations">Expérimentations</a></li>
+    <li><a href="#pointage-des-positions">Pointage des positions</a></li>
+    <li><a href="#exploitation">Exploitation</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

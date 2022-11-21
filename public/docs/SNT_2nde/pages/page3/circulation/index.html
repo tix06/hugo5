@@ -1,32 +1,563 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>reseaux
-| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel=stylesheet><script type=text/x-mathjax-config>
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    reseaux
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
   });
-</script><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.1c02dc1d2c0b546a84beb71d8f4336d6f5d7b69564e08bdfc04c2fb0595d786d.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
 catch(err)
-{console.log(err.message);}
-if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
-if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
-if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}
-let chemin=window.location.pathname;if(chemin.search('NSI')>-1){baniere=document.querySelector("#myHeader");let linkBox=document.createElement('div');linkBox.classList.add('linkBox');let newH=document.createElement('a');newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';newH.classList.add('nsi');linkBox.appendChild(newH);baniere.appendChild(linkBox);}</script><style>#myHeader{display:flex;flex-direction:row-reverse}#myHeader>.titre{width:80%;min-width:300px;text-align:left}.linkBox{margin:10px;padding-top:10px;background-color:pink;min-width:50px}.isn{}</style></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2f docs\2fSNT_2nde\2fpages\2fpage3\2f circulation\2f ]{color:#004ed0}</style><ul><li><a href=/><strong>Accueil</strong></a></li><li><a href=/docs/esf/esf_index/><strong>ESF</strong></a></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p></li><li><p><a href=/docs/python/index_python/><strong>Python</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
-addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-page><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
-<strong>reseaux</strong></header><article class=markdown><h1 id=faire-communiquer-des-ordinateurs>Faire communiquer des ordinateurs</h1><p>Une première idée naïve : tout usage du numérique met des machines en connexion, et qui échangent des données.</p><figure><img src=../images/reseau1.png width=80% alt="communication avec 2 ordinateurs"><figcaption>communication avec 2 ordinateurs</figcaption></figure><p>Ce modèle <em>simpliste</em> de réseau va devenir irréalisable lorsque celui-ci contiendra de nombreux ordinateurs :</p><ul><li>grand nombre de connexions (et de liaisons physiques) au départ de chaque ordinateur</li><li>grand nombre de ports utilisés</li></ul><p>Il faudra d&rsquo;autres éléments pour connecter les ordinateurs entre eux.</p><h2 id=reseau-d-ordinateurs>Reseau d&rsquo;ordinateurs</h2><h3 id=qu-est-ce-qu-un-système-informatique>Qu&rsquo;est ce qu&rsquo;un système informatique ?</h3><p>Un système informatique fonctionne sur le modèle <strong>client-serveur</strong> :</p><p>Les parcs informatiques des écoles, universités, et entreprises ont leur activité qui dépend d&rsquo;informations partagées sur leur réseau. (gestion des salles, ressources, identité des étudiants, des clients, les stocks, la comptabilité, les états financiers,&hellip;). En conséquence, une panne informatique ne leur permettrait plus de fonctionner. C&rsquo;est pour cette raison que les ordinateurs doivent être connectés, que ces informations doivent être <em>distribuées</em>; que l&rsquo;information doit être accessible, même si l&rsquo;un des ordinateurs est en panne.</p><blockquote><p>Un système informatique est alors constitué :</p><ul><li>d&rsquo;une ou plusieurs base(s) de données</li><li>d&rsquo;ordinateurs serveurs qui stockent les bases de données</li><li>d&rsquo;ordinateurs clients : des ordinateurs plus simples, et qui doivent avoir accès aux ressouces.</li></ul></blockquote><figure><img src=../images/LAN.png width=80% alt=LAN><figcaption>local area network (LAN)</figcaption></figure><h3 id=des-services-diversifiés>des services diversifiés</h3><p>Un réseau d&rsquo;ordinateurs peut aussi servir à fournir des services de communication :</p><ul><li>courrier électronique</li><li>outils de collaboration (redaction à plusieurs)</li><li>visioconférence</li><li>la conclusion d&rsquo;affaires par voie électronique, commandes en temps réel</li><li>logiciel partagé</li></ul><p>C&rsquo;est l&rsquo;utilisation d&rsquo;un serveur partagé dans le réseau qui permet d&rsquo;acceder à ces services.</p><p>Certains de ces services peuvent aussi être fournis par un serveur sur un réseau externe, accessible depuis internet. C&rsquo;est ce que l&rsquo;on appelle <strong>le cloud</strong> : <em>la livraison de ressources et de services à la demande par internet.</em><sup class=footnote-ref id=fnref:1Cloud><a href=#fn:1Cloud>1</a></sup></p><p>Un réseau d&rsquo;ordinateur peut aussi servir à partager du matériel (une imprimante), ou une connexion internet (le routeur). (voir note en bas de page sur la configuration d&rsquo;un reseau local<sup class=footnote-ref id=fnref:2><a href=#fn:2>2</a></sup>)</p><h3 id=le-commutateur-switch-et-le-routeur>Le commutateur (switch) et le routeur</h3><p>Les appareils ne sont pas forcément connectés directement, mais peuvent l&rsquo;être au moyen d&rsquo;un <em>switch</em>. (concentre les liaisons et possède une table de routage avec les adresses mac des ordinateurs reliés).</p><p>Les réseaux sont alors reliés entre eux par un <em>routeur</em></p><figure><img src=../images/reseau3.png width=80% alt="réseau d'ordinateurs"><figcaption>réseaux d'ordinateurs</figcaption></figure><p><em>Sur cette image, les serveurs ne sont pas représentés, mais n&rsquo;importe quel ordinateur du réseau peut assurer ce rôle. Certains sont donc des clients, d&rsquo;autres des serveurs</em>.</p><p>le <strong>routeur</strong> est l&rsquo;appareil disposant de sa propre adresse IP (voir plus loin) qui fait office de passerelle entre les périphériques sur un réseau local (LAN) et Internet. Dans un réseau de réseaux, c&rsquo;est aussi une machine qui a plusieurs interfaces (plusieurs cartes réseau), chacune reliée à un réseau. Son rôle va être d&rsquo;aiguiller les paquets reçus entre les différents réseaux.</p><h2 id=différences-entre-reseau-local-et-reseau-internet>Différences entre reseau local et reseau internet</h2><h3 id=reseau-local-systeme-réparti-3>Reseau local: Systeme <em>réparti</em><sup class=footnote-ref id=fnref:3><a href=#fn:3>3</a></sup></h3><p>Unn système réparti permet de partager des ressources, données et logiciels.</p><p>Avec un réseau local d&rsquo;ordinateurs, qui peut constituer un système réparti, l&rsquo;utilisateur se trouve devant la réalité des machines et leurs caractéristiques diverses, la varieté des équipements, et de leur système d&rsquo;exploitation; pour executer un programme sur une machine distante, l&rsquo;usager doit ouvrir une session. La maitenance d&rsquo;un reseau local demande une bonne connaissance de tous ces matériels.</p><p>Et si l&rsquo;un des ordinateurs tombe en panne, les autres ordinateurs risquent de s&rsquo;en apercevoir (base de donnée inaccessible, etc&hellip;).</p><p><strong>Définition:</strong> Un système réparti est un système qui vous empêche de travailler quand une machine dont vous n’avez jamais entendu parler tombe en panne.</p><p>Des exemples de systèmes répartis: un centre de documentation, bibliothèque, reseau de lycée, contrôle et organisation d&rsquo;activité en temps réél,&hellip;</p><p><em>Pour approfondir :</em> (Wikihow) comment configurer son réseau local ? <sup class=footnote-ref id=fnref:2><a href=#fn:2>2</a></sup></p><h3 id=reseau-internet-un-système-distribué-4>Reseau internet: un système <em>distribué</em><sup class=footnote-ref id=fnref:4><a href=#fn:4>4</a></sup></h3><p>Lorsque l&rsquo;on utilise internet, on ne voit plus cette variété d&rsquo;équipement.</p><p>le système distribué est un ensemble d&rsquo;ordinateurs indépendants, présenté à l&rsquo;utilisateur comme un système unique cohérent. Souvent une couche logicielle intermédiaire appelée middleware située au dessus du système d&rsquo;exploitation est responsable de son implémentation.</p><p>Un exemple est le <strong><a href=https://fr.wikipedia.org/wiki/World_Wide_Web>web</a></strong> dans lequel toute information apparait comme un document. C&rsquo;est donc un logiciel élaboré au dessus du réseau, qui nous fait oublier la variété des supports utilisés pour transmettre les données (Serveur, Adsl, Box, wifi, bluetooth&hellip;).</p><h2 id=définitions>Définitions</h2><blockquote><p>Un <strong>système distribué</strong>: C&rsquo;est un ensemble d’ordinateurs indépendants qui apparaît à un utilisateur comme un système unique et cohérent</p><p><strong>Internet</strong> n&rsquo;est pas un réseau d&rsquo;ordinateurs. C&rsquo;est un réseau de réseaux.</p><p><strong>Le web</strong>, c&rsquo;est un système distribué opérant au-dessus d&rsquo;internet.</p></blockquote><h3 id=caractéristiques-physiques-canal-de-transmission>Caractéristiques physiques : canal de transmission:</h3><h4 id=1-reseau-local>1. reseau local</h4><p>Deux critères permettent de les caractériser : la technologie de transmission utilisée, et leur taille.</p><p>Dans un reseau local, les <strong>supports de transmission</strong> des données peuvent être :</p><ul><li>cable ethernet</li><li>wifi (ondes EM)</li><li>bluetooth (ondes EM à courte portée)</li></ul><h4 id=2-reseau-internet>2. reseau internet</h4><p>Une fois sorties du reseau local, les transmissions peuvent se faire par:</p><ul><li>fibre optique (<a href=https://fr.wikipedia.org/wiki/ADSL>Adsl</a>)</li><li>ligne de type telephonique (<a href=https://fr.wikipedia.org/wiki/ADSL>Adsl</a>)</li><li>reseau de telephonie mobile (4G, 5G)</li></ul><p><em>Remarque:</em> L&rsquo;utilisation d&rsquo;internet demande un <em>abonnement</em>.</p><h1 id=le-fonctionnement-d-internet>Le fonctionnement d&rsquo;internet</h1><h2 id=protocole-http>Protocole http</h2><p><strong>http</strong> est le protocole qui permet à une machine de demander et de recevoir une ressource d&rsquo;un serveur.</p><p><em>http :</em> est l&rsquo;abréviation de HyperText Transfer Protocol. (est-ce plus clair ?)</p><p>En plus clair :</p><ul><li><strong>P</strong>rotocole : c&rsquo;est une règle.</li><li><strong>T</strong>ransfert : pour transférer (communiquer).</li><li><strong>H</strong>yperTexte : c&rsquo;est du texte qui contient des liens vers d&rsquo;autres ressources (documents, images etc&hellip;)</li></ul><p>On a vu qu&rsquo;un système informatique fonctionne sur le modèle <em>client-serveur</em>. Ceci est vrai, même si le serveur est extérieur au réseau du client (accessible par internet) :</p><figure><img src=../images/http.gif width=80% alt="protocole HTTP"><figcaption>modèle client-serveur</figcaption></figure><p><em>Questions :</em></p><ol><li>Comment le client s&rsquo;adresse t-il au <em>bon</em> serveur ?</li><li>Comment celui-ci renvoie-t-il les données au <em>bon</em> client ?</li><li>Comment circulent les données entre le client et le serveur?</li></ol><p><em>Réponses:</em></p><ul><li>pour les questions 1 et 2, c&rsquo;est avec la définition du <em>protocole IP</em> que nous allons y repondre.</li><li>pour la question 3: il s&rsquo;agit d&rsquo;une partie qui sera étudiée en <a href=/docs/SNT_2nde/pages/page3/modele_OSI/>spécialité NSI de la classe de 1<sup>ere</sup></a>. Tout ce que nous aurons à retenir, c&rsquo;est que le navigateur (un logiciel de la couche <em>Application</em>), confie cette tâche à d&rsquo;autres logiciels, qui vont saucissonner les messages entre le client et le serveur, en <em>trames</em>, et ajouter des données qui vont permettre leur bonne circulation. C&rsquo;est le <strong>protocole TCP</strong>.</li></ul><p><strong>le protocole IP:</strong> c&rsquo;est lui qui permet d&rsquo;envoyer les paquets d&rsquo;un ordinateur vers un autre ordinateur. Il gère l&rsquo;adressage, le routage et l&rsquo;interconnexion des différents réseaux.</p><h2 id=adresses-ip>adresses IP</h2><p>une adresse IP est un identifiant numérique unique attribué à chaque appareil (appareils mobiles, ordinateurs, routeurs, imprimantes, consoles de jeux, etc.) connecté à un réseau TCP / IP comme Internet. Plus précisemment, <strong>c&rsquo;est l&rsquo;identifiant de la <em>carte reseau</em>, reelle ou virtuelle.</strong>
-Chaque dispositif peut se connecter grâce à cette adresse IP à d’autres périphériques et partager des informations. Il s&rsquo;agit du Protocole Internet (IP).</p><ul><li><p>Lorsque l&rsquo;on veut atteindre un ordinateur serveur depuis notre navigateur, on saisit dans la barre d&rsquo;adresse:<sup class=footnote-ref id=fnref:5><a href=#fn:5>5</a></sup></p><pre><code>&gt; http://&lt;adresse IP du serveur&gt;
-</code></pre></li><li><p>Lorsque l&rsquo;on veut tester la connexion vers une machine distante du reseau, on saisit dans la console (lignes de commande):</p><pre><code>&gt; ping &lt;adresse IP du destinataire&gt;
-</code></pre></li></ul><p>On le verra dans la suite : IPv4 et IPv6 sont deux protocoles réseau de la couche 3 du modèle OSI (Open Systems Interconnection).</p><p><strong>IPv4</strong></p><p>Ces adresses IP constituées de <strong>4 nombres</strong> sont les plus répandues à l&rsquo;heure actuelle, on les appelle IPv4. Bien que codés sur 32 bits, leur nombre se révèle assez limité : il n&rsquo;y a en effet &ldquo;que&rdquo; $$256×256×256×256$$
-possibilités d&rsquo;IP, soit $$256^4=4\phantom*294\phantom*967\phantom*296$$
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fSNT_2nde\2fpages\2fpage3\2f circulation\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    reseaux
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="faire-communiquer-des-ordinateurs">Faire communiquer des ordinateurs</h1>
+<p>Une première idée naïve : tout usage du numérique met des machines en connexion, et qui échangent des données.</p>
+<!-- raw HTML omitted -->
+<p>Ce modèle <em>simpliste</em> de réseau va devenir irréalisable lorsque celui-ci contiendra de nombreux ordinateurs :</p>
+<ul>
+<li>grand nombre de connexions (et de liaisons physiques) au départ de chaque ordinateur</li>
+<li>grand nombre de ports utilisés</li>
+</ul>
+<p><em>Internet</em> ne constitue pas un graphe <em>complet</em>, c&rsquo;est à dire un reseau dans lequel chaque machine est directement connectée à une autre.</p>
+<p>Il faudra d&rsquo;autres éléments pour connecter les ordinateurs entre eux.</p>
+<h2 id="reseau-dordinateurs">Reseau d&rsquo;ordinateurs</h2>
+<h3 id="quest-ce-quun-système-informatique-">Qu&rsquo;est ce qu&rsquo;un système informatique ?</h3>
+<p>Un système informatique fonctionne sur le modèle <strong>client-serveur</strong> :</p>
+<p>Les parcs informatiques des écoles, universités, et entreprises ont leur activité qui dépend d&rsquo;informations partagées sur leur réseau. (gestion des salles, ressources, identité des étudiants, des clients, les stocks, la comptabilité, les états financiers,&hellip;). En conséquence, une panne informatique ne leur permettrait plus de fonctionner. C&rsquo;est pour cette raison que les ordinateurs doivent être connectés, que ces informations doivent être <em>distribuées</em>; que l&rsquo;information doit être accessible, même si l&rsquo;un des ordinateurs est en panne.</p>
+<blockquote>
+<p>Un système informatique est alors constitué :</p>
+</blockquote>
+<blockquote>
+<ul>
+<li>d&rsquo;une ou plusieurs base(s) de données</li>
+<li>d&rsquo;ordinateurs serveurs qui stockent les bases de données</li>
+<li>d&rsquo;ordinateurs clients : des ordinateurs plus simples, et qui doivent avoir accès aux ressouces.</li>
+</ul>
+</blockquote>
+<!-- raw HTML omitted -->
+<h3 id="des-services-diversifiés">des services diversifiés</h3>
+<p>Un réseau d&rsquo;ordinateurs peut aussi servir à fournir des services de communication :</p>
+<ul>
+<li>courrier électronique</li>
+<li>outils de collaboration (redaction à plusieurs)</li>
+<li>visioconférence</li>
+<li>la conclusion d&rsquo;affaires par voie électronique, commandes en temps réel</li>
+<li>logiciel partagé</li>
+</ul>
+<p>C&rsquo;est l&rsquo;utilisation d&rsquo;un serveur partagé dans le réseau qui permet d&rsquo;acceder à ces services.</p>
+<p>Certains de ces services peuvent aussi être fournis par un serveur sur un réseau externe, accessible depuis internet. C&rsquo;est ce que l&rsquo;on appelle <strong>le cloud</strong> : <em>la livraison de ressources et de services à la demande par internet.</em><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>Un réseau d&rsquo;ordinateur peut aussi servir à partager du matériel (une imprimante), ou une connexion internet (le routeur). (voir note en bas de page sur la configuration d&rsquo;un reseau local<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>)</p>
+<h3 id="le-commutateur-switch-et-le-routeur">Le commutateur (switch) et le routeur</h3>
+<p>Les appareils ne sont pas forcément connectés directement, mais peuvent l&rsquo;être au moyen d&rsquo;un <em>switch</em>. (concentre les liaisons et possède une table de routage avec les adresses mac des ordinateurs reliés).</p>
+<p>les switchs (commutateurs) peuvent lire les adresses matérielles des paquets entrants afin de les transmettre à la destination appropriée.</p>
+<p>Les réseaux sont alors reliés entre eux par un <em>routeur</em></p>
+<!-- raw HTML omitted -->
+<p><em>Sur cette image, plusieurs sous-reseaux sont reliés par des routeurs. Par contre, l&rsquo;appareil qui interconnecte les machines dans un même sous-reseau est un switch</em>.</p>
+<p>le <strong>routeur</strong> est l&rsquo;appareil disposant plusieurs adresses IP, une adresse par interface (voir plus loin). Il fait office de passerelle entre les périphériques sur un réseau local (LAN) et Internet. Dans un réseau de réseaux, cette machine doit posséder plusieurs interfaces (plusieurs cartes réseau), chacune reliée à un réseau. Son rôle va être d&rsquo;aiguiller les paquets reçus entre les différents réseaux.</p>
+<!-- raw HTML omitted -->
+<h2 id="différences-entre-reseau-local-et-reseau-internet">Différences entre reseau local et reseau internet</h2>
+<h3 id="reseau-local-systeme-réparti3">Reseau local: Systeme <em>réparti</em><sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></h3>
+<p>Un système réparti permet de partager des ressources, données et logiciels.</p>
+<p>Avec un réseau local d&rsquo;ordinateurs, qui peut constituer un système réparti, l&rsquo;utilisateur se trouve devant la réalité des machines et leurs caractéristiques diverses, la varieté des équipements, et de leur système d&rsquo;exploitation; pour executer un programme sur une machine distante, l&rsquo;usager doit ouvrir une session. La maitenance d&rsquo;un reseau local demande une bonne connaissance de tous ces matériels.</p>
+<p>Et si l&rsquo;un des ordinateurs tombe en panne, les autres ordinateurs risquent de s&rsquo;en apercevoir (base de donnée inaccessible, etc&hellip;).</p>
+<p><strong>Définition:</strong> Un système réparti est un système qui vous empêche de travailler quand une machine dont vous n’avez jamais entendu parler tombe en panne.</p>
+<p>Des exemples de systèmes répartis: un centre de documentation, bibliothèque, reseau de lycée, contrôle et organisation d&rsquo;activité en temps réél,&hellip;</p>
+<p><em>Pour approfondir :</em>  (Wikihow) comment configurer son réseau local ? <sup id="fnref1:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<h3 id="reseau-internet-un-système-distribué4">Reseau internet: un système <em>distribué</em><sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></h3>
+<p>Lorsque l&rsquo;on utilise internet, on ne voit plus cette variété d&rsquo;équipement.</p>
+<p>le système distribué est un ensemble d&rsquo;ordinateurs indépendants, présenté à l&rsquo;utilisateur comme un système unique cohérent. Souvent une couche logicielle intermédiaire appelée middleware située au dessus du système d&rsquo;exploitation est responsable de son implémentation.</p>
+<p>Un exemple est le <strong><a href="https://fr.wikipedia.org/wiki/World_Wide_Web">web</a></strong> dans lequel toute information apparait comme un document. C&rsquo;est donc un logiciel élaboré au dessus du réseau, qui nous fait oublier la variété des supports utilisés pour transmettre les données (Serveur, Adsl, Box, wifi, bluetooth&hellip;).</p>
+<h2 id="définitions">Définitions</h2>
+<blockquote>
+<p>Un <strong>système distribué</strong>: C&rsquo;est un ensemble d’ordinateurs indépendants qui apparaît à un utilisateur comme un système unique et cohérent</p>
+</blockquote>
+<blockquote>
+<p><strong>Internet</strong> n&rsquo;est pas un réseau d&rsquo;ordinateurs. C&rsquo;est un réseau de réseaux.</p>
+</blockquote>
+<blockquote>
+<p><strong>Le web</strong>, c&rsquo;est un système distribué opérant au-dessus d&rsquo;internet.</p>
+</blockquote>
+<h3 id="caractéristiques-physiques--canal-de-transmission">Caractéristiques physiques : canal de transmission:</h3>
+<h4 id="1-reseau-local">1. reseau local</h4>
+<p>Deux critères permettent de les caractériser : la technologie de transmission utilisée, et leur taille.</p>
+<p>Dans un reseau local, les <strong>supports de transmission</strong> des données peuvent être :</p>
+<ul>
+<li>cable ethernet</li>
+<li>wifi (ondes EM)</li>
+<li>bluetooth (ondes EM à courte portée)</li>
+</ul>
+<h4 id="2-reseau-internet">2. reseau internet</h4>
+<p>Une fois sorties du reseau local, les transmissions peuvent se faire par:</p>
+<ul>
+<li>fibre optique (<a href="https://fr.wikipedia.org/wiki/ADSL">Adsl</a>)</li>
+<li>ligne de type telephonique (<a href="https://fr.wikipedia.org/wiki/ADSL">Adsl</a>)</li>
+<li>reseau de telephonie mobile (4G, 5G)</li>
+</ul>
+<p><em>Remarque:</em> L&rsquo;utilisation d&rsquo;internet demande un <em>abonnement</em> à un FAI.</p>
+<h1 id="adressage-des-machines">Adressage des machines.</h1>
+<h2 id="adressage-dans-un-reseau-local-mac">adressage dans un reseau local: MAC</h2>
+<p>une adresse <strong>MAC</strong> (Media Access Control), appelée également adresse Ethernet, est l&rsquo;adresse physique d&rsquo;une interface (carte réseau, wifi, &hellip;). Chaque adresse MAC est normalement unique au monde et fournie par le fabricant de l&rsquo;interface.</p>
+<p>Cette adresse est constituée de 6 octets, soit 12 caractères hexadécimaux, comme par exemple:</p>
+<p>$$01:b8:43:c4:85:a3$$</p>
+<p>Un ordinateur qui reçoit un message par l&rsquo;une de ses interface, va lire si l&rsquo;adresse MAC est bien la sienne. Sinon, c&rsquo;est que le message ne lui est pas destiné: il détruit alors le message.</p>
+<p>Dans un reseau local où les machines sont interconnectées via un switch: Pour envoyer la trame vers la bonne machine, le switch se sert de l&rsquo;adresse MAC destination contenue dans l&rsquo;en-tête de la trame.
+Il contient en fait une table qui fait l&rsquo;association entre un port du switch (une prise RJ45 femelle) et une adresse MAC. Cette table est appelée la table CAM.</p>
+<h2 id="adressage-ip">adressage IP</h2>
+<p>une adresse IP est un identifiant numérique unique attribué à chaque appareil (appareils mobiles, ordinateurs, routeurs, imprimantes, consoles de jeux, etc.) connecté à un réseau TCP / IP comme Internet. Plus précisemment, <strong>c&rsquo;est l&rsquo;identifiant de la <em>carte reseau</em>,</strong> reelle ou virtuelle.
+Chaque dispositif peut se connecter grâce à cette adresse IP à d’autres périphériques et partager des informations. Il s&rsquo;agit du Protocole Internet (IP).</p>
+<blockquote>
+<p>Question: Est-il possible de connaître l&rsquo;emplacement de mon ordinateur (smartphone, &hellip;) en connaissant son adresse IP?</p>
+</blockquote>
+<p>En principe, non, pas exactement, car mon dispositif possède une adresse IP privée&hellip; Il existe 2 types d&rsquo;adresses IP:</p>
+<ul>
+<li>
+<p>Adresse IP privée: 2 machines peuvent avoir la même adresse privée à condition qu&rsquo;elles soient sur 2 reseaux privés distincts. Pour une machine dotée d&rsquo;une adresse privée qui doit accéder à internet, une traduction de son adresse privée en adresse publique est nécessaire. C&rsquo;est le mécanisme NAT (Network Adress Translation) qui assure cette fonction. Ce mécanisme de traduction d&rsquo;adresse réseau se fait par la <em>passerelle</em>, qui se situe à l&rsquo;<em>interface entre les réseaux</em> privés et les réseaux publics. Elle est aussi nommée routeur (gateway). Une passerelle possède au moins 2 interfaces reseau.</p>
+</li>
+<li>
+<p>adresse IP publique: adresse attribuée aux machines connectées sur Internet. Ce sont les FAI qui sont autorisés à affecter des adresses publiques. Ces adresses sont uniques au niveau mondial. L&rsquo;essor constant d&rsquo;internet au niveau mondial fait que l&rsquo;on migre progressivement de la norme IPv4 vers IPv6. Ce sont deux protocoles réseau de la couche 3 du modèle OSI (Open Systems Interconnection).</p>
+</li>
+</ul>
+<h3 id="ipv4"><strong>IPv4</strong></h3>
+<p>Ces adresses IP constituées de <strong>4 nombres</strong> sont les plus répandues à l&rsquo;heure actuelle, on les appelle IPv4.</p>
+<p><em>Un exemple d&rsquo;adresse IPV4: (exprimée par 4 nombres decimaux 0-255)</em></p>
+<p>$$192.168.0.10$$</p>
+<p>Bien que codés sur 32 bits (4 octets), leur nombre se révèle assez limité : il n&rsquo;y a en effet &ldquo;que&rdquo; $$256×256×256×256$$
+possibilités d&rsquo;IP, soit $$256^4=4\phantom<em>294\phantom</em>967\phantom*296$$
 (plus de 4 milliards). Ce nombre a l&rsquo;air grand, mais on finira prochainement par l&rsquo;atteindre avec la multiplication des ordinateurs et des serveurs reliés à Internet.
-C&rsquo;est pourquoi ces IP ont vocation à être remplacées par un nouveau système : IPv6 (8 groupes de 2 octets)</p><p><strong>IPv6</strong>
-Ce sont des adresses IP codées sur 128 bits.
-La nouvelle forme d&rsquo;IP, que l&rsquo;on va rencontrer de plus en plus, a la forme suivante :</p><p><code>1703:01b8:43c4:85a3:0000:0000:a213:bba7</code></p><p>Leur nombre est d&rsquo;environ 10^29 fois plus important que pour les adresses IPv4.</p><h2 id=url>URL</h2><p><strong>URL</strong> Habituellement, un nom de domaine est associé à une adresse IP qui est celle du serveur et c’est le <strong>serveur DNS</strong> qui permet de connaitre l’adresse IP du serveur, quand on tape une adresse URL dans la barre d’adresse. Le DNS est donc un protocole indispensable au fonctionnement d&rsquo;Internet. Non pas d&rsquo;un point de vue technique, mais d&rsquo;un point de vue de son utilisation (les adresses URL sont plus faciles à retenir pour un humain).</p><p>L’URL (Uniform Ressource Locator ) est l’adresse unique qui permet d’accéder à une page web à partir de sa saisie dans la barre d’adresses du navigateur. L‘URL est communément appelée : l’adresse web d’une page.</p><p>Prenons l’exemple : <code>http://www.coursinfo.fr/</code> cette URL se compose de 4 blocs :</p><ul><li><code>.fr</code> désigne le domaine de 2er niveau, le top level auquel appartient le domaine</li><li><code>coursinfo</code> désigne le nom de domaine du site web – le site coursinfo.fr a souscrit à ce nom de domaine</li><li><code>www</code> le www est la norme pour les sites Web (World Wide Web), et c&rsquo;est un sous domaine dans la hierarchie de l&rsquo;URL</li><li>`http:// qui désigne le protocole à utiliser pour accèder au site web : ici c’est donc le protocole http</li><li>l&rsquo;URL finit en principe par un point (la racine dans la hierarchie)</li></ul><p>Il s&rsquo;agit donc d&rsquo;un système hiérarchique qui permet de &ldquo;découper&rdquo; le réseau en un ensemble de domaines, eux-mêmes composés de sous-domaines, éventuellement composés de sous-sous-domaines, etc.</p><p>La connaissance que vous avez maintenant de la construction de l&rsquo;URL / nom de domaine devrait vous permettre d&rsquo;eviter l&rsquo;un des grand piege d&rsquo;internet : le phishing&hellip;</p><h1 id=liens>Liens</h1><ul><li><a href=../internet/>Retour vers internet (Généralités)</a></li><li><a href=../TP_reseau/index.html>TP simulation d&rsquo;un reseau</a></li><li><a href=../modele_OSI/>Le modèle OSI (concerne la Spé NSI)</a></li></ul><div class=footnotes><hr><ol><li id=fn:1Cloud>Le cloud : désigne le stockage et l’accès aux données par l’intermédiaire d’internet plutôt que via le disque dur d’un ordinateur. Mais aussi des services rendus par des logiciels hébergés <em>côté serveur</em>.
-<a class=footnote-return href=#fnref:1Cloud><sup>[return]</sup></a></li><li id=fn:2>configurer son réseau local (Wikihow) : <a href=https://fr.wikihow.com/configurer-un-réseau-local>https://fr.wikihow.com/configurer-un-réseau-local</a>
-<a class=footnote-return href=#fnref:2><sup>[return]</sup></a></li><li id=fn:3>Systèmes répartis: Ce sont des systèmes pour lesquels les ordinateurs mis en reseau ont un couplage fort. Des exemples de systèmes répartis: un centre de documentation, bibliothèque, reseau de lycée, contrôle et organisation d&rsquo;activité en temps réél,&hellip;
-<a class=footnote-return href=#fnref:3><sup>[return]</sup></a></li><li id=fn:4>Système distribué: Les ordinateurs du reseau ont un couplage faible, et communiquent par echange de messages de manière asynchrone. La difficulté de mise en oeuvre d&rsquo;un algorithme sur un système distribué, est que l&rsquo;on n&rsquo;a pas connaissance de l&rsquo;état global du système (routage sur internet).
-<a class=footnote-return href=#fnref:4><sup>[return]</sup></a></li><li id=fn:5>En réalité, on ne saisit pas <code>http://adresse IP</code> mais <code>http://URL de la page</code> depuis la barre du navigateur. Celui-ci remplace l&rsquo;URL de la page par l&rsquo;adresse IP correspondante, après consultation du serveur DNS.
-<a class=footnote-return href=#fnref:5><sup>[return]</sup></a></li></ol></div></article><div style=height:100px></div></div><aside class="book-toc fixed"><nav id=TableOfContents><ul><li><a href=#faire-communiquer-des-ordinateurs>Faire communiquer des ordinateurs</a><ul><li><a href=#reseau-d-ordinateurs>Reseau d&rsquo;ordinateurs</a><ul><li><a href=#qu-est-ce-qu-un-système-informatique>Qu&rsquo;est ce qu&rsquo;un système informatique ?</a></li><li><a href=#des-services-diversifiés>des services diversifiés</a></li><li><a href=#le-commutateur-switch-et-le-routeur>Le commutateur (switch) et le routeur</a></li></ul></li><li><a href=#différences-entre-reseau-local-et-reseau-internet>Différences entre reseau local et reseau internet</a><ul><li><a href=#reseau-local-systeme-réparti-3>Reseau local: Systeme <em>réparti</em><sup class=footnote-ref id=fnref:3><a href=#fn:3>3</a></sup></a></li><li><a href=#reseau-internet-un-système-distribué-4>Reseau internet: un système <em>distribué</em><sup class=footnote-ref id=fnref:4><a href=#fn:4>4</a></sup></a></li></ul></li><li><a href=#définitions>Définitions</a><ul><li><a href=#caractéristiques-physiques-canal-de-transmission>Caractéristiques physiques : canal de transmission:</a><ul><li><a href=#1-reseau-local>1. reseau local</a></li><li><a href=#2-reseau-internet>2. reseau internet</a></li></ul></li></ul></li></ul></li><li><a href=#le-fonctionnement-d-internet>Le fonctionnement d&rsquo;internet</a><ul><li><a href=#protocole-http>Protocole http</a></li><li><a href=#adresses-ip>adresses IP</a></li><li><a href=#url>URL</a></li></ul></li><li><a href=#liens>Liens</a></li></ul></nav></aside></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
-<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
+C&rsquo;est pourquoi ces IP ont vocation à être remplacées par un nouveau système : IPv6 (8 groupes de 2 octets)</p>
+<h3 id="ipv6"><strong>IPv6</strong></h3>
+<p>Ce sont des adresses IP codées sur 128 bits, soit 16 octets, ou 32 caractères hexadecimaux.</p>
+<p>La nouvelle forme d&rsquo;IP, que l&rsquo;on va rencontrer de plus en plus, a la forme suivante : (exemple)</p>
+<p>$$1703:01b8:43c4:85a3:0000:0000:a213:bba7$$</p>
+<p>Leur nombre est d&rsquo;environ 10^29 fois plus important que pour les adresses IPv4.</p>
+<h2 id="dns-ip-et-url">DNS, IP et URL</h2>
+<ul>
+<li>Lorsque l&rsquo;on veut atteindre un ordinateur serveur depuis notre navigateur, possédant une adresse IP publique, on pourrait saisir dans la barre d&rsquo;adresse. <sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup></li>
+</ul>
+<pre tabindex="0"><code>&gt; http://&lt;adresse IP du serveur&gt;
+</code></pre><ul>
+<li>De même, lorsque l&rsquo;on veut tester la connexion vers une machine distante du reseau, on saisit dans la console (lignes de commande):</li>
+</ul>
+<pre tabindex="0"><code>&gt; ping &lt;adresse IP du destinataire&gt;
+</code></pre><p>Mais, grâce au format d&rsquo;adresse symbolique, l&rsquo;URL, la navigation est plus facile:</p>
+<p><strong>URL</strong> Habituellement, un nom de domaine est associé à une <strong>adresse IP</strong> qui est celle du serveur et c’est le <strong>serveur DNS</strong> qui permet de connaitre l’adresse IP du serveur, quand on tape une adresse URL dans la barre d’adresse. Le DNS est donc un protocole indispensable au fonctionnement d&rsquo;Internet. Non pas d&rsquo;un point de vue technique, mais d&rsquo;un point de vue de son utilisation (les adresses URL sont plus faciles à retenir pour un humain).</p>
+<p>L’URL (Uniform Ressource Locator ) est l’adresse unique qui permet d’accéder à une page web à partir de sa saisie dans la barre d’adresses du navigateur. L‘URL est communément appelée : l’adresse web d’une page.</p>
+<p>Prenons l’exemple :  <code>http://www.coursinfo.fr/</code>
+<!-- raw HTML omitted -->Cette URL correspond à l&rsquo;adresse IP <code>213.186.33.16</code>. Lors du protocole DNS, le serveur DNS va permuter <em><a href="https://www.coursinfo.fr">www.coursinfo.fr</a></em> par <em>213.186.33.16</em> dans l&rsquo;URL.</p>
+<p>Revenons sur l&rsquo;URL symbolique. Celle-ci se compose de 4 blocs :</p>
+<ul>
+<li><code>.fr</code> désigne le domaine de 2er niveau, le top level auquel appartient le domaine</li>
+<li><code>coursinfo</code>  désigne le nom de domaine du site web – le site coursinfo.fr a souscrit à ce nom de domaine</li>
+<li><code>www</code>          le www est la norme pour les sites Web (World Wide Web), et c&rsquo;est un sous domaine dans la hierarchie de l&rsquo;URL</li>
+<li>`http://      qui désigne le protocole à utiliser pour accèder au site web : ici c’est donc le protocole http</li>
+<li>l&rsquo;URL finit en principe par un point (la racine dans la hierarchie)</li>
+</ul>
+<p>Il s&rsquo;agit donc d&rsquo;un système hiérarchique qui permet de &ldquo;découper&rdquo; le réseau en un ensemble de domaines, eux-mêmes composés de sous-domaines, éventuellement composés de sous-sous-domaines, etc. Ce découpage va faciliter le classement, le tri et la recherche des URL parmi les serveurs DNS.</p>
+<p>La connaissance que vous avez maintenant de la construction de l&rsquo;URL / nom de domaine devrait vous permettre d&rsquo;eviter l&rsquo;un des grand piege d&rsquo;internet : le phishing&hellip;</p>
+<h1 id="protocole-http">Protocole http</h1>
+<p><strong>http</strong> est le protocole qui permet à une machine de demander et de recevoir une ressource d&rsquo;un serveur. C&rsquo;est un protocole qui fonctionne selon le modèle <em>client-serveur</em>.</p>
+<p><em>http :</em> est l&rsquo;abréviation de HyperText Transfer Protocol. (est-ce plus clair ?)</p>
+<p>En plus clair :</p>
+<ul>
+<li><strong>P</strong>rotocole : c&rsquo;est une règle.</li>
+<li><strong>T</strong>ransfert : pour transférer (communiquer).</li>
+<li><strong>H</strong>yperTexte : c&rsquo;est du texte qui contient des liens vers d&rsquo;autres ressources (documents, images etc&hellip;)</li>
+</ul>
+<p>On a vu qu&rsquo;un système informatique fonctionne sur le modèle <em>client-serveur</em>. Ceci est vrai, même si le serveur est extérieur au réseau du client (accessible par internet) :</p>
+<!-- raw HTML omitted -->
+<p><em>Questions :</em></p>
+<ol>
+<li>Comment le client s&rsquo;adresse t-il au <em>bon</em> serveur ?</li>
+<li>Comment celui-ci renvoie-t-il les données au <em>bon</em> client ?</li>
+<li>Comment circulent les données entre le client et le serveur?</li>
+</ol>
+<p><em>Réponses:</em></p>
+<ul>
+<li>pour les questions 1 et 2, c&rsquo;est avec la définition du <em>protocole IP</em> que nous allons y repondre.</li>
+<li>pour la question 3: il s&rsquo;agit d&rsquo;une partie qui sera étudiée avec le cours sur <!-- raw HTML omitted -->le modele OSI et le protocole TCP<!-- raw HTML omitted -->. Tout ce que nous aurons à retenir, c&rsquo;est que le navigateur (un logiciel de la couche <em>Application</em>), confie cette tâche à d&rsquo;autres logiciels, qui vont saucissonner les messages entre le client et le serveur, en <em>trames</em>, et ajouter des données qui vont permettre leur bonne circulation. (<strong>protocole TCP</strong>).</li>
+</ul>
+<p><strong>le protocole IP:</strong> c&rsquo;est lui qui permet de se connecter à un autre ordinateur. Il gère l&rsquo;adressage.</p>
+<p><strong>le protocole TCP:</strong> permet d&rsquo;envoyer les paquets d&rsquo;un ordinateur vers un autre ordinateur. Il gère le routage et l&rsquo;interconnexion des différents réseaux.</p>
+<h1 id="liens">Liens</h1>
+<ul>
+<li><!-- raw HTML omitted -->TP simulation d&rsquo;un reseau<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->Le modèle OSI (concerne la Spé NSI)<!-- raw HTML omitted --></li>
+</ul>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Le cloud : désigne le stockage et l’accès aux données par l’intermédiaire d’internet plutôt que via le disque dur d’un ordinateur. Mais aussi des services rendus par des logiciels hébergés <em>côté serveur</em>.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>configurer son réseau local (Wikihow) : <a href="https://fr.wikihow.com/configurer-un-r">https://fr.wikihow.com/configurer-un-r</a>éseau-local&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>Systèmes répartis: Ce sont des systèmes pour lesquels les ordinateurs mis en reseau ont un couplage fort. Des exemples de systèmes répartis: un centre de documentation, bibliothèque, reseau de lycée, contrôle et organisation d&rsquo;activité en temps réél,&hellip;&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>Système distribué: Les ordinateurs du reseau ont un couplage faible, et communiquent par echange de messages de manière asynchrone. La difficulté de mise en oeuvre d&rsquo;un algorithme sur un système distribué, est que l&rsquo;on n&rsquo;a pas connaissance de l&rsquo;état global du système (routage sur internet).&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>En réalité, on ne saisit pas <code>http://adresse IP</code> mais <code>http://URL de la page</code> depuis la barre du navigateur. Celui-ci remplace l&rsquo;URL de la page par l&rsquo;adresse IP correspondante, après consultation du serveur DNS.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#reseau-dordinateurs">Reseau d&rsquo;ordinateurs</a>
+      <ul>
+        <li><a href="#quest-ce-quun-système-informatique-">Qu&rsquo;est ce qu&rsquo;un système informatique ?</a></li>
+        <li><a href="#des-services-diversifiés">des services diversifiés</a></li>
+        <li><a href="#le-commutateur-switch-et-le-routeur">Le commutateur (switch) et le routeur</a></li>
+      </ul>
+    </li>
+    <li><a href="#différences-entre-reseau-local-et-reseau-internet">Différences entre reseau local et reseau internet</a>
+      <ul>
+        <li><a href="#reseau-local-systeme-réparti3">Reseau local: Systeme <em>réparti</em></a></li>
+        <li><a href="#reseau-internet-un-système-distribué4">Reseau internet: un système <em>distribué</em></a></li>
+      </ul>
+    </li>
+    <li><a href="#définitions">Définitions</a>
+      <ul>
+        <li><a href="#caractéristiques-physiques--canal-de-transmission">Caractéristiques physiques : canal de transmission:</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#adressage-dans-un-reseau-local-mac">adressage dans un reseau local: MAC</a></li>
+    <li><a href="#adressage-ip">adressage IP</a>
+      <ul>
+        <li><a href="#ipv4"><strong>IPv4</strong></a></li>
+        <li><a href="#ipv6"><strong>IPv6</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#dns-ip-et-url">DNS, IP et URL</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

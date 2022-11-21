@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    python
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fpython\2fpages\2fgeneralites\2fpage1\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    python
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="naissance-de-python">Naissance de Python</h1>
+<p>Python, créé en 1991, est désormais le principal langage de programmation dans les domaines du Machine Learning, du Big Data et de la Data Science.</p>
+<p>Son créateur est un néerlandais nommé Guido van Rossum, qui a cherché à faire un langage très simple et lisible. Certains prétendent même que lire du code Python équivaut à lire de l’anglais.</p>
+<!-- raw HTML omitted -->
+<p>le nom du langage vient de l’affection de Guido pour le « Monty Python Flying Circus », une comédie surréaliste créée par un groupe comique anglais « Monty Python ».</p>
+<p>Le site « <a href="http://www.rosettacode.org/wiki/Rosetta_Code">Rosetta Code</a> » permet de comparer des programmes réalisant le même travail dans plusieurs centaines de langages informatique différents, confirme cette lisibilité.</p>
+<p>la licence Python appartient depuis 2001 à la Python Software Foundation, organisation sans but lucratif. La licence est donc FLOSS &ldquo;Free/Libre and Open Source Software&rdquo;, à l’instar de Linux, Ubuntu, LibreOffice, Mozilla Firefox, Mono (clone de la plateforme .NET de Microsoft), Apache Web Server et le VLC player.</p>
+<!-- raw HTML omitted -->
+<h1 id="langage-de-haut-niveau">Langage de haut-niveau</h1>
+<p>On appelle « haut niveau » les langages de forte abstraction, qui s’éloignent de l’électronique de l’appareil opérant le programme. Un langage orienté autour du problème à résoudre sans s’occuper des caractéristiques techniques du matériel utilisé.</p>
+<p>Python est généralement appelé un langage interprété, cependant, il combine la compilation et l&rsquo;interprétation:</p>
+<ul>
+<li>Lorsque nous exécutons un <strong>code source</strong> (un fichier avec une extension <strong><code>.py</code></strong> ), Python le compile d&rsquo;abord en un bytecode.</li>
+<li>Le <strong>bytecode</strong> est une représentation de bas niveau indépendante de la plate-forme de votre code source, cependant, il ne s&rsquo;agit pas du code machine binaire et ne peut pas être exécuté directement par la machine.</li>
+<li>Le bytecode est un ensemble d&rsquo;instructions pour une machine virtuelle qui s&rsquo;appelle la <strong>machine virtuelle Python (PVM)</strong>.</li>
+</ul>
+<!-- raw HTML omitted -->
+<p>Le PVM est un interpréteur qui exécute le bytecode et fait partie du système Python. Le bytecode est indépendant de la plate-forme, mais PVM est spécifique à la machine cible. L&rsquo;implémentation par défaut du langage de programmation Python est CPython qui est écrit dans le langage de programmation C. (il existe d&rsquo;autres implementations). CPython compile le code source python dans le bytecode, et ce bytecode est ensuite exécuté puis desassemblé par la machine virtuelle CPython.</p>
+<h1 id="bytecode">Bytecode</h1>
+<p>On peut verifier comment sont codés les nombres dans la machine en lisant le Bytecode.<!-- raw HTML omitted -->
+Le <strong>module struct</strong> permet la conversion entre valeurs typées de python, et données binaires du C, le bytecode. C&rsquo;est ce bytecode qui est passé à la machine après compilation lors de l&rsquo;execution.</p>
+<h2 id="reconstruction-dun-nombre-à-partir-de-son-complément-à-2">Reconstruction d&rsquo;un nombre à partir de son complément à 2</h2>
+<p>On doit alors spécifier le format de ces valeurs, avant d&rsquo;en demander la conversion en bytecode.</p>
+<p>Pour faire cela, on importe la librairie <code>struct</code> avec <code>import struct</code>.</p>
+<p>La fonction <code>int_to_b</code> permet de convertir un entier signé en Bytecode, puis de retourner la sequence binaire correspondante.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#111">struct</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">int_to_b</span><span style="color:#111">(</span><span style="color:#111">num</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">bits</span><span style="color:#111">,</span> <span style="color:#f92672">=</span> <span style="color:#111">struct</span><span style="color:#f92672">.</span><span style="color:#111">unpack</span><span style="color:#111">(</span><span style="color:#d88200">&#39;!I&#39;</span><span style="color:#111">,</span> <span style="color:#111">struct</span><span style="color:#f92672">.</span><span style="color:#111">pack</span><span style="color:#111">(</span><span style="color:#d88200">&#39;!i&#39;</span><span style="color:#111">,</span> <span style="color:#111">num</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">bin</span><span style="color:#111">(</span><span style="color:#111">bits</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>Testons cette fonction avec le nombre -129:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">int_to_b</span><span style="color:#111">(</span><span style="color:#f92672">-</span><span style="color:#ae81ff">129</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#d88200">&#39;0b11111111111111111111111101111111&#39;</span>
+</span></span></code></pre></div><p>Rappelez vous: pour coder un entier signé, il faut:</p>
+<ul>
+<li>inverser tous les bits (chercher le complément à 1)</li>
+<li>ajouter 1 au nombre binaire pris en valeur absolue</li>
+</ul>
+<p>Donc pour retrouver la valeur absolue en binaire, il faudra :</p>
+<ul>
+<li>soustraire 1</li>
+<li>déterminer le complement à 1 (inverser tous les bits)</li>
+</ul>
+<p>&lsquo;0b11111111111111111111111101111111&rsquo; <!-- raw HTML omitted -->-&gt; (-1) <!-- raw HTML omitted -->&lsquo;0b11111111111111111111111101111110&rsquo;
+<!-- raw HTML omitted -->
+puis inversion de tous les bits:<!-- raw HTML omitted -->
+N = &lsquo;0b11111111111111111111111101111110&rsquo;
+<!-- raw HTML omitted -->
+<code>inverse_bits(N) = ?</code></p>
+<p>Il pourra être utile de programmer une fonction <code>inverse_bits</code> pour eviter de faire les 32 bits &ldquo;à la main&rdquo;.</p>
+<p>Le debut de cette fonction pourrait être:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">inverse_bits</span><span style="color:#111">(</span><span style="color:#111">N</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">inverse</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">for</span> <span style="color:#111">bit</span> <span style="color:#f92672">in</span> <span style="color:#111">N</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">if</span> <span style="color:#111">bit</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#39;0&#39;</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">...</span>
+</span></span></code></pre></div><p>Puis pour finir:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">N</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;11111111111111111111111101111110&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">int</span><span style="color:#111">(</span><span style="color:#111">inverse_bits</span><span style="color:#111">(</span><span style="color:#111">N</span><span style="color:#111">),</span><span style="color:#ae81ff">2</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">129</span>
+</span></span></code></pre></div><h3 id="à-vous-de-jouer">à vous de jouer</h3>
+<p>Utiliser les fonctions <code>float_to_bin</code> puis <code>int_to_bin</code> pour obtenir les représentations de -126 dans les 2 représentations vues ici: selon la norme IEEE 754 puis selon le codage à complement à 2.</p>
+<p>Verifier alors que le nombre peut être reconstruit selon ces 2 normes, et que l&rsquo;on retrouve bien -126.</p>
+<h3 id="conversion-python---c">CONVERSION PYTHON -&gt; C</h3>
+<p>S&rsquo;il s&rsquo;agit d&rsquo;un flottant à convertir en bytecode, faire:</p>
+<p><code>struct.pack('!f', num)</code></p>
+<p>On précise ici que la variable <code>num</code> est de type float. <code>num</code> sera alors codé en C-bytes selon la norme IEEE 754.</p>
+<p><em>Exemple:</em> en console, on demande le bytecode qui code le flottant 500.0</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#111">struct</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">struct</span><span style="color:#f92672">.</span><span style="color:#111">pack</span><span style="color:#111">(</span><span style="color:#d88200">&#39;!f&#39;</span><span style="color:#111">,</span> <span style="color:#ae81ff">129.</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#d88200">b</span><span style="color:#d88200">&#39;C</span><span style="color:#8045ff">\x01\x00\x00</span><span style="color:#d88200">&#39;</span>
+</span></span></code></pre></div><p>Les options sont:</p>
+<ul>
+<li>i : entier non signé</li>
+<li>I : entier signé</li>
+<li>f : float</li>
+</ul>
+<h3 id="conversion-c---python">CONVERSION C -&gt; PYTHON</h3>
+<p>L&rsquo;opération inverse s&rsquo;effectue ainsi :</p>
+<p><code>bits,=struct.unpack('!I', b'C\x01\x00\x00')</code></p>
+<p>La virgule après bits doit bien être écrite afin de que bits soit mis en format numerique. Cela permet de traduire le Bytecode <code>b'C\x01\x00\x00'</code> en une serie de bits.</p>
+<p>Si on veut afficher la série de bits:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">bin</span><span style="color:#111">(</span><span style="color:#111">bits</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#d88200">&#39;0b1000011000000010000000000000000&#39;</span>
+</span></span></code></pre></div><h2 id="programme-complet-python---c---python">Programme complet: python -&gt; C -&gt; python</h2>
+<p>La fonction <code>float_to_b</code> permet de convertir un flottant en Bytecode, puis de retourner la sequence binaire correspondante. Celle-ci suit la norme IEEE 754, en simple precision.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#111">struct</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">float_to_b</span><span style="color:#111">(</span><span style="color:#111">num</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">bits</span><span style="color:#111">,</span> <span style="color:#f92672">=</span> <span style="color:#111">struct</span><span style="color:#f92672">.</span><span style="color:#111">unpack</span><span style="color:#111">(</span><span style="color:#d88200">&#39;!I&#39;</span><span style="color:#111">,</span> <span style="color:#111">struct</span><span style="color:#f92672">.</span><span style="color:#111">pack</span><span style="color:#111">(</span><span style="color:#d88200">&#39;!f&#39;</span><span style="color:#111">,</span> <span style="color:#111">num</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">bin</span><span style="color:#111">(</span><span style="color:#111">bits</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>On peut alors tester avec le nombre -129:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">float_to_b</span><span style="color:#111">(</span><span style="color:#f92672">-</span><span style="color:#ae81ff">129</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#d88200">&#39;0b11000011000000010000000000000000&#39;</span>
+</span></span></code></pre></div><h2 id="reconstruction-dun-nombre-à-partir-de-la-représentation-en-ieee-754">Reconstruction d&rsquo;un nombre à partir de la représentation en ieee 754</h2>
+<p>On peut alors vérifier si la reconstruction du nombre -129 est possible à partir de ce binaire: Le nombre s&rsquo;écrit:</p>
+<p>$$-1^{bit~signe}\times 1,M \times 2^{E-127}$$</p>
+<p>Le binaire est constitué de 3 parties</p>
+<table>
+<thead>
+<tr>
+<th>bit de signe</th>
+<th>E</th>
+<th>M</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 bit</td>
+<td>8 bits</td>
+<td>23 bits restants</td>
+</tr>
+<tr>
+<td>1</td>
+<td>10000110</td>
+<td>00000010000000000000000</td>
+</tr>
+</tbody>
+</table>
+<p>E vaut donc 10000110. Or, pour obtenir la puissance de 2, il faut soustraire 127. Ceci permet de gérer les puissances négatives de 2 et donne une etendue [-127; 128] à l&rsquo;exposant.</p>
+<p>Cela peut se faire selon le calcul suivant:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">int</span><span style="color:#111">(</span><span style="color:#111">b</span><span style="color:#111">,</span><span style="color:#ae81ff">2</span><span style="color:#111">)</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">127</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">7</span>
+</span></span></code></pre></div><p>M est la partie après la virgule de 1,M. On rajoute le bit entier avant la virgule: (on n&rsquo;écrit pas les zeros à droite du dernier 1)</p>
+<p>$$1,0000001$$</p>
+<p>Le nombre s&rsquo;écrit :</p>
+<p>$$-1 \times 1,0000001 \times 2^7$$</p>
+<p>Mais l&rsquo;exposant 7 doit permettre alors de decaler la virgule de 7 rangs vers la droite, ce qui donne finalement:</p>
+<p>$$-1 \times 10000001$$</p>
+<p>Cette fois, on peut evaluer ce binaire, et il vaut: $$-127$$</p>
+<h1 id="liens">Liens</h1>
+<p><a href="https://www.ausy.fr/fr/actualites-techniques/que-se-cache-t-il-derriere-python">https://www.ausy.fr/fr/actualites-techniques/que-se-cache-t-il-derriere-python</a></p>
+<p><a href="https://ichi.pro/fr/comprendre-le-bytecode-python-255007960625997">https://ichi.pro/fr/comprendre-le-bytecode-python-255007960625997</a></p>
+<p><a href="https://opensource.com/article/18/4/introduction-python-bytecode">https://opensource.com/article/18/4/introduction-python-bytecode</a></p>
+<p><a href="https://learning-python.com/class/Workbook/unit02.htm">https://learning-python.com/class/Workbook/unit02.htm</a></p>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#reconstruction-dun-nombre-à-partir-de-son-complément-à-2">Reconstruction d&rsquo;un nombre à partir de son complément à 2</a>
+      <ul>
+        <li><a href="#à-vous-de-jouer">à vous de jouer</a></li>
+        <li><a href="#conversion-python---c">CONVERSION PYTHON -&gt; C</a></li>
+        <li><a href="#conversion-c---python">CONVERSION C -&gt; PYTHON</a></li>
+      </ul>
+    </li>
+    <li><a href="#programme-complet-python---c---python">Programme complet: python -&gt; C -&gt; python</a></li>
+    <li><a href="#reconstruction-dun-nombre-à-partir-de-la-représentation-en-ieee-754">Reconstruction d&rsquo;un nombre à partir de la représentation en ieee 754</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

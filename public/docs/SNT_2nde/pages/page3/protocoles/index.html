@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    protocoles
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fSNT_2nde\2fpages\2fpage3\2fprotocoles\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    protocoles
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="protocoles">Protocoles</h1>
+<p>Pour rappel, un protocole est un langage. Il permet aux machines qui dialoguent ensemble de se comprendre.</p>
+<p>Grâce au protocole TCP, les machines dialoguent en <em>mode connecté</em>.</p>
+<p>Le <em>mode connecté</em> est l&rsquo;établissement d&rsquo;une session de communication entre deux parties qui veulent échanger des données. Cette session comporte:</p>
+<ul>
+<li>un début</li>
+<li>une fin</li>
+<li>et une validation (vérification des erreurs).</li>
+</ul>
+<h2 id="rappels-sur-le-modèle-en-couches">rappels sur le modèle en couches</h2>
+<p>On a vu que l&rsquo;information qui circule entre 2 machines comprend des données et des adresses.</p>
+<p>Les composants du reseau n&rsquo;ont accès qu&rsquo;à certaines de ces données et adresses, selon leur position dans le modèle en couches.</p>
+<!-- raw HTML omitted -->
+<p><em>source: <a href="https://www.youtube.com/watch?v=26jazyc7VNk">comprendre les modèles OSI et TCP/IP - chaine Cookie connecté</a></em></p>
+<p>Ainsi:</p>
+<ul>
+<li>Le switch fait partie des couches <em>liaison</em> (2)  et <em>physique</em> (1). Il a accès aux bits et à l&rsquo;adresse MAC. Il en a besoin pour commuter les trames vers le bon port. (même reseau).</li>
+<li>Le routeur a accès aux adresses MAC et IP de la trame. Il va interconnecter des reseaux grace aux adresses IP.</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="protocoles-de-la-couche-physique">Protocoles de la couche physique</h2>
+<p>le rôle principal de la couche 1 est d&rsquo;offrir un support de transmission pour les communications. Le protocole de la couche 1 doit permettre aux machines de communiquer sans collision (l&rsquo;une après l&rsquo;autre pour 2 machines de la même ligne). Il existe par exemple le protocole CSMA/CD, pour organiser le droit de parole lorsque 2 machines sont directement connectées.</p>
+<h2 id="protocoles-de-la-couche-liaison">Protocoles de la couche liaison</h2>
+<p>Le protocole Ethernet: l&rsquo;objectif est de permettre à des machines connectées ensemble de communiquer, ainsi que la détection des erreurs de transmission.</p>
+<p>Les données sont mises dans une <em>trame</em>, dont les premières valeurs lisibles sont l&rsquo;adresse MAC du destinataire, puis de l&rsquo;émetteur.</p>
+<p>Ainsi, lorsqu&rsquo;une machine reçoit une trame, et que les premiers bits identifient son adresse MAC, alors elle conserve la trame, car celle-ci lui est destinée.</p>
+<p>Un autre protocole a été utilisé pour fiabiliser la transmission. Le protocole du bit alterné est utilisé au sein de la couche 2 du modèle OSI (distribution des trames Ethernet). Simple et léger, il peut toutefois être facilement mis en défaut, ce qui explique qu&rsquo;il ait été remplacé par des protocoles plus performants.</p>
+<!-- raw HTML omitted -->
+<p>Cela necessite d&rsquo;ajouter 1 bit dans l&rsquo;en-tête prévu pour la couche 2, contenant déjà les adresses MAC.</p>
+<h3 id="principe-du-protocole-du-bit-alterné">Principe du protocole du bit alterné</h3>
+<p>la première trame envoyée par A aura pour drapeau 0, dès cette trame
+reçue par B, ce dernier va envoyer un accusé de réception avec le drapeau 1 (ce 1 signifie &ldquo;la prochaine trame
+que A va m&rsquo;envoyer devra avoir son drapeau à 1&rdquo;). Dès que A reçoit l&rsquo;accusé de réception avec le drapeau à
+1, il envoie la 2e trame avec un drapeau à 1, et ainsi de suite&hellip;</p>
+<p>Le système de drapeau est complété avec un système d&rsquo;horloge côté émetteur. Un &ldquo;chronomètre&rdquo; est déclenché à chaque envoi de trame, si au bout d&rsquo;un certain temps, l&rsquo;émetteur n&rsquo;a pas reçu un acquittement correct (avec le bon drapeau), la trame précédemment envoyée par l&rsquo;émetteur est considérée comme perdue et est de nouveau envoyée.</p>
+<h3 id="code-de-correction-derreur-crc">Code de correction d&rsquo;erreur CRC</h3>
+<p>Dans la trame, on ajoute aux données de la couche 2 un code de correction des erreurs, ou CRC. C&rsquo;est une valeur mathématique qui est représentative des données envoyées.</p>
+<!-- raw HTML omitted -->
+<p>Lors de l&rsquo;envoi, A calcule le CRC (une valeur X) et le met à la fin de la trame.</p>
+<p>B reçoit le message et fait le même calcul que A avec la trame reçue (une valeur Y).</p>
+<p>B compare la valeur qu&rsquo;elle a calculée (Y) avec la valeur que A avait calculée et mise à la fin de la trame (X).</p>
+<p>Si elles sont égales, bingo ! La trame envoyée par A est bien identique à la trame reçue par B.</p>
+<h3 id="désencapsulation">Désencapsulation</h3>
+<p>Supposons que les machines A et B soient des <em>routeurs</em>:</p>
+<p>Une fois que la machine B a reçu la <em>bonne</em> trame, elle <em>désencapsule</em> les données pour consulter celles de couche 3, les adresses IP. Elle agit alors selon le protocole IP.</p>
+<h2 id="le-protocole-ip">Le protocole IP</h2>
+<blockquote>
+<p>Le protocole IP a pour charge de mettre en contact 2 ordinateurs qui n&rsquo;appartiennent pas au même réseau. (par exemple sur Internet). C&rsquo;est un protocole de la <strong>couche 3</strong> (couche reseau).</p>
+</blockquote>
+<p>La couche 3 a pour rôle d&rsquo;interconnecter les reseaux.</p>
+<p>Lorsqu&rsquo;un routeur reçoit un paquet d&rsquo;une machine A, et qu&rsquo;il doit la transmettre vers la machine B, il consulte sa <em>table de routage</em> pour l&rsquo;envoyer par le chemin (l&rsquo;interface) le plus court.</p>
+<p>La table contient, pour chaque machine à atteindre, l&rsquo;interface vers laquelle doivent transiter les données, ainsi qu&rsquo;un coefficient correspondant au coût pour cette interface. (Le coût étant égal au nombre de sauts, ou bien au résultat d&rsquo;un calcul mettant en jeu le debit).</p>
+<!-- raw HTML omitted -->
+<p>Cette table de routage ne peut contenir tous les routeurs du reseau internet (estimé à probablement 1 million). Il est donc necessaire de regrouper les sous-réseaux en <em>aires</em>, et d&rsquo;indiquer le chemin vers ces <em>aires</em> dans les tables de routage.</p>
+<!-- raw HTML omitted -->
+<p>La manière avec laquelle les tables de routages sont constituées est le resultat du protocole IP. Il existe ainsi:</p>
+<ul>
+<li>le routage à vecteur de distance</li>
+<li>le routage à état de liens</li>
+</ul>
+<p>Cette partie sera développée en Term NSI.</p>
+<p><em><a href="https://www.youtube.com/watch?v=FeZI3Xl7j84">sources: mooc de l&rsquo;institut des mines telecom</a></em></p>
+<p><strong>TTL</strong>: Le protocole prend en compte le <em>time to live</em> (TTL), une valeur numerique du datagramme (couche reseau), qui diminue d&rsquo;une unité à chaque saut (routeur). Lorsque ce TTL arrive à zero, alors que le paquet n&rsquo;est pas parvenu à destination, celui-ci est détruit. On verra que dans le protocole TCP, cette eventualité est prévue. Un compte à rebours du côté de la machine emettrice va provoquer la ré expedition du paquet lorsque ce compteur arrive à 0, et qu&rsquo;aucun accusé de reception n&rsquo;est parvenu.</p>
+<h2 id="le-protocole-tcp">Le protocole TCP</h2>
+<blockquote>
+<p>Le protocole TCP permet d&rsquo;assurer le transport des données de sorte que celles-ci arrivent complètes, sans trop occuper les lignes du reseau. C&rsquo;est le protocole de la <strong>couche 4</strong>. A ce niveau de la couche de transport, l&rsquo;identifiant ajouté au <em>message</em> est le <strong>numéro de port</strong> de l&rsquo;application qui est à l&rsquo;origine du message.</p>
+</blockquote>
+<p>La fiabilité est obtenue par un mécanisme d&rsquo;acquittement des segments :</p>
+<ul>
+<li>À l&rsquo;émission d&rsquo;un segment, une alarme est amorcée</li>
+<li>Elle est désamorcée quand l&rsquo;acquittement correspondant est reçu</li>
+<li>Si elle expire, le segment est réémis</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>Chaque segment possède un numéro de séquence SEQ: c&rsquo;est le numéro du premier octet envoyé. C&rsquo;est grâce à ce numero que les segments peuvent être remis dans l&rsquo;ordre.</li>
+<li>Les acquittements sont identifiés par un marqueur ACK: c&rsquo;est le numéro du prochain octet attendu par la machine.</li>
+<li>Le concept même d&rsquo;acquittement impose des notions de délai.
+Par exemple, quel est le délai au delà duquel un segment non acquitté doit être réémis</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><em>TCP permet ainsi d&rsquo;être un protocole fiable sans perte de paquets, qui permet à 2 machines de communiquer entre elles (et seulement 2)</em></p>
+<h2 id="protocoles-dns-http-">Protocoles DNS, HTTP, &hellip;</h2>
+<blockquote>
+<p>C&rsquo;est un protocole de la couche Application. Le sujet a déja été traité <a href="http://localhost:1313/docs/SNT_2nde/pages/page3/circulation/#dns-ip-et-url">ici</a></p>
+</blockquote>
+<p>La couche d&rsquo;application définit les services Internet standard et les applications réseau à la disposition des utilisateurs: utilise les protocoles HTTP, FTP, SMTP.</p>
+<p>Le protocole HTTP a été traité <a href="/docs/NSI/HTML/page2/">ici</a></p>
+<h1 id="exercices">Exercices</h1>
+<h2 id="adressage-ip-dans-un-reseau">adressage IP dans un reseau</h2>
+<p><strong>Ex 1:</strong></p>
+<p>Sur la configuration IP d’une machine nommée MACH01 on peut lire :</p>
+<blockquote>
+<p>adresse Ipv4 : 172.16.100.201<!-- raw HTML omitted -->
+Masque de sous-réseau :  255.255.0.0<!-- raw HTML omitted -->
+Passerelle : 172.16.0.254<!-- raw HTML omitted --></p>
+</blockquote>
+<p>Sur la configuration IP d’une machine nommée MACH02 on peut lire :</p>
+<blockquote>
+<p>adresse Ipv4 : 172.16.100.202<!-- raw HTML omitted -->
+Masque de sous-réseau :  255.255.0.0<!-- raw HTML omitted -->
+Passerelle : 172.16.0.254<!-- raw HTML omitted --></p>
+</blockquote>
+<p><strong>1.</strong> <em>(QCM)</em> Depuis la machine MACH02, à l&rsquo;aide de quelle commande peut-on tester le dialogue entre ces deux machines ?</p>
+<p>Réponses :</p>
+<p>A- ping 172.16.100.201</p>
+<p>B- ping 172.16.100.202</p>
+<p>C- ping 172.16.100.254</p>
+<p>D- ping 255.255.0.0</p>
+<p><strong>2.</strong> On souhaite ajouter une nouvelle machine dans ce reseau. Proposez une nouvelle adresse IP possible pour cette machine.</p>
+<p><strong>3.</strong> <em>(QCM)</em> Quel est le composant qui a l&rsquo;adresse 172.16.0.254?</p>
+<p>A- un ordinateur du reseau</p>
+<p>B- l&rsquo;une des interfaces du routeur</p>
+<p>C- l&rsquo;adresse du switch</p>
+<p><strong>Ex 2:</strong>
+Une machine a pour adresse IP:</p>
+<p>$$192.168.0.1 / 24$$</p>
+<p>le /24 signifie que les 24 premiers bits correspondent à l&rsquo;adresse reseau. Le reste des bits correspond à l&rsquo;adresse machine.</p>
+<p>Représenter cette adresse en binaire, et identifier les bits correspondant aux 2 sous-parties, reseau et machine.</p>
+<h2 id="constitution-dun-reseau">Constitution d&rsquo;un reseau</h2>
+<p><strong>Ex 1:</strong></p>
+<!-- raw HTML omitted -->
+<p><strong>1.</strong> La machine 192.168.0.1 veut joindre la machine 10.0.1.1 Combien de sauts seront necessaires?</p>
+<p><strong>2.</strong> Les switchs ne sont pas représentés sur ce schéma. Positionnez celui du reseau 192.168.0.0</p>
+<p><strong>3.</strong> Les ordinateurs du reseau 192.168.0 ne peuvent plus acceder à internet, de même que celui d&rsquo;adresse 10.0.0.1. Par contre, ceux-ci peuvent encore communiquer entre eux. Quelle peut être la cause de cette panne?</p>
+<h2 id="routage">Routage</h2>
+<p><strong>Ex 1:</strong>
+Soit le reseau de routeurs A, B, C, D:</p>
+<!-- raw HTML omitted -->
+<p>On suppose que la transmission par une liaison prend une unité de temps. Un seul paquet peut emprunter une liaison pendant cette durée.</p>
+<p>A chaque unité de temps, le paquet poursuit sa route selon le parcours le plus rapide et fait 1 saut.</p>
+<p>Au bout de ce temps, le paquet est donc forcément stocké au niveau du routeur d&rsquo;arrivée.</p>
+<ul>
+<li>A l&rsquo;instant 1, A commence l&rsquo;envoi vers C d&rsquo;une donnée constituée de 3 paquets P1, P2, P3.</li>
+<li>A l&rsquo;instant 2, D commence l&rsquo;envoi vers C d&rsquo;une donnée composée de 2 paquets P4 et P5</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Temps</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>P1, P2, P3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>P2, P3</td>
+<td>P1</td>
+<td></td>
+<td>P4, P5</td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&hellip;</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>1.</strong> Compléter le tableau des différentes étapes d&rsquo;envoi des données.</p>
+<p><strong>2.</strong> Déterminer l&rsquo;espace de stockage nécessaire dans le noeud B.</p>
+<h2 id="trame-et-datagramme">Trame et datagramme</h2>
+<p><strong>Ex 1:</strong></p>
+<!-- raw HTML omitted -->
+<ol>
+<li>Commenter le schéma précédent en expliquant l&rsquo;encapsulation des données.</li>
+<li>Donner les principaux éléments qui composent un datagramme IP et décrire leur utilité.</li>
+</ol>
+<p><strong>Ex 2:</strong>
+Voici le modèle simplifié de datagramme IP que nous allons utiliser dans la suite de l&rsquo;exercice:</p>
+<!-- raw HTML omitted -->
+<p><strong>1.</strong> Sur combien d&rsquo;octets sont codés:</p>
+<ul>
+<li>une adresse IPv4?</li>
+<li>une adresse IPv6?</li>
+<li>un entête IPv4 (au minimum)?</li>
+</ul>
+<p><strong>2.</strong> En vous basant sur l&rsquo;illustration du datagramme IP ci-dessus, dessinez et indiquez certaines des valeurs contenues dans un 2<!-- raw HTML omitted -->e<!-- raw HTML omitted --> datagramme qui repond à l&rsquo;emetteur avec la donnée: <em>il est midi</em>, le TTL est fixé à 5.</p>
+<p><strong>3.</strong> Représentez le datagramme IPv4 correspondant aux informations suivantes:</p>
+<ul>
+<li>source: 10.0.1.1</li>
+<li>destination: 128.192.2.2</li>
+<li>TTL: 3</li>
+<li>Données à envoyer: <em>Bonjour</em></li>
+<li>Pas d&rsquo;option</li>
+</ul>
+<h2 id="protocole-du-bit-alterné">Protocole du bit alterné</h2>
+<p><strong>Ex 1:</strong></p>
+<p>On veut envoyer la donnée <em>1234567890</em> de A vers B avec le protocole du bit alterné</p>
+<p><strong>1.</strong> Que doit renvoyer B lorsqu&rsquo;il reçoit:</p>
+<ul>
+<li>donnée: 12345</li>
+<li>bit de contrôle: 1 ?</li>
+</ul>
+<p><strong>2.</strong> Que doit renvoyer A s&rsquo;il reçoit un bit de contrôle à 0?</p>
+<p><strong>3.</strong> Que doit-il renvoyer s&rsquo;il reçoit 1 comme bit de contrôle?</p>
+<p><strong>Ex 2:</strong></p>
+<p>La machine A doit envoyer les 3 données suivantes: <em>hohoho</em>, <em>salut</em>, <em>les enfants</em>.</p>
+<p>Indiquer les données et les bits de contrôle qui sont transmis dans le protocole du bit alterné lorsque:</p>
+<p><strong>a.</strong> toutes les données sont transmises sans problème.</p>
+<p><strong>b.</strong> la 2e donnée est mal receptionnée 2 fois de suite.</p>
+<h2 id="protocole-tcp">Protocole TCP</h2>
+<p><strong>Ex 1:</strong> (QCM)</p>
+<p>Quels sont les avantages de la transmission sous forme de paquets?</p>
+<p>A- S&rsquo;assurer que les données arrivent dans leur ordre d&rsquo;envoi.</p>
+<p>B- S&rsquo;assurer que les données ne restent pas indéfiniment dans le réseau.</p>
+<p>C- Utiliser au mieux les liens dans le reseau.</p>
+<p><strong>Ex 2:</strong> (QCM plusieurs reponses possibles)</p>
+<p>Que nécessite la transmission sous forme de paquets?</p>
+<p>A- Pouvoir stocker la donnée si un lien n&rsquo;est pas libre.</p>
+<p>B- Une adresse source et une adresse destination associée au paquet.</p>
+<p>C- Un protocole de fiabilisation de la transmission.</p>
+<p>D- Un préfixe d&rsquo;adresse.</p>
+<h1 id="liens">Liens</h1>
+<ul>
+<li><!-- raw HTML omitted -->Retour vers la page Reseaux<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->Sécurité des communications (1ere NSI)<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->TP simulation d&rsquo;un reseau<!-- raw HTML omitted --></li>
+</ul>
+<h1 id="sources">Sources</h1>
+<ul>
+<li>adresse IP, partie reseau, partie machine, plages d&rsquo;adresses: <a href="https://openclassrooms.com/fr/courses/857447-apprenez-le-fonctionnement-des-reseaux-tcp-ip/853441-la-couche-3">cours openclassroom</a></li>
+</ul>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#rappels-sur-le-modèle-en-couches">rappels sur le modèle en couches</a></li>
+    <li><a href="#protocoles-de-la-couche-physique">Protocoles de la couche physique</a></li>
+    <li><a href="#protocoles-de-la-couche-liaison">Protocoles de la couche liaison</a>
+      <ul>
+        <li><a href="#principe-du-protocole-du-bit-alterné">Principe du protocole du bit alterné</a></li>
+        <li><a href="#code-de-correction-derreur-crc">Code de correction d&rsquo;erreur CRC</a></li>
+        <li><a href="#désencapsulation">Désencapsulation</a></li>
+      </ul>
+    </li>
+    <li><a href="#le-protocole-ip">Le protocole IP</a></li>
+    <li><a href="#le-protocole-tcp">Le protocole TCP</a></li>
+    <li><a href="#protocoles-dns-http-">Protocoles DNS, HTTP, &hellip;</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#adressage-ip-dans-un-reseau">adressage IP dans un reseau</a></li>
+    <li><a href="#constitution-dun-reseau">Constitution d&rsquo;un reseau</a></li>
+    <li><a href="#routage">Routage</a></li>
+    <li><a href="#trame-et-datagramme">Trame et datagramme</a></li>
+    <li><a href="#protocole-du-bit-alterné">Protocole du bit alterné</a></li>
+    <li><a href="#protocole-tcp">Protocole TCP</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

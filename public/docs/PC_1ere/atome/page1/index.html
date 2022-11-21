@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    L&#39;atome de Bohr
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fPC_1ere\2f atome\2fpage1\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    L&#39;atome de Bohr
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="spectres-de-raies">Spectres de raies</h1>
+<h2 id="lampes-spectrales">Lampes spectrales</h2>
+<p>On observe différentes lampes à l&rsquo;aide d&rsquo;un spectroscope:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Mettre le reseau dispersif dans le spectroscope et l&rsquo;Utiliser pour visualiser le spectre de quelques lampes.<!-- raw HTML omitted -->
+<strong>Question a</strong> Quelle lampe a le spectre suivant?</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<blockquote>
+<p><strong>Question b:</strong> Reconnaitre les autres lampes à partir du tableau suivant.</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<table>
+<thead>
+<tr>
+<th>Element chimique</th>
+<th>Raie 1  (nm)</th>
+<th>Raie 2</th>
+<th>Raie 3</th>
+<th>Raie 4</th>
+<th>Raie 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Soufre</td>
+<td>410</td>
+<td>470</td>
+<td>500</td>
+<td>570</td>
+<td>605</td>
+</tr>
+<tr>
+<td>Néon</td>
+<td>585</td>
+<td>620</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hydrogène</td>
+<td>395</td>
+<td>410</td>
+<td>435</td>
+<td>485</td>
+<td>655</td>
+</tr>
+<tr>
+<td>Oxygène</td>
+<td>535</td>
+<td>595</td>
+<td>605</td>
+<td>615</td>
+<td>645</td>
+</tr>
+<tr>
+<td>Hélium</td>
+<td>445</td>
+<td>500</td>
+<td>590</td>
+<td>670</td>
+<td></td>
+</tr>
+<tr>
+<td>Mercure</td>
+<td>407</td>
+<td>436</td>
+<td>546</td>
+<td>577</td>
+<td>579</td>
+</tr>
+</tbody>
+</table>
+<h1 id="modèle-de-latome-de-bohr---aspect-theorique">Modèle de l&rsquo;atome de Bohr - aspect theorique</h1>
+<h2 id="niels-bohr">Niels Bohr</h2>
+<p>Niels Bohr, physicien danois, formule en 1913 l&rsquo;hypothèse que les atomes occupent des niveaux d&rsquo;énergie bien déteminés.
+Son modèle atomique est adapté à l&rsquo;atome d&rsquo;hydrogène. Mais il sera aussi adapté aux autres atomes avec des enrichissements venant de la théorie quantique (<em>Hamilton</em>).</p>
+<h2 id="modèle-atomique">Modèle atomique</h2>
+<p>Cette énergie est liée à l&rsquo;interaction entre le noyau de l&rsquo;atome et son électron.
+Elle dépend de la position de l&rsquo;électron, sur des niveaux électroniques (les orbitales) qui vont du plus près (niveau n=1) au plus loin de l&rsquo;atome (niveau n=7).</p>
+<p>L&rsquo;électron occupe préférentiellement l&rsquo;orbitale de plus basse énergie (n=1).
+Lorsque l&rsquo;électron change d&rsquo;orbitale (de niveau d&rsquo;énergie), on dit qu&rsquo;il y a une transition électronique.</p>
+<p>Une transitions électronique vers un niveau inférieur peut s&rsquo;accompagner d&rsquo;une emission d&rsquo;une particule de lumière (un photon). La video suivante explique ceci plus en détail :</p>
+<!-- raw HTML omitted -->
+<h1 id="lanimation--lampe-à-décharge-utilise-java">L&rsquo;animation : lampe à décharge (utilise java)</h1>
+<h2 id="interaction-lumière---matière">Interaction lumière - matière</h2>
+<p>L&rsquo;expérience suivante simule une lampe à décharge : avec une tension suffisante, délivrée par une pile, des électrons sont émis dans un tube depuis l&rsquo;électrode (-) vers l&rsquo;électrode (+). <!-- raw HTML omitted -->
+Sur leur passage, ils rencontrent un atome constitutif du gaz de ce gaz.
+L&rsquo;énergie du choc est absorbée par l&rsquo;atome. Son électron passe alors du niveau fondamental (n=1) vers un niveau supérieur.<!-- raw HTML omitted -->
+Puis, après un certain temps, il revient vers son niveau fondamental, directement, ou avec des étapes à des niveaux intermédiaires (par exemple 3 -&gt; 2 puis 3 -&gt;1). Il se produit une ou plusieurs transitions électroniques, avec émission de <strong>photons</strong><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<p>Ces transitions sont représentées sur le diagramme d&rsquo;énergie, à droite. Chaque plateau horizontal est une <em>orbitale</em>, possédant un certain <em>niveau d&rsquo;énergie</em>, occupé ou non par l&rsquo;électron.</p>
+<p>Le spectromètre mesure le nombre de <em>photons</em> émis pour chaque longueur d&rsquo;onde.</p>
+<!-- raw HTML omitted -->
+<h2 id="travail">Travail</h2>
+<p>Cocher les paramètres : <em>spectromètre, gribouillis, passer au ralenti</em>
+<!-- raw HTML omitted -->
+Les questions suivantes portent sur l&rsquo;atome d&rsquo;Hydrogène. Il s&rsquo;agit de l&rsquo;atome par defaut dans la lampe à decharge presentée ici.</p>
+<ol>
+<li>Légender le schéma fourni avec : électrode (-), électrode (+), pile, atome, électron, photon, diagramme d&rsquo;énergie, fenêtre du spectrophotomètre, transition électronique</li>
+<li>Que signifie le numéro inscrit sur l&rsquo;atome de gaz, au milieu du tube ?</li>
+<li>Les électrons qui percutent l&rsquo;atome, sont ils ralentis par le choc ? Si oui, dans quel cas ?</li>
+<li>Combien de photons sont émis lors d&rsquo;un choc entre électron et atome ?</li>
+<li>Comment soit être réglée la tension de polarisation des électrodes pour que les photons émis soient tous de couleur rouge ?</li>
+<li>Régler la pile pour avoir des photons de différentes couleurs. Attendre suffisament longtemps pour que le spectrophotomètre indique un certain nombre de radiations émises. Relever les valeurs des longueurs d&rsquo;ondes des photons émis.</li>
+<li>Utiliser le <a href="http://ressources.univ-lemans.fr/AccesLibre/UM/Pedago/physique/02/divers/raiehydro.html">lien suivant</a> pour repérer <em>quelles transitions sont responsables de l&rsquo;émission des photons du domaine du visible</em>. (de quel niveau, et vers quel niveau électronique)</li>
+<li>Comment s&rsquo;appelle cette série de transition avec emission dans le visible : Lyman, Balmer, Paschen, Brakett, Plund ?</li>
+</ol>
+<h1 id="compléménts">Compléménts</h1>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Pour faire simple, un <strong>photon</strong> est un <em>grain</em> de lumière.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#lampes-spectrales">Lampes spectrales</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#niels-bohr">Niels Bohr</a></li>
+    <li><a href="#modèle-atomique">Modèle atomique</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#interaction-lumière---matière">Interaction lumière - matière</a></li>
+    <li><a href="#travail">Travail</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

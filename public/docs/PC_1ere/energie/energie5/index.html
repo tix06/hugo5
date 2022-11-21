@@ -1,29 +1,430 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>energie et transports
-| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel=stylesheet><script type=text/x-mathjax-config>
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    energie et transports
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
   });
-</script><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.1c02dc1d2c0b546a84beb71d8f4336d6f5d7b69564e08bdfc04c2fb0595d786d.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
 catch(err)
-{console.log(err.message);}
-if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
-if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
-if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}
-let chemin=window.location.pathname;if(chemin.search('NSI')>-1){baniere=document.querySelector("#myHeader");let linkBox=document.createElement('div');linkBox.classList.add('linkBox');let newH=document.createElement('a');newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';newH.classList.add('nsi');linkBox.appendChild(newH);baniere.appendChild(linkBox);}</script><style>#myHeader{display:flex;flex-direction:row-reverse}#myHeader>.titre{width:80%;min-width:300px;text-align:left}.linkBox{margin:10px;padding-top:10px;background-color:pink;min-width:50px}.isn{}</style></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2f docs\2fPC_1ere\2f energie\2f energie5\2f ]{color:#004ed0}</style><ul><li><a href=/><strong>Accueil</strong></a></li><li><a href=/docs/esf/esf_index/><strong>ESF</strong></a></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p></li><li><p><a href=/docs/python/index_python/><strong>Python</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
-addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-page><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
-<strong>energie et transports</strong></header><article class=markdown><h1 id=energie-et-transports>Energie et transports</h1><h2 id=document-1-cycle-de-vie-d-un-véhicule-déchets-et-émission-de-ges>Document 1: Cycle de vie d’un véhicule, déchets et émission de GES</h2><figure><img src=../images/transports1.png><figcaption>cycle de vie et GES</figcaption></figure><blockquote><p>Question 1: un véhicule propre, à zéro émission de gaz à effet de serre (comme les véhicules électriques par exemple), est-il réellement propre ? Expliquez.</p></blockquote><h2 id=document-2-les-biocarburants>Document 2: Les biocarburants</h2><p>Les biocarburants sont obtenus à partir de plantes possédant une haute valeur énergétique.
-Il y a ceux qui se substituent à l’essence, au gasoil, et ceux à base de gaz naturel. Ils sont issus de plantes riches en sucre (glucose et saccharose dans la betterave, canne à sucre) ou en amidon (blé, maïs, pomme de terre). Ces plantes génèrent des alcools par fermentation.</p><ul><li>pour les substituants de l’essence : on utilise l’alcool (éthanol) produit, que l’on peut utiliser mélangé à l’essence ou même pur (mais dans ce dernier cas il faut un moteur spécial modifié)….</li><li><p>Pour les substituants du gasoil : un nouveau produit doit être synthétisé (fabriqué) à partir de l’éthanol (le diester méthylique), et qui se substitue au diesel.</p></li><li><p>Enfin, il existe les GNV (gaz naturel pour véhicules). Pour la France, ce gaz naturel provient principalement de l&rsquo;étranger (Norvège, Russie, Algérie, Pays-Bas). Le GNV est généralement stocké sous pression (200 bars) dans des réservoirs spécifiques à l&rsquo;intérieur du véhicule. Mais il est aussi possible d&rsquo;utiliser du biométhane produit par des installations de méthanisation (usines de traitement des ordures ménagères, stations d&rsquo;épuration, digesteurs agricoles), ce qui en fait une troisième filière de biocarburants.
-Questions :</p></li></ul><blockquote><p>Question 2: L’utilisation de biocarburant, ajoute t elle du C atmosphérique supplémentaire par rapport à celui absorbé par la plante lors de sa croissance?</p><p>Question 3: Quel est l’intérêt d’utiliser un biocarburant pour son véhicule ?</p><p>Question 4: Véhicules à bioéthanol : Calculer le volume d’éthanol nécessaire pour produire une énergie de 100 000 kJ, nécessaire pour parcourir 100 km avec un véhicule adapté.<br><strong><em>Donnée:</em></strong> <em>pouvoir calorifique de l’éthanol : 21 000 kJ/L (21 000 000 Joules par Litre d’éthanol)</em></p><p>Question 5: Calculer la quantité de matière correspondante (en mol)<br><strong><em>Donnée:</em></strong> <em>masse molaire de l’éthanol : $M(C_2 H_6 O) = 46 g/mol$</em></p></blockquote><p>On donne l&rsquo;équation de combustion de l&rsquo;éthanol:</p><p>$$C_2 H_6 O + 3O_2 = 2CO_2 + 3H_2O$$</p><blockquote><p>Question 6: Quelle est la masse de dioxyde de carbone produite par la combustion d&rsquo;éthanol calculée à la question 4?<br><strong><em>Donnée:</em></strong> <em>masse molaire du dioxyde de carbone : $M(CO_2) = 44 g/mol$</em></p></blockquote><h2 id=document-3-véhicules-hybrides-électricité-essence>Document 3: véhicules hybrides (électricité/essence)</h2><p>Il existe aujourd’hui une certaine variété de véhicules à la consommation hybride (utilisant plusieurs sources d’énergie).</p><p>Selon les sources de professionnels de l’automobile, et l&rsquo;offre de plus en plus attractive, le véhicule de demain devrait fonctionner avec un système hybride de batterie rechargeable/essence.</p><p>Les efforts du véhicule viennent à la fois des moteurs thermique et électrique.
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fPC_1ere\2f energie\2f energie5\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    energie et transports
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="energie-et-transports">Energie et transports</h1>
+<h2 id="document-1-cycle-de-vie-dun-véhicule-déchets-et-émission-de-ges">Document 1: Cycle de vie d’un véhicule, déchets et émission de GES</h2>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Question 1: un véhicule propre, à zéro émission de gaz à effet de serre (comme les véhicules électriques par exemple), est-il réellement propre ? Expliquez.</p>
+</blockquote>
+<h2 id="document-2-les-biocarburants">Document 2: Les biocarburants</h2>
+<p>Les biocarburants sont obtenus à partir de plantes possédant une haute valeur énergétique.
+Il y a ceux qui se substituent à l’essence, au gasoil, et ceux à base de gaz naturel. Ils sont issus de plantes riches en sucre (glucose et saccharose dans la betterave, canne à sucre) ou en amidon (blé, maïs, pomme de terre). Ces plantes génèrent des alcools par fermentation.</p>
+<ul>
+<li>
+<p>pour les substituants de l’essence : on utilise l’alcool (éthanol) produit, que l’on peut utiliser mélangé à l’essence ou même pur (mais dans ce dernier cas il faut un moteur spécial modifié)….</p>
+</li>
+<li>
+<p>Pour les substituants du gasoil : un nouveau produit doit être synthétisé (fabriqué) à partir de l’éthanol (le diester méthylique), et qui se substitue au diesel.</p>
+</li>
+<li>
+<p>Enfin, il existe les GNV (gaz naturel pour véhicules). Pour la France, ce gaz naturel provient principalement de l&rsquo;étranger (Norvège, Russie, Algérie, Pays-Bas). Le GNV est généralement stocké sous pression (200 bars) dans des réservoirs spécifiques à l&rsquo;intérieur du véhicule. Mais il est aussi possible d&rsquo;utiliser du biométhane produit par des installations de méthanisation (usines de traitement des ordures ménagères, stations d&rsquo;épuration, digesteurs agricoles), ce qui en fait une troisième filière de biocarburants.
+Questions :</p>
+</li>
+</ul>
+<blockquote>
+<p>Question 2: L’utilisation de biocarburant, ajoute t elle du C atmosphérique supplémentaire par rapport à celui absorbé par la plante lors de sa croissance?</p>
+</blockquote>
+<blockquote>
+<p>Question 3: Quel est l’intérêt d’utiliser un biocarburant pour son véhicule ?</p>
+</blockquote>
+<blockquote>
+<p>Question 4: Véhicules à bioéthanol : Calculer le volume d’éthanol nécessaire pour produire une énergie de 100 000 kJ, nécessaire pour parcourir 100 km avec un véhicule adapté.<!-- raw HTML omitted -->
+<em><strong>Donnée:</strong></em> <em>pouvoir calorifique de l’éthanol : 21 000 kJ/L  (21 000 000 Joules par Litre d’éthanol)</em></p>
+</blockquote>
+<blockquote>
+<p>Question 5: Calculer la quantité de matière correspondante (en mol)<!-- raw HTML omitted -->
+<em><strong>Donnée:</strong></em> <em>masse molaire de l’éthanol : $M(C_2 H_6 O) = 46 g/mol$</em></p>
+</blockquote>
+<p>On donne l&rsquo;équation de combustion de l&rsquo;éthanol:</p>
+<p>$$C_2 H_6 O + 3O_2 = 2CO_2 + 3H_2O$$</p>
+<blockquote>
+<p>Question 6: Quelle est la masse de dioxyde de carbone produite par la combustion d&rsquo;éthanol calculée à la question 4?<!-- raw HTML omitted -->
+<em><strong>Donnée:</strong></em> <em>masse molaire du dioxyde de carbone : $M(CO_2) = 44 g/mol$</em></p>
+</blockquote>
+<h2 id="document-3-véhicules-hybrides-électricitéessence">Document 3: véhicules hybrides (électricité/essence)</h2>
+<p>Il existe aujourd’hui une certaine variété de véhicules à la consommation hybride (utilisant plusieurs sources d’énergie).</p>
+<p>Selon les sources de professionnels de l’automobile, et l&rsquo;offre de plus en plus attractive, le véhicule de demain devrait fonctionner avec un système hybride de batterie rechargeable/essence.</p>
+<p>Les efforts du véhicule viennent à la fois des moteurs thermique et électrique.
 La voiture hybride classique permet de ne pas consommer de carburant en-dessous de 30 à 50 km/h la plupart du temps. Dans un embouteillage, dans une « Zone 30 », en manœuvre dans un parking, le moteur thermique n’est alors plus alimenté en carburant mais entraîne les roues grâce au moteur électrique intégré.
-La batterie est rechargée lors des périodes de freinage du véhicule :</p><figure><img src=../images/transport4.png><figcaption>assistance électrique pour un moteur hybride</figcaption></figure><p>Aujourd&rsquo;hui, les batteries les plus employées sont de type lithium – ion</p><blockquote><p>Question: Sur l’hybride essence/batterie. Rappeler quelle (quels) est (sont) la (les) source(s) d’énergie utilisée(s) dans ce véhicule ?</p><p>Question: à quels moments fait on l’économie du moteur ? Et la recharge de la batterie, peut elle se faire en branchant le vehicule sur une borne électrique ?</p></blockquote><h2 id=document-4-vehicules-à-pile-à-combustible>Document 4: Vehicules à pile à combustible.</h2><h3 id=principe>Principe</h3><p>Les véhicules à pile à combustible sont d&rsquo;autres types de véhicules hybrides. Ceux-ci fonctionnent avec un système hybride constitué:</p><ul><li>d&rsquo;une pile à combustible, exploitant la réaction très énergétique du dihydrogène avec le dioxygène.</li><li>d&rsquo;une batterie, qui se charge à partir de l&rsquo;énergie produite par la combustion de l&rsquo;hydrogène, mais aussi lors des cycles de charge, comme pour l&rsquo;hybride à essence (voir plus haut)</li></ul><figure><img src=../images/transport2.png><figcaption>Chaine énergétique pour une voiture à hydrogène</figcaption></figure><h3 id=la-toyota-mirai-la-première-voiture-avec-pile-à-hydrogène>La Toyota Mirai : la première voiture avec pile à hydrogène.</h3><p>Pour faire le plein, le gaz H2 est stocké dans deux réservoirs en fibres de carbone [4]. L’oxygène de l’air ambiant pénètre dans le véhicule via les entrée d’air à l’avant du véhicule [1]
+La batterie est rechargée lors des périodes de freinage du véhicule :</p>
+<!-- raw HTML omitted -->
+<p>Aujourd&rsquo;hui, les batteries les plus employées sont de type lithium – ion</p>
+<blockquote>
+<p>Question: Sur l’hybride essence/batterie. Rappeler quelle (quels) est (sont) la (les) source(s) d’énergie utilisée(s) dans ce véhicule ?</p>
+</blockquote>
+<blockquote>
+<p>Question: à quels moments fait on l’économie du moteur ? Et la recharge de la batterie, peut elle se faire en branchant le vehicule sur une borne électrique ?</p>
+</blockquote>
+<h2 id="document-4-vehicules-à-pile-à-combustible">Document 4: Vehicules à pile à combustible.</h2>
+<h3 id="principe">Principe</h3>
+<p>Les véhicules à pile à combustible sont d&rsquo;autres types de véhicules hybrides. Ceux-ci fonctionnent avec un système hybride constitué:</p>
+<ul>
+<li>d&rsquo;une pile à combustible, exploitant la réaction très énergétique du dihydrogène avec le dioxygène.</li>
+<li>d&rsquo;une batterie, qui se charge à partir de l&rsquo;énergie produite par la combustion de l&rsquo;hydrogène, mais aussi lors des cycles de charge, comme pour l&rsquo;hybride à essence (voir plus haut)</li>
+</ul>
+<!-- raw HTML omitted -->
+<h3 id="la-toyota-mirai--la-première-voiture-avec-pile-à-hydrogène">La Toyota Mirai : la première voiture avec pile à hydrogène.</h3>
+<p>Pour faire le plein, le gaz H2 est stocké dans deux réservoirs en fibres de carbone [4]. L’oxygène de l’air ambiant pénètre dans le véhicule via les entrée d’air à l’avant du véhicule [1]
 L’hydrogène et l’air arrivent séparément dans la pile à combustible [3], où l’électricité est générée par le biais d’une réaction chimique.
-Cette réaction chimique produit de l’eau en plus de l’énergie électrique.
+Cette réaction chimique produit de l’eau en plus de l’énergie  électrique.
 L’eau est alors le seul et unique rejet de la voiture.
-Cette électricité est dirigée vers la batterie [5] pour y être stockée, et vers le moteur. C’est une unité de contrôle[2], un ordinateur, qui en assure la gestion. Le moteur génère alors le mouvement à partir de cette électricité lorsque l’on appuie sur l’accélérateur. La batterie [5] est également chargée lorsque l’on décélère. Elle récupère alors une partie de l’énergie grâce à un dispositif magnétique qui convertit l’énergie mécanique en électrique. Cette batterie sert aussi d’assistance à la pile à combustible lors de l’accélération.</p><figure><img src=../images/transport3.png><figcaption>Scaner de la Toyota Mirai</figcaption></figure><blockquote><p>Question: Quel type d’énergie primaire permet la fabrication de dihydrogène H2 ? Ce vehicule, permet-il d&rsquo;économiser les énergie fossiles?</p></blockquote><h1 id=sources>Sources :</h1><ul><li>Automobile propre: Dossier sur les voitures hybrides :
-<a href=https://www.automobile-propre.com/dossiers/voiture-hybride-fonctionnement-avantages-inconvenients/>https://www.automobile-propre.com/dossiers/voiture-hybride-fonctionnement-avantages-inconvenients/</a></li><li>Dossier sur les GNV :
-<a href=https://www.automobile-propre.com/electrique-hydrogene-gnv-syndicats-energie-ateurs-mobilite-multi-energies/>https://www.automobile-propre.com/electrique-hydrogene-gnv-syndicats-energie-ateurs-mobilite-multi-energies/</a></li></ul></article><div style=height:100px></div></div><aside class="book-toc fixed"><nav id=TableOfContents><ul><li><a href=#energie-et-transports>Energie et transports</a><ul><li><a href=#document-1-cycle-de-vie-d-un-véhicule-déchets-et-émission-de-ges>Document 1: Cycle de vie d’un véhicule, déchets et émission de GES</a></li><li><a href=#document-2-les-biocarburants>Document 2: Les biocarburants</a></li><li><a href=#document-3-véhicules-hybrides-électricité-essence>Document 3: véhicules hybrides (électricité/essence)</a></li><li><a href=#document-4-vehicules-à-pile-à-combustible>Document 4: Vehicules à pile à combustible.</a><ul><li><a href=#principe>Principe</a></li><li><a href=#la-toyota-mirai-la-première-voiture-avec-pile-à-hydrogène>La Toyota Mirai : la première voiture avec pile à hydrogène.</a></li></ul></li></ul></li><li><a href=#sources>Sources :</a></li></ul></nav></aside></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
-<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
+Cette électricité est dirigée vers la batterie [5] pour y être stockée, et vers le moteur. C’est une unité de contrôle[2], un ordinateur, qui en assure la gestion. Le moteur génère alors le mouvement à partir de cette électricité lorsque l’on appuie sur l’accélérateur. La batterie [5] est également chargée lorsque l’on décélère. Elle récupère alors une partie de l’énergie grâce à un dispositif magnétique qui convertit l’énergie mécanique en électrique. Cette batterie sert aussi d’assistance à la pile à combustible lors de l’accélération.</p>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Question: Quel type d’énergie primaire permet la fabrication de dihydrogène H2 ? Ce vehicule, permet-il d&rsquo;économiser les énergie fossiles?</p>
+</blockquote>
+<h1 id="sources-">Sources :</h1>
+<ul>
+<li>Automobile propre: Dossier sur les voitures hybrides :
+<a href="https://www.automobile-propre.com/dossiers/voiture-hybride-fonctionnement-avantages-inconvenients/">https://www.automobile-propre.com/dossiers/voiture-hybride-fonctionnement-avantages-inconvenients/</a></li>
+<li>Dossier sur les GNV :
+<a href="https://www.automobile-propre.com/electrique-hydrogene-gnv-syndicats-energie-ateurs-mobilite-multi-energies/">https://www.automobile-propre.com/electrique-hydrogene-gnv-syndicats-energie-ateurs-mobilite-multi-energies/</a></li>
+</ul>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#document-1-cycle-de-vie-dun-véhicule-déchets-et-émission-de-ges">Document 1: Cycle de vie d’un véhicule, déchets et émission de GES</a></li>
+    <li><a href="#document-2-les-biocarburants">Document 2: Les biocarburants</a></li>
+    <li><a href="#document-3-véhicules-hybrides-électricitéessence">Document 3: véhicules hybrides (électricité/essence)</a></li>
+    <li><a href="#document-4-vehicules-à-pile-à-combustible">Document 4: Vehicules à pile à combustible.</a>
+      <ul>
+        <li><a href="#principe">Principe</a></li>
+        <li><a href="#la-toyota-mirai--la-première-voiture-avec-pile-à-hydrogène">La Toyota Mirai : la première voiture avec pile à hydrogène.</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

@@ -1,98 +1,634 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>algorithmes de tri
-| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel=stylesheet><script type=text/x-mathjax-config>
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    algorithmes de tri
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
   });
-</script><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.1c02dc1d2c0b546a84beb71d8f4336d6f5d7b69564e08bdfc04c2fb0595d786d.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
 catch(err)
-{console.log(err.message);}
-if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
-if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
-if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}
-let chemin=window.location.pathname;if(chemin.search('NSI')>-1){baniere=document.querySelector("#myHeader");let linkBox=document.createElement('div');linkBox.classList.add('linkBox');let newH=document.createElement('a');newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';newH.classList.add('nsi');linkBox.appendChild(newH);baniere.appendChild(linkBox);}</script><style>#myHeader{display:flex;flex-direction:row-reverse}#myHeader>.titre{width:80%;min-width:300px;text-align:left}.linkBox{margin:10px;padding-top:10px;background-color:pink;min-width:50px}.isn{}</style></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2f docs\2fNSI\2f algorithmes\2fpage8\2f ]{color:#004ed0}</style><ul><li><a href=/><strong>Accueil</strong></a></li><li><a href=/docs/esf/esf_index/><strong>ESF</strong></a></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p></li><li><p><a href=/docs/python/index_python/><strong>Python</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
-addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-page><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
-<strong>algorithmes de tri</strong></header><article class=markdown><h1 id=algorithmes-de-tri>Algorithmes de tri</h1><p>Les activités de tri sont très fréquentes en informatique. Dans un projet informatique, on préfère qu&rsquo;un programme pass du temps à trier les données plutôt qu&rsquo;à les rechercher.</p><p>On presente ici TROIS algorithmes de tri. Il y en a d&rsquo;autres.</p><h2 id=le-tri-par-insertion-ou-tri-simple>Le tri par insertion (ou tri simple)</h2><h3 id=principe>Principe</h3><p>Pour cet algorithme, trier, c’est déplacer des éléments, et y insérer l’élément rangé, depuis le debut déjà trié de la liste, jusqu’à la fin :</p><ul><li><em>Hypothèse :</em> l&rsquo;élément non rangé est le j. Tous les autres éléments sont rangés jusqu’à j.</li><li>Il faut d’abord conserver sa valeur à l’aide d’une variable temp</li><li>On décale tous les éléments i, depuis le rang j jusqu’à l’élément dont la valeur est inférieure à celle de j (et donc de temp), en redescendant.</li></ul><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>def</span> <span style=color:#75af00>tri1</span><span style=color:#111>(</span><span style=color:#111>L</span><span style=color:#111>):</span>
-    <span style=color:#00a8c8>for</span> <span style=color:#111>j</span> <span style=color:#f92672>in</span> <span style=color:#111>range</span><span style=color:#111>(</span><span style=color:#111>len</span><span style=color:#111>(</span><span style=color:#111>L</span><span style=color:#111>)):</span>
-        <span style=color:#111>temp</span> <span style=color:#f92672>=</span> <span style=color:#111>L</span><span style=color:#111>[</span><span style=color:#111>j</span><span style=color:#111>]</span>
-        <span style=color:#111>i</span> <span style=color:#f92672>=</span> <span style=color:#111>j</span>
-        <span style=color:#00a8c8>while</span> <span style=color:#111>i</span><span style=color:#f92672>&gt;</span><span style=color:#ae81ff>0</span> <span style=color:#f92672>and</span> <span style=color:#111>L</span><span style=color:#111>[</span><span style=color:#111>i</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span><span style=color:#111>]</span><span style=color:#f92672>&gt;</span><span style=color:#111>temp</span><span style=color:#111>:</span>
-            <span style=color:#111>L</span><span style=color:#111>[</span><span style=color:#111>i</span><span style=color:#111>]</span><span style=color:#f92672>=</span><span style=color:#111>L</span><span style=color:#111>[</span><span style=color:#111>i</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span><span style=color:#111>]</span>
-            <span style=color:#111>i</span><span style=color:#f92672>-=</span><span style=color:#ae81ff>1</span>
-        <span style=color:#111>L</span><span style=color:#111>[</span><span style=color:#111>i</span><span style=color:#111>]</span><span style=color:#f92672>=</span><span style=color:#111>temp</span>
-    <span style=color:#00a8c8>return</span> <span style=color:#111>L</span></code></pre></div><h3 id=preuve-de-correction>Preuve de correction</h3><p>Montrons qu&rsquo;à la fin d&rsquo;un tour de boucle, les valeurs de la liste sont triées jusqu&rsquo;au rang j inclus:</p><ul><li>au début, j vaut 0. Il ne se passe rien.</li><li>puis j vaut 1. temp vaut L[1]. Dans la boucle secondaire (<code>while</code>), à la ligne 5, si L[0] &gt; temp, alors L[1] = L[0] puis L[0] = temp. La liste est alors triée jusqu&rsquo;à j = 1 inclus.</li><li>supposons qu&rsquo;à la fin du tour j-1, les valeurs sont triées jusqu&rsquo;à j-1 inclus. Il faut alors montrer que, lors du tour j, la valeur temp (qui vaut L[j]) sera insérée au bon endroit.</li></ul><p>Pour aider le raisonnement, on utlisera le <em>tableau exemple suivant</em>:</p><figure><img src=../images/tri_insertion.png><figcaption>liste triée jusqu'au rang j = 3</figcaption></figure><p><strong>Cas n°1: Soit <code>L[j] &gt;= L[0]</code></strong>:</p><p>Après la ligne 4, on entre dans la boucle <code>while</code>. A la fin de cette boucle, avant la ligne 8, on a la configuration <em>milieu</em> pour la liste.</p><p>Alors la boucle n&rsquo;est plus executée car <code>L[i-1] &gt; temp</code> vaut <code>False</code>, donc, ligne 9: <code>L[i] = temp</code>. La liste est alors dans la configuration <em>fin de boucle</em> sur l&rsquo;image suivante.</p><figure><img src=../images/liste_triee.png><figcaption>liste triée jusqu'au rang j = 4 inclus</figcaption></figure><p><strong>Cas 2: <code>L[j] &lt; L[0]</code></strong>: prendre l&rsquo;élement au rang j = 5 de la liste précédente.</p><p>On verifie que <code>while</code> quitte pour i = 0 et que la clé <code>temp</code> est bien insérée dans la case 0. La liste est bien triée jusqu&rsquo;à j = 5 inclus.</p><p><em>Conclusion:</em> Lorsque la boucle <code>for</code> execute son dernier tour, j designe la dernière case, et on a bien montré que la liste sera bien triée jusqu&rsquo;à cette case. Donc la liste est <em>entièrement triée</em>.</p><h3 id=complexité>Complexité</h3><h4 id=calcul-du-nombre-d-opération>Calcul du nombre d&rsquo;opération</h4><p>Supposons que la taille de la liste est <strong>n</strong>.</p><p>Les opérations significatives sont:</p><ul><li>l&rsquo;affectation</li><li>la comparaison</li><li>l&rsquo;une des opérations arithmetiques: +, -, *, /</li></ul><p>La boucle <code>for</code>est executée n fois.</p><p>Dans la pire des cas, où la liste classerait les éléments dans l&rsquo;ordre décroissant, T(n) sera alors:</p><p>$$T_1(n) = n \times 2~(lignes~3~et~4)+ n~(ligne~8)$$
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI\2f algorithmes\2fpage8\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    algorithmes de tri
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="algorithmes-de-tri">Algorithmes de tri</h1>
+<p>Les activités de tri sont très fréquentes en informatique. Dans un projet informatique, on préfère qu&rsquo;un programme pass du temps à trier les données plutôt qu&rsquo;à les rechercher.</p>
+<p>On presente ici TROIS algorithmes de tri. Il y en a d&rsquo;autres.</p>
+<h2 id="le-tri-par-insertion-ou-tri-simple">Le tri par insertion (ou tri simple)</h2>
+<h3 id="principe">Principe</h3>
+<p>Pour cet algorithme, trier, c’est déplacer des éléments, et y insérer l’élément rangé, depuis le debut déjà trié de la liste, jusqu’à la fin :</p>
+<ul>
+<li><em>Hypothèse :</em> l&rsquo;élément non rangé est le j. Tous les autres éléments sont rangés jusqu’à j.</li>
+<li>Il faut d’abord conserver sa valeur à l’aide d’une variable temp</li>
+<li>On décale tous les éléments i, depuis le rang j jusqu’à l’élément dont la valeur est inférieure à celle de j (et donc de temp), en redescendant.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">tri1</span><span style="color:#111">(</span><span style="color:#111">L</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">for</span> <span style="color:#111">j</span> <span style="color:#f92672">in</span> <span style="color:#111">range</span><span style="color:#111">(</span><span style="color:#111">len</span><span style="color:#111">(</span><span style="color:#111">L</span><span style="color:#111">)):</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">temp</span> <span style="color:#f92672">=</span> <span style="color:#111">L</span><span style="color:#111">[</span><span style="color:#111">j</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">i</span> <span style="color:#f92672">=</span> <span style="color:#111">j</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">while</span> <span style="color:#111">i</span><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> <span style="color:#111">L</span><span style="color:#111">[</span><span style="color:#111">i</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#111">]</span><span style="color:#f92672">&gt;</span><span style="color:#111">temp</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">L</span><span style="color:#111">[</span><span style="color:#111">i</span><span style="color:#111">]</span><span style="color:#f92672">=</span><span style="color:#111">L</span><span style="color:#111">[</span><span style="color:#111">i</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">i</span><span style="color:#f92672">-=</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">L</span><span style="color:#111">[</span><span style="color:#111">i</span><span style="color:#111">]</span><span style="color:#f92672">=</span><span style="color:#111">temp</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">L</span>
+</span></span></code></pre></div><h3 id="preuve-de-correction">Preuve de correction</h3>
+<p>Montrons qu&rsquo;à la fin d&rsquo;un tour de boucle, les valeurs de la liste sont triées jusqu&rsquo;au rang j inclus:</p>
+<ul>
+<li>au début, j vaut 0. Il ne se passe rien.</li>
+<li>puis j vaut 1. temp vaut L[1]. Dans la boucle secondaire (<code>while</code>), à la ligne 5, si L[0] &gt; temp, alors L[1] = L[0] puis L[0] = temp. La liste est alors triée jusqu&rsquo;à j = 1 inclus.</li>
+<li>supposons qu&rsquo;à la fin du tour j-1, les valeurs sont triées jusqu&rsquo;à j-1 inclus. Il faut alors montrer que, lors du tour j, la valeur temp (qui vaut L[j]) sera insérée au bon endroit.</li>
+</ul>
+<p>Pour aider le raisonnement, on utlisera le <em>tableau exemple suivant</em>:</p>
+<!-- raw HTML omitted -->
+<p><strong>Cas n°1: Soit <code>L[j] &gt;= L[0]</code></strong>:</p>
+<p>Après la ligne 4, on entre dans la boucle <code>while</code>. A la fin de cette boucle, avant la ligne 8, on a la configuration <em>milieu</em> pour la liste.</p>
+<p>Alors la boucle n&rsquo;est plus executée car <code>L[i-1] &gt; temp</code> vaut <code>False</code>, donc, ligne 9: <code>L[i] = temp</code>. La liste est alors dans la configuration <em>fin de boucle</em> sur l&rsquo;image suivante.</p>
+<!-- raw HTML omitted -->
+<p><strong>Cas 2: <code>L[j] &lt; L[0]</code></strong>: prendre l&rsquo;élement au rang j = 5 de la liste précédente.</p>
+<p>On verifie que <code>while</code> quitte pour i = 0 et que la clé <code>temp</code> est bien insérée dans la case 0. La liste est bien triée jusqu&rsquo;à j = 5 inclus.</p>
+<p><em>Conclusion:</em> Lorsque la boucle <code>for</code> execute son dernier tour, j designe la dernière case, et on a bien montré que la liste sera bien triée jusqu&rsquo;à cette case. Donc la liste est <em>entièrement triée</em>.</p>
+<h3 id="complexité">Complexité</h3>
+<h4 id="calcul-du-nombre-dopération">Calcul du nombre d&rsquo;opération</h4>
+<p>Supposons que la taille de la liste est <strong>n</strong>.</p>
+<p>Les opérations significatives sont:</p>
+<ul>
+<li>l&rsquo;affectation</li>
+<li>la comparaison</li>
+<li>l&rsquo;une des opérations arithmetiques: +, -, *, /</li>
+</ul>
+<p>La boucle <code>for</code>est executée n fois.</p>
+<p>Dans la pire des cas, où la liste classerait les éléments dans l&rsquo;ordre décroissant, T(n) sera alors:</p>
+<p>$$T_1(n) = n \times 2~(lignes~3~et~4)+ n~(ligne~8)$$
 $$T_2(n) = [2~(ligne~5) + 2~(ligne~6)+2~(ligne~7)]\times[1+2+ &hellip; +(n-1)]$$
 $$T(n) = T_1 + T_2$$
-Soit $$T(n) = 3n + 6\times \tfrac{n\times(n-1)}{2}$$</p><p>$$T(n) = 3n^2$$</p><p>La complexité est donc $O(n^2)$. (coût quadratique). Et si la liste est déjà triée, le nombre d&rsquo;opérations est quand même T(n) = 5.n (coût linéaire).</p><h4 id=evaluation-rapide-de-la-complexité>Evaluation rapide de la complexité</h4><p>On peut compter le nombre de déplacaments / affectations réalisés pour trier les valeurs de la liste, en fonction de la valeur j:</p><table><thead><tr><th>j</th><th>nombre d&rsquo;opérations dans le pire des cas</th></tr></thead><tbody><tr><td>1</td><td>3</td></tr><tr><td>2</td><td>4</td></tr><tr><td>3</td><td>5</td></tr><tr><td>4</td><td>6</td></tr><tr><td>&hellip;</td><td>&hellip;</td></tr><tr><td>n-1</td><td>n+1</td></tr></tbody></table><p>La somme de cette série arithmétique est alors $S_n = (n+4)\times(n-1)$</p><p>Soit $O(n^2)$ pour la complexité asymptotique.</p><h2 id=le-tri-par-selection>Le tri par selection</h2><h3 id=tri-par-selection-du-plus-petit-élement>Tri par selection du plus petit élement</h3><p>Sur un tableau de n éléments (numérotés de 0 à n-1), le principe du tri par sélection est le suivant :</p><ul><li>rechercher le plus petit élément du tableau, et l&rsquo;échanger avec l&rsquo;élément d&rsquo;indice 0 ;</li><li>rechercher le second plus petit élément du tableau, et l&rsquo;échanger avec l&rsquo;élément d&rsquo;indice 1 ;</li><li>continuer de cette façon jusqu&rsquo;à ce que le tableau soit entièrement trié (jusqu&rsquo;au rang n-2).</li></ul><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>def</span> <span style=color:#75af00>select</span><span style=color:#111>(</span><span style=color:#111>T</span><span style=color:#111>,</span><span style=color:#111>debut</span><span style=color:#111>)</span> <span style=color:#111>:</span>
-    <span style=color:#111>indiceDuMin</span><span style=color:#f92672>=</span><span style=color:#111>debut</span>
-    <span style=color:#00a8c8>for</span> <span style=color:#111>k</span> <span style=color:#f92672>in</span> <span style=color:#111>range</span><span style=color:#111>(</span><span style=color:#111>debut</span><span style=color:#f92672>+</span><span style=color:#ae81ff>1</span><span style=color:#111>,</span><span style=color:#111>len</span><span style=color:#111>(</span><span style=color:#111>T</span><span style=color:#111>))</span> <span style=color:#111>:</span>
-        <span style=color:#00a8c8>if</span> <span style=color:#111>T</span><span style=color:#111>[</span><span style=color:#111>k</span><span style=color:#111>]</span><span style=color:#f92672>&lt;</span> <span style=color:#111>T</span><span style=color:#111>[</span><span style=color:#111>indiceDuMin</span><span style=color:#111>]</span> <span style=color:#111>:</span>
-            <span style=color:#111>indiceDuMin</span><span style=color:#f92672>=</span><span style=color:#111>k</span>
-    <span style=color:#00a8c8>if</span> <span style=color:#111>indiceDuMin</span> <span style=color:#f92672>!=</span><span style=color:#111>debut</span> <span style=color:#111>:</span>
-        <span style=color:#111>T</span><span style=color:#111>[</span><span style=color:#111>debut</span><span style=color:#111>],</span><span style=color:#111>T</span><span style=color:#111>[</span><span style=color:#111>indiceDuMin</span><span style=color:#111>]</span><span style=color:#f92672>=</span><span style=color:#111>T</span><span style=color:#111>[</span><span style=color:#111>indiceDuMin</span><span style=color:#111>],</span><span style=color:#111>T</span><span style=color:#111>[</span><span style=color:#111>debut</span><span style=color:#111>]</span>
-
-        
-<span style=color:#00a8c8>def</span> <span style=color:#75af00>tri2</span><span style=color:#111>(</span><span style=color:#111>T</span><span style=color:#111>):</span>
-    <span style=color:#00a8c8>for</span> <span style=color:#111>j</span> <span style=color:#f92672>in</span> <span style=color:#111>range</span><span style=color:#111>(</span><span style=color:#ae81ff>0</span><span style=color:#111>,</span><span style=color:#111>len</span><span style=color:#111>(</span><span style=color:#111>T</span><span style=color:#111>)</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span><span style=color:#111>)</span> <span style=color:#111>:</span>
-        <span style=color:#111>select</span><span style=color:#111>(</span><span style=color:#111>T</span><span style=color:#111>,</span><span style=color:#111>j</span><span style=color:#111>)</span>
-    <span style=color:#00a8c8>return</span> <span style=color:#111>T</span></code></pre></div><h3 id=tri-à-l-aide-d-une-clé>Tri à l&rsquo;aide d&rsquo;une clé</h3><p>On peut réaliser un tri à l&rsquo;aide d&rsquo;une <strong>clé</strong>. Les objets (les lignes d&rsquo;un fichier <em>csv</em>) contiennent ainsi des valeurs sur plusieurs colonnes. On peut choisir l&rsquo;une de ces colonnes pour réaliser le tri.</p><p>On prendra pour exemple le fichier du classement UEFA des équipes feminines sur plusieurs années:</p><ul><li><p>fichier <em><a href=/pdf/NSI/classement_uefa.csv>classement_uefa.csv</a></em> à telecharger</p></li><li><p>Programme pour lire le fichier csv:</p></li></ul><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> <span style=color:#111>csv</span>
-<span style=color:#00a8c8>with</span> <span style=color:#111>open</span><span style=color:#111>(</span><span style=color:#d88200>&#39;datas/classement_uefa.csv&#39;</span><span style=color:#111>,</span> <span style=color:#111>newline</span><span style=color:#f92672>=</span><span style=color:#d88200>&#39;&#39;</span><span style=color:#111>)</span> <span style=color:#00a8c8>as</span> <span style=color:#111>csvfile</span><span style=color:#111>:</span>
-    <span style=color:#111>spamreader</span> <span style=color:#f92672>=</span> <span style=color:#111>csv</span><span style=color:#f92672>.</span><span style=color:#111>reader</span><span style=color:#111>(</span><span style=color:#111>csvfile</span><span style=color:#111>)</span>
-    <span style=color:#111>teams</span> <span style=color:#f92672>=</span> <span style=color:#111>[]</span>
-    <span style=color:#00a8c8>for</span> <span style=color:#111>row</span> <span style=color:#f92672>in</span> <span style=color:#111>spamreader</span><span style=color:#111>:</span>
-        <span style=color:#111>s</span> <span style=color:#f92672>=</span> <span style=color:#d88200>&#34;.&#34;</span><span style=color:#f92672>.</span><span style=color:#111>join</span><span style=color:#111>(</span><span style=color:#111>row</span><span style=color:#111>)</span> 
-        <span style=color:#75715e># pour joindre les chaines entre &#34;&#34; et conserver le . de separation</span>
-        <span style=color:#75715e># .join(row) créé une chaine de caractères à partir de la liste</span>
-        <span style=color:#111>s</span> <span style=color:#f92672>=</span> <span style=color:#111>list</span><span style=color:#111>(</span><span style=color:#111>s</span><span style=color:#f92672>.</span><span style=color:#111>split</span><span style=color:#111>(</span><span style=color:#d88200>&#34;;&#34;</span><span style=color:#111>))</span>
-        <span style=color:#75715e># on recréé une liste</span>
-        <span style=color:#111>teams</span><span style=color:#f92672>.</span><span style=color:#111>append</span><span style=color:#111>(</span><span style=color:#111>s</span><span style=color:#111>)</span>
-
-<span style=color:#00a8c8>del</span><span style=color:#111>(</span><span style=color:#111>teams</span><span style=color:#111>[</span><span style=color:#ae81ff>0</span><span style=color:#111>])</span>
-<span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#111>teams</span><span style=color:#111>)</span></code></pre></div><p>La premiere ligne du tableau contient:</p><pre><code>['\ufeffClub', 'Pays', '16/17', '17/18', '18/19', '19/20', '20/21', '\xa0pts\xa0', '\xa0Ass\xa0']
-</code></pre><p>L&rsquo;execution du programme affiche au depart les équipes classées par ordre alphabetique:</p><pre><code>['AC Sparta Praha', 'CZE', '3', '9', '3', '3', '8', '26', '11.715']
-['AFC Ajax', 'NED', '-', '5', '8', '-', '3', '16', '9.9']
-['Akadimia Elpides Karditsas', 'GRE', '-', '-', '2', '-', '-', '2', '2.145']
-['ALG Spor Kulübü Derneği', 'TUR', '-', '-', '-', '-', '0', '0', '2.145']
-['Apollon Ladies FC', 'CYP', '4', '3', '-', '2', '0', '9', '4.62']
+Soit $$T(n) = 3n + 6\times \tfrac{n\times(n-1)}{2}$$</p>
+<p>$$T(n) = 3n^2$$</p>
+<p>La complexité est donc $O(n^2)$. (coût quadratique). Et si la liste est déjà triée, le nombre d&rsquo;opérations est quand même T(n) = 5.n (coût linéaire).</p>
+<h4 id="evaluation-rapide-de-la-complexité">Evaluation rapide de la complexité</h4>
+<p>On peut compter le nombre de déplacaments / affectations réalisés pour trier les valeurs de la liste, en fonction de la valeur j:</p>
+<table>
+<thead>
+<tr>
+<th>j</th>
+<th>nombre d&rsquo;opérations dans le pire des cas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr>
+<td>4</td>
+<td>6</td>
+</tr>
+<tr>
+<td>&hellip;</td>
+<td>&hellip;</td>
+</tr>
+<tr>
+<td>n-1</td>
+<td>n+1</td>
+</tr>
+</tbody>
+</table>
+<p>La somme de cette série arithmétique est alors $S_n = (n+4)\times(n-1)$</p>
+<p>Soit $O(n^2)$ pour la complexité asymptotique.</p>
+<h2 id="le-tri-par-selection">Le tri par selection</h2>
+<h3 id="tri-par-selection-du-plus-petit-élement">Tri par selection du plus petit élement</h3>
+<p>Sur un tableau de n éléments (numérotés de 0 à n-1), le principe du tri par sélection est le suivant :</p>
+<ul>
+<li>rechercher le plus petit élément du tableau, et l&rsquo;échanger avec l&rsquo;élément d&rsquo;indice 0 ;</li>
+<li>rechercher le second plus petit élément du tableau, et l&rsquo;échanger avec l&rsquo;élément d&rsquo;indice 1 ;</li>
+<li>continuer de cette façon jusqu&rsquo;à ce que le tableau soit entièrement trié (jusqu&rsquo;au rang n-2).</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">select</span><span style="color:#111">(</span><span style="color:#111">T</span><span style="color:#111">,</span><span style="color:#111">debut</span><span style="color:#111">)</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">indiceDuMin</span><span style="color:#f92672">=</span><span style="color:#111">debut</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">for</span> <span style="color:#111">k</span> <span style="color:#f92672">in</span> <span style="color:#111">range</span><span style="color:#111">(</span><span style="color:#111">debut</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span><span style="color:#111">len</span><span style="color:#111">(</span><span style="color:#111">T</span><span style="color:#111">))</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">if</span> <span style="color:#111">T</span><span style="color:#111">[</span><span style="color:#111">k</span><span style="color:#111">]</span><span style="color:#f92672">&lt;</span> <span style="color:#111">T</span><span style="color:#111">[</span><span style="color:#111">indiceDuMin</span><span style="color:#111">]</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">indiceDuMin</span><span style="color:#f92672">=</span><span style="color:#111">k</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">if</span> <span style="color:#111">indiceDuMin</span> <span style="color:#f92672">!=</span><span style="color:#111">debut</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">T</span><span style="color:#111">[</span><span style="color:#111">debut</span><span style="color:#111">],</span><span style="color:#111">T</span><span style="color:#111">[</span><span style="color:#111">indiceDuMin</span><span style="color:#111">]</span><span style="color:#f92672">=</span><span style="color:#111">T</span><span style="color:#111">[</span><span style="color:#111">indiceDuMin</span><span style="color:#111">],</span><span style="color:#111">T</span><span style="color:#111">[</span><span style="color:#111">debut</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">tri2</span><span style="color:#111">(</span><span style="color:#111">T</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">for</span> <span style="color:#111">j</span> <span style="color:#f92672">in</span> <span style="color:#111">range</span><span style="color:#111">(</span><span style="color:#ae81ff">0</span><span style="color:#111">,</span><span style="color:#111">len</span><span style="color:#111">(</span><span style="color:#111">T</span><span style="color:#111">)</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#111">)</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">select</span><span style="color:#111">(</span><span style="color:#111">T</span><span style="color:#111">,</span><span style="color:#111">j</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">T</span>
+</span></span></code></pre></div><h3 id="tri-à-laide-dune-clé">Tri à l&rsquo;aide d&rsquo;une clé</h3>
+<p>On peut réaliser un tri à l&rsquo;aide d&rsquo;une <strong>clé</strong>. Les objets (les lignes d&rsquo;un fichier <em>csv</em>) contiennent ainsi des valeurs sur plusieurs colonnes. On peut choisir l&rsquo;une de ces colonnes pour réaliser le tri.</p>
+<p>On prendra pour exemple le fichier du classement UEFA des équipes feminines sur plusieurs années:</p>
+<ul>
+<li>
+<p>fichier <em><a href="/pdf/NSI/classement_uefa.csv">classement_uefa.csv</a></em> à telecharger</p>
+</li>
+<li>
+<p>Programme pour lire le fichier csv:</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#111">csv</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">with</span> <span style="color:#111">open</span><span style="color:#111">(</span><span style="color:#d88200">&#39;datas/classement_uefa.csv&#39;</span><span style="color:#111">,</span> <span style="color:#111">newline</span><span style="color:#f92672">=</span><span style="color:#d88200">&#39;&#39;</span><span style="color:#111">)</span> <span style="color:#00a8c8">as</span> <span style="color:#111">csvfile</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">spamreader</span> <span style="color:#f92672">=</span> <span style="color:#111">csv</span><span style="color:#f92672">.</span><span style="color:#111">reader</span><span style="color:#111">(</span><span style="color:#111">csvfile</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">teams</span> <span style="color:#f92672">=</span> <span style="color:#111">[]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">for</span> <span style="color:#111">row</span> <span style="color:#f92672">in</span> <span style="color:#111">spamreader</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">s</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#34;.&#34;</span><span style="color:#f92672">.</span><span style="color:#111">join</span><span style="color:#111">(</span><span style="color:#111">row</span><span style="color:#111">)</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># pour joindre les chaines entre &#34;&#34; et conserver le . de separation</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># .join(row) créé une chaine de caractères à partir de la liste</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">s</span> <span style="color:#f92672">=</span> <span style="color:#111">list</span><span style="color:#111">(</span><span style="color:#111">s</span><span style="color:#f92672">.</span><span style="color:#111">split</span><span style="color:#111">(</span><span style="color:#d88200">&#34;;&#34;</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># on recréé une liste</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">teams</span><span style="color:#f92672">.</span><span style="color:#111">append</span><span style="color:#111">(</span><span style="color:#111">s</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">del</span><span style="color:#111">(</span><span style="color:#111">teams</span><span style="color:#111">[</span><span style="color:#ae81ff">0</span><span style="color:#111">])</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">teams</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>La premiere ligne du tableau contient:</p>
+<pre tabindex="0"><code>[&#39;\ufeffClub&#39;, &#39;Pays&#39;, &#39;16/17&#39;, &#39;17/18&#39;, &#39;18/19&#39;, &#39;19/20&#39;, &#39;20/21&#39;, &#39;\xa0pts\xa0&#39;, &#39;\xa0Ass\xa0&#39;]
+</code></pre><p>L&rsquo;execution du programme affiche au depart les équipes classées par ordre alphabetique:</p>
+<pre tabindex="0"><code>[&#39;AC Sparta Praha&#39;, &#39;CZE&#39;, &#39;3&#39;, &#39;9&#39;, &#39;3&#39;, &#39;3&#39;, &#39;8&#39;, &#39;26&#39;, &#39;11.715&#39;]
+[&#39;AFC Ajax&#39;, &#39;NED&#39;, &#39;-&#39;, &#39;5&#39;, &#39;8&#39;, &#39;-&#39;, &#39;3&#39;, &#39;16&#39;, &#39;9.9&#39;]
+[&#39;Akadimia Elpides Karditsas&#39;, &#39;GRE&#39;, &#39;-&#39;, &#39;-&#39;, &#39;2&#39;, &#39;-&#39;, &#39;-&#39;, &#39;2&#39;, &#39;2.145&#39;]
+[&#39;ALG Spor Kulübü Derneği&#39;, &#39;TUR&#39;, &#39;-&#39;, &#39;-&#39;, &#39;-&#39;, &#39;-&#39;, &#39;0&#39;, &#39;0&#39;, &#39;2.145&#39;]
+[&#39;Apollon Ladies FC&#39;, &#39;CYP&#39;, &#39;4&#39;, &#39;3&#39;, &#39;-&#39;, &#39;2&#39;, &#39;0&#39;, &#39;9&#39;, &#39;4.62&#39;]
 ...
-</code></pre><p>On veut adapter l&rsquo;agorithme de tri par selection pour classer les equipes selon une <em>clé</em>, qui sera l&rsquo;indice de la colonne contenant les points UEFA de l&rsquo;équipe.</p><blockquote><p><strong>A vous de jouer</strong>: adapter le script de <code>tri2</code>:</p><ol><li>Ajouter un nouveau paramètre <code>cle</code> aux fonctions <code>select</code> et <code>tri2</code>.</li><li>modifier la condition dans la boucle <code>for</code> de la fonction <code>select</code> avec <code>if float(T[k][cle])&lt;float(T[indiceDuMin][cle]) :</code></li><li>modifier la 3e ligne de la fonction <code>tri2</code> avec <code>select(T,j,cle)</code></li><li>Trier maintenant la liste <code>teams</code> selon la colonne de rang 7. Si vous affichez cette liste, elle presente 2 inconvenients:<ul><li>elle est triée telle que l&rsquo;equipe la plus faible est au debut du tableau et la meilleure à la fin.</li><li>elle ne donne pas le rang du classement UEFA. Nous allons corriger ceci:</li></ul></li><li>Ajouter les instructions suivantes qui permettront d&rsquo;afficher les equipes :<ul><li>Créer un tableau vide T.</li><li>faire une boucle bornée <code>for</code> sur la liste <code>teams</code> : <code>for t in range(...)</code></li><li>Dans la boucle for, à chaque itération, ajouter dans T un tuple constitué des colonnes 0, 1 et 7 pour chacune des équipes, en partant de la fin de la liste <code>teams</code> (rang = len(teams) - t - 1)</li><li>afficher classement et equipe avec : <code>print(t,T[t])</code></li></ul></li></ol></blockquote><p>Vous devriez obtenir:</p><pre><code>0 ('Olympique Lyonnais', 'FRA', '99')
-1 ('FC Barcelona', 'ESP', '78')
-2 ('VfL Wolfsburg', 'GER', '77')
-3 ('Paris Saint-Germain', 'FRA', '60')
-4 ('Manchester City WFC', 'ENG', '59')
-5 ('FC Bayern München', 'GER', '57')
-6 ('Chelsea FC Women', 'ENG', '45')
+</code></pre><p>On veut adapter l&rsquo;agorithme de tri par selection pour classer les equipes selon une <em>clé</em>, qui sera l&rsquo;indice de la colonne contenant les points UEFA de l&rsquo;équipe.</p>
+<blockquote>
+<p><strong>A vous de jouer</strong>: adapter le script de <code>tri2</code>:</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>Ajouter un nouveau paramètre <code>cle</code> aux fonctions <code>select</code> et <code>tri2</code>.</li>
+</ol>
+</blockquote>
+<ol start="2">
+<li>modifier la condition dans la boucle <code>for</code> de la fonction <code>select</code> avec <code>if float(T[k][cle])&lt;float(T[indiceDuMin][cle]) :</code></li>
+<li>modifier la 3e ligne de la fonction <code>tri2</code> avec <code>select(T,j,cle)</code></li>
+<li>Trier maintenant la liste <code>teams</code> selon la colonne de rang 7. Si vous affichez cette liste, elle presente 2 inconvenients:</li>
+</ol>
+<ul>
+<li>elle est triée telle que l&rsquo;equipe la plus faible est au debut du tableau et la meilleure à la fin.</li>
+<li>elle ne donne pas le rang du classement UEFA. Nous allons corriger ceci:</li>
+</ul>
+<ol start="5">
+<li>Ajouter les instructions suivantes qui permettront d&rsquo;afficher les equipes :</li>
+</ol>
+<ul>
+<li>Créer un tableau vide T.</li>
+<li>faire une boucle bornée <code>for</code> sur la liste <code>teams</code> : <code>for t in range(...)</code></li>
+<li>Dans la boucle for, à chaque itération, ajouter dans T un tuple constitué des colonnes 0, 1 et 7 pour chacune des équipes, en partant de la fin de la liste <code>teams</code> (rang = len(teams) - t - 1)</li>
+<li>afficher classement et equipe avec :  <code>print(t,T[t])</code></li>
+</ul>
+<p>Vous devriez obtenir:</p>
+<pre tabindex="0"><code>0 (&#39;Olympique Lyonnais&#39;, &#39;FRA&#39;, &#39;99&#39;)
+1 (&#39;FC Barcelona&#39;, &#39;ESP&#39;, &#39;78&#39;)
+2 (&#39;VfL Wolfsburg&#39;, &#39;GER&#39;, &#39;77&#39;)
+3 (&#39;Paris Saint-Germain&#39;, &#39;FRA&#39;, &#39;60&#39;)
+4 (&#39;Manchester City WFC&#39;, &#39;ENG&#39;, &#39;59&#39;)
+5 (&#39;FC Bayern München&#39;, &#39;GER&#39;, &#39;57&#39;)
+6 (&#39;Chelsea FC Women&#39;, &#39;ENG&#39;, &#39;45&#39;)
 ...
-</code></pre><h3 id=tri-par-selection-du-plus-grand-élément>Tri par selection du plus grand élément</h3><p>Dans cette variante du tri par selection, la liste est triée depuis la droite vers la gauche:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>def</span> <span style=color:#75af00>tri2</span><span style=color:#111>(</span><span style=color:#111>T</span><span style=color:#111>):</span>
-    <span style=color:#00a8c8>for</span> <span style=color:#111>j</span> <span style=color:#f92672>in</span> <span style=color:#111>range</span><span style=color:#111>(</span><span style=color:#ae81ff>0</span><span style=color:#111>,</span><span style=color:#111>len</span><span style=color:#111>(</span><span style=color:#111>T</span><span style=color:#111>)</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span><span style=color:#111>)</span> <span style=color:#111>:</span>
-        <span style=color:#111>select</span><span style=color:#111>(</span><span style=color:#111>T</span><span style=color:#111>,</span><span style=color:#111>len</span><span style=color:#111>(</span><span style=color:#111>T</span><span style=color:#111>)</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span><span style=color:#f92672>-</span><span style=color:#111>j</span><span style=color:#111>)</span>
-    <span style=color:#00a8c8>return</span> <span style=color:#111>T</span></code></pre></div><p>On appelle alors la fonction <code>select</code> avec cette fois l&rsquo;argument <code>len(T)-1-j</code> pour le paramètre <code>debut</code>: les éléments triés sont accumulés à droite. On selectionne parmis les éléments à gauche de debut celui qui a la valeur maximale. Et on le place au rang: <code>debut</code>.</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>def</span> <span style=color:#75af00>select</span><span style=color:#111>(</span><span style=color:#111>T</span><span style=color:#111>,</span><span style=color:#111>debut</span><span style=color:#111>)</span> <span style=color:#111>:</span>
-    <span style=color:#111>indiceDuMax</span><span style=color:#f92672>=</span><span style=color:#111>debut</span>
-    <span style=color:#00a8c8>for</span> <span style=color:#111>k</span> <span style=color:#f92672>in</span> <span style=color:#111>range</span><span style=color:#111>(</span><span style=color:#ae81ff>0</span><span style=color:#111>,</span><span style=color:#111>debut</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span><span style=color:#111>)</span> <span style=color:#111>:</span>
-        <span style=color:#00a8c8>if</span> <span style=color:#111>T</span><span style=color:#111>[</span><span style=color:#111>k</span><span style=color:#111>]</span><span style=color:#f92672>&gt;</span> <span style=color:#111>T</span><span style=color:#111>[</span><span style=color:#111>indiceDuMax</span><span style=color:#111>]</span> <span style=color:#111>:</span>
-            <span style=color:#111>indiceDuMax</span><span style=color:#f92672>=</span><span style=color:#111>k</span>
-    <span style=color:#00a8c8>if</span> <span style=color:#111>indiceDuMax</span> <span style=color:#f92672>!=</span><span style=color:#111>debut</span> <span style=color:#111>:</span>
-        <span style=color:#111>T</span><span style=color:#111>[</span><span style=color:#111>debut</span><span style=color:#111>],</span><span style=color:#111>T</span><span style=color:#111>[</span><span style=color:#111>indiceDuMax</span><span style=color:#111>]</span><span style=color:#f92672>=</span><span style=color:#111>T</span><span style=color:#111>[</span><span style=color:#111>indiceDuMax</span><span style=color:#111>],</span><span style=color:#111>T</span><span style=color:#111>[</span><span style=color:#111>debut</span><span style=color:#111>]</span></code></pre></div><h3 id=exemple>Exemple</h3><p>Soit la liste à trier [&rsquo;T&rsquo;, &lsquo;I&rsquo;, &rsquo;M&rsquo;, &lsquo;O&rsquo;, &lsquo;L&rsquo;, &lsquo;E&rsquo;, &lsquo;O&rsquo;, &lsquo;N&rsquo;]<br>La liste prend successivement les valeurs:</p><table><thead><tr><th>j</th><th>Liste à la fin de <code>select</code></th><th>nombre de comparaisons effectuées</th></tr></thead><tbody><tr><td>0</td><td>[&lsquo;N&rsquo;, &lsquo;I&rsquo;, &rsquo;M&rsquo;, &lsquo;O&rsquo;, &lsquo;L&rsquo;, &lsquo;E&rsquo;, &lsquo;O&rsquo;, &rsquo;T&rsquo;]</td><td>7</td></tr><tr><td>1</td><td>[&lsquo;N&rsquo;, &lsquo;I&rsquo;, &rsquo;M&rsquo;, &lsquo;O&rsquo;, &lsquo;L&rsquo;, &lsquo;E&rsquo;, &lsquo;O&rsquo;, &rsquo;T&rsquo;]</td><td>6</td></tr><tr><td>2</td><td>[&lsquo;N&rsquo;, &lsquo;I&rsquo;, &rsquo;M&rsquo;, &lsquo;E&rsquo;, &lsquo;L&rsquo;, &lsquo;O&rsquo;, &lsquo;O&rsquo;, &rsquo;T&rsquo;]</td><td>5</td></tr><tr><td>3</td><td>[&lsquo;L&rsquo;, &lsquo;I&rsquo;, &rsquo;M&rsquo;, &lsquo;E&rsquo;, &lsquo;N&rsquo;, &lsquo;O&rsquo;, &lsquo;O&rsquo;, &rsquo;T&rsquo;]</td><td>4</td></tr><tr><td>4</td><td>[&lsquo;E&rsquo;, &lsquo;I&rsquo;, &rsquo;M&rsquo;, &lsquo;L&rsquo;, &lsquo;N&rsquo;, &lsquo;O&rsquo;, &lsquo;O&rsquo;, &rsquo;T&rsquo;]</td><td>3</td></tr><tr><td>5</td><td>[&lsquo;E&rsquo;, &lsquo;I&rsquo;, &rsquo;M&rsquo;, &lsquo;L&rsquo;, &lsquo;N&rsquo;, &lsquo;O&rsquo;, &lsquo;O&rsquo;, &rsquo;T&rsquo;]</td><td>2</td></tr></tbody></table><h3 id=complexité-1>Complexité</h3><p>On voit que le nombre d&rsquo;operations de comparaisons est constant quelle que soit la liste à trier. Alors que l&rsquo;affectation est aleatoire, et depend de la position des elements. On decide donc de compter le nombre de comparaisons.</p><p>Pour l&rsquo;exemple ci-dessus, ce nombre T(8) = 2 + 3 +&rsquo; 4 + 5 + 6 + 7 = 27</p><p>De manière plus générale: $T(n) = \tfrac{(n \times (n-1)}{2}$, ce qui fait une complexité $O(n^2)$</p><h2 id=le-tri-fusion>Le tri fusion</h2><p>L&rsquo;algorithme est naturellement décrit de façon récursive.</p><ul><li>Si le tableau n&rsquo;a qu&rsquo;un élément, il est déjà trié.</li><li>Sinon, séparer le tableau en deux parties à peu près égales.</li><li>Trier récursivement le sous-tableau de gauche avec ce même algorithme du tri</li><li>Trier récursivement le sous-tableau de droite avec ce même algorithme du tri</li><li>Fusionner les deux tableaux triés en un seul tableau trié.</li></ul><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>def</span> <span style=color:#75af00>interclassement</span><span style=color:#111>(</span><span style=color:#111>L1</span><span style=color:#111>,</span><span style=color:#111>L2</span><span style=color:#111>):</span>
-    <span style=color:#111>lN</span> <span style=color:#f92672>=</span> <span style=color:#111>[]</span>
-    <span style=color:#111>n1</span><span style=color:#111>,</span> <span style=color:#111>n2</span> <span style=color:#f92672>=</span> <span style=color:#111>len</span><span style=color:#111>(</span><span style=color:#111>L1</span><span style=color:#111>),</span><span style=color:#111>len</span><span style=color:#111>(</span><span style=color:#111>L2</span><span style=color:#111>)</span>
-    <span style=color:#111>i1</span><span style=color:#111>,</span> <span style=color:#111>i2</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span><span style=color:#111>,</span><span style=color:#ae81ff>0</span>
-    <span style=color:#00a8c8>while</span> <span style=color:#111>i1</span><span style=color:#f92672>&lt;</span><span style=color:#111>n1</span> <span style=color:#f92672>and</span> <span style=color:#111>i2</span><span style=color:#f92672>&lt;</span><span style=color:#111>n2</span><span style=color:#111>:</span>
-        <span style=color:#00a8c8>if</span> <span style=color:#111>L1</span><span style=color:#111>[</span><span style=color:#111>i1</span><span style=color:#111>]</span> <span style=color:#f92672>&lt;=</span> <span style=color:#111>L2</span><span style=color:#111>[</span><span style=color:#111>i2</span><span style=color:#111>]:</span>
-            <span style=color:#111>lN</span><span style=color:#f92672>.</span><span style=color:#111>append</span><span style=color:#111>(</span><span style=color:#111>L1</span><span style=color:#111>[</span><span style=color:#111>i1</span><span style=color:#111>])</span>
-            <span style=color:#111>i1</span> <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1</span>
-        <span style=color:#00a8c8>else</span><span style=color:#111>:</span>
-            <span style=color:#111>lN</span><span style=color:#f92672>.</span><span style=color:#111>append</span><span style=color:#111>(</span><span style=color:#111>L2</span><span style=color:#111>[</span><span style=color:#111>i2</span><span style=color:#111>])</span>
-            <span style=color:#111>i2</span> <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1</span>
-    <span style=color:#00a8c8>return</span> <span style=color:#111>lN</span> <span style=color:#f92672>+</span> <span style=color:#111>L1</span><span style=color:#111>[</span><span style=color:#111>i1</span><span style=color:#111>:]</span> <span style=color:#f92672>+</span> <span style=color:#111>L2</span><span style=color:#111>[</span><span style=color:#111>i2</span><span style=color:#111>:]</span>
+</code></pre><h3 id="tri-par-selection-du-plus-grand-élément">Tri par selection du plus grand élément</h3>
+<p>Dans cette variante du tri par selection, la liste est triée depuis la droite vers la gauche:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">tri2</span><span style="color:#111">(</span><span style="color:#111">T</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">for</span> <span style="color:#111">j</span> <span style="color:#f92672">in</span> <span style="color:#111">range</span><span style="color:#111">(</span><span style="color:#ae81ff">0</span><span style="color:#111">,</span><span style="color:#111">len</span><span style="color:#111">(</span><span style="color:#111">T</span><span style="color:#111">)</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#111">)</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">select</span><span style="color:#111">(</span><span style="color:#111">T</span><span style="color:#111">,</span><span style="color:#111">len</span><span style="color:#111">(</span><span style="color:#111">T</span><span style="color:#111">)</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">-</span><span style="color:#111">j</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">T</span>
+</span></span></code></pre></div><p>On appelle alors la fonction <code>select</code> avec cette fois l&rsquo;argument <code>len(T)-1-j</code> pour le paramètre <code>debut</code>: les éléments triés sont accumulés à droite. On selectionne parmis les éléments à gauche de debut celui qui a la valeur maximale. Et on le place au rang: <code>debut</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">select</span><span style="color:#111">(</span><span style="color:#111">T</span><span style="color:#111">,</span><span style="color:#111">debut</span><span style="color:#111">)</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">indiceDuMax</span><span style="color:#f92672">=</span><span style="color:#111">debut</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">for</span> <span style="color:#111">k</span> <span style="color:#f92672">in</span> <span style="color:#111">range</span><span style="color:#111">(</span><span style="color:#ae81ff">0</span><span style="color:#111">,</span><span style="color:#111">debut</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#111">)</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">if</span> <span style="color:#111">T</span><span style="color:#111">[</span><span style="color:#111">k</span><span style="color:#111">]</span><span style="color:#f92672">&gt;</span> <span style="color:#111">T</span><span style="color:#111">[</span><span style="color:#111">indiceDuMax</span><span style="color:#111">]</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">indiceDuMax</span><span style="color:#f92672">=</span><span style="color:#111">k</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">if</span> <span style="color:#111">indiceDuMax</span> <span style="color:#f92672">!=</span><span style="color:#111">debut</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">T</span><span style="color:#111">[</span><span style="color:#111">debut</span><span style="color:#111">],</span><span style="color:#111">T</span><span style="color:#111">[</span><span style="color:#111">indiceDuMax</span><span style="color:#111">]</span><span style="color:#f92672">=</span><span style="color:#111">T</span><span style="color:#111">[</span><span style="color:#111">indiceDuMax</span><span style="color:#111">],</span><span style="color:#111">T</span><span style="color:#111">[</span><span style="color:#111">debut</span><span style="color:#111">]</span>
+</span></span></code></pre></div><h3 id="exemple">Exemple</h3>
+<p>Soit la liste à trier [&lsquo;T&rsquo;, &lsquo;I&rsquo;, &lsquo;M&rsquo;, &lsquo;O&rsquo;, &lsquo;L&rsquo;, &lsquo;E&rsquo;, &lsquo;O&rsquo;, &lsquo;N&rsquo;] <!-- raw HTML omitted -->
+La liste prend successivement les valeurs:</p>
+<table>
+<thead>
+<tr>
+<th>j</th>
+<th>Liste à la fin de <code>select</code></th>
+<th>nombre de comparaisons effectuées</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>[&lsquo;N&rsquo;, &lsquo;I&rsquo;, &lsquo;M&rsquo;, &lsquo;O&rsquo;, &lsquo;L&rsquo;, &lsquo;E&rsquo;, &lsquo;O&rsquo;, &lsquo;T&rsquo;]</td>
+<td>7</td>
+</tr>
+<tr>
+<td>1</td>
+<td>[&lsquo;N&rsquo;, &lsquo;I&rsquo;, &lsquo;M&rsquo;, &lsquo;O&rsquo;, &lsquo;L&rsquo;, &lsquo;E&rsquo;, &lsquo;O&rsquo;, &lsquo;T&rsquo;]</td>
+<td>6</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[&lsquo;N&rsquo;, &lsquo;I&rsquo;, &lsquo;M&rsquo;, &lsquo;E&rsquo;, &lsquo;L&rsquo;, &lsquo;O&rsquo;, &lsquo;O&rsquo;, &lsquo;T&rsquo;]</td>
+<td>5</td>
+</tr>
+<tr>
+<td>3</td>
+<td>[&lsquo;L&rsquo;, &lsquo;I&rsquo;, &lsquo;M&rsquo;, &lsquo;E&rsquo;, &lsquo;N&rsquo;, &lsquo;O&rsquo;, &lsquo;O&rsquo;, &lsquo;T&rsquo;]</td>
+<td>4</td>
+</tr>
+<tr>
+<td>4</td>
+<td>[&lsquo;E&rsquo;, &lsquo;I&rsquo;, &lsquo;M&rsquo;, &lsquo;L&rsquo;, &lsquo;N&rsquo;, &lsquo;O&rsquo;, &lsquo;O&rsquo;, &lsquo;T&rsquo;]</td>
+<td>3</td>
+</tr>
+<tr>
+<td>5</td>
+<td>[&lsquo;E&rsquo;, &lsquo;I&rsquo;, &lsquo;M&rsquo;, &lsquo;L&rsquo;, &lsquo;N&rsquo;, &lsquo;O&rsquo;, &lsquo;O&rsquo;, &lsquo;T&rsquo;]</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="complexité-1">Complexité</h3>
+<p>On voit que le nombre d&rsquo;operations de comparaisons est constant quelle que soit la liste à trier. Alors que l&rsquo;affectation est aleatoire, et depend de la position des elements. On decide donc de compter le nombre de comparaisons.</p>
+<p>Pour l&rsquo;exemple ci-dessus, ce nombre T(8) = 2 + 3 +&rsquo; 4 + 5 + 6 + 7 = 27</p>
+<p>De manière plus générale: $T(n) = \tfrac{(n \times (n-1)}{2}$, ce qui fait une complexité $O(n^2)$</p>
+<h2 id="le-tri-fusion">Le tri fusion</h2>
+<p>L&rsquo;algorithme est naturellement décrit de façon récursive.</p>
+<ul>
+<li>Si le tableau n&rsquo;a qu&rsquo;un élément, il est déjà trié.</li>
+<li>Sinon, séparer le tableau en deux parties à peu près égales.</li>
+<li>Trier récursivement le sous-tableau de gauche avec ce même algorithme du tri</li>
+<li>Trier récursivement le sous-tableau de droite avec ce même algorithme du tri</li>
+<li>Fusionner les deux tableaux triés en un seul tableau trié.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">interclassement</span><span style="color:#111">(</span><span style="color:#111">L1</span><span style="color:#111">,</span><span style="color:#111">L2</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">lN</span> <span style="color:#f92672">=</span> <span style="color:#111">[]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">n1</span><span style="color:#111">,</span> <span style="color:#111">n2</span> <span style="color:#f92672">=</span> <span style="color:#111">len</span><span style="color:#111">(</span><span style="color:#111">L1</span><span style="color:#111">),</span><span style="color:#111">len</span><span style="color:#111">(</span><span style="color:#111">L2</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">i1</span><span style="color:#111">,</span> <span style="color:#111">i2</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#111">,</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">while</span> <span style="color:#111">i1</span><span style="color:#f92672">&lt;</span><span style="color:#111">n1</span> <span style="color:#f92672">and</span> <span style="color:#111">i2</span><span style="color:#f92672">&lt;</span><span style="color:#111">n2</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">if</span> <span style="color:#111">L1</span><span style="color:#111">[</span><span style="color:#111">i1</span><span style="color:#111">]</span> <span style="color:#f92672">&lt;=</span> <span style="color:#111">L2</span><span style="color:#111">[</span><span style="color:#111">i2</span><span style="color:#111">]:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">lN</span><span style="color:#f92672">.</span><span style="color:#111">append</span><span style="color:#111">(</span><span style="color:#111">L1</span><span style="color:#111">[</span><span style="color:#111">i1</span><span style="color:#111">])</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">i1</span> <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">else</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">lN</span><span style="color:#f92672">.</span><span style="color:#111">append</span><span style="color:#111">(</span><span style="color:#111">L2</span><span style="color:#111">[</span><span style="color:#111">i2</span><span style="color:#111">])</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">i2</span> <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">lN</span> <span style="color:#f92672">+</span> <span style="color:#111">L1</span><span style="color:#111">[</span><span style="color:#111">i1</span><span style="color:#111">:]</span> <span style="color:#f92672">+</span> <span style="color:#111">L2</span><span style="color:#111">[</span><span style="color:#111">i2</span><span style="color:#111">:]</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">tri3</span><span style="color:#111">(</span><span style="color:#111">L</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">if</span> <span style="color:#111">len</span><span style="color:#111">(</span><span style="color:#111">L</span><span style="color:#111">)</span> <span style="color:#f92672">&lt;=</span><span style="color:#ae81ff">1</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">return</span> <span style="color:#111">L</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">m</span> <span style="color:#f92672">=</span> <span style="color:#111">len</span><span style="color:#111">(</span><span style="color:#111">L</span><span style="color:#111">)</span><span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">gauche</span> <span style="color:#f92672">=</span> <span style="color:#111">tri3</span><span style="color:#111">(</span><span style="color:#111">L</span><span style="color:#111">[:</span><span style="color:#111">m</span><span style="color:#111">])</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">droite</span> <span style="color:#f92672">=</span> <span style="color:#111">tri3</span><span style="color:#111">(</span><span style="color:#111">L</span><span style="color:#111">[</span><span style="color:#111">m</span><span style="color:#111">:])</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">interclassement</span><span style="color:#111">(</span><span style="color:#111">gauche</span><span style="color:#111">,</span><span style="color:#111">droite</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>Le tri fusion est traité en détail au chapitre <a href="/docs/NSI/algorithmes/page5/">diviser pour regner</a></p>
+<h1 id="liens">Liens</h1>
+<!-- raw HTML omitted -->
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
     
-<span style=color:#00a8c8>def</span> <span style=color:#75af00>tri3</span><span style=color:#111>(</span><span style=color:#111>L</span><span style=color:#111>):</span>
-    <span style=color:#00a8c8>if</span> <span style=color:#111>len</span><span style=color:#111>(</span><span style=color:#111>L</span><span style=color:#111>)</span> <span style=color:#f92672>&lt;=</span><span style=color:#ae81ff>1</span><span style=color:#111>:</span>
-        <span style=color:#00a8c8>return</span> <span style=color:#111>L</span>
-    <span style=color:#111>m</span> <span style=color:#f92672>=</span> <span style=color:#111>len</span><span style=color:#111>(</span><span style=color:#111>L</span><span style=color:#111>)</span><span style=color:#f92672>//</span><span style=color:#ae81ff>2</span>
-    <span style=color:#111>gauche</span> <span style=color:#f92672>=</span> <span style=color:#111>tri3</span><span style=color:#111>(</span><span style=color:#111>L</span><span style=color:#111>[:</span><span style=color:#111>m</span><span style=color:#111>])</span>
-    <span style=color:#111>droite</span> <span style=color:#f92672>=</span> <span style=color:#111>tri3</span><span style=color:#111>(</span><span style=color:#111>L</span><span style=color:#111>[</span><span style=color:#111>m</span><span style=color:#111>:])</span>
-    <span style=color:#00a8c8>return</span> <span style=color:#111>interclassement</span><span style=color:#111>(</span><span style=color:#111>gauche</span><span style=color:#111>,</span><span style=color:#111>droite</span><span style=color:#111>)</span></code></pre></div><p>Le tri fusion est traité en détail au chapitre <a href=/docs/NSI/algorithmes/page5/>diviser pour regner</a></p><h1 id=liens>Liens</h1><ul><li>Cours <i>Diviser pour Regner</i> : <a href=/docs/NSI/algorithmes/page5/>Lien</a></li><li>TP <i>Comparaison de divers algorithmes de tri</i> : <a href=/pdf/NSI/algo4_algorithmes_tri.ipynb target=blank>Notebook</a></li><li>version <a href="https://drive.google.com/file/d/1TFnknrNxeMdtlzIonrdyw6iyexj3mDC1/view?usp=sharing">google colab du notebook</a></li><li>TP <i>variations sur le tri par selection</i>: <a href="https://colab.research.google.com/drive/1qUHTnjr4jxbKXsbwu6Af2USlJuSB7U4W?usp=sharing" target=blank>google colab</a></li></ul></article><div style=height:100px></div></div><aside class="book-toc fixed"><nav id=TableOfContents><ul><li><a href=#algorithmes-de-tri>Algorithmes de tri</a><ul><li><a href=#le-tri-par-insertion-ou-tri-simple>Le tri par insertion (ou tri simple)</a><ul><li><a href=#principe>Principe</a></li><li><a href=#preuve-de-correction>Preuve de correction</a></li><li><a href=#complexité>Complexité</a><ul><li><a href=#calcul-du-nombre-d-opération>Calcul du nombre d&rsquo;opération</a></li><li><a href=#evaluation-rapide-de-la-complexité>Evaluation rapide de la complexité</a></li></ul></li></ul></li><li><a href=#le-tri-par-selection>Le tri par selection</a><ul><li><a href=#tri-par-selection-du-plus-petit-élement>Tri par selection du plus petit élement</a></li><li><a href=#tri-à-l-aide-d-une-clé>Tri à l&rsquo;aide d&rsquo;une clé</a></li><li><a href=#tri-par-selection-du-plus-grand-élément>Tri par selection du plus grand élément</a></li><li><a href=#exemple>Exemple</a></li><li><a href=#complexité-1>Complexité</a></li></ul></li><li><a href=#le-tri-fusion>Le tri fusion</a></li></ul></li><li><a href=#liens>Liens</a></li></ul></nav></aside></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
-<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#le-tri-par-insertion-ou-tri-simple">Le tri par insertion (ou tri simple)</a>
+      <ul>
+        <li><a href="#principe">Principe</a></li>
+        <li><a href="#preuve-de-correction">Preuve de correction</a></li>
+        <li><a href="#complexité">Complexité</a></li>
+      </ul>
+    </li>
+    <li><a href="#le-tri-par-selection">Le tri par selection</a>
+      <ul>
+        <li><a href="#tri-par-selection-du-plus-petit-élement">Tri par selection du plus petit élement</a></li>
+        <li><a href="#tri-à-laide-dune-clé">Tri à l&rsquo;aide d&rsquo;une clé</a></li>
+        <li><a href="#tri-par-selection-du-plus-grand-élément">Tri par selection du plus grand élément</a></li>
+        <li><a href="#exemple">Exemple</a></li>
+        <li><a href="#complexité-1">Complexité</a></li>
+      </ul>
+    </li>
+    <li><a href="#le-tri-fusion">Le tri fusion</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

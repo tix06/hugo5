@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    Cours - les bases en python
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI_1\2f donnees\2fpage6\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    Cours - les bases en python
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="les-grands-principes-du-langage">Les grands principes du langage</h1>
+<p>Python, créé en 1991, est désormais le principal langage de programmation dans les domaines du Machine Learning, du Big Data et de la Data Science.</p>
+<p>C&rsquo;est un langage très concis, dont la prise en main est facile. La licence appartient à une organisation sans but lucratif (Open source).</p>
+<p>C&rsquo;est un langage de haut-niveau (à forte abstraction, éloigné des caractéristiques techniques de la machine).</p>
+<p>Lors de l&rsquo;execution, le code source est traduit en bytecode, lui même interprété dans une machine virtuelle python (PVM), écrite, elle dans un langage de plus bas niveau.</p>
+<p>Comme tout langage, python utilise des <em>instructions</em>. Ce sont :</p>
+<ul>
+<li>les affectations, opérations</li>
+<li>l&rsquo;appel de fonctions</li>
+<li>l&rsquo;import d&rsquo;une librairie/ bibliotheque / module</li>
+<li>les instructions conditionnelles</li>
+<li>les boucles</li>
+<li>les definitions de fonctions ou classes</li>
+</ul>
+<p>C&rsquo;est donc un langage complet, multiparadigme.</p>
+<h1 id="les-types-de-base-en-python">Les types de base en python</h1>
+<h2 id="variable-et-type">Variable et type</h2>
+<p><strong>Def:</strong> Un type définit l&rsquo;ensemble des valeurs possibles pour les données.</p>
+<p>Python a un typage dynamique: lorsque l&rsquo;on définit et que l&rsquo;on affecte une variable (opérations qui se passent lors de la premiere affectation), Python lui associe un type. Certaines opérations seront alors possibles selon le type.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#111">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#111">type</span><span style="color:#111">(</span><span style="color:#111">x</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">int</span>
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<p><strong>Def:</strong> Une variable est un espace mémoire auquel on donne un nom. Une variable a un type, et stocke une valeur.</p>
+<p>Comme les types de base sont <em>non mutables</em>, la variable est écrasée et reconstruite à chaque nouvelle affectation. Ce qui peu donner l&rsquo;impression que le type peut changer.</p>
+<p>Pour <strong>transformer le type</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>type de depart</th>
+<th>type d&rsquo;arrivée</th>
+<th>fonction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td>str</td>
+<td>str(x)</td>
+</tr>
+<tr>
+<td>str</td>
+<td>int</td>
+<td>int(x)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Les types de base sont:</strong></p>
+<ul>
+<li>nombres entiers: <strong>int</strong></li>
+<li>nombres à virgule flottante: <strong>float</strong></li>
+<li>chaine de caracteres: <strong>str</strong></li>
+<li>les variables logiques booléens: <strong>bool</strong> (True ou False)</li>
+<li>le type rien: <strong>None</strong></li>
+</ul>
+<p>Pour les flottants, ceux-ci ont pour rôle d&rsquo;approcher les nombre réels, mais il est impossible de les représenter EXACTEMENT. Le séparateur est un <em>point</em> plutôt qu&rsquo;une <em>virgule</em>. On peut utiliser la notation scientifique <strong>e</strong> ou <strong>E</strong>.</p>
+<p>Attention, il est impossible de comparer des flottants entre eux. On préfèrera alors eviter de les utiliser pour des tests logiques d&rsquo;egalité (==).</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.1</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.2</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">a</span> <span style="color:#f92672">+</span> <span style="color:#111">b</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0.3</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># False</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">abs</span><span style="color:#111">(</span><span style="color:#ae81ff">0.1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.2</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">0.3</span><span style="color:#111">)</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.000001</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># True</span>
+</span></span></code></pre></div><h2 id="type-booléen">Type booléen</h2>
+<p>Les expressions logiques, dont l&rsquo;evaluation vaut True ou False utilisent les opérateurs de comparaison (&gt;, &gt;=, &lt;, &lt;=, ==, !=), plus les suivants : AND, OR, NOT, IN, NOT IN.</p>
+<p>Lorsque l&rsquo;on affecte une expression à une variable, celle-ci est d&rsquo;abord evaluée avant que la valeur ne soit affectée:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">c</span> <span style="color:#f92672">=</span> <span style="color:#111">a</span> <span style="color:#f92672">&lt;</span> <span style="color:#111">b</span> <span style="color:#111">AND</span> <span style="color:#111">b</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># c&#39;est d&#39;abord l&#39;expression a &lt; b puis True AND b &lt; 100 qui est evaluée (True)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># puis c stocke True</span>
+</span></span></code></pre></div><p>Les expressions booléennes sont utilisées pour les <em>structures conditionnelle</em> (<code>if ... elif ... else</code>). Voir le <strong>TPn°2</strong> sur les éléments du langage python.</p>
+<h1 id="opérations-sur-les-chaînes-de-caractères">Opérations sur les chaînes de caractères</h1>
+<p>Les caractères et chaines sont mis entre guillemets simples ou doubles.</p>
+<p><em>Remarque</em>: ne pas confondre le nom d&rsquo;une variable avec la chaine de caractères:<code>print('a')</code> ≠  <code>print(a)</code>&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">a</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche ...</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#d88200">&#39;a&#39;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche ...</span>
+</span></span></code></pre></div><p>On peut réaliser des concatenations sur les chaines avec les opérateurs <code>+</code>, <code>*</code>.</p>
+<p>Mais aussi les opérations:</p>
+<ul>
+<li>de comparaison d&rsquo;ordre: &lsquo;A&rsquo; &lt; &lsquo;B&rsquo; vaut True, &lsquo;Ab&rsquo; &lt; &lsquo;A` vaut False.</li>
+<li>d&rsquo;égalité: &lsquo;HA&rsquo; == &lsquo;ha&rsquo; vaut False</li>
+<li>&lsquo;ou&rsquo; in &lsquo;jour&rsquo; vaut True</li>
+<li>&lsquo;ou&rsquo; not in &lsquo;jour&rsquo; vaut False</li>
+</ul>
+<h1 id="boucles">Boucles</h1>
+<h2 id="boucle-bornée-et-non-bornée">Boucle bornée et non bornée</h2>
+<p>On rappelle que la différence entre une boucle bornée et non bornée est la definition d&rsquo;un <em>variant</em> de boucle. Celui-ci varie sur une étendue qui est déclarée au depart.</p>
+<p><em>Revoir les definitions vues en TP de:</em></p>
+<ul>
+<li>bloc</li>
+<li>indentation</li>
+<li>for, in, in range(), while</li>
+</ul>
+<p>La fonction <code>range(X)</code> établit une liste de valeurs itérables, que prend le variant <code>i</code> qui est déclaré dans la boucle: <code>i</code> vaut successivement {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, de 0 à <code>X-1</code>.</p>
+<p>Les scripts suivants sont équivalents:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">for</span> <span style="color:#111">i</span> <span style="color:#f92672">in</span> <span style="color:#111">range</span><span style="color:#111">(</span><span style="color:#ae81ff">10</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">while</span> <span style="color:#111">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">i</span> <span style="color:#f92672">=</span> <span style="color:#111">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><ul>
+<li>Pour la boucle bornée, <code>i</code> est le variant de boucle, qui évolue à chaque itération de 0 à 9.</li>
+<li>Pour la boucle non bornée, on définit un variant de boucle au départ, <code>i</code> qui vaut zero. Puis on augmente <code>i</code> d&rsquo;une unité à chaque itération, jusqu&rsquo;à ce que sa valeur atteigne 9. Puis la condition <code>i &lt; 10</code> n&rsquo;est plus réalisée et le script poursuit après la boucle.</li>
+</ul>
+<h2 id="exercice">Exercice</h2>
+<p>Le module turtle de python permet de tracer (lentement) des figures géométriques. Voici quelques exemple de scripts et leur résultat:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<blockquote>
+<p><strong>a.</strong> Trouver la correspondance entre le script et le parcours</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<blockquote>
+<p><strong>b.</strong> Completer le tableau de suivi du programme pour chaque script:</p>
+</blockquote>
+<p><strong>script 1:</strong></p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>direction au debut du bloc</th>
+<th>direction à la fin du bloc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>script 2:</strong></p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>direction au debut du bloc</th>
+<th>direction à la fin du bloc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="les-fonctions">Les fonctions</h1>
+<p><strong>Def:</strong> Une fonction permet d&rsquo;encapsuler un bloc d&rsquo;instructions et de lui donnéer un nom.</p>
+<p>On peut ensuite exécuter ce bloc en utilsant ce nom. On dit qu&rsquo;on <strong>appelle</strong> cette fonction.</p>
+<p><strong>Def:</strong> Valeur de retour: Une fonction retourne en général une valeur. Après le mot-clé <code>return</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">hello</span><span style="color:#111">():</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">return</span> <span style="color:#d88200">&#39;Hi&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">hello</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &#39;Hi&#39;</span>
+</span></span></code></pre></div><p>Une fonction peut avoir plusieurs <strong>paramètres</strong> qui permettent de transmettre des valeurs au bloc d&rsquo;instructions. A l&rsquo;interieur de la fonction, ces paramètres sont traités comme des variables, mais <strong>locales</strong>: Elles n&rsquo;existent pas à l&rsquo;exterieur du bloc. <em>(voir plus loin)</em></p>
+<p>Lors de l&rsquo;<em>appel de la fonction</em>, le nombre d&rsquo;arguments passés doit correspondre au nombre de paramètres attendus. (sauf si pour les paramètres ayant une valeur par defaut). Il y a alors une affectation: <code>paramètre = argument</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">carre</span><span style="color:#111">(</span><span style="color:#111">x</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">return</span> <span style="color:#111">x</span><span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">carre</span><span style="color:#111">(</span><span style="color:#ae81ff">5</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 25</span>
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<h2 id="portée-des-variables">Portée des variables</h2>
+<p>Lorsqu’une fonction utilise des variables, celles-ci sont normalement propres à la fonction et ne sont pas accessibles à l’extérieur de celle-ci. On dit qu’il s’agit de variables locales, par opposition aux variables globales, du programme principal.</p>
+<p>Exemple: si on définit une variable <code>a</code> avant la définition de la fonction, celle-ci sera différente du <code>a</code> de la fonction somme:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">somme</span><span style="color:#111">(</span><span style="color:#111">a</span><span style="color:#111">,</span> <span style="color:#111">b</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">s</span> <span style="color:#f92672">=</span> <span style="color:#111">a</span> <span style="color:#f92672">+</span> <span style="color:#111">b</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">s</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">somme</span><span style="color:#111">(</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span><span style="color:#ae81ff">0</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><p>Python permet d’affecter à l’intérieur d’une fonction, une variable globale. Pour cela, il faut déclarer la variable comme étant globale au début de la fonction:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">somme</span><span style="color:#111">(</span><span style="color:#111">b</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">global</span> <span style="color:#111">a</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">s</span> <span style="color:#f92672">=</span> <span style="color:#111">a</span> <span style="color:#f92672">+</span> <span style="color:#111">b</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">s</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">somme</span><span style="color:#111">(</span><span style="color:#ae81ff">0</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">10</span>
+</span></span></code></pre></div><p>Modifier une variable globale depuis une fonction s’appelle un <em>effet de bord</em>. C’est considéré comme une mauvaise pratique, mais parfois indispensable.</p>
+<h1 id="modules">Modules</h1>
+<p>Une fonction peut être placée dans un autre fichier. On a alors:</p>
+<ul>
+<li>un fichier principal (le programme main)</li>
+<li>un ou plusieurs fichiers annexes (modules)</li>
+</ul>
+<p>**Def:**Un <strong>module</strong> apporte des fonctions et des variables et permet une extension du langage.</p>
+<p>Le programme principal doit alors faire référence aux modules. L’une des manières est la suivante:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#111">module</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> <span style="color:#111">module</span> <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#111">module</span> <span style="color:#00a8c8">as</span> <span style="color:#111">alias</span>
+</span></span></code></pre></div><p><em>Exemples:</em></p>
+<table>
+<thead>
+<tr>
+<th>import du module</th>
+<th>appel d&rsquo;une fonction du module</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>import math</td>
+<td>math.sin(x)</td>
+</tr>
+<tr>
+<td>from math import sin</td>
+<td>sin(x)</td>
+</tr>
+<tr>
+<td>from math import *</td>
+<td>sin(x)</td>
+</tr>
+<tr>
+<td>import numpy as np</td>
+<td>np.arrange(3, 15, 2)</td>
+</tr>
+</tbody>
+</table>
+<p><em>Comment choisir la bonne méthode?</em></p>
+<ul>
+<li>Il est recommandé de ne charger que les fonctions utiles du module, avec: <code>from module import fonction1, fonction2</code></li>
+<li>Si on importe le module entier, on préfera <code>import module</code> pour utiliser la fonction avec la notation pointée <code>module.fonction</code>.</li>
+<li>Pour executer l&rsquo;un des modules depuis le shell python, on peut écrire:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">from</span> <span style="color:#111">programme</span> <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+</span></span></code></pre></div><p>Exemple: supposons que le programme suivant soit dans le fichier <em>test.py</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># contenu du fichier test.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">somme</span><span style="color:#111">(</span><span style="color:#111">b</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">s</span> <span style="color:#f92672">=</span> <span style="color:#111">a</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">s</span>
+</span></span></code></pre></div><p>On execute le programme dans le shell:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">from</span> <span style="color:#111">test</span> <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">a</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">somme</span><span style="color:#111">(</span><span style="color:#ae81ff">0</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">20</span>
+</span></span></code></pre></div><p>le programme occupe alors une place privilégiée dans l’espace de noms de l’interpréteur python: c’est le <em>main</em>. On a accès aux variables et aux fonctions comme si elles avaient été définies depuis le programme principal ou depuis le shell.</p>
+<h2 id="prototyper-une-fonction">Prototyper une fonction</h2>
+<p>Une fonction doit être déclarée avant son utilisation. Cette déclaration est le prototype de la fonction. Le prototype doit indiquer à l’utilisateur le nom de la fonction, le type de la valeur de retour et le type des paramètres: <a href="/docs/NSI/langages/page5/#prototypage-d-une-fonction">Lien</a></p>
+<h1 id="erreurs-et-bugs">Erreurs et &ldquo;bugs&rdquo;</h1>
+<h2 id="les-erreurs-de-syntaxe">Les erreurs de syntaxe</h2>
+<p>dues au non-respect des règles d&rsquo;écriture de Python (parenthèses, :, &hellip;)</p>
+<h2 id="erreur-de-definition">erreur de definition</h2>
+<p>dues à l&rsquo;usage d&rsquo;un nom qui n&rsquo;a pas encore été défini (variable ou fonction)</p>
+<h2 id="erreurs-de-type">erreurs de type</h2>
+<p><code>print(3 + 'cm')</code> génère l&rsquo;erreur *unsupported operand type(s) for +: &lsquo;int&rsquo; and &lsquo;str&rsquo;</p>
+<h2 id="erreurs-dexecution">erreurs d&rsquo;execution</h2>
+<p>dues à des instructions que l&rsquo;ordinateur ne sait pas exécuter, comme un division par zero.</p>
+<h2 id="erreurs-de-logique">Erreurs de logique</h2>
+<p>n&rsquo;occasionnent en général pas de message d&rsquo;erreur, mais provoquent des problèmes inatendus (boucle infinie, autre&hellip;)</p>
+<p>Pour prévenir des erreurs logiques, il peut être utile d&rsquo;utiliser des <em>traces</em> dans son programme pour comprendre la cause de l&rsquo;erreur. On rajoute généralement des sorties <code>print(variable)</code> pour les variables que l&rsquo;on veut <em>suivre</em> lors de l&rsquo;execution.</p>
+<h1 id="exercices">Exercices</h1>
+<h2 id="revisions">Revisions</h2>
+<p>Revoir et connaitre les algorithmes et les programmes python correspondants à :</p>
+<ul>
+<li>la multiplication en n&rsquo;utilisant que l&rsquo;opérateur +</li>
+<li>la division entière en n&rsquo;utilisant que l&rsquo;opérateur -</li>
+<li>complément à 1 d&rsquo;un nombre binaire</li>
+<li>calcul d&rsquo;un angle à partir de la loi de Descartes (donnée)</li>
+</ul>
+<h2 id="programmer-des-fonctions-pour-calculer">Programmer des fonctions pour calculer</h2>
+<p>On donne les valeurs suivantes:</p>
+<ul>
+<li>Distance <strong>dTL</strong> Terre - Soleil : 150 millions de km en moyenne</li>
+<li>vitesse <strong>c</strong> de la lumière : 300~000 km/s</li>
+<li>Rayon terrestre : <strong>R</strong> 6400 km</li>
+<li>Population terrestre : <strong>p</strong> 7,8 milliards d&rsquo;habitants</li>
+</ul>
+<p>On rappelle que la surface d&rsquo;une sphere se calcule selon la loi :</p>
+<p>$$S = 4\times\pi\times R^2$$</p>
+<ol>
+<li>Ecrire une fonction <code>minutes</code> qui retourne le nombre de minutes correspondant aux secondes. Cette fonction aura un paramètre <code>s</code>.</li>
+<li>Ecrire une fonction <code>duree</code> qui calcule la durée de propagation d&rsquo;un signal lumineux en fonction de la distance parcourue. Le paramètre sera <strong>d</strong>. Utiliser alors cette fonction pour calculer la durée du parcours de la lumière, du Soleil à la Terre.</li>
+<li>Ecrire une fonction <code>surface</code> qui calcule la surface d&rsquo;une sphere de rayon r. Le paramètre sera <strong>r</strong>.</li>
+<li>Ecrire une fonction <code>densite</code> qui calcule la densité moyenne de la population de la Terre, sachant que 70,7% de la surface de la Terre est immergée. Cette fonction devra prendre en paramètre le nombre <strong>N</strong> d&rsquo;habitants.</li>
+</ol>
+<h2 id="autres-exercices">Autres exercices</h2>
+<h3 id="addition-de-chaines-de-caractères">addition de chaines de caractères</h3>
+<p>Dans le Bourgeois Gentilhomme, le Maitre de Philosophie dit:</p>
+<p><em>On les peut mettre premièrement comme vous avez dit : « Belle Marquise, vos beaux yeux me font mourir d’amour ». Ou bien : « D’amour mourir me font, belle Marquise, vos beaux yeux ». Ou bien : « Vos yeux beaux d’amour me font, belle Marquise, mourir ». Ou bien : « Mourir vos beaux yeux, belle Marquise, d’amour me font ». Ou bien : « Me font vos yeux beaux mourir, belle Marquise, d’amour ».</em></p>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Définir plusieurs variables contenant les morceaux de la phrase &ldquo;Belle Marquise, &hellip;&rdquo;, de telle sorte que l&rsquo;on puisse afficher avec la fonction <code>print</code> et l&rsquo;opérateur <code>+</code> des chaines de caractères, les différentes variantes énoncées. (On ignore la distinction entre majuscule et minuscule).</p>
+</blockquote>
+<h3 id="instruction-conditionnelle">Instruction conditionnelle</h3>
+<ol>
+<li>Ecrire l&rsquo;instruction conditionnelle qui affiche la phrase &ldquo;il va faire très froid / froid / bon / chaud / très chaud&rdquo; selon la valeur de la variable <strong>t</strong> (la température). Vous choisirez les seuils entre chaque niveau de température.</li>
+<li>Ecrire une fonction <code>meteo</code> qui retourne &ldquo;froid / froid / bon / chaud / très chaud&rdquo; selon le paramètre <strong>t</strong>. Et écrire le programme qui appelle la fonction pour afficher &ldquo;il va faire &hellip;&rdquo;.</li>
+</ol>
+<h3 id="boucle">Boucle</h3>
+<ol>
+<li>Ecrire un programme, puis une fonction qui inverse les lettres d&rsquo;un mot. Par exemple, « ados » et « soda ».</li>
+<li>Ecrire un programme, puis une fonction qui affiche les chiffres d&rsquo;un nombre à partir du dernier, un par ligne.</li>
+</ol>
+<p>Par exemple, pour le nombre 1 234, le programme affiche:</p>
+<pre tabindex="0"><code>4
+3
+2
+1
+</code></pre></article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#variable-et-type">Variable et type</a></li>
+    <li><a href="#type-booléen">Type booléen</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#boucle-bornée-et-non-bornée">Boucle bornée et non bornée</a></li>
+    <li><a href="#exercice">Exercice</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#portée-des-variables">Portée des variables</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#prototyper-une-fonction">Prototyper une fonction</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#les-erreurs-de-syntaxe">Les erreurs de syntaxe</a></li>
+    <li><a href="#erreur-de-definition">erreur de definition</a></li>
+    <li><a href="#erreurs-de-type">erreurs de type</a></li>
+    <li><a href="#erreurs-dexecution">erreurs d&rsquo;execution</a></li>
+    <li><a href="#erreurs-de-logique">Erreurs de logique</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#revisions">Revisions</a></li>
+    <li><a href="#programmer-des-fonctions-pour-calculer">Programmer des fonctions pour calculer</a></li>
+    <li><a href="#autres-exercices">Autres exercices</a>
+      <ul>
+        <li><a href="#addition-de-chaines-de-caractères">addition de chaines de caractères</a></li>
+        <li><a href="#instruction-conditionnelle">Instruction conditionnelle</a></li>
+        <li><a href="#boucle">Boucle</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

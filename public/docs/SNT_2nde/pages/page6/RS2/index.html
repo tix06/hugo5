@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    reseaux sociaux
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fSNT_2nde\2fpages\2fpage6\2fRS2\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    reseaux sociaux
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="definition-dun-reseau-social">Definition d&rsquo;un reseau social</h1>
+<p>Les reseaux sociaux sont des applications qui servent à créer des « communautés ». Il permettent aux usagers d’utiliser un compte public ou privé.
+Il permet de communiquer de manière instantanée, et se substituent peu à peu aux mails.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Les applications de type RS ont des fonctionnalités étendues qui sont en convergence (utilisation de hashtag, post de texte, img, video, reactions de type LIKE, interopérabilité…)</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Une conséquence de l’usage d’un ou plusieurs RS est la constitution d’une veritable identité numérique pour la personne, puisque chaque reaction/publi, surf, se fait avec sa propre identité.</p>
+<blockquote>
+<p>Les réseaux sociaux combinent trois fonctions fondamentales :</p>
+</blockquote>
+<blockquote>
+<ul>
+<li>support de l&rsquo;identité numérique ;</li>
+</ul>
+</blockquote>
+<ul>
+<li>moyen de sociabilité sur la base de critères d&rsquo;affinité ;</li>
+<li>média réticulaire de communication interpersonnelle et/ou intergroupe.</li>
+</ul>
+<h1 id="e-reputation-et-identité-numérique">e-reputation et identité numérique</h1>
+<h2 id="e-reputation">e-reputation</h2>
+<p>La e-reputation est due à l&rsquo;identité numérique que l&rsquo;on se construit, mais aussi par ce qu&rsquo;en disent les autres.</p>
+<p>La <strong>e-réputation</strong> a tendance à définir, aux yeux des autres, ce que vous êtes, <strong>selon la manière dont on parlera de vous</strong>, positivement ou négativement. Cette notoriété Internet peut pencher d’un côté comme de l’autre, en tout cas elle sera très représentative de la manière dont on vous percevra, qui que vous soyez.</p>
+<!-- raw HTML omitted -->
+<h2 id="identité-numérique">identité numérique</h2>
+<h3 id="definition">Definition</h3>
+<p>L’identité numérique est de son côté le lien entre une personne et ses informations virtuelles, pouvant être trouvées par le biais d’une simple recherche sur Internet. Cette identité est <strong>multiple</strong>.</p>
+<p>Toute activité sur le Web implique la création de traces. Certaines sont volontaires, d&rsquo;autres involontaires. Elles sont collectées, partagées entre applications et stockées dans des bases de données. Leur addition construit l&rsquo;identité numérique de chacun.</p>
+<h3 id="les-reseaux-sociaux-parlent-pour-nous">Les reseaux sociaux parlent pour nous</h3>
+<blockquote>
+<p>Une journaliste parisienne inscrite sur un fameux site de rencontre a décidé de réclamer ses données personnelles auprès dti site.
+Pour 1&rsquo;équivalent d&rsquo;une fréquentation de 4 années, el1e a reçu
+pas moins de 800 pages résumant les différents aspects de sa vie privée : ses « likes » sur Facebook, ses photos postées sur Instagram, ses diplômes universitaires, mais aussi ies dates, lieux et contenus de ses conversations&hellip; Que pourrait-il se passer dans le cas oit
+ces informations seraient divulguées ou revendues à une autre entreprise ?
+<!-- raw HTML omitted -->
+Ténroignage : elte réclarne ses données et reçoit&quot;. &quot; 800 pages !
+<em>D&rsquo;après Libération</em></p>
+</blockquote>
+<p>Les informations qui nous definissent sur le Net viennent de nos publications, mais aussi de notre activité. Toutes les applications utilisées peuvent partager nos données selon le paramétrage effectué.</p>
+<!-- raw HTML omitted -->
+<h3 id="addiction">Addiction</h3>
+<p>Les <strong>reseaux sociaux</strong> peuvent repondre à un besoin de reconnaissance. Cela peut entrainer un <strong>comportement addictif</strong> dans leur usage, en multipliant les parutions ou autres activités (partage, like).</p>
+<p><em>C&rsquo;est à partir de ce constat que Beomseok Yang, réalisateur sud-coréen, a décidé de produire un court-métrage montrant l&rsquo;addiction aux réseaux sociaux. Notamment chez les jeunes.</em></p>
+<p><em>La vidéo, intitulée &ldquo;Social Network&rdquo;, nous permet de suivre la journée d&rsquo;un jeune homme en mettant en avant toutes les interactions sociales qu&rsquo;il a au cours de cette journée.</em></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="cyberviolence">Cyberviolence</h1>
+<blockquote>
+<p>Avec Ies spécificités du numérique, on ajoute un impact plus conséquent aux violences. En effet, les contenus offensants peuvent se répandre très rapidement grâce aux reseaux qui accelerent et grandissent l&rsquo;échelle des échanges. D&rsquo;autre part, le caractere anonyme des echanges favorise le sentiment d&rsquo;impunité. Une certaine distance s&rsquo;installe et diminue la capacité d&rsquo;empathie ou la conscience de ses actes
+la conscience de ses actes.
+Dans certains cas, il rend aussi difficile l&rsquo;identification de l&rsquo;auteur. Enfin, les cyberviolences n&rsquo;ont pas de limite temporelle: elles laissent toujours une trace. Une fois diffusée sur la toile, on ne peux plus maitriser son cheminement.<!-- raw HTML omitted --><!-- raw HTML omitted -->d&rsquo;après un document de SNT Nathan p76<!-- raw HTML omitted --></p>
+</blockquote>
+<h2 id="droit-pénal">Droit pénal</h2>
+<blockquote>
+<p>Le fait de harceler une personne par des propos ou comportements répétés avantpour objet ou pour effet une dégradation de ses conditions de vie se traduisant par une altération de sa santé physique ou mentale est puni d&rsquo;un an d&rsquo;emprisonnement lorsque ces faits ont causé une incapacité totale de travai[ inférieure ou égale à huit jours. Ou et de 15 000 € d&rsquo;amende si cela n&rsquo;a entraîné aucune incapacité de travait.<!-- raw HTML omitted --> Article 222-33-2-2 du code penal</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="droit-à-loubli">Droit à l&rsquo;oubli</h2>
+<p>grâce à l&rsquo;arrêt de la Cour de justice de l&rsquo;Union européeenne du 13 mai 2014, il est possible de réclamer le &ldquo;droit à l&rsquo;oubli&rdquo;. Pour l&rsquo;appliquer, il faut demander au site d&rsquo;origine de supprimer les information outrageuese et au moteur de recherche de ne plus les référencer.</p>
+<h1 id="modelisation-dun-reseau-social">Modelisation d&rsquo;un reseau social</h1>
+<h2 id="graphe-dun-reseau-social">Graphe d&rsquo;un reseau social</h2>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><strong>La distance</strong> entre deux sommets d&rsquo;un graphe est le nombre minimum d&rsquo;arêtes pour aller du sommet à un autre. La distance entre a et f est 2.</p>
+<p><strong>L&rsquo;écartement d&rsquo;un sommet</strong> est la distance maximale existant entre ce sommet et les autres sommets du graphe. Pour le sommet a, la plus grande distance avec un autre sommet est 2. L&rsquo;écartement est donc de 2.</p>
+<p><strong>Le centre d&rsquo;un graphe</strong> est le sommet d&rsquo;écartement minimal (le centre n&rsquo;est pas nécessairement unique). Ci-contre, tous les sommets ont un écartement de 2, sauf d qui a un écartement de 1. Le centre est donc d.</p>
+<p><strong>Le rayon d&rsquo;un graphe</strong> G est l&rsquo;écartement d&rsquo;un centre du graphe. Ici d est le centre et d a un écartement de 1. Donc le rayon est de 1</p>
+<p><strong>Le diamètre</strong> d&rsquo;un graphe est la distance maximale entre deux sommets du graphe. Ici le diamètre est de 2.</p>
+<blockquote>
+<p>A vous de jouer. Pour simplifier, imaginons un réseau social ne possédant que 7 abonnés :</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<ol>
+<li>Déterminez-le (ou les) centre(s) du graphe ci-contre.</li>
+<li>En déduire le rayon du graphe.</li>
+<li>Déterminer le diamètre du graphe.</li>
+<li>Représenter les relations d&rsquo;amitié dans un tableau</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>L</th>
+<th>M</th>
+<th>N</th>
+<th>O</th>
+<th>P</th>
+<th>Q</th>
+<th>R</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>N</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>O</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>P</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Q</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>R</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Ce tableau, permet-il de repondre plus facilement aux 3 premieres questions?</p>
+<h2 id="experience-de-milgram">Experience de Milgram</h2>
+<blockquote>
+<p>Milgram envoie soixante lettres à des recrues de la ville d&rsquo;Omaha dans le Nebraska. Il leur demande de faire suivre cette lettre à un agent de change, vivant à une adresse fournie, dans la ville de Sharon dans le Massachusetts. Les participants pouvaient seulement passer les lettres, de main à main, à des connaissances personnelles qu&rsquo;ils pensaient être capables d&rsquo;atteindre l&rsquo;objectif.</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><em>Remarque</em>: Une des difficultés dans la conduite de ces études tient à la supposition que les gens dans la chaîne sont compétents pour découvrir le lien entre les deux personnes servant de terminaux. Ceci est plus evident avec des <em>communautés</em>, mais il n&rsquo;est pas certain, au vu de son expérience que le monde lui-même suit un <em>petit monde</em></p>
+<p>`</p>
+<h2 id="une-bulle-dinformations">Une bulle d&rsquo;informations</h2>
+<p>Sur le document suivant, on voit que les groupes communautaires peuvent avoir des liens fragiles entre-eux.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<blockquote>
+<p>En 2015 à Bombey, en Inde, le gouvernement a interdit la consommation de viande. La situation a fait polemique dans le pays et notamment sur Twitter, où le hashtag <code>#BeefBar</code>a été largement repris.</p>
+</blockquote>
+<blockquote>
+<p>Sur le document suivant, on a colorié en vert et en rouge les tweets pour et contre l&rsquo;interdiction de la consommation de viande. On constate un lien étroit entre les opinions et l&rsquo;appartenance à une communauté.<!-- raw HTML omitted --> extrait du livre Delagrave SNT p135.</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Les reseaux sociaux conduisent fréquemment à rester dans un &ldquo;petit monde&rdquo; où l&rsquo;on est en relation avant tout avec des personnes qui nous ressemblent et pensent comme nous, au risuue d&rsquo;un certain repli sur soi.</p>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#e-reputation">e-reputation</a></li>
+    <li><a href="#identité-numérique">identité numérique</a>
+      <ul>
+        <li><a href="#definition">Definition</a></li>
+        <li><a href="#les-reseaux-sociaux-parlent-pour-nous">Les reseaux sociaux parlent pour nous</a></li>
+        <li><a href="#addiction">Addiction</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#droit-pénal">Droit pénal</a></li>
+    <li><a href="#droit-à-loubli">Droit à l&rsquo;oubli</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#graphe-dun-reseau-social">Graphe d&rsquo;un reseau social</a></li>
+    <li><a href="#experience-de-milgram">Experience de Milgram</a></li>
+    <li><a href="#une-bulle-dinformations">Une bulle d&rsquo;informations</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

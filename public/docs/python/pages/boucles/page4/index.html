@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    TP2 listes et boucles
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fpython\2fpages\2f boucles\2fpage4\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    TP2 listes et boucles
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="editeur-python">Editeur Python</h1>
+<ul>
+<li>L&rsquo;<strong>editeur</strong> suivant se présente comme un <strong>notebook</strong>. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur <em>Majuscule(Shift)</em> + <em>Entrée</em> pour <strong>executer le code</strong>.</li>
+</ul>
+<!-- raw HTML omitted -->
+<h1 id="tp2-boucles-bornées-et-parcours-dune-liste">TP2: Boucles bornées et parcours d&rsquo;une liste</h1>
+<h2 id="ex-1-parcours-dune-liste">Ex 1: Parcours d&rsquo;une liste</h2>
+<ul>
+<li>script 1</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">L</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span> <span style="color:#ae81ff">10</span><span style="color:#111">,</span> <span style="color:#ae81ff">100</span><span style="color:#111">,</span> <span style="color:#ae81ff">1000</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">for</span> <span style="color:#111">i</span> <span style="color:#f92672">in</span> <span style="color:#111">L</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">i</span><span style="color:#111">)</span>
+</span></span></code></pre></div><ul>
+<li>script 2</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">L</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span> <span style="color:#ae81ff">10</span><span style="color:#111">,</span> <span style="color:#ae81ff">100</span><span style="color:#111">,</span> <span style="color:#ae81ff">1000</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">for</span> <span style="color:#111">i</span> <span style="color:#f92672">in</span> <span style="color:#111">range</span><span style="color:#111">(</span><span style="color:#111">len</span><span style="color:#111">(</span><span style="color:#111">L</span><span style="color:#111">)):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">i</span><span style="color:#111">)</span>
+</span></span></code></pre></div><ul>
+<li><strong>Question a:</strong> Lequel des 2 scripts précédents affiche <code>1 10 100 1000</code>? Lequel des 2 affiche <code>0 1 2 3</code>? Expliquez.</li>
+</ul>
+<h2 id="ex-2-table-de-3">Ex 2: table de 3</h2>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">L</span> <span style="color:#f92672">=</span> <span style="color:#111">[]</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">for</span>  <span style="color:#111">i</span> <span style="color:#f92672">in</span>  <span style="color:#111">range</span><span style="color:#111">(</span><span style="color:#ae81ff">11</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">L</span><span style="color:#f92672">.</span><span style="color:#111">append</span><span style="color:#111">(</span><span style="color:#111">i</span>  <span style="color:#f92672">*</span> <span style="color:#ae81ff">3</span><span style="color:#111">)</span>
+</span></span></code></pre></div><ul>
+<li><strong>Question b:</strong> Que vaut la liste <code>L</code> après ce programme? Quelles sont les valeurs prises par l&rsquo;iterable <code>i</code>?</li>
+</ul>
+<h2 id="ex-3-energies-en-spc">Ex 3: Energies en SPC</h2>
+<p>On donne les listes de relevés du temps et de la vitesse pour un mobile.</p>
+<p>La vitesse <code>vitesse[0]</code>est relevée au temps <code>t[0]</code>, <code>vitesse[1]</code>est relevée au temps <code>t[1]</code>, etc&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">t</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#ae81ff">0</span><span style="color:#111">,</span><span style="color:#ae81ff">0.04</span><span style="color:#111">,</span><span style="color:#ae81ff">0.08</span><span style="color:#111">,</span><span style="color:#ae81ff">0.12</span><span style="color:#111">,</span><span style="color:#ae81ff">0.16</span><span style="color:#111">,</span><span style="color:#ae81ff">0.2</span><span style="color:#111">,</span><span style="color:#ae81ff">0.24</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">vitesse</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#ae81ff">5.2</span><span style="color:#111">,</span><span style="color:#ae81ff">4.8</span><span style="color:#111">,</span><span style="color:#ae81ff">4.41</span><span style="color:#111">,</span><span style="color:#ae81ff">4.02</span><span style="color:#111">,</span><span style="color:#ae81ff">3.63</span><span style="color:#111">,</span><span style="color:#ae81ff">3.23</span><span style="color:#111">,</span><span style="color:#ae81ff">2.84</span><span style="color:#111">]</span>
+</span></span></code></pre></div><p>Dans une cellule Python,</p>
+<ul>
+<li>Recopiez les 2 listes et leur contenu</li>
+<li>commencez par attribuer 100 à la variable <code>m</code>.</li>
+<li>créez une liste vide pour l&rsquo;énergie: <code>E = []</code></li>
+<li>calculer les éléments de la liste <code>E</code>, l&rsquo;energie cinetique pour un systeme de masse 100kg et de vitesse v, selon la loi:</li>
+</ul>
+<p><code>E = 1/2 * m * v**2</code></p>
+<p>Pour réaliser cela, vous completerez la boucle bornée sur les valeurs de <code>vitesse</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">for</span> <span style="color:#111">v</span> <span style="color:#f92672">in</span> <span style="color:#111">vitesse</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">E</span><span style="color:#f92672">.</span><span style="color:#111">append</span><span style="color:#111">(</span><span style="color:#f92672">...</span><span style="color:#111">)</span>
+</span></span></code></pre></div><ul>
+<li><strong>Question c:</strong> Afficher le graphique de l&rsquo;Energie cinétique E au cours du temps. (abscisses: t, ordonnées: E). Recopier le script entier dans votre cahier. Identifier dans le script les parties qui servent à:
+<ul>
+<li>déclarer des variables et des listes</li>
+<li>calculer les termes d&rsquo;une liste avec une boucle bornée</li>
+<li>importer un module</li>
+<li>tracer un graphique</li>
+</ul>
+</li>
+</ul>
+<h2 id="ex-4-algorithmes-simples-utilisant-une-boucle-bornée">Ex 4: algorithmes simples utilisant une boucle bornée</h2>
+<p>Le script suivant calcule la somme des 99 premiers entiers:</p>
+<p>$$0 + 1 + 2 + 3 + &hellip;99$$</p>
+<blockquote>
+<p>Tester ce script et lire le résultat.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">somme</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">for</span> <span style="color:#111">n</span> <span style="color:#f92672">in</span> <span style="color:#111">range</span><span style="color:#111">(</span><span style="color:#ae81ff">100</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">somme</span> <span style="color:#f92672">=</span> <span style="color:#111">somme</span> <span style="color:#f92672">+</span> <span style="color:#111">n</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">somme</span>
+</span></span></code></pre></div><ul>
+<li>
+<p><strong>Question d:</strong> adapter ce script pour que celui-ci calcule la somme des termes 2<!-- raw HTML omitted -->i<!-- raw HTML omitted --> pour <code>i</code> variant de 0 à 99: $$2^0 + 2^1 + 2^2 + &hellip; + 2^{99}$$</p>
+</li>
+<li>
+<p><strong>Question e:</strong> adapter ce script pour calculer le nombre de boules de la pyramique à 7 étages suivante. Quel est ce nombre? Quel serait ce nombre pour une pyramide à 99 étage?</p>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

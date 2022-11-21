@@ -1,21 +1,541 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>nombres et caracteres
-| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel=stylesheet><script type=text/x-mathjax-config>
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    nombres et caracteres
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
   });
-</script><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.1c02dc1d2c0b546a84beb71d8f4336d6f5d7b69564e08bdfc04c2fb0595d786d.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
 catch(err)
-{console.log(err.message);}
-if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
-if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
-if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}
-let chemin=window.location.pathname;if(chemin.search('NSI')>-1){baniere=document.querySelector("#myHeader");let linkBox=document.createElement('div');linkBox.classList.add('linkBox');let newH=document.createElement('a');newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';newH.classList.add('nsi');linkBox.appendChild(newH);baniere.appendChild(linkBox);}</script><style>#myHeader{display:flex;flex-direction:row-reverse}#myHeader>.titre{width:80%;min-width:300px;text-align:left}.linkBox{margin:10px;padding-top:10px;background-color:pink;min-width:50px}.isn{}</style></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2f docs\2fSNT_2nde\2fpages\2fpage16\2fnombres_caracteres\2f ]{color:#004ed0}</style><ul><li><a href=/><strong>Accueil</strong></a></li><li><a href=/docs/esf/esf_index/><strong>ESF</strong></a></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p></li><li><p><a href=/docs/python/index_python/><strong>Python</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
-addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-page><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
-<strong>nombres et caracteres</strong></header><article class=markdown><h1 id=codage-des-nombres>Codage des nombres</h1><p>Ce cours comprend une page d&rsquo;exercices avec des flash cards : <a href=/docs/SNT_2nde/pages/page16/ex1/index.html>Lien vers la page d&rsquo;exercices</a></p><h2 id=explication-en-vidéo>Explication en vidéo</h2><figure><a href=https://youtu.be/VRdp_vaNRoY><img src=../images/video1.png><figcaption>introduction au langage binaire</figcaption></a></figure><h2 id=définition-de-la-numeration-binaire>Définition de la numeration binaire</h2><p>La numeration binaire est une numeration de position, en base 2.</p><blockquote><p>Numération en base 2 :
-- On utilise 2 symboles 0 et 1
-- Le mot-nombre comprend, depuis la droite vers la gauche : les unités, les paires, les paires de paires…</p><p>Numeration de position : on utilise les mêmes chiffres pour représenter les unités, les paires, etc…</p></blockquote><h2 id=comparaison-avec-la-numération-décimale>Comparaison avec la numération décimale</h2><p>La numération décimale est aussi une numération de position. On retrouve donc des similitudes avec le binaire:</p><table><thead><tr><th></th><th>decimale</th><th>binaire</th></tr></thead><tbody><tr><td>base</td><td>10</td><td>2</td></tr><tr><td>chiffres utilisés</td><td>0,1,2,3,4,5,6,7,8,9</td><td>0, 1</td></tr><tr><td>poids du chiffre le plus à droite</td><td>1 (unité)</td><td>1 (unité)</td></tr><tr><td>poids du chiffre à gauche des unités</td><td>10 (dizaines)</td><td>2 (paire)</td></tr><tr><td>poids du chiffre encore plus à gauche</td><td>100 (dizaine de dizaine)</td><td>4 (paire de paire)</td></tr></tbody></table><p><em>Résumé :</em></p><figure><img src=../images/base10.png><figcaption>base10</figcaption></figure><figure><img src=../images/base2.png><figcaption>base2</figcaption></figure><h2 id=multiples-binaires>Multiples binaires</h2><p>Les mémoires des machines imposent d&rsquo;utiliser des multiples de l&rsquo;octet : ko; Mo; Go; To</p><blockquote><p>Conversion en bits</p></blockquote><table><thead><tr><th>unité</th><th>valeur approchée en bits</th><th>valeur exacte</th></tr></thead><tbody><tr><td>kilobits (kb)</td><td>1000</td><td>2<sup>10</sup></td></tr><tr><td>megabits (Mb)</td><td>10<sup>6</sup></td><td>2<sup>20</sup></td></tr><tr><td>gigabits (Gb)</td><td>10<sup>9</sup></td><td>2<sup>30</sup></td></tr><tr><td>terabits (Tb)</td><td>10<sup>12</sup></td><td>2<sup>40</sup></td></tr><tr><td>petabits (Pb)</td><td>10<sup>15</sup></td><td>2<sup>50</sup></td></tr></tbody></table><p><br></p><blockquote><p>Conversion en octets</p></blockquote><table><thead><tr><th>unité</th><th>valeur approchée en bits</th><th>valeur exacte</th></tr></thead><tbody><tr><td>kilooctets (ko)</td><td>10<sup>3</sup></td><td>2<sup>10</sup></td></tr><tr><td>megaoctets (Mo)</td><td>10<sup>6</sup></td><td>2<sup>20</sup></td></tr><tr><td>gigaoctets (Go)</td><td>10<sup>9</sup></td><td>2<sup>30</sup></td></tr><tr><td>teraoctets (To)</td><td>10<sup>12</sup></td><td>2<sup>40</sup></td></tr><tr><td>petaoctets (Po)</td><td>10<sup>15</sup></td><td>2<sup>50</sup></td></tr></tbody></table><p><br></p><blockquote><p>Rappels :</p></blockquote><ul><li>8 bits = 1 octet</li><li>10<sup>3</sup> = 1000</li><li>2<sup>10</sup> = 1024</li></ul><h1 id=codage-des-caractères>Codage des caractères</h1><p>Le texte est constitué de caractères. Chaque caractère est représenté par un entier (sur un certain nombre d’octets).</p><p>Il existe plusieurs normes d&rsquo;encodage des caractères (c&rsquo;est à dire de correspondance entre caractères et nombres).</p><ul><li><strong>L&rsquo;ASCII</strong> (American Standard Code for Information Interchange), inventé par Bob Bemer en 1961. C’est un code sur 7 bits, le premier bit étant 0 (Dans le temps on utilisait ce bit comme bit de parité).<br>Les caractères de 0 à 31 ainsi que le 127 ne sont pas affichables, et correspondent à des directives de terminal. Le caractère 32 est l’espace blanc. Les autres correspondent à différents symboles de ponctuation, aux chiffres, aux lettres majuscules (à partir du caractère 65) et minuscules (après 97).</li><li>D&rsquo;autres normes comprenant <strong>l&rsquo;ASCII étendu</strong> permettront d&rsquo;ajouter les caractères accentués à cette première table.</li><li>Aujourd&rsquo;hui, en Europe, la norme d&rsquo;encodage la plus utilisée est la norme <strong>UTF-8</strong>, comprenant l&rsquo;encodage de tous les caractères nécessaires pour les langues latines. (UTF-8 = 1 octet). Il existe aussi les normes étandues UTF-16 et UTF-32, dont l&rsquo;encodage prend plus de 8 bits (respectivement 16 et 32).</li><li>Enfin, la norme la plus riche, englobant également les alphabets grecs, arabes et asiatiques est la norme <strong>Unicode</strong>. Cette norme dont la première publication remonte à 1991, est compatible avec celle UTF-8 (les caractères ascii et UTF-8 ont la même valeur numérique en Unicode). Unicode permet de normaliser environ 100 000 caractères. Mais l&rsquo;encodage des caractères se fait sur plus d&rsquo;un octet et rend les fichiers textes assez lourds (inutilement lourd pour les caractères latins).</li></ul><figure><img src=../images/ascii.png alt=ascii><figcaption>extrait de la table ASCII</figcaption></figure><h1 id=exercices-et-flash-card>Exercices et flash card</h1><p><a href=/docs/SNT_2nde/pages/page16/ex1/index.html>Lien vers la page d&rsquo;exercices</a></p></article><div style=height:100px></div></div><aside class="book-toc fixed"><nav id=TableOfContents><ul><li><a href=#codage-des-nombres>Codage des nombres</a><ul><li><a href=#explication-en-vidéo>Explication en vidéo</a></li><li><a href=#définition-de-la-numeration-binaire>Définition de la numeration binaire</a></li><li><a href=#comparaison-avec-la-numération-décimale>Comparaison avec la numération décimale</a></li><li><a href=#multiples-binaires>Multiples binaires</a></li></ul></li><li><a href=#codage-des-caractères>Codage des caractères</a></li><li><a href=#exercices-et-flash-card>Exercices et flash card</a></li></ul></nav></aside></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
-<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fSNT_2nde\2fpages\2fpage16\2fnombres_caracteres\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    nombres et caracteres
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="codage-des-nombres">Codage des nombres</h1>
+<p>Ce cours comprend une page d&rsquo;exercices avec des flash cards : <a href="/docs/SNT_2nde/pages/page16/ex1/index.html">Lien vers la page d&rsquo;exercices</a></p>
+<h2 id="explication-en-vidéo">Explication en vidéo</h2>
+<!-- raw HTML omitted -->
+<h2 id="définition-de-la-numeration-binaire">Définition de la numeration binaire</h2>
+<p>La numeration binaire est une numeration de position, en base 2.</p>
+<blockquote>
+<p>Numération en base 2 :</p>
+</blockquote>
+<ul>
+<li>On utilise 2 symboles 0 et 1</li>
+<li>Le mot-nombre comprend, depuis la droite vers la gauche : les unités, les paires, les paires de paires…</li>
+</ul>
+<blockquote>
+<p>Numeration de position : on utilise les mêmes chiffres pour représenter les unités, les paires, etc…</p>
+</blockquote>
+<h2 id="comparaison-avec-la-numération-décimale">Comparaison avec la numération décimale</h2>
+<p>La numération décimale est aussi une numération de position. On retrouve donc des similitudes avec le binaire:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>decimale</th>
+<th>binaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>base</td>
+<td>10</td>
+<td>2</td>
+</tr>
+<tr>
+<td>chiffres utilisés</td>
+<td>0,1,2,3,4,5,6,7,8,9</td>
+<td>0, 1</td>
+</tr>
+<tr>
+<td>poids du chiffre le plus à droite</td>
+<td>1 (unité)</td>
+<td>1 (unité)</td>
+</tr>
+<tr>
+<td>poids du chiffre à gauche des unités</td>
+<td>10 (dizaines)</td>
+<td>2 (paire)</td>
+</tr>
+<tr>
+<td>poids du chiffre encore plus à gauche</td>
+<td>100 (dizaine de dizaine)</td>
+<td>4 (paire de paire)</td>
+</tr>
+</tbody>
+</table>
+<p><em>Résumé :</em></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="multiples-binaires">Multiples binaires</h2>
+<p>Les mémoires des machines imposent d&rsquo;utiliser des multiples de l&rsquo;octet : ko; Mo; Go; To</p>
+<blockquote>
+<p>Conversion en bits</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>unité</th>
+<th>valeur approchée en bits</th>
+<th>valeur exacte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>kilobits (kb)</td>
+<td>1000</td>
+<td>2<!-- raw HTML omitted -->10<!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>megabits (Mb)</td>
+<td>10<!-- raw HTML omitted -->6<!-- raw HTML omitted --></td>
+<td>2<!-- raw HTML omitted -->20<!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>gigabits (Gb)</td>
+<td>10<!-- raw HTML omitted -->9<!-- raw HTML omitted --></td>
+<td>2<!-- raw HTML omitted -->30<!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>terabits (Tb)</td>
+<td>10<!-- raw HTML omitted -->12<!-- raw HTML omitted --></td>
+<td>2<!-- raw HTML omitted -->40<!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>petabits (Pb)</td>
+<td>10<!-- raw HTML omitted -->15<!-- raw HTML omitted --></td>
+<td>2<!-- raw HTML omitted -->50<!-- raw HTML omitted --></td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Conversion en octets</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>unité</th>
+<th>valeur approchée en bits</th>
+<th>valeur exacte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>kilooctets (ko)</td>
+<td>10<!-- raw HTML omitted -->3<!-- raw HTML omitted --></td>
+<td>2<!-- raw HTML omitted -->10<!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>megaoctets (Mo)</td>
+<td>10<!-- raw HTML omitted -->6<!-- raw HTML omitted --></td>
+<td>2<!-- raw HTML omitted -->20<!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>gigaoctets (Go)</td>
+<td>10<!-- raw HTML omitted -->9<!-- raw HTML omitted --></td>
+<td>2<!-- raw HTML omitted -->30<!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>teraoctets (To)</td>
+<td>10<!-- raw HTML omitted -->12<!-- raw HTML omitted --></td>
+<td>2<!-- raw HTML omitted -->40<!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>petaoctets (Po)</td>
+<td>10<!-- raw HTML omitted -->15<!-- raw HTML omitted --></td>
+<td>2<!-- raw HTML omitted -->50<!-- raw HTML omitted --></td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Rappels :</p>
+</blockquote>
+<ul>
+<li>8 bits = 1 octet</li>
+<li>10<!-- raw HTML omitted -->3<!-- raw HTML omitted --> = 1000</li>
+<li>2<!-- raw HTML omitted -->10<!-- raw HTML omitted --> = 1024</li>
+</ul>
+<h1 id="codage-des-caractères">Codage des caractères</h1>
+<h2 id="texte-et-caractères">Texte et caractères</h2>
+<ul>
+<li>Un <strong>texte</strong> est une chaine de caractères et de symboles (dont l&rsquo;espace, virgule&hellip;). La représentation du texte dans l&rsquo;ordinateur suit ce même schéma : c&rsquo;est le rangement à des emplacements consécutifs de la mémoire des représentations des caractères un à un. Chaque caractère est représenté par un entier (sur un certain nombre d’octets).</li>
+</ul>
+<p>Etant donné le nombre n de symboles différents à coder, que peut prendre chaque caractère, il faut un nombre de bits p tel que 2<!-- raw HTML omitted -->p<!-- raw HTML omitted --> &gt;= n. Ainsi, 2<!-- raw HTML omitted -->7<!-- raw HTML omitted --> &gt; 100 caractères du clavier.</p>
+<p>Dans l’hypothèse où ce nombre p vaut 8: Si le texte contient C caractères, il faut C * 8 bits de données pour coder tout le texte.</p>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Dans l&rsquo;hypothèse où chaque caractère serait codé sur un seul octet, quel serait le poids (en ko) de ce fichier texte?</p>
+</blockquote>
+<h2 id="coder-les-caractères">Coder les caractères</h2>
+<p>Il existe plusieurs normes d&rsquo;encodage des caractères (c&rsquo;est à dire de correspondance entre caractères et nombres).</p>
+<ul>
+<li><strong>L&rsquo;ASCII</strong> (American Standard Code for Information Interchange), inventé par Bob Bemer en 1961. C’est un code sur 7 bits, le premier bit étant 0 (Dans le temps on utilisait ce bit comme bit de parité).<!-- raw HTML omitted -->
+Les caractères de 0 à 31 ainsi que le 127 ne sont pas affichables, et correspondent à des directives de terminal. Le caractère 32 est l’espace blanc. Les autres correspondent à différents symboles de ponctuation, aux chiffres, aux lettres majuscules (à partir du caractère 65) et minuscules (après 97).
+<!-- raw HTML omitted -->
+La table ASCII propose ainsi un alphabet, mettant en correspondance 127 caractères avec leur représentation binaire.</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>D&rsquo;autres normes comprenant <strong>l&rsquo;ASCII étendu</strong> permettront d&rsquo;ajouter les caractères accentués à cette première table.</p>
+</li>
+<li>
+<p>La norme la plus riche, englobant également les alphabets grecs,  arabes et asiatiques est la norme <strong>Unicode</strong>. Cette norme dont la première publication remonte à 1991,
+<!-- raw HTML omitted -->
+Unicode permet de normaliser environ 1 000 000 caractères. L&rsquo;encodage des caractères se fait sur plus d&rsquo;un octet et, si le nombre de bits était fixe, les fichiers textes seraint inutilement lourds.</p>
+</li>
+<li>
+<p>Encodages Unicode comprimés : aujourd&rsquo;hui, en Europe, la norme d&rsquo;encodage la plus utilisée est la norme <strong>UTF-8</strong>, comprenant l&rsquo;encodage de tous les caractères nécessaires pour les langues latines. (UTF-8 = 1 octet). Il existe aussi les normes étandues UTF-16 et UTF-32, dont l&rsquo;encodage prend plus de 8 bits (respectivement 16 et 32).
+<!-- raw HTML omitted -->
+La principale caractéristique d&rsquo;UTF-8 est qu&rsquo;elle est rétro-compatible avec le standard ASCII, c&rsquo;est-à-dire que tout caractère ASCII se code en UTF-8 sous forme d&rsquo;un unique octet, identique au code ASCII. Par exemple « A » (A majuscule) a pour code ASCII 65 (0x41) et se code en UTF-8 par l&rsquo;octet 65.</p>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<p>Chaque caractère dont le point de code est supérieur à 127 (0x7F) (caractère non ASCII) se code sur 2 à 4 octets:</p>
+<ul>
+<li>Codage des caractères Unicode sur plusieurs octets.</li>
+</ul>
+<p>0bbbbbbb                                  1 octet codant 1 à 7 bits</p>
+<p>110bbbbb 10bbbbbb                         2 octets codant 8 à 11 bits</p>
+<h1 id="exercices-et-flash-card">Exercices et flash card</h1>
+<p><a href="/docs/SNT_2nde/pages/page16/ex1/index.html">Lien vers la page d&rsquo;exercices</a></p>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#explication-en-vidéo">Explication en vidéo</a></li>
+    <li><a href="#définition-de-la-numeration-binaire">Définition de la numeration binaire</a></li>
+    <li><a href="#comparaison-avec-la-numération-décimale">Comparaison avec la numération décimale</a></li>
+    <li><a href="#multiples-binaires">Multiples binaires</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#texte-et-caractères">Texte et caractères</a></li>
+    <li><a href="#coder-les-caractères">Coder les caractères</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

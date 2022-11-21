@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    informatique des objets
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2ftechno\2fpages\2fMB_init\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    informatique des objets
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="prise-en-main-de-la-carte-microbit-présentation">Prise en main de la carte micro:bit: présentation</h1>
+<p>La carte microbit est un nano-ordinateur créé pour la promotion de la programmation dans l&rsquo;éducation. Elle est très simple d&rsquo;utilisation, mais peut également s&rsquo;intégrer dans des applications complexes.</p>
+<!-- raw HTML omitted -->
+<p>Elle possède dans sa version 2:</p>
+<ul>
+<li>un capteur de luminosité</li>
+<li>un acceleromètre/gyroscope</li>
+<li>un capteur de champ magnétique</li>
+<li>2 boutons a/b</li>
+<li>un écran LED <code>5*5</code></li>
+<li>un mini haut-parleur</li>
+<li>un microphone</li>
+<li>antenne radio 2,4 GHz et bluetooth pour une communication entre cartes</li>
+<li>3 entrées/sorties analogiques ou numeriques(0-3,3V), avec un courant de sortie limité à 200mA. Par défaut les broches sont configurées en sortie.</li>
+</ul>
+<p>La programmation se fait depuis un navigateur web en Block Editor pour les débutants ou en langage MicroPython pour les utilisateurs plus expérimentés.
+Le programme se télécharge depuis l&rsquo;IDE en ligne et se copie simplement dans la micro:bit comme dans une clé USB (cordon USB vers micro-USB non inclus).</p>
+<h1 id="utiliser-lediteur-en-ligne-pythonmicrobitorg">Utiliser l&rsquo;editeur en ligne python.microbit.org</h1>
+<p>Aller sur l&rsquo;editeur à l&rsquo;adresse suivante : <a href="https://python.microbit.org/v/2.0">https://python.microbit.org/v/2.0</a></p>
+<!-- raw HTML omitted -->
+<ol>
+<li>Saisir le script dans la fenêtre d&rsquo;edition.</li>
+<li>Lui donner un nom (champ en haut à droite : <em>script name</em>).</li>
+<li>Charger le programme sur le disque dur de l&rsquo;ordinateur : <em>Download</em> (l&rsquo;extension est .hex)</li>
+<li>Deplacer le programme sur la carte microbit à l&rsquo;aide de l&rsquo;explorateur de fichiers.</li>
+</ol>
+<h1 id="utiliser-lediteur-mu">Utiliser l&rsquo;editeur Mu</h1>
+<!-- raw HTML omitted -->
+<ul>
+<li>Bouton <strong>Mode</strong> : <!-- raw HTML omitted --> choisir l&rsquo;editeur BBC microbit <!-- raw HTML omitted --></li>
+<li>Saisir le script dans la fenêtre de script.</li>
+<li>Faites une copie de votre script : <!-- raw HTML omitted --></li>
+<li>Une fois le microcontrôleur relié à l&rsquo;ordinateur par le cable USB : bouton <strong>Flasher</strong> pour transferer le script. <!-- raw HTML omitted --></li>
+</ul>
+<p>L&rsquo;editeur aide à la saisie grâce à l&rsquo;autocompletion. Selectionner le mot en python et valider avec la touche <em>Enter</em> du clavier.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Lorsque l&rsquo;on tape le nom d&rsquo;une fonction qui est documentée, l&rsquo;aide apparait à l&rsquo;écran. C&rsquo;est très utile pour savoir si la fonction prend des paramètres :</p>
+<!-- raw HTML omitted -->
+<h2 id="gestion-des-erreurs-de-syntaxe">gestion des erreurs de syntaxe</h2>
+<p>Une fois le programme chargé, il peut y avoir une erreur de syntaxe qui empêche son fonctionnement. Le message s&rsquo;affiche sur l&rsquo;écran de la carte microbit. Mais il peut être plus facile de lire ce message sur l&rsquo;écran de l&rsquo;ordinateur. Le bouton <strong>REPL</strong> fournit une console python avec affichage des messages à l&rsquo;execution.</p>
+<!-- raw HTML omitted -->
+<h1 id="un-premier-programme-hello-world">Un premier programme <code>Hello World</code></h1>
+<p><strong>Entrées/Sorties :</strong></p>
+<p>La carte dispose d&rsquo;un petit écran de LED qui peut servir de sortie et d&rsquo;affichage. Elle est équipée de 2 boutons A et B pour intéragir.
+Pour que le programme détecte l&rsquo;appui sur les boutons, il faut surveiller l&rsquo;état des boutons en permanence, avec une boucle non bornée <code>while True:</code></p>
+<p>On demarrera toujours le script avec l&rsquo;import des librairies spécifiques à la carte micro:bit : <code>from microbit import *</code>, qui s&rsquo;ajouteront aux librairies standart Python :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> <span style="color:#111">microbit</span> <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># On cree une boucle infinie </span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">while</span> <span style="color:#00a8c8">True</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">if</span> <span style="color:#111">button_a</span><span style="color:#f92672">.</span><span style="color:#111">is_pressed</span><span style="color:#111">():</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#111">display</span><span style="color:#f92672">.</span><span style="color:#111">show</span><span style="color:#111">(</span><span style="color:#111">Image</span><span style="color:#f92672">.</span><span style="color:#111">HAPPY</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">else</span><span style="color:#111">:</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#111">display</span><span style="color:#f92672">.</span><span style="color:#111">show</span><span style="color:#111">(</span><span style="color:#111">Image</span><span style="color:#f92672">.</span><span style="color:#111">SAD</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>Ici, le programme affiche l&rsquo;un ou l&rsquo;autre des smileys, selon si le bouton A est pressé ou relâché.</p>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Liste des images : <a href="https://microbit-micropython.readthedocs.io/fr/latest/tutorials/images.html">https://microbit-micropython.readthedocs.io/fr/latest/tutorials/images.html</a></p>
+</blockquote>
+<!-- raw HTML omitted -->
+<h2 id="affichage-dun-texte">Affichage d&rsquo;un texte</h2>
+<p>Si l&rsquo;on veut afficher un texte, il sera préférable d&rsquo;utiliser la fonction <code>scroll</code> à la place de <code>show</code>, afin de faire défiler les caractères sur l&rsquo;écran de LED.</p>
+<p><em>Exemple avec un texte :</em> <code>display.scroll(&quot;Hello World&quot;)</code></p>
+<p><em>Exemple avec la valeur d&rsquo;une variable dt :</em> <code>display.scroll(dt)</code></p>
+<h2 id="affichage-de-formes">Affichage de formes</h2>
+<p>Ce script met en oeuvre une boucle bornée qui permet de parcourir les pixels (selon x ou y):</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># trace un trait horizontal (-)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> <span style="color:#111">microbit</span> <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">y</span><span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">b</span><span style="color:#f92672">=</span><span style="color:#ae81ff">9</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">for</span> <span style="color:#111">x</span> <span style="color:#f92672">in</span> <span style="color:#111">range</span><span style="color:#111">(</span><span style="color:#ae81ff">5</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">display</span><span style="color:#f92672">.</span><span style="color:#111">set_pixel</span><span style="color:#111">(</span><span style="color:#111">x</span><span style="color:#111">,</span><span style="color:#111">y</span><span style="color:#111">,</span><span style="color:#111">b</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>x,y : int, valeur de 0 à 4<!-- raw HTML omitted -->
+b : int, 0 à 9 (intensité lumineuse de la diode en x,y)</p>
+<h1 id="application-tp-évalué">Application: TP évalué</h1>
+<p>Lien vers <!-- raw HTML omitted -->l&rsquo;énoncé en ligne<!-- raw HTML omitted --></p>
+<p>Lien vers le <!-- raw HTML omitted -->Document pdf à rendre<!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<h1 id="liens">Liens</h1>
+<ul>
+<li>Documentation micro:bit <a href="https://microbit-micropython.readthedocs.io/en/v1.0.1/">microbit-micropython.readthedocs</a></li>
+<li>Travaux pratiques: <a href="https://microbit.org/projects/make-it-code-it/">microbit.org/make-it-code-it</a></li>
+<li>Prise en main de la micro:bit avec des exemples <a href="https://numerique-sciences-informatiques.discip.ac-caen.fr/IMG/pdf/initiation-mu-microbit.pdf">DANE Normandie ac-Caen</a></li>
+<li>Une premiere approche de la communication entre microbits : <a href="https://microbit-micropython.readthedocs.io/en/v1.0.1/tutorials/radio.html">l&rsquo;exemple de la luciole</a></li>
+<li>TP Reseaux : comment faire communiquer <a href="https://www.lossendiere.com/2017/12/10/faire-communiquer-2-microbit-par-onde-radio/">deux cartes microbit par ondes radio</a></li>
+</ul>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#gestion-des-erreurs-de-syntaxe">gestion des erreurs de syntaxe</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#affichage-dun-texte">Affichage d&rsquo;un texte</a></li>
+    <li><a href="#affichage-de-formes">Affichage de formes</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

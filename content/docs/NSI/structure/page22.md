@@ -1,5 +1,6 @@
 ---
 Title: TD reduction chaine
+bookShowToc: false
 ---
 # Suite des exercices sur les Piles
 
@@ -33,6 +34,8 @@ Certains jeux comme par exemple *Candie Crush* reposent sur l'*élimination de m
 <figcaption>méthode de reduction avec une chaine contenant<br>
 des caractères a, A, b, B, c, C, d, D</figcaption>
 </figure>
+
+![méthode de reduction](../images/reduction.PNG)
 
 > Programmez la fonction `reduction` qui va permettre de réaliser ceci.
 

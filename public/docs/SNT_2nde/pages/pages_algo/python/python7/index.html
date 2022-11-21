@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    de scratch à python
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fSNT_2nde\2fpages\2fpages_algo\2fpython\2fpython7\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    de scratch à python
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="tp1-de-scratch-à-python">TP1: de scratch à python</h1>
+<p>Aller sur l&rsquo;interface de programmation python du site <!-- raw HTML omitted -->Vittascience<!-- raw HTML omitted --></p>
+<h2 id="partie-1-premier-programme">Partie 1: Premier programme</h2>
+<h3 id="but">BUT:</h3>
+<p>créer un programme qui demande à l&rsquo;utilisateur son nom, et lui affiche un message de bienvenue.</p>
+<h3 id="variables">VARIABLES:</h3>
+<p>le programme utilise les variables:</p>
+<ul>
+<li><code>nom</code>, de type texte. Contient le nom renseigné par l&rsquo;utilisateur</li>
+<li><code>debut</code>, de type texte. Contient le mot: &ldquo;Bonjour &quot;</li>
+<li><code>message</code>, de type texte, contient <code>debut</code> + <code>nom</code></li>
+</ul>
+<p>On rappelle qu&rsquo;une variable, c&rsquo;est un nom qui fait référence à une valeur stockée dans un espace de la mémoire. <em>Exemple:</em></p>
+<!-- raw HTML omitted -->
+<h3 id="ecrire-le-programme">ECRIRE LE PROGRAMME:</h3>
+<p>Dans la fenêtre <em>SCRATCH</em>, on a un seul bloc de code:</p>
+<!-- raw HTML omitted -->
+<ul>
+<li>Dans la rubrique AFFICHAGE:
+selectionner et glisser l&rsquo;instruction: <em>demander un texte à l&rsquo;utilisateur</em>.</li>
+</ul>
+<!-- raw HTML omitted -->
+<p>Comme cette instruction n&rsquo;est pas complète, elle ne peut pas constituer un bloc de code. Il faut ajouter une affectation.</p>
+<ul>
+<li>Dans la rubrique VARIABLE: cliquer sur <em>Créer une variable</em>. Nommer celle-ci <em>nom</em></li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>Rubrique VARIABLES: selectionner et glisser: <em>Affecter à <code>nom</code> la valeur <code>&quot; &quot;</code></em>. <!-- raw HTML omitted -->Puis mettre l&rsquo;instruction <em>demander un texte à l&rsquo;utilisateur</em>, et coller les 2 blocs de code.</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>Rubrique VARIABLES: Créer une nouvelle variable <code>debut</code>. Selectionner et glisser: <em>Affecter à <code>debut</code> la valeur <code>&quot; &quot;</code></em>. <!-- raw HTML omitted -->Ecrire <code>&quot;Bonjour &quot;</code>à la place de <code>&quot; &quot;</code>.</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>Rubrique VARIABLES: créer une nouvelle variable <code>message</code>.</p>
+</li>
+<li>
+<p>Rubrique MATH: choisir le premier élément, celui qui permet une addition</p>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<p>A l&rsquo;aide des variables <code>debut</code> et <code>nom</code>, vous allez construire l&rsquo;instruction complète: <em>Affecter à <code>message</code> la valeur <code>debut + nom</code></em></p>
+<p>Vous trouverez les éléments <code>debut</code> et <code>nom</code> dans la rubrique VARIABLES:</p>
+<!-- raw HTML omitted -->
+<p>Compléter alors l&rsquo;instruction pour obtenir:</p>
+<!-- raw HTML omitted -->
+<ul>
+<li>Mettre à la suite les blocs de code pour former le programme:</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>Mettez vous maintenant dans la peau de l&rsquo;utilisateur: Executer le programme (bouton du haut <code>&gt;</code>) Et repondre à la question dans le <em>shell</em>, sous la fenêtre d&rsquo;edition.</li>
+</ul>
+<blockquote>
+<p>Sur votre cahier, recopier le script python correspondant. Et répondre aux questions:</p>
+</blockquote>
+<ol>
+<li>Quelle instruction en python permet de demander à l&rsquo;utilisateur d&rsquo;entrer une valeur ou un texte?</li>
+<li>Quelle instruction python permet d&rsquo;afficher :</li>
+</ol>
+<ul>
+<li>un texte?</li>
+<li>le contenu d&rsquo;une variable?</li>
+</ul>
+<ol start="3">
+<li>Quelle instruction en python permet d&rsquo;affecter le texte &ldquo;bonjour&rdquo; à la variable &ldquo;debut&rdquo;?</li>
+</ol>
+<h2 id="partie-2-programmer-une-fonction">Partie 2: programmer une fonction</h2>
+<h3 id="but-remplacer-les-entrées-demander-à-et-sortie-afficher-par-des-paramètres-de-fonction">But: remplacer les entrées <em>demander à</em> et sortie <em>afficher</em> par des paramètres de fonction</h3>
+<h3 id="ecrire-le-programme-1">Ecrire le programme</h3>
+<ul>
+<li>Supprimer le premier bloc du programme précédent (<em>Affecter à <code>nom</code> la valeur demander&hellip;</em>)</li>
+<li>Rubrique FONCTIONS: Choisir le 2e bloc, <em>Définir <code>nom_de_la_fonction</code></em> avec l&rsquo;option <em>retour</em>.
+<ul>
+<li>modifier le <code>nom_de_la_fonction</code>: mettre <code>salutation</code> comme nouveau nom</li>
+<li>Bouton (+): ajouter le paramètre <code>nom</code></li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<p>Votre fonction est vide et ne contient pas encore d&rsquo;instruction.</p>
+<!-- raw HTML omitted -->
+<ul>
+<li>Mettre le bloc du programme précédent dans la fonction:</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>Supprimer la dernière ligne <em>afficher <code>message</code></em>.</li>
+<li>Dans l&rsquo;espace vide après <em>retour</em> : mettre la variable <code>message</code> pour que celle-ci s&rsquo;affiche lorsque l&rsquo;on appelle la fonction:</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>Executer le programme (bouton du haut &gt;)<!-- raw HTML omitted -->En apparence, il ne se passe rien, mais vous avez quand même chargé la fonction en mémoire.</li>
+<li>Dans le shell (partie inférieure de la fenêtre), après les chevrons <code>&gt;&gt;&gt;</code>, saisir l&rsquo;instruction qui va appeler votre fonction: <!-- raw HTML omitted --></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">salutation</span><span style="color:#111">(</span><span style="color:#d88200">&#34;votre nom&#34;</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p><em>Modifier <code>votre nom</code> par votre veritable nom&hellip;</em></p>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Sur votre cahier, recopier le script python correspondant. Et répondre aux questions: Dans le script python: &hellip;</p>
+</blockquote>
+<ol>
+<li>Quelle partie du programme associe votre nom à la variable <code>nom</code>?</li>
+<li>Quelle partie du programme affiche le contenu du message?</li>
+<li>Comment sont mises les instructions du bloc de code dans la fonction?</li>
+<li>Comment faut-il faire pour appeler la fonction et déclencher son execution?</li>
+<li>Quel est l&rsquo;avantage d&rsquo;utiliser une fonction plutôt que le script de la partie 1?</li>
+</ol>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#partie-1-premier-programme">Partie 1: Premier programme</a>
+      <ul>
+        <li><a href="#but">BUT:</a></li>
+        <li><a href="#variables">VARIABLES:</a></li>
+        <li><a href="#ecrire-le-programme">ECRIRE LE PROGRAMME:</a></li>
+      </ul>
+    </li>
+    <li><a href="#partie-2-programmer-une-fonction">Partie 2: programmer une fonction</a>
+      <ul>
+        <li><a href="#but-remplacer-les-entrées-demander-à-et-sortie-afficher-par-des-paramètres-de-fonction">But: remplacer les entrées <em>demander à</em> et sortie <em>afficher</em> par des paramètres de fonction</a></li>
+        <li><a href="#ecrire-le-programme-1">Ecrire le programme</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

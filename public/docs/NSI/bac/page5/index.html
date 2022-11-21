@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    bac BDD SQL
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI\2f bac\2fpage5\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    bac BDD SQL
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="bac-2022-polynesie-exercice-3">Bac 2022 Polynesie: Exercice 3</h1>
+<p><em>Cet exercice traite du thème « base de données », et principalement du modèle
+relationnel et du langage SQL.</em></p>
+<p>L’énoncé de cet exercice peut utiliser les mots du langage SQL suivants :</p>
+<p><code>CREATE TABLE, SELECT, FROM, WHERE, JOIN ON, INSERT INTO, VALUES, UPDATE, SET, DELETE, COUNT, DISTINCT, AND, OR, AS, ORDER BY, ASC, DESC</code></p>
+<p>Un site web recueille des données de navigation dans une base de données afin
+d&rsquo;étudier les profils de ses visiteurs.</p>
+<p>Chaque requête d&rsquo;interrogation d&rsquo;une page de ce site est enregistrée dans une première table dénommée <strong>Visites</strong> sous la forme d&rsquo;un 5-uplet : <code>(identifiant, adresse IP, date et heure de visite, nom de la page, navigateur)</code>.</p>
+<p>Le chargement de la page index.html par 192.168.1.91 le 12 juillet 1998 à 22h48 aura par exemple été enregistré de la façon suivante :</p>
+<p><code>(1534, &quot;192.168.1.91&quot;, &quot;1998-07-12 22:48:00&quot;, &quot;index.html&quot;, &quot;Internet explorer 4.1&quot;)</code>.</p>
+<p>La commande SQL ayant permis de créer cette table est la suivante:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#00a8c8">CREATE</span> <span style="color:#00a8c8">TABLE</span> <span style="color:#111">Visites</span> <span style="color:#111">(</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">identifiant</span> <span style="color:#111">INTEGER</span> <span style="color:#00a8c8">NOT</span> <span style="color:#00a8c8">NULL</span> <span style="color:#00a8c8">UNIQUE</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">ip</span> <span style="color:#111">VARCHAR</span><span style="color:#111">(</span><span style="color:#ae81ff">15</span><span style="color:#111">),</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">dateheure</span> <span style="color:#111">DATETIME</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">nompage</span> <span style="color:#111">TEXT</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">navigateur</span> <span style="color:#111">TEXT</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">);</span>
+</span></span></code></pre></div><h2 id="question-1">Question 1</h2>
+<p>A.  Donner une commande d&rsquo;interrogation en langage SQL permettant d&rsquo;obtenir
+l&rsquo;ensemble des 2-uplets (adresse IP, nom de la page) de cette table.</p>
+<p>B.  Donner une commande en langage SQL permettant d&rsquo;obtenir l&rsquo;ensemble des
+adresses IP ayant interrogé le site, sans doublon.</p>
+<p>C.  Donner une commande en langage SQL permettant d&rsquo;obtenir la liste des
+noms des pages visitées par l&rsquo;adresse IP 192.168.1.91</p>
+<p>Ce site web met en place, sur chacune de ses pages, un programme en javascript qui envoie au serveur, à intervalle régulier de 15 secondes, le temps en secondes de présence sur la page. Ces envois contiennent tous la valeur de identifiant correspondant au chargement initial de la page.</p>
+<p>Par exemple, si le visiteur du 12 juillet 1998 est resté 65 secondes sur la page, celle-ci a envoyé au serveur les 4 doublets (1534, 15), (1534, 30), (1534, 45) et (1534, 60).</p>
+<p>Ces données sont enregistrées dans une table nommée Pings créée avec la
+commande ci-dessous :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#00a8c8">CREATE</span> <span style="color:#00a8c8">TABLE</span> <span style="color:#111">Pings</span> <span style="color:#111">(</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">identifiant</span> <span style="color:#111">INTEGER</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">duree</span> <span style="color:#111">INTEGER</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">);</span>
+</span></span></code></pre></div><p>En plus de l&rsquo;inscription d&rsquo;une ligne dans la table <strong>Visites</strong>, chaque chargement d&rsquo;une nouvelle page provoque l&rsquo;insertion d&rsquo;une ligne dans la table <strong>Pings</strong> comprenant l&rsquo;identifiant de ce chargement et une durée de 0.</p>
+<p>Les attributs identifiant des tables <strong>Visites</strong> et <strong>Pings</strong> partagent les mêmes
+valeurs.</p>
+<h2 id="question-2">Question 2</h2>
+<p>A.  De quelle table l’attribut <code>identifiant</code> est-il la clé primaire ?</p>
+<p>B.  De quelle table l’attribut <code>identifiant</code> est-il une clé étrangère ?</p>
+<p>C.  Par conséquent, quelles vérifications sont automatiquement effectuées par le système de gestion de base de données ?</p>
+<h2 id="question-3">Question 3</h2>
+<p>Le serveur reçoit le doublet <code>(identifiant, duree)</code> suivant : <code>(1534, 105)</code>.
+Écrire la commande SQL d&rsquo;insertion qui permet d&rsquo;ajouter cet enregistrement à la
+table <strong>Pings</strong>.
+On envisage ensuite d&rsquo;optimiser la table en se contentant d&rsquo;une seule ligne par
+identifiant dans la table <strong>Pings</strong> : les valeurs de l&rsquo;attribut <code>duree</code> devraient alors être mises à jour à chaque réception d&rsquo;un nouveau doublet <code>(identifiant, duree)</code>.</p>
+<h2 id="question-4">Question 4</h2>
+<p>A.  Écrire la requête de mise à jour permettant de fixer à 120 la valeur de l&rsquo;attribut <code>duree</code> associée à l&rsquo;identifiant <code>1534</code> dans la table <strong>Pings</strong>.</p>
+<p>B.  Expliquer pourquoi on ne peut pas être certain que les données envoyées par
+une page web, depuis le navigateur d&rsquo;un client, via plusieurs requêtes formulées en javascript, arrivent au serveur dans l&rsquo;ordre dans lequel elles ont été émises.</p>
+<p>C. En déduire qu&rsquo;il est préférable d&rsquo;utiliser une requête d&rsquo;insertion plutôt qu&rsquo;une requête de mise à jour pour ajouter des données à la table <strong>Pings</strong>.</p>
+<h2 id="question-5">Question 5</h2>
+<p>Écrire une requête SQL utilisant le mot-clef <code>JOIN</code> et une clause <code>WHERE</code>,
+permettant de trouver les noms de toutes les pages qui ont été consultées plus
+d&rsquo;une minute par au moins un utilisateur.</p>
+<h1 id="bac-2022-metropole1-exercice-2">Bac 2022 metropole1: Exercice 2</h1>
+<p><em>Cet exercice porte sur les bases de données.</em></p>
+<p>On pourra utiliser les mots clés SQL suivants : <code>SELECT, FROM, WHERE, JOIN, ON, INSERT, INTO, VALUES, UPDATE, SET, AND</code>.</p>
+<p>Nous allons étudier une base de données traitant du cinéma dont voici le schéma
+relationnel qui comporte 3 relations :</p>
+<ul>
+<li>la relation <code>individu</code>  (<strong><code>id_ind</code></strong>, `nom, prenom, naissance)</li>
+<li>la relation <code>realisation</code> (<strong><code>id_rea</code></strong>, <code>titre, annee, type</code>)</li>
+<li>la relation <code>emploi</code> (<strong><code>id_emp</code></strong>, <code>description, #id_ind, #id_rea</code>)</li>
+</ul>
+<p>Les clés primaires sont <strong>en gras</strong> et les clés étrangères sont précédées d’un <code>#</code>.</p>
+<p>Ainsi <code>emploi.id_ind</code> est une clé étrangère faisant référence à <code>individu.id_ind</code>.</p>
+<p>Voici un extrait des tables individu et realisation :</p>
+<!-- raw HTML omitted -->
+<h2 id="question-1-1">Question 1</h2>
+<p>On s’intéresse ici à la récupération de données dans une relation.</p>
+<p>a
+A.  Écrire ce que renvoie la requête ci-dessous :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#00a8c8">SELECT</span> <span style="color:#111">nom</span><span style="color:#111">,</span> <span style="color:#111">prenom</span><span style="color:#111">,</span> <span style="color:#111">naissance</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">FROM</span> <span style="color:#111">individu</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">WHERE</span> <span style="color:#111">nom</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;Crog&#39;</span><span style="color:#111">;</span>
+</span></span></code></pre></div><p>B. Fournir une requête SQL permettant de récupérer le titre et la clé primaire de chaque film dont la date de sortie est strictement supérieure à 2020.</p>
+<h2 id="question-2-1">Question 2</h2>
+<p>Cette question traite de la modification de relations.</p>
+<p>A.  Dire s’il faut utiliser la requête 1 ou la requête 2 proposées ci-dessous pour modifier la date de naissance de Daniel Crog. Justifier votre réponse en
+expliquant pourquoi la requête refusée ne pourra pas fonctionner.</p>
+<p><strong>Requête 1:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#00a8c8">UPDATE</span> <span style="color:#111">individu</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">SET</span> <span style="color:#111">naissance</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;02-03-1968&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">WHERE</span> <span style="color:#111">id_ind</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">688</span> <span style="color:#00a8c8">AND</span> <span style="color:#111">nom</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;Crog&#39;</span> <span style="color:#00a8c8">AND</span> <span style="color:#111">prenom</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;Daniel&#39;</span><span style="color:#111">;</span>
+</span></span></code></pre></div><p><strong>Requête 2:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#00a8c8">INSERT</span> <span style="color:#00a8c8">INTO</span> <span style="color:#111">individu</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">VALUES</span> <span style="color:#111">(</span><span style="color:#ae81ff">688</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;Crog&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;Daniel&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;02-03-1968&#39;</span><span style="color:#111">);</span> 
+</span></span></code></pre></div><p>B.  Expliquer si la relation individu peut accepter (ou pas) deux individus
+portant le même nom, le même prénom et la même date de naissance.</p>
+<h2 id="question-3-1">Question 3</h2>
+<p>Cette question porte sur la notion de clés étrangères.</p>
+<p>A.  Recopier sur votre copie les demandes ci-dessous, dans leur intégralité, et les compléter correctement pour qu’elles ajoutent dans la relation <code>emploi</code> les rôles de Daniel Crog en tant que James Bond dans le film nommé ‘Casino
+Impérial’ puis dans le film ‘Ciel tombant’.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#00a8c8">INSERT</span> <span style="color:#00a8c8">INTO</span> <span style="color:#111">emploi</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">VALUES</span> <span style="color:#111">(</span><span style="color:#ae81ff">5400</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;Acteur(James Bond)&#39;</span><span style="color:#111">,</span> <span style="color:#111">...</span> <span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">INSERT</span> <span style="color:#00a8c8">INTO</span> <span style="color:#111">emploi</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">VALUES</span> <span style="color:#111">(</span><span style="color:#ae81ff">5401</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;Acteur(James Bond)&#39;</span><span style="color:#111">,</span> <span style="color:#111">...</span> <span style="color:#111">);</span>
+</span></span></code></pre></div><p>B.  On désire rajouter un nouvel emploi de Daniel Crog en tant que James Bond
+dans le film &lsquo;Docteur Yes&rsquo;.</p>
+<p>Expliquer si l’on doit d’abord créer l’enregistrement du film dans la relation
+realisation ou si l’on doit d’abord créer le rôle dans la relation <code>emploi</code>.</p>
+<h2 id="question-4-1">Question 4</h2>
+<p>Cette question traite des jointures.</p>
+<p>A.  Recopier sur votre copie la requête SQL ci-dessous, dans son intégralité, et la compléter de façon à ce qu’elle renvoie le nom de l’acteur, le titre du film et l’année de sortie du film, à partir de tous les enregistrements de la relation <code>emploi</code> pour lesquels la description de l’emploi est <code>'Acteur(James Bond)'</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#00a8c8">SELECT</span> <span style="color:#111">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">FROM</span> <span style="color:#111">emploi</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">JOIN</span> <span style="color:#111">individu</span> <span style="color:#00a8c8">ON</span> <span style="color:#111">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">JOIN</span> <span style="color:#111">realisation</span> <span style="color:#00a8c8">ON</span> <span style="color:#111">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">WHERE</span> <span style="color:#111">emploi</span><span style="color:#111">.</span><span style="color:#111">description</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;Acteur(James Bond)&#39;</span><span style="color:#111">;</span>
+</span></span></code></pre></div><p>B.  Fournir une requête SQL permettant de trouver toutes les descriptions des
+emplois de Denis Johnson (Denis est son prénom et Johnson est son nom).
+On veillera à n’afficher que la description des emplois et non les films associés à ces emplois.</p>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#question-1">Question 1</a></li>
+    <li><a href="#question-2">Question 2</a></li>
+    <li><a href="#question-3">Question 3</a></li>
+    <li><a href="#question-4">Question 4</a></li>
+    <li><a href="#question-5">Question 5</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#question-1-1">Question 1</a></li>
+    <li><a href="#question-2-1">Question 2</a></li>
+    <li><a href="#question-3-1">Question 3</a></li>
+    <li><a href="#question-4-1">Question 4</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

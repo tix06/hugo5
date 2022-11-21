@@ -1,39 +1,182 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sciences numériques</title><link>/posts/</link><description>Recent content in Posts on Sciences numériques</description><generator>Hugo -- gohugo.io</generator><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Modèle prédictif</title><link>/posts/sciences/modeliser/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/sciences/modeliser/</guid><description>Principe Un modèle prédictif ne peut être établi qu&amp;rsquo;à partir d&amp;rsquo;une étude prealable de données. Une étude statistique permet de repérer si certains paramètres sont liés entre eux. Alors, si ces données étaient suffisamment nombreuses et précises, il est possible d&amp;rsquo;établir des lois mathematiques sur ces données. Une manière de représenter ce lien entre paramètres est d&amp;rsquo;établir une loi de regression linéaire, par exemple.
-A partir de nouvelles données, on peut alors, grâce à une simulation, prédire le comportement futur du nouvel objet.</description></item><item><title>Securite informatique</title><link>/posts/sciences/securite_informatique/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/sciences/securite_informatique/</guid><description>Chiffrements symétriques Vocabulaire Chiffrer: transformer les caractères d&amp;rsquo;un texte pour le rendre incompréhensible, sauf pour celui qui possède la clé de chiffrement. Déchiffrer: transformer le texte chiffré en texte clair à l&amp;rsquo;aide de la clé de chiffrement Décrypter: transformer le texte chiffré en texte clair sans posséder la clé. Cryptologie: science du secret: possède deux branches cryptographie: étude de l&amp;rsquo;art du chiffrement cryptanalyse: analyse des méthodes de chiffrement pour les casser (décrypter) à quoi sert le chiffrement?</description></item><item><title>Python les bases</title><link>/posts/python/python_les_bases/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/python/python_les_bases/</guid><description> Page en cours de construction. Cliquer pour voir les liens
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Allophysique</title>
+    <link>/posts/</link>
+    <description>Recent content in Posts on Allophysique</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Modèle prédictif</title>
+      <link>/posts/sciences/modeliser/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/sciences/modeliser/</guid>
+      <description>Principe Un modèle prédictif ne peut être établi qu&amp;rsquo;à partir d&amp;rsquo;une étude prealable de données. Une étude statistique permet de repérer si certains paramètres sont liés entre eux. Alors, si ces données étaient suffisamment nombreuses et précises, il est possible d&amp;rsquo;établir des lois mathematiques sur ces données. Une manière de représenter ce lien entre paramètres est d&amp;rsquo;établir une loi de regression linéaire, par exemple.
+A partir de nouvelles données, on peut alors, grâce à une simulation, prédire le comportement futur du nouvel objet.</description>
+    </item>
+    
+    <item>
+      <title>Securite informatique</title>
+      <link>/posts/sciences/securite_informatique/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/sciences/securite_informatique/</guid>
+      <description>Chiffrements symétriques Vocabulaire Chiffrer: transformer les caractères d&amp;rsquo;un texte pour le rendre incompréhensible, sauf pour celui qui possède la clé de chiffrement. Déchiffrer: transformer le texte chiffré en texte clair à l&amp;rsquo;aide de la clé de chiffrement Décrypter: transformer le texte chiffré en texte clair sans posséder la clé. Cryptologie: science du secret: possède deux branches cryptographie: étude de l&amp;rsquo;art du chiffrement cryptanalyse: analyse des méthodes de chiffrement pour les casser (décrypter) à quoi sert le chiffrement?</description>
+    </item>
+    
+    <item>
+      <title>Python les bases</title>
+      <link>/posts/python/python_les_bases/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/python/python_les_bases/</guid>
+      <description>Page en cours de construction. Cliquer pour voir les liens
 Liens L&amp;rsquo;essentiel. Python et sciences physiques : https://pyspc.readthedocs.io/fr/latest/05-bases/index.html
 Fiche. Utiliser un notebook ipython : https://pyspc.readthedocs.io/fr/latest/03-guide/
-lecture ecriture dans un fichier : https://python.sdv.univ-paris-diderot.fr/07_fichiers/</description></item><item><title>Python Pandas</title><link>/posts/python/pandas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/python/pandas/</guid><description>Python : la librairie pandas notebook Le notebook présenté ici est à télécharger à l&amp;rsquo;adresse suivante :
+lecture ecriture dans un fichier : https://python.sdv.univ-paris-diderot.fr/07_fichiers/</description>
+    </item>
+    
+    <item>
+      <title>Python graphe et NPI</title>
+      <link>/posts/python/nsi_graphe_dict_npi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/python/nsi_graphe_dict_npi/</guid>
+      <description>tracer un arbre à partir d&amp;rsquo;une expression NPI NPI : notation polonaise inversée
+En particulier : on dispose d&amp;rsquo;une expression en NPI, du type :
+L3 = [7,8,&#39;-&#39;,6,&#39;*&#39;,10,3,&#39;+&#39;,&#39;*&#39;]
+Et on veut créer et afficher le graphe correspondant : On utilisera le script :
+L3 = [7,8,&amp;#39;-&amp;#39;,6,&amp;#39;*&amp;#39;,10,3,&amp;#39;+&amp;#39;,&amp;#39;*&amp;#39;] D = makeTree(L3) G = nx.Graph() graphDict(D) Dont l&amp;rsquo;instruction suivante va générer le dictionnaire à partir de l&amp;rsquo;expression NPI (fonction npiTree recursive):
+D = makeTree(L3) D # affiche {&amp;#39;*&amp;#39;: ({&amp;#39;*&amp;#39;: ({&amp;#39;-&amp;#39;: (7, 8)}, 6)}, {&amp;#39;+&amp;#39;: (10, 3)})} Ce dictionnaire peut être alors parcouru avec des elgorithmes recursifs, comme par exemple celui de la fonction createEdges qui est un parcours en profondeur.</description>
+    </item>
+    
+    <item>
+      <title>Python Pandas</title>
+      <link>/posts/python/pandas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/python/pandas/</guid>
+      <description>Python : la librairie pandas notebook Le notebook présenté ici est à télécharger à l&amp;rsquo;adresse suivante :
 https://mybinder.org/v2/gh/tix06/notebook_datas.git/master
 Puis choisir : gestionBase_de_donnees_python.ipynb
 Exercez vous en suivant le tutoriel avec ce notebook.
 présentation Pandas fournit des structures de données puissantes et simples à utiliser, ainsi que les moyens d&amp;rsquo;opérer rapidement des opérations sur ces structures.
-Cette librairie va utiliser et faire des opérations sur un objet : le DataFrame Ce DataFrame est très similaire aux tables des bases de données relationnelles (type MySQL, PostgreSQL, etc.</description></item><item><title>Python graphe et NPI</title><link>/posts/python/nsi_graphe_dict_npi/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/python/nsi_graphe_dict_npi/</guid><description>tracer un arbre à partir d&amp;rsquo;une expression NPI NPI : notation polonaise inversée
-En particulier : on dispose d&amp;rsquo;une expression en NPI, du type :
-L3 = [7,8,&#39;-&#39;,6,&#39;*&#39;,10,3,&#39;+&#39;,&#39;*&#39;]
-Et on veut créer et afficher le graphe correspondant : On utilisera le script :
-L3 = [7,8,&#39;-&#39;,6,&#39;*&#39;,10,3,&#39;+&#39;,&#39;*&#39;] D = makeTree(L3) G = nx.Graph() graphDict(D) Dont l&amp;rsquo;instruction suivante va générer le dictionnaire à partir de l&amp;rsquo;expression NPI (fonction npiTree recursive):</description></item><item><title>Python graphes Networkx</title><link>/posts/python/Python_graphes_Networkx/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/python/Python_graphes_Networkx/</guid><description>tracé de graphes avec Networkx Les scripts suivants permettent de choisir entre plusieurs types de configuration pour tracer un graphe avec Networkx, module Python.
+Cette librairie va utiliser et faire des opérations sur un objet : le DataFrame Ce DataFrame est très similaire aux tables des bases de données relationnelles (type MySQL, PostgreSQL, etc.</description>
+    </item>
+    
+    <item>
+      <title>Python graphes Networkx</title>
+      <link>/posts/python/Python_graphes_Networkx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/python/Python_graphes_Networkx/</guid>
+      <description>tracé de graphes avec Networkx Les scripts suivants permettent de choisir entre plusieurs types de configuration pour tracer un graphe avec Networkx, module Python.
 On pourra choisir de personaliser :
-la couleur d&amp;rsquo;un noeud l&amp;rsquo;etiquette des noeuds l&amp;rsquo;étiquette des arêtes le type de trait (plein ou en pointillés) des arêtes Déclaration du graphe import matplotlib.pyplot as plt import networkx as nx from numpy import array G = nx.</description></item><item><title>Python Labyrinthe</title><link>/posts/python/Python-Labyrinthe/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/python/Python-Labyrinthe/</guid><description>Créer et resoudre un labyrinthe Les scripts suivants permettent de créer un labyrinthe de manière aléatoire, et d&amp;rsquo;exploiter la structure de données de ce labyrinthe. On pourra ainsi tester quelques algorithmes relatifs au parcours de ce labyrinthe. Les scripts en permettent une visualisation.
-Définitions des classes class Pile: def __init__(self): self.lst = [] def empty(self): return self.lst == [] def push(self, x): self.lst.append(x) def pop(self): if self.empty(): raise ValueError(&amp;#34;pile vide&amp;#34;) return self.</description></item><item><title>Python turtle Labyrinthe</title><link>/posts/python/Python_turtle_Labyrinthe/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/python/Python_turtle_Labyrinthe/</guid><description>Utiliser le module turtle Le script suivant présente les classes et fonctions utiles pour :
+la couleur d&amp;rsquo;un noeud l&amp;rsquo;etiquette des noeuds l&amp;rsquo;étiquette des arêtes le type de trait (plein ou en pointillés) des arêtes Déclaration du graphe import matplotlib.pyplot as plt import networkx as nx from numpy import array G = nx.Graph() # definition des noeuds G.</description>
+    </item>
+    
+    <item>
+      <title>Python Labyrinthe</title>
+      <link>/posts/python/Python-Labyrinthe/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/python/Python-Labyrinthe/</guid>
+      <description>Créer et resoudre un labyrinthe Les scripts suivants permettent de créer un labyrinthe de manière aléatoire, et d&amp;rsquo;exploiter la structure de données de ce labyrinthe. On pourra ainsi tester quelques algorithmes relatifs au parcours de ce labyrinthe. Les scripts en permettent une visualisation.
+Définitions des classes class Pile: def __init__(self): self.lst = [] def empty(self): return self.lst == [] def push(self, x): self.lst.append(x) def pop(self): if self.empty(): raise ValueError(&amp;#34;pile vide&amp;#34;) return self.</description>
+    </item>
+    
+    <item>
+      <title>Python turtle Labyrinthe</title>
+      <link>/posts/python/Python_turtle_Labyrinthe/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/python/Python_turtle_Labyrinthe/</guid>
+      <description>Utiliser le module turtle Le script suivant présente les classes et fonctions utiles pour :
 tracer un labyrinthe complet parcourir le labyrinthe selon une méthode de parcours en profondeur tracer ce parcours animé avec turtle Utilisation :
-tab=labyrinthe(5,6) L = parcours((len(tab)-1,0),(0,len(tab[0])-1),tab) afficheTurtle(tab,L) librairies from numpy.random import randint import matplotlib.pyplot as plt import turtle classes utiles class Pile: def __init__(self): self.lst = [] def empty(self): return self.lst == [] def push(self, x): self.</description></item><item><title>Python algo KNN</title><link>/posts/python/algKnn/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/python/algKnn/</guid><description>Algorithme des k plus proches voisins notebook Le notebook présenté ici est à télécharger à l&amp;rsquo;adresse suivante :
+tab=labyrinthe(5,6) L = parcours((len(tab)-1,0),(0,len(tab[0])-1),tab) afficheTurtle(tab,L) librairies from numpy.random import randint import matplotlib.pyplot as plt import turtle classes utiles class Pile: def __init__(self): self.lst = [] def empty(self): return self.lst == [] def push(self, x): self.</description>
+    </item>
+    
+    <item>
+      <title>Python algo KNN</title>
+      <link>/posts/python/algKnn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/python/algKnn/</guid>
+      <description>Algorithme des k plus proches voisins notebook Le notebook présenté ici est à télécharger à l&amp;rsquo;adresse suivante :
 https://mybinder.org/v2/gh/tix06/notebook_datas.git/master
 Choisir : algoKNN.ipynb
 Exercez vous en suivant le tutoriel avec ce notebook.
 Principe On cherche une correspondance entre les caractéristiques physiques d&amp;rsquo;un joueur de basket et son poste sur le terrain.
 Pour simplifier, on considerera que les postes sont au nombre de trois :
-le joueur Centre, noté &amp;lsquo;C&amp;rsquo; (position 5 sur le schéma) Le joueur Ailier, noté &amp;lsquo;F&amp;rsquo; (positions 3 et 4 sur le schéma) Le joueur arrière ou meneur de jeu, noté &amp;lsquo;G&amp;rsquo; (positions 1 et 2 sur le schéma) Il nous faut, pour rechercher une correspondance, avoir accès à une base de données des joueurs de basket, jouant par exemple dans un même championnat.</description></item><item><title>Python Datas analyse</title><link>/posts/python/data_analyse/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/python/data_analyse/</guid><description>Notebooks associés algorithme de recommandation : algorithme de recommandation.md arbres de décision : graphes_mini_prog.md Intelligence artificielle (IA) L&amp;rsquo;intelligence artificielle désigne des algorithmes plus ou moins évolués qui traitent des problèmes dont la résolution fait appel à l&amp;rsquo;intelligence humaine. Ils imitent des actions humaines.
+le joueur Centre, noté &amp;lsquo;C&amp;rsquo; (position 5 sur le schéma) Le joueur Ailier, noté &amp;lsquo;F&amp;rsquo; (positions 3 et 4 sur le schéma) Le joueur arrière ou meneur de jeu, noté &amp;lsquo;G&amp;rsquo; (positions 1 et 2 sur le schéma) Il nous faut, pour rechercher une correspondance, avoir accès à une base de données des joueurs de basket, jouant par exemple dans un même championnat.</description>
+    </item>
+    
+    <item>
+      <title>Python Datas analyse</title>
+      <link>/posts/python/data_analyse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/python/data_analyse/</guid>
+      <description>Notebooks associés algorithme de recommandation : algorithme de recommandation.md arbres de décision : graphes_mini_prog.md Intelligence artificielle (IA) L&amp;rsquo;intelligence artificielle désigne des algorithmes plus ou moins évolués qui traitent des problèmes dont la résolution fait appel à l&amp;rsquo;intelligence humaine. Ils imitent des actions humaines.
 Exemple : L&amp;rsquo;algorithme suivant :
-input(poids) if poids &amp;gt; 120 then print(&#39;vous êtes en surpoids&#39;) Ce n&amp;rsquo;est pas un algorithme digne d&amp;rsquo;une intelligence artificielle.</description></item><item><title>Python unittest</title><link>/posts/python/Python_unittest_np/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/python/Python_unittest_np/</guid><description>Utilisation du module unittest avec le calcul des nombres premiers avant de démarrer cette partie, il est recommandé de consulter :
+input(poids) if poids &amp;gt; 120 then print(&amp;#39;vous êtes en surpoids&amp;#39;) Ce n&amp;rsquo;est pas un algorithme digne d&amp;rsquo;une intelligence artificielle. On trouvera dans la suite du document, de nombreux exemples qui traitent d&amp;rsquo;intelligence artificielle.</description>
+    </item>
+    
+    <item>
+      <title>Python unittest</title>
+      <link>/posts/python/Python_unittest_np/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/python/Python_unittest_np/</guid>
+      <description>Utilisation du module unittest avec le calcul des nombres premiers avant de démarrer cette partie, il est recommandé de consulter :
 le cours sur les tests unitaires Et le paragraphe sur mettre son programme sous forme de modules Définition: Un test unitaire est un test réalisé sur une portion du programme, typiquement sur une fonction.
-Le module unittest offre des outils de test de code, comme la classe TestCase.</description></item><item><title>Python algo de recommandation</title><link>/posts/python/algorithme_recommandation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/python/algorithme_recommandation/</guid><description>Algorithmes de recommandation Lien vers le notebook en ligne : https://mybinder.org/v2/gh/tix06/notebooks_classif/master
+Le module unittest offre des outils de test de code, comme la classe TestCase. Le but est des vérifier que votre code génère des résultats corrects, conformes au attentes.</description>
+    </item>
+    
+    <item>
+      <title>Python algo de recommandation</title>
+      <link>/posts/python/algorithme_recommandation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/python/algorithme_recommandation/</guid>
+      <description>Algorithmes de recommandation Lien vers le notebook en ligne : https://mybinder.org/v2/gh/tix06/notebooks_classif/master
 Choisir alors le fichier : algorithme de recommandation.ipynb
-Il s&amp;rsquo;agit d&amp;rsquo;un cas très classique d&amp;rsquo;algorithme utilisé dans le web marketing. Un client choisit et met dans ses favoris un article, ou dans son panier. Le site lui propose des articles compatibles, ou similaires. La recommandation peut être basée sur la description de ces articles. L&amp;rsquo;algorithme va alors chercher les articles qui ont le plus de points communs dans leur description; c&amp;rsquo;est à dire le plus de mots communs dans leur description.</description></item><item><title>Python arbre decision</title><link>/posts/python/graphes_mini_prog/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/python/graphes_mini_prog/</guid><description>Arbres de classification Lien vers le notebook en ligne : https://mybinder.org/v2/gh/tix06/notebooks_classif/master
+Il s&amp;rsquo;agit d&amp;rsquo;un cas très classique d&amp;rsquo;algorithme utilisé dans le web marketing. Un client choisit et met dans ses favoris un article, ou dans son panier. Le site lui propose des articles compatibles, ou similaires. La recommandation peut être basée sur la description de ces articles. L&amp;rsquo;algorithme va alors chercher les articles qui ont le plus de points communs dans leur description; c&amp;rsquo;est à dire le plus de mots communs dans leur description.</description>
+    </item>
+    
+    <item>
+      <title>Python arbre decision</title>
+      <link>/posts/python/graphes_mini_prog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/python/graphes_mini_prog/</guid>
+      <description>Arbres de classification Lien vers le notebook en ligne : https://mybinder.org/v2/gh/tix06/notebooks_classif/master
 Choisir alors le fichier : graphes_mini_prog.ipynb
 Définition Un arbre de classification est utile pour réaliser des prévisions de manière explicite. C&amp;rsquo;est une méthode d&amp;rsquo;appentissage automatisé (machine learning) supervisé (les classes des entrées sont connue).
-A partir des valeurs des données en entrée, l&amp;rsquo;algorithme va créer des règles pour segmenter, au mieux, la population (les index des entrées) à chaque noeud.</description></item><item><title>Javascript le DOM</title><link>/posts/javascript/javascript_DOM/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/javascript/javascript_DOM/</guid><description>Le DOM le DOM ou Document Object Model, une interface qui fait partie du BOM (Browser Object Model) et grâce à laquelle nous allons pouvoir manipuler le contenu HTML et les styles de nos pages.
+A partir des valeurs des données en entrée, l&amp;rsquo;algorithme va créer des règles pour segmenter, au mieux, la population (les index des entrées) à chaque noeud.</description>
+    </item>
+    
+    <item>
+      <title>Javascript le DOM</title>
+      <link>/posts/javascript/javascript_DOM/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/javascript/javascript_DOM/</guid>
+      <description>Le DOM le DOM ou Document Object Model, une interface qui fait partie du BOM (Browser Object Model) et grâce à laquelle nous allons pouvoir manipuler le contenu HTML et les styles de nos pages.
 Le DOM est ainsi une représentation structurée du document sous forme « d’arbre » crée automatiquement par le navigateur, à partir de sa lecture du document HTML.
-Chaque branche de cet arbre se termine par ce qu’on appelle un nœud, contenant les éléments HTML.</description></item><item><title>jeu Space Invader</title><link>/posts/javascript/mini_projet_spaceInvader/page1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/javascript/mini_projet_spaceInvader/page1/</guid><description>Ce mini projet sera l&amp;rsquo;occasion de mettre en oeuvre les notions vues dans le cours précédent sur :
-la définition d&amp;rsquo;un objet en javascript la gestion des évènements l&amp;rsquo;utilisation d&amp;rsquo;une fonction callback avec un timer Vous pourrez également suivre ce tutoriel avec la video à l&amp;rsquo;adresse : lien video
-Afficher des éléments en javascript Contenu du dossier du projet D&amp;rsquo;abord, créer un dossier contenant :
-spaceInvader.</description></item></channel></rss>
+Chaque branche de cet arbre se termine par ce qu’on appelle un nœud, contenant les éléments HTML.</description>
+    </item>
+    
+    <item>
+      <title>jeu Space Invader</title>
+      <link>/posts/javascript/mini_projet_spaceInvader/page1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/javascript/mini_projet_spaceInvader/page1/</guid>
+      <description>Ce mini projet sera l&amp;rsquo;occasion de mettre en oeuvre les notions vues dans le cours précédent sur :
+la définition d&amp;rsquo;un objet en javascript la gestion des évènements l&amp;rsquo;utilisation d&amp;rsquo;une fonction callback avec un timer Vous pourrez également suivre ce tutoriel avec la video à l&amp;rsquo;adresse : lien video Afficher des éléments en javascript Contenu du dossier du projet D&amp;rsquo;abord, créer un dossier contenant :
+spaceInvader.html jeu.js ship.png (sur fond transparent) ufo.</description>
+    </item>
+    
+  </channel>
+</rss>

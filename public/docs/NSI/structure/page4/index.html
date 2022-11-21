@@ -1,50 +1,483 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>arbres
-| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel=stylesheet><script type=text/x-mathjax-config>
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    arbres
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
   });
-</script><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.1c02dc1d2c0b546a84beb71d8f4336d6f5d7b69564e08bdfc04c2fb0595d786d.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
 catch(err)
-{console.log(err.message);}
-if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
-if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
-if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}
-let chemin=window.location.pathname;if(chemin.search('NSI')>-1){baniere=document.querySelector("#myHeader");let linkBox=document.createElement('div');linkBox.classList.add('linkBox');let newH=document.createElement('a');newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';newH.classList.add('nsi');linkBox.appendChild(newH);baniere.appendChild(linkBox);}</script><style>#myHeader{display:flex;flex-direction:row-reverse}#myHeader>.titre{width:80%;min-width:300px;text-align:left}.linkBox{margin:10px;padding-top:10px;background-color:pink;min-width:50px}.isn{}</style></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2f docs\2fNSI\2fstructure\2fpage4\2f ]{color:#004ed0}</style><ul><li><a href=/><strong>Accueil</strong></a></li><li><a href=/docs/esf/esf_index/><strong>ESF</strong></a></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p></li><li><p><a href=/docs/python/index_python/><strong>Python</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
-addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-page><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
-<strong>arbres</strong></header><article class=markdown><h1 id=arbres>Arbres</h1><h2 id=définitions>Définitions</h2><p>Un arbre est constitué de <strong>noeuds</strong> organisés de manière <strong>hierarchique</strong>: c&rsquo;est un <strong>graphe non orienté, connexe, sans cycle</strong>, dans lequel on a choisi un noeud particulier appelé la <strong>racine</strong>.</p><p>Chaque noeud peut être étiqueté par une information.</p><p>Un arbre est donc un cas particulier des graphes. Voir la <a href=/docs/NSI/structure/page5/>page suivante sur les graphes</a></p><p>Des <strong>exemples</strong> d&rsquo;arbres:</p><ul><li>l&rsquo;<em>arbre généalogique</em> est un bon exemple. Le vocabulaire sur la structure des arbres s&rsquo;inspire d&rsquo;ailleurs de la génélogie (père-fils).</li><li>L&rsquo;arbre représentant les sytèmes de dossiers sur ordinateur (dossiers et sous-dossiers puis fichiers).</li><li><em>arbre lexicographique</em> : représente un ensemble de mots, comme un dictionnaire, où chaque noeud est une lettre. Les prefixes communs à plusieurs mots n&rsquo;apparaissent qu&rsquo;une seule fois dans l&rsquo;arbre:</li></ul><figure><img src=../images/arbre1.png alt="arbre lexicographique"><figcaption>Retrouver le mot <i>p i l e</i> et rajouter le mot <i>p o r t a i l</i></figcaption></figure><ul><li>arbre représentant des expressions arithmétiques</li></ul><figure><img src=../images/arbre2.png alt="expression arithmetique"><figcaption>Retrouver l'expression arithmetique correspondante</figcaption></figure><p>Les arbres sont très utilisés en informatique, d&rsquo;abord parce que les données sont souvent hierarchisées, et se prêtent bien à cette structure. Mais aussi parce que l&rsquo;accès à ces données est alors plus efficace: la recherche d&rsquo;une valeur se fait en <em>O(log(n))</em> dans le cas moyen, où n est la <em>taille de l&rsquo;arbre</em>.</p><h2 id=caractéristiques-d-un-arbre>Caractéristiques d&rsquo;un arbre</h2><figure><img src=../images/arbre3.png alt="caracteristiques d'un arbre"><figcaption>exemple d'arbre binaire et vocabulaire</figcaption></figure><ul><li>Dans un arbre, chaque <strong>valeur</strong> est stockée dans un nœud. On appelle parfois cette <em>valeur</em> une <strong>clé</strong>.</li><li>Les <strong>nœuds</strong> sont connectés par des <strong>arêtes</strong>, ou <strong>branches</strong> qui représentent une relation de type &ldquo;<strong>parent</strong> (prédécesseur est le terme exact) – <strong>fils</strong>&rdquo;.</li><li>Chaque noeud ne possède qu&rsquo;<strong>un seul noeud parent</strong> (sauf le noeud racine).</li><li>La <strong>racine</strong> est le seul nœud qui n’a pas de prédécesseur.</li><li>Les nœuds qui n’ont pas de fils sont appelés des <strong>feuilles</strong>.</li><li>Des nœuds qui ont le même père sont appelés des <strong>frères</strong>.</li><li>Un <strong>sous-arbre</strong> c’est une portion de l’arbre. C&rsquo;est une notion utile pour la recursivité.</li><li>Le <strong>niveau d’un nœud</strong> est la distance qui le sépare de la racine&hellip; Sachant que le niveau de la racine est 0 et que le niveau d’un nœud quelconque c’est 1+ le niveau de son père.</li><li>La <strong>hauteur</strong> d&rsquo;un arbre, ou sa <strong>profondeur</strong> est égale au <em>niveau</em> (à la profondeur) du noeud le plus profond. Selon la convention proposée ici (le niveau de la racine vaut 0), la hauteur correspond aussi au <strong>plus grand nombre de branches</strong> depuis la <em>racine</em> jusqu&rsquo;à l&rsquo;une de ses <em>feuilles</em>.</li><li>Le <strong>degré</strong> d&rsquo;un arbre est egal au plus grand des degrés de ses noeuds.</li><li>Un arbre de <strong>degré</strong> égal à 1 est &hellip; une <strong>liste</strong>.</li></ul><figure><img src=../images/arbre7.png alt="degré d'un arbre"><figcaption>Quel est le degré de cet arbre?</figcaption></figure><ul><li>La <strong>hauteur</strong> d’un arbre est le plus grand des niveaux de tous les nœuds.</li><li>La <strong>taille</strong> d&rsquo;un arbre est son nombre de noeuds.</li></ul><figure><img src=../images/arbre5.png alt="dimensions d'un arbre"><figcaption>dimensions d'un arbre</figcaption></figure><h2 id=arbres-binaires>Arbres binaires</h2><ul><li><strong>Arbre binaire:</strong> arbre de degré égal à 2. Chaque noeud a au plus 2 fils: le <strong>fils droit</strong> et le <strong>fils gauche</strong>.</li><li><strong>Arbre binaire équilibré:</strong> pour chaque noeud interne, les sous-arbres gauche et droit ont une même hauteur (ou qui diffère d&rsquo;une unité).</li><li><strong>Arbre binaire complet:</strong> tous les niveaux de l’arbre sont remplis.</li></ul><figure><img src=../images/arbre4.png alt="sous arbres droit et gauche"><figcaption>definition recursive des arbres binaires</figcaption></figure><figure><img src=../images/arbre_complet.png alt="arbre complet"><figcaption>arbre complet</figcaption></figure><h1 id=implémenter-en-python>Implémenter en python</h1><p>On utilisera l&rsquo;arbre suivant pour l&rsquo;implémentation en python:</p><figure><img src=../images/arbre6.png alt="exemple d'arbre binaire"><figcaption>exemple d'arbre binaire de taille 9</figcaption></figure><p>Comme vu pour les graphes, on pourra utiliser des listes imbriquées, un dictionnaire, ou une classe (programmation objet).</p><h2 id=liste>Liste</h2><p>Un noeud peut être représenté par une liste <code>[clé,fils gauche,fils droit]</code>.</p><p>Et comme les <em>fils gauche</em> ou <em>fils droit</em> sont des noeuds, on y mettra une nouvelle liste imbriquée <code>[clé,fils gauche,fils droit]</code>.</p><p>Pour les feuilles, la liste s&rsquo;écrit: <code>[clé,None,None]</code>.</p><p>Le petit arbre suivant peut être représenté par <code>['r'</code>,[&lsquo;a&rsquo;,None,None],[&lsquo;b&rsquo;,None,None]`</p><figure><div><img src=../images/arbre8.png><figcaption>petit arbre de taille 3</figcaption></div></figure><p>Avec l&rsquo;arbre de taille 9 donné en exemple:</p><p><code>arbre9 = [8,[3,..,..],[10,..,..]</code></p><blockquote><p>Question: compléter cette liste.</p></blockquote><h2 id=classe>Classe</h2><p>La classe suivante va permettre d&rsquo;implémenter les arbres binaires:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>class</span> <span style=color:#75af00>ArbreBinaire</span><span style=color:#111>:</span>
-    <span style=color:#00a8c8>def</span> <span style=color:#111>__init__</span><span style=color:#111>(</span><span style=color:#111>self</span><span style=color:#111>,</span> <span style=color:#111>valeur</span><span style=color:#111>):</span>
-        <span style=color:#111>self</span><span style=color:#f92672>.</span><span style=color:#111>valeur</span> <span style=color:#f92672>=</span> <span style=color:#111>valeur</span>
-        <span style=color:#111>self</span><span style=color:#f92672>.</span><span style=color:#111>fils_gauche</span> <span style=color:#f92672>=</span> <span style=color:#111>None</span>
-        <span style=color:#111>self</span><span style=color:#f92672>.</span><span style=color:#111>fils_droit</span> <span style=color:#f92672>=</span> <span style=color:#111>None</span></code></pre></div><p>On n&rsquo;a donné ici que le constructeur, mais il est possible d&rsquo;y ajouter les méthodes qui permettront de retourner une valeur (getter), ou d&rsquo;ajouter un noeud (setter); ou encore de déterminer les dimensions de l&rsquo;arbre.</p><p>Avec l&rsquo;arbre de taille 9 vu plus haut, la classe peut s&rsquo;utiliser de la manière suivante (avec la notation pointée qui n&rsquo;est pas recommandée):</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>racine</span> <span style=color:#f92672>=</span> <span style=color:#111>ArbreBinaire</span><span style=color:#111>(</span><span style=color:#ae81ff>8</span><span style=color:#111>)</span>
-<span style=color:#111>noeud1</span> <span style=color:#f92672>=</span> <span style=color:#111>ArbreBinaire</span><span style=color:#111>(</span><span style=color:#ae81ff>3</span><span style=color:#111>)</span>
-<span style=color:#111>noeud2</span> <span style=color:#f92672>=</span> <span style=color:#111>ArbreBinaire</span><span style=color:#111>(</span><span style=color:#ae81ff>10</span><span style=color:#111>)</span>
-<span style=color:#111>noeud3</span> <span style=color:#f92672>=</span> <span style=color:#111>ArbreBinaire</span><span style=color:#111>(</span><span style=color:#ae81ff>1</span><span style=color:#111>)</span>
-<span style=color:#f92672>...</span>
-<span style=color:#111>racine</span><span style=color:#f92672>.</span><span style=color:#111>fils_gauche</span> <span style=color:#f92672>=</span> <span style=color:#111>noeud1</span>
-<span style=color:#111>racine</span><span style=color:#f92672>.</span><span style=color:#111>fils_droit</span> <span style=color:#f92672>=</span> <span style=color:#111>noeud2</span>
-<span style=color:#111>noeud1</span><span style=color:#f92672>.</span><span style=color:#111>fils_gauche</span> <span style=color:#f92672>=</span> <span style=color:#111>noeud3</span>
-<span style=color:#f92672>...</span></code></pre></div><p>Ou bien, en supposant que vous ayez ajouté deux méthodes de classe <code>ajoute_fils_gauche</code> et <code>ajoute_fils_droit</code>:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>racine</span> <span style=color:#f92672>=</span> <span style=color:#111>ArbreBinaire</span><span style=color:#111>(</span><span style=color:#ae81ff>8</span><span style=color:#111>)</span>
-<span style=color:#111>noeud1</span> <span style=color:#f92672>=</span> <span style=color:#111>ArbreBinaire</span><span style=color:#111>(</span><span style=color:#ae81ff>3</span><span style=color:#111>)</span>
-<span style=color:#111>noeud2</span> <span style=color:#f92672>=</span> <span style=color:#111>ArbreBinaire</span><span style=color:#111>(</span><span style=color:#ae81ff>10</span><span style=color:#111>)</span>
-<span style=color:#111>noeud3</span> <span style=color:#f92672>=</span> <span style=color:#111>ArbreBinaire</span><span style=color:#111>(</span><span style=color:#ae81ff>1</span><span style=color:#111>)</span>
-<span style=color:#f92672>...</span>
-<span style=color:#111>racine</span><span style=color:#f92672>.</span><span style=color:#111>ajoute_fils_gauche</span><span style=color:#111>(</span><span style=color:#111>noeud1</span><span style=color:#111>)</span>
-<span style=color:#111>racine</span><span style=color:#f92672>.</span><span style=color:#111>ajoute_fils_droit</span><span style=color:#111>(</span><span style=color:#111>noeud2</span><span style=color:#111>)</span>
-<span style=color:#111>noeud1</span><span style=color:#f92672>.</span><span style=color:#111>ajoute_fils_gauche</span><span style=color:#111>(</span><span style=color:#111>noeud3</span><span style=color:#111>)</span></code></pre></div><h1 id=parcours>Parcours</h1><p><strong>Definition:</strong> Un <strong>parcours</strong> est un algorithme qui appelle une fonction, ou un méthode sur tous les noeuds d&rsquo;un arbre.</p><p>L&rsquo;<strong>ordre</strong> sur les noeuds dans lequel la méthode est appelée doit être fixé. Il y a plusieurs choix, qui diffèrent par la seule position de l&rsquo;instruction <code>Afficher clef [ r ]</code></p><p>L&rsquo;algorithme opère alors un <strong>traitement</strong> sur chacune des clés de l&rsquo;arbre, dans un ordre choisi. Ici, on cherche à <em>Afficher la clef</em>.</p><p>Mais on peut remplacer cette instruction par un traitement sur les valeurs.</p><h2 id=parcours-postfixe>Parcours postfixe</h2><pre><code>ParcoursPostfixe ( Arbre binaire T de racine r ) 
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI\2fstructure\2fpage4\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    arbres
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="arbres">Arbres</h1>
+<h2 id="définitions">Définitions</h2>
+<p>Un arbre est constitué de <strong>noeuds</strong> organisés de manière <strong>hierarchique</strong>: c&rsquo;est un <strong>graphe non orienté, connexe, sans cycle</strong>, dans lequel on a choisi un noeud particulier appelé la <strong>racine</strong>.</p>
+<p>Chaque noeud peut être étiqueté  par une information.</p>
+<p>Un arbre est donc un cas particulier des graphes. Voir la <a href="/docs/NSI/structure/page5/">page suivante sur les graphes</a></p>
+<p>Des <strong>exemples</strong> d&rsquo;arbres:</p>
+<ul>
+<li>l&rsquo;<em>arbre généalogique</em> est un bon exemple. Le vocabulaire sur la structure des arbres s&rsquo;inspire d&rsquo;ailleurs de la génélogie (père-fils).</li>
+<li>L&rsquo;arbre représentant les sytèmes de dossiers sur ordinateur (dossiers et sous-dossiers puis fichiers).</li>
+<li><em>arbre lexicographique</em> : représente un ensemble de mots, comme un dictionnaire, où chaque noeud est une lettre. Les prefixes communs à plusieurs mots n&rsquo;apparaissent qu&rsquo;une seule fois dans l&rsquo;arbre:</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>arbre représentant des expressions arithmétiques</li>
+</ul>
+<!-- raw HTML omitted -->
+<p>Les arbres sont très utilisés en informatique, d&rsquo;abord parce que les données sont souvent hierarchisées, et se prêtent bien à cette structure. Mais aussi parce que l&rsquo;accès à ces données est alors plus efficace: la recherche d&rsquo;une valeur se fait en <em>O(log(n))</em> dans le cas moyen, où n est la <em>taille de l&rsquo;arbre</em>.</p>
+<h2 id="caractéristiques-dun-arbre">Caractéristiques d&rsquo;un arbre</h2>
+<!-- raw HTML omitted -->
+<ul>
+<li>Dans un arbre, chaque <strong>valeur</strong> est stockée dans un nœud. On appelle parfois cette <em>valeur</em> une <strong>clé</strong>.</li>
+<li>Les <strong>nœuds</strong> sont connectés par des <strong>arêtes</strong>, ou <strong>branches</strong> qui représentent une relation de type &ldquo;<strong>parent</strong> (prédécesseur est le terme exact) – <strong>fils</strong>&rdquo;.</li>
+<li>Chaque noeud ne possède qu&rsquo;<strong>un seul noeud parent</strong> (sauf le noeud racine).</li>
+<li>La <strong>racine</strong> est le seul nœud qui n’a pas de prédécesseur.</li>
+<li>Les nœuds qui n’ont pas de fils sont appelés des <strong>feuilles</strong>.</li>
+<li>Des nœuds qui ont le même père sont appelés des <strong>frères</strong>.</li>
+<li>Un <strong>sous-arbre</strong> c’est une portion de l’arbre. C&rsquo;est une notion utile pour la recursivité.</li>
+<li>Le <strong>niveau d’un nœud</strong> est la distance qui le sépare de la racine&hellip; Sachant que le niveau de la racine est 0 et que le niveau d’un nœud quelconque c’est 1+ le niveau de son père.</li>
+<li>La <strong>hauteur</strong> d&rsquo;un arbre, ou sa <strong>profondeur</strong> est égale au <em>niveau</em> (à la profondeur) du noeud le plus profond. Selon la convention proposée ici (le niveau de la racine vaut 0), la hauteur correspond aussi au <strong>plus grand nombre de branches</strong> depuis la <em>racine</em> jusqu&rsquo;à l&rsquo;une de ses <em>feuilles</em>.</li>
+<li>Le <strong>degré</strong> d&rsquo;un arbre est egal au plus grand des degrés de ses noeuds.</li>
+<li>Un arbre de <strong>degré</strong> égal à 1 est &hellip; une <strong>liste</strong>.</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>La <strong>hauteur</strong> d’un arbre est le plus grand des niveaux de tous les nœuds.</li>
+<li>La <strong>taille</strong> d&rsquo;un arbre est son nombre de noeuds.</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="arbres-binaires">Arbres binaires</h2>
+<ul>
+<li><strong>Arbre binaire:</strong> arbre de degré égal à 2. Chaque noeud a au plus 2 fils: le <strong>fils droit</strong> et le <strong>fils gauche</strong>.</li>
+<li><strong>Arbre binaire équilibré:</strong> pour chaque noeud interne, les sous-arbres gauche et droit ont une même hauteur (ou qui diffère d&rsquo;une unité).</li>
+<li><strong>Arbre binaire complet:</strong> tous les niveaux de l’arbre sont remplis.</li>
+</ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="implémenter-en-python">Implémenter en python</h1>
+<p>On utilisera l&rsquo;arbre suivant pour l&rsquo;implémentation en python:</p>
+<!-- raw HTML omitted -->
+<p>Comme vu pour les graphes, on pourra utiliser des listes imbriquées, un dictionnaire, ou une classe (programmation objet).</p>
+<h2 id="liste">Liste</h2>
+<p>Un noeud peut être représenté par une liste <code>[clé,fils gauche,fils droit]</code>.</p>
+<p>Et comme les <em>fils gauche</em> ou <em>fils droit</em> sont des noeuds, on y mettra une nouvelle liste imbriquée <code>[clé,fils gauche,fils droit]</code>.</p>
+<p>Pour les feuilles, la liste s&rsquo;écrit: <code>[clé,None,None]</code>.</p>
+<p>Le petit arbre suivant peut être représenté par <code>['r'</code>,[&lsquo;a&rsquo;,None,None],[&lsquo;b&rsquo;,None,None]`</p>
+<!-- raw HTML omitted -->
+<p>Avec l&rsquo;arbre de taille 9 donné en exemple:</p>
+<p><code>arbre9 = [8,[3,..,..],[10,..,..]</code></p>
+<blockquote>
+<p>Question: compléter cette liste.</p>
+</blockquote>
+<h2 id="classe">Classe</h2>
+<p>La classe suivante va permettre d&rsquo;implémenter les arbres binaires:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">class</span> <span style="color:#75af00">ArbreBinaire</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">def</span> <span style="color:#111">__init__</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">,</span> <span style="color:#111">valeur</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">valeur</span> <span style="color:#f92672">=</span> <span style="color:#111">valeur</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">fils_gauche</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">None</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">fils_droit</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">None</span>
+</span></span></code></pre></div><p>On n&rsquo;a donné ici que le constructeur, mais il est possible d&rsquo;y ajouter les méthodes qui permettront de retourner une valeur (getter), ou d&rsquo;ajouter un noeud (setter); ou encore de déterminer les dimensions de l&rsquo;arbre.</p>
+<p>Avec l&rsquo;arbre de taille 9 vu plus haut, la classe peut s&rsquo;utiliser de la manière suivante (avec la notation pointée qui n&rsquo;est pas recommandée):</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">racine</span> <span style="color:#f92672">=</span> <span style="color:#111">ArbreBinaire</span><span style="color:#111">(</span><span style="color:#ae81ff">8</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">noeud1</span> <span style="color:#f92672">=</span> <span style="color:#111">ArbreBinaire</span><span style="color:#111">(</span><span style="color:#ae81ff">3</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">noeud2</span> <span style="color:#f92672">=</span> <span style="color:#111">ArbreBinaire</span><span style="color:#111">(</span><span style="color:#ae81ff">10</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">noeud3</span> <span style="color:#f92672">=</span> <span style="color:#111">ArbreBinaire</span><span style="color:#111">(</span><span style="color:#ae81ff">1</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">racine</span><span style="color:#f92672">.</span><span style="color:#111">fils_gauche</span> <span style="color:#f92672">=</span> <span style="color:#111">noeud1</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">racine</span><span style="color:#f92672">.</span><span style="color:#111">fils_droit</span> <span style="color:#f92672">=</span> <span style="color:#111">noeud2</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">noeud1</span><span style="color:#f92672">.</span><span style="color:#111">fils_gauche</span> <span style="color:#f92672">=</span> <span style="color:#111">noeud3</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
+</span></span></code></pre></div><p>Ou bien, en supposant que vous ayez ajouté deux méthodes de classe <code>ajoute_fils_gauche</code> et <code>ajoute_fils_droit</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">racine</span> <span style="color:#f92672">=</span> <span style="color:#111">ArbreBinaire</span><span style="color:#111">(</span><span style="color:#ae81ff">8</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">noeud1</span> <span style="color:#f92672">=</span> <span style="color:#111">ArbreBinaire</span><span style="color:#111">(</span><span style="color:#ae81ff">3</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">noeud2</span> <span style="color:#f92672">=</span> <span style="color:#111">ArbreBinaire</span><span style="color:#111">(</span><span style="color:#ae81ff">10</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">noeud3</span> <span style="color:#f92672">=</span> <span style="color:#111">ArbreBinaire</span><span style="color:#111">(</span><span style="color:#ae81ff">1</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">racine</span><span style="color:#f92672">.</span><span style="color:#111">ajoute_fils_gauche</span><span style="color:#111">(</span><span style="color:#111">noeud1</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">racine</span><span style="color:#f92672">.</span><span style="color:#111">ajoute_fils_droit</span><span style="color:#111">(</span><span style="color:#111">noeud2</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">noeud1</span><span style="color:#f92672">.</span><span style="color:#111">ajoute_fils_gauche</span><span style="color:#111">(</span><span style="color:#111">noeud3</span><span style="color:#111">)</span>
+</span></span></code></pre></div><h1 id="parcours">Parcours</h1>
+<p><strong>Definition:</strong> Un <strong>parcours</strong> est un algorithme qui appelle une fonction, ou un méthode sur tous les noeuds d&rsquo;un arbre.</p>
+<p>L&rsquo;<strong>ordre</strong> sur les noeuds dans lequel la méthode est appelée doit être fixé. Il y a plusieurs choix, qui diffèrent par la seule position de l&rsquo;instruction <code>Afficher clef [ r ]</code></p>
+<p>L&rsquo;algorithme opère alors un <strong>traitement</strong> sur chacune des clés de l&rsquo;arbre, dans un ordre choisi. Ici, on cherche à <em>Afficher la clef</em>.</p>
+<p>Mais on peut remplacer cette instruction par un traitement sur les valeurs.</p>
+<h2 id="parcours-postfixe">Parcours postfixe</h2>
+<pre tabindex="0"><code>ParcoursPostfixe ( Arbre binaire T de racine r ) 
   ParcoursPostfixe(Arbre de racine fils_gauche[r]) 
   ParcoursPostfixe(Arbre de racine fils_droit[r])
   Afficher clef [ r ]
-</code></pre><h2 id=parcours-préfixe>Parcours préfixe</h2><pre><code>ParcoursPréfixe ( Arbre binaire T de racine r ) 
+</code></pre><h2 id="parcours-préfixe">Parcours préfixe</h2>
+<pre tabindex="0"><code>ParcoursPréfixe ( Arbre binaire T de racine r ) 
   Afficher clef [ r ]
   ParcoursPréfixe(Arbre de racine fils_gauche[r]) 
   ParcoursPréfixe(Arbre de racine fils_droit[r])
-</code></pre><h2 id=parcours-infixe>Parcours infixe</h2><pre><code>ParcoursInfixe ( Arbre binaire T de racine r ) 
+</code></pre><h2 id="parcours-infixe">Parcours infixe</h2>
+<pre tabindex="0"><code>ParcoursInfixe ( Arbre binaire T de racine r ) 
   ParcoursInfixe(Arbre de racine fils_gauche[r]) 
   Afficher clef [ r ]
   ParcoursInfixe(Arbre de racine fils_droit[r])
-</code></pre><figure><img src=../images/arbre10.png><figcaption>exemples de parcours</figcaption></figure><h1 id=travaux-pratiques>Travaux pratiques</h1><ul><li>telecharger le fichier module <a href=/pdf/NSI/hierarchyP.py>hierarchyP</a> (faire un clic droit et <em>enregistrer sous&hellip;</em>)</li><li><p>utiliser le lien suivant pour acceder au <a href="https://colab.research.google.com/drive/1y3GF5m5UI2ilRLX7wYQsFNnw6gzdvvHV?usp=sharing" target=blank>notebook colab</a></p></li><li><p>lien alternatif: télécharger une <a href=/pdf/NSI/sd5_notebook.ipynb>version locale</a> du notebook (clic droit et <em>enregistrer sous&hellip;</em>)</p></li><li><p>correction du <a href="https://colab.research.google.com/drive/18VUCVjH9u9V3jF7JU2VRy0XZWQwyXtqO?usp=sharing" target=blank>notebook colab en ligne</a>, ou version <a href=/pdf/NSI/sd5_notebook_correction.ipynb>locale</a></p></li></ul><h1 id=liens>Liens</h1><ul><li>cours de l&rsquo;Université Paris Sud: <a href=https://www.lri.fr/~hivert/COURS/CFA-L3/06-Arbres.pdf>Lien</a></li></ul></article><div style=height:100px></div></div><aside class="book-toc fixed"><nav id=TableOfContents><ul><li><a href=#arbres>Arbres</a><ul><li><a href=#définitions>Définitions</a></li><li><a href=#caractéristiques-d-un-arbre>Caractéristiques d&rsquo;un arbre</a></li><li><a href=#arbres-binaires>Arbres binaires</a></li></ul></li><li><a href=#implémenter-en-python>Implémenter en python</a><ul><li><a href=#liste>Liste</a></li><li><a href=#classe>Classe</a></li></ul></li><li><a href=#parcours>Parcours</a><ul><li><a href=#parcours-postfixe>Parcours postfixe</a></li><li><a href=#parcours-préfixe>Parcours préfixe</a></li><li><a href=#parcours-infixe>Parcours infixe</a></li></ul></li><li><a href=#travaux-pratiques>Travaux pratiques</a></li><li><a href=#liens>Liens</a></li></ul></nav></aside></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
-<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
+</code></pre><!-- raw HTML omitted -->
+<h1 id="travaux-pratiques">Travaux pratiques</h1>
+<ul>
+<li>
+<p>telecharger le fichier module <a href="/pdf/NSI/hierarchyP.py">hierarchyP</a> (faire un clic droit et <em>enregistrer sous&hellip;</em>)</p>
+</li>
+<li>
+<p>utiliser le lien suivant pour acceder au <!-- raw HTML omitted -->notebook colab<!-- raw HTML omitted --></p>
+</li>
+<li>
+<p>lien alternatif: télécharger une <a href="/pdf/NSI/sd5_notebook.ipynb">version locale</a> du notebook (clic droit et <em>enregistrer sous&hellip;</em>)</p>
+</li>
+<li>
+<p>correction du <!-- raw HTML omitted -->notebook colab en ligne<!-- raw HTML omitted -->, ou version <!-- raw HTML omitted -->locale<!-- raw HTML omitted --></p>
+</li>
+</ul>
+<h1 id="liens">Liens</h1>
+<ul>
+<li>cours de l&rsquo;Université Paris Sud: <a href="https://www.lri.fr/~hivert/COURS/CFA-L3/06-Arbres.pdf">Lien</a></li>
+</ul>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#définitions">Définitions</a></li>
+    <li><a href="#caractéristiques-dun-arbre">Caractéristiques d&rsquo;un arbre</a></li>
+    <li><a href="#arbres-binaires">Arbres binaires</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#liste">Liste</a></li>
+    <li><a href="#classe">Classe</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#parcours-postfixe">Parcours postfixe</a></li>
+    <li><a href="#parcours-préfixe">Parcours préfixe</a></li>
+    <li><a href="#parcours-infixe">Parcours infixe</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

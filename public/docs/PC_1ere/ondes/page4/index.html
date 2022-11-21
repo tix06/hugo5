@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    TP filtrage
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fPC_1ere\2fondes\2fpage4\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    TP filtrage
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><!-- raw HTML omitted -->
+<h1 id="filtrage-simple">Filtrage simple</h1>
+<h2 id="image-numérique">Image numérique</h2>
+<p>Une image est constituée de pixels. Chacun de ces pixels est codé numériquement par sa couleur, sur 3 octets (un octet pour le canal rouge, 1 autre pour le vert, et un dernier pour le bleu). Un pixel rouge intense a ainsi pour codage numérique: 255, 0, 0.</p>
+<h2 id="filtre">Filtre</h2>
+<p>Lorsque l&rsquo;on applique un filtre sur une image, on modifie les valeurs de chaque canal coloré, de chaque pixel, que l&rsquo;on met dans une nouvelle image.</p>
+<!-- raw HTML omitted -->
+<p>La modification se fait par une opération mathématique sur chacun des canaux.
+Ces opérations peuvent être différentes pour chaque canal.</p>
+<p>Par exemple, pour appliquer un filtre rouge, on peut décider de conserver la valeur d&rsquo;origine du rouge, et modifier celle du vert et du bleu, en les mettant à zero:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">filtre</span><span style="color:#111">(</span><span style="color:#111">r</span><span style="color:#111">,</span><span style="color:#111">v</span><span style="color:#111">,</span><span style="color:#111">b</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">r</span> <span style="color:#f92672">=</span> <span style="color:#111">r</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">v</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">return</span> <span style="color:#111">r</span><span style="color:#111">,</span> <span style="color:#111">v</span><span style="color:#111">,</span> <span style="color:#111">b</span>
+</span></span></code></pre></div><p>L&rsquo;algorithme précédent du fitre rouge est donné en langage python.</p>
+<p><em>Remarquer que les lignes du bloc de code de la fonction sont indentées dans le script (2 espaces par rapport au bors gauche)</em>.</p>
+<blockquote>
+<p><strong>Question a</strong>: Donner le script de la fonction <code>filtre</code> en langage python qui applique un filtre cyan (les canaux <code>v</code> et <code>b</code> sont transmis, pas le rouge).
+<!-- raw HTML omitted -->
+<strong>Question b</strong>: Donner Donner le script de la fonction <code>filtre</code> en langage python qui applique un filtre orange (voir image plus haut).</p>
+</blockquote>
+<h2 id="tp-utilisation-dun-programme-de-filtrage">TP: utilisation d&rsquo;un programme de filtrage</h2>
+<h3 id="le-programme">Le programme</h3>
+<p>Le <a href="/scripts/anaglyphe.zip">programme</a> se trouve dans le fichier <em>zippé</em> qui porte le nom <em>anaglyphe.zip</em>. Vous commencerez par <em>dezipper ce fichier</em> dans vos documents.</p>
+<p>Le programme est constitué de deux modules: <code>filtres.py</code> et <code>interface.py</code>. Vous ouvrirez chacun de ces fichiers avec le logiciel <em>IDE Python</em> de la distribution <em>Winpython</em>.</p>
+<p>Mettez vous dans la fenêtre contenant le script <em>interface.py</em>. Executez ce script (menu <em>Run</em> &gt; <em>Run module F5</em>).</p>
+<p>Organisez vos fenêtres comme sur l&rsquo;image suivante:</p>
+<!-- raw HTML omitted -->
+<p>Vous avez alors sur l&rsquo;écran:</p>
+<ul>
+<li>la fenêtre d&rsquo;edition du script <code>interface.py</code></li>
+<li>la fenêtre d&rsquo;edition du script <code>filtres.py</code></li>
+<li>la fenêtre du shell python (montrant les messages à l&rsquo;execution)</li>
+<li>la fenêtre graphique du programme avec interface graphique (image, boutons).</li>
+</ul>
+<p><strong>Comment utiliser le programme?</strong><!-- raw HTML omitted -->
+Il s&rsquo;agit d&rsquo;un programme permettant de créer 2 nouvelles images à partir de la premiere. (par defaut, l&rsquo;image du film Avatar<!-- raw HTML omitted -->(R)<!-- raw HTML omitted --> de James Cameron)</p>
+<ul>
+<li>Le bouton <em>filtre 1</em> permet d&rsquo;appliquer le filtre 1 à l&rsquo;image et créé une nouvelle image, qui est alors affichée. (par defaut, cela applique un filtre rouge)</li>
+<li>Le bouton <em>filtre 1</em> permet d&rsquo;appliquer le filtre 1 à l&rsquo;image et créé une nouvelle image, qui est alors affichée. (filtre cyan par defaut)</li>
+<li>Le bouton interlacer va superposer les 2 images et créer une image visible en 3D avec des lunettes adaptées.</li>
+</ul>
+<p>Vous pouvez créer cette image par appui successif sur ces 3 boutons.</p>
+<p><strong>Comment modifier le programme?</strong><!-- raw HTML omitted -->
+Au cours de la seance, vous aurez besoin de modifier les fonctions <code>filtre1</code> et <code>filtre2</code>. Vous modifierez directement le script du fichier <code>filtres.py</code>, dans la fenêtre d&rsquo;edition deja ouverte. Pour que les modifications soient prises en compte, vous devrez fermer la fenêtre graphique, puis relancer le programme <code>interface.py</code>.</p>
+<h2 id="à-vous-de-jouer">à vous de jouer</h2>
+<p>Télécharger le fichier image <a href="../images/banane.jpg">banane.jpg</a></p>
+<blockquote>
+<p>Modifier alors le filtre appliqué pour que celle-ci apparaisse orange, comme dans l&rsquo;exemple proposé plus haut. Vous pourrez utiliser la fonction <code>filtre1</code> du fichier <code>filtres.py</code> pour programmer les valeurs du filtre.</p>
+</blockquote>
+<blockquote>
+<p>Modifier encore le filtre à appliquer sur cette banane pour obtenir une couleur <em>achromatique</em> pour cette banane.<!-- raw HTML omitted -->
+<strong>Question c:</strong> indiquer le script de la fonction qui vous a permis de la rendre achromatique. Justifiez votre démarche.</p>
+</blockquote>
+<h2 id="améliorer-des-photographies-numériques">Améliorer des photographies numériques</h2>
+<p>D&rsquo;autres images sont proposées dans le dossier <em>images</em>.</p>
+<h3 id="photographie-astronomique">Photographie astronomique</h3>
+<p>Les photographies astronomiques sont prises avec des réglages particuliers. A cause du manque de lumière, les temps de pose sont plus longs. Et les capteurs numériques sont très sensibles aux radiations rouge émises par l&rsquo;hydrogène. Les photographies sont alors trop &ldquo;rouges&rdquo;: [ciel profond trop rouge.jpg](../images/ciel profond trop rouge.jpg)</p>
+<blockquote>
+<p>Adaptez le filtre à appliquer à la photographie <code>ciel profond trop rouge.jpg</code> pour que celle-ci soit plus équilibrée au niveau des couleurs.<!-- raw HTML omitted -->
+<strong>Question d:</strong> Indiquer la fonction pour le filtre utilisé</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<h3 id="fruits-trop-rouges">Fruits trop rouges</h3>
+<p>On pourra appliquer à nouveau ce filtre à l&rsquo;image de fruits trop rouge. On essaiera de reconstruire une image sur le modèle suivant:</p>
+<!-- raw HTML omitted -->
+<h1 id="filtrages-plus-complexes">Filtrages plus complexes</h1>
+<h2 id="les-structures-conditionnelles-en-python">Les structures conditionnelles en python</h2>
+<p>En python, les structures conditionnelles s&rsquo;écrivent sous la forme:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">if</span> <span style="color:#f92672">&lt;</span><span style="color:#111">condition</span><span style="color:#f92672">&gt;</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span><span style="color:#111">bloc</span> <span style="color:#111">a</span> <span style="color:#111">executer</span> <span style="color:#111">si</span> <span style="color:#111">condition</span> <span style="color:#111">VRAIE</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">else</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span><span style="color:#111">bloc</span> <span style="color:#111">a</span> <span style="color:#111">executer</span> <span style="color:#111">si</span> <span style="color:#111">condition</span> <span style="color:#111">FAUSSE</span><span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div><p>Ainsi, il peut être utile, si l&rsquo;on veut doubler la valeur du canal rouge <code>r</code>, à la condition que <code>r</code> soit inférieur à 127:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">if</span> <span style="color:#111">r</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">127</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">r</span> <span style="color:#f92672">=</span> <span style="color:#111">r</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>
+</span></span></code></pre></div><h2 id="image-trop-foncée">Image trop foncée</h2>
+<p>L&rsquo;[image suivante](../images/image foncee.jpg) est trop foncée. Il faudra augmenter l&rsquo;intensité de chaque canal coloré, <code>r</code>, <code>v</code>, <code>b</code>.</p>
+<p>Mais il faudra faire attention à ne pas depasser la valeur maximale admise pour chacun de ces canaux (255)</p>
+<blockquote>
+<p><strong>Question e:</strong> Recopier le script utilisé et justifier votre demarche.</p>
+</blockquote>
+<h2 id="image-trop-terne">Image trop terne</h2>
+<p>L&rsquo;[image suivante](../images/image terne.jpg) manque de contraste: les parties claires sont d&rsquo;intensité trop proches de celles sombres. Retablir les contrastes de cette image.</p>
+<blockquote>
+<p><strong>Question f:</strong> Recopier le script utilisé et justifier votre demarche.</p>
+</blockquote>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#image-numérique">Image numérique</a></li>
+    <li><a href="#filtre">Filtre</a></li>
+    <li><a href="#tp-utilisation-dun-programme-de-filtrage">TP: utilisation d&rsquo;un programme de filtrage</a>
+      <ul>
+        <li><a href="#le-programme">Le programme</a></li>
+      </ul>
+    </li>
+    <li><a href="#à-vous-de-jouer">à vous de jouer</a></li>
+    <li><a href="#améliorer-des-photographies-numériques">Améliorer des photographies numériques</a>
+      <ul>
+        <li><a href="#photographie-astronomique">Photographie astronomique</a></li>
+        <li><a href="#fruits-trop-rouges">Fruits trop rouges</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#les-structures-conditionnelles-en-python">Les structures conditionnelles en python</a></li>
+    <li><a href="#image-trop-foncée">Image trop foncée</a></li>
+    <li><a href="#image-trop-terne">Image trop terne</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

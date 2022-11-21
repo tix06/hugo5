@@ -1,81 +1,679 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Programme informatique
-| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel=stylesheet><script type=text/x-mathjax-config>
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    Programme informatique
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
   });
-</script><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.1c02dc1d2c0b546a84beb71d8f4336d6f5d7b69564e08bdfc04c2fb0595d786d.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
-catch(err)
-{console.log(err.message);}
-if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
-if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
-if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}
-let chemin=window.location.pathname;if(chemin.search('NSI')>-1){baniere=document.querySelector("#myHeader");let linkBox=document.createElement('div');linkBox.classList.add('linkBox');let newH=document.createElement('a');newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';newH.classList.add('nsi');linkBox.appendChild(newH);baniere.appendChild(linkBox);}</script><style>#myHeader{display:flex;flex-direction:row-reverse}#myHeader>.titre{width:80%;min-width:300px;text-align:left}.linkBox{margin:10px;padding-top:10px;background-color:pink;min-width:50px}.isn{}</style></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2f docs\2fSNT_2nde\2fpages\2fpages_algo\2fpython\2fpython4\2f ]{color:#004ed0}</style><ul><li><a href=/><strong>Accueil</strong></a></li><li><a href=/docs/esf/esf_index/><strong>ESF</strong></a></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p></li><li><p><a href=/docs/python/index_python/><strong>Python</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
-addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-page><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
-<strong>Programme informatique</strong></header><article class=markdown><h1 id=a-quoi-sert-un-programme-informatique>A quoi sert un programme informatique</h1><h2 id=que-fait-un-programme-informatique>Que fait un programme informatique?</h2><p>Ce qui fait fonctionner un appareil numérique, c&rsquo;est un <strong>programme</strong>:
-C&rsquo;est donc grâce à un programme que l&rsquo;on fait fonctionner un ordinateur, une console de jeux, une machine à laver, le poste de pilotage d&rsquo;un avion, un guichet automatique bancaire…</p><figure><img src=../images/machines.png><figcaption>des <i>machines</i> numériques</figcaption></figure><p>Mais c&rsquo;est aussi grâce à un programme que ces machines peuvent fournir un service: un logiciel de bureautique, un jeu, le lavage du linge, le pilotage automatique, ou le retrait d&rsquo;argent de son compte&hellip;.</p><p>Aujourd&rsquo;hui, le smartphone est l&rsquo;objet qui nous permet d&rsquo;executer de nombreux programmes, en permanence.</p><figure><div><img src=../images/iphone.jpg><figcaption>applications et smartphone</figcaption></div></figure><p>On confond parfois <strong>programme informatique</strong> et <strong>logiciel</strong>, ou <strong>application</strong>.
-Un logiciel peut comporter plusieurs programmes.</p><h2 id=quelques-repères-historiques>Quelques repères historiques</h2><ul><li>En <strong>1842</strong>, la comtesse Ada Lovelace crée des diagrammes pour la machine analytique de Charles Babbage. Ces diagrammes sont considérés aujourd&rsquo;hui comme étant les <em>premiers programmes</em> informatiques au monde</li><li><strong>1936</strong>: Première formulation de ce qu&rsquo;est un <em>programme</em> par Alan Turing.</li><li><strong>1940</strong>: Les premiers ordinateurs. Les programmes informatiques étaient alors conçus par des analystes, rédigés par des programmeurs et saisis par des opératrices sur des bandes type cartes en carton perforé.</li><li>Le premier système d&rsquo;exploitation a été développé en <strong>1954</strong>.</li><li><strong>1970</strong>: début de la programmation structurée. Depuis, la variété et mise à jour des langages n&rsquo;a cessé de rendre plus accéssible la programmation.</li></ul><figure><img src=../images/frise.jpg><figcaption>Compléter la frise</figcaption></figure><h1 id=algorithme>Algorithme</h1><p>Un algorithme traduit le cahier des charges d&rsquo;un programme en un langage naturel et non ambigü, où les instructions sont séquencées.</p><h2 id=quelques-exemples>Quelques exemples</h2><h3 id=origami>Origami</h3><ul><li><strong>Cahier des charges:</strong> <em>Réaliser une grue (l&rsquo;animal) par 10 pliages succéssifs d&rsquo;une feuille de papier.</em></li><li><strong>Algorithme:</strong></li></ul><figure><img src=../images/origami.png><figcaption>extrait de la séquence de pliage</figcaption></figure><h3 id=code-pin>Code PIN</h3><ul><li><strong>Cahier des charges:</strong> <em>Demander à l&rsquo;utilisateur du smartphone de saisir son code PIN, et s&rsquo;il echoue 3 fois, lui demander son code PUK</em></li><li><strong>Algorithme:</strong> L&rsquo;un des trois algorithmes correspond bien au cahier des charges</li></ul><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># algorithme 1</span>
-<span style=color:#111>Répéter</span> <span style=color:#ae81ff>3</span> <span style=color:#111>fois</span><span style=color:#111>:</span>
-  <span style=color:#111>demander</span> <span style=color:#111>code</span> <span style=color:#111>PIN</span>
-<span style=color:#111>Si</span> <span style=color:#111>code</span> <span style=color:#111>PIN</span> <span style=color:#111>incorrect</span>
-  <span style=color:#111>demander</span> <span style=color:#111>code</span> <span style=color:#111>PUK</span></code></pre></div><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># algorithme 2</span>
-<span style=color:#111>demander</span> <span style=color:#111>code</span> <span style=color:#111>PIN</span>
-<span style=color:#111>Tant</span> <span style=color:#111>que</span> <span style=color:#111>code</span> <span style=color:#111>PIN</span> <span style=color:#111>incorrect</span><span style=color:#111>:</span>
-  <span style=color:#111>demander</span> <span style=color:#111>code</span> <span style=color:#111>PIN</span>
-<span style=color:#111>demander</span> <span style=color:#111>code</span> <span style=color:#111>PUK</span></code></pre></div><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># algorithme 3</span>
-<span style=color:#111>demander</span> <span style=color:#111>code</span> <span style=color:#111>PIN</span>
-<span style=color:#111>nbessai</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
-<span style=color:#111>Tant</span> <span style=color:#111>que</span> <span style=color:#111>code</span> <span style=color:#111>PIN</span> <span style=color:#111>incorreect</span> <span style=color:#111>et</span> <span style=color:#111>nbessai</span> <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>3</span><span style=color:#111>:</span>
-  <span style=color:#111>demander</span> <span style=color:#111>code</span> <span style=color:#111>PIN</span>
-  <span style=color:#111>nbessai</span> <span style=color:#f92672>=</span> <span style=color:#111>nbessai</span> <span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>
-<span style=color:#111>Si</span> <span style=color:#111>code</span> <span style=color:#111>PIN</span> <span style=color:#111>incorrect</span><span style=color:#111>:</span>
-  <span style=color:#111>demander</span> <span style=color:#111>code</span> <span style=color:#111>PUK</span></code></pre></div><blockquote><p>A vous de jouer: Trouver lequel.</p></blockquote><h3 id=diamètre-d-ouverture-de-l-appareil-photographique>Diamètre d&rsquo;ouverture de l&rsquo;appareil photographique</h3><ul><li><p><strong>Cahier des charges:</strong> <em>Pour l&rsquo;appareil photo numérique: Mesurer le flux lumineux. Si celui-ci est supérieur à 100 Lux, diminuer le diamètre d&rsquo;ouverture. S&rsquo;il est infèrieur ou égal à 100 Lux, ouvrir davantage.</em></p></li><li><p><strong>Algorithme:</strong></p></li></ul><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>Répeter</span> <span style=color:#111>indefiniment</span><span style=color:#111>:</span>
-  <span style=color:#111>Mesurer</span> <span style=color:#111>la</span> <span style=color:#111>lumière</span> <span style=color:#111>et</span> <span style=color:#111>stocker</span> <span style=color:#111>dans</span> <span style=color:#111>L</span>
-  <span style=color:#111>Si</span> <span style=color:#111>L</span> <span style=color:#f92672>...</span>  <span style=color:#111>:</span>
-    <span style=color:#f92672>...</span>
-  <span style=color:#111>Sinon</span><span style=color:#111>:</span>
-    <span style=color:#f92672>...</span></code></pre></div><blockquote><p>A vous de jouer: Compléter l&rsquo;algorithme.</p></blockquote><h3 id=application-pour-la-course-à-pied>Application pour la course à pied</h3><ul><li><strong>Cahier des charges:</strong> <em>Une application de course à pieds sur spartphone propose à l&rsquo;utilisateur de rentrer les distances parcourues chaque jour. Lorsque l&rsquo;utilisateur a atteint son objectif, fixé à 45 km, le décompte s&rsquo;arrête.</em></li><li><strong>Algorithme:</strong></li></ul><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>total</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
-<span style=color:#111>Tant</span> <span style=color:#111>que</span> <span style=color:#111>total</span> <span style=color:#f92672>...</span>    <span style=color:#111>:</span>
-  <span style=color:#111>distance</span> <span style=color:#f92672>=</span> <span style=color:#111>int</span><span style=color:#111>(</span><span style=color:#111>input</span><span style=color:#111>(</span><span style=color:#d88200>&#34;Entrer la distance : &#34;</span><span style=color:#111>))</span>
-  <span style=color:#f92672>...</span>
-<span style=color:#111>Afficher</span><span style=color:#111>(</span><span style=color:#d88200>&#34;Félicitations&#34;</span><span style=color:#111>)</span></code></pre></div><blockquote><p>A vous de jouer: Compléter l&rsquo;algorithme.</p></blockquote><h2 id=les-ingrédients-d-un-algorithme>Les ingrédients d&rsquo;un algorithme</h2><p>Les instructions relatives aux ingrédients d&rsquo;un algorithme seront données en langage naturel, mais à la manière du langage Python.</p><h3 id=données-variables-et-opérations>Données: Variables et opérations</h3><p>(voir <a href=/docs/SNT_2nde/pages/pages_algo/python/python2/index.html>introduction à la programmation</a>)</p><h3 id=interface-entrées-sorties>Interface: Entrées/Sorties</h3><p>Un algorithme doit fournir une interface qui permet d&rsquo;interagir avec l&rsquo;utilisateur. Il doit pouvoir lire et entrer des données.</p><p>Ce sont les instructions: <em>afficher</em> et <em>entrer</em> qui réalisent ceci.</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>afficher</span><span style=color:#111>(</span><span style=color:#d88200>&#34;un message&#34;</span><span style=color:#111>)</span>
-<span style=color:#111>afficher</span><span style=color:#111>(</span><span style=color:#111>une_variable</span><span style=color:#111>)</span>
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<span style=color:#111>x</span> <span style=color:#f92672>=</span> <span style=color:#111>entrer</span><span style=color:#111>(</span><span style=color:#d88200>&#34;position&#34;</span><span style=color:#111>)</span></code></pre></div><h3 id=contrôler-le-programme-structures-conditionnelles>Contrôler le programme: Structures conditionnelles</h3><p>Cette structure permet d’effectuer une séquence d’opérations selon la valeur d’une condition.</p><p>Une condition est une expression logique (on dit également booléenne), dont la valeur est vrai ou faux.</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>Si</span> <span style=color:#111>(</span> <span style=color:#f92672>&lt;</span><span style=color:#111>expression_logique</span><span style=color:#f92672>&gt;</span> <span style=color:#111>)</span> <span style=color:#111>alors</span> 
-  <span style=color:#f92672>&lt;</span><span style=color:#111>bloc_alors</span><span style=color:#f92672>&gt;</span>
-<span style=color:#111>Sinon</span> 
-  <span style=color:#f92672>&lt;</span><span style=color:#111>bloc_sinon</span><span style=color:#f92672>&gt;</span></code></pre></div><h3 id=contrôler-le-programme-boucles>Contrôler le programme: Boucles</h3><ul><li>Les structures répétitives permettent d’exécuter plusieurs fois un bloc d’opérations, en faisant varier automatiquement une variable de boucle.</li></ul><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>Pour</span> <span style=color:#f92672>&lt;</span><span style=color:#111>identificateur_variable</span><span style=color:#f92672>&gt;</span> <span style=color:#111>de</span> <span style=color:#f92672>&lt;</span><span style=color:#111>valeur_début</span><span style=color:#f92672>&gt;</span> <span style=color:#111>a</span> <span style=color:#f92672>&lt;</span><span style=color:#111>valeur_fin</span><span style=color:#f92672>&gt;</span> <span style=color:#111>faire</span>
- <span style=color:#f92672>&lt;</span><span style=color:#111>bloc_opérations</span><span style=color:#f92672>&gt;</span> </code></pre></div><ul><li>Les structures répétitives permettent d’exécuter plusieurs fois un bloc d’opérations, tant qu’une condition (de continuation) est satisfaite.</li></ul><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>Tantque</span> <span style=color:#111>(</span> <span style=color:#f92672>&lt;</span><span style=color:#111>condition</span><span style=color:#f92672>&gt;</span> <span style=color:#111>)</span> <span style=color:#111>faire</span>
- <span style=color:#f92672>&lt;</span><span style=color:#111>bloc_opérations</span><span style=color:#f92672>&gt;</span> </code></pre></div><h3 id=structure-fonctions-et-procedures>Structure: Fonctions et Procedures</h3><p>Les fonctions permettent de rendre le script plus efficace, plus facile à lire et à vérifier. Un bonne pratique est de faire régulierement du remaniement de son code : C’est à dire ré-écrire les parties du programme qui fonctionnent et les mettre dans une fonction. Cela evite aussi les répétitions. On remplace alors le code par un appel à une fonction.</p><p>La programmation se fait en deux temps: On commence par programmer la fonction</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>fonction</span> <span style=color:#111>carre</span><span style=color:#111>(</span><span style=color:#111>x</span><span style=color:#111>)</span>
-  <span style=color:#111>y</span> <span style=color:#f92672>=</span> <span style=color:#111>x</span> <span style=color:#f92672>*</span> <span style=color:#111>x</span>
-  <span style=color:#00a8c8>return</span> <span style=color:#111>y</span></code></pre></div><p>Puis on appelle cette fonction:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>a</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>10</span>
-<span style=color:#111>carre</span><span style=color:#111>(</span><span style=color:#ae81ff>10</span><span style=color:#111>)</span></code></pre></div><p>Le programme retourne dans ce cas la valeur 100.</p><h1 id=langages-informatiques>Langages informatiques</h1><p>Les instructions qu&rsquo;un ordinateur devra exécuter doivent pouvoir être exprimées de manière précise et non ambiguë.</p><h1 id=définitions>Définitions</h1><h2 id=un-programme-informatique>Un programme informatique</h2><p>C&rsquo;est un ensemble d&rsquo;opérations destinées à être exécutées par un ordinateur.</p><p>Un <strong>programme source</strong> est un code écrit par un informaticien dans un <strong>langage de programmation</strong>. Il peut être <strong>compilé</strong> vers une forme binaire ou directement <strong>interprété</strong>. Au final, les instructions seront traduites en <strong>binaire</strong>, afin qu&rsquo;elles soient exécutées par un microprocesseur.</p><h2 id=un-langage-de-programmation>Un langage de programmation</h2><p>C&rsquo;est une notation utilisée pour exprimer des algorithmes et écrire des programmes.</p><h2 id=un-algorithme>Un algorithme</h2><p>Un algorithme est un procédé pour obtenir un résultat par une succession de calculs, décrits sous forme de termes simples dans une langue naturelle.
-C&rsquo;est une suite finie et non ambigüe d&rsquo;instructions, permettant de resoudre certains problèmes.</p><h2 id=un-bug>Un bug</h2><p>Un bug est un défaut de construction dans un programme. Les instructions que l&rsquo;appareil informatique exécute ne correspondent pas à ce qui est attendu, ce qui provoque des dysfonctionnements et des pannes.</p><h1 id=exercices>Exercices</h1><h2 id=ex-1>Ex 1</h2><p>On donne le script d&rsquo;un programme en langage naturel, ainsi que sa traduction en Python. Déterminer, à la fin du programme, les valeurs stockées dans les variables a, b et c.</p><ul><li>Programme 1 en langage naturel</li></ul><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>a</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>10</span>
-<span style=color:#111>b</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>5</span>
-<span style=color:#111>c</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
-<span style=color:#111>si</span> <span style=color:#111>(</span> <span style=color:#111>a</span> <span style=color:#f92672>==</span> <span style=color:#111>b</span> <span style=color:#111>)</span>
- <span style=color:#111>c</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span> <span style=color:#f92672>*</span> <span style=color:#111>c</span>
-<span style=color:#111>sinon</span>
- <span style=color:#111>a</span> <span style=color:#f92672>=</span> <span style=color:#111>a</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>
- <span style=color:#111>b</span> <span style=color:#f92672>=</span> <span style=color:#111>b</span> <span style=color:#111>div</span> <span style=color:#ae81ff>2</span></code></pre></div><ul><li>Programme 1 en langage Python</li></ul><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>a</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>10</span>
-<span style=color:#111>b</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>5</span>
-<span style=color:#111>c</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
-<span style=color:#00a8c8>if</span> <span style=color:#111>(</span> <span style=color:#111>a</span> <span style=color:#f92672>==</span> <span style=color:#111>b</span> <span style=color:#111>):</span>
- <span style=color:#111>c</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span> <span style=color:#f92672>*</span> <span style=color:#111>c</span>
-<span style=color:#00a8c8>else</span><span style=color:#111>:</span>
- <span style=color:#111>a</span> <span style=color:#f92672>=</span> <span style=color:#111>a</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>
- <span style=color:#111>b</span> <span style=color:#f92672>=</span> <span style=color:#111>b</span> <span style=color:#f92672>/</span> <span style=color:#ae81ff>2</span> </code></pre></div><h2 id=ex-2>Ex 2</h2><p>On donne le script d&rsquo;un programme en langage naturel, ainsi que sa traduction en Python. Déterminer, à la fin du programme, la valeur stockée dans la variable a.</p><ul><li>Programme 2 en langage naturel</li></ul><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>a</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>10</span>
-<span style=color:#111>Tantque</span> <span style=color:#111>(</span> <span style=color:#111>a</span> <span style=color:#111>different</span> <span style=color:#111>de</span> <span style=color:#ae81ff>0</span> <span style=color:#111>)</span> <span style=color:#111>faire</span>
- <span style=color:#111>afficher</span> <span style=color:#111>(</span> <span style=color:#ae81ff>2</span> <span style=color:#f92672>*</span> <span style=color:#111>a</span> <span style=color:#111>)</span>
- <span style=color:#111>a</span> <span style=color:#f92672>=</span> <span style=color:#111>a</span> <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span> </code></pre></div><ul><li>Programme 2 en langage Python</li></ul><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>a</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>10</span>
-<span style=color:#00a8c8>while</span> <span style=color:#111>(</span> <span style=color:#111>a</span> <span style=color:#f92672>!=</span> <span style=color:#ae81ff>0</span> <span style=color:#111>):</span>
- <span style=color:#00a8c8>print</span> <span style=color:#ae81ff>2</span><span style=color:#f92672>*</span><span style=color:#111>a</span>
- <span style=color:#111>a</span> <span style=color:#f92672>=</span> <span style=color:#111>a</span> <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span> </code></pre></div><h2 id=ex-3>Ex 3</h2><p>On donne le script d&rsquo;un programme en langage naturel, ainsi que sa traduction en Python. Déterminer, à la fin du programme, la valeur stockée dans la variable a.</p><ul><li>Programme 3 en langage naturel</li></ul><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>pour</span> <span style=color:#111>i</span> <span style=color:#111>de</span> <span style=color:#ae81ff>1</span> <span style=color:#111>a</span> <span style=color:#111>n</span> <span style=color:#111>faire</span>
- <span style=color:#111>a</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>3</span> <span style=color:#f92672>*</span> <span style=color:#111>i</span>
- <span style=color:#111>Afficher</span> <span style=color:#111>(</span> <span style=color:#111>a</span> <span style=color:#111>)</span></code></pre></div><ul><li>Programme 3 en langage Python</li></ul><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>for</span> <span style=color:#111>i</span> <span style=color:#f92672>in</span> <span style=color:#111>range</span><span style=color:#111>(</span><span style=color:#ae81ff>1</span><span style=color:#111>,</span><span style=color:#111>n</span><span style=color:#f92672>+</span><span style=color:#ae81ff>1</span><span style=color:#111>):</span>
- <span style=color:#111>a</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>3</span> <span style=color:#f92672>*</span> <span style=color:#111>i</span>
- <span style=color:#00a8c8>print</span> <span style=color:#111>a</span></code></pre></div><p><em>range(a,b) permet de parcourir les valeurs a, a+1, …, b-1 (b non compris)</em></p><h1 id=liens-et-ressources>Liens et ressources</h1><ul><li>Programme informatique: <a href="https://fr.wikipedia.org/wiki/Programme_informatique#:~:text=Un%20programme%20informatique%20est%20un,forme%20binaire%20ou%20directement%20interpr%C3%A9t%C3%A9.">wikipedia</a></li><li>exercice sur algorithme issu du Bordas 3.0 SNT (code PIN)</li><li>exercice sur algorithme issu du Delagrave SNT (course à pieds)</li></ul></article><div style=height:100px></div></div><aside class="book-toc fixed"><nav id=TableOfContents><ul><li><a href=#a-quoi-sert-un-programme-informatique>A quoi sert un programme informatique</a><ul><li><a href=#que-fait-un-programme-informatique>Que fait un programme informatique?</a></li><li><a href=#quelques-repères-historiques>Quelques repères historiques</a></li></ul></li><li><a href=#algorithme>Algorithme</a><ul><li><a href=#quelques-exemples>Quelques exemples</a><ul><li><a href=#origami>Origami</a></li><li><a href=#code-pin>Code PIN</a></li><li><a href=#diamètre-d-ouverture-de-l-appareil-photographique>Diamètre d&rsquo;ouverture de l&rsquo;appareil photographique</a></li><li><a href=#application-pour-la-course-à-pied>Application pour la course à pied</a></li></ul></li><li><a href=#les-ingrédients-d-un-algorithme>Les ingrédients d&rsquo;un algorithme</a><ul><li><a href=#données-variables-et-opérations>Données: Variables et opérations</a></li><li><a href=#interface-entrées-sorties>Interface: Entrées/Sorties</a></li><li><a href=#contrôler-le-programme-structures-conditionnelles>Contrôler le programme: Structures conditionnelles</a></li><li><a href=#contrôler-le-programme-boucles>Contrôler le programme: Boucles</a></li><li><a href=#structure-fonctions-et-procedures>Structure: Fonctions et Procedures</a></li></ul></li></ul></li><li><a href=#langages-informatiques>Langages informatiques</a></li><li><a href=#définitions>Définitions</a><ul><li><a href=#un-programme-informatique>Un programme informatique</a></li><li><a href=#un-langage-de-programmation>Un langage de programmation</a></li><li><a href=#un-algorithme>Un algorithme</a></li><li><a href=#un-bug>Un bug</a></li></ul></li><li><a href=#exercices>Exercices</a><ul><li><a href=#ex-1>Ex 1</a></li><li><a href=#ex-2>Ex 2</a></li><li><a href=#ex-3>Ex 3</a></li></ul></li><li><a href=#liens-et-ressources>Liens et ressources</a></li></ul></nav></aside></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
-<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fSNT_2nde\2fpages\2fpages_algo\2fpython\2fpython4\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    Programme informatique
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="a-quoi-sert-un-programme-informatique">A quoi sert un programme informatique</h1>
+<h2 id="que-fait-un-programme-informatique">Que fait un programme informatique?</h2>
+<p>Ce qui fait fonctionner un appareil numérique, c&rsquo;est un <strong>programme</strong>:
+C&rsquo;est donc grâce à un programme que l&rsquo;on fait fonctionner un ordinateur, une console de jeux, une machine à laver, le poste de pilotage d&rsquo;un avion, un guichet automatique bancaire…</p>
+<!-- raw HTML omitted -->
+<p>Mais c&rsquo;est aussi grâce à un programme que ces machines peuvent fournir un service: un logiciel de bureautique, un jeu, le lavage du linge, le pilotage automatique, ou le retrait d&rsquo;argent de son compte&hellip;.</p>
+<p>Aujourd&rsquo;hui, le smartphone est l&rsquo;objet qui nous permet d&rsquo;executer de nombreux programmes, en permanence.</p>
+<!-- raw HTML omitted -->
+<p>On confond parfois <strong>programme informatique</strong> et <strong>logiciel</strong>, ou <strong>application</strong>.
+Un logiciel peut comporter plusieurs programmes.</p>
+<h2 id="quelques-repères-historiques">Quelques repères historiques</h2>
+<ul>
+<li>En <strong>1842</strong>, la comtesse Ada Lovelace crée des diagrammes pour la machine analytique de Charles Babbage. Ces diagrammes sont considérés aujourd&rsquo;hui comme étant les <em>premiers programmes</em> informatiques au monde</li>
+<li><strong>1936</strong>: Première formulation de ce qu&rsquo;est un <em>programme</em> par Alan Turing.</li>
+<li><strong>1940</strong>: Les premiers ordinateurs. Les programmes informatiques étaient alors conçus par des analystes, rédigés par des programmeurs et saisis par des opératrices sur des bandes type cartes en carton perforé.</li>
+<li>Le premier système d&rsquo;exploitation a été développé en <strong>1954</strong>.</li>
+<li><strong>1970</strong>: début de la programmation structurée. Depuis, la variété et mise à jour des langages n&rsquo;a cessé de rendre plus accéssible la programmation.</li>
+</ul>
+<!-- raw HTML omitted -->
+<h1 id="algorithme">Algorithme</h1>
+<p>Un algorithme traduit le cahier des charges d&rsquo;un programme en un langage naturel et non ambigü, où les instructions sont séquencées.</p>
+<h2 id="quelques-exemples">Quelques exemples</h2>
+<h3 id="origami">Origami</h3>
+<ul>
+<li><strong>Cahier des charges:</strong> <em>Réaliser une grue (l&rsquo;animal) par 10 pliages succéssifs d&rsquo;une feuille de papier.</em></li>
+<li><strong>Algorithme:</strong></li>
+</ul>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>L&rsquo;algorithme du pliage de l&rsquo;origami présente une <strong>structure linéaire</strong>. On peut visualiser celui-ci à l&rsquo;aide d&rsquo;un <a href="https://www.playhooky.fr/technologie/algorithmes-algorigrammes/">algorigramme</a></p>
+</blockquote>
+<!-- raw HTML omitted -->
+<h3 id="code-pin">Code PIN</h3>
+<ul>
+<li><strong>Cahier des charges:</strong> <em>Demander à l&rsquo;utilisateur du smartphone de saisir son code PIN, et s&rsquo;il echoue 3 fois, lui demander son code PUK</em></li>
+<li><strong>Algorithme:</strong> L&rsquo;un des deux algorithmes correspond bien au cahier des charges</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># algorithme 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">Répéter</span> <span style="color:#ae81ff">3</span> <span style="color:#111">fois</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">demander</span> <span style="color:#111">code</span> <span style="color:#111">PIN</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">Si</span> <span style="color:#111">code</span> <span style="color:#111">PIN</span> <span style="color:#111">incorrect</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">demander</span> <span style="color:#111">code</span> <span style="color:#111">PUK</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">Sinon</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">passer</span>
+</span></span></code></pre></div><p>Ce premier algorithme montre une <strong>structure alternative</strong>: on commence par tester la condition ; si elle est vraie, l’action 2 est exécutée, sinon, c&rsquo;est l&rsquo;action 3.</p>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># algorithme 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">demander</span> <span style="color:#111">code</span> <span style="color:#111">PIN</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">nbessai</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">Tant</span> <span style="color:#111">que</span> <span style="color:#111">code</span> <span style="color:#111">PIN</span> <span style="color:#111">incorrect</span> <span style="color:#111">et</span> <span style="color:#111">nbessai</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">demander</span> <span style="color:#111">code</span> <span style="color:#111">PIN</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">nbessai</span> <span style="color:#f92672">=</span> <span style="color:#111">nbessai</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">Si</span> <span style="color:#111">code</span> <span style="color:#111">PIN</span> <span style="color:#111">incorrect</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">demander</span> <span style="color:#111">code</span> <span style="color:#111">PUK</span>
+</span></span></code></pre></div><p>Dans ce 2e algorithme:</p>
+<ul>
+<li>on utilise une <em>variable</em> appelée <code>nbessai</code>. Sa valeur est d&rsquo;abord mise à 1, puis évolue au fur et à mesure que le programme avance.</li>
+<li>on utilise une structure qui amène une répétition. (une <strong>structure itérative</strong>): <code>Tant que &lt;condition&gt; …</code>qui répète le bloc tant que la condition est VRAIE.</li>
+</ul>
+<p><strong>Questions:</strong></p>
+<ol>
+<li>Pour l&rsquo;algorithme 1, compléter l&rsquo;algorigramme.</li>
+<li>Trouver lequel des 2 algorithmes correspond bien au cahier des charges.</li>
+<li>Pour les 2 algorithmes: Expliquer ce que fait le programme si l&rsquo;utilisateur entre 2 fois un code PIN erroné, puis entre le bon (au 3e essai).</li>
+<li>Pour l&rsquo;algorithme 2: expliquer ce que fait le programme lorsque l&rsquo;on entre 3 code PIN erronés.</li>
+</ol>
+<h2 id="les-ingrédients-dun-algorithme">Les ingrédients d&rsquo;un algorithme</h2>
+<p>Les instructions relatives aux ingrédients d&rsquo;un algorithme seront données en langage naturel, mais à la manière du langage Python.</p>
+<h3 id="données-variables-et-opérations">Données: Variables et opérations</h3>
+<p>Une variable stocke une valeur et peut être utilisée pour des opérations.</p>
+<p>(voir <a href="/docs/SNT_2nde/pages/pages_algo/python/python2/index.html">introduction à la programmation</a>)</p>
+<ul>
+<li>Exemples
+Le signe <code>=</code> permet d&rsquo;affecter une valeur à une variable:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>nom de la variable</th>
+<th>affectation d&rsquo;une valeur</th>
+<th>type de variable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nbessai</td>
+<td><code>nbessai = 1</code></td>
+<td>nombre entier</td>
+</tr>
+<tr>
+<td>message</td>
+<td><code>message = &quot;bonjour&quot;</code></td>
+<td>texte</td>
+</tr>
+<tr>
+<td>text1</td>
+<td>texte1 = &ldquo;je suis &quot;</td>
+<td>texte</td>
+</tr>
+<tr>
+<td>text2</td>
+<td>texte2 = &ldquo;le prof&rdquo;</td>
+<td>texte</td>
+</tr>
+</tbody>
+</table>
+<p>Lors de l&rsquo;affectation, python va choisir un type pour cette variable, ce qui va permettre certaines opérations.</p>
+<ul>
+<li>Opérations sur les variables de type textes:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">text1</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#34;je suis &#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">text2</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#34;le prof&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">text</span> <span style="color:#f92672">=</span> <span style="color:#111">text1</span> <span style="color:#f92672">+</span> <span style="color:#111">text2</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">afficher</span><span style="color:#111">(</span><span style="color:#111">text</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">je</span> <span style="color:#111">suis</span> <span style="color:#111">le</span> <span style="color:#111">prof</span>
+</span></span></code></pre></div><ul>
+<li>Opérations sur les variables de type nombres entiers:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">nbessai</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">nbessai</span> <span style="color:#f92672">=</span> <span style="color:#111">nbessai</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">afficher</span><span style="color:#111">(</span><span style="color:#111">nbessai</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span>
+</span></span></code></pre></div><h3 id="interface-entréessorties">Interface: Entrées/Sorties</h3>
+<p>Un algorithme doit fournir une interface qui permet d&rsquo;interagir avec l&rsquo;utilisateur. Il doit pouvoir lire et entrer des données.</p>
+<p>Ce sont les instructions: <em>afficher</em> et <em>entrer</em> qui réalisent ceci.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">afficher</span><span style="color:#111">(</span><span style="color:#d88200">&#34;un message&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">afficher</span><span style="color:#111">(</span><span style="color:#111">une_variable</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">x</span> <span style="color:#f92672">=</span> <span style="color:#111">entrer</span><span style="color:#111">(</span><span style="color:#d88200">&#34;position&#34;</span><span style="color:#111">)</span>
+</span></span></code></pre></div><h3 id="contrôler-le-programme-structures-conditionnelles">Contrôler le programme: Structures conditionnelles</h3>
+<p>Cette structure permet d’effectuer une séquence d’opérations selon la valeur d’une condition.</p>
+<p>Une condition est une expression logique (on dit également booléenne), dont la valeur est vrai ou faux.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">Si</span> <span style="color:#111">(</span> <span style="color:#f92672">&lt;</span><span style="color:#111">expression_logique</span><span style="color:#f92672">&gt;</span> <span style="color:#111">)</span> <span style="color:#111">alors</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span><span style="color:#111">bloc_alors</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">Sinon</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span><span style="color:#111">bloc_sinon</span><span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div><ul>
+<li>
+<p>Exemple: le physionomiste d&rsquo;une discothèque</p>
+<ul>
+<li><em>Programme 1: Vous pouvez entrer si vous avez plus de 18 ans</em></li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">si</span> <span style="color:#111">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">18</span> <span style="color:#111">alors</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">dire</span><span style="color:#111">(</span><span style="color:#d88200">&#34;vous pouvez entrer&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">sinon</span> <span style="color:#111">:</span> 
+</span></span><span style="display:flex;"><span>      <span style="color:#111">dire</span><span style="color:#111">(</span><span style="color:#d88200">&#34;repasser une prochaine fois&#34;</span><span style="color:#111">)</span>
+</span></span></code></pre></div><ul>
+<li><em>Vous pouvez entrer si vous avez plus de 18 ans, ET si vous ne portez pas des baskets</em></li>
+</ul>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">si</span> <span style="color:#111">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">18</span> <span style="color:#111">ET</span> <span style="color:#111">non</span> <span style="color:#111">porte_des_baskets</span> <span style="color:#111">alors</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">dire</span><span style="color:#111">(</span><span style="color:#d88200">&#34;vous pouvez entrer&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">sinon</span> <span style="color:#111">:</span> 
+</span></span><span style="display:flex;"><span>      <span style="color:#111">dire</span><span style="color:#111">(</span><span style="color:#d88200">&#34;repasser une prochaine fois&#34;</span><span style="color:#111">)</span>
+</span></span></code></pre></div><h3 id="contrôler-le-programme-boucles">Contrôler le programme: Boucles</h3>
+<ul>
+<li>Les structures répétitives permettent d’exécuter plusieurs fois un bloc d’opérations, en faisant varier automatiquement une variable de boucle.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">Pour</span> <span style="color:#f92672">&lt;</span><span style="color:#111">identificateur_variable</span><span style="color:#f92672">&gt;</span> <span style="color:#111">de</span> <span style="color:#f92672">&lt;</span><span style="color:#111">valeur_début</span><span style="color:#f92672">&gt;</span> <span style="color:#111">a</span> <span style="color:#f92672">&lt;</span><span style="color:#111">valeur_fin</span><span style="color:#f92672">&gt;</span> <span style="color:#111">faire</span>
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">&lt;</span><span style="color:#111">bloc_opérations</span><span style="color:#f92672">&gt;</span> 
+</span></span></code></pre></div><ul>
+<li>Les structures répétitives permettent d’exécuter plusieurs fois un bloc d’opérations, tant qu’une condition (de continuation) est satisfaite.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">Tantque</span> <span style="color:#111">(</span> <span style="color:#f92672">&lt;</span><span style="color:#111">condition</span><span style="color:#f92672">&gt;</span> <span style="color:#111">)</span> <span style="color:#111">faire</span>
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">&lt;</span><span style="color:#111">bloc_opérations</span><span style="color:#f92672">&gt;</span> 
+</span></span></code></pre></div><h3 id="structure-fonctions-et-procedures">Structure: Fonctions et Procedures</h3>
+<p>Les fonctions permettent de rendre le script plus efficace, plus facile à lire et à vérifier. Un bonne pratique est de faire régulierement du remaniement de son code : C’est à dire ré-écrire les parties du programme qui fonctionnent et les mettre dans une fonction. Cela evite aussi les répétitions. On remplace alors le code par un appel à une fonction.</p>
+<p>La programmation se fait en deux temps: On commence par programmer la fonction</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">fonction</span> <span style="color:#111">carre</span><span style="color:#111">(</span><span style="color:#111">x</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">y</span> <span style="color:#f92672">=</span> <span style="color:#111">x</span> <span style="color:#f92672">*</span> <span style="color:#111">x</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">return</span> <span style="color:#111">y</span>
+</span></span></code></pre></div><p>Puis on appelle cette fonction:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">carre</span><span style="color:#111">(</span><span style="color:#ae81ff">10</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>Le programme retourne dans ce cas la valeur 100.</p>
+<h1 id="langages-informatiques">Langages informatiques</h1>
+<p>Les instructions qu&rsquo;un ordinateur devra exécuter doivent pouvoir être exprimées de manière précise et non ambiguë.</p>
+<h1 id="définitions">Définitions</h1>
+<h2 id="un-programme-informatique">Un programme informatique</h2>
+<p>C&rsquo;est un ensemble d&rsquo;opérations destinées à être exécutées par un ordinateur.</p>
+<p>Un <strong>programme source</strong> est un code écrit par un informaticien dans un <strong>langage de programmation</strong>. Il peut être <strong>compilé</strong> vers une forme binaire ou directement <strong>interprété</strong>. Au final, les instructions seront traduites en <strong>binaire</strong>, afin qu&rsquo;elles soient exécutées par un microprocesseur.</p>
+<h2 id="un-langage-de-programmation">Un langage de programmation</h2>
+<p>C&rsquo;est une notation utilisée pour exprimer des algorithmes et écrire des programmes.</p>
+<h2 id="un-algorithme">Un algorithme</h2>
+<p>Un algorithme est un procédé pour obtenir un résultat par une succession de calculs, décrits sous forme de termes simples dans une langue naturelle.
+C&rsquo;est une suite finie et non ambigüe d&rsquo;instructions, permettant de resoudre certains problèmes.</p>
+<h2 id="un-bug">Un bug</h2>
+<p>Un bug est un défaut de construction dans un programme. Les instructions que l&rsquo;appareil informatique exécute ne correspondent pas à ce qui est attendu, ce qui provoque des dysfonctionnements et des pannes.</p>
+<h1 id="exercices">Exercices</h1>
+<h2 id="ex-1-code-pin-et-code-puk">Ex 1: code PIN et code PUK</h2>
+<p>Le programme suivant, est-il celui utilisé pour le deverouillage d&rsquo;un smartphone? Pour repondre à la question:</p>
+<ul>
+<li>dessiner l&rsquo;algorigramme correspondant.</li>
+<li>Expliquer ce que fait le programme lorsque l&rsquo;utilisateur se trompe 3 fois de suite de code PIN, puis parvient enfin à rentrer le bon (au 4e essai).</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># algorithme 3</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">demander</span> <span style="color:#111">code</span> <span style="color:#111">PIN</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">Tant</span> <span style="color:#111">que</span> <span style="color:#111">code</span> <span style="color:#111">PIN</span> <span style="color:#111">incorrect</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">demander</span> <span style="color:#111">code</span> <span style="color:#111">PIN</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">demander</span> <span style="color:#111">code</span> <span style="color:#111">PUK</span>
+</span></span></code></pre></div><h2 id="ex-2-application-pour-la-course-à-pied">Ex 2: Application pour la course à pied</h2>
+<ul>
+<li><strong>Cahier des charges:</strong> <em>Une application de course à pieds sur spartphone propose à l&rsquo;utilisateur de rentrer les distances parcourues chaque jour. Lorsque l&rsquo;utilisateur a atteint son objectif, fixé à 42 km, le décompte s&rsquo;arrête. L&rsquo;ecran affiche alors: <strong>Félicitations</strong></em></li>
+<li><strong>Algorithme:</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">total</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">Tant</span> <span style="color:#111">que</span> <span style="color:#111">total</span> <span style="color:#f92672">...</span>    <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">distance</span> <span style="color:#f92672">=</span> <span style="color:#111">entrer</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Saisir la distance : &#34;</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">Afficher</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Félicitations&#34;</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p><em>Remarque:</em> l&rsquo;instruction <code>distance = entrer(&quot;Saisir la distance : &quot;))</code> va afficher <em>Saisir la distance :</em>, puis stocker celle-ci dans la variable <em>distance</em>.</p>
+<ul>
+<li>Compléter l&rsquo;algorithme.</li>
+<li>Expliquer ce que fait le programme lorsque l&rsquo;utilisateur entre successivement: 10, 12, 10, 15.</li>
+</ul>
+<h2 id="ex-3-diamètre-douverture-de-lappareil-photographique">Ex 3: Diamètre d&rsquo;ouverture de l&rsquo;appareil photographique</h2>
+<ul>
+<li>
+<p><strong>Cahier des charges:</strong> <em>Pour l&rsquo;appareil photo numérique: Mesurer le flux lumineux. Si celui-ci est supérieur à 100 Lux, diminuer le diamètre d&rsquo;ouverture. S&rsquo;il est infèrieur ou égal à 100 Lux, ouvrir davantage.</em></p>
+</li>
+<li>
+<p><strong>Algorithme:</strong></p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">Répeter</span> <span style="color:#111">indefiniment</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">Mesurer</span> <span style="color:#111">la</span> <span style="color:#111">lumière</span> <span style="color:#111">et</span> <span style="color:#111">stocker</span> <span style="color:#111">dans</span> <span style="color:#111">L</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">Si</span> <span style="color:#111">L</span> <span style="color:#f92672">...</span>  <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">Sinon</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span></code></pre></div><blockquote>
+<p>A vous de jouer: Compléter l&rsquo;algorithme.</p>
+</blockquote>
+<p><em>Remarque:</em> on peut utiliser les fonctions <code>diminuer</code> et <code>augmenter</code> pour agir sur l&rsquo;ouverture de l&rsquo;appareil photo.</p>
+<h1 id="exercices-supplementaires">Exercices supplementaires</h1>
+<h2 id="ex-1">Ex 1</h2>
+<p>On donne le script d&rsquo;un programme en langage naturel, ainsi que sa traduction en Python. Déterminer, à la fin du programme, les valeurs stockées dans les variables a, b et c.</p>
+<ul>
+<li>Programme 1 en langage naturel</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">c</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">si</span> <span style="color:#111">(</span> <span style="color:#111">a</span> <span style="color:#f92672">==</span> <span style="color:#111">b</span> <span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span> <span style="color:#111">c</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> <span style="color:#111">c</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">sinon</span>
+</span></span><span style="display:flex;"><span> <span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#111">a</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span> <span style="color:#111">b</span> <span style="color:#f92672">=</span> <span style="color:#111">b</span> <span style="color:#111">div</span> <span style="color:#ae81ff">2</span>
+</span></span></code></pre></div><ul>
+<li>Programme 1 en langage Python</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">c</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">if</span> <span style="color:#111">(</span> <span style="color:#111">a</span> <span style="color:#f92672">==</span> <span style="color:#111">b</span> <span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span> <span style="color:#111">c</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> <span style="color:#111">c</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">else</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span> <span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#111">a</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span> <span style="color:#111">b</span> <span style="color:#f92672">=</span> <span style="color:#111">b</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span> 
+</span></span></code></pre></div><h2 id="ex-2">Ex 2</h2>
+<p>On donne le script d&rsquo;un programme en langage naturel, ainsi que sa traduction en Python. Déterminer, à la fin du programme, la valeur stockée dans la variable a.</p>
+<ul>
+<li>Programme 2 en langage naturel</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">Tantque</span> <span style="color:#111">(</span> <span style="color:#111">a</span> <span style="color:#111">different</span> <span style="color:#111">de</span> <span style="color:#ae81ff">0</span> <span style="color:#111">)</span> <span style="color:#111">faire</span>
+</span></span><span style="display:flex;"><span> <span style="color:#111">afficher</span> <span style="color:#111">(</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> <span style="color:#111">a</span> <span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span> <span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#111">a</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> 
+</span></span></code></pre></div><ul>
+<li>Programme 2 en langage Python</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">while</span> <span style="color:#111">(</span> <span style="color:#111">a</span> <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span> <span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span> <span style="color:#111">print</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">*</span><span style="color:#111">a</span>
+</span></span><span style="display:flex;"><span> <span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#111">a</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> 
+</span></span></code></pre></div><h2 id="ex-3">Ex 3</h2>
+<p>On donne le script d&rsquo;un programme en langage naturel, ainsi que sa traduction en Python. Déterminer, à la fin du programme, la valeur stockée dans la variable a.</p>
+<ul>
+<li>Programme 3 en langage naturel</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">pour</span> <span style="color:#111">i</span> <span style="color:#111">de</span> <span style="color:#ae81ff">1</span> <span style="color:#111">a</span> <span style="color:#111">n</span> <span style="color:#111">faire</span>
+</span></span><span style="display:flex;"><span> <span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#111">i</span>
+</span></span><span style="display:flex;"><span> <span style="color:#111">Afficher</span> <span style="color:#111">(</span> <span style="color:#111">a</span> <span style="color:#111">)</span>
+</span></span></code></pre></div><ul>
+<li>Programme 3 en langage Python</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">for</span> <span style="color:#111">i</span> <span style="color:#f92672">in</span> <span style="color:#111">range</span><span style="color:#111">(</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span><span style="color:#111">n</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span> <span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#111">i</span>
+</span></span><span style="display:flex;"><span> <span style="color:#111">print</span> <span style="color:#111">a</span>
+</span></span></code></pre></div><p><em>range(a,b) permet de parcourir les valeurs a, a+1, …, b-1 (b non compris)</em></p>
+<h1 id="liens-et-ressources">Liens et ressources</h1>
+<ul>
+<li>Programme informatique: <a href="https://fr.wikipedia.org/wiki/Programme_informatique#:~:text=Un%20programme%20informatique%20est%20un,forme%20binaire%20ou%20directement%20interpr%C3%A9t%C3%A9.">wikipedia</a></li>
+<li>exercice sur algorithme issu du Bordas 3.0 SNT (code PIN)</li>
+<li>exercice sur algorithme issu du Delagrave SNT (course à pieds)</li>
+</ul>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#que-fait-un-programme-informatique">Que fait un programme informatique?</a></li>
+    <li><a href="#quelques-repères-historiques">Quelques repères historiques</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#quelques-exemples">Quelques exemples</a>
+      <ul>
+        <li><a href="#origami">Origami</a></li>
+        <li><a href="#code-pin">Code PIN</a></li>
+      </ul>
+    </li>
+    <li><a href="#les-ingrédients-dun-algorithme">Les ingrédients d&rsquo;un algorithme</a>
+      <ul>
+        <li><a href="#données-variables-et-opérations">Données: Variables et opérations</a></li>
+        <li><a href="#interface-entréessorties">Interface: Entrées/Sorties</a></li>
+        <li><a href="#contrôler-le-programme-structures-conditionnelles">Contrôler le programme: Structures conditionnelles</a></li>
+        <li><a href="#contrôler-le-programme-boucles">Contrôler le programme: Boucles</a></li>
+        <li><a href="#structure-fonctions-et-procedures">Structure: Fonctions et Procedures</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#un-programme-informatique">Un programme informatique</a></li>
+    <li><a href="#un-langage-de-programmation">Un langage de programmation</a></li>
+    <li><a href="#un-algorithme">Un algorithme</a></li>
+    <li><a href="#un-bug">Un bug</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#ex-1-code-pin-et-code-puk">Ex 1: code PIN et code PUK</a></li>
+    <li><a href="#ex-2-application-pour-la-course-à-pied">Ex 2: Application pour la course à pied</a></li>
+    <li><a href="#ex-3-diamètre-douverture-de-lappareil-photographique">Ex 3: Diamètre d&rsquo;ouverture de l&rsquo;appareil photographique</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#ex-1">Ex 1</a></li>
+    <li><a href="#ex-2">Ex 2</a></li>
+    <li><a href="#ex-3">Ex 3</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

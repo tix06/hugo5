@@ -1,114 +1,564 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>structures lineaires
-| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel=stylesheet><script type=text/x-mathjax-config>
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    structures lineaires
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
   });
-</script><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.1c02dc1d2c0b546a84beb71d8f4336d6f5d7b69564e08bdfc04c2fb0595d786d.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
 catch(err)
-{console.log(err.message);}
-if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
-if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
-if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}
-let chemin=window.location.pathname;if(chemin.search('NSI')>-1){baniere=document.querySelector("#myHeader");let linkBox=document.createElement('div');linkBox.classList.add('linkBox');let newH=document.createElement('a');newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';newH.classList.add('nsi');linkBox.appendChild(newH);baniere.appendChild(linkBox);}</script><style>#myHeader{display:flex;flex-direction:row-reverse}#myHeader>.titre{width:80%;min-width:300px;text-align:left}.linkBox{margin:10px;padding-top:10px;background-color:pink;min-width:50px}.isn{}</style></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2f docs\2fNSI\2fstructure\2fpage2\2f ]{color:#004ed0}</style><ul><li><a href=/><strong>Accueil</strong></a></li><li><a href=/docs/esf/esf_index/><strong>ESF</strong></a></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p></li><li><p><a href=/docs/python/index_python/><strong>Python</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
-addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-page><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
-<strong>structures lineaires</strong></header><article class=markdown><h1 id=structure-linéaire-la-pile>Structure linéaire : La Pile</h1><h2 id=les-structures-de-données>Les structures de données</h2><p class=definition>Definition: Une <b>structure de données</b> est une manière de stocker, d’accéder à, et de manipuler des données (comme les types list ou dict de Python).</p><p class=definition>Definition: Un <b>type abstrait</b> décrit essentiellement une interface, indépendamment du langage de programmation.</p><h2 id=un-premier-exemple>Un premier exemple</h2><p>La pile est une manière de ranger les données.</p><p>Elle correspond exactement à l’image traditionnelle d’une pile de cartes ou d’assiettes posée sur une table. En particulier, on ne peut accéder qu’au dernier élément ajouté, qu’on appelle le sommet de la pile.</p><p>L&rsquo;illustration suivante montre que c&rsquo;est la structure de données à adopter si l&rsquo;on veut sortir d&rsquo;un labyrinthe&hellip;</p><figure><div><img src=../images/turt.gif alt="parcours utilisant une pile"><figcaption>parcours pour sortir d'un labyrinthe</figcaption></div></figure><p>Le labyrinthe peut être modélisé par les coordonnées de ses noeuds, ainsi qu&rsquo;une liste de directions possibles (ouvertures) pour chacun de ses noeuds :</p><figure><div><img src=../images/laby.png alt="labyritnhe modelisation"><figcaption>modelisation d'un labyrinthe</figcaption></div></figure><p>En observant l&rsquo;animation de la tortue dans le labyrinthe, on peut supposer que la pile des sommets visités (les cases du labyrinthe) sont, dans l&rsquo;ordre :</p><p>(4,0), (3,0), (3,1), (3,2), (4,2), (4,1) &hellip;</p><p>puis le chemin inverse jusqu&rsquo;au sommet (3,0) :</p><p>(4,2), (3,2), (3,1), (3,0), &hellip;</p><p>Une fois revenu au sommet (3,0), on reprend l&rsquo;exploration vers (2,0), (2,1),&hellip;</p><p>Il s&rsquo;agit d&rsquo;une méthode d&rsquo;exploration du labyrinthe de type <em>parcours en profondeur</em>. L&rsquo;algorithme est expliqué en détail à la page : <a href=/docs/SNT_2nde/pages/pages_algo/graphes/page2/#parcours-d-un-arbre-en-profondeur-dfs>SNT algorithmes graphe : parcours en profondeur</a></p><figure><img src=../images/logott.png alt=turtle><figcaption>fil d'ariane</figcaption></figure><p>La tortue suit son chemin jusqu&rsquo;à arriver à une impasse (ou un sommet déjà visité). Alors, elle doit être capable de <em>revenir sur ses traces</em>. C&rsquo;est pour cela qu&rsquo;elle mémorise son parcours dans une <em>pile</em>, qu&rsquo;elle pourra remonter (c&rsquo;est à dire <em>dépiler</em>) au besoin. Cette pile de sommets visités correspond au fil d&rsquo;Ariane, rendu célèbre par la mythologie (Thésée et le Minautore).</p><p>Lorsqu&rsquo;elle s&rsquo;avance plus en profondeur dans le labyrinthe, vers des sommets encore non explorés, elle <em>empile</em>.</p><p>Lorsqu&rsquo;elle revient sur ses traces, elle <em>dépile</em> (elle retire des sommets de la pile).</p><figure><img src=../images/emdepile.png alt="empiler depiler"><figcaption>pile de sommets du labyrinthe</figcaption></figure><p>Lorsque la tortue arrive à la case (4,1), l&rsquo;impasse, la pile a alors la configuration <strong>pile a</strong> (voir schéma plus bas).</p><p>Elle revient jusqu&rsquo;à (3,0).</p><p>Après avoir <em>dépilé</em> (4,1),(4,2),(3,2),(3,1), la pile est alors la <strong>pile b</strong>.</p><p>Puis, lorsqu&rsquo;elle est parvenu à une bifurcation vers une nouvelle direction, elle poursuit son exploration (et <em>empile</em> à nouveau) : <strong>pile c</strong>. Qu&rsquo;il faudra encore prolonger pour atteindre la sortie (en bas à droite).</p><figure><img src=../images/pileL.png alt="pile DFS"><figcaption>pile du parcours en profondeur</figcaption></figure><h2 id=deuxieme-exemple-une-expression-correctement-parenthésée>Deuxieme exemple : une expression correctement parenthésée</h2><p><strong>Principe :</strong> On lit l&rsquo;expression de gauche à droite et on empile au fur et à mesure les caractères ouvrants : [, {, (. On dépile lorsqu&rsquo;on lit le caractère fermant correspondant. A la fin, la pile doit être vide.</p><p>Dans l&rsquo;exemple suivant, on voit que l&rsquo;expression <code>[a+(b+c)]</code> est correctement parenthesée. Ce qui ne serait pas le cas pour <code>[a+(b+c])</code>.</p><figure><img src=../images/parentheses.png></figure><h2 id=définitions>Définitions</h2><h3 id=la-pile-interface>La pile: interface</h3><p>La pile est une structure de données appropriée quand :</p><ul><li>On veut stocker des éléments dontle nombre est variable, et inconnu à l’avance.</li><li>On peut ou on doit se contenter d’accéder au dernier élément stocké.</li></ul><p>Dans d&rsquo;autres cas, il faudra utiliser une autre structure de données, comme par exemple un tableau.</p><p>Une <b>Pile</b> est une structure de données <b>linéaire</b> (les données sont rangées sur un ligne ou une colonne). Le dernier élément entré sera aussi le premier à sortir (<b>L</b>ast <b>I</b>n <b>F</b>irst <b>O</b>ut : LIFO).</p><p>Les méthodes (= fonctions) disponibles pour cette structure sont :<ul><li><b>construction</b> (d&rsquo;une pile vide)</li><li><b>test</b> d&rsquo;une pile <b>vide</b> (renvoie <code>True</code> si la pile est vide)</li><li>ajout d&rsquo;un élément (<b>empiler</b> = <code>push</code>), mis au sommet de la pile</li><li>retire le premier élément de la pile, celui au sommet (<b>dépiler</b> = pop) si la pile est non vide et renvoie cet élément.</li><li>lire le sommet de la pile.</li></ul></p><h3 id=implémenter-un-pile-en-python>Implémenter un pile en Python</h3><p>Le type <em>List</em> en Python possède déjà toutes les méthodes d&rsquo;une pile :</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>pile</span> <span style=color:#f92672>=</span> <span style=color:#111>[]</span>           <span style=color:#75715e># creation d&#39;une pile</span>
-<span style=color:#111>pile</span> <span style=color:#f92672>==</span> <span style=color:#111>[]</span>          <span style=color:#75715e># tester si la pile est vide</span>
-<span style=color:#111>pile</span><span style=color:#f92672>.</span><span style=color:#111>append</span><span style=color:#111>(</span><span style=color:#111>valeur</span><span style=color:#111>)</span> <span style=color:#75715e># empile valeur dans la pile</span>
-<span style=color:#111>pile</span><span style=color:#f92672>.</span><span style=color:#111>pop</span><span style=color:#111>()</span>         <span style=color:#75715e># depiler l&#39;element au sommet</span>
-<span style=color:#111>pile</span><span style=color:#111>[</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span><span style=color:#111>]</span>            <span style=color:#75715e># lire l&#39;element au sommet de la pile</span></code></pre></div><p>Lorsque l&rsquo;on fait référence à une structure de données de type <em>pile</em> en traduisant un algorithme en Python, il faudra se contenter de ces 5 instructions.</p><h3 id=interface-ou-implémentation>Interface ou implémentation ?</h3><p>Les types abstraits, comme les piles, sont définis par leur <strong>interface</strong> (comment on s’en sert) plutôt que par leur <strong>implémentation</strong> (comment ils fonctionnent). Ils permettent d’étudier des algorithmes indépendamment du langage utilisé.</p><p class=definition>Definition: L’<b>interface</b> de la structure de données décrit de quelle manière on peut la manipuler, par exemple en utilisant `append` pour le type list ou `get` pour le type dict.</p><p class=definition>Definition: L’<b>implémentation</b> de la structure de données, contient le code de ces méthodes (comment fait Python). Il n’est pas nécessaire de connaître l’implémentation pour manipuler la structure de données. Il faut connaitre l'interface.</p><p>On verra ici deux manières d&rsquo;implémenter la <em>pile</em>.</p><h3 id=créer-ses-propres-fonctions>Créer ses propres fonctions</h3><p>Pour traduire un algorithme utilisant cette structure <em>pile</em>, il peut être préférable de définir des instructions portant les noms de ces 5 instructions:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>def</span> <span style=color:#75af00>Pile</span><span style=color:#111>():</span>
-  <span style=color:#d88200>&#34;&#34;&#34;creation d&#39;une pile vide à l&#39;aide de l&#39;instruction : 
-</span><span style=color:#d88200>  pile = Pile()
-</span><span style=color:#d88200>  &#34;&#34;&#34;</span>
-  <span style=color:#00a8c8>return</span> <span style=color:#111>[]</span>
-
-<span style=color:#00a8c8>def</span> <span style=color:#75af00>est_vide</span><span style=color:#111>(</span><span style=color:#111>pile</span><span style=color:#111>)</span>
-  <span style=color:#75715e># à compléter</span>
-
-<span style=color:#00a8c8>def</span> <span style=color:#75af00>empile</span><span style=color:#111>(</span><span style=color:#111>valeur</span><span style=color:#111>,</span><span style=color:#111>pile</span><span style=color:#111>):</span>
-  <span style=color:#75715e># à compléter</span>
-
-<span style=color:#00a8c8>def</span> <span style=color:#75af00>depile</span><span style=color:#111>(</span><span style=color:#111>pile</span><span style=color:#111>):</span>
-  <span style=color:#75715e># à completer</span>
-
-<span style=color:#00a8c8>def</span> <span style=color:#75af00>sommet</span><span style=color:#111>(</span><span style=color:#111>pile</span><span style=color:#111>):</span>
-  <span style=color:#75715e># à completer</span></code></pre></div><h3 id=définir-sa-propre-pile-construction-d-un-objet-de-type-pile>Définir sa propre pile (construction d&rsquo;un objet de type pile)</h3><p>On peut créer un type (= une <strong>classe</strong>) <code>Pile</code> personnelle en Python.</p><p>Les méthodes (fonctions) déclarées précédemment sont alors associées à l&rsquo;objet <code>Pile</code>. L&rsquo;appel d&rsquo;une méthode se fait à l&rsquo;aide de l&rsquo;instruction :</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>pile</span> <span style=color:#f92672>=</span> <span style=color:#111>Pile</span><span style=color:#111>()</span>
-<span style=color:#111>pile</span><span style=color:#f92672>.</span><span style=color:#111>est_vide</span><span style=color:#111>()</span>
-<span style=color:#111>pile</span><span style=color:#f92672>.</span><span style=color:#111>empile</span><span style=color:#111>(</span><span style=color:#111>valeur</span><span style=color:#111>)</span>
-<span style=color:#111>pile</span><span style=color:#f92672>.</span><span style=color:#111>depile</span><span style=color:#111>()</span>
-<span style=color:#111>pile</span><span style=color:#f92672>.</span><span style=color:#111>sommet</span><span style=color:#111>()</span></code></pre></div><p>Voir le cours sur la <a href=/docs/NSI/structure/page3/>programmation orientée objet</a>.</p><p><strong>Rappel : Objet = type mutable</strong>. Quelle que soit la façon avec laquelle la pile est implémentée, il faudra se souvenir que celle-ci est un objet <em>mutable</em>. Cela a des conséquences sur la manière avec laquelle la pile est passée en argument d&rsquo;une fonction, et comment cette fonction modifie la pile.</p><h2 id=pile-et-recursivité>Pile et recursivité</h2><p>Tout algorithme récursif peut être mis sous forme d&rsquo;algorithme itératif avec une structure de données en pile.</p><p>La pile d&rsquo;instruction doit être la même.</p><p>Voir le cours sur la <a href=/docs/NSI/langages/page2/>recursivité</a></p><h1 id=résumé>Résumé</h1><div class=essentiel><div class=entete>L'essentiel</div><div class=resume>Une <b>structure de données</b> est une manière de stocker, d’accéder à, et de manipuler des données.<br>Une <b>Pile</b> est une <em>structure de données</em> <b>linéaire</b> (les données sont rangées sur un ligne ou une colonne). Le dernier élément entré sera aussi le premier à sortir (<b>L</b>ast <b>I</b>n <b>F</b>irst <b>O</b>ut : LIFO).<br><b>Interface</b><br>L’<em>interface</em> d'une structure de données décrit de quelle manière on peut la manipuler.
-Les méthodes (= fonctions) disponibles pour la <em>Pile</em> sont :<ul><li><b>construction</b> (d'une pile vide)</li><li><b>test</b> d'une pile <b>vide</b> (renvoie `True` si la pile est vide)</li><li>ajout d'un élément (<b>empiler</b> = `push`), mis au sommet de la pile</li><li>retire le premier élément de la pile, celui au sommet (<b>dépiler</b> = pop) si la pile est non vide et renvoie cet élément.</li><li>lire le sommet de la pile.</li></ul><b>Implementation</b><br>L'<em>implementation</em> contient le code de ces méthodes (comment fait Python). Il n’est pas nécessaire de connaître l’implémentation pour manipuler la structure de données. Il faut connaitre l'interface.<br>Pour <b>implémenter</b> une pile en Python, on utilisera les méthodes déjà existantes pour le type <b>List</b> :<pre><code class=language-python data-lang=python>
-  pile = []           # creation d'une pile
-  pile == []          # tester si la pile est vide
-  pile.append(valeur) # empile valeur dans la pile
-  pile.pop()         # depiler l'element au sommet
-  pile[-1]            # lire l'element au sommet de la pile
-</code></pre></div></div><h1 id=exercices-sur-les-piles>Exercices sur les piles</h1><h2 id=exercice-1-implementer-une-pile>Exercice 1 : implementer une pile</h2><ol><li>Programmer les fonctions qui implémentent la <em>pile</em>: <code>Pile</code>,<code>est_vide</code>,<code>empile</code>,<code>depile</code>,<code>sommet</code>. (editeur python en fin d&rsquo;exerice)</li><li>Tester votre implémentation pour resoudre l&rsquo;exercice suivant: (utiliser l&rsquo;editeur python):</li><li>Soit une liste L = [&lsquo;a&rsquo;,1,&lsquo;b&rsquo;,2,&lsquo;c&rsquo;,3,&rsquo;d&rsquo;,4]</li><li>Parcourir les éléments de la liste L avec une boucle bornée<ul><li>empiler tous les nombres entiers dans une pile <code>p</code>.</li></ul></li></ol><iframe width=100% height=500 allowfullscreen frameborder=0 style="border:1px #d6d6d6 solid" src="https://fr.vittascience.com/python/?link=5f9d36caf37c6&mode=code"></iframe><h2 id=exercice-2-lever-des-exceptions>Exercice 2 : lever des exceptions</h2><p>Certaines des fonctions que vous avez écrites vont lever des exceptions dans le cas où la pile est vide.</p><ol><li>Pour ces fonctions, ajouter des instructions pour lever les exceptions dans le cas où la pile est vide. (utiliser l&rsquo;editeur python de l&rsquo;exercice 1)</li><li>Tester vos fonctions avec une pile vide.</li></ol><h2 id=exercice-3-déverser-une-pile>Exercice 3 : déverser une pile</h2><p>Dans l&rsquo;editeur de l&rsquo;exercice 1:</p><p>Ecrire une fonction <code>deversepile</code> qui déverse une pile <code>p1</code> dans une pile <code>p2</code>.</p><p>Cette fonction sera utilisée de la manière suivante : On utilise une pile intermédaire <code>p3</code> :</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>p1</span><span style=color:#111>,</span><span style=color:#111>p2</span><span style=color:#111>,</span><span style=color:#111>p3</span><span style=color:#f92672>=</span><span style=color:#111>Pile</span><span style=color:#111>(),</span><span style=color:#111>Pile</span><span style=color:#111>(),</span><span style=color:#111>Pile</span><span style=color:#111>()</span>
-<span style=color:#111>deversepile</span><span style=color:#111>(</span><span style=color:#111>p1</span><span style=color:#111>,</span><span style=color:#111>p3</span><span style=color:#111>)</span>
-<span style=color:#111>deversepile</span><span style=color:#111>(</span><span style=color:#111>p3</span><span style=color:#111>,</span><span style=color:#111>p2</span><span style=color:#111>)</span></code></pre></div><p>Les fonctions que vous pourrez utiliser pour les piles seront celles définies dans l&rsquo;exercice 1 : <code>Pile,est_vide,empile,depile,sommet</code>.</p><h2 id=exercice-4-evaluation-d-une-opération-en-notation-polonaise-inversée>Exercice 4 : Evaluation d&rsquo;une opération en notation polonaise inversée</h2><p>Principe : la notation polonaise inversée permet d&rsquo;écrire une opération sans utiliser de parenthèses. Il faut alors écrire les 2 opérandes avant l&rsquo;opérateur. L&rsquo;opérateur se trouve à droite des 2 opérandes.</p><p>En parcourant l&rsquo;expression de gauche à droite, chaque fois que l&rsquo;on rencontre un opérateur, on remonte vers la gauche pour rechercher les 2 opérandes et on remplace les 3 termes (2 operandes et 1 opérateur) par le resultat de l&rsquo;opération.</p><p>On peut utiliser une pile pour réaliser la séquence de calculs.</p><p>Exemple : <code>1 2 + 4 * 3 +</code></p><figure><img src=../images/npi.png></figure><figure><a href="https://www.youtube.com/watch?v=Ak8I7o-rXKg" target=blank><img src=../images/video_NPI.png alt="video notation polonaise inversée"><figcaption>Arnaud Bodin : Calculatrice polonaise - les piles</figcaption></a></figure><p>La liste L contient les caractères de l&rsquo;expression POSTFIXE à calculer.</p><ol><li>Compléter les fonctions <code>add</code>, <code>soust</code>, et <code>multip</code> qui doivent additionner, soustraire, et multiplier les arguments x et y.</li><li>Testez vos fonctions à l&rsquo;aide du tableau associatif: Executer en console l&rsquo;instruction: <code>dicoP['-'](3,4)</code> qui doit renvoyer &hellip; -1</li><li>Compléter la fonction evalNPI: Dans une boucle bornée qui parcourt tous les éléments de la liste L: <code>for a in L:</code></li></ol><ul><li>si <code>a</code> est un entier: empiler a dans une liste <code>p</code> qui sera utilisée comme une <em>pile</em>.</li><li>si <code>a</code> est un opérateur présent dans le tableau associatif <code>dicoP</code>:<ul><li>depiler <code>p</code> deux fois et stocker les valeurs dans les opérandes x et y.</li><li>empiler la valeur calculée dans la pile <code>p</code></li></ul></li><li>retourner la valeur finale stockée dans <code>p</code></li></ul><iframe width=100% height=500 allowfullscreen frameborder=0 style="border:1px #d6d6d6 solid" src="https://fr.vittascience.com/python/?link=5f9d305edd765&mode=code"></iframe><h1 id=correction-des-exercices>Correction des exercices</h1><h2 id=exercice-1>Exercice 1</h2><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># exercice 1</span>
-<span style=color:#111>L</span> <span style=color:#f92672>=</span> <span style=color:#111>[</span><span style=color:#d88200>&#39;a&#39;</span><span style=color:#111>,</span><span style=color:#ae81ff>1</span><span style=color:#111>,</span><span style=color:#d88200>&#39;b&#39;</span><span style=color:#111>,</span><span style=color:#ae81ff>2</span><span style=color:#111>,</span><span style=color:#d88200>&#39;c&#39;</span><span style=color:#111>,</span><span style=color:#ae81ff>3</span><span style=color:#111>,</span><span style=color:#d88200>&#39;d&#39;</span><span style=color:#111>,</span><span style=color:#ae81ff>4</span><span style=color:#111>]</span>
-
-<span style=color:#00a8c8>def</span> <span style=color:#75af00>Pile</span><span style=color:#111>():</span>
-    <span style=color:#00a8c8>return</span> <span style=color:#111>[]</span>
-
-<span style=color:#00a8c8>def</span> <span style=color:#75af00>est_vide</span><span style=color:#111>(</span><span style=color:#111>pile</span><span style=color:#111>):</span>
-    <span style=color:#00a8c8>return</span> <span style=color:#111>pile</span> <span style=color:#f92672>==</span> <span style=color:#111>[]</span>
-
-<span style=color:#00a8c8>def</span> <span style=color:#75af00>depile</span><span style=color:#111>(</span><span style=color:#111>pile</span><span style=color:#111>):</span>
-    <span style=color:#00a8c8>assert</span> <span style=color:#111>pile</span> <span style=color:#f92672>!=</span> <span style=color:#111>[],</span> <span style=color:#d88200>&#39;impossible de depiler : pile vide&#39;</span>
-    <span style=color:#00a8c8>return</span> <span style=color:#111>pile</span><span style=color:#f92672>.</span><span style=color:#111>pop</span><span style=color:#111>()</span>
-
-<span style=color:#00a8c8>def</span> <span style=color:#75af00>empile</span><span style=color:#111>(</span><span style=color:#111>a</span><span style=color:#111>,</span><span style=color:#111>pile</span><span style=color:#111>):</span>
-    <span style=color:#111>pile</span><span style=color:#f92672>.</span><span style=color:#111>append</span><span style=color:#111>(</span><span style=color:#111>a</span><span style=color:#111>)</span>
-
-<span style=color:#00a8c8>def</span> <span style=color:#75af00>sommet</span><span style=color:#111>(</span><span style=color:#111>pile</span><span style=color:#111>):</span>
-    <span style=color:#00a8c8>assert</span> <span style=color:#111>pile</span> <span style=color:#f92672>!=</span> <span style=color:#111>[],</span> <span style=color:#d88200>&#39;la pile n_a pas de sommet : pile vide&#39;</span>
-    <span style=color:#00a8c8>return</span> <span style=color:#111>pile</span><span style=color:#111>[</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span><span style=color:#111>]</span>
+{
+    console.log(err.message);
+}
 
 
 
-<span style=color:#111>p</span> <span style=color:#f92672>=</span> <span style=color:#111>Pile</span><span style=color:#111>()</span>
-<span style=color:#00a8c8>for</span> <span style=color:#111>a</span> <span style=color:#f92672>in</span> <span style=color:#111>L</span><span style=color:#111>:</span>
-    <span style=color:#00a8c8>if</span> <span style=color:#111>isinstance</span><span style=color:#111>(</span><span style=color:#111>a</span><span style=color:#111>,</span><span style=color:#111>int</span><span style=color:#111>):</span>
-        <span style=color:#111>empile</span><span style=color:#111>(</span><span style=color:#111>a</span><span style=color:#111>,</span><span style=color:#111>p</span><span style=color:#111>)</span>
-<span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#111>p</span><span style=color:#111>)</span></code></pre></div><h2 id=exercice-2>Exercice 2</h2><p>Les modifications ont été faites directement dans le corrigé de l&rsquo;exercice 1.</p><p>Tester le script suivant à la suite de celui de l&rsquo;exercice 1:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># exercice 2</span>
-<span style=color:#111>p2</span> <span style=color:#f92672>=</span> <span style=color:#111>Pile</span><span style=color:#111>()</span>
-<span style=color:#111>depile</span><span style=color:#111>(</span><span style=color:#111>p2</span><span style=color:#111>)</span></code></pre></div><h2 id=exercice-3>Exercice 3</h2><p>Ajouter la fonction <code>deversePile</code> suivante à la suite de celles de l&rsquo;exercice 1. (Les fonctions <code>est_vide</code>, <code>depile</code> et <code>empile</code> doivent être définies)</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># exercice 3</span>
-<span style=color:#00a8c8>def</span> <span style=color:#75af00>deversePile</span><span style=color:#111>(</span><span style=color:#111>p1</span><span style=color:#111>,</span><span style=color:#111>p2</span><span style=color:#111>):</span>
-    <span style=color:#00a8c8>while</span> <span style=color:#f92672>not</span><span style=color:#111>(</span><span style=color:#111>est_vide</span><span style=color:#111>(</span><span style=color:#111>p1</span><span style=color:#111>)):</span>
-        <span style=color:#111>a</span> <span style=color:#f92672>=</span> <span style=color:#111>depile</span><span style=color:#111>(</span><span style=color:#111>p1</span><span style=color:#111>)</span>
-        <span style=color:#111>empile</span><span style=color:#111>(</span><span style=color:#111>a</span><span style=color:#111>,</span><span style=color:#111>p2</span><span style=color:#111>)</span>
-    <span style=color:#00a8c8>return</span> <span style=color:#111>p2</span></code></pre></div><h2 id=exercice-4>Exercice 4</h2><p>Il faut commencer par définir le dictionaire <code>dicoP</code> ainsi que les différentes fonctions des opérations:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>def</span> <span style=color:#75af00>add</span><span style=color:#111>(</span><span style=color:#111>x</span><span style=color:#111>,</span><span style=color:#111>y</span><span style=color:#111>):</span>
-    <span style=color:#00a8c8>return</span> <span style=color:#111>x</span><span style=color:#f92672>+</span><span style=color:#111>y</span>
 
-<span style=color:#00a8c8>def</span> <span style=color:#75af00>soust</span><span style=color:#111>(</span><span style=color:#111>x</span><span style=color:#111>,</span><span style=color:#111>y</span><span style=color:#111>):</span>
-    <span style=color:#00a8c8>return</span> <span style=color:#111>x</span><span style=color:#f92672>-</span><span style=color:#111>y</span>
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
 
-<span style=color:#00a8c8>def</span> <span style=color:#75af00>multip</span><span style=color:#111>(</span><span style=color:#111>x</span><span style=color:#111>,</span><span style=color:#111>y</span><span style=color:#111>):</span>
-    <span style=color:#00a8c8>return</span> <span style=color:#111>x</span><span style=color:#f92672>*</span><span style=color:#111>y</span>
 
-<span style=color:#111>dicoP</span> <span style=color:#f92672>=</span> <span style=color:#111>{</span><span style=color:#d88200>&#39;+&#39;</span> <span style=color:#111>:</span> <span style=color:#111>add</span><span style=color:#111>,</span>
-        <span style=color:#d88200>&#39;-&#39;</span> <span style=color:#111>:</span> <span style=color:#111>soust</span><span style=color:#111>,</span>
-        <span style=color:#d88200>&#39;*&#39;</span> <span style=color:#111>:</span> <span style=color:#111>multip</span>
-<span style=color:#111>}</span></code></pre></div><p>On peut tester une opération à l&rsquo;aide de <code>dicoP</code>:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>&gt;&gt;&gt;</span> <span style=color:#111>dicoP</span><span style=color:#111>[</span><span style=color:#d88200>&#39;-&#39;</span><span style=color:#111>](</span><span style=color:#ae81ff>3</span><span style=color:#111>,</span><span style=color:#ae81ff>4</span><span style=color:#111>)</span>
-<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span></code></pre></div><p>Puis on programme la fonction <code>evalNPI</code>:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>def</span> <span style=color:#75af00>evalNPI</span><span style=color:#111>(</span><span style=color:#111>L</span><span style=color:#111>):</span>
-    <span style=color:#111>dico</span> <span style=color:#f92672>=</span> <span style=color:#111>{</span><span style=color:#d88200>&#39;+&#39;</span> <span style=color:#111>:</span> <span style=color:#00a8c8>lambda</span> <span style=color:#111>x</span><span style=color:#111>,</span><span style=color:#111>y</span> <span style=color:#111>:</span> <span style=color:#111>x</span><span style=color:#f92672>+</span><span style=color:#111>y</span><span style=color:#111>,</span>
-            <span style=color:#d88200>&#39;-&#39;</span> <span style=color:#111>:</span> <span style=color:#00a8c8>lambda</span> <span style=color:#111>x</span><span style=color:#111>,</span><span style=color:#111>y</span> <span style=color:#111>:</span> <span style=color:#111>x</span><span style=color:#f92672>-</span><span style=color:#111>y</span><span style=color:#111>,</span>
-            <span style=color:#d88200>&#39;*&#39;</span> <span style=color:#111>:</span> <span style=color:#00a8c8>lambda</span> <span style=color:#111>x</span><span style=color:#111>,</span><span style=color:#111>y</span> <span style=color:#111>:</span> <span style=color:#111>x</span><span style=color:#f92672>*</span><span style=color:#111>y</span>
-    <span style=color:#111>}</span>
-    <span style=color:#111>p</span><span style=color:#f92672>=</span><span style=color:#111>[]</span>    
-    <span style=color:#00a8c8>for</span> <span style=color:#111>a</span> <span style=color:#f92672>in</span> <span style=color:#111>L</span><span style=color:#111>:</span>
-        <span style=color:#00a8c8>if</span> <span style=color:#111>a</span> <span style=color:#f92672>in</span> <span style=color:#111>dico</span><span style=color:#111>:</span>
-            <span style=color:#111>deuxieme</span> <span style=color:#f92672>=</span> <span style=color:#111>depile</span><span style=color:#111>(</span><span style=color:#111>p</span><span style=color:#111>)</span>
-            <span style=color:#111>premier</span> <span style=color:#f92672>=</span> <span style=color:#111>depile</span><span style=color:#111>(</span><span style=color:#111>p</span><span style=color:#111>)</span>
-            <span style=color:#111>r</span> <span style=color:#f92672>=</span> <span style=color:#111>dico</span><span style=color:#111>[</span><span style=color:#111>a</span><span style=color:#111>](</span><span style=color:#111>premier</span><span style=color:#111>,</span><span style=color:#111>deuxieme</span><span style=color:#111>)</span>
-            <span style=color:#111>empile</span><span style=color:#111>(</span><span style=color:#111>r</span><span style=color:#111>,</span><span style=color:#111>p</span><span style=color:#111>)</span>
-        <span style=color:#00a8c8>elif</span> <span style=color:#111>isinstance</span><span style=color:#111>(</span><span style=color:#111>a</span><span style=color:#111>,</span><span style=color:#111>int</span><span style=color:#111>)</span> <span style=color:#111>:</span> 
-            <span style=color:#111>empile</span><span style=color:#111>(</span><span style=color:#111>a</span><span style=color:#111>,</span><span style=color:#111>p</span><span style=color:#111>)</span>
-    <span style=color:#00a8c8>return</span> <span style=color:#111>p</span>
 
-<span style=color:#111>evalNPI</span><span style=color:#111>(</span><span style=color:#111>L</span><span style=color:#111>)</span></code></pre></div><blockquote><p>A vous de jouer: Ecrire la liste d&rsquo;instructions relatives au calcul de g, puis utiliser votre calculatrice en notation polonaise inversée pour résoudre:</p><p>$$g = (3+6)*7 - (10-24)*4$$</p></blockquote><p><i>Aide: rappelez vous que l&rsquo;instruction ne contient pas de parenthèses, alors il faudra bien respecter l&rsquo;ordre des opérations à realiser, de gauche à droite. Le dernier caractère à saisir sera alors le symbole <strong>-</strong>. Relire la video si vous en avez besoin (énoncé de l&rsquo;Ex 4).</i></p><h1 id=autres-structures-linéaires>Autres structures linéaires</h1><p>Lien vers la page <a href=../page21/>Listes et Files</a></p></article><div style=height:100px></div></div><aside class="book-toc fixed"><nav id=TableOfContents><ul><li><a href=#structure-linéaire-la-pile>Structure linéaire : La Pile</a><ul><li><a href=#les-structures-de-données>Les structures de données</a></li><li><a href=#un-premier-exemple>Un premier exemple</a></li><li><a href=#deuxieme-exemple-une-expression-correctement-parenthésée>Deuxieme exemple : une expression correctement parenthésée</a></li><li><a href=#définitions>Définitions</a><ul><li><a href=#la-pile-interface>La pile: interface</a></li><li><a href=#implémenter-un-pile-en-python>Implémenter un pile en Python</a></li><li><a href=#interface-ou-implémentation>Interface ou implémentation ?</a></li><li><a href=#créer-ses-propres-fonctions>Créer ses propres fonctions</a></li><li><a href=#définir-sa-propre-pile-construction-d-un-objet-de-type-pile>Définir sa propre pile (construction d&rsquo;un objet de type pile)</a></li></ul></li><li><a href=#pile-et-recursivité>Pile et recursivité</a></li></ul></li><li><a href=#résumé>Résumé</a></li><li><a href=#exercices-sur-les-piles>Exercices sur les piles</a><ul><li><a href=#exercice-1-implementer-une-pile>Exercice 1 : implementer une pile</a></li><li><a href=#exercice-2-lever-des-exceptions>Exercice 2 : lever des exceptions</a></li><li><a href=#exercice-3-déverser-une-pile>Exercice 3 : déverser une pile</a></li><li><a href=#exercice-4-evaluation-d-une-opération-en-notation-polonaise-inversée>Exercice 4 : Evaluation d&rsquo;une opération en notation polonaise inversée</a></li></ul></li><li><a href=#correction-des-exercices>Correction des exercices</a><ul><li><a href=#exercice-1>Exercice 1</a></li><li><a href=#exercice-2>Exercice 2</a></li><li><a href=#exercice-3>Exercice 3</a></li><li><a href=#exercice-4>Exercice 4</a></li></ul></li><li><a href=#autres-structures-linéaires>Autres structures linéaires</a></li></ul></nav></aside></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
-<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI\2fstructure\2fpage2\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    structures lineaires
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><p><em>Prérequis</em>: Cours sur les <!-- raw HTML omitted -->types abstraits<!-- raw HTML omitted -->.</p>
+<ul>
+<li>Ce cours sur les structures lineaires se prolonge à la <!-- raw HTML omitted -->page 2 avec: Listes et Files<!-- raw HTML omitted --></li>
+<li>Ce cours peut necessiter quelques connaissances en <!-- raw HTML omitted -->Programmation orientée objets<!-- raw HTML omitted -->.</li>
+</ul>
+<h1 id="structure-linéaire--la-pile">Structure linéaire : La Pile</h1>
+<h2 id="les-structures-de-données">Les structures de données</h2>
+<!-- raw HTML omitted -->
+<h2 id="un-premier-exemple">Un premier exemple</h2>
+<p>La pile est une manière de ranger les données.</p>
+<p>Elle correspond exactement à l’image traditionnelle d’une pile de cartes ou d’assiettes posée sur une table. En particulier, on ne peut accéder qu’au dernier élément ajouté, qu’on appelle le sommet de la pile.</p>
+<p>L&rsquo;illustration suivante montre que c&rsquo;est la structure de données à adopter si l&rsquo;on veut sortir d&rsquo;un labyrinthe&hellip;</p>
+<!-- raw HTML omitted -->
+<p>Le labyrinthe peut être modélisé par les coordonnées de ses noeuds, ainsi qu&rsquo;une liste de directions possibles (ouvertures) pour chacun de ses noeuds :</p>
+<!-- raw HTML omitted -->
+<p>En observant l&rsquo;animation de la tortue dans le labyrinthe, on peut supposer que la pile des sommets visités (les cases du labyrinthe) sont, dans l&rsquo;ordre :</p>
+<p>(4,0), (3,0), (3,1), (3,2), (4,2), (4,1) &hellip;</p>
+<p>puis le chemin inverse jusqu&rsquo;au sommet (3,0) :</p>
+<p>(4,2), (3,2), (3,1), (3,0), &hellip;</p>
+<p>Une fois revenu au sommet (3,0), on reprend l&rsquo;exploration vers (2,0), (2,1),&hellip;</p>
+<p>Il s&rsquo;agit d&rsquo;une méthode d&rsquo;exploration du labyrinthe de type <em>parcours en profondeur</em>. L&rsquo;algorithme est expliqué en détail à la page : <a href="/docs/SNT_2nde/pages/pages_algo/graphes/page2/#parcours-d-un-arbre-en-profondeur-dfs">SNT algorithmes graphe : parcours en profondeur</a></p>
+<!-- raw HTML omitted -->
+<p>La tortue suit son chemin jusqu&rsquo;à arriver à une impasse (ou un sommet déjà visité). Alors, elle doit être capable de <em>revenir sur ses traces</em>. C&rsquo;est pour cela qu&rsquo;elle mémorise son parcours dans une <em>pile</em>, qu&rsquo;elle pourra remonter (c&rsquo;est à dire <em>dépiler</em>) au besoin. Cette pile de sommets visités correspond au fil d&rsquo;Ariane, rendu célèbre par la mythologie (Thésée et le Minautore).</p>
+<p>Lorsqu&rsquo;elle s&rsquo;avance plus en profondeur dans le labyrinthe, vers des sommets encore non explorés, elle <em>empile</em>.</p>
+<p>Lorsqu&rsquo;elle revient sur ses traces, elle <em>dépile</em> (elle retire des sommets de la pile).</p>
+<!-- raw HTML omitted -->
+<p>Lorsque la tortue arrive à la case (4,1), l&rsquo;impasse, la pile a alors la configuration <strong>pile a</strong> (voir schéma plus bas).</p>
+<p>Elle revient jusqu&rsquo;à (3,0).</p>
+<p>Après avoir <em>dépilé</em> (4,1),(4,2),(3,2),(3,1), la pile est alors la <strong>pile b</strong>.</p>
+<p>Puis, lorsqu&rsquo;elle est parvenu à une bifurcation vers une nouvelle direction, elle poursuit son exploration (et <em>empile</em> à nouveau) : <strong>pile c</strong>. Qu&rsquo;il faudra encore prolonger pour atteindre la sortie (en bas à droite).</p>
+<!-- raw HTML omitted -->
+<h2 id="deuxieme-exemple--une-expression-correctement-parenthésée">Deuxieme exemple : une expression correctement parenthésée</h2>
+<p><strong>Principe :</strong> On lit l&rsquo;expression de gauche à droite et on empile au fur et à mesure les caractères ouvrants : [, {, (. On dépile lorsqu&rsquo;on lit le caractère fermant correspondant. A la fin, la pile doit être vide.</p>
+<p>Dans l&rsquo;exemple suivant, on voit que l&rsquo;expression <code>[a+(b+c)]</code> est correctement parenthesée. Ce qui ne serait pas le cas pour <code>[a+(b+c])</code>.</p>
+<!-- raw HTML omitted -->
+<h2 id="définitions">Définitions</h2>
+<h3 id="la-pile-interface">La pile: interface</h3>
+<p>La pile est une structure de données appropriée quand :</p>
+<ul>
+<li>On veut stocker des éléments dont le nombre est variable, et inconnu à l’avance.</li>
+<li>On peut ou on doit se contenter d’accéder au dernier élément stocké.</li>
+</ul>
+<p>Dans d&rsquo;autres cas, il faudra utiliser une autre structure de données, comme par exemple un tableau.</p>
+<p>Une <!-- raw HTML omitted -->Pile<!-- raw HTML omitted --> est une structure de données <!-- raw HTML omitted -->linéaire<!-- raw HTML omitted --> (les données sont rangées sur un ligne ou une colonne). Le dernier élément entré sera aussi le premier à sortir (<!-- raw HTML omitted -->L<!-- raw HTML omitted -->ast <!-- raw HTML omitted -->I<!-- raw HTML omitted -->n <!-- raw HTML omitted -->F<!-- raw HTML omitted -->irst <!-- raw HTML omitted -->O<!-- raw HTML omitted -->ut : LIFO).</p>
+<p>Les méthodes (= fonctions) disponibles pour cette structure sont :</p>
+<!-- raw HTML omitted -->
+<h3 id="implémenter-un-pile-en-python">Implémenter un pile en Python</h3>
+<p>Le type <em>List</em> en Python possède déjà toutes les méthodes d&rsquo;une pile :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">pile</span> <span style="color:#f92672">=</span> <span style="color:#111">[]</span>           <span style="color:#75715e"># creation d&#39;une pile</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">pile</span> <span style="color:#f92672">==</span> <span style="color:#111">[]</span>          <span style="color:#75715e"># tester si la pile est vide</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">pile</span><span style="color:#f92672">.</span><span style="color:#111">append</span><span style="color:#111">(</span><span style="color:#111">valeur</span><span style="color:#111">)</span> <span style="color:#75715e"># empile valeur dans la pile</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">pile</span><span style="color:#f92672">.</span><span style="color:#111">pop</span><span style="color:#111">()</span>         <span style="color:#75715e"># depiler l&#39;element au sommet</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">pile</span><span style="color:#111">[</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#111">]</span>            <span style="color:#75715e"># lire l&#39;element au sommet de la pile</span>
+</span></span></code></pre></div><p>Lorsque l&rsquo;on fait référence à une structure de données de type <em>pile</em> en traduisant un algorithme en Python, il faudra se contenter de ces 5 instructions.</p>
+<h3 id="interface-ou-implémentation-">Interface ou implémentation ?</h3>
+<p>Les types abstraits, comme les piles, sont définis par leur <strong>interface</strong> (comment  on s’en sert) plutôt que par leur <strong>implémentation</strong> (comment ils fonctionnent). Ils permettent d’étudier des algorithmes indépendamment  du langage utilisé.</p>
+<!-- raw HTML omitted -->
+<p>On verra ici deux manières d&rsquo;implémenter la <em>pile</em>.</p>
+<h3 id="créer-ses-propres-fonctions">Créer ses propres fonctions</h3>
+<p>Pour traduire un algorithme utilisant cette structure <em>pile</em>, il peut être préférable de définir des instructions portant les noms de ces 5 instructions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">Pile</span><span style="color:#111">():</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;&#34;&#34;creation d&#39;une pile vide à l&#39;aide de l&#39;instruction : 
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  pile = Pile()
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">return</span> <span style="color:#111">[]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">est_vide</span><span style="color:#111">(</span><span style="color:#111">pile</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># à compléter</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">empile</span><span style="color:#111">(</span><span style="color:#111">valeur</span><span style="color:#111">,</span><span style="color:#111">pile</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># à compléter</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">depile</span><span style="color:#111">(</span><span style="color:#111">pile</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># à completer</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">sommet</span><span style="color:#111">(</span><span style="color:#111">pile</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># à completer</span>
+</span></span></code></pre></div><h3 id="définir-sa-propre-pile-construction-dun-objet-de-type-pile">Définir sa propre pile (construction d&rsquo;un objet de type pile)</h3>
+<p>On peut créer un type (= une <strong>classe</strong>) <code>Pile</code> personnelle en Python.</p>
+<p>Les méthodes (fonctions) déclarées précédemment sont alors associées à l&rsquo;objet <code>Pile</code>. L&rsquo;appel d&rsquo;une méthode se fait à l&rsquo;aide de l&rsquo;instruction :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">pile</span> <span style="color:#f92672">=</span> <span style="color:#111">Pile</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">pile</span><span style="color:#f92672">.</span><span style="color:#111">est_vide</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">pile</span><span style="color:#f92672">.</span><span style="color:#111">empile</span><span style="color:#111">(</span><span style="color:#111">valeur</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">pile</span><span style="color:#f92672">.</span><span style="color:#111">depile</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">pile</span><span style="color:#f92672">.</span><span style="color:#111">sommet</span><span style="color:#111">()</span>
+</span></span></code></pre></div><p>Voir le cours sur la <a href="/docs/NSI/structure/page3/">programmation orientée objet</a>.</p>
+<p><strong>Rappel : Objet = type mutable</strong>. Quelle que soit la façon avec laquelle la pile est implémentée, il faudra se souvenir que celle-ci est un objet <em>mutable</em>. Cela a des conséquences sur la manière avec laquelle la pile est passée en argument d&rsquo;une fonction, et comment cette fonction modifie la pile.</p>
+<h2 id="pile-et-recursivité">Pile et recursivité</h2>
+<p>Tout algorithme récursif peut être mis sous forme d&rsquo;algorithme itératif avec une structure de données en pile.</p>
+<p>La pile d&rsquo;instruction doit être la même.</p>
+<p>Voir le cours sur la <a href="/docs/NSI/langages/page2/">recursivité</a></p>
+<h1 id="résumé">Résumé</h1>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted -->Interface<!-- raw HTML omitted --><!-- raw HTML omitted -->
+L’<!-- raw HTML omitted -->interface<!-- raw HTML omitted --> d&rsquo;une structure de données décrit de quelle manière on peut la  manipuler.
+Les méthodes (= fonctions) disponibles pour la <!-- raw HTML omitted -->Pile<!-- raw HTML omitted --> sont :</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted -->Implementation<!-- raw HTML omitted --><!-- raw HTML omitted -->
+L&rsquo;<!-- raw HTML omitted -->implementation<!-- raw HTML omitted --> contient le code de  ces méthodes (comment fait Python). Il n’est pas nécessaire de connaître l’implémentation pour manipuler la structure de données. Il faut connaitre l&rsquo;interface.<!-- raw HTML omitted -->
+Pour <!-- raw HTML omitted -->implémenter<!-- raw HTML omitted --> une pile en Python, on utilisera les méthodes déjà existantes pour le type <!-- raw HTML omitted -->List<!-- raw HTML omitted --> :</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="exercices-sur-les-piles">Exercices sur les piles</h1>
+<h2 id="exercice-1--implementer-une-pile">Exercice 1 : implementer une pile</h2>
+<ol>
+<li>Programmer les fonctions qui implémentent la <em>pile</em>: <code>Pile</code>,<code>est_vide</code>,<code>empile</code>,<code>depile</code>,<code>sommet</code>. (editeur python en fin d&rsquo;exerice)</li>
+<li>Tester votre implémentation pour resoudre l&rsquo;exercice suivant: (utiliser l&rsquo;editeur python):</li>
+</ol>
+<ul>
+<li>Soit une liste L = [&lsquo;a&rsquo;,1,&lsquo;b&rsquo;,2,&lsquo;c&rsquo;,3,&rsquo;d&rsquo;,4]</li>
+<li>Parcourir les éléments de la liste L avec une boucle bornée
+<ul>
+<li>empiler tous les nombres entiers dans une pile <code>p</code>.</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="exercice-2--lever-des-exceptions">Exercice 2 : lever des exceptions</h2>
+<p>Certaines des fonctions que vous avez écrites vont lever des exceptions dans le cas où la pile est vide.</p>
+<ol>
+<li>Pour ces fonctions, ajouter des instructions pour lever les exceptions dans le cas où la pile est vide. (utiliser l&rsquo;editeur python de l&rsquo;exercice 1)</li>
+<li>Tester vos fonctions avec une pile vide.</li>
+</ol>
+<h2 id="exercice-3--déverser-une-pile">Exercice 3 : déverser une pile</h2>
+<p>Dans l&rsquo;editeur de l&rsquo;exercice 1:</p>
+<p>Ecrire une fonction <code>deversepile</code> qui déverse une pile <code>p1</code> dans une pile <code>p2</code>.</p>
+<p>Cette fonction sera utilisée de la manière suivante : On utilise une pile intermédaire <code>p3</code> :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">p1</span><span style="color:#111">,</span><span style="color:#111">p2</span><span style="color:#111">,</span><span style="color:#111">p3</span><span style="color:#f92672">=</span><span style="color:#111">Pile</span><span style="color:#111">(),</span><span style="color:#111">Pile</span><span style="color:#111">(),</span><span style="color:#111">Pile</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">deversepile</span><span style="color:#111">(</span><span style="color:#111">p1</span><span style="color:#111">,</span><span style="color:#111">p3</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">deversepile</span><span style="color:#111">(</span><span style="color:#111">p3</span><span style="color:#111">,</span><span style="color:#111">p2</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>Les fonctions que vous pourrez utiliser pour les piles seront celles définies dans l&rsquo;exercice 1 : <code>Pile,est_vide,empile,depile,sommet</code>.</p>
+<h2 id="exercice-4--evaluation-dune-opération-en-notation-polonaise-inversée">Exercice 4 : Evaluation d&rsquo;une opération en notation polonaise inversée</h2>
+<p>Principe : la notation polonaise inversée permet d&rsquo;écrire une opération sans utiliser de parenthèses. Il faut alors écrire les 2 opérandes avant l&rsquo;opérateur. L&rsquo;opérateur se trouve à droite des 2 opérandes.</p>
+<p>En parcourant l&rsquo;expression de gauche à droite, chaque fois que l&rsquo;on rencontre un opérateur, on remonte vers la gauche pour rechercher les 2 opérandes et on remplace les 3 termes (2 operandes et 1 opérateur) par le resultat de l&rsquo;opération.</p>
+<p>On peut utiliser une pile pour réaliser la séquence de calculs.</p>
+<p>Exemple : <code>1 2 + 4 * 3 +</code></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>La liste L contient les caractères de l&rsquo;expression POSTFIXE à calculer.</p>
+<ol>
+<li>Compléter les fonctions <code>add</code>, <code>soust</code>, et <code>multip</code> qui doivent additionner, soustraire, et multiplier les arguments x et y.</li>
+<li>Testez vos fonctions à l&rsquo;aide du tableau associatif: Executer en console l&rsquo;instruction: <code>dicoP['-'](3,4)</code> qui doit renvoyer &hellip; -1</li>
+<li>Compléter la fonction evalNPI: Dans une boucle bornée qui parcourt tous les éléments de la liste L: <code>for a in L:</code></li>
+</ol>
+<ul>
+<li>si <code>a</code> est un entier: empiler a dans une liste <code>p</code> qui sera utilisée comme une <em>pile</em>.</li>
+<li>si <code>a</code> est un opérateur présent dans le tableau associatif <code>dicoP</code>:
+<ul>
+<li>depiler <code>p</code> deux fois et stocker les valeurs dans les opérandes x et y.</li>
+<li>empiler la valeur calculée dans la pile <code>p</code></li>
+</ul>
+</li>
+<li>retourner la valeur finale stockée dans <code>p</code></li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="exercice-5-reduction-dune-chaine-de-caractères">Exercice 5: Reduction d&rsquo;une chaine de caractères</h2>
+<p>Enoncé à la <!-- raw HTML omitted -->page suivante: allophysique.com/docs/nsi/structure/page22/index.html<!-- raw HTML omitted --></p>
+<h1 id="correction-des-exercices">Correction des exercices</h1>
+<h2 id="exercice-1">Exercice 1</h2>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># exercice 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">L</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#d88200">&#39;a&#39;</span><span style="color:#111">,</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span><span style="color:#d88200">&#39;b&#39;</span><span style="color:#111">,</span><span style="color:#ae81ff">2</span><span style="color:#111">,</span><span style="color:#d88200">&#39;c&#39;</span><span style="color:#111">,</span><span style="color:#ae81ff">3</span><span style="color:#111">,</span><span style="color:#d88200">&#39;d&#39;</span><span style="color:#111">,</span><span style="color:#ae81ff">4</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">Pile</span><span style="color:#111">():</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">[]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">est_vide</span><span style="color:#111">(</span><span style="color:#111">pile</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">pile</span> <span style="color:#f92672">==</span> <span style="color:#111">[]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">depile</span><span style="color:#111">(</span><span style="color:#111">pile</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">assert</span> <span style="color:#111">pile</span> <span style="color:#f92672">!=</span> <span style="color:#111">[],</span> <span style="color:#d88200">&#39;impossible de depiler : pile vide&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">pile</span><span style="color:#f92672">.</span><span style="color:#111">pop</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">empile</span><span style="color:#111">(</span><span style="color:#111">a</span><span style="color:#111">,</span><span style="color:#111">pile</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">pile</span><span style="color:#f92672">.</span><span style="color:#111">append</span><span style="color:#111">(</span><span style="color:#111">a</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">sommet</span><span style="color:#111">(</span><span style="color:#111">pile</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">assert</span> <span style="color:#111">pile</span> <span style="color:#f92672">!=</span> <span style="color:#111">[],</span> <span style="color:#d88200">&#39;la pile n_a pas de sommet : pile vide&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">pile</span><span style="color:#111">[</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">p</span> <span style="color:#f92672">=</span> <span style="color:#111">Pile</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">for</span> <span style="color:#111">a</span> <span style="color:#f92672">in</span> <span style="color:#111">L</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">if</span> <span style="color:#111">isinstance</span><span style="color:#111">(</span><span style="color:#111">a</span><span style="color:#111">,</span><span style="color:#111">int</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">empile</span><span style="color:#111">(</span><span style="color:#111">a</span><span style="color:#111">,</span><span style="color:#111">p</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">p</span><span style="color:#111">)</span>
+</span></span></code></pre></div><h2 id="exercice-2">Exercice 2</h2>
+<p>Les modifications ont été faites directement dans le corrigé de l&rsquo;exercice 1.</p>
+<p>Tester le script suivant à la suite de celui de l&rsquo;exercice 1:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># exercice 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">p2</span> <span style="color:#f92672">=</span> <span style="color:#111">Pile</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">depile</span><span style="color:#111">(</span><span style="color:#111">p2</span><span style="color:#111">)</span>
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="autres-structures-linéaires">Autres structures linéaires</h1>
+<p>Lien vers la page <!-- raw HTML omitted -->Listes et Files<!-- raw HTML omitted --></p>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#les-structures-de-données">Les structures de données</a></li>
+    <li><a href="#un-premier-exemple">Un premier exemple</a></li>
+    <li><a href="#deuxieme-exemple--une-expression-correctement-parenthésée">Deuxieme exemple : une expression correctement parenthésée</a></li>
+    <li><a href="#définitions">Définitions</a>
+      <ul>
+        <li><a href="#la-pile-interface">La pile: interface</a></li>
+        <li><a href="#implémenter-un-pile-en-python">Implémenter un pile en Python</a></li>
+        <li><a href="#interface-ou-implémentation-">Interface ou implémentation ?</a></li>
+        <li><a href="#créer-ses-propres-fonctions">Créer ses propres fonctions</a></li>
+        <li><a href="#définir-sa-propre-pile-construction-dun-objet-de-type-pile">Définir sa propre pile (construction d&rsquo;un objet de type pile)</a></li>
+      </ul>
+    </li>
+    <li><a href="#pile-et-recursivité">Pile et recursivité</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#exercice-1--implementer-une-pile">Exercice 1 : implementer une pile</a></li>
+    <li><a href="#exercice-2--lever-des-exceptions">Exercice 2 : lever des exceptions</a></li>
+    <li><a href="#exercice-3--déverser-une-pile">Exercice 3 : déverser une pile</a></li>
+    <li><a href="#exercice-4--evaluation-dune-opération-en-notation-polonaise-inversée">Exercice 4 : Evaluation d&rsquo;une opération en notation polonaise inversée</a></li>
+    <li><a href="#exercice-5-reduction-dune-chaine-de-caractères">Exercice 5: Reduction d&rsquo;une chaine de caractères</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#exercice-1">Exercice 1</a></li>
+    <li><a href="#exercice-2">Exercice 2</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

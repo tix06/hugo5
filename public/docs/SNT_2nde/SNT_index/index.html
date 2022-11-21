@@ -1,19 +1,739 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>SNT 2nde
-| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel=stylesheet><script type=text/x-mathjax-config>
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    SNT 2nde
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
   });
-</script><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.1c02dc1d2c0b546a84beb71d8f4336d6f5d7b69564e08bdfc04c2fb0595d786d.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
 catch(err)
-{console.log(err.message);}
-if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
-if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
-if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}
-let chemin=window.location.pathname;if(chemin.search('NSI')>-1){baniere=document.querySelector("#myHeader");let linkBox=document.createElement('div');linkBox.classList.add('linkBox');let newH=document.createElement('a');newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';newH.classList.add('nsi');linkBox.appendChild(newH);baniere.appendChild(linkBox);}</script><style>#myHeader{display:flex;flex-direction:row-reverse}#myHeader>.titre{width:80%;min-width:300px;text-align:left}.linkBox{margin:10px;padding-top:10px;background-color:pink;min-width:50px}.isn{}</style></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2f docs\2fSNT_2nde\2fSNT_index\2f ]{color:#004ed0}</style><ul><li><a href=/><strong>Accueil</strong></a></li><li><a href=/docs/esf/esf_index/><strong>ESF</strong></a></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p></li><li><p><a href=/docs/python/index_python/><strong>Python</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
-addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-page><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
-<strong>SNT 2nde</strong></header><article class=markdown><div class=info><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 32"><path d="M22 20c-2 2-2 4-4 4s-4-2-6-4-4-4-4-6 2-2 4-4-4-8-6-8-6 6-6 6c0 4 4.109 12.109 8 16s12 8 16 8c0 0 6-4 6-6s-6-8-8-6z"/></svg><div class=blog><h1>SNT informations</h1><p><b>Parcours numérique pour SNT proposé par le groupe de formateurs de l'academie de Nice</b><figure><a href=https://start.me/p/1kjakb/accueil-snt><img src=../start_me.png></a></figure></p><p>Parcours de formation microbit<br><ul><li><a href=/docs/SNT_2nde/SNT_microbit/>programmer la carte microbit</a></li><li><a href=/docs/SNT_2nde/SNT_texas/>microbit et calculatrice TI83 Ed Python</a></li></ul></p></div></div><p class=rubrik>Rubriques :</p><section class=main><div class="main-inside left"><input type=button class="btn btn-lg" value="codage de données" onclick="window.location.href='../SNT_codage'"></div><div class="main-inside right"><input type=button class="btn btn-lg" value="format de données" onclick="window.location.href='../SNT_format'"></div></section><section class=main><div class="main-inside left"><input type=button class="btn btn-lg" value=images onclick="window.location.href='../SNT_images'"></div><div class="main-inside right"><input type=button class="btn btn-lg" value=Internet onclick="window.location.href='../SNT_internet'"></div></section><section class=main><div class="main-inside left"><input type=button class="btn btn-lg" value=reseaux onclick="window.location.href='../SNT_reseaux'"></div><div class="main-inside right"><input type=button class="btn btn-lg" value=machines onclick="window.location.href='../SNT_machines'"></div></section><section class=main><div class="main-inside left"><input type=button class="btn btn-lg" value=Python onclick="window.location.href='/docs/SNT_2nde/SNT_python/index.html'"></div><div class="main-inside right"><input type=button class="btn btn-lg" value=Géolocalisation onclick="window.location.href='../SNT_geolocaliser'"></div></section><section class=main><div class="main-inside left"><input type=button class="btn btn-lg" value=notebooks onclick="window.location.href='../pages/page7/notebooks/index.html'"></div><div class="main-inside right"><input type=button class="btn btn-lg" value=retour onclick="window.location.href='/'"></div></section><div style=height:800px></div></article><div style=height:100px></div></div></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
-<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fSNT_2nde\2fSNT_index\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    SNT 2nde
+  
+</strong>
+</header>
+
+      
+<article class="markdown">
+<div class='info'>
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 32">
+         <path d="M22 20c-2 2-2 4-4 4s-4-2-6-4-4-4-4-6 2-2 4-4-4-8-6-8-6 6-6 6c0 4 4.109 12.109 8 16s12 8 16 8c0 0 6-4 6-6s-6-8-8-6z"></path>
+        </svg>
+<div class='blog'>
+<h1>SNT informations</h1>
+<p>Semaine de la rentrée: 05/09/2022<br>
+  <ul>
+    <li>Présentation de la matière: <a href="/pdf/SNT/C1_presentation.pdf">pdf</a></li>
+  </ul>
+</p>
+
+<p>Semaine du 12/09/2022<br>
+  <ul>
+    <li>TP n°1: escape Game: <a href="https://lesitedelaclasse.fr/Fichiers/SNT/escape-game-snt-1/index.html" target="blank">intro à la SNT</a></li>
+    <li>Au cours de votre exploration, complétez sur votre cahier de SNT les définitions suivantes: <ul>
+      <li>adresse IP</li>
+      <li>nom de domaine</li>
+      <li>serveur DNS</li>
+      <li>logiciel tableur</li>
+      <li>GPS</li>
+      <li>ASCII</li>
+      <li>internet</li>
+      <li>Données EXIF</li>
+    </ul></li>
+    <li>Cours sur le <a href="/docs/SNT_2nde/pages/page16/nombres_caracteres/">codage des données</a></li>
+
+  </ul>
+</p>
+
+<p>Semaine du 19/09/2022<br>
+  <ul>
+    <li>Exercice: traiter les exercices des <a href="/docs/SNT_2nde/pages/page16/ex1">flash cards</a> sur le binaire</li>
+    <li>TP sur le tableur <a href="/docs/SNT_2nde/pages/pages_donnees/page1/">Excel</a></li>
+  </ul>
+</p>
+
+<p>Semaine du 26/09/2022
+  <ul>
+    <li>Cours et doc sur la memoire des machines, <a href="/docs/SNT_2nde/pages/page15/memoire/#histoire-des-données">historique du stockage des données</a></li>
+  </ul>
+</p>
+
+<p>Semaine du 03/10/22
+  <ul>
+    <li>TP sur la <a href="/docs/SNT_2nde/pages/pages_donnees/page4/">recherche dans une base de données</a> de la police</li>
+  </ul>
+
+<p>Semaine du 10/10/22
+  <ul>
+    <li>Cours sur Données personnelles: <a href="/docs/SNT_2nde/pages/page17/identite/">Lien</a></li>
+    <li>TP sur la <a href="/docs/SNT_2nde/pages/pages_donnees/page4/">recherche dans une base de données</a> de la police</li>
+  </ul>
+</p>
+
+<p>Semaine du 17/10/22
+  <ul>
+    <li>Revenir sur la page du TP <a href="/docs/SNT_2nde/pages/pages_donnees/page4/">recherche dans une base de données</a> de la police. Traiter la fin de la seance (documentaire)</li>
+    <li>cours sur le Web: <a href="/docs/SNT_2nde/pages/page4/web0/">modele client-serveur</a></li>
+  </ul>
+</p>
+<p>Semaine de la rentrée: 07/11/22
+  <ul>
+    <li>Cours Internet 2, les moteurs de recherche: <a href="/docs/SNT_2nde/pages/page3/internet/#des-problèmes-de-sécurité">Lien 1</a> et <a href="/docs/SNT_2nde/pages/page4/web/">Lien 2</a></li>
+  </ul>
+</p>
+
+<p>Semaine du 14/11/22
+  <ul>
+    <li>TP langage HTML: <a href="/docs/SNT_2nde/pages/page4/web2/">Lien</a></li>
+  </ul>
+</p>
+
+
+
+
+<!--
+<p>Semaine de la rentrée: 06/09/2021<br>
+  <ul>
+    <li>Documents et cours: <a href="/docs/SNT_2nde/pages/page15/memoire/" target="blank">Données numeriques</a></li>
+    <li>TP n°1: escape Game:<a href="https://lesitedelaclasse.fr/Fichiers/SNT/escape-game-snt-1/index.html" target="blank">intro à la SNT</a></li>
+  </ul>
+</p>
+<p>Semaine du 20 et 27 septembre
+  <ul>
+    <li>TP n°2 Format des données - Excel: <a href="/docs/SNT_2nde/pages/pages_donnees/page1/">Lien</a></li>
+  </ul>
+</p>
+
+<p>Semaine du 04 octobre
+  <ul>
+    <li>Documents pour l'activité sur <a href="/docs/SNT_2nde/pages/page3/page1">Le Cloud</a></li>
+    <li>TP n°3 (évalué) - Filtres et recherches dans une table: <a href="/docs/SNT_2nde/pages/pages_donnees/page3/">Lien</a></li>  
+  </ul>
+
+<p>Semaine du 15/11
+  <ul>
+    <li>Cours sur le reseau internet et ses protocoles <a href="/docs/SNT_2nde/pages/page3/circulation/">Lien</a>
+    </li>
+    <li>TP simulation d'un système informatique (logiciel Filius): <a href="/docs/SNT_2nde/pages/page3/TP_reseau/">Lien vers le TP</a></li>
+  </ul>
+</p>
+
+<p>Semaine du 29/11
+  <ul>
+    <li>Cours Graphe et Internet: <a href="/docs/SNT_2nde/pages/pages_algo/graphes/page3/">Lien</a></li>
+  </ul>
+</p>
+
+<p>Semaine du 06/12
+  <ul>
+    <li>Activité: <a href="/docs/SNT_2nde/pages/pages_algo/graphes/page2/">algorithme de parcours d'un graphe</a></li>
+    <li>Document vierge pour le parcours d'un graphe: <a href="/pdf/SNT/graphes-version-eleve.pdf">Doc</a></li>
+  </ul>
+</p>
+
+<p>Semaine du 01/12 et du 06/12
+  <ul>
+    <li>TP: les instructions en html et css: <a href="/docs/SNT_2nde/pages/page4/web2/">Lien</a></li>
+  </ul>
+</p>
+
+<p>Semaine du 03/01 
+  <ul>
+    <li>Entrainement au concours Algorea: <a href="/docs/NSI_1/autoformation/page1/">Lien</a></li>
+    <li>Cours sur le Web, et les moteurs de recherche: <a href="/docs/SNT_2nde/pages/page4/web/">Lien</a></li>
+  </ul>
+</p>
+
+<p>Semaine du 10/01 et du 17/01
+  <ul>
+    <li>Fiche de revision pour le controle <a href="/pdf/SNT/EPCCinternetweb.pdf">Internet et le Web</a></li>
+    <li>TP évalué (HTML): <a href="/docs/SNT_2nde/pages/page4/web4/">le curriculum vitae</a></li>
+  </ul>
+</p>
+
+<p>Semaine du 21/02
+  <ul>
+    <li>Cours sur les algorithmes: <a href="/docs/SNT_2nde/pages/pages_algo/python/python4/index.html">Lien</a></li>
+    <li>TP1: de scratch à python: <a href="/docs/SNT_2nde/pages/pages_algo/python/python7/index.html">Lien</a></li>
+  </ul>
+</p>
+
+<p>Semaine du 07/03
+  <ul>
+    <li>Version pdf du cours python1 <a href="/pdf/SNT/python1_algogrammes.pdf">bases en algorithmique</a></li>
+    <li>Cours sur la géolocalisation: <a href="/docs/SNT_2nde/pages/page18/geolocaliser/">Lien</a></li>
+    <li>TP2: de scratch à python, dessiner des figures: <a href="/docs/SNT_2nde/pages/pages_algo/python/python5/">Lien</a></li>
+  </ul>
+</p>
+
+<p>Semaine du 25/03
+  <ul>
+    <li>suite du cours sur la Géolocalisation: <a href="/docs/SNT_2nde/pages/page18/services/">Services liés à la géolocalisation</a></li>
+    <li>Parcours de formation sur la Geolocalisation: <a href="https://concours.castor-informatique.fr/?team=sntp2pc">activités avec l'interface du concours Castor</a></li>
+  </ul>
+</p>
+
+<p>Semaine du 08/04
+  <ul>
+    <li>TP3 programmer une fonction: <a href="/docs/SNT_2nde/SNT_prog_fonction/">Lien</a></li>
+  </ul>
+</p>
+
+<p>Semaine du 02/05
+  <ul>
+    <li>Cours sur la photographie numerique: <a href="/docs/SNT_2nde/pages/page5/photo_num/">Lien</a></li>
+    <br>
+    <li>TP carte microbit: <a href="/docs/techno/pages/MB_init/">Lien 1</a></li>
+    <li>TP pixel ART: <a href="/docs/SNT_2nde/pages/page5/photo_num3/">Lien 2</a></li>
+  </ul>
+</p>
+
+<p>Semaine du 09/05
+  <ul>
+    <li>TP donnees colorimetriques et EXIF: <a href="/docs/SNT_2nde/pages/page5/photo_num5/">Lien</a></li>
+  </ul>
+</p>
+
+<p>Semaine du 23/05
+  <ul>
+    <li>Cours: images, enjeux societaux: <a href="/docs/SNT_2nde/pages/page5/photo_num4/">Lien</a></li>
+    <li>Cours: Reseaux sociaux, introduction: <a href="/docs/SNT_2nde/pages/page6/RS2/">Lien</a></li>
+  </ul>
+</p>
+
+
+<br><br>
+
+<p>Parcours numérique pour SNT proposé par le groupe de formateurs de l'academie de Nice
+<figure>
+  <a href="https://start.me/p/1kjakb/accueil-snt">
+    <img src="../start_me.png">
+  </a>
+</figure>
+</p>
+
+-->
+<!--
+<p>ANNEE 2019-2020</p>
+<p><b>Questionnaire de rentrée : </b></p>
+<p>Le questionnaire de rentrée est à compléter à l'adresse suivante : <a href="https://forms.gle/twMwauZMMYqREimX8" target = "blank">Lien</a>
+</p>
+
+<p><b>Seances de TP</b> du <b>10 septembre</b> (groupe B) et du <b>17 septembre</b> (groupe A):<br>
+  Recherche documentaire sur la numération au cours des ages : 
+  <ul>
+    <li>Document à consulter : <a href="../pages/page14/histoire_num" target="blank">SNT / codage / histoire de la numeration</a></li>
+    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfKvsan0Eg9SfHBuslLY6Df3EimfaLjz_ftw6YLXpi_qoWwdA/viewform?usp=sf_link" target="blank">Fiche réponse à completer</a></li>
+  </ul>
+
+</p>
+<p><b>Seance du 21 sept</b><br>
+  <ul>
+    <li>Lire le cours sur <a href="/docs/SNT_2nde/pages/page16/nombres_caracteres/index.html">codage des données numeriques</a></li>
+    <li>Lire la video en lien sur la page</li>
+  </ul>
+</p>
+<p><b>Seance du 5 oct</b><br>
+  <ul>
+    <li>Lire le cours sur <a href="/docs/SNT_2nde/pages/page4/web/index.html">Internet1: Le Web</a></li>
+    <li>Repondre aux questions du document <a href="/pdf/SNT/Internet1_cours_navigateur.pdf">à telecharger ici</a></li>
+  </ul>
+</p> 
+
+
+
+
+<p><b>Seance du 05 et 12 nov</b><br>
+  <ul>
+  <li>Lire le cours sur <a href="/docs/SNT_2nde/pages/page4/web1/index.html">Documents Web</a></li>
+  <li>TP HTML et CSS à la page <a href="/docs/SNT_2nde/pages/page4/web2/index.html">TP projet Web</a></li>
+</ul>
+</p>
+
+
+<p><b>Semaine du 23 au 27 nov: Elèves en distanciel</b><br>
+  <ul>
+    <li>Lire le cours sur <a href="/docs/SNT_2nde/pages/page3/internet/" target="blank">INTERNET</a></li>
+    <li>Repondre aux 3 questions ci-dessous, directement sur <a href ="https://doctools.dgpad.net/connect.php?datas=eyJiYXNlaWQiOiIxdjBoaFh5eXZsYWQxQnZSM3pkMThnMjF6ZFBHREdTcE80clhBbWx3R3hYYyIsImRzX2Jhc2UiOiIxR3hJdHRNMnJmNXZJWWFaYzZYWjF4UzNOeHFPS0p6RVpaN2VEb09xdk9kZyIsImZpZCI6IjFTTVU0bWlNNWdWSVQtdmNQQW9TR25rQkN6Q1UtWkhfcSIsImlkIjoiMUtuaUl5NVlNQnM5WVJHckJMLVMxd1lfUkJUaWxTaG9JdFZUNnB1Vy04cTgiLCJsaXN0aWQiOiIxYmdFX1FNLWptQkhQcThSOXRiLWQ1ZVhDaDFEZjQtY205akRSUkVyZjFCbyIsInR5cGUiOiJkb2MifQ==" target="blank">le document numerique</a> au plus tard le <b>27 nov</b>.
+      <ul>
+        <li><b>Question 1:</b> <i>(2 lignes)</i> Citer quelques applications innovantes (au moins 2) qui sont aujourd'hui possibles à l'aide d'un smartphone connecté au reseau internet. Et surtout, quel est l'apport d'internet pour ces applications?</li>
+        <li><b>Question 2:</b> <i>(5-10 lignes)</i> Comment a-t-on reussi à repondre à l'un des problèmes majeurs lors de la constitution du reseau internet:<br><em>Comment transmettre des messages de toutes tailles, avec une gestion automatique des incidents?</em><br>
+
+        <i>mots-clés: protocole TCP/IP, datagrammes, trames</i></li>
+        <li><b>Question 3:</b> <i>(3-4 lignes)</i> Développer, au choix, **un seul** des sujets suivants:
+          <ul>
+
+            <li>Internet peut-être à l'origine de désaccords entre ses usagers.</li>
+            <li>Internet peut permettre de manipuler l'opinion publique.</li>
+            <li>Internet est un endroit mal contrôlé, où l'on peut se faire voler des données personnelles, ou voir ses oeuvres artisitiques être diffusées librement.</li>
+          </ul>
+        </li>
+      </ul>
+</li>
+        
+
+
+
+
+
+
+      </ul>
+    </li>
+  </ul>
+</p>
+
+
+
+<p><b>Séance du 10 decembre (Présentiel)</b><br>
+  <ul>
+    <li>TP simulation d'un reseau d'ordinateurs : <a href="/docs/SNT_2nde/pages/page3/TP_reseau/">Lien</a></li>
+  </ul>
+</p>
+
+<p><b>Semaines du 7 au 11 decembre: Elèves en distanciel</b><br>
+  Préparer le cours sur les réseaux. Et faire le QCM en ligne.
+  <ul>
+    <li>Lire le cours sur les <em>réseaux</em> à la page <a href="/docs/SNT_2nde/pages/page3/circulation/">Reseaux</a></li>
+    <li>Prendre des notes sur ce cours en vous aidant du document : <a href="/pdf/SNT/Internet4_reseaux.pdf">à consulter ici</a></li>
+    <li>QCM à faire en ligne: (attention temps limité)<em><a href ="https://doctools.dgpad.net/connect.php?datas=eyJiYXNlaWQiOiIxdjBoaFh5eXZsYWQxQnZSM3pkMThnMjF6ZFBHREdTcE80clhBbWx3R3hYYyIsImRlX2Jhc2UiOiIxVWl0X09CVk14dHlsbDBmaTdZMFd2SHo0T1ZzaHRFOGJCRHZsODRrU3hRWSIsImlkIjoiMUc1bmgyeW0yTUhWdFM4VVhqbkhjNW5CczRCVDNYbDJmZmhKUjVEVlZkVkEiLCJ1c2VycyI6IkFub255bWUifQ==">Lien</a></em></li>
+  </ul>
+</p>
+
+<p>Séance du 17 dec (élèves en presentiel)<br>
+  <ul>
+    <li>TP débuter en python: <a href="/docs/SNT_2nde/pages/pages_algo/python/python1/index.html">Lien</a></li>
+  </ul>
+</p>
+<p><b>Semaines du 14 decembre au 8 janvier (élèves en distanciel)</b><br>
+  <ul>
+    <li>Cette semaine, vous devrez importer des fichiers dans votre calculatrice qui serviront à utiliser, plus tard, le microcontrôleur micro:bit</li>
+    <li>Mettre à jour et tester votre premier script sur la calculatrice <a href="/docs/SNT_2nde/pages/page12/TI_prisenmain/">TI-83 Premium CE ed Python: Lien</a></li>
+  </ul>
+  
+</p>
+
+<p><b>Semaines du 11 au 22 janvier (élèves en distanciel)</b><br>
+  <ul>
+    <li>Cette semaine, vous allez revoir la notion de variables en langage Python</li>
+    <li>Lire le cours à la page: <a href="/docs/SNT_2nde/pages/pages_algo/python/python2/">introduction au langage Python</a></li>
+    <li>Et traiter les exercices (corrigés) à la page: <a href="/docs/SNT_2nde/pages/pages_algo/python/ex1/">flash cards</a>
+  </ul>
+  
+</p>
+
+<p>Eleves en presentiel jusqu'au 22 janvier<br>
+  <ul>
+    <li>TP utilisant un logiciel tableur: <a href="/docs/SNT_2nde/pages/pages_donnees/page1/">Lien</a></li>
+  </ul>
+</p>
+
+<p><b>Eleves en presentiel du 25 janvier au 5 fev</b>
+<ul>
+  <li>TP sur la base de données des exoplanètes : <a href="/docs/SNT_2nde/pages/pages_donnees/page2/"><b>Lien</b></a></li>
+</ul>
+</p>
+
+<p><b>Eleves en presentiel du 8 fevrier au 20 fevrier</b>
+<ul>
+  <li>TP les enigmes mathématiques : <a href="/docs/SNT_2nde/pages/pages_algo/python/python3/"><b>Lien</b></a></li>
+</ul>
+</p>
+
+
+<p>Semaine du 6 au 9 avril: <b>tous les élèves de Sec 07 et Sec 10</b>
+  <ul>
+    <li>Faire le TP informatique sur les images numériques: <a href="/docs/SNT_2nde/pages/page5/photo_num3/">Pixel Art</a></li>
+  </ul>
+</p>
+
+<p>Seance de TP évalué: <b>élèves en présentiel</b><br>
+  Utiliser les liens des 2 pages suivantes pour réaliser le TP:
+  <ul>
+    <li>Prise en main de la carte microbit: <a href="/docs/SNT_2nde/pages/page12/MB_init/">Lien 1</a></li>
+    <li>images numériques: <a href="/docs/SNT_2nde/pages/page5/photo_num3/">Lien 2</a></li>
+  </ul>
+</p>
+--->
+</div>
+</div>
+
+<p class="rubrik">Rubriques :</p>
+
+ 	<section class="main">
+
+  	
+	<div class="main-inside left">
+		
+		<input type="button" class="btn btn-lg" value="codage de données" onclick="window.location.href = '../SNT_codage'">
+    </div>	
+  	<div class="main-inside right">
+    	<input type="button" class="btn btn-lg" value="format de données" onclick="window.location.href = '../SNT_format'">
+    	
+	</div>
+    </section>	
+  
+  	
+
+  	<section class="main">
+	<div class="main-inside left">
+		
+		<input type="button" class="btn btn-lg" value="images" onclick="window.location.href = '../SNT_images'">
+    </div>	
+  	<div class="main-inside right">
+    	<input type="button" class="btn btn-lg" value="Internet" onclick="window.location.href = '../SNT_internet'">
+    	
+	</div>
+</section>
+
+
+<section class="main">
+  <div class="main-inside left">
+    
+    <input type="button" class="btn btn-lg" value="reseaux" onclick="window.location.href = '../SNT_reseaux'">
+    </div>  
+    <div class="main-inside right">
+      <input type="button" class="btn btn-lg" value="machines" onclick="window.location.href = '../SNT_machines'">
+      
+  </div>  
+</section>
+
+<section class="main">
+  <div class="main-inside left">
+    
+    <input type="button" class="btn btn-lg" value="algorithmes" onclick="window.location.href = '/docs/SNT_2nde/SNT_python/index.html'">
+    </div>  
+    <div class="main-inside right">
+     <input type="button" class="btn btn-lg" value="Géolocalisation" onclick="window.location.href = '../SNT_geolocaliser'">
+      
+  </div> 
+</section>
+
+<section class="main">
+  <div class="main-inside left">
+    
+    <input type="button" class="btn btn-lg" value="notebooks" onclick="window.location.href = '../pages/page7/notebooks/index.html'">
+    </div>  
+    <div class="main-inside right">
+      <input type="button" class="btn btn-lg" value="retour" onclick="window.location.href = '/'">
+      
+  </div>
+</section>
+
+<div style="height:800px;"></div></article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

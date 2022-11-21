@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    sujets de bac NSI
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI\2fNSI_sujets\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    sujets de bac NSI
+  
+</strong>
+</header>
+
+      
+<article class="markdown">
+<h1>Exercices par rubriques</h1>
+
+
+<ul>
+  <li><a href="#exos1">Structures de données natives</a></li>
+  <li><a href="#exos2">Piles et Files</a></li>
+  <li><a href="#exos3">Arbres</a></li>
+  <li><a href="#exos4">Algorithmes, recursivité</a></li>
+  <li><a href="#exos5">Programmation orientée objet</a></li>
+  <li><a href="#exos6">Bases de données</a></li>
+  <li><a href="#exos7">Architecture</a></li>
+</ul>
+
+
+
+<div class='info'>
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 32">
+         <path d="M22 20c-2 2-2 4-4 4s-4-2-6-4-4-4-4-6 2-2 4-4-4-8-6-8-6 6-6 6c0 4 4.109 12.109 8 16s12 8 16 8c0 0 6-4 6-6s-6-8-8-6z"></path>
+        </svg>
+<div class='blog'>
+<h1>SUJETS BAC NSI</h1>
+
+
+<p><a href="https://eduscol.education.fr/document/33073/download">Sujet Centres étrangers 1 2021</a>
+  <ul>
+    <li>Exercice 1: Programmation Orienté Objet</li>
+    <li><a href="../bac/page1/#bac-2021-etranger1-exercice-2">Exercice 2:</a> Algorithmes et dictionnaires en python</li>
+    <li>Exercice 3: Récursivité et Arbres binaires de recherche</li>
+    <li>Exercice 4: Réseau, adressage IP et conversion binaire</li>
+    <li>Exercice 5: Algorithmes et piles en python</li>
+
+  </ul>
+</p>
+
+<p><a href="https://eduscol.education.fr/document/33076/download">Sujet Centres étrangers 2 2021</a>
+  <ul>
+    <li>Exercice 1: Algorithmes et piles en python</li>
+    <li><a href="">Exercice 2:</a> Algorithmes et tableaux en python. Labyrinthe</li>
+    <li><a href="/docs/NSI/bac/page6/#bac-2021-centres-étrangers-2-exercice-3">Exercice 3:</a> Architecture, conversion et codage des caractères</li>
+    <li>Exercice 4: SGBD et SQL</li>
+    <li>Exercice 5: Systèmes sur puce et Programmation Orienté Objet</li>
+    
+  </ul>
+</p>
+
+<p><a href="https://eduscol.education.fr/document/33124/download">Sujet Amerique du Nord 2021</a>
+  <ul>
+    <li>Exercice 1: Requêtes SQL</li>
+    <li>Exercice II : Routage (RIP), Processus et Systèmes sur puce</li>
+    <li><a href="../bac/page1/#bac-2021-amerique-nord-exercice-3">Exercice 3:</a> Algorithmes et tableaux en python</li>
+    <li>Exercice 4: Algorithmes et Arbres binaires</li>
+    <li>Exercice 5: Piles et Files</li>
+    
+  </ul>
+</p>
+
+<p><a href="https://eduscol.education.fr/document/32914/download">Sujet Métropole Sept 1 : 2021</a>
+  <ul>
+    <li>Exercice 1: protocoles de communication, architecture d’un réseau et
+protocoles de routage.</li>
+    <li><a href="../bac/page8/">Exercice 2:</a>  algorithmique (recherche dichotomique) et langages et programmation (récursivité), complexité O(n)</li>
+    <li>Exercice 3: bases de données (modèle relationnel, base de données
+relationnelle et langage SQL).</li>
+    <li>Exercice 4: Structure de données (programmation objet) et langages et
+programmation (spécification).</li>
+    <li>Exercice 5:  structures de données (arbre, arbre binaire, pile). Pseudo langage</li>
+    
+  </ul>
+</p>
+
+<p><a href="https://eduscol.education.fr/document/32917/download">Sujet Métropole Sept 2 : 2021</a>
+  <ul>
+    <li>Exercice 1: protocoles de communication, architecture d’un réseau et
+protocoles de routage.</li>
+    <li><a href="../bac/page1/#bac-2021-metropole-sept-exercice-2">Exercice 2:</a>  structure de données (tableaux, dictionnaires) et langages
+et programmation (spécification).</li>
+    <li>Exercice 3: bases de données (modèle relationnel, base de données
+relationnelle et langage SQL).</li>
+    <li>Exercice 4: structure de données (programmation objet) et langages et
+programmation (spécification). Piles</li>
+    <li><a href="../bac/page1/#bac-2021-metropole-sept-exercice-5">Exercice 5:</a>  Traitement de données en tables (CSV) et langages et
+programmation (spécification).</li>
+    
+  </ul>
+</p>
+
+<p><a href="https://eduscol.education.fr/document/32914/download">Sujet Métropole 1 : 2021</a>
+  <ul>
+    <li>Exercice 1: SGBD et SQL, commediens de theatre</li>
+    <li>Exercice 2: Programmation Orienté Objet et Piles</li>
+    <li>Exercice 3: Commandes systèmes, Processus et Routage (OSPF)</li>
+    <li><a href="">Exercice 4:</a> Algorithmes et tableaux en python</li>
+    <li>Exercice 5: Récursivité, tableaux et diviser pour régner.</li>
+    
+  </ul>
+</p>
+
+
+
+<p><a href="https://eduscol.education.fr/document/32791/download">Sujet Métropole 2 : 2021</a>
+  <ul>
+    <li>Exercice 1: Requêtes SQL</li>
+    <li>Exercice 2: Gestion des processus, ordonancement</li>
+    <li>Exercice 3: Programmation Orienté Objet et Arbres binaires de recherche.</li>
+    <li>Exercice 4: Programmation python et récursivité</li>
+    <li><a href="">Exercice 5:</a> Algorithmes et tableaux en python</li>
+  </ul>
+</p>
+
+<p><a href="https://eduscol.education.fr/document/32770/download">Sujet Polynesie : 2021</a>
+  <ul>
+    <li><a href="">Exercice 1:</a> Algorithmes de tri (insertion et fusion)</li>
+    <li>Exercice 2: SGBD, Web et SQL</li>
+    <li>Exercice 3: Programmation Orienté Objet et Arbres binaires de recherche.</li>
+    <li>Exercice 4: Architecture, Systèmes sur puce, interblocage et routage RIP</li>
+    <li>Exercice 5: SGBD, SQL et tableaux en python</li>
+  </ul>
+</p>
+
+<p><a href="https://www.education.gouv.fr/media/114662/download">Sujet Mayotte: 2022</a>
+  <ul>
+    <li>Exercice 1: Structure de données (Pile), la notation polonaise inversée</li>
+    <li>Exercice 2: SQL, reservation d'une chambre d'hôtel</li>
+    <li>Exercice 3: Représentation binaire d’un entier relatif et les systèmes
+d’exploitation.</li>
+    <li>Exercice 4: Arbre binaire de recherche, programmation en pseudo langage</li>
+    <li>Exercice 5: Algorithmes et programmation en python, jeu du TAKAZU</li>
+  </ul>
+</p>
+
+<p><a href="https://www.education.gouv.fr/media/114758/download">Sujet Polynesie : 2022</a>
+  <ul>
+    <li><a href="../bac/page4/#bac-2022-polynesie-exercice-1">Exercice 1</a>: programmation, récursivité.</li>
+    <li><a href="../bac/page6/#bac-2022-polynesie-exercice-2">Exercice 2</a>: architecture matérielle.
+      <ul><li>Partie 1: ordonnancement. </li>
+      <li>Partie 2: expressions booléennes et circuit à portes logiques.</li></ul>
+    </li>
+    <li><a href="../bac/page5/#bac-2022-polynesie-exercice-3">Exercice 3:</a> bases de données, le modèle relationnel et le langage SQL. </li>
+    <li><a href="../bac/page2/#bac-2022-polynesie-exercice-4">Exercice 4</a>: structures de données et piles; tri. Programmation Objet.</li>
+    <li><a href="../bac/page3/#bac-2022-polynesie-exercice-5">Exercice 5:</a> algorithmes sur les arbres binaires.</li>
+</ul>
+</p>
+
+<p><a href="https://www.education.gouv.fr/media/114242/download">Sujet Metropole1 : 2022</a>
+  <ul>
+    <li><a href="../bac/page2/#bac-2022-metropole-1-exercice-1">Exercice 1</a>: Piles. Expression correctement parenthésée. Texte correctement balisé.</li>
+    <li><a href="../bac/page5/#bac-2022-metropole1-exercice-2">Exercice 2</a>: bases de données. Cinéma, titres de film et noms des acteurs.</li>
+    <li><a href="../bac/page6/#bac-2022-metropole1-exercice-3">Exercice 3</a>: représentations binaires et protocoles de routage. (RIP), minimiser le nombre de routeurs à traverser pour une requête.</li>
+    <li><a href="/bac/page3/#bac-2022-mettropole-1-exercice-4">Exercice 4</a>: parcours des arbres binaires, principe "diviser pour régner" et récursivité.</li>
+    <li><a href="../bac/page7/#bac-2022-metropole1-exercice-5">Exercice 5</a>: Programmation orientée objet, participants à un laser-game</li>
+  </ul>
+</p>
+
+<p><a href="https://www.education.gouv.fr/media/114344/download">Sujet Metropole2 : 2022</a>
+  <ul>
+    <li><a href="../bac/page3/#bac-2022-metropole-2-exercice-1">Exercice 1</a> : Arbre binaire de recherche, POO, récursivité</li>
+    <li><a href="../bac/page2/#bac-2022-metropole-2-exercice-2">Exercice 2</a> : Piles. jeu de cartes en solitaire "la poussette"</li>
+    <li><a href="../bac/page6">Exercice 3</a> : Réseaux et protocoles de routage</li>
+    <li><a href="../bac/page5">Exercice 4</a> : Bases de données et SQL. Un musicien souhaite créer une base de données contenant ses morceaux et interprètes préférés</li>
+    <li>Exercice 5 : programmation objet et méthode diviser pour regner. Création d'un labyrinthe.</li>
+
+  </ul>
+</p>
+
+</div>
+</div>
+
+<p class="rubrik" id="exos1">Exercices sur les structures de données natives</p>
+
+ 	<section class="main">
+
+  <div class="main-inside left">
+    
+    <input type="button" class="btn btn-lg" value="2021 sept metro Algo et dict" onclick="window.location.href = '../bac/page1/#bac-2021-metropole-sept-exercice-2'">
+    </div>  
+    <div class="main-inside right">
+      <input type="button" class="btn btn-lg" value="2021 sept metro Algo et tab" onclick="window.location.href = '../bac/page1/#bac-2021-metropole-sept-exercice-5'">
+      
+  </div>
+    </section>
+
+  <section class="main">
+  <div class="main-inside left">
+    <input type="button" class="btn btn-lg" value="2021 Ame Nord Algo et tab" onclick="window.location.href = '../bac/page1/#bac-2021-amerique-nord-exercice-3'">
+    </div> 
+    <div class="main-inside left">
+    <input type="button" class="btn btn-lg" value="2021 Etranger1 Algo et dict" onclick="window.location.href = '../bac/page1/#bac-2021-etranger1-exercice-2'">
+  </div>
+    </section>    
+
+<p class="rubrik" id="exos2">Exercices sur les Piles et Files</p>
+
+  <section class="main">
+  <div class="main-inside left">
+    <input type="button" class="btn btn-lg" value="2022 Polynesie Piles" onclick="window.location.href = '../bac/page2/#bac-2022-polynesie-exercice-4'">
+    </div> 
+    <div class="main-inside right">
+      <input type="button" class="btn btn-lg" value="2022 Metrop1 Piles" onclick='window.location.href = "../bac/page2/#bac-2022-metropole-1-exercice-1"'>
+  </div>
+    </section>  
+
+<p class="rubrik" id="exos3">Exercices sur les arbres</p>
+
+  <section class="main">
+  <div class="main-inside left">
+    <input type="button" class="btn btn-lg" value="2022 Metrop1 Arbres" onclick="window.location.href = '../bac/page3/#bac-2022-mettropole-1-exercice-4'">
+    </div> 
+    <div class="main-inside right">
+      <input type="button" class="btn btn-lg" value="2022 Polynesie Arbres" onclick='window.location.href = "../bac/page3/#bac-2022-polynesie-exercice-5"'>
+  </div>
+    </section>
+
+
+<p class="rubrik" id="exos4">Exercices sur recursivité</p>
+
+  <section class="main">
+  <div class="main-inside left">
+    <input type="button" class="btn btn-lg" value="2022 Polynesie recursivite" onclick="window.location.href = '../bac/page4/#bac-2022-polynesie-exercice-1'">
+    </div> 
+    <div class="main-inside right">
+      <input type="button" class="btn btn-lg" value="2021 Metropole recursivité" onclick='window.location.href = "../bac/page8/#sujet-métropole-sept-1-2021-exercice-2"'>
+  </div>
+    </section> 
+
+
+<p class="rubrik" id="exos5">Exercices POO</p>
+
+  <section class="main">
+  <div class="main-inside left">
+    <input type="button" class="btn btn-lg" value="2022 Metrop1 POO" onclick="window.location.href = '../bac/page7/#bac-2022-metropole1-exercice-5'">
+    </div> 
+    <div class="main-inside right">
+      <input type="button" class="btn btn-lg" value="..." onclick='window.location.href = "../bac/page5/#bac-2022-polynesie-exercice-3"'>
+  </div>
+    </section> 
+
+
+<p class="rubrik" id="exos6">Exercices BDD</p>
+
+  <section class="main">
+  <div class="main-inside left">
+    <input type="button" class="btn btn-lg" value="2022 Metrop1 BDD" onclick="window.location.href = '../bac/page5/#bac-2022-metropole1-exercice-2'">
+    </div> 
+    <div class="main-inside right">
+      <input type="button" class="btn btn-lg" value="2022 Polynesie BDD, SQL" onclick='window.location.href = "../bac/page5/#bac-2022-polynesie-exercice-3"'>
+  </div>
+    </section> 
+
+
+<p class="rubrik" id="exos7">Exercices Architecture</p>
+
+  <section class="main">
+  <div class="main-inside left">
+    <input type="button" class="btn btn-lg" value="2022 Metro1 Routage" onclick="window.location.href = '../bac/page6/#bac-2022-metropole1-exercice-3'">
+    </div> 
+    <div class="main-inside right">
+      <input type="button" class="btn btn-lg" value="Architecture, conversion, ASCII" onclick='window.location.href = "/docs/NSI/bac/page6/#bac-2021-centres-étrangers-2-exercice-3"'>
+  </div>
+    </section> 
+
+  <section class="main">
+  <div class="main-inside left">
+    <input type="button" class="btn btn-lg" value="2022 Polynesie archit ordon" onclick="window.location.href = '../bac/page6/#bac-2022-polynesie-exercice-2'">
+    </div> 
+    <div class="main-inside right">
+      <input type="button" class="btn btn-lg" value="retour" onclick='window.location.href = "/docs/NSI/NSI_index"'>
+  </div>
+    </section>  
+
+
+<div style="height:400px;"></div>
+
+
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

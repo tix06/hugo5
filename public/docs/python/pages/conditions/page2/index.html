@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    conditions
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fpython\2fpages\2f conditions\2fpage2\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    conditions
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="editeur-python">Editeur Python</h1>
+<ul>
+<li>L&rsquo;<strong>editeur</strong> suivant se présente comme un <strong>notebook</strong>. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur <em>Majuscule(Shift)</em> + <em>Entrée</em> pour <strong>executer le code</strong>.</li>
+</ul>
+<!-- raw HTML omitted -->
+<h1 id="conditions-et-boucles-non-bornées">Conditions et boucles non bornées</h1>
+<h2 id="conditions">Conditions</h2>
+<p><strong>1. Définition :</strong> Une <em>instruction conditionnelle</em> vérifie si une certaine condition est vraie avant d&rsquo;executer son code :</p>
+<pre tabindex="0"><code>if instruction_conditionnelle : 
+  code_à_executer
+</code></pre><p><em>Exemple :</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">if</span> <span style="color:#111">prix_essence</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1.8</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#d88200">&#39;Trop cher&#39;</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p><strong>2. Les blocs du programme</strong>
+En Python, on utilise l&rsquo;indentation (le retrait de la ligne) pour rendre compte des blocs de code.</p>
+<!-- raw HTML omitted -->
+<p>Le bloc de code à executer peut contenir plusieurs lignes, à condition de respecter l&rsquo;indentation.</p>
+<p><strong>3. L&rsquo;alternative <code>if - else</code></strong>
+Une instruction <code>if - else</code> contient une instruction <code>if</code> qui s&rsquo;execute si la condition est <code>True</code> et une clause <code>else</code> qui s&rsquo;execute si la condition est <code>False</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">if</span> <span style="color:#111">hauteur_plant</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span> <span style="color:#111">:</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#d88200">&#39;laisser le plant dans la serre&#39;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">else</span> <span style="color:#111">:</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#d88200">&#39;le mettre dehors&#39;</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p><strong>4. Conditions multiples <code>if - elif - else</code></strong>
+Un bloc <code>if - elif - else</code> comprend une premiere instruction <code>if</code>, puis une suite de conditions de tests <code>elif</code> si le premier test echoue, puis un bloc <code>else</code> qui s&rsquo;execute si tous les autres tests échouent.</p>
+<p>Même s&rsquo;il n&rsquo;est pas obligatoire, il est fortement recommandé de finir une série de conditions <code>elif</code> par le bloc <code>else</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">if</span> <span style="color:#111">hauteur_plant</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span> <span style="color:#111">:</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#d88200">&#39;laisser le plant dans la serre&#39;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">elif</span> <span style="color:#111">hauteur_plant</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span> <span style="color:#111">:</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#d88200">&#39;le sortir le jour&#39;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">elif</span> <span style="color:#111">hauteur_plant</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">15</span> <span style="color:#111">:</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#d88200">&#39;le mettre dehors&#39;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">else</span> <span style="color:#111">:</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#d88200">&#39;Pret pour la recolte&#39;</span><span style="color:#111">)</span>
+</span></span></code></pre></div><h2 id="boucles-non-bornées">Boucles non bornées</h2>
+<p><strong>1. Definition:</strong> Une <em>boucle non bornée</em> permet de répéter un élément de code un nombre à priori inconnu de fois.</p>
+<p>On écrit l&rsquo;instruction:  <!-- raw HTML omitted --> <code>while &lt;condition&gt;:</code></p>
+<p>Le bloc de code est indenté sous cette première ligne:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">while</span> <span style="color:#f92672">&lt;</span><span style="color:#111">condition</span><span style="color:#f92672">&gt;</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">instruction</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">instruction</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">instruction</span> <span style="color:#111">suivante</span> <span style="color:#75715e"># suite du programme</span>
+</span></span></code></pre></div><p>Cette boucle repète l&rsquo;execution d&rsquo;un bloc de code (<em>instruction 1, instruction 2</em>), <em>tant que</em> la <code>&lt;condition&gt;</code> est evaluée à <code>True</code>. Le test sur la <code>&lt;condition&gt;</code> est réalisé à chaque <em>itération</em>.</p>
+<p>Lorsque cette <code>&lt;condition&gt;</code> n&rsquo;est plus réalisée, le programme passe à l&rsquo;<em>instruction suivante</em>.</p>
+<p><em>Exemple:</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">r</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">while</span> <span style="color:#111">r</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">r</span> <span style="color:#f92672">=</span> <span style="color:#111">r</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#d88200">&#39;à la fin du programme, r vaut &#39;</span> <span style="color:#f92672">+</span> <span style="color:#111">str</span><span style="color:#111">(</span><span style="color:#111">r</span><span style="color:#111">))</span>
+</span></span></code></pre></div><ul>
+<li>A la première itération, <code>r</code> vaut 4 donc la <code>&lt;condition&gt;</code> r &gt; 0 est <code>True. r est diminué de 3 et prend la valeur</code>1</li>
+<li>A la 2e itération, <code>1 &gt; 0</code> est evalué à <code>True</code>. <code>r</code> est diminué de 3 et prend la valeur`-2</li>
+<li>A la 3e itération, <code>-2 &gt; 0</code> est evalué à <code>False</code>. Le bloc n&rsquo;est pas executé et le programme s&rsquo;arrête s&rsquo;il n&rsquo;y a pas d&rsquo;autres instructions (ou poursuit le script sinon).</li>
+</ul>
+<p><strong>2. Le problème de l&rsquo;arrêt</strong>
+Pour le script précédent, si l&rsquo;on avait remplacé la condition <code>r &gt; 0</code> par <code>r == 0</code> le programme aurait pu executer le bloc <code>r = r - 3</code> indefiniement. <code>r</code> aurait pris successivement les valeurs 4, 1, -2, -5, &hellip; etc, sans jamais prendre la valeur 0.</p>
+<p>C&rsquo;est le problème avec les boucles non bornées. Celles-ci peuvent ne pas finir, ce qui peut bloquer la machine.</p>
+<h1 id="travaux-pratiques">Travaux Pratiques</h1>
+<ul>
+<li><!-- raw HTML omitted -->Lien vers le TP1: structures conditionnelles<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->Lien vers le TP2: boucles non bornées<!-- raw HTML omitted --></li>
+</ul>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

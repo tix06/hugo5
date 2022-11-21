@@ -1,26 +1,498 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>thematiques
-| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel=stylesheet><script type=text/x-mathjax-config>
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    thematiques
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
   });
-</script><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.1c02dc1d2c0b546a84beb71d8f4336d6f5d7b69564e08bdfc04c2fb0595d786d.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
 catch(err)
-{console.log(err.message);}
-if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
-if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
-if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}
-let chemin=window.location.pathname;if(chemin.search('NSI')>-1){baniere=document.querySelector("#myHeader");let linkBox=document.createElement('div');linkBox.classList.add('linkBox');let newH=document.createElement('a');newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';newH.classList.add('nsi');linkBox.appendChild(newH);baniere.appendChild(linkBox);}</script><style>#myHeader{display:flex;flex-direction:row-reverse}#myHeader>.titre{width:80%;min-width:300px;text-align:left}.linkBox{margin:10px;padding-top:10px;background-color:pink;min-width:50px}.isn{}</style></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2f docs\2fNSI\2fprojet\2fpage2\2f ]{color:#004ed0}</style><ul><li><a href=/><strong>Accueil</strong></a></li><li><a href=/docs/esf/esf_index/><strong>ESF</strong></a></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p></li><li><p><a href=/docs/python/index_python/><strong>Python</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
-addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-page><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
-<strong>thematiques</strong></header><article class=markdown><h1 id=thématiques-en-informatique-et-numérique>Thématiques en informatique et numérique</h1><p>Les liens ci-dessous sont extraits de:</p><ul><li>le blog binaire du journal <a href=https://www.lemonde.fr/blog/binaire/>le monde</a></li><li>flux RSS du blog binaire: <a href=https://www.lemonde.fr/blog/binaire/feed/>https://www.lemonde.fr/blog/binaire/feed/</a></li><li>La chronique numérique du journal la recherche:<a href=https://www.larecherche.fr/rubrique/chronique-num%C3%A9rique>https://www.larecherche.fr/rubrique/chronique-num</a></li><li>Chronique éthique de Jean-Gabriel Ganascia: <a href=https://www.larecherche.fr/rubrique/chronique-%C3%A9thique>https://www.larecherche.fr/rubrique/chronique-%C3%A9thique</a></li></ul><p><script type=text/javascript src=https://feed.mikle.com/js/fw-loader.js preloader-text=Loading data-fw-param=144917/></script></p><h1 id=l-histoire-de-l-informatique>L’histoire de l’informatique</h1><h2 id=l-informatique-quelques-questions-pour-se-fâcher-entre-amis-https-www-lemonde-fr-blog-binaire-2021-03-05-linformatique-quelques-questions-pour-se-facher-entre-amis><a href=https://www.lemonde.fr/blog/binaire/2021/03/05/linformatique-quelques-questions-pour-se-facher-entre-amis/>L’informatique, quelques questions pour se fâcher entre amis</a></h2><p>vendredi 5 mars 2021 à 07:18</p><p>À l’heure des GAFAM, des fakenews, de prétendues addictions au numérique, etc., l’informatique ne manque pas de détracteurs. La définition même de cette science inédite du XXe qui a bouleversé nos sociétés divise. Serge Abiteboul et Gilles Dowek, les auteurs du best seller « Le temps des Algorithmes »[0] nous racontent ces sources de désaccords.</p><p><a href=https://www.lemonde.fr/blog/binaire/2021/03/05/linformatique-quelques-questions-pour-se-facher-entre-amis/>https://www.lemonde.fr/blog/binaire/2021/03/05/linformatique-quelques-questions-pour-se-facher-entre-amis/</a></p><h1 id=langages-et-programmation>Langages et programmation</h1><h2 id=le-vote-électronique-progrès-ou-danger-https-www-larecherche-fr-chronique-num-c3-a9rique-musique-et-informatique-un-mariage-damour><a href=https://www.larecherche.fr/chronique-num%C3%A9rique/musique-et-informatique-un-mariage-damour>Le vote électronique, progrès ou danger ?</a></h2><p>Une question s&rsquo;impose peut-on faire des machines et logiciels de vote sûrs, et pour quel type de vote ?
-<a href=https://www.larecherche.fr/chronique-num%C3%A9rique/le-vote-%C3%A9lectronique-progr%C3%A8s-ou-danger>https://www.larecherche.fr/chronique-num%C3%A9rique/le-vote-%C3%A9lectronique-progr%C3%A8s-ou-danger</a></p><h2 id=musique-et-informatique-un-mariage-d-amour-https-www-larecherche-fr-chronique-num-c3-a9rique-musique-et-informatique-un-mariage-damour><a href=https://www.larecherche.fr/chronique-num%C3%A9rique/musique-et-informatique-un-mariage-damour>Musique et informatique, un mariage d&rsquo;amour</a></h2><p>La portée classique, retranscrivant des notes de hauteurs bien séparées s&rsquo;enchaînant en rythme, ne suffit plus pour écrire les nouveaux sons, donnés par des courbes, des programmes ou des formules mathématiques, qui peuvent être spatialisés, etc. Quels langages, graphiques ou textuels, faut-il utiliser ?
-<a href=https://www.larecherche.fr/chronique-num%C3%A9rique/musique-et-informatique-un-mariage-damour>https://www.larecherche.fr/chronique-num%C3%A9rique/musique-et-informatique-un-mariage-damour</a></p><h1 id=données-structurées-et-structures-de-données>Données structurées et structures de données</h1><h2 id=réguler-grâce-aux-données-https-www-larecherche-fr-chronique-num-c3-a9rique-id-c3-a9es-r-c3-a9guler-gr-c3-a2ce-aux-donn-c3-a9es><a href=https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/r%C3%A9guler-gr%C3%A2ce-aux-donn%C3%A9es>Réguler grâce aux données</a></h2><p>Le monde se transforme de plus en plus rapidement en se complexifiant. Cela s&rsquo;accompagne de nouveaux défis pour l&rsquo;action de l&rsquo;État. Les données numériques, souvent à l&rsquo;origine d&rsquo;innovations, peuvent participer à la régulation par l&rsquo;État de systèmes économiques ou sociaux. Ainsi, la ville de Paris publie, depuis septembre 2019, Pollutrack, une carte interactive pour connaître le niveau de pollution de l&rsquo;air dans la capitale…
-<a href=https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/r%C3%A9guler-gr%C3%A2ce-aux-donn%C3%A9es>https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/r%C3%A9guler-gr%C3%A2ce-aux-donn%C3%A9es</a></p><h2 id=le-décodage-à-grande-distance-https-www-lemonde-fr-blog-binaire-2021-03-02-le-decodage-a-grande-distance><a href=https://www.lemonde.fr/blog/binaire/2021/03/02/le-decodage-a-grande-distance/>Le décodage à grande distance</a></h2><p>mardi 2 mars 2021 à 07:41</p><p>Thomas Debris-Alazard est lauréat du prix de thèse Gilles Kahn 2020, pour sa thèse effectuée à l’Inria Paris. Pendant sa thèse, Thomas s’est attaqué a un problème de cryptographie post-quantique ouvert depuis 40 ans ! Il vient nous l’expliquer dans binaire. Pauline Bolignano. La sécurité de nos données personnelles, de nos communications ou encore de …</p><p><a href=https://www.lemonde.fr/blog/binaire/2021/03/02/le-decodage-a-grande-distance/>https://www.lemonde.fr/blog/binaire/2021/03/02/le-decodage-a-grande-distance/</a></p><h1 id=algorithmique>Algorithmique</h1><h2 id=le-problème-sat-un-défi-constant-pour-les-calculateurs-https-www-larecherche-fr-chronique-num-c3-a9rique-id-c3-a9es-le-probl-c3-a8me-sat-un-d-c3-a9fi-constant-pour-les-calculateurs><a href=https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/le-probl%C3%A8me-sat-un-d%C3%A9fi-constant-pour-les-calculateurs>Le problème SAT, un défi constant pour les calculateurs</a></h2><p>Le problème SAT est de savoir si une formule donnée est satisfiable ou non. À première vue, on peut résoudre ce problème en un temps fini : il suffit de tester une par une toutes les combinaisons de valeurs des variables. Mais la méthode devient vite impraticable car la quantité de calcul requise croît exponentiellement avec le nombre de variables&hellip;</p><p><a href=https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/le-probl%C3%A8me-sat-un-d%C3%A9fi-constant-pour-les-calculateurs>https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/le-probl%C3%A8me-sat-un-d%C3%A9fi-constant-pour-les-calculateurs</a></p><h2 id=algorithmes-décisionnels-expliquer-n-est-pas-justifier-https-www-lemonde-fr-blog-binaire-2021-02-19-algorithmes-decisionnels-expliquer-nest-pas-justifier><a href=https://www.lemonde.fr/blog/binaire/2021/02/19/algorithmes-decisionnels-expliquer-nest-pas-justifier/>Algorithmes décisionnels : expliquer n’est pas justifier</a></h2><p>vendredi 19 février 2021 à 07:32</p><p>Fournir des explications du fonctionnement des algorithmes compréhensibles par des profanes ? Félicien Vallet s’entretient avec Clément Henin et Daniel Le Métayer, de l’équipe Inria Privatics, sur les enjeux de l’explicabilité des algorithmes et leurs travaux de recherche sur ce sujet.
-<a href=https://www.lemonde.fr/blog/binaire/2021/02/19/algorithmes-decisionnels-expliquer-nest-pas-justifier/>https://www.lemonde.fr/blog/binaire/2021/02/19/algorithmes-decisionnels-expliquer-nest-pas-justifier/</a></p><h2 id=le-dilemme-de-la-maladie-https-www-lemonde-fr-blog-binaire-2021-02-16-le-dilemne-de-la-maladie><a href=https://www.lemonde.fr/blog/binaire/2021/02/16/le-dilemne-de-la-maladie/>Le Dilemme de la Maladie</a></h2><p>mardi 16 février 2021 à 06:30</p><p>Peut-on établir un lien mathématique entre le comportement des gens et la propagation d’un virus ? La réponse est oui, et cela permet, en résolvant des équations, d’aider à la prise de décisions stratégiques pour gérer une pandémie. Carl-Joar Karlsson et Julie Rowlett, chercheur et chercheuse au département des Sciences Mathématiques de l’université technique de …</p><p><a href=https://www.lemonde.fr/blog/binaire/2021/02/16/le-dilemne-de-la-maladie/>https://www.lemonde.fr/blog/binaire/2021/02/16/le-dilemne-de-la-maladie/</a></p><h2 id=fouiller-les-processus-pour-les-améliorer-https-www-lemonde-fr-blog-binaire-2021-02-12-fouiller-les-processus-pour-les-ameliorer><a href=https://www.lemonde.fr/blog/binaire/2021/02/12/fouiller-les-processus-pour-les-ameliorer/>Fouiller les processus pour les améliorer</a></h2><p>vendredi 12 février 2021 à 07:24</p><p>Dans la rubrique Il était une fois… ma thèse, Mathilde Boltenhagen, doctorante en informatique à l’Université Paris-Saclay, à l’ENS Paris-Saclay, au CNRS, à l’Inria et au LSV, vient nous raconter ses travaux. Dans cet article, Mathilde fait faire le tour du monde à notre valise, un prétexte pour nous parler de son domaine de recherche …
-<a href=https://www.lemonde.fr/blog/binaire/2021/02/12/fouiller-les-processus-pour-les-ameliorer/>https://www.lemonde.fr/blog/binaire/2021/02/12/fouiller-les-processus-pour-les-ameliorer/</a></p><h2 id=codecarbon-un-programme-qui-évalue-les-algorithmes-https-www-cscience-ca-2020-12-22-un-code-pour-connaitre-lempreinte-ecologique-de-lia><a href=https://www.cscience.ca/2020/12/22/un-code-pour-connaitre-lempreinte-ecologique-de-lia/>Codecarbon: un programme qui évalue les algorithmes</a></h2><p>« L’IA est une technologie exceptionnelle et essentielle pour le bien commun, mais il faut cependant être conscients de son impact environnemental croissant. C’est l’ambition de CodeCarbon. Nous souhaitons inciter la communauté d’experts de l’IA à mieux évaluer, à révéler et surtout à réduire son empreinte carbone », Yoshua Bengio, fondateur de Mila&hellip;</p><p><a href=https://www.cscience.ca/2020/12/22/un-code-pour-connaitre-lempreinte-ecologique-de-lia/>https://www.cscience.ca/2020/12/22/un-code-pour-connaitre-lempreinte-ecologique-de-lia/</a></p><h2 id=dossier-sur-l-intelligence-artificielle-posts-python-data-analyse><a href=/posts/python/data_analyse/>Dossier sur l&rsquo;intelligence artificielle</a></h2><p>fiche et liens sur le thème de l&rsquo;IA.</p><p><a href=/posts/python/data_analyse/>allophysique.com &gt; Posts</a></p><h2 id=l-algorithme-nouvelle-machine-à-tubes-vraiment-https-www-lemonde-fr-blog-binaire-2021-03-12-lalgorithme-nouvelle-machine-a-tubes-vraiment><a href=https://www.lemonde.fr/blog/binaire/2021/03/12/lalgorithme-nouvelle-machine-a-tubes-vraiment/>L’algorithme, nouvelle machine à tubes. Vraiment ?</a></h2><p>Un algorithme peut-il composer de la musique, un texte, un tableau ? C’est le sujet que traite Philippe Rigaux, professeur d’informatique au CNAM…</p><p><a href=https://www.lemonde.fr/blog/binaire/2021/03/12/lalgorithme-nouvelle-machine-a-tubes-vraiment/>https://www.lemonde.fr/blog/binaire/2021/03/12/lalgorithme-nouvelle-machine-a-tubes-vraiment/</a></p><h2 id=on-n-apprend-bien-qu-en-se-trompant-https-www-lemonde-fr-blog-binaire-2020-10><a href=https://www.lemonde.fr/blog/binaire/2020/10/>« On n’apprend bien qu’en se trompant »</a></h2><p>De la même façon qu’on est souvent incapable de caractériser une phrase correcte, il existe de nombreux problèmes que les humains savent résoudre sans vraiment pouvoir en décrire précisément une solution algorithmique… ce sont des problèmes identiques à ceux traités par l’apprentissage par renforcement, en intelligence artificielle.</p><p><a href=https://www.lemonde.fr/blog/binaire/2020/10/>https://www.lemonde.fr/blog/binaire/2020/10/</a></p><h2 id=les-algorithmes-ou-la-recherche-de-l-élégance-https-www-larecherche-fr-chronique-num-c3-a9rique-les-algorithmes-ou-la-recherche-de-l-c3-a9l-c3-a9gance><a href=https://www.larecherche.fr/chronique-num%C3%A9rique/les-algorithmes-ou-la-recherche-de-l%C3%A9l%C3%A9gance>Les algorithmes ou la recherche de l&rsquo;élégance</a></h2><p>« Quelle peut bien être la forme des algorithmes ? » Pour suggérer des figures « de douceur céleste », le dramaturge Eugène Ionesco dessinait des formes ovales. Qu&rsquo;aurait-il dessiné pour représenter des algorithmes : des carrés, des parallélépipèdes biscornus, des graffitis ?</p><p><a href=https://www.larecherche.fr/chronique-num%C3%A9rique/les-algorithmes-ou-la-recherche-de-l%C3%A9l%C3%A9gance>https://www.larecherche.fr/chronique-num%C3%A9rique/les-algorithmes-ou-la-recherche-de-l%C3%A9l%C3%A9gance</a></p><h1 id=bases-de-données>Bases de données</h1><h2 id=affiche-sur-le-cloud-et-l-environnement>Affiche sur le cloud et l&rsquo;environnement</h2><figure><img src=../images/affiche.JPG><figcaption>projet sur le developpement durable des élèves du lycée H d'Estiennes d'Orves 2021</figcaption></figure><h2 id=deux-ou-trois-leçons-à-retenir-de-l-application-stopcovid-https-www-larecherche-fr-chronique-num-c3-a9rique-deux-ou-trois-le-c3-a7ons-c3-a0-retenir-de-lapplication-stopcovid><a href=https://www.larecherche.fr/chronique-num%C3%A9rique/deux-ou-trois-le%C3%A7ons-%C3%A0-retenir-de-lapplication-stopcovid>Deux ou trois leçons à retenir de l&rsquo;application StopCovid</a></h2><p>L&rsquo;application mobile chargée de tracer les contacts avec des personnes contaminées: un sujet mettant en jeu des libertés fondamentales&hellip;Deux approches algorithmiques sont en compétition : centralisée et décentralisée. Les deux font appel à un serveur central. La question est de savoir si la liste des contacts de chacun est gérée sur ce serveur (approche centralisée) ou distribuée sur tout le réseau (approche décentralisée). Des risques de fuite de données personnelles existent dans les deux cas. Les différences sont subtiles et demandent une compréhension fine du fonctionnement des deux algorithmes. Cela met en évidence l&rsquo;indispensable formation à l&rsquo;informatique de la population pour pouvoir faire collectivement des choix éclairés.</p><p><a href=https://www.larecherche.fr/chronique-num%C3%A9rique/deux-ou-trois-le%C3%A7ons-%C3%A0-retenir-de-lapplication-stopcovid>https://www.larecherche.fr/chronique-num%C3%A9rique/deux-ou-trois-le%C3%A7ons-%C3%A0-retenir-de-lapplication-stopcovid</a></p><h1 id=architectures-matérielles-systèmes-d-exploitation-réseaux-et-securité>Architectures matérielles, systèmes d’exploitation, réseaux et securité</h1><h2 id=internet-un-bond-de-géant-pour-l-humanité-https-www-larecherche-fr-chronique-num-c3-a9rique-id-c3-a9es-un-bond-de-g-c3-a9ant-pour-lhumanit-c3-a9><a href=https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/un-bond-de-g%C3%A9ant-pour-lhumanit%C3%A9>Internet : Un bond de géant pour l&rsquo;humanité</a></h2><p>cette magnifique invention est porteuse des plus belles valeurs humaines : apporter les connaissances à tous, permettre à tous de communiquer. Mais pourrons-nous continuer longtemps à utiliser Internet ? Peut-être pas.</p><p><a href=https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/un-bond-de-g%C3%A9ant-pour-lhumanit%C3%A9>https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/un-bond-de-g%C3%A9ant-pour-lhumanit%C3%A9</a></p><h2 id=comprendre-les-blockchains-fonctionnement-et-enjeux-de-ces-nouvelles-technologies-http-www-senat-fr-rap-r17-584-r17-584-mono-html><a href=http://www.senat.fr/rap/r17-584/r17-584_mono.html>Comprendre les blockchains : fonctionnement et enjeux de ces nouvelles technologies</a></h2><p>les blockchains permettent des échanges décentralisés et sécurisés, sans qu&rsquo;il soit besoin d&rsquo;un tiers de confiance. Plus précisément, elles sont des technologies de stockage et de transmission d&rsquo;informations, permettant la constitution de registres répliqués et distribués, sans organe central de contrôle, sécurisées grâce à la cryptographie, et structurées par des blocs liés les uns aux autres, à intervalles de temps réguliers&hellip;.
-<a href=http://www.senat.fr/rap/r17-584/r17-584_mono.html#toc75>des blocs liés entre eux par des fonctions de hachage</a></p><h1 id=interfaces-hommes-machines-ihm>Interfaces Hommes-Machines (IHM)</h1><h2 id=neurosmart-une-histoire-de-cerveau-et-de-passionnés-https-www-lemonde-fr-blog-binaire-2020-11-27-neurosmart-une-histoire-de-cerveau-et-de-passionnes><a href=https://www.lemonde.fr/blog/binaire/2020/11/27/neurosmart-une-histoire-de-cerveau-et-de-passionnes/>Neurosmart, une histoire de cerveau et de passionnés</a></h2><p>Comment expliquer au mieux au grand public, aux étudiantes et étudiants, mais aussi à d’autres collègues chercheurs, notre métier de chercheuses et chercheurs ? Comment expliquer le lien entre les neurosciences, la cognition et l’informatique de manière la plus accessible à chacune et chacun, quel que soit le niveau de connaissance dans ces domaines ?
-Neurosmart : concrêtement, is’agit d’un site web où il est possible de visualiser plusieurs scénarios. Un scénario est le nom donné à une situation particulière que vit un individu et pour laquelle ses fonctions cognitives vont être sollicitées pour pouvoir y réagir. L’interface propose alors de visualiser. pour chaque action les structures cérébrales qui sont impliquées et mettre en avant cela par une visualisation 3D dynamique (c’est littéralement le cerveau qui s’illumine au sens propre du terme !)</p><p><a href=https://www.lemonde.fr/blog/binaire/2020/11/27/neurosmart-une-histoire-de-cerveau-et-de-passionnes/>https://www.lemonde.fr/blog/binaire/2020/11/27/neurosmart-une-histoire-de-cerveau-et-de-passionnes/</a></p><h1 id=impact-sociétal-et-éthique-de-l-informatique>Impact sociétal et éthique de l’informatique</h1><h2 id=ia-et-démocratie-participative-la-confiance-règne-https-www-lemonde-fr-blog-binaire-2021-03-30-ia-et-democratie-participative-la-confiance-regne><a href=https://www.lemonde.fr/blog/binaire/2021/03/30/ia-et-democratie-participative-la-confiance-regne/>IA et démocratie participative : la confiance règne ?</a></h2><p>mardi 30 mars 2021 à 07:00</p><p>Le développement de la démocratie participative a fait émerger de nouvelles formes de consultations avec un grand nombre de données à analyser. Les réponses sont complexes puisque chacun s’exprime sans contrainte de style ou de format. Des méthodes d’intelligence artificielle ont donc été utilisées pour analyser ces réponses mais le résultat est-il vraiment fiable ? …</p><p><a href=https://www.lemonde.fr/blog/binaire/2021/03/30/ia-et-democratie-participative-la-confiance-regne/>https://www.lemonde.fr/blog/binaire/2021/03/30/ia-et-democratie-participative-la-confiance-regne/</a></p><h2 id=magie-numérique-et-défis-juridiques-https-www-lemonde-fr-blog-binaire-2021-02-05-magie-numerique-et-defis-juridiques><a href=https://www.lemonde.fr/blog/binaire/2021/02/05/magie-numerique-et-defis-juridiques/>Magie numérique et défis juridiques</a></h2><p>vendredi 5 février 2021 à 07:12</p><p>Un nouvel « Entretien autour de l’informatique ». Christophe Lazaro est Professeur au Centre de Philosophie du Droit, à l’Université de Louvain, et membre du Comité National Pilote d’Éthique du Numérique (France). Nous poursuivons avec lui le voyage commencé avec Célia Zolynski sur le droit du numérique. Christophe nous amène aux frontières du droit, de …</p><p><a href=https://www.lemonde.fr/blog/binaire/2021/02/05/magie-numerique-et-defis-juridiques/>https://www.lemonde.fr/blog/binaire/2021/02/05/magie-numerique-et-defis-juridiques/</a></p><h2 id=la-modélisation-de-l-intelligence-humaine-les-hauts-de-otesia-https-www-lemonde-fr-blog-binaire-2020-12-29-les-hauts-de-otesia><a href=https://www.lemonde.fr/blog/binaire/2020/12/29/les-hauts-de-otesia/>la modélisation de l’intelligence humaine - les hauts de otesia</a></h2><p>Lorsqu’on parle d’intelligence artificielle, surgit très souvent le problème de la définition de ce que cette notion recouvre, en opposition ou en complément à une intelligence dite « humaine ». Profitant des travaux sur la formalisation d’une intelligence mécanique et de nombreux outils développés dans ce cadre, abordons la question passionnante de la modélisation de l’intelligence humaine</p><p><a href=https://www.lemonde.fr/blog/binaire/2020/12/29/les-hauts-de-otesia/>https://www.lemonde.fr/blog/binaire/2020/12/29/les-hauts-de-otesia/</a></p><h2 id=multiplions-les-identités-de-notre-double-numérique-https-www-larecherche-fr-chronique-num-c3-a9rique-multiplions-les-identit-c3-a9s-de-notre-double-num-c3-a9rique><a href=https://www.larecherche.fr/chronique-num%C3%A9rique/multiplions-les-identit%C3%A9s-de-notre-double-num%C3%A9rique>Multiplions les identités de notre double numérique</a></h2><p>une identité unique est-elle souhaitable pour se connecter à toutes les plateformes numériques ?</p><p><a href=https://www.larecherche.fr/chronique-num%C3%A9rique/multiplions-les-identit%C3%A9s-de-notre-double-num%C3%A9rique>https://www.larecherche.fr/chronique-num%C3%A9rique/multiplions-les-identit%C3%A9s-de-notre-double-num%C3%A9rique</a></p><h2 id=la-voiture-autonome-met-en-échec-l-utilitarisme-https-www-larecherche-fr-chronique-c3-a9thique-la-voiture-autonome-met-en-c3-a9chec-lutilitarisme><a href=https://www.larecherche.fr/chronique-%C3%A9thique/la-voiture-autonome-met-en-%C3%A9chec-lutilitarisme>La voiture autonome met en échec l&rsquo;utilitarisme</a></h2><p>Depuis quelques années, on établit souvent un lien entre les voitures autonomes et des dilemmes éthiques insolubles auxquels les ingénieurs seraient sommés de trouver des solutions consensuelles : comment choisir entre tuer cinq personnes qui traversent au feu vert ou condamner le passager du véhicule, qui en est aussi le propriétaire, à une mort certaine ?</p><p><a href=https://www.larecherche.fr/chronique-%C3%A9thique/la-voiture-autonome-met-en-%C3%A9chec-lutilitarisme>https://www.larecherche.fr/chronique-%C3%A9thique/la-voiture-autonome-met-en-%C3%A9chec-lutilitarisme</a></p><p><input type=button class="btn btn-lg" value="Préparer l'entretien" onclick="window.location.href='/docs/NSI/projet/page3/'"></p></article><div style=height:100px></div></div><aside class="book-toc fixed"><nav id=TableOfContents><ul><li><a href=#thématiques-en-informatique-et-numérique>Thématiques en informatique et numérique</a></li><li><a href=#l-histoire-de-l-informatique>L’histoire de l’informatique</a><ul><li><a href=#l-informatique-quelques-questions-pour-se-fâcher-entre-amis-https-www-lemonde-fr-blog-binaire-2021-03-05-linformatique-quelques-questions-pour-se-facher-entre-amis><a href=https://www.lemonde.fr/blog/binaire/2021/03/05/linformatique-quelques-questions-pour-se-facher-entre-amis/>L’informatique, quelques questions pour se fâcher entre amis</a></a></li></ul></li><li><a href=#langages-et-programmation>Langages et programmation</a><ul><li><a href=#le-vote-électronique-progrès-ou-danger-https-www-larecherche-fr-chronique-num-c3-a9rique-musique-et-informatique-un-mariage-damour><a href=https://www.larecherche.fr/chronique-num%C3%A9rique/musique-et-informatique-un-mariage-damour>Le vote électronique, progrès ou danger ?</a></a></li><li><a href=#musique-et-informatique-un-mariage-d-amour-https-www-larecherche-fr-chronique-num-c3-a9rique-musique-et-informatique-un-mariage-damour><a href=https://www.larecherche.fr/chronique-num%C3%A9rique/musique-et-informatique-un-mariage-damour>Musique et informatique, un mariage d&rsquo;amour</a></a></li></ul></li><li><a href=#données-structurées-et-structures-de-données>Données structurées et structures de données</a><ul><li><a href=#réguler-grâce-aux-données-https-www-larecherche-fr-chronique-num-c3-a9rique-id-c3-a9es-r-c3-a9guler-gr-c3-a2ce-aux-donn-c3-a9es><a href=https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/r%C3%A9guler-gr%C3%A2ce-aux-donn%C3%A9es>Réguler grâce aux données</a></a></li><li><a href=#le-décodage-à-grande-distance-https-www-lemonde-fr-blog-binaire-2021-03-02-le-decodage-a-grande-distance><a href=https://www.lemonde.fr/blog/binaire/2021/03/02/le-decodage-a-grande-distance/>Le décodage à grande distance</a></a></li></ul></li><li><a href=#algorithmique>Algorithmique</a><ul><li><a href=#le-problème-sat-un-défi-constant-pour-les-calculateurs-https-www-larecherche-fr-chronique-num-c3-a9rique-id-c3-a9es-le-probl-c3-a8me-sat-un-d-c3-a9fi-constant-pour-les-calculateurs><a href=https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/le-probl%C3%A8me-sat-un-d%C3%A9fi-constant-pour-les-calculateurs>Le problème SAT, un défi constant pour les calculateurs</a></a></li><li><a href=#algorithmes-décisionnels-expliquer-n-est-pas-justifier-https-www-lemonde-fr-blog-binaire-2021-02-19-algorithmes-decisionnels-expliquer-nest-pas-justifier><a href=https://www.lemonde.fr/blog/binaire/2021/02/19/algorithmes-decisionnels-expliquer-nest-pas-justifier/>Algorithmes décisionnels : expliquer n’est pas justifier</a></a></li><li><a href=#le-dilemme-de-la-maladie-https-www-lemonde-fr-blog-binaire-2021-02-16-le-dilemne-de-la-maladie><a href=https://www.lemonde.fr/blog/binaire/2021/02/16/le-dilemne-de-la-maladie/>Le Dilemme de la Maladie</a></a></li><li><a href=#fouiller-les-processus-pour-les-améliorer-https-www-lemonde-fr-blog-binaire-2021-02-12-fouiller-les-processus-pour-les-ameliorer><a href=https://www.lemonde.fr/blog/binaire/2021/02/12/fouiller-les-processus-pour-les-ameliorer/>Fouiller les processus pour les améliorer</a></a></li><li><a href=#codecarbon-un-programme-qui-évalue-les-algorithmes-https-www-cscience-ca-2020-12-22-un-code-pour-connaitre-lempreinte-ecologique-de-lia><a href=https://www.cscience.ca/2020/12/22/un-code-pour-connaitre-lempreinte-ecologique-de-lia/>Codecarbon: un programme qui évalue les algorithmes</a></a></li><li><a href=#dossier-sur-l-intelligence-artificielle-posts-python-data-analyse><a href=/posts/python/data_analyse/>Dossier sur l&rsquo;intelligence artificielle</a></a></li><li><a href=#l-algorithme-nouvelle-machine-à-tubes-vraiment-https-www-lemonde-fr-blog-binaire-2021-03-12-lalgorithme-nouvelle-machine-a-tubes-vraiment><a href=https://www.lemonde.fr/blog/binaire/2021/03/12/lalgorithme-nouvelle-machine-a-tubes-vraiment/>L’algorithme, nouvelle machine à tubes. Vraiment ?</a></a></li><li><a href=#on-n-apprend-bien-qu-en-se-trompant-https-www-lemonde-fr-blog-binaire-2020-10><a href=https://www.lemonde.fr/blog/binaire/2020/10/>« On n’apprend bien qu’en se trompant »</a></a></li><li><a href=#les-algorithmes-ou-la-recherche-de-l-élégance-https-www-larecherche-fr-chronique-num-c3-a9rique-les-algorithmes-ou-la-recherche-de-l-c3-a9l-c3-a9gance><a href=https://www.larecherche.fr/chronique-num%C3%A9rique/les-algorithmes-ou-la-recherche-de-l%C3%A9l%C3%A9gance>Les algorithmes ou la recherche de l&rsquo;élégance</a></a></li></ul></li><li><a href=#bases-de-données>Bases de données</a><ul><li><a href=#affiche-sur-le-cloud-et-l-environnement>Affiche sur le cloud et l&rsquo;environnement</a></li><li><a href=#deux-ou-trois-leçons-à-retenir-de-l-application-stopcovid-https-www-larecherche-fr-chronique-num-c3-a9rique-deux-ou-trois-le-c3-a7ons-c3-a0-retenir-de-lapplication-stopcovid><a href=https://www.larecherche.fr/chronique-num%C3%A9rique/deux-ou-trois-le%C3%A7ons-%C3%A0-retenir-de-lapplication-stopcovid>Deux ou trois leçons à retenir de l&rsquo;application StopCovid</a></a></li></ul></li><li><a href=#architectures-matérielles-systèmes-d-exploitation-réseaux-et-securité>Architectures matérielles, systèmes d’exploitation, réseaux et securité</a><ul><li><a href=#internet-un-bond-de-géant-pour-l-humanité-https-www-larecherche-fr-chronique-num-c3-a9rique-id-c3-a9es-un-bond-de-g-c3-a9ant-pour-lhumanit-c3-a9><a href=https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/un-bond-de-g%C3%A9ant-pour-lhumanit%C3%A9>Internet : Un bond de géant pour l&rsquo;humanité</a></a></li><li><a href=#comprendre-les-blockchains-fonctionnement-et-enjeux-de-ces-nouvelles-technologies-http-www-senat-fr-rap-r17-584-r17-584-mono-html><a href=http://www.senat.fr/rap/r17-584/r17-584_mono.html>Comprendre les blockchains : fonctionnement et enjeux de ces nouvelles technologies</a></a></li></ul></li><li><a href=#interfaces-hommes-machines-ihm>Interfaces Hommes-Machines (IHM)</a><ul><li><a href=#neurosmart-une-histoire-de-cerveau-et-de-passionnés-https-www-lemonde-fr-blog-binaire-2020-11-27-neurosmart-une-histoire-de-cerveau-et-de-passionnes><a href=https://www.lemonde.fr/blog/binaire/2020/11/27/neurosmart-une-histoire-de-cerveau-et-de-passionnes/>Neurosmart, une histoire de cerveau et de passionnés</a></a></li></ul></li><li><a href=#impact-sociétal-et-éthique-de-l-informatique>Impact sociétal et éthique de l’informatique</a><ul><li><a href=#ia-et-démocratie-participative-la-confiance-règne-https-www-lemonde-fr-blog-binaire-2021-03-30-ia-et-democratie-participative-la-confiance-regne><a href=https://www.lemonde.fr/blog/binaire/2021/03/30/ia-et-democratie-participative-la-confiance-regne/>IA et démocratie participative : la confiance règne ?</a></a></li><li><a href=#magie-numérique-et-défis-juridiques-https-www-lemonde-fr-blog-binaire-2021-02-05-magie-numerique-et-defis-juridiques><a href=https://www.lemonde.fr/blog/binaire/2021/02/05/magie-numerique-et-defis-juridiques/>Magie numérique et défis juridiques</a></a></li><li><a href=#la-modélisation-de-l-intelligence-humaine-les-hauts-de-otesia-https-www-lemonde-fr-blog-binaire-2020-12-29-les-hauts-de-otesia><a href=https://www.lemonde.fr/blog/binaire/2020/12/29/les-hauts-de-otesia/>la modélisation de l’intelligence humaine - les hauts de otesia</a></a></li><li><a href=#multiplions-les-identités-de-notre-double-numérique-https-www-larecherche-fr-chronique-num-c3-a9rique-multiplions-les-identit-c3-a9s-de-notre-double-num-c3-a9rique><a href=https://www.larecherche.fr/chronique-num%C3%A9rique/multiplions-les-identit%C3%A9s-de-notre-double-num%C3%A9rique>Multiplions les identités de notre double numérique</a></a></li><li><a href=#la-voiture-autonome-met-en-échec-l-utilitarisme-https-www-larecherche-fr-chronique-c3-a9thique-la-voiture-autonome-met-en-c3-a9chec-lutilitarisme><a href=https://www.larecherche.fr/chronique-%C3%A9thique/la-voiture-autonome-met-en-%C3%A9chec-lutilitarisme>La voiture autonome met en échec l&rsquo;utilitarisme</a></a></li></ul></li></ul></nav></aside></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
-<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI\2fprojet\2fpage2\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    thematiques
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="thématiques-en-informatique-et-numérique">Thématiques en informatique et numérique</h1>
+<p>Les liens ci-dessous sont extraits de:</p>
+<ul>
+<li>le blog binaire du journal <a href="https://www.lemonde.fr/blog/binaire/">le monde</a></li>
+<li>flux RSS du blog binaire: <a href="https://www.lemonde.fr/blog/binaire/feed/">https://www.lemonde.fr/blog/binaire/feed/</a></li>
+<li>La chronique numérique du journal la recherche:<a href="https://www.larecherche.fr/rubrique/chronique-num%C3%A9rique">https://www.larecherche.fr/rubrique/chronique-num</a></li>
+<li>Chronique éthique de Jean-Gabriel Ganascia:  <a href="https://www.larecherche.fr/rubrique/chronique-%C3%A9thique">https://www.larecherche.fr/rubrique/chronique-%C3%A9thique</a></li>
+</ul>
+<!-- raw HTML omitted -->
+<h1 id="lhistoire-de-linformatique">L’histoire de l’informatique</h1>
+<h2 id="linformatique-quelques-questions-pour-se-fâcher-entre-amishttpswwwlemondefrblogbinaire20210305linformatique-quelques-questions-pour-se-facher-entre-amis"><a href="https://www.lemonde.fr/blog/binaire/2021/03/05/linformatique-quelques-questions-pour-se-facher-entre-amis/">L’informatique, quelques questions pour se fâcher entre amis</a></h2>
+<p>vendredi 5 mars 2021 à 07:18</p>
+<p>À l’heure des GAFAM, des fakenews, de prétendues addictions au numérique, etc., l’informatique ne manque pas de détracteurs. La définition même de cette science inédite du XXe qui a bouleversé nos sociétés divise. Serge Abiteboul et Gilles Dowek, les auteurs du best seller « Le temps des Algorithmes »[0] nous racontent ces sources de désaccords.</p>
+<p><a href="https://www.lemonde.fr/blog/binaire/2021/03/05/linformatique-quelques-questions-pour-se-facher-entre-amis/">https://www.lemonde.fr/blog/binaire/2021/03/05/linformatique-quelques-questions-pour-se-facher-entre-amis/</a></p>
+<h1 id="langages-et-programmation">Langages et programmation</h1>
+<h2 id="réinventer-la-programmationhttpswwwlemondefrbloginternetactu20171125reinventer-la-programmation"><a href="https://www.lemonde.fr/blog/internetactu/2017/11/25/reinventer-la-programmation/">Réinventer la programmation</a></h2>
+<p>La manière même dont on code arrive-t-elle à bout de souffle ? C’est la thèse que défend un long et passionnant article de The Atlantic signé par le journaliste et programmeur James Somers (@jsomers). Résumé par Hubert Guillaud.</p>
+<p>Questions<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->Combien de lignes de code contiennent les programmes qui font fonctionner une voiture?<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->Citer quelques une des causes de l&rsquo;existence de bug dans les logiciels<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->Comment on pourrait les résoudre (en partie)<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->Quels sont les domaines actuels et futurs où le code a un caractère critique<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<p><a href="https://www.lemonde.fr/blog/internetactu/2017/11/25/reinventer-la-programmation/">https://www.lemonde.fr/blog/internetactu/2017/11/25/reinventer-la-programmation/</a></p>
+<h2 id="le-vote-électronique-progrès-ou-danger-httpswwwlarecherchefrchronique-numc3a9riquemusique-et-informatique-un-mariage-damour"><a href="https://www.larecherche.fr/chronique-num%C3%A9rique/musique-et-informatique-un-mariage-damour">Le vote électronique, progrès ou danger ?</a></h2>
+<p>Une question s&rsquo;impose  peut-on faire des machines et logiciels de vote sûrs, et pour quel type de vote ?
+<a href="https://www.larecherche.fr/chronique-num%C3%A9rique/le-vote-%C3%A9lectronique-progr%C3%A8s-ou-danger">https://www.larecherche.fr/chronique-num%C3%A9rique/le-vote-%C3%A9lectronique-progr%C3%A8s-ou-danger</a></p>
+<h2 id="musique-et-informatique-un-mariage-damourhttpswwwlarecherchefrchronique-numc3a9riquemusique-et-informatique-un-mariage-damour"><a href="https://www.larecherche.fr/chronique-num%C3%A9rique/musique-et-informatique-un-mariage-damour">Musique et informatique, un mariage d&rsquo;amour</a></h2>
+<p>La portée classique, retranscrivant des notes de hauteurs bien séparées s&rsquo;enchaînant en rythme, ne suffit plus pour écrire les nouveaux sons, donnés par des courbes, des programmes ou des formules mathématiques, qui peuvent être spatialisés, etc. Quels langages, graphiques ou textuels, faut-il utiliser ?
+<a href="https://www.larecherche.fr/chronique-num%C3%A9rique/musique-et-informatique-un-mariage-damour">https://www.larecherche.fr/chronique-num%C3%A9rique/musique-et-informatique-un-mariage-damour</a></p>
+<h1 id="données-structurées-et-structures-de-données">Données structurées et structures de données</h1>
+<h2 id="réguler-grâce-aux-donnéeshttpswwwlarecherchefrchronique-numc3a9rique-idc3a9esrc3a9guler-grc3a2ce-aux-donnc3a9es"><a href="https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/r%C3%A9guler-gr%C3%A2ce-aux-donn%C3%A9es">Réguler grâce aux données</a></h2>
+<p>Le monde se transforme de plus en plus rapidement en se complexifiant. Cela s&rsquo;accompagne de nouveaux défis pour l&rsquo;action de l&rsquo;État. Les données numériques, souvent à l&rsquo;origine d&rsquo;innovations, peuvent participer à la régulation par l&rsquo;État de systèmes économiques ou sociaux. Ainsi, la ville de Paris publie, depuis septembre 2019, Pollutrack, une carte interactive pour connaître le niveau de pollution de l&rsquo;air dans la capitale…
+<a href="https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/r%C3%A9guler-gr%C3%A2ce-aux-donn%C3%A9es">https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/r%C3%A9guler-gr%C3%A2ce-aux-donn%C3%A9es</a></p>
+<h2 id="le-décodage-à-grande-distancehttpswwwlemondefrblogbinaire20210302le-decodage-a-grande-distance"><a href="https://www.lemonde.fr/blog/binaire/2021/03/02/le-decodage-a-grande-distance/">Le décodage à grande distance</a></h2>
+<p>mardi 2 mars 2021 à 07:41</p>
+<p>Thomas Debris-Alazard est lauréat du prix de thèse Gilles Kahn 2020, pour sa thèse effectuée à l’Inria Paris. Pendant sa thèse, Thomas s’est attaqué a un problème de cryptographie post-quantique ouvert depuis 40 ans ! Il vient nous l’expliquer dans binaire. Pauline Bolignano. La sécurité de nos données personnelles, de nos communications ou encore de …</p>
+<p><a href="https://www.lemonde.fr/blog/binaire/2021/03/02/le-decodage-a-grande-distance/">https://www.lemonde.fr/blog/binaire/2021/03/02/le-decodage-a-grande-distance/</a></p>
+<h1 id="algorithmique">Algorithmique</h1>
+<h2 id="le-problème-sat-un-défi-constant-pour-les-calculateurshttpswwwlarecherchefrchronique-numc3a9rique-idc3a9esle-problc3a8me-sat-un-dc3a9fi-constant-pour-les-calculateurs"><a href="https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/le-probl%C3%A8me-sat-un-d%C3%A9fi-constant-pour-les-calculateurs">Le problème SAT, un défi constant pour les calculateurs</a></h2>
+<p>Le problème SAT est de savoir si une formule donnée est satisfiable ou non. À première vue, on peut résoudre ce problème en un temps fini : il suffit de tester une par une toutes les combinaisons de valeurs des variables. Mais la méthode devient vite impraticable car la quantité de calcul requise croît exponentiellement avec le nombre de variables&hellip;</p>
+<p><a href="https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/le-probl%C3%A8me-sat-un-d%C3%A9fi-constant-pour-les-calculateurs">https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/le-probl%C3%A8me-sat-un-d%C3%A9fi-constant-pour-les-calculateurs</a></p>
+<h2 id="algorithmes-décisionnels--expliquer-nest-pas-justifierhttpswwwlemondefrblogbinaire20210219algorithmes-decisionnels-expliquer-nest-pas-justifier"><a href="https://www.lemonde.fr/blog/binaire/2021/02/19/algorithmes-decisionnels-expliquer-nest-pas-justifier/">Algorithmes décisionnels : expliquer n’est pas justifier</a></h2>
+<p>vendredi 19 février 2021 à 07:32</p>
+<p>Fournir des explications du fonctionnement des algorithmes compréhensibles par des profanes ? Félicien Vallet s’entretient avec Clément Henin et Daniel Le Métayer, de l’équipe Inria Privatics, sur  les enjeux de l’explicabilité des algorithmes et leurs travaux de recherche sur ce sujet.
+<a href="https://www.lemonde.fr/blog/binaire/2021/02/19/algorithmes-decisionnels-expliquer-nest-pas-justifier/">https://www.lemonde.fr/blog/binaire/2021/02/19/algorithmes-decisionnels-expliquer-nest-pas-justifier/</a></p>
+<h2 id="le-dilemme-de-la-maladiehttpswwwlemondefrblogbinaire20210216le-dilemne-de-la-maladie"><a href="https://www.lemonde.fr/blog/binaire/2021/02/16/le-dilemne-de-la-maladie/">Le Dilemme de la Maladie</a></h2>
+<p>mardi 16 février 2021 à 06:30</p>
+<p>Peut-on établir un lien mathématique entre le comportement des gens et la propagation d’un virus ? La réponse est oui, et cela permet, en résolvant des équations, d’aider à la prise de décisions stratégiques pour gérer une pandémie.  Carl-Joar Karlsson et Julie Rowlett, chercheur et chercheuse au département des Sciences Mathématiques de l’université technique de …</p>
+<p><a href="https://www.lemonde.fr/blog/binaire/2021/02/16/le-dilemne-de-la-maladie/">https://www.lemonde.fr/blog/binaire/2021/02/16/le-dilemne-de-la-maladie/</a></p>
+<h2 id="fouiller-les-processus-pour-les-améliorerhttpswwwlemondefrblogbinaire20210212fouiller-les-processus-pour-les-ameliorer"><a href="https://www.lemonde.fr/blog/binaire/2021/02/12/fouiller-les-processus-pour-les-ameliorer/">Fouiller les processus pour les améliorer</a></h2>
+<p>vendredi 12 février 2021 à 07:24</p>
+<p>Dans la rubrique Il était une fois… ma thèse, Mathilde Boltenhagen,  doctorante en informatique à l’Université Paris-Saclay, à l’ENS Paris-Saclay, au CNRS, à l’Inria et au LSV, vient nous raconter ses travaux. Dans cet article, Mathilde fait faire le tour du monde à notre valise, un prétexte pour nous parler de son domaine de recherche …
+<a href="https://www.lemonde.fr/blog/binaire/2021/02/12/fouiller-les-processus-pour-les-ameliorer/">https://www.lemonde.fr/blog/binaire/2021/02/12/fouiller-les-processus-pour-les-ameliorer/</a></p>
+<h2 id="codecarbon-un-programme-qui-évalue-les-algorithmeshttpswwwcscienceca20201222un-code-pour-connaitre-lempreinte-ecologique-de-lia"><a href="https://www.cscience.ca/2020/12/22/un-code-pour-connaitre-lempreinte-ecologique-de-lia/">Codecarbon: un programme qui évalue les algorithmes</a></h2>
+<p>« L’IA est une technologie exceptionnelle et essentielle pour le bien commun, mais il faut cependant être conscients de son impact environnemental croissant. C’est l’ambition de CodeCarbon. Nous souhaitons inciter la communauté d’experts de l’IA à mieux évaluer, à révéler et surtout à réduire son empreinte carbone », Yoshua Bengio, fondateur de Mila&hellip;</p>
+<p><a href="https://www.cscience.ca/2020/12/22/un-code-pour-connaitre-lempreinte-ecologique-de-lia/">https://www.cscience.ca/2020/12/22/un-code-pour-connaitre-lempreinte-ecologique-de-lia/</a></p>
+<h2 id="dossier-sur-lintelligence-artificiellepostspythondata_analyse"><a href="/posts/python/data_analyse/">Dossier sur l&rsquo;intelligence artificielle</a></h2>
+<p>fiche et liens sur le thème de l&rsquo;IA.</p>
+<p><a href="/posts/python/data_analyse/">allophysique.com &gt; Posts</a></p>
+<h2 id="lalgorithme-nouvelle-machine-à-tubes-vraiment-httpswwwlemondefrblogbinaire20210312lalgorithme-nouvelle-machine-a-tubes-vraiment"><a href="https://www.lemonde.fr/blog/binaire/2021/03/12/lalgorithme-nouvelle-machine-a-tubes-vraiment/">L’algorithme, nouvelle machine à tubes. Vraiment ?</a></h2>
+<p>Un algorithme peut-il composer de la musique, un texte, un tableau ? C’est le sujet que traite Philippe Rigaux, professeur d’informatique au CNAM…</p>
+<p><a href="https://www.lemonde.fr/blog/binaire/2021/03/12/lalgorithme-nouvelle-machine-a-tubes-vraiment/">https://www.lemonde.fr/blog/binaire/2021/03/12/lalgorithme-nouvelle-machine-a-tubes-vraiment/</a></p>
+<h2 id="-on-napprend-bien-quen-se-trompant-httpswwwlemondefrblogbinaire202010"><a href="https://www.lemonde.fr/blog/binaire/2020/10/">« On n’apprend bien qu’en se trompant »</a></h2>
+<p>De la même façon qu’on est souvent incapable de caractériser une phrase correcte, il existe de nombreux problèmes que les humains savent résoudre sans vraiment pouvoir en décrire précisément une solution algorithmique… ce sont des problèmes identiques à ceux traités par l’apprentissage par renforcement, en intelligence artificielle.</p>
+<p><a href="https://www.lemonde.fr/blog/binaire/2020/10/">https://www.lemonde.fr/blog/binaire/2020/10/</a></p>
+<h2 id="les-algorithmes-ou-la-recherche-de-lélégancehttpswwwlarecherchefrchronique-numc3a9riqueles-algorithmes-ou-la-recherche-de-lc3a9lc3a9gance"><a href="https://www.larecherche.fr/chronique-num%C3%A9rique/les-algorithmes-ou-la-recherche-de-l%C3%A9l%C3%A9gance">Les algorithmes ou la recherche de l&rsquo;élégance</a></h2>
+<p>« Quelle peut bien être la forme des algorithmes ? » Pour suggérer des figures « de douceur céleste », le dramaturge Eugène Ionesco dessinait des formes ovales. Qu&rsquo;aurait-il dessiné pour représenter des algorithmes : des carrés, des parallélépipèdes biscornus, des graffitis ?</p>
+<p><a href="https://www.larecherche.fr/chronique-num%C3%A9rique/les-algorithmes-ou-la-recherche-de-l%C3%A9l%C3%A9gance">https://www.larecherche.fr/chronique-num%C3%A9rique/les-algorithmes-ou-la-recherche-de-l%C3%A9l%C3%A9gance</a></p>
+<h1 id="bases-de-données">Bases de données</h1>
+<h2 id="affiche-sur-le-cloud-et-lenvironnement">Affiche sur le cloud et l&rsquo;environnement</h2>
+<!-- raw HTML omitted -->
+<h2 id="deux-ou-trois-leçons-à-retenir-de-lapplication-stopcovidhttpswwwlarecherchefrchronique-numc3a9riquedeux-ou-trois-lec3a7ons-c3a0-retenir-de-lapplication-stopcovid"><a href="https://www.larecherche.fr/chronique-num%C3%A9rique/deux-ou-trois-le%C3%A7ons-%C3%A0-retenir-de-lapplication-stopcovid">Deux ou trois leçons à retenir de l&rsquo;application StopCovid</a></h2>
+<p>L&rsquo;application mobile chargée de tracer les contacts avec des personnes contaminées: un sujet mettant en jeu des libertés fondamentales&hellip;Deux approches algorithmiques sont en compétition : centralisée et décentralisée. Les deux font appel à un serveur central. La question est de savoir si la liste des contacts de chacun est gérée sur ce serveur (approche centralisée) ou distribuée sur tout le réseau (approche décentralisée). Des risques de fuite de données personnelles existent dans les deux cas. Les différences sont subtiles et demandent une compréhension fine du fonctionnement des deux algorithmes. Cela met en évidence l&rsquo;indispensable formation à l&rsquo;informatique de la population pour pouvoir faire collectivement des choix éclairés.</p>
+<p><a href="https://www.larecherche.fr/chronique-num%C3%A9rique/deux-ou-trois-le%C3%A7ons-%C3%A0-retenir-de-lapplication-stopcovid">https://www.larecherche.fr/chronique-num%C3%A9rique/deux-ou-trois-le%C3%A7ons-%C3%A0-retenir-de-lapplication-stopcovid</a></p>
+<h2 id="le-cloud-pollue-davantage-quun-simple-nuage---siecledigitalfrhttpssiecledigitalfr20210406cloud-pollution">Le cloud pollue davantage qu&rsquo;un simple nuage - <a href="https://siecledigital.fr/2021/04/06/cloud-pollution/">siecledigital.fr</a></h2>
+<p><em>Article sur les enjeux energetiques et le bilan carbone relatifs au cloud</em></p>
+<p>Les services cloud s’appuient sur de nombreux serveurs répartis à travers le monde. Contrairement aux déchets pour lesquels les impacts environnementaux sont directement visibles, ceux du matériel informatique le sont moins. Néanmoins, ils ne sont pas pour autant inexistants.</p>
+<p><a href="https://siecledigital.fr/2021/04/06/cloud-pollution/">https://siecledigital.fr/2021/04/06/cloud-pollution/</a></p>
+<h1 id="architectures-matérielles-systèmes-dexploitation-réseaux-et-securité">Architectures matérielles, systèmes d’exploitation, réseaux et securité</h1>
+<h2 id="internet--un-bond-de-géant-pour-lhumanitéhttpswwwlarecherchefrchronique-numc3a9rique-idc3a9esun-bond-de-gc3a9ant-pour-lhumanitc3a9"><a href="https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/un-bond-de-g%C3%A9ant-pour-lhumanit%C3%A9">Internet : Un bond de géant pour l&rsquo;humanité</a></h2>
+<p>cette magnifique invention est porteuse des plus belles valeurs humaines : apporter les connaissances à tous, permettre à tous de communiquer. Mais pourrons-nous continuer longtemps à utiliser Internet ? Peut-être pas.</p>
+<p><a href="https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/un-bond-de-g%C3%A9ant-pour-lhumanit%C3%A9">https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/un-bond-de-g%C3%A9ant-pour-lhumanit%C3%A9</a></p>
+<h2 id="comprendre-les-blockchains--fonctionnement-et-enjeux-de-ces-nouvelles-technologieshttpwwwsenatfrrapr17-584r17-584_monohtml"><a href="http://www.senat.fr/rap/r17-584/r17-584_mono.html">Comprendre les blockchains : fonctionnement et enjeux de ces nouvelles technologies</a></h2>
+<p>les blockchains permettent des échanges décentralisés et sécurisés, sans qu&rsquo;il soit besoin d&rsquo;un tiers de confiance. Plus précisément, elles sont des technologies de stockage et de transmission d&rsquo;informations, permettant la constitution de registres répliqués et distribués, sans organe central de contrôle, sécurisées grâce à la cryptographie, et structurées par des blocs liés les uns aux autres, à intervalles de temps réguliers&hellip;.
+<a href="http://www.senat.fr/rap/r17-584/r17-584_mono.html#toc75">des blocs liés entre eux par des fonctions de hachage</a></p>
+<h1 id="interfaces-hommes-machines-ihm">Interfaces Hommes-Machines (IHM)</h1>
+<h2 id="neurosmart-une-histoire-de-cerveau-et-de-passionnéshttpswwwlemondefrblogbinaire20201127neurosmart-une-histoire-de-cerveau-et-de-passionnes"><a href="https://www.lemonde.fr/blog/binaire/2020/11/27/neurosmart-une-histoire-de-cerveau-et-de-passionnes/">Neurosmart, une histoire de cerveau et de passionnés</a></h2>
+<p>Comment expliquer au mieux au grand public, aux étudiantes et étudiants, mais aussi à d’autres collègues chercheurs, notre métier de chercheuses et chercheurs ? Comment expliquer le lien entre les neurosciences, la cognition et l’informatique de manière la plus accessible à chacune et chacun, quel que soit le niveau de connaissance dans ces domaines ?
+Neurosmart : concrêtement, is’agit d’un site web où il est possible de visualiser plusieurs scénarios. Un scénario est le nom donné à une situation particulière que vit un individu et pour laquelle ses fonctions cognitives vont être sollicitées pour pouvoir y réagir. L’interface propose alors de visualiser. pour chaque action les structures cérébrales qui sont impliquées et mettre en avant cela par une visualisation 3D dynamique (c’est littéralement le cerveau qui s’illumine au sens propre du terme !)</p>
+<p><a href="https://www.lemonde.fr/blog/binaire/2020/11/27/neurosmart-une-histoire-de-cerveau-et-de-passionnes/">https://www.lemonde.fr/blog/binaire/2020/11/27/neurosmart-une-histoire-de-cerveau-et-de-passionnes/</a></p>
+<h1 id="impact-sociétal-et-éthique-de-linformatique">Impact sociétal et éthique de l’informatique</h1>
+<h2 id="ia-et-démocratie-participative--la-confiance-règne-httpswwwlemondefrblogbinaire20210330ia-et-democratie-participative-la-confiance-regne"><a href="https://www.lemonde.fr/blog/binaire/2021/03/30/ia-et-democratie-participative-la-confiance-regne/">IA et démocratie participative : la confiance règne ?</a></h2>
+<p>mardi 30 mars 2021 à 07:00</p>
+<p>Le développement de la démocratie participative a fait émerger de nouvelles formes de consultations avec un grand nombre de données à analyser. Les réponses sont complexes puisque chacun s’exprime sans contrainte de style ou de format.  Des méthodes d’intelligence artificielle ont donc été utilisées pour analyser ces réponses mais le résultat est-il vraiment fiable ? …</p>
+<p><a href="https://www.lemonde.fr/blog/binaire/2021/03/30/ia-et-democratie-participative-la-confiance-regne/">https://www.lemonde.fr/blog/binaire/2021/03/30/ia-et-democratie-participative-la-confiance-regne/</a></p>
+<h2 id="magie-numérique-et-défis-juridiqueshttpswwwlemondefrblogbinaire20210205magie-numerique-et-defis-juridiques"><a href="https://www.lemonde.fr/blog/binaire/2021/02/05/magie-numerique-et-defis-juridiques/">Magie numérique et défis juridiques</a></h2>
+<p>vendredi 5 février 2021 à 07:12</p>
+<p>Un nouvel « Entretien autour de l’informatique ». Christophe Lazaro est Professeur au Centre de Philosophie du Droit, à l’Université de Louvain, et membre du Comité National Pilote d’Éthique du Numérique (France). Nous poursuivons avec lui le voyage commencé avec Célia Zolynski sur le droit du numérique. Christophe nous amène aux frontières du droit, de …</p>
+<p><a href="https://www.lemonde.fr/blog/binaire/2021/02/05/magie-numerique-et-defis-juridiques/">https://www.lemonde.fr/blog/binaire/2021/02/05/magie-numerique-et-defis-juridiques/</a></p>
+<h2 id="la-modélisation-de-lintelligence-humaine---les-hauts-de-otesiahttpswwwlemondefrblogbinaire20201229les-hauts-de-otesia"><a href="https://www.lemonde.fr/blog/binaire/2020/12/29/les-hauts-de-otesia/">la modélisation de l’intelligence humaine - les hauts de otesia</a></h2>
+<p>Lorsqu’on parle d’intelligence artificielle, surgit très souvent le problème de la définition de ce que cette notion recouvre, en opposition ou en complément à une intelligence dite « humaine ». Profitant des travaux sur la formalisation d’une intelligence mécanique et de nombreux outils développés dans ce cadre, abordons la question passionnante de la modélisation de l’intelligence humaine</p>
+<p><a href="https://www.lemonde.fr/blog/binaire/2020/12/29/les-hauts-de-otesia/">https://www.lemonde.fr/blog/binaire/2020/12/29/les-hauts-de-otesia/</a></p>
+<h2 id="multiplions-les-identités-de-notre-double-numériquehttpswwwlarecherchefrchronique-numc3a9riquemultiplions-les-identitc3a9s-de-notre-double-numc3a9rique"><a href="https://www.larecherche.fr/chronique-num%C3%A9rique/multiplions-les-identit%C3%A9s-de-notre-double-num%C3%A9rique">Multiplions les identités de notre double numérique</a></h2>
+<p>une identité unique est-elle souhaitable pour se connecter à toutes les plateformes numériques ?</p>
+<p><a href="https://www.larecherche.fr/chronique-num%C3%A9rique/multiplions-les-identit%C3%A9s-de-notre-double-num%C3%A9rique">https://www.larecherche.fr/chronique-num%C3%A9rique/multiplions-les-identit%C3%A9s-de-notre-double-num%C3%A9rique</a></p>
+<h2 id="la-voiture-autonome-met-en-échec-lutilitarismehttpswwwlarecherchefrchronique-c3a9thiquela-voiture-autonome-met-en-c3a9chec-lutilitarisme"><a href="https://www.larecherche.fr/chronique-%C3%A9thique/la-voiture-autonome-met-en-%C3%A9chec-lutilitarisme">La voiture autonome met en échec l&rsquo;utilitarisme</a></h2>
+<p>Depuis quelques années, on établit souvent un lien entre les voitures autonomes et des dilemmes éthiques insolubles auxquels les ingénieurs seraient sommés de trouver des solutions consensuelles : comment choisir entre tuer cinq personnes qui traversent au feu vert ou condamner le passager du véhicule, qui en est aussi le propriétaire, à une mort certaine ?</p>
+<p><a href="https://www.larecherche.fr/chronique-%C3%A9thique/la-voiture-autonome-met-en-%C3%A9chec-lutilitarisme">https://www.larecherche.fr/chronique-%C3%A9thique/la-voiture-autonome-met-en-%C3%A9chec-lutilitarisme</a></p>
+<!-- raw HTML omitted -->
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#linformatique-quelques-questions-pour-se-fâcher-entre-amishttpswwwlemondefrblogbinaire20210305linformatique-quelques-questions-pour-se-facher-entre-amis"><a href="https://www.lemonde.fr/blog/binaire/2021/03/05/linformatique-quelques-questions-pour-se-facher-entre-amis/">L’informatique, quelques questions pour se fâcher entre amis</a></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#réinventer-la-programmationhttpswwwlemondefrbloginternetactu20171125reinventer-la-programmation"><a href="https://www.lemonde.fr/blog/internetactu/2017/11/25/reinventer-la-programmation/">Réinventer la programmation</a></a></li>
+    <li><a href="#le-vote-électronique-progrès-ou-danger-httpswwwlarecherchefrchronique-numc3a9riquemusique-et-informatique-un-mariage-damour"><a href="https://www.larecherche.fr/chronique-num%C3%A9rique/musique-et-informatique-un-mariage-damour">Le vote électronique, progrès ou danger ?</a></a></li>
+    <li><a href="#musique-et-informatique-un-mariage-damourhttpswwwlarecherchefrchronique-numc3a9riquemusique-et-informatique-un-mariage-damour"><a href="https://www.larecherche.fr/chronique-num%C3%A9rique/musique-et-informatique-un-mariage-damour">Musique et informatique, un mariage d&rsquo;amour</a></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#réguler-grâce-aux-donnéeshttpswwwlarecherchefrchronique-numc3a9rique-idc3a9esrc3a9guler-grc3a2ce-aux-donnc3a9es"><a href="https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/r%C3%A9guler-gr%C3%A2ce-aux-donn%C3%A9es">Réguler grâce aux données</a></a></li>
+    <li><a href="#le-décodage-à-grande-distancehttpswwwlemondefrblogbinaire20210302le-decodage-a-grande-distance"><a href="https://www.lemonde.fr/blog/binaire/2021/03/02/le-decodage-a-grande-distance/">Le décodage à grande distance</a></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#le-problème-sat-un-défi-constant-pour-les-calculateurshttpswwwlarecherchefrchronique-numc3a9rique-idc3a9esle-problc3a8me-sat-un-dc3a9fi-constant-pour-les-calculateurs"><a href="https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/le-probl%C3%A8me-sat-un-d%C3%A9fi-constant-pour-les-calculateurs">Le problème SAT, un défi constant pour les calculateurs</a></a></li>
+    <li><a href="#algorithmes-décisionnels--expliquer-nest-pas-justifierhttpswwwlemondefrblogbinaire20210219algorithmes-decisionnels-expliquer-nest-pas-justifier"><a href="https://www.lemonde.fr/blog/binaire/2021/02/19/algorithmes-decisionnels-expliquer-nest-pas-justifier/">Algorithmes décisionnels : expliquer n’est pas justifier</a></a></li>
+    <li><a href="#le-dilemme-de-la-maladiehttpswwwlemondefrblogbinaire20210216le-dilemne-de-la-maladie"><a href="https://www.lemonde.fr/blog/binaire/2021/02/16/le-dilemne-de-la-maladie/">Le Dilemme de la Maladie</a></a></li>
+    <li><a href="#fouiller-les-processus-pour-les-améliorerhttpswwwlemondefrblogbinaire20210212fouiller-les-processus-pour-les-ameliorer"><a href="https://www.lemonde.fr/blog/binaire/2021/02/12/fouiller-les-processus-pour-les-ameliorer/">Fouiller les processus pour les améliorer</a></a></li>
+    <li><a href="#codecarbon-un-programme-qui-évalue-les-algorithmeshttpswwwcscienceca20201222un-code-pour-connaitre-lempreinte-ecologique-de-lia"><a href="https://www.cscience.ca/2020/12/22/un-code-pour-connaitre-lempreinte-ecologique-de-lia/">Codecarbon: un programme qui évalue les algorithmes</a></a></li>
+    <li><a href="#dossier-sur-lintelligence-artificiellepostspythondata_analyse"><a href="/posts/python/data_analyse/">Dossier sur l&rsquo;intelligence artificielle</a></a></li>
+    <li><a href="#lalgorithme-nouvelle-machine-à-tubes-vraiment-httpswwwlemondefrblogbinaire20210312lalgorithme-nouvelle-machine-a-tubes-vraiment"><a href="https://www.lemonde.fr/blog/binaire/2021/03/12/lalgorithme-nouvelle-machine-a-tubes-vraiment/">L’algorithme, nouvelle machine à tubes. Vraiment ?</a></a></li>
+    <li><a href="#-on-napprend-bien-quen-se-trompant-httpswwwlemondefrblogbinaire202010"><a href="https://www.lemonde.fr/blog/binaire/2020/10/">« On n’apprend bien qu’en se trompant »</a></a></li>
+    <li><a href="#les-algorithmes-ou-la-recherche-de-lélégancehttpswwwlarecherchefrchronique-numc3a9riqueles-algorithmes-ou-la-recherche-de-lc3a9lc3a9gance"><a href="https://www.larecherche.fr/chronique-num%C3%A9rique/les-algorithmes-ou-la-recherche-de-l%C3%A9l%C3%A9gance">Les algorithmes ou la recherche de l&rsquo;élégance</a></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#affiche-sur-le-cloud-et-lenvironnement">Affiche sur le cloud et l&rsquo;environnement</a></li>
+    <li><a href="#deux-ou-trois-leçons-à-retenir-de-lapplication-stopcovidhttpswwwlarecherchefrchronique-numc3a9riquedeux-ou-trois-lec3a7ons-c3a0-retenir-de-lapplication-stopcovid"><a href="https://www.larecherche.fr/chronique-num%C3%A9rique/deux-ou-trois-le%C3%A7ons-%C3%A0-retenir-de-lapplication-stopcovid">Deux ou trois leçons à retenir de l&rsquo;application StopCovid</a></a></li>
+    <li><a href="#le-cloud-pollue-davantage-quun-simple-nuage---siecledigitalfrhttpssiecledigitalfr20210406cloud-pollution">Le cloud pollue davantage qu&rsquo;un simple nuage - <a href="https://siecledigital.fr/2021/04/06/cloud-pollution/">siecledigital.fr</a></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#internet--un-bond-de-géant-pour-lhumanitéhttpswwwlarecherchefrchronique-numc3a9rique-idc3a9esun-bond-de-gc3a9ant-pour-lhumanitc3a9"><a href="https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/un-bond-de-g%C3%A9ant-pour-lhumanit%C3%A9">Internet : Un bond de géant pour l&rsquo;humanité</a></a></li>
+    <li><a href="#comprendre-les-blockchains--fonctionnement-et-enjeux-de-ces-nouvelles-technologieshttpwwwsenatfrrapr17-584r17-584_monohtml"><a href="http://www.senat.fr/rap/r17-584/r17-584_mono.html">Comprendre les blockchains : fonctionnement et enjeux de ces nouvelles technologies</a></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#neurosmart-une-histoire-de-cerveau-et-de-passionnéshttpswwwlemondefrblogbinaire20201127neurosmart-une-histoire-de-cerveau-et-de-passionnes"><a href="https://www.lemonde.fr/blog/binaire/2020/11/27/neurosmart-une-histoire-de-cerveau-et-de-passionnes/">Neurosmart, une histoire de cerveau et de passionnés</a></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#ia-et-démocratie-participative--la-confiance-règne-httpswwwlemondefrblogbinaire20210330ia-et-democratie-participative-la-confiance-regne"><a href="https://www.lemonde.fr/blog/binaire/2021/03/30/ia-et-democratie-participative-la-confiance-regne/">IA et démocratie participative : la confiance règne ?</a></a></li>
+    <li><a href="#magie-numérique-et-défis-juridiqueshttpswwwlemondefrblogbinaire20210205magie-numerique-et-defis-juridiques"><a href="https://www.lemonde.fr/blog/binaire/2021/02/05/magie-numerique-et-defis-juridiques/">Magie numérique et défis juridiques</a></a></li>
+    <li><a href="#la-modélisation-de-lintelligence-humaine---les-hauts-de-otesiahttpswwwlemondefrblogbinaire20201229les-hauts-de-otesia"><a href="https://www.lemonde.fr/blog/binaire/2020/12/29/les-hauts-de-otesia/">la modélisation de l’intelligence humaine - les hauts de otesia</a></a></li>
+    <li><a href="#multiplions-les-identités-de-notre-double-numériquehttpswwwlarecherchefrchronique-numc3a9riquemultiplions-les-identitc3a9s-de-notre-double-numc3a9rique"><a href="https://www.larecherche.fr/chronique-num%C3%A9rique/multiplions-les-identit%C3%A9s-de-notre-double-num%C3%A9rique">Multiplions les identités de notre double numérique</a></a></li>
+    <li><a href="#la-voiture-autonome-met-en-échec-lutilitarismehttpswwwlarecherchefrchronique-c3a9thiquela-voiture-autonome-met-en-c3a9chec-lutilitarisme"><a href="https://www.larecherche.fr/chronique-%C3%A9thique/la-voiture-autonome-met-en-%C3%A9chec-lutilitarisme">La voiture autonome met en échec l&rsquo;utilitarisme</a></a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

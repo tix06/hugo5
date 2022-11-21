@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    algorithmique avancé
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI_1\2f algo\2fpage3\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    algorithmique avancé
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="le-problème-du-rendu-de-monnaie">Le problème du rendu de monnaie</h1>
+<p>Le problème du rendu de monnaie est un problème d&rsquo;algorithmique. Il s&rsquo;énonce de la façon suivante : étant donné un système de monnaie (pièces et billets), comment rendre une somme donnée de façon optimale, c&rsquo;est-à-dire avec le nombre minimal de pièces et billets ?</p>
+<p>Par exemple, la meilleure façon de rendre 7 euros est de rendre un billet de cinq et une pièce de deux, même si d&rsquo;autres façons existent (rendre 7 pièces de un euro, par exemple).</p>
+<!-- raw HTML omitted -->
+<h2 id="algorithme-naif">algorithme naif</h2>
+<p>Une première idée, naïve serait de commencer par rendre la piece de plus grande valeur, puis sur la somme restante, la pièce un peu moins grande, et ainsi de suite.</p>
+<blockquote>
+<p><strong>S&rsquo;entrainer à rendre la monnaie de manière optimale:</strong></p>
+</blockquote>
+<!-- raw HTML omitted -->
+<h2 id="programmation-python">Programmation Python</h2>
+<p>Pour une <code>somme</code> à rendre, et un systeme de monnaie appelé <code>caisse</code>, contenant par exemple la liste<code>[20, 10, 5, 1]</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">caisse</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#111">piece4</span><span style="color:#111">,</span> <span style="color:#111">piece3</span><span style="color:#111">,</span> <span style="color:#111">piece2</span><span style="color:#111">,</span> <span style="color:#111">piece1</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">rendu</span> <span style="color:#f92672">=</span> <span style="color:#111">{</span><span style="color:#111">piece4</span> <span style="color:#111">:</span> <span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#111">piece3</span><span style="color:#111">:</span> <span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#111">piece</span> <span style="color:#ae81ff">2</span><span style="color:#111">:</span> <span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#111">piece1</span><span style="color:#111">:</span> <span style="color:#ae81ff">0</span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">tant</span> <span style="color:#111">que</span> <span style="color:#111">la</span> <span style="color:#111">somme</span> <span style="color:#111">a</span> <span style="color:#111">rendre</span> <span style="color:#111">est</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">si</span> <span style="color:#111">la</span> <span style="color:#111">piece</span> <span style="color:#111">de</span> <span style="color:#111">montant</span> <span style="color:#111">caisse</span><span style="color:#111">[</span><span style="color:#111">i</span><span style="color:#111">]</span> <span style="color:#111">est</span> <span style="color:#111">inferieure</span> <span style="color:#111">a</span> <span style="color:#111">somme</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">somme</span> <span style="color:#f92672">=</span> <span style="color:#111">somme</span> <span style="color:#f92672">-</span> <span style="color:#111">caisse</span><span style="color:#111">[</span><span style="color:#111">i</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">rendu</span><span style="color:#111">[</span><span style="color:#111">caisse</span><span style="color:#111">[</span><span style="color:#111">i</span><span style="color:#111">]]</span> <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">sinon</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">changer</span> <span style="color:#111">de</span> <span style="color:#111">piece</span>
+</span></span></code></pre></div><p>On utilisera le notebook <!-- raw HTML omitted -->TP5/rendu_monnaie_NSI1.ipynb<!-- raw HTML omitted --> sur <!-- raw HTML omitted -->Jupyterlite<!-- raw HTML omitted --></p>
+<h2 id="amélioration-de-la-méthode">Amélioration de la méthode</h2>
+<p>Quelques essais avec le script précédent montrent que le rendu n&rsquo;est pas toujours optimal. Il faut envisager d&rsquo;<strong>autres possibilités</strong> de rendre la monnaie.</p>
+<p>Une autre méthode pourrait être de mélanger l&rsquo;ordre des pieces utilisées pour le rendu de monnaie. On pourrait alors imaginer que l&rsquo;on rend la monnaie avec la premiere piece de la caisse (pas forcément la plus haute), puis la 2e, etc&hellip;</p>
+<p>On créé alors une combinaison de caisses, par permutation des pieces. On teste les possibilités pour chacune d&rsquo;entre elles, en recherchant celle qui donne une solution optimale. <em>Par exemple, avec une caisse <code>[50, 10, 1]</code>, il y a aussi <code>[50,1,10], [10, 50, 1],</code> &hellip; soit en tout 6 caisses différentes par permutations</em></p>
+<p>Le rendu avec une piece se fait comme dans la méthode précédente: On rend autant de pieces possibles pour une valeur de piece donnée. <em>Par exemple, pour rendre 16 euros avec une piece de 5, on rend 3 pieces</em>.</p>
+<p>On utilisera le notebook <!-- raw HTML omitted -->TP5/rendu_monnaie_NSI1.ipynb<!-- raw HTML omitted --> sur <!-- raw HTML omitted -->Jupyterlite<!-- raw HTML omitted --></p>
+<h2 id="questions">Questions</h2>
+<ol>
+<li>Parfois la solution est impossible à trouver, il n&rsquo;y a pas de rendu possible avec la caisse considérée: V / F</li>
+<li>La solution dépend de l&rsquo;ordre des pieces dans la caisse: V / F</li>
+<li>La solution est toujours optimale en commençant par rendre la monnaie avec la plus grande piece, puis la piece moins grande, etc&hellip;: V / F</li>
+<li>Avec la 2e méthode, celle des permutations de caisse: cette méthode permet de tester toutes les possibilités, toutes les combinaisons possibles pour le rendu de monnaie: V / F</li>
+<li>Suposons que le programme, pour la méthode 2, commence par calculer le rendu pour pour la somme 99 avec la caisse <code>[50,10,1]</code>. Plus loin, dans le programme, il calcule le rendu pour 99 avec la caisse <code>[50, 1, 10]</code>. Doit-il aller au bout du calcul de la solution avec cette autre caisse, ou bien, peut-il arrêter son calcul au milieu, vu qu&rsquo;il a déjà trouvé une meilleur solution? Cela est-il réalisé par le programme, tel que vous l&rsquo;avez écrit?</li>
+</ol>
+<h1 id="conclusion">Conclusion</h1>
+<p>En analysant les 2 méthodes précédentes, on voit que le rendu de monnaie sera optimal pour toute somme à rendre, et pour tout type de caisse, à condition de tester toutes les combinaisons de rendu possible. Pas seulement une permutation des pieces dans la caisse. Le programme 2 améliore la méthode, en proposant plus de solutions. Mais ces solutions ne sont pas assez nombreuses. Il faudra envisager une autre méthode de rendu que celle qui prend la même piece pour rendre un montant intermédiaire, tant que la piece est inferieure au montant à rendre.</p>
+<p>Cela risque toutefois de générer un programme dont la complexité va être très grande.</p>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#algorithme-naif">algorithme naif</a></li>
+    <li><a href="#programmation-python">Programmation Python</a></li>
+    <li><a href="#amélioration-de-la-méthode">Amélioration de la méthode</a></li>
+    <li><a href="#questions">Questions</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

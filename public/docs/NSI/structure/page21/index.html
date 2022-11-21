@@ -1,51 +1,521 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>autres structures lineaires
-| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel=stylesheet><script type=text/x-mathjax-config>
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    autres structures lineaires
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
   });
-</script><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.1c02dc1d2c0b546a84beb71d8f4336d6f5d7b69564e08bdfc04c2fb0595d786d.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
-catch(err)
-{console.log(err.message);}
-if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
-if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
-if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}
-let chemin=window.location.pathname;if(chemin.search('NSI')>-1){baniere=document.querySelector("#myHeader");let linkBox=document.createElement('div');linkBox.classList.add('linkBox');let newH=document.createElement('a');newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';newH.classList.add('nsi');linkBox.appendChild(newH);baniere.appendChild(linkBox);}</script><style>#myHeader{display:flex;flex-direction:row-reverse}#myHeader>.titre{width:80%;min-width:300px;text-align:left}.linkBox{margin:10px;padding-top:10px;background-color:pink;min-width:50px}.isn{}</style></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2f docs\2fNSI\2fstructure\2fpage21\2f ]{color:#004ed0}</style><ul><li><a href=/><strong>Accueil</strong></a></li><li><a href=/docs/esf/esf_index/><strong>ESF</strong></a></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p></li><li><p><a href=/docs/python/index_python/><strong>Python</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
-addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-page><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
-<strong>autres structures lineaires</strong></header><article class=markdown><h1 id=structures-de-données-rappels>Structures de données: rappels</h1><p>Les piles, files et listes sont des structures de données <strong>linéaires</strong>. Ce sont des types <strong>abstraits</strong>.</p><p>Structure de données <strong>linéaire</strong> : les données sont rangées sur un ligne ou une colonne.</p><p>Un <strong>type abstrait</strong> décrit essentiellement une interface, indépendamment du langage de programmation.</p><h1 id=files>Files</h1><h2 id=definition-et-interface>Definition et interface</h2><p>Une file (queue ou FIFO pour first in, first out) est une collection d’objets munie des opérations suivantes:</p><ul><li>savoir si la file est vide (is_empty);<br></li><li>ajouter un élément dans la file (enfiler ou enqueue) en temps constant;<br></li><li>retirer et renvoyer l’élément le plus ancien de la file (defiler ou dequeue).</li></ul><p>C&rsquo;est une structure de données utilisée en informatique pour par exemple gérer la file d&rsquo;attente lors de la gestion des impressions.</p><h2 id=implémentations-en-python>Implémentations en python</h2><p>L&rsquo;implementation d&rsquo;une File est imparfaite avec une liste en python pour l&rsquo;opération de <em>defiler</em>. On peut utiliser l&rsquo;instruction <code>file.pop(0)</code>. Le problème est que celle-ci ne s&rsquo;effectue pas en temps constant.</p><p>La bibliothèque standard possède toutefois un module nommé <code>collections</code> qui contient quelques structures de données supplémentaires, dont le type <code>deque</code>, qui est une implémentation de file:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>from</span> <span style=color:#111>collection</span> <span style=color:#f92672>import</span> <span style=color:#111>deque</span>
-<span style=color:#111>f</span> <span style=color:#f92672>=</span> <span style=color:#111>deque</span><span style=color:#111>()</span>
-<span style=color:#111>f</span><span style=color:#f92672>.</span><span style=color:#111>append</span><span style=color:#111>(</span><span style=color:#d88200>&#34;Premier&#34;</span><span style=color:#111>)</span>
-<span style=color:#111>f</span><span style=color:#f92672>.</span><span style=color:#111>append</span><span style=color:#111>(</span><span style=color:#d88200>&#34;Deuxieme&#34;</span><span style=color:#111>)</span>
-<span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#111>f</span><span style=color:#f92672>.</span><span style=color:#111>popleft</span><span style=color:#111>())</span>
-<span style=color:#111>f</span><span style=color:#f92672>.</span><span style=color:#111>append</span><span style=color:#111>(</span><span style=color:#d88200>&#34;Troisieme&#34;</span><span style=color:#111>)</span>
-<span style=color:#00a8c8>while</span> <span style=color:#111>f</span><span style=color:#111>:</span>
-  <span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#111>f</span><span style=color:#f92672>.</span><span style=color:#111>popleft</span><span style=color:#111>())</span></code></pre></div><p>affiche:</p><pre><code>Deuxieme
-Troisieme
-</code></pre><h1 id=listes>Listes</h1><h2 id=principe>Principe</h2><p>Le types abstrait <em>Liste</em> ne concerne pas le type <em>list</em> en python. C&rsquo;est une liste <em>chaînée</em> (ou liste <em>liée</em>): une structure de données composées d’une séquence d’<em>éléments</em> de liste.</p><p>Ces éléments sont aussi appelés <em>noeuds</em> ou <em>maillons</em>.</p><p>La <strong>tête</strong> d’une liste est son premier <em>maillon</em>. La <strong>queue</strong> d’une liste, son dernier.</p><p>Chaque maillon <strong>M</strong> contient:</p><ul><li>une valeur, de n&rsquo;importe quel type.</li><li>un lien (ou pointeur) vers le maillon suivant de la séquence.</li></ul><p>Il s&rsquo;agit d&rsquo;une structure <em>linéaire</em>, mais dans laquelle les éléments n&rsquo;occupent pas <em>à priori</em>, des positions contigües dans la mémoire:</p><p><em>illustration:</em></p><figure><div><img src=../images/listeElem.png alt="elements d'une liste chainée"><figcaption>elements dans une liste</figcaption></div></figure><p>Pour relier ces éléments ensembles, dans une même structure de données, il faut alors utiliser des <em>pointeurs</em>.</p><figure><div><img src=../images/listeElemPoint.png alt="liste chainée grâce aux pointeurs"><figcaption>liste chainée grâce aux pointeurs</figcaption></div></figure><p>L&rsquo;élément <strong>A</strong> pointe sur <strong>B</strong>, qui pointe sur <strong>C</strong>, qui pointe sur <strong>D</strong>. <strong>D</strong>, lui, ne pointe sur &hellip; <strong>rien</strong>!</p><p>La plupart du temps, le lien du dernier maillon a pour valeur <em>None</em> en python, signifiant un pointeur sur <em>rien</em>.</p><p>On pourra consulter la vidéo suivante jusqu&rsquo;à 18min:</p><p><a href="https://youtu.be/qB00WgCsbqo?t=495" target=blank>listes chainées de Jaques Olivier Lapeyre <img src=../images/video.png></a></p><h2 id=interface>Interface</h2><p>On trouve en général les opérations suivantes pour l&rsquo;interface d&rsquo;une <em>Liste</em>:</p><ul><li><code>est_vide</code> : renvoie <code>True</code> si Liste vide</li><li><code>taille</code> : renvoie le nombre de <em>maillons</em> de la séquence</li><li><code>get_dernier_maillon</code><br></li><li><code>get_maillon_indice</code><br></li><li><code>ajouter_debut</code><br></li><li><code>inserer_apres</code></li><li><code>ajouter_fin</code><br></li><li><code>supprimer_apres</code><br></li><li>&hellip;</li></ul><h2 id=implémentation>Implémentation</h2><p>L&rsquo;implémentation est plus naturelle en <em>programmation orientée objet</em> (<a href=/docs/NSI/structure/page3/>voir le chapitre POO</a>).</p><blockquote><p>Un maillon est une instance de la classe <code>Maillon</code></p></blockquote><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>class</span> <span style=color:#75af00>Maillon</span><span style=color:#111>:</span>
-  <span style=color:#00a8c8>def</span> <span style=color:#111>__init__</span><span style=color:#111>(</span><span style=color:#111>self</span><span style=color:#111>):</span>
-    <span style=color:#111>self</span><span style=color:#f92672>.</span><span style=color:#111>val</span> <span style=color:#f92672>=</span> <span style=color:#111>None</span>
-    <span style=color:#111>self</span><span style=color:#f92672>.</span><span style=color:#111>suiv</span> <span style=color:#f92672>=</span> <span style=color:#111>None</span></code></pre></div><blockquote><p>Une <em>Liste</em> est une instance de la classe <code>Liste</code></p></blockquote><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>class</span> <span style=color:#75af00>Liste</span><span style=color:#111>:</span>
-  <span style=color:#00a8c8>def</span> <span style=color:#111>__init__</span><span style=color:#111>(</span><span style=color:#111>self</span><span style=color:#111>):</span>
-    <span style=color:#111>self</span><span style=color:#f92672>.</span><span style=color:#111>tete</span> <span style=color:#f92672>=</span> <span style=color:#111>None</span></code></pre></div><p>Son attribut <code>tete</code> est de type <code>Maillon</code> , ou bien vaut <code>None</code> si la liste est vide.</p><p>Cette classe ne comporte pour l&rsquo;instant que sa définition de la variable <code>tete</code>, mais elle est créée pour contenir, plus tard, l&rsquo;implementation des différentes méthodes prévues par l&rsquo;interface.</p><figure><div><img src=../images/listeC.png alt="liste chainée"><figcaption>illustration d'une liste chainée</figcaption></div></figure><p>On peut alors créer une liste ainsi :</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>L</span> <span style=color:#f92672>=</span> <span style=color:#111>Liste</span><span style=color:#111>()</span>
-<span style=color:#111>M1</span><span style=color:#111>,</span> <span style=color:#111>M2</span><span style=color:#111>,</span> <span style=color:#111>M3</span> <span style=color:#f92672>=</span> <span style=color:#111>Maillon</span><span style=color:#111>(),</span> <span style=color:#111>Maillon</span><span style=color:#111>(),</span> <span style=color:#111>Maillon</span><span style=color:#111>()</span>
-<span style=color:#111>M1</span><span style=color:#f92672>.</span><span style=color:#111>val</span> <span style=color:#f92672>=</span> <span style=color:#d88200>&#39;A&#39;</span>
-<span style=color:#111>M2</span><span style=color:#f92672>.</span><span style=color:#111>val</span> <span style=color:#f92672>=</span> <span style=color:#d88200>&#39;C&#39;</span>
-<span style=color:#111>M3</span><span style=color:#f92672>.</span><span style=color:#111>val</span> <span style=color:#f92672>=</span> <span style=color:#d88200>&#39;D&#39;</span>
-<span style=color:#111>M1</span><span style=color:#f92672>.</span><span style=color:#111>suiv</span> <span style=color:#f92672>=</span> <span style=color:#111>M2</span>
-<span style=color:#111>M2</span><span style=color:#f92672>.</span><span style=color:#111>suiv</span> <span style=color:#f92672>=</span> <span style=color:#111>M3</span>
-<span style=color:#111>M3</span><span style=color:#f92672>.</span><span style=color:#111>suiv</span> <span style=color:#f92672>=</span> <span style=color:#111>None</span>
-<span style=color:#111>L</span><span style=color:#f92672>.</span><span style=color:#111>tete</span> <span style=color:#f92672>=</span> <span style=color:#111>M1</span></code></pre></div><blockquote><p><strong>Questions:</strong> à votre avis, que vaut <code>L.tete.val</code> ?</p><p>et que vaut <code>L.tete.suiv.val</code>?</p></blockquote><h2 id=interêt-et-inconvenient-par-rapport-aux-listes-en-python>Interêt et inconvenient par rapport aux listes en python</h2><p>L&rsquo;interface d&rsquo;une liste chainée fournit des méthodes plus efficaces que la <em>Pile</em>, la <em>File</em> ou le <em>tableau</em>, lorsque l&rsquo;on veut par exempke: <strong>insérer</strong>, ou <strong>supprimer</strong> un élément dans la séquence.</p><figure><div><img src=../images/listeC2.png alt="insertion liste chainée"><figcaption>insertion dans une liste</figcaption></div></figure><p>Cette opération est prévue par l&rsquo;interface d&rsquo;une liste chainée =&gt; O(n): <code>inserer_apres(i)</code>, où <code>i</code> est l&rsquo;indice de l&rsquo;élément après lequel on veut <em>insérer</em>.</p><p>Avec une liste python, qui implémente la Pile (voir cours) cela necessite de décaler toutes les valeurs de rang supérieur à <code>i</code>. C&rsquo;est une opération qui est évaluée en O(n<sup>2</sup>) pour sa complexité asymptotique.</p><p>Il s&rsquo;agit du même problème lorsque l&rsquo;on veut <em>supprimer après <code>i</code></em>.</p><p>Un autre avantage est la possibilité de faire pointer le dernier élément sur le premier de la liste. On créé ainsi une liste <em>périodique</em>.</p><p><strong>Inconvénient:</strong> Pour accéder à un <em>maillon</em> de rang <code>i</code> dans une liste chainée, il faut remonter la liste depuis le premier élément (celui de tête), jusqu&rsquo;à celui de rang <code>i</code>. Et cela se fait avec une complexité asymtotique O(n).</p><h1 id=exercices>Exercices</h1><h2 id=exercice-1-créer-une-liste-chainée>Exercice 1: Créer une liste chainée</h2><p><strong>1.</strong> Completer le script ci-dessous pour créer une liste chainée appelée <code>ma_liste</code> qui contiendra la éléments suivants:</p><p><code>'Premier', 'Troisieme'</code>, <code>'Quatrieme'</code></p><iframe width=100% height=500 allowfullscreen frameborder=0 style="border:1px #d6d6d6 solid" src="https://fr.vittascience.com/python/?link=5faa722d44d4d&mode=code"></iframe><p><strong>2.</strong> Tester dans la console les instructions suivantes:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>&gt;&gt;&gt;</span> <span style=color:#111>ma_liste</span><span style=color:#f92672>.</span><span style=color:#111>tete</span><span style=color:#f92672>.</span><span style=color:#111>val</span>
-<span style=color:#f92672>&gt;&gt;&gt;</span> <span style=color:#111>ma_liste</span><span style=color:#f92672>.</span><span style=color:#111>tete</span><span style=color:#f92672>.</span><span style=color:#111>suiv</span><span style=color:#f92672>.</span><span style=color:#111>val</span>
-<span style=color:#f92672>&gt;&gt;&gt;</span> <span style=color:#111>ma_liste</span><span style=color:#f92672>.</span><span style=color:#111>tete</span><span style=color:#f92672>.</span><span style=color:#111>suiv</span><span style=color:#f92672>.</span><span style=color:#111>suiv</span><span style=color:#f92672>.</span><span style=color:#111>val</span></code></pre></div><p><strong>3.</strong> Rendez-vous sur <a href="http://pythontutor.com/visualize.html#mode=edit" target=blank>pythontutor.com</a> et coller le script dans l&rsquo;editeur. Dérouler alors le script pour obtenir la représentation complète de la liste chaînée comme sur l&rsquo;image suivante:</p><figure><div><img src=../images/pythontutor.png alt="liste chainée et pythontutor"><figcaption>liste chainée et pythontutor</figcaption></div></figure><p><strong>4.</strong> Modifier le script dans la fenêtre d&rsquo;edition de <em>pythontutor</em>. Ajouter les lignes suivantes et dérouler le programme ligne par ligne:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>s</span> <span style=color:#f92672>=</span> <span style=color:#111>ma_liste</span><span style=color:#f92672>.</span><span style=color:#111>tete</span>
-<span style=color:#111>s</span><span style=color:#f92672>.</span><span style=color:#111>val</span> <span style=color:#f92672>=</span> <span style=color:#d88200>&#39;1&#39;</span>
-<span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#111>ma_liste</span><span style=color:#f92672>.</span><span style=color:#111>tete</span><span style=color:#f92672>.</span><span style=color:#111>val</span><span style=color:#111>)</span>
-<span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#111>M1</span><span style=color:#f92672>.</span><span style=color:#111>val</span><span style=color:#111>)</span></code></pre></div><blockquote><p>Qu&rsquo;affiche la console? Ce résultat était-il prévisible? Pourquoi?</p></blockquote><h2 id=exercice-2-afficher-les-éléments-de-liste>Exercice 2: afficher les éléments de liste</h2><p>On cherche à parcourir les éléments d&rsquo;une liste chainée <code>L</code>.</p><p>On propose un premier algorithme itératif. Celui-ci stocke l&rsquo;élément de tête de <code>L</code> dans une variable <code>M</code>.</p><p>Puis une boucle non bornée parcourt les différents maillons de <code>L</code> jusqu&rsquo;à ce que <code>M.suiv</code> soit <code>None</code>, marquant le maillon de <em>queue</em>.</p><p>On affiche alors les valeurs <code>M.val</code> de ces maillons avec <code>print</code>.</p><p>Et on passe au maillon suivant: <code>M = M.suiv</code></p><p><strong>1.</strong> Ecrire le script itératif.<br><strong>2.</strong> Adapter ce script pour en faire une fonction <strong>recursive</strong> qui prend en paramètre un maillon M, et affiche toutes les valeurs jusqu&rsquo;à la fin de la liste. La condition d&rsquo;arrêt (Base) sera <code>M.suiv is None</code>.</p><p>La fonction doit renvoyer une chaine de caractères fabriquée de la manière suivante : <code>A =&gt; ... =&gt; ... =&gt; D</code></p><p>Compléter après le return:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>def</span> <span style=color:#75af00>affiche</span><span style=color:#111>(</span><span style=color:#111>M</span><span style=color:#111>):</span>
-    <span style=color:#00a8c8>if</span> <span style=color:#111>M</span><span style=color:#f92672>.</span><span style=color:#111>suiv</span> <span style=color:#f92672>is</span> <span style=color:#111>None</span><span style=color:#111>:</span>
-        <span style=color:#00a8c8>return</span> <span style=color:#111>M</span><span style=color:#f92672>.</span><span style=color:#111>val</span>  <span style=color:#75715e># affiche la valeur de queue</span>
-    <span style=color:#00a8c8>else</span><span style=color:#111>:</span>
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-    <span style=color:#f92672>.....</span></code></pre></div><p><br></p><p><iframe width=100% height=500 allowfullscreen frameborder=0 style="border:1px #d6d6d6 solid" src="https://fr.vittascience.com/python/?link=5faa752e1c9a3&mode=code"></iframe><br></p><p><strong>3.</strong> Comment appeler cette fonction afin qu&rsquo;elle affiche TOUS les éléments de la liste L, du premier (<em>tête</em>) au dernier? Tester avec la liste <strong>ACD</strong> décrite dans le cours.</p><h2 id=exercice-3-insertion-d-un-élément>Exercice 3: Insertion d&rsquo;un élément</h2><p>On souhaite maintenant modifier la séquence de <code>ma_liste</code> créée dans l&rsquo;exercice 1. On va insérer un élément de valeur <code>Deuxieme</code> à la 2<sup>e</sup> position.</p><figure><div><img src=../images/listeC2.png alt="insertion liste chainée"><figcaption>insertion dans une liste</figcaption></div></figure><p>Ajouter dans votre programme les instructions qui permettront de:</p><p><strong>1.</strong> Créer un nouveau maillon <code>M4</code>.<br><strong>2.</strong> Affecter &lsquo;Deuxieme&rsquo; comme valeur à <code>M4</code>.<br><strong>3.</strong> Modifier le lien <code>M4.suiv</code> pour que celui-ci pointe vers le 3<sup>e</sup> élément de <code>ma_liste</code>.<br><strong>4.</strong> Modifier le lien <code>ma_liste.tete.suiv</code> pour recréer la liste chainée.<br><strong>5.</strong> Utiliser la fonction <code>affiche</code> pour afficher les éléments de <code>ma_liste</code>.<br></p><h1 id=correction-des-exercices>Correction des exercices</h1><h2 id=exercice-1>Exercice 1</h2><p>(à venir)</p><h2 id=exercice-2>Exercice 2</h2><p>(à venir)</p><h2 id=exercice-3>Exercice 3</h2><p>(à venir)</p><h1 id=liens>Liens</h1><ul><li>Retour vers la page <a href=../page2/>introduction aux structures de données: les Piles</a></li></ul></article><div style=height:100px></div></div><aside class="book-toc fixed"><nav id=TableOfContents><ul><li><a href=#structures-de-données-rappels>Structures de données: rappels</a></li><li><a href=#files>Files</a><ul><li><a href=#definition-et-interface>Definition et interface</a></li><li><a href=#implémentations-en-python>Implémentations en python</a></li></ul></li><li><a href=#listes>Listes</a><ul><li><a href=#principe>Principe</a></li><li><a href=#interface>Interface</a></li><li><a href=#implémentation>Implémentation</a></li><li><a href=#interêt-et-inconvenient-par-rapport-aux-listes-en-python>Interêt et inconvenient par rapport aux listes en python</a></li></ul></li><li><a href=#exercices>Exercices</a><ul><li><a href=#exercice-1-créer-une-liste-chainée>Exercice 1: Créer une liste chainée</a></li><li><a href=#exercice-2-afficher-les-éléments-de-liste>Exercice 2: afficher les éléments de liste</a></li><li><a href=#exercice-3-insertion-d-un-élément>Exercice 3: Insertion d&rsquo;un élément</a></li></ul></li><li><a href=#correction-des-exercices>Correction des exercices</a><ul><li><a href=#exercice-1>Exercice 1</a></li><li><a href=#exercice-2>Exercice 2</a></li><li><a href=#exercice-3>Exercice 3</a></li></ul></li><li><a href=#liens>Liens</a></li></ul></nav></aside></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
-<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI\2fstructure\2fpage21\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    autres structures lineaires
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="structures-de-données-rappels">Structures de données: rappels</h1>
+<p>Les piles, files et listes sont des structures de données <strong>linéaires</strong>. Ce sont des types <strong>abstraits</strong>.</p>
+<p>Structure de données <strong>linéaire</strong> : les données sont rangées sur un ligne ou une colonne.</p>
+<p>Un <strong>type abstrait</strong> décrit essentiellement une interface, indépendamment du  langage de programmation.</p>
+<h1 id="files">Files</h1>
+<h2 id="definition-et-interface">Definition et interface</h2>
+<p>Une file (queue ou FIFO pour first in, first out) est une collection d’objets munie  des opérations suivantes:</p>
+<ul>
+<li>savoir si la file est vide (is_empty);</li>
+<li>ajouter un élément dans la file (enfiler ou enqueue) en temps constant;</li>
+<li>retirer et renvoyer l’élément le plus ancien de la file (defiler ou dequeue).</li>
+</ul>
+<p>C&rsquo;est une structure de données utilisée en informatique pour par exemple gérer la file d&rsquo;attente lors de la gestion des impressions.</p>
+<h2 id="implémentations-en-python">Implémentations en python</h2>
+<p>L&rsquo;implementation d&rsquo;une File est imparfaite avec une liste en python pour l&rsquo;opération de <em>defiler</em>. On peut utiliser l&rsquo;instruction <code>file.pop(0)</code>. Le problème est que celle-ci ne s&rsquo;effectue pas en temps constant.</p>
+<p>La bibliothèque standard possède toutefois un module nommé <code>collections</code>  qui contient quelques structures de données supplémentaires, dont le type <code>deque</code>, qui est une implémentation de file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> <span style="color:#111">collection</span> <span style="color:#f92672">import</span> <span style="color:#111">deque</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">f</span> <span style="color:#f92672">=</span> <span style="color:#111">deque</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">f</span><span style="color:#f92672">.</span><span style="color:#111">append</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Premier&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">f</span><span style="color:#f92672">.</span><span style="color:#111">append</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Deuxieme&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">f</span><span style="color:#f92672">.</span><span style="color:#111">popleft</span><span style="color:#111">())</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">f</span><span style="color:#f92672">.</span><span style="color:#111">append</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Troisieme&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">while</span> <span style="color:#111">f</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">f</span><span style="color:#f92672">.</span><span style="color:#111">popleft</span><span style="color:#111">())</span>
+</span></span></code></pre></div><p>affiche:</p>
+<pre tabindex="0"><code>Deuxieme
+Troisieme
+</code></pre><h1 id="listes">Listes</h1>
+<h2 id="principe">Principe</h2>
+<p>Le types abstrait <em>Liste</em> ne concerne pas le type <em>list</em> en python. C&rsquo;est une liste <em>chaînée</em> (ou liste <em>liée</em>): une structure de données composées d’une séquence d’<em>éléments</em> de liste.</p>
+<p>Ces éléments sont aussi appelés <em>noeuds</em> ou <em>maillons</em>.</p>
+<p>La <strong>tête</strong> d’une liste est son premier <em>maillon</em>. La <strong>queue</strong> d’une liste, son dernier.</p>
+<p>Chaque maillon <strong>M</strong> contient:</p>
+<ul>
+<li>une valeur, de n&rsquo;importe quel type.</li>
+<li>un lien (ou pointeur) vers le maillon suivant de la séquence.</li>
+</ul>
+<p>Il s&rsquo;agit d&rsquo;une structure <em>linéaire</em>, mais dans laquelle les éléments n&rsquo;occupent pas <em>à priori</em>, des positions contigües dans la mémoire:</p>
+<p><em>illustration:</em></p>
+<!-- raw HTML omitted -->
+<p>Pour relier ces éléments ensembles, dans une même structure de données, il faut alors utiliser des <em>pointeurs</em>.</p>
+<!-- raw HTML omitted -->
+<p>L&rsquo;élément <strong>A</strong> pointe sur <strong>B</strong>, qui pointe sur <strong>C</strong>, qui pointe sur <strong>D</strong>. <strong>D</strong>, lui, ne pointe sur &hellip; <strong>rien</strong>!</p>
+<p>La plupart du temps, le lien du dernier maillon a pour valeur <em>None</em> en python, signifiant un pointeur sur <em>rien</em>.</p>
+<p>On pourra consulter la vidéo suivante jusqu&rsquo;à 18min:</p>
+<p><!-- raw HTML omitted -->listes chainées de Jaques Olivier Lapeyre <!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="interface">Interface</h2>
+<p>On trouve en général les opérations suivantes pour l&rsquo;interface d&rsquo;une <em>Liste</em>:</p>
+<ul>
+<li><code>est_vide</code> : renvoie <code>True</code> si Liste vide</li>
+<li><code>taille</code> : renvoie le nombre de <em>maillons</em> de la séquence</li>
+<li><code>get_dernier_maillon</code></li>
+<li><code>get_maillon_indice</code></li>
+<li><code>ajouter_debut</code></li>
+<li><code>inserer_apres</code></li>
+<li><code>ajouter_fin</code></li>
+<li><code>supprimer_apres</code></li>
+<li>&hellip;</li>
+</ul>
+<h2 id="implémentation">Implémentation</h2>
+<p>L&rsquo;implémentation est plus naturelle en <em>programmation orientée objet</em> (<!-- raw HTML omitted -->voir le chapitre POO<!-- raw HTML omitted -->).</p>
+<blockquote>
+<p>Un maillon est une instance de la classe <code>Maillon</code></p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">class</span> <span style="color:#75af00">Maillon</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">def</span> <span style="color:#111">__init__</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">val</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">None</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">suiv</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">None</span>
+</span></span></code></pre></div><blockquote>
+<p>Une <em>Liste</em> est une instance de la classe <code>Liste</code></p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">class</span> <span style="color:#75af00">Liste</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">def</span> <span style="color:#111">__init__</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">tete</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">None</span>
+</span></span></code></pre></div><p>Son attribut <code>tete</code>  est de type <code>Maillon</code> , ou bien vaut <code>None</code> si la liste est vide.</p>
+<p>Cette classe ne comporte pour l&rsquo;instant que sa définition de la variable <code>tete</code>, mais elle est créée pour contenir, plus tard, l&rsquo;implementation des différentes méthodes prévues par l&rsquo;interface.</p>
+<!-- raw HTML omitted -->
+<p>On peut alors créer une liste ainsi :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">L</span> <span style="color:#f92672">=</span> <span style="color:#111">Liste</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">M1</span><span style="color:#111">,</span> <span style="color:#111">M2</span><span style="color:#111">,</span> <span style="color:#111">M3</span> <span style="color:#f92672">=</span> <span style="color:#111">Maillon</span><span style="color:#111">(),</span> <span style="color:#111">Maillon</span><span style="color:#111">(),</span> <span style="color:#111">Maillon</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">M1</span><span style="color:#f92672">.</span><span style="color:#111">val</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;A&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">M2</span><span style="color:#f92672">.</span><span style="color:#111">val</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;C&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">M3</span><span style="color:#f92672">.</span><span style="color:#111">val</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;D&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">M1</span><span style="color:#f92672">.</span><span style="color:#111">suiv</span> <span style="color:#f92672">=</span> <span style="color:#111">M2</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">M2</span><span style="color:#f92672">.</span><span style="color:#111">suiv</span> <span style="color:#f92672">=</span> <span style="color:#111">M3</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">M3</span><span style="color:#f92672">.</span><span style="color:#111">suiv</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">None</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">L</span><span style="color:#f92672">.</span><span style="color:#111">tete</span> <span style="color:#f92672">=</span> <span style="color:#111">M1</span>
+</span></span></code></pre></div><blockquote>
+<p><strong>Questions:</strong> à votre avis, que vaut <code>L.tete.val</code> ?</p>
+</blockquote>
+<blockquote>
+<p>et que vaut <code>L.tete.suiv.val</code>?</p>
+</blockquote>
+<h2 id="interêt-et-inconvenient-par-rapport-aux-listes-en-python">Interêt et inconvenient par rapport aux listes en python</h2>
+<p>L&rsquo;interface d&rsquo;une liste chainée fournit des méthodes plus efficaces que la <em>Pile</em>, la <em>File</em> ou le <em>tableau</em>, lorsque l&rsquo;on veut par exempke: <strong>insérer</strong>, ou <strong>supprimer</strong> un élément dans la séquence.</p>
+<!-- raw HTML omitted -->
+<p>Cette opération est prévue par l&rsquo;interface d&rsquo;une liste chainée =&gt; O(n): <code>inserer_apres(i)</code>, où <code>i</code> est l&rsquo;indice de l&rsquo;élément après lequel on veut <em>insérer</em>.</p>
+<p>Avec une liste python, qui implémente la Pile (voir cours) cela necessite de décaler toutes les valeurs de rang supérieur à <code>i </code>. C&rsquo;est une opération qui est évaluée en O(n<!-- raw HTML omitted -->2<!-- raw HTML omitted -->) pour sa complexité asymptotique.</p>
+<p>Il s&rsquo;agit du même problème lorsque l&rsquo;on veut <em>supprimer après <code>i</code></em>.</p>
+<p>Un autre avantage est la possibilité de faire pointer le dernier élément sur le premier de la liste. On créé ainsi une liste <em>périodique</em>.</p>
+<p><strong>Inconvénient:</strong> Pour accéder à un <em>maillon</em> de rang <code>i</code> dans une liste chainée, il faut remonter la liste depuis le premier élément (celui de tête), jusqu&rsquo;à celui de rang <code>i</code>. Et cela se fait avec une complexité asymtotique O(n).</p>
+<h1 id="exercices">Exercices</h1>
+<h2 id="exercice-1-créer-une-liste-chainée">Exercice 1: Créer une liste chainée</h2>
+<p><strong>1.</strong> Completer le script ci-dessous pour créer une liste chainée appelée <code>ma_liste</code> qui contiendra la éléments suivants:</p>
+<p><code>'Premier', 'Troisieme'</code>, <code>'Quatrieme'</code></p>
+<!-- raw HTML omitted -->
+<p><strong>2.</strong> Tester dans la console les instructions suivantes:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">ma_liste</span><span style="color:#f92672">.</span><span style="color:#111">tete</span><span style="color:#f92672">.</span><span style="color:#111">val</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">ma_liste</span><span style="color:#f92672">.</span><span style="color:#111">tete</span><span style="color:#f92672">.</span><span style="color:#111">suiv</span><span style="color:#f92672">.</span><span style="color:#111">val</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">ma_liste</span><span style="color:#f92672">.</span><span style="color:#111">tete</span><span style="color:#f92672">.</span><span style="color:#111">suiv</span><span style="color:#f92672">.</span><span style="color:#111">suiv</span><span style="color:#f92672">.</span><span style="color:#111">val</span>
+</span></span></code></pre></div><p><strong>3.</strong> Rendez-vous sur <!-- raw HTML omitted -->pythontutor.com<!-- raw HTML omitted --> et coller le script dans l&rsquo;editeur. Dérouler alors le script pour obtenir la représentation complète de la liste chaînée comme sur l&rsquo;image suivante:</p>
+<!-- raw HTML omitted -->
+<p><strong>4.</strong> Modifier le script dans la fenêtre d&rsquo;edition de <em>pythontutor</em>. Ajouter les lignes suivantes et dérouler le programme ligne par ligne:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">s</span> <span style="color:#f92672">=</span> <span style="color:#111">ma_liste</span><span style="color:#f92672">.</span><span style="color:#111">tete</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">s</span><span style="color:#f92672">.</span><span style="color:#111">val</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;1&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">ma_liste</span><span style="color:#f92672">.</span><span style="color:#111">tete</span><span style="color:#f92672">.</span><span style="color:#111">val</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">M1</span><span style="color:#f92672">.</span><span style="color:#111">val</span><span style="color:#111">)</span>
+</span></span></code></pre></div><blockquote>
+<p>Qu&rsquo;affiche la console? Ce résultat était-il prévisible? Pourquoi?</p>
+</blockquote>
+<h2 id="exercice-2-afficher-les-éléments-de-liste">Exercice 2: afficher les éléments de liste</h2>
+<p>On cherche à parcourir les éléments d&rsquo;une liste chainée <code>L</code>.</p>
+<p>On propose un premier algorithme itératif. Celui-ci stocke l&rsquo;élément de tête de <code>L</code> dans une variable <code>M</code>.</p>
+<p>Puis une boucle non bornée parcourt les différents maillons de <code>L</code> jusqu&rsquo;à ce que <code>M.suiv</code> soit <code>None</code>, marquant le maillon de <em>queue</em>.</p>
+<p>On affiche alors les valeurs <code>M.val</code> de ces maillons avec <code>print</code>.</p>
+<p>Et on passe au maillon suivant: <code>M = M.suiv</code></p>
+<p><strong>1.</strong> Ecrire le script itératif.<!-- raw HTML omitted -->
+<strong>2.</strong> Adapter ce script pour en faire une fonction <strong>recursive</strong> qui prend en paramètre un maillon M, et affiche toutes les valeurs jusqu&rsquo;à la fin de la liste. La condition d&rsquo;arrêt (Base) sera <code>M.suiv is None</code>.</p>
+<p>La fonction doit renvoyer une chaine de caractères fabriquée de la manière suivante : <code>A =&gt; ... =&gt; ... =&gt; D</code></p>
+<p>Compléter après le return:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">affiche</span><span style="color:#111">(</span><span style="color:#111">M</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">if</span> <span style="color:#111">M</span><span style="color:#f92672">.</span><span style="color:#111">suiv</span> <span style="color:#f92672">is</span> <span style="color:#00a8c8">None</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">return</span> <span style="color:#111">M</span><span style="color:#f92672">.</span><span style="color:#111">val</span>  <span style="color:#75715e"># affiche la valeur de queue</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">else</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">.....</span>
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><strong>3.</strong> Comment appeler cette fonction afin qu&rsquo;elle affiche TOUS les éléments de la liste L, du premier (<em>tête</em>) au dernier? Tester avec la liste <strong>ACD</strong> décrite dans le cours.</p>
+<h2 id="exercice-3-insertion-dun-élément">Exercice 3: Insertion d&rsquo;un élément</h2>
+<p>On souhaite maintenant modifier la séquence de <code>ma_liste</code> créée dans l&rsquo;exercice 1. On va insérer un élément de valeur <code>Deuxieme</code> à la 2<!-- raw HTML omitted -->e<!-- raw HTML omitted --> position.</p>
+<!-- raw HTML omitted -->
+<p>Ajouter dans votre programme les instructions qui permettront de:</p>
+<p><strong>1.</strong> Créer un nouveau maillon <code>M4</code>.<!-- raw HTML omitted -->
+<strong>2.</strong> Affecter &lsquo;Deuxieme&rsquo; comme valeur à <code>M4</code>.<!-- raw HTML omitted -->
+<strong>3.</strong> Modifier le lien <code>M4.suiv</code> pour que celui-ci pointe vers le 3<!-- raw HTML omitted -->e<!-- raw HTML omitted --> élément de <code>ma_liste</code>.<!-- raw HTML omitted -->
+<strong>4.</strong> Modifier le lien <code>ma_liste.tete.suiv</code> pour recréer la liste chainée.<!-- raw HTML omitted -->
+<strong>5.</strong> Utiliser la fonction <code>affiche</code> pour afficher les éléments de <code>ma_liste</code>.<!-- raw HTML omitted --></p>
+<h1 id="correction-des-exercices">Correction des exercices</h1>
+<h2 id="exercice-1">Exercice 1</h2>
+<p>(à venir)</p>
+<h2 id="exercice-2">Exercice 2</h2>
+<p>(à venir)</p>
+<h2 id="exercice-3">Exercice 3</h2>
+<p>(à venir)</p>
+<h1 id="liens">Liens</h1>
+<ul>
+<li>Retour vers la page <a href="../page2/">introduction aux structures de données: les Piles</a></li>
+</ul>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#definition-et-interface">Definition et interface</a></li>
+    <li><a href="#implémentations-en-python">Implémentations en python</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#principe">Principe</a></li>
+    <li><a href="#interface">Interface</a></li>
+    <li><a href="#implémentation">Implémentation</a></li>
+    <li><a href="#interêt-et-inconvenient-par-rapport-aux-listes-en-python">Interêt et inconvenient par rapport aux listes en python</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#exercice-1-créer-une-liste-chainée">Exercice 1: Créer une liste chainée</a></li>
+    <li><a href="#exercice-2-afficher-les-éléments-de-liste">Exercice 2: afficher les éléments de liste</a></li>
+    <li><a href="#exercice-3-insertion-dun-élément">Exercice 3: Insertion d&rsquo;un élément</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#exercice-1">Exercice 1</a></li>
+    <li><a href="#exercice-2">Exercice 2</a></li>
+    <li><a href="#exercice-3">Exercice 3</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    Bac algo et tableau
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI\2f bac\2fpage1\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    Bac algo et tableau
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="bac-2021-amerique-nord-exercice-3">Bac 2021 Amerique Nord: Exercice 3</h1>
+<p><em>Cet exercice porte sur les tableaux et sur la programmation de base en Python.</em></p>
+<p>On rappelle que <code>len</code> est une fonction qui prend un tableau en paramètre et renvoie sa longueur. C’est-à-dire le nombre d’éléments présents dans le tableau.</p>
+<p><strong>Exemple</strong> : <code>len([12, 54, 34, 57]</code> vaut 4.</p>
+<p>Le but de cet exercice est de programmer différentes réductions pour un site de vente de vêtements en ligne.</p>
+<p>On rappelle que si le prix d’un article avant réduction est de x euros,</p>
+<ul>
+<li>son prix vaut 0,5x si on lui applique une réduction de 50%,</li>
+<li>son prix vaut 0,6x si on lui applique une réduction de 40%,</li>
+<li>son prix vaut 0,7x si on lui applique une réduction de 30%,</li>
+<li>son prix vaut 0,8x si on lui applique une réduction de 20%,</li>
+<li>son prix vaut 0,9x si on lui applique une réduction de 10%.</li>
+</ul>
+<p>Dans le système informatique du site de vente, l’ensemble des articles qu’un client veut acheter, appelé panier, est modélisé par un tableau de flottants.</p>
+<p>Par exemple, si un client veut acheter un pantalon à 30,50 euros, un tee-shirt à 15 euros, une paire de chaussettes à 6 euros, une jupe à 20 euros, une paire de collants à 5 euros, une robe à 35 euros et un short à 10,50 euros, le système informatique aura le tableau suivant :</p>
+<p><code>tab = [30.5, 15.0, 6.0, 20.0, 5.0, 35.0, 10.5]`` </code></p>
+<h2 id="question-1">Question 1</h2>
+<p>A.  Écrire une fonction Python <code>total_hors_reduction</code> ayant pour argument le tableau des prix des articles du panier d’un client et renvoyant le total des prix de ces articles.</p>
+<p>B.  Le site de vente propose la promotion suivante comme offre de bienvenue : 20% de réduction sur le premier article de la liste, 30% de réduction sur le deuxième article de la liste (s’il y a au moins deux articles) et aucune réduction sur le reste des articles (s’il y en a).
+Recopier sur la copie et compléter la fonction Python <code>offre_bienvenue</code> prenant en paramètre le tableau tab des prix des articles du panier d’un client et renvoyant le total à payer lorsqu’on leur applique l’offre de bienvenue.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">offre_bienvenue</span> <span style="color:#111">(</span> <span style="color:#111">tab</span> <span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;&#34;&#34; tableau -&gt; float &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">somme</span> <span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">longueur</span> <span style="color:#f92672">=</span><span style="color:#111">len</span><span style="color:#111">(</span><span style="color:#111">tab</span> <span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">if</span> <span style="color:#111">longueur</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">somme</span> <span style="color:#f92672">=</span> <span style="color:#111">tab</span> <span style="color:#111">[</span><span style="color:#ae81ff">0</span><span style="color:#111">]</span><span style="color:#f92672">*...</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">if</span> <span style="color:#111">longueur</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">somme</span> <span style="color:#f92672">=</span> <span style="color:#111">somme</span> <span style="color:#f92672">+</span> <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">if</span> <span style="color:#111">longueur</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">for</span> <span style="color:#111">i</span> <span style="color:#f92672">in</span> <span style="color:#111">range</span> <span style="color:#111">(</span><span style="color:#ae81ff">2</span><span style="color:#111">,</span> <span style="color:#111">longueur</span> <span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">somme</span> <span style="color:#f92672">=...</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">return</span> <span style="color:#f92672">...</span>
+</span></span></code></pre></div><p>Pour toute la suite de l’exercice, on pourra utiliser la fonction total_hors_reduction même si la question 1 n’a pas été traitée.</p>
+<h2 id="question-2">Question 2</h2>
+<p>Lors de la période des soldes, le site de vente propose les réductions suivantes :</p>
+<ul>
+<li>si le panier contient 5 articles ou plus, une réduction globale de 50%,</li>
+<li>si le panier contient 4 articles, une réduction globale de 40%,</li>
+<li>si le panier contient 3 articles, une réduction globale de 30%,</li>
+<li>si le panier contient 2 articles, une réduction globale de 20%,</li>
+<li>si le panier contient 1 article, une réduction globale de 10%.</li>
+</ul>
+<p>Proposer une fonction Python <code>prix_solde</code> ayant pour argument le tableau tab des prix des articles du panier d’un client et renvoyant le total des prix de ces articles lorsqu’on leur applique la réduction des soldes.</p>
+<h2 id="question-3">Question 3</h2>
+<p>A.  Écrire une fonction <code>minimum</code> qui prend en paramètre un tableau tab de nombres et renvoie la valeur minimum présente dans le tableau.</p>
+<p>B.  Pour ses bons clients, le site de vente propose une offre promotionnelle, à partir de 2 articles achetés, l’article le moins cher des articles commandés est offert.</p>
+<p>Écrire une fonction Python <code>offre_bon_client</code> ayant pour paramètre le tableau des prix des articles du panier d’un client et renvoyant le total à payer lorsqu’on leur applique l’offre bon client.</p>
+<h2 id="question-4">Question 4</h2>
+<p>Afin de diminuer le stock de ses articles dans ses entrepôts, l’entreprise imagine faire l’offre suivante à ses clients : en suivant l’ordre des articles dans le panier du client, elle considère les 3 premiers articles et offre le moins cher, puis les 3 suivants et offre le moins cher et ainsi de suite jusqu’à ce qu’il reste au plus 2 articles qui n’ont alors droit à aucune réduction.</p>
+<p><strong>Exemple :</strong> Si le panier du client contient un pantalon à 30,50 euros, un tee-shirt à 15 euros, une paire de chaussettes à 6 euros, une jupe à 20 euros, une paire de collants à 5 euros, une robe à 35 euros et un short à 10,50 euros, ce panier est représenté par le tableau suivant :</p>
+<p><code>tab = [30.5, 15.0, 6.0, 20.0, 5.0, 35.0, 10.5]</code></p>
+<p>Pour le premier groupe (le pantalon à 30,50 euros, le tee-shirt à 15 euros, la paire de chaussettes à 6 euros), l’article le moins cher, la paire de chaussettes à 6 euros, est offert. Pour le second groupe (la jupe à 20 euros, la paire de collants à 5 euros, la robe à 35 euros), la paire de collants
+à 5 euros est offerte.
+Donc le total après promotion de déstockage est 111 euros.
+On constate que le prix après promotion de déstockage dépend de l’ordre dans lequel se présentent les articles dans le panier.</p>
+<p>A.  Proposer un panier contenant les mêmes articles que ceux de l’exemple mais ayant un prix
+après promotion de déstockage différent de 111 euros.</p>
+<p>B.  Proposer un panier contenant les mêmes articles mais ayant le prix après promotion de déstockage le plus bas possible.</p>
+<p>C.  Une fois ses articles choisis, quel algorithme le client peut-il utiliser pour modifier son panier afin de s’assurer qu’il obtiendra le prix après promotion de déstockage le plus bas possible ? On ne demande pas d’écrire cet algorithme.</p>
+<h1 id="bac-2021-metropole-sept-exercice-2">Bac 2021 Metropole Sept: Exercice 2</h1>
+<p><em>Principaux thèmes abordés : structure de données (tableaux, dictionnaires) et langages et programmation (spécification).</em></p>
+<p>Objectif de l’exercice :</p>
+<p>Les Aventuriers du Rail© est un jeu de société dans lequel les joueurs doivent construire des lignes de chemin de fer entre différentes villes d&rsquo;un pays.</p>
+<p>La carte des liaisons possibles dans la région Occitanie est donnée en annexe 1 de l’exercice 2. Dans l’annexe 2 de l’exercice 2, les liaisons possédées par le joueur 1 sont en noir, et celles du joueur 2 en blanc. Les liaisons en gris sont encore en jeu.</p>
+<p>Codages des structures de données utilisées :</p>
+<ul>
+<li>Liste des liaisons d&rsquo;un joueur : Toutes les liaisons directes (sans ville intermédiaire) construites par un joueur seront enregistrées dans une variable de type &ldquo;tableau de tableaux&rdquo;.
+Le joueur 1 possède les lignes directes &ldquo;Toulouse-Muret&rdquo;, &ldquo;Toulouse-Montauban&rdquo;,
+&ldquo;Gaillac-St Sulpice&rdquo; et &ldquo;Muret-Pamiers&rdquo; (liaisons indiquées en noir dans l’annexe 2 de l’exercice 2). Ces liaisons sont mémorisées dans la variable ci-dessous.</li>
+</ul>
+<pre tabindex="0"><code>liaisonsJoueur1 = [[&#34;Toulouse&#34;,&#34;Muret&#34;],
+                   [&#34;Toulouse&#34;,&#34;Montauban&#34;],
+                   [&#34;Gaillac&#34;,&#34;St Sulpice&#34;],
+                   [&#34;Muret&#34;,&#34;Pamiers&#34;]] 
+</code></pre><p>Remarque : Seules les liaisons directes existent, par exemple [&ldquo;Toulouse&rdquo;,&ldquo;Muret&rdquo;] ou [&ldquo;Muret&rdquo;,&ldquo;Toulouse&rdquo;]. Par contre, le tableau [&ldquo;Toulouse&rdquo;,&ldquo;Mazamet&rdquo;] n&rsquo;existe pas, puisque la ligne Toulouse-Mazamet passe par Castres.</p>
+<ul>
+<li>Dictionnaire associé à un joueur : On code la liste des villes et des trajets possédée
+par un joueur en utilisant un dictionnaire de tableaux. Chaque clef de ce
+dictionnaire est une ville de départ, et chaque valeur est un tableau contenant les
+villes d&rsquo;arrivée possibles en fonction des liaisons possédées par le joueur.
+Le dictionnaire de tableaux du joueur 1 est donné ci-dessous :</li>
+</ul>
+<pre tabindex="0"><code>DictJoueur1 = {
+              &#34;Toulouse&#34;:[&#34;Muret&#34;,&#34;Montauban&#34;],
+              &#34;Montauban&#34;:[&#34;Toulouse&#34;],
+              &#34;Gaillac&#34;:[&#34;St Sulpice&#34;],
+              &#34;St Sulpice&#34;:[&#34;Gaillac&#34;],
+              &#34;Muret&#34;:[&#34;Toulouse&#34;,&#34;Pamiers&#34;],
+              &#34;Pamiers&#34;:[&#34;Muret&#34;]}
+</code></pre><h2 id="question-1-1">Question 1</h2>
+<p>Expliquer pourquoi la liste des liaisons suivante n&rsquo;est pas valide :</p>
+<p><code>tableauliaisons = [[&quot;Toulouse&quot;,&quot;Auch&quot;], [&quot;Luchon&quot;,&quot;Muret&quot;], [&quot;Quillan&quot;,&quot;Limoux&quot;] ]</code></p>
+<h2 id="question-2-1">Question 2</h2>
+<p>Cette question concerne le joueur n°2 (Rappel : les liaisons possédées par le joueur n°2 sont représentées par un rectangle blanc dans l’annexe 2 de l’exercice 2).</p>
+<p>A.  Donner le tableau <code>liaisonsJoueur2</code>, des liaisons possédées par le joueur n°2.</p>
+<p>B.  Recopier et compléter le dictionnaire suivant, associé au joueur n°2 :</p>
+<pre tabindex="0"><code>DictJoueur2 = {
+              &#34;Toulouse&#34;:[&#34;Castres&#34;,&#34;Castelnaudary&#34;],
+              …
+              }
+</code></pre><h2 id="question-3-1">Question 3</h2>
+<p>À partir du tableau de tableaux contenant les liaisons d&rsquo;un joueur, on souhaite
+construire le dictionnaire correspondant au joueur. Une première proposition a
+abouti à la fonction construireDict ci-dessous</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">construireDict</span><span style="color:#111">(</span><span style="color:#111">listeLiaisons</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  listeLiaisons est un tableau de tableaux représentant la
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  liste des liaisons d&#39;un joueur comme décrit dans le problème
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">   &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">Dict</span><span style="color:#f92672">=</span><span style="color:#111">{}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">for</span> <span style="color:#111">liaison</span> <span style="color:#f92672">in</span> <span style="color:#111">listeLiaisons</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">villeA</span> <span style="color:#f92672">=</span> <span style="color:#111">liaison</span><span style="color:#111">[</span><span style="color:#ae81ff">0</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">villeB</span> <span style="color:#f92672">=</span> <span style="color:#111">liaison</span><span style="color:#111">[</span><span style="color:#ae81ff">1</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">if</span> <span style="color:#f92672">not</span> <span style="color:#111">villeA</span> <span style="color:#f92672">in</span> <span style="color:#111">Dict</span><span style="color:#f92672">.</span><span style="color:#111">keys</span><span style="color:#111">()</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">Dict</span><span style="color:#111">[</span><span style="color:#111">villeA</span><span style="color:#111">]</span><span style="color:#f92672">=</span><span style="color:#111">[</span><span style="color:#111">villeB</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">else</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">destinationsA</span> <span style="color:#f92672">=</span> <span style="color:#111">Dict</span><span style="color:#111">[</span><span style="color:#111">villeA</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">if</span> <span style="color:#f92672">not</span> <span style="color:#111">villeB</span> <span style="color:#f92672">in</span> <span style="color:#111">destinationsA</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">destinationsA</span><span style="color:#f92672">.</span><span style="color:#111">append</span><span style="color:#111">(</span><span style="color:#111">villeB</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">Dict</span> 
+</span></span></code></pre></div><p>A.  Écrire sur votre copie un assert dans la fonction construireDict qui permet
+de vérifier que la listeLiaisons n’est pas vide.</p>
+<p>B.  Sur votre copie, donner le résultat de cette fonction ayant comme argument la variable liaisonsJoueur1 donnée dans l’énoncé et expliquer en quoi cette
+fonction ne répond que partiellement à la demande.</p>
+<p>C.  La fonction construireDict, définie ci-dessus, est donc partiellement
+inexacte. Compléter la fonction construireDict pour qu’elle génère bien l’ensemble du dictionnaire de tableaux correspondant à la liste de liaisons données en argument. À l’aide des numéros de lignes, on précisera où est inséré ce code.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="bac-2021-metropole-sept-exercice-5">Bac 2021 Metropole Sept: Exercice 5</h1>
+<p><em>Principaux thèmes abordés : Traitement de données en tables (CSV) et langages et programmation (spécification).</em></p>
+<p>Afin d’améliorer l’ergonomie d’un logiciel de traitement des inscriptions dans une université, un programmeur souhaite exploiter l’intelligence artificielle pour renseigner certains champs par auto-complétion. Il s’intéresse au descripteur « genre » (masculin, féminin ou indéterminé).</p>
+<p>Pour cela il propose d’exploiter les dernières lettres du prénom
+pour proposer automatiquement le genre.</p>
+<p>Pour vérifier son hypothèse, il récupère un fichier CSV associant plus de 60 000 prénoms du monde entier au genre de la personne portant ce prénom. En utilisant seulement la dernière lettre, le taux de réussite de sa démarche est de 72,9% avec la fonction définie ci-dessous :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">genre</span><span style="color:#111">(</span><span style="color:#111">prenom</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">liste_M</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#d88200">&#39;f&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;d&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;c&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;b&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;o&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;n&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;m&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;l&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;k&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#d88200">&#39;j&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;é&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;h&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;w&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;v&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;u&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;t&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;s&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;r&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#d88200">&#39;q&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;p&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;i&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;þ&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;z&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;x&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;ç&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;ö&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;ã&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#d88200">&#39;â&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;ï&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;g&#39;</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">liste_F</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#d88200">&#39;e&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;a&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;ä&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;ü&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;y&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;ë&#39;</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">if</span> <span style="color:#111">prenom</span><span style="color:#111">[</span><span style="color:#111">len</span><span style="color:#111">(</span><span style="color:#111">prenom</span><span style="color:#111">)</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#111">]</span><span style="color:#f92672">.</span><span style="color:#111">lower</span><span style="color:#111">()</span> <span style="color:#f92672">in</span> <span style="color:#111">liste_M</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#d88200">&#34;M&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">elif</span> <span style="color:#111">prenom</span><span style="color:#111">[</span><span style="color:#111">len</span><span style="color:#111">(</span><span style="color:#111">prenom</span><span style="color:#111">)</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#111">]</span><span style="color:#f92672">.</span><span style="color:#111">lower</span><span style="color:#111">()</span> <span style="color:#f92672">in</span> <span style="color:#111">liste_F</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#d88200">&#34;F&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">else</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#d88200">&#34;I&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Pour rappel, C.lower() convertit le caractère C en minuscule.</span>
+</span></span></code></pre></div><h2 id="1-appropriation">1. Appropriation</h2>
+<p>A.  Expliquer ce qu’est un fichier CSV.</p>
+<p>B.  Donner le type de l’argument prenom de la fonction <code>genre</code>, et le type de la réponse renvoyée.</p>
+<h2 id="2-développement">2. Développement</h2>
+<p>Pour effectuer son étude sur les prénoms à partir du fichier CSV, le programmeur souhaite utiliser la bibliothèque csv.</p>
+<p>A.  La bibliothèque csv est un module natif du moteur python.
+Donner, dans ce cas, l’instruction d’importation.</p>
+<p>B.  Au cours du développement de son projet, le programmeur souhaite insérer une
+assertion sur l’argument donné à la fonction.
+Proposer une assertion sur le type de l’argument qui corrige une erreur lorsque
+le type ne correspond pas à celui attendu.</p>
+<p>C.  Avant le déploiement de sa solution, le programmeur décide de rendre sa fonction plus robuste.
+Pour cela il veut remplacer l’assertion proposée dans la question <strong>2.B)</strong> par une
+gestion de l’argument pour éviter toutes erreurs empêchant la poursuite du
+programme.
+Proposer alors une ou plusieurs instructions en Python utilisant l’argument afin de s’assurer que la fonction se termine quel que soit le type de l’argument.</p>
+<h2 id="3-améliorations">3. Améliorations</h2>
+<p>En prenant en compte les deux dernières lettres du prénom, il parvient à augmenter son taux de réussite à 74,4%. Pour cela, son étude du fichier CSV lui permet de créer deux listes : <code>liste_M2</code> pour les terminaisons de deux lettres associées aux prénoms masculins et <code>liste_F2</code> pour les prénoms féminins.
+Sur votre copie, recopier et modifier la structure conditionnelle (lignes 8 à 13) de la fonction genre afin de prendre en compte les terminaisons de deux lettres des listes <code>liste_M2</code> et <code>liste_F2</code>.</p>
+<h1 id="bac-2021-etranger1-exercice-2">Bac 2021 Etranger1: Exercice 2</h1>
+<p><em>Notion abordée : structures de données (dictionnaires)</em></p>
+<p>Une ville souhaite gérer son parc de vélos en location partagée. L’ensemble de la flotte de vélos est stocké dans une table de données représentée en langage Python par un dictionnaire contenant des associations de type <code>id_velo: dict_velo</code> où <code>id_velo</code> est un nombre entier compris entre 1 et 199 qui correspond à l&rsquo;identifiant unique du vélo et <code>dict_velo</code> est un dictionnaire dont les clés sont : <code>&quot;type&quot;, &quot;etat&quot;, &quot;station&quot;</code>.</p>
+<p>Les valeurs associées aux clés <code>&quot;type&quot;, &quot;etat&quot;, &quot;station&quot;</code>de <code>dict_velo</code> sont de type chaînes de caractères ou nombre entier :</p>
+<ul>
+<li><code>&quot;type&quot;</code> : chaîne de caractères qui peut prendre la valeur &ldquo;electrique&rdquo; ou
+&ldquo;classique&rdquo;</li>
+<li><code>&quot;état&quot;</code> : nombre entier qui peut prendre la valeur 1 si le vélo est disponible, 0 si le vélo est en déplacement, -1 si le vélo est en panne</li>
+<li><code>&quot;station&quot;</code>: chaînes de caractères qui identifie la station où est garé le vélo.</li>
+</ul>
+<p>Dans le cas où le vélo est en déplacement ou en panne, <code>&quot;station&quot;</code> correspond à celle où il a été dernièrement stationné.</p>
+<p>Voici un extrait de la table de données :</p>
+<pre tabindex="0"><code>flotte = {
+  12 : {&#34;type&#34; : &#34;electrique&#34;, &#34;etat&#34; : 1, &#34;station&#34; : &#34;Prefecture&#34;},
+  80 : {&#34;type&#34; : &#34;classique&#34;, &#34;etat&#34; : 0, &#34;station&#34; : &#34;Saint-Leu&#34;},
+  45 : {&#34;type&#34; : &#34;classique&#34;, &#34;etat&#34; : 1, &#34;station&#34; : &#34;Baraban&#34;},
+  41 : {&#34;type&#34; : &#34;classique&#34;, &#34;etat&#34; : -1, &#34;station&#34; : &#34;Citadelle&#34;},
+  26 : {&#34;type&#34; : &#34;classique&#34;, &#34;etat&#34; : 1, &#34;station&#34; : &#34;Coliseum&#34;},
+  28 : {&#34;type&#34; : &#34;electrique&#34;, &#34;etat&#34; : 0, &#34;station&#34; : &#34;Coliseum&#34;},
+  74 : {&#34;type&#34; : &#34;electrique&#34;, &#34;etat&#34; : 1, &#34;station&#34; : &#34;Jacobins&#34;},
+  13 : {&#34;type&#34; : &#34;classique&#34;, &#34;etat&#34; : 0, &#34;station&#34; : &#34;Citadelle&#34;},
+  83 : {&#34;type&#34; : &#34;classique&#34;, &#34;etat&#34; : -1, &#34;station&#34; : &#34;Saint-Leu&#34;},
+  22 : {&#34;type&#34; : &#34;electrique&#34;, &#34;etat&#34; : -1, &#34;station&#34; : &#34;Joffre&#34;}
+  }
+</code></pre><p><code>flotte</code> étant une variable globale du programme.</p>
+<p>Toutes les questions de cet exercice se réfèrent à l&rsquo;extrait de la table flotte fourni cidessus. L&rsquo;annexe 1 présente un rappel sur les dictionnaires en langage Python.</p>
+<h2 id="question-1-2">Question 1</h2>
+<ul>
+<li>1.a. Que renvoie l&rsquo;instruction <code>flotte[26]</code> ?</li>
+<li>1.b. Que renvoie l&rsquo;instruction <code>flotte[80][&quot;etat&quot;]</code> ?</li>
+<li>1.c. Que renvoie l&rsquo;instruction <code>flotte[99][&quot;etat&quot;]</code> ?</li>
+</ul>
+<h2 id="question-2-2">Question 2</h2>
+<p>Voici le script d&rsquo;une fonction :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">proposition</span><span style="color:#111">(</span><span style="color:#111">choix</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span> <span style="color:#00a8c8">for</span> <span style="color:#111">v</span> <span style="color:#f92672">in</span> <span style="color:#111">flotte</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">if</span> <span style="color:#111">flotte</span><span style="color:#111">[</span><span style="color:#111">v</span><span style="color:#111">][</span><span style="color:#d88200">&#34;type&#34;</span><span style="color:#111">]</span> <span style="color:#f92672">==</span> <span style="color:#111">choix</span> <span style="color:#f92672">and</span> <span style="color:#111">flotte</span><span style="color:#111">[</span><span style="color:#111">v</span><span style="color:#111">][</span><span style="color:#d88200">&#34;etat&#34;</span><span style="color:#111">]</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">flotte</span><span style="color:#111">[</span><span style="color:#111">v</span><span style="color:#111">][</span><span style="color:#d88200">&#34;station&#34;</span><span style="color:#111">]</span>
+</span></span></code></pre></div><ul>
+<li>2.a. <strong>Quelles sont</strong> les valeurs possibles de la variable <code>choix</code> ?</li>
+<li>2.b. <strong>Expliquer</strong> ce que renvoie la fonction lorsque l&rsquo;on choisit comme paramètre l&rsquo;une des valeurs possibles de la variable <code>choix</code>.</li>
+</ul>
+<h2 id="question-3-2">Question 3</h2>
+<ul>
+<li>3.a. Écrire un script en langage Python qui affiche les identifiants <code>(id_velo)</code> de tous les vélos disponibles à la station <code>&quot;Citadelle&quot;</code>.</li>
+<li>3.b. Écrire un script en langage Python qui permet d&rsquo;afficher l&rsquo;identifiant
+<code>(id_velo)</code> et la station de tous les vélos électriques qui ne sont pas en panne.</li>
+</ul>
+<h2 id="question-4-1">Question 4</h2>
+<p>On dispose d&rsquo;une table de données des positions GPS de toutes les stations,
+dont un extrait est donné ci-dessous. Cette table est stockée sous forme d’un
+dictionnaire.</p>
+<p>Chaque élément du dictionnaire est du type:
+<code>'nom de la station' : (latitude, longitude)</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">stations</span> <span style="color:#f92672">=</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#39;Prefecture&#39;</span> <span style="color:#111">:</span> <span style="color:#111">(</span><span style="color:#ae81ff">49.8905</span><span style="color:#111">,</span> <span style="color:#ae81ff">2.2967</span><span style="color:#111">)</span> <span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#39;Saint-Leu&#39;</span> <span style="color:#111">:</span> <span style="color:#111">(</span><span style="color:#ae81ff">49.8982</span><span style="color:#111">,</span> <span style="color:#ae81ff">2.3017</span><span style="color:#111">),</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#39;Coliseum&#39;</span> <span style="color:#111">:</span> <span style="color:#111">(</span><span style="color:#ae81ff">49.8942</span><span style="color:#111">,</span> <span style="color:#ae81ff">2.2874</span><span style="color:#111">),</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#39;Jacobins&#39;</span> <span style="color:#111">:</span> <span style="color:#111">(</span><span style="color:#ae81ff">49.8912</span><span style="color:#111">,</span> <span style="color:#ae81ff">2.3016</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">}</span>
+</span></span></code></pre></div><p>On <strong>admet</strong> que l&rsquo;on dispose d&rsquo;une fonction <code>distance(p1, p2)</code> permettant de
+renvoyer la distance en mètres entre deux positions données par leurs
+coordonnées GPS (latitude et longitude).</p>
+<p>Cette fonction prend en paramètre deux tuples représentant les coordonnées des
+deux positions GPS et renvoie un nombre entier représentant cette distance en
+mètres.</p>
+<p>Par exemple, <code>distance((49.8905, 2.2967), (49.8912, 2.3016))</code> renvoie 9591</p>
+<p>Écrire une fonction qui prend en paramètre les coordonnées GPS de l&rsquo;utilisateur
+sous forme d’un tuple et qui renvoie, pour chaque station située à moins de 800
+mètres de l&rsquo;utilisateur :</p>
+<ul>
+<li>le nom de la station ;</li>
+<li>la distance entre l&rsquo;utilisateur et la station ;</li>
+<li>les identifiants des vélos disponibles dans cette station.
+Une station où aucun vélo n’est disponible ne doit pas être affichée.</li>
+</ul>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#question-1">Question 1</a></li>
+    <li><a href="#question-2">Question 2</a></li>
+    <li><a href="#question-3">Question 3</a></li>
+    <li><a href="#question-4">Question 4</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#question-1-1">Question 1</a></li>
+    <li><a href="#question-2-1">Question 2</a></li>
+    <li><a href="#question-3-1">Question 3</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1-appropriation">1. Appropriation</a></li>
+    <li><a href="#2-développement">2. Développement</a></li>
+    <li><a href="#3-améliorations">3. Améliorations</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#question-1-2">Question 1</a></li>
+    <li><a href="#question-2-2">Question 2</a></li>
+    <li><a href="#question-3-2">Question 3</a></li>
+    <li><a href="#question-4-1">Question 4</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

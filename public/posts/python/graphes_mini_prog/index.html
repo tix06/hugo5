@@ -1,51 +1,382 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Python arbre decision
-| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel=stylesheet><script type=text/x-mathjax-config>
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    Python arbre decision
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
   });
-</script><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.1c02dc1d2c0b546a84beb71d8f4336d6f5d7b69564e08bdfc04c2fb0595d786d.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
 catch(err)
-{console.log(err.message);}
-if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
-if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
-if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}
-let chemin=window.location.pathname;if(chemin.search('NSI')>-1){baniere=document.querySelector("#myHeader");let linkBox=document.createElement('div');linkBox.classList.add('linkBox');let newH=document.createElement('a');newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';newH.classList.add('nsi');linkBox.appendChild(newH);baniere.appendChild(linkBox);}</script><style>#myHeader{display:flex;flex-direction:row-reverse}#myHeader>.titre{width:80%;min-width:300px;text-align:left}.linkBox{margin:10px;padding-top:10px;background-color:pink;min-width:50px}.isn{}</style></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2fposts\2fpython\2fgraphes_mini_prog\2f ]{color:#004ed0}</style><ul><li><a href=/><strong>Accueil</strong></a></li><li><a href=/docs/esf/esf_index/><strong>ESF</strong></a></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p></li><li><p><a href=/docs/python/index_python/><strong>Python</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
-addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-posts><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
-<strong>Python arbre decision</strong></header><header class=markdown><h1>Python arbre decision</h1><h5><strong>Sept 1, 1019</strong></h5></header><article class=markdown><h1 id=arbres-de-classification>Arbres de classification</h1><p>Lien vers le notebook en ligne : <a href=https://mybinder.org/v2/gh/tix06/notebooks_classif/master>https://mybinder.org/v2/gh/tix06/notebooks_classif/master</a></p><blockquote><p>Choisir alors le fichier : <code>graphes_mini_prog.ipynb</code></p></blockquote><h2 id=définition>Définition</h2><p>Un arbre de classification est utile pour réaliser des prévisions de manière <em>explicite</em>. C&rsquo;est une méthode d&rsquo;appentissage automatisé (machine learning) supervisé (les classes des entrées sont connue).</p><p>A partir des valeurs des données en entrée, l&rsquo;algorithme va créer des règles pour segmenter, au mieux, la population (les index des entrées) à chaque noeud. En descendant dans l&rsquo;arbre de classification, on parcourt ses noeuds. Le nombre d&rsquo;éléments qu&rsquo;il reste à classer diminue du noeud parent vers un noeud fils : tous les éléments se répartissent sur tous les noeuds fils.</p><p>Enfin, lorsque les éléments d&rsquo;un noeuds ont tous la même classe, alors la division est terminée. Ce noeud est alors une feuille.</p><p><em>Exemple :</em> ici, les noeuds 4, 6, 7, 8, 9, 10 sont des feuilles. Ces noeuds contiennent chacun une partie des éléments qui ont servi à construire l&rsquo;arbre. La totalité de ces éléments occupent le noeud <em>racine</em>, numéro 0, puis sont répartis dans les feuilles selon leur classe.</p><p><img src=../datas/hierarchy.png alt="exemple d'arbre de classification"></p><h2 id=principe>Principe</h2><p>Utilisation de la librairie sklearn pour créer un arbre de classification/décision à partir d&rsquo;un fichier de données.</p><p>L&rsquo;arbre de decision est construit à partir d&rsquo;une segmentation optimale qui est réalisée sur les entrées (les lignes du tableau).</p><h1 id=jouer-ou-ne-pas-jouer>Jouer ou ne pas jouer</h1><h2 id=fichier-de-données>fichier de données</h2><p>Ici, le fichier de données est <code>datas/jouer0.png</code>. Il contient les données méteorologiques et les classes (jouer/ne pas jouer au golf) pour plusieurs types de conditions météo (les lignes).</p><p>Ce fichier ne devra contenir que des données numériques (mis à part la première ligne, contenant les étiquettes des colonnes, les <em>features</em>).</p><h2 id=classifier-puis-prédire>Classifier puis prédire</h2><p>Une fois l&rsquo;arbre de classification établi, on pourra le parcourir pour <em>prédire</em> la classe d&rsquo;une nouvelle entrée, en fonction de ses valeurs : l&rsquo;arbre sert alors comme une <em>aide à la décision</em>.</p><p>En pratique, il faudra créer une structure qui contient l&rsquo;arbre, avec ses noeuds, leur association, et les tests qui sont effectués pour descendre d&rsquo;un noeud parent à l&rsquo;un des ses noeuds fils. On peut choisir d&rsquo;utiliser un <em>dictionnaire python</em> pour contenir cette structure. Le <em>dictionnaire</em> étant un <em>tableau associatif</em>.</p><p>Comme les données sont toutes <em>numériques</em>, les tests réalisés à chaque noeud, pour traduire la division des éléments s&rsquo;écrivent de la manière suivante :</p><p>Soit X une liste de listes contenant : les éléments à classer, et les valeurs pour chacun des éléments :</p><p><code>X[i]</code> fait alors référence à la valeur des éléments pour la colonne n°i.</p><pre><code>pour touts les éléments présents au noeud courant : 
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2fposts\2fpython\2fgraphes_mini_prog\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-posts">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    Python arbre decision
+  
+</strong>
+</header>
+
+      
+
+<header class="markdown">
+  <h1>Python arbre decision</h1>
+  <h5>
+    <strong>Sept 1, 1019</strong>
+  </h5>
+</header>
+<article class="markdown"><h1 id="arbres-de-classification">Arbres de classification</h1>
+<p>Lien vers le notebook en ligne : <a href="https://mybinder.org/v2/gh/tix06/notebooks_classif/master">https://mybinder.org/v2/gh/tix06/notebooks_classif/master</a></p>
+<blockquote>
+<p>Choisir alors le fichier : <code>graphes_mini_prog.ipynb</code></p>
+</blockquote>
+<h2 id="définition">Définition</h2>
+<p>Un arbre de classification est utile pour réaliser des prévisions de manière <em>explicite</em>. C&rsquo;est une méthode d&rsquo;appentissage automatisé (machine learning) supervisé (les classes des entrées sont connue).</p>
+<p>A partir des valeurs des données en entrée, l&rsquo;algorithme va créer des règles pour segmenter, au mieux, la population (les index des entrées) à chaque noeud. En descendant dans l&rsquo;arbre de classification, on parcourt ses noeuds. Le nombre d&rsquo;éléments qu&rsquo;il reste à classer diminue du noeud parent vers un noeud fils : tous les éléments se répartissent sur tous les noeuds fils.</p>
+<p>Enfin, lorsque les éléments d&rsquo;un noeuds ont tous la même classe, alors la division est terminée. Ce noeud est alors une feuille.</p>
+<p><em>Exemple :</em> ici, les noeuds 4, 6, 7, 8, 9, 10 sont des feuilles. Ces noeuds contiennent chacun une partie des éléments qui ont servi à construire l&rsquo;arbre. La totalité de ces éléments occupent le noeud <em>racine</em>, numéro 0, puis sont répartis dans les feuilles selon leur classe.</p>
+<p><img src="../datas/hierarchy.png" alt="exemple d&amp;rsquo;arbre de classification"></p>
+<h2 id="principe">Principe</h2>
+<p>Utilisation de la librairie sklearn pour créer un arbre de classification/décision à partir d&rsquo;un fichier de données.</p>
+<p>L&rsquo;arbre de decision est construit à partir d&rsquo;une segmentation optimale qui est réalisée sur les entrées (les lignes du tableau).</p>
+<h1 id="jouer-ou-ne-pas-jouer">Jouer ou ne pas jouer</h1>
+<h2 id="fichier-de-données">fichier de données</h2>
+<p>Ici, le fichier de données est <code>datas/jouer0.png</code>. Il contient les données méteorologiques et les classes (jouer/ne pas jouer au golf) pour plusieurs types de conditions météo (les lignes).</p>
+<p>Ce fichier ne devra contenir que des données numériques (mis à part la première ligne, contenant les étiquettes des colonnes, les <em>features</em>).</p>
+<h2 id="classifier-puis-prédire">Classifier puis prédire</h2>
+<p>Une fois l&rsquo;arbre de classification établi, on pourra le parcourir pour <em>prédire</em> la classe d&rsquo;une nouvelle entrée, en fonction de ses valeurs : l&rsquo;arbre sert alors comme une <em>aide à la décision</em>.</p>
+<p>En pratique, il faudra créer une structure qui contient l&rsquo;arbre, avec ses noeuds, leur association, et les tests qui sont effectués pour descendre d&rsquo;un noeud parent à l&rsquo;un des ses noeuds fils. On peut choisir d&rsquo;utiliser un <em>dictionnaire python</em> pour contenir cette structure. Le <em>dictionnaire</em> étant un <em>tableau associatif</em>.</p>
+<p>Comme les données sont toutes <em>numériques</em>, les tests réalisés à chaque noeud, pour traduire la division des éléments s&rsquo;écrivent de la manière suivante :</p>
+<p>Soit X une liste de listes contenant : les éléments à classer, et les valeurs pour chacun des éléments :</p>
+<p><code>X[i]</code> fait alors référence à la valeur des éléments pour la colonne n°i.</p>
+<pre tabindex="0"><code>pour touts les éléments présents au noeud courant : 
     si X[i] &lt;= valeur_seuil alors :
         descendre vers le noeud fils gauche
         sinon : descendre vers le noeud fils droit
-</code></pre><h2 id=import-des-librairie-et-création-de-l-arbre-de-décision>Import des librairie et création de l&rsquo;arbre de décision</h2><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>from</span> <span style=color:#111>sklearn</span> <span style=color:#f92672>import</span> <span style=color:#111>tree</span>
-<span style=color:#f92672>from</span> <span style=color:#111>sklearn.tree</span> <span style=color:#f92672>import</span> <span style=color:#111>DecisionTreeClassifier</span>
-<span style=color:#f92672>from</span> <span style=color:#111>sklearn.tree</span> <span style=color:#f92672>import</span> <span style=color:#111>export_text</span>
-<span style=color:#f92672>import</span> <span style=color:#111>pandas</span> <span style=color:#f92672>as</span> <span style=color:#111>pd</span>
-<span style=color:#111>df</span> <span style=color:#f92672>=</span> <span style=color:#111>pd</span><span style=color:#f92672>.</span><span style=color:#111>read_csv</span><span style=color:#111>(</span><span style=color:#d88200>&#34;datas/jouer0.csv&#34;</span><span style=color:#111>,</span><span style=color:#111>sep</span><span style=color:#f92672>=</span><span style=color:#d88200>&#34;;&#34;</span><span style=color:#111>)</span>
-<span style=color:#75715e>#col = df.columns</span>
-<span style=color:#111>X</span> <span style=color:#f92672>=</span> <span style=color:#111>df</span><span style=color:#f92672>.</span><span style=color:#111>iloc</span><span style=color:#111>[:,:</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span><span style=color:#111>]</span> <span style=color:#75715e># les données sont toutes les colonnes du tableau sauf la dernière</span>
-<span style=color:#111>y</span> <span style=color:#f92672>=</span> <span style=color:#111>df</span><span style=color:#f92672>.</span><span style=color:#111>iloc</span><span style=color:#111>[:,</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span><span style=color:#111>]</span>  <span style=color:#75715e># les classes sont dans la dernière colonne (jouer/ne pas jouer)</span>
+</code></pre><h2 id="import-des-librairie-et-création-de-larbre-de-décision">Import des librairie et création de l&rsquo;arbre de décision</h2>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> <span style="color:#111">sklearn</span> <span style="color:#f92672">import</span> <span style="color:#111">tree</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> <span style="color:#111">sklearn.tree</span> <span style="color:#f92672">import</span> <span style="color:#111">DecisionTreeClassifier</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> <span style="color:#111">sklearn.tree</span> <span style="color:#f92672">import</span> <span style="color:#111">export_text</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#111">pandas</span> <span style="color:#00a8c8">as</span> <span style="color:#111">pd</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">df</span> <span style="color:#f92672">=</span> <span style="color:#111">pd</span><span style="color:#f92672">.</span><span style="color:#111">read_csv</span><span style="color:#111">(</span><span style="color:#d88200">&#34;datas/jouer0.csv&#34;</span><span style="color:#111">,</span><span style="color:#111">sep</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;;&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#col = df.columns</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">X</span> <span style="color:#f92672">=</span> <span style="color:#111">df</span><span style="color:#f92672">.</span><span style="color:#111">iloc</span><span style="color:#111">[:,:</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#111">]</span> <span style="color:#75715e"># les données sont toutes les colonnes du tableau sauf la dernière</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">y</span> <span style="color:#f92672">=</span> <span style="color:#111">df</span><span style="color:#f92672">.</span><span style="color:#111">iloc</span><span style="color:#111">[:,</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#111">]</span>  <span style="color:#75715e"># les classes sont dans la dernière colonne (jouer/ne pas jouer)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">clf</span> <span style="color:#f92672">=</span> <span style="color:#111">tree</span><span style="color:#f92672">.</span><span style="color:#111">DecisionTreeClassifier</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">clf</span> <span style="color:#f92672">=</span> <span style="color:#111">clf</span><span style="color:#f92672">.</span><span style="color:#111">fit</span><span style="color:#111">(</span><span style="color:#111">X</span><span style="color:#111">,</span> <span style="color:#111">y</span><span style="color:#111">)</span>  <span style="color:#75715e"># on entraine l&#39;arbre à l&#39;aide du jeu de données</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">df</span>
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-<span style=color:#111>clf</span> <span style=color:#f92672>=</span> <span style=color:#111>tree</span><span style=color:#f92672>.</span><span style=color:#111>DecisionTreeClassifier</span><span style=color:#111>()</span>
-<span style=color:#111>clf</span> <span style=color:#f92672>=</span> <span style=color:#111>clf</span><span style=color:#f92672>.</span><span style=color:#111>fit</span><span style=color:#111>(</span><span style=color:#111>X</span><span style=color:#111>,</span> <span style=color:#111>y</span><span style=color:#111>)</span>  <span style=color:#75715e># on entraine l&#39;arbre à l&#39;aide du jeu de données</span>
-<span style=color:#111>df</span></code></pre></div><div><style scoped>.dataframe tbody tr th:only-of-type{vertical-align:middle}.dataframe tbody tr th{vertical-align:top}.dataframe thead th{text-align:right}</style><table border=1 class=dataframe><thead><tr style=text-align:right><th></th><th>temps</th><th>température</th><th>humidité</th><th>vent</th><th>jouer</th></tr></thead><tbody><tr><th>0</th><td>1</td><td>30</td><td>85</td><td>0</td><td>0</td></tr><tr><th>1</th><td>1</td><td>27</td><td>90</td><td>1</td><td>0</td></tr><tr><th>2</th><td>0</td><td>28</td><td>78</td><td>0</td><td>1</td></tr><tr><th>3</th><td>-1</td><td>21</td><td>96</td><td>0</td><td>1</td></tr><tr><th>4</th><td>-1</td><td>20</td><td>80</td><td>0</td><td>1</td></tr><tr><th>5</th><td>-1</td><td>18</td><td>70</td><td>1</td><td>0</td></tr><tr><th>6</th><td>0</td><td>18</td><td>65</td><td>1</td><td>1</td></tr><tr><th>7</th><td>1</td><td>22</td><td>95</td><td>0</td><td>0</td></tr><tr><th>8</th><td>1</td><td>21</td><td>70</td><td>0</td><td>1</td></tr><tr><th>9</th><td>-1</td><td>24</td><td>80</td><td>0</td><td>1</td></tr><tr><th>10</th><td>1</td><td>24</td><td>70</td><td>1</td><td>1</td></tr><tr><th>11</th><td>0</td><td>22</td><td>90</td><td>1</td><td>1</td></tr><tr><th>12</th><td>0</td><td>27</td><td>75</td><td>0</td><td>1</td></tr><tr><th>13</th><td>-1</td><td>22</td><td>80</td><td>1</td><td>0</td></tr></tbody></table></div><h2 id=accéder-au-paramètres-calculés-pour-l-arbre>accéder au paramètres calculés pour l&rsquo;arbre</h2><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># Using those arrays, we can parse the tree structure:</span>
-
-<span style=color:#111>n_nodes</span> <span style=color:#f92672>=</span> <span style=color:#111>clf</span><span style=color:#f92672>.</span><span style=color:#111>tree_</span><span style=color:#f92672>.</span><span style=color:#111>node_count</span>
-<span style=color:#111>children_left</span> <span style=color:#f92672>=</span> <span style=color:#111>clf</span><span style=color:#f92672>.</span><span style=color:#111>tree_</span><span style=color:#f92672>.</span><span style=color:#111>children_left</span>    <span style=color:#75715e># noeud fils gauche pour le noeud courant (ou -1 si aucun noeud enfant)</span>
-<span style=color:#111>children_right</span> <span style=color:#f92672>=</span> <span style=color:#111>clf</span><span style=color:#f92672>.</span><span style=color:#111>tree_</span><span style=color:#f92672>.</span><span style=color:#111>children_right</span>  <span style=color:#75715e># noeud fils droit pour le noeud courant (ou -1 si aucun noeud enfant)</span>
-<span style=color:#111>feature</span> <span style=color:#f92672>=</span> <span style=color:#111>clf</span><span style=color:#f92672>.</span><span style=color:#111>tree_</span><span style=color:#f92672>.</span><span style=color:#111>feature</span>                <span style=color:#75715e># numéro de la colonne pour la valeur testée </span>
-<span style=color:#75715e>#                                          # par exemple : feature = 0 &lt;=&gt; temps</span>
-<span style=color:#75715e>#                                          # par exemple : feature = 1 &lt;=&gt; temperature ...                                            </span>
-<span style=color:#111>threshold</span> <span style=color:#f92672>=</span> <span style=color:#111>clf</span><span style=color:#f92672>.</span><span style=color:#111>tree_</span><span style=color:#f92672>.</span><span style=color:#111>threshold</span>            <span style=color:#75715e># valeur seuil du test realisé au noeud courant</span></code></pre></div><h2 id=exploration-de-la-structure-de-données>Exploration de la structure de données</h2><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>for</span> <span style=color:#111>i</span> <span style=color:#f92672>in</span>  <span style=color:#111>range</span><span style=color:#111>(</span><span style=color:#111>n_nodes</span><span style=color:#111>):</span>
-    <span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#d88200>&#39;noeud :&#39;</span><span style=color:#111>,</span><span style=color:#111>i</span><span style=color:#111>)</span>
-    <span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#d88200>&#39;fg :&#39;</span><span style=color:#111>,</span><span style=color:#111>children_left</span><span style=color:#111>[</span><span style=color:#111>i</span><span style=color:#111>])</span>
-    <span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#d88200>&#39;fd :&#39;</span><span style=color:#111>,</span> <span style=color:#111>children_right</span><span style=color:#111>[</span><span style=color:#111>i</span><span style=color:#111>])</span>
-    <span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#d88200>&#39;feature : &#39;</span><span style=color:#111>,</span><span style=color:#111>feature</span><span style=color:#111>[</span><span style=color:#111>i</span><span style=color:#111>])</span>
-    <span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#d88200>&#39;thershold :&#39;</span><span style=color:#111>,</span><span style=color:#111>threshold</span><span style=color:#111>[</span><span style=color:#111>i</span><span style=color:#111>])</span>
-    <span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#d88200>&#39;----------&#39;</span><span style=color:#111>)</span>
-    </code></pre></div><pre><code>noeud : 0
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<h2 id="accéder-au-paramètres-calculés-pour-larbre">accéder au paramètres calculés pour l&rsquo;arbre</h2>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Using those arrays, we can parse the tree structure:</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">n_nodes</span> <span style="color:#f92672">=</span> <span style="color:#111">clf</span><span style="color:#f92672">.</span><span style="color:#111">tree_</span><span style="color:#f92672">.</span><span style="color:#111">node_count</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">children_left</span> <span style="color:#f92672">=</span> <span style="color:#111">clf</span><span style="color:#f92672">.</span><span style="color:#111">tree_</span><span style="color:#f92672">.</span><span style="color:#111">children_left</span>    <span style="color:#75715e"># noeud fils gauche pour le noeud courant (ou -1 si aucun noeud enfant)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">children_right</span> <span style="color:#f92672">=</span> <span style="color:#111">clf</span><span style="color:#f92672">.</span><span style="color:#111">tree_</span><span style="color:#f92672">.</span><span style="color:#111">children_right</span>  <span style="color:#75715e"># noeud fils droit pour le noeud courant (ou -1 si aucun noeud enfant)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">feature</span> <span style="color:#f92672">=</span> <span style="color:#111">clf</span><span style="color:#f92672">.</span><span style="color:#111">tree_</span><span style="color:#f92672">.</span><span style="color:#111">feature</span>                <span style="color:#75715e"># numéro de la colonne pour la valeur testée </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#                                          # par exemple : feature = 0 &lt;=&gt; temps</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#                                          # par exemple : feature = 1 &lt;=&gt; temperature ...                                            </span>
+</span></span><span style="display:flex;"><span><span style="color:#111">threshold</span> <span style="color:#f92672">=</span> <span style="color:#111">clf</span><span style="color:#f92672">.</span><span style="color:#111">tree_</span><span style="color:#f92672">.</span><span style="color:#111">threshold</span>            <span style="color:#75715e"># valeur seuil du test realisé au noeud courant</span>
+</span></span></code></pre></div><h2 id="exploration-de-la-structure-de-données">Exploration de la structure de données</h2>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">for</span> <span style="color:#111">i</span> <span style="color:#f92672">in</span>  <span style="color:#111">range</span><span style="color:#111">(</span><span style="color:#111">n_nodes</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#d88200">&#39;noeud :&#39;</span><span style="color:#111">,</span><span style="color:#111">i</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#d88200">&#39;fg :&#39;</span><span style="color:#111">,</span><span style="color:#111">children_left</span><span style="color:#111">[</span><span style="color:#111">i</span><span style="color:#111">])</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#d88200">&#39;fd :&#39;</span><span style="color:#111">,</span> <span style="color:#111">children_right</span><span style="color:#111">[</span><span style="color:#111">i</span><span style="color:#111">])</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#d88200">&#39;feature : &#39;</span><span style="color:#111">,</span><span style="color:#111">feature</span><span style="color:#111">[</span><span style="color:#111">i</span><span style="color:#111">])</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#d88200">&#39;thershold :&#39;</span><span style="color:#111">,</span><span style="color:#111">threshold</span><span style="color:#111">[</span><span style="color:#111">i</span><span style="color:#111">])</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#d88200">&#39;----------&#39;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    
+</span></span></code></pre></div><pre><code>noeud : 0
 fg : 1
 fd : 6
 feature :  0
@@ -99,23 +430,27 @@ fd : -1
 feature :  -2
 thershold : -2.0
 ----------
-</code></pre><h2 id=creation-d-une-structure-de-type-dictionnaire-pour-contenir-l-arbre>creation d&rsquo;une structure de type dictionnaire pour contenir l&rsquo;arbre</h2><p>Cette struture contiendra aussi les conditions, afin de pouvoir l&rsquo;utiliser pour <em>décision</em>.</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>def</span> <span style=color:#75af00>isleaves</span><span style=color:#111>(</span><span style=color:#111>node</span><span style=color:#111>):</span>
-    <span style=color:#00a8c8>if</span> <span style=color:#111>(</span><span style=color:#111>children_left</span><span style=color:#111>[</span><span style=color:#111>node</span><span style=color:#111>]</span><span style=color:#f92672>==-</span><span style=color:#ae81ff>1</span> <span style=color:#f92672>&amp;</span> <span style=color:#111>children_right</span><span style=color:#111>[</span><span style=color:#111>node</span><span style=color:#111>]</span><span style=color:#f92672>==-</span><span style=color:#ae81ff>1</span><span style=color:#111>)</span> <span style=color:#111>:</span>
-        <span style=color:#00a8c8>return</span> <span style=color:#111>True</span>
-    <span style=color:#00a8c8>else</span><span style=color:#111>:</span>
-        <span style=color:#00a8c8>return</span> <span style=color:#111>False</span>
-
-
-<span style=color:#00a8c8>def</span> <span style=color:#75af00>construct</span><span style=color:#111>(</span><span style=color:#111>node_id</span><span style=color:#111>):</span>
-    <span style=color:#111>arbre</span><span style=color:#111>[</span><span style=color:#111>node_id</span><span style=color:#111>]</span> <span style=color:#f92672>=</span> <span style=color:#111>{}</span>
-    <span style=color:#75715e>#if node_id != 0:</span>
-    <span style=color:#00a8c8>if</span> <span style=color:#111>isleaves</span><span style=color:#111>(</span><span style=color:#111>node_id</span><span style=color:#111>):</span>
-        <span style=color:#00a8c8>return</span> <span style=color:#111>{</span><span style=color:#d88200>&#39;node&#39;</span><span style=color:#111>:</span><span style=color:#111>node_id</span><span style=color:#111>}</span>
-    <span style=color:#00a8c8>else</span> <span style=color:#111>:</span> 
-        <span style=color:#00a8c8>return</span> <span style=color:#111>{</span><span style=color:#d88200>&#39;node&#39;</span><span style=color:#111>:</span><span style=color:#111>node_id</span><span style=color:#111>,</span><span style=color:#d88200>&#39;feature&#39;</span><span style=color:#111>:</span><span style=color:#111>feature</span><span style=color:#111>[</span><span style=color:#111>node_id</span><span style=color:#111>],</span><span style=color:#d88200>&#39;threshold&#39;</span><span style=color:#111>:</span><span style=color:#111>threshold</span><span style=color:#111>[</span><span style=color:#111>node_id</span><span style=color:#111>],</span><span style=color:#d88200>&#39;fg&#39;</span><span style=color:#111>:</span><span style=color:#111>construct</span><span style=color:#111>(</span><span style=color:#111>children_left</span><span style=color:#111>[</span><span style=color:#111>node_id</span><span style=color:#111>]),</span><span style=color:#d88200>&#39;fd&#39;</span><span style=color:#111>:</span><span style=color:#111>construct</span><span style=color:#111>(</span><span style=color:#111>children_right</span><span style=color:#111>[</span><span style=color:#111>node_id</span><span style=color:#111>])}</span>
-        
-<span style=color:#111>arbre</span> <span style=color:#f92672>=</span> <span style=color:#111>{}</span>       
-<span style=color:#111>construct</span><span style=color:#111>(</span><span style=color:#ae81ff>0</span><span style=color:#111>)</span></code></pre></div><pre><code>{'node': 0,
+</code></pre>
+<h2 id="creation-dune-structure-de-type-dictionnaire-pour-contenir-larbre">creation d&rsquo;une structure de type dictionnaire pour contenir l&rsquo;arbre</h2>
+<p>Cette struture contiendra aussi les conditions, afin de pouvoir l&rsquo;utiliser pour <em>décision</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">isleaves</span><span style="color:#111">(</span><span style="color:#111">node</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#111">children_left</span><span style="color:#111">[</span><span style="color:#111">node</span><span style="color:#111">]</span><span style="color:#f92672">==-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">&amp;</span> <span style="color:#111">children_right</span><span style="color:#111">[</span><span style="color:#111">node</span><span style="color:#111">]</span><span style="color:#f92672">==-</span><span style="color:#ae81ff">1</span><span style="color:#111">)</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">return</span> <span style="color:#00a8c8">True</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">else</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">return</span> <span style="color:#00a8c8">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">construct</span><span style="color:#111">(</span><span style="color:#111">node_id</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">arbre</span><span style="color:#111">[</span><span style="color:#111">node_id</span><span style="color:#111">]</span> <span style="color:#f92672">=</span> <span style="color:#111">{}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#if node_id != 0:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">if</span> <span style="color:#111">isleaves</span><span style="color:#111">(</span><span style="color:#111">node_id</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">return</span> <span style="color:#111">{</span><span style="color:#d88200">&#39;node&#39;</span><span style="color:#111">:</span><span style="color:#111">node_id</span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">else</span> <span style="color:#111">:</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">return</span> <span style="color:#111">{</span><span style="color:#d88200">&#39;node&#39;</span><span style="color:#111">:</span><span style="color:#111">node_id</span><span style="color:#111">,</span><span style="color:#d88200">&#39;feature&#39;</span><span style="color:#111">:</span><span style="color:#111">feature</span><span style="color:#111">[</span><span style="color:#111">node_id</span><span style="color:#111">],</span><span style="color:#d88200">&#39;threshold&#39;</span><span style="color:#111">:</span><span style="color:#111">threshold</span><span style="color:#111">[</span><span style="color:#111">node_id</span><span style="color:#111">],</span><span style="color:#d88200">&#39;fg&#39;</span><span style="color:#111">:</span><span style="color:#111">construct</span><span style="color:#111">(</span><span style="color:#111">children_left</span><span style="color:#111">[</span><span style="color:#111">node_id</span><span style="color:#111">]),</span><span style="color:#d88200">&#39;fd&#39;</span><span style="color:#111">:</span><span style="color:#111">construct</span><span style="color:#111">(</span><span style="color:#111">children_right</span><span style="color:#111">[</span><span style="color:#111">node_id</span><span style="color:#111">])}</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span><span style="color:#111">arbre</span> <span style="color:#f92672">=</span> <span style="color:#111">{}</span>       
+</span></span><span style="display:flex;"><span><span style="color:#111">construct</span><span style="color:#111">(</span><span style="color:#ae81ff">0</span><span style="color:#111">)</span>
+</span></span></code></pre></div><pre><code>{'node': 0,
  'feature': 0,
  'threshold': 0.5,
  'fg': {'node': 1,
@@ -132,9 +467,11 @@ thershold : -2.0
   'threshold': 77.5,
   'fg': {'node': 7},
   'fd': {'node': 8}}}
-</code></pre><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># visualisation du graphe en console</span>
-<span style=color:#111>r</span> <span style=color:#f92672>=</span> <span style=color:#111>export_text</span><span style=color:#111>(</span><span style=color:#111>clf</span><span style=color:#111>,</span> <span style=color:#111>feature_names</span><span style=color:#f92672>=</span><span style=color:#111>None</span><span style=color:#111>)</span>
-<span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#111>r</span><span style=color:#111>)</span></code></pre></div><pre><code>|--- feature_0 &lt;= 0.50
+</code></pre>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># visualisation du graphe en console</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">r</span> <span style="color:#f92672">=</span> <span style="color:#111">export_text</span><span style="color:#111">(</span><span style="color:#111">clf</span><span style="color:#111">,</span> <span style="color:#111">feature_names</span><span style="color:#f92672">=</span><span style="color:#00a8c8">None</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">r</span><span style="color:#111">)</span>
+</span></span></code></pre></div><pre><code>|--- feature_0 &lt;= 0.50
 |   |--- feature_3 &lt;= 0.50
 |   |   |--- class: 1
 |   |--- feature_3 &gt;  0.50
@@ -147,8 +484,10 @@ thershold : -2.0
 |   |   |--- class: 1
 |   |--- feature_2 &gt;  77.50
 |   |   |--- class: 0
-</code></pre><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># visualisation rapide de l&#39;arbre de classification</span>
-<span style=color:#111>tree</span><span style=color:#f92672>.</span><span style=color:#111>plot_tree</span><span style=color:#111>(</span><span style=color:#111>clf</span><span style=color:#111>)</span></code></pre></div><pre><code>[Text(167.4, 190.26, 'X[0] &lt;= 0.5\ngini = 0.459\nsamples = 14\nvalue = [5, 9]'),
+</code></pre>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># visualisation rapide de l&#39;arbre de classification</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">tree</span><span style="color:#f92672">.</span><span style="color:#111">plot_tree</span><span style="color:#111">(</span><span style="color:#111">clf</span><span style="color:#111">)</span>
+</span></span></code></pre></div><pre><code>[Text(167.4, 190.26, 'X[0] &lt;= 0.5\ngini = 0.459\nsamples = 14\nvalue = [5, 9]'),
  Text(83.7, 135.9, 'X[3] &lt;= 0.5\ngini = 0.346\nsamples = 9\nvalue = [2, 7]'),
  Text(41.85, 81.53999999999999, 'gini = 0.0\nsamples = 5\nvalue = [0, 5]'),
  Text(125.55000000000001, 81.53999999999999, 'X[0] &lt;= -0.5\ngini = 0.5\nsamples = 4\nvalue = [2, 2]'),
@@ -157,7 +496,46 @@ thershold : -2.0
  Text(251.10000000000002, 135.9, 'X[2] &lt;= 77.5\ngini = 0.48\nsamples = 5\nvalue = [3, 2]'),
  Text(209.25, 81.53999999999999, 'gini = 0.0\nsamples = 2\nvalue = [0, 2]'),
  Text(292.95, 81.53999999999999, 'gini = 0.0\nsamples = 3\nvalue = [3, 0]')]
-</code></pre><p><img src=../images/jouer.pdf alt=png></p><p>Contenu de chaque noeud :</p><ul><li>la condition qui est testée : par ex au noeud 0, X[0]&lt;=0.5 (le temps est moins bien qu&rsquo;<em>ensoleillé</em>) VRAI =&gt; à gauche, FAUX =&gt; à droite</li><li>le coefficient de gini (qui doit être égal à 0 ou presque dans les feuilles)</li><li>le nombre d&rsquo;éléments dans le noeud</li><li>value = le nombre d&rsquo;éléments de chaque classe [classe 0 : ne jouent pas, classe 1 : jouent]</li></ul><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>arbre</span> <span style=color:#f92672>=</span> <span style=color:#111>construct</span><span style=color:#111>(</span><span style=color:#ae81ff>0</span><span style=color:#111>)</span>
-<span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#111>arbre</span><span style=color:#111>)</span></code></pre></div><pre><code>{'node': 0, 'feature': 0, 'threshold': 0.5, 'fg': {'node': 1, 'feature': 3, 'threshold': 0.5, 'fg': {'node': 2}, 'fd': {'node': 3, 'feature': 0, 'threshold': -0.5, 'fg': {'node': 4}, 'fd': {'node': 5}}}, 'fd': {'node': 6, 'feature': 2, 'threshold': 77.5, 'fg': {'node': 7}, 'fd': {'node': 8}}}
-</code></pre><h1 id=liens>Liens</h1><ul><li>wikipedia : arbres de décision : <a href=https://fr.wikipedia.org/wiki/Arbre_de_décision_(apprentissage)>https://fr.wikipedia.org/wiki/Arbre_de<em>décision</em>(apprentissage)</a></li><li>dessiner un arbre dans la console <a href=https://scikit-learn.org/stable/modules/tree.html>https://scikit-learn.org/stable/modules/tree.html</a></li><li>utilisation de networkx : <a href=https://networkx.github.io/documentation/stable/reference/introduction.html>https://networkx.github.io/documentation/stable/reference/introduction.html</a></li></ul><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python></code></pre></div></article><div style=height:100px></div></div></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
-<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
+</code></pre>
+<p><img src="../images/jouer.pdf" alt="png"></p>
+<p>Contenu de chaque noeud :</p>
+<ul>
+<li>la condition qui est testée : par ex au noeud 0, X[0]&lt;=0.5 (le temps est moins bien qu&rsquo;<em>ensoleillé</em>) VRAI =&gt; à gauche, FAUX =&gt; à droite</li>
+<li>le coefficient de gini (qui doit être égal à 0 ou presque dans les feuilles)</li>
+<li>le nombre d&rsquo;éléments dans le noeud</li>
+<li>value = le nombre d&rsquo;éléments de chaque classe [classe 0 : ne jouent pas, classe 1 : jouent]</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">arbre</span> <span style="color:#f92672">=</span> <span style="color:#111">construct</span><span style="color:#111">(</span><span style="color:#ae81ff">0</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">arbre</span><span style="color:#111">)</span>
+</span></span></code></pre></div><pre><code>{'node': 0, 'feature': 0, 'threshold': 0.5, 'fg': {'node': 1, 'feature': 3, 'threshold': 0.5, 'fg': {'node': 2}, 'fd': {'node': 3, 'feature': 0, 'threshold': -0.5, 'fg': {'node': 4}, 'fd': {'node': 5}}}, 'fd': {'node': 6, 'feature': 2, 'threshold': 77.5, 'fg': {'node': 7}, 'fd': {'node': 8}}}
+</code></pre>
+<h1 id="liens">Liens</h1>
+<ul>
+<li>wikipedia : arbres de décision : <a href="https://fr.wikipedia.org/wiki/Arbre_de_d%C3%A9cision_(apprentissage)">https://fr.wikipedia.org/wiki/Arbre_de_décision_(apprentissage)</a></li>
+<li>dessiner un arbre dans la console <a href="https://scikit-learn.org/stable/modules/tree.html">https://scikit-learn.org/stable/modules/tree.html</a></li>
+<li>utilisation de networkx : <a href="https://networkx.github.io/documentation/stable/reference/introduction.html">https://networkx.github.io/documentation/stable/reference/introduction.html</a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"></code></pre></div></article>
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+  </main>
+
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

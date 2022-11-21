@@ -1,51 +1,565 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Python3
-| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel=stylesheet><script type=text/x-mathjax-config>
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    Python3
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
   });
-</script><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.1c02dc1d2c0b546a84beb71d8f4336d6f5d7b69564e08bdfc04c2fb0595d786d.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
 catch(err)
-{console.log(err.message);}
-if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
-if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
-if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}
-let chemin=window.location.pathname;if(chemin.search('NSI')>-1){baniere=document.querySelector("#myHeader");let linkBox=document.createElement('div');linkBox.classList.add('linkBox');let newH=document.createElement('a');newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';newH.classList.add('nsi');linkBox.appendChild(newH);baniere.appendChild(linkBox);}</script><style>#myHeader{display:flex;flex-direction:row-reverse}#myHeader>.titre{width:80%;min-width:300px;text-align:left}.linkBox{margin:10px;padding-top:10px;background-color:pink;min-width:50px}.isn{}</style></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2f docs\2fSNT_2nde\2fpages\2fpages_algo\2fpython\2fpython3\2f ]{color:#004ed0}</style><ul><li><a href=/><strong>Accueil</strong></a></li><li><a href=/docs/esf/esf_index/><strong>ESF</strong></a></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p></li><li><p><a href=/docs/python/index_python/><strong>Python</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
-addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-page><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
-<strong>Python3</strong></header><article class=markdown><h1 id=but-de-la-séance>But de la séance</h1><p>Utiliser un programme Python pour s&rsquo;aider à résoudre deux enigmes mathématiques.</p><p><em>Objectifs en programmation:</em></p><ul><li>variables, types <em>int</em> et <em>str</em></li><li>opérations sur les variables</li><li>entrées <code>input</code> et sorties <code>print</code></li><li>boucle <code>while</code><br></li></ul><h1 id=l-énigme-de-l-age-du-fils-du-capitaine>L&rsquo;énigme de l&rsquo;age du fils du Capitaine</h1><h2 id=enoncé>Enoncé</h2><p>Le Capitaine dit à son fils : &ldquo;<em>Tu viens de fêter ton anniversaire. Dans quelques années, lorsque tu seras adulte, tu deviendras toi aussi Capitaine. Tu devras savoir calculer, et vite. Voici une enigme qui va exercer tes talents:</em></p><blockquote><p>La cabine n°1 abrite M. Dupont et ses deux filles. Le produit de leurs trois âges est 2450 et la somme de leurs trois âges est égale à 4 fois le tien. L&rsquo;ainée est blonde. Peux-tu trouver les âges des trois passagers ?&rdquo;</p></blockquote><figure><div><img src=../images/haddock.jpg><figcaption>Le Capitaine...</figcaption></div></figure><h2 id=résolution>Résolution</h2><p>On pourrait procéder par tatonnement, à l&rsquo;aide de nombreux essais sur les ages de M Dupont et ses deux filles. Pour cela, nous allons écrire un programme qui nous aidera à tester différentes combinaisons sur ces ages&hellip;</p><h2 id=le-script>Le script</h2><h3 id=explications>Explications</h3><p>Le programme est donné ici en partie. Vous devrez le compléter.<br>Ce programme utilise les variables suivantes:</p><ul><li><code>a</code> et <code>b</code>: entiers, l&rsquo;age de chacune des filles</li><li><code>c</code> : entier, l&rsquo;âge du père Dupont.</li><li><code>produit</code> : entier, stocke le calcul $a \times b \times c$</li><li><code>somme</code> : entier, stocke le résultat de $a + b + c$</li><li><code>age</code> : nombre décimal à virgule flottante, stocke le resultat de $somme / 4$</li></ul><p>Ce programme va demander à l&rsquo;utilisateur de rentrer les valeurs de <code>a</code>, <code>b</code>, <code>c</code>.</p><p>L&rsquo;instruction <code>while</code> (signifie <em>tant que</em>) va tester si la valeur de <code>c</code> est différente de 0 (<code>c != 0</code>). Et si c&rsquo;est le cas, tout le bloc d&rsquo;instructions sera executé.</p><p>Les instructions qui font partie de ce bloc sont <em>indentées</em> par rapport au bord gauche: elles sont écrites après avoir inséré une marge de 2 ou 4 espaces.</p><p>Après execution, si la valeur de <code>c</code> est toujours différente de 0, le bloc sera à nouveau executé. Cela permet de faire de nouveaux essais, et trouver les bonnes valeurs pour repondre à l&rsquo;enigme.</p><p>Pour sortir du programme, vous devrez saisir 0 pour la valeur de <code>c</code>.</p><blockquote><p>Vous commencerez par compléter les parties où il y a un commentaire <code># à compléter</code>, au dessous de cette ligne, directement le document:</p></blockquote><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>c</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
-<span style=color:#00a8c8>while</span> <span style=color:#111>c</span> <span style=color:#f92672>!=</span><span style=color:#ae81ff>0</span><span style=color:#111>:</span>
-    <span style=color:#111>a</span> <span style=color:#f92672>=</span> <span style=color:#111>int</span><span style=color:#111>(</span><span style=color:#111>input</span><span style=color:#111>(</span><span style=color:#d88200>&#39;a =&#39;</span><span style=color:#111>))</span>
-    <span style=color:#111>b</span> <span style=color:#f92672>=</span> <span style=color:#111>int</span><span style=color:#111>(</span><span style=color:#111>input</span><span style=color:#111>(</span><span style=color:#d88200>&#39;b =&#39;</span><span style=color:#111>))</span>
-    <span style=color:#75715e># à completer: demander de saisir la valeur c</span>
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
     
-    <span style=color:#111>produit</span> <span style=color:#f92672>=</span> <span style=color:#111>a</span><span style=color:#f92672>*</span><span style=color:#111>b</span><span style=color:#f92672>*</span><span style=color:#111>c</span>
-    <span style=color:#111>somme</span> <span style=color:#f92672>=</span> <span style=color:#111>a</span><span style=color:#f92672>+</span><span style=color:#111>b</span><span style=color:#f92672>+</span><span style=color:#111>c</span>
-    <span style=color:#75715e># à completer: saisir le calcul de l&#39;age du fils du capitaine</span>
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
     
-    <span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#d88200>&#39;produit :&#39;</span><span style=color:#111>,</span><span style=color:#111>produit</span><span style=color:#111>,</span><span style=color:#d88200>&#39; somme :&#39;</span><span style=color:#111>,</span><span style=color:#111>somme</span><span style=color:#111>,</span><span style=color:#d88200>&#39;age du fils :&#39;</span><span style=color:#111>,</span> <span style=color:#111>age</span><span style=color:#111>)</span></code></pre></div><h3 id=entrées-et-sorties>Entrées et sorties</h3><ul><li><strong>entrée:</strong> pour demander à l&rsquo;utilisateur de saisir une valeur, on utilise la fonction <code>input</code>. On met entre parenthèses le message à afficher. Et on affecte à une variable la valeur saisie. On peut aussi ajouter la fonction <code>int</code> qui transforme les caractères saisis en une valeur entière. Ce qui donne: <code>variable = int(input('message à afficher'))</code></li><li><strong>sortie:</strong> on utilise le fonction <code>print</code> déjà vue dans un précédent TP.</li></ul><h2 id=saisir-le-programme>Saisir le programme</h2><p>Choisir l&rsquo;une des options:</p><ul><li>sur PC: l&rsquo;IDE Spyder</li><li>sur tablette Android: <a href="https://play.google.com/store/apps/details?id=ru.iiec.pydroid3&hl=fr&gl=US" target=blank>Application PyDroïd3</a></li><li>sur la calculatrice TI-83 Premium CE edition Python</li></ul><p>On détaillera ici la saisie du script à l&rsquo;aide de la calculatrice.</p><h3 id=edition-du-script-à-l-aide-de-la-calculatrice>Edition du script à l&rsquo;aide de la calculatrice</h3><blockquote><p>Ecriture du premier programme:</p><ul><li>Bouton <strong>prgm</strong> : Choisir <code>2:Python App</code></li><li>la fenêtre du shell Python s&rsquo;ouvre alors.</li></ul></blockquote><p>Les boutons du <em>menu</em> en bas de l&rsquo;ecran sont accessibles avec chacune des touches situées au dessous. Par exemple, touche <em>zoom</em> pour <strong>Nouv</strong>.</p><figure><div><img src=../images/menu_shell.png><figcaption>accès au shell ou aux programmes</figcaption><figcaption>Navigation entre les menus de la calculatrice</figcaption></div></figure><blockquote><ul><li>Saisir le nom de votre premier programme puis valider (par exemple <code>CAPIT</code> puisque vous demarrez un script sur l&rsquo;<em>enigme du Capitaine</em>).</li></ul></blockquote><figure><div><img src=../images/nom.png><figcaption>saisie du nom du programme</figcaption></div></figure><p>Vous entrez alors dans l&rsquo;editeur de programme.<br>Pour saisir <code>c = 1</code>, appuyer sur les touches:</p><ul><li><strong>alpha</strong> <strong>prgm</strong> (ce qui affiche <strong>c</strong>)<br></li><li><strong>sto</strong> (ce qui affiche <code>=</code>)</li><li>puis <strong>1</strong>.</li></ul><figure><div><img src=../images/menu.png><figcaption>fenêtre d'edition</figcaption></div></figure><blockquote><p>Pour le <code>while</code>, aller dans le menu <strong>Fns&hellip;</strong> en bas de l&rsquo;editeur:</p></blockquote><p>Se déplacer alors avec les flèches (touches doite/gauche de la calculatrice). Aller dans le menu <strong>Ctl</strong> (les fonctions de contrôle).</p><figure><div><img src=../images/while.png><figcaption>menu CTL</figcaption></div></figure><blockquote><p>Pour saisir <code>c!=0</code>, utiliser l&rsquo;editeur de texte (bouton du bas <strong>a A #</strong>). Valider les symboles avec la touche <strong>entrer</strong>. Faites <code>Coller</code> lorsque vous avez terminé la saisie.</p></blockquote><figure><div><img src=../images/edit.png><figcaption>editeur de symbôles</figcaption></div></figure><blockquote><p>Pour la fonction <code>int</code>: aller dans le menu <strong>Fns&hellip;</strong> puis <strong>Type</strong>. Et choisir <code>1.int()</code></p></blockquote><figure><div><img src=../images/int.png><figcaption>menu Type</figcaption></div></figure><blockquote><p>Pour les fonctions <code>print</code> et <code>input</code>, vous les trouverez dans <strong>Fns&hellip;</strong> puis <strong>E/S</strong> (ce sont des entrées/sorties)</p></blockquote><h2 id=essais>Essais</h2><p>Une fois le programme saisi, exécutez le. (menu <strong>Exèc</strong> dans l&rsquo;editeur de la calculatrice)</p><p>Utilisez le tableau suivant pour choisir les valeurs de <code>a</code>, <code>b</code> et <code>c</code>.</p><figure><img src=../images/tableur.png><figcaption>valeurs sont le produit fait 2450</figcaption></figure><h2 id=solution>Solution</h2><p>Une fois que vous aurez réalisé les essais necéssaires, vous aurez probablement déterminé quelles sont les valeurs pour <code>a</code>, <code>b</code> et <code>c</code> qui repondent à l&rsquo;enigme.</p><blockquote><p>Rédigez alors votre solution, sur cette feuille:</p></blockquote><h1 id=jeu-de-devinette>Jeu de devinette</h1><h2 id=principe>Principe</h2><p>L&rsquo;ordinateur choisit un nombre aleatoirement entre 1 et 100. Vous devrez le découvrir en un minimum d&rsquo;essais. A chacune de vos propositions, l&rsquo;ordinateur répond par: EXACT, PLUS, MOINS, selon si votre proposition est égale (vous avez gagné), infèrieure ou supérieure à la valeur tirée aleatoirement.</p><h2 id=le-script-explications>Le script: explications</h2><h3 id=librairie>Librairie</h3><p>Pour tirer au sort une valeur de manière aleatoire, il faut importer la librairie <code>random</code>.</p><blockquote><p>Vous pouvez le tester dans un <strong>SHELL Python</strong>:</p><p>Saisir:</p><pre><code>&gt;&gt;&gt; from random import * 
-&gt;&gt;&gt; randint(1,100)
-(valeur aleatoire affichée entre 1 et 100)
-&gt;&gt;&gt; randint(1,100)
-(autre valeur)
-</code></pre></blockquote><h3 id=variables>Variables</h3><ul><li><code>n</code> : entier, stocke la valeur choisie par l&rsquo;ordinateur.</li><li><code>rep</code>: entier, valeur entrée par l&rsquo;utilisateur, sa proposition.</li></ul><h3 id=script-python-à-compléter>Script Python à compléter</h3><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>from</span> <span style=color:#111>random</span> <span style=color:#f92672>import</span> <span style=color:#f92672>*</span>
-<span style=color:#111>n</span> <span style=color:#f92672>=</span> <span style=color:#111>randint</span><span style=color:#111>(</span><span style=color:#ae81ff>1</span><span style=color:#111>,</span><span style=color:#ae81ff>100</span><span style=color:#111>)</span>
-<span style=color:#111>rep</span> <span style=color:#f92672>=</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>
-<span style=color:#00a8c8>while</span> <span style=color:#111>rep</span> <span style=color:#f92672>!=</span> <span style=color:#111>n</span> <span style=color:#f92672>and</span> <span style=color:#111>rep</span> <span style=color:#f92672>!=</span> <span style=color:#ae81ff>0</span><span style=color:#111>:</span>
-    <span style=color:#111>rep</span> <span style=color:#f92672>=</span> <span style=color:#111>int</span><span style=color:#111>(</span><span style=color:#111>input</span><span style=color:#111>(</span><span style=color:#d88200>&#39;Choisir  &#39;</span><span style=color:#111>))</span>
-    <span style=color:#00a8c8>if</span> <span style=color:#111>rep</span> <span style=color:#f92672>&lt;</span> <span style=color:#111>n</span><span style=color:#111>:</span> 
-        <span style=color:#f92672>...</span>
-    <span style=color:#00a8c8>elif</span> <span style=color:#111>rep</span> <span style=color:#f92672>&gt;</span> <span style=color:#111>n</span><span style=color:#111>:</span>
-        <span style=color:#f92672>...</span>
-    <span style=color:#00a8c8>else</span><span style=color:#111>:</span>
-        <span style=color:#f92672>...</span>
-<span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#d88200>&#39;FIN&#39;</span><span style=color:#111>)</span></code></pre></div><h3 id=explications-1>Explications</h3><p>ligne 1: On commence par importer la librairie <code>random</code>, grâce à l&rsquo;instruction <code>from random import *</code><br>ligne 2: On stocke dans <code>n</code> le resultat du tirage aleatoire entre 1 et 100.<br>ligne 3: Pour rentrer dans la boucle <code>while</code>, on definit la variable <code>rep</code> et on lui affecte la valeur -1.<br>ligne 4: La boucle s&rsquo;execute <em>tant que</em> <code>rep</code> est différent de <code>n</code> (auquel cas on a gagné), ET que <code>rep</code> est différent de 0. Si l&rsquo;utilisateur veut quitter le jeu, il devra mettre 0 lorsque le programme lui demande de <em>choisir</em>.</p><p>ligne 6: c&rsquo;est une structure conditionnelle qui signifie:</p><pre><code>SI rep &lt; n ALORS:
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fSNT_2nde\2fpages\2fpages_algo\2fpython\2fpython3\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    Python3
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="but-de-la-séance">But de la séance</h1>
+<p>Utiliser un programme Python pour s&rsquo;aider à résoudre deux enigmes mathématiques.</p>
+<p><em>Objectifs en programmation:</em></p>
+<ul>
+<li>variables, types <em>int</em> et <em>str</em></li>
+<li>opérations sur les variables</li>
+<li>entrées <code>input</code> et sorties <code>print</code></li>
+<li>boucle <code>while</code></li>
+</ul>
+<h1 id="lénigme-de-lage-du-fils-du-capitaine">L&rsquo;énigme de l&rsquo;age du fils du Capitaine</h1>
+<h2 id="enoncé">Enoncé</h2>
+<p>Le Capitaine dit à son fils : &ldquo;<em>Tu viens de fêter ton anniversaire. Dans quelques années, lorsque tu seras adulte, tu deviendras toi aussi Capitaine. Tu devras savoir calculer, et vite. Voici une enigme qui va exercer tes talents:</em></p>
+<blockquote>
+<p>La cabine n°1 abrite M. Dupont et ses deux filles. Le produit de leurs trois âges est 2450 et la somme de leurs trois âges est égale à 4 fois le tien. L&rsquo;ainée est blonde. Peux-tu trouver les âges des trois passagers ?&rdquo;</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<h2 id="résolution">Résolution</h2>
+<p>On pourrait procéder par tatonnement, à l&rsquo;aide de nombreux essais sur les ages de M Dupont et ses deux filles. Pour cela, nous allons écrire un programme qui nous aidera à tester différentes combinaisons sur ces ages&hellip;</p>
+<h2 id="le-script">Le script</h2>
+<h3 id="explications">Explications</h3>
+<p>Le programme est donné ici en partie. Vous devrez le compléter. <!-- raw HTML omitted -->
+Ce programme utilise les variables suivantes:</p>
+<ul>
+<li><code>a</code> et <code>b</code>: entiers, l&rsquo;age de chacune des filles</li>
+<li><code>c</code> : entier, l&rsquo;âge du père Dupont.</li>
+<li><code>produit</code> : entier, stocke le calcul $a \times b \times c$</li>
+<li><code>somme</code> : entier, stocke le résultat de $a + b + c$</li>
+<li><code>age</code> : nombre décimal à virgule flottante, stocke le resultat de $somme / 4$</li>
+</ul>
+<p>Ce programme va demander à l&rsquo;utilisateur de rentrer les valeurs de <code>a</code>, <code>b</code>, <code>c</code>.</p>
+<p>L&rsquo;instruction <code>while</code> (signifie <em>tant que</em>) va tester si la valeur de <code>c</code> est différente de 0 (<code>c != 0</code>). Et si c&rsquo;est le cas, tout le bloc d&rsquo;instructions sera executé.</p>
+<p>Les instructions qui font partie de ce bloc sont <em>indentées</em> par rapport au bord gauche: elles sont écrites après avoir inséré une marge de 2 ou 4 espaces.</p>
+<p>Après execution, si la valeur de <code>c</code> est toujours différente de 0, le bloc sera à nouveau executé. Cela permet de faire de nouveaux essais, et trouver les bonnes valeurs pour repondre à l&rsquo;enigme.</p>
+<p>Pour sortir du programme, vous devrez saisir 0 pour la valeur de <code>c</code>.</p>
+<blockquote>
+<p>Vous commencerez par compléter les parties où il y a un commentaire <code># à compléter</code>, au dessous de cette ligne, directement le document:</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">c</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">while</span> <span style="color:#111">c</span> <span style="color:#f92672">!=</span><span style="color:#ae81ff">0</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#111">int</span><span style="color:#111">(</span><span style="color:#111">input</span><span style="color:#111">(</span><span style="color:#d88200">&#39;a =&#39;</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">b</span> <span style="color:#f92672">=</span> <span style="color:#111">int</span><span style="color:#111">(</span><span style="color:#111">input</span><span style="color:#111">(</span><span style="color:#d88200">&#39;b =&#39;</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># à completer: demander de saisir la valeur c</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#111">produit</span> <span style="color:#f92672">=</span> <span style="color:#111">a</span><span style="color:#f92672">*</span><span style="color:#111">b</span><span style="color:#f92672">*</span><span style="color:#111">c</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">somme</span> <span style="color:#f92672">=</span> <span style="color:#111">a</span><span style="color:#f92672">+</span><span style="color:#111">b</span><span style="color:#f92672">+</span><span style="color:#111">c</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># à completer: saisir le calcul de l&#39;age du fils du capitaine</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#d88200">&#39;produit :&#39;</span><span style="color:#111">,</span><span style="color:#111">produit</span><span style="color:#111">,</span><span style="color:#d88200">&#39; somme :&#39;</span><span style="color:#111">,</span><span style="color:#111">somme</span><span style="color:#111">,</span><span style="color:#d88200">&#39;age du fils :&#39;</span><span style="color:#111">,</span> <span style="color:#111">age</span><span style="color:#111">)</span>
+</span></span></code></pre></div><h3 id="entrées-et-sorties">Entrées et sorties</h3>
+<ul>
+<li><strong>entrée:</strong> pour demander à l&rsquo;utilisateur de saisir une valeur, on utilise la fonction <code>input</code>. On met entre parenthèses le message à afficher. Et on affecte à une variable la valeur saisie. On peut aussi ajouter la fonction <code>int</code> qui transforme les caractères saisis en une valeur entière. Ce qui donne: <code>variable = int(input('message à afficher'))</code></li>
+<li><strong>sortie:</strong>  on utilise le fonction <code>print</code> déjà vue dans un précédent TP.</li>
+</ul>
+<h2 id="saisir-le-programme">Saisir le programme</h2>
+<p>Choisir l&rsquo;une des options:</p>
+<ul>
+<li>sur PC: l&rsquo;IDE Spyder</li>
+<li>sur tablette Android: <!-- raw HTML omitted -->Application PyDroïd3<!-- raw HTML omitted --></li>
+<li>sur la calculatrice TI-83 Premium CE edition Python</li>
+</ul>
+<p>On détaillera ici la saisie du script à l&rsquo;aide de la calculatrice.</p>
+<h3 id="edition-du-script-à-laide-de-la-calculatrice">Edition du script à l&rsquo;aide de la calculatrice</h3>
+<blockquote>
+<p>Ecriture du premier programme:</p>
+</blockquote>
+<blockquote>
+<ul>
+<li>Bouton <strong>prgm</strong> : Choisir <code>2:Python App</code></li>
+</ul>
+</blockquote>
+<ul>
+<li>la fenêtre du shell Python s&rsquo;ouvre alors.</li>
+</ul>
+<p>Les boutons du <em>menu</em> en bas de l&rsquo;ecran sont accessibles avec chacune des touches situées au dessous. Par exemple, touche <em>zoom</em> pour <strong>Nouv</strong>.</p>
+<!-- raw HTML omitted -->
+<blockquote>
+<ul>
+<li>Saisir le nom de votre premier programme puis valider (par exemple <code>CAPIT</code> puisque vous demarrez un script sur l&rsquo;<em>enigme du Capitaine</em>).</li>
+</ul>
+</blockquote>
+<!-- raw HTML omitted -->
+<p>Vous entrez alors dans l&rsquo;editeur de programme. <!-- raw HTML omitted -->
+Pour saisir <code>c = 1</code>, appuyer sur les touches:</p>
+<ul>
+<li><strong>alpha</strong> <strong>prgm</strong> (ce qui affiche <strong>c</strong>)</li>
+<li><strong>sto</strong> (ce qui affiche <code>=</code>)</li>
+<li>puis <strong>1</strong>.</li>
+</ul>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Pour le <code>while</code>, aller dans le menu <strong>Fns&hellip;</strong> en bas de l&rsquo;editeur:</p>
+</blockquote>
+<p>Se déplacer alors avec les flèches (touches doite/gauche de la calculatrice). Aller dans le menu <strong>Ctl</strong> (les fonctions de contrôle).</p>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Pour saisir <code>c!=0</code>, utiliser l&rsquo;editeur de texte (bouton du bas <strong>a A #</strong>). Valider les symboles avec la touche <strong>entrer</strong>. Faites <code>Coller</code> lorsque vous avez terminé la saisie.</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Pour la fonction <code>int</code>: aller dans le menu <strong>Fns&hellip;</strong> puis <strong>Type</strong>. Et choisir <code>1.int()</code></p>
+</blockquote>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Pour les fonctions <code>print</code> et <code>input</code>, vous les trouverez dans <strong>Fns&hellip;</strong> puis <strong>E/S</strong>  (ce sont des entrées/sorties)</p>
+</blockquote>
+<h2 id="essais">Essais</h2>
+<p>Une fois le programme saisi, exécutez le. (menu <strong>Exèc</strong> dans l&rsquo;editeur de la calculatrice)</p>
+<p>Utilisez le tableau suivant pour choisir les valeurs de <code>a</code>, <code>b</code> et <code>c</code>.</p>
+<!-- raw HTML omitted -->
+<h2 id="solution">Solution</h2>
+<p>Une fois que vous aurez réalisé les essais necéssaires, vous aurez probablement déterminé quelles sont les valeurs pour <code>a</code>, <code>b</code> et <code>c</code> qui repondent à l&rsquo;enigme.</p>
+<blockquote>
+<p>Rédigez alors votre solution, sur cette feuille:</p>
+</blockquote>
+<h1 id="jeu-de-devinette">Jeu de devinette</h1>
+<h2 id="principe">Principe</h2>
+<p>L&rsquo;ordinateur choisit un nombre aleatoirement entre 1 et 100. Vous devrez le découvrir en un minimum d&rsquo;essais. A chacune de vos propositions, l&rsquo;ordinateur répond par: EXACT, PLUS, MOINS, selon si votre proposition est égale (vous avez gagné), infèrieure ou supérieure à la valeur tirée aleatoirement.</p>
+<h2 id="le-script-explications">Le script: explications</h2>
+<h3 id="librairie">Librairie</h3>
+<p>Pour tirer au sort une valeur de manière aleatoire, il faut importer la librairie <code>random</code>.</p>
+<blockquote>
+<p>Vous pouvez le tester dans un <strong>SHELL Python</strong>:</p>
+</blockquote>
+<blockquote>
+<p>Saisir:</p>
+</blockquote>
+<blockquote>
+<pre tabindex="0"><code>&gt;&gt; from random import * 
+&gt;&gt; randint(1,100)
+</code></pre></blockquote>
+<p>(valeur aleatoire affichée entre 1 et 100)</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>randint(1,100)
+(autre valeur)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<pre tabindex="0"><code>
+### Variables
+* `n` : entier, stocke la valeur choisie par l&#39;ordinateur.
+* `rep`: entier, valeur entrée par l&#39;utilisateur, sa proposition.
+
+### Script Python à compléter
+
+```python
+from random import *
+n = randint(1,100)
+rep = -1
+while rep != n and rep != 0:
+    rep = int(input(&#39;Choisir  &#39;))
+    if rep &lt; n: 
+        ...
+    elif rep &gt; n:
+        ...
+    else:
+        ...
+print(&#39;FIN&#39;)
+</code></pre><h3 id="explications-1">Explications</h3>
+<p>ligne 1: On commence par importer la librairie <code>random</code>, grâce à l&rsquo;instruction <code>from random import *</code><!-- raw HTML omitted -->
+ligne 2: On stocke dans <code>n</code> le resultat du tirage aleatoire entre 1 et 100.<!-- raw HTML omitted -->
+ligne 3: Pour rentrer dans la boucle <code>while</code>, on definit la variable <code>rep</code> et on lui affecte la valeur -1.<!-- raw HTML omitted -->
+ligne 4: La boucle s&rsquo;execute <em>tant que</em> <code>rep</code> est différent de <code>n</code> (auquel cas on a gagné), ET que <code>rep</code> est différent de 0. Si l&rsquo;utilisateur veut quitter le jeu, il devra mettre 0 lorsque le programme lui demande de <em>choisir</em>.</p>
+<p>ligne 6: c&rsquo;est une structure conditionnelle qui signifie:</p>
+<pre tabindex="0"><code>SI rep &lt; n ALORS:
 	...
 SINON SI rep &gt; n ALORS:
 	...
 SINON:
 	...
-</code></pre><p>En python, les instructions <code>SI, SINON SI et SINON</code> se traduisent par: <code>if, elif, else</code>. Il n&rsquo; y a pas besoin de traduire <code>ALORS</code>.</p><p>Les instructions <code>if</code> et <code>elif</code> sont suivies d&rsquo;une opération conditionnelle. Pas <code>else</code>.</p><p>La ligne finit par <em>deux points</em> <code>:</code>. C&rsquo;est pour délimiter le bloc de code (indenté) qui suit sous cette instruction.</p><h2 id=saisir-le-programme-à-l-aide-de-la-calculatrice-ti-83-premium-ce-edition-python>Saisir le programme à l&rsquo;aide de la calculatrice TI-83 Premium CE edition Python</h2><ul><li>Démarrer un <strong>Nouv</strong>eau programme depuis la fenêtre du shell Python</li><li>Choisir un nom à votre script, par exemple <strong>JEU</strong></li><li>Pour importer la librairie <em>random</em> dans votre programme: Dans l&rsquo;editeur, aller dans le menu <strong>Fns&hellip;</strong> puis <strong>Modul</strong></li></ul><figure><div><img src=../images/modul.png><figcaption>menu Modules</figcaption></div></figure><p>Choisir: <code>1.from random import *</code></p><p>Revenir ensuite dans le menu <strong>Modul</strong> pour choisir <code>4.randint(min,max)</code> lorsque vous aurez besoin de saisir la ligne <code>n = randint(1,100)</code></p><h2 id=utiliser-le-programme>Utiliser le programme</h2><p>Lancer le programme. Faire plusieurs essais et noter à chaque fois le nombre d&rsquo;essais qu&rsquo;il aura fallu pour deviner le nombre de l&rsquo;ordinateur.</p><blockquote><p>Quel est le nombre minimum de coups necéssaires pour trouver la valeur comprise entre 1 et 100?</p></blockquote><p>Modifier ensuite le programme pour que l&rsquo;ordinateur choisisse maintenant une valeur entre 1 et 1000?</p><blockquote><p>Quel est cette fois le nombre minimum de coups necéssaires pour trouver la valeur comprise entre 1 et 100?</p></blockquote><h1 id=liens>Liens</h1><ul><li>s&rsquo;exercer à la programmation Python sur la TI-83: TI-codes : <a href=https://education.ti.com/fr/mises-a-jour-et-logiciels/ti-codes/python/83>https://education.ti.com/fr/mises-a-jour-et-logiciels/ti-codes/python/83</a></li><li>site de Gerard Villemin, page sur les enigmes mathématiques: <a href=http://villemin.gerard.free.fr/Puzzle/Filles.htm#recherche>http://villemin.gerard.free.fr/Puzzle/Filles.htm#recherche</a></li></ul></article><div style=height:100px></div></div><aside class="book-toc fixed"><nav id=TableOfContents><ul><li><a href=#but-de-la-séance>But de la séance</a></li><li><a href=#l-énigme-de-l-age-du-fils-du-capitaine>L&rsquo;énigme de l&rsquo;age du fils du Capitaine</a><ul><li><a href=#enoncé>Enoncé</a></li><li><a href=#résolution>Résolution</a></li><li><a href=#le-script>Le script</a><ul><li><a href=#explications>Explications</a></li><li><a href=#entrées-et-sorties>Entrées et sorties</a></li></ul></li><li><a href=#saisir-le-programme>Saisir le programme</a><ul><li><a href=#edition-du-script-à-l-aide-de-la-calculatrice>Edition du script à l&rsquo;aide de la calculatrice</a></li></ul></li><li><a href=#essais>Essais</a></li><li><a href=#solution>Solution</a></li></ul></li><li><a href=#jeu-de-devinette>Jeu de devinette</a><ul><li><a href=#principe>Principe</a></li><li><a href=#le-script-explications>Le script: explications</a><ul><li><a href=#librairie>Librairie</a></li><li><a href=#variables>Variables</a></li><li><a href=#script-python-à-compléter>Script Python à compléter</a></li><li><a href=#explications-1>Explications</a></li></ul></li><li><a href=#saisir-le-programme-à-l-aide-de-la-calculatrice-ti-83-premium-ce-edition-python>Saisir le programme à l&rsquo;aide de la calculatrice TI-83 Premium CE edition Python</a></li><li><a href=#utiliser-le-programme>Utiliser le programme</a></li></ul></li><li><a href=#liens>Liens</a></li></ul></nav></aside></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
-<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
+</code></pre><p>En python, les instructions <code>SI, SINON SI et SINON</code> se traduisent par: <code>if, elif, else</code>. Il n&rsquo; y a pas besoin de traduire <code>ALORS</code>.</p>
+<p>Les instructions <code>if</code> et <code>elif</code> sont suivies d&rsquo;une opération conditionnelle. Pas <code>else</code>.</p>
+<p>La ligne finit par <em>deux points</em> <code>:</code>. C&rsquo;est pour délimiter le bloc de code (indenté) qui suit sous cette instruction.</p>
+<h2 id="saisir-le-programme-à-laide-de-la-calculatrice-ti-83-premium-ce-edition-python">Saisir le programme à l&rsquo;aide de la calculatrice TI-83 Premium CE edition Python</h2>
+<ul>
+<li>Démarrer un <strong>Nouv</strong>eau programme depuis la fenêtre du shell Python</li>
+<li>Choisir un nom à votre script, par exemple <strong>JEU</strong></li>
+<li>Pour importer la librairie <em>random</em> dans votre programme: Dans l&rsquo;editeur, aller dans le menu <strong>Fns&hellip;</strong> puis <strong>Modul</strong></li>
+</ul>
+<!-- raw HTML omitted -->
+<p>Choisir: <code>1.from random import *</code></p>
+<p>Revenir ensuite dans le menu <strong>Modul</strong> pour choisir <code>4.randint(min,max)</code> lorsque vous aurez besoin de saisir la ligne <code>n = randint(1,100)</code></p>
+<h2 id="utiliser-le-programme">Utiliser le programme</h2>
+<p>Lancer le programme. Faire plusieurs essais et noter à chaque fois le nombre d&rsquo;essais qu&rsquo;il aura fallu pour deviner le nombre de l&rsquo;ordinateur.</p>
+<blockquote>
+<p>Quel est le nombre minimum de coups necéssaires pour trouver la valeur comprise entre 1 et 100?</p>
+</blockquote>
+<p>Modifier ensuite le programme pour que l&rsquo;ordinateur choisisse maintenant une valeur entre 1 et 1000?</p>
+<blockquote>
+<p>Quel est cette fois le nombre minimum de coups necéssaires pour trouver la valeur comprise entre 1 et 100?</p>
+</blockquote>
+<h1 id="liens">Liens</h1>
+<ul>
+<li>s&rsquo;exercer à la programmation Python sur la TI-83: TI-codes : <a href="https://education.ti.com/fr/mises-a-jour-et-logiciels/ti-codes/python/83">https://education.ti.com/fr/mises-a-jour-et-logiciels/ti-codes/python/83</a></li>
+<li>site de Gerard Villemin, page sur les enigmes mathématiques: <a href="http://villemin.gerard.free.fr/Puzzle/Filles.htm#recherche">http://villemin.gerard.free.fr/Puzzle/Filles.htm#recherche</a></li>
+</ul>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#enoncé">Enoncé</a></li>
+    <li><a href="#résolution">Résolution</a></li>
+    <li><a href="#le-script">Le script</a>
+      <ul>
+        <li><a href="#explications">Explications</a></li>
+        <li><a href="#entrées-et-sorties">Entrées et sorties</a></li>
+      </ul>
+    </li>
+    <li><a href="#saisir-le-programme">Saisir le programme</a>
+      <ul>
+        <li><a href="#edition-du-script-à-laide-de-la-calculatrice">Edition du script à l&rsquo;aide de la calculatrice</a></li>
+      </ul>
+    </li>
+    <li><a href="#essais">Essais</a></li>
+    <li><a href="#solution">Solution</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#principe">Principe</a></li>
+    <li><a href="#le-script-explications">Le script: explications</a>
+      <ul>
+        <li><a href="#librairie">Librairie</a></li>
+        <li><a href="#explications-1">Explications</a></li>
+      </ul>
+    </li>
+    <li><a href="#saisir-le-programme-à-laide-de-la-calculatrice-ti-83-premium-ce-edition-python">Saisir le programme à l&rsquo;aide de la calculatrice TI-83 Premium CE edition Python</a></li>
+    <li><a href="#utiliser-le-programme">Utiliser le programme</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

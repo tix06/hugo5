@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    langages mathematiques
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI\2flangages\2fpage7\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    langages mathematiques
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="pourquoi-1--1--2-">Pourquoi 1 + 1 = 2 ?</h1>
+<p>Pour comprendre cette opération, il faut déjà comprendre la signification de chacun des symboles utilisés, les chiffres 1 et 2, et les opérateurs + et =</p>
+<ul>
+<li>1</li>
+<li>
+<ul>
+<li></li>
+</ul>
+</li>
+<li>=</li>
+<li>2</li>
+</ul>
+<h2 id="les-chiffres">Les chiffres</h2>
+<p>Les symboles des chiffres nous sont ainsi intuitifs, mais, dans l&rsquo;idée d&rsquo;une construction du langage mathématique, il doit exister une règle qui nous dit:</p>
+<ul>
+<li>que le successeur immédiat de 1, dans l&rsquo;ensemble des entiers naturels, est le 2 et non le 3. (et qu&rsquo;il existe aussi la notion de predecesseur)</li>
+<li>que le plus petit des entiers naturels est le 0</li>
+</ul>
+<p>Cet <a href="https://automathssite.wordpress.com/2017/08/18/savez-vous-compter-les-choux-a-la-mode-de-peano/">article du site automaths</a> détaille ainsi la construction de l&rsquo;ensemble des entiers naturels par des axiomes.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://fr.wikipedia.org/wiki/Giuseppe_Peano">Giuseppe Peano</a> (1858-1932) est un mathématicien et linguiste italien. Il a repertorié les caractéristiques structurelles des nombres naturels dans une liste d&rsquo;<strong>axiomes</strong> énoncés dans la symbolique logique. Aujourd&rsquo;hui, ces axiomes constituant le langage mathématique traitent tous les signes mathématiques et logiques, et jouent un rôle analogue à celui de la grammatisation dans les langues naturelles.</p>
+<!-- raw HTML omitted -->
+<p>Une fois établie la construction de l’ensemble des entiers naturels selon Peano, nous allons nous intéresser aux axiomes définissant les symboles + et =.</p>
+<h2 id="légalité-ou-lidentité-">l&rsquo;égalité, ou l&rsquo;identité =</h2>
+<p>L&rsquo;identité est définie par 2 propriétés:</p>
+<ul>
+<li>a = b, b = c → a = c</li>
+<li>a<!-- raw HTML omitted -->1<!-- raw HTML omitted --> = a<!-- raw HTML omitted -->2<!-- raw HTML omitted --> → f(a<!-- raw HTML omitted -->1<!-- raw HTML omitted -->) = f(a<!-- raw HTML omitted -->2<!-- raw HTML omitted -->)</li>
+</ul>
+<h2 id="laddition-">l&rsquo;addition +</h2>
+<p>Voir l&rsquo;article <a href="https://automathssite.wordpress.com/2017/10/13/quest-ce-que-ca-veut-dire-additionner/">Qu’est-ce que ça veut dire additionner ?</a>  du site automaths.</p>
+<p>On y lira que <strong>0 + 1 = 1</strong> est l&rsquo;un des axiomes définissant l&rsquo;addition, et s&rsquo;écrit en langage axiomatique:</p>
+<p>$$0 + S_0 = S_0$$</p>
+<!-- raw HTML omitted -->
+<h2 id="questions"><strong>Questions</strong></h2>
+<ul>
+<li><strong>Q1</strong>: Qui était Giuseppe Peano et qu&rsquo;a-t-il cherché à montrer à propos des entiers naturels?</li>
+<li><strong>Q2</strong>: Qui était le mathématicien Kurt Gödel, et qu&rsquo;a-t-il apporté à la théorie sur le langage mathématique initiée par Giuseppe Peano? En particulier, ce que l&rsquo;on appelle la <a href="https://www.pourlascience.fr/sd/histoire-sciences/vrai-ou-demontrable-5560.php">complétude d’un système d’axiomes</a> ?</li>
+<li><strong>Q3</strong>: A quoi peut-on comparer un axiome mathématique? Y-a-t-il quelque chose d&rsquo;équivalent dans les langues naturelles?</li>
+<li><strong>Q4</strong>: Qu&rsquo;est ce que l&rsquo;addition +?</li>
+<li><strong>Q5</strong>: Qu&rsquo;est ce que l&rsquo;égalité =? Commenter les 2 propriétés qui la définissent.</li>
+</ul>
+<h1 id="compléments-sur-les-mathematiques">Compléments sur les Mathématiques</h1>
+<ul>
+<li>notes issues d&rsquo;un cours d&rsquo;Université math.<a href="https://math.unice.fr/~frapetti/analyse/Logique.pdf">UNICE</a></li>
+</ul>
+<p>Les mathématiques actuelles sont bâties de la façon suivante :</p>
+<ul>
+<li>on part d’un petit nombre d’affirmations, appelées axiomes, supposées vraies à priori (et que l’on ne cherche donc pas à démontrer) ;</li>
+<li>on définit ensuite la notion de démonstration (en décidant par exemple de ce qu’est une implication, une équivalence&hellip;) ;</li>
+<li>on décide enfin de qualifier de vraie toute affirmation obtenue en fin de démonstration et on appelle « théorème » une telle affirmation (vraie).
+A partir des axiomes, on obtient donc des théorèmes qui viennent petit à petit enrichir la théorie mathématique. En raison des bases (les axiomes) non démontrées, la notion de « vérité » des mathématiques est sujette à débat.</li>
+</ul>
+<p><strong>Axiome</strong>. Un axiome est un énoncé supposé vrai à priori et que l’on ne cherche pas à démontrer.
+Ainsi, par exemple, Euclide a énoncé cinq axiomes (« les cinq postulats d’Euclide »), qu’il a renoncé à démontrer et qui devaient être la base de la géométrie (euclidienne). Le cinquième de ces axiomes a pour énoncé : « par un point extérieur à une droite, il passe une et une seule droite parallèle à cette droite ».</p>
+<p>Aujourd&rsquo;hui, ces axiomes constituant le langage mathématique traitent tous les signes mathématiques et logiques, et jouent un rôle analogue à celui de la grammatisation dans les langues naturelles.</p>
+<p><strong>Proposition</strong> (ou assertion ou affirmation). Une proposition est un énoncé énoncé auquel on peut attribuer une valeur de vérité <em>vrai</em> ou <em>faux</em>. Par exemple, « tout nombre premier est impair » et « tout carré de réel est un réel positif » sont deux propositions. Il est facile de démontrer que la première est fausse et la deuxième est vraie. Le mot proposition est clair : on propose quelque chose, mais cela reste à démontrer. Une proposition est construite à partir des axiomes du langage.</p>
+<p><strong>Théorème</strong>. Un théorème est une proposition vraie (et en tout cas démontrée comme telle). On utilise aussi en informatique le terme d&rsquo;<strong>assertion</strong> pour une proposition vraie.</p>
+<p><strong>Définition</strong>: souvent équivalent à axiome</p>
+<p><strong>Conjecture</strong>:  proposition que l’on suppose vraie sans parvenir à la démontrer. (et qu&rsquo;il est peut être impossible de démontrer).</p>
+<p>Voici la liste des <!-- raw HTML omitted -->plus célèbres conjectures<!-- raw HTML omitted --> qu&rsquo;il reste encore à démontrer.</p>
+<p>Pour exemple, la <!-- raw HTML omitted -->conjecture de Goldbach<!-- raw HTML omitted --> s&rsquo;énonce ainsi:</p>
+<blockquote>
+<p>Tout nombre entier pair supérieur à 3 peut s’écrire comme la somme de deux nombres premiers.</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<h1 id="calcul-propositionnel">Calcul propositionnel</h1>
+<p>On va avoir besoin d&rsquo;ajouter aux ensembles de nombres un nouvel ensemble particulier: un ensemble contenant 2 éléments contenant les valeurs de verité <em>vrai / faux</em>. Cela nous permettra de produire des démonstrations, et ainsi de prouver des propositions.</p>
+<p>Dans ce paragraphe, on étudie les propositions en tant que telles, et les liens qui peuvent exister entre elles, sans se préoccuper du contenu de ces propositions.</p>
+<p>On rappelle qu’une proposition est un énoncé pouvant être vrai ou faux. On dit alors que les deux valeurs de vérité d’une proposition sont « vrai » et « faux ».</p>
+<h2 id="equivalence-logique">Equivalence logique</h2>
+<p>Définition 1. Deux propositions équivalentes P et Q sont deux propositions ayant les mêmes valeurs de vérité. Cette phrase peut se visualiser dans un tableau appelé table de vérité dans lequel on fait apparaître les différentes valeurs de vérité possibles pour le couple (P, Q) (Vrai et Vrai, Vrai et Faux, &hellip;) et, en correspondance, les valeurs de vérité de la proposition P ⇔ Q. Ainsi, la table de vérité de l’équivalence logique P ⇔ Q est :</p>
+<table>
+<thead>
+<tr>
+<th>P</th>
+<th>Q</th>
+<th>P &lt;=&gt; Q</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F</td>
+<td>F</td>
+<td>V</td>
+</tr>
+<tr>
+<td>F</td>
+<td>V</td>
+<td>F</td>
+</tr>
+<tr>
+<td>V</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr>
+<td>V</td>
+<td>V</td>
+<td>V</td>
+</tr>
+</tbody>
+</table>
+<p>On peut ainsi lire, deuxième ligne, que si P est vraie et Q est fausse, P ⇔ Q est fausse.
+L’équivalence logique joue pour les propositions, le rôle que joue l’égalité pour les nombres. Les expressions 3 + 2 et 5 ne sont pas identiques et pourtant on écrit 3+2 = 5. De même, les propositions (x^2 = 1) et (x = 1 ou x = −1) ne sont pas identiques et pourtant on écrit (x^2 = 1) ⇔ (x = 1 ou x = −1).</p>
+<h2 id="implication">Implication</h2>
+<p>Si P et Q sont deux propositions, on définit l’implication logique : P ⇒ Q par sa table de vérité.</p>
+<table>
+<thead>
+<tr>
+<th>P</th>
+<th>Q</th>
+<th>P =&gt; Q</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F</td>
+<td>F</td>
+<td>V</td>
+</tr>
+<tr>
+<td>F</td>
+<td>V</td>
+<td>V</td>
+</tr>
+<tr>
+<td>V</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr>
+<td>V</td>
+<td>V</td>
+<td>V</td>
+</tr>
+</tbody>
+</table>
+<p>P et Q deux propositions. (P ⇒ Q) ⇔ (nonP ∨ Q).
+P ⇒ Q est fausse dans l’unique cas où P est vraie et Q est fausse: si P (est vraie) alors forcément Q (est vraie aussi). Mais pas réciproquement.</p>
+<h2 id="negation-dune-proposition">Négation d’une proposition</h2>
+<p>Soit P une proposition. On définit sa négation, notée nonP (ou ⌉P), à partir de sa table de vérité.</p>
+<table>
+<thead>
+<tr>
+<th>P</th>
+<th>nonP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V</td>
+<td>F</td>
+</tr>
+<tr>
+<td>F</td>
+<td>V</td>
+</tr>
+</tbody>
+</table>
+<h2 id="les-connecteurs-logiques--et--et--ou-">Les connecteurs logiques « et » et « ou »</h2>
+<p>Soient P et Q deux propositions. On peut définir les propositions « P ou Q », notée P ∨ Q, et « P et Q », notée P ∧ Q par les tables de vérité ci-dessous.</p>
+<table>
+<thead>
+<tr>
+<th>P</th>
+<th>Q</th>
+<th>P ∧ Q</th>
+<th>P ∨ Q</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr>
+<td>F</td>
+<td>V</td>
+<td>F</td>
+<td>V</td>
+</tr>
+<tr>
+<td>V</td>
+<td>F</td>
+<td>F</td>
+<td>V</td>
+</tr>
+<tr>
+<td>V</td>
+<td>V</td>
+<td>V</td>
+<td>V</td>
+</tr>
+</tbody>
+</table>
+<p><em>Remarque:</em> Le connecteur logique OU n&rsquo;a pas le sens du OU exclusif. En effet, on peut voir que lorsque P est vraie et Q est vrai, alors P∨Q est vraie</p>
+<h2 id="combinaisons-de-propositions">Combinaisons de propositions</h2>
+<p>Tout énoncé peut s’écrire en utilisant uniquement la conjonction ∧ et la négation (par exemple, P ⇔ Q est la proposition non(P ∧ nonQ) ∧ non(Q ∧ nonP)). Ce résultat a une importance en électronique et en informatique.</p>
+<h1 id="un-problème-mathématique">Un problème mathématique</h1>
+<p>En classe de mathématiques, <strong>un problème mathématique</strong> comprend un énoncé (la description d&rsquo;un situation) suivi d&rsquo;une ou plusieurs questions. Il est généralement demandé pour répondre aux questions posées d&rsquo;effectuer des calculs avec les données contenues dans l&rsquo;énoncé.</p>
+<p>Toute question ne peut pas forcément s&rsquo;énoncer dans un langage mathématique.</p>
+<p>En informatique, pour un problème donné, on cherche à trouver une procédure pour le résoudre. On doit pouvoir traiter cette procédure à l&rsquo;aide d&rsquo;une machine. Si cette procedure existe, et si le nombre d&rsquo;actions réalisées par la machine n&rsquo;est pas infini, alors le problème peut être résolu. (fonction calculable selon les données de l&rsquo;énoncé).</p>
+<h2 id="exercices-sur-les-procédures-de-calcul">Exercices sur les procédures de calcul</h2>
+<h3 id="ex-1-trouver-une-procédure-pour-calculer-2--3">Ex 1: Trouver une procédure pour calculer 2 + 3</h3>
+<p>On utilisera uniquemement les propositions suivantes:</p>
+<ul>
+<li>les entiers naturels s&rsquo;expriment selon la théorie axiomatique vue en classe: SS<!-- raw HTML omitted -->0<!-- raw HTML omitted --> succede à S<!-- raw HTML omitted -->0<!-- raw HTML omitted --> qui succede à 0&hellip;</li>
+<li>définitions axiomatique de l&rsquo;addition</li>
+<li>variables</li>
+</ul>
+<p>On considère qu&rsquo;il existe une fonction d&rsquo;affichage</p>
+<h3 id="ex-2-trouver-une-procédure-pour-calculer-3---2">Ex 2: Trouver une procédure pour calculer 3 - 2</h3>
+<p>Mêmes outils que pour l&rsquo;exercice 1. La relation de prédecesseur est également connue.</p>
+<h3 id="ex-3-trouver-une-procédure-pour-calculer-30--20">Ex 3: Trouver une procédure pour calculer 30 * 20</h3>
+<p>On peut utiliser toute proposition issue du calcul propositionnel, dont les opérateurs d&rsquo;implication, ET, OU, NON, les opérations de comparaison.
+On pourra également utiliser les variables simples, les branchements (<em>aller à</em> dans le programme), les blocs. On evitera les branchements <em>tant que</em> et <em>pour</em>.</p>
+<h2 id="exercices-sur-le-langage-mathématique">Exercices sur le langage mathématique</h2>
+<p>Pour chacun de ces exercices, lorsque cela est possible vous devrez écrire une proposition mathématique qui résoud le problème posé.</p>
+<h3 id="ex-1-le-problème-peut-il-être-mis-sous-forme-de-langage-mathématique">Ex 1: Le problème peut il être mis sous forme de langage mathématique?</h3>
+<ul>
+<li>Bois<!-- raw HTML omitted -->2<!-- raw HTML omitted --> = Argent</li>
+<li>Or - Perle = Porcelaine</li>
+<li>(Bois * Cuir) + Bois = Cristal</li>
+<li>Vermeil - Perle = ?</li>
+</ul>
+<p><em>Aide: Créer un langage mathématique utilisant les mots et symboles de cet énoncé. Si cela est possible, résoudre ce problème</em></p>
+<h3 id="ex-2-le-du-problème-peut-il-être-mis-sous-forme-de-langage-mathématique">Ex 2: Le du problème peut il être mis sous forme de langage mathématique?</h3>
+<ul>
+<li>Réunion hostile entre deux armées</li>
+<li>Diamant monté seul, le plus souvent en bague</li>
+<li>Prothèse dentaire</li>
+<li>Qui est couvert de vermine</li>
+<li>Capitale des philippines</li>
+<li>Petit pieu</li>
+</ul>
+<p><em>Aide: On cherche à trouver le point commun entre les solutions aux définitions de ce problème.</em></p>
+<h3 id="ex-3-le-problème-peut-il-être-mis-sous-forme-de-langage-mathématique">Ex 3: Le problème peut il être mis sous forme de langage mathématique?</h3>
+<p>a, b, c, d, e, f = &ldquo;R&rdquo;, &ldquo;E&rdquo;, &ldquo;S&rdquo;, &ldquo;U&rdquo;, &ldquo;M&rdquo;, &ldquo;A&rdquo;</p>
+<p>On veut que l&rsquo;ordre des lettres soit inversé dans les variables a, b, c, d, e, f.</p>
+<p><em>Aide: On pourra utiliser une ou plusieurs autres variables si besoin.</em></p>
+<h3 id="ex-4-le-problème-peut-il-être-mis-sous-forme-de-langage-mathématique">Ex 4: Le problème peut il être mis sous forme de langage mathématique?</h3>
+<p>On dispose d&rsquo;une liste de mots. Ces mots ont une taille variable.</p>
+<p>&ldquo;MUSER&rdquo;, &ldquo;MÛRES&rdquo;, &ldquo;SUPER&rdquo;, &ldquo;PEURS&rdquo;, &ldquo;ECARTS&rdquo;, &ldquo;CARTES&rdquo;, &ldquo;ESPAR&rdquo;, &ldquo;REPAS&rdquo;, &ldquo;AMUSER&rdquo;, &ldquo;MAURES&rdquo;, &ldquo;PATERES&rdquo;, &ldquo;EPATER&rdquo;</p>
+<p>On souhaite inverser l&rsquo;ordre des lettres dans chacun de ces mots et obtenir une nouvelle liste:</p>
+<p>&ldquo;RESUM&rdquo;, &ldquo;SERUM&rdquo;, &ldquo;REPUS&rdquo;, &hellip;</p>
+<p><em>Aide: On peut utiliser une liste pour chacun des mots: La liste $mot1 = &ldquo;MUSER&rdquo;$ contient 5 caractères. Le premier caractère est $mot1[1]$ et contient &ldquo;M&rdquo;, le deuxième est $mot1[2]$ et contient &ldquo;U&rdquo;, etc&hellip;</em></p>
+<h3 id="ex-5-lénoncé-du-problème-peut-il-être-mis-sous-forme-de-langage-mathématique">Ex 5: L&rsquo;énoncé du problème peut il être mis sous forme de langage mathématique?</h3>
+<p>On dispose d&rsquo;une liste de mots.</p>
+<p>&ldquo;MUSER&rdquo;, &ldquo;MÛRES&rdquo;, &ldquo;SUPER&rdquo;, &ldquo;PEURS&rdquo;, &ldquo;ECARTS&rdquo;, &ldquo;CARTES&rdquo;, &ldquo;ESPAR&rdquo;, &ldquo;REPAS&rdquo;, &ldquo;AMUSER&rdquo;, &ldquo;MAURES&rdquo;, &ldquo;PATERES&rdquo;, &ldquo;EPATER&rdquo;</p>
+<p>Est-ce que leur reflet a un sens?</p>
+<h1 id="liens">Liens</h1>
+<ul>
+<li>Article <a href="https://automathssite.wordpress.com/2017/08/18/savez-vous-compter-les-choux-a-la-mode-de-peano/">sur la construction des ensembles, site automaths</a></li>
+<li>Cours math <a href="https://math.unice.fr/~frapetti/analyse/Logique.pdf">UNICE</a></li>
+<li>Raisonnement et logique propositionnelle <a href="http://zanotti.univ-tln.fr/MD/MD-Logique.html">cours et article de Zanotti</a></li>
+</ul>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#les-chiffres">Les chiffres</a></li>
+    <li><a href="#légalité-ou-lidentité-">l&rsquo;égalité, ou l&rsquo;identité =</a></li>
+    <li><a href="#laddition-">l&rsquo;addition +</a></li>
+    <li><a href="#questions"><strong>Questions</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#equivalence-logique">Equivalence logique</a></li>
+    <li><a href="#implication">Implication</a></li>
+    <li><a href="#negation-dune-proposition">Négation d’une proposition</a></li>
+    <li><a href="#les-connecteurs-logiques--et--et--ou-">Les connecteurs logiques « et » et « ou »</a></li>
+    <li><a href="#combinaisons-de-propositions">Combinaisons de propositions</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#exercices-sur-les-procédures-de-calcul">Exercices sur les procédures de calcul</a>
+      <ul>
+        <li><a href="#ex-1-trouver-une-procédure-pour-calculer-2--3">Ex 1: Trouver une procédure pour calculer 2 + 3</a></li>
+        <li><a href="#ex-2-trouver-une-procédure-pour-calculer-3---2">Ex 2: Trouver une procédure pour calculer 3 - 2</a></li>
+        <li><a href="#ex-3-trouver-une-procédure-pour-calculer-30--20">Ex 3: Trouver une procédure pour calculer 30 * 20</a></li>
+      </ul>
+    </li>
+    <li><a href="#exercices-sur-le-langage-mathématique">Exercices sur le langage mathématique</a>
+      <ul>
+        <li><a href="#ex-1-le-problème-peut-il-être-mis-sous-forme-de-langage-mathématique">Ex 1: Le problème peut il être mis sous forme de langage mathématique?</a></li>
+        <li><a href="#ex-2-le-du-problème-peut-il-être-mis-sous-forme-de-langage-mathématique">Ex 2: Le du problème peut il être mis sous forme de langage mathématique?</a></li>
+        <li><a href="#ex-3-le-problème-peut-il-être-mis-sous-forme-de-langage-mathématique">Ex 3: Le problème peut il être mis sous forme de langage mathématique?</a></li>
+        <li><a href="#ex-4-le-problème-peut-il-être-mis-sous-forme-de-langage-mathématique">Ex 4: Le problème peut il être mis sous forme de langage mathématique?</a></li>
+        <li><a href="#ex-5-lénoncé-du-problème-peut-il-être-mis-sous-forme-de-langage-mathématique">Ex 5: L&rsquo;énoncé du problème peut il être mis sous forme de langage mathématique?</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

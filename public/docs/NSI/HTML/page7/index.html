@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    Projet
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI\2fHTML\2fpage7\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    Projet
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><p>Les projets suivants utilisent le module <strong>Flask</strong>.
+Vous travaillerez en groupe de 2, ou de 3 élèves. Vous choisirez l&rsquo;un de ces 3 projets.</p>
+<p>Pour <strong>rendre votre projet</strong>, vous pourrez, au choix:</p>
+<ul>
+<li>créer un <strong>fichier</strong> <em>zip</em> avec tous les dossiers et fichiers du projet et le mettre dans les <em>Documents</em> de votre session.</li>
+<li>le <strong>publier</strong> en ligne (Pythonanywhere.com)</li>
+</ul>
+<p>Vous rendrez également un <strong>fichier readme.txt</strong> qui servira de compte-rendu de projet. Vous y préciserez les étapes de votre projet, ainsi que le rôle pour chacun des participants. Vous pourrez eventuellement utiliser la syntaxe markdown pour mettre le texte en forme.</p>
+<h1 id="projet-1-boîte-à-secret">Projet 1: Boîte à secret</h1>
+<p>On veut créer une application web qui permette d&rsquo;enregistrer des secrets protégés par des mots de passe.</p>
+<!-- raw HTML omitted -->
+<ol>
+<li>Créer un <em>template</em> (un patron) appelé <em>index.html</em> contenant un formulaire permettant de spécifier un mot de passe et un message secret à enregistrer.</li>
+<li>Créer une <em>vue</em> dans le fichier <em>main.py</em> qui servira la page <em>index.html</em> lorsque l&rsquo;on se connecte au serveur (route <code>/</code>).</li>
+<li>Créer un <em>template</em> <em>succes.html</em> qui affiche un message de reussite (voir plus loin), ainsi que le contenu d&rsquo;une variable <em>message</em>.</li>
+<li>Créer une <em>vue</em> dans le fichier <em>main.py</em> qui servira cette page <em>succes.html</em> lorsqu&rsquo;on la demande. (route &lsquo;/succes.html&rsquo;).</li>
+</ol>
+<ul>
+<li>Cette vue servira la page <em>succes.html</em> qui affichera un message de succès, ainsi que le <em>message</em> si le mot de passe est correct.</li>
+<li>Sinon, la <em>vue</em> servira la page <em>echec.html</em>, qui affichera un message d&rsquo;echec, ainsi qu&rsquo;un bouton pour recommencer.</li>
+<li>Si le message est laissé vide par l&rsquo;utilisateur, mais que le mot de passe est correct, la page <em>succes.html</em> affichera l&rsquo;ancien message secret.</li>
+</ul>
+<p><em>Aide:</em></p>
+<p>Le programme utilise une variable globale qu&rsquo;il faudra ajouter à la <em>vue</em> <code>succes</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75af00">@app</span><span style="color:#f92672">.</span><span style="color:#111">route</span><span style="color:#111">(</span><span style="color:#d88200">&#39;/succes&#39;</span><span style="color:#111">,</span><span style="color:#111">methods</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#d88200">&#39;POST&#39;</span><span style="color:#111">])</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">result</span><span style="color:#111">():</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">global</span> <span style="color:#111">secret</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">result</span> <span style="color:#f92672">=</span> <span style="color:#111">request</span><span style="color:#f92672">.</span><span style="color:#111">form</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">...</span>
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="projet-2-panier-dachat-sans-session">Projet 2: Panier d&rsquo;achat sans session</h1>
+<p>L&rsquo;application que vous allez developper servira à gérer un panier d&rsquo;achats sur un site de e-commerce.</p>
+<!-- raw HTML omitted -->
+<p>L&rsquo;application utilise deux patrons (<em>templates</em>): <code>article.html</code> et <code>panier.html</code>.</p>
+<p>Le premier, <em>article.html</em>, affiche la liste des articles. Un champs de formulaire permet de choisir, ou non, un (ou plusieurs) exemplaire(s) de chaque article.</p>
+<p>Le deuxieme, <em>panier.html</em>, affichera le contenu du panier.</p>
+<h1 id="projet-3-interroge-un-dictionnaire">Projet 3: Interroge un dictionnaire</h1>
+<p>Le site <a href="https://dictionaryapi.dev/">https://dictionaryapi.dev/</a> permet d&rsquo;acceder à un dictionnaire en ligne. Les requetes sont de la forme <code>https://api.dictionaryapi.dev/api/v2/entries/en/hello</code> si l&rsquo;on souhaite par exemple consulter la definition du mot <em>hello</em> en langue anglaise.</p>
+<!-- raw HTML omitted -->
+<p>Pour utiliser l&rsquo;API, il faut d&rsquo;abord importer la librairie <em><a href="https://fr.python-requests.org/en/latest/">requests</a></em>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#111">requests</span>
+</span></span></code></pre></div><p>Puis, utiliser les instructions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">l</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;fr&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">m</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;école&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">url</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;https://api.dictionaryapi.dev/api/v2/entries/&#39;</span> <span style="color:#f92672">+</span> <span style="color:#111">l</span> <span style="color:#f92672">+</span> <span style="color:#d88200">&#39;/&#39;</span> <span style="color:#f92672">+</span> <span style="color:#111">m</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">reponse</span> <span style="color:#f92672">=</span> <span style="color:#111">requests</span><span style="color:#f92672">.</span><span style="color:#111">get</span><span style="color:#111">(</span><span style="color:#111">url</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>Le contenu de la reponse contient:</p>
+<ul>
+<li>un <em>header</em>, que l&rsquo;on peut consulter avec:</li>
+</ul>
+<pre tabindex="0"><code>reponse.headers
+</code></pre><ul>
+<li>un status code que l&rsquo;on peut consulter avec:</li>
+</ul>
+<pre tabindex="0"><code>reponse.status_code
+</code></pre><ul>
+<li>la reponse en format json, que l&rsquo;on peut consulter de la manière suivante:</li>
+</ul>
+<pre tabindex="0"><code>definition = reponse.json()
+print(definition)
+</code></pre><p>Votre application Flask sera constituée de 2 patrons (<em>templates</em>): <em>index.html</em> et <em>definition.html</em>.</p>
+<ul>
+<li>Le premier fichier, <em>index.html</em>, contiendra un formulaire qui permettra de choisir la langue et le mot.</li>
+<li>Le deuxième fichier, <em>definition.html</em>, présentera le contenu de la definition, si la reponse du serveur <em>dictionaryapi.dev</em> retourne un <code>status_code</code> de 200.</li>
+</ul>
+<h2 id="que-faire-si-le-module-requests-ne-fonctionne-pas">Que faire si le module <code>requests</code> ne fonctionne pas?</h2>
+<p>Il se peut que le module ne fonctionne pas avec l&rsquo;installation du lycée.</p>
+<p>Dans ce cas, vous pouvez ajouter la classe <em>dictionnaire</em> qui contiendra un unique mot, <em>bonjour</em>.</p>
+<p><strong>1.</strong> Ajouter les lignes suivantes, juste après <code>app = Flask(__name__)</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">app</span> <span style="color:#f92672">=</span> <span style="color:#111">Flask</span><span style="color:#111">(</span><span style="color:#111">__name__</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">class</span> <span style="color:#75af00">dictionnaire</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">def</span> <span style="color:#111">__init__</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">headers</span> <span style="color:#f92672">=</span> <span style="color:#111">{</span><span style="color:#d88200">&#39;Server&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;nginx/1.18.0&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;Date&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;Mon, 06 Dec 2021 16:27:31 GMT&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;Content-Type&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;application/json; charset=utf-8&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;Content-Length&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;216&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;Connection&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;keep-alive&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;X-Powered-By&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;Express&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;X-RateLimit-Limit&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;450&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;X-RateLimit-Remaining&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;449&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;X-RateLimit-Reset&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;1638808183&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;Access-Control-Allow-Origin&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;*&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;ETag&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;W/&#34;d8-MHRbRl1KWQW5GmjcbqbJ8KqZwY4&#34;&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;Vary&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;Accept-Encoding&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;Strict-Transport-Security&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;â</span><span style="color:#8045ff">\x80\x9c</span><span style="color:#d88200">max-age=15768000â</span><span style="color:#8045ff">\x80\x9d</span><span style="color:#d88200">&#39;</span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">status_code</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">json</span> <span style="color:#f92672">=</span> <span style="color:#111">[{</span><span style="color:#d88200">&#39;word&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;bonjour&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;phonetics&#39;</span><span style="color:#111">:</span> <span style="color:#111">[{}],</span> <span style="color:#d88200">&#39;meanings&#39;</span><span style="color:#111">:</span> <span style="color:#111">[{</span><span style="color:#d88200">&#39;partOfSpeech&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;nom masculin&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;definitions&#39;</span><span style="color:#111">:</span> <span style="color:#111">[{</span><span style="color:#d88200">&#39;definition&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;Souhait de bonne journée (adressé en arrivant, en rencontrant).&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;synonyms&#39;</span><span style="color:#111">:</span> <span style="color:#111">[</span><span style="color:#d88200">&#39;salut&#39;</span><span style="color:#111">],</span> <span style="color:#d88200">&#39;antonyms&#39;</span><span style="color:#111">:</span> <span style="color:#111">[]}]}]}]</span>
+</span></span></code></pre></div><p><strong>2.</strong> Ajouter la ligne <code>requete = dictionnaire()</code> juste avant <code>app.run(debug=True)</code></p>
+<p><strong>3.</strong> Remplacer alors les 2 lignes</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">reponse</span> <span style="color:#f92672">=</span> <span style="color:#111">requests</span><span style="color:#f92672">.</span><span style="color:#111">get</span><span style="color:#111">(</span><span style="color:#111">url</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">definition</span> <span style="color:#f92672">=</span> <span style="color:#111">reponse</span><span style="color:#f92672">.</span><span style="color:#111">json</span><span style="color:#111">()</span>
+</span></span></code></pre></div><p>par : <code>reponse = requete.json</code></p>
+<p><strong>4.</strong> Programmez enfin la vue dont la route est <code>/definition</code> afin de servir la page de la definition du mot <em>bonjour</em>, à condition que ce soit bien le mot demandé par le formulaire. Retourner <em>Page introuvable</em> sinon.</p>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

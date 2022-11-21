@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    Tri et recherche
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI_1\2fsequences\2fpage2\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    Tri et recherche
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="algorithmes-de-recherche">Algorithmes de recherche</h1>
+<h2 id="activité-recherche-dichotomique">Activité: recherche dichotomique</h2>
+<p>Imaginez un jeu où votre adversaire doit deviner le nombre que vous avez en tête.</p>
+<!-- raw HTML omitted -->
+<p>Votre adversaire connait les bornes entre lesquelles vous avez choisi votre nombre.</p>
+<p>Pour l&rsquo;aider, vous l&rsquo;informez à chacun de ses essais si le nombre dans votre mémoire est <em>plus grand</em>, ou bien <em>plus petit</em>.</p>
+<p>Une fois que le nombre a été deviné, vous lui annoncez le nombre d&rsquo;essais dont il a eu besoin.</p>
+<p>L&rsquo;algorithme que vous utilisez peut s&rsquo;écrire en langage naturel:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">fonction</span> <span style="color:#111">devine_un_nombre</span><span style="color:#111">(</span><span style="color:#111">borne_inf</span><span style="color:#111">:</span> <span style="color:#111">entier</span><span style="color:#111">,</span> <span style="color:#111">borne_sup</span><span style="color:#111">:</span> <span style="color:#111">entier</span><span style="color:#111">)</span> <span style="color:#f92672">-&gt;</span> <span style="color:#111">c</span><span style="color:#111">:</span> <span style="color:#111">entier</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">var</span> <span style="color:#111">N</span><span style="color:#111">:</span> <span style="color:#111">entier</span><span style="color:#111">[</span><span style="color:#111">borne_inf</span> <span style="color:#f92672">..</span> <span style="color:#111">borne_sup</span><span style="color:#111">]</span> <span style="color:#f92672">&lt;-</span> <span style="color:#111">tirage_aleatoire</span><span style="color:#111">(</span><span style="color:#111">borne_inf</span><span style="color:#111">,</span> <span style="color:#111">borne_sup</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">var</span> <span style="color:#111">c</span><span style="color:#111">:</span> <span style="color:#111">entier</span> <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">0</span> <span style="color:#75715e"># compteur du nombre d&#39;essais</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">var</span> <span style="color:#111">p</span><span style="color:#111">:</span> <span style="color:#111">entier</span><span style="color:#111">[</span><span style="color:#111">borne_inf</span> <span style="color:#f92672">..</span> <span style="color:#111">borne_sup</span><span style="color:#111">]</span> <span style="color:#f92672">&lt;-</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#75715e"># valeur proposée par l&#39;adversaire</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">tant</span> <span style="color:#111">que</span> <span style="color:#111">p</span> <span style="color:#f92672">!=</span> <span style="color:#111">N</span> <span style="color:#111">faire</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">p</span> <span style="color:#f92672">&lt;-</span> <span style="color:#111">saisie</span><span style="color:#111">(</span><span style="color:#d88200">&#34;quel nombre proposes tu?&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">c</span> <span style="color:#f92672">&lt;-</span> <span style="color:#111">c</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">si</span> <span style="color:#111">p</span> <span style="color:#f92672">&gt;</span> <span style="color:#111">N</span> <span style="color:#111">alors</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">afficher</span><span style="color:#111">(</span><span style="color:#d88200">&#34;c&#39;est moins&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">sinon</span> <span style="color:#111">si</span> <span style="color:#111">p</span> <span style="color:#f92672">&lt;</span> <span style="color:#111">N</span> <span style="color:#111">alors</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">afficher</span><span style="color:#111">(</span><span style="color:#d88200">&#34;c&#39;est plus&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">sinon</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">afficher</span><span style="color:#111">(</span><span style="color:#d88200">&#34;bravo c&#39;est gagné&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">fintantque</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">retourner</span> <span style="color:#111">c</span>
+</span></span></code></pre></div><blockquote>
+<p>Questions: Joue à ce jeu avec ton adversaire.</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>Faire plusieurs parties avec pour bornes: [0 .. 100]. Quelle est la valeur de c dans chaque cas?</li>
+</ol>
+</blockquote>
+<ol start="2">
+<li>Quelles sont les  puissances m et n de 2 qui encadrent la valeur $2^n &lt; 100 &lt; 2^m$?</li>
+<li>Jouer à ce même jeu, mais avec les bornes: [0 .. 1000]</li>
+<li>Comparer c avec n et m tels que $2^n &lt; 1000 &lt; 2^m$</li>
+</ol>
+<p><em>Le jeu auquel vous avez joué est celui d&rsquo;une recherche dichotomique. Vous avez cherché un élément (une valeur) dans un ensemble trié (l&rsquo;ensemble des entiers [0 ..100])</em></p>
+<h2 id="cours---recherche-dans-une-table">Cours - Recherche dans une table</h2>
+<h3 id="table-non-triée-recherche-linéaire">Table non triée: recherche linéaire</h3>
+<p><strong>Def:</strong> La recherche dans une liste consiste à trouver un élément x dans cette liste, et retrourner l&rsquo;indice de x.</p>
+<p>Dans le cas d&rsquo;une table non triée, l&rsquo;algorithme de recherche le plus efficace est l&rsquo;algorithme de <strong>recherche linéaire</strong>.</p>
+<p>L&rsquo;algorithme suivant retourne l&rsquo;index de x, ou bien -1 si x n&rsquo;est pas dans la liste.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">recherche_lin</span><span style="color:#111">(</span><span style="color:#111">T</span><span style="color:#111">,</span> <span style="color:#111">x</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  :param T: list of elements
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  :param x: element
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  :return: int, index of x in the list
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">           else -1
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">while</span> <span style="color:#111">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#111">len</span><span style="color:#111">(</span><span style="color:#111">T</span><span style="color:#111">)</span> <span style="color:#f92672">and</span> <span style="color:#111">T</span><span style="color:#111">[</span><span style="color:#111">i</span><span style="color:#111">]</span> <span style="color:#f92672">!=</span> <span style="color:#111">x</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">i</span> <span style="color:#f92672">=</span> <span style="color:#111">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">if</span> <span style="color:#111">i</span> <span style="color:#f92672">&gt;=</span> <span style="color:#111">len</span><span style="color:#111">(</span><span style="color:#111">T</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">else</span><span style="color:#111">:</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">i</span>
+</span></span></code></pre></div><h4 id="questions">Questions</h4>
+<blockquote>
+<ol>
+<li>Que retourne l&rsquo;instructiion suivante: <code>recherche_lin([i for i in range(10)], 5)</code>?</li>
+</ol>
+</blockquote>
+<ol start="2">
+<li>Que retourne l&rsquo;instructiion suivante: <code>recherche_lin([i for i in range(10)], 10)</code>?</li>
+</ol>
+<h4 id="efficacité-de-la-recherche-linéaire">Efficacité de la recherche linéaire</h4>
+<p><strong>Def</strong>: <strong>L&rsquo;efficacité</strong> est mesurée par la <em>COMPLEXITE</em>: La <strong>complexité</strong> mesure le nombre d&rsquo;opérations effectuées par la fonction. Ce nombre d&rsquo;opérations dépend des <em>valeurs des paramètres</em>, mais aussi de la <em>taille</em> de ces paramètres. C&rsquo;est pourquoi, il est d&rsquo;usage de considérer plusieurs cas pour mesurer l&rsquo;efficacité. Elle est en général exprimée comme une <strong>fonciton de N</strong>, où N est la <strong>taille de la liste</strong> passée en paramètre.</p>
+<p>Quelles sont les <strong>opérations</strong> que l&rsquo;on comptabilise? Pour les algorithmes de recherche, ce sont les opérations de comparaisons, dans la boucle non bornée:</p>
+<pre tabindex="0"><code>while i &lt; len(T) and T[i] != x
+</code></pre><p>On peut définir ce que l&rsquo;on appelle le <strong>pire des cas</strong>. Pour une taille N de la liste, les éléments sont rangés de telle sorte que le nombre d&rsquo;opérations effectuée est maximum. Pour la recherche linéaire, c&rsquo;est lorsque l&rsquo;élément x ne se trouve pas dans la liste.</p>
+<p>Dans ce cas, le <strong>nombre d&rsquo;opérations</strong>  de comparaisons est égal à $2 \times N$. Pour simplifier, on dira que ce nombre d&rsquo;opérations est <strong>égal à N</strong>.</p>
+<p>La complexité est dite <em>linéaire</em> (proportionnelle à N). Le coefficient $2 \times N$ n&rsquo;a pas d&rsquo;importance.</p>
+<h3 id="table-triée-recherche-dichotomique">Table triée: recherche dichotomique</h3>
+<p><strong>Def:</strong> La recherche dichotomique consiste à diviser par 2 l&rsquo;ensemble de recherche. Pour cela, on définit le milieu de l&rsquo;intervalle de recherche, puis on conserve:</p>
+<ul>
+<li><code>[borne_inf .. milieu]</code> si <code>T[milieu] &gt; x</code></li>
+<li><code>[milieu .. borne_sup]</code> si <code>T[milieu] &lt; x</code></li>
+</ul>
+<p><em>Exemple:</em> On recherche un mot commençant par la lettre <em>c</em> dans le dictionnaire. Les lettres du dictionnaire sont dans l&rsquo;ensemble [a .. z].<!-- raw HTML omitted -->
+Il s&rsquo;agit d&rsquo;une liste <code>['a','b','c','d', ..'m', ..,'x','y','z']</code>. <!-- raw HTML omitted -->
+Comme il s&rsquo;agit d&rsquo;une liste dont les indices vont de 0 à 25: Le milieu, c&rsquo;est 25//2 soit 12. la lettre <em>c</em> a un rang inférieur à 12 (lettre <em>m</em>). Donc, dans une première étape de recherche, on prendra la liste entre les rangs 0 et 12 pour rechercher <em>c</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">recherche_dicho</span><span style="color:#111">(</span><span style="color:#111">T</span><span style="color:#111">,</span><span style="color:#111">x</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#d88200">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    :param T: sorted list of elements
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    :param x: element
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    :return: int, index of x in the list
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">           else -1
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">i_min</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">i_max</span> <span style="color:#f92672">=</span> <span style="color:#111">len</span><span style="color:#111">(</span><span style="color:#111">T</span><span style="color:#111">)</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">while</span> <span style="color:#111">(</span><span style="color:#111">i_max</span> <span style="color:#f92672">&gt;=</span> <span style="color:#111">i_min</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">mid</span> <span style="color:#f92672">=</span> <span style="color:#111">(</span><span style="color:#111">i_min</span> <span style="color:#f92672">+</span> <span style="color:#111">i_max</span><span style="color:#111">)</span><span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">if</span> <span style="color:#111">T</span><span style="color:#111">[</span><span style="color:#111">mid</span><span style="color:#111">]</span> <span style="color:#f92672">==</span> <span style="color:#111">x</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#00a8c8">return</span> <span style="color:#111">mid</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">elif</span> <span style="color:#111">T</span><span style="color:#111">[</span><span style="color:#111">mid</span><span style="color:#111">]</span> <span style="color:#f92672">&lt;</span> <span style="color:#111">x</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">i_min</span> <span style="color:#f92672">=</span> <span style="color:#111">mid</span> <span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">else</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">i_max</span> <span style="color:#f92672">=</span> <span style="color:#111">mid</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><h4 id="efficacité-de-la-recherche-dichotomique">Efficacité de la recherche dichotomique</h4>
+<p>Le nombre d&rsquo;opérations de comparaison, dans le pire des cas, est proportionnel à <code>log(N)</code>. N étant égal à la taille de la liste. Et <code>log(N)</code> étant egal au <em>nombre de divisions par 2 qu&rsquo;il faut effectuer pour que N arrive à 1</em>:</p>
+<p>100 -&gt; 50 -&gt; 25 -&gt; 13 -&gt; 7 -&gt; 4 -&gt; 2 -&gt; 1 (6 à 7 divisions)</p>
+<p>On dit que la complexité est <em>logarithmique</em>.</p>
+<h1 id="algorithmes-de-tri">Algorithmes de tri</h1>
+<p><strong>Def:</strong> un algorithme de tri permet d&rsquo;organiser une collection d&rsquo;objets selon une relation d&rsquo;ordre. <a href="https://fr.wikipedia.org/wiki/Algorithme_de_tri">wikipedia</a>.</p>
+<p>Nous nous intéressons ici aux méthodes de <em>tri en place</em>: On modifie directement le tableau à trier en permuttant des éléments, sans créer de nouveaux tableaux.</p>
+<p>Le tri peut être effectué avec des éléments numériques. Mais il peut aussi être effectué avec des caractères. On parle alors de tri <em>lexicographique</em>.</p>
+<p>On a vu <a href="/pdf/NSI/algos_tri_simples.pdf">deux algorithmes de tri</a>: le tri par insertion, et le tri par selection. Le langage Python possède une fonction de tri native: <code>sorted</code>, et une méthode de tri associée aux listes: <code>sort</code>.</p>
+<h2 id="le-tri-par-insertion">Le tri par insertion</h2>
+<p>Chaque nouvel élément non trié est comparé avec un élément déjà trié, par ordre croissant ou décroissant dans la partie triée. Le nouvel élément est <em>inséré</em> à la <em>bonne place</em>.</p>
+<p><em>Exemple d&rsquo;algorithme</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">tri1</span><span style="color:#111">(</span><span style="color:#111">table</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">for</span> <span style="color:#111">k</span> <span style="color:#f92672">in</span> <span style="color:#111">range</span><span style="color:#111">(</span><span style="color:#111">len</span><span style="color:#111">(</span><span style="color:#111">table</span><span style="color:#111">)):</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">temp</span> <span style="color:#f92672">=</span> <span style="color:#111">table</span><span style="color:#111">[</span><span style="color:#111">k</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">j</span> <span style="color:#f92672">=</span> <span style="color:#111">k</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">while</span> <span style="color:#111">j</span><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> <span style="color:#111">table</span><span style="color:#111">[</span><span style="color:#111">j</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#111">]</span><span style="color:#f92672">&gt;</span><span style="color:#111">temp</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">table</span><span style="color:#111">[</span><span style="color:#111">j</span><span style="color:#111">]</span><span style="color:#f92672">=</span><span style="color:#111">table</span><span style="color:#111">[</span><span style="color:#111">j</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">j</span><span style="color:#f92672">-=</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">table</span><span style="color:#111">[</span><span style="color:#111">j</span><span style="color:#111">]</span><span style="color:#f92672">=</span><span style="color:#111">temp</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">table</span>
+</span></span></code></pre></div><h2 id="le-tri-par-selection">Le tri par selection</h2>
+<p>On recherche le plus petit élément dans la partie non triée et on l&rsquo;insère à la fin de la partie <em>triée</em>.</p>
+<p><em>Exemple d&rsquo;algorithme</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">tri2</span><span style="color:#111">(</span><span style="color:#111">T</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">for</span> <span style="color:#111">i</span> <span style="color:#f92672">in</span> <span style="color:#111">range</span><span style="color:#111">(</span><span style="color:#111">len</span><span style="color:#111">(</span><span style="color:#111">T</span><span style="color:#111">)</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">indmin</span> <span style="color:#f92672">=</span> <span style="color:#111">i</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">for</span> <span style="color:#111">k</span> <span style="color:#f92672">in</span> <span style="color:#111">range</span><span style="color:#111">(</span><span style="color:#111">i</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span> <span style="color:#111">len</span><span style="color:#111">(</span><span style="color:#111">T</span><span style="color:#111">))</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#00a8c8">if</span> <span style="color:#111">T</span><span style="color:#111">[</span><span style="color:#111">k</span><span style="color:#111">]</span> <span style="color:#f92672">&lt;</span> <span style="color:#111">T</span><span style="color:#111">[</span><span style="color:#111">indmin</span><span style="color:#111">]</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#111">indmin</span><span style="color:#f92672">=</span><span style="color:#111">k</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">if</span> <span style="color:#111">indmin</span> <span style="color:#f92672">!=</span> <span style="color:#111">i</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">T</span><span style="color:#111">[</span><span style="color:#111">i</span><span style="color:#111">],</span> <span style="color:#111">T</span><span style="color:#111">[</span><span style="color:#111">indmin</span><span style="color:#111">]</span> <span style="color:#f92672">=</span> <span style="color:#111">T</span><span style="color:#111">[</span><span style="color:#111">indmin</span><span style="color:#111">],</span> <span style="color:#111">T</span><span style="color:#111">[</span><span style="color:#111">i</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">T</span>
+</span></span></code></pre></div><h2 id="sort-et-sorted">SORT et SORTED</h2>
+<h3 id="sortedt">sorted(t)</h3>
+<p>fonction qui renvoie une liste triée à partir de la liste <em>t</em>. On l&rsquo;utilise de la manière suivante:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#111">t</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span> <span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#ae81ff">6</span><span style="color:#111">,</span> <span style="color:#ae81ff">4</span><span style="color:#111">,</span> <span style="color:#ae81ff">2</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#111">t1</span> <span style="color:#f92672">=</span> <span style="color:#111">sorted</span><span style="color:#111">(</span><span style="color:#111">t</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#111">t1</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">[</span><span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#ae81ff">2</span><span style="color:#111">,</span> <span style="color:#ae81ff">4</span><span style="color:#111">,</span> <span style="color:#ae81ff">5</span><span style="color:#111">,</span> <span style="color:#ae81ff">6</span><span style="color:#111">]</span>
+</span></span></code></pre></div><h3 id="tsort">t.sort()</h3>
+<p>méthode qui modifie la liste <em>t</em>. On peut lui ajouter un paramètre, comme <code>reverse = True</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#111">t</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span> <span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#ae81ff">6</span><span style="color:#111">,</span> <span style="color:#ae81ff">4</span><span style="color:#111">,</span> <span style="color:#ae81ff">2</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#111">t</span><span style="color:#f92672">.</span><span style="color:#111">sort</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#111">t</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">[</span><span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#ae81ff">2</span><span style="color:#111">,</span> <span style="color:#ae81ff">4</span><span style="color:#111">,</span> <span style="color:#ae81ff">5</span><span style="color:#111">,</span> <span style="color:#ae81ff">6</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#111">t</span><span style="color:#f92672">.</span><span style="color:#111">sort</span><span style="color:#111">(</span><span style="color:#111">reverse</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">True</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#111">t</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">[</span><span style="color:#ae81ff">6</span><span style="color:#111">,</span> <span style="color:#ae81ff">5</span><span style="color:#111">,</span> <span style="color:#ae81ff">4</span><span style="color:#111">,</span> <span style="color:#ae81ff">2</span><span style="color:#111">,</span> <span style="color:#ae81ff">0</span><span style="color:#111">]</span>
+</span></span></code></pre></div><h2 id="tri-à-partir-dune-clé">Tri à partir d&rsquo;une clé</h2>
+<p>Lorsque les éléments à trier sont aux-mêmes des sous-listes, le tri est réalisé à partir d&rsquo;une <em>clé</em>: la <em>clé</em> est l&rsquo;une des valeurs de la sous-liste.</p>
+<p>Par exemple, pour la liste suivante:</p>
+<p><code>M = [(&quot;Paulette&quot;, 93), (&quot;Marie&quot;, 62), (&quot;Thomas&quot;, 45), (&quot;Jean&quot;, 50)]</code></p>
+<p>Celle-ci pourra être triée par ordre alphabetique du nom: la clé est alors la première valeur de la sous-liste:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#111">t</span> <span style="color:#f92672">=</span> <span style="color:#111">sorted</span><span style="color:#111">(</span><span style="color:#111">M</span><span style="color:#111">,</span> <span style="color:#111">key</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">lambda</span> <span style="color:#111">item</span><span style="color:#111">:</span> <span style="color:#111">item</span><span style="color:#111">[</span><span style="color:#ae81ff">0</span><span style="color:#111">])</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#111">t</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">[(</span><span style="color:#d88200">&#39;Jean&#39;</span><span style="color:#111">,</span> <span style="color:#ae81ff">50</span><span style="color:#111">),</span> <span style="color:#111">(</span><span style="color:#d88200">&#39;Marie&#39;</span><span style="color:#111">,</span> <span style="color:#ae81ff">62</span><span style="color:#111">),</span> <span style="color:#111">(</span><span style="color:#d88200">&#39;Paulette&#39;</span><span style="color:#111">,</span> <span style="color:#ae81ff">93</span><span style="color:#111">),</span> <span style="color:#111">(</span><span style="color:#d88200">&#39;Thomas&#39;</span><span style="color:#111">,</span> <span style="color:#ae81ff">45</span><span style="color:#111">)]</span>
+</span></span></code></pre></div><p>Mais elle peut aussi être triée par age des personnes: à partir de la 2e valeur.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#111">t</span> <span style="color:#f92672">=</span> <span style="color:#111">sorted</span><span style="color:#111">(</span><span style="color:#111">M</span><span style="color:#111">,</span> <span style="color:#111">key</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">lambda</span> <span style="color:#111">item</span><span style="color:#111">:</span> <span style="color:#111">item</span><span style="color:#111">[</span><span style="color:#ae81ff">1</span><span style="color:#111">])</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#111">t</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">[(</span><span style="color:#d88200">&#39;Thomas&#39;</span><span style="color:#111">,</span> <span style="color:#ae81ff">45</span><span style="color:#111">),</span> <span style="color:#111">(</span><span style="color:#d88200">&#39;Jean&#39;</span><span style="color:#111">,</span> <span style="color:#ae81ff">50</span><span style="color:#111">),</span> <span style="color:#111">(</span><span style="color:#d88200">&#39;Marie&#39;</span><span style="color:#111">,</span> <span style="color:#ae81ff">62</span><span style="color:#111">),</span> <span style="color:#111">(</span><span style="color:#d88200">&#39;Paulette&#39;</span><span style="color:#111">,</span> <span style="color:#ae81ff">93</span><span style="color:#111">)]</span>
+</span></span></code></pre></div><h2 id="efficacité">Efficacité</h2>
+<p>La meilleure complexité que l&rsquo;on peut attendre pour un algorithme de tri est quasi linéaire. Mais il s&rsquo;agit d&rsquo;algorithmes plus élaborés que ceux vus en classe.</p>
+<p>Ainsi, pour le tri par insertion, le nombre d&rsquo;opérations f(N) dépend de la disposition des éléments, tel que:</p>
+<p>$$a.N &lt; f(N) &lt; a.N^2$$</p>
+<p>La complexité est <em>linéaire</em> dans le meilleur des cas (liste déjà triée), mais <em>quadratique</em> dans le pire des cas (liste triée à l&rsquo;envers).</p>
+<p>Pour le tri par séléction, le nombre d&rsquo;opérations est constant, et egal à $b.N^2$. La complexité est <em>quadratique</em>.</p>
+<h1 id="documents">Documents</h1>
+<ul>
+<li><!-- raw HTML omitted --> fiche de TD à compléter<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->fiche d&rsquo;exercices<!-- raw HTML omitted --></li>
+</ul>
+<h1 id="liens">Liens</h1>
+<ul>
+<li>cours et animations sur la <a href="https://www.lyceum.fr/1g/nsi/8-algorithmique/2-algorithmes-de-tri">page du site Lyceum</a></li>
+</ul>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#activité-recherche-dichotomique">Activité: recherche dichotomique</a></li>
+    <li><a href="#cours---recherche-dans-une-table">Cours - Recherche dans une table</a>
+      <ul>
+        <li><a href="#table-non-triée-recherche-linéaire">Table non triée: recherche linéaire</a></li>
+        <li><a href="#table-triée-recherche-dichotomique">Table triée: recherche dichotomique</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#le-tri-par-insertion">Le tri par insertion</a></li>
+    <li><a href="#le-tri-par-selection">Le tri par selection</a></li>
+    <li><a href="#sort-et-sorted">SORT et SORTED</a>
+      <ul>
+        <li><a href="#sortedt">sorted(t)</a></li>
+        <li><a href="#tsort">t.sort()</a></li>
+      </ul>
+    </li>
+    <li><a href="#tri-à-partir-dune-clé">Tri à partir d&rsquo;une clé</a></li>
+    <li><a href="#efficacité">Efficacité</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

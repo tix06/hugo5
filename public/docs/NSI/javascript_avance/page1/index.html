@@ -1,51 +1,372 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Page1
-| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel=stylesheet><script type=text/x-mathjax-config>
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    Page1
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
   });
-</script><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.1c02dc1d2c0b546a84beb71d8f4336d6f5d7b69564e08bdfc04c2fb0595d786d.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
 catch(err)
-{console.log(err.message);}
-if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
-if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
-if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}
-let chemin=window.location.pathname;if(chemin.search('NSI')>-1){baniere=document.querySelector("#myHeader");let linkBox=document.createElement('div');linkBox.classList.add('linkBox');let newH=document.createElement('a');newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';newH.classList.add('nsi');linkBox.appendChild(newH);baniere.appendChild(linkBox);}</script><style>#myHeader{display:flex;flex-direction:row-reverse}#myHeader>.titre{width:80%;min-width:300px;text-align:left}.linkBox{margin:10px;padding-top:10px;background-color:pink;min-width:50px}.isn{}</style></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2f docs\2fNSI\2fjavascript_avance\2fpage1\2f ]{color:#004ed0}</style><ul><li><a href=/><strong>Accueil</strong></a></li><li><a href=/docs/esf/esf_index/><strong>ESF</strong></a></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p></li><li><p><a href=/docs/python/index_python/><strong>Python</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
-addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-page><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
-<strong>Page1</strong></header><article class=markdown><h1 id=portée-d-une-variable>Portée d&rsquo;une variable</h1><h2 id=portée-locale-et-globale>portée locale et globale</h2><p>La « portée » d’une variable désigne l’espace du script dans laquelle elle va être accessible. En effet, toutes nos variables ne sont pas automatiquement disponibles à n’importe quel endroit dans un script et on ne va donc pas toujours pouvoir les utiliser.
-En JavaScript, il n’existe que deux espaces de portée différents : l’espace global et l’espace local. Pour rester très simple, l’espace global désigne l’entièreté d’un script à l’exception de l’intérieur de nos fonctions. L’espace local désigne, à l’inverse, l’espace dans une fonction.</p><h2 id=let-et-var>let et var</h2><p>Lorsqu’on utilise la syntaxe <code>let</code> pour définir une variable à l’intérieur d’une fonction en JavaScript, la variable va avoir une portée dite « de bloc » : la variable sera accessible dans le bloc dans lequel elle a été définie et dans les blocs que le bloc contient.
-En revanche, en définissant une variable avec le mot clef <code>var</code> dans une fonction, la variable aura une portée élargie puisque cette variable sera alors accessible dans tous les blocs de la fonction.</p><h1 id=les-fonctions>Les fonctions</h1><p>On crée une fonction personnalisée grâce au mot clef <code>function</code> ;</p><h2 id=fonction-nommée>fonction nommée</h2><p>Une fonction permet d&rsquo;écrire un morceau de code réutilisable. Pour cela, il faut qu&rsquo;elle porte un nom. Il suffira, pour réutiliser ce code, d&rsquo;écrire le nom de cette fonction.</p><h3 id=déclarer-et-appeler-une-fonction-avec-argument>déclarer et appeler une fonction avec argument</h3><p>La fonction porte un nom, et peut posseder des <em>arguments</em>.</p><p>Si une fonction a besoin qu’on lui passe des valeurs pour fonctionner, alors on définira des paramètres lors de sa définition. Lors de son appel, on lui passera des arguments qui prendront la place des paramètres.</p><p><em>Exemple avec une fonction <code>fn</code> qui prend pour argument <code>n</code>et qui retourne le résultats d&rsquo;une opération</em> :</p><pre><code>// declaration
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI\2fjavascript_avance\2fpage1\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    Page1
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="portée-dune-variable">Portée d&rsquo;une variable</h1>
+<h2 id="portée-locale-et-globale">portée locale et globale</h2>
+<p>La « portée » d’une variable désigne l’espace du script dans laquelle elle va être accessible. En effet, toutes nos variables ne sont pas automatiquement disponibles à n’importe quel endroit dans un script et on ne va donc pas toujours pouvoir les utiliser.
+En JavaScript, il n’existe que deux espaces de portée différents : l’espace global et l’espace local. Pour rester très simple, l’espace global désigne l’entièreté d’un script à l’exception de l’intérieur de nos fonctions. L’espace local désigne, à l’inverse, l’espace dans une fonction.</p>
+<h2 id="let-et-var">let et var</h2>
+<p>Lorsqu’on utilise la syntaxe <code>let</code> pour définir une variable à l’intérieur d’une fonction en JavaScript, la variable va avoir une portée dite « de bloc » : la variable sera accessible dans le bloc dans lequel elle a été définie et dans les blocs que le bloc contient.
+En revanche, en définissant une variable avec le mot clef <code>var</code> dans une fonction, la variable aura une portée élargie puisque cette variable sera alors accessible dans tous les blocs de la fonction.</p>
+<h1 id="les-fonctions">Les fonctions</h1>
+<p>On crée une fonction personnalisée grâce au mot clef <code>function</code> ;</p>
+<h2 id="fonction-nommée">fonction nommée</h2>
+<p>Une fonction permet d&rsquo;écrire un morceau de code réutilisable. Pour cela, il faut qu&rsquo;elle porte un nom. Il suffira, pour réutiliser ce code, d&rsquo;écrire le nom de cette fonction.</p>
+<h3 id="déclarer-et-appeler-une-fonction-avec-argument">déclarer et appeler une fonction avec argument</h3>
+<p>La fonction porte un nom, et peut posseder des <em>arguments</em>.</p>
+<p>Si une fonction a besoin qu’on lui passe des valeurs pour fonctionner, alors on définira des paramètres lors de sa définition. Lors de son appel, on lui passera des arguments qui prendront la place des paramètres.</p>
+<p><em>Exemple avec une fonction <code>fn</code> qui prend pour argument <code>n</code>et qui retourne le résultats d&rsquo;une opération</em> :</p>
+<pre tabindex="0"><code>// declaration
 function fn(n){
   return 3*n+2
 }
 // appel de la fonction avec 2 comme argument
 fn(2) 
 // retourne 8
-</code></pre><h3 id=utiliser-une-fonction-comme-argument>utiliser une fonction comme argument</h3><p>En javascript, comme pour d&rsquo;autres langages dits <em>fonctionnels</em>, on peut mettre une fonction comme argument d&rsquo;une autre fonction :</p><pre><code>fn(fn(2)) 
+</code></pre><h3 id="utiliser-une-fonction-comme-argument">utiliser une fonction comme argument</h3>
+<p>En javascript, comme pour d&rsquo;autres langages dits <em>fonctionnels</em>, on peut mettre une fonction comme argument d&rsquo;une autre fonction :</p>
+<pre tabindex="0"><code>fn(fn(2)) 
 // retourne 18
 </code></pre><p>Ici, la fonction <code>fn</code> est appelée avec pour argument, &hellip; la fonction <code>fn</code> elle-même.
-On pourrait représenter la pile d&rsquo;execution de la manière suivante :</p><figure><img src=../images/pileExecution.png width=40% alt="pile d'execution"><figcaption>pile d'execution</figcaption></figure><p>C&rsquo;est un premier pas vers la <em>recursivité</em>, ou une fonction s&rsquo;appelle elle-même, souvent un nombre important de fois. La pile d&rsquo;execution s&rsquo;agrandit jusqu&rsquo;au dernier appel de fonction. L&rsquo;opération est alors executée, et l&rsquo;ordinateur peut alors remonter la pile d&rsquo;execution en propageant les résultats dans les arguments en attente.</p><blockquote><p><em>Exercice : Ecrire une fonction du même type de celle utilisée en exemple, et qui créé une pile d&rsquo;execussion avec 3 niveaux. Cette fonction s&rsquo;appellera elle-même, tout comme la fonction passée en argument. Représenter également la pile d&rsquo;execution.</em></p></blockquote><h2 id=fonction-anonyme>fonction anonyme</h2><p>Les fonctions anonymes sont, comme leur nom l’indique, des fonctions qui ne vont pas posséder de nom.
-Généralement, on utilisera les fonctions anonymes lorsqu’on n’a pas besoin d’appeler notre fonction par son nom c’est-à-dire lorsque le code de notre fonction n’est appelé qu’à un endroit dans notre script et n’est pas réutilisé.</p><p>On va créer une fonction anonyme de la même façon qu’une fonction classique, en utilisant le mot clef <code>function</code>, mais en omettant le nom de la fonction après.</p><p>Ici, nous faisons pourtant face à un problème : comment appeler une fonction qui n’a pas de nom ?
-On va avoir plusieurs façons de faire en JavaScript. Pour exécuter une fonction anonyme, on va notamment pouvoir :
-- Enfermer le code de notre fonction dans une variable et utiliser la variable comme une fonction ;
-- Auto-invoquer notre fonction anonyme ;
-- Utiliser un évènement pour déclencher l’exécution de notre fonction.</p><p><em>Exemple 1 : utiliser une variable comme fonction</em></p><pre><code>let alerte = function(){
-  alert('Alerte executée par une fonction anonyme');
+On pourrait représenter la pile d&rsquo;execution de la manière suivante :</p>
+<!-- raw HTML omitted -->
+<p>C&rsquo;est un premier pas vers la <em>recursivité</em>, ou une fonction s&rsquo;appelle elle-même, souvent un nombre important de fois. La pile d&rsquo;execution s&rsquo;agrandit jusqu&rsquo;au dernier appel de fonction. L&rsquo;opération est alors executée, et l&rsquo;ordinateur peut alors remonter la pile d&rsquo;execution en propageant les résultats dans les arguments en attente.</p>
+<blockquote>
+<p><em>Exercice : Ecrire une fonction du même type de celle utilisée en exemple, et qui créé une pile d&rsquo;execussion avec 3 niveaux. Cette fonction s&rsquo;appellera elle-même, tout comme la fonction passée en argument. Représenter également la pile d&rsquo;execution.</em></p>
+</blockquote>
+<h2 id="fonction-anonyme">fonction anonyme</h2>
+<p>Les fonctions anonymes sont, comme leur nom l’indique, des fonctions qui ne vont pas posséder de nom.
+Généralement, on utilisera les fonctions anonymes lorsqu’on n’a pas besoin d’appeler notre fonction par son nom c’est-à-dire lorsque le code de notre fonction n’est appelé qu’à un endroit dans notre script et n’est pas réutilisé.</p>
+<p>On va créer une fonction anonyme de la même façon qu’une fonction classique, en utilisant le mot clef <code>function</code>, mais en omettant le nom de la fonction après.</p>
+<p>Ici, nous faisons pourtant face à un problème : comment appeler une fonction qui n’a pas de nom ?
+On va avoir plusieurs façons de faire en JavaScript. Pour exécuter une fonction anonyme, on va notamment pouvoir :</p>
+<ul>
+<li>Enfermer le code de notre fonction dans une variable et utiliser la variable comme une fonction ;</li>
+<li>Auto-invoquer notre fonction anonyme ;</li>
+<li>Utiliser un évènement pour déclencher l’exécution de notre fonction.</li>
+</ul>
+<p><em>Exemple 1 : utiliser une variable comme fonction</em></p>
+<pre tabindex="0"><code>let alerte = function(){
+  alert(&#39;Alerte executée par une fonction anonyme&#39;);
 }
 alerte(); // appel de la fonction
 </code></pre><p><em>Exemple 2 : auto-invoquer la fonction</em>
 Pour créer une fonction auto-invoquée à partir d’une fonction, il va tout simplement falloir rajouter un couple de parenthèses autour de la fonction et un second après le code de la fonction.
-Le couple de parenthèses après la fonction va faire en sorte que la fonction s’appelle elle-même, ce qui donne :</p><p><code>(function bonjour(){alert('bonjour !)})()</code></p><p>une fonction auto-invoquée s’exécutera toujours juste après sa déclaration.</p><p><em>Exemple 3 : évenement déclencheur</em>
+Le couple de parenthèses après la fonction va faire en sorte que la fonction s’appelle elle-même, ce qui donne :</p>
+<p><code>(function bonjour(){alert('bonjour !)})()</code></p>
+<p>une fonction auto-invoquée s’exécutera toujours juste après sa déclaration.</p>
+<p><em>Exemple 3 : évenement déclencheur</em>
 Le JavaScript permet de répondre à de nombreux types d’évènements : clic sur un élément, pressage d’une touche sur un clavier, ouverture d’une fenêtre, etc.
-Pour indiquer comment on veut répondre à tel évènement, on utilise des gestionnaires d’évènements qui sont des fonctions qui vont exécuter tel code lorsque tel évènement survient :</p><p><strong>Testez le :</strong></p><p><span id=gauche>GAUCHE</span>
-<span id=droite>DROITE</span><div id=alerte>Cliquer sur l&rsquo;une des boites</div></p><script>let boiteG=document.getElementById("gauche");let boiteD=document.getElementById("droite");boiteG.addEventListener('click',function(){document.getElementById("alerte").innerHTML='Clic sur la boite de GAUCHE'});boiteD.addEventListener('click',function(){document.getElementById("alerte").innerHTML='Clic sur la boite de DROITE'});</script><pre><code>&lt;!doctype html&gt;
+Pour indiquer comment on veut répondre à tel évènement, on utilise des gestionnaires d’évènements qui sont des fonctions qui vont exécuter tel code lorsque tel évènement survient :</p>
+<p><strong>Testez le :</strong></p>
+<p><!-- raw HTML omitted -->GAUCHE<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->DROITE<!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre tabindex="0"><code>&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
 	&lt;title&gt;mini programme&lt;/title&gt;
-	&lt;meta charset=&quot;utf-8&quot;&gt;
+	&lt;meta charset=&#34;utf-8&#34;&gt;
 	&lt;style&gt;
 		span {
 			border-style: solid;
@@ -59,40 +380,68 @@ Pour indiquer comment on veut répondre à tel évènement, on utilise des g
 	&lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
-	&lt;span id=&quot;gauche&quot;&gt;GAUCHE&lt;/span&gt; 
-	&lt;span id=&quot;droite&quot;&gt;DROITE&lt;/span&gt;
-   &lt;div id=&quot;alerte&quot;&gt;Cliquer sur l'une des boites&lt;/div&gt;
+	&lt;span id=&#34;gauche&#34;&gt;GAUCHE&lt;/span&gt; 
+	&lt;span id=&#34;droite&#34;&gt;DROITE&lt;/span&gt;
+   &lt;div id=&#34;alerte&#34;&gt;Cliquer sur l&#39;une des boites&lt;/div&gt;
 &lt;/body&gt;
 &lt;script&gt;
-	let boiteG = document.getElementById(&quot;gauche&quot;);
-	let boiteD = document.getElementById(&quot;droite&quot;);
+	let boiteG = document.getElementById(&#34;gauche&#34;);
+	let boiteD = document.getElementById(&#34;droite&#34;);
 
 	/*on utilise la fonction addEventListener() qui sert
-	de gestionnaire d'evenement. Ici on demande à executer 
+	de gestionnaire d&#39;evenement. Ici on demande à executer 
 	la fonction anonyme passée en 2e argument lors de 
-	l'evenement &quot;click&quot; sur l'une des boites GAUCHE/DROITE
+	l&#39;evenement &#34;click&#34; sur l&#39;une des boites GAUCHE/DROITE
 	*/
-	boiteG.addEventListener('click', function(){document.getElementById(&quot;alerte&quot;).innerHTML = 'Clic sur la boite de GAUCHE'});
-	boiteD.addEventListener('click', function(){document.getElementById(&quot;alerte&quot;).innerHTML = 'Clic sur la boite de DROITE'});
+	boiteG.addEventListener(&#39;click&#39;, function(){document.getElementById(&#34;alerte&#34;).innerHTML = &#39;Clic sur la boite de GAUCHE&#39;});
+	boiteD.addEventListener(&#39;click&#39;, function(){document.getElementById(&#34;alerte&#34;).innerHTML = &#39;Clic sur la boite de DROITE&#39;});
 &lt;/script&gt;
 &lt;/html&gt;
-</code></pre><h2 id=fonction-de-rappel-ou-callback>fonction de rappel (ou callback)</h2><p>En javascript, pour réaliser des appels de fonction à intervalle de temps régulier, il faut utiliser un mécanisme de callback, unique solution pour ne pas bloquer une exécution lorsque celle-ci est trop <em>couteuse</em>.</p><p>Par exemple, le programme suivant devrait établir un décompte de 200 à 0, mais en réalité, celui-ci va entrainer un blocage du système : (ne pas tester)</p><pre><code>&lt;html&gt;
-    &lt;div id=&quot;bip&quot; class=&quot;display&quot;&gt;&lt;/div&gt;
+</code></pre><h2 id="fonction-de-rappel-ou-callback">fonction de rappel (ou callback)</h2>
+<p>En javascript, pour réaliser des appels de fonction à intervalle de temps régulier, il faut utiliser un mécanisme de callback, unique solution pour ne pas bloquer une exécution lorsque celle-ci est trop <em>couteuse</em>.</p>
+<p>Par exemple, le programme suivant devrait établir un décompte de 200 à 0, mais en réalité, celui-ci  va entrainer un blocage du système : (ne pas tester)</p>
+<pre tabindex="0"><code>&lt;html&gt;
+    &lt;div id=&#34;bip&#34; class=&#34;display&#34;&gt;&lt;/div&gt;
 &lt;script &gt;
      function bip () {
-         document.getElementById(&quot;bip&quot;).innerHTML = counter + &quot; secondes restantes&quot;;
+         document.getElementById(&#34;bip&#34;).innerHTML = counter + &#34; secondes restantes&#34;;
      }
      
      for (var i = 2000; i &gt;0; i--) {
          bip();
      }
 &lt;/script&gt;
-
-</code></pre><p>La pile d&rsquo;appel est alors :</p><table><thead><tr><th>pile d&rsquo;appel</th></tr></thead><tbody><tr><td>main()</td></tr><tr><td>bip()</td></tr><tr><td>bip()</td></tr><tr><td>&hellip;</td></tr></tbody></table><p>Une fonction de rappel (aussi appelée <em>callback</em> en anglais) est une fonction passée dans une autre fonction en tant qu&rsquo;argument, qui est ensuite invoquée à l&rsquo;intérieur de la fonction externe pour accomplir une sorte de routine ou d&rsquo;action.</p><p>On peut utiliser la méthode <code>setInterval</code> de l&rsquo;objet window qui déclenche un compteur et appelle une fonction callback à intervalle de temps régulier (développé plus loin dans le paragraphe suivant).</p><p><strong>Testez le :</strong>
-<button onclick=start()>Lancer le decompte</button><div id=bip class=display></div></p><script>var counter=10;var intervalId=null;function bip(){counter-=1;if(counter==0)finish();else{document.getElementById("bip").innerHTML=counter+" secondes restantes";}}
-function start(){intervalId=setInterval(bip,500);}
-function finish(){clearInterval(intervalId);document.getElementById("bip").innerHTML="TERMINE!";counter=10;}</script><pre><code>&lt;button onclick=&quot;start()&quot;&gt;Lancer le decompte&lt;/button&gt;
-&lt;div id=&quot;bip&quot; class=&quot;display&quot;&gt;&lt;/div&gt;
+</code></pre><p>La pile d&rsquo;appel est alors :</p>
+<table>
+<thead>
+<tr>
+<th>pile d&rsquo;appel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>main()</td>
+</tr>
+<tr>
+<td>bip()</td>
+</tr>
+<tr>
+<td>bip()</td>
+</tr>
+<tr>
+<td>&hellip;</td>
+</tr>
+</tbody>
+</table>
+<p>Une fonction de rappel (aussi appelée <em>callback</em> en anglais) est une fonction passée dans une autre fonction en tant qu&rsquo;argument, qui est ensuite invoquée à l&rsquo;intérieur de la fonction externe pour accomplir une sorte de routine ou d&rsquo;action.</p>
+<p>On peut utiliser la méthode <code>setInterval</code> de l&rsquo;objet window qui déclenche un compteur et appelle une fonction callback à intervalle de temps régulier (développé plus loin dans le paragraphe suivant).</p>
+<p><strong>Testez le :</strong>
+<!-- raw HTML omitted -->Lancer le decompte<!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre tabindex="0"><code>&lt;button onclick=&#34;start()&#34;&gt;Lancer le decompte&lt;/button&gt;
+&lt;div id=&#34;bip&#34; class=&#34;display&#34;&gt;&lt;/div&gt;
 
 &lt;script&gt;
 var counter = 10; // on peut mettre un nombre plus grand, mais le décompte est plus long
@@ -102,7 +451,7 @@ function bip() {
     counter-=1;
     if(counter == 0) finish();
     else {	
-        document.getElementById(&quot;bip&quot;).innerHTML = counter + &quot; secondes restantes&quot;;
+        document.getElementById(&#34;bip&#34;).innerHTML = counter + &#34; secondes restantes&#34;;
     }
     	
 }
@@ -113,109 +462,247 @@ function start(){
 
 function finish() {
   clearInterval(intervalId);
-  document.getElementById(&quot;bip&quot;).innerHTML = &quot;TERMINE!&quot;;	
+  document.getElementById(&#34;bip&#34;).innerHTML = &#34;TERMINE!&#34;;	
   counter = 10;
 }
 &lt;/script&gt;
-</code></pre><p>La nouvelle pile d&rsquo;appel est alors :</p><table><thead><tr><th>pile d&rsquo;appel</th></tr></thead><tbody><tr><td>main()</td></tr><tr><td>call1()</td></tr><tr><td>le processus est rendu au document</td></tr><tr><td>call1() après 500ms</td></tr><tr><td>le processus est rendu au document</td></tr><tr><td>&hellip;</td></tr></tbody></table><h2 id=méthode-setinterval>méthode setInterval()</h2><p>Les méthodes setTimeout et setInterval sont des méthodes de l&rsquo;objet Window.
+</code></pre><p>La nouvelle pile d&rsquo;appel est alors :</p>
+<table>
+<thead>
+<tr>
+<th>pile d&rsquo;appel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>main()</td>
+</tr>
+<tr>
+<td>call1()</td>
+</tr>
+<tr>
+<td>le processus est rendu au document</td>
+</tr>
+<tr>
+<td>call1() après 500ms</td>
+</tr>
+<tr>
+<td>le processus est rendu au document</td>
+</tr>
+<tr>
+<td>&hellip;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="méthode-setinterval">méthode setInterval()</h2>
+<p>Les méthodes setTimeout et setInterval sont des méthodes de l&rsquo;objet Window.
 Ce sont des processus indépendants qui, quand ils sont lancés par une instruction, ne bloquent pas l&rsquo;affichage du reste de la page ni les actions de l&rsquo;utilisateur.
-Elles permettent de placer dans la pile des prochaines fonctions à exécuter une fonction particulière. Javascript exécute cette pile fonction après fonction dans l&rsquo;ordre de la pile.</p><ul><li>SetTimeout indique un délai avant exécution</li><li>setInterval déclenche une opération à intervalles réguliers</li><li>ClearTimeout interrompt le décompte de setTimeout et de setInterval</li></ul><p>Syntax :
-<code>var intervalID = scope.setInterval(function ou bloc de code, [delay (en ms)]);</code></p><p>Ce compteur de temps est identifié de manière unique : <code>window.setInterval</code> renvoie une valeur numérique qui permet cette identification.</p><p>Une fonction lambda peut être un argument</p><h1 id=manipuler-les-éléments-de-la-page>Manipuler les éléments de la page</h1><h2 id=accéder-à-un-élément-à-l-aide-d-un-sélecteur>accéder à un élément à l&rsquo;aide d&rsquo;un sélecteur</h2><p>Pour manipuler les éléments d&rsquo;une page affichée dans le navigateur, on doit <em>accéder</em> à cet élément.
-Cela peut se faire à l&rsquo;aide des <em>ancres</em> laissées sur ces éléments. On peut les sélectionner, comme en CSS avec leur classe, leur ID ou le nom de la balise. Pour réaliser ceci, on utilise les fonctions suivantes:</p><ul><li><code>document.getElementById()</code> permet de sélectionner un élément html à partir de son id.</li><li><code>document.querySelector()</code> un sélecteur plus générique qui sélectionne les éléments à la manière des sélecteurs css.</li></ul><p><em>Exemple 1 :</em> soit un élement avec attribut id=&lsquo;elem&rsquo; de la page :
-On cherche à atteindre cet élément et en modifier la couleur :</p><pre><code>let elem = document.getElementById('elem');
-elem.style.background = 'red';
-</code></pre><p>On met cet élément dans une variable <code>elem</code>. Puis on peut modifier ses attributs, comme par exemple celui <code>style</code> pour la couleur.</p><p><em>Exemple 2 :</em> manipulation des données d&rsquo;un formulaire et utilisation de <code>document.querySelector()</code> : Voir <a href=https://lyceum.fr/1g/nsi/5-interactions-entre-lhomme-et-la-machine-sur-le-web/4-gestion-des-evenements-en-javascript>Lyceum javascript</a></p><h2 id=parcourir-l-arbre-du-dom>parcourir l&rsquo;arbre du DOM</h2><p>La propriété <code>childNodes</code> de l&rsquo;interface <code>Node</code> renvoie une liste sous forme de tableau des nœuds enfants de l’élément donné. Le premier nœud enfant reçoit l’indice 0 comme pour tout tableau.
-Et pour obtenir l&rsquo;élément parent d&rsquo;un noeud, on utilise la propriété <code>parentElement</code>.</p><p><em>Exemple 3 :</em>
-Vous pouvez tester cet exemple en enregistrant le code <em>html</em> suivant.</p><pre><code>&lt;div&gt;
-  &lt;p id=&quot;myP&quot;&gt;Un peu de texte, &lt;a&gt;un lien&lt;/a&gt; et &lt;strong&gt;une portion en emphase&lt;/strong&gt;&lt;/p&gt;
+Elles permettent de placer dans la pile des prochaines fonctions à exécuter une fonction particulière. Javascript exécute cette pile fonction après fonction dans l&rsquo;ordre de la pile.</p>
+<ul>
+<li>SetTimeout indique un délai avant exécution</li>
+<li>setInterval déclenche une opération à intervalles réguliers</li>
+<li>ClearTimeout interrompt le décompte de setTimeout et de setInterval</li>
+</ul>
+<p>Syntax :
+<code>var intervalID = scope.setInterval(function ou bloc de code, [delay (en ms)]);</code></p>
+<p>Ce compteur de temps est identifié de manière unique : <code>window.setInterval</code> renvoie une valeur numérique qui permet cette identification.</p>
+<p>Une fonction lambda peut être un argument</p>
+<h1 id="manipuler-les-éléments-de-la-page">Manipuler les éléments de la page</h1>
+<h2 id="accéder-à-un-élément-à-laide-dun-sélecteur">accéder à un élément à l&rsquo;aide d&rsquo;un sélecteur</h2>
+<p>Pour manipuler les éléments d&rsquo;une page affichée dans le navigateur, on doit <em>accéder</em> à cet élément.
+Cela peut se faire à l&rsquo;aide des <em>ancres</em> laissées sur ces éléments. On peut les sélectionner, comme en CSS avec leur classe, leur ID ou le nom de la balise. Pour réaliser ceci, on utilise les fonctions suivantes:</p>
+<ul>
+<li><code>document.getElementById()</code> permet de sélectionner un élément html à partir de son id.</li>
+<li><code>document.querySelector()</code> un sélecteur plus générique qui sélectionne les éléments à la manière des sélecteurs css.</li>
+</ul>
+<p><em>Exemple 1 :</em> soit un élement avec attribut id=&lsquo;elem&rsquo; de la page :
+On cherche à atteindre cet élément et en modifier la couleur :</p>
+<pre tabindex="0"><code>let elem = document.getElementById(&#39;elem&#39;);
+elem.style.background = &#39;red&#39;;
+</code></pre><p>On met cet élément dans une variable <code>elem</code>. Puis on peut modifier ses attributs, comme par exemple celui <code>style</code> pour la couleur.</p>
+<p><em>Exemple 2 :</em> manipulation des données d&rsquo;un formulaire et utilisation de <code>document.querySelector()</code> : Voir <a href="https://lyceum.fr/1g/nsi/5-interactions-entre-lhomme-et-la-machine-sur-le-web/4-gestion-des-evenements-en-javascript">Lyceum javascript</a></p>
+<h2 id="parcourir-larbre-du-dom">parcourir l&rsquo;arbre du DOM</h2>
+<p>La propriété <code>childNodes</code> de l&rsquo;interface <code>Node</code> renvoie une liste sous forme de tableau des nœuds enfants de l’élément donné. Le premier nœud enfant reçoit l’indice 0 comme pour tout tableau.
+Et pour obtenir l&rsquo;élément parent d&rsquo;un noeud, on utilise la propriété <code>parentElement</code>.</p>
+<p><em>Exemple 3 :</em>
+Vous pouvez tester cet exemple en enregistrant le code <em>html</em>  suivant.</p>
+<pre tabindex="0"><code>&lt;div&gt;
+  &lt;p id=&#34;myP&#34;&gt;Un peu de texte, &lt;a&gt;un lien&lt;/a&gt; et &lt;strong&gt;une portion en emphase&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
-</code></pre><p>Ouvrir alors la page pour l&rsquo;afficher dans le navigateur.</p><p>Cette page a alors l&rsquo;arbre de DOM suivant qui lui est associé :</p><figure><img src=../images/dom.png width=80% " alt="arbre du DOM"><figcaption>arbre du DOM</figcaption></figure><p>Le premier enfant de <code>&lt;p&gt;</code> est un nœud textuel, alors que le dernier enfant est un élément <code>&lt;strong&gt;</code>. Cet élément <code>&lt;strong&gt;</code> possède pour noeud enfant un noeud textuel dont le contenu et <em>une portion en emphase</em></p><p>Dans la console, saisir une à une les instructions suivantes : (sans les commentaires)</p><pre><code>let paragraph = document.getElementById('myP'); // pour stocker le noeud parent.
-let first = paragraph.firstChild; // parcours de l'arbre jusqu'au 1er enfant
+</code></pre><p>Ouvrir alors la page pour l&rsquo;afficher dans le navigateur.</p>
+<p>Cette page a alors l&rsquo;arbre de DOM suivant qui lui est associé :</p>
+<!-- raw HTML omitted -->
+<p>Le premier enfant de <code>&lt;p&gt;</code> est un nœud textuel, alors que le dernier enfant est un élément <code>&lt;strong&gt;</code>. Cet élément <code>&lt;strong&gt;</code> possède pour noeud enfant un noeud textuel dont le contenu et <em>une portion en emphase</em></p>
+<p>Dans la console, saisir une à une les instructions suivantes : (sans les commentaires)</p>
+<pre tabindex="0"><code>let paragraph = document.getElementById(&#39;myP&#39;); // pour stocker le noeud parent.
+let first = paragraph.firstChild; // parcours de l&#39;arbre jusqu&#39;au 1er enfant
 alert(first.nodeValue); // pour récuperer le contenu du noeud textuel
-</code></pre><figure><img src=../images/dom1.png width=100% " alt="arbre du DOM"><figcaption>contenu textuel du premier enfant</figcaption></figure><p>Puis :</p><pre><code>let last = paragraph.lastChild;
+</code></pre><!-- raw HTML omitted -->
+<p>Puis :</p>
+<pre tabindex="0"><code>let last = paragraph.lastChild;
 alert(last.firstChild.data); // pour recuperer le contenu textuel de la balise
-</code></pre><figure><img src=../images/dom2.png width=100% " alt="arbre du DOM"><figcaption>contenu textuel du dernier enfant</figcaption></figure><p>On peut réaliser cette dernière manipulation en ayant recours à la liste de tous les enfants de <code>paragraph</code>: en écrivant <code>paragraph.childnodes</code></p><figure><img src=../images/dom3.png width=100% " alt="arbre du DOM"><figcaption>liste de tous les enfants du noeud parent</figcaption></figure><p>Puis on affiche son contenu textuel</p><figure><img src=../images/dom4.png width=100% " alt="arbre du DOM"><figcaption>contenu textuel de last</figcaption></figure><p>Pour finir, on peut modifier à volonté les éléments textuels en modifiant la valeur renvoyée par <code>.data</code> ou <code>.nodeValue</code> :</p><figure><img src=../images/dom5.png width=100% " alt="arbre du DOM"><figcaption>modification du contenu textuel de last</figcaption></figure><h1 id=gestion-des-evenements>Gestion des evenements</h1><p>On reprend ici une application du javascript entrevue lors de la présentation des fonctions, avec la gestion du clic de souris sur un des éléments de la page.</p><p>La différence cette fois ci, c&rsquo;est qu&rsquo;il y aura plusieurs éléments de la page qui sont <em>cliquables</em>. Et que tous ces éléments pourront avoir le même comportement : il utiliseront la même fonction lorsqu&rsquo;on clique dessus. Il utiliseront la même propriété CSS lorsqu&rsquo;on leur affecte la classe <code>.active</code>.</p><p>Le problème est alors : comment détecter l&rsquo;élément qui est cliqué, afin que lui SEUL devienne rouge lors de l&rsquo;evenement <em>clic</em>.</p><p>Ce petit programme va utiliser les trois langages, HTML, CSS et JS :</p><p>HTML</p><pre><code>&lt;ul class=&quot;nav&quot;&gt;
+</code></pre><!-- raw HTML omitted -->
+<p>On peut réaliser cette dernière manipulation en ayant recours à la liste de tous les enfants de <code>paragraph</code>: en écrivant <code>paragraph.childnodes</code></p>
+<!-- raw HTML omitted -->
+<p>Puis on affiche son contenu textuel</p>
+<!-- raw HTML omitted -->
+<p>Pour finir, on peut modifier à volonté les éléments textuels en modifiant la valeur renvoyée par <code>.data</code> ou <code>.nodeValue</code> :</p>
+<!-- raw HTML omitted -->
+<h1 id="gestion-des-evenements">Gestion des evenements</h1>
+<p>On reprend ici une application du javascript entrevue lors de la présentation des fonctions, avec la gestion du clic de souris sur un des éléments de la page.</p>
+<p>La différence cette fois ci, c&rsquo;est qu&rsquo;il y aura plusieurs éléments de la page qui sont <em>cliquables</em>. Et que tous ces éléments pourront avoir le même comportement : il utiliseront la même fonction lorsqu&rsquo;on clique dessus. Il utiliseront la même propriété CSS lorsqu&rsquo;on leur affecte la classe <code>.active</code>.</p>
+<p>Le problème est alors : comment détecter l&rsquo;élément qui est cliqué, afin que lui SEUL devienne rouge lors de l&rsquo;evenement <em>clic</em>.</p>
+<p>Ce petit programme va utiliser les trois langages, HTML, CSS et JS :</p>
+<p>HTML</p>
+<pre tabindex="0"><code>&lt;ul class=&#34;nav&#34;&gt;
     &lt;li&gt;One&lt;/li&gt;
     &lt;li&gt;Two&lt;/li&gt;
     &lt;li&gt;Three&lt;/li&gt;
     &lt;li&gt;Four&lt;/li&gt;
 &lt;/ul&gt;
-</code></pre><p>CSS</p><pre><code>li.active {
+</code></pre><p>CSS</p>
+<pre tabindex="0"><code>li.active {
     color: red;
 }
-</code></pre><p>JAVASCRIPT</p><pre><code>let selector, elems, makeActive;
+</code></pre><p>JAVASCRIPT</p>
+<pre tabindex="0"><code>let selector, elems, makeActive;
 
-selector = '.nav li';
+selector = &#39;.nav li&#39;;
 
 elems = document.querySelectorAll(selector);
 
 makeActive = function () {
     for (let i = 0; i &lt; elems.length; i++)
-        elems[i].classList.remove('active');
+        elems[i].classList.remove(&#39;active&#39;);
     
-    this.classList.add('active');
+    this.classList.add(&#39;active&#39;);
 };
 
 for (let i = 0; i &lt; elems.length; i++)
-    elems[i].addEventListener('mousedown', makeActive);
-</code></pre><p>Le contenu de la fonction <code>makeActive</code> sera expliqué plus loin. En particulier le rôle du mot clé <code>this</code>.</p><p><strong>Résultat :</strong> (cliquer sur chacun des éléments de la liste)<ul class=navi><li class=liste>One</li><li class=liste>Two</li><li class=liste>Three</li><li class=liste>Four</li></ul></p><style>.liste.active{color:red}</style><script>let selector,elems,makeActive;selector='.navi .liste';elems=document.querySelectorAll(selector);makeActive=function(){for(let i=0;i<elems.length;i++)
-elems[i].classList.remove('active');this.classList.add('active');};for(let i=0;i<elems.length;i++)
-elems[i].addEventListener('mousedown',makeActive);</script><h1 id=objets>Objets</h1><p>Un objet est une entité qui peut être vue comme indépendante et qui va contenir
-un ensemble de variables (qu’on va appeler propriétés) et de fonctions (qu’on appellera méthodes). Ces objets vont pouvoir interagir entre eux.</p><h2 id=fonctions-et-objets>fonctions et objets</h2><p>Un objet, en informatique, un <strong>objet</strong> est un ensemble cohérent de données et de fonctionnalités qui vont fonctionner ensemble.</p><p>Pour être tout à fait précis, les fonctions prédéfinies en JavaScript sont des méthodes. Une méthode est tout simplement le nom donné à une fonction définie au sein d’un objet.</p><p>Par exemple, le JavaScript dispose d’une fonction nommée random() (qui appartient à l’objet Math que nous étudierons plus tard) et qui va générer un nombre décimal aléatoire entre 0 et 1.</p><h2 id=méthode-d-un-objet>méthode d&rsquo;un objet</h2><p>Méthode d’un object = Propriété d’un object dont la valeur est la définition d’une fonction.</p><pre><code>let user = {
-  firstname : &quot;john&quot;,
-  lastname : &quot;Doe&quot;,
+    elems[i].addEventListener(&#39;mousedown&#39;, makeActive);
+</code></pre><p>Le contenu de la fonction <code>makeActive</code> sera expliqué plus loin. En particulier le rôle du mot clé <code>this</code>.</p>
+<p><strong>Résultat :</strong> (cliquer sur chacun des éléments de la liste)</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="objets">Objets</h1>
+<p>Un objet est une entité qui peut être vue comme indépendante et qui va contenir
+un ensemble de variables (qu’on va appeler propriétés) et de fonctions (qu’on appellera méthodes). Ces objets vont pouvoir interagir entre eux.</p>
+<h2 id="fonctions-et-objets">fonctions et objets</h2>
+<p>Un objet, en informatique, un <strong>objet</strong> est un ensemble cohérent de données et de fonctionnalités qui vont fonctionner ensemble.</p>
+<p>Pour être tout à fait précis, les fonctions prédéfinies en JavaScript sont des méthodes. Une méthode est tout simplement le nom donné à une fonction définie au sein d’un objet.</p>
+<p>Par exemple, le JavaScript dispose d’une fonction nommée random() (qui appartient à l’objet Math que nous étudierons plus tard) et qui va générer un nombre décimal aléatoire entre 0 et 1.</p>
+<h2 id="méthode-dun-objet">méthode d&rsquo;un objet</h2>
+<p>Méthode d’un object = Propriété d’un object dont la valeur est la définition d’une fonction.</p>
+<pre tabindex="0"><code>let user = {
+  firstname : &#34;john&#34;,
+  lastname : &#34;Doe&#34;,
   age : 30,
   fullname: function() {
-            return this.firstname + &quot; &quot; + this.lastname;
+            return this.firstname + &#34; &#34; + this.lastname;
   }
 };
-console.log(user.fullname()); // &quot;john Doe&quot;
-console.log(user[&quot;fullname&quot;]()); // &quot;john Doe&quot;
-console.log(user.fullname); // function() {return this.firstname + &quot; &quot; + this.lastname;}
-</code></pre><p>et pour ajouter une méthode à un objet :</p><pre><code>user.getage = function () {
+console.log(user.fullname()); // &#34;john Doe&#34;
+console.log(user[&#34;fullname&#34;]()); // &#34;john Doe&#34;
+console.log(user.fullname); // function() {return this.firstname + &#34; &#34; + this.lastname;}
+</code></pre><p>et pour ajouter une méthode à un objet :</p>
+<pre tabindex="0"><code>user.getage = function () {
   return this.age;
   };
 </code></pre><p><strong>Testez le :</strong>
-<button onclick="identite('firstname')">user.firstname</button>
-<button onclick="identite('fullname')">user.fullname</button>
-<button onclick="identite('getage')">user.getage</button><div id=user class=display>cliquer</div></p><script>let user={firstname:"john",lastname:"Doe",age:30,fullname:function(){return this.firstname+" "+this.lastname;}};function identite(param){if(param=="firstname"){document.getElementById('user').innerHTML=user.firstname;}
-if(param=="fullname"){nom=user.firstname+" "+user.lastname;document.getElementById('user').innerHTML=nom;}
-if(param=="getage"){document.getElementById('user').innerHTML=user.age;}}</script><h2 id=constructeur>Constructeur</h2><p>On souhaite maintenant créer des objets aux propriétés semblables, avec un minimum de code à répéter. On va utiliser pour cela une <em>fonction constructeur</em>.</p><p>Une <em>fonction constructeur d’objets</em> est une fonction qui va nous permettre de créer des objets semblables.</p><p>nous allons devoir suivre deux étapes :</p><ul><li>il va déjà falloir définir notre fonction constructeur</li><li>ensuite nous allons appeler ce constructeur avec une syntaxe un peu spéciale utilisant le mot clef <code>new</code>.</li></ul><p>Dans une fonction constructeur, on va pouvoir définir un ensemble de propriétés et de méthodes. Les objets créés à partir de ce constructeur vont automatiquement posséder les (« hériter des ») propriétés (les variables) et des méthodes (les fonctions) définies dans le constructeur.</p><p>On définit ici une fonction <code>Person()</code> que l&rsquo;on va utiliser comme constructeur d’objets. Notez que lorsqu’on définit un constructeur, on utilise par convention une majuscule au début du nom de la fonction afin de bien discerner nos constructeurs des fonctions classiques dans un script.</p><p><code>this</code> dans le constructeur n’a pas de valeur.
+<!-- raw HTML omitted -->user.firstname<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->user.fullname<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->user.getage<!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="constructeur">Constructeur</h2>
+<p>On souhaite maintenant créer des objets aux propriétés semblables, avec un minimum de code à répéter. On va utiliser pour cela une <em>fonction constructeur</em>.</p>
+<p>Une <em>fonction constructeur d’objets</em> est une fonction qui va nous permettre de créer des objets semblables.</p>
+<p>nous allons devoir suivre deux étapes :</p>
+<ul>
+<li>il va déjà falloir définir notre fonction constructeur</li>
+<li>ensuite nous allons appeler ce constructeur avec une syntaxe un peu spéciale utilisant le mot clef <code>new</code>.</li>
+</ul>
+<p>Dans une fonction constructeur, on va pouvoir définir un ensemble de propriétés et de méthodes. Les objets créés à partir de ce constructeur vont automatiquement posséder les (« hériter des ») propriétés (les variables) et des méthodes (les fonctions) définies dans le constructeur.</p>
+<p>On définit ici une fonction <code>Person()</code>  que l&rsquo;on va utiliser comme constructeur d’objets. Notez que lorsqu’on définit un constructeur, on utilise par convention une majuscule au début du nom de la fonction afin de bien discerner nos constructeurs des fonctions classiques dans un script.</p>
+<p><code>this</code> dans le constructeur n’a pas de valeur.
 La valeur de this sera l’object lui-même quand l’object sera créé.
-Pour le dire très simplement, c’est un prête nom qui va être remplacé par le nom de l’objet actuellement utilisé lorsqu’on souhaite accéder à des membres de cet objet.</p><pre><code>// le constructeur
+Pour le dire très simplement, c’est un prête nom qui va être remplacé par le nom de l’objet actuellement utilisé lorsqu’on souhaite accéder à des membres de cet objet.</p>
+<pre tabindex="0"><code>// le constructeur
 function Person(first,last,age,eyes){
   this.firstname = first;
   this.lastname = last;
   this.age = age;
   this.eyescolor = eyes;
 }
-// construction de l'objet
-var myFather = new Person(&quot;John&quot;,&quot;Doe&quot;,50,&quot;blue&quot;);```
+// construction de l&#39;objet
+var myFather = new Person(&#34;John&#34;,&#34;Doe&#34;,50,&#34;blue&#34;);```
 </code></pre><p><strong>Testez le :</strong>
-<button onclick="identite2('Person')">Person</button>
-<button onclick="identite2('myFather')">myFather</button>
-<button onclick="identite2('name')">myFather.name</button>
-<button onclick="identite2('color')">myFather.eyesColor</button><div id=user2 class=display>cliquer</div></p><script>function Person(first,last,age,eyes){this.firstname=first;this.lastname=last;this.age=age;this.eyescolor=eyes;}
-Person.prototype.hello=function(){alert('Hello, my name is '+this.firstname+', I am ,'+this.age+' years old');}
-var myFather=new Person("John","Doe",50,"blue");var myMother=new Person("Cindi","Doe",48,"brown");function identite2(param){if(param=="Person"){document.getElementById('user2').innerHTML=Person;}
-if(param=="myFather"){document.getElementById('user2').innerHTML='Person {firstname: "John", lastname: "Doe", age: 50, eyescolor: "blue"}';}
-if(param=="name"){document.getElementById('user2').innerHTML='Doe';}
-if(param=="color"){document.getElementById('user2').innerHTML='blue';}}</script><p>On pourrait ainsi créer des objets à la chaine, à l&rsquo;aide d&rsquo;une seule nouvelle déclaration, en ajoutant par exemple :</p><pre><code>var myMother = new Person(&quot;Cindi&quot;,&quot;Doe&quot;,48,&quot;brown&quot;);
+<!-- raw HTML omitted -->Person<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->myFather<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->myFather.name<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->myFather.eyesColor<!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>On pourrait ainsi créer des objets à la chaine, à l&rsquo;aide d&rsquo;une seule nouvelle déclaration, en ajoutant par exemple :</p>
+<pre tabindex="0"><code>var myMother = new Person(&#34;Cindi&#34;,&#34;Doe&#34;,48,&#34;brown&#34;);
 var myBrother = new Person(...
-</code></pre><h2 id=prototypes>Prototypes</h2><p>Dans l&rsquo;exemple précédent, le constructeur est <code>Person()</code>.
-Une fois celui-ci définit, on pourra toujours lui ajouter des propriétés et méthodes. Par exemple, une méthode <code>hello</code> en faisant :</p><pre><code>Person.prototype.hello = function(){
-  alert('Hello, my name is ' + this.firstname + ', I am ,' + this.age + ' years old');}
+</code></pre><h2 id="prototypes">Prototypes</h2>
+<p>Dans l&rsquo;exemple précédent, le constructeur est <code>Person()</code>.
+Une fois celui-ci définit, on pourra toujours lui ajouter des propriétés et méthodes. Par exemple, une méthode <code>hello</code> en faisant :</p>
+<pre tabindex="0"><code>Person.prototype.hello = function(){
+  alert(&#39;Hello, my name is &#39; + this.firstname + &#39;, I am ,&#39; + this.age + &#39; years old&#39;);}
 </code></pre><p>On ajoute ainsi une nouvelle méthode à l&rsquo;objet <code>prototype</code> contenu dans le constructeur <code>Person()</code>.
-Définir des propriétés et des méthodes dans le prototype d’un constructeur nous permet ainsi de les rendre accessible à tous les objets créés à partir de ce constructeur sans que ces objets aient à les redéfinir.</p><p>Ce n&rsquo;est pas la même chose que l&rsquo;on réalise lorsque l&rsquo;on ajoute des <em>propriétés en propre</em> à un <em>objet</em> :</p><blockquote><p><em>Exemple :</em>
-Lorsque l&rsquo;on définit un nouvel objet à partir du constructeur <code>Person()</code>:</p><p><code>var myFather = new Person(&quot;John&quot;,&quot;Doe&quot;,50,&quot;blue&quot;);</code></p><p>Si on veut lui ajouter une méthode <code>bonjour</code>, une <em>méthode en propre</em>, on fait :
-<code>myFather.bonjour= function(){
-alert('Bonjour, mon nom est ' + this.firstname + ', mon age ,' + this.age + ' ans');}</code></p><p>Elle sera alors particulière à myFather, et n&rsquo;est pas commune avec myMother et myBrother. Alors que celle ajoutée au prototype Person() appelée <code>hello</code>sera commune à tous les objets qui utilisent le constructeur Person().</p></blockquote><p><strong>Testez le :</strong>
-Ouvrir la console et testez les instructions suivantes :<figure><img src=../images/myFather.hello.png width=60% alt=myFather.hello()><figcaption>myFather.hello()</figcaption></figure></p><figure><img src=../images/myFather.bonjour.png width=60% alt=myFather.bonjour()><figcaption>myFather.bonjour()</figcaption></figure><figure><img src=../images/myMother.hello.png width=60% alt=myMother.hello()><figcaption>myMother.hello()</figcaption></figure><figure><img src=../images/myMother.bonjour.png width=60% alt=myMother.bonjour()><figcaption>myMother.bonjour()</figcaption></figure><p>Pour avoir le code le plus clair et le plus performant possible, on définit généralement les propriétés des objets (dont les valeurs doivent être spécifiques à l’objet) au sein du constructeur et les méthodes (que tous les objets vont pouvoir appeler de la même façon) dans le prototype du constructeur.</p><p>Un constructeur peut parfois venir lui-même d&rsquo;un autre constructeur. Il aura alors lui aussi hérité des méthodes du prototype de son constructeur.</p><p>Il existe un constructeur appellé <code>Object()</code> va être le parent de tout objet en JavaScript et il possède aussi un objet <em>prototype</em>.</p><h1 id=tp-thème-jeu-d-arcade>TP : thème jeu d&rsquo;arcade</h1><p>On va voir dans ce TP :</p><ul><li>le positionnement des éléments en CSS</li><li>la création d&rsquo;éléments d&rsquo;une page en pur javascript</li><li>les objets en javascript</li><li>les animations en javascript</li></ul><h2 id=le-squelette-du-fichier-game-html>Le squelette du fichier game.html</h2><p>On commence par créer le squelette <strong>html</strong> de notre mini projet.</p><ul><li>Dans un dossier de votre disque dur, mettre l&rsquo;image <em>ufo.png</em> que vous téléchargerez avec le lien suivant:
-<a href=../images/ufo.png>faire un clic droit et choisir : telecharger le fichier</a></li><li>dans le même dossier, à l&rsquo;aide d&rsquo;un éditeur de code comme par exemple notepadd++, créer un nouveau fichier et choisir une extension <code>.html</code></li></ul><p>Mettre les lignes de code suivantes:</p><pre><code>&lt;!doctype html&gt;
+Définir des propriétés et des méthodes dans le prototype d’un constructeur nous permet ainsi de les rendre accessible à tous les objets créés à partir de ce constructeur sans que ces objets aient à les redéfinir.</p>
+<p>Ce n&rsquo;est pas la même chose que l&rsquo;on réalise lorsque l&rsquo;on ajoute des <em>propriétés en propre</em> à un <em>objet</em> :</p>
+<blockquote>
+<p><em>Exemple :</em>
+Lorsque l&rsquo;on définit un nouvel objet à partir du constructeur <code>Person()</code>:</p>
+</blockquote>
+<blockquote>
+<p><code>var myFather = new Person(&quot;John&quot;,&quot;Doe&quot;,50,&quot;blue&quot;);</code></p>
+</blockquote>
+<blockquote>
+<p>Si on veut lui ajouter une méthode <code>bonjour</code>, une <em>méthode en propre</em>, on fait :
+<code>myFather.bonjour= function(){ alert('Bonjour, mon nom est ' + this.firstname + ', mon age ,' + this.age + ' ans');}</code></p>
+</blockquote>
+<blockquote>
+<p>Elle sera alors particulière à myFather, et n&rsquo;est pas commune avec myMother et myBrother. Alors que celle ajoutée au prototype Person() appelée <code>hello</code>sera commune à tous les objets qui utilisent le constructeur Person().</p>
+</blockquote>
+<p><strong>Testez le :</strong>
+Ouvrir la console et testez les instructions suivantes :</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Pour avoir le code le plus clair et le plus performant possible, on définit généralement les propriétés des objets (dont les valeurs doivent être spécifiques à l’objet) au sein du constructeur et les méthodes (que tous les objets vont pouvoir appeler de la même façon) dans le prototype du constructeur.</p>
+<p>Un constructeur peut parfois venir lui-même d&rsquo;un autre constructeur. Il aura alors lui aussi hérité des méthodes du prototype de son constructeur.</p>
+<p>Il existe un constructeur appellé <code>Object()</code> va être le parent de tout objet en JavaScript et il possède aussi un objet <em>prototype</em>.</p>
+<h1 id="tp--thème-jeu-darcade">TP : thème jeu d&rsquo;arcade</h1>
+<p>On va voir dans ce TP :</p>
+<ul>
+<li>le positionnement des éléments en CSS</li>
+<li>la création d&rsquo;éléments d&rsquo;une page en pur javascript</li>
+<li>les objets en javascript</li>
+<li>les animations en javascript</li>
+</ul>
+<h2 id="le-squelette-du-fichier-gamehtml">Le squelette du fichier game.html</h2>
+<p>On commence par créer le squelette <strong>html</strong> de notre mini projet.</p>
+<ul>
+<li>Dans un dossier de votre disque dur, mettre l&rsquo;image <em>ufo.png</em> que vous téléchargerez avec le lien suivant:
+<!-- raw HTML omitted -->faire un clic droit et choisir : telecharger le fichier<!-- raw HTML omitted --></li>
+<li>dans le même dossier, à l&rsquo;aide d&rsquo;un éditeur de code comme par exemple notepadd++, créer un nouveau fichier et choisir une extension <code>.html</code></li>
+</ul>
+<p>Mettre les lignes de code suivantes:</p>
+<pre tabindex="0"><code>&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
 	&lt;title&gt;mini programme&lt;/title&gt;
-	&lt;meta charset=&quot;utf-8&quot;&gt;
+	&lt;meta charset=&#34;utf-8&#34;&gt;
 &lt;style&gt;
 
 #game{
@@ -238,8 +725,8 @@ Ouvrir la console et testez les instructions suivantes :<figure><img src=../imag
 &lt;/head&gt;
 
 &lt;body&gt;
-&lt;div id=&quot;game&quot;&gt;
-	&lt;img class = &quot;alien0&quot; src=&quot;ufo.png&quot;&gt;
+&lt;div id=&#34;game&#34;&gt;
+	&lt;img class = &#34;alien0&#34; src=&#34;ufo.png&#34;&gt;
 &lt;/div&gt;
 
 &lt;script&gt;
@@ -248,50 +735,195 @@ Ouvrir la console et testez les instructions suivantes :<figure><img src=../imag
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre><p>Executer le programme (double clic sur le fichier).
-Dans la fenêtre du navigateur devraient s&rsquo;afficher :</p><ul><li>un cadre gris qui occupe la largeur de la feuille, le container</li><li>une image d&rsquo;alien positionné en haut à gauche.</li></ul><p>Le règles relatives au positionnement et dimensions de ces 2 éléments sont mises dans les déclarations CSS du debut de programme, entre les balises <code>&lt;style&gt;</code>.</p><h2 id=le-constructeur>Le constructeur</h2><p>Si nous voulons créer plusieurs éléments du même genre (c&rsquo;est à dire plusieurs aliens), comme nous l&rsquo;avons vu lors du chapitre précédent, nous allons devoir utiliser un <em>constructeur</em>.
-Commençons par programmer ce constructeur et les propriétés dont héritera l&rsquo;objet : Entre les balises <code>&lt;script&gt;</code>, ajouter les lignes suivantes :</p><pre><code>let surface = document.getElementById(&quot;game&quot;);
+Dans la fenêtre du navigateur devraient s&rsquo;afficher :</p>
+<ul>
+<li>un cadre gris qui occupe la largeur de la feuille, le container</li>
+<li>une image d&rsquo;alien positionné en haut à gauche.</li>
+</ul>
+<p>Le règles relatives au positionnement et dimensions de ces 2 éléments sont mises dans les déclarations CSS du debut de programme, entre les balises <code>&lt;style&gt;</code>.</p>
+<h2 id="le-constructeur">Le constructeur</h2>
+<p>Si nous voulons créer plusieurs éléments du même genre (c&rsquo;est à dire plusieurs aliens), comme nous l&rsquo;avons vu lors du chapitre précédent, nous allons devoir utiliser un <em>constructeur</em>.
+Commençons par programmer ce constructeur et les propriétés dont héritera l&rsquo;objet : Entre les balises <code>&lt;script&gt;</code>, ajouter les lignes suivantes :</p>
+<pre tabindex="0"><code>let surface = document.getElementById(&#34;game&#34;);
 
 	function Sprite(filename, left,top){
-	this._node = document.createElement(&quot;img&quot;);
+	this._node = document.createElement(&#34;img&#34;);
 	this._node.src = filename;
-	this._node.style.position=&quot;absolute&quot;;
-	this._node.style.height=&quot;50px&quot;;
-	this._node.style.width=&quot;auto&quot;;
-	this._node.style.left=left+&quot;px&quot;;
-	this._node.style.top=top+&quot;px&quot;;
+	this._node.style.position=&#34;absolute&#34;;
+	this._node.style.height=&#34;50px&#34;;
+	this._node.style.width=&#34;auto&#34;;
+	this._node.style.left=left+&#34;px&#34;;
+	this._node.style.top=top+&#34;px&#34;;
 	this.vitesse = 2;
 	surface.appendChild(this._node);
 }
-let alien1 = new Sprite(&quot;ufo.png&quot;,200,100);
-</code></pre><p><em>Explications:</em></p><ul><li>on commence par créer une première variable, <code>surface</code>, de portée globale. On y met le noeud contenant l&rsquo;élément <code>&lt;div id=&quot;game&gt;</code>.</li><li><p>on écrit les règles du constructeur, que l&rsquo;on appellera <em>Sprite()</em>.
-Ce constructeur contiendra 3 paramètres pour sa création: l&rsquo;adresse de l&rsquo;image, sa position par rapport au bord gauche <em>left</em> et sa position par rapport au bord supérieur <em>top</em>.</p></li><li><p><code>_node</code> sera la propriété que l&rsquo;on créé; elle contiendra le nom de l&rsquo;élément créé (<em>img</em>) ainsi que plusieurs variables. Ces variables seront les différents attributs de l&rsquo;élément <em>img</em>.</p></li><li><p>on ajoute une variable pour la vitesse de déplacement du l&rsquo;alien.</p></li><li><p>Et l&rsquo;instruction qui ajoute l&rsquo;élément <em>img</em> de l&rsquo;alien au cadre <code>&lt;div id=&quot;game&gt;</code></p></li><li><p>la dernière ligne correspond à la construction de l&rsquo;objet <em>alien1</em> à partir de ce constructeur, à la position (200,100).</p></li></ul><p>On peut <em>rafraichir</em> la page dans le navigateur. On devrait observer 2 aliens côte à côte. Celui de gauche a été placé avec une instruction en <em>html</em>. Mais le 2e, celui de droite, en <em>javascript</em>.</p><blockquote><p><strong>A vous de jouer :</strong> Placer un autre alien à doite du second, que vous appellerez <em>alien2</em>, en utilisant le constructeur <em>Sprite()</em>.</p></blockquote><h2 id=ajouter-les-méthode-au-prototype-de-sprite>Ajouter les méthode au prototype de Sprite()</h2><p>A partir des explications vues plus haut (paragraphe <em>Prototype</em>), nous allons ajouter des méthodes au constructeur. Les objets <em>alien1</em> et <em>alien2</em> vont alors en hériter.</p><h3 id=ajouter-au-programme-javascript>Ajouter au programme javascript</h3><pre><code>Sprite.prototype.posXQuery = function(){
+let alien1 = new Sprite(&#34;ufo.png&#34;,200,100);
+</code></pre><p><em>Explications:</em></p>
+<ul>
+<li>
+<p>on commence par créer une première variable, <code>surface</code>, de portée globale. On y met le noeud contenant l&rsquo;élément <code>&lt;div id=&quot;game&gt;</code>.</p>
+</li>
+<li>
+<p>on écrit les règles du constructeur, que l&rsquo;on appellera <em>Sprite()</em>.
+Ce constructeur contiendra 3 paramètres pour sa création: l&rsquo;adresse de l&rsquo;image, sa position par rapport au bord gauche <em>left</em> et sa position par rapport au bord supérieur <em>top</em>.</p>
+</li>
+<li>
+<p><code>_node</code>  sera la propriété que l&rsquo;on créé; elle contiendra le nom de l&rsquo;élément créé (<em>img</em>) ainsi que plusieurs variables. Ces variables seront les différents attributs de l&rsquo;élément <em>img</em>.</p>
+</li>
+<li>
+<p>on ajoute une variable pour la vitesse de déplacement du l&rsquo;alien.</p>
+</li>
+<li>
+<p>Et l&rsquo;instruction qui ajoute l&rsquo;élément <em>img</em> de l&rsquo;alien au cadre <code>&lt;div id=&quot;game&gt;</code></p>
+</li>
+<li>
+<p>la dernière ligne correspond à la construction de l&rsquo;objet <em>alien1</em> à partir de ce constructeur, à la position (200,100).</p>
+</li>
+</ul>
+<p>On peut <em>rafraichir</em> la page dans le navigateur. On devrait observer 2 aliens côte à côte. Celui de gauche a été placé avec une instruction en <em>html</em>. Mais le 2e, celui de droite, en <em>javascript</em>.</p>
+<blockquote>
+<p><strong>A vous de jouer :</strong> Placer un autre alien à doite du second, que vous appellerez <em>alien2</em>, en utilisant le constructeur <em>Sprite()</em>.</p>
+</blockquote>
+<h2 id="ajouter-les-méthode-au-prototype-de-sprite">Ajouter les méthode au prototype de Sprite()</h2>
+<p>A partir des explications vues plus haut (paragraphe <em>Prototype</em>), nous allons ajouter des méthodes au constructeur. Les objets <em>alien1</em> et <em>alien2</em> vont alors en hériter.</p>
+<h3 id="ajouter-au-programme-javascript">Ajouter au programme javascript</h3>
+<pre tabindex="0"><code>Sprite.prototype.posXQuery = function(){
 	let chain = this._node.style.left;
 	chain = parseInt(chain);
 	return chain
 }
 
 Sprite.prototype.posX = function(param){
-	this._node.style.left=param+&quot;px&quot;;
+	this._node.style.left=param+&#34;px&#34;;
 }
-</code></pre><h3 id=la-méthode-posxquery>La méthode <code>posXQuery</code></h3><p>On utilise une fonction anonyme qui sera executée lorsque l&rsquo;on fait, par exemple : (ne pas oublier le parathèses () à la fin de la déclaration pour préciser que l&rsquo;on veut <em>executer</em> la fonction)</p><p><code>alien1.posXQuery()</code></p><p>On récupère avec cette fonction la valeur numérique, en pixels, de la position horizontale de l&rsquo;alien, à partir de ses propriétés CSS.</p><h3 id=la-méthode-posx>La méthode <code>posX</code></h3><p>Cette fonction va permettre de (re)positionner l&rsquo;alien à une nouvelle absisse, mise en paramètre lors de l&rsquo;appel de la fonction.</p><p>Par exemple :</p><ul><li>pour positionner l&rsquo;alien à l&rsquo;abscisse 300px, écrire dans le programme javascript : <code>alien1.posX(300)</code></li><li>pour déplacer l&rsquo;alien à une abscisse 10px plus à droite, faire : <code>alien1.posX(alien1.posXQuery()+10)</code></li><li>pour ajouter la valeur stockée dans alien.vitesse à l&rsquo;abscisse actuelle : <code>alien1.posX(alien1.posXQuery()+alien1.vitesse)</code></li></ul><h2 id=déplacement-de-l-alien>déplacement de l&rsquo;alien</h2><p>On veut créer une fonction qui sera utilisable par tous les aliens, et qui modifiera automatiquement leur abscisse en lui ajoutant la vitesse, à chaque appel de cette fonction. Ajouter à la suite du programme :</p><pre><code>function deplaceX(element){
+</code></pre><h3 id="la-méthode-posxquery">La méthode <code>posXQuery</code></h3>
+<p>On utilise une fonction anonyme qui sera executée lorsque l&rsquo;on fait, par exemple : (ne pas oublier le parathèses () à la fin de la déclaration pour préciser que l&rsquo;on veut <em>executer</em> la fonction)</p>
+<p><code>alien1.posXQuery()</code></p>
+<p>On récupère avec cette fonction la valeur numérique, en pixels, de la position horizontale de l&rsquo;alien, à partir de ses propriétés CSS.</p>
+<h3 id="la-méthode-posx">La méthode <code>posX</code></h3>
+<p>Cette fonction va permettre de (re)positionner l&rsquo;alien à une nouvelle absisse, mise en paramètre lors de l&rsquo;appel de la fonction.</p>
+<p>Par exemple :</p>
+<ul>
+<li>pour positionner l&rsquo;alien à l&rsquo;abscisse 300px, écrire dans le programme javascript : <code>alien1.posX(300)</code></li>
+<li>pour déplacer l&rsquo;alien à une abscisse 10px plus à droite, faire : <code>alien1.posX(alien1.posXQuery()+10)</code></li>
+<li>pour ajouter la valeur stockée dans alien.vitesse à l&rsquo;abscisse actuelle : <code> alien1.posX(alien1.posXQuery()+alien1.vitesse)</code></li>
+</ul>
+<h2 id="déplacement-de-lalien">déplacement de l&rsquo;alien</h2>
+<p>On veut créer une fonction qui sera utilisable par tous les aliens, et qui modifiera automatiquement leur abscisse en lui ajoutant la vitesse, à chaque appel de cette fonction. Ajouter à la suite du programme :</p>
+<pre tabindex="0"><code>function deplaceX(element){
 	if (element.posXQuery()&lt;480 &amp;&amp; element.vitesse&gt;0) {
 		element.posX(element.posXQuery()+element.vitesse);
 	} else if (element.posXQuery()&gt;=480 &amp;&amp; element.vitesse&gt;0){
 		element.vitesse = -element.vitesse;
 }
-</code></pre><p><em>Explications :</em></p><ul><li>cette fonction nommée <em>deplaceX</em> prend en paramètre l&rsquo;objet pour lequel elle est appelée. Ce paramètre sera <em>element</em>.</li><li>comme <em>element</em> correspond à un objet construit avec Sprite(), il a hérité des méthodes <em>posX</em> et <em>posXQuery</em>. On commence par vérifier si l&rsquo;alien n&rsquo;a pas encore atteint le bord droit, afin qu&rsquo;il ne sorte pas de l&rsquo;écran. Sa vitesse est supposée <em>positive</em>, l&rsquo;alien se déplçant alors vers la droite. Si cette condition est réalisée, on ajoute <em>element.vitesse</em> à l&rsquo;abscisse.</li><li>si l&rsquo;alien touche le bord droit, on modifie le signe de la valeur de la vitesse, pour que l&rsquo;alien reparte dans l&rsquo;autre sens.</li></ul><blockquote><p><strong>A vous de jouer :</strong> Ajouter les instructions à cette fonction pour que l&rsquo;alien se déplace à gauche lorsqu&rsquo;il a touché le bord droit, puis à droite lorsqu&rsquo;il a touché le bord gauche.</p></blockquote><h2 id=animer-l-alien>animer l&rsquo;alien</h2><p>Ajouter les lignes suivantes pour créer une animation continue :</p><pre><code>Sprite.prototype.startAnimation = function (fct, interval) {
+</code></pre><p><em>Explications :</em></p>
+<ul>
+<li>cette fonction nommée <em>deplaceX</em> prend en paramètre l&rsquo;objet pour lequel elle est appelée. Ce paramètre sera <em>element</em>.</li>
+<li>comme <em>element</em> correspond à un objet construit avec Sprite(), il a hérité des méthodes <em>posX</em> et <em>posXQuery</em>. On commence par vérifier si l&rsquo;alien n&rsquo;a pas encore atteint le bord droit, afin qu&rsquo;il ne sorte pas de l&rsquo;écran. Sa vitesse est supposée <em>positive</em>, l&rsquo;alien se déplçant alors vers la droite. Si cette condition est réalisée, on ajoute <em>element.vitesse</em> à l&rsquo;abscisse.</li>
+<li>si l&rsquo;alien touche le bord droit, on modifie le signe de la valeur de la vitesse, pour que l&rsquo;alien reparte dans l&rsquo;autre sens.</li>
+</ul>
+<blockquote>
+<p><strong>A vous de jouer :</strong> Ajouter les instructions à cette fonction pour que l&rsquo;alien se déplace à gauche lorsqu&rsquo;il a touché le bord droit, puis à droite lorsqu&rsquo;il a touché le bord gauche.</p>
+</blockquote>
+<h2 id="animer-lalien">animer l&rsquo;alien</h2>
+<p>Ajouter les lignes suivantes pour créer une animation continue :</p>
+<pre tabindex="0"><code>Sprite.prototype.startAnimation = function (fct, interval) {
 	var _this=this;
 	this._clock=window.setInterval(function(){
 		fct(_this);
 	},interval);
 };
-</code></pre><p>Cette nouvelle méthode, lorsqu&rsquo;elle est appellée pour l&rsquo;un des aliens, attache un <em>timer</em> à l&rsquo;alien, et appelle à intervalle de temps régulier la fonction <code>fct</code> mise en paramètre.</p><p>Pour animer l&rsquo;<em>alien1</em>, avec un déplacement toutes les 20ms, on ajoutera à la fin du programme :</p><p><code>alien1.startAnimation(deplaceX,20);</code></p><p>Vous devriez maintenant obtenir un déplacement continu de l&rsquo;alien de gauche à droite de l&rsquo;écran.</p><blockquote><p><strong>Exercice :</strong> Modifiez ce programme pour obtenir un déplacement aléatoire dans toute la fenêtre, comme sur l&rsquo;image suivante.</p></blockquote><h1 id=fenêtre-de-jeu>Fenêtre de jeu</h1><div id=game><img class=alien0 src=../images/ufo.png></div><script>let surface=document.getElementById("game");function Sprite(filename,left,top){this._node=document.createElement("img");this._node.src=filename;this._node.style.position="absolute";this._node.style.height="50px";this._node.style.width="auto";this._node.style.left=left+"px";this._node.style.top=top+"px";this.vitesseX=2;this.vitesseY=2;surface.appendChild(this._node);}
-Sprite.prototype.posXQuery=function(){let chain=this._node.style.left;chain=parseInt(chain);return chain}
-Sprite.prototype.posX=function(param){this._node.style.left=param+"px";}
-Sprite.prototype.posYQuery=function(){let chain=this._node.style.top;chain=parseInt(chain);return chain}
-Sprite.prototype.posY=function(param){this._node.style.top=param+"px";}
-Sprite.prototype.startAnimation=function(fct,interval){var _this=this;this._clock=window.setInterval(function(){fct(_this);},interval);};function deplaceX(element){if(element.posXQuery()<480&&element.vitesse>0){element.posX(element.posXQuery()+element.vitesse);}else if(element.posXQuery()>=480&&element.vitesse>0){element.vitesse=-element.vitesse;}else if(element.posXQuery()>0&&element.vitesse<0){element.posX(element.posXQuery()+element.vitesse);}else if(element.posXQuery()<=0&&element.vitesse<0){element.vitesse=-element.vitesse;}}
-function deplaceXY(element){if(element.posXQuery()<420&&element.vitesseX>0){element.posX(element.posXQuery()+element.vitesseX);}else if(element.posXQuery()>=420&&element.vitesseX>0){element.vitesseX=-element.vitesseX;}else if(element.posXQuery()>0&&element.vitesseX<0){element.posX(element.posXQuery()+element.vitesseX);}else if(element.posXQuery()<=0&&element.vitesseX<0){element.vitesseX=-element.vitesseX;}
-if(element.posYQuery()>0&&element.vitesseY>0){element.posY(element.posYQuery()-element.vitesseY);}else if(element.posYQuery()<=0&&element.vitesseY>0){element.vitesseY=-element.vitesseY;}else if(element.posYQuery()<350&&element.vitesseY<0){element.posY(element.posYQuery()-element.vitesseY);}else if(element.posYQuery()>=350&&element.vitesseY<0){element.vitesseY=-element.vitesseY;}}
-let alien1=new Sprite("../images/ufo.png",200,100);alien1.startAnimation(deplaceXY,20);</script><p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><input type=button class="btn btn-lg" value="suite du TP : Le jeu Space Invader" onclick="window.location.href='../../mini_projet_spaceInvader/page1/index.html'"></p><style>span{border-style:solid}span:hover{cursor:pointer;background-color:#ccc}#game{position:absolute;width:480px;height:400px;background-color:#646464;overflow:scroll}.alien0{position:absolute;left:100px;top:100px;height:50px;width:auto}</style></article><div style=height:100px></div></div><aside class="book-toc fixed"><nav id=TableOfContents><ul><li><a href=#portée-d-une-variable>Portée d&rsquo;une variable</a><ul><li><a href=#portée-locale-et-globale>portée locale et globale</a></li><li><a href=#let-et-var>let et var</a></li></ul></li><li><a href=#les-fonctions>Les fonctions</a><ul><li><a href=#fonction-nommée>fonction nommée</a><ul><li><a href=#déclarer-et-appeler-une-fonction-avec-argument>déclarer et appeler une fonction avec argument</a></li><li><a href=#utiliser-une-fonction-comme-argument>utiliser une fonction comme argument</a></li></ul></li><li><a href=#fonction-anonyme>fonction anonyme</a></li><li><a href=#fonction-de-rappel-ou-callback>fonction de rappel (ou callback)</a></li><li><a href=#méthode-setinterval>méthode setInterval()</a></li></ul></li><li><a href=#manipuler-les-éléments-de-la-page>Manipuler les éléments de la page</a><ul><li><a href=#accéder-à-un-élément-à-l-aide-d-un-sélecteur>accéder à un élément à l&rsquo;aide d&rsquo;un sélecteur</a></li><li><a href=#parcourir-l-arbre-du-dom>parcourir l&rsquo;arbre du DOM</a></li></ul></li><li><a href=#gestion-des-evenements>Gestion des evenements</a></li><li><a href=#objets>Objets</a><ul><li><a href=#fonctions-et-objets>fonctions et objets</a></li><li><a href=#méthode-d-un-objet>méthode d&rsquo;un objet</a></li><li><a href=#constructeur>Constructeur</a></li><li><a href=#prototypes>Prototypes</a></li></ul></li><li><a href=#tp-thème-jeu-d-arcade>TP : thème jeu d&rsquo;arcade</a><ul><li><a href=#le-squelette-du-fichier-game-html>Le squelette du fichier game.html</a></li><li><a href=#le-constructeur>Le constructeur</a></li><li><a href=#ajouter-les-méthode-au-prototype-de-sprite>Ajouter les méthode au prototype de Sprite()</a><ul><li><a href=#ajouter-au-programme-javascript>Ajouter au programme javascript</a></li><li><a href=#la-méthode-posxquery>La méthode <code>posXQuery</code></a></li><li><a href=#la-méthode-posx>La méthode <code>posX</code></a></li></ul></li><li><a href=#déplacement-de-l-alien>déplacement de l&rsquo;alien</a></li><li><a href=#animer-l-alien>animer l&rsquo;alien</a></li></ul></li><li><a href=#fenêtre-de-jeu>Fenêtre de jeu</a></li></ul></nav></aside></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
-<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
+</code></pre><p>Cette nouvelle méthode, lorsqu&rsquo;elle est appellée pour l&rsquo;un des aliens, attache un <em>timer</em> à l&rsquo;alien, et appelle à intervalle de temps régulier la fonction <code>fct</code> mise en paramètre.</p>
+<p>Pour animer l&rsquo;<em>alien1</em>, avec un déplacement toutes les 20ms, on ajoutera à la fin du programme :</p>
+<p><code>alien1.startAnimation(deplaceX,20);</code></p>
+<p>Vous devriez maintenant obtenir un déplacement continu de l&rsquo;alien de gauche à droite de l&rsquo;écran.</p>
+<blockquote>
+<p><strong>Exercice :</strong> Modifiez ce programme pour obtenir un déplacement aléatoire dans toute la fenêtre, comme sur l&rsquo;image suivante.</p>
+</blockquote>
+<h1 id="fenêtre-de-jeu">Fenêtre de jeu</h1>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#portée-locale-et-globale">portée locale et globale</a></li>
+    <li><a href="#let-et-var">let et var</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#fonction-nommée">fonction nommée</a>
+      <ul>
+        <li><a href="#déclarer-et-appeler-une-fonction-avec-argument">déclarer et appeler une fonction avec argument</a></li>
+        <li><a href="#utiliser-une-fonction-comme-argument">utiliser une fonction comme argument</a></li>
+      </ul>
+    </li>
+    <li><a href="#fonction-anonyme">fonction anonyme</a></li>
+    <li><a href="#fonction-de-rappel-ou-callback">fonction de rappel (ou callback)</a></li>
+    <li><a href="#méthode-setinterval">méthode setInterval()</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#accéder-à-un-élément-à-laide-dun-sélecteur">accéder à un élément à l&rsquo;aide d&rsquo;un sélecteur</a></li>
+    <li><a href="#parcourir-larbre-du-dom">parcourir l&rsquo;arbre du DOM</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#fonctions-et-objets">fonctions et objets</a></li>
+    <li><a href="#méthode-dun-objet">méthode d&rsquo;un objet</a></li>
+    <li><a href="#constructeur">Constructeur</a></li>
+    <li><a href="#prototypes">Prototypes</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#le-squelette-du-fichier-gamehtml">Le squelette du fichier game.html</a></li>
+    <li><a href="#le-constructeur">Le constructeur</a></li>
+    <li><a href="#ajouter-les-méthode-au-prototype-de-sprite">Ajouter les méthode au prototype de Sprite()</a>
+      <ul>
+        <li><a href="#ajouter-au-programme-javascript">Ajouter au programme javascript</a></li>
+        <li><a href="#la-méthode-posxquery">La méthode <code>posXQuery</code></a></li>
+        <li><a href="#la-méthode-posx">La méthode <code>posX</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#déplacement-de-lalien">déplacement de l&rsquo;alien</a></li>
+    <li><a href="#animer-lalien">animer l&rsquo;alien</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

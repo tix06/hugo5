@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    algorithmique
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI\2f bac\2fpage4\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    algorithmique
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="bac-2022-polynesie-exercice-1">Bac 2022 Polynesie: Exercice 1</h1>
+<p><em>Cet exercice traite du thème «programmation», et principalement de la récursivité.</em></p>
+<p>On rappelle qu&rsquo;une chaîne de caractères peut être représentée en Python par un texte entre guillemets &quot;&quot; et que :</p>
+<ul>
+<li>la fonction <code>len</code> renvoie la longueur de la chaîne de caractères passée en
+paramètre ;</li>
+<li>si une variable <code>ch</code> désigne une chaîne de caractères, alors <code>ch[0]</code> renvoie son premier caractère, <code>ch[1]</code> le deuxième, etc. ;</li>
+<li>l&rsquo;opérateur + permet de concaténer deux chaînes de caractères.</li>
+</ul>
+<p>Exemples :</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; texte = &#34;bricot&#34;
+&gt;&gt;&gt; len(texte)
+6
+&gt;&gt;&gt; texte[0]
+&#34;b&#34;
+&gt;&gt;&gt; texte[1]
+&#34;r&#34;
+&gt;&gt;&gt; &#34;a&#34; + texte
+&#34;abricot&#34;
+</code></pre><p>On s&rsquo;intéresse dans cet exercice à la construction de chaînes de caractères suivant certaines règles de construction.</p>
+<p><strong>Règle A :</strong> une chaîne est construite suivant la règle A dans les deux cas suivants:</p>
+<ul>
+<li>soit elle est égale à &ldquo;a&rdquo; ;</li>
+<li>soit elle est de la forme &ldquo;a&rdquo;+chaine+&ldquo;a&rdquo;, où chaine est une chaîne de
+caractères construite suivant la règle A.</li>
+</ul>
+<p><strong>Règle B :</strong> une chaîne est construite suivant la règle B dans les deux cas suivants :</p>
+<ul>
+<li>soit elle est de la forme &ldquo;b&rdquo;+chaine+&ldquo;b&rdquo;, où chaine est une chaîne de
+caractères construite suivant la règle A ;</li>
+<li>soit elle est de la forme &ldquo;b&rdquo;+chaine+&ldquo;b&rdquo;, où chaine est une chaîne de
+caractères construite suivant la règle B.</li>
+</ul>
+<p>On a reproduit ci-dessous l&rsquo;aide de la fonction <code>choice</code> du module <code>random</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span><span style="color:#f92672">from</span> <span style="color:#111">random</span> <span style="color:#f92672">import</span> <span style="color:#111">choice</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span><span style="color:#111">help</span><span style="color:#111">(</span><span style="color:#111">choice</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">Help</span> <span style="color:#111">on</span> <span style="color:#111">method</span> <span style="color:#111">choice</span> <span style="color:#f92672">in</span> <span style="color:#111">module</span> <span style="color:#111">random</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">choice</span><span style="color:#111">(</span><span style="color:#111">seq</span><span style="color:#111">)</span> <span style="color:#111">method</span> <span style="color:#111">of</span> <span style="color:#111">random</span><span style="color:#f92672">.</span><span style="color:#111">Random</span> <span style="color:#111">instance</span>
+</span></span><span style="display:flex;"><span> <span style="color:#111">Choose</span> <span style="color:#111">a</span> <span style="color:#111">random</span> <span style="color:#111">element</span> <span style="color:#f92672">from</span> <span style="color:#111">a</span> <span style="color:#111">non</span><span style="color:#f92672">-</span><span style="color:#111">empty</span> <span style="color:#111">sequence</span><span style="color:#f92672">.</span>
+</span></span></code></pre></div><p>La fonction <code>A()</code> ci-dessous renvoie une chaîne de caractères construite suivant la règle A, en choisissant aléatoirement entre les deux cas de figure de cette règle.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">A</span><span style="color:#111">():</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">if</span> <span style="color:#111">choice</span><span style="color:#111">([</span><span style="color:#00a8c8">True</span><span style="color:#111">,</span> <span style="color:#00a8c8">False</span><span style="color:#111">]):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#d88200">&#34;a&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">else</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#d88200">&#34;a&#34;</span> <span style="color:#f92672">+</span> <span style="color:#111">A</span><span style="color:#111">()</span> <span style="color:#f92672">+</span> <span style="color:#d88200">&#34;a&#34;</span>
+</span></span></code></pre></div><h2 id="question-1">Question 1</h2>
+<p>A.  Cette fonction est-elle récursive ? Justifier.</p>
+<p>B.  La fonction <code>choice([True, False])</code> peut renvoyer <code>False</code> un très grand
+nombre de fois consécutives. Expliquer pourquoi ce cas de figure amènerait à
+une erreur d&rsquo;exécution.
+Dans la suite, on considère une deuxième version de la fonction A. À présent, la fonction prend en paramètre un entier <code>n</code> tel que, si la valeur de <code>n</code> est négative ou nulle, la fonction renvoie <code>&quot;a&quot;</code>. Si la valeur de <code>n</code> est strictement positive, elle renvoie une chaîne de caractères construite suivant la règle A avec un <code>n</code> décrémenté de 1, en choisissant aléatoirement entre les deux cas de figure de cette règle.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">A</span><span style="color:#111">(</span><span style="color:#111">n</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">if</span> <span style="color:#f92672">...</span> <span style="color:#f92672">or</span> <span style="color:#111">choice</span><span style="color:#111">([</span><span style="color:#00a8c8">True</span><span style="color:#111">,</span> <span style="color:#00a8c8">False</span><span style="color:#111">])</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#d88200">&#34;a&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">else</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#d88200">&#34;a&#34;</span> <span style="color:#f92672">+</span> <span style="color:#f92672">...</span> <span style="color:#f92672">+</span> <span style="color:#d88200">&#34;a&#34;</span>
+</span></span></code></pre></div><h2 id="question-2">Question 2</h2>
+<p>A.  Recopier sur la copie et compléter aux emplacements des points de
+suspension <code>...</code> le code de cette nouvelle fonction <code>A</code>.</p>
+<p>B.  Justifier le fait qu&rsquo;un appel de la forme <code>A(n)</code> avec <code>n</code> un nombre entier positif inférieur à 50, termine toujours.</p>
+<p>On donne ci-après le code de la fonction récursive <code>B</code> qui prend en paramètre un entier <code>n</code> et qui renvoie une chaîne de caractères construite suivant la règle B.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">B</span><span style="color:#111">(</span><span style="color:#111">n</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">if</span> <span style="color:#111">n</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">or</span> <span style="color:#111">choice</span><span style="color:#111">([</span><span style="color:#00a8c8">True</span><span style="color:#111">,</span> <span style="color:#00a8c8">False</span><span style="color:#111">]):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#d88200">&#34;b&#34;</span> <span style="color:#f92672">+</span> <span style="color:#111">A</span><span style="color:#111">(</span><span style="color:#111">n</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#111">)</span> <span style="color:#f92672">+</span> <span style="color:#d88200">&#34;b&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">else</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#d88200">&#34;b&#34;</span> <span style="color:#f92672">+</span> <span style="color:#111">B</span><span style="color:#111">(</span><span style="color:#111">n</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#111">)</span> <span style="color:#f92672">+</span> <span style="color:#d88200">&#34;b&#34;</span>
+</span></span></code></pre></div><p>On admet que :</p>
+<ul>
+<li>les appels <code>A(-1)</code> et <code>A(0)</code> renvoient la chaîne <code>&quot;a&quot;</code>;</li>
+<li>l’appel <code>A(1)</code> renvoie la chaîne <code>&quot;a&quot;</code> ou la chaîne <code>&quot;aaa&quot;</code>;</li>
+<li>l’appel <code>A(2)</code> renvoie la chaîne <code>&quot;a&quot;</code>, la chaîne <code>&quot;aaa&quot;</code> ou la chaîne <code>&quot;aaaaa&quot;</code>.</li>
+</ul>
+<h2 id="question-3">Question 3</h2>
+<p>Donner toutes les chaînes possibles renvoyées par les appels <code>B(0)</code>, <code>B(1)</code>
+et <code>B(2)</code>.</p>
+<p>On suppose maintenant qu&rsquo;on dispose d&rsquo;une fonction raccourcir qui prend comme
+paramètre une chaîne de caractères de longueur supérieure ou égale à 2, et renvoie la chaîne de caractères obtenue à partir de la chaîne initiale en lui ôtant le premier et le dernier caractère.</p>
+<p>Par exemple :</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; raccourcir(&#34;abricot&#34;)
+&#34;brico&#34;
+&gt;&gt;&gt; raccourcir(&#34;ab&#34;)
+&#34;&#34;
+</code></pre><h2 id="question-4">Question 4</h2>
+<p>A.  Recopier sur la copie et compléter les points de suspension <code>...</code> du code de la fonction <code>regleA</code> ci-dessous pour qu&rsquo;elle renvoie <code>True</code> si la chaîne passée en paramètre est construite suivant la règle A, et <code>False</code> sinon.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">regleA</span><span style="color:#111">(</span><span style="color:#111">chaine</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">n</span> <span style="color:#f92672">=</span> <span style="color:#111">len</span><span style="color:#111">(</span><span style="color:#111">chaine</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">if</span> <span style="color:#111">n</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">2</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">chaine</span><span style="color:#111">[</span><span style="color:#ae81ff">0</span><span style="color:#111">]</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#34;a&#34;</span> <span style="color:#f92672">and</span> <span style="color:#111">chaine</span><span style="color:#111">[</span><span style="color:#111">n</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#111">]</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#34;a&#34;</span> <span style="color:#f92672">and</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#111">regleA</span><span style="color:#111">(</span><span style="color:#f92672">...</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">else</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">chaine</span> <span style="color:#f92672">==</span> <span style="color:#f92672">...</span>
+</span></span></code></pre></div><p>B.  Écrire le code d’une fonction <code>regleB</code>, prenant en paramètre une chaîne de
+caractères et renvoyant <code>True</code> si la chaîne est construite suivant la règle B,
+et <code>False</code> sinon.</p>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#question-1">Question 1</a></li>
+    <li><a href="#question-2">Question 2</a></li>
+    <li><a href="#question-3">Question 3</a></li>
+    <li><a href="#question-4">Question 4</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

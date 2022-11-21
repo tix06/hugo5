@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    protocole HTTP
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI\2fHTML\2fpage2\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    protocole HTTP
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="le-protocole-http">Le protocole HTTP</h1>
+<h2 id="des-requêtes-http-jusquà-la-page-web">Des requêtes HTTP jusqu&rsquo;à la page Web</h2>
+<p>HTTP est un protocole de la <strong>couche Application</strong> selon le modèle de communication entre machines <strong>OSI</strong> (sera développé plus tard).</p>
+<p>C&rsquo;est le protocole qui permet de récupérer des ressources telles que des documents HTML. Il est à la base de <strong>tout échange de données</strong> sur le <strong>Web</strong>. C&rsquo;est un protocole de type <strong>client-serveur</strong>, ce qui signifie que les requêtes sont initiées par le destinataire (qui est généralement un <strong>navigateur web</strong>).</p>
+<p>Le <strong>protocole HTTP</strong> est un protocole <strong>synchrone</strong>: pour chacune des tâches, il faut attendre la réponse avant d&rsquo;exploiter la ressource chargée.</p>
+<p>Un document complet est construit à partir de différents sous-documents qui sont récupérés, par exemple du texte, des descriptions de mise en page, des images, des vidéos, des scripts et bien plus.</p>
+<!-- raw HTML omitted -->
+<p>Le navigateur web assemble alors ces ressources pour présenter un document complet à l&rsquo;utilisateur : c&rsquo;est la <strong>page web</strong>.</p>
+<p>Pour obtenir ces fragments de page, le navigateur web envoie des messages  qui sont appelés des <em>requêtes</em> et les messages renvoyés par le serveur sont appelés <em>réponses</em>.</p>
+<p>Entre une requête et la réponse se trouve de nombreuses entités qu&rsquo;on désignera de façon générique sous le terme proxies. Celles-ci exécutent différentes opérations et agissent comme passerelles ou comme caches par exemple.</p>
+<p>En réalité, il y a plus d&rsquo;un ordinateur entre un navigateur et le serveur qui traite la requête : il y a les routeurs, les modems et bien plus. Grâce à la <em>construction en couche du Web</em>, ces intermédiaires sont cachés dans les couches réseau et transport. HTTP, lui, est bâti sur la couche applicative.</p>
+<p>Pour plus de détails, voir la page sur <a href="https://developer.mozilla.org/fr/docs/Web/HTTP/Overview">MDN Web Docs</a>.</p>
+<h2 id="naviguer-sur-le-web">naviguer sur le web</h2>
+<p>Une page web est un document hypertexte. Cela signifie que certaines parties sont des liens hypertextes qui peuvent être activés (généralement avec un clic de souris) afin de récupérer une nouvelle page web, permettant à l&rsquo;utilisateur de naviguer sur le Web.</p>
+<p>Encore une fois, c&rsquo;est le navigateur qui traduit ces instructions en requêtes HTTP.</p>
+<p>Plus de détails: <a href="https://www.ionos.fr/digitalguide/hebergement/aspects-techniques/requete-http/">voir page du site IONOS</a></p>
+<p>Ce protocole HTTP contrôle la façon dont le client formule ses demandes et la façon dont le serveur y répond, et connaît <strong>différentes méthodes de requête</strong>: GET, POST, HEAD, OPTIONS, TRACE, ou autres méthodes spécifiques.</p>
+<h1 id="méthodes-http">Méthodes HTTP</h1>
+<h2 id="get">GET</h2>
+<p>c&rsquo;est la méthode HTTP qui est utilisée pour demander une ressource, par exemple un fichier HTML, au serveur Web. Dans le navigateur, on fait cette demande grâce à une URL (<em>uniform ressource locator</em>)</p>
+<p><strong>Comprendre les URL et leur structure:</strong></p>
+<!-- raw HTML omitted -->
+<p>Si l&rsquo;on saisit l’URL <code>www.exemple.com/test.html</code> dans la barre d&rsquo;adresse du navigateur, celui-ci se connecte au serveur Web et lui envoie la requête GET :</p>
+<pre tabindex="0"><code>GET /test.html 
+</code></pre><p>Le serveur renvoie alors le fichier <code>test.html</code>.</p>
+<h3 id="paramètres-url">Paramètres URL</h3>
+<p>Des paramètres d’URL qui peuvent être ajoutés à l’URL s&rsquo;appelent <em>chaine query</em>
+<!-- raw HTML omitted -->
+Ce sont des paramètres optionnels.<!-- raw HTML omitted -->
+Une URL valide est alors <strong>construite de la manière suivante:</strong></p>
+<pre tabindex="0"><code># nom de domaine symbolique
+http://nom du domaine.org/ressource/chaine query
+# adresse IP du domaine
+http://adresse IP du domaine/ressource/chaine query
+</code></pre><p>La requête GET contient alors des informations supplémentaires que le serveur Web doit traiter.</p>
+<p>Les règles de syntaxe employées:</p>
+<ul>
+<li>La chaîne de requête est introduite par un « ? » (point d’interrogation).</li>
+<li>Chaque paramètre est nommé, il se compose donc d’un nom et d’une valeur : « Nom=Valeur ».</li>
+<li>Si plusieurs paramètres doivent être inclus, ils sont reliés par un « &amp; ».</li>
+</ul>
+<!-- raw HTML omitted -->
+<p>Par exemple, sur un site de météo, <code>Nice</code> est saisi comme <code>ville</code> et <code>12</code> comme heure <code>UTC</code>: L&rsquo;URL affichée dans le navigateur pourrait être:</p>
+<pre tabindex="0"><code>http://ma_meteo.fr/search?ville=Nice&amp;UTC=12
+</code></pre><p>Et le navigateur enverra au serveur du site <code>ma_meteo.fr</code> l&rsquo;instruction suivante:</p>
+<pre tabindex="0"><code>GET /search?ville=Nice&amp;UTC=12
+</code></pre><!-- raw HTML omitted -->
+<p>En réalité, pour des problèmes de standardisation, l&rsquo;URL ne contient pas tout à fait les mêmes symboles, et l&rsquo;extension de l&rsquo;adresse (la chaîne Query) pourrait plutôt ressembler à: %2Fsearch%3Fville%3DNice%26UTC%3D12 (voir <a href="https://www.urlencoder.org/">URL encoder.org</a></p>
+<h3 id="inconvenients-de-la-méthode-get">inconvenients de la méthode GET</h3>
+<p>La méthode GET est la plus utilisée pour obtenir les ressources qui construisent la page Web dans le navigateur.</p>
+<p>Cette méthode présente des limites lorsque cette page doit être personnalisée:</p>
+<p><strong>Avec la méthode GET, les données à envoyer au serveur sont écrites directement dans l’URL.</strong></p>
+<p>Cela présente un avantage: Les paramètres de l’URL peuvent être enregistrés avec l’adresse du site Web. (utile pour un marque page, historique de navigation, enregistrer des pages Web contenant certains paramètres de filtrage et de tri, meteo avec conservation de la localisation&hellip;).</p>
+<p>Le principal inconvénient de la méthode GET est l’absence de protection des données. Un deuxième inconvénient est sa capacité limitée : suivant le serveur Web et le navigateur, l’URL ne peut pas contenir plus de 2 000 caractères environ.</p>
+<h2 id="la-méthode-post">La méthode POST</h2>
+<p><strong>Cette méthode n’écrit pas les paramètres de l’URL, mais les ajoute à l’en-tête HTTP (HTTP header)</strong></p>
+<p>Revenons sur l&rsquo;exemple de la page meteo. Voici un aperçu des interactions possibles entre l&rsquo;utilisateur et la page. Celle-ci pourrait présenter:</p>
+<ul>
+<li>un champs de texte à remplir (Ville)</li>
+<li>un menu déroulant (heure)</li>
+</ul>
+<!-- raw HTML omitted -->
+<p>L&rsquo;en-tête HTTP (HTTP <em>header</em>) pourrait alors avoir le contenu suivant:</p>
+<!-- raw HTML omitted -->
+<h2 id="comparatif-get-post">Comparatif GET POST</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>GET</th>
+<th>POST</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Visibilité</td>
+<td>Visible pour l’utilisateur dans le champ d’adresse</td>
+<td>Invisible pour l’utilisateur</td>
+</tr>
+<tr>
+<td>Marque-page et historique de navigation</td>
+<td>Les paramètres de l’URL sont stockés en même temps que l’URL.</td>
+<td>L’URL est enregistrée sans paramètres URL.</td>
+</tr>
+<tr>
+<td>Cache et fichier log du serveur</td>
+<td>Les paramètres de l’URL sont stockés sans chiffrement</td>
+<td>Les paramètres de l’URL ne sont pas enregistrés automatiquement.</td>
+</tr>
+<tr>
+<td>Comportement lors de l’actualisation du navigateur / Bouton « précédent »</td>
+<td>Les paramètres de l’URL ne sont pas envoyés à nouveau.</td>
+<td>Le navigateur avertit que les données du formulaire doivent être renvoyées.</td>
+</tr>
+<tr>
+<td>Type de données</td>
+<td>Caractères ASCII uniquement.</td>
+<td>Caractères ASCII mais également données binaires.</td>
+</tr>
+<tr>
+<td>Longueur des données</td>
+<td>Limitée - longueur maximale de l’URL à 2 048 caractères.</td>
+<td>Illimitée.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>GET pour les paramètres d’un site Web (filtres, tri, saisies de recherche, etc.).</li>
+<li>POST pour la transmission des informations, des fichiers, et des données de l’utilisateur.</li>
+</ul>
+<h2 id="autres-méthodes-http">Autres méthodes HTTP</h2>
+<h3 id="la-méthode-head">La méthode HEAD</h3>
+<p>Utilisée pour interroger l’en-tête de la réponse, sans que le fichier ne vous soit envoyé immédiatement. C’est utile, par exemple, si des fichiers volumineux doivent être transférés : grâce à la requête HEAD, le client peut d’abord être informé de la taille du fichier et seulement ensuite décider s’il veut recevoir le fichier.</p>
+<h3 id="options">OPTIONS</h3>
+<p>Avec la méthode OPTIONS, le client peut demander quelles méthodes le serveur supporte pour le fichier en question. Ces méthodes autorisées sont contenues dans le champs d&rsquo;en-tête &ldquo;allow&rdquo;.</p>
+<h3 id="trace">TRACE</h3>
+<p>La méthode TRACE peut être utilisée pour tracer le chemin qu’une requête HTTP emprunte jusqu’au serveur puis jusqu’au client. Vous pouvez utiliser la commande tracert de Windows pour tracer vous-même cet itinéraire.</p>
+<pre tabindex="0"><code>tracert www.exemple.com
+</code></pre><h1 id="http-header">HTTP header</h1>
+<h2 id="http-header-côté-client">HTTP header Côté client</h2>
+<p>Chaque requête HTTP formulée par le navigateur contient:</p>
+<ul>
+<li>une premiere ligne constituée de: METHODE suivie du PATH (chemin vers la ressource) suivi de la version HTTP. Exemple: `GET /index.php HTTP/1.1</li>
+<li>Puis vient le HTTP header.</li>
+</ul>
+<p>Pour le client, voici les principales informations contenues dans le http header:</p>
+<table>
+<thead>
+<tr>
+<th>Champ d’en-tête</th>
+<th>Signification</th>
+<th>Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accept</td>
+<td>Les types de contenu que le client peut traiter ; si le champ est vide, il s’agit de tous les types de contenu.</td>
+<td>Accept: text/html, application/xml</td>
+</tr>
+<tr>
+<td>Accept-Charset</td>
+<td>Quels jeux de caractères le client peut afficher.</td>
+<td>Accept-Charset: utf-8</td>
+</tr>
+<tr>
+<td>Cookie</td>
+<td>Cookie stocké pour ce serveur</td>
+<td>Cookie: $Version=1; Content=23</td>
+</tr>
+<tr>
+<td>Content-Length</td>
+<td>Longueur en octets</td>
+<td>Content-Length: 212</td>
+</tr>
+<tr>
+<td>Content-Type</td>
+<td>Type MIME: text/plain pour les fichiers texte, application/.. pour le reste</td>
+<td>Content-Type: application/x_222-form-urlencoded</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>Date et heure de la demande</td>
+<td>Date: Mon, 9 March 2020 09:02:22 GMT</td>
+</tr>
+<tr>
+<td>Host</td>
+<td>Nom de domaine du serveur</td>
+<td>Host: exemple.fr</td>
+</tr>
+<tr>
+<td>Referrer</td>
+<td>URL de la ressource à partir de laquelle la demande est faite (c’est-à-dire à partir de laquelle le lien a été créé)</td>
+<td>Referrer: <a href="https://exemple.fr/index.html">https://exemple.fr/index.html</a></td>
+</tr>
+<tr>
+<td>User-Agent</td>
+<td>navigateur du client</td>
+<td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36</td>
+</tr>
+</tbody>
+</table>
+<h2 id="http-header-côté-serveur">HTTP header Côté serveur</h2>
+<p>Chaque reponse HTTP retournée par le serveur contient:</p>
+<ul>
+<li>une premiere ligne constituée:
+<ul>
+<li>de la version HTTP</li>
+<li>du code statut (200, 301, 404, &hellip;)</li>
+<li>du message de statut (OK, &hellip;)</li>
+</ul>
+</li>
+<li>puis les différents champs de l&rsquo;en-tête.</li>
+<li>et enfin le contenu html ou autre.</li>
+</ul>
+<p>Sur l&rsquo;exemple suivant, on voit par exemple, sur la 1ere ligne:</p>
+<ul>
+<li>HTTP/1.1 est la version valide du protocole HTTP.</li>
+<li>200 OK est le code de statut. Il indique que le serveur a reçu, compris et accepté la demande.</li>
+</ul>
+<!-- raw HTML omitted -->
+<p>Explications pour les différentes lignes (les champs d&rsquo;en-tête):</p>
+<ul>
+<li>Content-Encoding et Content-Type fournissent des informations sur le type de fichier.</li>
+<li>Age, Cache-Control, Expires, Vary et X-Cache font référence à la mise en cache du fichier.</li>
+<li>Etag et Last-Modified sont utilisés pour le contrôle de la version du fichier livré.</li>
+<li>Le terme « server » désigne le logiciel du serveur Web.</li>
+<li>Content-Length est la taille du fichier en octets.</li>
+</ul>
+<h2 id="classes-de-statut-http">Classes de statut HTTP</h2>
+<!-- raw HTML omitted -->
+<ul>
+<li><strong>Classe 1xx, codes d’information :</strong> si le code commence par 1, le serveur indique au client que la requête actuelle est en en train de se faire. Cette classe regroupe des codes en cours de traitement et d’envoi.</li>
+<li><strong>Classe 2xx, codes de succès :</strong> un code qui commence par 2 indique que la requête a abouti. Elle a été reçue par le client, comprise et acceptée. En conséquence, les codes 2xx du serveur sont envoyés en même temps que les informations des pages Web désirées. En général, l’utilisateur ne prend en compte que la page Web qu’il a chargé.</li>
+<li><strong>Classe 3xx, codes de redirection :</strong> un code 3xx indique que la requête a été reçue par le serveur. Cependant, le client doit encore provoquer une action complémentaire. Par exemple, le code HTTP  301 signifie <em>changement d’adresse définitif</em> : les informations demandées par le client ne se trouvent plus à l’adresse indiquée car celle-ci a définitivement changée. Le navigateur Internet peut aussitôt rediriger l’utilisateur à la nouvelle adresse.</li>
+<li><strong>Classe 4xx, erreurs du client :</strong> le code 4xx renvoie à une erreur commise par le client. Le serveur a reçu la requête mais ne peut pas l’exécuter.  La réponse 404 signifie par exemple que la page Internet est introuvable.. En général, il s’agit d’une syntaxe erronée. En général, l’utilisateur est automatiquement dirigé vers  une page HTML.</li>
+<li><strong>Classe 5xx, erreurs du serveur :</strong> Le code 5xx fait référence à une erreur commise par le serveur. Ces informations indiquent que la requête en question est complètement ou provisoirement impossible. Une page d’erreur HTML est également présentée.</li>
+</ul>
+<h1 id="http-sécurité-et-confidentialité">HTTP: sécurité et confidentialité</h1>
+<h2 id="sécurité">Sécurité</h2>
+<p>La sécurité d&rsquo;un protocole vise à ce que les communications ne soient pas exploitables pour quelqu&rsquo;un qui intercepte le message.</p>
+<p>Le protocole HTTP possède une version sécurisée des échanges: il s&rsquo;agit de HTTP<strong>S</strong>.</p>
+<h2 id="confidentialité-http-un-protocole-sans-etat">confidentialité: HTTP, un protocole sans ETAT</h2>
+<p>Pour une communication client-serveur:
+<strong>Un état</strong> est conservé entre 2 requêtes si l&rsquo;utilisateur, le <em>client</em>, s&rsquo;est identifié.</p>
+<h3 id="protocole-sans-état">Protocole sans état</h3>
+<p><a href="https://fr.wikipedia.org/wiki/Protocole_sans_%C3%A9tat">wiki: protocole sans état</a></p>
+<p>Un <em>protocole sans état</em> (en anglais stateless protocol) est un protocole de communication qui n&rsquo;enregistre pas l&rsquo;état d&rsquo;une session de communication entre deux requêtes successives. La communication est formée de paires requête-réponse indépendantes et chaque paire requête-réponse est traitée comme une transaction indépendante, sans lien avec les requêtes précédentes ou suivantes.</p>
+<p>Le <strong>protocole HTTP</strong> est donc un protocole <em>synchrone</em>, et <strong>sans état</strong>.</p>
+<p><em>Des couches de protocoles avec et sans état:</em></p>
+<p><em>Dans les différentes couches de protocoles de communication: le protocole HTTP (sans état) s&rsquo;appuie sur le protocole TCP, un protocole avec état, qui s&rsquo;appuie à son tour sur le protocole IP, un autre protocole sans état.</em></p>
+<h3 id="cookies">Cookies</h3>
+<p><strong>1.</strong> A quoi servent les cookies?
+voir <a href="https://developer.mozilla.org/fr/docs/Web/HTTP/Cookies">MDN: HTTP cookies</a></p>
+<p>Les cookies permettent de conserver de l&rsquo;information en passant par le procotole <strong>HTTP qui est lui &ldquo;sans état&rdquo;.</strong></p>
+<p>Les cookies, ce sont des données qu&rsquo;un serveur envoie au navigateur web de l&rsquo;utilisateur. Le navigateur peut alors le stocker localement, puis le renvoyer à la prochaine requête vers le même serveur. Typiquement, cette méthode est utilisée par le serveur pour déterminer si deux requêtes proviennent du même navigateur.</p>
+<p>Cela permet:</p>
+<ul>
+<li>
+<p>Gestion des sessions
+Logins, panier d&rsquo;achat, score d&rsquo;un jeu, ou tout autre chose dont le serveur doit se souvenir.<br>
+Par exemple, garder un utilisateur connecté.</p>
+</li>
+<li>
+<p>Personnalisation
+Préférences utilisateur, thèmes, et autres paramètres.</p>
+</li>
+<li>
+<p>Suivi
+Enregistrement et analyse du comportement utilisateur.</p>
+</li>
+</ul>
+<p><strong>2.</strong> Protection des données</p>
+<!-- raw HTML omitted -->
+<p>Les cookies étaient auparavant utilisés pour le stockage côté client. Mais aujourd&rsquo;hui, la tendance est plutôt d&rsquo;envoyér ces données avec chaque requête. Cela a pour conséquence de partager ses données pour l&rsquo;internaute. Son surf n&rsquo;est plus complètement anonyme.</p>
+<p>En application de la directive ePrivacy, les internautes doivent être informés et donner leur consentement préalablement au dépôt et à la lecture de certains traceurs</p>
+<p>Les cookies ont un domaine qui leur est associé. Si ce domaine est le même que la page sur laquelle vous êtes, on parle de cookie interne (first-party cookie). Si le domaine est différent, on parle de cookie tiers (third-party cookie).</p>
+<p>Pour plus de détails, voir la page: <a href="https://www.cnil.fr/fr/cookies-et-traceurs-que-dit-la-loi#:~:text=Tant%20que%20la%20personne%20n,ajouter%20aux%20finalit%C3%A9s%20initialement%20pr%C3%A9vues.">Quel est le cadre juridique applicable?</a></p>
+<h1 id="travaux-pratiques-le-moniteur-réseau">Travaux Pratiques: le moniteur réseau</h1>
+<p>TP inspiré de la page <a href="https://developer.mozilla.org/fr/docs/Tools/Network_Monitor">MDN Mozilla</a></p>
+<p>Le moniteur réseau du navigateur affiche des informations sur les requêtes effectuées (par exemple, au chargement d&rsquo;une page).</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Faire une recherche sur un moteur de recherche pour trouver l&rsquo;URL de la page d&rsquo;accueil du site <em>cité des sciences</em>.</p>
+</blockquote>
+<p><strong>1.</strong> Lorsque vous lancez un recherche sur un moteur de recherche, celui-ci utilise t-il une méthode GET ou POST? Justifiez. Quel est l&rsquo;intérêt d&rsquo;utiliser cette méthode?</p>
+<blockquote>
+<p>Aller sur la page d&rsquo;accueil du site de: <em>cité des sciences</em>.</p>
+</blockquote>
+<p><strong>2.</strong> Ouvrir le moniteur réseau du navigateur.</p>
+<p><strong>3.</strong> Après avoir rechargé la page de cité des sciences, quel est le nombre de requêtes?</p>
+<p><strong>4.</strong> Ce nombre évolue t-il alors que vous laissez la page ouverte, sans aucune action de votre part?</p>
+<p><strong>5.</strong> Est-ce que toutes les requêtes sont de type GET?</p>
+<p><strong>6.</strong> Cliquer sur la première ressource téléchargée, <code>accueil/</code>. Vous obtenez alors le <em>détail</em> de la ressource.</p>
+<ul>
+<li>Quelle est la différence entre les informations transmises par le <em>Headers</em> et celles transmises par le <em>Reponse (ou Response)</em>?</li>
+<li>Pour l&rsquo;onglet <em>Headers</em>: S&rsquo;agit-il du HTTP header émis par le client ou bien celui serveur? Justifier.</li>
+<li>Reconnaitre et interpréter certains champs de l&rsquo;en-tête.</li>
+</ul>
+<p><strong>7.</strong> Aller sur l&rsquo;onglet <em>Cookies</em> pour cette première ressource. Que remarquez vous?</p>
+<ul>
+<li>Y-a-t-il des ressources qui ont un code statut différent de 200? Quels sont-ils et que signifient-ils?</li>
+<li>Quel est le nom de domaine qui revient le plus souvent pour ces requêtes, dont le statut est différent de 200?</li>
+<li>Pour l&rsquo;une de ces ressources, on observe en détail l&rsquo;extension de l&rsquo;URL que l&rsquo;on appelle Query String (chaine Query). Celle-ci est écrite en <em>Base 64</em>. Elle est constituée de la série de caractères suivante:</li>
+</ul>
+<pre tabindex="0"><code>c2l0ZUNvZGU9ZGFjcGJybDR0byZ2aXNpdG9yQ29kZT1mMnBvbGJucXRhNTU5b3YwJnN0YXJ0T2ZWaXNpdD1mYWxzZSZzY3JpcHRWZXJzaW9uPTIwMTkwMTE1Jm5vbmNlPThGRjcyMTVBRjMyOUM4MEEmZXZlbnRUeXBlPWFjdGl2aXR5JnRpbWU9MTYzNTc3NDY4NDMzNyZhY3RpdmU9ZmFsc2UmbnVtYmVyQ2xpY2tzPTAmdGFiQ291bnQ9MA==
+</code></pre><!-- raw HTML omitted -->
+<blockquote>
+<p>Utiliser un décodeur en base 64, comme par exemple <a href="https://base64.guru/converter/decode/file">base64.guru</a> et afficher le texte decodé.</p>
+</blockquote>
+<p><strong>8.</strong> De quoi peut-il s&rsquo;agir?</p>
+<p><em>Pour l&rsquo;outil de developpement du navigateur, on pourra s&rsquo;aider de la page <a href="https://developer.mozilla.org/fr/docs/Tools/Network_Monitor/request_details">MDN Web Docs: Détails des requêtes réseau</a></em></p>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#des-requêtes-http-jusquà-la-page-web">Des requêtes HTTP jusqu&rsquo;à la page Web</a></li>
+    <li><a href="#naviguer-sur-le-web">naviguer sur le web</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#get">GET</a>
+      <ul>
+        <li><a href="#paramètres-url">Paramètres URL</a></li>
+        <li><a href="#inconvenients-de-la-méthode-get">inconvenients de la méthode GET</a></li>
+      </ul>
+    </li>
+    <li><a href="#la-méthode-post">La méthode POST</a></li>
+    <li><a href="#comparatif-get-post">Comparatif GET POST</a></li>
+    <li><a href="#autres-méthodes-http">Autres méthodes HTTP</a>
+      <ul>
+        <li><a href="#la-méthode-head">La méthode HEAD</a></li>
+        <li><a href="#options">OPTIONS</a></li>
+        <li><a href="#trace">TRACE</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#http-header-côté-client">HTTP header Côté client</a></li>
+    <li><a href="#http-header-côté-serveur">HTTP header Côté serveur</a></li>
+    <li><a href="#classes-de-statut-http">Classes de statut HTTP</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#sécurité">Sécurité</a></li>
+    <li><a href="#confidentialité-http-un-protocole-sans-etat">confidentialité: HTTP, un protocole sans ETAT</a>
+      <ul>
+        <li><a href="#protocole-sans-état">Protocole sans état</a></li>
+        <li><a href="#cookies">Cookies</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

@@ -1,34 +1,337 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>mise au point
-| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel=stylesheet><script type=text/x-mathjax-config>
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    mise au point
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
   });
-</script><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.1c02dc1d2c0b546a84beb71d8f4336d6f5d7b69564e08bdfc04c2fb0595d786d.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
 catch(err)
-{console.log(err.message);}
-if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
-if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
-if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}
-let chemin=window.location.pathname;if(chemin.search('NSI')>-1){baniere=document.querySelector("#myHeader");let linkBox=document.createElement('div');linkBox.classList.add('linkBox');let newH=document.createElement('a');newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';newH.classList.add('nsi');linkBox.appendChild(newH);baniere.appendChild(linkBox);}</script><style>#myHeader{display:flex;flex-direction:row-reverse}#myHeader>.titre{width:80%;min-width:300px;text-align:left}.linkBox{margin:10px;padding-top:10px;background-color:pink;min-width:50px}.isn{}</style></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2f docs\2fNSI\2flangages\2fpage5\2f ]{color:#004ed0}</style><ul><li><a href=/><strong>Accueil</strong></a></li><li><a href=/docs/esf/esf_index/><strong>ESF</strong></a></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p></li><li><p><a href=/docs/python/index_python/><strong>Python</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
-addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-page><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
-<strong>mise au point</strong></header><article class=markdown><h1 id=mise-au-point-d-un-programme>Mise au point d&rsquo;un programme</h1><p>Les consignes suivantes sont adaptées au langage Python. Il s&rsquo;agit d&rsquo;un recueil de <em>bonnes</em> pratiques.</p><p>Pour créer une cohérence dans le code, il est recommandé d&rsquo;utiliser un <em>guide de style</em>. Il s&rsquo;agit de PEP8 sur <a href=https://python.org>https://python.org</a>.</p><p>Une première façon de gérer les erreurs passe par la documentation. Le but de la documentation est de permettre à l&rsquo;utilisateur d&rsquo;une fonction de savoir comment l&rsquo;appeler correctement et comment interpréter sa valeur de retour.</p><h2 id=spécification-d-un-algorithme>Spécification d&rsquo;un algorithme</h2><p>Construire un algorithme consiste à découvrir les actions qu&rsquo;il faut organiser dans le temps, et à choisir la manière de les organiser pour obtenir le résultat escompté par leurs effets cumulés. La <em>spécification</em> doit permettre d&rsquo;aider à cette construction, sans ambiguïté.</p><p>La spécification de l&rsquo;agorithme doit comprendre :</p><ul><li>Le nom donné à cet algorithme. Ce nom soit être explicite, en rapport avec la tâche effectuée par l&rsquo;algorithme</li><li>Une description du résultat de cet algorithme, ainsi que la manière avec laquelle on va s&rsquo;y prendre</li><li>Le type et la nature des données en <em>entrée</em></li><li>Le type et la nature des données en <em>sortie</em></li><li>eventuellement, le type et la nature des variables internes</li></ul><p><em>Exemple :</em> recherche_maximum</p><pre><code>&quot;&quot;&quot;
-L'algorithme recherche la valeur maximale dans la liste.
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI\2flangages\2fpage5\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    mise au point
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="mise-au-point-dun-programme">Mise au point d&rsquo;un programme</h1>
+<p>Les consignes suivantes sont adaptées au langage Python. Il s&rsquo;agit d&rsquo;un recueil de <em>bonnes</em> pratiques.</p>
+<p>Pour créer une cohérence dans le code, il est recommandé d&rsquo;utiliser un <em>guide de style</em>. Il s&rsquo;agit de PEP8 sur <a href="https://python.org">https://python.org</a>.</p>
+<p>Une première façon de gérer les erreurs passe par la documentation. Le but de la documentation est de permettre à l&rsquo;utilisateur d&rsquo;une fonction de savoir comment l&rsquo;appeler correctement et comment interpréter sa valeur de retour.</p>
+<h2 id="spécification-dun-algorithme">Spécification d&rsquo;un algorithme</h2>
+<p>Construire un algorithme consiste à découvrir les actions qu&rsquo;il faut organiser dans le temps, et à choisir la manière de les organiser pour obtenir le résultat escompté par leurs effets cumulés. La <em>spécification</em> doit permettre d&rsquo;aider à cette construction, sans ambiguïté.</p>
+<p>La spécification de l&rsquo;agorithme doit comprendre :</p>
+<ul>
+<li>Le nom donné à cet algorithme. Ce nom soit être explicite, en rapport avec la tâche effectuée par l&rsquo;algorithme</li>
+<li>Une description du résultat de cet algorithme, ainsi que la manière avec laquelle on va s&rsquo;y prendre</li>
+<li>Le type et la nature des données en <em>entrée</em></li>
+<li>Le type et la nature des données en <em>sortie</em></li>
+<li>eventuellement, le type et la nature des variables internes</li>
+</ul>
+<p><em>Exemple :</em> recherche_maximum</p>
+<pre tabindex="0"><code>&#34;&#34;&#34;
+L&#39;algorithme recherche la valeur maximale dans la liste.
 variables en entrée : 
 ------------------
-ma_liste : list, une liste de valeurs entieres, uniques, mises dans un ordre aléatoires.
-max : int, stocke la valeur maximale actuelle. Initialisé à 0.
+:ma_liste : list, une liste de valeurs entieres, uniques, mises dans un ordre aléatoires.
+:max : int, stocke la valeur maximale actuelle. Initialisé à 0.
 Sortie :
 ------
-max : int, prend la valeur de l'élément le plus grand de la liste
+:max : int, prend la valeur de l&#39;élément le plus grand de la liste
 Principe : 
 --------
 on parcourt la liste avec une boucle bornée.
 si la valeur la valeur de max est inferieure à la valeur courante, max est actualisée avec cette valeur courante
-&quot;&quot;&quot;
+Exemple:
+&gt; recherche_maximum([0,2,3,1])
+3
+--------
+&#34;&#34;&#34;
 max := 0
 pour i allant du premier au dernier element de ma_liste faire
     si i &gt; max  
@@ -36,158 +339,454 @@ pour i allant du premier au dernier element de ma_liste faire
     fin
 fin
 afficher max
-</code></pre><p>Le <em>pseudo langage</em> adopté est celui utilisé dans wikipedia : <a href=https://fr.wikipedia.org/wiki/Tri_fusion>exemple</a></p><h2 id=prototypage-d-une-fonction>Prototypage d&rsquo;une fonction</h2><p>Une fonction doit être déclarée avant son utilisation. Cette déclaration est le prototype de la fonction. Le prototype doit indiquer à l&rsquo;utilisateur le nom de la fonction, le type de la valeur de retour et le type des paramètres.</p><p>Pour de nombreux langages, ce prototypage est explicite, et cela provoque une erreur de compilation si ce prototypage n&rsquo;est pas correct.</p><p><em>Exemple de déclaration d&rsquo;une fonction en langage ADA :</em></p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ada data-lang=ada><span style=color:#00a8c8>function</span> <span style=color:#75af00>A_Rect</span><span style=color:#111>(</span><span style=color:#111>larg</span> <span style=color:#111>: </span><span style=color:#111>natural</span> <span style=color:#111>;</span> <span style=color:#111>long</span> <span style=color:#111>: </span><span style=color:#111>natural</span><span style=color:#111>)</span> <span style=color:#00a8c8>return</span> <span style=color:#00a8c8>natural</span> <span style=color:#00a8c8>is</span>
-  <span style=color:#111>A</span> <span style=color:#111>:</span> <span style=color:#00a8c8>natural</span> <span style=color:#111>;</span> 
-<span style=color:#00a8c8>begin</span>
-  <span style=color:#111>A</span><span style=color:#111>:=</span> <span style=color:#111>larg</span> <span style=color:#f92672>*</span> <span style=color:#111>long</span><span style=color:#111>;</span>
-  <span style=color:#00a8c8>return</span> <span style=color:#111>A</span><span style=color:#111>;</span>
-<span style=color:#00a8c8>end</span> <span style=color:#75af00>A_Rect</span> <span style=color:#111>;</span></code></pre></div><p>En python, malheureusement, ce prototypage est facultatif, mais il fait partie des <em>bonnes méthodes</em> de le réaliser.</p><p>En python, on pourra construire le prototypage dans le commentaire, mis tout de suite après la déclaration de la fonction :</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>def</span> <span style=color:#75af00>a_rect</span><span style=color:#111>(</span><span style=color:#111>larg</span><span style=color:#111>,</span><span style=color:#111>long</span><span style=color:#111>):</span>
-    <span style=color:#d88200>&#34;&#34;&#34;Le produit de 2 nombres.
-</span><span style=color:#d88200>    
-</span><span style=color:#d88200>    Renvoie le produit des 2 nombres passés en argument
-</span><span style=color:#d88200>    
-</span><span style=color:#d88200>    Parameters
-</span><span style=color:#d88200>    ----------
-</span><span style=color:#d88200>    larg : int ou float
-</span><span style=color:#d88200>           la largeur du rectangle
-</span><span style=color:#d88200>           
-</span><span style=color:#d88200>    long : int ou float
-</span><span style=color:#d88200>           la longueur du rectangle
-</span><span style=color:#d88200>    
-</span><span style=color:#d88200>    Returns
-</span><span style=color:#d88200>    -------
-</span><span style=color:#d88200>    int ou float
-</span><span style=color:#d88200>
-</span><span style=color:#d88200>    Variables
-</span><span style=color:#d88200>    ---------
-</span><span style=color:#d88200>    a : int ou float
-</span><span style=color:#d88200>        larg * long
-</span><span style=color:#d88200>    
-</span><span style=color:#d88200>    &#34;&#34;&#34;</span>
-    <span style=color:#111>a</span> <span style=color:#f92672>=</span> <span style=color:#111>larg</span> <span style=color:#f92672>*</span> <span style=color:#111>long</span>
-    <span style=color:#00a8c8>return</span> <span style=color:#111>a</span></code></pre></div><p>On voit que le prototypage d&rsquo;une fonction donne à peu près les mêmes informations que la <em>spécification d&rsquo;un algorithme</em>.</p><p>On pourra consulter la page du site <a href=https://lyceum.fr/1g/nsi/7-langages-et-programmation/6-fonctions>Lyceum</a> pour plus d&rsquo;informations.</p><h2 id=ajouter-un-doctest>Ajouter un Doctest</h2><p>Le doctest est un module qui recherche dans le prototypage (docstring) de la fonction ce qui pourrait s&rsquo;apparenter à des tests sur la fonction.</p><p>Comme par exemple:</p><pre><code>&gt;&gt;&gt; multiplie(2,3)
+</code></pre><p>Le <em>pseudo langage</em> adopté est celui utilisé dans wikipedia : <a href="https://fr.wikipedia.org/wiki/Tri_fusion">exemple</a></p>
+<h2 id="prototypage-dune-fonction">Prototypage d&rsquo;une fonction</h2>
+<p>Une fonction doit être déclarée avant son utilisation. Cette déclaration est le prototype de la fonction. Le prototype doit indiquer à l&rsquo;utilisateur le nom de la fonction, le type de la valeur de retour et le type des paramètres.</p>
+<p>Pour de nombreux langages, ce prototypage est explicite, et cela provoque une erreur de compilation si ce prototypage n&rsquo;est pas correct.</p>
+<p><em>Exemple de déclaration d&rsquo;une fonction en langage ADA :</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ada" data-lang="ada"><span style="display:flex;"><span><span style="color:#00a8c8">function</span> <span style="color:#75af00">A_Rect</span><span style="color:#111">(</span><span style="color:#111">larg</span> <span style="color:#111">: </span><span style="color:#111">natural</span> <span style="color:#111">;</span> <span style="color:#111">long</span> <span style="color:#111">: </span><span style="color:#111">natural</span><span style="color:#111">)</span> <span style="color:#00a8c8">return</span> <span style="color:#00a8c8">natural</span> <span style="color:#00a8c8">is</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">A</span> <span style="color:#111">:</span> <span style="color:#00a8c8">natural</span> <span style="color:#111">;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">begin</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">A</span><span style="color:#111">:=</span> <span style="color:#111">larg</span> <span style="color:#f92672">*</span> <span style="color:#111">long</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">return</span> <span style="color:#111">A</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">end</span> <span style="color:#75af00">A_Rect</span> <span style="color:#111">;</span>
+</span></span></code></pre></div><p>En python, malheureusement, ce prototypage est facultatif, mais il fait partie des <em>bonnes méthodes</em> de le réaliser.</p>
+<p>En python, on pourra construire le prototypage dans le commentaire, mis tout de suite après la déclaration de la fonction :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">a_rect</span><span style="color:#111">(</span><span style="color:#111">larg</span><span style="color:#111">,</span><span style="color:#111">long</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#d88200">&#34;&#34;&#34;Le produit de 2 nombres.
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    Renvoie le produit des 2 nombres passés en argument
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    :param larg : int ou float
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">           la largeur du rectangle
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">           
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    :param long : int ou float
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">           la longueur du rectangle
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    :return a: int ou float
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">            larg * long
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    Exemple
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    -------
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    &gt;&gt;&gt; a_rect(2,3)
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    6
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#111">larg</span> <span style="color:#f92672">*</span> <span style="color:#111">long</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">a</span>
+</span></span></code></pre></div><p>On voit que le prototypage d&rsquo;une fonction donne à peu près les mêmes informations que la <em>spécification d&rsquo;un algorithme</em>.</p>
+<p>Pour accéder au contenu du prototypage depuis le shell python, il faudra charger le fichier: <code>&gt; from fichier import *</code>, puis utiliser <code>help</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#111">help</span><span style="color:#111">(</span><span style="color:#111">a_rect</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>Pour sortir de la fenêtre de l&rsquo;aide, appuyer sur la touche <code>q</code>.</p>
+<p>On pourra consulter la page du site <a href="https://lyceum.fr/1g/nsi/7-langages-et-programmation/6-fonctions">Lyceum</a> pour plus d&rsquo;informations.</p>
+<h2 id="ajouter-un-doctest">Ajouter un Doctest</h2>
+<p>Le doctest est un module qui recherche dans le prototypage (docstring) de la fonction ce qui pourrait s&rsquo;apparenter à des tests sur la fonction.</p>
+<p>Comme par exemple:</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; a_rect(2,3)
 6
-</code></pre><p>Supposons que l&rsquo;on ait programmé une fonction qui multiplie 2 nombres passés en arguments. On écrit alors une simulation d&rsquo;un essai directement dans le docstring, en écrivant de manière explicite les 3 chevrons. Ainsi que la valeur attendue pour des arguments choisis.</p><p>Pour réaliser des tests sur la fonction, on ajoutera alors à la suite du script les lignes suivantes:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>if</span> <span style=color:#111>__name__</span> <span style=color:#f92672>==</span> <span style=color:#d88200>&#34;__main__&#34;</span><span style=color:#111>:</span>
-    <span style=color:#f92672>import</span> <span style=color:#111>doctest</span>
-    <span style=color:#111>doctest</span><span style=color:#f92672>.</span><span style=color:#111>testmod</span><span style=color:#111>()</span></code></pre></div><p>Documentation officielle :<a href=https://docs.python.org/fr/3/library/doctest.html#module-doctest>Lien</a></p><h1 id=prévoir-et-gérer-les-erreurs>Prévoir et gérer les erreurs</h1><h2 id=traceback>Traceback</h2><p>L&rsquo;exécution d&rsquo;un programme peut provoquer une erreur, une <em>exception</em>. Lorsque c&rsquo;est le cas, l&rsquo;exécution s&rsquo;arrête immédiatement et l&rsquo;interpréteur Python affiche une trace d&rsquo;erreur.</p><p>Cette dernière fournit des informations quant au chemin d&rsquo;exécution qui a mené jusqu&rsquo;à l&rsquo;erreur et sur la cause de cette dernière.</p><p>La console affiche <code>Traceback</code>, qui marque le début de la trace d&rsquo;erreur.</p><p>On peut distinguer 3 types d&rsquo;erreurs :</p><ul><li>erreur de syntaxe</li><li>erreur d&rsquo;execution</li><li>erreur de logique</li></ul><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>def</span> <span style=color:#75af00>inverse</span> <span style=color:#111>(</span><span style=color:#111>x</span><span style=color:#111>):</span>
-    <span style=color:#111>y</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1.0</span> <span style=color:#f92672>/</span> <span style=color:#111>x</span>
-    <span style=color:#00a8c8>return</span> <span style=color:#111>y</span>
-
-<span style=color:#111>a</span> <span style=color:#f92672>=</span> <span style=color:#111>inverse</span><span style=color:#111>(</span><span style=color:#ae81ff>2</span><span style=color:#111>)</span>
-<span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#111>a</span><span style=color:#111>)</span>
-<span style=color:#111>b</span> <span style=color:#f92672>=</span> <span style=color:#111>inverse</span><span style=color:#111>(</span><span style=color:#ae81ff>0</span><span style=color:#111>)</span>
-<span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#111>b</span><span style=color:#111>)</span></code></pre></div><p>L’interpréteur Python affiche ce qu’on appelle la pile d’appels ou pile d’exécution. La pile d’appel permet d’obtenir la liste de toutes les fonctions pour remonter jusqu’à celle où l’erreur s’est produite.</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75af00>ZeroDivisionError</span>                         <span style=color:#111>Traceback</span> <span style=color:#111>(</span><span style=color:#111>most</span> <span style=color:#111>recent</span> <span style=color:#111>call</span> <span style=color:#111>last</span><span style=color:#111>)</span>
-<span style=color:#f92672>&lt;</span><span style=color:#111>ipython</span><span style=color:#f92672>-</span><span style=color:#111>input</span><span style=color:#f92672>-</span><span style=color:#ae81ff>24</span><span style=color:#f92672>-</span><span style=color:#111>bdb719052d31</span><span style=color:#f92672>&gt;</span> <span style=color:#f92672>in</span> <span style=color:#f92672>&lt;</span><span style=color:#111>module</span><span style=color:#f92672>&gt;</span>
-      <span style=color:#ae81ff>5</span> <span style=color:#111>a</span> <span style=color:#f92672>=</span> <span style=color:#111>inverse</span><span style=color:#111>(</span><span style=color:#ae81ff>2</span><span style=color:#111>)</span>
-      <span style=color:#ae81ff>6</span> <span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#111>a</span><span style=color:#111>)</span>
-<span style=color:#f92672>----&gt;</span> <span style=color:#ae81ff>7</span> <span style=color:#111>b</span> <span style=color:#f92672>=</span> <span style=color:#111>inverse</span><span style=color:#111>(</span><span style=color:#ae81ff>0</span><span style=color:#111>)</span>
-      <span style=color:#ae81ff>8</span> <span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#111>b</span><span style=color:#111>)</span>
-
-<span style=color:#f92672>&lt;</span><span style=color:#111>ipython</span><span style=color:#f92672>-</span><span style=color:#111>input</span><span style=color:#f92672>-</span><span style=color:#ae81ff>24</span><span style=color:#f92672>-</span><span style=color:#111>bdb719052d31</span><span style=color:#f92672>&gt;</span> <span style=color:#f92672>in</span> <span style=color:#111>inverse</span><span style=color:#111>(</span><span style=color:#111>x</span><span style=color:#111>)</span>
-      <span style=color:#ae81ff>1</span> <span style=color:#00a8c8>def</span> <span style=color:#75af00>inverse</span> <span style=color:#111>(</span><span style=color:#111>x</span><span style=color:#111>):</span>
-<span style=color:#f92672>----&gt;</span> <span style=color:#ae81ff>2</span>     <span style=color:#111>y</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1.0</span> <span style=color:#f92672>/</span> <span style=color:#111>x</span>
-      <span style=color:#ae81ff>3</span>     <span style=color:#00a8c8>return</span> <span style=color:#111>y</span>
-      <span style=color:#ae81ff>4</span> 
-      <span style=color:#ae81ff>5</span> <span style=color:#111>a</span> <span style=color:#f92672>=</span> <span style=color:#111>inverse</span><span style=color:#111>(</span><span style=color:#ae81ff>2</span><span style=color:#111>)</span>
-
-<span style=color:#75af00>ZeroDivisionError</span><span style=color:#111>:</span> <span style=color:#111>float</span> <span style=color:#111>division</span> <span style=color:#111>by</span> <span style=color:#111>zero</span></code></pre></div><h3 id=messages-d-exception>Messages d&rsquo;exception</h3><p>Les messages d&rsquo;exception affichés par le Traceback.</p><table><thead><tr><th>message</th><th>type erreur</th></tr></thead><tbody><tr><td>SyntaxError</td><td>parenthèse, crochet ou guillemet mal fermé</td></tr><tr><td>IndentationError</td><td>mauvaise indentation</td></tr><tr><td>ZeroDivisionError</td><td>division par zero</td></tr><tr><td>NameError</td><td>nom de fonction ou de variable mal orthographié</td></tr><tr><td>IndexError</td><td>accès à une position en dehors d’une liste</td></tr><tr><td>AttributeError</td><td>accès à une méthode ou à un attribut inconnu. <em>Exemple: &lsquo;list&rsquo; object has no attribute &lsquo;appand&rsquo;</em></td></tr><tr><td>TypeError</td><td>types incompatibles pour l’opération demandée. <em>Exemple: unsupported operand type(s) for &lsquo;-&rsquo;: &lsquo;range&rsquo; and &lsquo;int&rsquo;</em></td></tr><tr><td>ValueError</td><td>une valeur est inappropriée pour une certaine opération</td></tr><tr><td>KeyError</td><td>Une clé est utilisée pour accéder à un élément d’un dictionnaire dont elle ne fait pas partie</td></tr></tbody></table><h2 id=déclencher-des-exceptions>Déclencher des exceptions</h2><h3 id=raise><strong><code>Raise</code></strong></h3><p>L’instruction <code>raise</code> permet au programmeur de déclencher une exception spécifique:</p><p><em>Exemple:</em></p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>raise</span> <span style=color:#75af00>NameError</span><span style=color:#111>(</span><span style=color:#d88200>&#39;HiThere&#39;</span><span style=color:#111>)</span></code></pre></div><p>Affiche:</p><pre><code>NameError  Traceback (most recent call last)
+</code></pre><p>On écrit alors une simulation d&rsquo;un essai directement dans le docstring, en écrivant de manière explicite les 3 chevrons. Ainsi que la valeur attendue pour des arguments choisis. (voir le paragraphe précédent)</p>
+<p>Pour réaliser des tests sur la fonction, on ajoutera alors à la suite du script les lignes suivantes:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">if</span> <span style="color:#111">__name__</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#34;__main__&#34;</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">import</span> <span style="color:#111">doctest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">doctest</span><span style="color:#f92672">.</span><span style="color:#111">testmod</span><span style="color:#111">()</span>
+</span></span></code></pre></div><p>Supposons que l&rsquo;on ait fait une erreur dans la fonction <code>a_rect</code> sur la valeur calculée, et que l&rsquo;on ait écrit:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    <span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#111">long</span> <span style="color:#f92672">*</span> <span style="color:#111">long</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">a</span>
+</span></span></code></pre></div><p>alors la console affichera, à l&rsquo;execution du programme:</p>
+<pre tabindex="0"><code>Failed example:
+    a_rect(2,3)
+Expected:
+    6
+Got:
+    9
+</code></pre><p>Documentation officielle :<a href="https://docs.python.org/fr/3/library/doctest.html#module-doctest">Lien</a></p>
+<h1 id="prévoir-et-gérer-les-erreurs">Prévoir et gérer les erreurs</h1>
+<h2 id="traceback">Traceback</h2>
+<p>L&rsquo;exécution d&rsquo;un programme peut provoquer une erreur, une <em>exception</em>. Lorsque c&rsquo;est le cas, l&rsquo;exécution s&rsquo;arrête immédiatement et l&rsquo;interpréteur Python affiche une trace d&rsquo;erreur.</p>
+<p>Cette dernière fournit des informations quant au chemin d&rsquo;exécution qui a mené jusqu&rsquo;à l&rsquo;erreur et sur la cause de cette dernière.</p>
+<p>La console affiche <code>Traceback</code>, qui marque le début de la trace d&rsquo;erreur.</p>
+<p>On peut distinguer 3 types d&rsquo;erreurs :</p>
+<ul>
+<li>erreur de syntaxe</li>
+<li>erreur d&rsquo;execution</li>
+<li>erreur de logique</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">inverse</span> <span style="color:#111">(</span><span style="color:#111">x</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.0</span> <span style="color:#f92672">/</span> <span style="color:#111">x</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">y</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#111">inverse</span><span style="color:#111">(</span><span style="color:#ae81ff">2</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">a</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">b</span> <span style="color:#f92672">=</span> <span style="color:#111">inverse</span><span style="color:#111">(</span><span style="color:#ae81ff">0</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">b</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>L’interpréteur Python affiche ce qu’on appelle la pile d’appels ou pile d’exécution. La pile d’appel permet d’obtenir la liste de toutes les fonctions pour remonter jusqu’à celle où l’erreur s’est produite.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75af00">ZeroDivisionError</span>                         <span style="color:#111">Traceback</span> <span style="color:#111">(</span><span style="color:#111">most</span> <span style="color:#111">recent</span> <span style="color:#111">call</span> <span style="color:#111">last</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#111">ipython</span><span style="color:#f92672">-</span><span style="color:#111">input</span><span style="color:#f92672">-</span><span style="color:#ae81ff">24</span><span style="color:#f92672">-</span><span style="color:#111">bdb719052d31</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">in</span> <span style="color:#f92672">&lt;</span><span style="color:#111">module</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#ae81ff">5</span> <span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#111">inverse</span><span style="color:#111">(</span><span style="color:#ae81ff">2</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#ae81ff">6</span> <span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">a</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">----&gt;</span> <span style="color:#ae81ff">7</span> <span style="color:#111">b</span> <span style="color:#f92672">=</span> <span style="color:#111">inverse</span><span style="color:#111">(</span><span style="color:#ae81ff">0</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#ae81ff">8</span> <span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">b</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#111">ipython</span><span style="color:#f92672">-</span><span style="color:#111">input</span><span style="color:#f92672">-</span><span style="color:#ae81ff">24</span><span style="color:#f92672">-</span><span style="color:#111">bdb719052d31</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">in</span> <span style="color:#111">inverse</span><span style="color:#111">(</span><span style="color:#111">x</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#ae81ff">1</span> <span style="color:#00a8c8">def</span> <span style="color:#75af00">inverse</span> <span style="color:#111">(</span><span style="color:#111">x</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">----&gt;</span> <span style="color:#ae81ff">2</span>     <span style="color:#111">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.0</span> <span style="color:#f92672">/</span> <span style="color:#111">x</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#ae81ff">3</span>     <span style="color:#00a8c8">return</span> <span style="color:#111">y</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#ae81ff">4</span> 
+</span></span><span style="display:flex;"><span>      <span style="color:#ae81ff">5</span> <span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#111">inverse</span><span style="color:#111">(</span><span style="color:#ae81ff">2</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">ZeroDivisionError</span><span style="color:#111">:</span> <span style="color:#111">float</span> <span style="color:#111">division</span> <span style="color:#111">by</span> <span style="color:#111">zero</span>
+</span></span></code></pre></div><h3 id="messages-dexception">Messages d&rsquo;exception</h3>
+<p>Les messages d&rsquo;exception affichés par le Traceback.</p>
+<table>
+<thead>
+<tr>
+<th>message</th>
+<th>type erreur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SyntaxError</td>
+<td>parenthèse, crochet ou guillemet mal fermé</td>
+</tr>
+<tr>
+<td>IndentationError</td>
+<td>mauvaise indentation</td>
+</tr>
+<tr>
+<td>ZeroDivisionError</td>
+<td>division par zero</td>
+</tr>
+<tr>
+<td>NameError</td>
+<td>nom de fonction ou de variable mal orthographié</td>
+</tr>
+<tr>
+<td>IndexError</td>
+<td>accès à une position en dehors d’une liste</td>
+</tr>
+<tr>
+<td>AttributeError</td>
+<td>accès à une méthode ou à un attribut inconnu.  <em>Exemple: &rsquo;list&rsquo; object has no attribute &lsquo;appand&rsquo;</em></td>
+</tr>
+<tr>
+<td>TypeError</td>
+<td>types incompatibles pour l’opération demandée.  <em>Exemple: unsupported operand type(s) for &lsquo;-&rsquo;: &lsquo;range&rsquo; and &lsquo;int&rsquo;</em></td>
+</tr>
+<tr>
+<td>ValueError</td>
+<td>une valeur est inappropriée pour une certaine opération</td>
+</tr>
+<tr>
+<td>KeyError</td>
+<td>Une clé est utilisée pour accéder à un élément d’un dictionnaire dont elle ne fait pas partie</td>
+</tr>
+</tbody>
+</table>
+<h2 id="déclencher-des-exceptions">Déclencher des exceptions</h2>
+<h3 id="raise"><strong><code>Raise</code></strong></h3>
+<p>L’instruction <code>raise</code> permet au programmeur de déclencher une exception spécifique:</p>
+<p><em>Exemple:</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">raise</span> <span style="color:#75af00">NameError</span><span style="color:#111">(</span><span style="color:#d88200">&#39;HiThere&#39;</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>Affiche:</p>
+<pre tabindex="0"><code>NameError  Traceback (most recent call last)
 &lt;ipython-input-27-72c183edb298&gt; in &lt;module&gt;
-----&gt; 1 raise NameError('HiThere')
+----&gt; 1 raise NameError(&#39;HiThere&#39;)
 
 NameError: HiThere
-</code></pre><h3 id=assertions-assert><strong>Assertions: <code>assert</code></strong></h3><p><strong>Les assertions sont les hypothèses avec vérification</strong>.</p><p>Le rajout <em>provisoire</em> d&rsquo;assertions dans le script va permettre d&rsquo;anticiper sur les erreurs possibles de logique.</p><p>Le mécanisme d&rsquo;assertion est là pour empêcher des erreurs qui ne devraient pas se produire, en arrêtant prématurément le programme. C&rsquo;est un mode de programmation <em>défensif</em>, dans lequel on vérifie les <em>préconditions</em>.</p><p><em>Méthode :</em> <code>assert &lt;expression logique&gt;, 'commentaire facultatif'</code></p><p>L&rsquo;expression logique doit être egale à <code>True</code> pour que le programme se poursuive.</p><p><em>Exemple avec une erreur d&rsquo;execution :</em></p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>def</span> <span style=color:#75af00>inverse</span> <span style=color:#111>(</span><span style=color:#111>x</span><span style=color:#111>):</span>
-    <span style=color:#00a8c8>assert</span> <span style=color:#111>b</span><span style=color:#f92672>!=</span><span style=color:#ae81ff>0</span><span style=color:#111>,</span><span style=color:#d88200>&#39;argument nul&#39;</span>
-    <span style=color:#111>y</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1.0</span> <span style=color:#f92672>/</span> <span style=color:#111>x</span>
-    <span style=color:#00a8c8>return</span> <span style=color:#111>y</span></code></pre></div><p>Lorsque l&rsquo;on execute la fonction <code>inverse</code> avec zero comme argument, le programme s&rsquo;arrête et renvoie le message suivant dans le <code>Traceback</code>:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>inverse</span><span style=color:#111>(</span><span style=color:#ae81ff>0</span><span style=color:#111>)</span>
-
-<span style=color:#75af00>AssertionError</span> <span style=color:#111>:</span> <span style=color:#111>argument</span> <span style=color:#111>nul</span></code></pre></div><p>Mais l&rsquo;interêt réside surtout dans l&rsquo;utilisation d&rsquo;<em>assertion</em> pour prévenir une possible erreur logique:</p><p>On souhaite maintenant obtenir le même comportement (arrêt pour une valeur sortant de l&rsquo;ensemble de définition d&rsquo;une fonction) pour la fonction de conversion de degré Celsius en degré Fahrenheit. En effet, il n’y aurait aucun sens de convertir une température inférieure à la température correspondant au zéro absolu. (exemple issu de <a href=https://www.fil.univ-lille1.fr/~wegrzyno/portail/Info/Doc/HTML/seq2_booleens_conditionnelles.html>univ.lille</a>)</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>def</span> <span style=color:#75af00>en_fahrenheit</span><span style=color:#111>(</span><span style=color:#111>c</span><span style=color:#111>)</span> <span style=color:#111>:</span>
-    <span style=color:#d88200>&#34;&#34;&#34;
-</span><span style=color:#d88200>      conversion en Fahrenheit d&#39;une température donnée en Celsius
-</span><span style=color:#d88200>      C.U. c doit être supérieure au zéro absolu.
-</span><span style=color:#d88200>
-</span><span style=color:#d88200>    &#34;&#34;&#34;</span>
-    <span style=color:#00a8c8>assert</span> <span style=color:#111>c</span><span style=color:#f92672>&gt;-</span><span style=color:#ae81ff>273.15</span><span style=color:#111>,</span> <span style=color:#111>valeur</span> <span style=color:#111>inferieure</span> <span style=color:#111>au</span> <span style=color:#111>zero</span> <span style=color:#111>absolu</span>
-    <span style=color:#00a8c8>return</span> <span style=color:#ae81ff>9</span><span style=color:#f92672>*</span><span style=color:#111>c</span><span style=color:#f92672>/</span><span style=color:#ae81ff>5</span><span style=color:#f92672>+</span><span style=color:#ae81ff>32</span></code></pre></div><p>Alors :</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>en_fahrenheit</span><span style=color:#111>(</span><span style=color:#f92672>-</span><span style=color:#ae81ff>500</span><span style=color:#111>)</span>
-<span style=color:#75715e># Affichage</span>
-<span style=color:#75af00>AssertionError</span> <span style=color:#111>valeur</span> <span style=color:#111>inferieure</span> <span style=color:#111>au</span> <span style=color:#111>zero</span> <span style=color:#111>absolu</span></code></pre></div><h2 id=créer-un-module-de-test-unitaires-avec-unittest>Créer un module de test unitaires avec <strong><code>unittest</code></strong></h2><p><strong>Définition:</strong> Un test unitaire est un test réalisé sur une portion du programme, typiquement sur une fonction.</p><p>Le module <code>unittest</code> offre des outils de test de code, comme la classe TestCase. Le but est de vérifier que votre code génère des résultats corrects, conformes au attentes.</p><blockquote><p>Exemple</p></blockquote><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> <span style=color:#111>unittest</span>
-
-<span style=color:#00a8c8>def</span> <span style=color:#75af00>add</span><span style=color:#111>(</span><span style=color:#111>x</span><span style=color:#111>,</span><span style=color:#111>y</span><span style=color:#111>):</span>
-    <span style=color:#00a8c8>return</span> <span style=color:#111>x</span> <span style=color:#f92672>+</span> <span style=color:#111>y</span>
-
-<span style=color:#00a8c8>class</span> <span style=color:#75af00>MyTest</span><span style=color:#111>(</span><span style=color:#111>unittest</span><span style=color:#f92672>.</span><span style=color:#111>TestCase</span><span style=color:#111>):</span>
-    <span style=color:#00a8c8>def</span> <span style=color:#75af00>test_add</span><span style=color:#111>(</span><span style=color:#111>self</span><span style=color:#111>):</span>
-        <span style=color:#111>self</span><span style=color:#f92672>.</span><span style=color:#111>assertEqual</span><span style=color:#111>(</span><span style=color:#111>add</span><span style=color:#111>(</span><span style=color:#ae81ff>3</span><span style=color:#111>,</span><span style=color:#ae81ff>4</span><span style=color:#111>),</span> <span style=color:#ae81ff>7</span><span style=color:#111>)</span>
-
-<span style=color:#00a8c8>if</span> <span style=color:#111>__name__</span> <span style=color:#f92672>==</span> <span style=color:#d88200>&#39;__main__&#39;</span><span style=color:#111>:</span>
-    <span style=color:#111>unittest</span><span style=color:#f92672>.</span><span style=color:#111>main</span><span style=color:#111>()</span></code></pre></div><blockquote><p>Explications</p></blockquote><p>On commence par importer le module <code>unittest</code>.</p><p>Les noms des classes de test se terminent généralement par <code>TestCase</code> (scenario de test). La classe créée pour le test, <code>MyTest</code> doit être une classe enfant de <code>unittest.TestCase</code>, d&rsquo;où l&rsquo;instruction <code>class MyTest(unittest.TestCase):</code></p><p>Chaque test à créer est une méthode. Toute méthode dont le nom commence par <code>test_</code> est exécutée lors du test. La méthode <code>test_add</code> appelle donc la fonction <code>add</code> avec les arguments 3 et 4, puis vérifie que son résultat est conforme, grâce à un test d&rsquo;assertion <code>assertEqual</code>.</p><p>Ici, le test reussit:</p><p>En console:</p><pre><code>Ran 1 tests, passed: 1 failed: 0
-</code></pre><p>On ajoute maintenant un deuxième test:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> <span style=color:#111>unittest</span>
-
-<span style=color:#00a8c8>def</span> <span style=color:#75af00>add</span><span style=color:#111>(</span><span style=color:#111>x</span><span style=color:#111>,</span><span style=color:#111>y</span><span style=color:#111>):</span>
-    <span style=color:#00a8c8>return</span> <span style=color:#111>x</span> <span style=color:#f92672>+</span> <span style=color:#111>y</span>
-
-<span style=color:#00a8c8>class</span> <span style=color:#75af00>MyTest</span><span style=color:#111>(</span><span style=color:#111>unittest</span><span style=color:#f92672>.</span><span style=color:#111>TestCase</span><span style=color:#111>):</span>
-    <span style=color:#00a8c8>def</span> <span style=color:#75af00>test_add1</span><span style=color:#111>(</span><span style=color:#111>self</span><span style=color:#111>):</span>
-        <span style=color:#111>self</span><span style=color:#f92672>.</span><span style=color:#111>assertEqual</span><span style=color:#111>(</span><span style=color:#111>add</span><span style=color:#111>(</span><span style=color:#ae81ff>3</span><span style=color:#111>,</span><span style=color:#ae81ff>4</span><span style=color:#111>),</span> <span style=color:#ae81ff>7</span><span style=color:#111>)</span>
-        
-    <span style=color:#00a8c8>def</span> <span style=color:#75af00>test_add2</span><span style=color:#111>(</span><span style=color:#111>self</span><span style=color:#111>):</span>
-        <span style=color:#111>self</span><span style=color:#f92672>.</span><span style=color:#111>assertEqual</span><span style=color:#111>(</span><span style=color:#111>add</span><span style=color:#111>(</span><span style=color:#ae81ff>3</span><span style=color:#111>,</span><span style=color:#ae81ff>4</span><span style=color:#111>),</span> <span style=color:#ae81ff>8</span><span style=color:#111>)</span>
-
-<span style=color:#00a8c8>if</span> <span style=color:#111>__name__</span> <span style=color:#f92672>==</span> <span style=color:#d88200>&#39;__main__&#39;</span><span style=color:#111>:</span>
-    <span style=color:#111>unittest</span><span style=color:#f92672>.</span><span style=color:#111>main</span><span style=color:#111>()</span></code></pre></div><p>Le deuxième test échoue. On peut remonter jusqu&rsquo;à l&rsquo;erreur dans le Traceback qui est affiché en console:</p><pre><code># Traceback
+</code></pre><h3 id="assertions-assert"><strong>Assertions: <code>assert</code></strong></h3>
+<p><strong>Les assertions sont les hypothèses avec vérification</strong>.</p>
+<p>Le rajout <em>provisoire</em> d&rsquo;assertions dans le script va permettre d&rsquo;anticiper sur les erreurs possibles de logique.</p>
+<p>Le mécanisme d&rsquo;assertion est là pour empêcher des erreurs qui ne devraient pas se produire, en arrêtant prématurément le programme. C&rsquo;est un mode de programmation <em>défensif</em>, dans lequel on vérifie les <em>préconditions</em>.</p>
+<p><em>Méthode :</em>  <code>assert &lt;expression logique&gt;, 'commentaire facultatif'</code></p>
+<p>L&rsquo;expression logique doit être egale à <code>True</code> pour que le programme se poursuive.</p>
+<p><em>Exemple avec une erreur d&rsquo;execution :</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">inverse</span> <span style="color:#111">(</span><span style="color:#111">x</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">assert</span> <span style="color:#111">b</span><span style="color:#f92672">!=</span><span style="color:#ae81ff">0</span><span style="color:#111">,</span><span style="color:#d88200">&#39;argument nul&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.0</span> <span style="color:#f92672">/</span> <span style="color:#111">x</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">y</span>
+</span></span></code></pre></div><p>Lorsque l&rsquo;on execute la fonction <code>inverse</code> avec zero comme argument, le programme s&rsquo;arrête et renvoie le message suivant dans le <code>Traceback</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">inverse</span><span style="color:#111">(</span><span style="color:#ae81ff">0</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">AssertionError</span> <span style="color:#111">:</span> <span style="color:#111">argument</span> <span style="color:#111">nul</span>
+</span></span></code></pre></div><p>Mais l&rsquo;interêt réside surtout dans l&rsquo;utilisation d&rsquo;<em>assertion</em> pour prévenir une possible erreur logique:</p>
+<p>On souhaite maintenant obtenir le même comportement (arrêt pour une valeur sortant de l&rsquo;ensemble de définition d&rsquo;une fonction) pour la fonction de conversion de degré Celsius en degré Fahrenheit. En effet, il n’y aurait aucun sens de convertir une température inférieure à la température correspondant au zéro absolu. (exemple issu de <a href="https://www.fil.univ-lille1.fr/~wegrzyno/portail/Info/Doc/HTML/seq2_booleens_conditionnelles.html">univ.lille</a>)</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">en_fahrenheit</span><span style="color:#111">(</span><span style="color:#111">c</span><span style="color:#111">)</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#d88200">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">      conversion en Fahrenheit d&#39;une température donnée en Celsius
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">      C.U. c doit être supérieure au zéro absolu.
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">assert</span> <span style="color:#111">c</span><span style="color:#f92672">&gt;-</span><span style="color:#ae81ff">273.15</span><span style="color:#111">,</span> <span style="color:#111">valeur</span> <span style="color:#111">inferieure</span> <span style="color:#111">au</span> <span style="color:#111">zero</span> <span style="color:#111">absolu</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#ae81ff">9</span><span style="color:#f92672">*</span><span style="color:#111">c</span><span style="color:#f92672">/</span><span style="color:#ae81ff">5</span><span style="color:#f92672">+</span><span style="color:#ae81ff">32</span>
+</span></span></code></pre></div><p>Alors :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">en_fahrenheit</span><span style="color:#111">(</span><span style="color:#f92672">-</span><span style="color:#ae81ff">500</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Affichage</span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">AssertionError</span> <span style="color:#111">valeur</span> <span style="color:#111">inferieure</span> <span style="color:#111">au</span> <span style="color:#111">zero</span> <span style="color:#111">absolu</span>
+</span></span></code></pre></div><h2 id="créer-un-module-de-test-unitaires-avec-unittest">Créer un module de test unitaires avec <strong><code>unittest</code></strong></h2>
+<p><strong>Définition:</strong> Un test unitaire est un test réalisé sur une portion du programme, typiquement sur une fonction.</p>
+<p>Le module <code>unittest</code> offre des outils de test de code, comme la classe TestCase. Le but est de vérifier que votre code génère des résultats corrects, conformes au attentes.</p>
+<blockquote>
+<p>Exemple</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#111">unittest</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">add</span><span style="color:#111">(</span><span style="color:#111">x</span><span style="color:#111">,</span><span style="color:#111">y</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">x</span> <span style="color:#f92672">+</span> <span style="color:#111">y</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">class</span> <span style="color:#75af00">MyTest</span><span style="color:#111">(</span><span style="color:#111">unittest</span><span style="color:#f92672">.</span><span style="color:#111">TestCase</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">def</span> <span style="color:#75af00">test_add</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">assertEqual</span><span style="color:#111">(</span><span style="color:#111">add</span><span style="color:#111">(</span><span style="color:#ae81ff">3</span><span style="color:#111">,</span><span style="color:#ae81ff">4</span><span style="color:#111">),</span> <span style="color:#ae81ff">7</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">if</span> <span style="color:#111">__name__</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#39;__main__&#39;</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">unittest</span><span style="color:#f92672">.</span><span style="color:#111">main</span><span style="color:#111">()</span>
+</span></span></code></pre></div><blockquote>
+<p>Explications</p>
+</blockquote>
+<p>On commence par importer le module <code>unittest</code>.</p>
+<p>Les noms des classes de test se terminent généralement par <code>TestCase</code> (scenario de test). La classe créée pour le test, <code>MyTest</code> doit être une classe enfant de <code>unittest.TestCase</code>, d&rsquo;où l&rsquo;instruction <code>class MyTest(unittest.TestCase):</code></p>
+<p>Chaque test à créer est une méthode. Toute méthode dont le nom commence par <code>test_</code> est exécutée lors du test. La méthode <code>test_add</code> appelle donc la fonction <code>add</code>  avec les arguments 3 et 4, puis vérifie que son résultat est conforme, grâce à un test d&rsquo;assertion <code>assertEqual</code>.</p>
+<p>Ici, le test reussit:</p>
+<p>En console:</p>
+<pre tabindex="0"><code>Ran 1 tests, passed: 1 failed: 0
+</code></pre><p>On ajoute maintenant un deuxième test:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#111">unittest</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">add</span><span style="color:#111">(</span><span style="color:#111">x</span><span style="color:#111">,</span><span style="color:#111">y</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">x</span> <span style="color:#f92672">+</span> <span style="color:#111">y</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">class</span> <span style="color:#75af00">MyTest</span><span style="color:#111">(</span><span style="color:#111">unittest</span><span style="color:#f92672">.</span><span style="color:#111">TestCase</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">def</span> <span style="color:#75af00">test_add1</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">assertEqual</span><span style="color:#111">(</span><span style="color:#111">add</span><span style="color:#111">(</span><span style="color:#ae81ff">3</span><span style="color:#111">,</span><span style="color:#ae81ff">4</span><span style="color:#111">),</span> <span style="color:#ae81ff">7</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">def</span> <span style="color:#75af00">test_add2</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">assertEqual</span><span style="color:#111">(</span><span style="color:#111">add</span><span style="color:#111">(</span><span style="color:#ae81ff">3</span><span style="color:#111">,</span><span style="color:#ae81ff">4</span><span style="color:#111">),</span> <span style="color:#ae81ff">8</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">if</span> <span style="color:#111">__name__</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#39;__main__&#39;</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">unittest</span><span style="color:#f92672">.</span><span style="color:#111">main</span><span style="color:#111">()</span>
+</span></span></code></pre></div><p>Le deuxième test échoue. On peut remonter jusqu&rsquo;à l&rsquo;erreur dans le Traceback qui est affiché en console:</p>
+<pre tabindex="0"><code># Traceback
 Fail: Expected 7 to equal 8
 Tests failed in  MyTest.test_add2  
 Ran 2 tests, passed: 1 failed: 1
-</code></pre><p>Le module <code>unittest</code> fournit d&rsquo;autres fonctions comme par exemple <code>assertRaises</code>. La liste complète est <a href=#autres-tests-d-assertion>ici</a></p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>  <span style=color:#00a8c8>def</span> <span style=color:#75af00>test_split</span><span style=color:#111>(</span><span style=color:#111>self</span><span style=color:#111>):</span>
-    <span style=color:#111>s</span> <span style=color:#f92672>=</span> <span style=color:#d88200>&#39;hello world&#39;</span>
-    <span style=color:#75715e># check that s.split fails when the separator is not a string</span>
-    <span style=color:#111>self</span><span style=color:#f92672>.</span><span style=color:#111>assertRaises</span><span style=color:#111>(</span><span style=color:#75af00>TypeError</span><span style=color:#111>,</span><span style=color:#111>s</span><span style=color:#f92672>.</span><span style=color:#111>split</span><span style=color:#111>,</span><span style=color:#ae81ff>1</span><span style=color:#111>)</span></code></pre></div><p>Console: Test reussi</p><pre><code>Ran 1 tests, passed: 1 failed: 0
-</code></pre><blockquote><p>Explications</p></blockquote><p>La fonction <code>split</code> prend en argument un caractère et decoupe la chaine de caractères au niveau de ce caractère. (et retourne une liste).</p><p>Par exemple:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>s</span> <span style=color:#f92672>=</span> <span style=color:#d88200>&#39;hello world&#39;</span>
-<span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#111>s</span><span style=color:#f92672>.</span><span style=color:#111>split</span><span style=color:#111>(</span><span style=color:#d88200>&#39; &#39;</span><span style=color:#111>))</span>
-<span style=color:#75715e># affiche</span>
-<span style=color:#111>[</span><span style=color:#d88200>&#39;hello&#39;</span><span style=color:#111>,</span><span style=color:#d88200>&#39;world&#39;</span><span style=color:#111>]</span></code></pre></div><p>L&rsquo;argument DOIT être un caractère et non un nombre entier ou autre type. Sinon, l&rsquo;execution génère un <em>TypeError</em>:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#111>s</span> <span style=color:#f92672>=</span> <span style=color:#d88200>&#39;hello world&#39;</span>
-<span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#111>s</span><span style=color:#f92672>.</span><span style=color:#111>split</span><span style=color:#111>(</span><span style=color:#ae81ff>1</span><span style=color:#111>))</span>
-<span style=color:#75715e># affiche</span>
-<span style=color:#75af00>TypeError</span>          <span style=color:#111>Traceback</span> <span style=color:#111>(</span><span style=color:#111>most</span> <span style=color:#111>recent</span> <span style=color:#111>call</span> <span style=color:#111>last</span><span style=color:#111>)</span>
-<span style=color:#f92672>&lt;</span><span style=color:#111>ipython</span><span style=color:#f92672>-</span><span style=color:#111>input</span><span style=color:#f92672>-</span><span style=color:#ae81ff>32</span><span style=color:#f92672>-</span><span style=color:#ae81ff>6</span><span style=color:#111>acfb0b512b4</span><span style=color:#f92672>&gt;</span> <span style=color:#f92672>in</span> <span style=color:#f92672>&lt;</span><span style=color:#111>module</span><span style=color:#f92672>&gt;</span>
-      <span style=color:#ae81ff>1</span> <span style=color:#111>s</span> <span style=color:#f92672>=</span> <span style=color:#d88200>&#39;hello world&#39;</span>
-<span style=color:#f92672>----&gt;</span> <span style=color:#ae81ff>2</span> <span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#111>s</span><span style=color:#f92672>.</span><span style=color:#111>split</span><span style=color:#111>(</span><span style=color:#ae81ff>1</span><span style=color:#111>))</span>
-<span style=color:#75af00>TypeError</span><span style=color:#111>:</span> <span style=color:#111>must</span> <span style=color:#111>be</span> <span style=color:#111>str</span> <span style=color:#f92672>or</span> <span style=color:#111>None</span><span style=color:#111>,</span> <span style=color:#f92672>not</span> <span style=color:#111>int</span></code></pre></div><p>Or, ici, on fait le test d&rsquo;assertion suivant: on vérifie si lorsque l&rsquo;on appelle la fonction <code>s.split</code> avec l&rsquo;argument <strong>1</strong>, cela génère un <em>TypeError</em>, ce qui est VRAI. Donc le test REUSSI!</p><p>Par contre, avec <code>self.assertRaises(TypeError,s.split,' ')</code>, cela echoue&hellip;</p><pre><code>Fail: 
+</code></pre><p>Le module <code>unittest</code> fournit d&rsquo;autres fonctions comme par exemple <code>assertRaises</code>. La liste complète est <a href="#autres-tests-d-assertion">ici</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  <span style="color:#00a8c8">def</span> <span style="color:#75af00">test_split</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">s</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;hello world&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># check that s.split fails when the separator is not a string</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">assertRaises</span><span style="color:#111">(</span><span style="color:#75af00">TypeError</span><span style="color:#111">,</span><span style="color:#111">s</span><span style="color:#f92672">.</span><span style="color:#111">split</span><span style="color:#111">,</span><span style="color:#ae81ff">1</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>Console: Test reussi</p>
+<pre tabindex="0"><code>Ran 1 tests, passed: 1 failed: 0
+</code></pre><blockquote>
+<p>Explications</p>
+</blockquote>
+<p>La fonction <code>split</code> prend en argument un caractère et decoupe la chaine de caractères au niveau de ce caractère. (et retourne une liste).</p>
+<p>Par exemple:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">s</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;hello world&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">s</span><span style="color:#f92672">.</span><span style="color:#111">split</span><span style="color:#111">(</span><span style="color:#d88200">&#39; &#39;</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">[</span><span style="color:#d88200">&#39;hello&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;world&#39;</span><span style="color:#111">]</span>
+</span></span></code></pre></div><p>L&rsquo;argument DOIT être un caractère et non un nombre entier ou autre type. Sinon, l&rsquo;execution génère un <em>TypeError</em>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">s</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;hello world&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">s</span><span style="color:#f92672">.</span><span style="color:#111">split</span><span style="color:#111">(</span><span style="color:#ae81ff">1</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche</span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">TypeError</span>          <span style="color:#111">Traceback</span> <span style="color:#111">(</span><span style="color:#111">most</span> <span style="color:#111">recent</span> <span style="color:#111">call</span> <span style="color:#111">last</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#111">ipython</span><span style="color:#f92672">-</span><span style="color:#111">input</span><span style="color:#f92672">-</span><span style="color:#ae81ff">32</span><span style="color:#f92672">-</span><span style="color:#ae81ff">6</span><span style="color:#111">acfb0b512b4</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">in</span> <span style="color:#f92672">&lt;</span><span style="color:#111">module</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#ae81ff">1</span> <span style="color:#111">s</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;hello world&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">----&gt;</span> <span style="color:#ae81ff">2</span> <span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">s</span><span style="color:#f92672">.</span><span style="color:#111">split</span><span style="color:#111">(</span><span style="color:#ae81ff">1</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">TypeError</span><span style="color:#111">:</span> <span style="color:#111">must</span> <span style="color:#111">be</span> <span style="color:#111">str</span> <span style="color:#f92672">or</span> <span style="color:#00a8c8">None</span><span style="color:#111">,</span> <span style="color:#f92672">not</span> <span style="color:#111">int</span>
+</span></span></code></pre></div><p>Or, ici, on fait le test d&rsquo;assertion suivant: on vérifie si lorsque l&rsquo;on appelle la fonction <code>s.split</code> avec l&rsquo;argument <strong>1</strong>, cela génère un <em>TypeError</em>, ce qui est VRAI. Donc le test REUSSI!</p>
+<p>Par contre, avec <code>self.assertRaises(TypeError,s.split,' ')</code>, cela echoue&hellip;</p>
+<pre tabindex="0"><code>Fail: 
 Tests failed in  MyTest.test_split  
 Ran 1 tests, passed: 0 failed: 1
-</code></pre><blockquote><p>Testez ces exemples</p></blockquote><p>Ces exemples peuvent être testés dans l&rsquo;éditeur en ligne <em>Trinket</em>:</p><iframe src=https://trinket.io/embed/python/b55ced5652 width=100% height=600 frameborder=0 marginwidth=0 marginheight=0 allowfullscreen></iframe><h3 id=autres-tests-d-assertion>Autres tests d&rsquo;assertion</h3><p>En fait, <code>unittest.TestCase</code> propose plusieurs méthodes d&rsquo;assertion que nous utiliserons dans nos tests unitaires.</p><table><thead><tr><th>Méthode</th><th>Explications</th></tr></thead><tbody><tr><td>assertEqual(a, b)</td><td>a == b</td></tr><tr><td>assertNotEqual(a, b)</td><td>a != b</td></tr><tr><td>assertTrue(x)</td><td>x is True</td></tr><tr><td>assertFalse(x)</td><td>x is False</td></tr><tr><td>assertIs(a, b)</td><td>a is b</td></tr><tr><td>assertIsNot(a, b)</td><td>a is not b</td></tr><tr><td>assertIsNone(x)</td><td>x is None</td></tr><tr><td>assertIsNotNone(x)</td><td>x is not None</td></tr><tr><td>assertIn(a, b)</td><td>a in b</td></tr><tr><td>assertNotIn(a, b)</td><td>a not in b</td></tr><tr><td>assertIsInstance(a, b)</td><td>isinstance(a, b)</td></tr><tr><td>assertNotIsInstance(a, b)</td><td>not isinstance(a, b)</td></tr><tr><td>assertRaises(exception, fonction, *args, **kwargs)</td><td>Vérifie que la fonction lève l&rsquo;exception attendue.</td></tr></tbody></table><h1 id=gestion-des-exceptions-try-except>Gestion des exceptions: <strong><code>try-except</code></strong></h1><p><a href=https://docs.python.org/fr/3.5/tutorial/errors.html#handling-exceptions>compléments sur la gestion des exceptions</a></p><p>Le mécanisme des exceptions permet au programme de « rattraper » les erreurs, de détecter qu’une erreur s’est produite et d’agir en conséquence afin que le programme ne s’arrête pas.</p><p>Afin de rattraper l’erreur, on insère le code susceptible de produire une erreur entre les mots clés <code>try</code> et <code>except</code>.</p><p><em>Méthode :</em></p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>try</span><span style=color:#111>:</span>
-    <span style=color:#75715e># ... instructions à protéger</span>
-<span style=color:#00a8c8>except</span><span style=color:#111>:</span>
-    <span style=color:#75715e># ... que faire en cas d&#39;erreur</span>
-<span style=color:#00a8c8>else</span><span style=color:#111>:</span>
-    <span style=color:#75715e># ... que faire lorsque aucune erreur n&#39;est apparue</span></code></pre></div><p>L’instruction try fonctionne comme ceci.</p><ul><li>Premièrement, la clause try (instruction(s) placée(s) entre les mots-clés try et except) est exécutée.</li><li>Si aucune exception n’intervient, la clause except est sautée et l’exécution de l’instruction try est terminée.</li><li>Si une exception intervient pendant l’exécution de la clause “try”, le reste de cette clause est sauté. Si son type correspond à un nom d’exception indiqué après le mot-clé except, la clause “except” correspondante est exécutée, puis l’exécution continue après l’instruction try.</li></ul><p><em>Exemple 1:</em></p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>def</span> <span style=color:#75af00>inverse</span><span style=color:#111>(</span><span style=color:#111>x</span><span style=color:#111>):</span>
-    <span style=color:#111>y</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1.0</span> <span style=color:#f92672>/</span> <span style=color:#111>x</span>
-    <span style=color:#00a8c8>return</span> <span style=color:#111>y</span>
-
-
-<span style=color:#00a8c8>try</span><span style=color:#111>:</span>
-    <span style=color:#111>a</span> <span style=color:#f92672>=</span> <span style=color:#111>inverse</span><span style=color:#111>(</span><span style=color:#ae81ff>2</span><span style=color:#111>)</span>
-    <span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#111>a</span><span style=color:#111>)</span>
-    <span style=color:#111>b</span> <span style=color:#f92672>=</span> <span style=color:#111>inverse</span><span style=color:#111>(</span><span style=color:#ae81ff>0</span><span style=color:#111>)</span>  <span style=color:#75715e># déclenche une exception</span>
-    <span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#111>b</span><span style=color:#111>)</span>
-<span style=color:#00a8c8>except</span><span style=color:#111>:</span>
-    <span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#d88200>&#34;le programme a déclenché une erreur&#34;</span><span style=color:#111>)</span>
-
-<span style=color:#75715e># affiche : </span>
-<span style=color:#ae81ff>0.5</span>
-<span style=color:#111>le</span> <span style=color:#111>programme</span> <span style=color:#111>a</span> <span style=color:#111>déclenché</span> <span style=color:#111>une</span> <span style=color:#111>erreur</span></code></pre></div><p><em>Exemple 2:</em>
-Si on veut convertir un caractère en entier, cela génère une erreur de type <em>ValueError</em>:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>&gt;&gt;&gt;</span> <span style=color:#111>int</span><span style=color:#111>(</span><span style=color:#111>input</span><span style=color:#111>(</span><span style=color:#d88200>&#34;Please enter a number: &#34;</span><span style=color:#111>))</span>
-<span style=color:#111>Please</span> <span style=color:#111>enter</span> <span style=color:#111>a</span> <span style=color:#111>number</span><span style=color:#111>:</span> <span style=color:#111>q</span>
-<span style=color:#75af00>ValueError</span><span style=color:#111>:</span> <span style=color:#111>invalid</span> <span style=color:#111>literal</span> <span style=color:#00a8c8>for</span> <span style=color:#111>int</span><span style=color:#111>()</span> <span style=color:#00a8c8>with</span> <span style=color:#111>base</span> <span style=color:#ae81ff>10</span><span style=color:#111>:</span> <span style=color:#d88200>&#39;q&#39;</span></code></pre></div><p>On peut utiliser un mecanisme d&rsquo;exception pour rattraper cette erreur possible:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>while</span> <span style=color:#111>True</span><span style=color:#111>:</span>
-     <span style=color:#00a8c8>try</span><span style=color:#111>:</span>
-         <span style=color:#111>x</span> <span style=color:#f92672>=</span> <span style=color:#111>int</span><span style=color:#111>(</span><span style=color:#111>input</span><span style=color:#111>(</span><span style=color:#d88200>&#34;Please enter a number: &#34;</span><span style=color:#111>))</span>
-         <span style=color:#00a8c8>break</span>
-     <span style=color:#00a8c8>except</span> <span style=color:#75af00>ValueError</span> <span style=color:#00a8c8>as</span> <span style=color:#111>typ</span><span style=color:#111>:</span>
-         <span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#d88200>&#34;Oops!  That was no valid number.  Try again...: {}&#34;</span><span style=color:#f92672>.</span><span style=color:#111>format</span><span style=color:#111>(</span><span style=color:#111>typ</span><span style=color:#111>))</span>
-<span style=color:#00a8c8>print</span><span style=color:#111>(</span><span style=color:#d88200>&#39;=&gt; vous avez entré le nombre {}&#39;</span><span style=color:#f92672>.</span><span style=color:#111>format</span><span style=color:#111>(</span><span style=color:#111>x</span><span style=color:#111>))</span></code></pre></div><p>Executons ce script:</p><pre><code>Please enter a number: d
-Oops!  That was no valid number.  Try again...: invalid literal for int() with base 10: 'd'
+</code></pre><blockquote>
+<p>Testez ces exemples</p>
+</blockquote>
+<p>Ces exemples peuvent être testés dans l&rsquo;éditeur en ligne <em>Trinket</em>:</p>
+<!-- raw HTML omitted -->
+<h3 id="autres-tests-dassertion">Autres tests d&rsquo;assertion</h3>
+<p>En fait, <code>unittest.TestCase</code> propose plusieurs méthodes d&rsquo;assertion que nous utiliserons dans nos tests unitaires.</p>
+<table>
+<thead>
+<tr>
+<th>Méthode</th>
+<th>Explications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>assertEqual(a, b)</td>
+<td>a == b</td>
+</tr>
+<tr>
+<td>assertNotEqual(a, b)</td>
+<td>a != b</td>
+</tr>
+<tr>
+<td>assertTrue(x)</td>
+<td>x is True</td>
+</tr>
+<tr>
+<td>assertFalse(x)</td>
+<td>x is False</td>
+</tr>
+<tr>
+<td>assertIs(a, b)</td>
+<td>a is b</td>
+</tr>
+<tr>
+<td>assertIsNot(a, b)</td>
+<td>a is not b</td>
+</tr>
+<tr>
+<td>assertIsNone(x)</td>
+<td>x is None</td>
+</tr>
+<tr>
+<td>assertIsNotNone(x)</td>
+<td>x is not None</td>
+</tr>
+<tr>
+<td>assertIn(a, b)</td>
+<td>a in b</td>
+</tr>
+<tr>
+<td>assertNotIn(a, b)</td>
+<td>a not in b</td>
+</tr>
+<tr>
+<td>assertIsInstance(a, b)</td>
+<td>isinstance(a, b)</td>
+</tr>
+<tr>
+<td>assertNotIsInstance(a, b)</td>
+<td>not isinstance(a, b)</td>
+</tr>
+<tr>
+<td>assertRaises(exception, fonction, *args, **kwargs)</td>
+<td>Vérifie que la fonction lève l&rsquo;exception attendue.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="gestion-des-exceptions-try-except">Gestion des exceptions: <strong><code>try-except</code></strong></h1>
+<p><a href="https://docs.python.org/fr/3.5/tutorial/errors.html#handling-exceptions">compléments sur la gestion des exceptions</a></p>
+<p>Le mécanisme des exceptions permet au programme de « rattraper » les erreurs, de détecter qu’une erreur s’est produite et d’agir en conséquence afin que le programme ne s’arrête pas.</p>
+<p>Afin de rattraper l’erreur, on insère le code susceptible de produire une erreur entre les mots clés <code>try</code> et <code>except</code>.</p>
+<p><em>Méthode :</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">try</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># ... instructions à protéger</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">except</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># ... que faire en cas d&#39;erreur</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">else</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># ... que faire lorsque aucune erreur n&#39;est apparue</span>
+</span></span></code></pre></div><p>L’instruction try fonctionne comme ceci.</p>
+<ul>
+<li>Premièrement, la clause try (instruction(s) placée(s) entre les mots-clés try et except) est exécutée.</li>
+<li>Si aucune exception n’intervient, la clause except est sautée et l’exécution de l’instruction try est terminée.</li>
+<li>Si une exception intervient pendant l’exécution de la clause “try”, le reste de cette clause est sauté. Si son type correspond à un nom d’exception indiqué après le mot-clé except, la clause “except” correspondante est exécutée, puis l’exécution continue après l’instruction try.</li>
+</ul>
+<p><em>Exemple 1:</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">inverse</span><span style="color:#111">(</span><span style="color:#111">x</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.0</span> <span style="color:#f92672">/</span> <span style="color:#111">x</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">y</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">try</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">a</span> <span style="color:#f92672">=</span> <span style="color:#111">inverse</span><span style="color:#111">(</span><span style="color:#ae81ff">2</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">a</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">b</span> <span style="color:#f92672">=</span> <span style="color:#111">inverse</span><span style="color:#111">(</span><span style="color:#ae81ff">0</span><span style="color:#111">)</span>  <span style="color:#75715e"># déclenche une exception</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">b</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">except</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#d88200">&#34;le programme a déclenché une erreur&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche : </span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0.5</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">le</span> <span style="color:#111">programme</span> <span style="color:#111">a</span> <span style="color:#111">déclenché</span> <span style="color:#111">une</span> <span style="color:#111">erreur</span>
+</span></span></code></pre></div><p><em>Exemple 2:</em>
+Si on veut convertir un caractère en entier, cela génère une erreur de type <em>ValueError</em>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">int</span><span style="color:#111">(</span><span style="color:#111">input</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Please enter a number: &#34;</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">Please</span> <span style="color:#111">enter</span> <span style="color:#111">a</span> <span style="color:#111">number</span><span style="color:#111">:</span> <span style="color:#111">q</span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">ValueError</span><span style="color:#111">:</span> <span style="color:#111">invalid</span> <span style="color:#111">literal</span> <span style="color:#00a8c8">for</span> <span style="color:#111">int</span><span style="color:#111">()</span> <span style="color:#00a8c8">with</span> <span style="color:#111">base</span> <span style="color:#ae81ff">10</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;q&#39;</span>
+</span></span></code></pre></div><p>On peut utiliser un mecanisme d&rsquo;exception pour rattraper cette erreur possible:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">while</span> <span style="color:#00a8c8">True</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#00a8c8">try</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#111">x</span> <span style="color:#f92672">=</span> <span style="color:#111">int</span><span style="color:#111">(</span><span style="color:#111">input</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Please enter a number: &#34;</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#00a8c8">break</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#00a8c8">except</span> <span style="color:#75af00">ValueError</span> <span style="color:#00a8c8">as</span> <span style="color:#111">typ</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Oops!  That was no valid number.  Try again...: </span><span style="color:#d88200">{}</span><span style="color:#d88200">&#34;</span><span style="color:#f92672">.</span><span style="color:#111">format</span><span style="color:#111">(</span><span style="color:#111">typ</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#d88200">&#39;=&gt; vous avez entré le nombre </span><span style="color:#d88200">{}</span><span style="color:#d88200">&#39;</span><span style="color:#f92672">.</span><span style="color:#111">format</span><span style="color:#111">(</span><span style="color:#111">x</span><span style="color:#111">))</span>
+</span></span></code></pre></div><p>Executons ce script:</p>
+<pre tabindex="0"><code>Please enter a number: d
+Oops!  That was no valid number.  Try again...: invalid literal for int() with base 10: &#39;d&#39;
 Please enter a number: Z
-Oops!  That was no valid number.  Try again...: invalid literal for int() with base 10: 'Z'
+Oops!  That was no valid number.  Try again...: invalid literal for int() with base 10: &#39;Z&#39;
 Please enter a number: 2
 =&gt; vous avez entré le nombre 2
-</code></pre><h1 id=flash-cards>Flash cards</h1><p><a href=/docs/NSI/langages/ex1/>Lien vers les flash cards</a></p><h1 id=sources>Sources</h1><ul><li><a href="https://python.developpez.com/tutoriels/apprendre-programmation-python/notions-avancees/?page=gestion-d-erreurs">python.developpez.com</a></li><li>Pour aller plus loin sur la gestion des Exceptions : <a href=http://www.xavierdupre.fr/app/teachpyx/helpsphinx/c_exception/exception.html>xavierdupre.fr les bases en python</a></li><li>Documentation officielle : <a href=https://docs.python.org/3/library/unittest.html>unittest</a></li></ul></article><div style=height:100px></div></div><aside class="book-toc fixed"><nav id=TableOfContents><ul><li><a href=#mise-au-point-d-un-programme>Mise au point d&rsquo;un programme</a><ul><li><a href=#spécification-d-un-algorithme>Spécification d&rsquo;un algorithme</a></li><li><a href=#prototypage-d-une-fonction>Prototypage d&rsquo;une fonction</a></li><li><a href=#ajouter-un-doctest>Ajouter un Doctest</a></li></ul></li><li><a href=#prévoir-et-gérer-les-erreurs>Prévoir et gérer les erreurs</a><ul><li><a href=#traceback>Traceback</a><ul><li><a href=#messages-d-exception>Messages d&rsquo;exception</a></li></ul></li><li><a href=#déclencher-des-exceptions>Déclencher des exceptions</a><ul><li><a href=#raise><strong><code>Raise</code></strong></a></li><li><a href=#assertions-assert><strong>Assertions: <code>assert</code></strong></a></li></ul></li><li><a href=#créer-un-module-de-test-unitaires-avec-unittest>Créer un module de test unitaires avec <strong><code>unittest</code></strong></a><ul><li><a href=#autres-tests-d-assertion>Autres tests d&rsquo;assertion</a></li></ul></li></ul></li><li><a href=#gestion-des-exceptions-try-except>Gestion des exceptions: <strong><code>try-except</code></strong></a></li><li><a href=#flash-cards>Flash cards</a></li><li><a href=#sources>Sources</a></li></ul></nav></aside></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
-<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
+</code></pre><h1 id="flash-cards">Flash cards</h1>
+<p><a href="/docs/NSI/langages/ex1/">Lien vers les flash cards</a></p>
+<h1 id="sources">Sources</h1>
+<ul>
+<li><a href="https://python.developpez.com/tutoriels/apprendre-programmation-python/notions-avancees/?page=gestion-d-erreurs">python.developpez.com</a></li>
+<li>Pour aller plus loin sur la gestion des Exceptions : <a href="http://www.xavierdupre.fr/app/teachpyx/helpsphinx/c_exception/exception.html">xavierdupre.fr les bases en python</a></li>
+<li>Documentation officielle : <a href="https://docs.python.org/3/library/unittest.html">unittest</a></li>
+</ul>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#spécification-dun-algorithme">Spécification d&rsquo;un algorithme</a></li>
+    <li><a href="#prototypage-dune-fonction">Prototypage d&rsquo;une fonction</a></li>
+    <li><a href="#ajouter-un-doctest">Ajouter un Doctest</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#traceback">Traceback</a>
+      <ul>
+        <li><a href="#messages-dexception">Messages d&rsquo;exception</a></li>
+      </ul>
+    </li>
+    <li><a href="#déclencher-des-exceptions">Déclencher des exceptions</a>
+      <ul>
+        <li><a href="#raise"><strong><code>Raise</code></strong></a></li>
+        <li><a href="#assertions-assert"><strong>Assertions: <code>assert</code></strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#créer-un-module-de-test-unitaires-avec-unittest">Créer un module de test unitaires avec <strong><code>unittest</code></strong></a>
+      <ul>
+        <li><a href="#autres-tests-dassertion">Autres tests d&rsquo;assertion</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

@@ -1,25 +1,404 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Forces intermoleculaires
-| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel=stylesheet><script type=text/x-mathjax-config>
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    Forces intermoleculaires
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
   });
-</script><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.1c02dc1d2c0b546a84beb71d8f4336d6f5d7b69564e08bdfc04c2fb0595d786d.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
 catch(err)
-{console.log(err.message);}
-if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
-if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
-if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}
-let chemin=window.location.pathname;if(chemin.search('NSI')>-1){baniere=document.querySelector("#myHeader");let linkBox=document.createElement('div');linkBox.classList.add('linkBox');let newH=document.createElement('a');newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';newH.classList.add('nsi');linkBox.appendChild(newH);baniere.appendChild(linkBox);}</script><style>#myHeader{display:flex;flex-direction:row-reverse}#myHeader>.titre{width:80%;min-width:300px;text-align:left}.linkBox{margin:10px;padding-top:10px;background-color:pink;min-width:50px}.isn{}</style></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2f docs\2fPC_2nde\2f chimie\2fpages\2fmatiere4\2f ]{color:#004ed0}</style><ul><li><a href=/><strong>Accueil</strong></a></li><li><a href=/docs/esf/esf_index/><strong>ESF</strong></a></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p></li><li><p><a href=/docs/python/index_python/><strong>Python</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
-addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-page><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
-<strong>Forces intermoleculaires</strong></header><article class=markdown><h1 id=molécules-et-forces-intermoléculaires>Molécules et forces intermoléculaires</h1><p><strong>Postulat:</strong> Deux substances sont miscibles si les molécules qui les constituent forment des forces d&rsquo;attraction intermoléculaires.</p><p>Des molécules peuvent s&rsquo;attirer si elles forment des liaisons du type:</p><ul><li>dipôle-dipôle</li><li>liaison hydrogène</li><li>ion-dipôle</li></ul><p>ou bien, si les molécules sont toutes apolaires.</p><p>Il faut donc rechercher dans ces molécules, la présence eventuelle de charges partielles. Ces charges sont la conséquence de la polarisation de certaines liaisons.</p><h1 id=liaison-polarisée>Liaison polarisée</h1><p>On observe la différence d&rsquo;ectronegativité des atomes engagés dans les liaisons. Trois cas sont à considérer :</p><ul><li>Liaison apolaire ou très faiblement polaire : Lorsque la différence d&rsquo;electronegativité est nulle ou faible (<0,6). le doublet d’électrons est alors équitablement réparti => Pas de charges partielles.</li></ul><p><img src=../images/polH2.png style=text-align:center>
-<em>le doublet d&rsquo;electrons est localisé au milieu</em></p><ul><li>Liaison polaire : atomes liés par une liaison covalente présentant une différence d’électronégativité moyenne. Le doublet d’électrons est globalement plus proche de l’atome le plus électronégatif =&gt; charges partielles</li></ul><p><img src=../images/polHCl.png style=text-align:center>
-<em>le doublet d&rsquo;electrons est localisé plus souvent sur l&rsquo;atome Cl</em></p><ul><li>Liaison ionique : différence d’électronégativité forte : le doublet d’électrons est alors complètement capté par l’atome le plus électronégatif. Il apparait une charge sur chacun des atomes.</li></ul><p><img src=../images/polNaCl.png style=text-align:center>
-<em>le doublet d&rsquo;electrons est localisé SUR l&rsquo;atome de Chlore</em></p><p>Les ions ne présentent plus de liaison covalente, mais une liaison de type ionique.</p><h1 id=molécule-polaire>Molécule polaire</h1><p>Une molécule polaire comprend des liaisons polarisées.</p><ul><li>Si les molécules de 2 substances sont toutes les 2 polaires, alors ces 2 substances sont solubles. Elles forment entre elles des liaisons intermoleculaires, de type dipole-dipole.</li><li>Une substance polaire et une substance non polaire ne sont PAS solubles. Elles ne forment aucune liaisons intermoleculaires.</li></ul><h1 id=liaison-hydrogène>Liaison hydrogène</h1><p>La liaison hydrogène est une force intermoléculaire impliquant un atome d&rsquo;hydrogène et un atome d&rsquo;oxygène ou d&rsquo;azote, non liés par une liaison covalente (présents sur 2 molécules ou 2 parties d’une même molécule).</p><p>Pour faire simple, une molécule contenant de nombreux atomes O ou N, bien repartis sur la molécule, est susceptible de former des liaisons hydrogènes.</p><ul><li>Si les molécules de 2 substances peuvent former des liaisons hydrogènes entre elles, c’est à dire qu’elles possèdent toutes les 2 des atomes d’hydrogène ET d’oxygène (ou d’azote), alors ces 2 substances sont solubles.</li></ul><h1 id=molécule-apolaire>Molécule apolaire</h1><ul><li>Si les molécules de 2 substances sont toutes les 2 apolaires, alors ces 2 substances sont solubles. Elles forment entre elles des forces intermoléculaires.</li></ul><h1 id=interaction-avec-un-ion>Interaction avec un ion</h1><p>Les ions sont solubles dans un solvant POLAIRE. Il se forme alors, entre le solvant et l’ion des forces de type ion-dipole.</p><p>L&rsquo;action de solubiliser un ion s&rsquo;appelle la solvatation. L&rsquo;eau est capable de solvater indifféremment des anions et des cations, grâce aux forces de nature electrostatique, de type ion-dipole, que l&rsquo;eau peut faire avec ces ions:</p><p>Solvatation d’un anion :</p><figure><img src=../images/solvaCl.png><figcaption>forces electrostatiques entre les H et Cl<sup>-</sup></figcaption></figure><p>Solvatation d’un cation :</p><figure><img src=../images/solvaNa.png><figcaption>forces electrostatiques entre les O et Na<sup>+</sup></figcaption></figure><h1 id=solubilité>Solubilité</h1><h2 id=soluble-ou-non-soluble>Soluble ou non soluble</h2><p>On désigne souvent pas soluble ou insoluble la (non) capacité d’un soluté à se dissoudre dans un solvant. Mais pour être précis, il vaudrait mieux parler de la quantité qui peut être dissoute dans le solvant.</p><h2 id=definiton-de-la-solubilité>Definiton de la solubilité</h2><p>C’est la quantité maximale d’un soluté donné que l’on peut dissoudre dans un solvant. Désignée aussi par « s » exprimée en g/L ou en mol/L : concentration de la solution à saturation</p><p>Exemple : s(glucose/eau) = 900g/L
-Vue que la valeur est très élevée, on peut considérer que le glucose est TRES soluble dans l’eau.</p><p>s(rouge de methyle/eau) = 0,1g/L
-Cette valeur très basse suggère que le rouge de methyle est quasi insoluble dans l’eau.</p><p><h1>Extraction</h1><p><span style="font-family:Segoe UI">Les extractions sont parmi les méthodes les plus utilisées en analyse pour séparer les mélanges. Elles reposent sur la différence de solubilité d&rsquo;un soluté entre deux phases non-miscibles entre elles. L&rsquo;idée est de transférer un soluté d&rsquo;une phase liquide à une autre phase liquide non-miscible à la première.</span></p><p><span style="font-family:Segoe UI"><img src="../img/extraction Liquide Liquide.jpg" style=display:block;margin-left:auto;margin-right:auto width=580></span></p><p><span style="font-family:Segoe UI"><span class=bold>Exemple : l&rsquo;extraction du diiode d&rsquo;une solution aqueuse par le cyclohexane</span></span></p><p><span style="font-family:Segoe UI"><span class=bold>On donne le tableau de solubilité/miscibilité des espèces :</span></span></p><p></p><table style=width:486px cellspacing=0 cellpadding=0 border=0><tbody><tr><td style=text-align:center width=133><p align=center><b>Solubilité</b></p></td><td style=text-align:center width=118><p align=center><b>Diiode</b></p></td><td style=text-align:center width=117><p align=center><b>Eau</b></p></td><td style=text-align:center width=117><p align=center><b>Cyclohexane</b></p></td></tr><tr><td style=text-align:center width=133><p>Dans l’eau</p></td><td style=text-align:center width=118><p align=center>Faible</p></td><td style=text-align:center width=117><p align=center></p></td><td style=text-align:center width=117><p align=center>Non miscible</p></td></tr><tr><td style=text-align:center width=133><p>Dans le cyclohexane</p></td><td style=text-align:center width=118><p align=center>Grande</p></td><td style=text-align:center width=117><p align=center>Non miscible</p></td><td style=text-align:center width=117><p align=center></p></td></tr></tbody></table><p></p><p></p><p>On choisit d&rsquo;extraire le diiode dissout dans une solution aqueuse par du cyclohexane. D&rsquo;après le tableau des solubilités, celui ci est plus soluble dans le cyclohexane que dans l&rsquo;eau. On verse alors la solution de diiode dans l&rsquo;ampoule à décanter, suivie de cyclohexane. Les 2 liquides sont non miscibles. Le cyclohexane occupe la phase supérieure, sa densité étant plus faible que l&rsquo;eau :</p><p><img src="../img/extraction de liode.jpg" style=display:block;margin-left:auto;margin-right:auto width=580></p><p></p></p><h1 id=retour>Retour</h1><p><a href=../matiere3/>Lien vers la page sur les liaisons covalentes et molecules</a>
- </p></article><div style=height:100px></div></div><aside class="book-toc fixed"><nav id=TableOfContents><ul><li><a href=#molécules-et-forces-intermoléculaires>Molécules et forces intermoléculaires</a></li><li><a href=#liaison-polarisée>Liaison polarisée</a></li><li><a href=#molécule-polaire>Molécule polaire</a></li><li><a href=#liaison-hydrogène>Liaison hydrogène</a></li><li><a href=#molécule-apolaire>Molécule apolaire</a></li><li><a href=#interaction-avec-un-ion>Interaction avec un ion</a></li><li><a href=#solubilité>Solubilité</a><ul><li><a href=#soluble-ou-non-soluble>Soluble ou non soluble</a></li><li><a href=#definiton-de-la-solubilité>Definiton de la solubilité</a></li></ul></li><li><a href=#retour>Retour</a></li></ul></nav></aside></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
-<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fPC_2nde\2f chimie\2fpages\2fmatiere4\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    Forces intermoleculaires
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="molécules-et-forces-intermoléculaires">Molécules et forces intermoléculaires</h1>
+<p><strong>Postulat:</strong> Deux substances sont miscibles si les molécules qui les constituent forment des forces d&rsquo;attraction intermoléculaires.</p>
+<p>Des molécules peuvent s&rsquo;attirer si elles forment des liaisons du type:</p>
+<ul>
+<li>dipôle-dipôle</li>
+<li>liaison hydrogène</li>
+<li>ion-dipôle</li>
+</ul>
+<p>ou bien, si les molécules sont toutes apolaires.</p>
+<p>Il faut donc rechercher dans ces molécules, la présence eventuelle de charges partielles. Ces charges sont la conséquence de la polarisation de certaines liaisons.</p>
+<h1 id="liaison-polarisée">Liaison polarisée</h1>
+<p>On observe la différence d&rsquo;ectronegativité des atomes engagés dans les liaisons. Trois cas sont à considérer :</p>
+<ul>
+<li>Liaison apolaire ou très faiblement polaire : Lorsque la différence d&rsquo;electronegativité est nulle ou faible (&lt;0,6). le doublet d’électrons est alors équitablement réparti =&gt; Pas de charges partielles.</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>Liaison polaire : atomes liés par une liaison covalente présentant une différence d’électronégativité moyenne. Le doublet d’électrons est globalement plus proche de l’atome le plus électronégatif =&gt; charges partielles</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>Liaison ionique : différence d’électronégativité forte : le doublet d’électrons est alors complètement capté par l’atome le plus électronégatif. Il apparait une charge sur chacun des atomes.</li>
+</ul>
+<!-- raw HTML omitted -->
+<p>Les ions ne présentent plus de liaison covalente, mais une liaison de type ionique.</p>
+<h1 id="molécule-polaire">Molécule polaire</h1>
+<p>Une molécule polaire comprend des liaisons polarisées.</p>
+<ul>
+<li>Si les molécules de 2 substances sont toutes les 2 polaires, alors ces 2 substances sont solubles. Elles forment entre elles des liaisons intermoleculaires, de type dipole-dipole.</li>
+<li>Une substance polaire et une substance non polaire ne sont PAS solubles. Elles ne forment aucune liaisons intermoleculaires.</li>
+</ul>
+<h1 id="liaison-hydrogène">Liaison hydrogène</h1>
+<p>La liaison hydrogène est une force intermoléculaire impliquant un atome d&rsquo;hydrogène et un atome d&rsquo;oxygène ou d&rsquo;azote, non liés par une liaison covalente (présents sur 2 molécules ou 2 parties d’une même molécule).</p>
+<p>Pour faire simple, une molécule contenant de nombreux atomes O ou N, bien repartis sur la molécule, est susceptible de former des liaisons hydrogènes.</p>
+<ul>
+<li>Si les molécules de 2 substances peuvent former des liaisons hydrogènes entre elles, c’est à dire qu’elles possèdent toutes les 2 des atomes d’hydrogène ET d’oxygène (ou d’azote), alors ces 2 substances sont solubles.</li>
+</ul>
+<h1 id="molécule-apolaire">Molécule apolaire</h1>
+<ul>
+<li>Si les molécules de 2 substances sont toutes les 2 apolaires, alors ces 2 substances sont solubles. Elles forment entre elles des forces intermoléculaires.</li>
+</ul>
+<h1 id="interaction-avec-un-ion">Interaction avec un ion</h1>
+<p>Les ions sont solubles dans un solvant POLAIRE. Il se forme alors, entre le solvant et l’ion des forces de type ion-dipole.</p>
+<p>L&rsquo;action de solubiliser un ion s&rsquo;appelle la solvatation. L&rsquo;eau est capable de solvater indifféremment des anions et des cations, grâce aux forces de nature electrostatique, de type ion-dipole, que l&rsquo;eau peut faire avec ces ions:</p>
+<p>Solvatation d’un anion :</p>
+<!-- raw HTML omitted -->
+<p>Solvatation d’un cation :</p>
+<!-- raw HTML omitted -->
+<h1 id="solubilité">Solubilité</h1>
+<h2 id="soluble-ou-non-soluble">Soluble ou non soluble</h2>
+<p>On désigne souvent pas soluble ou insoluble la (non) capacité d’un soluté à se dissoudre dans un solvant. Mais pour être précis, il vaudrait mieux parler de la quantité qui peut être dissoute dans le solvant.</p>
+<h2 id="definiton--de-la-solubilité">Definiton  de la solubilité</h2>
+<p>C’est la quantité maximale d’un soluté donné que l’on peut dissoudre dans un solvant. Désignée aussi par « s » exprimée en g/L ou en mol/L : concentration de la solution à saturation</p>
+<p>Exemple : s(glucose/eau) = 900g/L
+Vue que la valeur est très élevée, on peut considérer que le glucose est TRES soluble dans l’eau.</p>
+<p>s(rouge de methyle/eau) = 0,1g/L
+Cette valeur très basse suggère que le rouge de methyle est quasi insoluble dans l’eau.</p>
+<!-- raw HTML omitted -->
+<h1 id="retour">Retour</h1>
+<p><a href="../matiere3/">Lien vers la page sur les liaisons covalentes et molecules</a>
+ </p>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#soluble-ou-non-soluble">Soluble ou non soluble</a></li>
+    <li><a href="#definiton--de-la-solubilité">Definiton  de la solubilité</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

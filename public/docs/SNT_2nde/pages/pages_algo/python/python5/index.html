@@ -1,26 +1,466 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Python Turtle
-| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel=stylesheet><script type=text/x-mathjax-config>
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    Python Turtle
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
   });
-</script><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.1c02dc1d2c0b546a84beb71d8f4336d6f5d7b69564e08bdfc04c2fb0595d786d.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
-catch(err)
-{console.log(err.message);}
-if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
-if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
-if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}
-let chemin=window.location.pathname;if(chemin.search('NSI')>-1){baniere=document.querySelector("#myHeader");let linkBox=document.createElement('div');linkBox.classList.add('linkBox');let newH=document.createElement('a');newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';newH.classList.add('nsi');linkBox.appendChild(newH);baniere.appendChild(linkBox);}</script><style>#myHeader{display:flex;flex-direction:row-reverse}#myHeader>.titre{width:80%;min-width:300px;text-align:left}.linkBox{margin:10px;padding-top:10px;background-color:pink;min-width:50px}.isn{}</style></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2f docs\2fSNT_2nde\2fpages\2fpages_algo\2fpython\2fpython5\2f ]{color:#004ed0}</style><ul><li><a href=/><strong>Accueil</strong></a></li><li><a href=/docs/esf/esf_index/><strong>ESF</strong></a></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p></li><li><p><a href=/docs/python/index_python/><strong>Python</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
-addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-page><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
-<strong>Python Turtle</strong></header><article class=markdown><figure><div><img src=../images/figuresMath.png><figcaption>des exemples de figures mathématiques</figcaption></div></figure><h1 id=tp-python-turtle>TP Python Turtle</h1><p>Le module Turtle de Python permet de dessiner à l&rsquo;écran des formes, à l&rsquo;aide d&rsquo;instructions qui tracent des formes géométriques.</p><p>Nous nous limiterons aux fonctions:</p><ul><li>up() : lève le crayon</li><li>down() : baisse le crayon</li><li>forward(n) : avance de n</li><li>left(n) : tourne vers la gauche de n degrés</li><li>right(n) : tourne vers la droite de n degrés</li><li>circle(n) : dessine un cercle de rayon n</li><li>write(’texte’) : écrit le texte</li><li>color(’couleur’) : définit la couleur du trait</li><li>fillcolor(&lsquo;couleur&rsquo;) : definit la couleur du remplissage</li></ul><h1 id=premiers-tracés>Premiers tracés</h1><h2 id=l-interface-scratch-python-de-vittascience>L&rsquo;interface Scratch + Python de Vittascience</h2><ul><li>Aller sur le site <a href=https://fr.vittascience.com/ target=blank>Vittascience</a>. Puis choisir <em>Programmer</em> et <em>Python</em>.</li></ul><p>Le site propose un éditeur Scratch en ligne (avec des blocs de code).</p><p>Les blocs de code sont accessibles à partir des <em>menus</em>, par genre:</p><ul><li>Affichage</li><li>Turtle</li><li>Logique</li><li>Boucles</li><li>Variables</li><li>Fonctions &hellip;</li></ul><h2 id=pour-commencer-dessiner-un-triangle-simple>Pour commencer: dessiner un triangle simple</h2><h3 id=assembler-les-blocs>Assembler les blocs</h3><p>A partir du <em>menu Turtle</em>, en utilisant les blocs, vous allez:</p><figure><div><img src=../images/bloc1.png><figcaption>bloc avancer du menu Turtle</figcaption></div></figure><pre><code>avancer de 50
-tourner a gauche d'un angle de 120°
-avancer de 50
-</code></pre><p>Vous voyez sur l&rsquo;écran de droite le script Python équivalent, qui se construit au fur et à mesure:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> <span style=color:#111>turtle</span>
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<span style=color:#111>turtle</span><span style=color:#f92672>.</span><span style=color:#111>forward</span><span style=color:#111>(</span><span style=color:#ae81ff>50</span><span style=color:#111>)</span>
-<span style=color:#111>turtle</span><span style=color:#f92672>.</span><span style=color:#111>left</span><span style=color:#111>(</span><span style=color:#ae81ff>120</span><span style=color:#111>)</span>
-<span style=color:#111>turtle</span><span style=color:#f92672>.</span><span style=color:#111>forward</span><span style=color:#111>(</span><span style=color:#ae81ff>50</span><span style=color:#111>)</span></code></pre></div><p>Appuyer sur <strong>Executer</strong>: La forme dessinée n&rsquo;est pas un triangle fermé.</p><blockquote><p><strong>Défi 1:</strong> ajouter les blocs manquants pour dessiner complètement le triangle.</p></blockquote><figure><div><img src=../images/triangle.png></div></figure><ul><li>Recopiez le script python correspondant dans votre cahier.</li></ul><h3 id=répéter-avec-une-boucle>Répéter avec une boucle</h3><p>Si vous observez votre script, vous remarquez qu&rsquo;il est constitué de 3 répétitions:</p><figure><div><img src=../images/bloc2.png></div></figure><p>Vous allez réaliser la même chose, mais en réduisant <em>AU MAXIMUM</em> le nombre de lignes.</p><ul><li>Conserver uniquement les 2 premiers blocs, <em>AVANCER</em> et <em>TOURNER</em>. Supprimer les autres</li><li>Dans le menu <em>Boucles</em>, prendre le bloc <em>répéter &hellip; fois</em> et insérer dans ce bloc les 2 instructions de dessin. Modifier le paramètre 3.</li></ul><figure><div><img src=../images/bloc3.png></div></figure><ul><li>EXECUTER le programme</li><li>Recopiez le script python correspondant dans votre cahier.</li></ul><h3 id=créer-une-spirale-de-triangles>Créer une spirale de triangles</h3><blockquote><p><strong>Défi 2:</strong> Vous allez créer une figure originale en modifiant juste les paramètres dans votre script:</p><ul><li>Répéter 25 fois</li><li>Faites tourner chaque fois votre <em>Tortue</em> d&rsquo;un angle de 125° et non 120°</li></ul></blockquote><p>Vous voyez ici l&rsquo;interêt d&rsquo;utiliser une boucle pour répéter plusieurs fois les même instructions&hellip;</p><h3 id=créer-ses-propres-fonctions>Créer ses propres fonctions</h3><p>Une fonction permet de mémoriser des blocs de code afin de les organiser et les réutiliser plusieurs fois.</p><ul><li>Remettre les paramètres qui dessinent un triangle simple (3 fois, 120°)</li><li>Dans le menu <em>Fonctions</em>, prendre le premier bloc <em>Définir</em>. Modifier le nom, et renommer cette fonction avec <code>triangle</code>.</li></ul><figure><div><img src=../images/bloc4.png></div></figure><ul><li>Mettre alors la boucle entière dans cette fonction. EXECUTER&hellip; il ne se passe rien.</li><li>Revenir dans le menu <em>Fonctions</em> et aller chercher le bloc de code appelé <code>triangle</code>. Ajouter ce bloc et EXECUTER&hellip; voilà qui devrait afficher le triangle. Vous venez de programmer votre propre fonction, puis vous l&rsquo;avez appelé avec <code>nom()</code>.</li><li>Recopiez le script python correspondant dans votre cahier.</li></ul><h3 id=réutiliser-une-fonction>Réutiliser une fonction</h3><p>Voici un extrait de la suite du script qui vous permettra de créer une figurre plus complexe:</p><figure><div><img src=../images/bloc5.png></div></figure><blockquote><p><strong>Défi 3:</strong> Vous allez déplacer votre <em>Tortue</em> à différentes positions de l&rsquo;image, afin de dessiner la forme suivante:</p></blockquote><figure><div><img src=../images/triangleFigure.png></div></figure><p>Vous aurez besoin pour cela de réutiliser votre fonction <code>triangle</code>.</p><blockquote><p><strong>Défi 4:</strong> Réaliser maintenant la figure ci-dessous:</p></blockquote><figure><div><img src=../images/triangleFigure2.png></div></figure></article><div style=height:100px></div></div><aside class="book-toc fixed"><nav id=TableOfContents><ul><li><a href=#tp-python-turtle>TP Python Turtle</a></li><li><a href=#premiers-tracés>Premiers tracés</a><ul><li><a href=#l-interface-scratch-python-de-vittascience>L&rsquo;interface Scratch + Python de Vittascience</a></li><li><a href=#pour-commencer-dessiner-un-triangle-simple>Pour commencer: dessiner un triangle simple</a><ul><li><a href=#assembler-les-blocs>Assembler les blocs</a></li><li><a href=#répéter-avec-une-boucle>Répéter avec une boucle</a></li><li><a href=#créer-une-spirale-de-triangles>Créer une spirale de triangles</a></li><li><a href=#créer-ses-propres-fonctions>Créer ses propres fonctions</a></li><li><a href=#réutiliser-une-fonction>Réutiliser une fonction</a></li></ul></li></ul></li></ul></nav></aside></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
-<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fSNT_2nde\2fpages\2fpages_algo\2fpython\2fpython5\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    Python Turtle
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><!-- raw HTML omitted -->
+<h1 id="tp-python-turtle">TP Python Turtle</h1>
+<p>Le module Turtle de Python permet de dessiner à l&rsquo;écran des formes, à l&rsquo;aide d&rsquo;instructions qui tracent des formes géométriques.</p>
+<p>Nous nous limiterons aux fonctions:</p>
+<ul>
+<li>up() : lève le crayon</li>
+<li>down() : baisse le crayon</li>
+<li>forward(n) : avance de n</li>
+<li>left(n) : tourne vers la gauche de n degrés</li>
+<li>right(n) : tourne vers la droite de n degrés</li>
+<li>circle(n) : dessine un cercle de rayon n</li>
+<li>write(’texte’) : écrit le texte</li>
+<li>color(’couleur’) : définit la couleur du trait</li>
+<li>fillcolor(&lsquo;couleur&rsquo;) : definit la couleur du remplissage</li>
+</ul>
+<h1 id="premiers-tracés">Premiers tracés</h1>
+<h2 id="linterface-scratch--python-de-vittascience">L&rsquo;interface Scratch + Python de Vittascience</h2>
+<ul>
+<li>Aller sur le site <!-- raw HTML omitted -->Vittascience.com<!-- raw HTML omitted -->. Puis choisir <em>Programmer</em> et <em>Python</em>.</li>
+</ul>
+<p>Le site propose un éditeur Scratch en ligne (avec des blocs de code).</p>
+<p>Les blocs de code sont accessibles à partir des <em>menus</em>, par genre:</p>
+<ul>
+<li>Affichage</li>
+<li>Turtle</li>
+<li>Logique</li>
+<li>Boucles</li>
+<li>Variables</li>
+<li>Fonctions &hellip;</li>
+</ul>
+<h2 id="pour-commencer-dessiner-un-triangle-simple">Pour commencer: dessiner un triangle simple</h2>
+<h3 id="assembler-les-blocs">Assembler les blocs</h3>
+<p>A partir du <em>menu Turtle</em>, en utilisant les blocs, vous allez:</p>
+<!-- raw HTML omitted -->
+<pre tabindex="0"><code>avancer de 50
+tourner a gauche d&#39;un angle de 120°
+avancer de 50
+</code></pre><p>Vous voyez sur l&rsquo;écran de droite le script Python équivalent, qui se construit au fur et à mesure:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#111">turtle</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">turtle</span><span style="color:#f92672">.</span><span style="color:#111">forward</span><span style="color:#111">(</span><span style="color:#ae81ff">50</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">turtle</span><span style="color:#f92672">.</span><span style="color:#111">left</span><span style="color:#111">(</span><span style="color:#ae81ff">120</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">turtle</span><span style="color:#f92672">.</span><span style="color:#111">forward</span><span style="color:#111">(</span><span style="color:#ae81ff">50</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>Appuyer sur <strong>Executer</strong>: La forme dessinée n&rsquo;est pas un triangle fermé.</p>
+<blockquote>
+<p><strong>Défi 1:</strong> ajouter les blocs manquants pour dessiner complètement le triangle.</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<ul>
+<li>Recopiez le script python correspondant dans votre cahier.</li>
+</ul>
+<h3 id="répéter-avec-une-boucle">Répéter avec une boucle</h3>
+<p>Si vous observez votre script, vous remarquez qu&rsquo;il est constitué de 3 répétitions:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Vous allez réaliser la même chose, mais en réduisant <em>AU MAXIMUM</em> le nombre de lignes.</p>
+<ul>
+<li>Conserver uniquement les 2 premiers blocs, <em>AVANCER</em> et <em>TOURNER</em>. Supprimer les autres</li>
+<li>Dans le menu <em>Boucles</em>, prendre le bloc <em>répéter &hellip; fois</em> et insérer dans ce bloc les 2 instructions de dessin. Modifier le paramètre 3.</li>
+</ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<ul>
+<li>EXECUTER le programme</li>
+<li>Recopiez le script python correspondant dans votre cahier.</li>
+</ul>
+<h3 id="créer-une-spirale-de-triangles">Créer une spirale de triangles</h3>
+<blockquote>
+<p><strong>Défi 2:</strong> Vous allez créer une figure originale en modifiant juste les paramètres dans votre script:</p>
+</blockquote>
+<blockquote>
+<ul>
+<li>Répéter 25 fois</li>
+</ul>
+</blockquote>
+<ul>
+<li>Faites tourner chaque fois votre <em>Tortue</em> d&rsquo;un angle de 125° et non 120°</li>
+</ul>
+<p>Vous voyez ici l&rsquo;interêt d&rsquo;utiliser une boucle pour répéter plusieurs fois les même instructions&hellip;</p>
+<h3 id="créer-ses-propres-fonctions">Créer ses propres fonctions</h3>
+<p>Une fonction permet de mémoriser des blocs de code afin de les organiser et les réutiliser plusieurs fois.</p>
+<ul>
+<li>Remettre les arguments qui dessinent un triangle simple (3 fois, 120°)</li>
+<li>Dans le menu <em>Fonctions</em>, prendre le premier bloc <em>Définir</em>. Modifier le nom, et renommer cette fonction avec <code>triangle</code>.</li>
+</ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<ul>
+<li>Mettre alors la boucle entière dans cette fonction. EXECUTER&hellip; il ne se passe rien.</li>
+<li>Revenir dans le menu <em>Fonctions</em> et:
+<ul>
+<li>aller chercher le bloc de code appelé <code>triangle</code>.</li>
+<li>Ajouter ce bloc dans la programme, à la suite</li>
+<li>et EXECUTER&hellip; voilà qui devrait afficher le triangle. Vous venez de programmer votre propre fonction, puis vous l&rsquo;avez appelé avec son nom,  <code>triangle()</code>.</li>
+</ul>
+</li>
+<li>Recopiez le script python correspondant dans votre cahier.</li>
+</ul>
+<h3 id="réutiliser-une-fonction">Réutiliser une fonction</h3>
+<p>Voici un extrait de la suite du script qui vous permettra de créer une figurre plus complexe:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<blockquote>
+<p><strong>Défi 3:</strong> Vous allez déplacer votre <em>Tortue</em> à différentes positions de l&rsquo;image, afin de dessiner la forme suivante:</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><em>Remarque: Vous aurez besoin pour cela de réutiliser votre fonction <code>triangle</code>.</em></p>
+<p>Une fois le défi réalisé, recopiez le script dans votre cahier.</p>
+<blockquote>
+<p><strong>Défi 4:</strong> Réaliser maintenant l&rsquo;une des figures ci-dessous:</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#linterface-scratch--python-de-vittascience">L&rsquo;interface Scratch + Python de Vittascience</a></li>
+    <li><a href="#pour-commencer-dessiner-un-triangle-simple">Pour commencer: dessiner un triangle simple</a>
+      <ul>
+        <li><a href="#assembler-les-blocs">Assembler les blocs</a></li>
+        <li><a href="#répéter-avec-une-boucle">Répéter avec une boucle</a></li>
+        <li><a href="#créer-une-spirale-de-triangles">Créer une spirale de triangles</a></li>
+        <li><a href="#créer-ses-propres-fonctions">Créer ses propres fonctions</a></li>
+        <li><a href="#réutiliser-une-fonction">Réutiliser une fonction</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

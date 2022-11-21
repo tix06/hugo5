@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    Cinématique (cours)
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fPC_1ere\2fmeca\2fpage3\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    Cinématique (cours)
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="cinematique">Cinematique</h1>
+<p>La cinématique, c&rsquo;est l&rsquo;étude du mouvement à partir des positions. On y définit la position, la vitesse, et l&rsquo;accélération au cours du temps.</p>
+<h1 id="etude-dans-un-repère-cartésien">Etude dans un repère cartésien</h1>
+<h2 id="référentiel">Référentiel</h2>
+<blockquote>
+<p>Definition: C&rsquo;est l&rsquo;espace, muni d&rsquo;un repère, dans lequel on étudie un mouvement.</p>
+</blockquote>
+<p><em>Quelques référentiels particuliers:</em></p>
+<table>
+<thead>
+<tr>
+<th>nom</th>
+<th>centré sur</th>
+<th>axes du repère</th>
+<th>On y étudie &hellip;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Héliocentrique</td>
+<td>Soleil</td>
+<td>Dirigés vers des étoiles lointaines</td>
+<td>mouvement des objets du système Solaire (planètes&hellip;). La Terre fait un tour en 365j dans le ref Héliocentrique</td>
+</tr>
+<tr>
+<td>Géocentrique</td>
+<td>Terre</td>
+<td>Dirigés vers des étoiles lointaines</td>
+<td>mouvement des satellites de la Terre. La Terre fait un tour sur elle-même en 24h dans ce ref.</td>
+</tr>
+<tr>
+<td>Terrestre</td>
+<td>Terre</td>
+<td>Fixés avec la Terre</td>
+<td>mouvement des objets à la surface de la Terre. Aussi appelé le référentiel du laboratoire.</td>
+</tr>
+</tbody>
+</table>
+<p>Dans un référentiel cartésien, le réféntiel est muni d&rsquo;un repère (0,x,y,z).</p>
+<!-- raw HTML omitted -->
+<p>Les axes sont supportés par les vecteurs $\overrightarrow{i}$ et $\overrightarrow{j}$</p>
+<h2 id="trajectoire">Trajectoire</h2>
+<blockquote>
+<p>Definition: C&rsquo;est l&rsquo;ensemble des points qui représentent le mouvement (M<!-- raw HTML omitted -->1<!-- raw HTML omitted -->, M<!-- raw HTML omitted -->2<!-- raw HTML omitted -->, &hellip; M<!-- raw HTML omitted -->n<!-- raw HTML omitted -->).</p>
+</blockquote>
+<p>On considère le mouvement comme une succession continue de petits mouvements. Les positions sont alors marquées de manière discrète (discrétisation du temps), espacés avec des intervalles de temps égaux, Δt.</p>
+<!-- raw HTML omitted -->
+<h2 id="coordonnées-dun-point">Coordonnées d&rsquo;un point</h2>
+<p>Un point M<!-- raw HTML omitted -->n<!-- raw HTML omitted --> est alors repéré par ses coodonnées $M\binom{x_n}{y_n}$, ou bien grâce au vecteur position $\overrightarrow{OM}\binom{x_n}{y_n}$</p>
+<h2 id="coordonnées-du-vecteur-vitesse">Coordonnées du vecteur vitesse</h2>
+<blockquote>
+<p>Définition: la vitesse est le taux de variation de la position, en fonction du temps. Il s&rsquo;agit d&rsquo;un vecteur. Au moment n, c&rsquo;est le vecteur $\overrightarrow{v_n}$. Ce vecteur est <em>tangent</em> à la trajectoire.</p>
+</blockquote>
+<p>Comme: $\overrightarrow{v}\binom{v_x}{v_y}$, on a:</p>
+<p>$$\overrightarrow{v_n} \begin{pmatrix}
+vx_n\\vy_n
+\end{pmatrix}$$</p>
+<ul>
+<li>Au <em>moment n</em>: en une durée Δt, la coordonnée x<!-- raw HTML omitted -->n<!-- raw HTML omitted --> varie de x<!-- raw HTML omitted -->n<!-- raw HTML omitted --> à x<!-- raw HTML omitted -->n+1<!-- raw HTML omitted -->. Alors v<!-- raw HTML omitted -->xn<!-- raw HTML omitted --> représente le taux de variation de cette coordonnée selon l&rsquo;axe des x.</li>
+<li>Au <em>moment n</em>: en une durée Δt, la coordonnée y<!-- raw HTML omitted -->n<!-- raw HTML omitted --> varie de y<!-- raw HTML omitted -->n<!-- raw HTML omitted --> à y<!-- raw HTML omitted -->n+1<!-- raw HTML omitted -->. D&rsquo;où la loi sur v<!-- raw HTML omitted -->yn<!-- raw HTML omitted -->:</li>
+</ul>
+<!-- raw HTML omitted -->
+<p>On a alors des suites de fonctions v<!-- raw HTML omitted -->xn<!-- raw HTML omitted --> et v<!-- raw HTML omitted -->yn<!-- raw HTML omitted -->. On peut utiliser un logiciel tableur ou un programme (en langage python) pour calculer ces valeurs: Voir <a href="/docs/PC_1ere/meca/page2/">TP2</a>.</p>
+<!-- raw HTML omitted -->
+<p>Et on peut tracer le vecteur $\overrightarrow{v_n}$ à partir de ses coordonnées, v<!-- raw HTML omitted -->xn<!-- raw HTML omitted --> et v<!-- raw HTML omitted -->yn<!-- raw HTML omitted -->, de sommet M<!-- raw HTML omitted -->n<!-- raw HTML omitted -->, directement sur la trajectoire:</p>
+<!-- raw HTML omitted -->
+<h2 id="coordonnées-du-vecteur-accélération">Coordonnées du vecteur accélération</h2>
+<blockquote>
+<p>Définition: l&rsquo;accélération est le taux de variation de la vitesse, en fonction du temps. Il s&rsquo;agit d&rsquo;un vecteur. Au moment n, c&rsquo;est le vecteur $\overrightarrow{a_n}$</p>
+</blockquote>
+<ul>
+<li>Au <em>moment n</em>: en une durée Δt, la vitesse v<!-- raw HTML omitted -->xn<!-- raw HTML omitted --> varie de v<!-- raw HTML omitted -->xn<!-- raw HTML omitted --> à v<!-- raw HTML omitted -->x n+1<!-- raw HTML omitted -->. Alors a<!-- raw HTML omitted -->xn<!-- raw HTML omitted --> représente le taux de variation de cette coordonnée selon l&rsquo;axe des x.</li>
+<li>Au <em>moment n</em>: en une durée Δt, la vitesse v<!-- raw HTML omitted -->yn<!-- raw HTML omitted --> varie de v<!-- raw HTML omitted -->yn<!-- raw HTML omitted --> à v<!-- raw HTML omitted -->y n+1<!-- raw HTML omitted -->. D&rsquo;où la loi sur a<!-- raw HTML omitted -->yn<!-- raw HTML omitted -->:</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>Pour un mouvement accéléré dans la direction (Ox), a<!-- raw HTML omitted -->x<!-- raw HTML omitted --> est positif, et la vitesse v<!-- raw HTML omitted -->x<!-- raw HTML omitted --> augmente au cours du temps.</li>
+<li>Pour un mouvement décéléré dans la direction (Ox), a<!-- raw HTML omitted -->x<!-- raw HTML omitted --> est négatif, et la vitesse v<!-- raw HTML omitted -->x<!-- raw HTML omitted --> diminue au cours du temps.</li>
+</ul>
+<h1 id="etude-par-une-méthode-géométrique">Etude par une méthode géométrique</h1>
+<p>On peut ignorer les coordonnées de position, et repérer les directions avec des vecteurs unitaires $\overrightarrow{u_1}$, $\overrightarrow{u_2}$, etc&hellip;</p>
+<p>Alors le déplacement de M<!-- raw HTML omitted -->1<!-- raw HTML omitted --> vers M<!-- raw HTML omitted -->2<!-- raw HTML omitted --> est repéré par le vecteur $\overrightarrow{M_1M_2}$ tel que:</p>
+<p>$$\overrightarrow{M_1M_2} = M_1M_2.\overrightarrow{u_1}$$</p>
+<!-- raw HTML omitted -->
+<h2 id="vitesse">Vitesse</h2>
+<p>La definition de la vitesse, au point M<!-- raw HTML omitted -->n<!-- raw HTML omitted -->, sera prise comme le taux de variation de la position, entre les points M<!-- raw HTML omitted -->n<!-- raw HTML omitted --> et M<!-- raw HTML omitted -->n+1<!-- raw HTML omitted -->:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Mais, pour des mouvements courbes, on peut prendre la vitesse en M<!-- raw HTML omitted -->n+1<!-- raw HTML omitted --> comme le taux de variation de la position, entre les points M<!-- raw HTML omitted -->n<!-- raw HTML omitted --> et M<!-- raw HTML omitted -->n+2<!-- raw HTML omitted -->. La <strong>durée</strong> est alors de <strong>2.Δt</strong>. Cela donne:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><em>En pratique:</em>
+On mesure le segment M<!-- raw HTML omitted -->1<!-- raw HTML omitted -->M<!-- raw HTML omitted -->2<!-- raw HTML omitted -->. On divise par Δt.</p>
+<!-- raw HTML omitted -->
+<p>Le vecteur $\overrightarrow{v_1}$ est alors porté par la droite (M<!-- raw HTML omitted -->1<!-- raw HTML omitted -->M<!-- raw HTML omitted -->2<!-- raw HTML omitted -->), de sens 1 vers 2. La longueur du vecteur depend de la valeur calculée, et de l&rsquo;echelle utilisée (1cm &lt;-&gt; &hellip; m/s).</p>
+<!-- raw HTML omitted -->
+<h2 id="accélération">Accélération</h2>
+<p>L&rsquo;accélération au point M<!-- raw HTML omitted -->n<!-- raw HTML omitted -->, sera prise comme le taux de variation de la <em>vitesse</em>, entre les points M<!-- raw HTML omitted -->n<!-- raw HTML omitted --> et M<!-- raw HTML omitted -->n+1<!-- raw HTML omitted -->:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Mais là aussi, pour des mouvements courbes, on peut avoir:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><em>En pratique:</em>
+En prenant la première définition. Au point M<!-- raw HTML omitted -->1<!-- raw HTML omitted -->:</p>
+<!-- raw HTML omitted -->
+<p>On fait la somme géométrique des vecteurs $\overrightarrow{v_2}$ et -$\overrightarrow{v_1}$. On obtient alors le vecteur $\overrightarrow{\Delta v_1}$. (à gauche sur l&rsquo;image).</p>
+<p>Pour tracer les vecteur $\overrightarrow{a_1}$, on utilise alors l&rsquo;echelle proposée sur le document <em>(1cm &lt;-&gt; &hellip;m/s<!-- raw HTML omitted -->2<!-- raw HTML omitted -->)</em>: à droite sur le schéma.</p>
+<!-- raw HTML omitted -->
+<p>On reporte alors ce vecteur au point M<!-- raw HTML omitted -->1<!-- raw HTML omitted --> :</p>
+<!-- raw HTML omitted -->
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#référentiel">Référentiel</a></li>
+    <li><a href="#trajectoire">Trajectoire</a></li>
+    <li><a href="#coordonnées-dun-point">Coordonnées d&rsquo;un point</a></li>
+    <li><a href="#coordonnées-du-vecteur-vitesse">Coordonnées du vecteur vitesse</a></li>
+    <li><a href="#coordonnées-du-vecteur-accélération">Coordonnées du vecteur accélération</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#vitesse">Vitesse</a></li>
+    <li><a href="#accélération">Accélération</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

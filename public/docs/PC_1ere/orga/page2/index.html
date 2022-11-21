@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    synthèse en chimie organique
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fPC_1ere\2forga\2fpage2\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    synthèse en chimie organique
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="la-synthèse-chimique---présentation">La synthèse chimique - Présentation</h1>
+<!-- raw HTML omitted -->
+<p>Un protocole de synthèse suit une série de 3 étapes : transformation, traitement (et purification), identification.</p>
+<h1 id="les-étapes-de-la-synthèse-chimique">Les étapes de la synthèse chimique</h1>
+<h2 id="préparation">Préparation</h2>
+<p>Pour estimer la quantité de matière des réactifs, il peut y avoir plusieurs possibiltés:</p>
+<ul>
+<li>Si le réactif est mesuré à partir de sa masse m<!-- raw HTML omitted -->1<!-- raw HTML omitted -->, on utilise la loi masse molaire - quantité de matière:</li>
+</ul>
+<p>$$n_1 = \tfrac{m_1}{M_1}$$</p>
+<ul>
+<li>Si le réactif est mesuré en volume, il faudra au préalable utiliser la valeur de masse volumique:</li>
+</ul>
+<p>$$m_2 = \rho.V$$</p>
+<p>Puis la loi masse molaire - quantité de matière:</p>
+<p>$$n_2 = \tfrac{m_2}{M_2}$$</p>
+<h3 id="avancement-maximal">Avancement maximal</h3>
+<p>Soit C<!-- raw HTML omitted -->i<!-- raw HTML omitted --> le coefficient stoechiométrique du réactif <!-- raw HTML omitted -->i<!-- raw HTML omitted -->, l&rsquo;avancement maximal est estimé en calculant pour chaque réactif:</p>
+<p>$$\tfrac{n_i}{C_i}$$</p>
+<p>La valeur de l&rsquo;avancement maximal x<!-- raw HTML omitted -->i<!-- raw HTML omitted --> est alors la plus petite valeur calculée pour les $\tfrac{n_i}{C_i}$</p>
+<h2 id="transformation">Transformation</h2>
+<p>Lorsque l’on réalise une réaction chimique : il faut choisir des <strong>paramètres expérimentaux</strong> pour assurer le meilleur compromis : cout/ rendement/ sécurité/ impact environnemental.</p>
+<p>Par exemple :</p>
+<ul>
+<li>La température et la pression permettent de jouer sur l’état physique des composés, et sert aussi de facteur cinétique ;</li>
+<li>La durée de réaction doit être choisie en assurant un compromis entre la quantité de réactifs qui réagiront et une durée excessivement longue d’obtention des produits recherchés ;</li>
+<li>Le choix du solvant  (solubiliser des espèces qui peuvent être insolubles entre elles)</li>
+<li>Présence d&rsquo;un catalyseur</li>
+<li>La sécurité : montage de chauffage à reflux</li>
+</ul>
+<p>Le montage à reflux permet d’augmenter la température du mélange réactionnel sans perte par vaporisation (l’usage de grains de pierre ponce permet alors de réguler l’ébullition).</p>
+<p>En effet, lorsque le mélange réactionnel est chauffé, des vapeurs s’échappent et montent ; au contact du réfrigérant froid, elles se ………………    et retombent dans le ballon : on observe alors un ……………….</p>
+<p>Compléter la légende pour le schéma du montage de chauffage à reflux :</p>
+<!-- raw HTML omitted -->
+<h2 id="traitement">Traitement</h2>
+<p>Le but est maintenant d’extraire le <em>produit d’intérêt</em>.</p>
+<p><strong>produit d&rsquo;intérêt</strong> : lors d&rsquo;une synthèse, on fabrique une espèce chimique cible : le <em>produit d&rsquo;intérêt</em>. Les autres espèces sont les <em>sous-produits</em>.</p>
+<h3 id="extraction-pendant-la-transformation-">Extraction pendant la transformation :</h3>
+<p>Parfois, on peut séparer le produit d’intérêt par distillation. Il s’agit d’une extraction qui est réalisée pendant la transformation. Il faut pour cela se munir d’un ballon bicol (ou tricol comme dans le sch 2).</p>
+<p>Légender le schéma avec les mots suivants : support élevateur, ballon tricol, ampoule de coulée, refrigérant à eau, thermomètre, mélange réactionnel, distillat, erlenmeyer, entrée d’eau froide, sortie d’eau.</p>
+<!-- raw HTML omitted -->
+<p>Ce montage permet d’extraire le produit d’intérêt du mélange réactionnel au fur et à mesure qu’il est produit. Pour que ce soit réalisable, le produit d’intérêt doit avoir une température de vaporisation plus basse que les autres constituants du mélange.</p>
+<h3 id="extraction-après-la-transformation-">Extraction après la transformation :</h3>
+<p>On peut retirer une espèce chimique d’un mélange grâce à la différence de l’une des caractéristiques physiques des espèces du mélange : par exemple, la différence de solubilité dans un solvant donné.</p>
+<h3 id="la-filtration-">La filtration :</h3>
+<p>si la substance est solide à température ambiante.
+La filtration est généralement réalisée avec un filtre Büchner, et permet de séparer les phases solide et liquide, par gravité, mais aussi grâce à l’aspiration créée dans le bocal situé sous l’entonoir.</p>
+<!-- raw HTML omitted -->
+<h3 id="lextraction-liquide-liquide">L’extraction liquide-liquide:</h3>
+<p>si la substance est liquide à température ambiante.</p>
+<p>Cette extraction est généralement réalisée avec une <strong>ampoule à décanter</strong>.</p>
+<p>Elle repose sur la différence de solubilité d&rsquo;un soluté entre deux phases non-miscibles entre elles. L&rsquo;idée est de transférer un soluté d&rsquo;une phase liquide à une autre phase liquide non-miscible à la première.</p>
+<p>Dans l’exemple suivant, on considère que les deux phases liquides sont constituées :</p>
+<ul>
+<li>d’un liquide de type organique (cyclohexane, essence,…), non miscible avec l’eau, et de densité inférieure à celle de l’eau.</li>
+<li>d’eau</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="purification">Purification</h2>
+<p>Lorsque la première étape de traitement est terminée, le produit d’intérêt n&rsquo;est qu&rsquo;en partie isolé, et les impuretés n’ont pas toutes été retirées:</p>
+<p>Une étape de purification peut être est nécessaire. Pour cela, plusieurs techniques sont possibles : lavage avec solvant, distillation, ou recristallisation.</p>
+<h2 id="identification">Identification</h2>
+<p>Afin d’identifier un produit synthétisé ou de contrôler sa pureté, différents types d’analyse existent, utilisant les caractéristiques des espèces à identifier : mesure d’une température de changement d’état, de l’indice de réfraction, de la masse volumique&hellip;</p>
+<p>D&rsquo;autres analyses peuvent être effectuées :</p>
+<ul>
+<li>
+<p>La <strong>Chromatographie sur Couche Mince (CCM)</strong> : voir l’ex resolu  n°2 p 147 pour approfondir.</p>
+</li>
+<li>
+<p>La réalisation d’un spectre IR, Visible, UV, ou encore une spectroscopie RMN permettent également d&rsquo;identifier une molécule.</p>
+</li>
+</ul>
+<p><strong>Def:</strong> Une analyse par chromatographie (<strong>CCM</strong>) permet:</p>
+<ul>
+<li>de séparer les constituants d&rsquo;un mélange: on voit plusieurs tâches à la verticale du depot.</li>
+<li>d&rsquo;identifier une espèce chimique en la comparant avec une substance de référence.</li>
+</ul>
+<h1 id="rendement-dune-synthèse-chimique">rendement d’une synthèse chimique</h1>
+<p>Lorsque l&rsquo;on peut isoler, purifier et mesurer le produit d&rsquo;interêt, on peut évaluer le <em>rendement de la synthèse</em>.</p>
+<p><strong>Def:</strong> Le rendement <strong>r</strong> d’une synthèse est défini comme le rapport entre la quantité de matière de produit réellement obtenue (n<!-- raw HTML omitted -->exp<!-- raw HTML omitted -->) et la quantité de matière maximale de produit que l’on pourrait obtenir avec un avancement maximal (n<!-- raw HTML omitted -->max<!-- raw HTML omitted -->):</p>
+<p>$$r = \tfrac{n_e}{n_m}$$</p>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#préparation">Préparation</a>
+      <ul>
+        <li><a href="#avancement-maximal">Avancement maximal</a></li>
+      </ul>
+    </li>
+    <li><a href="#transformation">Transformation</a></li>
+    <li><a href="#traitement">Traitement</a>
+      <ul>
+        <li><a href="#extraction-pendant-la-transformation-">Extraction pendant la transformation :</a></li>
+        <li><a href="#extraction-après-la-transformation-">Extraction après la transformation :</a></li>
+        <li><a href="#la-filtration-">La filtration :</a></li>
+        <li><a href="#lextraction-liquide-liquide">L’extraction liquide-liquide:</a></li>
+      </ul>
+    </li>
+    <li><a href="#purification">Purification</a></li>
+    <li><a href="#identification">Identification</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

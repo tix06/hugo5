@@ -1,38 +1,495 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>langages web
-| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel=stylesheet><script type=text/x-mathjax-config>
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    langages web
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
   });
-</script><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.1c02dc1d2c0b546a84beb71d8f4336d6f5d7b69564e08bdfc04c2fb0595d786d.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
 catch(err)
-{console.log(err.message);}
-if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
-if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
-if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}
-let chemin=window.location.pathname;if(chemin.search('NSI')>-1){baniere=document.querySelector("#myHeader");let linkBox=document.createElement('div');linkBox.classList.add('linkBox');let newH=document.createElement('a');newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';newH.classList.add('nsi');linkBox.appendChild(newH);baniere.appendChild(linkBox);}</script><style>#myHeader{display:flex;flex-direction:row-reverse}#myHeader>.titre{width:80%;min-width:300px;text-align:left}.linkBox{margin:10px;padding-top:10px;background-color:pink;min-width:50px}.isn{}</style></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2f docs\2fSNT_2nde\2fpages\2fpage4\2fweb2\2f ]{color:#004ed0}</style><ul><li><a href=/><strong>Accueil</strong></a></li><li><a href=/docs/esf/esf_index/><strong>ESF</strong></a></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p></li><li><p><a href=/docs/python/index_python/><strong>Python</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
-addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-page><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
-<strong>langages web</strong></header><article class=markdown><h1 id=le-langage-html>Le langage HTML</h1><h2 id=instructions-en-html>Instructions en HTML</h2><p>Les instructions <code>HTML</code> sont mises dans un fichier dont l&rsquo;extension est <code>.html</code>.</p><p><strong>Toutes les instructions</strong> de mise en page seront disposées entre les balises <code>&lt;body&gt; … &lt;/body&gt;</code></p><p><strong>Les arguments</strong> pour chaque instruction sont mis entre la balise d’ouverture, par exemple <code>&lt;h1&gt;</code> et de fermeture, <code>&lt;/h1&gt;</code>.</p><blockquote><p><code>&lt;h1&gt;Wanted!&lt;/h1&gt;</code></p></blockquote><p><strong>Pour ajouter une image :</strong> on utilise la balise <code>&lt;img&gt;</code>:</p><blockquote><p><code>&lt;img src=&quot;robot.png&quot;&gt;</code></p></blockquote><p>Celle-ci doit obligatoirement avoir un attribut <em>src</em> suivi du chemin (local ou URL de type http://&hellip;) vers le fichier image. Les attributs d&rsquo;une balise, comme ici <code>src</code> permettent de configurer les éléments.</p><p><em>Remarque:</em> La balise <code>&lt;img&gt;</code> est une balise orpheline, qui ne possède pas de balise de fermeture.</p><p><strong>Les balises principales :</strong> de type <code>&lt;balise&gt;argument&lt;/balise&gt;</code></p><table><thead><tr><th>element</th><th>exemple d&rsquo;instruction html</th><th>rendu navigateur</th></tr></thead><tbody><tr><td>h1 (titre principal)</td><td><code>&lt;h1&gt;Mon titre principal&lt;/h1&gt;</code></td><td><span style=font-size:32px>Mon titre principal</span></td></tr><tr><td>h2 (titre secondaire)</td><td><code>&lt;h2&gt;Mon titre secondaire&lt;/h2&gt;</code></td><td><span style=font-size:24px>Mon titre secondaire</span></td></tr><tr><td>p (paragraphe)</td><td><code>&lt;p&gt;Voici le contenu d'un paragraphe&lt;/p&gt;</code></td><td>&nbsp; &nbsp; Voici le contenu d&rsquo;un paragraphe</td></tr><tr><td>div (container)</td><td><code>&lt;div&gt;&lt;p&gt;Contenu&lt;/p&gt;&lt;p&gt;autre contenu&lt;/p&gt;&lt;/div&gt;</code></td><td><p>Contenu</p><p>autre contenu</p></td></tr><tr><td>a (lien)</td><td><code>&lt;a href=&quot;lien/vers/la/page2.html&quot;&gt;aller a la page 2&lt;/a&gt;</code></td><td><a href>aller a la page 2</a></td></tr><tr><td>img (image)</td><td><code>&lt;img src=&quot;lien/vers/l/image.png&quot;&gt;</code></td><td><img src=../images/bigdata.png width=50px></td></tr></tbody></table><p><strong>Balise orpheline:</strong>
-Noter que <code>&lt;img&gt;</code> est une balise orpheline, qui ne necessite pas de balise de fermeture: <code>&lt;img src=&quot;lien/vers/l/image.png&quot;&gt;</code><br></p><h2 id=travail-pratique>Travail pratique</h2><p>Testons nos premières instructions en html.</p><iframe src="https://trinket.io/embed/html/58318bee1f?runMode=autorun" width=900 height=560 frameborder=0 marginwidth=0 marginheight=0 allowfullscreen></iframe><p><em>Si l&rsquo;affichage de l&rsquo;editeur n&rsquo;est pas optimal, utiliser le <a href=https://trinket.io/embed/html/58318bee1f#.XNWFAS_M3MJ target=blank>lien direct sur la page en plein écran</a></em></p><blockquote><p>Nous allons <strong>modifier le script</strong> de la page pour obtenir quelque chose ressemblant à celle-ci :</p></blockquote><figure><div><img src=../images/wanted.png></div></figure><p><strong>1)</strong> Traduire et modifier le texte (<em>Description</em>) pour qu&rsquo;il soit rédigé en français.</p><p><strong>2)</strong> Diminuer la dimension de l&rsquo;image à 150px: Dans l&rsquo;onglet <em>style.css</em>, ajouter la règle CSS suivante, à la suite de la précédente (donc APRES l&rsquo;accolade } ):</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#f92672>img</span> <span style=color:#111>{</span> 
-  <span style=color:#00a8c8>width</span><span style=color:#111>:</span> <span style=color:#ae81ff>150</span><span style=color:#00a8c8>px</span><span style=color:#111>;</span>
-<span style=color:#111>}</span></code></pre></div><p><strong>3)</strong> Ajouter un nouveau paragraphe (vide): Dans l&rsquo;onglet <em>index.html</em>, ajouter une balise enfant <code>&lt;p&gt;</code> à celle <code>&lt;div&gt;</code>. Penser à ajouter la balise de fermeture <code>&lt;/p&gt;</code> juste après.</p><p><strong>4)</strong> Ajouter un lien dans ce paragraphe vide vers une nouvelle page du site: <code>&lt;a href=&quot;lune.html&quot;&gt;=&gt; Go to Lune Project&lt;/a&gt;</code></p><p><strong>5)</strong> Créer un nouvel onglet (bouton <strong>+</strong>) que vous renommerez <em>lune.html</em>.</p><h2 id=projet-de-recrutement-lunaire>Projet de recrutement lunaire</h2><p>Dans l&rsquo;onglet <em>lune.html</em>, écrire le script HTML pour obtenir la page suivante:</p><figure><div><img src=../images/lune.png><figcaption>lune.html</figcaption></div></figure><p><strong>Aide:</strong></p><p><strong>1)</strong> Pour charger l&rsquo;image dans le projet : bouton de droite
-<img src=../images/bouton.png alt=bouton></p><p><strong>2)</strong> Puis selectionner l&rsquo;image :
-<img src=../images/rocket.png alt=rocket></p><p>Penser à adapter le nom de l&rsquo;image pour la balise <code>&lt;img&gt;</code>.</p><p><strong>3)</strong> Vérifier que le fichier <code>Lune.html</code> contient bien la balise suivante dans l&rsquo;entête du fichier afin de pointer vers le fichier <em>style.css</em>. Cette balise doit être placée entre les balise<code>&lt;head&gt;...&lt;/head&gt;</code> :</p><blockquote><p><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code></p></blockquote><p>Sinon, ajoutez la.</p><p><strong>4)</strong> Ajouter un lien <em>Retour</em> vers la page <em>index.html</em>.</p><h1 id=le-langage-css>Le langage CSS</h1><p>CSS est le langage qui décrit le style et la mise en forme du document HTML. Il décrit comment les elements HTML doivent être affichés et remplace les règles de style par defaut appliquées par le navigateur.</p><p>Les déclaration CSS doivent en principe se trouver dans un fichier à extension <code>.css</code>. Chaque <em>déclaration</em> se rapporte à un type d&rsquo;<em>élément</em> de la page HTML, grâce au <em>sélécteur</em>. Et chaque déclaration contient une ou plusieurs <em>règles</em>:</p><blockquote><p><strong>Déclaration: <code>sélécteur {propriété: valeur;}</code></strong></p><p><strong>Règle: <code>propriété: valeur;</code></strong></p></blockquote><p>Une déclaration CSS comprend :</p><ul><li>un sélecteur, qui peut être le nom d&rsquo;une balise HTML (comme par exemple div dans l&rsquo;exemple proposé)</li><li>une ou plusieurs règle(s) contenant<ul><li>une propriété</li><li>et la valeur correspondante.</li></ul></li></ul><figure><div><img src=../images/css.png><figcaption>règles CSS associées à tous les éléments p de la page: caractères mis en gras (font-weight: bold) et entourés d'une bordure rouge (border: 2px solid red)</figcaption></div></figure><p>Observez bien les caractères spéciaux { } : et ; utilisés pour contenir et séparer les <em>instructions</em>.
-Ces instructions peuvent être mises à la ligne, ou bien dans une seule ligne :</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#f92672>p</span> <span style=color:#111>{</span>
-  <span style=color:#00a8c8>font-weight</span><span style=color:#111>:</span> <span style=color:#00a8c8>bold</span><span style=color:#111>;</span>
-  <span style=color:#00a8c8>border</span><span style=color:#111>:</span> <span style=color:#ae81ff>2</span><span style=color:#00a8c8>px</span> <span style=color:#00a8c8>solid</span> <span style=color:#00a8c8>red</span><span style=color:#111>;</span>
-<span style=color:#111>}</span></code></pre></div><p>est équivalent à :</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#f92672>p</span> <span style=color:#111>{</span><span style=color:#00a8c8>font-weight</span><span style=color:#111>:</span> <span style=color:#00a8c8>bold</span><span style=color:#111>;</span> <span style=color:#00a8c8>border</span><span style=color:#111>:</span> <span style=color:#ae81ff>2</span><span style=color:#00a8c8>px</span> <span style=color:#00a8c8>solid</span> <span style=color:#00a8c8>red</span><span style=color:#111>;}</span></code></pre></div><p>Ici, TOUTES les balises h1 utilisées dans le document html héritent des propriétés suivantes :</p><ul><li>la couleur du texte est mise en bleu</li><li>la taille des caractères est mise à 12 px.</li></ul><p>Ces instructions {propriété1 : valeur; } sont référencées sur le site : <em><a href=https://www.w3schools.com/css/default.asp>https://www.w3schools.com/css/default.asp</a></em></p><blockquote><p>A vous de jouer : Vous allez modifier le fichier de style de votre projet, mais cette fois, à l&rsquo;aide d&rsquo;un editeur de texte.</p></blockquote><p><strong>1)</strong> Téléchargez votre projet sur votre ordinateur. A l&rsquo;aide du menu en haut à gauche de la fenêtre d&rsquo;edition, selectionner <em>Download</em>:</p><figure><div><img src=../images/download.png><figcaption>Download depuis le menu de l'editeur Trinket</figcaption></div></figure><p><br></p><figure><div><img src=../images/enregistrer.png><figcaption>Choisir l'option Enregistrer sous...</figcaption></div></figure><p><strong>2)</strong> Atteindre le fichier à l&rsquo;aide de l&rsquo;<strong>explorateur</strong> de votre ordinateur.</p><figure><div><img src=../images/telechargement.png><figcaption>Dossier téléchargement</figcaption></div></figure><p><strong>Dézipper</strong> le fichier téléchargé et deplacer son contenu dans vos <em>Documents</em>.</p><figure><div><img src=../images/extraire.png><figcaption>Clic droit sur le dossier .zip et choisir <i>Extraire tout</i></figcaption></div></figure><p>Normalement, l&rsquo;explorateur devrait montrer le contenu du nouveau dossier, avec tous les fichiers du projet.</p><p><strong>3)</strong> Sélectionner tous les fichiers d&rsquo;extensions <code>.html</code> et <code>.css</code>: Touche <i>Maj</i> enfoncée séléctionner les 3 fichiers.</p><p>On veut les ouvrir avec un editeur de script, comme par exemple <em>Notepad++</em>:</p><figure><div><img src=../images/editer.png><figcaption>Clic droit: Ouvrir avec Notepad++</figcaption></div></figure><p><br></p><figure><div><img src=../images/notepad2.png><figcaption>La fenêtre de l'editeur Notepad++</figcaption></div></figure><p><strong>4)</strong> Choisir parmi les différents onglets celui appelé <code>style.css</code>. Vous allez modifiez la mise en forme du texte à l&rsquo;aide d&rsquo;une déclaration CSS. Pour modifier les titres de niveau 1 (éléments <em>h1</em>) en bleu, et la taille des caractères à 12px, vous saisirez à la suite des autres déclarations:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#f92672>h1</span> <span style=color:#111>{</span>
-  <span style=color:#00a8c8>color</span> <span style=color:#111>:</span> <span style=color:#00a8c8>blue</span><span style=color:#111>;</span>
-  <span style=color:#00a8c8>font-size</span> <span style=color:#111>:</span> <span style=color:#ae81ff>12</span> <span style=color:#111>px</span><span style=color:#111>;</span>
-  <span style=color:#111>}</span></code></pre></div><p>D&rsquo;autres règles peuvent être ajoutées à partir du tutoriel <a href=https://www.w3schools.com/css target=blank><a href=https://www.w3schools.com/css/default.asp>https://www.w3schools.com/css/default.asp</a></a></p><p><strong>5)</strong> Ouvrir alors le fichier <em>index.html</em> de votre projet à l&rsquo;aide du navigateur: depuis l&rsquo;<em>explorateur</em>, faire un clic droit sur <code>index.html</code>.</p><figure><div><img src=../images/ouvrirAvec.png><figcaption>Choisir Ouvrir avec: Firefox</figcaption></div></figure><h1 id=le-langage-javascript>Le langage javascript</h1><p>Le langage javascript va permettre de gérer les évènements de la page : les animations, les données des formulaires, les boutons&hellip;</p><ul><li><p>A l&rsquo;aide des fonctions de l&rsquo;editeur <em>Notepad++</em>, <strong>créer un nouveau fichier</strong> qui sera nommé <code>script.js</code>. Mettre ce fichier dans le MËME dossier que celui contenant votre projet (et donc vos autres fichiers).</p></li><li><p>Ajouter dans ce fichier l&rsquo;instruction :</p><pre><code>function decollage() { 
-alert(&quot;c'est parti on decolle !!&quot;);}
-</code></pre></li><li><p>Puis indiquer l&rsquo;adresse du fichier javascript : entre les balises <code>&lt;head&gt;...&lt;/head&gt;</code>, ajouter :
-<code>&lt;script type=&quot;text/javascript&quot; src=&quot;script.js&quot;&gt;&lt;/script&gt;</code></p></li><li><p>et ajouter un bouton dans la page <em>lune.html</em>: juste avant la fermeture de la balise <code>&lt;/div&gt;</code>, mettre :
-<button onclick=decollage()>s&rsquo;inscrire</button> avec la balise <code>&lt;button onclick=&quot;decollage()&quot;&gt;s'inscrire&lt;/button&gt;</code></p></li></ul><h1 id=prolongement>Prolongement</h1><p><em>S&rsquo;il vous reste du temps:</em> ajoutez une <strong>troisième</strong> page à votre projet Web.</p><p>Celle-ci pourrait, par exemple, porter sur un sujet lié à l&rsquo;exploration d&rsquo;un astre du système solaire pour rester dans le thème des précédentes.</p><ul><li>La page créée pourrait contenir une image (libre de droit si possible).</li><li>Citer les sources utilisées (sites où vous avez trouvé les renseignements, source de l&rsquo;image)</li><li>La page devra être liée aux autres pages à l&rsquo;aide de liens hypertextes.</li></ul><h1 id=liens-et-compléments>Liens et compléments</h1><ul><li><p>retour vers la page HTML: présentation
-<input type=button class="btn btn-lg" value="Partie 1: HTML. Présentation" onclick="window.location.href='../web1/index.html'"></p></li><li><p>retour vers la page: Documents Web &nbsp;&nbsp;&nbsp;&nbsp;
-<input type=button class="btn btn-lg" value=Retour onclick="window.location.href='../web/index.html'"></p></li><li><p>Animations en javascript avec P5.js:&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-<input type=button class="btn btn-lg" value="Partie 3: Javascript" onclick="window.location.href='../web3/index.html'"></p></li></ul></article><div style=height:100px></div></div></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
-<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fSNT_2nde\2fpages\2fpage4\2fweb2\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    langages web
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="le-langage-html">Le langage HTML</h1>
+<p>L’Hypertext Markup Language, généralement abrégé <strong>HTML</strong>, est un langage de contenu et de description interprété par le navigateur.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="instructions-en-html">Instructions en HTML</h2>
+<p>Testons nos premières instructions en html.</p>
+<p><strong>Les arguments</strong> pour chaque instruction sont mis entre la balise d’ouverture, par exemple <code>&lt;h1&gt;</code> et de fermeture, <code>&lt;/h1&gt;</code>.</p>
+<blockquote>
+<p>Testez le vous même: Allez dans l&rsquo;editeur en ligne <!-- raw HTML omitted -->squarefree.com<!-- raw HTML omitted --> et copier-coller le script suivant:</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">h1</span><span style="color:#111">&gt;</span>Wanted!<span style="color:#111">&lt;/</span><span style="color:#f92672">h1</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<blockquote>
+<p>Comment cette instruction est-elle interprétée par le navigateur (partie inférieure de l&rsquo;écran)?</p>
+</blockquote>
+<h3 id="les-balises-principales"><strong>Les balises principales</strong></h3>
+<p>Ce sont la plupart du temps des balises de type <code>&lt;balise&gt;argument&lt;/balise&gt;</code></p>
+<table>
+<thead>
+<tr>
+<th>element</th>
+<th>exemple d&rsquo;instruction html</th>
+<th>rendu navigateur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>h1 (titre principal)</td>
+<td><code>&lt;h1&gt;Mon titre principal&lt;/h1&gt;</code></td>
+<td><!-- raw HTML omitted -->Mon titre principal<!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>h2 (titre secondaire)</td>
+<td><code>&lt;h2&gt;Mon titre secondaire&lt;/h2&gt;</code></td>
+<td><!-- raw HTML omitted -->Mon titre secondaire<!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>p (paragraphe)</td>
+<td><code>&lt;p&gt;Voici le contenu d'un paragraphe&lt;/p&gt;</code></td>
+<td>    Voici le contenu d&rsquo;un paragraphe</td>
+</tr>
+<tr>
+<td>div (container)</td>
+<td><code>&lt;div&gt;&lt;p&gt;Contenu&lt;/p&gt;&lt;p&gt;autre contenu&lt;/p&gt;&lt;/div&gt;</code></td>
+<td><!-- raw HTML omitted -->Contenu<!-- raw HTML omitted --><!-- raw HTML omitted -->autre contenu<!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>a (lien)</td>
+<td><code>&lt;a href=&quot;https://www.anti-moustique.net/raquette-moustique/&quot;&gt;le meilleur antimoustique au monde&lt;/a&gt;</code></td>
+<td><!-- raw HTML omitted -->le meilleur antimoustique au monde<!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>img (image)</td>
+<td><code>&lt;img src=&quot;https://i.postimg.cc/MHjjW4wg/moustique.png&quot;&gt;</code></td>
+<td><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>ul li</td>
+<td><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></td>
+<td><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<h3 id="balise-de-lien-hypertexte"><strong>Balise de lien hypertexte</strong></h3>
+<p>Dans le tableau précédent, la balise <code>&lt;a href=&quot;...&quot;&gt;texte à afficher&lt;/a&gt;</code> possède un <em>attribut</em> obligatoire: <code>href=&quot;...&quot;</code>. Cet attribut contient le lien hypertexte vers lequel le navigateur vous mène lorsque vous cliquez sur le <em>texte à afficher</em>.</p>
+<h3 id="balise-image"><strong>Balise image</strong></h3>
+<p><strong>Pour ajouter une image :</strong> on utilise la balise <code>&lt;img&gt;</code>:</p>
+<blockquote>
+<p><code>&lt;img src=&quot;robot.png&quot;&gt;</code></p>
+</blockquote>
+<p>Celle-ci doit obligatoirement avoir un attribut <em>src</em> suivi du chemin (local ou URL de type http://&hellip;) vers le fichier image. Les attributs d&rsquo;une balise, comme ici <code>src</code> permettent de configurer les éléments.</p>
+<p><em>Remarque:</em> La balise <code>&lt;img&gt;</code> est une balise orpheline, qui ne possède pas de balise de fermeture: <code>&lt;img src=&quot;lien/vers/l/image.png&quot;&gt;</code><!-- raw HTML omitted --></p>
+<h1 id="travail-pratique">Travail pratique</h1>
+<p>Dans une page html, les instructions <code>HTML</code> sont mises dans un fichier dont l&rsquo;extension est <code>.html</code>. Ici, nous utiliserons un editeur en ligne, qui donne directement le rendu visuel de la page, sans avoir à manipuler de fichier.</p>
+<p><strong>Tout le contenu</strong> de la page sera disposé entre les balises <code>&lt;body&gt; … &lt;/body&gt;</code></p>
+<!-- raw HTML omitted -->
+<p><em>Si l&rsquo;affichage de l&rsquo;editeur n&rsquo;est pas optimal, utiliser le <!-- raw HTML omitted -->lien direct sur la page en plein écran<!-- raw HTML omitted --></em></p>
+<blockquote>
+<p>Nous  allons <strong>modifier le script</strong> de la page pour obtenir quelque chose ressemblant à celle-ci (mais en français):</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<p><strong>1)</strong> Traduire et modifier le texte (<em>Description</em>) pour qu&rsquo;il soit rédigé en français.</p>
+<p><strong>2)</strong> Sous le paragraphe <strong>Description:..</strong> vous ajouterez un nouveau paragraphe <code>&lt;p&gt;</code> contenant:</p>
+<pre tabindex="0"><code>If you have any information, please contact 6207 332 2310
+</code></pre><p>Ca paragraphe devra être positionné AVANT la femeture <code>&lt;/div&gt;</code>.</p>
+<p><strong>3)</strong> Ajouter un nouveau paragraphe (vide): Dans <em>index.html</em>, ajouter les balises  <code>&lt;p&gt;  &lt;/p&gt;</code> AVANT la femeture <code>&lt;/div&gt;</code>.</p>
+<p><strong>4)</strong> Ajouter un lien dans ce paragraphe vide <code>&lt;p&gt;  &lt;/p&gt;</code> vers une nouvelle page du site:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;lune.html&#34;</span><span style="color:#111">&gt;</span>=&gt; Go to Lune Project<span style="color:#111">&lt;/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><p><strong>5)</strong> Sur votre <strong>cahier SNT</strong>: recopier les instructions HTML que vous avez rajoutées dans cette page.</p>
+<h2 id="projet-de-recrutement-lunaire">Projet de recrutement lunaire</h2>
+<p>Dans l&rsquo;onglet <em>lune.html</em>, écrire le script HTML pour obtenir la page suivante:</p>
+<!-- raw HTML omitted -->
+<p><strong>Aide:</strong></p>
+<p><strong>1)</strong> Pour charger l&rsquo;image dans le projet : bouton de droite
+<img src="../images/bouton.png" alt="bouton"></p>
+<p><strong>2)</strong> Puis selectionner l&rsquo;image :
+<img src="../images/rocket.png" alt="rocket"></p>
+<p>Penser à adapter le nom de l&rsquo;image pour la balise <code>&lt;img&gt;</code>.</p>
+<p><strong>3)</strong> Vérifier que le fichier <code>Lune.html</code> contient bien la balise suivante dans l&rsquo;entête du fichier afin de pointer vers le fichier <em>style.css</em>. Cette balise doit être placée entre les balise<code>&lt;head&gt;...&lt;/head&gt;</code> :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">head</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">link</span> <span style="color:#75af00">rel</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;stylesheet&#34;</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;style.css&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">head</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><p>Sinon, ajoutez la.</p>
+<p><strong>4)</strong> Ajouter un lien <em>Retour</em> vers la page <em>index.html</em></p>
+<p><strong>5)</strong> Sur votre <strong>cahier SNT</strong>: recopier l&rsquo;instruction HTML que vous avez ajoutée pour créer ce lien <em>retour</em>.</p>
+<h1 id="le-langage-css">Le langage CSS</h1>
+<p>CSS est le langage qui décrit le style et la mise en forme du document HTML. Il décrit comment les elements HTML doivent être affichés et remplace les règles de style par defaut appliquées par le navigateur.</p>
+<p>Les <strong>déclarations</strong> CSS doivent en principe se trouver dans un fichier à extension <code>.css</code>. Chaque <em>déclaration</em> se rapporte à un type d&rsquo;<em>élément</em> de la page HTML, grâce au <em>sélécteur</em>. Et chaque déclaration contient une ou plusieurs <em>règles</em>:</p>
+<blockquote>
+<p><strong>Déclaration: <code>sélécteur {propriété: valeur;}</code></strong></p>
+</blockquote>
+<blockquote>
+<p><strong>Règle: <code>propriété: valeur;</code></strong></p>
+</blockquote>
+<p>Une déclaration CSS comprend :</p>
+<ul>
+<li>un sélecteur, qui peut être le nom d&rsquo;une balise HTML (comme par exemple div dans l&rsquo;exemple proposé)</li>
+<li>une ou plusieurs règle(s) contenant une propriété ainsi que la valeur correspondante.</li>
+</ul>
+<!-- raw HTML omitted -->
+<p>Observez bien les caractères spéciaux {  } : et ; utilisés pour contenir et séparer les <em>instructions</em>.
+Ces instructions peuvent être mises à la ligne, ou bien dans une seule ligne :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">p</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">font-weight</span><span style="color:#111">:</span> <span style="color:#00a8c8">bold</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">border</span><span style="color:#111">:</span> <span style="color:#ae81ff">2</span><span style="color:#00a8c8">px</span> <span style="color:#00a8c8">solid</span> <span style="color:#00a8c8">red</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><p>est équivalent à :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">p</span> <span style="color:#111">{</span><span style="color:#00a8c8">font-weight</span><span style="color:#111">:</span> <span style="color:#00a8c8">bold</span><span style="color:#111">;</span> <span style="color:#00a8c8">border</span><span style="color:#111">:</span> <span style="color:#ae81ff">2</span><span style="color:#00a8c8">px</span> <span style="color:#00a8c8">solid</span> <span style="color:#00a8c8">red</span><span style="color:#111">;}</span>
+</span></span></code></pre></div><p>Ici, TOUTES les balises p utilisées dans le document html héritent des propriétés suivantes :</p>
+<ul>
+<li>une bordure rouge (red) encadre le texte</li>
+<li>les caractères sont mis en GRAS (bold)</li>
+</ul>
+<p>Ces instructions {propriété1 : valeur; } sont référencées sur le site : <em><a href="https://www.w3schools.com/css/default.asp">https://www.w3schools.com/css/default.asp</a></em></p>
+<blockquote>
+<p>A vous de jouer : Vous allez modifier le fichier de style de votre projet, mais cette fois, à l&rsquo;aide d&rsquo;un editeur de texte.</p>
+</blockquote>
+<p><strong>1)</strong> Cliquer sur l&rsquo;onglet <em>style.css</em>. Combien y-a-t-il de <strong>déclarations</strong>, et de <strong>règles</strong> <em>css</em> dans ce fichier? Repondre sur le <strong>cahier SNT</strong>.</p>
+<p><strong>2)</strong> Diminuer la dimension de l&rsquo;image à 150px: Dans le fichier <em>style.css</em>, ajouter la règle CSS suivante, à la suite de la précédente <em>déclaration</em> (donc APRES l&rsquo;accolade } ):</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">img</span> <span style="color:#111">{</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">width</span><span style="color:#111">:</span> <span style="color:#ae81ff">150</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><h1 id="prolongement-travailler-sur-le-fichier-local">Prolongement: travailler sur le fichier <em>local</em></h1>
+<p><strong>1)</strong> Téléchargez votre projet sur votre ordinateur. A l&rsquo;aide du menu en haut à gauche de la fenêtre d&rsquo;edition, selectionner <em>Download</em>:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><strong>2)</strong> Atteindre le fichier à l&rsquo;aide de l&rsquo;<strong>explorateur</strong> de votre ordinateur.</p>
+<!-- raw HTML omitted -->
+<p><strong>Dézipper</strong> le fichier téléchargé et deplacer son contenu dans vos <em>Documents</em>.</p>
+<!-- raw HTML omitted -->
+<p>Normalement, l&rsquo;explorateur devrait montrer le contenu du nouveau dossier, avec tous les fichiers du projet.</p>
+<blockquote>
+<p>Si votre projet n&rsquo;est pas complètement terminé, vous pouvez utilisez celui-ci: <!-- raw HTML omitted -->projet_correction<!-- raw HTML omitted --></p>
+</blockquote>
+<p>Vous pouvez maintenant ouvrir la page <em>index.html</em> avec votre <em>navigateur</em>, et vérifier que le lien <!-- raw HTML omitted -->Go to Lune Project<!-- raw HTML omitted --> vous envoie bien sur la page <em>Lune.html</em>.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="liens-et-compléments">Liens et compléments</h1>
+<!-- raw HTML omitted -->
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

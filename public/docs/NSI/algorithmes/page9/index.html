@@ -1,94 +1,536 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>rotation quart de tour d&#39;une image
-| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel=stylesheet><script type=text/x-mathjax-config>
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    rotation quart de tour d&#39;une image
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
   });
-</script><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.1c02dc1d2c0b546a84beb71d8f4336d6f5d7b69564e08bdfc04c2fb0595d786d.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
 catch(err)
-{console.log(err.message);}
-if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
-if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
-if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}
-let chemin=window.location.pathname;if(chemin.search('NSI')>-1){baniere=document.querySelector("#myHeader");let linkBox=document.createElement('div');linkBox.classList.add('linkBox');let newH=document.createElement('a');newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';newH.classList.add('nsi');linkBox.appendChild(newH);baniere.appendChild(linkBox);}</script><style>#myHeader{display:flex;flex-direction:row-reverse}#myHeader>.titre{width:80%;min-width:300px;text-align:left}.linkBox{margin:10px;padding-top:10px;background-color:pink;min-width:50px}.isn{}</style></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2f docs\2fNSI\2f algorithmes\2fpage9\2f ]{color:#004ed0}</style><ul><li><a href=/><strong>Accueil</strong></a></li><li><a href=/docs/esf/esf_index/><strong>ESF</strong></a></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p></li><li><p><a href=/docs/python/index_python/><strong>Python</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
-addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-page><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
-<strong>rotation quart de tour d&#39;une image</strong></header><article class=markdown><h1 id=coder-une-image-numérique>Coder une image numérique</h1><h2 id=qu-est-ce-qu-une-image-numériques>Qu&rsquo;est ce qu&rsquo;une image numériques?</h2><p><em>Rappels de SNT:</em> Une image numérique est constituée de pixels colorés (ou noirs et blanc). Le fichier comportant l&rsquo;image numérique contient alors une succession de valeurs qui codent la couleur de chaque pixels: lire le cours de SNT, paragraphe <a href=/docs/SNT_2nde/pages/page5/photo_num/#codage-de-l-image target=blank>codage de l&rsquo;image</a>.</p><h2 id=librairie-pil>Librairie PIL</h2><p>Pour manipuler les images, nous pouvons utiliser le module <code>PIL</code> de Python. Celui-ci permet de traiter les pixels d&rsquo;une image, un par un. Souvent, il faudra parcourir l&rsquo;image pixel par pixel, sur toute la largeur et toute la hauteur. Cela est possible avec deux boucles imbriquées, à condition de connaitre ses dimensions <code>largeur, hauteur</code>:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>from</span> <span style=color:#111>PIL</span> <span style=color:#f92672>import</span> <span style=color:#111>Image</span>
-<span style=color:#111>imageSource</span><span style=color:#f92672>=</span><span style=color:#111>Image</span><span style=color:#f92672>.</span><span style=color:#111>open</span><span style=color:#111>(</span><span style=color:#d88200>&#34;crabePortrait.bmp&#34;</span><span style=color:#111>)</span>
-<span style=color:#111>largeur</span><span style=color:#111>,</span><span style=color:#111>hauteur</span><span style=color:#f92672>=</span><span style=color:#111>imageSource</span><span style=color:#f92672>.</span><span style=color:#111>size</span>
+{
+    console.log(err.message);
+}
 
-<span style=color:#00a8c8>for</span> <span style=color:#111>x</span> <span style=color:#f92672>in</span> <span style=color:#111>range</span><span style=color:#111>(</span><span style=color:#111>largeur</span><span style=color:#111>):</span> <span style=color:#75715e># x varie de 0 à largeur - 1</span>
-    <span style=color:#00a8c8>for</span> <span style=color:#111>y</span> <span style=color:#f92672>in</span> <span style=color:#111>range</span><span style=color:#111>(</span><span style=color:#111>hauteur</span><span style=color:#111>):</span> <span style=color:#75715e># x varie de 0 à hauteur - 1</span>
-      <span style=color:#75715e># traitement pixel (x,y)</span>
 
-<span style=color:#111>planPixels</span><span style=color:#f92672>.</span><span style=color:#111>save</span><span style=color:#111>(</span><span style=color:#d88200>&#34;crabe2.jpg&#34;</span><span style=color:#111>)</span>
-<span style=color:#111>planPixels</span><span style=color:#f92672>.</span><span style=color:#111>show</span><span style=color:#111>()</span></code></pre></div><p><em>imageSource est une instance de la classe <code>Image</code> et possède une methode <code>getPixel((x,y))</code> qui renvoie la valeur du pixel pour l&rsquo;argument (x,y)</em></p><p>Nous allons travailler sur l&rsquo;image suivante: <strong>crabePortrait.bmp</strong></p><figure><a href=../images/crabePortrait.bmp><img src=../images/crabePortrait.bmp><figcaption>image de dimension 247 * 330 en format bitmap, RGB 3 octets</figcaption></a></figure><p>Dans un premier temps, explorons cette structure de données:</p><blockquote><p><em>A vous de jouer:</em> une fois l&rsquo;image téléchargée, ouvrir un notebook dans le <strong>même</strong> dossier que l&rsquo;image, puis, à partir du script précédent:</p><ol><li>créer une double boucle sur x (position en largeur qui varie de 0 à largeur//10) et sur y (position en hauteur qui varie de 0 à hauteur//10). On ne parcourt qu&rsquo;une petite partie de l&rsquo;image. Le pixel (0,0) est en haut sur le coin gauche.</li><li>dans la boucle: stocker dans p la valeur RGB du pixel de coordonnée (x,y) de imageSource: <code>p=imageSource.getpixel((x,y))</code></li><li>afficher la valeur de p&hellip;</li></ol></blockquote><p>On souhaite maintenant diminuer le contraste, en divisant par 2 chacune de composantes RGB de chacun des pixels de l&rsquo;image. L&rsquo;image sera egalement plus sombre. On va créer cette fois une nouvelle instance de la classe <code>Image</code>, mais pour former une image completement NOIRE:</p><p><code>planPixels=Image.new(&quot;RGB&quot;,(largeur,hauteur))</code></p><p>On remplira cette image avec des pixels, un par un.</p><blockquote><p><em>A vous de jouer:</em> Ecrire un script qui parcourt TOUS les pixels de l&rsquo;image.</p><ol><li>Avant la boucle de parcours des pixels, ajouter <code>planPixels=Image.new(&quot;RGB&quot;,(largeur,hauteur))</code></li><li>Parcourir tous les pixels de l&rsquo;image, largeur * hauteur.</li><li>Lire la valeur RGB de chaque pixel (<code>getpixel</code>) et modifier cette valeur, en diminuant le contraste de couleur: p = (p[0]//2,p[1]//2,p[2]//2)</li><li>puis placer ce pixel sur la nouvelle image en construction planPixels. Utiliser pour cela la methode putpixel((x,y),p) de l&rsquo;objet <code>planPixels</code> où x et y sont les nouvelles coordonnées du pixel p que l&rsquo;on veut dessiner.</li></ol></blockquote><h1 id=rotation-d-une-image>Rotation d&rsquo;une image</h1><h2 id=premier-algorithme-permutation-de-pixels>Premier algorithme: permutation de pixels</h2><p>On va cherche à écrire un script Python qui réalise la rotation d&rsquo;un quart de tour dans le sens horaire, comme sur l&rsquo;image ci-dessous:</p><figure><img src=../images/rotation.png><figcaption>principe de la rotation horaire d'un quart de tour</figcaption></figure><blockquote><p><em>Questions:</em></p><ol><li>Quelles sont les coordonnées des points A et B avant transformation?</li><li>Quelles sont les nouvelles coordonnées des points A&rsquo; et B&rsquo; après transformation?</li><li>pour un pixel situé initialement en (x,y), quelles sont ses coodonnées (x&rsquo;,y&rsquo;) après transformation? Exprimer ces coordonnées x&rsquo; et y&rsquo; en fonction de x, y, largeur, hauteur.</li><li>Ecrire le script du programme qui devra réaliser la transformation de <em>crabePortrait.bmp</em>, d&rsquo;un quart de tour, dans le sens horaire.</li><li>Donner la complexité de cet algorithme.</li></ol></blockquote><h2 id=méthode-diviser-pour-régner>Méthode diviser pour régner</h2><p>On cherche maintenant à effectuer cette transformation, SANS utiliser de nouvelle image <em>planPixels</em> comme précédemment. Ce sera une méthode dite en O(1) du point de vue de la complexité spatiale.</p><p>On utilisera l&rsquo;image suivante (carrée) pour cette méthode: <strong>woody.jpg</strong></p><figure><a href=../images/woody.jpg><img src=../images/woody.jpg><figcaption>image woody.jpg</figcaption></a></figure><h3 id=compléter-la-fonction-echange-pix-suivante>Compléter la fonction <code>echange_pix</code> suivante</h3><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>def</span> <span style=color:#75af00>echange_pix</span><span style=color:#111>(</span><span style=color:#111>image</span><span style=color:#111>,</span><span style=color:#111>x0</span><span style=color:#111>,</span><span style=color:#111>y0</span><span style=color:#111>,</span><span style=color:#111>x1</span><span style=color:#111>,</span><span style=color:#111>y1</span><span style=color:#111>):</span>
-    <span style=color:#d88200>&#34;&#34;&#34;procedure qui echange les pixels d&#39;une image entre une position 
-</span><span style=color:#d88200>    de depart start et d&#39;arrivée end
-</span><span style=color:#d88200>    Params:
-</span><span style=color:#d88200>    ------
-</span><span style=color:#d88200>    image : objet de la classe Image
-</span><span style=color:#d88200>    x0,y0: int, int: coordonnées du pixel de depart
-</span><span style=color:#d88200>    x1,y1: int, int: coordonnées du pixel d&#39;arrivée
-</span><span style=color:#d88200>    
-</span><span style=color:#d88200>    Example: echange du pixel (0,0) avec celui (120,120)
-</span><span style=color:#d88200>    --------
-</span><span style=color:#d88200>    &gt;&gt;&gt; echange_pix(imageSource,0,0,120,120)
-</span><span style=color:#d88200>    &#34;&#34;&#34;</span>
-    <span style=color:#111>start</span> <span style=color:#f92672>=</span> <span style=color:#111>image</span><span style=color:#f92672>.</span><span style=color:#111>getpixel</span><span style=color:#111>((</span><span style=color:#111>x0</span><span style=color:#111>,</span><span style=color:#111>y0</span><span style=color:#111>))</span>
-    <span style=color:#111>end</span> <span style=color:#f92672>=</span> <span style=color:#111>image</span><span style=color:#f92672>.</span><span style=color:#111>getpixel</span><span style=color:#111>((</span><span style=color:#111>x1</span><span style=color:#111>,</span><span style=color:#111>y1</span><span style=color:#111>))</span>
-    <span style=color:#75715e># à compléter</span></code></pre></div><h3 id=compléter-la-fonction-echange-quadrant-suivante>Compléter la fonction <code>echange_quadrant</code> suivante</h3><p>Cette fonction permet d&rsquo;echanger les pixels de 2 zones carrées de même dimensions.</p><figure><div><img src=../images/deplaceBloc.png><figcaption>exemple: echange des blocs A et B</figcaption></div></figure><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>def</span> <span style=color:#75af00>echange_quadrant</span><span style=color:#111>(</span><span style=color:#111>image</span><span style=color:#111>,</span><span style=color:#111>x0</span><span style=color:#111>,</span><span style=color:#111>y0</span><span style=color:#111>,</span><span style=color:#111>x1</span><span style=color:#111>,</span><span style=color:#111>y1</span><span style=color:#111>,</span><span style=color:#111>n</span><span style=color:#111>):</span>
-    <span style=color:#d88200>&#34;&#34;&#34;procedure qui echange tous les pixels du bloc de pixels A
-</span><span style=color:#d88200>    avec ceux du bloc B, de même dimension n*n.
-</span><span style=color:#d88200>    L&#39;image doit être carrée, de largeur et hauteur égaux à n
-</span><span style=color:#d88200>    A et B occupent une position quelconque parmi les 4 quarts de l&#39;image
-</span><span style=color:#d88200>    Params:
-</span><span style=color:#d88200>    -------
-</span><span style=color:#d88200>    image : objet de la classe Image
-</span><span style=color:#d88200>    x0,y0: int, int: coordonnées du pixel du coin superieur gauche de A
-</span><span style=color:#d88200>    x1,y1: int, int: coordonnées du pixel du coin superieur gauche de B
-</span><span style=color:#d88200>    n : int : largeur ou hauteur de l&#39;image, en nombre de pixels
-</span><span style=color:#d88200>    Example: echange du quart d&#39;image en haut à gauche (A) avec celui 
-</span><span style=color:#d88200>    ------------ en haut à droite (B) sur une image de largeur 420
-</span><span style=color:#d88200>     
-</span><span style=color:#d88200>   
-</span><span style=color:#d88200>    &gt;&gt;&gt; echange_quadrant(imageSource,0,0,120,0,120)
-</span><span style=color:#d88200>    &#34;&#34;&#34;</span>
-    <span style=color:#00a8c8>for</span> <span style=color:#111>x</span> <span style=color:#f92672>in</span> <span style=color:#111>range</span><span style=color:#111>(</span><span style=color:#111>n</span><span style=color:#111>):</span>
-        <span style=color:#00a8c8>for</span> <span style=color:#111>y</span> <span style=color:#f92672>in</span> <span style=color:#111>range</span><span style=color:#111>(</span><span style=color:#111>n</span><span style=color:#111>):</span>
-            <span style=color:#111>echange_pix</span><span style=color:#111>(</span><span style=color:#111>image</span><span style=color:#111>,</span> <span style=color:#75715e># à compléter</span></code></pre></div><blockquote><p><strong>Questions:</strong></p><ul><li>On veut echanger les blocs A et D, qui font chacun 120*120 pixels. Quelle instruction faut-il écrire, utilisant la procedure <code>echange_quadrant</code>.</li><li>Même question pour echanger les blocs A et C.</li></ul></blockquote><h3 id=analyser-la-fonction-rotate>analyser la fonction <code>rotate</code></h3><p>La fonction (ou plutôt <em>méthode</em>, vue qu&rsquo;elle ne retourne rien), permet de faire tourner l&rsquo;image d&rsquo;un quart de tour par une méthode de type <em>diviser pour régner</em>.</p><p>Une fois la partie <strong>divisée</strong> executée (appels recursifs), lorsque les subdivisions de l&rsquo;image sont constituées d&rsquo;un seul pixel, les pixels sont déplacés (<strong>règne</strong>) à l&rsquo;aide de 3 permutations successives, selon le schéma suivant:</p><figure><img src=../images/echanges.png><figcaption>trois permutations réalisées sur les subdivisions de l'image</figcaption></figure><p>Il sont alors recombinés pour reformer l&rsquo;image, tout en suivant les mêmes permutations, mais avec des blocs de pixels plus gros (<strong>fusion</strong>).</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>def</span> <span style=color:#75af00>rotate</span><span style=color:#111>(</span><span style=color:#111>image</span><span style=color:#111>,</span><span style=color:#111>x0</span><span style=color:#111>,</span><span style=color:#111>y0</span><span style=color:#111>,</span><span style=color:#111>n</span><span style=color:#111>):</span>
-    <span style=color:#d88200>&#34;&#34;&#34;procedure recursive qui tourne d&#39;un quart de tour un carré
-</span><span style=color:#d88200>    de l&#39;image de dimension n.
-</span><span style=color:#d88200>    à chaque appel recursif, la taille de l&#39;image est divisée par 2.
-</span><span style=color:#d88200>    Si l&#39;image fait plus d&#39;un seul pixel, la rotation se fait par 
-</span><span style=color:#d88200>    permutation des (zones de) pixels A&lt;=&gt;B, B&lt;=&gt;D, D&lt;=&gt;C
-</span><span style=color:#d88200>    Params:
-</span><span style=color:#d88200>    -------
-</span><span style=color:#d88200>    image
-</span><span style=color:#d88200>    x0,y0: int, int: coordonnées du pixel du coin superieur gauche du carré
-</span><span style=color:#d88200>    n: dimansion du carré
-</span><span style=color:#d88200>    Example:
-</span><span style=color:#d88200>    --------
-</span><span style=color:#d88200>    rotate(imageSource,0,0,420)
-</span><span style=color:#d88200>    &#34;&#34;&#34;</span>
-    <span style=color:#00a8c8>if</span> <span style=color:#111>n</span><span style=color:#f92672>&gt;=</span><span style=color:#ae81ff>2</span><span style=color:#111>:</span>
-        <span style=color:#111>m</span> <span style=color:#f92672>=</span> <span style=color:#111>n</span><span style=color:#f92672>//</span><span style=color:#ae81ff>2</span>
-        <span style=color:#111>rotate</span><span style=color:#111>(</span><span style=color:#111>image</span><span style=color:#111>,</span><span style=color:#111>x0</span><span style=color:#111>,</span><span style=color:#111>y0</span><span style=color:#111>,</span><span style=color:#111>m</span><span style=color:#111>)</span>
-        <span style=color:#111>rotate</span><span style=color:#111>(</span><span style=color:#111>image</span><span style=color:#111>,</span><span style=color:#111>x0</span><span style=color:#111>,</span><span style=color:#111>y0</span><span style=color:#f92672>+</span><span style=color:#111>m</span><span style=color:#111>,</span><span style=color:#111>m</span><span style=color:#111>)</span>
-        <span style=color:#111>rotate</span><span style=color:#111>(</span><span style=color:#111>image</span><span style=color:#111>,</span><span style=color:#111>x0</span><span style=color:#f92672>+</span><span style=color:#111>m</span><span style=color:#111>,</span><span style=color:#111>y0</span><span style=color:#111>,</span><span style=color:#111>m</span><span style=color:#111>)</span>
-        <span style=color:#111>rotate</span><span style=color:#111>(</span><span style=color:#111>image</span><span style=color:#111>,</span><span style=color:#111>x0</span><span style=color:#f92672>+</span><span style=color:#111>m</span><span style=color:#111>,</span><span style=color:#111>y0</span><span style=color:#f92672>+</span><span style=color:#111>m</span><span style=color:#111>,</span><span style=color:#111>m</span><span style=color:#111>)</span>
-        <span style=color:#111>echange_quadrant</span><span style=color:#111>(</span><span style=color:#111>image</span><span style=color:#111>,</span><span style=color:#111>x0</span><span style=color:#111>,</span><span style=color:#111>y0</span><span style=color:#111>,</span><span style=color:#111>x0</span><span style=color:#f92672>+</span><span style=color:#111>m</span><span style=color:#111>,</span><span style=color:#111>y0</span><span style=color:#111>,</span><span style=color:#111>m</span><span style=color:#111>)</span>
-        <span style=color:#111>echange_quadrant</span><span style=color:#111>(</span><span style=color:#111>image</span><span style=color:#111>,</span><span style=color:#111>x0</span><span style=color:#111>,</span><span style=color:#111>y0</span><span style=color:#111>,</span><span style=color:#111>x0</span><span style=color:#f92672>+</span><span style=color:#111>m</span><span style=color:#111>,</span><span style=color:#111>y0</span><span style=color:#f92672>+</span><span style=color:#111>m</span><span style=color:#111>,</span><span style=color:#111>m</span><span style=color:#111>)</span>
-        <span style=color:#111>echange_quadrant</span><span style=color:#111>(</span><span style=color:#111>image</span><span style=color:#111>,</span><span style=color:#111>x0</span><span style=color:#111>,</span><span style=color:#111>y0</span><span style=color:#111>,</span><span style=color:#111>x0</span><span style=color:#111>,</span><span style=color:#111>y0</span><span style=color:#f92672>+</span><span style=color:#111>m</span><span style=color:#111>,</span><span style=color:#111>m</span><span style=color:#111>)</span></code></pre></div><blockquote><p><em>Analysez la procedure:</em> A l&rsquo;aide de l&rsquo;image suivante, que vous découperez, montrer pas à pas ce qui est réalisé par la fonction rotate.</p></blockquote><figure><a href=../images/procedure.jpg><img src=../images/procedure.jpg></a></figure><h3 id=efficacité-de-la-méthode>efficacité de la méthode</h3><p>Pour executer cette méthode, vous écrirez le script suivant dans une nouvelle cellule:</p><div class=highlight><pre style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00a8c8>def</span> <span style=color:#75af00>quart_tour</span><span style=color:#111>(</span><span style=color:#111>image</span><span style=color:#111>):</span>
-    <span style=color:#111>largeur</span><span style=color:#111>,</span><span style=color:#111>hauteur</span><span style=color:#f92672>=</span><span style=color:#111>image</span><span style=color:#f92672>.</span><span style=color:#111>size</span>
-    <span style=color:#00a8c8>assert</span> <span style=color:#111>largeur</span> <span style=color:#f92672>==</span> <span style=color:#111>hauteur</span>
-    <span style=color:#111>rotate</span><span style=color:#111>(</span><span style=color:#111>image</span><span style=color:#111>,</span><span style=color:#ae81ff>0</span><span style=color:#111>,</span><span style=color:#ae81ff>0</span><span style=color:#111>,</span><span style=color:#111>largeur</span><span style=color:#111>)</span>
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
     
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
     
-<span style=color:#111>img</span> <span style=color:#f92672>=</span> <span style=color:#111>Image</span><span style=color:#f92672>.</span><span style=color:#111>open</span><span style=color:#111>(</span><span style=color:#d88200>&#34;woody.jpg&#34;</span><span style=color:#111>)</span>
-<span style=color:#111>quart_tour</span><span style=color:#111>(</span><span style=color:#111>img</span><span style=color:#111>)</span>
-<span style=color:#111>img</span><span style=color:#f92672>.</span><span style=color:#111>save</span><span style=color:#111>(</span><span style=color:#d88200>&#34;woody_endroit.jpg&#34;</span><span style=color:#111>)</span>
-<span style=color:#111>img</span><span style=color:#f92672>.</span><span style=color:#111>show</span><span style=color:#111>()</span></code></pre></div><blockquote><p><em>Tester l&rsquo;efficacité de cet algorithme</em></p><ul><li>Est-il plus rapide ou plus lent que votre premier algorithme?</li><li>Le nombre d&rsquo;opérations significatives suit une loi de recurence: $T(n) = 4 \times T(\tfrac{n}{2}) + C \times n^2$ Cela confirme t-il votre reponse à la question pécédente?</li></ul></blockquote><p>On rappelle que l&rsquo;intérêt de la méthode est surtout de ne PAS utiliser de nouvelle image <em>planPixels</em> comme précédemment. Il s&rsquo;agit d&rsquo;une transformation <em>en place</em>.</p><h1 id=liens-et-aides>Liens et aides</h1><ul><li>En cas de difficulté, consulter la page et les videos du site: <a href=http://www.monlyceenumerique.fr/nsi_terminale/a/a3_div_regner.php>monlyceenumerique.fr</a></li></ul></article><div style=height:100px></div></div><aside class="book-toc fixed"><nav id=TableOfContents><ul><li><a href=#coder-une-image-numérique>Coder une image numérique</a><ul><li><a href=#qu-est-ce-qu-une-image-numériques>Qu&rsquo;est ce qu&rsquo;une image numériques?</a></li><li><a href=#librairie-pil>Librairie PIL</a></li></ul></li><li><a href=#rotation-d-une-image>Rotation d&rsquo;une image</a><ul><li><a href=#premier-algorithme-permutation-de-pixels>Premier algorithme: permutation de pixels</a></li><li><a href=#méthode-diviser-pour-régner>Méthode diviser pour régner</a><ul><li><a href=#compléter-la-fonction-echange-pix-suivante>Compléter la fonction <code>echange_pix</code> suivante</a></li><li><a href=#compléter-la-fonction-echange-quadrant-suivante>Compléter la fonction <code>echange_quadrant</code> suivante</a></li><li><a href=#analyser-la-fonction-rotate>analyser la fonction <code>rotate</code></a></li><li><a href=#efficacité-de-la-méthode>efficacité de la méthode</a></li></ul></li></ul></li><li><a href=#liens-et-aides>Liens et aides</a></li></ul></nav></aside></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
-<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI\2f algorithmes\2fpage9\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    rotation quart de tour d&#39;une image
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="coder-une-image-numérique">Coder une image numérique</h1>
+<h2 id="quest-ce-quune-image-numériques">Qu&rsquo;est ce qu&rsquo;une image numériques?</h2>
+<p><em>Rappels de SNT:</em> Une image numérique est constituée de pixels colorés (ou noirs et blanc). Le fichier comportant l&rsquo;image numérique contient alors une succession de valeurs qui codent la couleur de chaque pixels: lire le cours de SNT, paragraphe <!-- raw HTML omitted -->codage de l&rsquo;image<!-- raw HTML omitted -->.</p>
+<h2 id="librairie-pil">Librairie PIL</h2>
+<p>Pour manipuler les images, nous pouvons utiliser le module <code>PIL</code> de Python. Celui-ci permet de traiter les pixels d&rsquo;une image, un par un. Souvent, il faudra parcourir l&rsquo;image pixel par pixel, sur toute la largeur et toute la hauteur. Cela est possible avec deux boucles imbriquées, à condition de connaitre ses dimensions <code>largeur, hauteur</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> <span style="color:#111">PIL</span> <span style="color:#f92672">import</span> <span style="color:#111">Image</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">imageSource</span><span style="color:#f92672">=</span><span style="color:#111">Image</span><span style="color:#f92672">.</span><span style="color:#111">open</span><span style="color:#111">(</span><span style="color:#d88200">&#34;crabePortrait.bmp&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">largeur</span><span style="color:#111">,</span><span style="color:#111">hauteur</span><span style="color:#f92672">=</span><span style="color:#111">imageSource</span><span style="color:#f92672">.</span><span style="color:#111">size</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">for</span> <span style="color:#111">x</span> <span style="color:#f92672">in</span> <span style="color:#111">range</span><span style="color:#111">(</span><span style="color:#111">largeur</span><span style="color:#111">):</span> <span style="color:#75715e"># x varie de 0 à largeur - 1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">for</span> <span style="color:#111">y</span> <span style="color:#f92672">in</span> <span style="color:#111">range</span><span style="color:#111">(</span><span style="color:#111">hauteur</span><span style="color:#111">):</span> <span style="color:#75715e"># x varie de 0 à hauteur - 1</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># traitement pixel (x,y)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">planPixels</span><span style="color:#f92672">.</span><span style="color:#111">save</span><span style="color:#111">(</span><span style="color:#d88200">&#34;crabe2.jpg&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">planPixels</span><span style="color:#f92672">.</span><span style="color:#111">show</span><span style="color:#111">()</span>
+</span></span></code></pre></div><p><em>imageSource est une instance de la classe <code>Image</code> et possède une methode <code>getPixel((x,y))</code> qui renvoie la valeur du pixel pour l&rsquo;argument (x,y)</em></p>
+<p>Nous allons travailler sur l&rsquo;image suivante: <strong>crabePortrait.bmp</strong></p>
+<!-- raw HTML omitted -->
+<p>Dans un premier temps, explorons cette structure de données:</p>
+<blockquote>
+<p><em>A vous de jouer:</em> une fois l&rsquo;image téléchargée, ouvrir un notebook dans le <strong>même</strong> dossier que l&rsquo;image, puis, à partir du script précédent:</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>créer une double boucle sur x (position en largeur qui varie de 0 à largeur//10) et sur y (position en hauteur qui varie de 0 à hauteur//10). On ne parcourt qu&rsquo;une petite partie de l&rsquo;image. Le pixel (0,0) est en haut sur le coin gauche.</li>
+</ol>
+</blockquote>
+<ol start="2">
+<li>dans la boucle: stocker dans p la valeur RGB du pixel de coordonnée (x,y) de imageSource: <code>p=imageSource.getpixel((x,y))</code></li>
+<li>afficher la valeur de p&hellip;</li>
+</ol>
+<p>On souhaite maintenant diminuer le contraste, en divisant par 2 chacune de composantes RGB de chacun des pixels de l&rsquo;image. L&rsquo;image sera egalement plus sombre. On va créer cette fois une nouvelle instance de la classe <code>Image</code>, mais pour former une image completement NOIRE:</p>
+<p><code>planPixels=Image.new(&quot;RGB&quot;,(largeur,hauteur))</code></p>
+<p>On remplira cette image avec des pixels, un par un.</p>
+<blockquote>
+<p><em>A vous de jouer:</em> Ecrire un script qui parcourt TOUS les pixels de l&rsquo;image.</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>Avant la boucle de parcours des pixels, ajouter <code>planPixels=Image.new(&quot;RGB&quot;,(largeur,hauteur))</code></li>
+</ol>
+</blockquote>
+<ol start="2">
+<li>Parcourir tous les pixels de l&rsquo;image, largeur * hauteur.</li>
+<li>Lire la valeur RGB de chaque pixel (<code>getpixel</code>) et modifier cette valeur, en diminuant le contraste de couleur: p = (p[0]//2,p[1]//2,p[2]//2)</li>
+<li>puis placer ce pixel sur la nouvelle image en construction planPixels. Utiliser pour cela la methode putpixel((x,y),p) de l&rsquo;objet <code>planPixels</code> où x et y sont les nouvelles coordonnées du pixel p que l&rsquo;on veut dessiner.</li>
+</ol>
+<h1 id="rotation-dune-image">Rotation d&rsquo;une image</h1>
+<h2 id="premier-algorithme-permutation-de-pixels">Premier algorithme: permutation de pixels</h2>
+<p>On va cherche à écrire un script Python qui réalise la rotation d&rsquo;un quart de tour dans le sens horaire, comme sur l&rsquo;image ci-dessous:</p>
+<!-- raw HTML omitted -->
+<blockquote>
+<p><em>Questions:</em></p>
+</blockquote>
+<blockquote>
+<ol>
+<li>Quelles sont les coordonnées des points A et B avant transformation?</li>
+</ol>
+</blockquote>
+<ol start="2">
+<li>Quelles sont les nouvelles coordonnées des points A&rsquo; et B&rsquo; après transformation?</li>
+<li>pour un pixel situé initialement en (x,y), quelles sont ses coodonnées (x&rsquo;,y&rsquo;) après transformation? Exprimer ces coordonnées x&rsquo; et y&rsquo; en fonction de x, y, largeur, hauteur.</li>
+<li>Ecrire le script du programme qui devra réaliser la transformation de <em>crabePortrait.bmp</em>, d&rsquo;un quart de tour, dans le sens horaire.</li>
+<li>Donner la complexité de cet algorithme.</li>
+</ol>
+<h2 id="méthode-diviser-pour-régner">Méthode diviser pour régner</h2>
+<p>On cherche maintenant à effectuer cette transformation, SANS utiliser de nouvelle image <em>planPixels</em> comme précédemment. Ce sera une méthode dite en O(1) du point de vue de la complexité spatiale.</p>
+<p>On utilisera l&rsquo;image suivante (carrée) pour cette méthode: <strong>woody.jpg</strong></p>
+<!-- raw HTML omitted -->
+<h3 id="compléter-la-fonction-echange_pix-suivante">Compléter la fonction <code>echange_pix</code> suivante</h3>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">echange_pix</span><span style="color:#111">(</span><span style="color:#111">image</span><span style="color:#111">,</span><span style="color:#111">x0</span><span style="color:#111">,</span><span style="color:#111">y0</span><span style="color:#111">,</span><span style="color:#111">x1</span><span style="color:#111">,</span><span style="color:#111">y1</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#d88200">&#34;&#34;&#34;procedure qui echange les pixels d&#39;une image entre une position 
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    de depart start et d&#39;arrivée end
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    Params:
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    ------
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    image : objet de la classe Image
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    x0,y0: int, int: coordonnées du pixel de depart
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    x1,y1: int, int: coordonnées du pixel d&#39;arrivée
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    Example: echange du pixel (0,0) avec celui (120,120)
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    --------
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    &gt;&gt;&gt; echange_pix(imageSource,0,0,120,120)
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">start</span> <span style="color:#f92672">=</span> <span style="color:#111">image</span><span style="color:#f92672">.</span><span style="color:#111">getpixel</span><span style="color:#111">((</span><span style="color:#111">x0</span><span style="color:#111">,</span><span style="color:#111">y0</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">end</span> <span style="color:#f92672">=</span> <span style="color:#111">image</span><span style="color:#f92672">.</span><span style="color:#111">getpixel</span><span style="color:#111">((</span><span style="color:#111">x1</span><span style="color:#111">,</span><span style="color:#111">y1</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># à compléter</span>
+</span></span></code></pre></div><h3 id="compléter-la-fonction-echange_quadrant-suivante">Compléter la fonction <code>echange_quadrant</code> suivante</h3>
+<p>Cette fonction permet d&rsquo;echanger les pixels de 2 zones carrées de même dimensions.</p>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">echange_quadrant</span><span style="color:#111">(</span><span style="color:#111">image</span><span style="color:#111">,</span><span style="color:#111">x0</span><span style="color:#111">,</span><span style="color:#111">y0</span><span style="color:#111">,</span><span style="color:#111">x1</span><span style="color:#111">,</span><span style="color:#111">y1</span><span style="color:#111">,</span><span style="color:#111">n</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#d88200">&#34;&#34;&#34;procedure qui echange tous les pixels du bloc de pixels A
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    avec ceux du bloc B, de même dimension n*n.
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    L&#39;image doit être carrée, de largeur et hauteur égaux à n
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    A et B occupent une position quelconque parmi les 4 quarts de l&#39;image
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    Params:
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    -------
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    image : objet de la classe Image
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    x0,y0: int, int: coordonnées du pixel du coin superieur gauche de A
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    x1,y1: int, int: coordonnées du pixel du coin superieur gauche de B
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    n : int : largeur ou hauteur de l&#39;image, en nombre de pixels
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    Example: echange du quart d&#39;image en haut à gauche (A) avec celui 
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    ------------ en haut à droite (B) sur une image de largeur 420
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">     
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">   
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    &gt;&gt;&gt; echange_quadrant(imageSource,0,0,120,0,120)
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">for</span> <span style="color:#111">x</span> <span style="color:#f92672">in</span> <span style="color:#111">range</span><span style="color:#111">(</span><span style="color:#111">n</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">for</span> <span style="color:#111">y</span> <span style="color:#f92672">in</span> <span style="color:#111">range</span><span style="color:#111">(</span><span style="color:#111">n</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">echange_pix</span><span style="color:#111">(</span><span style="color:#111">image</span><span style="color:#111">,</span> <span style="color:#75715e"># à compléter</span>
+</span></span></code></pre></div><blockquote>
+<p><strong>Questions:</strong></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>On veut echanger les blocs A et D, qui font chacun 120*120 pixels. Quelle instruction faut-il écrire, utilisant la procedure <code>echange_quadrant</code>.</li>
+</ul>
+</blockquote>
+<ul>
+<li>Même question pour echanger les blocs A et C.</li>
+</ul>
+<h3 id="analyser-la-fonction-rotate">analyser la fonction <code>rotate</code></h3>
+<p>La fonction (ou plutôt <em>méthode</em>, vue qu&rsquo;elle ne retourne rien), permet de faire tourner l&rsquo;image d&rsquo;un quart de tour par une méthode de type <em>diviser pour régner</em>.</p>
+<p>Une fois la partie <strong>divisée</strong> executée (appels recursifs), lorsque les subdivisions de l&rsquo;image sont constituées d&rsquo;un seul pixel, les pixels sont déplacés (<strong>règne</strong>) à l&rsquo;aide de 3 permutations successives, selon le schéma suivant:</p>
+<!-- raw HTML omitted -->
+<p>Il sont alors recombinés pour reformer l&rsquo;image, tout en suivant les mêmes permutations, mais avec des blocs de pixels plus gros (<strong>fusion</strong>).</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">rotate</span><span style="color:#111">(</span><span style="color:#111">image</span><span style="color:#111">,</span><span style="color:#111">x0</span><span style="color:#111">,</span><span style="color:#111">y0</span><span style="color:#111">,</span><span style="color:#111">n</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#d88200">&#34;&#34;&#34;procedure recursive qui tourne d&#39;un quart de tour un carré
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    de l&#39;image de dimension n.
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    à chaque appel recursif, la taille de l&#39;image est divisée par 2.
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    Si l&#39;image fait plus d&#39;un seul pixel, la rotation se fait par 
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    permutation des (zones de) pixels A&lt;=&gt;B, B&lt;=&gt;D, D&lt;=&gt;C
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    Params:
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    -------
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    image
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    x0,y0: int, int: coordonnées du pixel du coin superieur gauche du carré
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    n: dimansion du carré
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    Example:
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    --------
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    rotate(imageSource,0,0,420)
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">if</span> <span style="color:#111">n</span><span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">2</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">m</span> <span style="color:#f92672">=</span> <span style="color:#111">n</span><span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">rotate</span><span style="color:#111">(</span><span style="color:#111">image</span><span style="color:#111">,</span><span style="color:#111">x0</span><span style="color:#111">,</span><span style="color:#111">y0</span><span style="color:#111">,</span><span style="color:#111">m</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">rotate</span><span style="color:#111">(</span><span style="color:#111">image</span><span style="color:#111">,</span><span style="color:#111">x0</span><span style="color:#111">,</span><span style="color:#111">y0</span><span style="color:#f92672">+</span><span style="color:#111">m</span><span style="color:#111">,</span><span style="color:#111">m</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">rotate</span><span style="color:#111">(</span><span style="color:#111">image</span><span style="color:#111">,</span><span style="color:#111">x0</span><span style="color:#f92672">+</span><span style="color:#111">m</span><span style="color:#111">,</span><span style="color:#111">y0</span><span style="color:#111">,</span><span style="color:#111">m</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">rotate</span><span style="color:#111">(</span><span style="color:#111">image</span><span style="color:#111">,</span><span style="color:#111">x0</span><span style="color:#f92672">+</span><span style="color:#111">m</span><span style="color:#111">,</span><span style="color:#111">y0</span><span style="color:#f92672">+</span><span style="color:#111">m</span><span style="color:#111">,</span><span style="color:#111">m</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">echange_quadrant</span><span style="color:#111">(</span><span style="color:#111">image</span><span style="color:#111">,</span><span style="color:#111">x0</span><span style="color:#111">,</span><span style="color:#111">y0</span><span style="color:#111">,</span><span style="color:#111">x0</span><span style="color:#f92672">+</span><span style="color:#111">m</span><span style="color:#111">,</span><span style="color:#111">y0</span><span style="color:#111">,</span><span style="color:#111">m</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">echange_quadrant</span><span style="color:#111">(</span><span style="color:#111">image</span><span style="color:#111">,</span><span style="color:#111">x0</span><span style="color:#111">,</span><span style="color:#111">y0</span><span style="color:#111">,</span><span style="color:#111">x0</span><span style="color:#f92672">+</span><span style="color:#111">m</span><span style="color:#111">,</span><span style="color:#111">y0</span><span style="color:#f92672">+</span><span style="color:#111">m</span><span style="color:#111">,</span><span style="color:#111">m</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">echange_quadrant</span><span style="color:#111">(</span><span style="color:#111">image</span><span style="color:#111">,</span><span style="color:#111">x0</span><span style="color:#111">,</span><span style="color:#111">y0</span><span style="color:#111">,</span><span style="color:#111">x0</span><span style="color:#111">,</span><span style="color:#111">y0</span><span style="color:#f92672">+</span><span style="color:#111">m</span><span style="color:#111">,</span><span style="color:#111">m</span><span style="color:#111">)</span>
+</span></span></code></pre></div><blockquote>
+<p><em>Analysez la procedure:</em> A l&rsquo;aide de l&rsquo;image suivante, que vous découperez, montrer pas à pas ce qui est réalisé par la fonction rotate.</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<h3 id="efficacité-de-la-méthode">efficacité de la méthode</h3>
+<p>Pour executer cette méthode, vous écrirez le script suivant dans une nouvelle cellule:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">quart_tour</span><span style="color:#111">(</span><span style="color:#111">image</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">largeur</span><span style="color:#111">,</span><span style="color:#111">hauteur</span><span style="color:#f92672">=</span><span style="color:#111">image</span><span style="color:#f92672">.</span><span style="color:#111">size</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">assert</span> <span style="color:#111">largeur</span> <span style="color:#f92672">==</span> <span style="color:#111">hauteur</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">rotate</span><span style="color:#111">(</span><span style="color:#111">image</span><span style="color:#111">,</span><span style="color:#ae81ff">0</span><span style="color:#111">,</span><span style="color:#ae81ff">0</span><span style="color:#111">,</span><span style="color:#111">largeur</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span><span style="color:#111">img</span> <span style="color:#f92672">=</span> <span style="color:#111">Image</span><span style="color:#f92672">.</span><span style="color:#111">open</span><span style="color:#111">(</span><span style="color:#d88200">&#34;woody.jpg&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">quart_tour</span><span style="color:#111">(</span><span style="color:#111">img</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">img</span><span style="color:#f92672">.</span><span style="color:#111">save</span><span style="color:#111">(</span><span style="color:#d88200">&#34;woody_endroit.jpg&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">img</span><span style="color:#f92672">.</span><span style="color:#111">show</span><span style="color:#111">()</span>
+</span></span></code></pre></div><blockquote>
+<p><em>Tester l&rsquo;efficacité de cet algorithme</em></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>Est-il plus rapide ou plus lent que votre premier algorithme?</li>
+</ul>
+</blockquote>
+<ul>
+<li>Le nombre d&rsquo;opérations significatives suit une loi de recurence: $T(n) = 4 \times T(\tfrac{n}{2}) + C \times n^2$ Cela confirme t-il votre reponse à la question pécédente?</li>
+</ul>
+<p>On rappelle que l&rsquo;intérêt de la méthode est surtout de ne PAS utiliser de nouvelle image <em>planPixels</em> comme précédemment. Il s&rsquo;agit d&rsquo;une transformation <em>en place</em>.</p>
+<h1 id="liens-et-aides">Liens et aides</h1>
+<ul>
+<li>En cas de difficulté, consulter la page et les videos du site: <a href="http://www.monlyceenumerique.fr/nsi_terminale/a/a3_div_regner.php">monlyceenumerique.fr</a></li>
+</ul>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#quest-ce-quune-image-numériques">Qu&rsquo;est ce qu&rsquo;une image numériques?</a></li>
+    <li><a href="#librairie-pil">Librairie PIL</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#premier-algorithme-permutation-de-pixels">Premier algorithme: permutation de pixels</a></li>
+    <li><a href="#méthode-diviser-pour-régner">Méthode diviser pour régner</a>
+      <ul>
+        <li><a href="#compléter-la-fonction-echange_pix-suivante">Compléter la fonction <code>echange_pix</code> suivante</a></li>
+        <li><a href="#compléter-la-fonction-echange_quadrant-suivante">Compléter la fonction <code>echange_quadrant</code> suivante</a></li>
+        <li><a href="#analyser-la-fonction-rotate">analyser la fonction <code>rotate</code></a></li>
+        <li><a href="#efficacité-de-la-méthode">efficacité de la méthode</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

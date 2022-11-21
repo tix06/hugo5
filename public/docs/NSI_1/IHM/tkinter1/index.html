@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    Tkinter les bases
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI_1\2fIHM\2ftkinter1\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    Tkinter les bases
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="tkinter-les-bases">Tkinter les bases</h1>
+<ul>
+<li>télécharger le dossier zip: <!-- raw HTML omitted -->tuto_tkinter.zip<!-- raw HTML omitted --></li>
+<li>le placer dans vos <em>Documents</em></li>
+<li>Extraire tout</li>
+<li>Ouvrir le fichier <em>main.py</em> avec un IDE Python de la suite Winpython</li>
+</ul>
+<h2 id="import-des-modules">Import des modules</h2>
+<p>Le module <code>tkinter</code> apporte l&rsquo;environnement graphique.</p>
+<p>Le module <code>PIL</code> permet la gestion des images.</p>
+<p>Démarrer votre fichier par:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> <span style="color:#111">tkinter</span> <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> <span style="color:#111">PIL</span> <span style="color:#f92672">import</span> <span style="color:#111">Image</span><span style="color:#111">,</span> <span style="color:#111">ImageTk</span>
+</span></span></code></pre></div><h2 id="créer-une-fenêtre-tkinter">Créer une fenêtre Tkinter</h2>
+<p>La fenêtre est un objet de la classe <code>Tk</code>. Pour l&rsquo;exemple qui suit, on lui donne le nom de <code>fen1</code>.</p>
+<p>On créé un objet fenêtre à partir de l&rsquo;instruction: <code>fen1 = Tk()</code></p>
+<p>La dernière ligne permet d&rsquo;afficher la fenêtre à l&rsquo;écran. Il faudra auparavent ajouter les <em>objets esclaves</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">if</span> <span style="color:#111">__name__</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#39;__main__&#39;</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">fen1</span> <span style="color:#f92672">=</span> <span style="color:#111">Tk</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># ajouter des objets esclaves à la fenêtre</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># puis finir par:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">fen1</span><span style="color:#f92672">.</span><span style="color:#111">mainloop</span><span style="color:#111">()</span>
+</span></span></code></pre></div><h2 id="objets-esclaves">Objets esclaves</h2>
+<p>Ces objets sont à ajouter à <code>fen1</code>, une fois celle-ci créé. Donc après <code>fen1 = Tk()</code></p>
+<h3 id="canvas">Canvas</h3>
+<p>C&rsquo;est la partie de la fenêtre dans laquelle on dessine.</p>
+<p>On commence par créer un objet canvas appelé ici <code>can1</code>: c&rsquo;est l&rsquo;instruction <code>can1 = Canvas(fen1, ...arguments...)</code>. Les arguments vont permettre de choisir par exemple la largeur en pixel du canvas (<em>width</em>) et sa hauteur (<em>height</em>).</p>
+<p>Puis on positionne <code>can1</code> avec la méthode <code>pack</code>. Sans cette deuxième ligne <code>can1.pack(side=LEFT, padx=5, pady=5)</code>, l&rsquo;objet esclave est créé mais non attaché à la fenêtre (et donc n&rsquo;apparait pas).</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">if</span> <span style="color:#111">__name__</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#39;__main__&#39;</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">can1</span> <span style="color:#f92672">=</span> <span style="color:#111">Canvas</span><span style="color:#111">(</span><span style="color:#111">fen1</span><span style="color:#111">,</span> <span style="color:#111">bg</span><span style="color:#f92672">=</span><span style="color:#d88200">&#39;dark grey&#39;</span><span style="color:#111">,</span> <span style="color:#111">height</span><span style="color:#f92672">=</span><span style="color:#ae81ff">400</span><span style="color:#111">,</span> <span style="color:#111">width</span><span style="color:#f92672">=</span><span style="color:#ae81ff">600</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">can1</span><span style="color:#f92672">.</span><span style="color:#111">pack</span><span style="color:#111">(</span><span style="color:#111">side</span><span style="color:#f92672">=</span><span style="color:#111">LEFT</span><span style="color:#111">,</span> <span style="color:#111">padx</span><span style="color:#f92672">=</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span> <span style="color:#111">pady</span><span style="color:#f92672">=</span><span style="color:#ae81ff">5</span><span style="color:#111">)</span>
+</span></span></code></pre></div><h3 id="des-boutons">des boutons</h3>
+<p>Les boutons vont permettre d&rsquo;appeler des fonctions lorsque l&rsquo;on clique dessus.</p>
+<p>Par exemple, le bouton 1, <code>bou1</code> va appeler une fonction de <code>fen1</code> héritée lors de sa création à partir de la classe <code>Tk</code>. C&rsquo;est la fonction <code>quit</code>.</p>
+<p>Et le bouton 1, <code>bou2</code>, va appeler la fonction <code>replay</code> qu&rsquo;il vous faudra programmer. Que voudrez vous qu&rsquo;il se passe lorsque l&rsquo;on clique sur ce bouton&hellip;? Effacer le canvas, dessiner une grille,&hellip;?</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">if</span> <span style="color:#111">__name__</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#39;__main__&#39;</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># un bouton</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">bou1</span> <span style="color:#f92672">=</span> <span style="color:#111">Button</span><span style="color:#111">(</span><span style="color:#111">fen1</span><span style="color:#111">,</span> <span style="color:#111">text</span><span style="color:#f92672">=</span><span style="color:#d88200">&#39;Quitter&#39;</span><span style="color:#111">,</span> <span style="color:#111">command</span><span style="color:#f92672">=</span><span style="color:#111">fen1</span><span style="color:#f92672">.</span><span style="color:#111">quit</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">bou1</span><span style="color:#f92672">.</span><span style="color:#111">pack</span><span style="color:#111">(</span><span style="color:#111">side</span><span style="color:#f92672">=</span><span style="color:#111">BOTTOM</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># un autre bouton</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">bou2</span> <span style="color:#f92672">=</span> <span style="color:#111">Button</span><span style="color:#111">(</span><span style="color:#111">fen1</span><span style="color:#111">,</span> <span style="color:#111">text</span><span style="color:#f92672">=</span><span style="color:#d88200">&#39;(Re)Jouer&#39;</span><span style="color:#111">,</span> <span style="color:#111">command</span><span style="color:#f92672">=</span><span style="color:#111">replay</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">bou2</span><span style="color:#f92672">.</span><span style="color:#111">pack</span><span style="color:#111">()</span>
+</span></span></code></pre></div><p><em>Remarques:</em> en python, il est possible de mettre en argument d&rsquo;une fonction une autre fonction. C&rsquo;est ce qui est réalisé ici, avec les fonctions <code>fen1.quit</code> et <code>replay</code>. On appelle ces fonctions sans mettre de parenthèses: on écrit <code>replay</code> et non <code>replay()</code>.</p>
+<h3 id="etiquette-label">Etiquette: Label</h3>
+<p>On peut écrire un texte dont le contenu sera evolutif, comme un panneau d&rsquo;affichage dont le contenu est variable:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">if</span> <span style="color:#111">__name__</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#39;__main__&#39;</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">text_affichage</span> <span style="color:#f92672">=</span> <span style="color:#111">StringVar</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">txt1</span> <span style="color:#f92672">=</span> <span style="color:#111">Label</span><span style="color:#111">(</span><span style="color:#111">fen1</span><span style="color:#111">,</span> <span style="color:#111">textvariable</span><span style="color:#f92672">=</span><span style="color:#111">text_affichage</span><span style="color:#111">,</span> <span style="color:#111">justify</span><span style="color:#f92672">=</span><span style="color:#111">LEFT</span><span style="color:#111">,</span> <span style="color:#111">font</span><span style="color:#f92672">=</span><span style="color:#d88200">&#39;TkFixedFont&#39;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">txt1</span><span style="color:#f92672">.</span><span style="color:#111">pack</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">text_affichage</span><span style="color:#f92672">.</span><span style="color:#111">set</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Cliquer sur </span><span style="color:#8045ff">\n</span><span style="color:#d88200"> le bouton </span><span style="color:#8045ff">\n</span><span style="color:#d88200"> pour demarrer&#34;</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>Plus tard, dans le programme, il suffira d&rsquo;écrire <code>text_affichage.set(&quot;nouveau \n message&quot;)</code> pour afficher un <em>nouveau message</em>, à la même place.</p>
+<h3 id="textbox">textBox</h3>
+<p>Equivalent de <code>input</code> mais pour l&rsquo;environnement tkinter. Il faudra definir le champs de saisie (objet Text), et le bouton pour validation:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">if</span> <span style="color:#111">__name__</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#39;__main__&#39;</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Une textBox</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">textBox</span> <span style="color:#f92672">=</span> <span style="color:#111">Text</span><span style="color:#111">(</span><span style="color:#111">fen1</span><span style="color:#111">,</span> <span style="color:#111">height</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span> <span style="color:#111">width</span><span style="color:#f92672">=</span><span style="color:#ae81ff">15</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">textBox</span><span style="color:#f92672">.</span><span style="color:#111">pack</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Bouton pour valider la saisie</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">bou3</span> <span style="color:#f92672">=</span> <span style="color:#111">Button</span><span style="color:#111">(</span><span style="color:#111">fen1</span><span style="color:#111">,</span> <span style="color:#111">text</span><span style="color:#f92672">=</span><span style="color:#d88200">&#39;Valider&#39;</span><span style="color:#111">,</span> <span style="color:#111">command</span><span style="color:#f92672">=</span><span style="color:#111">readtext</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">bou3</span><span style="color:#f92672">.</span><span style="color:#111">pack</span><span style="color:#111">()</span>
+</span></span></code></pre></div><p>Il faudra alors programmer la fonction de rappel <code>readtext</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">readtext</span><span style="color:#111">():</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">result</span><span style="color:#f92672">=</span><span style="color:#111">textBox</span><span style="color:#f92672">.</span><span style="color:#111">get</span><span style="color:#111">(</span><span style="color:#d88200">&#34;1.0&#34;</span><span style="color:#111">,</span><span style="color:#d88200">&#34;end&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">text_affichage</span><span style="color:#f92672">.</span><span style="color:#111">set</span><span style="color:#111">(</span><span style="color:#111">result</span><span style="color:#111">)</span>
+</span></span></code></pre></div><h3 id="image-dans-le-canvas">Image dans le canvas</h3>
+<p>Plusieurs étapes sont necessaires pour:</p>
+<ul>
+<li>ouvrir une image du dossier</li>
+<li>redimensionner l&rsquo;image</li>
+<li>créer un objet image à partir du module tkinter: <code>image_bomb</code></li>
+<li>dessiner l&rsquo;image dans le canvas à la position 100 * 100</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">if</span> <span style="color:#111">__name__</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#39;__main__&#39;</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># une image de dimension 50 pixels * 50 pixels </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">image</span> <span style="color:#f92672">=</span> <span style="color:#111">Image</span><span style="color:#f92672">.</span><span style="color:#111">open</span><span style="color:#111">(</span><span style="color:#d88200">&#34;images/bomb.png&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">image</span> <span style="color:#f92672">=</span> <span style="color:#111">image</span><span style="color:#f92672">.</span><span style="color:#111">resize</span><span style="color:#111">((</span><span style="color:#ae81ff">50</span><span style="color:#111">,</span> <span style="color:#ae81ff">50</span><span style="color:#111">),</span> <span style="color:#111">Image</span><span style="color:#f92672">.</span><span style="color:#111">ANTIALIAS</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">image_bomb</span> <span style="color:#f92672">=</span> <span style="color:#111">ImageTk</span><span style="color:#f92672">.</span><span style="color:#111">PhotoImage</span><span style="color:#111">(</span><span style="color:#111">image</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">bomb</span> <span style="color:#f92672">=</span> <span style="color:#111">can1</span><span style="color:#f92672">.</span><span style="color:#111">create_image</span><span style="color:#111">(</span><span style="color:#ae81ff">100</span><span style="color:#111">,</span> <span style="color:#ae81ff">100</span><span style="color:#111">,</span> <span style="color:#111">anchor</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;nw&#34;</span><span style="color:#111">,</span> <span style="color:#111">image</span><span style="color:#f92672">=</span><span style="color:#111">image_bomb</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>Plus loin dans le programme, il suffira d&rsquo;écrire <code>bomb = can1.create_image(200, 200, anchor=&quot;nw&quot;, image=image_bomb)</code> pour dessiner l&rsquo;image à la position 200 * 200 par exemple.</p>
+<h3 id="dessiner-dans-le-canvas">Dessiner dans le canvas</h3>
+<p><strong>Dessiner un carré</strong><!-- raw HTML omitted -->
+On utilise la méthode: <code>.create_rectangle(X0, Y0, X1, Y1)</code><!-- raw HTML omitted -->
+X, Y sont les coordonnées du coin supérieur gauche du carré.<!-- raw HTML omitted -->
+Il peut y avoir des paramètres optionnels.</p>
+<!-- raw HTML omitted -->
+<p><em>Exemple: pour dessiner un carré de côté r dans le canvas:</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">can1</span><span style="color:#f92672">.</span><span style="color:#111">create_rectangle</span><span style="color:#111">(</span><span style="color:#111">X</span><span style="color:#111">,</span> <span style="color:#111">Y</span><span style="color:#111">,</span> <span style="color:#111">X</span> <span style="color:#f92672">+</span> <span style="color:#111">r</span><span style="color:#111">,</span> <span style="color:#111">Y</span> <span style="color:#f92672">+</span> <span style="color:#111">r</span><span style="color:#111">,</span> <span style="color:#111">outline</span><span style="color:#f92672">=</span><span style="color:#d88200">&#39;black&#39;</span><span style="color:#111">,</span> <span style="color:#111">fill</span><span style="color:#f92672">=</span><span style="color:#111">couleur</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p><strong>Dessiner un cercle:</strong><!-- raw HTML omitted -->
+On utilise la méthode: <code>.create_oval(x-r, y-r, x+r, y+r)</code></p>
+<!-- raw HTML omitted -->
+<p><strong>Dessiner une ligne:</strong><!-- raw HTML omitted -->
+On utilise la méthode: <code>.create_line(x0, y0, x1, y1)</code></p>
+<!-- raw HTML omitted -->
+<h1 id="evenements">Evenements</h1>
+<h2 id="gestion-dun-clic-de-souris-dans-le-canvas">Gestion d&rsquo;un clic de souris dans le canvas</h2>
+<p>Pour ajouter un écouteur de clic dans le canvas, il faut ajouter dans le bloc principal (après avoir créé l&rsquo;objet <code>fen1</code> et <code>can1</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">if</span> <span style="color:#111">__name__</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#39;__main__&#39;</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">can1</span><span style="color:#f92672">.</span><span style="color:#111">bind</span><span style="color:#111">(</span><span style="color:#d88200">&#39;&lt;Button-1&gt;&#39;</span><span style="color:#111">,</span> <span style="color:#111">clic</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">...</span>
+</span></span></code></pre></div><p>Ici, la fonction qui sera appelée lorsque l&rsquo;on clique avec le bouton gauche de la souris dans le canvas est la fonction<code>clic</code> qu&rsquo;il faudra programmer.</p>
+<p>Lors de l&rsquo;appel de cette fonction, il ne faut pas ajouter d&rsquo;agument ni de parenthèses.</p>
+<p>On peut par exemple vouloir afficher les coordonnées de la souris lors du clic:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">clic</span><span style="color:#111">(</span><span style="color:#111">event</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#d88200">&#34;&#34;&#34; Gestion de l&#39;événement clic gauche sur la zone graphique &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># MODE JEU</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># (X,Y) : position du pointeur de la souris</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">X</span> <span style="color:#f92672">=</span> <span style="color:#111">event</span><span style="color:#f92672">.</span><span style="color:#111">x</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">Y</span> <span style="color:#f92672">=</span> <span style="color:#111">event</span><span style="color:#f92672">.</span><span style="color:#111">y</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">text_affichage</span><span style="color:#f92672">.</span><span style="color:#111">set</span><span style="color:#111">(</span><span style="color:#d88200">&#34;</span><span style="color:#d88200">{}</span><span style="color:#d88200">, </span><span style="color:#d88200">{}</span><span style="color:#d88200">&#34;</span><span style="color:#f92672">.</span><span style="color:#111">format</span><span style="color:#111">(</span><span style="color:#111">X</span><span style="color:#111">,</span><span style="color:#111">Y</span><span style="color:#111">))</span>
+</span></span></code></pre></div><p><em>Remarque:</em> la fonction de rappel <code>clic</code> a un paramètre obligatoire, <code>event</code> lors de sa création.</p>
+<h2 id="cliquer-sur-une-image">Cliquer sur une image</h2>
+<p>Pour ajouter un ecouteur de clic sur une image, on procède d&rsquo;une manière presque identique:</p>
+<p>Après avoir placé l&rsquo;image dans le canvas, on lui associe une fonction de rappel:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">if</span> <span style="color:#111">__name__</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#39;__main__&#39;</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Pierre</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">image</span> <span style="color:#f92672">=</span> <span style="color:#111">Image</span><span style="color:#f92672">.</span><span style="color:#111">open</span><span style="color:#111">(</span><span style="color:#d88200">&#34;images/pierre.png&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">image</span> <span style="color:#f92672">=</span> <span style="color:#111">image</span><span style="color:#f92672">.</span><span style="color:#111">resize</span><span style="color:#111">((</span><span style="color:#111">image</span><span style="color:#f92672">.</span><span style="color:#111">size</span><span style="color:#111">[</span><span style="color:#ae81ff">0</span><span style="color:#111">]</span> <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span><span style="color:#111">,</span> <span style="color:#111">image</span><span style="color:#f92672">.</span><span style="color:#111">size</span><span style="color:#111">[</span><span style="color:#ae81ff">1</span><span style="color:#111">]</span> <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span><span style="color:#111">),</span> <span style="color:#111">Image</span><span style="color:#f92672">.</span><span style="color:#111">ANTIALIAS</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">photo_pierre</span> <span style="color:#f92672">=</span> <span style="color:#111">ImageTk</span><span style="color:#f92672">.</span><span style="color:#111">PhotoImage</span><span style="color:#111">(</span><span style="color:#111">image</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">pierre</span> <span style="color:#f92672">=</span> <span style="color:#111">can1</span><span style="color:#f92672">.</span><span style="color:#111">create_image</span><span style="color:#111">(</span><span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#111">anchor</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;nw&#34;</span><span style="color:#111">,</span> <span style="color:#111">image</span><span style="color:#f92672">=</span><span style="color:#111">photo_pierre</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">can1</span><span style="color:#f92672">.</span><span style="color:#111">tag_bind</span><span style="color:#111">(</span><span style="color:#111">pierre</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;&lt;ButtonRelease&gt;&#34;</span><span style="color:#111">,</span> <span style="color:#111">play_pierre</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span></code></pre></div><p>Ici, la fonction de rappel sera <code>play_pierre</code>. Le clic sur cette image pourra peut-être afficher un message:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">play_pierre</span><span style="color:#111">(</span><span style="color:#111">event</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">texte</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#34;Joueur joue: </span><span style="color:#8045ff">\n</span><span style="color:#d88200"> PIERRE&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">text_affichage</span><span style="color:#f92672">.</span><span style="color:#111">set</span><span style="color:#111">(</span><span style="color:#111">texte</span><span style="color:#111">)</span>
+</span></span></code></pre></div><h2 id="gestion-des-touches-du-clavier">Gestion des touches du clavier</h2>
+<p>De nombreux jeux utilisent les touches du clavier pour commandes. L&rsquo;écoute du clavier se fait avec <code>fen1.bind(&quot;&lt;Key&gt;&quot;, nom_de_la_fonction_de_rappel)</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">if</span> <span style="color:#111">__name__</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#39;__main__&#39;</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">fen1</span><span style="color:#f92672">.</span><span style="color:#111">bind</span><span style="color:#111">(</span><span style="color:#d88200">&#34;&lt;Key&gt;&#34;</span><span style="color:#111">,</span> <span style="color:#111">clavier</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span></code></pre></div><p>On peut alors programmer une fonction de rappel <code>clavier</code> qui affiche le caractère appuyé:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">clavier</span><span style="color:#111">(</span><span style="color:#111">event</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">t</span> <span style="color:#f92672">=</span> <span style="color:#111">event</span><span style="color:#f92672">.</span><span style="color:#111">keysym</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">text_affichage</span><span style="color:#f92672">.</span><span style="color:#111">set</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Touche pressée : </span><span style="color:#d88200">{}</span><span style="color:#d88200">&#34;</span><span style="color:#f92672">.</span><span style="color:#111">format</span><span style="color:#111">(</span><span style="color:#111">t</span><span style="color:#111">))</span>
+</span></span></code></pre></div><h1 id="exemples">Exemples</h1>
+<h2 id="exemple-1-dessiner-une-grille">Exemple 1: dessiner une grille</h2>
+<p>Souvent, le jeu utilise un quadrillage sur tout le canvas.</p>
+<p>On peut programmer une fonction <code>carre</code> qui dessine un carré de côté r, puis appeler cette fonction lors du dessin initial, dans une autre fonction.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">carre</span><span style="color:#111">(</span><span style="color:#111">r</span><span style="color:#111">,</span> <span style="color:#111">X</span><span style="color:#111">,</span> <span style="color:#111">Y</span><span style="color:#111">,</span> <span style="color:#111">couleur</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#d88200">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    dessine le contour d&#39;une case colorée
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">can1</span><span style="color:#f92672">.</span><span style="color:#111">create_rectangle</span><span style="color:#111">(</span><span style="color:#111">X</span><span style="color:#111">,</span> <span style="color:#111">Y</span><span style="color:#111">,</span> <span style="color:#111">X</span> <span style="color:#f92672">+</span> <span style="color:#111">r</span><span style="color:#111">,</span> <span style="color:#111">Y</span> <span style="color:#f92672">+</span> <span style="color:#111">r</span><span style="color:#111">,</span> <span style="color:#111">outline</span><span style="color:#f92672">=</span><span style="color:#d88200">&#39;black&#39;</span><span style="color:#111">,</span> <span style="color:#111">fill</span><span style="color:#f92672">=</span><span style="color:#111">couleur</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>La fonction qui dessine le fond quadrillé utilisera 2 boucles bornées imbriquées. Si chaque carré a pour côté H: L&rsquo;idée est d&rsquo;utiliser les dimensions du canvas pour avoir un nombre entier de carrés de côtés H:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    <span style="color:#00a8c8">for</span> <span style="color:#111">j</span> <span style="color:#f92672">in</span> <span style="color:#111">range</span><span style="color:#111">(</span><span style="color:#111">int</span><span style="color:#111">(</span><span style="color:#111">can1</span><span style="color:#111">[</span><span style="color:#d88200">&#39;height&#39;</span><span style="color:#111">])</span> <span style="color:#f92672">//</span> <span style="color:#111">H</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">for</span> <span style="color:#111">i</span> <span style="color:#f92672">in</span> <span style="color:#111">range</span><span style="color:#111">(</span><span style="color:#111">int</span><span style="color:#111">(</span><span style="color:#111">can1</span><span style="color:#111">[</span><span style="color:#d88200">&#39;width&#39;</span><span style="color:#111">])</span> <span style="color:#f92672">//</span> <span style="color:#111">H</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">carre</span><span style="color:#111">(</span><span style="color:#111">H</span><span style="color:#111">,</span><span style="color:#f92672">...</span>
+</span></span></code></pre></div><p><em>famille de jeux: le morpion, puissance 4, echecs, demineur</em></p>
+<h2 id="exemple-2-dessiner-selon-le-texte-saisi">Exemple 2: dessiner selon le texte saisi</h2>
+<p>On pourrait <em>dessiner avec un ordre</em>: la fonction de rappel  <code>readtext</code> pourrait évaluer les caractères saisis, et, s&rsquo;il s&rsquo;agit de:</p>
+<ul>
+<li><code>tete</code>: dessiner la tête du personnage</li>
+<li><code>corps</code>: dessiner le corps</li>
+<li><code>bras</code>: dessiner ses bras</li>
+<li><code>jambes</code>: dessiner ses jambes</li>
+</ul>
+<p><em>famille de jeux: jeu de devinette, jeu de rôle, jeu du pendu</em></p>
+<h2 id="exemple-3-ajouter-une-image-lors-dun-clic">Exemple 3: ajouter une image lors d&rsquo;un clic</h2>
+<p>Avec la fonction <code>clic</code>, on peut créer une nouvelle image dans le canvas avec:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">clic</span><span style="color:#111">(</span><span style="color:#111">event</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#d88200">&#34;&#34;&#34; Gestion de l&#39;événement clic gauche sur la zone graphique &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># MODE JEU</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># (X,Y) : position du pointeur de la souris</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">X</span> <span style="color:#f92672">=</span> <span style="color:#111">event</span><span style="color:#f92672">.</span><span style="color:#111">x</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">Y</span> <span style="color:#f92672">=</span> <span style="color:#111">event</span><span style="color:#f92672">.</span><span style="color:#111">y</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">bomb</span> <span style="color:#f92672">=</span> <span style="color:#111">can1</span><span style="color:#f92672">.</span><span style="color:#111">create_image</span><span style="color:#111">(</span><span style="color:#111">X</span><span style="color:#111">,</span> <span style="color:#111">Y</span><span style="color:#111">,</span> <span style="color:#111">anchor</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;nw&#34;</span><span style="color:#111">,</span> <span style="color:#111">image</span><span style="color:#f92672">=</span><span style="color:#111">image_bomb</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>Le mieux, serait d&rsquo;aligner l&rsquo;image sur la grille de fond lorsque l&rsquo;on clique dans l&rsquo;une des cases du quadrillage.</p>
+<p>Si les carrés ont pour côté H: Il faudra que X et Y soient multiples de H.</p>
+<p><strong>Utiliser la division entière:</strong></p>
+<p><code>X = (X // H) * H</code></p>
+<p>et <code>Y = (Y // H) * H</code></p>
+<p><em>famille de jeux: demineur, puissance 4, morpion</em></p>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#import-des-modules">Import des modules</a></li>
+    <li><a href="#créer-une-fenêtre-tkinter">Créer une fenêtre Tkinter</a></li>
+    <li><a href="#objets-esclaves">Objets esclaves</a>
+      <ul>
+        <li><a href="#canvas">Canvas</a></li>
+        <li><a href="#des-boutons">des boutons</a></li>
+        <li><a href="#etiquette-label">Etiquette: Label</a></li>
+        <li><a href="#textbox">textBox</a></li>
+        <li><a href="#image-dans-le-canvas">Image dans le canvas</a></li>
+        <li><a href="#dessiner-dans-le-canvas">Dessiner dans le canvas</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#gestion-dun-clic-de-souris-dans-le-canvas">Gestion d&rsquo;un clic de souris dans le canvas</a></li>
+    <li><a href="#cliquer-sur-une-image">Cliquer sur une image</a></li>
+    <li><a href="#gestion-des-touches-du-clavier">Gestion des touches du clavier</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#exemple-1-dessiner-une-grille">Exemple 1: dessiner une grille</a></li>
+    <li><a href="#exemple-2-dessiner-selon-le-texte-saisi">Exemple 2: dessiner selon le texte saisi</a></li>
+    <li><a href="#exemple-3-ajouter-une-image-lors-dun-clic">Exemple 3: ajouter une image lors d&rsquo;un clic</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

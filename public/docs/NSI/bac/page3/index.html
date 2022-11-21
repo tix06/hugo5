@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    bac donnees structurees2
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI\2f bac\2fpage3\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    bac donnees structurees2
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="bac-2022-polynesie-exercice-5">Bac 2022 Polynesie: Exercice 5</h1>
+<p><em>Cet exercice traite du thème « algorithmique », et principalement des algorithmes sur les arbres binaires.</em></p>
+<p>On manipule ici les arbres binaires avec trois fonctions :</p>
+<ul>
+<li><code>est_vide(A)</code> qui renvoie <code>True</code> si l&rsquo;arbre binaire <code>A</code> est vide, <code>False</code> s&rsquo;il ne l&rsquo;est pas ;</li>
+<li><code>sous_arbre_gauche(A)</code> qui renvoie le sous-arbre gauche de l&rsquo;arbre binaire <code>A</code> ;</li>
+<li><code>sous_arbre_droit(A)</code> qui renvoie le sous-arbre droit de l&rsquo;arbre binaire <code>A</code>.</li>
+</ul>
+<p>L&rsquo;arbre binaire renvoyé par les fonctions <code>sous_arbre_gauche</code> et <code>sous_arbre_droit</code> peut éventuellement être l&rsquo;arbre vide.</p>
+<p>On définit la <strong>hauteur</strong> d&rsquo;un arbre binaire non vide de la façon suivante :</p>
+<ul>
+<li>si ses sous-arbres gauche et droit sont vides, sa hauteur est 0 ;</li>
+<li>si l&rsquo;un des deux au moins est non vide, alors sa hauteur est égale à 1 + M, où M est la plus grande des hauteurs de ses sous-arbres (gauche et droit) non vides.</li>
+</ul>
+<h2 id="question-1">Question 1</h2>
+<p>A. Donner la hauteur de l&rsquo;arbre ci-dessous.</p>
+<!-- raw HTML omitted -->
+<p>B. Dessiner sur la copie un arbre binaire de hauteur 4.</p>
+<p>La hauteur d&rsquo;un arbre est calculée par l&rsquo;algorithme récursif suivant :</p>
+<pre tabindex="0"><code>Algorithme hauteur(A):
+  test d&#39;assertion : A est supposé non vide
+  si sous_arbre_gauche(A) vide et sous_arbre_droit(A) vide:
+    renvoyer 0
+  sinon, si sous_arbre_gauche(A) vide:
+    renvoyer 1 + hauteur(sous_arbre_droit(A))
+  sinon, si ... :
+    renvoyer ...
+  sinon:
+    renvoyer 1 + max(hauteur(sous_arbre_gauche(A)),
+    hauteur(sous_arbre_droit(A)))
+</code></pre><h2 id="question-2">Question 2</h2>
+<p>Recopier sur la copie les lignes 7 et 8 en complétant les points de suspension.</p>
+<h2 id="question-3">Question 3</h2>
+<p>On considère un arbre binaire <code>R</code> dont on note <code>G</code> le sous-arbre gauche et <code>D</code> le sous-arbre droit. On suppose que <code>R</code> est de hauteur 4 et <code>G</code> de hauteur 2.</p>
+<p>A.  Justifier le fait que <code>D</code> n&rsquo;est pas l&rsquo;arbre vide et déterminer sa hauteur.</p>
+<p>B.  Illustrer cette situation par un dessin.</p>
+<p>Soit un arbre binaire non vide de hauteur h. On note <code>n</code> le nombre de nœuds de cet arbre. On admet que $h+1 \leqslant n \leqslant 2^{h+1}−1$.</p>
+<h2 id="question-4">Question 4</h2>
+<p>A.  Vérifier ces inégalités sur l&rsquo;arbre binaire de la question 1.A.</p>
+<p>B.  Expliquer comment construire un arbre binaire de hauteur h quelconque
+ayant h+1 nœuds.</p>
+<p>C. Expliquer comment construire un arbre binaire de hauteur h quelconque ayant
+$2^{h+1}−1$ nœuds.</p>
+<p><em>Indication</em> : $2^{h+1}−1 = 1+2+4+&hellip;+2^h$</p>
+<p>L&rsquo;objectif de la fin de l’exercice est d&rsquo;écrire le code d&rsquo;une fonction <code>fabrique(h, n)</code> qui prend comme paramètres deux nombres entiers positifs <code>h</code> et <code>n</code> tels que $h+1 \leqslant n \leqslant 2^{h+1}−1$, et qui renvoie un arbre binaire de hauteur h à n nœuds.</p>
+<p>Pour cela, on a besoin des deux fonctions suivantes:</p>
+<ul>
+<li><code>arbre_vide()</code>, qui renvoie un arbre vide ;</li>
+<li><code>arbre(gauche, droit)</code> qui renvoie l&rsquo;arbre de fils gauche <code>gauche</code> et de fils
+droit <code>droit</code>.</li>
+</ul>
+<h2 id="question-5">Question 5</h2>
+<p>Recopier sur la copie l&rsquo;arbre binaire ci-dessous et numéroter ses nœuds de 1 en
+1 en commençant à 1, en effectuant un parcours en profondeur préfixe.</p>
+<!-- raw HTML omitted -->
+<p>La fonction <code>fabrique</code> ci-dessous a pour but de répondre au problème posé. Pour cela, la fonction <code>annexe</code> utilise la valeur de <code>n</code>, qu&rsquo;elle peut modifier, et renvoie un arbre binaire de hauteur <code>hauteur_max</code> dont le nombre de nœuds est égal à la valeur de <code>n</code> au moment de son appel.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">fabrique</span><span style="color:#111">(</span><span style="color:#111">h</span><span style="color:#111">,</span> <span style="color:#111">n</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">def</span> <span style="color:#75af00">annexe</span><span style="color:#111">(</span><span style="color:#111">hauteur_max</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">if</span> <span style="color:#111">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">return</span> <span style="color:#111">arbre_vide</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">elif</span> <span style="color:#111">hauteur_max</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">n</span> <span style="color:#f92672">=</span> <span style="color:#111">n</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">return</span> <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">else</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">n</span> <span style="color:#f92672">=</span> <span style="color:#111">n</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">gauche</span> <span style="color:#f92672">=</span> <span style="color:#111">annexe</span><span style="color:#111">(</span><span style="color:#111">hauteur_max</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">droite</span> <span style="color:#f92672">=</span> <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">return</span> <span style="color:#111">arbre</span><span style="color:#111">(</span><span style="color:#111">gauche</span><span style="color:#111">,</span> <span style="color:#111">droite</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">return</span> <span style="color:#111">annexe</span><span style="color:#111">(</span><span style="color:#111">h</span><span style="color:#111">)</span>
+</span></span></code></pre></div><h2 id="question-6">Question 6</h2>
+<p>Recopier sur la copie les lignes 7 et 11 en complétant les points de suspension.</p>
+<h1 id="bac-2022-mettropole-1-exercice-4">Bac 2022 Mettropole 1: Exercice 4</h1>
+<p><em>Cet exercice, composé de deux parties A et B, porte sur le parcours des arbres
+binaires, le principe “diviser pour régner” et la récursivité.</em></p>
+<p>Cet exercice traite du calcul de la somme d’un arbre binaire. Cette somme consiste à additionner toutes les valeurs numériques contenues dans les nœuds de l’arbre.</p>
+<p>L’arbre utilisé dans les parties A et B est le suivant :</p>
+<!-- raw HTML omitted -->
+<h2 id="partie-a--parcours-dun-arbre">Partie A : Parcours d’un arbre</h2>
+<h2 id="question-1-1">Question 1</h2>
+<p>Donner la somme de l’arbre précédent. Justifier la réponse en explicitant le calcul qui a permis de l’obtenir.</p>
+<h2 id="question-2-1">Question 2</h2>
+<p>Indiquer la lettre correspondante aux noms ‘racine’, ‘feuille’, ‘nœud’, ‘SAG’ (Sous Arbre Gauche) et ‘SAD’ (Sous Arbre Droit). Chaque lettre <strong>A, B, C, D</strong> et <strong>E</strong> devra être utilisée une seule fois.</p>
+<!-- raw HTML omitted -->
+<h2 id="question-3-1">Question 3</h2>
+<p>Parmi les quatre propositions A, B, C et D ci-dessous, donnant un parcours en
+largeur d’abord de l’arbre, une seule est correcte. Indiquer laquelle.</p>
+<ul>
+<li><strong>Proposition A :</strong> 7 - 6 - 4 - 3 - 9 - 2 - 1</li>
+<li><strong>Proposition B :</strong> 3 - 6 - 7 - 4 - 2 - 9 - 1</li>
+<li><strong>Proposition C :</strong> 3 - 6 - 2 - 7 - 4 - 9 - 1</li>
+<li><strong>Proposition D :</strong> 7 - 4 - 6 - 9 - 1 - 2 – 3</li>
+</ul>
+<h2 id="question-4-1">Question 4</h2>
+<p>Écrire en langage Python la fonction somme qui prend en paramètre une liste de
+nombres et qui renvoie la somme de ses éléments.</p>
+<p>Exemple : <code>somme([1, 2, 3, 4])</code> est égale à 10.</p>
+<h2 id="question-5-1">Question 5</h2>
+<p>La fonction <code>parcourir(arbre)</code> pourrait se traduire en langage naturel par :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">parcourir</span><span style="color:#111">(</span><span style="color:#111">A</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">L</span> <span style="color:#f92672">=</span> <span style="color:#111">liste_vide</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">F</span> <span style="color:#f92672">=</span> <span style="color:#111">file_vide</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">enfiler</span> <span style="color:#111">A</span> <span style="color:#111">dans</span> <span style="color:#111">F</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">Tant</span> <span style="color:#111">que</span> <span style="color:#111">F</span> <span style="color:#111">n</span> <span style="color:#111">est</span> <span style="color:#111">pas</span> <span style="color:#111">vide</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">défiler</span> <span style="color:#111">S</span> <span style="color:#111">de</span> <span style="color:#111">F</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">ajouter</span> <span style="color:#111">la</span> <span style="color:#111">valeur</span> <span style="color:#111">de</span> <span style="color:#111">la</span> <span style="color:#111">racine</span> <span style="color:#111">de</span> <span style="color:#111">S</span> <span style="color:#111">dans</span> <span style="color:#111">L</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">Pour</span> <span style="color:#111">chaque</span> <span style="color:#111">sous</span> <span style="color:#111">arbre</span> <span style="color:#111">SA</span> <span style="color:#111">non</span> <span style="color:#111">vide</span> <span style="color:#111">de</span> <span style="color:#111">S</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">enfiler</span> <span style="color:#111">SA</span> <span style="color:#111">dans</span> <span style="color:#111">F</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">renvoyer</span> <span style="color:#111">L</span>
+</span></span></code></pre></div><p>Donner le type de parcours obtenu grâce à la fonction <code>parcourir</code>.</p>
+<h2 id="partie-b--méthode-diviser-pour-régner">Partie B : Méthode ‘diviser pour régner’</h2>
+<h2 id="question-6-1">Question 6</h2>
+<p>Parmi les quatre propositions A,B, C et D ci-dessous, indiquer la seule
+proposition correcte.</p>
+<p>En informatique, le principe diviser pour régner signifie :</p>
+<ul>
+<li><strong>Proposition A</strong>: diviser une fonction en deux fonctions plus petites</li>
+<li><strong>Proposition B</strong>: utiliser plusieurs modules</li>
+<li><strong>Proposition C</strong>: séparer les informations en fonction de leur types</li>
+<li><strong>Proposition D</strong>: diviser un problème en deux problèmes plus petits et
+indépendants.</li>
+</ul>
+<h2 id="question-7">Question 7</h2>
+<p>L’arbre présenté dans le problème peut être décomposé en racine et sous
+arbres :</p>
+<!-- raw HTML omitted -->
+<p>Indiquer dans l’esprit de ‘diviser pour régner’ l’égalité donnant la somme d’un arbre en fonction de la somme des sous arbres et de la valeur numérique de la racine.</p>
+<h2 id="question-8">Question 8</h2>
+<p>Écrire en langage Python une fonction récursive <code>calcul_somme(arbre)</code>.
+Cette fonction calcule la somme de l’arbre passé en paramètre.
+Les fonctions suivantes sont disponibles :</p>
+<ul>
+<li><code>est_vide(arbre)</code> : renvoie <code>True</code> si <code>arbre</code>est vide et renvoie <code>False</code>
+sinon ;</li>
+<li><code>valeur_racine(arbre)</code> : renvoie la valeur numérique de la racine de
+<code>arbre</code>;</li>
+<li><code>arbre_gauche(arbre)</code> : renvoie le sous arbre gauche de <code>arbre</code>;</li>
+<li><code>arbre_droit(arbre)</code> : renvoie le sous arbre droit de <code>arbre</code>.</li>
+</ul>
+<h1 id="bac-2022-metropole-2-exercice-1">Bac 2022 Metropole 2: Exercice 1</h1>
+<p><em>Cet exercice porte sur les arbres binaires de recherche, la programmation orientée objet et la récursivité.</em></p>
+<p>Dans cet exercice, la <strong>taille</strong> d’un arbre est le nombre de nœuds qu’il contient. Sa <strong>hauteur</strong> est le nombre de nœuds du plus long chemin qui joint le nœud racine à l’une des feuilles (nœuds sans sous-arbres). On convient que la hauteur d’un arbre ne contenant qu’un nœud vaut 1 et la hauteur de l’arbre vide vaut 0.</p>
+<h2 id="question-1-2">Question 1</h2>
+<p>On considère l’arbre binaire représenté ci-dessous:</p>
+<!-- raw HTML omitted -->
+<p>A.  Donner la taille de cet arbre.</p>
+<p>B.  Donner la hauteur de cet arbre.</p>
+<p>C.  Représenter sur la copie le sous-arbre droit du nœud de valeur 15.</p>
+<p>D.  Justifier que l’arbre de la figure 1 est un arbre binaire de recherche.</p>
+<p>E. On insère la valeur 17 dans l’arbre de la figure 1 de telle sorte que 17 soit une nouvelle feuille de l’arbre et que le nouvel arbre obtenu soit encore un arbre binaire de recherche. Représenter sur la copie ce nouvel arbre.</p>
+<h2 id="question-2-2">Question 2</h2>
+<p>On considère la classe Noeud définie de la façon suivante en Python :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">class</span> <span style="color:#75af00">Noeud</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">def</span> <span style="color:#111">__init__</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">,</span> <span style="color:#111">g</span><span style="color:#111">,</span> <span style="color:#111">v</span><span style="color:#111">,</span> <span style="color:#111">d</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">gauche</span> <span style="color:#f92672">=</span> <span style="color:#111">g</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">valeur</span> <span style="color:#f92672">=</span> <span style="color:#111">v</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">droit</span> <span style="color:#f92672">=</span> <span style="color:#111">d</span>
+</span></span></code></pre></div><p>A.  Parmi les trois instructions (A), (B) et (C) suivantes, écrire
+sur la copie la lettre correspondant à celle qui construit et
+stocke dans la variable abr l’arbre représenté ci-contre.</p>
+<p>(A) <code>abr=Noeud(Noeud(Noeud(None,13,None),15,None),21,None)</code>
+(B) <code>abr=Noeud(None,13,Noeud(Noeud(None,15,None),21,None))</code>
+(C) <code>abr=Noeud(Noeud(None,13,None),15,Noeud(None,21,None))</code></p>
+<p>B.  Recopier et compléter la ligne 7 du code de la fonction <code>ins</code> ci-dessous qui prend en paramètres une valeur <code>v</code> et un arbre binaire de recherche <code>abr</code> et qui renvoie l’arbre obtenu suite à l’insertion de la valeur <code>v</code> dans l’arbre <code>abr</code>. Les lignes 8 et 9 permettent de ne pas insérer la valeur <code>v</code> si celle-ci est déjà présente dans <code>abr</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">ins</span><span style="color:#111">(</span><span style="color:#111">v</span><span style="color:#111">,</span> <span style="color:#111">abr</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">if</span> <span style="color:#111">abr</span> <span style="color:#f92672">is</span> <span style="color:#00a8c8">None</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">Noeud</span><span style="color:#111">(</span><span style="color:#00a8c8">None</span><span style="color:#111">,</span> <span style="color:#111">v</span><span style="color:#111">,</span> <span style="color:#00a8c8">None</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">if</span> <span style="color:#111">v</span> <span style="color:#f92672">&gt;</span> <span style="color:#111">abr</span><span style="color:#f92672">.</span><span style="color:#111">valeur</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">Noeud</span><span style="color:#111">(</span><span style="color:#111">abr</span><span style="color:#f92672">.</span><span style="color:#111">gauche</span><span style="color:#111">,</span><span style="color:#111">abr</span><span style="color:#f92672">.</span><span style="color:#111">valeur</span><span style="color:#111">,</span><span style="color:#111">ins</span><span style="color:#111">(</span><span style="color:#111">v</span><span style="color:#111">,</span><span style="color:#111">abr</span><span style="color:#f92672">.</span><span style="color:#111">droit</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">elif</span> <span style="color:#111">v</span> <span style="color:#f92672">&lt;</span> <span style="color:#111">abr</span><span style="color:#f92672">.</span><span style="color:#111">valeur</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#f92672">............................................</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">else</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">abr</span> 
+</span></span></code></pre></div><h2 id="question-3-2">Question 3</h2>
+<p>La fonction <code>nb_sup</code> prend en paramètres une valeur <code>v</code> et un arbre binaire de
+recherche <code>abr</code> et renvoie le nombre de valeurs supérieures ou égales à la valeur <code>v</code> dans l’arbre <code>abr</code>.</p>
+<p>Le code de cette fonction <code>nb_sup</code> est donné ci-dessous :</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">nb_sup</span><span style="color:#111">(</span><span style="color:#111">v</span><span style="color:#111">,</span> <span style="color:#111">abr</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">if</span> <span style="color:#111">abr</span> <span style="color:#f92672">is</span> <span style="color:#00a8c8">None</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">else</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">if</span> <span style="color:#111">abr</span><span style="color:#f92672">.</span><span style="color:#111">valeur</span> <span style="color:#f92672">&gt;=</span> <span style="color:#111">v</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">return</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">+</span><span style="color:#111">nb_sup</span><span style="color:#111">(</span><span style="color:#111">v</span><span style="color:#111">,</span> <span style="color:#111">abr</span><span style="color:#f92672">.</span><span style="color:#111">gauche</span><span style="color:#111">)</span><span style="color:#f92672">+</span><span style="color:#111">nb_sup</span><span style="color:#111">(</span><span style="color:#111">v</span><span style="color:#111">,</span> <span style="color:#111">abr</span><span style="color:#f92672">.</span><span style="color:#111">droit</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">else</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">return</span> <span style="color:#111">nb_sup</span><span style="color:#111">(</span><span style="color:#111">v</span><span style="color:#111">,</span> <span style="color:#111">abr</span><span style="color:#f92672">.</span><span style="color:#111">gauche</span><span style="color:#111">)</span><span style="color:#f92672">+</span><span style="color:#111">nb_sup</span><span style="color:#111">(</span><span style="color:#111">v</span><span style="color:#111">,</span> <span style="color:#111">abr</span><span style="color:#f92672">.</span><span style="color:#111">droit</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>A.  On exécute l’instruction <code>nb_sup(16, abr)</code> dans laquelle <code>abr</code> est l’arbre
+initial de la figure 1. Déterminer le nombre d’appels à la fonction <code>nb_sup</code>.</p>
+<p>B.  L’arbre passé en paramètre étant un arbre binaire de recherche, on peut
+améliorer la fonction <code>nb_sup</code> précédente afin de réduire ce nombre d’appels.
+Écrire sur la copie le code modifié de cette fonction.</p>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#question-1">Question 1</a></li>
+    <li><a href="#question-2">Question 2</a></li>
+    <li><a href="#question-3">Question 3</a></li>
+    <li><a href="#question-4">Question 4</a></li>
+    <li><a href="#question-5">Question 5</a></li>
+    <li><a href="#question-6">Question 6</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#partie-a--parcours-dun-arbre">Partie A : Parcours d’un arbre</a></li>
+    <li><a href="#question-1-1">Question 1</a></li>
+    <li><a href="#question-2-1">Question 2</a></li>
+    <li><a href="#question-3-1">Question 3</a></li>
+    <li><a href="#question-4-1">Question 4</a></li>
+    <li><a href="#question-5-1">Question 5</a></li>
+    <li><a href="#partie-b--méthode-diviser-pour-régner">Partie B : Méthode ‘diviser pour régner’</a></li>
+    <li><a href="#question-6-1">Question 6</a></li>
+    <li><a href="#question-7">Question 7</a></li>
+    <li><a href="#question-8">Question 8</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#question-1-2">Question 1</a></li>
+    <li><a href="#question-2-2">Question 2</a></li>
+    <li><a href="#question-3-2">Question 3</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

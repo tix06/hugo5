@@ -1,54 +1,501 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Posts
-| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel=stylesheet><script type=text/x-mathjax-config>
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    Posts
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
   });
-</script><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.1c02dc1d2c0b546a84beb71d8f4336d6f5d7b69564e08bdfc04c2fb0595d786d.css><link rel=icon href=/favicon.png type=image/x-icon><link rel=alternate type=application/rss+xml href=/posts/index.xml title="Sciences numériques"><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="alternate" type="application/rss+xml" href="/posts/index.xml" title="Allophysique" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
 catch(err)
-{console.log(err.message);}
-if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
-if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
-if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}
-let chemin=window.location.pathname;if(chemin.search('NSI')>-1){baniere=document.querySelector("#myHeader");let linkBox=document.createElement('div');linkBox.classList.add('linkBox');let newH=document.createElement('a');newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';newH.classList.add('nsi');linkBox.appendChild(newH);baniere.appendChild(linkBox);}</script><style>#myHeader{display:flex;flex-direction:row-reverse}#myHeader>.titre{width:80%;min-width:300px;text-align:left}.linkBox{margin:10px;padding-top:10px;background-color:pink;min-width:50px}.isn{}</style></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2fposts\2f ]{color:#004ed0}</style><ul><li><a href=/><strong>Accueil</strong></a></li><li><a href=/docs/esf/esf_index/><strong>ESF</strong></a></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p></li><li><p><a href=/docs/python/index_python/><strong>Python</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
-addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-posts><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
-<strong>Posts</strong></header><article class=markdown><h2><a href=/posts/sciences/modeliser/>Modèle prédictif</a></h2><h5><strong>Sept 1, 1019</strong></h5><p>Principe Un modèle prédictif ne peut être établi qu&rsquo;à partir d&rsquo;une étude prealable de données. Une étude statistique permet de repérer si certains paramètres sont liés entre eux. Alors, si ces données étaient suffisamment nombreuses et précises, il est possible d&rsquo;établir des lois mathematiques sur ces données. Une manière de représenter ce lien entre paramètres est d&rsquo;établir une loi de regression linéaire, par exemple.
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2fposts\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-posts">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    Posts
+  
+</strong>
+</header>
+
+      
+  
+  
+  
+  <article class="markdown">
+    <h2>
+      <a href="/posts/sciences/modeliser/">Modèle prédictif</a>
+    </h2>
+    <h5>
+      <strong>Sept 1, 1019</strong>
+    </h5>
+    <p>Principe Un modèle prédictif ne peut être établi qu&rsquo;à partir d&rsquo;une étude prealable de données. Une étude statistique permet de repérer si certains paramètres sont liés entre eux. Alors, si ces données étaient suffisamment nombreuses et précises, il est possible d&rsquo;établir des lois mathematiques sur ces données. Une manière de représenter ce lien entre paramètres est d&rsquo;établir une loi de regression linéaire, par exemple.
 A partir de nouvelles données, on peut alors, grâce à une simulation, prédire le comportement futur du nouvel objet.
-<a href=/posts/sciences/modeliser/>...</a></p></article><article class=markdown><h2><a href=/posts/sciences/securite_informatique/>Securite informatique</a></h2><h5><strong>Sept 1, 1019</strong></h5><p>Chiffrements symétriques Vocabulaire Chiffrer: transformer les caractères d&rsquo;un texte pour le rendre incompréhensible, sauf pour celui qui possède la clé de chiffrement. Déchiffrer: transformer le texte chiffré en texte clair à l&rsquo;aide de la clé de chiffrement Décrypter: transformer le texte chiffré en texte clair sans posséder la clé. Cryptologie: science du secret: possède deux branches cryptographie: étude de l&rsquo;art du chiffrement cryptanalyse: analyse des méthodes de chiffrement pour les casser (décrypter) à quoi sert le chiffrement?
-<a href=/posts/sciences/securite_informatique/>...</a></p></article><article class=markdown><h2><a href=/posts/python/python_les_bases/>Python les bases</a></h2><h5><strong>Sept 1, 1019</strong></h5><p>Page en cours de construction. Cliquer pour voir les liens
+        <a href="/posts/sciences/modeliser/">...</a>
+      
+    </p>
+  </article>
+  
+  <article class="markdown">
+    <h2>
+      <a href="/posts/sciences/securite_informatique/">Securite informatique</a>
+    </h2>
+    <h5>
+      <strong>Sept 1, 1019</strong>
+    </h5>
+    <p>Chiffrements symétriques Vocabulaire Chiffrer: transformer les caractères d&rsquo;un texte pour le rendre incompréhensible, sauf pour celui qui possède la clé de chiffrement. Déchiffrer: transformer le texte chiffré en texte clair à l&rsquo;aide de la clé de chiffrement Décrypter: transformer le texte chiffré en texte clair sans posséder la clé. Cryptologie: science du secret: possède deux branches cryptographie: étude de l&rsquo;art du chiffrement cryptanalyse: analyse des méthodes de chiffrement pour les casser (décrypter) à quoi sert le chiffrement?
+        <a href="/posts/sciences/securite_informatique/">...</a>
+      
+    </p>
+  </article>
+  
+  <article class="markdown">
+    <h2>
+      <a href="/posts/python/python_les_bases/">Python les bases</a>
+    </h2>
+    <h5>
+      <strong>Sept 1, 1019</strong>
+    </h5>
+    <p>Page en cours de construction. Cliquer pour voir les liens
 Liens L&rsquo;essentiel. Python et sciences physiques : https://pyspc.readthedocs.io/fr/latest/05-bases/index.html
 Fiche. Utiliser un notebook ipython : https://pyspc.readthedocs.io/fr/latest/03-guide/
-lecture ecriture dans un fichier : https://python.sdv.univ-paris-diderot.fr/07_fichiers/</p></article><article class=markdown><h2><a href=/posts/python/pandas/>Python Pandas</a></h2><h5><strong>Sept 1, 1019</strong></h5><p>Python : la librairie pandas notebook Le notebook présenté ici est à télécharger à l&rsquo;adresse suivante :
+lecture ecriture dans un fichier : https://python.sdv.univ-paris-diderot.fr/07_fichiers/
+    </p>
+  </article>
+  
+  <article class="markdown">
+    <h2>
+      <a href="/posts/python/nsi_graphe_dict_npi/">Python graphe et NPI</a>
+    </h2>
+    <h5>
+      <strong>Sept 1, 1019</strong>
+    </h5>
+    <p>tracer un arbre à partir d&rsquo;une expression NPI NPI : notation polonaise inversée
+En particulier : on dispose d&rsquo;une expression en NPI, du type :
+L3 = [7,8,'-',6,'*',10,3,'+','*']
+Et on veut créer et afficher le graphe correspondant : On utilisera le script :
+L3 = [7,8,&#39;-&#39;,6,&#39;*&#39;,10,3,&#39;+&#39;,&#39;*&#39;] D = makeTree(L3) G = nx.Graph() graphDict(D) Dont l&rsquo;instruction suivante va générer le dictionnaire à partir de l&rsquo;expression NPI (fonction npiTree recursive):
+D = makeTree(L3) D # affiche {&#39;*&#39;: ({&#39;*&#39;: ({&#39;-&#39;: (7, 8)}, 6)}, {&#39;+&#39;: (10, 3)})} Ce dictionnaire peut être alors parcouru avec des elgorithmes recursifs, comme par exemple celui de la fonction createEdges qui est un parcours en profondeur.
+        <a href="/posts/python/nsi_graphe_dict_npi/">...</a>
+      
+    </p>
+  </article>
+  
+  <article class="markdown">
+    <h2>
+      <a href="/posts/python/pandas/">Python Pandas</a>
+    </h2>
+    <h5>
+      <strong>Sept 1, 1019</strong>
+    </h5>
+    <p>Python : la librairie pandas notebook Le notebook présenté ici est à télécharger à l&rsquo;adresse suivante :
 https://mybinder.org/v2/gh/tix06/notebook_datas.git/master
 Puis choisir : gestionBase_de_donnees_python.ipynb
 Exercez vous en suivant le tutoriel avec ce notebook.
 présentation Pandas fournit des structures de données puissantes et simples à utiliser, ainsi que les moyens d&rsquo;opérer rapidement des opérations sur ces structures.
 Cette librairie va utiliser et faire des opérations sur un objet : le DataFrame Ce DataFrame est très similaire aux tables des bases de données relationnelles (type MySQL, PostgreSQL, etc.
-<a href=/posts/python/pandas/>...</a></p></article><article class=markdown><h2><a href=/posts/python/nsi_graphe_dict_npi/>Python graphe et NPI</a></h2><h5><strong>Sept 1, 1019</strong></h5><p>tracer un arbre à partir d&rsquo;une expression NPI NPI : notation polonaise inversée
-En particulier : on dispose d&rsquo;une expression en NPI, du type :
-L3 = [7,8,'-',6,'*',10,3,'+','*']
-Et on veut créer et afficher le graphe correspondant : On utilisera le script :
-L3 = [7,8,'-',6,'*',10,3,'+','*'] D = makeTree(L3) G = nx.Graph() graphDict(D) Dont l&rsquo;instruction suivante va générer le dictionnaire à partir de l&rsquo;expression NPI (fonction npiTree recursive):
-<a href=/posts/python/nsi_graphe_dict_npi/>...</a></p></article><article class=markdown><h2><a href=/posts/python/Python_graphes_Networkx/>Python graphes Networkx</a></h2><h5><strong>Sept 1, 1019</strong></h5><p>tracé de graphes avec Networkx Les scripts suivants permettent de choisir entre plusieurs types de configuration pour tracer un graphe avec Networkx, module Python.
+        <a href="/posts/python/pandas/">...</a>
+      
+    </p>
+  </article>
+  
+  <article class="markdown">
+    <h2>
+      <a href="/posts/python/Python_graphes_Networkx/">Python graphes Networkx</a>
+    </h2>
+    <h5>
+      <strong>Sept 1, 1019</strong>
+    </h5>
+    <p>tracé de graphes avec Networkx Les scripts suivants permettent de choisir entre plusieurs types de configuration pour tracer un graphe avec Networkx, module Python.
 On pourra choisir de personaliser :
-la couleur d&rsquo;un noeud l&rsquo;etiquette des noeuds l&rsquo;étiquette des arêtes le type de trait (plein ou en pointillés) des arêtes Déclaration du graphe import matplotlib.pyplot as plt import networkx as nx from numpy import array G = nx.
-<a href=/posts/python/Python_graphes_Networkx/>...</a></p></article><article class=markdown><h2><a href=/posts/python/Python-Labyrinthe/>Python Labyrinthe</a></h2><h5><strong>Sept 1, 1019</strong></h5><p>Créer et resoudre un labyrinthe Les scripts suivants permettent de créer un labyrinthe de manière aléatoire, et d&rsquo;exploiter la structure de données de ce labyrinthe. On pourra ainsi tester quelques algorithmes relatifs au parcours de ce labyrinthe. Les scripts en permettent une visualisation.
+la couleur d&rsquo;un noeud l&rsquo;etiquette des noeuds l&rsquo;étiquette des arêtes le type de trait (plein ou en pointillés) des arêtes Déclaration du graphe import matplotlib.pyplot as plt import networkx as nx from numpy import array G = nx.Graph() # definition des noeuds G.
+        <a href="/posts/python/Python_graphes_Networkx/">...</a>
+      
+    </p>
+  </article>
+  
+  <article class="markdown">
+    <h2>
+      <a href="/posts/python/Python-Labyrinthe/">Python Labyrinthe</a>
+    </h2>
+    <h5>
+      <strong>Sept 1, 1019</strong>
+    </h5>
+    <p>Créer et resoudre un labyrinthe Les scripts suivants permettent de créer un labyrinthe de manière aléatoire, et d&rsquo;exploiter la structure de données de ce labyrinthe. On pourra ainsi tester quelques algorithmes relatifs au parcours de ce labyrinthe. Les scripts en permettent une visualisation.
 Définitions des classes class Pile: def __init__(self): self.lst = [] def empty(self): return self.lst == [] def push(self, x): self.lst.append(x) def pop(self): if self.empty(): raise ValueError(&#34;pile vide&#34;) return self.
-<a href=/posts/python/Python-Labyrinthe/>...</a></p></article><article class=markdown><h2><a href=/posts/python/Python_turtle_Labyrinthe/>Python turtle Labyrinthe</a></h2><h5><strong>Sept 1, 1019</strong></h5><p>Utiliser le module turtle Le script suivant présente les classes et fonctions utiles pour :
+        <a href="/posts/python/Python-Labyrinthe/">...</a>
+      
+    </p>
+  </article>
+  
+  <article class="markdown">
+    <h2>
+      <a href="/posts/python/Python_turtle_Labyrinthe/">Python turtle Labyrinthe</a>
+    </h2>
+    <h5>
+      <strong>Sept 1, 1019</strong>
+    </h5>
+    <p>Utiliser le module turtle Le script suivant présente les classes et fonctions utiles pour :
 tracer un labyrinthe complet parcourir le labyrinthe selon une méthode de parcours en profondeur tracer ce parcours animé avec turtle Utilisation :
 tab=labyrinthe(5,6) L = parcours((len(tab)-1,0),(0,len(tab[0])-1),tab) afficheTurtle(tab,L) librairies from numpy.random import randint import matplotlib.pyplot as plt import turtle classes utiles class Pile: def __init__(self): self.lst = [] def empty(self): return self.lst == [] def push(self, x): self.
-<a href=/posts/python/Python_turtle_Labyrinthe/>...</a></p></article><article class=markdown><h2><a href=/posts/python/algKnn/>Python algo KNN</a></h2><h5><strong>Sept 1, 1019</strong></h5><p>Algorithme des k plus proches voisins notebook Le notebook présenté ici est à télécharger à l&rsquo;adresse suivante :
+        <a href="/posts/python/Python_turtle_Labyrinthe/">...</a>
+      
+    </p>
+  </article>
+  
+  <article class="markdown">
+    <h2>
+      <a href="/posts/python/algKnn/">Python algo KNN</a>
+    </h2>
+    <h5>
+      <strong>Sept 1, 1019</strong>
+    </h5>
+    <p>Algorithme des k plus proches voisins notebook Le notebook présenté ici est à télécharger à l&rsquo;adresse suivante :
 https://mybinder.org/v2/gh/tix06/notebook_datas.git/master
 Choisir : algoKNN.ipynb
 Exercez vous en suivant le tutoriel avec ce notebook.
 Principe On cherche une correspondance entre les caractéristiques physiques d&rsquo;un joueur de basket et son poste sur le terrain.
 Pour simplifier, on considerera que les postes sont au nombre de trois :
 le joueur Centre, noté &lsquo;C&rsquo; (position 5 sur le schéma) Le joueur Ailier, noté &lsquo;F&rsquo; (positions 3 et 4 sur le schéma) Le joueur arrière ou meneur de jeu, noté &lsquo;G&rsquo; (positions 1 et 2 sur le schéma) Il nous faut, pour rechercher une correspondance, avoir accès à une base de données des joueurs de basket, jouant par exemple dans un même championnat.
-<a href=/posts/python/algKnn/>...</a></p></article><article class=markdown><h2><a href=/posts/python/data_analyse/>Python Datas analyse</a></h2><h5><strong>Sept 1, 1019</strong></h5><p>Notebooks associés algorithme de recommandation : algorithme de recommandation.md arbres de décision : graphes_mini_prog.md Intelligence artificielle (IA) L&rsquo;intelligence artificielle désigne des algorithmes plus ou moins évolués qui traitent des problèmes dont la résolution fait appel à l&rsquo;intelligence humaine. Ils imitent des actions humaines.
+        <a href="/posts/python/algKnn/">...</a>
+      
+    </p>
+  </article>
+  
+  <article class="markdown">
+    <h2>
+      <a href="/posts/python/data_analyse/">Python Datas analyse</a>
+    </h2>
+    <h5>
+      <strong>Sept 1, 1019</strong>
+    </h5>
+    <p>Notebooks associés algorithme de recommandation : algorithme de recommandation.md arbres de décision : graphes_mini_prog.md Intelligence artificielle (IA) L&rsquo;intelligence artificielle désigne des algorithmes plus ou moins évolués qui traitent des problèmes dont la résolution fait appel à l&rsquo;intelligence humaine. Ils imitent des actions humaines.
 Exemple : L&rsquo;algorithme suivant :
-input(poids) if poids &gt; 120 then print('vous êtes en surpoids') Ce n&rsquo;est pas un algorithme digne d&rsquo;une intelligence artificielle.
-<a href=/posts/python/data_analyse/>...</a></p></article><ul class=pagination><li class=page-item><a href=/posts/ class=page-link aria-label=First><span aria-hidden=true>&laquo;&laquo;</span></a></li><li class="page-item disabled"><a href class=page-link aria-label=Previous><span aria-hidden=true>&laquo;</span></a></li><li class="page-item active"><a class=page-link href=/posts/>1</a></li><li class=page-item><a class=page-link href=/posts/page/2/>2</a></li><li class=page-item><a href=/posts/page/2/ class=page-link aria-label=Next><span aria-hidden=true>&raquo;</span></a></li><li class=page-item><a href=/posts/page/2/ class=page-link aria-label=Last><span aria-hidden=true>&raquo;&raquo;</span></a></li></ul><div style=height:100px></div></div></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
-<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
+input(poids) if poids &gt; 120 then print(&#39;vous êtes en surpoids&#39;) Ce n&rsquo;est pas un algorithme digne d&rsquo;une intelligence artificielle. On trouvera dans la suite du document, de nombreux exemples qui traitent d&rsquo;intelligence artificielle.
+        <a href="/posts/python/data_analyse/">...</a>
+      
+    </p>
+  </article>
+  
+  
+    <ul class="pagination pagination-default">
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="First" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Previous" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item active">
+        <a aria-current="page" aria-label="Page 1" class="page-link" role="button">1</a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/2/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul>
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+  </main>
+
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

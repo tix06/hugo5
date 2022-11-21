@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    bac architecture
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI\2f bac\2fpage6\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    bac architecture
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="bac-2021-centres-étrangers-2-exercice-3">Bac 2021 Centres étrangers 2: Exercice 3</h1>
+<p><em>Thèmes abordés : conversion décimal/binaire, table de vérité, codage des caractères</em></p>
+<p>L’objectif de l’exercice est d’étudier une méthode de cryptage d’une chaîne de
+caractères à l’aide du codage ASCII et de la fonction logique XOR.</p>
+<p><strong>1.</strong> Le nombre 65, donné ici en écriture décimale, s’écrit 01000001 en notation
+binaire. En détaillant la méthode utilisée, donner l’écriture binaire du nombre
+89.</p>
+<p><strong>2.</strong> La fonction logique OU EXCLUSIF, appelée XOR et représentée par le symbole
+$\bigoplus$, fournit une sortie égale à 1 si l’une ou l’autre des deux entrées vaut 1 mais
+pas les deux.</p>
+<p>On donne ci-contre la table de vérité de la fonction XOR:</p>
+<!-- raw HTML omitted -->
+<p>Si on applique cette fonction à un nombre codé en binaire, elle opère bit à bit.</p>
+<!-- raw HTML omitted -->
+<p>Poser et calculer l’opération : $11001110 \bigoplus 01101011$</p>
+<p><strong>3.</strong> On donne, ci-dessous, un extrait de la table ASCII qui permet d’encoder les
+caractères de A à Z.
+On peut alors considérer l’opération XOR entre deux caractères en effectuant
+le XOR entre les codes ASCII des deux caractères. Par exemple : &lsquo;F&rsquo; XOR &lsquo;S&rsquo;
+sera le résultat de $01000110 \bigoplus 01010011$.</p>
+<!-- raw HTML omitted -->
+<p>On souhaite mettre au point une méthode de cryptage à l’aide de la fonction
+XOR.</p>
+<p>Pour cela, on dispose d’un message à crypter et d’une clé de cryptage de même
+longueur que ce message. Le message et la clé sont composés uniquement
+des caractères du tableau ci-dessus et on applique la fonction XOR caractère
+par caractère entre les lettres du message à crypter et les lettres de la clé de
+cryptage.</p>
+<p>Par exemple, voici le cryptage du mot ALPHA à l’aide de la clé YAKYA :</p>
+<!-- raw HTML omitted -->
+<p>Ecrire une fonction <code>xor_crypt(message, cle)</code> qui prend en paramètres deux
+chaînes de caractères et qui renvoie la liste des entiers correspondant au
+message crypté.</p>
+<p><em>Aide :</em></p>
+<ul>
+<li>On pourra utiliser la fonction native du langage Python <code>ord(c)</code> qui prend en paramètre un caractère c et qui renvoie un nombre représentant le code ASCII du caractère c.</li>
+<li>On considère également que l’on dispose d’une fonction écrite <code>xor(n1,n2)</code> qui prend en paramètre deux nombres n1 et n2 et qui renvoie le résultat de n1 ⊕ n2.</li>
+</ul>
+<p><strong>4.</strong> On souhaite maintenant générer une clé de la taille du message à partir d’un
+mot quelconque. On considère que le mot choisi est plus court que le
+message, il faut donc le reproduire un certain nombre de fois pour créer une
+clé de la même longueur que le message.</p>
+<p>Par exemple, si le mot choisi est YAK pour crypter le message ALPHABET, la
+clé sera YAKYAKYA.)</p>
+<p>Créer une fonction <code>generer_cle(mot,n)</code> qui renvoie la clé de longueur n à partir de la chaîne de caractères mot.</p>
+<p><strong>5.</strong> Recopier et compléter la table de vérité de $(𝑬𝟏 \bigoplus 𝑬𝟐) \bigoplus 𝑬𝟐$.</p>
+<!-- raw HTML omitted -->
+<p>A l’aide de ce résultat, proposer une démarche pour décrypter un message crypté.</p>
+<h1 id="bac-2022-polynesie-exercice-2">Bac 2022 Polynesie: Exercice 2</h1>
+<p><em>Cet exercice traite du thème « architecture matérielle », et principalement d&rsquo;ordonnancement et d&rsquo;expressions booléennes.</em></p>
+<p>Un système est composé de 4 périphériques, numérotés de 0 à 3, et d&rsquo;une mémoire, reliés entre eux par un bus auquel est également connecté un dispositif ordonnanceur.
+À l&rsquo;aide d&rsquo;un signal spécifique envoyé sur le bus, l&rsquo;ordonnanceur sollicite à tour de rôle les périphériques pour qu&rsquo;ils indiquent le type d&rsquo;opération (lecture ou écriture) qu&rsquo;ils souhaitent effectuer, et l&rsquo;adresse mémoire concernée.</p>
+<p>Un tour a lieu quand les 4 périphériques ont été sollicités. <strong>Au début d&rsquo;un nouveau tour, on considère que toutes les adresses sont disponibles en lecture et écriture.</strong></p>
+<p>Si un périphérique demande l&rsquo;écriture à une adresse mémoire <strong>à laquelle on n&rsquo;a pas encore accédé</strong> pendant le tour, l&rsquo;ordonnanceur répond &ldquo;OK&rdquo; et l&rsquo;écriture a lieu.
+Si on a déjà demandé la lecture ou l&rsquo;écriture à cette adresse, l&rsquo;ordonnanceur répond &ldquo;ATT&rdquo; et l&rsquo;opération n&rsquo;a pas lieu.</p>
+<p>Si un périphérique demande la lecture à une adresse à laquelle on n&rsquo;a pas encore accédé en écriture pendant le tour, l&rsquo;ordonnanceur répond &ldquo;OK&rdquo; et la lecture a lieu.
+Plusieurs lectures peuvent avoir donc lieu pendant le même tour à la même adresse.</p>
+<p>Si un périphérique demande la lecture à une adresse à laquelle on a déjà accédé en écriture, l&rsquo;ordonnanceur répond &ldquo;ATT&rdquo; et la lecture n&rsquo;a pas lieu.</p>
+<p>Ainsi, pendant un tour, une adresse peut être utilisée soit une seule fois en écriture, soit autant de fois qu&rsquo;on veut en lecture, soit pas utilisée.</p>
+<p>Si un périphérique ne peut pas effectuer une opération à une adresse, il demande la même opération à la même adresse au tour suivant.</p>
+<h2 id="question-1">Question 1</h2>
+<p>Le tableau donné en annexe 1 indique, sur chaque ligne, le périphérique
+sélectionné, l&rsquo;adresse à laquelle il souhaite accéder et l&rsquo;opération à effectuer sur cette adresse. Compléter dans la dernière colonne de cette annexe, à rendre avec la copie, la réponse donnée par l&rsquo;ordonnanceur pour chaque opération.</p>
+<p>On suppose dans toute la suite que :</p>
+<ul>
+<li>le périphérique 0 écrit systématiquement à l&rsquo;adresse 10 ;</li>
+<li>le périphérique 1 lit systématiquement à l&rsquo;adresse 10 ;</li>
+<li>le périphérique 2 écrit alternativement aux adresses 11 et 12 ;</li>
+<li>le périphérique 3 lit alternativement aux adresses 11 et 12 ;</li>
+</ul>
+<p>Pour les périphériques 2 et 3, le changement d’adresse n’est effectif que lorsque l’opération et réalisée.</p>
+<h2 id="question-2">Question 2</h2>
+<p>On suppose que les périphériques sont sélectionnés à chaque tour dans l&rsquo;ordre
+0 ; 1 ; 2 ; 3. Expliquer ce qu&rsquo;il se passe pour le périphérique 1.</p>
+<p>Les périphériques sont sollicités de la manière suivante lors de quatre tours successifs :</p>
+<ul>
+<li>au premier tour, ils sont sollicités dans l’ordre 0 ; 1 ; 2 ; 3 ;</li>
+<li>au deuxième tour, dans l’ordre 1 ; 2 ; 3 ; 0 ;</li>
+<li>au troisième tour, 2 ; 3 ; 0 ; 1 ;</li>
+<li>puis 3 ; 0 ; 1 ; 2 au dernier tour.</li>
+<li>Et on recommence&hellip;</li>
+</ul>
+<h2 id="question-3">Question 3</h2>
+<p>A.  Préciser pour chacun de ces tours si le périphérique 0 peut écrire et si le
+périphérique 1 peut lire.</p>
+<p>B.  En déduire la proportion des valeurs écrites par le périphérique 0 qui sont
+effectivement lues par le périphérique 1.</p>
+<p>On change la méthode d&rsquo;ordonnancement : on détermine l&rsquo;ordre des périphériques au cours d&rsquo;un tour à l&rsquo;aide de deux listes d&rsquo;attente <code>ATTL_L</code> et <code>ATT_E</code> établies au tour précédent.</p>
+<p>Au cours d&rsquo;un tour, on place dans la liste <code>ATT_L</code> toutes les opérations de lecture mises en attente, et dans la liste d&rsquo;attente <code>ATT_E</code> toutes les opérations d&rsquo;écriture mises en attente.</p>
+<p>Au début du tour suivant, on établit l&rsquo;ordre d&rsquo;interrogation des périphériques en procédant ainsi :</p>
+<ul>
+<li>on interroge ceux présents dans la liste ATT_L, par ordre croissant d&rsquo;adresse,</li>
+<li>on interroge ensuite ceux présents dans la liste ATT_E, par ordre croissant
+d&rsquo;adresse,</li>
+<li>puis on interroge les périphériques restants, par ordre croissant d’adresse.</li>
+</ul>
+<h2 id="question-4">Question 4</h2>
+<p>Compléter et rendre avec la copie le tableau fourni en annexe 2, en utilisant
+l&rsquo;ordonnancement décrit ci-dessus, sur 3 tours.</p>
+<p>Les colonnes e0 et e1 du tableau suivant recensent les deux chiffres de l&rsquo;écriture binaire de l’entier n de la première colonne.</p>
+<table>
+<thead>
+<tr>
+<th>nombre n</th>
+<th>écriture binaire de n sur deux bits</th>
+<th>e1</th>
+<th>e0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>00</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>01</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>10</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>11</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>L&rsquo;ordonnanceur attribue à deux signaux sur le bus de données les valeurs de <strong>e0</strong> et <strong>e1</strong> associées au numéro du circuit qu’il veut sélectionner. On souhaite construire à l&rsquo;aide des portes ET, OU et NON un circuit pour chaque périphérique.</p>
+<p>Chacun des quatre circuits à construire prend en entrée deux signaux <strong>e0</strong> et <strong>e1</strong>, le signal de sortie <strong>s</strong> valant 1 uniquement lorsque les niveaux de <strong>e0</strong> et <strong>e1</strong> correspondent aux bits de l&rsquo;écriture en binaire du numéro du périphérique correspondant.</p>
+<p>Par exemple, le circuit ci-dessous réalise la sélection du périphérique 3. En effet, le signal <strong>s</strong> vaut 1 si et seulement si <strong>e0</strong> et <strong>e1</strong> valent tous les deux 1.</p>
+<!-- raw HTML omitted -->
+<h2 id="question-5">Question 5</h2>
+<p>A.  Recopier sur la copie et indiquer dans le circuit ci-dessous les entrées e0 et e1 de façon à ce que ce circuit sélectionne le périphérique 1.</p>
+<!-- raw HTML omitted -->
+<p>B.  Dessiner un circuit constitué d&rsquo;une porte ET et d&rsquo;une porte NON, qui
+sélectionne le périphérique 2.
+c. Dessiner un circuit permettant de sélectionner le périphérique 0.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="bac-2022-metropole1-exercice-3">Bac 2022 Metropole1: Exercice 3</h1>
+<p>Cet exercice porte sur les représentations binaires et les protocoles de routage.</p>
+<h2 id="question-1-1">Question 1</h2>
+<p>Une adresse IPv4 est représentée sous la forme de 4 nombres séparés par des
+points. Chacun de ces 4 nombres peut être représenté sur un octet.</p>
+<p>A.  Donner en écriture décimale l’adresse IPv4 correspondant à l’écriture binaire :</p>
+<p>11000000.10101000.10000000.10000011</p>
+<p>B.  Tous les ordinateurs du réseau A ont une adresse IPv4 de la forme :
+192.168.128._ _ _ , où seul le dernier octet (représenté par _ _ _ ) diffère.
+Donner le nombre d’adresses différentes possibles du réseau A.</p>
+<h2 id="question-2-1">Question 2</h2>
+<p>On rappelle que le protocole RIP cherche à minimiser le nombre de routeurs
+traversés (qui correspond à la métrique). On donne les tables de routage d’un
+réseau informatique composé de 5 routeurs (appelés A, B, C, D et E), chacun
+associé directement à un réseau du même nom obtenues avec le protocole RIP :</p>
+<!-- raw HTML omitted -->
+<p>A.  Donner la liste des routeurs avec lesquels le routeur A est directement
+relié.</p>
+<p>B.  Représenter graphiquement et de manière sommaire les 5 routeurs
+ainsi que les liaisons existantes entre ceux-ci.</p>
+<h2 id="question-3-1">Question 3</h2>
+<p>Le protocole OSPF est un protocole de routage qui cherche à minimiser la
+somme des métriques des liaisons entre routeurs.</p>
+<p>Dans le protocole de routage OSPF le débit des liaisons entre routeurs agit
+sur la métrique via la relation : $metrique = \tfrac{10^8}{debit}$  dans laquelle le débit est exprimé en bit par seconde (bps).</p>
+<p>On rappelle qu’un kbps est égal à $10^3$  bps et qu’un Mbps est égal à $10^6$  bps.</p>
+<p>Recopier sur votre copie et compléter le tableau suivant :</p>
+<table>
+<thead>
+<tr>
+<th>Débit</th>
+<th>100 kbps</th>
+<th>500 kbps</th>
+<th>?</th>
+<th>100 Mbps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Métrique associé</td>
+<td>1000</td>
+<td>?</td>
+<td>10</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<p>Les nombres présents sur les liaisons représentent les coûts des routes avec le
+protocole OSPF.</p>
+<p>A.  Indiquer le chemin emprunté par un message d’un ordinateur du réseau F à
+destination d’un ordinateur du réseau I.
+Justifier votre réponse.</p>
+<p>B.  Recopier et compléter la table de routage du routeur F.</p>
+<p>C.  Citer une unique panne qui suffirait à ce que toutes les données des échanges de tout autre réseau à destination du réseau F transitent par le routeur G.
+Expliquer en détail votre réponse.</p>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#question-1">Question 1</a></li>
+    <li><a href="#question-2">Question 2</a></li>
+    <li><a href="#question-3">Question 3</a></li>
+    <li><a href="#question-4">Question 4</a></li>
+    <li><a href="#question-5">Question 5</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#question-1-1">Question 1</a></li>
+    <li><a href="#question-2-1">Question 2</a></li>
+    <li><a href="#question-3-1">Question 3</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    portes logiques
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2ftechno\2fpages\2fMB_portes\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    portes logiques
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="tp-portes-logiques---nsi-term">TP Portes logiques - NSI Term</h1>
+<h2 id="but-de-la-seance">But de la seance</h2>
+<p>Vous allez étudier les portes logiques fournies pour la seance. Vous utiliserez une carte microcontrôleur <em>Microbit</em> pour disposer d&rsquo;une générateur de tension à 2 sorties. Chacune de ces sorties sera branché à l&rsquo;une des entrées de la porte logique. Les boutons de la carte microbit serviront à choisir le niveau de tension 0 ou 3,3V pour les entrées de la porte logique.</p>
+<h2 id="progammer-la-carte-microbit">Progammer la carte microbit</h2>
+<p>La carte microbit est présentée dans <a href="/docs/techno/pages/MB_init/">cette fiche</a>.</p>
+<p>Dans un premier temps, vous allez consulter la <a href="/docs/techno/pages/MB_led/">fiche du TP</a> sur le clignottement d&rsquo;une Diode Electroluminescente.</p>
+<p>Ce que doit réaliser le programme: On pilote les niveaux de tension PIN0 et PIN1 à l&rsquo;aide des boutons a et b de la carte microbit:</p>
+<table>
+<thead>
+<tr>
+<th>bouton</th>
+<th>niveau de tension</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>a</strong> relâché</td>
+<td>PIN0 à 0V</td>
+</tr>
+<tr>
+<td><strong>a</strong> appuyé</td>
+<td>PIN0 à 3,3V</td>
+</tr>
+<tr>
+<td><strong>b</strong> relâché</td>
+<td>PIN1 à 0V</td>
+</tr>
+<tr>
+<td><strong>b</strong> appuyé</td>
+<td>PIN1 à 3,3V</td>
+</tr>
+</tbody>
+</table>
+<p>Sur l&rsquo;<strong>editeur Mu</strong>: Copier et compléter le programme suivant. <em>Brancher</em> la carte microbit sur un port USB de l&rsquo;ordinateur (maintenir le câble au cours de la seance). Et <em>flasher</em> la carte (charger le programme).</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Ecrit ton programme ici ;-)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Jaune: tension commandée : relier au + de la LED  </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Noir: GND : relier à la resistance 1k</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Rouge du PIN1 : relier à la borne +Vcc du circuit integre</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Blanc: non utilises</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> <span style="color:#111">microbit</span> <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">while</span> <span style="color:#00a8c8">True</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">if</span> <span style="color:#111">button_a</span><span style="color:#f92672">.</span><span style="color:#111">is_pressed</span><span style="color:#111">():</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># à completer</span>
+</span></span></code></pre></div><h2 id="pin0-et-pin1-de-la-carte">PIN0 et PIN1 de la carte</h2>
+<p>Brancher les connecteurs grove sur les PIN0 et PIN1. Utiliser alors des fils electriques pour acceder aux contacts des connecteurs grove:</p>
+<ul>
+<li>PIN0: contact noir (0V)</li>
+<li>PIN0: contact jaune (0 ou 3,3V selon le programme)</li>
+<li>PIN1: contact noir (0V)</li>
+<li>PIN1: contact rouge (3,3V fixe)</li>
+<li>PIN1: contact jaune (0 ou 3,3V selon le programme)</li>
+</ul>
+<!-- raw HTML omitted -->
+<p>Relier alors les contacts noirs et jaune de chaque connecteur grove sur une ligne verticale de la plaquette d&rsquo;essai (breadboard).</p>
+<!-- raw HTML omitted -->
+<h2 id="premiers-essais">Premiers essais</h2>
+<p>On va maintenant utiliser la diode electroluminescente pour tester si le programme fonctionne: Brancher la diode en série avec sa resistance de protection $1k\Ohm$ aux bornes de la tension du PIN0 (entre les contacts jaune et noir).</p>
+<!-- raw HTML omitted -->
+<p>Tester si celle-ci s&rsquo;allume lorsque l&rsquo;on appuie sur le bouton.</p>
+<h2 id="cabler-la-porte-logique">Cabler la porte logique</h2>
+<p>Les circuits intégrés fournis pour la seance sont de différents types. Certaines possèdent des portes logiques à 2 entrées (AND, OR, NAND), alors que celle NAND ne possède qu&rsquo;une entrée. Des marques de couleur ont été peintes pour les identifier plus facilement:</p>
+<table>
+<thead>
+<tr>
+<th>code</th>
+<th>porte logique</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4081 (bleue)</td>
+<td>AND</td>
+</tr>
+<tr>
+<td>4071 (orange)</td>
+<td>OR</td>
+</tr>
+<tr>
+<td>4011 (jaune)</td>
+<td>NAND</td>
+</tr>
+<tr>
+<td>4069 (vert)</td>
+<td>NOT</td>
+</tr>
+</tbody>
+</table>
+<p>Chaque circuit intégré comporte plusieurs portes logiques. Pour celles à 2 entrées, on peut les repérer comme sur le schéma suivant:</p>
+<!-- raw HTML omitted -->
+<p>Pour le circuit NOT, à une entrée, la disposition des portes logiques est comme ceci:</p>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>Disposer le circuit integré jaune 4011 sur le breadboard</p>
+</li>
+<li>
+<p>selectionner l&rsquo;une des portes logique du composant</p>
+</li>
+<li>
+<p>Brancher la diode avec, en serie, sa resistance de protection à la sortie de la porte logique. Fermer le circuit de la diode sur l&rsquo;un des contacts noirs (0V) de PIN0 ou PIN1.</p>
+</li>
+<li>
+<p>alimenter le circuit intégré: brancher la borne <strong>+Vcc</strong> sur le contact rouge du PIN1 (3,3V) et la borne <strong>GND</strong> (masse) sur l&rsquo;un des contacts noirs (0V) de PIN0 ou PIN1.</p>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>brancher les contacts commandés (jaunes) des PIN0 et PIN1 sur les entrées de la porte logique</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>Actionner alors les boutons a et b de la carte microbit pour tester toutes les combinaisons possibles en entrée. Renseigner la table de vérité.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>E1</th>
+<th>E2</th>
+<th>S</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="prolongements">Prolongements</h2>
+<p>Modifier le montage pour tester les autres portes logiques fournies.</p>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#but-de-la-seance">But de la seance</a></li>
+    <li><a href="#progammer-la-carte-microbit">Progammer la carte microbit</a></li>
+    <li><a href="#pin0-et-pin1-de-la-carte">PIN0 et PIN1 de la carte</a></li>
+    <li><a href="#premiers-essais">Premiers essais</a></li>
+    <li><a href="#cabler-la-porte-logique">Cabler la porte logique</a></li>
+    <li><a href="#prolongements">Prolongements</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

@@ -1,19 +1,567 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>mini projet web
-| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel=stylesheet><script type=text/x-mathjax-config>
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    mini projet web
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
   });
-</script><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.1c02dc1d2c0b546a84beb71d8f4336d6f5d7b69564e08bdfc04c2fb0595d786d.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
 catch(err)
-{console.log(err.message);}
-if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
-if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
-if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}
-let chemin=window.location.pathname;if(chemin.search('NSI')>-1){baniere=document.querySelector("#myHeader");let linkBox=document.createElement('div');linkBox.classList.add('linkBox');let newH=document.createElement('a');newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';newH.classList.add('nsi');linkBox.appendChild(newH);baniere.appendChild(linkBox);}</script><style>#myHeader{display:flex;flex-direction:row-reverse}#myHeader>.titre{width:80%;min-width:300px;text-align:left}.linkBox{margin:10px;padding-top:10px;background-color:pink;min-width:50px}.isn{}</style></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2f docs\2fNSI\2f CSS\2fpage1\2f ]{color:#004ed0}</style><ul><li><a href=/><strong>Accueil</strong></a></li><li><a href=/docs/esf/esf_index/><strong>ESF</strong></a></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p></li><li><p><a href=/docs/python/index_python/><strong>Python</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
-addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-page><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
-<strong>mini projet web</strong></header><article class=markdown><h1 id=css-intermediaire>CSS intermediaire</h1><h1 id=liens>Liens</h1><ul><li>article sur l&rsquo;attribut focus <a href=https://www.24joursdeweb.fr/2017/le-focus-nest-pas-juste-une-astuce/>24joursdeweb.fr</a></li></ul></article><div style=height:100px></div></div><aside class="book-toc fixed"><nav id=TableOfContents><ul><li><a href=#css-intermediaire>CSS intermediaire</a></li><li><a href=#liens>Liens</a></li></ul></nav></aside></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
-<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI\2f CSS\2fpage1\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    mini projet web
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="bases-en-css">Bases en css</h1>
+<p>les fondamentaux du css: cascade et héritage: <a href="https://developer.mozilla.org/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">MDN</a></p>
+<p>Les sigles « CSS » sont l’abréviation de « Cascading StyleSheets » ou « feuilles de styles en cascade » en français.</p>
+<p>Le CSS vient résoudre un problème bien différent du HTML : en effet, le HTML sert à définir les différents éléments d’une page, à leur donner du sens. Le CSS, lui, va servir à mettre en forme les différents contenus définis par le HTML en leur appliquant des styles.</p>
+<p>Si votre navigateur affiche par défaut les contenus textuels que vous avez déclaré comme des titres en HTML en grand et en gras et à l’inverse les paragraphes en plus petit c’est justement parce que chaque navigateur possède sa propre feuille de styles. En fournissant nos styles CSS pour les différents contenus de notre page, nous allons donc pouvoir définir l’apparence de ceux-ci puisque les styles que nous allons fournir vont être considérés comme prioritaires par rapport à ceux du navigateur. C&rsquo;est le principe du style en cascade (CSS)</p>
+<h2 id="une-déclaration-en-css">Une déclaration en CSS</h2>
+<p>Une règle typique est composée de trois parties :</p>
+<ul>
+<li>un <strong>sélecteur</strong>,</li>
+<li>une <strong>propriété</strong>,</li>
+<li>une <strong>valeur</strong></li>
+</ul>
+<!-- raw HTML omitted -->
+<p>La <strong>valeur</strong> de la propriété se met après le séparateur <code>:</code>.</p>
+<p>Ces règles deviennent des <em>déclarations</em> lorsque celles-ci comprennent plusieurs couples propriété-valeur :Les règles sont alors séparées par un point-virgule <code>;</code>, dans la même accolade:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">selecteur</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">propriete</span> <span style="color:#960050;background-color:#1e0010">1:</span> <span style="color:#960050;background-color:#1e0010">valeur</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">propriete</span> <span style="color:#960050;background-color:#1e0010">2:</span> <span style="color:#960050;background-color:#1e0010">valeur</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><p>Le selecteur fait référence à un ou plusieurs éléments du document.</p>
+<h2 id="indexer-les-parties-du-document">indexer les parties du document</h2>
+<p><strong>Classes et identifiants</strong>
+L&rsquo;un des attributs des éléments HTML peut servir à indexer cet élément :</p>
+<ul>
+<li>de manière unique : l&rsquo;attribut <code>id=&quot;valeur&quot;</code> : une seule valeur d&rsquo;attribut <code>id</code> peut être utilisée dans tout le document HTML. L’attribut id sert, comme son nom l’indique, à identifier un élément HTML en particulier
+dans une page pour ensuite pouvoir le cibler précisément (pour lui appliquer des styles CSS, ou bien créer un lien vers cet élément).</li>
+<li>avec un attribut de classe : <code>class=&quot;valeur&quot;</code> : ici, plusieurs éléments peuvent avoir la même <em>classe</em>. On pourra alors séléctionner (en css et en javascript) tous les éléments possédant cette classe, avec une seule instruction.</li>
+</ul>
+<p><em>Remarque: Plusieurs classes peuvent être associées à un élément HTML en les séparant par un espace : <code>&lt;h1 class=&quot;titre lexique&quot;&gt;</code></em></p>
+<h2 id="selecteurs">Selecteurs</h2>
+<p>Pour pouvoir appliquer un style à un contenu, il va déjà falloir le cibler, c’est-à-dire trouver un moyen d’indiquer qu’on souhaite appliquer tel style à un contenu en particulier.</p>
+<p>Pour cela, nous allons utiliser des sélecteurs.</p>
+<table>
+<thead>
+<tr>
+<th>selecteur</th>
+<th>effet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>h1</td>
+<td>Le nom d&rsquo;une balise. Toutes les balises de ce nom contenues dans le document seront concernées.</td>
+</tr>
+<tr>
+<td>h1,h2,h3</td>
+<td>Plusieurs sélecteurs séparés par des virgules.Toutes les balises énumérées sont concernées.</td>
+</tr>
+<tr>
+<td>#logo</td>
+<td>Le caractère # indique un identifiant. La balise avec cet ID est concernée.Exemple img id=&ldquo;logo&rdquo; src=&quot;&hellip;&quot;/.</td>
+</tr>
+<tr>
+<td>.bidule</td>
+<td>Le point introduit une classe. Toutes les balises comportant un attribut class de ce nom sont concernées.Exemple : p class=&ldquo;bidule&rdquo;</td>
+</tr>
+<tr>
+<td>tab img</td>
+<td>Plusieurs sélecteurs séparés par un espace : inclusion. Les balises img incluses dans un tableau sont concernées. Il peut exister des niveaux intermédiaires : ici il y aura probablement au moins des balises tr et td.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="règles-principales">Règles principales</h1>
+<h2 id="règles-appliquées-aux-textes">Règles appliquées aux textes</h2>
+<p>Tutoriel complet: <a href="https://developer.mozilla.org/fr/docs/Learn/CSS/Styling_text/Fundamentals">developer.mozilla.org</a></p>
+<p>Quelques propriétés CSS relatives aux textes</p>
+<table>
+<thead>
+<tr>
+<th>paramètre</th>
+<th>valeurs possibles</th>
+<th>effet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color</td>
+<td>blue, yellow, red, &hellip;</td>
+<td>colorie le texte selon le nom <em>anglais</em> de la couleur</td>
+</tr>
+<tr>
+<td>color</td>
+<td>rgb(0..255, 0..255, 0..255)</td>
+<td>selon le code RGB sur un octet chacun</td>
+</tr>
+<tr>
+<td>color</td>
+<td>#0..F0..F0..F</td>
+<td>selon le code RGB exprimé en hexadecimal, sans separateur</td>
+</tr>
+<tr>
+<td>background-color</td>
+<td>idem color</td>
+<td>couleur de fond</td>
+</tr>
+<tr>
+<td>font-family</td>
+<td>arial, courier new&hellip;</td>
+<td>choix de la police de caractères</td>
+</tr>
+<tr>
+<td>font</td>
+<td>italic 12 pt sans-serif</td>
+<td>informations complémentaires pour la police</td>
+</tr>
+<tr>
+<td>text-align</td>
+<td>center, left, right, justify</td>
+<td>alignement du texte</td>
+</tr>
+<tr>
+<td>font-weight</td>
+<td>bold</td>
+<td>mettre en gras</td>
+</tr>
+</tbody>
+</table>
+<h2 id="règles-appliquées-aux-boites">Règles appliquées aux boites</h2>
+<p>Tutoriel complet: <a href="https://developer.mozilla.org/fr/docs/Learn/CSS/Building_blocks/The_box_model">developer.mozilla.org</a></p>
+<p>En CSS, tout élément est inclus dans une boîte</p>
+<!-- raw HTML omitted -->
+<table>
+<thead>
+<tr>
+<th>paramètre</th>
+<th>valeurs possibles</th>
+<th>effet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>border</td>
+<td>solid, dashed, none</td>
+<td>bordure en trait plein, pointillé, sans bordure</td>
+</tr>
+<tr>
+<td>margin</td>
+<td>1px</td>
+<td>marge exterieur, dimension en pixels</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>1px</td>
+<td>marge intérieure</td>
+</tr>
+</tbody>
+</table>
+<h2 id="rappel-sur-la-propriété-display">Rappel sur la propriété display</h2>
+<ul>
+<li>Les balises s&rsquo;affichant en &ldquo;block&rdquo; (bloc) : elles prennent toute la largeur disponible et s&rsquo;affichent avec un saut de ligne avant et après. On peut les dimensionner avec les propriétés <code>width</code> et <code>height</code>. Elles n&rsquo;accèptent pas <code>vertical-align</code></li>
+<li>Les balises s&rsquo;affichant en &ldquo;inline&rdquo; (dans la ligne) : elles prennent uniquement la largeur dont elles ont besoin, sans ajouter de saut de ligne. Elles acceptent <code>vertical-align</code>, mais pas <code>width</code> et <code>height</code>.</li>
+</ul>
+<h1 id="css-intermediaire">CSS intermediaire</h1>
+<h2 id="héritage">héritage</h2>
+<p><a href="%5Bhttps://www.alsacreations.com/tuto/lire/545-Comprendre-l-heritage-et-la-parente-des-styles-CSS.html%5D(https://www.alsacreations.com/tuto/lire/545-Comprendre-l-heritage-et-la-parente-des-styles-CSS.html)">Lien alsacreation</a></p>
+<p>L&rsquo;héritage des CSS est fondé sur le modèle Parent-Enfant(s) : chaque élément Enfant reçoit en héritage tous les styles de son élément Parent. Par exemple, la balise <code>&lt;html&gt;</code> est parent de <code>&lt;body&gt;</code>, et <code>&lt;table&gt;</code> est parent de <code>&lt;tr&gt;</code> qui lui-même est parent de <code>&lt;td&gt;</code>. Cet héritage est très pratique et permet d&rsquo;éviter beaucoup de répétitions inutiles.</p>
+<p><strong>Précision :</strong> l&rsquo;élément enfant héritera de toutes les propriétés de l&rsquo;élément parent uniquement si ces propriétés s&rsquo;héritent, car l&rsquo;héritage ne fonctionne pas non plus sur toutes les propriétés css (margin, padding et autres propriétés de bloc).</p>
+<p>Pour appliquer une propriété de style &ldquo;par défaut&rdquo; à un document, un auteur peut l&rsquo;appliquer à la racine de l&rsquo;arbre du document.</p>
+<p>Par exemple ici, tous les descendants de l&rsquo;élément BODY auront la valeur de couleur &lsquo;black&rsquo;, la propriété <a href="http://www.yoyodesign.org/doc/w3c/css2/colors.html#propdef-color">&lsquo;color&rsquo;</a> étant héritée :</p>
+<pre tabindex="0"><code>BODY { color: black; }
+</code></pre><p>Les valeurs de pourcentage spécifiées ne sont pas héritées, celles calculées le sont.</p>
+<p>Par exemple, cette feuille de style :</p>
+<pre tabindex="0"><code>BODY { font-size: 10pt }
+H1 { font-size: 120% }
+</code></pre><p>et cet extrait d&rsquo;un document :</p>
+<pre tabindex="0"><code>&lt;BODY&gt;
+  &lt;H1&gt;Un &lt;EM&gt;grand&lt;/EM&gt; titre&lt;/H1&gt;
+&lt;/BODY&gt;
+</code></pre><p>Ici, la propriété &lsquo;font-size&rsquo; de l&rsquo;élément H1 aura une valeur calculée de &lsquo;12pt&rsquo; (120% de la valeur de son parent). Et, comme la valeur de la propriété <a href="http://www.yoyodesign.org/doc/w3c/css2/fonts.html#propdef-font-size">&lsquo;font-size&rsquo;</a> est héritée, la valeur calculée pour l&rsquo;élément EM sera aussi &lsquo;12pt&rsquo;.</p>
+<h2 id="selection-compléments">Selection, compléments</h2>
+<table>
+<thead>
+<tr>
+<th>selecteur</th>
+<th>effet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>td &gt; img</td>
+<td>Plusieurs sélecteurs séparés par un caractère supérieur : inclusion directe.Les balises img directement incluses dans une cellule de tableau sont concernées. Il ne doit pas exister de niveaux intermédiaires.</td>
+</tr>
+<tr>
+<td>td + img</td>
+<td>Plusieurs sélecteurs séparés par un signe + : vient après.Désigne les balises img venant après une balise p.</td>
+</tr>
+<tr>
+<td>p ~ img</td>
+<td>Plusieurs sélecteurs séparés par un signe ~ : une balise qui suit une autre (directement ou pas)</td>
+</tr>
+<tr>
+<td>:hover</td>
+<td>Le caractère : (deux points) introduit une pseudo-classe. La pseudo-classe désigne un élément lorsqu&rsquo;il se trouve dans une certaine situation : ici lorsqu&rsquo;il est survolé par la souris.Voir la liste complète des pseudo-class.</td>
+</tr>
+<tr>
+<td>img[width]</td>
+<td>Désigne les balises img comportant un attribut width quelle que soit la valeur de ce dernier. On teste donc seulement la présence de l&rsquo;attribut.</td>
+</tr>
+<tr>
+<td>p[lang = &ldquo;fr&rdquo; ]</td>
+<td>Ici on limite la portée aux balises p qui comportent l&rsquo;attribut lang avec la valeur &ldquo;fr&rdquo;.p lang=&ldquo;fr&rdquo;</td>
+</tr>
+</tbody>
+</table>
+<p><em>Exemple:</em> mise en couleur de fond gris pour une cellule sur 2 du tableau</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">tbody</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">tr</span><span style="color:#111">:</span><span style="color:#75af00">nth-child</span><span style="color:#f92672">(</span><span style="color:#f92672">odd</span><span style="color:#f92672">)</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">td</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">background-color</span><span style="color:#111">:</span> <span style="color:#111">lightGrey</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><h1 id="css-avancé">CSS avancé</h1>
+<ul>
+<li>article sur l&rsquo;attribut focus <a href="https://www.24joursdeweb.fr/2017/le-focus-nest-pas-juste-une-astuce/">24joursdeweb.fr</a></li>
+</ul>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#une-déclaration-en-css">Une déclaration en CSS</a></li>
+    <li><a href="#indexer-les-parties-du-document">indexer les parties du document</a></li>
+    <li><a href="#selecteurs">Selecteurs</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#règles-appliquées-aux-textes">Règles appliquées aux textes</a></li>
+    <li><a href="#règles-appliquées-aux-boites">Règles appliquées aux boites</a></li>
+    <li><a href="#rappel-sur-la-propriété-display">Rappel sur la propriété display</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#héritage">héritage</a></li>
+    <li><a href="#selection-compléments">Selection, compléments</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

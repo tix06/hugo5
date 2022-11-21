@@ -1,19 +1,629 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>pseudo langage
-| Sciences numériques</title><link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel=stylesheet><script type=text/x-mathjax-config>
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    types abstraits
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
   });
-</script><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-167114468-1');</script><link rel=stylesheet href=/book.min.1c02dc1d2c0b546a84beb71d8f4336d6f5d7b69564e08bdfc04c2fb0595d786d.css><link rel=icon href=/favicon.png type=image/x-icon><div class=my-header-container><div class=my-site-header><img src=/logo-site-b.svg width="150 px"></div><div id=myHeader><div class=titre><h2><a href=/>Sciences numériques</a></h2></div></div></div><script async>window.onload=function(){let container=document.getElementsByClassName("book-page");let logodiv=document.getElementsByClassName("site-menu-before");let header=document.getElementById("myHeader");let screen=window.innerWidth;let site_footer=document.querySelector(".site_footer");try{let site_TOC=document.querySelector("#TableOfContents>ul");let newP=document.createElement('li');newP.textContent='Contenu de la page';site_TOC.appendChild(newP,null);}
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
 catch(err)
-{console.log(err.message);}
-if(site_footer.parentNode!=document.body){let father=site_footer.parentNode;let clone=site_footer.cloneNode;father.removeChild(site_footer);document.body.appendChild(clone);}
-if(screen<=850){document.getElementsByClassName("my-site-header")[0].style.display="none";}else{window.addEventListener("scroll",function(e){let spectral=document.getElementById("spectral");if(screen>850){if(window.pageYOffset>150){header.classList.add("sticky");if(container.lenght>0){container[0].style.marginTop="65px";};logodiv[0].style.height="120px";}else{header.classList.remove("sticky");if(container.lenght>0){container[0].style.marginTop="0px";};spectral.style.display="none";logodiv[0].style.height="220px";}}
-if(screen<=850){if(window.pageYOffset>150){spectral.style.display="block";}else{spectral.style.display="none";}}});}}
-let chemin=window.location.pathname;if(chemin.search('NSI')>-1){baniere=document.querySelector("#myHeader");let linkBox=document.createElement('div');linkBox.classList.add('linkBox');let newH=document.createElement('a');newH.innerHTML='<a href="/docs/NSI/NSI_index/index.html">NSI</a>';newH.classList.add('nsi');linkBox.appendChild(newH);baniere.appendChild(linkBox);}</script><style>#myHeader{display:flex;flex-direction:row-reverse}#myHeader>.titre{width:80%;min-width:300px;text-align:left}.linkBox{margin:10px;padding-top:10px;background-color:pink;min-width:50px}.isn{}</style></head><body><input type=checkbox style=display:none id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav role=navigation><div class=site-menu-before style=height:220px;display:block><img src=/logo-site.svg id=spectral height=50% style=display:none></div><style>nav ul a[href$=\2f docs\2fNSI\2fstructure\2fpage1\2f ]{color:#004ed0}</style><ul><li><a href=/><strong>Accueil</strong></a></li><li><a href=/docs/esf/esf_index/><strong>ESF</strong></a></li><li><p><a href=/docs/SNT_2nde/SNT_index/><strong>SNT secondes</strong></a></p></li><li><p><a href=/docs/NSI/NSI_index/><strong>NSI</strong></a></p></li><li><p><a href=/docs/python/index_python/><strong>Python</strong></a></p></li><li><p><a href=/docs/PC_2nde/PC_index/><strong>Physique Chimie 2nde</strong></a></p></li><li><p><a href=/docs/PC_1ere/PC_index/><strong>Physique 1ere Spé</strong></a></p></li><li><p><a href=/posts/><strong>Posts</strong></a></p></li><li><p><a href=/docs/contact/simple-contact-form/><strong>Contact</strong></a></p></li></ul></nav><script>(function(){var menu=document.querySelector('aside.book-menu nav')
-addEventListener('beforeunload',function(event){localStorage.setItem('menu.scrollTop',menu.scrollTop)});menu.scrollTop=localStorage.getItem('menu.scrollTop')})()</script></aside><div class=book-page><header class="align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
-<strong>pseudo langage</strong></header><article class=markdown><h1 id=pseudo-langage>pseudo langage</h1></article><div style=height:100px></div></div><aside class="book-toc fixed"><nav id=TableOfContents><ul><li><a href=#pseudo-langage>pseudo langage</a></li></ul></nav></aside></main><div class=site_footer><a rel=license href=http://creativecommons.org/licenses/by/4.0/><img alt="Licence Creative Commons" style=border-width:0 src=/creative.png></a>
-<span xmlns:dct=http://purl.org/dc/terms/ property=dct:title>Sciences numeriques</span> de <a xmlns:cc=http://creativecommons.org/ns# href property=cc:attributionName rel=cc:attributionurl>numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel=license href=http://creativecommons.org/licenses/by/4.0/>licence Creative Commons Attribution 4.0 International</a></div></body></html>
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fNSI\2fstructure\2fpage1\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    types abstraits
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="types-abstraits">Types abstraits</h1>
+<p>La résolution d&rsquo;un problème par un programme nécessite:</p>
+<ul>
+<li>de définir les données du problème</li>
+<li>d&rsquo;utiliser des instructions du langage sur ces données</li>
+</ul>
+<p>Souvent, la résolution du problème demande d&rsquo;arranger ces données dans un <em>type abstrait</em>, afin d&rsquo;avoir une résolution plus efficace.</p>
+<p>Un type abstrait est défini par son <em>interface</em>, qui est indépendante de son <em>implémentation</em>.</p>
+<p>Les types abstraits sont des types <em>structurés</em>. On a déjà vu des types <em>structurés</em> natifs: les types séquences de texte (string), les types séquentiels (listes, tuples), et les mappages (dictionnaires).</p>
+<p><em>Un type abstrait</em> est caractérisé par une <em>interface</em> de programmation qui permet de manipuler les données de ce type. Sans pour autant avoir connaissance du contenu des fonctions proposées par l&rsquo;interface.</p>
+<p><em>Spécifier</em> un type abstrait, c&rsquo;est définir son <em>interface</em>, sans prejuger de la façon dont ses opérations sont implémentées.</p>
+<p><em>Implémenter</em>, c&rsquo;est fournir le code de ces opérations. Plusieurs implémentations peuvent correspondent à la même spécification. On verra dans ce chapitre la programmation dans un style fonctionnel. Il viendra plus tard la programmation par objet.</p>
+<p>On verra dans un premier temps, 2 exemples de types abstraits: Les <em>listes chainées</em> et les <em>tableaux</em>. Dans un chapitre ultérieur, nous verrons les types abstraits <em>Piles</em>, <em>Files</em>, et <em>Graphes</em>.</p>
+<h1 id="listes-chaînées">Listes chaînées</h1>
+<p>Une liste chaînée est une séquence ordonnée d&rsquo;éléments.</p>
+<p>La <em>liste L</em> suivante représente la chaine: <code>&quot;Lundi&quot; -&gt; &quot;Mardi&quot; -&gt; &quot;Mercredi&quot;</code></p>
+<pre tabindex="0"><code>L = (&#34;Lundi&#34;,(&#34;Mardi&#34;,(&#34;Mercredi&#34;,())))
+</code></pre><p>La liste chainée L contient 2 éléments <code>(tete, queue)</code> et <code>queue</code> est elle-même une liste chainée, contenant aussi <code>(tete, queue)</code>. Le dernier élément: <code>(tete, ())</code>.</p>
+<p>On utilisera par exemple une liste chainée lorsqu&rsquo;il y a une filiation, une chronologie entre les éléments.</p>
+<!-- raw HTML omitted -->
+<h2 id="linterface-dune-liste-chainée">L&rsquo;interface d&rsquo;une liste chainée</h2>
+<p>L&rsquo;<em>interface</em> fournit certaines fonctions.</p>
+<table>
+<thead>
+<tr>
+<th>fonctions qui implémentent la liste chainée L</th>
+<th>nom</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>créer une liste vide</td>
+<td><code>creer_liste()</code></td>
+</tr>
+<tr>
+<td>questionner si la liste est vide</td>
+<td><code>liste_vide(L)</code></td>
+</tr>
+<tr>
+<td>insérer un élément <strong>e</strong> en tête de liste et retourne une nouvelle liste</td>
+<td><code>inserer(L,e)</code></td>
+</tr>
+<tr>
+<td>retourne l&rsquo;élément de tête (premier élément)</td>
+<td><code>tete(L)</code></td>
+</tr>
+<tr>
+<td>retourne la liste privée de son premier élément (retourne donc le 2<!-- raw HTML omitted -->e<!-- raw HTML omitted --> élément)</td>
+<td><code>queue()</code></td>
+</tr>
+<tr>
+<td>retourne une liste python avec tous les éléments de la liste chainée</td>
+<td><code>elements_liste(L)</code></td>
+</tr>
+</tbody>
+</table>
+<p>Le <em>contenu</em> de ces fonctions va dépendre de l&rsquo;<em>implémentation</em> choisie par le programmeur.</p>
+<p>Par exemple, si l&rsquo;on choisit d&rsquo;implémenter la liste chainée par un tuple, on aura pour la premiere fonction:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">creer_liste</span><span style="color:#111">():</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">return</span> <span style="color:#111">()</span>
+</span></span></code></pre></div><p>Alors que si l&rsquo;on choisit plutôt une liste:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">creer_liste</span><span style="color:#111">():</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">return</span> <span style="color:#111">[]</span>
+</span></span></code></pre></div><h1 id="tableaux">Tableaux</h1>
+<p>Les tableaux se comportent de manière très similaire aux listes, sauf que les types d&rsquo;objets qui y sont stockés sont limités. (Array)</p>
+<p>Un tableau peut être représenté en Python par un tuple contenant 2 éléments:</p>
+<ul>
+<li>la liste des valeurs, de dimension fixe. On mettra <code>None</code> pour les valeurs non renseignés.</li>
+<li>la valeur de la taille de la liste.</li>
+</ul>
+<p>Par exemple:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">T</span> <span style="color:#f92672">=</span> <span style="color:#111">([</span><span style="color:#ae81ff">6</span><span style="color:#111">,</span> <span style="color:#ae81ff">7</span><span style="color:#111">,</span> <span style="color:#ae81ff">8</span><span style="color:#111">,</span> <span style="color:#00a8c8">None</span><span style="color:#111">,</span> <span style="color:#00a8c8">None</span><span style="color:#111">],</span> <span style="color:#ae81ff">5</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>Un tableau peut servir à implémenter une grille de notes par exemple:</p>
+<!-- raw HTML omitted -->
+<p>Supposons, pour simplifier, que le tableau ne contient que les notes de Kyle:</p>
+<!-- raw HTML omitted -->
+<p>On peut représenter cet ensemble de notes par le tableau:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">T</span> <span style="color:#f92672">=</span> <span style="color:#111">([</span><span style="color:#ae81ff">6</span><span style="color:#111">,</span> <span style="color:#ae81ff">7</span><span style="color:#111">,</span> <span style="color:#ae81ff">8</span><span style="color:#111">,</span> <span style="color:#00a8c8">None</span><span style="color:#111">,</span> <span style="color:#00a8c8">None</span><span style="color:#111">],</span> <span style="color:#ae81ff">5</span><span style="color:#111">)</span>
+</span></span></code></pre></div><h2 id="linterface-dun-tableau">L&rsquo;interface d&rsquo;un tableau</h2>
+<table>
+<thead>
+<tr>
+<th>fonctions qui implémentent un tableau T (Array)</th>
+<th>nom</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>taille du tableau</td>
+<td><code>taille(T)</code></td>
+</tr>
+<tr>
+<td>demander l&rsquo;élément au rang i</td>
+<td><code>ieme(T,i)</code></td>
+</tr>
+<tr>
+<td>ajouter à la fin</td>
+<td><code>ajouter(T,e)</code></td>
+</tr>
+<tr>
+<td>insérer l&rsquo;élément e au rang i</td>
+<td><code>inserer(T,i,e)</code></td>
+</tr>
+<tr>
+<td>supprimer l&rsquo;élément au rang i</td>
+<td><code>supprimer(T,i)</code></td>
+</tr>
+<tr>
+<td>remplacer l&rsquo;élément au rang i par e</td>
+<td><code>remplacer(T,i,e)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="tableaux-dynamiques-et-tableaux-statiques">Tableaux dynamiques et tableaux statiques</h2>
+<p>Les tableaux vus ci-dessus sont des tableaux <em>statiques</em>: leur taille ne peut pas être modifiée. Dans le cas où l&rsquo;on ait besoin d&rsquo;agrandir le tableau, il faut le copier dans un nouveau tableau, plus grand.</p>
+<p>Python implémente naturellement un autre type de tableau, que l&rsquo;on appelera <em>dynamique</em>: Les <em>Listes Python</em>. Ce problème de dimension n&rsquo;apparait pas dans les Listes Python, qui apportent de surcroit des méthodes bien pratiques comme <code>append</code> et <code>pop</code>.</p>
+<p>Attention: les listes chaînées (vues plus haut) et les Listes Python sont différentes, il ne s&rsquo;agit pas des mêmes objets.</p>
+<h1 id="editeur-python">Editeur Python</h1>
+<ul>
+<li>L&rsquo;<strong>editeur</strong> suivant se présente comme un <strong>notebook</strong>. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur <em>Majuscule(Shift)</em> + <em>Entrée</em> pour <strong>executer le code</strong>.</li>
+</ul>
+<!-- raw HTML omitted -->
+<h1 id="exercices-sur-les-listes">Exercices sur les listes</h1>
+<p>On propose l&rsquo;implémentation suivante pour les listes chainées:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">creer_liste</span><span style="color:#111">():</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;&#34;&#34;exemple: 
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  L = creer_liste()
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">return</span> <span style="color:#111">[]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">liste_vide</span><span style="color:#111">(</span><span style="color:#111">L</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;&#34;&#34;exemple: 
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  liste_vide(L)
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">return</span> <span style="color:#111">L</span> <span style="color:#f92672">==</span> <span style="color:#111">[]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">inserer</span><span style="color:#111">(</span><span style="color:#111">L</span><span style="color:#111">,</span><span style="color:#111">e</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;&#34;&#34;exemple:
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  L = inserer(L,e)
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">return</span> <span style="color:#111">[</span><span style="color:#111">e</span><span style="color:#111">,</span><span style="color:#111">L</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">tete</span><span style="color:#111">(</span><span style="color:#111">L</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;&#34;&#34;exemple:
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  elem = tete(L)
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">return</span> <span style="color:#111">L</span><span style="color:#111">[</span><span style="color:#ae81ff">0</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">queue</span><span style="color:#111">(</span><span style="color:#111">L</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;&#34;&#34;exemple:
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  L2 = queue(L)
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">return</span> <span style="color:#111">L</span><span style="color:#111">[</span><span style="color:#ae81ff">1</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">elements_liste</span><span style="color:#111">(</span><span style="color:#111">L</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;&#34;&#34;exemple:
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  L2 = elements_liste(L)
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># à completer</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># </span>
+</span></span><span style="display:flex;"><span>  
+</span></span></code></pre></div><h2 id="exercice-dintroduction-aux-listes">Exercice d&rsquo;introduction aux listes</h2>
+<p>On cherche à implémenter l&rsquo;historique du navigateur pour permettre de revenir en arrière lors de la navigation.</p>
+<p>On visite, dans l&rsquo;ordre les sites suivants:</p>
+<ul>
+<li>site 1</li>
+<li>site 2</li>
+<li>site 3</li>
+</ul>
+<p><strong>1.</strong> Qu&rsquo;est ce qui est affiché par le programme suivant?</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">L1</span> <span style="color:#f92672">=</span> <span style="color:#111">creer_liste</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">L1</span> <span style="color:#f92672">=</span> <span style="color:#111">inserer</span><span style="color:#111">(</span><span style="color:#111">L1</span><span style="color:#111">,</span><span style="color:#d88200">&#39;site 1&#39;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">L1</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">L1</span> <span style="color:#f92672">=</span> <span style="color:#111">inserer</span><span style="color:#111">(</span><span style="color:#111">L1</span><span style="color:#111">,</span><span style="color:#d88200">&#39;site 2&#39;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">L1</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">L1</span> <span style="color:#f92672">=</span> <span style="color:#111">inserer</span><span style="color:#111">(</span><span style="color:#111">L1</span><span style="color:#111">,</span><span style="color:#d88200">&#39;site 3&#39;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">L1</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p><strong>2.</strong> Lorsque l&rsquo;on retourne en arrière, on veut acceder au dernier site visité. Supposons que cela retourne la valeur <code>site 3</code>. Quelle instruction de l&rsquo;interface de liste faut-il utiliser?</p>
+<p><strong>3.</strong> On souhaite alors que cela modifie la liste L1 en supprimant  <code>site 3</code>. Quelle instruction utilisant l&rsquo;interface de liste va modifier L1 de cette façon?</p>
+<p><strong>4.</strong> On revient à la liste L1 contenant la navigation sur les 3 sites. Compléter la boucle non bornée pour former la liste python <code>['site 3', 'site 2', 'site 1']</code> à partir de la liste chainée L1:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">L2</span> <span style="color:#f92672">=</span> <span style="color:#111">[]</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">while</span> <span style="color:#f92672">not</span> <span style="color:#111">liste_vide</span><span style="color:#111">(</span><span style="color:#111">L1</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># à completer</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># </span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># </span>
+</span></span></code></pre></div><p><strong>5.</strong> Ajouter au script les instructions qui vont déverser la liste python L2 dans une liste python L3. Cette liste L3 devra présenter les sites dans l&rsquo;ordre de la navigation: <code>['site 1', 'site 2', 'site 3']</code></p>
+<p><strong>6.</strong> Ecrire l&rsquo;implémentation de la fonction <code>elements_liste</code> qui va retourner une liste python avec les éléments d&rsquo;une liste chainée L mise en paramètre. Pour l&rsquo;exemple précédent, cette fonction retourne la liste python L3 lorsque L est mise en paramètre de la fonction <code>elements_liste</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">elements_liste</span><span style="color:#111">(</span><span style="color:#111">L</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche [&#39;site 1&#39;, &#39;site 2&#39;, &#39;site 3&#39;]</span>
+</span></span></code></pre></div><p>On utilisera à l&rsquo;intérieur de la fonction une instruction de copie de la liste L afin de ne pas modifier L lors des traitements:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">elements_liste</span><span style="color:#111">(</span><span style="color:#111">L</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">L_copie</span> <span style="color:#f92672">=</span> <span style="color:#111">list</span><span style="color:#111">(</span><span style="color:#111">L</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">L2</span> <span style="color:#f92672">=</span> <span style="color:#111">[]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">L3</span> <span style="color:#f92672">=</span> <span style="color:#111">[]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">while</span> <span style="color:#f92672">not</span> <span style="color:#111">liste_vide</span><span style="color:#111">(</span><span style="color:#111">L_copie</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># à completer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># </span>
+</span></span></code></pre></div><h2 id="exercice-sur-la-separation-dune-liste">Exercice sur la separation d&rsquo;une liste</h2>
+<p>Ecrire une fonction <code>separe</code> qui sépare les éléments d&rsquo;une liste en deux listes selon s&rsquo;ils sont inférieurs (strictement) ou supérieurs (et égal) à une valeur <code>v</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">separe</span><span style="color:#111">(</span><span style="color:#111">L</span><span style="color:#111">,</span><span style="color:#111">v</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">L_copie</span> <span style="color:#f92672">=</span> <span style="color:#111">list</span><span style="color:#111">(</span><span style="color:#111">L</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">L_inf</span> <span style="color:#f92672">=</span> <span style="color:#111">creer_liste</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">L_sup</span> <span style="color:#f92672">=</span> <span style="color:#111">creer_liste</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">while</span> <span style="color:#f92672">not</span> <span style="color:#111">liste_vide</span><span style="color:#111">(</span><span style="color:#111">L_copie</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># à completer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># </span>
+</span></span></code></pre></div><h1 id="exercices-sur-les-tableaux-statiques">Exercices sur les tableaux statiques</h1>
+<p>On propose l&rsquo;implémentation suivante pour les tableaux statiques:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">T</span> <span style="color:#f92672">=</span> <span style="color:#111">([</span><span style="color:#d88200">&#39;lundi&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;mardi&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;mercredi&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;jeudi&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;vendredi&#39;</span><span style="color:#111">],</span><span style="color:#ae81ff">5</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">taille</span><span style="color:#111">(</span><span style="color:#111">T</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;&#34;&#34;exemple:
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  &gt; taille(T)
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  &gt; 5
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">return</span> <span style="color:#111">T</span><span style="color:#111">[</span><span style="color:#ae81ff">1</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">ieme</span><span style="color:#111">(</span><span style="color:#111">T</span><span style="color:#111">,</span><span style="color:#111">i</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;&#34;&#34;exemple:
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  &gt; ieme(T,3)
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  &gt; &#39;jeudi&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">return</span> <span style="color:#111">T</span><span style="color:#111">[</span><span style="color:#ae81ff">0</span><span style="color:#111">][</span><span style="color:#111">i</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">remplacer</span><span style="color:#111">(</span><span style="color:#111">T</span><span style="color:#111">,</span><span style="color:#111">i</span><span style="color:#111">,</span><span style="color:#111">e</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;&#34;&#34;exemple:
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  &gt; remplacer(T,2,&#39;jour des enfants&#39;)
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  &gt; T
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  &gt; ([&#39;lundi&#39;,&#39;mardi&#39;,&#39;jour des enfants&#39;,&#39;jeudi&#39;,&#39;vendredi&#39;],5)
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">  &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># à completer</span>
+</span></span></code></pre></div><h2 id="utiliser-linterface-du-tableau">Utiliser l&rsquo;interface du tableau</h2>
+<p><strong>1.</strong> Soit le tableau suivant qui implémente les notes de Kyle dans les matières C1, C2, C3:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">T</span> <span style="color:#f92672">=</span> <span style="color:#111">([</span><span style="color:#ae81ff">6</span><span style="color:#111">,</span> <span style="color:#ae81ff">7</span><span style="color:#111">,</span> <span style="color:#ae81ff">8</span><span style="color:#111">],</span> <span style="color:#ae81ff">3</span><span style="color:#111">)</span> 
+</span></span></code></pre></div><p><strong>a.</strong> Ecrire l&rsquo;instruction qui retourne la note de Kyle dans la matière C3.</p>
+<p><strong>b.</strong> Kyle n&rsquo;a pas eu 8, mais 12/20 dans la matière C3. Ecrire l&rsquo;instruction qui modifie sa note 8 en 12, à partir d&rsquo;une fonction de l&rsquo;interface des tableaux.</p>
+<p><strong>c.</strong> Compléter le script donné plus haut pour cette fonction.</p>
+<p><strong>2.</strong> Soit le tableau suivant qui implémente les notes de Kyle, Sean, Quentin et Zinedine dans les matières C1, C2, C3:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">T</span> <span style="color:#f92672">=</span> <span style="color:#111">([[</span><span style="color:#ae81ff">6</span><span style="color:#111">,</span> <span style="color:#ae81ff">7</span><span style="color:#111">,</span> <span style="color:#ae81ff">8</span><span style="color:#111">],</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">[</span><span style="color:#ae81ff">10</span><span style="color:#111">,</span> <span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#ae81ff">10</span><span style="color:#111">],</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">[</span><span style="color:#d88200">&#39;?&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;?&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;?&#39;</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">[</span><span style="color:#d88200">&#39;?&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;?&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;?&#39;</span><span style="color:#111">]],</span> <span style="color:#f92672">..</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p><strong>a.</strong> Recopier le tableau T et remplacer les &lsquo;?&rsquo; et les &lsquo;..&rsquo; par les bonnes valeurs (utiliser l&rsquo;image plus haut).</p>
+<p><strong>b.</strong> Quelle instruction de l&rsquo;interface va donner le nombre d&rsquo;élèves dans le tableau?</p>
+<p><strong>c.</strong> Modifier la fonction <code>remplacer</code> pour que celle-ci modifie la note dans la matière voulue pour un élève donné. Par exemple:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">remplacer</span><span style="color:#111">(</span><span style="color:#111">T</span><span style="color:#111">,</span><span style="color:#ae81ff">0</span><span style="color:#111">,</span><span style="color:#ae81ff">2</span><span style="color:#111">,</span><span style="color:#ae81ff">12</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">T</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># affiche </span>
+</span></span><span style="display:flex;"><span><span style="color:#111">([[</span><span style="color:#ae81ff">6</span><span style="color:#111">,</span> <span style="color:#ae81ff">7</span><span style="color:#111">,</span> <span style="color:#ae81ff">12</span><span style="color:#111">],</span>
+</span></span><span style="display:flex;"><span> <span style="color:#111">[</span><span style="color:#ae81ff">10</span><span style="color:#111">,</span> <span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#ae81ff">10</span><span style="color:#111">],</span>
+</span></span><span style="display:flex;"><span> <span style="color:#111">[</span><span style="color:#d88200">&#39;?&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;?&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;?&#39;</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span> <span style="color:#111">[</span><span style="color:#d88200">&#39;?&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;?&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;?&#39;</span><span style="color:#111">]],</span> <span style="color:#f92672">..</span><span style="color:#111">)</span>
+</span></span></code></pre></div><h2 id="un-nouveau-type-abstrait">Un nouveau type abstrait</h2>
+<p>Afin de gérer les notes des élèves de la classe de seconde 209, on veut définir un type abstrait qui permet de calculer sur les notes des élèves.</p>
+<p>Ce type abstrait, appelé <code>Classe_209</code> va utiliser l&rsquo;interface des tableaux statiques définie plus haut. Mais il va aussi calculer la moyenne des notes grâce à 2 nouvelles fonctions de son interface:</p>
+<ul>
+<li><code>moyenne_eleve</code>: va calculer la moyenne de l&rsquo;élève au rang <code>eleve_i</code> (par exemple, pour Kyle, <code>eleve_i</code> vaut 0)</li>
+<li><code>moyenne_matiere</code>: va calculer la moyenne sur une matière à partir du rang <code>matiere_i</code>. Par exemple, pour C3, <code>matiere_i</code> vaut 3)</li>
+</ul>
+<p><strong>1.</strong> Programmer l&rsquo;implémentation en python de <code>moyenne_eleve</code></p>
+<p><strong>2.</strong> Programmer l&rsquo;implémentation en python de <code>moyenne_matiere</code></p>
+<h1 id="liens">Liens</h1>
+<ul>
+<li>Types séquentiels natifs <a href="https://dlatreyte.github.io/terminales-nsi/chap-6/1-structures-integrees/">cours David Latreyte</a></li>
+</ul>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#linterface-dune-liste-chainée">L&rsquo;interface d&rsquo;une liste chainée</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#linterface-dun-tableau">L&rsquo;interface d&rsquo;un tableau</a></li>
+    <li><a href="#tableaux-dynamiques-et-tableaux-statiques">Tableaux dynamiques et tableaux statiques</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#exercice-dintroduction-aux-listes">Exercice d&rsquo;introduction aux listes</a></li>
+    <li><a href="#exercice-sur-la-separation-dune-liste">Exercice sur la separation d&rsquo;une liste</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#utiliser-linterface-du-tableau">Utiliser l&rsquo;interface du tableau</a></li>
+    <li><a href="#un-nouveau-type-abstrait">Un nouveau type abstrait</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

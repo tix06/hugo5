@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    Pydroid prise en main
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2ftechno\2fpages\2f android_prise_en_main\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    Pydroid prise en main
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><p>La version complète de cette fiche:</p>
+<ul>
+<li>version Pydroid3: <a href="/docs/SNT_2nde/pages/pages_algo/python/python9/">TP3 geolocalisation</a></li>
+<li>version TI83: <a href="/docs/SNT_2nde/pages/pages_algo/python/python8/">TP3 geolocalisation</a></li>
+</ul>
+<h1 id="programme-1--conversion-dm--dd">PROGRAMME 1 : conversion DM =&gt; DD</h1>
+<p>DM et DD sont des formats de repères d&rsquo;angles:</p>
+<ul>
+<li>DM: signifie Degrès Minutes</li>
+<li>DD: signifie Degrès Décimal</li>
+</ul>
+<h2 id="lediteur-de-programme">L’editeur de programme</h2>
+<p>Pour créer un nouveau programme: <strong>Menu Fichier: New</strong></p>
+<!-- raw HTML omitted -->
+<ul>
+<li>Saisir alors le script python:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#111">degres</span> <span style="color:#f92672">=</span> <span style="color:#111">float</span><span style="color:#111">(</span><span style="color:#111">input</span><span style="color:#111">(</span><span style="color:#d88200">&#39;Entrer les degres :&#39;</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">minutes</span> <span style="color:#f92672">=</span> <span style="color:#111">float</span><span style="color:#111">(</span><span style="color:#111">input</span><span style="color:#111">(</span><span style="color:#d88200">&#39;Entrer les minutes :&#39;</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">DD</span> <span style="color:#f92672">=</span> <span style="color:#111">degres</span> <span style="color:#f92672">+</span> <span style="color:#111">minutes</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">60</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#d88200">&#34;l&#39;angle en notation DD est :&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">print</span><span style="color:#111">(</span><span style="color:#111">DD</span><span style="color:#111">)</span>
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<ul>
+<li>Sauvegarder le programme:
+<ul>
+<li><strong>Menu Fichier: Save as</strong></li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>Internal storage</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>Créer un nouveau dossier appelé <code>python</code>: New Folder puis saisir <code>python</code></li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>Nommer le fichier: <code>localisation.py</code></li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>Executer alors le programme avec le bouton jaune en bas de l&rsquo;écran</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>Renseigner les valeurs de degrés et minutes pour convertir en DD:</li>
+</ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Utilisez alors votre programme pour définir les coordonnées DD du départ de la randonnée:</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<table>
+<thead>
+<tr>
+<th></th>
+<th>latitude</th>
+<th>longitude</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Départ</td>
+<td>44°20,01612'</td>
+<td>6°52,1109'</td>
+</tr>
+</tbody>
+</table>
+<p><em>Remarque:</em> il vous faudra executer une 2e fois le programme pour le calcul de la longitude</p>
+<h1 id="programme-2--créer-une-fonction-conversion">Programme 2 : Créer une fonction <strong>conversion</strong></h1>
+<p>Une meilleure approche du langage python consiste à créer une fonction, puis appeler celle-ci depuis le <em>Shell</em> pour afficher le résultat.</p>
+<h2 id="modifier-le-programme-pour-créer-une-fonction-conversion">Modifier le programme pour créer une fonction <strong>conversion</strong></h2>
+<p>Revenir dans l&rsquo;editeur et modifier le programme pour créer une fonction:</p>
+<!-- raw HTML omitted -->
+<p>La fonction <strong>conversion</strong> a alors 2 paramètres, <code>degres</code> et <code>minutes</code> qui devront être renseignés lors de l&rsquo;appel de la fonction. Cela se fera depuis le <em>Shell</em> python.</p>
+<h2 id="le-terminal">Le Terminal</h2>
+<ul>
+<li>Depuis le menu principal, à gauche, choisir <em>Terminal</em></li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>Utiliser alors les instructions UNIX:</li>
+</ul>
+<pre tabindex="0"><code>$ ls
+$ cd python
+$ python
+</code></pre><p><em>explications&hellip;</em></p>
+<table>
+<thead>
+<tr>
+<th>instruction UNIX</th>
+<th>commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ls</td>
+<td>affiche le contenu du dossier courant</td>
+</tr>
+<tr>
+<td>cd python</td>
+<td>changer de dossier et aller dans le dossier <code>python</code></td>
+</tr>
+<tr>
+<td>python</td>
+<td>lancer le shell python</td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<h2 id="le-shell-python">Le Shell python</h2>
+<p>Les instructions python seront alors saisies après les chevrons <code>&gt;&gt;&gt;</code> <code> </code>
+Chaque ligne saisie sera alors exécutée.</p>
+<p>Saisir:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">from</span> <span style="color:#111">localisation</span> <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#111">conversion</span><span style="color:#111">(</span><span style="color:#ae81ff">40</span><span style="color:#111">,</span><span style="color:#ae81ff">23</span><span style="color:#111">)</span>
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<p>Voilà, vous pourrez utiliser maintenant la fonction <code>conversion</code> pour transformer n&rsquo;importe quelle valeur du format DM vers le format DD.</p>
+<p>Voici celles du départ et de l&rsquo;arrivée de la randonnée:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>latitude</th>
+<th>longitude</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Départ</td>
+<td>44°20,01612'</td>
+<td>6°52,1109'</td>
+</tr>
+<tr>
+<td>Arrivée</td>
+<td>44°20,04108'</td>
+<td>6°51,91188'</td>
+</tr>
+</tbody>
+</table>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#lediteur-de-programme">L’editeur de programme</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#modifier-le-programme-pour-créer-une-fonction-conversion">Modifier le programme pour créer une fonction <strong>conversion</strong></a></li>
+    <li><a href="#le-terminal">Le Terminal</a></li>
+    <li><a href="#le-shell-python">Le Shell python</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>

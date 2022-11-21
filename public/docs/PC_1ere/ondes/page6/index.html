@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    chemins de la lumière
+  
+ | Allophysique</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167114468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167114468-1');
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/book.min.757bde8284addd9205931692e0522a4e50ed085e00c44dff802d2fc8255c68ca.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+<div class="my-header-container">
+<div class="my-site-header">
+	<img src="/logo-site-b.svg" width = "150 px"/>
+</div>
+
+<div id="myHeader">
+	<div class="titre">
+	<h2><a href="/">Allophysique</a></h2>
+    </div>
+</div>
+</div>
+
+
+
+<script async>
+window.onload = function () {
+let container = document.getElementsByClassName("book-page");
+let logodiv = document.getElementsByClassName("site-menu-before");
+let header = document.getElementById("myHeader");
+let screen = window.innerWidth;
+let site_footer = document.querySelector(".site_footer");
+
+try {
+  
+  let site_TOC = document.querySelector("#TableOfContents>ul");
+  let newP = document.createElement('li');
+
+  newP.textContent='Contenu de la page';
+  site_TOC.appendChild(newP,null);
+}
+catch(err)
+{
+    console.log(err.message);
+}
+
+
+
+
+if (site_footer.parentNode != document.body){
+    let father = site_footer.parentNode;
+    let clone = site_footer.cloneNode;
+    father.removeChild(site_footer);
+    document.body.appendChild(clone);
+}
+
+
+
+
+
+if (screen<=850) {
+
+  document.getElementsByClassName("my-site-header")[0].style.display="none";
+} else {
+
+	window.addEventListener("scroll", function(e) {
+	let spectral=document.getElementById("spectral");
+	if (screen>850 ){
+		if (window.pageYOffset > 150) {
+			header.classList.add("sticky");
+    		if (container.lenght>0) {container[0].style.marginTop="65px";};
+            logodiv[0].style.height="120px";
+    	} else {
+    	header.classList.remove("sticky");
+    	if (container.lenght>0) {container[0].style.marginTop="0px";};
+    	spectral.style.display="none";
+        logodiv[0].style.height="220px";
+    	}
+
+    } 
+    if (screen<=850) {
+
+    	if (window.pageYOffset > 150){
+    		spectral.style.display="block";
+    	} else {
+    		spectral.style.display="none";
+    	}
+    }
+});
+}
+
+
+}
+
+
+
+
+
+ 
+let chemin = window.location.pathname;
+if (chemin.search('NSI')>-1) {
+baniere=document.querySelector("#myHeader");
+
+
+let linkBox = document.createElement('div');
+linkBox.classList.add('linkBox');
+let newH = document.createElement('a');
+newH.innerHTML='<a href="/docs/NSI_1/NSI_index/index.html">NSI</a>';
+
+newH.classList.add('nsi');
+
+linkBox.appendChild(newH);
+baniere.appendChild(linkBox); 
+}
+</script>
+
+<style>
+  #myHeader{
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  #myHeader>.titre{
+    width:80%;
+    min-width:300px;
+    text-align: left;
+
+    
+  }
+  .linkBox{
+    margin:10px;
+    padding-top:10px;
+    background-color: pink;
+    
+    min-width:50px;
+
+  }
+  .isn{
+     
+    
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      
+<nav role="navigation">
+
+<div class="site-menu-before" style="height:220px; display:block;" >
+<img src="/logo-site.svg" id="spectral" height="50%" style="display:none;">	
+
+</div>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fPC_1ere\2fondes\2fpage6\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+<p><a href="/"><strong>Accueil</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/SNT_2nde/SNT_index/"><strong>SNT secondes</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI_1/NSI_index/"><strong>NSI 1ere</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/NSI/NSI_index/"><strong>NSI Term</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_2nde/PC_index/"><strong>Physique Chimie 2nde</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/PC_1ere/PC_index/"><strong>Physique 1ere Spé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/esf/esf_index/"><strong>ESF</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python_D/"><strong>Python debutant</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/python/index_python/"><strong>Python avancé</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/techno/index_microcontroleurs/"><strong>Techno</strong></a></p>
+</li>
+<li>
+<p><a href="/posts/"><strong>Posts</strong></a></p>
+</li>
+<li>
+<p><a href="/docs/contact/simple-contact-form/"><strong>Contact</strong></a></p>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    chemins de la lumière
+  
+</strong>
+</header>
+
+      
+<article class="markdown"><h1 id="rappels-sur-le-chemin-de-la-lumiere">Rappels sur le chemin de la lumiere</h1>
+<h2 id="principe">Principe</h2>
+<p>Le chemin de la lumière, c&rsquo;est le trajet suivi par la lumière entre la source et le recepteur (ou le point d&rsquo;arrivée des rayons).</p>
+<p>La lumière se propage sur ce chemin selon des directions qui vont minimiser son temps de parcours.</p>
+<h2 id="refraction">Refraction</h2>
+<p><strong>Definition:</strong> La <strong>refraction</strong>, c&rsquo;est le changement de direction de la lumière à la traversée de l’interface entre 2 milieux (un dioptre). Ce phénomène est à l’origine d’un effet optique sur la position apparente d’un objet.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="loi-de-descartes">Loi de Descartes</h2>
+<h3 id="enoncé-de-la-loi-de-descartes">Enoncé de la Loi de Descartes:</h3>
+<p>Soit un dioptre séparant deux milieux d’indices de refraction n<!-- raw HTML omitted -->1<!-- raw HTML omitted --> et n<!-- raw HTML omitted -->2<!-- raw HTML omitted -->. Lorsqu’un rayon incident arrive sur le dioptre en un point d’incidence I : si son angle d’incidence est i<!-- raw HTML omitted -->1<!-- raw HTML omitted --> , et son angle de réfraction i<!-- raw HTML omitted -->2<!-- raw HTML omitted --> , alors on a :</p>
+<p>$$n_1 \times sin(i_1) = n_2 \times sin(i_2)$$</p>
+<p><strong>n</strong> est l’<strong>indice de refraction du milieu</strong> : n vaut environ 1,33 pour l&rsquo;eau, aux alentours de 1,5 pour le verre et 2,4 pour le diamant.</p>
+<p><strong>n</strong> représente le coefficient de reduction de la vitesse de la lumère dans le milieu:</p>
+<p>$$n = \tfrac{c}{v}$$</p>
+<p>c: vitesse de la lumière dans le vide<!-- raw HTML omitted -->
+v: vitesse de la lumière dans le mileu d&rsquo;indice n.</p>
+<p><em>En pratique</em> : si les angles i<!-- raw HTML omitted -->1<!-- raw HTML omitted --> et i<!-- raw HTML omitted -->2<!-- raw HTML omitted --> sont différents, alors le rayon est dévié. Sa direction change après la traversée du dioptre.</p>
+<p><em>Attention:</em> Les angles i1 et i2 sont repérés par rapport à la droite (fictive) perpendiculaire au dioptre, en I, le point d&rsquo;incidence.</p>
+<h3 id="exemple">Exemple</h3>
+<p>La situation suivante présente une refraction de l’air (n1 = 1,0) vers le plexiglass (n2 = 1,47). Le rayon est dévié à l’entrée du dioptre plan (voir schéma).</p>
+<p>l’angle i1 du rayon incident vaut 50°.<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->Calculer l’angle de refraction i2 d’après la loi de Descartes.<!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<p><em>Réponse :</em><!-- raw HTML omitted --><br>
+D’après la loi de Descartes :</p>
+<p>$$n_1 \times sin(i_1) = n_2 \times sin(i_2)$$</p>
+<p>Donc:</p>
+<p>$$i_2 = sin^{-1}(\tfrac{n_1}{n_2}\times sin(i_1))$$</p>
+<p>$$i_2 = sin^{-1}(\tfrac{1}{1,47}\times sin (50))$$</p>
+<p>$$i_2 = 31,4°$$</p>
+<h1 id="lentilles-et-correction-du-trajet-de-la-lumière">Lentilles et correction du trajet de la lumière</h1>
+<h2 id="présentation">Présentation</h2>
+<p>Une <strong>lentille</strong> est un objet qui est constitué (la plupart du temps) de verre, et dont la forme est travaillée pour dévier la lumière et donner des images nettes.</p>
+<p>L’image peut avoir une taille apparente différente de celle de l’objet lumineux.</p>
+<p>La lentille est constituée de 2 faces, que l’on appelle « dioptres ». Ces faces peuvent être droites, concaves ou convexes.</p>
+<!-- raw HTML omitted -->
+<p>Ce sont les lois de Descartes, appliquées à la surface de chacun des dioptres, qui déterminent la direction des rayons lumineux à la traversée.</p>
+<h2 id="activité-1-">Activité 1 :</h2>
+<p>Un rayon incident, parallèle à l’axe optique arrive sur un dioptre plan (supporté par la droite dd’). Il pénètre à l’intérieur de ce dioptre SANS être dévié. Il arrive alors au point I.</p>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Va-t-il ressortir du dioptre convexe, selon la direction de la droite:</p>
+</blockquote>
+<blockquote>
+<ul>
+<li>aa'</li>
+</ul>
+</blockquote>
+<ul>
+<li>bb'</li>
+<li>cc'</li>
+<li>dd&rsquo; ?</li>
+</ul>
+<blockquote>
+<p>Compléter le schema suivant avec les termes</p>
+</blockquote>
+<blockquote>
+<ul>
+<li>axe optique</li>
+</ul>
+</blockquote>
+<ul>
+<li>rayon incident</li>
+<li>rayon transmis</li>
+<li>foyer image</li>
+<li>lentille</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="activité-2-">Activité 2 :</h2>
+<p>Les schémas suivants illustrent la trajectoire de certains rayons lumineux passant par des points particuliers de la lentille :</p>
+<!-- raw HTML omitted -->
+<p>Une lentille possède un centre O, et deux points particuliers appelés foyers : un foyer objet F et un foyer image F'
+Travail : compléter :</p>
+<ul>
+<li>les rayons passant par le foyer objet F sortent de la lentille &hellip;</li>
+<li>Les rayons passant  par le centre de la lentille &hellip;</li>
+<li>Les rayons &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; passent par le foyer image à la sortie de la lentille.</li>
+</ul>
+<h2 id="définitions-sur-les-lentilles">Définitions sur les lentilles</h2>
+<h3 id="centre-optique-">Centre optique :</h3>
+<p>le centre optique d’une lentille, noté O sur le schéma qui représente la lentille, est un point pour lequel les rayons ne sont pas déviés.</p>
+<h3 id="le-foyer-principal-image-f">Le foyer principal image F'</h3>
+<p>C&rsquo;est le point de l&rsquo;axe optique ou se rencontrent tous les rayons paralèlles à l&rsquo;axe optique traversant la lentille.</p>
+<h3 id="le-foyer-principal-objet-f">Le foyer principal objet F</h3>
+<p>C&rsquo;est le symetrique de F&rsquo; par rapport à O. Les rayons issus de ce point et qui arrivent sur la lentille, ressortent parallèles à l’axe optique.</p>
+<p>La distance focale f, mesurée en m s&rsquo;exprime par:</p>
+<p>$$f = \overline{OF&rsquo;} = -\overline{OF}$$</p>
+<p>Où $\overline{OF}$ désigne la distance algébrique de O à F sur l’axe optique, comptée positivement si F est à droite de O.</p>
+<h3 id="la-vergence-v">La vergence V</h3>
+<p>V s&rsquo;exprime en dioptrie (δ) et est donnée par:</p>
+<p>$$V = \tfrac{1}{V}$$</p>
+<p>Où f est la distance focale, en m.</p>
+<p>Plus la vergence est forte, plus la lentille est convergente. L’image se formera plus près de la lentille. Et la forme de la lentille sera plus « bombée », plus epaisse au centre.</p>
+<p>Exemple : une lentille de vergence $8\delta$ est moins convergente qu’une lentille de $10\delta$.</p>
+<h2 id="relation-de-conjugaison-voir-aussi-p308-du-livre">Relation de conjugaison (voir aussi p308 du livre)</h2>
+<p>La relation de conjugaison lie les distances :</p>
+<ul>
+<li>de la position de l’objet A au centre optique de la lentille : $\overline{AO}$ , que l’on note <strong>p</strong></li>
+<li>de la lentille O à la position de l’image A’ : $\overline{OA&rsquo;}$  que l’on note <strong>p’</strong></li>
+<li>la distance focale image : $\overline{OF&rsquo;}$ que l’on note <strong>f’</strong></li>
+</ul>
+<p>$$\tfrac{1}{\overline{OA&rsquo;}} - \tfrac{1}{\overline{OA}} = \tfrac{1}{\overline{OF&rsquo;}}$$</p>
+<p>Ou bien:</p>
+<p>$$\tfrac{1}{\overline{p&rsquo;}} - \tfrac{1}{\overline{p}} = \tfrac{1}{\overline{p&rsquo;}}$$</p>
+<p>Ces distances sont algébriques, et doivent être comptées positives vers la droite.</p>
+<p>Voir application de cette loi au bas de la page 309 du livre de 1ere spé, colonne de gauche (cas d’une image réelle)</p>
+<p>On laissera le 2e cas sur l’image virtuelle (colonne de droite) pour l’année prochaine.</p>
+<h2 id="grandissement">Grandissement</h2>
+<p>Le grandissement, noté $\gamma$, est égal au rapport de la dimension de l’image A’B’ par celle de l’objet AB :</p>
+<p>$$\gamma = \tfrac{A&rsquo;B&rsquo;}{AB}$$</p>
+<p>La position A de l’objet va déterminer la position et la dimension de l’image.</p>
+</article>
+
+      
+
+      <div style="height:100px;"></div>
+
+
+
+    </div>
+
+    
+  
+
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#principe">Principe</a></li>
+    <li><a href="#refraction">Refraction</a></li>
+    <li><a href="#loi-de-descartes">Loi de Descartes</a>
+      <ul>
+        <li><a href="#enoncé-de-la-loi-de-descartes">Enoncé de la Loi de Descartes:</a></li>
+        <li><a href="#exemple">Exemple</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#présentation">Présentation</a></li>
+    <li><a href="#activité-1-">Activité 1 :</a></li>
+    <li><a href="#activité-2-">Activité 2 :</a></li>
+    <li><a href="#définitions-sur-les-lentilles">Définitions sur les lentilles</a>
+      <ul>
+        <li><a href="#centre-optique-">Centre optique :</a></li>
+        <li><a href="#le-foyer-principal-image-f">Le foyer principal image F'</a></li>
+        <li><a href="#le-foyer-principal-objet-f">Le foyer principal objet F</a></li>
+        <li><a href="#la-vergence-v">La vergence V</a></li>
+      </ul>
+    </li>
+    <li><a href="#relation-de-conjugaison-voir-aussi-p308-du-livre">Relation de conjugaison (voir aussi p308 du livre)</a></li>
+    <li><a href="#grandissement">Grandissement</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+
+<div class="site_footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="/creative.png" /></a>
+
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Sciences numeriques</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">numerix.netlify.com</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licence Creative Commons Attribution 4.0 International</a>
+
+
+
+</div>
+  
+</body>
+
+</html>
