@@ -21,7 +21,6 @@ La page HTML est un CV (curriculum vitae). <a href="../images/curriculum.zip" do
   * Un lien ***Télécharger mon CV*** mène à un fichier pdf réalisé à partir de la page. (utiliser la fonction d'impression du navigateur => enregistrer le pdf)
 
 
-
 Vous pouvez vous aider des liens suivants:
 
 <ul>
