@@ -2,7 +2,10 @@
 Title : recursivité
 ---
 
-Le cours comprend une [page d'exercices](../page6/) avec un *editeur python online*.
+Le cours comprend:
+
+* une partie 2: <a href="../page22">Suite du cours sur la recursivité</a>
+* une <a href="../page6/">page d'exercices</a> avec un *editeur python online*.
 
 # Récursivité
 ## Principe 
@@ -474,6 +477,68 @@ def exp2(n,x):
 1. Combien de produits sont necessaires pour calculer une puissance n-ième avec la fonction `exp1` ?
 2. Pour la fonction `exp2` : Soit u<sub>n</sub> le nombre de produits nécessaires pour calculer une puissance n-ième. Quelle est la relation de récurrence vérifiée par u<sub>n+1</sub> ? $$u_{n+1} = u_n + ...$$
 3. En déduire la complexité pour ces 2 fonctions.
+
+## Ex 3: dichotomie recursif
+la méthode de dichotomie pour calculer la racine d’une fonction. Soit une fonction f : R → R continue, dont on sait qu’elle a une racine et une seule sur un intervalle [a, b]. On cherche une valeur approchée de cette racine. voir figure ci-dessous 
+
+<figure>
+  <img src="../images/page2/racine.png">
+  <figcaption>principe de la dichotomie</figcaption>
+</figure>
+
+Soit c = (a + b)/2, qui divise l’intervalle initial en deux parties égales. On calcule `f(c)` et on compare son signe à `f(a)` et `f(b)`. La racine est nécessairement dans le sous-intervalle aux bornes duquel la fonction `f` prend deux valeurs de signes opposés (ou éventuellement nulles toutes les deux). On est donc conduit à répéter la recherche sur l’intervalle [a, c], qui est similaire au premier, d’où le caractère récursif de cet algorithme. La récursion doit être stoppée lorsque la valeur `|f (c)|` est inférieure à une tolérance ε que l’on fixe en fonction de la précision souhaitée.
+
+```python
+def dichotomie_recursive(fonction,a,b,epsilon):
+    c = (a+b)*0.5
+    fc = fonction(c)
+    if abs(fc) < epsilon:
+        return c
+    else:
+        if fc*fonction(a) <= 0:
+            return dichotomie_recursive(fonction,a,c,epsilon)
+        else:
+            return dichotomie_recursive(fonction,c,b,epsilon)
+```
+
+On utilise la fonction `dichotomie_recursive` pour la fonction `f(x)`:
+
+```python
+def f(x):
+    return x**2-2.0
+```  
+
+On fait alors: 
+
+```python
+> dichotomie_recursive(f,0.0,2.0,1e-3))
+1.4140625
+```
+
+1. Interpreter le résultat obtenu.
+2. Que valent chacun des paramètres de la fonction lors du premier appel avec `dichotomie_recursive(f,0.0,2.0,1e-3))` ?
+3. Que valent chacun des paramètres lors du premier appel recursif par cette fonction?
+4. A quel moment cette fonction va-t-elle finir?
+5. **Prouver la terminaison de cette fonction.**
+6. Soit un tableau contenant des nombres entiers triés par ordre croissant :
+
+```
+import numpy.random
+import numpy
+N = 50
+L = numpy.random.randint(0,200,N)
+L = numpy.sort(L)
+```
+
+Écrire une fonction qui permet d’insérer un nombre entier x dans cette liste. La recherche de l’emplacement d’insertion doit se faire par dichotomie. Pour faire l’insertion juste avant l’élément d’indice i :
+
+```
+L1 = numpy.insert(L,i,x)
+```
+
+Cela renvoie un nouveau tableau avec l’élément inséré.
+
+
 
 # Autres exercices avec editeur online
 [Lien vers la page des exercices](../page6/)
