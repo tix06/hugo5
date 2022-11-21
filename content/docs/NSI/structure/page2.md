@@ -285,7 +285,7 @@ La liste L contient les caractères de l'expression POSTFIXE à calculer.
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f9d305edd765&mode=code"></iframe>
 
 ## Exercice 5: Reduction d'une chaine de caractères
-Enoncé à la <a href="../page22/">page suivante</a>
+Enoncé à la <a href="/docs/nsi/structure/page22/index.html">page suivante</a>
 
 
 # Correction des exercices
