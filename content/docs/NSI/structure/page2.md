@@ -3,7 +3,10 @@ Title : structures lineaires
 ---
 
 *Prérequis*: Cours sur les{{< a link="/docs/NSI/structure/page1/" caption="types abstraits" >}}
-* Ce cours sur les structures lineaires se prolonge à la{{< a link="../page21/" caption="page 2 avec: Listes et Files" >}}* Ce cours peut necessiter quelques connaissances en{{< a link="/docs/NSI/structure/page3/" caption="Programmation orientée objets" >}}
+
+* Ce cours sur les structures lineaires se prolonge à la{{< a link="../page21/" caption="page 2 avec: Listes et Files" >}}
+* Ce cours peut necessiter quelques connaissances en{{< a link="/docs/NSI/structure/page3/" caption="Programmation orientée objets" >}}
+
 # Structure linéaire : La Pile
 ## Les structures de données
 <p class="definition">Definition: Une <b>structure de données</b> est une manière de stocker, d’accéder à, et de manipuler des données (comme les types list ou dict de Python).</p>
@@ -150,6 +153,7 @@ La pile d'instruction doit être la même.
 
 Voir le cours sur la [recursivité](/docs/NSI/langages/page2/)
 
+<!--
 # Résumé
 
 <div class="essentiel">
@@ -185,7 +189,7 @@ Voir le cours sur la [recursivité](/docs/NSI/langages/page2/)
 
  </div>
 </div>
-
+-->
 
 # Exercices sur les piles
 ## Exercice 1 : implementer une pile
@@ -195,7 +199,9 @@ Voir le cours sur la [recursivité](/docs/NSI/langages/page2/)
 * Parcourir les éléments de la liste L avec une boucle bornée
   * empiler tous les nombres entiers dans une pile `p`.
 
-<iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f9d36caf37c6&mode=code"></iframe>
+<!--<iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f9d36caf37c6&mode=code"></iframe>-->
+
+{{< vitta 5f9d36caf37c >}} 
 
 ## Exercice 2 : lever des exceptions
 Certaines des fonctions que vous avez écrites vont lever des exceptions dans le cas où la pile est vide.
@@ -244,6 +250,8 @@ La liste L contient les caractères de l'expression POSTFIXE à calculer.
 * retourner la valeur finale stockée dans `p`
 
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f9d305edd765&mode=code"></iframe>
+
+{{< vitta 5f9d305edd765 >}}
 
 ## Exercice 5: Reduction d'une chaine de caractères
 Enoncé à la{{< a link="/docs/NSI/structure/page22/" caption="page suivante" >}}

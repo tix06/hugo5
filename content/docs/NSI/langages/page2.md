@@ -4,7 +4,9 @@ Title : recursivité
 
 Le cours comprend:
 
-* une partie 2:{{< a link="../page22" caption="Suite du cours sur la recursivité" >}}* une{{< a link="../page6/" caption="page d'exercices" >}}
+* une partie 2:{{< a link="../page22" caption="Suite du cours sur la recursivité" >}}
+* une{{< a link="../page6/" caption="page d'exercices" >}}
+
 # Récursivité
 ## Principe 
 Un algorithme récursif est un algorithme qui fait appel à lui-même dans le corps de sa propre définition. Ce principe est aussi appelé : *de l'autoréférence*. 

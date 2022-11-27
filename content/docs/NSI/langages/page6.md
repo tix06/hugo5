@@ -1,5 +1,6 @@
 ---
 Title: exercices sur la recursivité
+bookShowToc: false
 ---
 
 [RETOUR au cours sur la recursivité](../page2/)
@@ -13,6 +14,8 @@ La condition de base est que N == 1 au bout d'un certain nombre d'appels.
 > Completez le script de cette fonction. 
 
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f87256293a25&mode=code"></iframe>
+
+{{< vitta 5f87256293a25 >}}
 
 # Ex 2: Suite de Fibonacci
 On définit la suite (f<sub>n</sub>) des nombres de Fibonacci par :
@@ -35,6 +38,8 @@ def fibo(n):
 
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f8726ff0f497&mode=code"></iframe>
 
+{{< vitta 5f8726ff0f497 >}}
+
 # Ex 3: Les tours de Hanoï
 Le problème des tours de Hanoi est présenté en détails dans le cours sur la recursivité [ici](/docs/NSI/langages/page2/#application-les-tours-de-hanoï)
 
@@ -43,6 +48,8 @@ Le problème des tours de Hanoi est présenté en détails dans le cours sur la 
 2. Tester egalement avec 4 disques. Noter chaque fois le nombre de deplacements effectués.
 
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f8727ed29a8a&mode=code"></iframe>
+
+{{< vitta 5f8727ed29a8a >}}
 
 *3.* Proposez une loi de recurence entre le nombre de déplacements T(N) pour N disques, et le nombre de déplacements T(N-1) pour N-1 disques.
 
@@ -59,6 +66,8 @@ il s'agit d'écrire une fonction recursive nombre_r(lettre, phrase) qui renvoit 
 > Compléter le script et testez votre fonction avec, par exemple les arguments: `u` et `lustucru`.
 
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f872924a7977&mode=code"></iframe>
+
+{{< vitta 5f872924a7977 >}}
 
 # Ex 5: Retournement d'une liste
 La fonction suivante realise un retournement d'une chaine de caractères:
@@ -130,7 +139,7 @@ Le milieu est constitué de la chaine retournée par l'appel recursif de la fonc
 
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=63677ac691291&mode=code"></iframe>
 
-
+{{< vitta 63677ac691291 >}}
 
 [RETOUR au cours sur la recursivité](../page2/)
 # Ressources
