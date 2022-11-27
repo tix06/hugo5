@@ -27,11 +27,7 @@ Ces états sont résumés ci-dessous.
 * Le passage de l'état *prêt* vers l'état *élu* constitue l'opération *d'élection*.
 * Un processus ne pourra *terminer* que s’il est déjà dans l’état *élu*. 
 
-<figure>
-  <img src="../images/election.png">
-  <figcaption>mecanisme d'election</figcaption>
-</figure>
-
+{{< img src="../images/election.png" caption="mecanisme d'election" >}}
 Un processus peut créer un ou plusieurs nouveaux processus. Il y a alors une filiation père-fils.
 
 Chaque processus possède un numéro **PID** qui lui est attribué automatiquement. Il possède aussi un **PPID** qui est le numéro d'identification du processus père.
@@ -44,11 +40,7 @@ Plusieurs processus peuvent être dans l'état prêt: comment choisir celui qui 
 
 Dans les systèmes d'exploitation, l’ordonnanceur désigne le composant du noyau du *système d'exploitation* choisissant l'ordre d'exécution des processus sur les processeurs d'un ordinateur. Cette organisation permet d'occuper au mieux le (ou les) processeurs.
 
-<figure>
-  <img src="../images/ordonnancement.jpg">
-  <figcaption>gestion des processus</figcaption>
-</figure>
-
+{{< img src="../images/ordonnancement.jpg" caption="gestion des processus" >}}
 
 Il existe plusieurs politiques d’ordonnancement dont le choix va dépendre des  objectifs du système. Voici quelques exemples:  
 
@@ -91,11 +83,7 @@ Il y a interblocage lorsque des cycles sont présents dans le graphe réalisé d
 * un arc Pj vers Ri signifie que le processus Pj demande la ressource Ri.
 
  
- <figure>
-  <img src="../images/interblocage.png">
-  <figcaption>interblocage - wikipedia</figcaption>
-</figure>
-
+{{< img src="../images/interblocage.png" caption="interblocage - wikipedia" >}}{{< img src="../images/ordonnancement.jpg" caption="gestion des processus" >}}
 # TP en console (UNIX) ou avec l'editeur de commandes (WIN)
 ## La commande `ps`
 Pour la liste des processus obtenue par `ps`

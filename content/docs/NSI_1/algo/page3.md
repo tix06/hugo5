@@ -7,23 +7,13 @@ Le problème du rendu de monnaie est un problème d'algorithmique. Il s'énonce 
 
 Par exemple, la meilleure façon de rendre 7 euros est de rendre un billet de cinq et une pièce de deux, même si d'autres façons existent (rendre 7 pièces de un euro, par exemple).
 
-<figure>
-  <img src="../images/caisse.png" width="350px" alt="caisse rendu monnaie">
-  <figcaption>Image by <a href="https://pixabay.com/users/conmongt-1226108/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2048569">Christian Dorn</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2048569">Pixabay</a></figcaption></a>
-</figure>
-
+{{< img src="../images/caisse.png" alt="caisse rendu monnaie" link="https://pixabay.com/users/conmongt-1226108/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2048569" caption="Image by " >}}
 ## algorithme naif
 Une première idée, naïve serait de commencer par rendre la piece de plus grande valeur, puis sur la somme restante, la pièce un peu moins grande, et ainsi de suite.
 
 > **S'entrainer à rendre la monnaie de manière optimale:**
 
-<figure>
-<a href="https://maths-au-quotidien.fr/college/caissiere.php" target=_blank>
-<img src="../images/rendu_monnaie.png">
-<figcaption>Cliquer pour lancer l'animation</figcaption>
-</a>
-</figure>
-
+{{< img src="../images/rendu_monnaie.png" link="https://maths-au-quotidien.fr/college/caissiere.php" caption="Cliquer pour lancer l'animation" >}}
 ## Programmation Python
 Pour une `somme` à rendre, et un systeme de monnaie appelé `caisse`, contenant par exemple la liste`[20, 10, 5, 1]`:
 
@@ -37,8 +27,7 @@ tant que la somme a rendre est > 0:
   sinon:
     changer de piece
 ```
-On utilisera le notebook <i>TP5/rendu_monnaie_NSI1.ipynb</i> sur <a href="https://tix06.github.io/jupyterlite_NSI/lab/index.html" target="_blank">Jupyterlite</a>
-
+On utilisera le notebook <i>TP5/rendu_monnaie_NSI1.ipynb</i> sur{{< a link="https://tix06.github.io/jupyterlite_NSI/lab/index.html" caption="TP5/rendu_monnaie_NSI1.ipynb" >}}
 ## Amélioration de la méthode
 Quelques essais avec le script précédent montrent que le rendu n'est pas toujours optimal. Il faut envisager d'**autres possibilités** de rendre la monnaie. 
 
@@ -48,8 +37,7 @@ On créé alors une combinaison de caisses, par permutation des pieces. On teste
 
 Le rendu avec une piece se fait comme dans la méthode précédente: On rend autant de pieces possibles pour une valeur de piece donnée. *Par exemple, pour rendre 16 euros avec une piece de 5, on rend 3 pieces*.
 
-On utilisera le notebook <i>TP5/rendu_monnaie_NSI1.ipynb</i> sur <a href="https://tix06.github.io/jupyterlite_NSI/lab/index.html" target="_blank">Jupyterlite</a>
-
+On utilisera le notebook <i>TP5/rendu_monnaie_NSI1.ipynb</i> sur{{< a link="https://tix06.github.io/jupyterlite_NSI/lab/index.html" caption="TP5/rendu_monnaie_NSI1.ipynb" >}}
 ## Questions
 1. Parfois la solution est impossible à trouver, il n'y a pas de rendu possible avec la caisse considérée: V / F
 2. La solution dépend de l'ordre des pieces dans la caisse: V / F

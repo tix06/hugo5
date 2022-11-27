@@ -64,11 +64,7 @@ La liste chainée L contient 2 éléments `(tete, queue)` et `queue` est elle-m�
 
 On utilisera par exemple une liste chainée lorsqu'il y a une filiation, une chronologie entre les éléments.
 
-<figure>
-  <img src="../images/history.png">
-  <figcaption>L'historique permet au navigateur de<br> remonter le fil de la navigation</figcaption>
-</figure>
-
+{{< img src="../images/history.png" caption="L'historique permet au navigateur de" >}}
 ## L'interface d'une liste chainée
 L'*interface* fournit certaines fonctions.
 
@@ -113,18 +109,10 @@ T = ([6, 7, 8, None, None], 5)
 
 Un tableau peut servir à implémenter une grille de notes par exemple:
 
-<figure>
-  <img src="../images/array.png">
-  <figcaption>Tableau de notes</figcaption>
-</figure>
-
+{{< img src="../images/array.png" caption="Tableau de notes" >}}
 Supposons, pour simplifier, que le tableau ne contient que les notes de Kyle:
 
-<figure>
-  <img src="../images/array2.png">
-  <figcaption>Tableau des notes de Kyle</figcaption>
-</figure>
-
+{{< img src="../images/array2.png" caption="Tableau des notes de Kyle" >}}
 On peut représenter cet ensemble de notes par le tableau:
 
 ```python

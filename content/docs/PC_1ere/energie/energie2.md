@@ -41,11 +41,7 @@ L'électrique est produite sous forme d'une tension triphasée de fréquence et 
 
 *Expérience : produire de l’électricité à l’aide d’une dynamo :* 
 
-<figure>
-<img src="../images/induction.png" width = 80% alt="induction bobine-aimant">
-<figcaption>induction bobine-aimant</figcaption>
-</figure>
-
+{{< img src="../images/induction.png" alt="induction bobine-aimant" caption="induction bobine-aimant" >}}
 *Principe d’induction :* Lorsqu’un aimant tourne à proximité d’une bobine, de l’électricité est produite par un phénomène d'induction à cause du mouvement relatif aimant - bobine (alternateur ou dynamo).
 C’est le mouvement relatif entre un aimant et un conducteur sous forme de bobine (enroulement) qui permet de créer de l’électricité : **c’est le principe d’induction.**
 
@@ -98,11 +94,7 @@ Ces piles peuvent être développées pour les automobiles lorsque le proble�
 
 
 
-<figure>
-<img src="../images/pileH.png" width = 40% alt="pile à hydrogène">
-<figcaption>pile à hydrogène</figcaption>
-</figure>
-
+{{< img src="../images/pileH.png" alt="pile à hydrogène" caption="pile à hydrogène" >}}
 
 # transporter l'électricité
 
@@ -114,11 +106,7 @@ Sa distribution nécessite un réseau de câblage très complet et complexe 
 De même que le couplage aimant-bobine produit de l'électricité, une bobine est capable de produire un champs magnétique lorsqu'elle est parcourue par un courant (inducteur). On peut faire rentrer ce champs dans une deuxième bobine, ce qui produira une tension induite. Ceci est utilisé dans les transformateurs : 
 
 
-<figure>
-<img src="../images/transformateur.png" width = 80% alt="transformateur">
-<figcaption>transformateur</figcaption>
-</figure>
-
+{{< img src="../images/transformateur.png" alt="transformateur" caption="transformateur" >}}
 Un transformateur permet d’élever ou abaisser la tension. La puissance électrique est conservée au cours de la conversion. Le transport sous THT permet de limiter les pertes énergétiques.
 
 **Structure du réseau de distribution électrique :**
@@ -133,11 +121,7 @@ En fin de parcours, elle est abaissée par le poste de transformation en une ten
 
 
 
-<figure>
-<img src="../images/distribution.png" width = 100% alt="schéma d'un réseau de distribution">
-<figcaption></figcaption>
-</figure>
-
+{{< img src="../images/distribution.png" alt="schéma d" caption="" >}}
 La production et le transport de l'électricité se fait en triphasé : Cela présente plusieurs avantages: 
 - la conception des machines électriques (alternateurs et moteurs) se fait avec des enroulements triphasés ce qui présente, entre autre, le meilleur rendement "poids - puissance". 
 - le démarrage des moteurs triphasés se fait naturellement.
@@ -147,11 +131,7 @@ Chaque fil électrique transporte l'une des phases du signal. Ces signaux sont i
 Une quatrième ligne électrique sert de *neutre (voir paragraphe sur la sécurité électrique)*.
 
 
-<figure>
-<img src="../images/triphase.png" width = 80% alt="signal triphasé">
-<figcaption>signal triphasé</figcaption>
-</figure>
-
+{{< img src="../images/triphase.png" alt="signal triphasé" caption="signal triphasé" >}}
 # Testez vous : QCM
 * (EnE-QCM1) L'énergie électrique peut servir à fournir de l'énergie : 
 mécanique, chimique, rayonnée, thermique, nucléaire ?

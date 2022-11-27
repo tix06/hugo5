@@ -18,20 +18,10 @@ Les symboles des chiffres nous sont ainsi intuitifs, mais, dans l'idée d'une co
 
 Cet [article du site automaths](https://automathssite.wordpress.com/2017/08/18/savez-vous-compter-les-choux-a-la-mode-de-peano/) détaille ainsi la construction de l'ensemble des entiers naturels par des axiomes.
 
-<figure>
-    <img src="../images/page7/naturels.png">
-    <figcaption>Comment sont placés les successeurs pour <br>les entiers naturels?</figcaption>
-</figure>
-
+{{< img src="../images/page7/naturels.png" caption="Comment sont placés les successeurs pour " >}}
 [Giuseppe Peano](https://fr.wikipedia.org/wiki/Giuseppe_Peano) (1858-1932) est un mathématicien et linguiste italien. Il a repertorié les caractéristiques structurelles des nombres naturels dans une liste d'**axiomes** énoncés dans la symbolique logique. Aujourd'hui, ces axiomes constituant le langage mathématique traitent tous les signes mathématiques et logiques, et jouent un rôle analogue à celui de la grammatisation dans les langues naturelles.
 
-<figure>
-  <a href="https://fr.wikipedia.org/wiki/Giuseppe_Peano">
-    <img src="../images/page7/peano.jpeg">
-    <figcaption>Giuseppe Peano (1858-1932) <br>mathématicien et linguiste italien</figcaption>
-  </a>
-</figure>
-
+{{< img src="../images/page7/peano.jpeg" link="https://fr.wikipedia.org/wiki/Giuseppe_Peano" caption="Giuseppe Peano (1858-1932) " >}}
 Une fois établie la construction de l’ensemble des entiers naturels selon Peano, nous allons nous intéresser aux axiomes définissant les symboles + et =.
 
 ## l'égalité, ou l'identité =
@@ -47,13 +37,7 @@ On y lira que **0 + 1 = 1** est l'un des axiomes définissant l'addition, et s'�
 
 $$0 + S_0 = S_0$$ 
 
-<figure>
-    <img src="../images/page7/addition.png">
-    <a href="https://automathssite.wordpress.com/2017/10/13/quest-ce-que-ca-veut-dire-additionner/">
-    <figcaption>L'addition: la réunion de 2 ensembles</figcaption>
-  </a>
-</figure>
-
+{{< img src="../images/page7/addition.png" link="https://automathssite.wordpress.com/2017/10/13/quest-ce-que-ca-veut-dire-additionner/" caption="L'addition: la réunion de 2 ensembles" >}}
 
 
 ## **Questions**
@@ -87,17 +71,11 @@ Aujourd'hui, ces axiomes constituant le langage mathématique traitent tous les 
 
 **Conjecture**:  proposition que l’on suppose vraie sans parvenir à la démontrer. (et qu'il est peut être impossible de démontrer).
 
-Voici la liste des <a href="https://fr.wikipedia.org/wiki/Probl%C3%A8mes_non_r%C3%A9solus_en_math%C3%A9matiques">plus célèbres conjectures</a> qu'il reste encore à démontrer. 
-
-Pour exemple, la <a href="https://fr.wikipedia.org/wiki/Conjecture_de_Goldbach">conjecture de Goldbach</a> s'énonce ainsi:
-
+Voici la liste des{{< a link="https://fr.wikipedia.org/wiki/Probl%C3%A8mes_non_r%C3%A9solus_en_math%C3%A9matiques" caption="plus célèbres conjectures" >}}
+Pour exemple, la{{< a link="https://fr.wikipedia.org/wiki/Conjecture_de_Goldbach" caption="conjecture de Goldbach" >}}
 > Tout nombre entier pair supérieur à 3 peut s’écrire comme la somme de deux nombres premiers.
 
-<figure>
-  <img src="../images/page7/goldbach.png">
-  <a href="https://fr.wikipedia.org/wiki/Conjecture_de_Goldbach"><figcaption>Illustration de la<br>conjecture de Goldbach</figcaption></a>
-</figure>
-
+{{< img src="../images/page7/goldbach.png" link="https://fr.wikipedia.org/wiki/Conjecture_de_Goldbach" caption="Illustration de la" >}}
 # Calcul propositionnel
 On va avoir besoin d'ajouter aux ensembles de nombres un nouvel ensemble particulier: un ensemble contenant 2 éléments contenant les valeurs de verité *vrai / faux*. Cela nous permettra de produire des démonstrations, et ainsi de prouver des propositions.
 

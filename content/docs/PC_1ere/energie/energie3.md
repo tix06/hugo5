@@ -3,8 +3,7 @@ Title : grandeurs electriques
 
 ---
 
-Ce cours est en lien avec la <a href="/pdf/PC_1/elec_carte_mentale.pdf" target=_blank>carte mentale à compléter.</a>
-
+Ce cours est en lien avec la{{< a link="/pdf/PC_1/elec_carte_mentale.pdf" caption="carte mentale à compléter." >}}
 # les grandeurs et les lois de l'électricité
 ## Grandeurs U, I, R, P
 *(Rappel) C'est quoi l'électricité?* : L'électricité, ou l'*énergie électrique* désigne le déplacement de porteurs de charges, qui permet d'assurer diverses applications utilisant des *circuits électriques* par conversion de cette énergie : en mouvement, en chaleur, en lumière ou autre. 
@@ -124,11 +123,7 @@ Deux points d'un circuit électrique reliés par un conducteur idéal sont au m�
 Si l'on branche un voltmètre entre ces 2 points, la différence de potentiel est alors nulle. C'est le cas si ces 2 points sont séparés par un fil électrique ou un interrupteur fermé : 
 
 
-<figure>
-<img src="../images/mesuretension.jpeg" width = 80% alt="schéma branchement voltmètre">
-<figcaption>schémas du branchement du voltmètre</figcaption>
-</figure>
-
+{{< img src="../images/mesuretension.jpeg" alt="schéma branchement voltmètre" caption="schémas du branchement du voltmètre" >}}
 Par contre, la tension aux bornes d'un interrupteur ouvert est égale à la tension aux bornes du générateur (circuit simple) ou à la tension aux bornes de la branche dans laquelle il est placé.
 
 ![circuit](../images/circuit5.gif)

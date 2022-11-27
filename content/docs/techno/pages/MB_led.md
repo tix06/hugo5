@@ -15,20 +15,8 @@ Il faudra utiliser les connecteurs avec fils de couleur sur prise grove:
 * Noir: GND : relier à la resistance 1k
 * Rouge (3V fixe) et Blanc: non utilisés
 
-<figure>
-  <div>
-<img src="../images/led_pin.png">
-<figcaption>circuit avec LED et Resistance</figcaption>
-</div>
-</figure>
-
-<figure>
-  <div>
-<img src="../images/MB_led.JPG">
-<figcaption>montage complet</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/led_pin.png" caption="circuit avec LED et Resistance" >}}
+{{< img src="../images/MB_led.JPG" caption="montage complet" >}}
 
 ## Matériel
 

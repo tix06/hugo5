@@ -3,8 +3,7 @@ Title: Tkinter les bases
 ---
 
 # Tkinter les bases
-* télécharger le dossier zip: <a href="/scripts/Tkinter/tuto_tkinter.zip" dowload="tuto_tkinter.zip">tuto_tkinter.zip</a>
-* le placer dans vos *Documents*
+* télécharger le dossier zip:{{< a link="/scripts/Tkinter/tuto_tkinter.zip" caption="tuto_tkinter.zip" >}}* le placer dans vos *Documents*
 * Extraire tout
 * Ouvrir le fichier *main.py* avec un IDE Python de la suite Winpython
 
@@ -137,10 +136,7 @@ On utilise la méthode: `.create_rectangle(X0, Y0, X1, Y1)`<br>
 X, Y sont les coordonnées du coin supérieur gauche du carré.<br>
 Il peut y avoir des paramètres optionnels.
 
-<figure>
-  <img src="../images/tkinter_rect.png">
-</figure>
-
+{{< img src="../images/tkinter_rect.png" >}}
 *Exemple: pour dessiner un carré de côté r dans le canvas:*
 
 ```python 
@@ -150,18 +146,11 @@ can1.create_rectangle(X, Y, X + r, Y + r, outline='black', fill=couleur)
 **Dessiner un cercle:**<br>
 On utilise la méthode: `.create_oval(x-r, y-r, x+r, y+r)` 
 
-<figure>
-  <img src="../images/tkinter_oval.png">
-</figure>
-
+{{< img src="../images/tkinter_oval.png" >}}
 **Dessiner une ligne:**<br>
 On utilise la méthode: `.create_line(x0, y0, x1, y1)` 
 
-<figure>
-  <img src="../images/pendu.png">
-  <figcaption>Exemple: le jeu du pendu</figcaption>
-</figure>
-
+{{< img src="../images/pendu.png" caption="Exemple: le jeu du pendu" >}}
 # Evenements
 ## Gestion d'un clic de souris dans le canvas
 Pour ajouter un écouteur de clic dans le canvas, il faut ajouter dans le bloc principal (après avoir créé l'objet `fen1` et `can1`:

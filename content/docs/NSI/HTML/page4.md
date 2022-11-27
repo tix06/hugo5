@@ -30,13 +30,8 @@ Il est souhaitable que ces liens se situent dans le bandeau de navigation, comme
 
 Par exemple, pour la page 1:
 
-<figure>
-  <img src="../images/form.png">
-  <figcaption>Exemple de page avec formulaire</figcaption>
-</figure>
-
-Commencer par intégrer le squelette HTML pour chacune des pages comme vu en cours: <a href="/docs/NSI/HTML/page3/#le-html-et-la-page-web">Lien</a>
-
+{{< img src="../images/form.png" caption="Exemple de page avec formulaire" >}}
+Commencer par intégrer le squelette HTML pour chacune des pages comme vu en cours:{{< a link="/docs/NSI/HTML/page3/#le-html-et-la-page-web" caption="Lien" >}}
 # Page avec formulaire
 Pour la mise en forme de la page, il est fortement suggéré de lire:
 

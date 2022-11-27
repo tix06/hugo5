@@ -11,35 +11,14 @@ Les besoins croissants posent des problèmes de durabilité importants et
 l’économie des ressources énergétiques devient un problème crucial afin de
 maintenir de façon durable et écologique la persistance de notre monde.
 
-<a href="/pdf/PC_1/enea-lacces_a_lenergiepages3-4.pdf">
-<figure>
-  <img src="../images/enea1.png">
-  <figcaption>Dossier:<br> le problème de l'accès à l'energie</figcaption>
-</figure>
-</a>
-
-<figure>
-  <img src="../images/enea2.png">
-  <figcaption>La problématique de l'énergie</figcaption></a>
-</figure>
-
+{{< img src="../images/enea1.png" caption="Dossier:" >}}
+{{< img src="../images/enea2.png" caption="La problématique de l'énergie" >}}
 A ces trois besoins s'ajoute celui de la *sécurité* de la production d'énergie: *Comment faire pour éviter que la demande ne soit supérieure à la production?* 
 
-<a href="https://www.planetoscope.com/Source-d-energie/951-.html">
-<figure>
-  <img src="../images/enea3.png">
-  <figcaption>Consommation en France: Energie primaire</figcaption>
-</figure>
-</a>
-
+{{< img src="../images/enea3.png" caption="Consommation en France: Energie primaire" >}}
 $$1~tep = 11 628~kWh$$ 
 
-<a href="https://youtu.be/p4pDKIEymqg?t=432" target=_blank>
-<figure>
-  <img src="../images/enea4.png">
-<figcaption>Transition énergétique de A à Z: Daniel Suchet</figcaption>
-</figure></a>
-
+{{< img src="../images/enea4.png" caption="Transition énergétique de A à Z: Daniel Suchet" >}}
 # Définitions de l'énergie
 **[Definition - wikipedia](https://fr.wikipedia.org/wiki/%C3%89nergie)**<br>
 L'énergie désigne une capacité à modifier un état ou à produire un travail entraînant un [mouvement](https://www.futura-sciences.com/sciences/definitions/physique-mouvement-316/) ou générant un [rayonnement électromagnétique](https://www.futura-sciences.com/sciences/questions-reponses/matiere-chaleur-rayonnement-infrarouge-1780/) - de la [lumière](https://www.futura-sciences.com/sciences/definitions/physique-lumiere-326/), par exemple - ou de la [chaleur](https://www.futura-sciences.com/sciences/definitions/physique-chaleur-15898/). Le mot vient d'ailleurs du grec et signifie « force en action ».
@@ -149,21 +128,11 @@ $$E = Q_1 + Q_2$$
 
 
 
-<figure>
-  <div>
-<img src="../images/img-diagrammeE.png" width = 80% alt="elements diagramme">
-<figcaption>Exemple de diagramme d'énergie</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/img-diagrammeE.png" alt="elements diagramme" caption="Exemple de diagramme d'énergie" >}}
 *On utilisera dans la suite du cours, une représentation des chaines énergétiques avec les symboles suivants :* 
 
 
-<figure>
-<img src="../images/elements diagramme.png" width = 80% alt="elements diagramme">
-<figcaption>symboles utilisés pour les diagrammes d'énergie</figcaption>
-</figure>
-
+{{< img src="../images/elements diagramme.png" alt="elements diagramme" caption="symboles utilisés pour les diagrammes d'énergie" >}}
 ### rendement d'une  conversion
 
 Le rendement détermine quelle part de l'énergie (ou de la puissance) apportée est utilisée pour le fonctionnement attendu de l'appareil. On la définit avec la relation : 
@@ -192,8 +161,7 @@ Il peut y avoir plusieurs conversions de l'énergie avant qu'elle ne soit dispon
   * **énergie éolienne** (vent), 
   * **énergie solaire (soleil)**, 
   * **énergie hydraulique**, 
-  * **énergie géothermique** (une énergie issue de la radioactivité naturelle de la croute terrestre: <a href="https://www.laradioactivite.com/site/pages/ChaleurTerre.htm">Docu</a>, 
-  * **énergie des combustibles fossiles** (pétrole, charbon gaz) et **nucléaires**, et **énergie biomasse**. ;
+  * **énergie géothermique** (une énergie issue de la radioactivité naturelle de la croute terrestre:{{< a link="https://www.laradioactivite.com/site/pages/ChaleurTerre.htm" caption="Docu" >}}  * **énergie des combustibles fossiles** (pétrole, charbon gaz) et **nucléaires**, et **énergie biomasse**. ;
   
 - [énergie secondaire](https://www.futura-sciences.com/planete/definitions/energie-renouvelable-energie-secondaire-6936/) : Lorsqu’une énergie primaire n’est pas utilisable directement, elle peut être transformée en une source d’énergie secondaire, qui elle pourra être utilisée directement. C’est donc l’**énergie issue de la conversion d’une énergie primaire**. (l'énergie électrique, par exemple) ;
 - énergie utile : l'énergie secondaire peut encore subir des transformations. L'énergie utile, c'est celle qui rend réellement service à l'utilisateur (la lumière issue d'une lampe, chaleur fournie par un radiateur ou un four, ...etc)
@@ -204,11 +172,7 @@ Il peut y avoir plusieurs conversions de l'énergie avant qu'elle ne soit dispon
 
 
 
-<figure>
-<img src="../images/en-edf-origine-electricite-3_2016_vf.png" width = 80% alt="diagramme production electricité">
-<figcaption>diagramme circulaire de production d'éléctricité en 2016</figcaption>
-</figure>
-
+{{< img src="../images/en-edf-origine-electricite-3_2016_vf.png" alt="diagramme production electricité" caption="diagramme circulaire de production d'éléctricité en 2016" >}}
 # Etude de cas
 
 Dans les exemples suivants, on s'intéressera à la forme d'énergie primaire, aux conversions et au formes de transport de cette énergie, ainsi qu'aux formes d'énergies associées. On donnera aussi la nature de l'énergie secondaire produite.
@@ -225,11 +189,7 @@ La production d’hydroélectricité ne génère ni gaz à effet de serre, ni d�
 *Inconvénient :* Les barrages modifent le paysage et le cours des rivières, ils représentent un obstacle à la navigation et à la circulation des poissons.
 
 
-<figure>
-<img src="../images/barage hydrolique.png" width = 80% alt="barage hydrolique">
-<figcaption>document issu du site www.japrends-lenergie.fr</figcaption>
-</figure>
-
+{{< img src="../images/barage hydrolique.png" alt="barage hydrolique" caption="document issu du site www.japrends-lenergie.fr" >}}
 
 1. Le reservoir d'eau, en hauteur, constitue un reservoir d'énergie potentielle (mécanique)
 2. barrage : retenue de l'eau
@@ -242,11 +202,7 @@ La production d’hydroélectricité ne génère ni gaz à effet de serre, ni d�
 
 L'énergie électrique d'origine hydraulique représente une part de 4,5% des sources primaires. L'**énergie primaire** est l'**énergie hydraulique**. La forme de l'énergie est l'énergie **mécanique** (**potentielle**). L'eau est transportée jusqu'en bas du barrage dans une conduite : c'est le **canal de transport** de l'énergie mécanique de l'eau. En sortie, l'énergie mécanique de l'eau est de forme **cinétique**. L'organe essentiel de la conversion mécanique => électricité est l'ensemble turbine + alternateur. L'**énergie secondaire** produite est de l'**énergie électrique**. Cette énergie est alors transportée dans un nouveau canal de transport : à travers les **lignes électriques**.
 
-<figure>
-<img src="../images/diagramme hydraulique.png" width = 80% alt="diagramme hydraulique.png">
-<figcaption>diagramme hydraulique</figcaption>
-</figure>
-
+{{< img src="../images/diagramme hydraulique.png" alt="diagramme hydraulique.png" caption="diagramme hydraulique" >}}
 *Remarque : L'eau est souvent utilisée comme canal de transport de l'énergie dans les centrales. C'est un fluide ayant une forte capacité thermique, capable d'emmagasiner beaucoup d'énergie sous forme thermique.*
 
 compléments sur l'énergie hydraulique : [connaissancedesenergie.org](https://www.connaissancedesenergies.org/fiche-pedagogique/hydroelectricite)
@@ -257,33 +213,21 @@ compléments sur l'énergie hydraulique : [connaissancedesenergie.org](https://w
 
 
 
-<figure>
-<img src="../images/reacteurs.jpg" width = 80% alt="centrale Graveline">
-<figcaption>ensemble des 6 reacteurs de la centrale de Graveline_creditsMAYEUX-LAURENT</figcaption>
-</figure>
-
+{{< img src="../images/reacteurs.jpg" alt="centrale Graveline" caption="ensemble des 6 reacteurs de la centrale de Graveline_creditsMAYEUX-LAURENT" >}}
 ### Dossier sur la production d'énergie par méthanisation :
 
 [Essor de la méthanisation, où l'on produit du biogaz](https://sciencepop.fr/2018/10/17/methanisation/)
 
 
 
-<figure>
-<img src="../images/1024px-Unit__de_m_thanisation_au_Garrit_Haut.jpg" width = 80% alt="unité de methanisation">
-<figcaption>unité de méthanisation</figcaption>
-</figure>
-
+{{< img src="../images/1024px-Unit__de_m_thanisation_au_Garrit_Haut.jpg" alt="unité de methanisation" caption="unité de méthanisation" >}}
 ### Dossier sur le photovoltaïque :
 
 [fonctionnement d'une centrale photovoltaïque](https://www.edf.fr/groupe-edf/espaces-dedies/l-energie-de-a-a-z/tout-sur-l-energie/produire-de-l-electricite/le-fonctionnement-d-une-centrale-photovoltaique)
 
 
 
-<figure>
-<img src="../images/en-photovoltaique.jpg" width = 80% alt="centrale photovoltaïque">
-<figcaption>centrale photovoltaïque</figcaption>
-</figure>
-
+{{< img src="../images/en-photovoltaique.jpg" alt="centrale photovoltaïque" caption="centrale photovoltaïque" >}}
 
 
 *compléments*

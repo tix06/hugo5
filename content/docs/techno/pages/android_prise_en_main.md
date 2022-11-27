@@ -16,10 +16,7 @@ DM et DD sont des formats de repères d'angles:
 ## L’editeur de programme
 Pour créer un nouveau programme: **Menu Fichier: New** 
 
-<figure>
-  <img src="../images_android/android1.png">
-</figure>
-
+{{< img src="../images_android/android1.png" >}}
 * Saisir alors le script python:
 
 ```python
@@ -29,47 +26,26 @@ DD = degres + minutes / 60
 print("l'angle en notation DD est :")
 print(DD)
 ```
-<figure>
-  <img src="../images_android/android8.png">
-</figure>
-
+{{< img src="../images_android/android8.png" >}}
 * Sauvegarder le programme: 
   * **Menu Fichier: Save as**
 
-<figure>
-  <img src="../images_android/android2.png">
-</figure>
-
+{{< img src="../images_android/android2.png" >}}
   * Internal storage
 
-<figure>
-  <img src="../images_android/android3.png">
-</figure>
-
+{{< img src="../images_android/android3.png" >}}
   * Créer un nouveau dossier appelé `python`: New Folder puis saisir `python`
 
-<figure>
-  <img src="../images_android/android4.png">
-</figure>
-
+{{< img src="../images_android/android4.png" >}}
   * Nommer le fichier: `localisation.py` 
 
-<figure>
-  <img src="../images_android/android7.png">
-</figure>
-
+{{< img src="../images_android/android7.png" >}}
 * Executer alors le programme avec le bouton jaune en bas de l'écran
 
-<figure>
-  <img src="../images_android/android13.png">
-</figure>
-
+{{< img src="../images_android/android13.png" >}}
 * Renseigner les valeurs de degrés et minutes pour convertir en DD:
 
-<figure>
-  <img src="../images_android/android9.png">
-</figure>
-
+{{< img src="../images_android/android9.png" >}}
 <br>
 
 > Utilisez alors votre programme pour définir les coordonnées DD du départ de la randonnée:
@@ -88,19 +64,13 @@ Une meilleure approche du langage python consiste à créer une fonction, puis a
 ## Modifier le programme pour créer une fonction **conversion**
 Revenir dans l'editeur et modifier le programme pour créer une fonction:
 
-<figure>
-  <img src="../images_android/android10.png">
-</figure>
-
+{{< img src="../images_android/android10.png" >}}
 La fonction **conversion** a alors 2 paramètres, `degres` et `minutes` qui devront être renseignés lors de l'appel de la fonction. Cela se fera depuis le *Shell* python.
 
 ## Le Terminal
 * Depuis le menu principal, à gauche, choisir *Terminal* 
 
-<figure>
-  <img src="../images_android/android5.png">
-</figure>
-
+{{< img src="../images_android/android5.png" >}}
 
 * Utiliser alors les instructions UNIX:
 
@@ -119,10 +89,7 @@ $ python
 | python | lancer le shell python |
 
 
-<figure>
-  <img src="../images_android/android11.png">
-</figure>
-
+{{< img src="../images_android/android11.png" >}}
 ## Le Shell python
 Les instructions python seront alors saisies après les chevrons `>>>` `
 `
@@ -135,10 +102,7 @@ Saisir:
 >>> conversion(40,23)
 ```
 
-<figure>
-  <img src="../images_android/android12.png">
-</figure>
-
+{{< img src="../images_android/android12.png" >}}
 Voilà, vous pourrez utiliser maintenant la fonction `conversion` pour transformer n'importe quelle valeur du format DM vers le format DD. 
 
 Voici celles du départ et de l'arrivée de la randonnée:

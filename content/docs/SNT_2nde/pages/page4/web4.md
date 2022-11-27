@@ -4,8 +4,7 @@ bookShowToc: false
 ---
 
 # TRAVAIL
-La page HTML est un CV (curriculum vitae). <a href="../images/curriculum.zip" download="curriculum.zip">Téléchargez le dossier complet</a>.
-
+La page HTML est un CV (curriculum vitae).{{< a link="../images/curriculum.zip" caption="Téléchargez le dossier complet" >}}
 * dezipper le dossier dans *devoirs/tixidor/curriculum/*
 
 * Modifier le fichier `CV.html` en ajoutant les balises HTML, afin de structurer la page. Votre document devra être BIEN présenté, avec titres et sous-titres.
@@ -24,10 +23,7 @@ La page HTML est un CV (curriculum vitae). <a href="../images/curriculum.zip" do
 Vous pouvez vous aider des liens suivants:
 
 <ul>
-<li><a href="../web1">le langage HTML</a></li>
-<li><a href="../web2">TP 1: HTML</a></li>
-<li><a href="../web5">Tutoriel sur CSS</a></li>
-</ul>
+<li{{< a link="../web1" caption="" >}}<li{{< a link="../web2" caption="" >}}<li{{< a link="../web5" caption="" >}}</ul>
 
 ... ou d'autres site sur internet.
 

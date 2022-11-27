@@ -42,11 +42,7 @@ fn(fn(2))
 Ici, la fonction `fn` est appelée avec pour argument, ... la fonction `fn` elle-même.
 On pourrait représenter la pile d'execution de la manière suivante : 
 
-<figure>
-<img src="../images/pileExecution.png" width = 40% alt="pile d'execution">
-<figcaption>pile d'execution</figcaption>
-</figure>
-
+{{< img src="../images/pileExecution.png" alt="pile d" caption="pile d'execution" >}}
 C'est un premier pas vers la *recursivité*, ou une fonction s'appelle elle-même, souvent un nombre important de fois. La pile d'execution s'agrandit jusqu'au dernier appel de fonction. L'opération est alors executée, et l'ordinateur peut alors remonter la pile d'execution en propageant les résultats dans les arguments en attente.
 
 > *Exercice : Ecrire une fonction du même type de celle utilisée en exemple, et qui créé une pile d'execussion avec 3 niveaux. Cette fonction s'appellera elle-même, tout comme la fonction passée en argument. Représenter également la pile d'execution.* 
@@ -289,19 +285,14 @@ Vous pouvez tester cet exemple en enregistrant le code *html*  suivant.
 
 ```
 <div>
-  <p id="myP">Un peu de texte, <a>un lien</a> et <strong>une portion en emphase</strong></p>
-</div>
+  <p id="myP">Un peu de texte,{{< a caption="Un peu de texte, " >}}</div>
 ``` 
 
 Ouvrir alors la page pour l'afficher dans le navigateur.
 
 Cette page a alors l'arbre de DOM suivant qui lui est associé : 
 
-<figure>
-<img src="../images/dom.png" width = "80%"" alt="arbre du DOM">
-<figcaption>arbre du DOM</figcaption>
-</figure>
-
+{{< img src="../images/dom.png" alt="arbre du DOM" caption="arbre du DOM" >}}
 Le premier enfant de `<p>` est un nœud textuel, alors que le dernier enfant est un élément `<strong>`. Cet élément `<strong>` possède pour noeud enfant un noeud textuel dont le contenu et *une portion en emphase*
 
 Dans la console, saisir une à une les instructions suivantes : (sans les commentaires)
@@ -311,43 +302,23 @@ let first = paragraph.firstChild; // parcours de l'arbre jusqu'au 1er enfant
 alert(first.nodeValue); // pour récuperer le contenu du noeud textuel
 ```
 
-<figure>
-<img src="../images/dom1.png" width = "100%"" alt="arbre du DOM">
-<figcaption>contenu textuel du premier enfant</figcaption>
-</figure>
-
+{{< img src="../images/dom1.png" alt="arbre du DOM" caption="contenu textuel du premier enfant" >}}
 Puis :
 ```
 let last = paragraph.lastChild;
 alert(last.firstChild.data); // pour recuperer le contenu textuel de la balise
 ```
 
-<figure>
-<img src="../images/dom2.png" width = "100%"" alt="arbre du DOM">
-<figcaption>contenu textuel du dernier enfant</figcaption>
-</figure>
-
+{{< img src="../images/dom2.png" alt="arbre du DOM" caption="contenu textuel du dernier enfant" >}}
 On peut réaliser cette dernière manipulation en ayant recours à la liste de tous les enfants de `paragraph`: en écrivant `paragraph.childnodes` 
 
-<figure>
-<img src="../images/dom3.png" width = "100%"" alt="arbre du DOM">
-<figcaption>liste de tous les enfants du noeud parent</figcaption>
-</figure>
-
+{{< img src="../images/dom3.png" alt="arbre du DOM" caption="liste de tous les enfants du noeud parent" >}}
 Puis on affiche son contenu textuel
 
-<figure>
-<img src="../images/dom4.png" width = "100%"" alt="arbre du DOM">
-<figcaption>contenu textuel de last</figcaption>
-</figure>
-
+{{< img src="../images/dom4.png" alt="arbre du DOM" caption="contenu textuel de last" >}}
 Pour finir, on peut modifier à volonté les éléments textuels en modifiant la valeur renvoyée par `.data` ou `.nodeValue` : 
 
-<figure>
-<img src="../images/dom5.png" width = "100%"" alt="arbre du DOM">
-<figcaption>modification du contenu textuel de last</figcaption>
-</figure>
-
+{{< img src="../images/dom5.png" alt="arbre du DOM" caption="modification du contenu textuel de last" >}}
 
 # Gestion des evenements
 On reprend ici une application du javascript entrevue lors de la présentation des fonctions, avec la gestion du clic de souris sur un des éléments de la page.
@@ -589,26 +560,10 @@ Ce n'est pas la même chose que l'on réalise lorsque l'on ajoute des *propriét
 
 **Testez le :**
 Ouvrir la console et testez les instructions suivantes :
-<figure>
-<img src="../images/myFather.hello.png" width = 60% alt="myFather.hello()">
-<figcaption>myFather.hello()</figcaption>
-</figure>
-
-<figure>
-<img src="../images/myFather.bonjour.png" width = 60% alt="myFather.bonjour()">
-<figcaption>myFather.bonjour()</figcaption>
-</figure>
-
-<figure>
-<img src="../images/myMother.hello.png" width = 60% alt="myMother.hello()">
-<figcaption>myMother.hello()</figcaption>
-</figure>
-
-<figure>
-<img src="../images/myMother.bonjour.png" width = 60% alt="myMother.bonjour()">
-<figcaption>myMother.bonjour()</figcaption>
-</figure>
-
+{{< img src="../images/myFather.hello.png" alt="myFather.hello()" caption="myFather.hello()" >}}
+{{< img src="../images/myFather.bonjour.png" alt="myFather.bonjour()" caption="myFather.bonjour()" >}}
+{{< img src="../images/myMother.hello.png" alt="myMother.hello()" caption="myMother.hello()" >}}
+{{< img src="../images/myMother.bonjour.png" alt="myMother.bonjour()" caption="myMother.bonjour()" >}}
 Pour avoir le code le plus clair et le plus performant possible, on définit généralement les propriétés des objets (dont les valeurs doivent être spécifiques à l’objet) au sein du constructeur et les méthodes (que tous les objets vont pouvoir appeler de la même façon) dans le prototype du constructeur.
 
 Un constructeur peut parfois venir lui-même d'un autre constructeur. Il aura alors lui aussi hérité des méthodes du prototype de son constructeur.
@@ -627,7 +582,6 @@ On va voir dans ce TP :
 On commence par créer le squelette **html** de notre mini projet. 
 
 - Dans un dossier de votre disque dur, mettre l'image *ufo.png* que vous téléchargerez avec le lien suivant: 
-<a href="../images/ufo.png">faire un clic droit et choisir : telecharger le fichier</a>
 - dans le même dossier, à l'aide d'un éditeur de code comme par exemple notepadd++, créer un nouveau fichier et choisir une extension `.html`
 
 Mettre les lignes de code suivantes:

@@ -180,16 +180,8 @@ fonction ne répond que partiellement à la demande.
 C.  La fonction construireDict, définie ci-dessus, est donc partiellement
 inexacte. Compléter la fonction construireDict pour qu’elle génère bien l’ensemble du dictionnaire de tableaux correspondant à la liste de liaisons données en argument. À l’aide des numéros de lignes, on précisera où est inséré ce code.
 
-<figure>
-  <img src="../images/page1_1.png">
-  <figcaption>1282 × 862</figcaption>
-</figure>
-
-<figure>
-  <img src="../images/page1_2.png">
-  <figcaption>1318 × 878</figcaption>
-</figure>
-
+{{< img src="../images/page1_1.png" caption="1282 × 862" >}}
+{{< img src="../images/page1_2.png" caption="1318 × 878" >}}
 
 # Bac 2021 Metropole Sept: Exercice 5
 *Principaux thèmes abordés : Traitement de données en tables (CSV) et langages et programmation (spécification).*

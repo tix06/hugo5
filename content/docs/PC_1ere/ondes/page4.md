@@ -10,10 +10,7 @@ Une image est constituée de pixels. Chacun de ces pixels est codé numériqueme
 ## Filtre
 Lorsque l'on applique un filtre sur une image, on modifie les valeurs de chaque canal coloré, de chaque pixel, que l'on met dans une nouvelle image.
 
-<figure>
-  <img src = "../images/filtre_orange.png">
-</figure>
-
+{{< img src="../images/filtre_orange.png" >}}
 La modification se fait par une opération mathématique sur chacun des canaux.
 Ces opérations peuvent être différentes pour chaque canal.
 
@@ -45,10 +42,7 @@ Mettez vous dans la fenêtre contenant le script *interface.py*. Executez ce scr
 
 Organisez vos fenêtres comme sur l'image suivante:
 
-<figure>
-  <img src = "../images/ide_python.png">
-</figure>
-
+{{< img src="../images/ide_python.png" >}}
 Vous avez alors sur l'écran:
 
 * la fenêtre d'edition du script `interface.py`
@@ -84,19 +78,11 @@ Les photographies astronomiques sont prises avec des réglages particuliers. A c
 > Adaptez le filtre à appliquer à la photographie `ciel profond trop rouge.jpg` pour que celle-ci soit plus équilibrée au niveau des couleurs.<br>
 > **Question d:** Indiquer la fonction pour le filtre utilisé
 
-<figure>
-  <img src = "../images/photo_ciel_filtre.png">
-  <figcaption>résultat à obtenir après filtrage</figcaption>
-</figure>
-
+{{< img src="../images/photo_ciel_filtre.png" caption="résultat à obtenir après filtrage" >}}
 ### Fruits trop rouges
 On pourra appliquer à nouveau ce filtre à l'image de fruits trop rouge. On essaiera de reconstruire une image sur le modèle suivant:
 
-<figure>
-  <img src = "../images/photo_fruits_filtre.png">
-  <figcaption>résultat à obtenir après filtrage</figcaption>
-</figure>
-
+{{< img src="../images/photo_fruits_filtre.png" caption="résultat à obtenir après filtrage" >}}
 # Filtrages plus complexes
 ## Les structures conditionnelles en python
 En python, les structures conditionnelles s'écrivent sous la forme:

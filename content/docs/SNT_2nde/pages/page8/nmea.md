@@ -11,41 +11,25 @@ Manipuler une chaine de caractères. Extraire des informations.
 Lorsqu’un récepteur GPS reçoit une information, il la transmet (au smartphone, à l’ordinateur auquel il est connecté, à l’interface gps de voiture) à l’aide d’une « phrase » dont la forme est strictement codifiée. On appelle cette « phrase » une trame.
 
 
-<figure>
-  <img src="../docs/satellites.png" alt="satellites" width=80%>
-  <figcaption>emission de signaux GPS</figcaption>
-</figure>
-
+{{< img src="../docs/satellites.png" alt="satellites" caption="emission de signaux GPS" >}}
 ## Recuperez votre propre trame NMEA (partie qui ne sera pas traitée pendant la séance)
 Travail personnel en amont : Si possible, installer l’application NMEA Tools sur votre smartphone sur Androïd ou NMEAGps sur iOS.
 Selon le mobile utilisé, pour enregistrer une série de trames GPS, il faut faire : 
 - Sur Android : *enregistrement* pour démarrer > attendre quelques secondes que le signal se stabilise > *enregistrement* pour arrêter > Choisir *Enregistrer* puis nommer le fichier votre_nom.txt
 - Sur IOS iphone : attendre que la barre de détection de la position passe au vert puis > Bouton *log* en position *ON* pour démarrer > attendre quelques secondes que le signal soit enregistré > *log* pour arrêter > L’application propose alors de récupérer un fichier nmea.log dans une application (notes, ...) ou de le *partager*.
 
-<figure>
-  <img src="../docs/tools.png" alt="appli NMEA-tools" width=200px>
-  <figcaption>application NMEA-tools</figcaption>
-</figure>
-
+{{< img src="../docs/tools.png" alt="appli NMEA-tools" caption="application NMEA-tools" >}}
 
 ## Que contient la trame NMEA ?
 Parmi les différentes lignes constituant la trame, l'une d'entre elles débute par les symboles $GPGGA
 
 Les données sont mises dans un format particulier expliqué ici : 
 
-<figure>
-  <img src="../docs/exemple_trame.png" alt="exemple de trame" width=100%>
-  <figcaption>extrait de trame NMEA</figcaption>
-</figure>
-
+{{< img src="../docs/exemple_trame.png" alt="exemple de trame" caption="extrait de trame NMEA" >}}
 La valeur numérique recherchée est celle de la latitude et de la longitude du lieu : 
 
 
-<figure>
-  <img src="../docs/detailNMEA.png" alt="extrait de trame" width=40%>
-  <figcaption>detail de trame NMEA</figcaption>
-</figure>
-
+{{< img src="../docs/detailNMEA.png" alt="extrait de trame" caption="detail de trame NMEA" >}}
 Ces valeurs sont mises sous la forme **DDMM.MMMM** : 
 
 lorsque l'on lit 4836.5375, la valeur doit être comprise comme  : 48°36,5375'

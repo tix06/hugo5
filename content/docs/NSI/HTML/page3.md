@@ -13,8 +13,7 @@ Ces langages sont en constante évolution. Ce sont des langages *open sources*[^
 
 Il existe plusieurs logiciels navigateurs (Mozilla, Chrome, Safari,...). Et pourtant, malgré cette diversité et ces évolutions du langage, ceux-ci vont interpréter ces fichiers et afficher les pages (presque) de la même manière car ils se réferent tous aux mêmes recommandations, celles du w3c[^4].
 
-Rappels de SNT sur le <a href="/docs/SNT_2nde/pages/page4/web/" target = "blank">Web</a>.
-
+Rappels de SNT sur le{{< a link="/docs/SNT_2nde/pages/page4/web/" caption="Web" >}}
 ## des tâches différentes
 Les langages web se partagent les tâches : 
 Une bonne pratique dans le développement d'un site internet (côté front-end, ce qui est executé sur la machine du client) consiste à utiliser:
@@ -86,140 +85,19 @@ Si vous avez un script qui est très gros mais indépendant, il est préférable
 ## Imbrication et filiation des balises
 Si vous débutez complètement en HTML, consultez les ressources de SNT:
 
-* Une introduction à la redaction d'un document en HTML: <a href="/docs/SNT_2nde/pages/page4/web1/" target="blank">Document Web, contenu et structure</a>.
-
+* Une introduction à la redaction d'un document en HTML:{{< a link="/docs/SNT_2nde/pages/page4/web1/" caption="Document Web, contenu et structure" >}}
 L'imbrication des balises traduit le lien (la filiation) entre les éléments.
 
 On représente la structure d’un document html à l’aide d’un arbre.
 On parle d’**arbre DOM** (Document Object Model) du document.
 
-<figure>
-  <img src="../images/DOM.png">
-  <figcaption>Exemple d'arbre du DOM</figcaption>
-</figure>
-
+{{< img src="../images/DOM.png" caption="Exemple d'arbre du DOM" >}}
 <i>Pour cet exemple: <br>
 Le **nœud** article est le **père** des noeuds h1, p, img et p.<br>
 Les nœuds h1, p, img et p sont les **fils** du nœud article.<br>
-Les balises `<h1>, <p>, <img> et <p>`sont imbriquées dans celle `<article>`.</i>
+{{< img src="../images/sections.jpg" alt="page avec sections" caption="page avec sectionnements" >}}
 
 
-# Les éléments importants à connaitre
-## Page qui repertorie TOUS les éléments HTML
-voir la page sur [developper.mozilla.org/](https://developer.mozilla.org/fr/docs/Web/HTML/Element)
-
-## Elément de section générique: section
-voir le lien sur [developer.mozilla.org/](https://developer.mozilla.org/fr/docs/Web/HTML/Element/section)
-
-L'élément HTML `<section>` représente une section générique d'un document, par exemple un groupe de contenu thématique. Une section commence généralement avec un titre.
-
-## Autres éléments de section
-Ce sont : `<section>`, `<article>`, `<header>`, `<footer>`, `<nav>`et `<aside>`
-
-
-<figure>
-<img src="../images/sections.jpg" width = 60% alt="page avec sections">
-<figcaption>page avec sectionnements</figcaption>
-</figure>
-
-Ces éléments sont tous de type `Block` pour leur *display*. Mais ils ont des rôles différents pour la bonne structure du document.
-
-Ce sont les règles CSS qui permettront de les disposer comme sur l'image ci-dessus.
-
-voir la page [developper.mozilla.org/](https://developer.mozilla.org/fr/docs/Web/HTML/Element)
-
-## listes
-voir le lien sur [developer.mozilla.org/](https://developer.mozilla.org/fr/docs/Apprendre/HTML/Comment/Créer_une_liste_d_éléments_avec_HTML)
-
-## tableaux
-voir le lien sur [developer.mozilla.org/](https://developer.mozilla.org/fr/docs/Apprendre/HTML/Tableaux/Basics)
-
-## formulaires
-voir le lien sur [developer.mozilla.org/](https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML)
-
-Les formulaires permettent à l’utilisateur de saisir **un ensemble de données** et d’envoyer une **requête** à un serveur en cliquant sur un bouton.
-
-Le formulaire est délimité par l’élément HTML `<form>` qui précise :
-
-- L’URL (attribut action)
-- La méthode (attribut method)
-
-Il contient un ensemble d’**éléments interactifs** permettant la saisie de données, spécifiés par l’élément `<input>`. Son attribut type permet de préciser le type de saisie :
-
-- Text
-- Number
-- Range (valeur numerique)
-- Checkbox
-- Radio
-- Button
-- …
-
-Les types *reset* et *submit* sont des boutons speciaux pour reinitialiser ou envoyer la requete verss le serveur.
-L’attribut value spécifie la valeur initiale du champ de saisie.
-
-
-
-*Exemple:*
-
-
-<p><label>Entrez votre nom <input type=text></label></p>
-<p><label>Selectionner une temperature <input type=range></label></p>
-<p><label>Entrer un nombre <input type=number></label></p>
-<p>Aimez vous la soupe ?</p><p><label style="padding:10px">Oui<input type=radio value="Oui" name="soupe"></label></p>
-<p><label style="padding:10px">Non<input type=radio value="Non" name="soupe"></label></p>
-<p>
-<label>Quelle est votre langue marternelle ?
-<select>
-   <nom>langue</nom>
-   <option valeur="fr">Français</option>
-   <option valeur="nl">Néerlandais</option>
-   <option valeur="en">Anglais</option>
-   <option valeur="other">Autre</option>
-</select>
-</label>
-</p>
-
-
-*Code source:*
-
-```html
-<form method="post" action="action.php">
-<p><label>Entrez votre nom <input type=text></label></p>
-<p><label>Selectionner une temperature <input type=range></label></p>
-<p><label>Entrer un nombre <input type=number></label></p>
-<p>Aimez vous la soupe ?</p><p><label style="padding:10px">Oui<input type=radio value="Oui" name="soupe"></label></p>
-<p><label style="padding:10px">Non<input type=radio value="Non" name="soupe"></label></p>
-<label>Quelle est votre langue marternelle ?
-<select>
-   <nom>langue</nom>
-   <option valeur="fr">Français</option>
-   <option valeur="nl">Néerlandais</option>
-   <option valeur="en">Anglais</option>
-   <option valeur="other">Autre</option>
-</select>
-</label>
-</p>
-</form>
-```
-
-
-## Liens externes et internes
-
-- Dans ces exemples, on voit qu'une balise peut être constituée *d'attributs* (par exemple `src` pour la balise *img*). On affecte alors des *valeurs* à ces attributs (entre guillemets et après le `=` ).
-- Lien hypertexte : on créé un lien *externe* en écrivant l'URL de la page `http://...`.
-
-Si le lien était vers une page du site (une page *locale*), il n'y aurait pas eu `http://` au début de l'adresse. Juste le chemin (relatif ou absolu) vers cette nouvelle page depuis la page actuelle.
-
-*Exemples:*
-
-```html
-<a href="http://fr.wikipedia.org/">Un lien hypertexte vers le site de Wikipédia</a>
-
-<a href="../page2/index.html">Un lien hypertexte vers une autre page du même site (chemin relatif)</a>
-
-<a href="/docs/page2/index.html">Un lien hypertexte vers une autre page du même site (chemin absolu)</a>
-
-<a href="#paragraphe2">Un lien vers un autre paragraphe de la même page</a>
 ```  
 
 

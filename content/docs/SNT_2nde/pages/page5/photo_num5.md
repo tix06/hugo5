@@ -7,8 +7,7 @@ Pour une image en couleur: À chaque pixel on associe 3 couleurs, le rouge, le v
 
 La valeur de l’intensité lumineuse associée à chaque canal de chaque pixel d’une image est comprise entre 0 et 255 (256 valeurs possibles). On codera donc un pixel à l'aide d'un triplet de valeur (par exemple (247,56,98) en code décimal, ou son équivalent en hexadecimal : (f7,38,62)
 
-Ouvrir le lien suivant : <a href="http://www.proftnj.com/RGB3.htm" target=_blank>www.proftnj.com/RGB3.htm</a>
-
+Ouvrir le lien suivant :{{< a link="http://www.proftnj.com/RGB3.htm" caption="www.proftnj.com/RGB3.htm" >}}
 **Question a**: à l’aide du logiciel : 
 Quelle est la couleur donnée par ce triplet de valeurs ? (247,56,98)
   
@@ -26,22 +25,16 @@ Quelle est la couleur donnée par ce triplet de valeurs ? (247,56,98)
 |   | ![gris](../images/coul_g.png) |
 |   | ![noir](../images/coul_n.png) |
 
-*Astuce:* On pourra verifier l'exactitude de la reponse avec l'outil de prélèvement de couleur (logiciel **Paint**). Suivre le tuto suivant: <a href="https://www.pcastuces.com/pratique/astuces/5453.htm">https://www.pcastuces.com/pratique/astuces/5453.htm</a>
-
+*Astuce:* On pourra verifier l'exactitude de la reponse avec l'outil de prélèvement de couleur (logiciel **Paint**). Suivre le tuto suivant:{{< a link="https://www.pcastuces.com/pratique/astuces/5453.htm" caption="https://www.pcastuces.com/pratique/astuces/5453.htm" >}}
 
 # Partie 2: Les données EXIF
 Certaines informations, contenues dans le fichier image, donnent des informations sur les conditions de la prise de vue, le type d’appareil utilisé, la géolocalisation, les dimensions de l’image… Ces données suivent un format précis du standard EXIF.
 
-Utilisez un logiciel en ligne de lecture des données EXIF, comme par exemple : <a href="https://onlineexifviewer.com/" target=_blank>onlineexifviewer.com/</a>
-
+Utilisez un logiciel en ligne de lecture des données EXIF, comme par exemple :{{< a link="https://onlineexifviewer.com/" caption="onlineexifviewer.com/" >}}
 * Télécharger l’image suivante sur votre disque dur
 * *Select image* depuis le logiciel en ligne
 
-<figure><a href="../images/photo.jpg" download="photo.jpg">
-<img src="../images/photo.jpg">
-<figcaption>cliquer sur l'image pour telecharger</figcaption></a>
-</figure>
-
+{{< img src="../images/photo.jpg" link="../images/photo.jpg" caption="cliquer sur l'image pour telecharger" >}}
 Le logiciel met ces données EXIF sous une forme lisible par un être humain : 
 
 **Question d** compléter les informations contenues dans le fichier de cette photographie :
@@ -63,6 +56,4 @@ Le paragraphe [suivant](/docs/SNT_2nde/pages/page5/photo_num4/#google-images) ex
 
 **Question f**: L'image suivante est-elle une vraie image?
 
-<figure>
- <img src="../images/photo2.png">
-</figure>
+{{< img src="../images/photo2.png" >}}

@@ -6,11 +6,7 @@ Title: mesure de c du son
 ## Principe
 On cherche à mesurer la durée de propagation des ultra-sons lors de leur reflexion sur un obstacle.
 
-<figure>
-    <img src="../images/E_R.png" alt="mesure de la duree de propagation des US">
-    <figcaption>Dispositif</figcaption>
-</figure>
-
+{{< img src="../images/E_R.png" alt="mesure de la duree de propagation des US" caption="Dispositif" >}}
 Pour une distance d<sub>1</sub> entre le dispositif ultra-sons et l'écran, on relève la durée de propagation t (en micro secondes) sur la carte microbit.
 
 Cette mesure est déclanchée par l'appui sur le bouton a de la carte microbit.
@@ -18,11 +14,7 @@ Cette mesure est déclanchée par l'appui sur le bouton a de la carte microbit.
 ## Script
 Commencer par uploader le script ci-dessous dans la carte microbit selon la méthode utilisant l'editeur Mu (flasher): [voir page présentation microbit](/docs/techno/pages/MB_init/#utiliser-l-editeur-mu)
 
-<figure>
-<img src="/docs/techno/pages/images/helloworld.png">
-<figcaption>Mu editor</figcaption>
-</figure>
-
+{{< img src="/docs/techno/pages/images/helloworld.png" caption="Mu editor" >}}
 ```python
 from microbit import *
 from machine import time_pulse_us
@@ -56,10 +48,7 @@ Brancher l'emetteur-capteur à ultra-son sur la carte micro:bit. Choisir le port
 
 Diriger l'emetteur-capteur à ultra-sons vers un support rigide, afin que les ondes ultrasonores se reflechissent et reviennent vers le recepteur.
 
-<figure>
-  <img scr="../images/mu_us2.png">
-</figure>
-
+{{< img src="" >}}
 ## Mesures
 Une fois le script téléversé : 
 

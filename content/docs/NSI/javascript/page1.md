@@ -12,18 +12,10 @@ Pour le vérifier, on peut utiliser la console javascript du navigateur pour tes
 
 Sur Chrome, cette console se trouve en ouvrant les outils de développement : 
 
-<figure>
-  <img src="../images/image1.png" width ="450px" alt="console javascript Chrome">
-  <figcaption>la console javascript dans le navigateur Chrome</figcaption>
-</figure>
-
+{{< img src="../images/image1.png" alt="console javascript Chrome" caption="la console javascript dans le navigateur Chrome" >}}
 Choisir alors l’onglet : *Console* et commencer à taper les instructions, une à une, après l’invite >, comme sur l’image suivante : 
 
-<figure>
-  <img src="../images/image2.png" width ="450px" alt="E/S">
-  <figcaption>entrée / sortie</figcaption>
-</figure>
-
+{{< img src="../images/image2.png" alt="E/S" caption="entrée / sortie" >}}
 Pour afficher le résultat d’une opération dans la console (équivalent au print en python), on utilise l’instruction `console.log(operation)`.
 
 L’option `filter` de la console devra être sur `Default`
@@ -55,11 +47,7 @@ Javascript, c’est aussi le langage de script des pages web : on peut aussi :
 
 ## Principe : le rôle du navigateur et son moteur javascript
 
-<figure>
-  <img src="../images/image3.png" width ="450px" alt="interpreteur js">
-  <figcaption>l'interpreteur javascript</figcaption>
-</figure>
-
+{{< img src="../images/image3.png" alt="interpreteur js" caption="l'interpreteur javascript" >}}
 * *Browser :* navigateur. C’est est un logiciel conçu pour consulter et afficher le World Wide Web. Techniquement, c'est au minimum un client http ou https (qui sont des protocoles de communication, définis lors du dernier cours)
 * *Web console :* Permet de coder, d’interpréter et d’exécuter du code Javascript directement sur le Browser 
 * *Js Engine :* Est intégré dans les Browser. Chaque Browser a son propre interpréteur Javascript qui interprète le code et exécute les scripts associés aux pages Web 

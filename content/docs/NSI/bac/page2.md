@@ -128,11 +128,7 @@ Pour simplifier les expressions arithmétiques, on enregistre, dans une structur
 On appelle expression simplifiée cette structure.
 
 
-<figure>
-  <img src="../images/page2_1.png">
-  <figcaption>1158 × 248</figcaption>
-</figure>
-
+{{< img src="../images/page2_1.png" caption="1158 × 248" >}}
 ## Question 1
 Indiquer si la phrase « les éléments sont maintenant retirés (pour être lus) de cette structure de données dans le même ordre qu’ils y ont été ajoutés lors de l’enregistrement » décrit le comportement d’une file ou d’une pile. Justifier.
 
@@ -209,11 +205,7 @@ même nom) si ce n’est pas le cas, l’analyse s’arrête (balisage incorrect
 
 Exemple : État de la pile lors du déroulement de cet algorithme pour l’expression simplifiée `"<p><em></p></em>"` qui n’est pas correctement balisée.
 
-<figure>
-  <img src="../images/page2_2.png">
-  <figcaption>État de la pile lors du déroulement de l’algorithme - 1242 × 258</figcaption>
-</figure>
-
+{{< img src="../images/page2_2.png" caption="État de la pile lors du déroulement de l’algorithme - 1242 × 258" >}}
 
 ## Question 4
 Cette question traite de l’état de la pile lors du déroulement de l’algorithme.
@@ -245,26 +237,14 @@ On parcourt la pile ainsi de haut en bas et on procède aux réductions. Arrivé
 
 Voici un exemple détaillé de déroulement d'une partie. 
 
-<figure>
-  <img src="../images/page2_3.png">
-  <figcaption>1128 × 412</figcaption>
-</figure>
-
+{{< img src="../images/page2_3.png" caption="1128 × 412" >}}
 ## Question 1
 A.  Donner les différentes étapes de réduction de la pile suivante : 
 
-<figure>
-  <img src="../images/page2_4.png">
-  <figcaption>524 × 394</figcaption>
-</figure>
-
+{{< img src="../images/page2_4.png" caption="524 × 394" >}}
 B.  Parmi les piles proposées ci-dessous, donner celle qui est gagnante. 
 
-<figure>
-  <img src="../images/page2_5.png">
-  <figcaption>952 × 468</figcaption>
-</figure>
-
+{{< img src="../images/page2_5.png" caption="952 × 468" >}}
 L'interface d'une pile est proposée ci-dessous. On utilisera uniquement les fonctions figurant dans le tableau suivant :
 
 | Structure de données abstraite : Pile  |  |

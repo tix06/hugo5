@@ -8,24 +8,12 @@ Nous avons utilisé le programme SQLite, ou SQLiteBrowser pour faire interface e
 
 
 
-<figure>
-
-<img src="../images/appli_db.png">
-  <figcaption>SQLite comme interface</figcaption>
-
-</figure>
-
+{{< img src="../images/appli_db.png" caption="SQLite comme interface" >}}
 Selon cette architecture, lorsque vous recherchez un billet de train, vous utilisez un logiciel qui fera directement l'interface:
 
 À titre d’exemple, considérons une application fictive de recherche d’horaires de train. 
 
-<figure>
-<div>
-<img src="https://geo.img.pmdstatic.net/fit/https.3A.2F.2Fprd-cam-website-statics.2Es3.2Eeu-west-1.2Eamazonaws.2Ecom.2Fcontent.2Fuploads.2F2011.2F11.2FHoraires-train-SNCF-cadencement-604.2Ejpg/750x422/quality/80/background-color/ffffff/background-alpha/100/horaires-train-sncf-cadencement-604.jpg">
-  <figcaption>tableau des horaires de trains © REUTERS.</figcaption>
-</div>
-</figure>
-
+{{< img src="https://geo.img.pmdstatic.net/fit/https.3A.2F.2Fprd-cam-website-statics.2Es3.2Eeu-west-1.2Eamazonaws.2Ecom.2Fcontent.2Fuploads.2F2011.2F11.2FHoraires-train-SNCF-cadencement-604.2Ejpg/750x422/quality/80/background-color/ffffff/background-alpha/100/horaires-train-sncf-cadencement-604.jpg" caption="tableau des horaires de trains © REUTERS." >}}
 
 Voici un scénario possible de fonctionnement de cette application :
 
@@ -59,36 +47,18 @@ Le serveur exécute alors la requête en recherchant les données correspondante
 
 La communication entre le client et le serveur est donc faite de requêtes et de réponses.
 
-<figure>
-
-<img src="../images/client_serveur.png">
-  <figcaption>client - serveur</figcaption>
-
-</figure>
-
+{{< img src="../images/client_serveur.png" caption="client - serveur" >}}
 **Un serveur web** est une application qui s'execute sur une machine et qui ecoute un port specifique.
 
 **Une application web** est un programme stocké sur un serveur distant auquel on accede via une connexion au reseau, via *http*. Celui-ci peut faire interface avec une base de données, fabrique les pages web à la volée pour le client. Ce client a besoin d'un *navigateur* pour se connecter à cette application web. L'application web utilise comme langage de programmation un langage dédié, comme *Python, PHP, node, C, ou autre*.<br>
 Alors que la ressource côté client est, elle, programmée en *HTML, Javascript, et CSS*.
 
 
-<figure>
-<a href="https://www.youtube.com/watch?v=XTA04_hcEWM">
-  <img src="../images/video_client_serveur.png">
-  <figcaption>Qu'est ce qu'une application web - video de la chaine WayToLearnX</figcaption>
-</a>
-</figure>
-
+{{< img src="../images/video_client_serveur.png" link="https://www.youtube.com/watch?v=XTA04_hcEWM" caption="Qu'est ce qu'une application web - video de la chaine WayToLearnX" >}}
 ## Un exemple de page *statique*
 Le fichier suivant, [formulaire.txt](/scripts/server_py/formulaire.txt) génère un formulaire. Lorsque l'on appuie sur le bouton, les valeurs des champs *nom* et *pass* sont transmises par methode *POST*. 
 
-<figure>
-<div>
-  <img src="../images/page.png">
-  <figcaption>exemple de page statique</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/page.png" caption="exemple de page statique" >}}
 Mais ici, ces valeurs ne peuvent pas être récupérées. Cela nécessiterait un script écrit en langage serveur. (voir plus haut).
 
 Vous pouvez ouvrir ce fichier en le télechargeant dans vos documents, puis:
@@ -241,20 +211,10 @@ if (form.getvalue("name") != None) :
 
 >  Soit:  <span style="font-size: 24px;">Entrez les identifiants des clients</span> Lorsque les champs de formulaire sont vides.
 
-> <figure>
-<div>
-  <img src="../images/page2.png">
-  <figcaption>champs du formulaire video</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/page2.png" caption="champs du formulaire video" >}}{{< img src="../images/page.png" caption="exemple de page statique" >}}
 >   Soit:  <span style="font-size: 24px;">VALIDER la saisie: {} => {}</span> Lorsque les champs *name* et *pass* ont été renseignés. Les symboles `{}` devront être remplacés par leur valeur à l'aide d'une expression formatée en python. (utiliser `.format`).
 
-> <figure>
-<img src="../images/page3.png">
-  <figcaption>champs du formulaire renseigné</figcaption>
-</figure>
-
+{{< img src="../images/page3.png" caption="champs du formulaire renseigné" >}}{{< img src="../images/page.png" caption="exemple de page statique" >}}
 > * Enfin, modifier la variable `table_affiche` pour afficher dans le tableau TOUS les éléments de la table `clients_login`
 
 > ```python
@@ -275,13 +235,7 @@ A partir de la base de données du TP précédent, vous allez créer une nouvell
 Ces boutons radio permettront de choisir les noms clients à afficher, en partageant l'alphabet en 3 parties.
 La page devrait ressembler à l'image ci-dessous:
 
-<figure>
-<div>
-  <img src="../images/page4.png">
-  <figcaption>page avec selection par boutons radio</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/page4.png" caption="page avec selection par boutons radio" >}}
 **Aide :** [Boutons radio sur mozzila.com](https://developer.mozilla.org/fr/docs/Web/HTML/Element/Input/radio)
 
 # Frameworks Flask et Django
@@ -295,13 +249,7 @@ Pour des projets d'applications web plus conséquents, on pourra se tourner vers
 Une presentation plus complète des différences entre ces frameworks ici: [Django vs Flask vs Pyramid: Choosing a Python Web Framework](https://www.airpair.com/python/posts/django-flask-pyramid)
 
 
-<figure>
-<a href="https://www.airpair.com/python/posts/django-flask-pyramid">
-  <img src="../images/airpair.jpg">
-  <figcaption>Choosing a Python Web Framework @airpair</figcaption>
-</a>
-</figure>
-
+{{< img src="../images/airpair.jpg" link="https://www.airpair.com/python/posts/django-flask-pyramid" caption="Choosing a Python Web Framework @airpair" >}}
 # Ressources
 * python flask [pixees](https://pixees.fr/informatiquelycee/n_site/nsi_prem_flask.html)
 * python formulaire GET POST [developper.mozilla.org](https://developer.mozilla.org/fr/docs/Learn/Forms/Sending_and_retrieving_form_data)

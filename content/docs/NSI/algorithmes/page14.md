@@ -4,8 +4,7 @@ Title: recherche dichotomique
 
 # TP: Recherche dans une liste de mots
 
-* Télécharger la liste de mots liste_francais.txt à partir du lien suivant: <a href="../datas/liste_francais.txt" download="liste_francais.txt">liste_francais.txt</a>.
-
+* Télécharger la liste de mots liste_francais.txt à partir du lien suivant:{{< a link="../datas/liste_francais.txt" caption="liste_francais.txt" >}}
 * Ouvrir un notebook et mettre le fichier dans le MÊME dossier.
 * Importer la liste de mots sous forme de liste et afficher les 13 premiers éléments de la liste à l'aide du script suivant:
 
@@ -109,11 +108,7 @@ Comme sur l'image suivante, vous allez représenter sur la même figure les fonc
 * $y = 1$
 * $y = log_2(x)$
 
-<figure>
-  <img src="../images/graphique1.png">
-  <figcaption>1 et log(n) : log(n) a une croissance faible</figcaption>
-</figure>
-
+{{< img src="../images/graphique1.png" caption="1 et log(n) : log(n) a une croissance faible" >}}
 > On s'aidera du [lien suivant](https://python.doctor/page-creer-graphiques-scientifiques-python-apprendre) pour représenter des graphiques avec *Matplolib*.
 
 
@@ -122,11 +117,7 @@ Puis vous ajouterez sur le même graphique les fonctions:
 * $y = x$
 * $y = x * log_2(x)$
 
-<figure>
-  <img src="../images/graphique2.png">
-  <figcaption>n*log(n) et n ont une croissance comparable</figcaption>
-</figure>
-
+{{< img src="../images/graphique2.png" caption="n*log(n) et n ont une croissance comparable" >}}
 Ajouter enfin:
 
 * $y = x**2$

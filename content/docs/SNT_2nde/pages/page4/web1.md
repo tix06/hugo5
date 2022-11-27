@@ -13,25 +13,14 @@ Le contenu des documents Web est rédigé en langage HTML (acronyme de Hypertext
 * mettre un titre à la page, au paragraphe
 * ...
 
-<figure>
- 
-<a href="https://vimeo.com/138623721">
-    <img src="../images/contenustructure.png">
-    <figcaption>Lire la video depuis 20' => 1min40'</figcaption>
-</a>
-</figure>
-
+{{< img src="../images/contenustructure.png" link="https://vimeo.com/138623721" caption="Lire la video depuis 20' => 1min40'" >}}
 
 
 ## Les éléments en HTML
 ### Balises
 Les élements sont décrits par des *balises*, comme par exemple, l'élément paragraphe `p`, est déclaré à l'aide d'une balise `<p>`. Toute balise ouverte doit être refermée, ici avec `</p>`. Et le contenu (souvent textuel), est mis entre ces deux balises:
 
-<figure>
-  <img src="../images/balises.png" alt="exemple d'une balise paragraphe">
-  <figcaption>exemple d'une balise paragraphe</figcaption>
-</figure> 
-
+{{< img src="../images/balises.png" alt="exemple d" caption="exemple d'une balise paragraphe" >}}
 Ces balises s'utilisent comme des *parenthèses* et peuvent être imbriquées. Une mauvaise imbrication de balises constitue une erreur.
 
 Par exemple: Une imbrication **correcte**:
@@ -58,12 +47,7 @@ Une imbrication **non correcte**:
 Il existe une hiérarchie entre ces balises. 
 Dans l'exemple qui suit, on peut lire dans le script html que la balise `html` contient celles `head` et `body`. `html` est donc une balise parente de `head` et `body`. On peut représenter ces liens de parentée avec le diagramme suivant:
 
-<figure>
-  <div>
-  <img src="../images/squelette.png">
-</div>
-</figure>
-
+{{< img src="../images/squelette.png" >}}
 **Script complet:**
 
 ```html
@@ -95,25 +79,14 @@ On peut ajouter des attributs à une balise. Cela permet de modifier son comport
 
 *Exemple:* En reprenant l'exemple initial, on souhaite maintenant créer un lien hypertexte sur l'un des mots affichés. On inclue la balise suivante dans le paragraphe:
 
-`<a href = "http://fr.wikipedia.org/restauration_1814">Restauration</a>`
-
-Le lien <a>Restauration</a> va s'afficher en bleu souligné.
-
-Et cela va rediriger sur la page de wikipedia: restauration française de 1814, lorsque l'on clique sur <a href="https://fr.wikipedia.org/wiki/Portail:Restauration_française_1814-1830" target="blank">Restauration</a>.
-
-<figure>
-  <img src="../images/balises_liens.png" alt="rendu navigateur html avec lien">
-  <figcaption>exemple de liens dans un paragraphe</figcaption>
-</figure> 
-
+{{< a link="http://fr.wikipedia.org/restauration_1814" caption="Restauration" >}}
+Le lien{{< a caption="Restauration" >}}
+Et cela va rediriger sur la page de wikipedia: restauration française de 1814, lorsque l'on clique sur{{< a link="https://fr.wikipedia.org/wiki/Portail:Restauration_française_1814-1830" caption="Restauration" >}}
+{{< img src="../images/balises_liens.png" alt="rendu navigateur html avec lien" caption="exemple de liens dans un paragraphe" >}}
 # Lien vers la suite du TP
 <ul>
-<li><a href="../web2">SNT TP 1: HTML et CSS</a></li>
-<li><a href="../web5">Tuto sur CSS</a></li>
-<li><a href="../web3">SNT TP 2: Javascript</a></li>
-</ul>   
+<li{{< a link="../web2" caption="" >}}<li{{< a link="../web5" caption="" >}}<li{{< a link="../web3" caption="" >}}</ul>   
       
 
 
 # Lien vers l'exploration d'une page wikipedia
-<a href="https://frederic-junier.org/SNT/Theme1_Web/SNT_Activite3_Web.html">Voir l'exercice 1 de la page du site de Frederic Junier</a>

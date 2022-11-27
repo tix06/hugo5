@@ -50,12 +50,7 @@ Une **liste** est entourée de **crochets** `[ ]`
 
 On accède à un élément d'une liste grace à sa position, appelée *indice*. Le premier élément a pour indice zero. 
 
-<figure>
-  <img src="../images/liste.png">
-  <figcaption>La liste `voyelles` est une collection contenant les caractères<br>
-  "e","i" et "o"</figcaption>
-</figure>
-
+{{< img src="../images/liste.png" caption="La liste `voyelles` est une collection contenant les caractères" >}}
 Un indice négatif donne accès à la liste à partir du dernier élément.
 
 ```python
@@ -130,10 +125,7 @@ positions = [[0,0], [1,2], [2,4]]
 
 C'est la représentation d'un tableau, qui sur un tableur peut être représenté sous la forme suivante:
 
-<figure>
-  <img src="../images/tableau.png">
-</figure>
-
+{{< img src="../images/tableau.png" >}}
 Les éléments de la liste `positions` sont `[0,0]`, `[1,2]`, et `[2,4]`
 
 Pour accéder au deuxieme élément `[1,2]`, on fait:
@@ -241,12 +233,8 @@ plt
 ```
 
 
-<figure>
-  <img src="../images/graphique.png">
-</figure>
-
+{{< img src="../images/graphique.png" >}}
 
 
 # Travaux pratiques TP1 et TP2
-* <a href="../page3" target=_blank>Lien vers l'editeur Python et l'énoncé du TP1: Listes</a>
-* <a href="../page4" target=_blank>Lien vers l'editeur Python et l'énoncé du TP2: boucles et parcours de listes</a>
+*{{< a link="../page3" caption="Lien vers l'editeur Python et l'énoncé du TP1: Listes" >}}*{{< a link="../page4" caption="Lien vers l'editeur Python et l'énoncé du TP2: boucles et parcours de listes" >}}

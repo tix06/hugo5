@@ -7,12 +7,7 @@ Title: MB grove
 ## Principe
 La carte microbit associée au shield grove permet d'utiliser de nombreux *capteurs passifs*. L'instruction à utiliser: `pin0.read_analog()`. Cette instruction permet la lecture d'une tension de type analogique sur l'entrée PIN0, quel que soit le composant passif.
 
-<figure>
-  <div>
-  <img src="../images/MB_LDR_grove.jpeg">
-</div>
-</figure>
-
+{{< img src="../images/MB_LDR_grove.jpeg" >}}
 
 ## Matériel
 

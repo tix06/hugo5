@@ -110,11 +110,7 @@ De la même façon qu’on est souvent incapable de caractériser une phrase cor
 
 # Bases de données
 ## Affiche sur le cloud et l'environnement
-<figure>
-  <img src="../images/affiche.JPG">
-  <figcaption>projet sur le developpement durable des élèves du lycée H d'Estiennes d'Orves 2021</figcaption>
-</figure>
-
+{{< img src="../images/affiche.JPG" caption="projet sur le developpement durable des élèves du lycée H d'Estiennes d'Orves 2021" >}}
 ## [Deux ou trois leçons à retenir de l'application StopCovid](https://www.larecherche.fr/chronique-num%C3%A9rique/deux-ou-trois-le%C3%A7ons-%C3%A0-retenir-de-lapplication-stopcovid)
 L'application mobile chargée de tracer les contacts avec des personnes contaminées: un sujet mettant en jeu des libertés fondamentales...Deux approches algorithmiques sont en compétition : centralisée et décentralisée. Les deux font appel à un serveur central. La question est de savoir si la liste des contacts de chacun est gérée sur ce serveur (approche centralisée) ou distribuée sur tout le réseau (approche décentralisée). Des risques de fuite de données personnelles existent dans les deux cas. Les différences sont subtiles et demandent une compréhension fine du fonctionnement des deux algorithmes. Cela met en évidence l'indispensable formation à l'informatique de la population pour pouvoir faire collectivement des choix éclairés.
 

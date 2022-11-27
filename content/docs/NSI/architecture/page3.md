@@ -31,22 +31,10 @@ La machine distante, qui reçoit cette trame, va alors repondre immédiatement e
 
 
 
-<figure>
-  <div>
-  <img src="../images/TCP.png" alt="principe de l'emission - reception d'une trame sur internet">
-  <figcaption>principe de l'emission - reception d'une trame sur internet</figcaption>
-</div>
-</figure>
+{{< img src="../images/TCP.png" alt="principe de l" caption="principe de l'emission - reception d'une trame sur internet" >}}
 
 
-
-<figure>
-  <div>
-  <img src="../images/TCP2.png" alt="envoi d'un accusé de reception">
-  <figcaption>envoi d'un accusé de reception</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/TCP2.png" alt="envoi d" caption="envoi d'un accusé de reception" >}}
 *[compléments et rappels de 1ere NSI: Lien](/docs/SNT_2nde/pages/page3/modele_OSI/)*
 
 ### Les machines
@@ -68,17 +56,7 @@ Dans le reseau internet, les reseaux et les machines sont identifiés par un num
 * Lorsque l'on veut atteindre un ordinateur serveur depuis notre navigateur, on saisit dans la barre d'adresse:[^1]
 
 ```
-> http://<adresse IP du serveur>
-```
-
-* Lorsque l'on veut tester la connexion vers une machine distante du reseau, on saisit dans la console (lignes de commande):
-
-```
-> ping <adresse IP du destinataire>
-``` 
-
-Pour plus de précisions sur l'adressage IP ainsi que le masque de sous-reseau, voir la video <a href="https://www.youtube.com/watch?v=RnpSaDSSjR4" target="blank"><img src="../images/video.png"></a>
-
+Pour plus de précisions sur l'adressage IP ainsi que le masque de sous-reseau, voir la video{{< a link="https://www.youtube.com/watch?v=RnpSaDSSjR4" caption="" >}}
 Une adresse IP de la norme IPv4 est un nombre binaire codé sur 32 bits, soit 4 octets. Le nombre d'adresses possibles est alors de plus de 4 milliards. 
 
 *Exemple d'adresse IPv4 exprimée à l'aide de 4 valeurs décimales (0-255):*
@@ -108,11 +86,7 @@ La table de routage contiendra donc:
 Dans cette représentation, on donne l'adresse des réseaux lorsqu'il y a plusieurs connexions. Par exemple `192.168.1.0/24` pour le reseau en bas à gauche. Pour toutes les machines connectées, on ne donne que la partie *adresse machine*. Il s'agit du dernier octet de l'adresse IP.
 
 
-<figure>
-  <img src="../images/routage4.png" alt="système n°1">
-  <figcaption>système n°1</figcaption>
-</figure>
-
+{{< img src="../images/routage4.png" alt="système n°1" caption="système n°1" >}}
 La table de routage du routeur 1 est alors:
 
 | reseau à rejoindre | passerelle (*Gateway*) |
@@ -129,11 +103,7 @@ La table de routage du routeur 1 est alors:
 *Ex 2:* Donner les tables de routage des routeurs du système informatique suivant:
 
 
-<figure>
-  <img src="../images/routage3.png" alt="système n°2">
-  <figcaption>système informatique n°2</figcaption>
-</figure>
-
+{{< img src="../images/routage3.png" alt="système n°2" caption="système informatique n°2" >}}
 Routeur 1
 
 | reseau à rejoindre | passerelle (*Gateway*) |
@@ -166,11 +136,7 @@ Considérons système informatique constitué de:
 Les adresses IP indiquées sur le schéma suivant concernent toutes les cartes reseaux des machines. Les routeurs possèdent une carte reseau par interface reseau.
 
 
-<figure>
-  <img src="../images/LAN.png" alt="exemple d'un reseau de sous-reseaux">
-  <figcaption>exemple d'un reseau de sous-reseaux</figcaption>
-</figure>
-
+{{< img src="../images/LAN.png" alt="exemple d" caption="exemple d'un reseau de sous-reseaux" >}}
 Dans cet exemple, voici la liste des adresses IP des différents reseaux:
 
 | reseau | adresse IP | symbole utilisé dans le graphe |
@@ -198,11 +164,7 @@ Pour constituer un graphe de ce système informatique, on ne représentera pas l
 
 
 
-<figure>
-  <img src="../images/fig50.png" alt="modelisation par graphe">
-  <figcaption>modelisation par graphe</figcaption>
-</figure>
-
+{{< img src="../images/fig50.png" alt="modelisation par graphe" caption="modelisation par graphe" >}}
 Supposons que la machine 192.168.0.101 du sous-reseau 192.168.1.0 souhaite communiquer avec une autre machine sur *internet*.
 
 Dans le reseau de cette machine, tous les ordinateurs hôtes sont reliés au switch *S0*. Ce switch *voit* le routeur **R1** à l'adresse IP de sa carte reseau *côté S0*, soit 192.168.0.1
@@ -240,11 +202,9 @@ Pour chacun des videos, au cours de leur visionnage, prendre en notes pour repon
 
 ## Le routage à vecteurs de distance
 
-<a href="https://www.youtube.com/watch?v=kzablGaqUXM" target="blank"><img src="../images/video.png"></a>
 
 ## Les routage à états de liens
 
-<a href="https://www.youtube.com/watch?v=-utHPKREZV8" target="blank"><img src="../images/video.png"></a>
 
 
 

@@ -36,11 +36,7 @@ Montrons qu'à la fin d'un tour de boucle, les valeurs de la liste sont triées 
 
 Pour aider le raisonnement, on utlisera le *tableau exemple suivant*:
 
-<figure>
-  <img src="../images/tri_insertion.png">
-  <figcaption>liste triée jusqu'au rang j = 3</figcaption>
-</figure>
-
+{{< img src="../images/tri_insertion.png" caption="liste triée jusqu'au rang j = 3" >}}
 
 **Cas n°1: Soit `L[j] >= L[0]`**: 
 
@@ -49,11 +45,7 @@ Après la ligne 4, on entre dans la boucle `while`. A la fin de cette boucle, av
 Alors la boucle n'est plus executée car `L[i-1] > temp` vaut `False`, donc, ligne 9: `L[i] = temp`. La liste est alors dans la configuration *fin de boucle* sur l'image suivante.
 
 
-<figure>
-  <img src="../images/liste_triee.png">
-  <figcaption>liste triée jusqu'au rang j = 4 inclus</figcaption>
-</figure>
-
+{{< img src="../images/liste_triee.png" caption="liste triée jusqu'au rang j = 4 inclus" >}}
 
 
 
@@ -285,8 +277,4 @@ Le tri fusion est traité en détail au chapitre [diviser pour regner](/docs/NSI
 # Liens
 
 <ul>
-  <li>Cours <i>Diviser pour Regner</i> : <a href="/docs/NSI/algorithmes/page5/">Lien</a></li>
-  <li>TP <i>Comparaison de divers algorithmes de tri</i> : <a href="/pdf/NSI/algo4_algorithmes_tri.ipynb" target = "blank">Notebook</a></li>
-  <li>version <a href ="https://drive.google.com/file/d/1TFnknrNxeMdtlzIonrdyw6iyexj3mDC1/view?usp=sharing">google colab du notebook</a></li>
-  <li>TP <i>variations sur le tri par selection</i>: <a href="https://colab.research.google.com/drive/1qUHTnjr4jxbKXsbwu6Af2USlJuSB7U4W?usp=sharing" target="blank">google colab</a></li>
-</ul>
+  <li>Cours <i>Diviser pour Regner</i> :{{< a link="/docs/NSI/algorithmes/page5/" caption="Cours " >}}  <li>TP <i>Comparaison de divers algorithmes de tri</i> :{{< a link="/pdf/NSI/algo4_algorithmes_tri.ipynb" caption="TP " >}}  <li>version{{< a link="https://drive.google.com/file/d/1TFnknrNxeMdtlzIonrdyw6iyexj3mDC1/view?usp=sharing" caption="version " >}}  <li>TP <i>variations sur le tri par selection</i>:{{< a link="https://colab.research.google.com/drive/1qUHTnjr4jxbKXsbwu6Af2USlJuSB7U4W?usp=sharing" caption="TP " >}}</ul>

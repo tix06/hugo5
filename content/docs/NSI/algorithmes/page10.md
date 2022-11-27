@@ -91,20 +91,14 @@ tt = turtle.Turtle()
 ## Des carrés
 On veut réaliser le dessin récursif dont on a mis ci-dessous les premières étapes (profondeur 0,1 et 2):
 
-<figure>
-    <img src = "../images/recur_carre.png">
-</figure>
-
+{{< img src="../images/recur_carre.png" >}}
 
 
 
 > Sur votre **cahier de labo**: 
 
 > * Compléter l'arbre des appels de la fonction recursive avec les traits du dessin de la figure.
-<figure>
-    <img src="../images/recur_directions.png">
-</figure>
-* Représenter la figure dessinée avec une profondeur de 2. Numéroter les 3 premiers segments dessinés par le programme.
+{{< img src="../images/recur_directions.png" >}}* Représenter la figure dessinée avec une profondeur de 2. Numéroter les 3 premiers segments dessinés par le programme.
 
 > Dans l'**editeur Trinket**: Completer la partie heredite du script suivant pour la fonction `recur_carre`. 
 
@@ -133,16 +127,10 @@ def recur_carre(divis):
 ## Des triangles
 Adapter ensuite cette fonction pour dessiner la figure:
 
-<figure>
-    <img src = "../images/recur_triangle1.png">
-</figure>
-
+{{< img src="../images/recur_triangle1.png" >}}
 ## Chalenge avec d'autres triangles
 
-<figure>
-    <img src = "../images/recur_triangle2.png">
-</figure>
-
+{{< img src="../images/recur_triangle2.png" >}}
 
 # Liens
 * Les dessins recursifs sont issus de la page [fourier.ujf-grenoble.fr](https://www-fourier.ujf-grenoble.fr/~parisse/giac/doc/fr/casrouge/casrouge019.html)

@@ -17,18 +17,12 @@ pas les deux.
 
 On donne ci-contre la table de vérité de la fonction XOR: 
 
-<figure>
-  <img src="../images/xor1.png">
-</figure>
-
+{{< img src="../images/xor1.png" >}}
 
 
 Si on applique cette fonction à un nombre codé en binaire, elle opère bit à bit.
 
-<figure>
-  <img src="../images/xor2.png">
-</figure>
-
+{{< img src="../images/xor2.png" >}}
 Poser et calculer l’opération : $11001110 \bigoplus 01101011$
 
 **3.** On donne, ci-dessous, un extrait de la table ASCII qui permet d’encoder les
@@ -37,10 +31,7 @@ On peut alors considérer l’opération XOR entre deux caractères en effectuan
 le XOR entre les codes ASCII des deux caractères. Par exemple : 'F' XOR 'S'
 sera le résultat de $01000110 \bigoplus 01010011$.
 
-<figure>
-  <img src="../images/xor3.png">
-</figure>
-
+{{< img src="../images/xor3.png" >}}
 On souhaite mettre au point une méthode de cryptage à l’aide de la fonction
 XOR.
 
@@ -52,10 +43,7 @@ cryptage.
 
 Par exemple, voici le cryptage du mot ALPHA à l’aide de la clé YAKYA :
 
-<figure>
-  <img src="../images/xor4.png">
-</figure>
-
+{{< img src="../images/xor4.png" >}}
 Ecrire une fonction `xor_crypt(message, cle)` qui prend en paramètres deux
 chaînes de caractères et qui renvoie la liste des entiers correspondant au
 message crypté. 
@@ -77,10 +65,7 @@ Créer une fonction `generer_cle(mot,n)` qui renvoie la clé de longueur n à pa
 
 **5.** Recopier et compléter la table de vérité de $(𝑬𝟏 \bigoplus 𝑬𝟐) \bigoplus 𝑬𝟐$.
 
-<figure>
-  <img src="../images/xor5.png">
-</figure>
-
+{{< img src="../images/xor5.png" >}}
 A l’aide de ce résultat, proposer une démarche pour décrypter un message crypté.
 
 # Bac 2022 Polynesie: Exercice 2
@@ -167,33 +152,17 @@ Chacun des quatre circuits à construire prend en entrée deux signaux **e0** et
 
 Par exemple, le circuit ci-dessous réalise la sélection du périphérique 3. En effet, le signal **s** vaut 1 si et seulement si **e0** et **e1** valent tous les deux 1.
 
-<figure>
-  <img src="../images/page6_1.png">
-  <figcaption>470 × 138</figcaption>
-</figure>
-
+{{< img src="../images/page6_1.png" caption="470 × 138" >}}
 ## Question 5
 A.  Recopier sur la copie et indiquer dans le circuit ci-dessous les entrées e0 et e1 de façon à ce que ce circuit sélectionne le périphérique 1.
 
-<figure>
-  <img src="../images/page6_2.png">
-  <figcaption>566 × 170</figcaption>
-</figure>
-
+{{< img src="../images/page6_2.png" caption="566 × 170" >}}
 B.  Dessiner un circuit constitué d'une porte ET et d'une porte NON, qui
 sélectionne le périphérique 2.
 c. Dessiner un circuit permettant de sélectionner le périphérique 0.
 
-<figure>
-  <img src="../images/page6_3.png">
-  <figcaption>1252 × 590</figcaption>
-</figure>
-
-<figure>
-  <img src="../images/page6_4.png">
-  <figcaption>1252 × 788</figcaption>
-</figure>
-
+{{< img src="../images/page6_3.png" caption="1252 × 590" >}}
+{{< img src="../images/page6_4.png" caption="1252 × 788" >}}
 # Bac 2022 Metropole1: Exercice 3
 Cet exercice porte sur les représentations binaires et les protocoles de routage.
 
@@ -215,11 +184,7 @@ traversés (qui correspond à la métrique). On donne les tables de routage d’
 réseau informatique composé de 5 routeurs (appelés A, B, C, D et E), chacun
 associé directement à un réseau du même nom obtenues avec le protocole RIP : 
 
-<figure>
-  <img src="../images/page6_5.png">
-  <figcaption>1234 × 916</figcaption>
-</figure>
-
+{{< img src="../images/page6_5.png" caption="1234 × 916" >}}
 A.  Donner la liste des routeurs avec lesquels le routeur A est directement
 relié.
 
@@ -241,11 +206,7 @@ Recopier sur votre copie et compléter le tableau suivant :
 |--- | --- | --- | --- | --- |
 | Métrique associé | 1000 | ? | 10 | 1 |
 
-<figure>
-  <img src="../images/page6_6.png">
-  <figcaption>1230 × 644</figcaption>
-</figure>
-
+{{< img src="../images/page6_6.png" caption="1230 × 644" >}}
 Les nombres présents sur les liaisons représentent les coûts des routes avec le
 protocole OSPF.
 

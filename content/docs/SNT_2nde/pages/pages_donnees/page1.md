@@ -12,13 +12,8 @@ On verra dans ce TP les opérations:
 * de filtrage
 * de calcul sur les données
 
-La première partie du TP utilise le fichier <a href="../datas/fruits.xlsx" target="blank"><i>fruits.xlsx</i></a> que vous devrez télécharger *(clic droit: Enregistrer sous)*. 
-
-<figure>
-<a href="../datas/fruits.xlsx" target="blank"><img src="/images/download.png"></a> 
-<figcaption>ckiquer pour telecharger</figcaption>
-</figure>
-
+La première partie du TP utilise le fichier{{< a link="../datas/fruits.xlsx" caption="" >}}
+{{< img src="/images/download.png" link="../datas/fruits.xlsx" caption="ckiquer pour telecharger" >}}
 > Une fois le fichier téléchargé:
 
 * Demarrer le logiciel Excel
@@ -26,13 +21,7 @@ La première partie du TP utilise le fichier <a href="../datas/fruits.xlsx" targ
 
 
 
-<figure>
-<div>
-<img src="../images/tableau_orig.png">
-<figcaption>exemple de présentation structurée des données en tableau</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/tableau_orig.png" caption="exemple de présentation structurée des données en tableau" >}}
 > * Ajouter les informations suivantes dans le tableau: *le commercial Sébastien a vendu 9814 Pommes dans la région Sud*.
 
 
@@ -76,24 +65,11 @@ Que remarque t-on?
 > * faire un copier coller des **etiquettes** du tableau
 * recopier une cellule: écrire l'opérateur `=` dans la premiere ligne, premiere colonne de ce nouveau tableau. 
 * Puis cliquer dans la case correspondante du tableau d'origine. Que constatez vous? ... Vous venez de faire une copie de la VALEUR de la cellule d'origine.
-* **étendre la formule** de la cellule: en largeur, puis en hauteur. (voir <a href="https://www.cours-gratuit.com/tutoriel-excel/tutoriel-excel-comment-etendre-une-formule#:~:text=Vous%20devez%20faire%20ce%20qui,en%20une%20croix%20noire%20%C3%A9paisse." target="blank">les explications sur cette page</a>)
-
-<figure>
-<div>
-<img src = "../images/select.gif" >
-<figcaption>faire une selection étendue</figcaption>
-</div>
-</figure>
-
+* **étendre la formule** de la cellule: en largeur, puis en hauteur. (voir{{< a link="https://www.cours-gratuit.com/tutoriel-excel/tutoriel-excel-comment-etendre-une-formule#:~:text=Vous%20devez%20faire%20ce%20qui,en%20une%20croix%20noire%20%C3%A9paisse." caption="les explications sur cette page" >}}
+{{< img src="../images/select.gif" caption="faire une selection étendue" >}}
 Vous avez réalisé une copie de votre tableau original. Une modification de ce tableau entraine une modification du 2e tableau.
 
-<figure>
-<div>
-<img src="../images/copie_tab.png">
-<figcaption>Copie du tableau</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/copie_tab.png" caption="Copie du tableau" >}}
 > Testez le vous même: Modifiez la valeur de la cellule en rouge du premier tableau. Vous devriez voir une modification sur le 2e tableau.
 
 Annulez ensuite votre modification. (CTRL + z)
@@ -104,39 +80,21 @@ Annulez ensuite votre modification. (CTRL + z)
 ## Filtrer par critère simple
 * Commencer par selectionner toutes les colonnes A, B, C, D, E dans laquelles se trouvent les données du tableau.
 
-<figure>
-  <img src="../images/excel1.png">
-</figure>
-
+{{< img src="../images/excel1.png" >}}
 Dans le bandeau *Données*, choisir Filtrer (entonoir).
 
 Il apparait alors des listes de choix au dessus des descripteurs du tableau. Pour filtrer selon l'un des descripteurs, cliquer sur l'une de ces listes de choix:
 
-<figure>
-  <img src="../images/excel2.png">
-</figure>
-
+{{< img src="../images/excel2.png" >}}
 * Sur le filtre appliqué à la première colonne (étiquette: Région), choisir **Est**.
 
-<figure>
-<div>
-<img src="../images/filtrer.png">
-<figcaption>menu permettant la sélection par Région</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/filtrer.png" caption="menu permettant la sélection par Région" >}}
 ## Filtrer selon un 2e critère
 * Sur le filtre appliqué à la troisième colonne (étiquette: Produits), choisir **Pommes**.
 
 Vous devriez obtenir le tableau suivant:
 
-<figure>
-<div>
-<img src="../images/tableau_tri.png">
-<figcaption>exemple de tableau filtré par Région ET par Produit</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/tableau_tri.png" caption="exemple de tableau filtré par Région ET par Produit" >}}
 
 
 # Les fonctions de calcul
@@ -173,34 +131,20 @@ La fonction SOMME.SI permet de sélectionner certaines cellules d'une selection 
 * Cliquer dans la cellule dans laquelle vous souhaitez rentrer la formule, sous le tableau.
 * écrire `= SOMME.SI(`
 
-<figure>
-
-<img src="../images/cadre_tab.png">
-<figcaption>somme conditionnelle <i>SOMME.SI</i><br>
-Les coordonnées de cases peuvent différer pour vous selon<br>la positon du tableau</figcaption>
-
-</figure>
-
+{{< img src="../images/cadre_tab.png" caption="somme conditionnelle " >}}
 > * cliquer sur le bouton *fx* de la barre de saisie.
 * Aidez vous des champs suivants pour remplir les plages pour cette formule:
 	* Plage: faire une selection étendue des valeurs de la colonne *Produits*
 	* Critères: écrire "Pommes", ou bien cliquer sur le mot "Pommes" dans l'une des cellules du tableau (la *C24* dans cet exemple.
 	* Somme_plage: selectionner toutes les valeurs numériques de la colonne *Unités*:
 
-<figure>
-<div>
-<img src="../images/sommesi.png">
-<figcaption>concepteur de formule pour SOMME.SI</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/sommesi.png" caption="concepteur de formule pour SOMME.SI" >}}
 On a alors le nombre de Pommes vendues dans toute la France.
 
 ## Somme conditionnelle avec plusieurs critères: SOMME.SI.ENS
 On souhaite maintenant evaluer le nombre total de *Pommes* vendues en Région *Est*. C'est une somme conditionnelle avec cette fois **2 critères**.
 
-Une notice détaillée de cette fonction se trouve <a href="https://support.microsoft.com/fr-fr/office/fonction-somme-si-ens-c9e748f5-7ea7-455d-9406-611cebce642b" target=blank>ici - site du support.microsoft.com</a>.
-
+Une notice détaillée de cette fonction se trouve{{< a link="https://support.microsoft.com/fr-fr/office/fonction-somme-si-ens-c9e748f5-7ea7-455d-9406-611cebce642b" caption="ici - site du support.microsoft.com" >}}
 
 > * Commencez par écrire `= SOMME.SI.ENS(`
 * cliquer sur le bouton *fx* de la barre de saisie.
@@ -210,14 +154,7 @@ Une notice détaillée de cette fonction se trouve <a href="https://support.micr
 * La boite de dialogue affiche maintenant *plage 2* correspondant au 2e critère. Ici, la plage de valeurs sous l'etiquette **Produit**.
 * puis ajouter `Pommes` pour le *critère 2* et *terminer*
 
-<figure>
-
-<img src="../images/sommesiens.png">
-<figcaption>selection des colonnes pour SOMME.SI.ENS<br>
-Les coordonnées de cases peuvent différer pour vous selon<br>la positon du tableau</figcaption>
-
-</figure>
-
+{{< img src="../images/sommesiens.png" caption="selection des colonnes pour SOMME.SI.ENS" >}}
 
 
 

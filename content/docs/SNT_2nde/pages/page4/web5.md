@@ -37,13 +37,7 @@ selecteur {
 ```
 *Exemple:*
 
-<figure>
-  <div>
-    <img src="../images/css.png">
-    <figcaption>règles CSS associées à tous les éléments p de la page: caractères mis en gras (font-weight: bold) et entourés d'une bordure rouge (border: 2px solid red)</figcaption>
-  </div>
-</figure>
-
+{{< img src="../images/css.png" caption="règles CSS associées à tous les éléments p de la page: caractères mis en gras (font-weight: bold) et entourés d'une bordure rouge (border: 2px solid red)" >}}
 
 Le selecteur fait référence à un ou plusieurs éléments du document.
 
@@ -156,7 +150,4 @@ On peut ajouter une déclaration CSS dans le début du fichier. Par exemple pour
 
 # Liens
 <ul>
-<li><a href="../web1">SNT le langage HTML</a></li>
-<li><a href="../web2">SNT TP 1: HTML et CSS</a></li>
-<li><a href="../web3">SNT TP 2: Javascript</a></li>
-</ul>
+<li{{< a link="../web1" caption="" >}}<li{{< a link="../web2" caption="" >}}<li{{< a link="../web3" caption="" >}}</ul>

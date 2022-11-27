@@ -189,8 +189,7 @@ with open("table_7.txt", "w") as filout:
 </div>
 
 # Relire le cours
-Lien vers la page : <a href="/docs/python/pages/ES/page1/">Entrées/Sorties</a>
-
+Lien vers la page :{{< a link="/docs/python/pages/ES/page1/" caption="Entrées/Sorties" >}}
 
 <script>
 let selector, cards, makeActive;

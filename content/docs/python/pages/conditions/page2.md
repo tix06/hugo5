@@ -57,11 +57,7 @@ if prix_essence > 1.8:
 **2. Les blocs du programme**
 En Python, on utilise l'indentation (le retrait de la ligne) pour rendre compte des blocs de code.
 
-<figure>
-  <img src="../images/pybloc1.png" alt="pybloc et indentation">
-  <figcaption>de pybloc au script python</figcaption>
-</figure>
-
+{{< img src="../images/pybloc1.png" alt="pybloc et indentation" caption="de pybloc au script python" >}}
 Le bloc de code à executer peut contenir plusieurs lignes, à condition de respecter l'indentation.
 
 **3. L'alternative `if - else`**
@@ -129,5 +125,4 @@ C'est le problème avec les boucles non bornées. Celles-ci peuvent ne pas finir
  
 
 # Travaux Pratiques
-* <a href="../page3">Lien vers le TP1: structures conditionnelles</a>
-* <a href="../page4">Lien vers le TP2: boucles non bornées</a>
+*{{< a link="../page3" caption="Lien vers le TP1: structures conditionnelles" >}}*{{< a link="../page4" caption="Lien vers le TP2: boucles non bornées" >}}

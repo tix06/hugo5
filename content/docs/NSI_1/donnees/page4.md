@@ -7,10 +7,7 @@ Title: Codage des nombres
 ## nombres signés
 Les entiers signés sont positifs, negatifs ou nuls. Comme il n'est pas possible d'écrire, comme nous le faisons normalement, un nombre négatif avec un signe (-) devant, il va falloir utiliser une nouvelle convention.
 
-<figure>
-  <img src="../images/moins127.png">
-</figure>
-
+{{< img src="../images/moins127.png" >}}
 La première idée est de reproduire le signe en utilisant le bit de poids fort du nombre pour le représenter. Les n – 1 bits restants donnent la valeur absolue binaire du nombre.
 
 *Problèmes:* 
@@ -29,10 +26,7 @@ C’est la représentation standard sur les ordinateurs pour exprimer les nombr
 > * Un nombre positif est représenté de façon standard par son écriture binaire. 
 * un nombre négatif est représenté en ajoutant 1 à son complément à 1 (obtenu en inversant tous les bits) et en laissant tomber une éventuelle retenue finale.
 
-<figure>
-  <img src="../images/moins127(2).png">
-</figure>
-
+{{< img src="../images/moins127(2).png" >}}
 il est important d’indiquer sur combien de bits doit s’écrire le nombre car on ne rajoute pas des zéros en tête mais 1...
 
 **Intérêt :** on n’a plus à se préoccuper du signe des nombres avant d’effectuer l’opération.
@@ -41,29 +35,18 @@ il est important d’indiquer sur combien de bits doit s’écrire le nombre ca
 
 Soit l'entier signé - 127 (1000 0001) que l'on additionne à 127 (0111 1111):
 
-<figure>
-  <img src="../images/complea2.png">
-</figure>
-
+{{< img src="../images/complea2.png" >}}
 # Représentation des nombres décimaux
 ## nombres fractionnaires
 Un nombre avec virgule, exprimé en base décimale peut être représenté comme une somme de puissances de 10:
 
-<figure>
-  <img src="../images/virg10.png">
-  <figcaption>écriture d'un nombre à virgule en base 10</figcaption>
-</figure>
-
+{{< img src="../images/virg10.png" caption="écriture d'un nombre à virgule en base 10" >}}
 * Les puissances de 10 positives pour la partie entière (à gauche de la virgule)
 * les puissances de 10 negatives pour la partie après la virgule
 
 En base 2, le nombre peut aussi s'écrire avec une virgule, et être lu comme une somme en puissance de 2:
 
-<figure>
-  <img src="../images/virg2.png">
-  <figcaption>écriture du même nombre en base 2</figcaption>
-</figure>
-
+{{< img src="../images/virg2.png" caption="écriture du même nombre en base 2" >}}
 * Les puissances de 2 positives pour la partie entière (à gauche de la virgule)
 * les puissances de 2 negatives pour la partie après la virgule
 
@@ -76,18 +59,10 @@ Pour représenter des nombres avec une partie fractionnaire, décomposer la part
 
 Lorsque l'on représente la partie décimale de 0.375, on a une valeur exacte que l'on peut coder sur 1 seul octet:
 
-<figure>
-  <img src="../images/virgule1.png">
-  <figcaption>conversion binaire de la partie décimale .0375</figcaption>
-</figure>
-
+{{< img src="../images/virgule1.png" caption="conversion binaire de la partie décimale .0375" >}}
 Le problème est que la représentation d'un nombre peut être finie dans une base donnée, et être infini dans une autre: 
 
-<figure>
-  <img src="../images/virgule2.png">
-  <figcaption>conversion binaire de la partie décimale .1</figcaption>
-</figure>
-
+{{< img src="../images/virgule2.png" caption="conversion binaire de la partie décimale .1" >}}
 Si on n'utilise que 8 bits pour la partie décimale de 0.1, la valeur numérisée vaut alors:
 
 $$\tfrac{1}{16} + \tfrac{1}{32} + \tfrac{1}{256} = 0.09765625$$
@@ -110,11 +85,7 @@ Il y a alors 2 problèmes avec cette représentation:
 
 Ces approximations sont alors la source d'erreurs de calcul en python:
 
-<figure>
-  <img src="../images/approxi.png">
-  <figcaption>somme de 0.1 + 0.2 en python</figcaption>
-</figure>
-
+{{< img src="../images/approxi.png" caption="somme de 0.1 + 0.2 en python" >}}
 ## codage en virgule flottante
 ### Principe
 Pour un ordinateur, TOUT est discrêt: cela signifie que les nombres réels seront *approchés* par des nombres dits *à virgule flottante*.
@@ -163,10 +134,7 @@ Avec 5 bits, nous pouvons coder 25 nombres flottants. La precision est alors de 
 
 Voici la liste des 16 positifs :
 
-<figure>
-  <img src="../images/float5bits.png">
-</figure>
-
+{{< img src="../images/float5bits.png" >}}
 Supposons que l'exposant E se calcule d'après e selon la règle suivante:
 
 $$E = e - 1$$

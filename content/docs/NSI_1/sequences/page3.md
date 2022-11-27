@@ -4,10 +4,7 @@ Title: Donnees en table
 
 # Données en table - intro
 
-<figure>
-  <img src="../images/voyage1.png">
-</figure>
-
+{{< img src="../images/voyage1.png" >}}
 
 Pour une agence de voyage, les données sont organisées en 2 tables *clients* et *sejours*.
 
@@ -68,26 +65,17 @@ L'agence de voyage a besoin d'un programme prenant en entrée un nom de ville **
 ### Une table
 Une table est une liste de lignes, dont les éléments partagent les mêmes colonnes.
 
-<figure>
-  <img src="../images/table1.png">
-</figure>
-
+{{< img src="../images/table1.png" >}}
 ### Une ligne
 Chaque ligne est un p-uplet de valeurs (duet, triplet, ...)
 
-<figure>
-  <img src="../images/table4.png">
-</figure>
-
+{{< img src="../images/table4.png" >}}
 ### Une colonne
 Dans chaque colonne, on trouve des valeurs de même type: le **domaine de valeurs**. 
 
 Chaque colonne porte un nom: le **descripteur** de la colonne.
 
-<figure>
-  <img src="../images/table2.png">
-</figure>
-
+{{< img src="../images/table2.png" >}}
 ### Le schéma d'une table
 Le schema d'une table est sa structure. C'est l'ensemble de ses descripteurs de colonnes avec leur type. C'est ce qui décrit une table.
 
@@ -102,10 +90,7 @@ Le schema d'une table est sa structure. C'est l'ensemble de ses descripteurs de 
 ### Le contenu d'une table
 Le contenu d'une table est formé de ses lignes, qui contiennent les *valeurs*
 
-<figure>
-  <img src="../images/table3.png">
-</figure>
-
+{{< img src="../images/table3.png" >}}
 
 
 ### L'identifiant ID
@@ -113,10 +98,7 @@ Parmi les colonnes, l'une d'entre-elles a un statut particulier: L'IDENTIFIANT. 
 
 
 
-<figure>
-  <img src="../images/table5.png">
-</figure>
-
+{{< img src="../images/table5.png" >}}
 
 
 ## Représentations en python

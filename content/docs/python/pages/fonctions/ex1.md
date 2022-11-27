@@ -180,8 +180,7 @@ L'appel de la fonction diffère selon la méthode d'import du module.
 
 
 # Relire le cours
-Lien vers la page : <a href="/docs/python/pages/fonctions/page1/">fonctions</a>
-
+Lien vers la page :{{< a link="/docs/python/pages/fonctions/page1/" caption="fonctions" >}}
 
 <script>
 let selector, cards, makeActive;

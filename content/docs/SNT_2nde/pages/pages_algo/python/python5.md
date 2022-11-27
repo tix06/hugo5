@@ -2,13 +2,7 @@
 Title : Python Turtle
 ---
 
-<figure>
-  <div>
-    <img src="../images/figuresMath.png">
-    <figcaption>des exemples de figures mathématiques</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/figuresMath.png" caption="des exemples de figures mathématiques" >}}
 # TP Python Turtle
 Le module Turtle de Python permet de dessiner à l'écran des formes, à l'aide d'instructions qui tracent des formes géométriques.
 
@@ -26,8 +20,7 @@ Nous nous limiterons aux fonctions:
 
 # Premiers tracés
 ## L'interface Scratch + Python de Vittascience
-* Aller sur le site <a href="https://fr.vittascience.com/python/" target="blank">Vittascience.com</a>. Puis choisir *Programmer* et *Python*.
-
+* Aller sur le site{{< a link="https://fr.vittascience.com/python/" caption="Vittascience.com" >}}
 Le site propose un éditeur Scratch en ligne (avec des blocs de code).
 
 Les blocs de code sont accessibles à partir des *menus*, par genre:
@@ -43,13 +36,7 @@ Les blocs de code sont accessibles à partir des *menus*, par genre:
 ### Assembler les blocs
 A partir du *menu Turtle*, en utilisant les blocs, vous allez:
 
-<figure>
-  <div>
-    <img src="../images/bloc1.png">
-    <figcaption>bloc avancer du menu Turtle</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/bloc1.png" caption="bloc avancer du menu Turtle" >}}
 ```
 avancer de 50
 tourner a gauche d'un angle de 120°
@@ -70,37 +57,19 @@ Appuyer sur **Executer**: La forme dessinée n'est pas un triangle fermé.
 
 > **Défi 1:** ajouter les blocs manquants pour dessiner complètement le triangle.
 
-<figure>
-  <div>
-    <img src="../images/triangle.png">
-
-</div>
-</figure>
-
+{{< img src="../images/triangle.png" >}}
 * Recopiez le script python correspondant dans votre cahier.
 
 ### Répéter avec une boucle
 Si vous observez votre script, vous remarquez qu'il est constitué de 3 répétitions:
 
-<figure>
-  <div>
-    <img src="../images/bloc2.png">
-
-</div>
-</figure>
-
+{{< img src="../images/bloc2.png" >}}
 Vous allez réaliser la même chose, mais en réduisant *AU MAXIMUM* le nombre de lignes.
 
 * Conserver uniquement les 2 premiers blocs, *AVANCER* et *TOURNER*. Supprimer les autres
 * Dans le menu *Boucles*, prendre le bloc *répéter ... fois* et insérer dans ce bloc les 2 instructions de dessin. Modifier le paramètre 3.
 
-<figure>
-  <div>
-    <img src="../images/bloc3.png">
-
-</div>
-</figure>
-
+{{< img src="../images/bloc3.png" >}}
 * EXECUTER le programme
 * Recopiez le script python correspondant dans votre cahier.
 
@@ -119,13 +88,7 @@ Une fonction permet de mémoriser des blocs de code afin de les organiser et les
 * Remettre les arguments qui dessinent un triangle simple (3 fois, 120°)
 * Dans le menu *Fonctions*, prendre le premier bloc *Définir*. Modifier le nom, et renommer cette fonction avec `triangle`.
 
-<figure>
-  <div>
-    <img src="../images/bloc4.png">
-
-</div>
-</figure>
-
+{{< img src="../images/bloc4.png" >}}
 * Mettre alors la boucle entière dans cette fonction. EXECUTER... il ne se passe rien.
 * Revenir dans le menu *Fonctions* et:
   * aller chercher le bloc de code appelé `triangle`. 
@@ -136,38 +99,15 @@ Une fonction permet de mémoriser des blocs de code afin de les organiser et les
 ### Réutiliser une fonction
 Voici un extrait de la suite du script qui vous permettra de créer une figurre plus complexe:
 
-<figure>
-  <div>
-    <img src="../images/bloc5.png">
-
-</div>
-</figure>
-
+{{< img src="../images/bloc5.png" >}}
 > **Défi 3:** Vous allez déplacer votre *Tortue* à différentes positions de l'image, afin de dessiner la forme suivante:
 
-<figure>
-  <div>
-    <img src="../images/triangleFigure.png">
-
-</div>
-</figure>
-
+{{< img src="../images/triangleFigure.png" >}}
 *Remarque: Vous aurez besoin pour cela de réutiliser votre fonction `triangle`.*
 
 Une fois le défi réalisé, recopiez le script dans votre cahier.
 
 > **Défi 4:** Réaliser maintenant l'une des figures ci-dessous:
 
-<figure>
-  <div>
-    <img src="../images/triangleFigure1.png">
-    <figcaption>figure 1: triangles alignés</figcaption>
-</div>
-</figure>
-
-<figure>
-  <div>
-    <img src="../images/triangleFigure2.png">
-    <figcaption>figure 2: triangles tournants</figcaption>
-</div>
-</figure>
+{{< img src="../images/triangleFigure1.png" caption="figure 1: triangles alignés" >}}
+{{< img src="../images/triangleFigure2.png" caption="figure 2: triangles tournants" >}}

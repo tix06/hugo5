@@ -15,8 +15,7 @@ Lancer le logiciel **Filius**.
 
 On réalise un premier réseau simple de 2 ordinateurs reliés par une seule ligne.
 
-On s'aidera de la video de présentation <a href="https://www.youtube.com/watch?v=nzuRSOwdF5I" target="blank">Filius 1 (David Roche)</a> pour realiser ce reseau simple.
-
+On s'aidera de la video de présentation{{< a link="https://www.youtube.com/watch?v=nzuRSOwdF5I" caption="Filius 1 (David Roche)" >}}
 * Disposer les 2 ordinateurs comme présenté sur la video. 
 
 * Modifier les adresses IP de ces ordinateurs pour avoir, dans l'ordre:
@@ -29,22 +28,11 @@ On s'aidera de la video de présentation <a href="https://www.youtube.com/watch?
 
 * Installer les logiciels utiles pour faire communiquer ces machines. Pour faire cela: Démarrer la simulation:
 
-<figure>
-
-    <img src="../images/logiciels.png" alt="démarrer">
-
-</figure>
-
+{{< img src="../images/logiciels.png" alt="démarrer" >}}
 
 * Puis faire un *double clic* sur chacune des machines, et installer le logiciel *ligne de commandes*.
 
-<figure>
-  <div>
-    <img src="../images/instal.png" alt="console d'installation de logiciels">
-    <figcaption>console d'installation de logiciels</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/instal.png" alt="console d" caption="console d'installation de logiciels" >}}
   
 
 * tester alors les commandes suivantes depuis la machine M1:
@@ -73,13 +61,7 @@ On cherche maintenant à créer un système de 2 sous-réseaux locaux. Ces resea
 Votre système devrait ressembler à l'image suivante:
 
 
-<figure>
-  <div>
-    <img src="../images/reseauSansrouteur.png" alt="systeme de 2 sous-reseaux sans routeur">
-    <figcaption>systeme de 2 sous-reseaux sans routeur</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/reseauSansrouteur.png" alt="systeme de 2 sous-reseaux sans routeur" caption="systeme de 2 sous-reseaux sans routeur" >}}
 * Tester alors la commande `ping` depuis la machine M1 vers celle M6 du 2e sous-reseau. Vous constatez que l'accès à M6 n'est pas possible. En effet, votre système doit disposer d'un routeur, une machine capable de faire interface entre 2 reseaux...
 
 * Modifier le système en ajoutant un routeur:
@@ -97,28 +79,16 @@ Votre système devrait ressembler à l'image suivante:
   > renseigner les adresses des 2 reseaux sur l'interface du routeur
 
 
-<figure>
-    <img src="../images/interface.png" alt="adresses des reseaux">
-    <figcaption>adresses des reseaux</figcaption>
-</figure>
-
+{{< img src="../images/interface.png" alt="adresses des reseaux" caption="adresses des reseaux" >}}
   > cocher routage automatique:
 
 
-<figure>
-    <img src="../images/routage.png" alt="option routage automatique">
-    <figcaption>option routage automatique</figcaption>
-</figure>
-
+{{< img src="../images/routage.png" alt="option routage automatique" caption="option routage automatique" >}}
   * Pour chacun des ordinateurs du sous-reseau 1, M1, M2, M3, renseigner l'adresse de l'interface reseau 1 du routeur: mettre **192.168.0.254** dans le champs *passerelle*. Ce sera l'adresse IP de la carte reseau du routeur, du côté du reseau 192.168.0.0 (on met **254** à la place de **0** pour l'adresse routeur).
 
  
 
-<figure>
-    <img src="../images/passerelle.png" alt="renseigner l'adresse reseau pour chaque ordinateur">
-    <figcaption>renseigner l'adresse reseau pour chaque ordinateur</figcaption>
-</figure>
-
+{{< img src="../images/passerelle.png" alt="renseigner l" caption="renseigner l'adresse reseau pour chaque ordinateur" >}}
   * Même travail pour M4, M5, M6: renseigner la passerelle **192.168.2.254**
   * refaire le cablage
 
@@ -126,8 +96,7 @@ Votre système devrait ressembler à l'image suivante:
 
 
 
-*En cas de difficultés: on pourra consulter la <a href="https://www.youtube.com/watch?v=xyK6ThdQeR0" target="blank">video Filius 2 de David Roche</a>*
-
+*En cas de difficultés: on pourra consulter la{{< a link="https://www.youtube.com/watch?v=xyK6ThdQeR0" caption="video Filius 2 de David Roche" >}}
 
 # TP Filius 3 : système avec ordinateur serveur
 On utilisera pour la suite un système informatique constitué de nombreux sous-reseaux:
@@ -158,17 +127,11 @@ Toujours en mode *simulation*:
   * lancer le logiciel *editeur de texte*
   * Saisir une ou plusieurs instructions en `html`, comme par exemple:
 
-<figure>
-  <img src="../images/serveur3.png">
-</figure>
-
+{{< img src="../images/serveur3.png" >}}
 * machine n°15:
   * cliquer sur le bouton *Fichier*
 
-<figure>
-  <img src="../images/serveur4.png">
-</figure>
-
+{{< img src="../images/serveur4.png" >}}
 * machine n°15:
   * sauvegarder ce fichier dans le dossier *webserver*. Choisir: Nom de fichier: **index.html**
   * Ouvrir le l'app *webserveur* et démarrer (**Start**)
@@ -176,16 +139,10 @@ Toujours en mode *simulation*:
 * test en local:
   * ouvrir le webbrowser. Dans la barre d'adresse, saisir `http://localhost`. Voyez vous votre page?
 
-<figure>
-  <img src="../images/localhost.png">
-</figure>
-
+{{< img src="../images/localhost.png" >}}
   * Aller sur l'application webserver: Les informations affichées devraient montrer l'entête HTTP avec la requête reçue (méthode GET, ...), l'entête de la reponse (HTTP/1.1 200 OK), ainsi que le script HTML téléchargé.
 
-<figure>
-  <img src="../images/protocoleHTTP.png">
-</figure>
-
+{{< img src="../images/protocoleHTTP.png" >}}
 ## Communication client-serveur
 * Ajouter à l'ordinateur n°1 le logiciel : *Navigateur Web*
 * Lancer le *Navigateur web*
@@ -200,25 +157,16 @@ Comme pour la connexion en localhost: Lire les informations de la fenêtre de l'
 * **Côté client** 
 Faire un clic droit sur la *machine M1*. Choisir *show data exchange*
 
-<figure><div>
-  <img src="../images/menu_client.png"></div>
-</figure>
-
+{{< img src="../images/menu_client.png" >}}
 Dérouler alors *trames échangées jusqu'à arriver à celles de protocole TCP*
 
-<figure>
-  <img src="../images/trame_tcp.png">
-</figure>
-
+{{< img src="../images/trame_tcp.png" >}}
 * Dans la série de *trames TCP*:
   * L'adresse source et celle destination, sont-elles toujours les mêmes? Ou y-a-t-il un alternance?
   * Observer le détail de la première trame: vous avez accès aux informations de la couche liaison (2), reseau (3), ainsi que la couche transport (4): identifier les informations pour chacune de ces couches: IP et TTL pour la couche 3, SEQ et ACK pour la couche 4...
   * Ces informations, évoluent-elles d'une trame à l'autre?
 
-<figure><div>
-  <img src="../images/detail_tcp_ip.png"></div>
-</figure>
-
+{{< img src="../images/detail_tcp_ip.png" >}}
 # TP Filius 4: Serveur DNS
 Quitter la simulation précédente et ouvrir ce [nouveau](../images/TP4_DNS.fls) fichier.
 
@@ -235,21 +183,11 @@ Vous allez remplir la table permettant la resolution symbolique du serveur DNS c
 | 192.168.4.3 | estiennedorves.fr |
 | 192.168.5.3 | autreserveur.com |
 
-<figure><div>
-  <img src="../images/configDNS.png">
-  <figcaption>configuration DNS</figcaption>
-  </div>
-</figure>
-
+{{< img src="../images/configDNS.png" caption="configuration DNS" >}}
 Puis, à partir de l'une des machines du reseau, comme par exemple M1, vous allez vous connecter à chacun de ces serveurs, à partir de leur adresse symbolique.
 
 
-<figure><div>
-  <img src="../images/adressesymbolique.png">
-  <figcaption>navigation avec adresse symbolique</figcaption>
-  </div>
-</figure>
-
+{{< img src="../images/adressesymbolique.png" caption="navigation avec adresse symbolique" >}}
 
 # Compléments théoriques sur les adresses des machines
 
@@ -325,8 +263,7 @@ Une adresse MAC est codée en hexadécimal, sur 6 octets (cf cours sur l'hexadé
 
 # Liens
 
-* Vidéo de prise en main du logiciel <a href="https://www.youtube.com/watch?v=nzuRSOwdF5I" target="blank">Filius 1 (David Roche)</a>
-
+* Vidéo de prise en main du logiciel{{< a link="https://www.youtube.com/watch?v=nzuRSOwdF5I" caption="Filius 1 (David Roche)" >}}
 * video [Ping et traceroute utility](https://www.youtube.com/watch?v=vJV-GBZ6PeM)
 
 

@@ -9,13 +9,7 @@ On affiche les valeurs retournées par le capteur interne de température sur le
 
 L'afficheur sera banché sur le port grove PIN0.
 
-<figure>
-<div>
-<img src="../images/MB_7.jpeg">
-<figcaption>afficheur à LED</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/MB_7.jpeg" caption="afficheur à LED" >}}
 ## Matériel
 
 * microcontrôleur microbit et shield grove

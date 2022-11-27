@@ -7,22 +7,12 @@ Title: Programme informatique
 Ce qui fait fonctionner un appareil numérique, c'est un **programme**: 
 C'est donc grâce à un programme que l'on fait fonctionner un ordinateur, une console de jeux, une machine à laver, le poste de pilotage d'un avion, un guichet automatique bancaire… 
 
-<figure>
-  <img src="../images/machines.png">
-<figcaption>des <i>machines</i> numériques</figcaption>
-</figure>
-
+{{< img src="../images/machines.png" caption="des " >}}
 Mais c'est aussi grâce à un programme que ces machines peuvent fournir un service: un logiciel de bureautique, un jeu, le lavage du linge, le pilotage automatique, ou le retrait d'argent de son compte....
 
 Aujourd'hui, le smartphone est l'objet qui nous permet d'executer de nombreux programmes, en permanence.
 
-<figure>
-  <div>
-  <img src="../images/iphone.jpg">
-<figcaption>applications et smartphone</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/iphone.jpg" caption="applications et smartphone" >}}
 On confond parfois **programme informatique** et **logiciel**, ou **application**.
 Un logiciel peut comporter plusieurs programmes. 
 
@@ -33,11 +23,7 @@ Un logiciel peut comporter plusieurs programmes.
 * Le premier système d'exploitation a été développé en **1954**. 
 * **1970**: début de la programmation structurée. Depuis, la variété et mise à jour des langages n'a cessé de rendre plus accéssible la programmation.
 
-<figure>
-<img src="../images/frise.jpg">
-<figcaption>Compléter la frise</figcaption>
-</figure>
-
+{{< img src="../images/frise.jpg" caption="Compléter la frise" >}}
 # Algorithme
 Un algorithme traduit le cahier des charges d'un programme en un langage naturel et non ambigü, où les instructions sont séquencées.
 
@@ -46,18 +32,10 @@ Un algorithme traduit le cahier des charges d'un programme en un langage naturel
 * **Cahier des charges:** *Réaliser une grue (l'animal) par 10 pliages succéssifs d'une feuille de papier.*
 * **Algorithme:**
 
-<figure>
-<img src="../images/origami.png">
-<figcaption>extrait de la séquence de pliage</figcaption>
-</figure>
-
+{{< img src="../images/origami.png" caption="extrait de la séquence de pliage" >}}
 > L'algorithme du pliage de l'origami présente une **structure linéaire**. On peut visualiser celui-ci à l'aide d'un [algorigramme](https://www.playhooky.fr/technologie/algorithmes-algorigrammes/)
 
-<figure>
-<img src="../images/algorigramme1.png">
-<figcaption><a href="https://www.playhooky.fr/technologie/algorithmes-algorigrammes/">algorigramme</a> du pliage</figcaption>
-</figure>
-
+{{< img src="../images/algorigramme1.png" link="https://www.playhooky.fr/technologie/algorithmes-algorigrammes/" caption="" >}}
 ### Code PIN
 * **Cahier des charges:** *Demander à l'utilisateur du smartphone de saisir son code PIN, et s'il echoue 3 fois, lui demander son code PUK*
 * **Algorithme:** L'un des deux algorithmes correspond bien au cahier des charges
@@ -75,11 +53,7 @@ Sinon
 ```
 Ce premier algorithme montre une **structure alternative**: on commence par tester la condition ; si elle est vraie, l’action 2 est exécutée, sinon, c'est l'action 3.
 
-<figure>
-<img src="../images/algorigramme2.png">
-<figcaption><a href="https://www.playhooky.fr/technologie/algorithmes-algorigrammes/">algorigramme</a> de l'algo n°1</figcaption>
-</figure>
-
+{{< img src="../images/algorigramme2.png" link="https://www.playhooky.fr/technologie/algorithmes-algorigrammes/" caption="" >}}
 ```python
 # algorithme 2
 demander code PIN
@@ -174,10 +148,7 @@ Sinon
 
   * *Programme 1: Vous pouvez entrer si vous avez plus de 18 ans*
 
-<figure>
-  <img src="../images/disco1.png">
-</figure>
-
+{{< img src="../images/disco1.png" >}}
 ```python
 >>> si age >= 18 alors:
       dire("vous pouvez entrer")
@@ -186,10 +157,7 @@ Sinon
 ``` 
   * *Vous pouvez entrer si vous avez plus de 18 ans, ET si vous ne portez pas des baskets*
 
-<figure>
-  <img src="../images/disco2.png">
-</figure>
-
+{{< img src="../images/disco2.png" >}}
 ```python
 >>> si age >= 18 ET non porte_des_baskets alors:
       dire("vous pouvez entrer")

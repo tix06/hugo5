@@ -12,11 +12,7 @@ Cette séparation des données s'appelle : comma separated value (csv).
 Le format CSV permet d'organiser les informations dans un ordre précis. Dans chaque ligne, les données respectent le même ordre. Le fichier de données csv peut alors être facilement ouvert avec un tableur (ou être sauvegardé en `.csv` à partir d'un tableur : Un caractère particulier – généralement la virgule –  permet au logiciel de placer les valeurs dans des colonnes différentes.
 
 
-<figure>
-  <img src="../docs/exemple_csv.png" alt ="exemple de fichier csv" width=60%>
-  <figcaption>passage d'un tableau au fichier csv</figcaption> 
-</figure>
-
+{{< img src="../docs/exemple_csv.png" alt="exemple de fichier csv" caption="passage d'un tableau au fichier csv" >}}
 Une librairie Python peut être utilisée pour découper ces informations et les mettre sous forme de liste.
 
 
@@ -29,11 +25,7 @@ Parmi les différentes lignes constituant la trame, l'une d'entre elles débute 
 
 Les données sont mises dans un format particulier expliqué ici : 
 
-<figure>
-  <img src="../docs/exemple_trame.png" alt="extrait trame NMEA" width=100%>
-  <figcaption>détail d'une trame NMEA</figcaption>
-</figure>
-
+{{< img src="../docs/exemple_trame.png" alt="extrait trame NMEA" caption="détail d'une trame NMEA" >}}
 
 
 <TABLE width=100% border=0>

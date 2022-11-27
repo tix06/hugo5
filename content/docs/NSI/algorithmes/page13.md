@@ -3,23 +3,13 @@ Title: Traitement csv
 ---
 
 # Un exemple de données ouvertes
-<figure><a href="https://www.data.gouv.fr/fr/">
-	<img src="../images/page13/data.gouv.png">
-	<figcaption>Plateforme ouverte des données publiques françaises</figcaption>
-</a>
-</figure>
-
+{{< img src="../images/page13/data.gouv.png" link="https://www.data.gouv.fr/fr/" caption="Plateforme ouverte des données publiques françaises" >}}
 Le Répertoire National des Élus (RNE) a pour finalité le suivi des titulaires d’un mandat électoral. Il est renseigné et tenu à jour par les préfectures et hauts commissariats et par les services du ministère de l'intérieur, notamment sur la base des éléments fournis par les élus lors de la phase d’enregistrement des candidatures.
 
-<figure>
-	<img src="../images/page13/elus.png">
-	<figcaption>Données du RNE pour les conseillers municipaux - extrait en csv</figcaption>
-</figure>
-
+{{< img src="../images/page13/elus.png" caption="Données du RNE pour les conseillers municipaux - extrait en csv" >}}
 Les données du RNE sont structurées par mandat. Neuf fichiers sont publiés ici :
 
-1. <a href="https://www.data.gouv.fr/fr/datasets/r/d5f400de-ae3f-4966-8cb6-a85c70c6c24a">les conseillers municipaux ;</a>
-2. les conseillers communautaires ;
+1.{{< a link="https://www.data.gouv.fr/fr/datasets/r/d5f400de-ae3f-4966-8cb6-a85c70c6c24a" caption="les conseillers municipaux ;" >}}2. les conseillers communautaires ;
 3. les conseillers départementaux ;
 4. les conseillers régionaux ;
 5. les membres des assemblées des collectivités à statut particulier ;
@@ -31,12 +21,7 @@ Les données du RNE sont structurées par mandat. Neuf fichiers sont publiés ic
 
 En [bas de page](https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/#community-reuses), vous pourrez observer les réutilisations de ces documents:
 
-<figure><a href="https://www.spallian.com/2020/03/01/donnees-parite-aux-sein-des-conseils-municipaux/">
-	<img src="../images/page13/utilisation.png">
-	<figcaption>exemples de réutilisation des données ouvertes sur les elus municipaux</figcaption>
-</a>
-</figure>
-
+{{< img src="../images/page13/utilisation.png" link="https://www.spallian.com/2020/03/01/donnees-parite-aux-sein-des-conseils-municipaux/" caption="exemples de réutilisation des données ouvertes sur les elus municipaux" >}}
 *Ouvrir les données jugées d'intérêt public, c'est encourager leur réutilisation par tout un chacun. Cela permet d'encourager la transparence démocratique, de bénéficier de services au quotidien ou de prendre des décisions plus éclairées.*
 
 # Exploration et traitement de données 
@@ -97,9 +82,4 @@ Représenter alors cette parité dans votre notebook sur un diagramme circulaire
 
 > On s'aidera du [lien suivant](https://python.doctor/page-creer-graphiques-scientifiques-python-apprendre) pour représenter des diagrammes avec *Matplolib*.
 
-<figure>
-	<img src="../images/page13/diagramme.png">
-	<figcaption>exemple de diagramme sur la proportion des élus H/F<br>
-	dans le departement de l'Herault (34)</figcaption>
-</figure>
-
+{{< img src="../images/page13/diagramme.png" caption="exemple de diagramme sur la proportion des élus H/F" >}}

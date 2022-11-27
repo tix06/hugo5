@@ -83,10 +83,7 @@ Quelques propriétés CSS relatives aux textes
 Tutoriel complet: [developer.mozilla.org](https://developer.mozilla.org/fr/docs/Learn/CSS/Building_blocks/The_box_model)
 
 En CSS, tout élément est inclus dans une boîte
-<figure>
-  <img src="../images/boite.png">
-</figure>
-
+{{< img src="../images/boite.png" >}}
 | paramètre | valeurs possibles | effet |
 |--- |--- |--- |
 | border | solid, dashed, none | bordure en trait plein, pointillé, sans bordure |

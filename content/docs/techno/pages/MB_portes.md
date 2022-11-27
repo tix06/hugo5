@@ -45,26 +45,14 @@ Brancher les connecteurs grove sur les PIN0 et PIN1. Utiliser alors des fils ele
 * PIN1: contact rouge (3,3V fixe)
 * PIN1: contact jaune (0 ou 3,3V selon le programme)
 
-<figure>
-  <img src="../images/portes/porte1.JPG" alt="carte microbit">
-  <figcaption>conneceurs grove de la carte microbit</figcaption>
-</figure>
-
+{{< img src="../images/portes/porte1.JPG" alt="carte microbit" caption="conneceurs grove de la carte microbit" >}}
 Relier alors les contacts noirs et jaune de chaque connecteur grove sur une ligne verticale de la plaquette d'essai (breadboard).
 
-<figure>
-  <img src="../images/portes/porte2.JPG" alt="connection carte microbit sur breadboard">
-  <figcaption>connection carte microbit sur breadboard</figcaption>
-</figure>
-
+{{< img src="../images/portes/porte2.JPG" alt="connection carte microbit sur breadboard" caption="connection carte microbit sur breadboard" >}}
 ## Premiers essais
 On va maintenant utiliser la diode electroluminescente pour tester si le programme fonctionne: Brancher la diode en série avec sa resistance de protection $1k\Ohm$ aux bornes de la tension du PIN0 (entre les contacts jaune et noir).
 
-<figure>
-  <img src="../images/portes/porte5.JPG" alt="DEL et resistance de protection">
-  <figcaption>Branchement en serie de la DEL<br> et sa resistance de protection</figcaption>
-</figure>
-
+{{< img src="../images/portes/porte5.JPG" alt="DEL et resistance de protection" caption="Branchement en serie de la DEL" >}}
 Tester si celle-ci s'allume lorsque l'on appuie sur le bouton.
 
 ## Cabler la porte logique
@@ -79,18 +67,10 @@ Les circuits intégrés fournis pour la seance sont de différents types. Certai
 
 Chaque circuit intégré comporte plusieurs portes logiques. Pour celles à 2 entrées, on peut les repérer comme sur le schéma suivant:
 
-<figure>
-  <img src="../images/portes/porte3.png" alt="portes logiques PIN 2 entrées">
-  <figcaption>Portes logiques à 2 entrées</figcaption>
-</figure>
-
+{{< img src="../images/portes/porte3.png" alt="portes logiques PIN 2 entrées" caption="Portes logiques à 2 entrées" >}}
 Pour le circuit NOT, à une entrée, la disposition des portes logiques est comme ceci:
 
-<figure>
-  <img src="../images/portes/porte4.png" alt="portes logiques PIN 1 entrée">
-  <figcaption>Portes logiques NOT</figcaption>
-</figure>
-
+{{< img src="../images/portes/porte4.png" alt="portes logiques PIN 1 entrée" caption="Portes logiques NOT" >}}
 * Disposer le circuit integré jaune 4011 sur le breadboard
 * selectionner l'une des portes logique du composant
 
@@ -102,18 +82,10 @@ Pour le circuit NOT, à une entrée, la disposition des portes logiques est comm
 
 * alimenter le circuit intégré: brancher la borne **+Vcc** sur le contact rouge du PIN1 (3,3V) et la borne **GND** (masse) sur l'un des contacts noirs (0V) de PIN0 ou PIN1.
 
-<figure>
-  <img src="../images/portes/porte7.JPG" alt="diode en sortie">
-  <figcaption>branchement de la diode en sortie</figcaption>
-</figure>
-
+{{< img src="../images/portes/porte7.JPG" alt="diode en sortie" caption="branchement de la diode en sortie" >}}
 * brancher les contacts commandés (jaunes) des PIN0 et PIN1 sur les entrées de la porte logique
 
-<figure>
-  <img src="../images/portes/porte6.JPG" alt="circuit complet à porte logique">
-  <figcaption>circuit complet</figcaption>
-</figure>
-
+{{< img src="../images/portes/porte6.JPG" alt="circuit complet à porte logique" caption="circuit complet" >}}
 * Actionner alors les boutons a et b de la carte microbit pour tester toutes les combinaisons possibles en entrée. Renseigner la table de vérité.
 
 | E1 | E2 | S |

@@ -22,12 +22,7 @@ On peut souhaiter, par exemple, créer une représentation graphique des nombres
 
 Le dossier contient alors:
   
-<figure>
-  <div>
-    <img src="../images/page3/modules.png">
-  </div>
-</figure>
-
+{{< img src="../images/page3/modules.png" >}}
 Le fichier principal `nombresPrem.py` sera organisé comme ceci:
 
 ```python
@@ -52,8 +47,7 @@ if __name__=='__main__':
 
 Il est recommandé de mettre les instructions du programme principal dans un bloc avec le test `if __name__=='__main__':` 
 
-Ceci permet d'importer le contenu du fichier sans déclencher son execution; et permettre de realiser des tests sur les fonctions. Voir <a href="/docs/NSI/langages/page5/#créer-un-module-de-test-avec-unittest">tests sur les modules avec unittest</a>
-
+Ceci permet d'importer le contenu du fichier sans déclencher son execution; et permettre de realiser des tests sur les fonctions. Voir{{< a link="/docs/NSI/langages/page5/#créer-un-module-de-test-avec-unittest" caption="tests sur les modules avec unittest" >}}
 Le module `fcts_turtle.py` : 
 
 ```python

@@ -4,27 +4,14 @@ Title : Photographie numérique
 # L'appareil photographique numérique
 *Présentation*
 
-<figure><a href="https://youtu.be/Rs5ab3X9Oxo" target=_blank>
-  <img src="../images/video_photo_num.png">
-  <figcaption>Video: Fonctionnement d'un appareil photo numérique<br>
-    Chaine: <i>Monsieur Techno</i></figcaption></a>
-</figure>
-
+{{< img src="../images/video_photo_num.png" link="https://youtu.be/Rs5ab3X9Oxo" caption="Video: Fonctionnement d un appareil photo numérique" >}}
 ## Composants principaux
 On retrouve dans un appareil photographique numérique, ou pour la partie photographie d'un smartphone ou d'une tablette, les constituants suivant : 
 
 * L’objectif photographique : c'est un système optique, amovible ou non, convergent et composé généralement de plusieurs lentilles. 
 
-<figure>
-<img src="../images/objectif-photo.jpg" width="60%" alt="objectif AP">
-<figcaption>objectif d'appareil photo</figcaption>
-</figure>
-
-<figure>
-<img src="../images/detail.png" width="60%" alt="objectif sur un smartphone">
-<figcaption>objectif photographique smartphone</figcaption>
-</figure>
-
+{{< img src="../images/objectif-photo.jpg" alt="objectif AP" caption="objectif d appareil photo" >}}
+{{< img src="../images/detail.png" alt="objectif sur un smartphone" caption="objectif photographique smartphone" >}}
 * La cellule d'exposition : c’est un composant électronique qui permet de mesurer la lumière renvoyée par le sujet et de régler l'ouverture du diaphragme, le temps d'ouverture de l'obturateur, et le déclenchement du flash. Cela permettra d’obtenir une *exposition* correcte.
 
 * L'obturateur est une piece qui s'ouvre et se ferme pour laisser passer la lumiere pendant un temps appelé temps d'obturation, choisi par le logiciel.
@@ -32,11 +19,7 @@ On retrouve dans un appareil photographique numérique, ou pour la partie photog
 
 * un filtre de Bayer (RVB), sans qui la photo serait en N&B
 
-<figure>
-<img src="../images/bayer.png" width="60%" alt="filtre de bayer">
-<figcaption>filtre de bayer et photosite <br>(image de Gilles Boisclair)</figcaption>
-</figure>
-
+{{< img src="../images/bayer.png" alt="filtre de bayer" caption="filtre de bayer et photosite " >}}
 Ce filtre de bayer est en réalité constitué de 3 filtres. La lumière issue de l'objectif traverse la grille de filtres colorés avant d'éclairer la grille de photosites.
 
 * un capteur, constitué de photosites, répartis sur une grille. Ce capteur se trouve à l'endroit où la lumière est focalisée (nette). Les photosites transforment l’intensité lumineuse en signal électrique. 
@@ -45,11 +28,7 @@ Ce filtre de bayer est en réalité constitué de 3 filtres. La lumière issue d
 
 Sur l'image suivante, on voit que la grille contient des carrés constitués de 2 cellules sensibles au vert, 1 cellule au bleu et 1 cellule au rouge. Il y a donc 2 fois plus de cellules vertes que de cellules rouge ou bleu.
 
-<figure>
-<img src="../images/photosites.png" width="60%" alt="photosites">
-<figcaption>plan de photosites</figcaption>
-</figure>
-
+{{< img src="../images/photosites.png" alt="photosites" caption="plan de photosites" >}}
 * Une carte mémoire (SDcard), pour y enregistrer les images.
 * un ordinateur interne capable de traiter des programmes.
 
@@ -76,11 +55,7 @@ l'appareil photographique est capable de mesurer la quantité de lumière, et de
 ## Algorithme d'aide à la mise au point
 Parfois, la mise au point automatique n'est pas possible. Certains appareils photographiques proposent une option d'aide appelée le *Focus Peaking* (l’intensification de la mise au point). C'est utile lorsque le sujet manque de lumière, ou que l'on utilise un objectif manuel.
 
-<figure>
-<img src="../images/focus.png">
-<figcaption> En rouge, le focus peaking qui indique la zone de mise au point</figcaption>
-</figure>
-
+{{< img src="../images/focus.png" caption=" En rouge, le focus peaking qui indique la zone de mise au point" >}}
 Voici un exemple d'algorithme utilisé:
 
 ```
@@ -94,19 +69,10 @@ pour chaque pixel:
 
 Les algorithmes de correction de flou on beaucoup progressé avec la cartographie mobile. En effet, il n'était pas possible de ralentir le vehicule lors des prises de vues (circulation routière de jour), ni d'utiliser de flash puissant pour éclairer les façades (nuit).
 
-<figure>
-<img src="../images/img_urbaine1.png">
-<figcaption> véhicules terrestres de
-cartographie mobile</figcaption>
-</figure>
-
+{{< img src="../images/img_urbaine1.png" caption=" véhicules terrestres decartographie mobile" >}}
 L'[algorithme utilisé](http://recherche.ign.fr/labos/matis/pdf/articles_revues/2017/daval2016_v1.4.pdf) va alors calculer le *mouvement des pixels* pour reconstruire l'*image nette*.
 
-<figure>
-<img src="../images/img_urbaine2.png">
-<figcaption>résultat du traitement par algorithme</figcaption>
-</figure>
-
+{{< img src="../images/img_urbaine2.png" caption="résultat du traitement par algorithme" >}}
 **algorithme de correction des couleurs** L'intensité de la couleur est mesurée par la *saturation*. Les applications de traitement d'image permettent la correction de la *saturation* grâce à des *filtres*, qui seront appliqués à tous les pixels de l'image.
 
 # Qu'est ce qu'une photographie numérique ?

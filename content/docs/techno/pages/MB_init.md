@@ -7,9 +7,7 @@ Title : informatique des objets
 # Prise en main de la carte micro:bit: présentation
 La carte microbit est un nano-ordinateur créé pour la promotion de la programmation dans l'éducation. Elle est très simple d'utilisation, mais peut également s'intégrer dans des applications complexes.
 
-<blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Gipsy est prête. <a href="https://twitter.com/hashtag/microbit?src=hash&amp;ref_src=twsrc%5Etfw">#microbit</a> <a href="https://twitter.com/hashtag/makecode?src=hash&amp;ref_src=twsrc%5Etfw">#makecode</a> <a href="https://t.co/5EJiNya0dw">pic.twitter.com/5EJiNya0dw</a></p>&mdash; Gaelic (@GaetanoLICATA5) <a href="https://twitter.com/GaetanoLICATA5/status/1377319663017803780?ref_src=twsrc%5Etfw">March 31, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<a href="https://youtu.be/fAlMMOpnFA8" target="blank">Lien alternatif(Youtube)</a>
-
+<blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Gipsy est prête.{{< a link="https://twitter.com/hashtag/microbit?src=hash&amp;ref_src=twsrc%5Etfw" caption="" >}}
 Elle possède dans sa version 2:
 
 * un capteur de luminosité
@@ -28,20 +26,14 @@ Le programme se télécharge depuis l'IDE en ligne et se copie simplement dans l
 # Utiliser l'editeur en ligne python.microbit.org
 Aller sur l'editeur à l'adresse suivante : [https://python.microbit.org/v/2.0](https://python.microbit.org/v/2.0)
 
-<figure>
-  <img src="../images/editoronline.png">
-</figure>
-
+{{< img src="../images/editoronline.png" >}}
 1. Saisir le script dans la fenêtre d'edition.
 2. Lui donner un nom (champ en haut à droite : *script name*).
 3. Charger le programme sur le disque dur de l'ordinateur : *Download* (l'extension est .hex)
 4. Deplacer le programme sur la carte microbit à l'aide de l'explorateur de fichiers.
 
 # Utiliser l'editeur Mu
-<figure>
-  <img src="../images/helloworld.png">
-</figure>
-
+{{< img src="../images/helloworld.png" >}}
 * Bouton **Mode** : <img src="../images/mu_mode.png" width="50px"> choisir l'editeur BBC microbit <img src="../images/mu_microbit.png" width="200px">
 * Saisir le script dans la fenêtre de script.
 * Faites une copie de votre script : <img src="../images/mu_save.png" width="50px">
@@ -49,27 +41,15 @@ Aller sur l'editeur à l'adresse suivante : [https://python.microbit.org/v/2.0](
 
 L'editeur aide à la saisie grâce à l'autocompletion. Selectionner le mot en python et valider avec la touche *Enter* du clavier.
 
-<figure>
-  <img src="../images/autocompletion1.png">
-</figure>
-
-<figure>
-  <img src="../images/autocompletion2.png">
-</figure>
-
+{{< img src="../images/autocompletion1.png" >}}
+{{< img src="../images/autocompletion2.png" >}}
 Lorsque l'on tape le nom d'une fonction qui est documentée, l'aide apparait à l'écran. C'est très utile pour savoir si la fonction prend des paramètres : 
 
-<figure>
-  <img src="../images/documentation.png">
-</figure>
-
+{{< img src="../images/documentation.png" >}}
 ## gestion des erreurs de syntaxe
 Une fois le programme chargé, il peut y avoir une erreur de syntaxe qui empêche son fonctionnement. Le message s'affiche sur l'écran de la carte microbit. Mais il peut être plus facile de lire ce message sur l'écran de l'ordinateur. Le bouton **REPL** fournit une console python avec affichage des messages à l'execution.
 
-<figure>
-  <img src="../images/repl.png">
-</figure>
-
+{{< img src="../images/repl.png" >}}
 # Un premier programme `Hello World`
 **Entrées/Sorties :**
 
@@ -90,11 +70,7 @@ while True:
 
 Ici, le programme affiche l'un ou l'autre des smileys, selon si le bouton A est pressé ou relâché.
 
-<figure>
-<img src="../images/mu_happy.png">
-<figcaption>smiley HAPPY</figcaption>
-</figure>
-
+{{< img src="../images/mu_happy.png" caption="smiley HAPPY" >}}
 > Liste des images : [https://microbit-micropython.readthedocs.io/fr/latest/tutorials/images.html](https://microbit-micropython.readthedocs.io/fr/latest/tutorials/images.html)
 
 <br>
@@ -121,16 +97,9 @@ x,y : int, valeur de 0 à 4<br>
 b : int, 0 à 9 (intensité lumineuse de la diode en x,y)
 
 # Application: TP évalué
-Lien vers <a href="/docs/SNT_2nde/pages/page5/photo_num3/" target=_blank>l'énoncé en ligne</a>
-
-Lien vers le <a href="/pdf/SNT/TP_intro_MB.pdf" target=_blank>Document pdf à rendre</a>
-
-<a href="/pdf/SNT/TP_intro_MB.pdf">
-<figure>
-  <img src="../images/TP.png">
-</figure>
-</a>
-
+Lien vers{{< a link="/docs/SNT_2nde/pages/page5/photo_num3/" caption="l'énoncé en ligne" >}}
+Lien vers le{{< a link="/pdf/SNT/TP_intro_MB.pdf" caption="Document pdf à rendre" >}}
+{{< img src="../images/TP.png" >}}
 # Liens
 * Documentation micro:bit [microbit-micropython.readthedocs](https://microbit-micropython.readthedocs.io/en/v1.0.1/)
 * Travaux pratiques: [microbit.org/make-it-code-it](https://microbit.org/projects/make-it-code-it/)

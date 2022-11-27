@@ -267,8 +267,7 @@ Script 3
 # Relire le cours
 Lien vers les pages : 
 
-* <a href="/docs/python/pages/variables/page1/">Variables</a>
-* [methodes associées aux sequences: list, dict](/docs/python/pages/variables/page2/)
+*{{< a link="/docs/python/pages/variables/page1/" caption="Variables" >}}* [methodes associées aux sequences: list, dict](/docs/python/pages/variables/page2/)
 
 
 <script type="text/javascript" src="/scripts/flash_cards.js"></script>

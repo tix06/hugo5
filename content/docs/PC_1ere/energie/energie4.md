@@ -58,11 +58,7 @@ Lorsque l'on fait le bilan d'énergie dans une habitation, on fait:
 
 
 ## Un exemple de bâtiment produisant son énergie
-<figure>
-  <img src="../images/img25.jpg" alt="bilan energie habitat">
-  <figcaption>bilan d'energie dans une habitation - source: Nathan Term PC 2012</figcaption>  
-</figure>
-
+{{< img src="../images/img25.jpg" alt="bilan energie habitat" caption="bilan d'energie dans une habitation - source: Nathan Term PC 2012" >}}
 # Questions
 1. Pourquoi le Grenelle de l’environnement s’intéresse-t-il autant au secteur du bâtiment ? Et pourquoi le secteur du bâtiment est-il autant responsable de l'émission de gaz à effet de serre?
 2. Sur l'exemple de bâtiment montré plus haut: <br>

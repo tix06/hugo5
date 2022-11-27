@@ -5,11 +5,7 @@ Title: champs
 # interactions et champs
 Une **interaction** suppose qu'il y a **2 systèmes qui agissent l'un sur l'autre**. Cette interaction peut être *mécanique*, par l'intermédiaire d'un objet.
 
-<figure>
-  <img src="../images/champ_interaction.png">
-  <figcaption>interaction mécanique</figcaption>
-</figure>
-
+{{< img src="../images/champ_interaction.png" caption="interaction mécanique" >}}
 
 Certaines caractéristiques de la nature ne sont pas attachées aux objets matériels mais sont définies en tout point de l’espace (espace sans particules et sans ondes ou espace en contenant). Ce concept s’est avéré indispensable du fait que les particules ne se touchent pas et interagissent via le vide qui les sépare. 
 
@@ -20,18 +16,10 @@ La notion de « champ » est d’usage courant. On y fait référence par exempl
 
 Un champ scalaire est représenté par des lignes où la grandeur est constante (isobare, isotherme, ...)
 
-<figure>
-  <img src="../images/champ_scalaire.png" alt="champ scalaire">
-  <figcaption>champ scalaire</figcaption>
-</figure>
-
+{{< img src="../images/champ_scalaire.png" alt="champ scalaire" caption="champ scalaire" >}}
 Un **champ vectoriel** est représenté par un vecteur.
 
-<figure>
-  <img src="../images/champ_vecteur.png" alt="champ vectoriel">
-  <figcaption>champ vectoriel</figcaption>
-</figure>
-
+{{< img src="../images/champ_vecteur.png" alt="champ vectoriel" caption="champ vectoriel" >}}
 Une ligne de champ est alors une ligne tangente aux vecteurs champ.
 
 ## Champs d'interaction
@@ -45,18 +33,10 @@ Tous les corps de l’Univers sont en interaction mutuelle et attractive. C’es
 
 La masse d'un corps est à l'origine d'un champ gravitationnel. Dans ce champ, les objets subissent une force d'attraction vers ce corps.
 
-<figure>
-  <img src="../images/champ_gravite.png" alt="champ gravitationnel attractif">
-  <figcaption>champ gravitationnel</figcaption>
-</figure>
-
+{{< img src="../images/champ_gravite.png" alt="champ gravitationnel attractif" caption="champ gravitationnel" >}}
 La charge électrique d'un corps est à l'origine d'un champ électrostatique. Dans ce champ, un objet chargé subit une force d'attraction ou de repulsion vers ce corps.
 
-<figure><div>
-  <img src="../images/champ_elec.png" alt="champ electrique attractif et repulsif">
-  <figcaption>champs électriques</figcaption></div>
-</figure>
-
+{{< img src="../images/champ_elec.png" alt="champ electrique attractif et repulsif" caption="champs électriques" >}}
 # Force d'interaction gravitationnelle
 (force de gravitation)<br>
 ## Loi de Newton

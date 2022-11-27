@@ -6,36 +6,18 @@ Title : Resaux sociaux
 ## Panne historique des connexions aux reseaux sociaux de Facebook
 Documents issus de l'article [Panne historique de Instagram, Facebook, WhatsApp et Messenger : tout ce qu’il s’est passé - numerama.com](https://www.numerama.com/tech/744753-instagram-messenger-facebook-et-whatsapp-sont-en-panne-vous-netes-pas-les-seuls.html)
 
-<figure>
-  <a href="https://youtu.be/TUO5-ct-X1Y">
-  <img src = "../images/20min.png">
-  <figure></figure>
-</a>
-</figure>
-
+{{< img src="../images/20min.png" link="https://youtu.be/TUO5-ct-X1Y" >}}
 Les pannes sur les reseaux sociaux sont souvent signalées par les usagés sur des sites dédiés:
 
-<figure>
-  <img src = "../images/downdetector.png">
-  <figcaption>Déjà 12 000 personnes ont signalé la panne de Facebook en 20 minutes sur DownDetector. <br>Source : Capture d’écran downdetector</figcaption>
-</figure>
-
+{{< img src="../images/downdetector.png" caption="Déjà 12 000 personnes ont signalé la panne de Facebook en 20 minutes sur DownDetector. " >}}
 Ces évenements sont également largement commentés sur les réseaux sociaux concurents:
 
-<figure>
-  <img src = "../images/FB_DNS.png">
-  <figcaption>alerte sur twitter à propos de la panne FB</figcaption>
-</figure>
-
+{{< img src="../images/FB_DNS.png" caption="alerte sur twitter à propos de la panne FB" >}}
 `Dig` est une commande Unix pour interroger les serveurs DNS.
 
 Une fois la panne de serveur DNS résolue, les serveurs ne pouvaient à nouveau pas être rejoints:
 
-<figure>
-  <img src = "../images/FB_routage.png">
-  <figcaption>les serveurs de FB restent inatteignables</figcaption>
-</figure>
-
+{{< img src="../images/FB_routage.png" caption="les serveurs de FB restent inatteignables" >}}
 La *route* sur internet avait alors disparue des serveurs de routage.
 
 
@@ -50,8 +32,4 @@ Au commencement était... Internet. Des ordinateurs reliés entre eux grâce à 
 
 A cette époque, Internet était anarchique, confus... et libre. Puis arriva Google et son algorithme de recherche révolutionnaire. 
 
-<figure><a href="https://www.lumni.fr/video/comment-les-algorithmes-nous-enferment">
-  <img src = "../images/algo.png">
-  <figcaption>Video - Lumni</figcaption></a>
-</figure>
-
+{{< img src="../images/algo.png" link="https://www.lumni.fr/video/comment-les-algorithmes-nous-enferment" caption="Video - Lumni" >}}

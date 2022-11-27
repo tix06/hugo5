@@ -18,8 +18,6 @@ Title : ipython notebooks
 
 
 <form id="fs-frm" name="bouton">
-<a href="https://mybinder.org/v2/gh/tix06/notebooks_donnees/master" target="_blank">
-    <input type="button" value="Cliquer pour ouvrir le depôt"></a>
 </form>
 
 
@@ -33,8 +31,6 @@ Au programme : formulaire, création d'un fichier `.csv`. Ouverture du fichier a
 ### format_json
 
 <form id="fs-frm" name="bouton">
-<a href="https://mybinder.org/v2/gh/tix06/notebooks_formats.git/master" target="_blank">
-    <input type="button" value="Cliquer pour ouvrir le depôt"></a>
 </form>
 <!--lien sur mybinder : 
 https://mybinder.org/v2/gh/tix06/notebooks_formats.git/master

@@ -43,10 +43,7 @@ Les œuvres exposées sur la voie publique ne font pas partie du domaine public.
 
 ## images sur le Net
 
-<figure><div>
-  <img src="../images/droit2.png"></div>
-</figure>
-
+{{< img src="../images/droit2.png" >}}
 Très souvent, les images disponibles sur internet, qu’il s’agisse de photos ou d’images graphiques, ne sont pas libres d’utilisation.
 En aucun cas, le fait qu’une photo soit disponible dans une banque d’image ne signifie que la personne représentée a donné son accord à la reproduction ou la communication au public de son image ! Une autorisation expresse est toujours nécessaire.
 
@@ -56,11 +53,7 @@ En reprenant des photos ou des images protégées par le droit d’auteur, vous 
 
 ## Licence Creative Commons
 
-<figure><div>
-  <img src="../images/droit1.png"></div>
-</figure>
-
-<a href="https://creativecommons.org/licenses/?lang=fr-FR">Creative Commons</a> est une association à but non lucratif qui propose une alternative assouplie et légale au droit d'auteur, dans le but du partage simplifié des créations.
+{{< img src="../images/droit1.png" >}}
 
 # Détourner d'images
 ## Une pratique virale
@@ -68,44 +61,22 @@ L'image numérique peut être facilement modifiée, transformée, et devenir un 
 
 la nécessité d'illustrer un contenu sur le web est devenu tellement indispensable qu'il est préférable d'utiliser une image «passe-partout» voire inappropriée plutôt que rien du tout! 
 
-*Une seule image, et des milliers d'interprétations possibles.* <a href="https://www.lefigaro.fr/vie-bureau/2017/10/10/09008-20171010ARTFIG00203-quand-une-seule-illustration-genere-des-milliers-de-legendes.php">L'article suivant </a>illustre cette pratique.
-
-<figure>
-  <img src="../images/detournement_img2.png">
-  <a href="https://www.lefigaro.fr/vie-bureau/2017/10/10/09008-20171010ARTFIG00203-quand-une-seule-illustration-genere-des-milliers-de-legendes.php"><figcaption>une image source, impersonnelle <br>donne lieu à de multiples détournements sur le Net</figcaption></a>
-</figure>
-
+*Une seule image, et des milliers d'interprétations possibles.*{{< a link="https://www.lefigaro.fr/vie-bureau/2017/10/10/09008-20171010ARTFIG00203-quand-une-seule-illustration-genere-des-milliers-de-legendes.php" caption="L'article suivant " >}}
+{{< img src="../images/detournement_img2.png" link="https://www.lefigaro.fr/vie-bureau/2017/10/10/09008-20171010ARTFIG00203-quand-une-seule-illustration-genere-des-milliers-de-legendes.php" caption="une image source, impersonnelle " >}}
 ## Quelques exemples
 Des images numériques crées par superposition de calques.
 
-<figure>
-  <img src="../images/detour1.png">
-  <figcaption>Source : okeit.net</figcaption>
-</figure>
-
-<figure>
-  <img src="../images/detour2.png">
-  <figcaption>Source : awkward.com</figcaption>
-</figure>
-
+{{< img src="../images/detour1.png" caption="Source : okeit.net" >}}
+{{< img src="../images/detour2.png" caption="Source : awkward.com" >}}
 Cette « vague de riz » est une sculpture japonaise exposée dans un magasin d'alimentation à Tokyo.
 
 # Vérifier l'authenticité d'une image ou d'une information numérique
 ## Les vrais sites d'information
-Le <a href="https://www.lemonde.fr/verification/">Décodex</a> est un outil pour vous aider à vérifier les informations qui circulent sur Internet et dénicher les rumeurs, exagérations ou déformations.
-
-<figure>
-  <img src="../images/detour3.png">
-  <figcaption><a href="https://www.lemonde.fr/verification/">Entrez l’adresse (URL) d’une page Web<br> ou le nom d’un site pour savoir si la source<br> de l’information est plutôt fiable ou non.</a> </figcaption>
-</figure>
-
+Le{{< a link="https://www.lemonde.fr/verification/" caption="Décodex" >}}
+{{< img src="../images/detour3.png" link="https://www.lemonde.fr/verification/" caption="" >}}
 ## Reseaux sociaux
- Pourquoi utiliser <a href="https://www.lemonde.fr/les-decodeurs/article/2017/01/23/decodex-verifier-une-rumeur-qui-circule-sur-les-reseaux-sociaux_5067723_4355770.html">Decodex?</a>: Facebook, Twitter, Snapchat, Reddit ou YouTube ne sont pas des sources d’information en soi. Les publications que vous y trouverez peuvent aussi bien émaner de sources réputées sérieuses que d’internautes mal intentionnés.
-
+ Pourquoi utiliser{{< a link="https://www.lemonde.fr/les-decodeurs/article/2017/01/23/decodex-verifier-une-rumeur-qui-circule-sur-les-reseaux-sociaux_5067723_4355770.html" caption="Decodex?" >}}
 ## Google images
 **Une photo ou une vidéo n’est jamais une preuve en soi**. Pour vérifier la nature d'une photo, on peut effectuer une recherche sur Google photo, non pas par *mots-clés*, mais par *images* (uploader ou coller l'URL). On peut aussi faire un clic droit sur l'image et choisir (*Google lens*).
 
-<figure>
-  <img src="../images/detour5.png">
-  <figcaption></figcaption>
-</figure>
+{{< img src="../images/detour5.png" caption="" >}}

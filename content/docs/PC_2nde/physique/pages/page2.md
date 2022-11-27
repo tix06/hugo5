@@ -9,11 +9,7 @@ Stockée dans les objets, les molécules, les atomes, l’énergie se manifeste 
 
 On représente ces transferts à l'aide d'une flèche `=>`, qui montre le sens de l'échange. Au départ ou à l'arrivée de cette flèche on dessine une forme (carré ou cercle) qui représente un *sous système*. Cette notion sera étudiée dans l'activité suivante.
 
-<figure>
-<img src="../images/img-diagrammeE.png" width = 80% alt="elements diagramme">
-<figcaption>Exemple de diagramme d'énergie</figcaption>
-</figure>
-
+{{< img src="../images/img-diagrammeE.png" alt="elements diagramme" caption="Exemple de diagramme d'énergie" >}}
 *Ici : le système (le cercle) reçoit de l'énergie E, et cède vers l'extérieur de l'énergie thermique Q1 et de l'énergie thermique Q2.*
 
 ## Activité : transferts d'énergie
@@ -23,10 +19,7 @@ On représente ces transferts à l'aide d'une flèche `=>`, qui montre le sens d
 
 * Choisir la page *Systèmes*.
 
-<figure>
-<img src="../images/systemes.png" width = 50% alt="systèmes énergétiques">
-</figure>
-
+{{< img src="../images/systemes.png" alt="systèmes énergétiques" >}}
 * Utilisez la simulation et compléter le document.
 
 > *Qu'avez vous appris de cette animation ?* Vous avez certainement remarqué : 

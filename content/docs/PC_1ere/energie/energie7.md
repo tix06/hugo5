@@ -58,11 +58,7 @@ Un générateur de tension réel est constituée :
 * d'une resistance interne r
 
 
-<figure>
-<img src="../images/generateur.png" width = 80% alt="générateur de tension">
-<figcaption>générateur réel</figcaption>
-</figure>
-
+{{< img src="../images/generateur.png" alt="générateur de tension" caption="générateur réel" >}}
 Par définition, la tension délivrée par ce générateur branché entre les bornes P et N est : 
 
 $$U_{PN} = E - r\times I$$
@@ -109,8 +105,7 @@ $$P_J = r \times I^2$$
 
 # Traitement numérique d'une serie de mesures
 
-On pourra utiliser le script suivant à recopier, et modifier dans un <a href="https://notebook.basthon.fr/" target=_blank>editeur python</a>:
-
+On pourra utiliser le script suivant à recopier, et modifier dans un{{< a link="https://notebook.basthon.fr/" caption="editeur python" >}}
 ```python
 import matplotlib.pyplot as plt
 import numpy as np
@@ -187,6 +182,4 @@ axes.set_ylim(bottom=0,top=max(tension)*1.2,auto=True)
 plt.show()
 ```
 
-<figure>
-  <img src = "../images/pile_caract.png">
-</figure>
+{{< img src="../images/pile_caract.png" >}}

@@ -11,20 +11,12 @@ On verra que la notation scientifique facilite justement l'utilisation des nombr
 
 > Test: sur l'echelle suivante: où se situe la graduation 1 million? Si ce dessin était représenté sur une bande de papier de 1m, à quelle distance de la graduation 1000 se situerait *1 million*?
 
-<figure>
-  <img src="../images/echelle.png">
-  <figcaption>une echelle graduée</figcaption>
-</figure>
-
+{{< img src="../images/echelle.png" caption="une echelle graduée" >}}
 *Réponse:* il y a plusieurs réponses possibles à cette question, selon si l'on considère que l'echelle représente des écarts multiplicatifs, ou des écarts additifs...
 
 > des écarts relatifs et multiplicatifs:[^1] Lors d'un jeu de devinette, on demande à 2 groupes de joueurs: *à quelle distance se trouve la Lune de la Terre?*
 
-<figure>
-  <img src="../images/terre-lune.png">
-  <figcaption>distance Terre-Lune</figcaption>
-</figure>
-
+{{< img src="../images/terre-lune.png" caption="distance Terre-Lune" >}}
 * Le premier groupe répond: 10km
 * Le 2e groupe repond: 1000 000 km
 
@@ -51,11 +43,7 @@ Réponses possibles: 10 millions, 100 000 milliards, 100 milliards, 300 000 mill
 * Les plages de sable ont toutes une largeur de 100m et une profondeur de sable sur 10m
 * Les géologues estiment qu'un m<sup>3</sup> de sable contient 100 milliards de grains.
 
-<figure>
-  <img src="../images/UK-coast.png">
-  <figcaption>La longueur de côte de la Grande Bretagne dépend du modèle choisi (2400 km à droite)</figcaption>
-</figure>
-
+{{< img src="../images/UK-coast.png" caption="La longueur de côte de la Grande Bretagne dépend du modèle choisi (2400 km à droite)" >}}
 ## Compter les atomes
 Pour ramener la quantité d'atomes à une valeur numérique acceptable, on a introduit une unité de quantité de matière: **la mole**. Il s'agit d'une abstraction mathématique, comme vu plus haut.
 
@@ -95,16 +83,8 @@ La solution d'origine est la solution *mère*. Celle fabriquée est la solution 
 
 La solution fille et la solution mère ont des concentrations qui montrent un *écart multiplicatif*. Le rapport entre les concentrations est égal au *facteur de dilution*.
 
-<figure>
-  <img src="../images/dilution1.png">
-  <figcaption>Principe d'une dilution. Solution mère/fille.</figcaption>
-</figure>
-
-<figure>
-  <img src="../images/dilution2.png">
-  <figcaption>Dilution à l'aide d'une pipette et fiole jaugée</figcaption>
-</figure>
-
+{{< img src="../images/dilution1.png" caption="Principe d'une dilution. Solution mère/fille." >}}
+{{< img src="../images/dilution2.png" caption="Dilution à l'aide d'une pipette et fiole jaugée" >}}
 # Autres domaines
 On a vu que l'utilisation d'une echelle multiplicative est bien adaptée au denombrement, ou aux distances dans l'Univers.
 

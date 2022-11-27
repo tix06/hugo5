@@ -4,11 +4,7 @@ Title: Open Datas
 
 # Open datas
 
-<figure><a href="https://youtu.be/pnrc6ZaYrwg">
-	<img src="../images/sitecookie.png">
-	<figcaption>video du site cookie-connecté</figcaption> </a>
-</figure>
-
+{{< img src="../images/sitecookie.png" link="https://youtu.be/pnrc6ZaYrwg" caption="video du site cookie-connecté" >}}
 > L'open data (ou données ouvertes) est l'ouverture via le Web de données collectées par des organismes publics (ou entreprises), et dont la diffusion est considerée comme d'interêt général.
 
 Quelques exemples:
@@ -79,33 +75,13 @@ Darcis, Pauline, 16
 <membre>
 	<nom>Dupont</nom>
 	<prenom>Francois</prenom>
-	<age>17</age>
-</membre>
-<membre>
-	<nom>Darcis</nom>
-	<prenom>Pauline</prenom>
-	<age>16</age>
-</membre>
-```
-
-# Un exemple de données ouvertes
-<figure><a href="https://www.data.gouv.fr/fr/">
-	<img src="../images/data.gouv.png">
-	<figcaption>Plateforme ouverte des données publiques françaises</figcaption>
-</a>
-</figure>
-
+<figure{{< a link="https://www.data.gouv.fr/fr/" caption="" >}}{{< img src="../images/data.gouv.png" link="https://www.data.gouv.fr/fr/" caption="Plateforme ouverte des données publiques françaises" >}}
 Le Répertoire National des Élus (RNE) a pour finalité le suivi des titulaires d’un mandat électoral. Il est renseigné et tenu à jour par les préfectures et hauts commissariats et par les services du ministère de l'intérieur, notamment sur la base des éléments fournis par les élus lors de la phase d’enregistrement des candidatures.
 
-<figure>
-	<img src="../images/elus.png">
-	<figcaption>Données du RNE pour les conseillers municipaux - extrait en csv</figcaption>
-</figure>
-
+{{< img src="../images/elus.png" caption="Données du RNE pour les conseillers municipaux - extrait en csv" >}}
 Les [données du RNE](https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/) sont structurées par mandat. Neuf fichiers sont publiés ici :
 
-1. <a href="https://www.data.gouv.fr/fr/datasets/r/d5f400de-ae3f-4966-8cb6-a85c70c6c24a">les conseillers municipaux ;</a>
-2. les conseillers communautaires ;
+1.{{< a link="https://www.data.gouv.fr/fr/datasets/r/d5f400de-ae3f-4966-8cb6-a85c70c6c24a" caption="les conseillers municipaux ;" >}}2. les conseillers communautaires ;
 3. les conseillers départementaux ;
 4. les conseillers régionaux ;
 5. les membres des assemblées des collectivités à statut particulier ;
@@ -117,12 +93,7 @@ Les [données du RNE](https://www.data.gouv.fr/fr/datasets/repertoire-national-d
 
 En [bas de page](https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/#community-reuses), vous pourrez observer les réutilisations de ces documents:
 
-<figure><a href="https://www.spallian.com/2020/03/01/donnees-parite-aux-sein-des-conseils-municipaux/">
-	<img src="../images/utilisation.png">
-	<figcaption>exemples de réutilisation des données ouvertes sur les elus municipaux</figcaption>
-</a>
-</figure>
-
+{{< img src="../images/utilisation.png" link="https://www.spallian.com/2020/03/01/donnees-parite-aux-sein-des-conseils-municipaux/" caption="exemples de réutilisation des données ouvertes sur les elus municipaux" >}}
 On voit ici comment des *données numériques* sont transformées en *informations*.
 
 > Ouvrir les données jugées d'intérêt public, c'est encourager leur réutilisation par tout un chacun. Cela permet d'encourager la transparence démocratique, de bénéficier de services au quotidien ou de prendre des décisions plus éclairées.

@@ -1,12 +1,6 @@
 # La desinfection des eaux
 
-<figure>
-<div>
-<img src="../images/desinf.jpg">
-<figcaption>traitement des germes dans les eaux</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/desinf.jpg" caption="traitement des germes dans les eaux" >}}
 
 
 ## Généralités
@@ -70,8 +64,7 @@ L'efficacité biocide du chlore dépend de certains facteurs:
 * pH: il vaudra mieux maintenir un pH < 8
 * temps de contact: maintenir un temps de contact d'au moins 30 min avant la consommation de l'eau.
 
-# Questions: Repondre sur <a href="https://doctools.dgpad.net/connect.php?datas=eyJiYXNlaWQiOiIxdjBoaFh5eXZsYWQxQnZSM3pkMThnMjF6ZFBHREdTcE80clhBbWx3R3hYYyIsImRzX2Jhc2UiOiIxR3hJdHRNMnJmNXZJWWFaYzZYWjF4UzNOeHFPS0p6RVpaN2VEb09xdk9kZyIsImZpZCI6IjFiY0pJWkVfN0t6WWJaTUxDbk1XTmZ2VG5uSVlGU05YeiIsImlkIjoiMUlMQkpiRExZUG93eW1iVmZYQW9tZVVsZks5MFlvMHlpdmZDZUFob2t3MkUiLCJsaXN0aWQiOiIxeXVJTGc5X1BLZmE3d1RyVkprVUlEUVg4dGRNNmNFbVVwMHNBb204ZG9zNCIsInR5cGUiOiJkb2MifQ==" target="blank">Docshare</a>
-
+# Questions: Repondre sur{{< a link="https://doctools.dgpad.net/connect.php?datas=eyJiYXNlaWQiOiIxdjBoaFh5eXZsYWQxQnZSM3pkMThnMjF6ZFBHREdTcE80clhBbWx3R3hYYyIsImRzX2Jhc2UiOiIxR3hJdHRNMnJmNXZJWWFaYzZYWjF4UzNOeHFPS0p6RVpaN2VEb09xdk9kZyIsImZpZCI6IjFiY0pJWkVfN0t6WWJaTUxDbk1XTmZ2VG5uSVlGU05YeiIsImlkIjoiMUlMQkpiRExZUG93eW1iVmZYQW9tZVVsZks5MFlvMHlpdmZDZUFob2t3MkUiLCJsaXN0aWQiOiIxeXVJTGc5X1BLZmE3d1RyVkprVUlEUVg4dGRNNmNFbVVwMHNBb204ZG9zNCIsInR5cGUiOiJkb2MifQ==" caption="Docshare" >}}
 1. L'eau oxygénée est un produit désinfectant utilisé pour désinfecter les surfaces. Son action est rapide, très efficace, mais c'est un produit qui ne persiste pas (il se décompose à la lumière). Pourquoi ne l'utilise t-on pas pour la désinfection des eaux?
 2. Quelles sont les étapes de la fabrication de l'eau de javel? Et quel est son pH pour que l'espece chlorée préponderante soit l'ion hypochlorite, ClO<sup>-</sup>?
 3. La membrane cytoplasmique des bactéries, qui est constituée de lipoproteines, est electriquement neutre. Or, la facilité pour une substance chimique de franchir cette membrane est d'autant plus grande que la substance est petite et non porteuse de charges électriques. Laquelle des substances à base de chlore sera la plus efficace?

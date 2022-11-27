@@ -11,13 +11,7 @@ C’est en prenant un recul suffisant que l’image retrouve sa finesse, et que 
 Ici, l’image est en noir et blanc. Les pixels ont une intensité que l’on pourrait représenter par 0 ou 1.
 Les pixels d’intensité lumineuse égale à 0 sont noirs. Ceux à 1 sont blancs.
 
-<figure>
-  <div>
-  <img src="../images/Abitmap.png">
-  <figcaption>détails du caractère "a"</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/Abitmap.png" caption="détails du caractère a" >}}
 On pourrait représenter chaque ligne de cette image par une liste de valeurs 0 ou 1 :
 
 ligne1 = [1, 0, 0, 0, 1]
@@ -43,13 +37,7 @@ La carte microbit est un microcontrôleur que l'on peut programmer en Python. Ce
 
 Et surtout, elle dispose d'un écran de diodes électroluminescentes (DEL), que l'on peut allumer en fonctions des coordonnées x, y de ces diodes.
 
-<figure>
-  <div>
-  <img src="../images/display.png">
-  <figcaption>coordonnée pour chacune des DEL x,y</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/display.png" caption="coordonnée pour chacune des DEL x,y" >}}
 La grille de DEL de la carte microbit est constituée d’un plan de 5 * 5 LED.
 L’intensité lumineuse est ajustable avec une valeur entre 0 à 9. 
 La valeur 0 correspondant à la LED éteinte, 9, allumée au maximum.
@@ -66,13 +54,7 @@ display.set_pixel(x,y, 0)
 ### Programmer l'affichage d'une image
 Imaginons que nous ayons à créer une structure de données qui contienne l’image d’un bateau. 
 
-<figure>
-  <div>
-  <img src="../images/boat.png">
-  <figcaption>deux mâts dessiné avec un tableau de DEL 5*5</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/boat.png" caption="deux mâts dessiné avec un tableau de DEL 5 x 5" >}}
 On propose le programme suivant en langage Python:
 
 
@@ -133,9 +115,4 @@ while True:
 ### Créez votre propre logo
 Utiliser la grille ci-dessous pour créer votre propre logo, avec une grille de 5 * 5 DEL. Programmer ensuite son affichage sur la carte microbit.
 
-<figure>
-  <div>
-  <img src="../images/grille.png">
-  <figcaption>grille à compléter</figcaption>
-</div>
-</figure>
+{{< img src="../images/grille.png" caption="grille à compléter" >}}

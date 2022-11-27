@@ -5,29 +5,13 @@ title: L'atome de Bohr
 ## Lampes spectrales 
 On observe différentes lampes à l'aide d'un spectroscope:
 
-<figure>
-  <img src="../images/spectro1.png">
-  <figcaption>Détail du spectroscope et de l'emplacement pour le réseau dispersif</figcaption>
-</figure>
-
-<figure>
-  <img src="../images/spectro2.png">
-  <figcaption>Regarder vers la lampe de bureau avec le reseau dispersif</figcaption>
-</figure>
-
-<figure>
-  <img src="../images/spectro3.png">
-  <figcaption>Faire pivoter le reseau dispersif pour observer les spectres de la lumière blanche</figcaption>
-</figure>
-
+{{< img src="../images/spectro1.png" caption="Détail du spectroscope et de l'emplacement pour le réseau dispersif" >}}
+{{< img src="../images/spectro2.png" caption="Regarder vers la lampe de bureau avec le reseau dispersif" >}}
+{{< img src="../images/spectro3.png" caption="Faire pivoter le reseau dispersif pour observer les spectres de la lumière blanche" >}}
 > Mettre le reseau dispersif dans le spectroscope et l'Utiliser pour visualiser le spectre de quelques lampes.<br> 
 **Question a** Quelle lampe a le spectre suivant?
 
-<figure>
-  <img src="../images/Hg.png">
-  <figcaption>Spectre inconnu</figcaption>
-</figure>
-
+{{< img src="../images/Hg.png" caption="Spectre inconnu" >}}
 
 > **Question b:** Reconnaitre les autres lampes à partir du tableau suivant. 
 
@@ -72,8 +56,7 @@ Ces transitions sont représentées sur le diagramme d'énergie, à droite. Chaq
 Le spectromètre mesure le nombre de *photons* émis pour chaque longueur d'onde.
  
  
- <div style="position: relative; width: 300px; height: 197px;"><a href="https://phet.colorado.edu/sims/discharge-lamps/discharge-lamps_fr.jar" style="text-decoration: none;"><img src="https://phet.colorado.edu/sims/discharge-lamps/discharge-lamps-screenshot.png" alt="Lumière néon et autre lampes à décharge" style="border: none;" width="300" height="197"/><div style="position: absolute; width: 200px; height: 80px; left: 50px; top: 58px; background-color: #FFF; opacity: 0.6; filter: alpha(opacity = 60);"></div><table style="position: absolute; width: 200px; height: 80px; left: 50px; top: 58px;"><tr><td style="text-align: center; color: #000; font-size: 24px; font-family: Arial,sans-serif;">Cliquer pour lancer</td></tr></table></a></div>
- 
+ <div style="position: relative; width: 300px; height: 197px;"{{< a link="https://phet.colorado.edu/sims/discharge-lamps/discharge-lamps_fr.jar" caption="" >}} 
 ## Travail
  
  Cocher les paramètres : *spectromètre, gribouillis, passer au ralenti*

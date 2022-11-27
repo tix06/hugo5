@@ -15,16 +15,8 @@ Un seul des connecteurs *grove* de la carte micro:bit suffira pour alimenter le 
 * Noir: GND
 * Jaune: pour la mesure de tension avec l'instruction `pin0.read_analog()`
 
-<figure>
-<img src="../images/MB_circuitD.png" >
-<figcaption>circuit avec LDR et Resistance</figcaption>
-</figure>
-
-<figure>
-<img src="../images/MB_Div.JPG" >
-<figcaption>montage à réaliser</figcaption>
-</figure>
-
+{{< img src="../images/MB_circuitD.png" caption="circuit avec LDR et Resistance" >}}
+{{< img src="../images/MB_Div.JPG" caption="montage à réaliser" >}}
 ## Matériel
 
 * carte micro:bit et shield grove

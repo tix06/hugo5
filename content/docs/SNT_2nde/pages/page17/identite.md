@@ -1,5 +1,5 @@
 ---
-Title: donnees personnelles
+Title: Les donnees personnelles
 ---
 
 # Identité numérique
@@ -9,13 +9,7 @@ Une donnée à caractère personnel est une information sur une personne.
 
 * L'exercice du droit d'une personne passe par la justification de l'*identité administrative* de la personne (nom, prenom, date de naissance, etc...).
 
-<figure>
-	<img src="../images/rgpd1.png">
-	<a href="https://www.cnil.fr/fr/rgpd-de-quoi-parle-t-on">
-		<figcaption>Infographie du RGPD - site de la CNIL</figcaption>
-	</a>
-</figure>
-
+{{< img src="../images/rgpd1.png" link="https://www.cnil.fr/fr/rgpd-de-quoi-parle-t-on" caption="Infographie du RGPD - site de la CNIL" >}}
 * *Identité sur le net*: Sur internet, la majorité des utilisateurs ne communiquent pas leur identité administrative. Ils donnent un *pseudo*, un mot de passe, un email. Le site associe souvent leur adresse IP à ces données. Ce qui constitue aussi une identité numérique.
 
 * *Une identité multiple*: Sur internet, nos traces numériques constituent aussi une certaine face de notre identité.
@@ -27,17 +21,10 @@ Une donnée à caractère personnel est une information sur une personne.
 * indirectement: par recoupement de plusieurs informations (publications, enregistrement par des dispositifs matériels, camera ou autre...)
 
 # Interconnecter les données administratives
-<figure><a href="https://sites.ina.fr/cnil/focus/chapitre/2/medias">
-	<img src="../images/safari2.png">
-	<figcaption>Projet SAFARI - source INE - video</figcaption></a>
-</figure>
-
+{{< img src="../images/safari2.png" link="https://sites.ina.fr/cnil/focus/chapitre/2/medias" caption="Projet SAFARI - source INE - video" >}}
 **1974** Un projet de dispositif administratif pensait interconnecter toutes les données des citoyens dans un même fichier. Chaque citoyen serait alors identifié par son numéro de securité sociale. Le projet SAFARI *("système automatisé pour les fichiers administratifs et le répertoire des individus")*. On aurait alors pu avoir toutes les informations relative à cet individu (santé, fiscalité, biens, origine, ...). Une mise en fiche de la population. Ceci est contraire à la loi de protection des libertés.
 
-<figure><img src="../images/safari.jpeg">
-	<figcaption>Scandale ! Le 21 mars 1974, le journal "Le Monde" révèle l’existence d’un projet de Raymond Marcellin, alors ministre de l’Intérieur du gouvernement Messmer.</figcaption>
-</figure>
-
+{{< img src="../images/safari.jpeg" caption="Scandale ! Le 21 mars 1974, le journal Le Monde révèle l’existence d’un projet de Raymond Marcellin, alors ministre de l’Intérieur du gouvernement Messmer." >}}
 Qu'adviendrait-il de l'usage d'un tel outil dans le futur si notre pays était administré par un regime moins démocratique? La constitution insouciante d'un tel outil sous un regime démocratique, en temps de paix et prosperité pourrait être qualifié de complicité de crime contre l'humanité s'il était utilisé dans un régime moins soucieux des libertés des personnes (il y a eu des exemple avec le gouvernement de Vichy pendant l'occupation, 40 ans plus tôt).
 
 **1978** Création de la CNIL. Commission Nationale Informatique et Libertés.<br>
@@ -48,16 +35,10 @@ Proposition de la loi *informatique et libertés*: Proteger les Français du fic
 # La CNIL
 La CNIL est avant tout chargée de veiller à la protection des données personnelles.
 
-<figure><img src="../images/cnil1.webp">
-	<figcaption>La CNIL: un rôle de gendarme pour la protection des données personnelles</figcaption>
-</figure>
-
+{{< img src="../images/cnil1.webp" caption="La CNIL: un rôle de gendarme pour la protection des données personnelles" >}}
 Cette protection s’étend aussi bien dans le privé que dans le public et concerne les contenus inclus dans les fichiers et les traitements papiers et informatiques.
 
-<figure><img src="../images/cnil2.webp">
-	<figcaption>La CNIL peut sanctionner</figcaption>
-</figure>
-
+{{< img src="../images/cnil2.webp" caption="La CNIL peut sanctionner" >}}
 Le but de cette commission est avant tout de veiller au bon usage et à la protection des données personnelles mais aussi de faire en sorte que l’usage qui en soit fait ne porte pas atteinte à la liberté des individus.
 
 
@@ -72,14 +53,8 @@ C'est la convergence technologique et la traçabilité qui permet d'intensifier 
 
 C'est un document qui donne un cadre légal à l'utilisation des données dans l'UE et contraint les organismes publics ou privés à certaines obligations. C'est un texte plus général que celui sur la loi *informatique et libertés*.
 
-<figure>
-	<img src="../images/rgpd3.png">
-	<a href="https://www.cnil.fr/fr/rgpd-par-ou-commencer">
-	<figcaption>Le RGPD - affiche de la CNIL</figcaption></a>
-</figure>
-
-Il s'agit d'un texte long (plusieurs centaines de pages), fruit de la concertation de 28 états membres de l'Europe. Ce texte est complexe à dechiffrer. Un des rôles de la CNIL est de produire des <a href="https://www.cnil.fr/fr/rgpd-de-quoi-parle-t-on">documents et textes</a> d'explications du RGPD.
-
+{{< img src="../images/rgpd3.png" link="https://www.cnil.fr/fr/rgpd-par-ou-commencer" caption="Le RGPD - affiche de la CNIL" >}}
+Il s'agit d'un texte long (plusieurs centaines de pages), fruit de la concertation de 28 états membres de l'Europe. Ce texte est complexe à dechiffrer. Un des rôles de la CNIL est de produire des{{< a link="https://www.cnil.fr/fr/rgpd-de-quoi-parle-t-on" caption="documents et textes" >}}
 *Extraits:*
 
 * La collecte de données doit servir l'objectif prévu. Ne collecter que celles nécessaires.
@@ -88,11 +63,7 @@ Il s'agit d'un texte long (plusieurs centaines de pages), fruit de la concertati
 * Sécuriser ces données.
 
 # Croiser les données pour obtenir des informations
-<figure><a href="https://www.ted.com/talks/alessandro_acquisti_what_will_a_future_without_secrets_look_like/transcript?language=fr">
-	<img src="../images/TED.png">
-	<figcaption>Pourquoi le respect de la vie privée est important- Allessandro Acquisti - TED video</figcaption></a>
-</figure>
-
+{{< img src="../images/TED.png" link="https://www.ted.com/talks/alessandro_acquisti_what_will_a_future_without_secrets_look_like/transcript?language=fr" caption="Pourquoi le respect de la vie privée est important- Allessandro Acquisti - TED video" >}}
 [lien alternatif](https://www.youtube.com/watch?v=U6OMZQ5h-xk) sur Youtube
 
 *La distinction entre public et privé s'est estompée dans la dernière décennie, à la fois en ligne et dans la vraie vie. Alessandro Acquisti est là pour nous expliquer ce que cela signifie, et pourquoi c'est important. Dans cet exposé qui donne à réfléchir et donne parfois le frisson, il nous fait partager les détails de recherches récentes et en cours - y compris un projet qui montre combien il est facile de faire correspondre la photographie d'un étranger avec ses informations personnelles sensibles.*

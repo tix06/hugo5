@@ -19,20 +19,13 @@ Par exemple, la page `html` que vous consultez, fait partie du domaine *allophys
 [https://allophysique.com/docs/snt_2nde/pages/page4/web/index.html](/docs/snt_2nde/pages/page4/web/index.html)
 
 
-<figure>
-	<img src="../images/url.png">
-</figure>
-
+{{< img src="../images/url.png" >}}
 
 # Le modèle client-serveur
 
 *Activité d’introduction:*  
 
-<figure><a href="https://episode1.donottrack-doc.com/fr/">
-	<img src="../images/donottrack1.png">
-	<figure>Do not track episode 1 - ARTE</figure></a>
-</figure>
-
+{{< img src="../images/donottrack1.png" link="https://episode1.donottrack-doc.com/fr/" >}}
  
 *Do Not Track explore les différentes manières dont le Web moderne enregistre et traque nos activités, nos publications et nos identités.*
 
@@ -44,18 +37,8 @@ Un système informatique fonctionne sur le modèle **client-serveur** : L'ordina
 
 Une fois la connexion établie, l'ordinateur serveur lui répond en lui renvoyant les données necessaires.
 
-<figure>
-  <img src="../images/client_serveur.png" alt="modele client serveur">
-  <figcaption>modele client serveur</figcaption>
-</figure>
-
-<figure>
-  <a href="https://fr.wikipedia.org/wiki/Client-serveur">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Server-based-network.svg/440px-Server-based-network.svg.png">
-  <figcaption>mode client-serveur. Un serveur peut repondre aux requetes de multiples clients<br>
-  definition client-serveur: wikipedia</figcaption></a>
-</figure>
-
+{{< img src="../images/client_serveur.png" alt="modele client serveur" caption="modele client serveur" >}}
+{{< img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Server-based-network.svg/440px-Server-based-network.svg.png" link="https://fr.wikipedia.org/wiki/Client-serveur" caption="mode client-serveur. Un serveur peut repondre aux requetes de multiples clients" >}}
 Le serveur lui repond en renvoyant un (des) fichier(s) qui constituent des fragments de page (en HTML, js, css, png, ...). Ces fragments complètent la page, son contenu, son style, ses éléments interactifs, ou apportent des ressources (images, videos...). C'est le navigateur qui interprète ces fichiers (ces *fragments de page*) et assure l'affichage de la page.
 
 > Mais alors ici, le serveur connaissait des informations sur le client. Pourquoi?
@@ -74,11 +57,7 @@ Dans le protocole HTTP, une **méthode est une commande spécifiant un type de r
 Le navigateur utilise souvent la *méthode GET* lors de l'envoi d'une requete:
 
 
-<figure>
-  <img src="../images/requete.png" alt="outil reseau du navigateur">
-  <figcaption>observation de la requete GET à l'aide de l'outil reseau du navigateur</figcaption>
-</figure>
-
+{{< img src="../images/requete.png" alt="outil reseau du navigateur" caption="observation de la requete GET à l'aide de l'outil reseau du navigateur" >}}
 
 ### Contenu: données et metadonnées
 Dans le fichier de reponse, il y a 2 parties :
@@ -111,12 +90,7 @@ MAIS AUSSI, des informations partagées (et qui ne devraient pas l’être) qui 
 # reseau P2P
 C'est un mode d'organisation sur internet où toutes les machines se comportent alternativement comme clients ou serveurs.
 
-<figure>
-  <a href="https://fr.wikipedia.org/wiki/Pair-à-pair">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/P2P-network.svg/440px-P2P-network.svg.png">
-  <figcaption>mode P2P. Chaque machine joue alternativement le rôle de client et de serveur</figcaption></a>
-</figure>
-
+{{< img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/P2P-network.svg/440px-P2P-network.svg.png" link="https://fr.wikipedia.org/wiki/Pair-à-pair" caption="mode P2P. Chaque machine joue alternativement le rôle de client et de serveur" >}}
 Ce mode a pu être utilisé pour partager illégalement des fichiers en infraction avec le droit d'auteur. La repartition des documents sur de multiples machines a compliqué les poursuites judiciaires.
 
 Ce mode P2P connait un regain d'interet avec les *Blockchains* qui consistent à repliquer sur de nombreuses machines les preuves chifrées et vérifiables d'un ensembles d'informations enregistrées.
@@ -138,11 +112,7 @@ Pour limiter ses traces sur le Web, et reduire cette collecte de données qui vo
 # Travaux pratiques
 
 <ul>
-<li><a href="../web1">SNT le langage HTML</a></li>
-<li><a href="../web2">SNT TP 1: HTML et CSS</a></li>
-<li><a href=../web5">Tuto sur CSS</a></li>
-<li><a href="../web3">SNT TP 2: Javascript</a></li>
-</ul>
+<li{{< a link="../web1" caption="" >}}<li{{< a link="../web2" caption="" >}}<li{{< a link="" caption="" >}}<li{{< a link="../web3" caption="" >}}</ul>
     
 
 
@@ -158,5 +128,4 @@ Pour limiter ses traces sur le Web, et reduire cette collecte de données qui vo
 	* [https://developer.mozilla.org/fr/docs/Web/HTTP/Headers](https://developer.mozilla.org/fr/docs/Web/HTTP/Headers)
 
 * Accepter ou refuser les cookies tiers. La liste :-o)
-<a href="https://www.tf1.fr/tmc/quotidien-avec-yann-barthes/videos/zoom-a-quel-point-les-gafam-sont-ils-dangereux-pour-nos-democraties-62368949.html" target=blank>tf1.fr - video à la demande- zoom-a-quel-point-les-gafam-sont-ils-dangereux-pour-nos-democraties</a>
 

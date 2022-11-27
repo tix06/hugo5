@@ -156,11 +156,7 @@ $$n_1\times sin(i_1) = n_2\times sin(i_2)$$
 
 Où **i** est l'angle d'incidence, n<sub>1</sub> et n<sub>2</sub> sont les indices de refraction des milieux traversés.
 
-<figure>
-  <img src="../images/descartes.png">
-  <figcaption>schema de la refraction sur diotre plan</figcaption>
-</figure>
-
+{{< img src="../images/descartes.png" caption="schema de la refraction sur diotre plan" >}}
 ## Fonction  degrès - radians
 Python manipule les angles en radians pour les fonctions trigonometriques.
 

@@ -14,11 +14,7 @@ Le **protocole HTTP** est un protocole **synchrone**: pour chacune des tâches, 
 Un document complet est construit à partir de différents sous-documents qui sont récupérés, par exemple du texte, des descriptions de mise en page, des images, des vidéos, des scripts et bien plus.
 
 
-<figure>
-  <img src = "../images/fetching_a_page.png">
-  <figcaption>requêtes pour la construction d'une page web. Source: MDN Web Docs</figcaption>
-</figure>
-
+{{< img src="../images/fetching_a_page.png" caption="requêtes pour la construction d'une page web. Source: MDN Web Docs" >}}
 
 Le navigateur web assemble alors ces ressources pour présenter un document complet à l'utilisateur : c'est la **page web**.
 
@@ -46,11 +42,7 @@ c'est la méthode HTTP qui est utilisée pour demander une ressource, par exempl
 
 **Comprendre les URL et leur structure:**
 
-<figure>
-<img src="../images/url_detail.png">
-<a href="https://developer.mozilla.org/fr/docs/Learn/Common_questions/What_is_a_URL"><figcaption>Comprendre les URL et leur structure</figcaption></a>
-</figure>
-
+{{< img src="../images/url_detail.png" link="https://developer.mozilla.org/fr/docs/Learn/Common_questions/What_is_a_URL" caption="Comprendre les URL et leur structure" >}}
 Si l'on saisit l’URL `www.exemple.com/test.html` dans la barre d'adresse du navigateur, celui-ci se connecte au serveur Web et lui envoie la requête GET :      
 
 ```
@@ -80,10 +72,7 @@ Les règles de syntaxe employées:
 * Chaque paramètre est nommé, il se compose donc d’un nom et d’une valeur : « Nom=Valeur ».
 * Si plusieurs paramètres doivent être inclus, ils sont reliés par un « & ».
 
-<figure>
-  <img src="../images/meteo.png">
-</figure>
-
+{{< img src="../images/meteo.png" >}}
 Par exemple, sur un site de météo, `Nice` est saisi comme `ville` et `12` comme heure `UTC`: L'URL affichée dans le navigateur pourrait être:
 
 ```
@@ -96,10 +85,7 @@ Et le navigateur enverra au serveur du site `ma_meteo.fr` l'instruction suivante
 GET /search?ville=Nice&UTC=12
 ```
 
-<figure>
-  <img src = "../images/requestHTTP.png">
-</figure>
-
+{{< img src="../images/requestHTTP.png" >}}
 En réalité, pour des problèmes de standardisation, l'URL ne contient pas tout à fait les mêmes symboles, et l'extension de l'adresse (la chaîne Query) pourrait plutôt ressembler à: %2Fsearch%3Fville%3DNice%26UTC%3D12 (voir [URL encoder.org](https://www.urlencoder.org/)
 
 ### inconvenients de la méthode GET
@@ -121,16 +107,10 @@ Revenons sur l'exemple de la page meteo. Voici un aperçu des interactions possi
 * un champs de texte à remplir (Ville)
 * un menu déroulant (heure)
 
-<figure>
-  <img src = "../images/meteo2.png">
-</figure>
-
+{{< img src="../images/meteo2.png" >}}
 L'en-tête HTTP (HTTP *header*) pourrait alors avoir le contenu suivant:
 
-<figure>
-  <img src = "../images/POST.png">
-</figure>
-
+{{< img src="../images/POST.png" >}}
 ## Comparatif GET POST
 
 |  |GET | POST |
@@ -198,11 +178,7 @@ Sur l'exemple suivant, on voit par exemple, sur la 1ere ligne:
 
 
 
-<figure>
-  <img src = "../images/http-response-header.png">
-  <figcaption>Le serveur renvoie cet en-tête avec la page HTML</figcaption>
-</figure>
-
+{{< img src="../images/http-response-header.png" caption="Le serveur renvoie cet en-tête avec la page HTML" >}}
 Explications pour les différentes lignes (les champs d'en-tête):
 
 
@@ -215,11 +191,7 @@ Explications pour les différentes lignes (les champs d'en-tête):
 
 ## Classes de statut HTTP
 
-<figure>
-  <img src = "../images/error404.png">
-  <figcaption>erreur 404: page internet introuvable</figcaption>
-</figure>
-
+{{< img src="../images/error404.png" caption="erreur 404: page internet introuvable" >}}
 * **Classe 1xx, codes d’information :** si le code commence par 1, le serveur indique au client que la requête actuelle est en en train de se faire. Cette classe regroupe des codes en cours de traitement et d’envoi.
 * **Classe 2xx, codes de succès :** un code qui commence par 2 indique que la requête a abouti. Elle a été reçue par le client, comprise et acceptée. En conséquence, les codes 2xx du serveur sont envoyés en même temps que les informations des pages Web désirées. En général, l’utilisateur ne prend en compte que la page Web qu’il a chargé.
 * **Classe 3xx, codes de redirection :** un code 3xx indique que la requête a été reçue par le serveur. Cependant, le client doit encore provoquer une action complémentaire. Par exemple, le code HTTP  301 signifie *changement d’adresse définitif* : les informations demandées par le client ne se trouvent plus à l’adresse indiquée car celle-ci a définitivement changée. Le navigateur Internet peut aussitôt rediriger l’utilisateur à la nouvelle adresse.
@@ -272,11 +244,7 @@ Cela permet:
 
 **2.** Protection des données
 
-<figure>
-  <img src = "../images/cookies.png">
-  <figcaption>contrôle des cookies par l'utilisateur</figcaption>
-</figure>
-
+{{< img src="../images/cookies.png" caption="contrôle des cookies par l'utilisateur" >}}
 
 Les cookies étaient auparavant utilisés pour le stockage côté client. Mais aujourd'hui, la tendance est plutôt d'envoyér ces données avec chaque requête. Cela a pour conséquence de partager ses données pour l'internaute. Son surf n'est plus complètement anonyme.
 
@@ -294,11 +262,7 @@ TP inspiré de la page [MDN Mozilla](https://developer.mozilla.org/fr/docs/Tools
 Le moniteur réseau du navigateur affiche des informations sur les requêtes effectuées (par exemple, au chargement d'une page).
 
 
-<figure>
-  <img src="../images/cds_network.png">
-  <figcaption>Outils de developpement sous Chrome</figcaption>
-</figure>
-
+{{< img src="../images/cds_network.png" caption="Outils de developpement sous Chrome" >}}
 <p class ="rubrik">Répondre aux questions suivantes sur le cahier</p>
 
 > Faire une recherche sur un moteur de recherche pour trouver l'URL de la page d'accueil du site *cité des sciences*.

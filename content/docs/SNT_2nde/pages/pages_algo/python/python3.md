@@ -15,13 +15,7 @@ Le Capitaine dit à son fils : "*Tu viens de fêter ton anniversaire. Dans quelq
 
 > La cabine n°1 abrite M. Dupont et ses deux filles. Le produit de leurs trois âges est 2450 et la somme de leurs trois âges est égale à 4 fois le tien. L'ainée est blonde. Peux-tu trouver les âges des trois passagers ?"
 
-<figure>
-<div>
-<img src="../images/haddock.jpg">
-<figcaption>Le Capitaine...</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/haddock.jpg" caption="Le Capitaine..." >}}
 ## Résolution
 On pourrait procéder par tatonnement, à l'aide de nombreux essais sur les ages de M Dupont et ses deux filles. Pour cela, nous allons écrire un programme qui nous aidera à tester différentes combinaisons sur ces ages...
 
@@ -70,8 +64,7 @@ while c !=0:
 Choisir l'une des options: 
 
 * sur PC: l'IDE Spyder
-* sur tablette Android: <a href="https://play.google.com/store/apps/details?id=ru.iiec.pydroid3&hl=fr&gl=US" target="blank">Application PyDroïd3</a> 
-* sur la calculatrice TI-83 Premium CE edition Python
+* sur tablette Android:{{< a link="https://play.google.com/store/apps/details?id=ru.iiec.pydroid3&hl=fr&gl=US" caption="Application PyDroïd3" >}}* sur la calculatrice TI-83 Premium CE edition Python
 
 On détaillera ici la saisie du script à l'aide de la calculatrice.
 
@@ -83,23 +76,10 @@ On détaillera ici la saisie du script à l'aide de la calculatrice.
 
 Les boutons du *menu* en bas de l'ecran sont accessibles avec chacune des touches situées au dessous. Par exemple, touche *zoom* pour **Nouv**.
 
-<figure>
-  <div>
-  <img src="../images/menu_shell.png">
-  <figcaption>accès au shell ou aux programmes</figcaption>
-  <figcaption>Navigation entre les menus de la calculatrice</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/menu_shell.png" caption="accès au shell ou aux programmes" >}}
 > * Saisir le nom de votre premier programme puis valider (par exemple `CAPIT` puisque vous demarrez un script sur l'*enigme du Capitaine*).
 
-<figure>
-  <div>
-  <img src="../images/nom.png">
-  <figcaption>saisie du nom du programme</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/nom.png" caption="saisie du nom du programme" >}}
 
 
 
@@ -111,44 +91,20 @@ Pour saisir `c = 1`, appuyer sur les touches:
 * **sto** (ce qui affiche `=`)
 * puis **1**.
 
-<figure>
-  <div>
-  <img src="../images/menu.png">
-  <figcaption>fenêtre d'edition</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/menu.png" caption="fenêtre d'edition" >}}
 > Pour le `while`, aller dans le menu **Fns...** en bas de l'editeur:
 
 
 
 Se déplacer alors avec les flèches (touches doite/gauche de la calculatrice). Aller dans le menu **Ctl** (les fonctions de contrôle).
 
-<figure>
-  <div>
-  <img src="../images/while.png">
-<figcaption>menu CTL</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/while.png" caption="menu CTL" >}}
 > Pour saisir `c!=0`, utiliser l'editeur de texte (bouton du bas **a A #**). Valider les symboles avec la touche **entrer**. Faites `Coller` lorsque vous avez terminé la saisie.
 
-<figure>
-  <div>
-  <img src="../images/edit.png">
-  <figcaption>editeur de symbôles</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/edit.png" caption="editeur de symbôles" >}}
 > Pour la fonction `int`: aller dans le menu **Fns...** puis **Type**. Et choisir `1.int()`
 
-<figure>
-  <div>
-  <img src="../images/int.png">
-  <figcaption>menu Type</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/int.png" caption="menu Type" >}}
 > Pour les fonctions `print` et `input`, vous les trouverez dans **Fns...** puis **E/S**  (ce sont des entrées/sorties)
 
 
@@ -157,11 +113,7 @@ Une fois le programme saisi, exécutez le. (menu **Exèc** dans l'editeur de la 
 
 Utilisez le tableau suivant pour choisir les valeurs de `a`, `b` et `c`. 
 
-<figure>
-<img src="../images/tableur.png">
-<figcaption>valeurs sont le produit fait 2450</figcaption>
-</figure>
-
+{{< img src="../images/tableur.png" caption="valeurs sont le produit fait 2450" >}}
 ## Solution
 Une fois que vous aurez réalisé les essais necéssaires, vous aurez probablement déterminé quelles sont les valeurs pour `a`, `b` et `c` qui repondent à l'enigme. 
 
@@ -241,13 +193,7 @@ La ligne finit par *deux points* `:`. C'est pour délimiter le bloc de code (ind
 * Choisir un nom à votre script, par exemple **JEU**
 * Pour importer la librairie *random* dans votre programme: Dans l'editeur, aller dans le menu **Fns...** puis **Modul**
 
-<figure>
-  <div>
-  <img src="../images/modul.png">
-  <figcaption>menu Modules</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/modul.png" caption="menu Modules" >}}
 Choisir: `1.from random import *` 
 
 Revenir ensuite dans le menu **Modul** pour choisir `4.randint(min,max)` lorsque vous aurez besoin de saisir la ligne `n = randint(1,100)`

@@ -100,11 +100,7 @@ $$n = 5,2.10^{-2}mol$$
 
 
 # tableau périodique réduit des éléments
-<figure>
-<img src="../images/TPE.png" width = 80% alt="TPE">
-<figcaption>masses molaires atomiques</figcaption>
-</figure>
-
+{{< img src="../images/TPE.png" alt="TPE" caption="masses molaires atomiques" >}}
 
 # La concentration molaire
 ## Definition

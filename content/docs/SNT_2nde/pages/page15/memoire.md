@@ -11,22 +11,13 @@ Une machine manipule des données numériques BINAIRES. Ce sont des nombres cons
 
 Le stockage des bits s’est fait autrefois sur support papier (avec/sans trou):
 
-<figure>
-  <a href="https://fr.wikipedia.org/wiki/Codage_des_caract%C3%A8res_sur_carte_perfor%C3%A9e">
-  <img src="../images/carte.png">
-  <figcaption>carte perforée IBM - source wikipedia</figcaption></a>
-</figure>
-
+{{< img src="../images/carte.png" link="https://fr.wikipedia.org/wiki/Codage_des_caract%C3%A8res_sur_carte_perfor%C3%A9e" caption="carte perforée IBM - source wikipedia" >}}
 
 Aujourd’hui, le support mémoire est constitué de milliards de transistors, possédant 2 niveaux de tension : **5V** ou **0V**.
 
 C’est donc le transistor qui permet la représentation d’un bit de donnée, en ajustant la tension électrique au niveau **haut** ou au niveau **bas**.
 
-<figure>
-  <img src="../images/transistor.png">
-  <figcaption>Le transistor: un composant électronique à 2 états</figcaption>
-</figure>
-
+{{< img src="../images/transistor.png" caption="Le transistor: un composant électronique à 2 états" >}}
 *Un transistor est un morceau de conducteur, dont la conductivité est contrôlée par sa troisième broche/borne. - Source: [Fonctionnement d'un ordinateur/Les transistors et portes logiques](https://fr.wikibooks.org/wiki/Fonctionnement_d%27un_ordinateur/Les_transistors_et_portes_logiques)* 
 
 # Loi de Moore
@@ -34,20 +25,11 @@ Le nombre de transistors sur une puce électronique devrait être doublé tous l
 
 La figure suivante montre l'évolution du nombre de transistors pour un même élement de surface:
 
-<figure>
-  <img src="../images/mem-moore.png">
-  <a href="https://fr.wikipedia.org/wiki/Loi_de_Moore">
-  <figcaption>illustration de la loi de Moore - source wikipedia</figcaption></a>
-</figure>
-
+{{< img src="../images/mem-moore.png" link="https://fr.wikipedia.org/wiki/Loi_de_Moore" caption="illustration de la loi de Moore - source wikipedia" >}}
 # Coder de plus grandes valeurs
 Les transistors sont gravés sur circuits intégrés, ce qui a permi d'atteindre des fortes densités par unité de surface. La finesse de gravure est actuellement de 10 nm environ (Intel).
 
-<figure>
-  <img src="../images/memory.png">
-  <figcaption>Le transistor: un composant électronique à 2 états</figcaption>
-</figure>
-
+{{< img src="../images/memory.png" caption="Le transistor: un composant électronique à 2 états" >}}
 
 Une machine va traiter des informations qui vont être à l’origine très diverses, plus ou moins structurées, mais toujours en binaire : 
 
@@ -56,11 +38,7 @@ Ce sont des nombres, des caractères, des mots, des images, des sons, des bruits
 La quantité de mémoire, même importante, n’est pas infinie dans une machine. C’est pourquoi on doit reserver un certain nombre de bit à chaque donnée, et ce nombre doit être ajusté au mieux.
 
 
-<figure>
-  <img src="../images/mem-bits.png">
-  <figcaption>Le transistor: un composant électronique à 2 états</figcaption>
-</figure>
-
+{{< img src="../images/mem-bits.png" caption="Le transistor: un composant électronique à 2 états" >}}
 Pour coder une information qui peut prendre plus de 2 valeurs, il faudra utiliser plusieurs *bits*. Ceux-ci sont souvent rassemblés par 8, formant un mot-octet. Celui-ci peut prendre 256 valeurs.
 
 Actuellement, les disques durs vendus dans le commerce contiennent 1 à plusieurs To (teraoctets: 10<sup>15</sup> octets)
@@ -68,32 +46,10 @@ Actuellement, les disques durs vendus dans le commerce contiennent 1 à plusieur
 # Format des données
 Dès l’invention de l’informatique, les ordinateurs ont pu manipuler des textes composés de caractères, que ce soit pour la saisie des commandes sur un clavier ou pour l’impression des résultats sur le papier. Il a donc fallu adopter une convention commune qui soit utilisée par tous les ordinateurs. Ainsi, est né en 1961 le code ASCII (American Standard Code for Information Interchange) qui associe une valeur numérique à chaque caractère de l’alphabet : 65 pour A, 66 pour B…
 
-<figure>
-  <a href="https://www.lookuptables.com/text/ascii-table">
-  <img src="../images/ascii.png">
-  <figcaption>table ascii, source: lookuptable.com</figcaption></a>
-</figure>
-
+{{< img src="../images/ascii.png" link="https://www.lookuptables.com/text/ascii-table" caption="table ascii, source: lookuptable.com" >}}
 Avec la taille des mémoires, et les performances des machines qui ont progressé, il a été possible de coder des données de plus en plus complexes. Il a fallu trouver un moyen de structurer ces données, c’est à dire de les mettre en forme et en lien dans un format approprié.
 
 # Histoire des données
 
 La video suivante présente l'histoire du stockage des données et ses enjeux:
 
-<figure>
-  <img src="../images/visicalc.png">
-  <a href="https://www.youtube.com/watch?v=y_mgaxO0fJY"><figcaption>source de la video: monlyceenumerique</figcaption></a>
-  </figure>
-
-> Répondre à l'aide de la vidéo précédente aux questions suivantes :
-
-1. Quelle invention datant du XVIIe siècle a été mis à profit par les informaticiens pour stocker des données ?
-2. En quelle année a été créé le premier disque dur ?
-3. En quelle année a été développé le premier modèle permettant de structurer et d'indexer des bases de données ?
-4. Comment s'appelle le premier tableur mis à la disposition du grand public ?
-5. En quelle année l'Open Government Initiative a t-elle été mise en place ?
-6. Quelle est le nom du texte de loi européen qui protège les citoyens européens quant à leurs données personnelles ?
-
-# Liens
-* [binaire: interstices](https://interstices.info/nom-de-code-binaire/)
-* Cours SNT [monlycee numerique](http://www.monlyceenumerique.fr/snt_seconde/donnees_structurees_traitement/donnees_structurees.php)

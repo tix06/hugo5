@@ -8,16 +8,9 @@ Title: calculatrice
 
 *Exemple*: Quel est le résultat evalué par rapport à cette expression?
 
-<figure>
-  <img src="../images/ti83_prio.png">
-    <figcaption>= 7 ou 9?</figcaption>
-</figure>
-
+{{< img src="../images/ti83_prio.png" caption="= 7 ou 9?" >}}
 * Pour l'écran de la calculatrice ci-dessous:
-<figure>
-  <img src="../images/ti83_prio2.png">
-</figure>
-
+{{< img src="../images/ti83_prio2.png" >}}
 Quelle est l'expression correspondante, écrite en langage naturel:
 
   * réponse 1: $$2,54\times\tfrac{10^3}{3,01}\times10^{-1}$$
@@ -33,16 +26,9 @@ La notation des nombres à la calculatrice peut différer de celle naturelle: il
 
 *Exemple:* Pour écrire le nombre 6,026.10<sup>23</sup>
 
-<figure>
-  <img src="../images/ti83_plank.png">
-    <figcaption>correspond à 6,026.10<sup>23</sup></figcaption>
-</figure>
-
+{{< img src="../images/ti83_plank.png" caption="correspond à 6,026.10" >}}
 ### Exercice
 Que doit-on écrire avec la calculatrice pour signifier le nombre suivant:
 $$6,674.10^{-11}$$
 
-<figure>
-  <img src="../images/ti83_blank.png">
-   
-</figure>
+{{< img src="../images/ti83_blank.png" >}}

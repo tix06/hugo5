@@ -21,12 +21,7 @@ Une base de données est constituée:
 
 Voici plusieurs informations: *M Dupont, un policier, uniforme noir et chapeau rond, Tintin.*
 
-<figure>
-  <div>
-  <img src="../images/dupont.png">
-</div>
-</figure>
-
+{{< img src="../images/dupont.png" >}}
 
 Il peut exister une **relation** entre ces informations: Dupont a pour métier *policier* et c'est l'ami de *Tintin*.
 
@@ -42,12 +37,7 @@ Des relations de ce genre définissent des **structures**.
 
 
 
-<figure>
-
-<img src="../images/SGBD.jpg">
-  <figcaption>rôle d'un SGBD</figcaption>
-</figure>
-
+{{< img src="../images/SGBD.jpg" caption="rôle d'un SGBD" >}}
 Il existe des SGBD gratuites, et payantes. Ces logiciels ont pour rôle: 
 
 * de gérer la lecture et l'ecriture ou les modifications des informations contenues dans la base de données.

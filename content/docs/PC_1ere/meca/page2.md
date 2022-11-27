@@ -21,41 +21,26 @@ Vous avez utilisé le programme *traitement.py* pour afficher les graphiques (0,
 
 # TP: coordonnées du vecteur vitesse
 ## Traitement avec un logiciel tableur
-Télécharger le fichier compressé <a href="/scripts/meca/chronophotographie.zip" download="chronophotograpie.zip">chronophotographie.zip</a>. Le déplacer dans vos *Documents* et Extraire.
-
+Télécharger le fichier compressé{{< a link="/scripts/meca/chronophotographie.zip" caption="chronophotographie.zip" >}}
 Avec un logiciel tableur de votre ordinateur (EXCEL):
 
 * ouvrir le fichier *coordonnees1.txt*. Préciser que le séparateur des colonnes est le symbole virgule ",".
 
-<figure>
-  <img src="../images/import.png">
-<figcaption>exemple de fenêtre d'aide à l'import (Excel)<br>
-Les données sont bien mises en colonnes (prévisualisation)</figcaption>
-</figure>
-
+{{< img src="../images/import.png" caption="exemple de fenêtre d'aide à l'import (Excel)" >}}
 * Ajouter une colonne à droite de celle d'etiquette **X** (clic droit sur la colonne **Y**, puis insérer une colonne). Nommer cette colonne **X_suivant**
 * Copier les données de la colonne **X** dans **X_suivant**
 
-<figure>
-  <img src="../images/excel1.png">
-</figure>
-
+{{< img src="../images/excel1.png" >}}
 * Supprimer la première donnée de **X_suivant** puis décaler les données comme sur l'image ci-dessous.
 
-<figure>
-  <img src="../images/excel2.png">
-</figure>
-
+{{< img src="../images/excel2.png" >}}
 > Sur une même ligne (même repère de temps *n*), le fichier vous renseigne la coordonnée X<sub>n</sub> du point ainsi que sa coordonnée X<sub>n+1</sub>, qu'il aura lorsque l'on passe à la ligne suivante (temps n+1)
 
 * Faire le même travail pour obtenir la colonne **Y_suivant**
 
 * Supprimer la dernière ligne, celle qui est incomplète (pas de valeur pour **X_suivant** et pour **Y_suivant**)
 
-<figure>
-  <img src="../images/excel3.png">
-</figure>
-
+{{< img src="../images/excel3.png" >}}
 * Sauvegarder alors le fichier avec l'extension *.csv*. Le séparateur des colonnes est alors le symbole point-virgule ";". Appelez le *coordonnees11.csv* pour conserver aussi le fichier d'origine.
 
 ## Traitement en Python: calcul des vitesses

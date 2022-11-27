@@ -23,11 +23,7 @@ En se basant sur des informations passées, les techniciens spécialisés dans l
   * Dans le premier cas, à partir de valeurs dites **discrètes** (des *catégories*), on devra réaliser une segmentation des objets en entrée en différentes catégories. La prédiction réalisée à partir d'une nouvelle entrée donne en sortie une liste de labels possibles.
   * Dans le deuxième cas, il s'agira d'un traitement statistique des données. 
 
-<figure>
-<img src="../images/donneesRegression.png" width = 80% alt="classification et regression">
-<figcaption>illutration de la différence entre classification et regression linéaire</figcaption>
-</figure>
-
+{{< img src="../images/donneesRegression.png" alt="classification et regression" caption="illutration de la différence entre classification et regression linéaire" >}}
 * Déployer le modèle. Une fois le modèle établit, on va encore le vérifier et l'ajuster à partir de certaines des données : il faudra donc prévoir une séparation initiale de ces données : certaines des données servent à générer le modèle (le *training set*). Les autres sont celles qui vont permettre de valider (tester) ou améliorer si besoin le modèle (le *testing set*). 
 * Prévoir la catégorie ou faire de la prédiction à partir des nouvelles données. 
 
@@ -38,11 +34,7 @@ La recommandation est une problématique qui revient très souvent dans l'ananly
 
 Sur l'image ci-dessous, on regarde par exemple ce qu'ont voté les utilisateurs similaires, c'est-à-dire ceux qui ont déjà voté la même chose sur d'autres produits (surlignés en vert). On peut alors prédire ce qu'aurait voté notre utilisateur sur le produit cherché, et ne proposer que les produits sur lesquels il aurait mis un pouce vert.
 
-<figure>
-<img src="../images/recommandation.png" width = 80% alt="recommandation à partir de pouces verts">
-<figcaption>Les utilisateurs similaires (en vert) n'ont pas aimé le produit que notre utilisateur n'a pas encore noté. L'algorithme aura donc tendance à prédire une mauvaise note et à ne pas recommander le produit ici</figcaption>
-</figure>
-
+{{< img src="../images/recommandation.png" alt="recommandation à partir de pouces verts" caption="Les utilisateurs similaires (en vert) n'ont pas aimé le produit que notre utilisateur n'a pas encore noté. L'algorithme aura donc tendance à prédire une mauvaise note et à ne pas recommander le produit ici" >}}
 Les utilisateurs similaires (en vert) n'ont pas aimé le produit que notre utilisateur n'a pas encore noté. L'algorithme aura donc tendance à prédire une mauvaise note et à ne pas recommander le produit ici.
 
 > En pratique : On peut voir la liste des profils utilisateurs comme une **matrice**. L’objectif d’un algorithme de recommandation est de remplir les cases vides de cette matrice. Quel serait le score de Gregory (dernière ligne du tableau) pour l’article "*ordinateur portable*", marqué avec un `?`.  Il faudra établir une correspondance entre les objets et les profils.
@@ -55,18 +47,10 @@ Il existe alors plusieurs méthodes d'association :
 
 * l'association basée sur les objets (l'exemple dit du *panier de la ménagère*)
 
-<figure>
-<img src="../images/achats.png" width = 80% >
-<figcaption>une liste d'achats</figcaption>
-</figure>
-
+{{< img src="../images/achats.png" caption="une liste d'achats" >}}
 > Cette fois on ne s'interesse plus au profil du client, mais on cherche une règle d'occurence entre les objets. Pour trouver les associations entre 2 produits, on construit le tableau de co-occurrence montrant combien de fois 2 produits ont été achetés ensemble.
 
-<figure>
-<img src="../images/produits.png" width = 80% >
-<figcaption>tableau de co-occurence</figcaption>
-</figure>
-
+{{< img src="../images/produits.png" caption="tableau de co-occurence" >}}
 *Ici : le produit A apparaît dans 80% des achats, le produit C n'apparaît jamais en même temps que le produit E, les produits A et D apparaissent simultanément dans 40% des achats.
 Ces observations peuvent suggérer une règle de la forme : « Si un client achète le produit A ALORS il achète le produit D ».*
 
@@ -77,8 +61,4 @@ On cherche alors à générer des règles du type : *si A alors D* avec, pour ch
 
 Le clustering désigne les méthodes de regroupement automatique de données qui se ressemblent le plus en un ensemble de "nuages", appelés clusters. On cherche repérer, et mesurer la similarité entre les différentes données. Par exemple, les points sur le graphe ci-dessous peuvent être considérés comme similaires s'ils sont proches en termes de distance.
 
-<figure>
-<img src="../images/clustering.png" width = 50% alt="clustering">
-<figcaption>L'objectif du clustering est de retrouver les différents clusters de données, c'est-à-dire de regrouper les données similaires entre elles</figcaption>
-</figure>
-
+{{< img src="../images/clustering.png" alt="clustering" caption="L'objectif du clustering est de retrouver les différents clusters de données, c'est-à-dire de regrouper les données similaires entre elles" >}}

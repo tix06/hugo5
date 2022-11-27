@@ -4,15 +4,11 @@ Title: listes en SPC
 
 # listes et algos sciences physiques et chimie
 * Les exemples et scripts seront à realiser dans un notebook python.
-* On utilisera la <a href="/pdf/NSI/python_listes_SPC.pdf">fiche reponse</a> pour recopier les scripts.
-
+* On utilisera la{{< a link="/pdf/NSI/python_listes_SPC.pdf" caption="fiche reponse" >}}
 ## Construire un tableau simple
 Pour tracer un graphique, on peut avoir besoin d'une liste de valeurs [0, 1, 2, ... 100] correspondant aux nombres de points relevés.
 
-<figure>
-  <img src="../images/spc1.png">
-</figure>
-
+{{< img src="../images/spc1.png" >}}
 Cette liste peut être construite à l'aide d'une boucle bornée:
 
 ```python
@@ -65,17 +61,11 @@ plt.ylabel('Temperature(°C)')
 plt.show()
 ```
 
-<figure>
-  <img src="../images/spc3.png">
-</figure>
-
+{{< img src="../images/spc3.png" >}}
 ## Listes calculées
 Souvent, les données issues d'une acquisition sont présentées sous forme d'une table.
 
-<figure>
-  <img src="../images/spc2.png">
-</figure>
-
+{{< img src="../images/spc2.png" >}}
 Elles sont alors échangées avec le programme python grâce à un fichier de données en format *csv*. Il est alors possible de créer une liste de données par colonne: listes `t, x, y, v` 
 
 A partir de l'exemple précédent, on peut supposer que:
@@ -107,8 +97,7 @@ for vitesse in v:
 > A vous de jouer: 
 
 1. quelle instruction permet de créer la même liste Ec, mais cette fois, par compréhension de liste.
-2. télécharger le fichier <a href="../data/data_parabolique.csv" download="data_parabolique.csv">data_parabolique.csv</a>. Compléter le programme python suivant qui va lire les données du fichier, et stocker les valeurs dans des listes. Tracer alors x en fonction de t.
-3. Ajouter une nouvelle liste calculée: $Ec = \tfrac{1}{2}* m * (vx^2+vz^2)$. Prendre m = 1. Compléter pour cela le programme:
+2. télécharger le fichier{{< a link="../data/data_parabolique.csv" caption="data_parabolique.csv" >}}3. Ajouter une nouvelle liste calculée: $Ec = \tfrac{1}{2}* m * (vx^2+vz^2)$. Prendre m = 1. Compléter pour cela le programme:
 
 ```python
 m = 1
@@ -167,12 +156,7 @@ Par exemple, la formule suivante peut être mise dans la liste:
 molecule = ['H','H','H','C','C','O','C','H','H','H']
 ```
 
-<figure><div>
-<img src="../images/spc5.png">
-<figcaption>une molecule en formule semi-developpée</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/spc5.png" caption="une molecule en formule semi-developpée" >}}
 Compter le nombre d'occurences signifie que l'on peut compter le nombre d'atomes identiques, comme par exemple le nombre de `'H'` ou bien le nombre de `'C'`.
 
 ```python
@@ -226,21 +210,12 @@ Les valeurs de `m` sont accessibles à partir de ses indices, comme pour une mat
 
 **Exemple**: traitement d'une image
 
-<figure><div>
-<img src="../images/spc4.png">
-<figcaption>une image numérique est constituée de pixels</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/spc4.png" caption="une image numérique est constituée de pixels" >}}
 Une image est représentée par un triplet de valeurs (un *tuple*) pour chacun de ses pixels, correspondant à l'intensité (Rouge, Vert, Bleu) (0-255) de ce pixel.
 
 Soit l'image suivante, de dimension 3 pixels * 3 pixels:
 
-<figure><div>
-<img src="../images/spc6.png">
-</div>
-</figure>
-
+{{< img src="../images/spc6.png" >}}
 Cette image est représentée par la matrice de valeurs (R,V,B):
 ```
 im = [[(128,30,40), (130,32,44), (128,30,40)], 

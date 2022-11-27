@@ -24,11 +24,7 @@ Le suffixe de leur nom est **-al**.
 
 *Exemple:*
 
-<figure>
-<img src = "../images/orga4.png">
-<figcaption>éthanal</figcaption>
-</figure>
-
+{{< img src="../images/orga4.png" caption="éthanal" >}}
 ### Cétones
 Pour les cétones, le carbone fonctionnel est relié à un oxygène par une double liaison (le groupe carbonyle C=O), et à 2 groupes carbonés R<sub>1</sub> et R<sub>2</sub>. 
 
@@ -36,11 +32,7 @@ Le suffixe de leur nom est **-one**.
 
 *Exemple:*
 
-<figure>
-<img src = "../images/orga5.png">
-<figcaption>propanone</figcaption>
-</figure>
-
+{{< img src="../images/orga5.png" caption="propanone" >}}
 On applique les mêmes règles de nomenclature que pour les alcools: 
 
 * Les atomes de la chaine princicipale doivent contenir le carbone fonctionnel
@@ -49,11 +41,7 @@ On applique les mêmes règles de nomenclature que pour les alcools:
 
 *Exemple:*
 
-<figure>
-<img src = "../images/orga6.png">
-<figcaption>3-méthylbutanone<br>ou 3-méthylbutan-2-one</figcaption>
-</figure>
-
+{{< img src="../images/orga6.png" caption="3-méthylbutanone" >}}
 ## Acides caroxyliques
 Les acides carboxyliques possèdent un groupe caractéristique carboxyle.
 
@@ -63,11 +51,7 @@ Leur nom est composé de la manière suivante:
 
 *Exemple:*
 
-<figure>
-<img src = "../images/orga7.png">
-<figcaption>acide éthanoïque</figcaption>
-</figure>
-
+{{< img src="../images/orga7.png" caption="acide éthanoïque" >}}
 On adapte les mêmes règles de nomenclature vues pour les autres famille: 
 
 * La chaine principale a pour carbone n°1 celui du groupe carboxyle
@@ -75,11 +59,7 @@ On adapte les mêmes règles de nomenclature vues pour les autres famille:
 
 *Exemple:*
 
-<figure>
-<img src = "../images/orga8.png">
-<figcaption>acide 2-méthylpropanoïque</figcaption>
-</figure>
-
+{{< img src="../images/orga8.png" caption="acide 2-méthylpropanoïque" >}}
 
 # Energie d'une molecule
 L’énergie d’une molécule (isolée en phase gazeuse) comprend : 
@@ -103,10 +83,7 @@ Il y a de grandes différences entre ces énergies:
 
 $$\Delta Er << \Delta Ev << \Delta Ee$$
 
-<figure>
-  <img src = "../images/energie_vib.png">
-</figure>
-
+{{< img src="../images/energie_vib.png" >}}
 ## Les domaines de rayonnement et leur intéractions avec la matière
 Ainsi les transitions observées pour passer d’un niveau d’énergie à un autre niveau de même nature ne vont pas mettre en jeu les mêmes énergies, donc pas les mêmes domaines de longueurs d’onde du spectre électromagnétique. 
 
@@ -121,10 +98,7 @@ Par conséquent, les groupements fonctionnels donnent lieu à des **absorption
 
 ## Allure d'un spectre d'absorption infra rouge moléculaire
 
-<figure>
-  <img src = "../images/spectreIR1.png">
-</figure>
-
+{{< img src="../images/spectreIR1.png" >}}
 Les abscisses possèdent une double echelle:
 
 * en longueur d'onde $\lambda$ croissante
@@ -141,17 +115,11 @@ Le groupe hydroxyle est responsable d'une bande d'absorption:
 * soit à 3200-3400 cm<sup>-1</sup> qui est forte et large (phase concentrée, liquide)
 * soit à plus de 3600 cm<sup>-1</sup> moins forte et fine (milieu dilué, gaz)
 
-<figure>
-  <img src = "../images/spectreIR2.png">
-</figure>
-
+{{< img src="../images/spectreIR2.png" >}}
 ## Le groupe carbonyle
 Le groupe carbonyle donne une bande d'absorption à 1700-1760 cm<sup>-1</sup> forte et fine. 
 
-<figure>
-  <img src = "../images/spectreIR3.png">
-</figure>
-
+{{< img src="../images/spectreIR3.png" >}}
 ## Le groupe carboxyle
 Le groupe carbonyle donne 2 bandes d'absorption caractéristiques de ses liaisons:
 

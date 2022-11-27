@@ -4,12 +4,7 @@ Title: synthèse en chimie organique
 
 # La synthèse chimique - Présentation
 
-<a href="https://youtu.be/frib5B7SBZg" target=_blank>
-<figure>
-  <img src="../images/synthese.png">
-  <figcaption>Video: étapes de la synthèse</figcaption>
-</figure></a>
-
+{{< img src="../images/synthese.png" caption="Video: étapes de la synthèse" >}}
 Un protocole de synthèse suit une série de 3 étapes : transformation, traitement (et purification), identification.
 
 # Les étapes de la synthèse chimique
@@ -53,11 +48,7 @@ En effet, lorsque le mélange réactionnel est chauffé, des vapeurs s’éc
 
 Compléter la légende pour le schéma du montage de chauffage à reflux :
 
-<figure>
-  <img src="../images/reflux.png">
-  <figcaption>Montage de chauffage à reflux</figcaption>
-</figure>
-
+{{< img src="../images/reflux.png" caption="Montage de chauffage à reflux" >}}
 ## Traitement
 
 Le but est maintenant d’extraire le *produit d’intérêt*.
@@ -70,11 +61,7 @@ Parfois, on peut séparer le produit d’intérêt par distillation. Il s’agit
 Légender le schéma avec les mots suivants : support élevateur, ballon tricol, ampoule de coulée, refrigérant à eau, thermomètre, mélange réactionnel, distillat, erlenmeyer, entrée d’eau froide, sortie d’eau.
 
  
-<figure>
-  <img src="../images/distillation.png">
-  <figcaption>Montage de chauffage avec extraction</figcaption>
-</figure>
-
+{{< img src="../images/distillation.png" caption="Montage de chauffage avec extraction" >}}
 Ce montage permet d’extraire le produit d’intérêt du mélange réactionnel au fur et à mesure qu’il est produit. Pour que ce soit réalisable, le produit d’intérêt doit avoir une température de vaporisation plus basse que les autres constituants du mélange.
 
 ### Extraction après la transformation :
@@ -84,11 +71,7 @@ On peut retirer une espèce chimique d’un mélange grâce à la différence de
 si la substance est solide à température ambiante.
 La filtration est généralement réalisée avec un filtre Büchner, et permet de séparer les phases solide et liquide, par gravité, mais aussi grâce à l’aspiration créée dans le bocal situé sous l’entonoir.
 
-<figure>
-  <img src="../images/buchner.png">
-  <figcaption>Filtration sur filtre Büchner</figcaption>
-</figure>
-
+{{< img src="../images/buchner.png" caption="Filtration sur filtre Büchner" >}}
 
 ### L’extraction liquide-liquide:
 si la substance est liquide à température ambiante.
@@ -102,11 +85,7 @@ Dans l’exemple suivant, on considère que les deux phases liquides sont consti
 - d’un liquide de type organique (cyclohexane, essence,…), non miscible avec l’eau, et de densité inférieure à celle de l’eau.
 - d’eau
 
-<figure>
-  <img src="/docs/PC_2nde/chimie/pages/img/extraction Liquide Liquide.jpg">
-  <figcaption>Extraction Liquide-Liquide à l'ampoule à décanter</figcaption>
-</figure>
-
+{{< img src="/docs/PC_2nde/chimie/pages/img/extraction Liquide Liquide.jpg" caption="Extraction Liquide-Liquide à l'ampoule à décanter" >}}
 ## Purification
 
 Lorsque la première étape de traitement est terminée, le produit d’intérêt n'est qu'en partie isolé, et les impuretés n’ont pas toutes été retirées:

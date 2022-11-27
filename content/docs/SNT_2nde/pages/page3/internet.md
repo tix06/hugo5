@@ -20,12 +20,7 @@ Maintenant, c'est l'accès à internet qui est recherché, pour :
 ## Quel est votre terminal ?
 On entend par *terminal*, l'appareil que vous utilisez pour utiliser les services fournis par internet. Progressivement, l'ordinateur a reculé et a été remplacé par les smartphones, tablettes, assistant vocal ou montre connectées pour la plupart de ces services.
 
-<figure>
-<img src="../images/equipement.png" width = 80% alt="equipement numerique">
-<figcaption>equipement le plus utilisé pour se connecter à internet</figcaption>
-</figure>
-
-<a href="https://www.economie.gouv.fr/files/files/directions_services/cge/barometre-numerique-2019.pdf">Etude : le baromètre du numérique 2019</a>
+{{< img src="../images/equipement.png" alt="equipement numerique" caption="equipement le plus utilisé pour se connecter à internet" >}}
 
 ## une utilisation nomade
 Il y a une convergence des usages que l'on fait avec un ordinateur et un smartphone. Sauf qu'avec le smartphone, le reseau sans fil est un moyen d'avoir un bureau mobile.
@@ -38,11 +33,7 @@ La géolocalisation offre de nombreuses possibilités, comme le conseil des rest
 
 Mais les activités principales liées à l'utilisation d'un smartphone restent la consultation de page à l'aide d'un navigateur, et l'utilisation de messageries ou des réseaux sociaux : 
 
-<figure>
-<img src="../images/sondage1.png" width = 80% alt="usage numerique">
-<figcaption>Proportion de la population qui utilise leur téléphone mobile pour ...</figcaption>
-</figure>
-
+{{< img src="../images/sondage1.png" alt="usage numerique" caption="Proportion de la population qui utilise leur téléphone mobile pour ..." >}}
 # La communication par internet
 **Des formes de communication interpersonnelles :**  (entre 2 personnes ou plus)
 
@@ -52,8 +43,7 @@ Mais les activités principales liées à l'utilisation d'un smartphone restent 
 - téléphonie, visiophonie, radio via internet.
 
 
-<a href="https://fr.statista.com/statistiques/491792/france-reseaux-sociaux-messageries-instantanees-penetration/" rel="nofollow"><img src="https://fr.statista.com/graphique/1/491792/france-reseaux-sociaux-messageries-instantanees-penetration.jpg" alt="Statistique: Classement des réseaux sociaux et messageries instantanées ayant le plus fort taux de pénétration en France en 2018 | Statista" style="width: 100%; height: auto !important; max-width:1000px;-ms-interpolation-mode: bicubic;"/></a><br />Trouver plus de statistiques sur  <a href="https://fr.statista.com" rel="nofollow">Statista</a>
-
+<a href="https://fr.statista.com/statistiques/491792/france-reseaux-sociaux-messageries-instantanees-penetration/" rel="nofollow"><img src="https://fr.statista.com/graphique/1/491792/france-reseaux-sociaux-messageries-instantanees-penetration.jpg" alt="Statistique: Classement des réseaux sociaux et messageries instantanées ayant le plus fort taux de pénétration en France en 2018 | Statista" style="width: 100%; height: auto !important; max-width:1000px;-ms-interpolation-mode: bicubic;"/></a><br />Trouver plus de statistiques sur {{< a link="https://fr.statista.com/statistiques/491792/france-reseaux-sociaux-messageries-instantanees-penetration/" caption="" >}}
 # Les données qui circulent sur internet
 
 ## Doit-on se protéger du contenu diffusé sur internet ?
@@ -79,21 +69,16 @@ Une autre source de désaccord, liée à l'utilisation du contenu des messages s
 - les gouvernements et leurs citoyens. Par exemple, le FBI avait mis en place un systeme d'espionnage des messages chez plusieurs fournisseurs d'accès afin de collecter des données interessantes. Le 4e amendement de la constitution americaine a mis fin à ce projet.
 - les entreprises et leurs visiteurs : les cookies, qui leur permettent de suivre leur activité et renseignent ceux qui y ont accès à certaines informations confidentielles comme les intérêts des visiteurs pour certains produits, leur mail, leur mot de passe, ou leur numéro de téléphone mobile. 
 
-**<a href="https://www.cnil.fr/fr">La CNIL :</a>** La Commission nationale de l'informatique et des libertés (CNIL) de France est une autorité administrative indépendante française. Elle est chargée de veiller à ce que l’informatique soit au service du citoyen et qu’elle ne porte atteinte ni à l’identité humaine, ni aux droits de l’homme, ni à la vie privée, ni aux libertés individuelles ou publiques.
-
+*{{< a link="https://www.cnil.fr/fr" caption="La CNIL :" >}}
 * Restez informé : Les droits pour maîtriser vos données personnelles !
-  <figure><a href = "https://www.cnil.fr/fr/les-droits-pour-maitriser-vos-donnees-personnelles">
-<img src="../images/informer.png" width = 30% alt="s'informer"></a>
-<figcaption>restez informé : la CNIL</figcaption>
+  <figure{{< a link="https://www.cnil.fr/fr/les-droits-pour-maitriser-vos-donnees-personnelles" caption="" >}}<figcaption>restez informé : la CNIL</figcaption>
 </figure>
-* paramétrer
-  <figure><a href="https://www.cnil.fr/fr/maitriser-mes-donnees">
-<img src="../images/maitriser.png" width = 30% alt="maitriser ses données"></a>
-<figcaption>maitrisez l'accès à vos données : la CNIL</figcaption>
+{{< img src="../images/informer.png" alt="s" link="https://www.cnil.fr/fr/les-droits-pour-maitriser-vos-donnees-personnelles" >}}* paramétrer
+  <figure{{< a link="https://www.cnil.fr/fr/maitriser-mes-donnees" caption="" >}}<figcaption>maitrisez l'accès à vos données : la CNIL</figcaption>
 </figure>
+{{< img src="../images/maitriser.png" alt="maitriser ses données" link="https://www.cnil.fr/fr/maitriser-mes-donnees" >}}
 
-
-### Des informations vraies.. ou fausses, virales ... ou confidentielles
+### fausses informations
 Les reseaux permettent d'envoyer des messages anonymes. On peut ainsi dénoncer quelqu'un sans risquer de represailles. Mais, heureusement, dans une societé democratique, une accusation ne fait pas preuve et toute personne a le droit d'être confronté à son accusateur.
 
 Internet permet la diffusion d'informations de manière *virale* : 
@@ -106,9 +91,7 @@ Internet permet la diffusion d'informations de manière *virale* :
 
 > Important : Toujours vérifier une information. Quelle est sa source ? Quelle est la qualité du média ou de la personne qui la diffuse ?
 
-* <a href="https://www.lemonde.fr/verification/">Le Décodex du journal en ligne Le Monde</a> est un outil pour vous aider à vérifier les informations qui circulent sur Internet et dénicher les rumeurs, exagérations ou déformations.
-* <a href="https://www.lumni.fr/programme/data-science-vs-fake">Le site Lumni</a> (anciennement France tv éducation) propose une série de vidéos sur le thème : *Data science vs Fake*, et aborde des sujets divers.
-
+*{{< a link="https://www.lemonde.fr/verification/" caption="Le Décodex du journal en ligne Le Monde" >}}*{{< a link="https://www.lumni.fr/programme/data-science-vs-fake" caption="Le site Lumni" >}}
 ### Des problèmes de sécurité
 L'internet c'est aussi aussi des problemes de securité, avec de nombreuses données non chiffrées, ce qui ouvre la possibilté à de nombreux méfaits : 
 
@@ -116,11 +99,7 @@ L'internet c'est aussi aussi des problemes de securité, avec de nombreuses donn
 - recevoir des macros avec virus en pièces jointes
 - le vol d'identité
 
-<figure>
-<img src="../images/pirate.png" width = 30% alt="securité">
-<figcaption>Sur internet, il y a autant de personnes mal intentionnées que dans la "vraie" vie</figcaption>
-</figure>
-
+{{< img src="../images/pirate.png" alt="securité" caption="Sur internet, il y a autant de personnes mal intentionnées que dans la vraie vie" >}}
 Mais le chiffrement est couteux pour les fournisseurs d'équipement et de logiciels.
 
 Un autre problème de sécurité vient d'une technique que l'on appelle le **phishing** : le pirate se fait passer pour un organisme bancaire, un assureur, un opérateur de téléphonie... La technique est souvent celle-ci : 
@@ -130,16 +109,8 @@ Vous recevez un mail de cet organisme, vous demandant de *cliquer sur un lien* q
 Seulement, lorsque vous *cliquez*, vous pouvez constater que le **nom de domaine** n'est pas rigoureusement identique à celui de l'organisme *original*.
 Ainsi, l'URL `https://twiter.com` *(le faux site, dont le nom de domaine est* twiter) n'est pas identique à `https://twitter.com` *(le vrai site, de nom de domaine* twit**t**er).
 
-<figure>
-<img src="../images/phishing.png" width = 80% alt="phishing">
-<figcaption>un exemple de phishing</figcaption>
-</figure>
-
-<figure>
-<img src="../images/detail.png" width = 80% alt="phishing">
-<figcaption>detail du lien</figcaption>
-</figure>
-
+{{< img src="../images/phishing.png" alt="phishing" caption="un exemple de phishing" >}}
+{{< img src="../images/detail.png" alt="phishing" caption="detail du lien" >}}
 Ensuite, on vous demande: 
 
 * vos identifiants de connexion, 
@@ -192,16 +163,11 @@ Voir la page [fonctionnement d'internet, prococoles](/docs/SNT_2nde/pages/page3/
 </div>
 
 # Liens
-* <a href="https://www.economie.gouv.fr/files/files/directions_services/cge/barometre-numerique-2019.pdf">Etude : le baromètre du numérique 2019</a>
-* <a href="https://www.lemonde.fr/verification/">Le Décodex du journal en ligne Le Monde</a> 
-* <a href="https://www.lumni.fr/programme/data-science-vs-fake">data sciences vs fake news sur la chaine Lumni</a>
-* <a href="https://fr.statista.com" rel="nofollow">Site avec visuels sur des enquetes statisiques : Statista.com</a>
-* <a href="https://www.cnil.fr/fr">La CNIL :</a>
-* conglomérat de réseaux (interstice.info) : [https://interstices.info/internet-le-conglomerat-des-reseaux/](https://interstices.info/internet-le-conglomerat-des-reseaux/)
+*{{< a link="https://www.economie.gouv.fr/files/files/directions_services/cge/barometre-numerique-2019.pdf" caption="Etude : le baromètre du numérique 2019" >}}*{{< a link="https://www.lemonde.fr/verification/" caption="Le Décodex du journal en ligne Le Monde" >}}*{{< a link="https://www.lumni.fr/programme/data-science-vs-fake" caption="data sciences vs fake news sur la chaine Lumni" >}}*{{< a link="https://fr.statista.com" caption="Site avec visuels sur des enquetes statisiques : Statista.com" >}}*{{< a link="https://www.cnil.fr/fr" caption="La CNIL :" >}}* conglomérat de réseaux (interstice.info) : [https://interstices.info/internet-le-conglomerat-des-reseaux/](https://interstices.info/internet-le-conglomerat-des-reseaux/)
 * Le web :[https://isn-icn-ljm.pagesperso-orange.fr/web/co/module_WEB.html](https://isn-icn-ljm.pagesperso-orange.fr/web/co/module_WEB.html)
 * article du CNRS, [Numérique : le grand gâchis énergétique](https://lejournal.cnrs.fr/articles/numerique-le-grand-gachis-energetique)
 
 
 # Approfondir
 
-* <a href = '../circulation/index.html'>Compléments de cours : Les Reseaux</a>
+*{{< a link="../circulation/index.html" caption="Compléments de cours : Les Reseaux" >}}

@@ -5,24 +5,16 @@ Title: Analyse de données
 
 # Utilisation de la base de données
 ## Ouvrir la base de données
-Aller sur la page <a href="http://exoplanet.eu/GCM1D/" target = "blank">Exoplanet.eu</a>.
-
+Aller sur la page{{< a link="http://exoplanet.eu/GCM1D/" caption="Exoplanet.eu" >}}
 Pour consulter la base de données de toutes les planetes observées, cliquer sur *Tous les catalogues*.
 
-<figure>
-<div>
-<img src = "../images/catalogues.png" >
-<figcaption>accès à la base de données</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/catalogues.png" caption="accès à la base de données" >}}
 Le tableau donne les caractéristiques connues pour ces planètes. Leur nombre est gigantesque. Vous allez utiliser les formules de filtre pour en selectionner quelques unes.
 
 ## Filtrer
 Par exemple, si l'on cherche à étudier les seules planètes telluriques, on choisira celles dont le rayon est un peu supérieur ou un peu inférieur à celui de la Terre. 
 
-D'après le <a href="https://media.afastronomie.fr/PetiteOurse/SIDERAL_PDF/outilPO%20-%20doc%20-%20tableau%20comparatif%20simplifié%20des%20planetes.pdf" target="blank">tableau comparatif des planètes du système solaire</a>, la masse (*mass en anglais*) de la Terre est 317 fois plus petite que celle de Jupiter, ce que l'on peut exprimer sous la forme:
-
+D'après le{{< a link="https://media.afastronomie.fr/PetiteOurse/SIDERAL_PDF/outilPO%20-%20doc%20-%20tableau%20comparatif%20simplifié%20des%20planetes.pdf" caption="tableau comparatif des planètes du système solaire" >}}
 $$mass:mjup = 0.00315$$
 
 * 1/317 = 0.00315
@@ -39,11 +31,7 @@ $$mass{:}mjup > 0.001 ~AND ~mass{:}mjup < 0.004$$
 > 1. Dans la barre de formule, vous écrirez la relation qui permettra de filtrer les planètes, et conserver celles dont les masses sont comprises entre 0.001 et 0.004 fois celle de Jupiter.
 > 2. Ajouter aussi un filtre sur le rayon: $$radius{:}rjup < 0.1$$
 
-<figure>
-<img src = "../images/filtre.png">
-<figcaption>appliquer un filtre sur la base de données</figcaption>
-</figure>
-
+{{< img src="../images/filtre.png" caption="appliquer un filtre sur la base de données" >}}
 ## Loi de régréssion linéaire
 ### Entrer les données dans un tableau
 On cherche maintenant une loi entre les grandeurs *mass* et *radius* pour ces planètes. Le modèle mathematique possible est le suivant:
@@ -64,11 +52,7 @@ Soit: la masse volumique relative à celle de Jupiter est égale à sa masse rel
 
 Si vous revenez sur la fenêtre d'edition du tableau, celui-ci devrait ressembler à ceci:
 
-<figure>
-<img src = "../images/Capture1.png">
-<figcaption>fenêtre tableur de la Ti-83</figcaption>
-</figure>
-
+{{< img src="../images/Capture1.png" caption="fenêtre tableur de la Ti-83" >}}
 ### Afficher le nuage de points
 
 > * Sur votre **calculatrice Ti-83**, choisir les listes de valeurs: faire `2nde f(x)`, ce qui correspond à `graph stat`. Choisir `1:Graph1...Aff` puis: 
@@ -77,22 +61,14 @@ Si vous revenez sur la fenêtre d'edition du tableau, celui-ci devrait ressemble
 	* XListe : `L3`
 	* YListe : `L1` 
 
-<figure>
-<img src = "../images/Capture2.png">
-<figcaption>selection des séries L1 et L3 pour X et Y</figcaption>
-</figure>
-
+{{< img src="../images/Capture2.png" caption="selection des séries L1 et L3 pour X et Y" >}}
 > * Réglage des axes: bouton `fenêtre`. Choisir:
 	* Xmin=0
 	* Xmax=0.001
 	* Ymin=0
 	* Ymax=0.005
 
-<figure>
-<img src = "../images/Capture3.png">
-<figcaption>Réglage des axes</figcaption>
-</figure>
-
+{{< img src="../images/Capture3.png" caption="Réglage des axes" >}}
 > * Appuyer alors sur le bouton `graphe` pour visualiser la distribution de points.
 
 ### Régréssion linéaire

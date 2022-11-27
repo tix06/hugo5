@@ -7,11 +7,7 @@ Title: introduction aux graphes et internet
 Soit un reseau constitué de 6 machines, que l'on symbolisera par 6 ronds A, B ,C ,D, E et F.
 
 
-<figure>
-  <img src="../images/ABC.png" alt="sommets d'un graphe">
-  <figcaption>sommets d'un graphe</figcaption>
-</figure>
-
+{{< img src="../images/ABC.png" alt="sommets d" caption="sommets d'un graphe" >}}
 Sur une feuille, relier ses sommets ( pour que le graphe soit "connexe"). Imaginez plusieurs types de figures. 
 
 Quels sont les avantages et inconvénients de chacun des graphes constuits sur le cahier (complets, en étoile, circulaires en particulier) en termes de fiabilité, de coût.
@@ -41,11 +37,7 @@ Le problème des sept ponts de Königsberg est connu pour être à l'**origine d
 il y a une île appelée le Kneiphof, entourée d’un fleuve qui se partage en 2 bras. Les bras de ce fleuve sont garnis de 7 ponts
 
 
-<figure>
-  <img src="../images/euler1.png" alt="les ponts de Konigsberg">
-  <figcaption>les ponts de Konigsberg</figcaption>
-</figure>
-
+{{< img src="../images/euler1.png" alt="les ponts de Konigsberg" caption="les ponts de Konigsberg" >}}
 Le problème consiste à déterminer s'il existe ou non une promenade dans les rues de Königsberg permettant, à partir d'un point de départ au choix, de passer une et une seule fois par chaque pont, et de revenir à son point de départ.
 
  Il est possible de vérifier, de manière intuitive, que la promenade demandée n'existe pas. Ce sont au moins deux ponts, bien choisis, qu'il faudrait ajouter ou retirer pour permettre la promenade avec retour initialement cherchée.

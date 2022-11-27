@@ -11,21 +11,13 @@ On peut faire un schéma où l'on fera justement apparaitre ces *relations* entr
 
 Voici l'un des schémas possibles : 
 
-<figure>
-  <img src="../images/fig4.png" alt="graphe reseau social">
-  <figcaption>Graphe 1 : connexe</figcaption>
-</figure>
-
+{{< img src="../images/fig4.png" alt="graphe reseau social" caption="Graphe 1 : connexe" >}}
 Il s'agit d'un graphe *connexe* : un graphe pour lequel toutes les personnes (tous les sommets) sont reliés par un chemin.
 
 On peut imaginer qu'un individu se joigne à la fête sans y avoir été invité. Il ne connait alors personne. Appelons le *Intru*.
 
 Le graphe a alors l'allure suivante : 
-<figure>
-  <img src="../images/fig5.png" alt="graphe non connexe">
-  <figcaption>Graphe 2 : non connexe</figcaption>
-</figure>
-
+{{< img src="../images/fig5.png" alt="graphe non connexe" caption="Graphe 2 : non connexe" >}}
 Il s'agit cette fois d'un graphe *non connexe*.
 
 Kévin se demande comment il pourrait parvenir à faire passer un message à Oriane, qu'il ne connait pas, par l'intermédiaire de personnes qui se connaissent entre-elles. Le graphe 3 présente l'un des chemins possibles : 
@@ -37,27 +29,15 @@ Ce chemin peut être décrit :
 
 Ce chemin a une longueur égale à 2 (il faut 2 transmissions du message pour qu'il parvienne à Oriane). C'est le nombre d'arêtes.
 
-<figure>
-  <img src="../images/fig6.png" alt="graphe avec chemin">
-  <figcaption>Graphe 3 : chemin Kévin-Oriane</figcaption>
-</figure>
-
+{{< img src="../images/fig6.png" alt="graphe avec chemin" caption="Graphe 3 : chemin Kévin-Oriane" >}}
 Dans la soirée, les personnes qui se connaissent déjà ont tendance à former de plus petits groupes au sein des participants. On peut matérialiser l'un de ces petits groupes avec le schéma suivant : 
 
-<figure>
-  <img src="../images/fig7.png" alt="graphe avec cycle">
-  <figcaption>Graphe 4 : cycle Paul-Kévin-Vous</figcaption>
-</figure>
-
+{{< img src="../images/fig7.png" alt="graphe avec cycle" caption="Graphe 4 : cycle Paul-Kévin-Vous" >}}
 Il s'agit d'un *cycle* dans le graphe. C'est une figure fermée (qui part de Paul pour revenir à Paul). Cette figure relie une seule fois tous les sommets de ce *petit groupe*. 
 
 Voici un autre exemple de cycle dans ce même graphe:
 
-<figure>
-  <img src="../images/fig8.png" alt="graphe avec cycle">
-  <figcaption>Graphe 5 : autres cycle</figcaption>
-</figure>
-
+{{< img src="../images/fig8.png" alt="graphe avec cycle" caption="Graphe 5 : autres cycle" >}}
 # Graphes
 ## Un graphe
 G = (V,E) est un graphe G où E est l'ensemble des sommets et V l'ensemble des arêtes.
@@ -83,18 +63,10 @@ Un cycle est un chemin fermé (qui revient à son sommet de départ), sans passe
 ## Arbre
 Un arbre est un graphe connexe sans cycle. La figure suivante en est une illustration: 
 
-<figure>
-  <img src="../images/fig11.png" alt="arbre couvrant">
-  <figcaption>Graphe 6 : arbre couvrant</figcaption>
-</figure>
-
+{{< img src="../images/fig11.png" alt="arbre couvrant" caption="Graphe 6 : arbre couvrant" >}}
 Cet arbre a la propriété de couvrir complètement tous les noeuds du graphe 1 vu en exemple (liaisons par pointillés) :
 
-<figure>
-  <img src="../images/fig9.png" alt="arbre couvrant">
-  
-</figure>
-
+{{< img src="../images/fig9.png" alt="arbre couvrant" >}}
 **Propriétés :** 
 
 * Tout arbre à n sommets a exactement n-1 arêtes.
@@ -103,11 +75,7 @@ Cet arbre a la propriété de couvrir complètement tous les noeuds du graphe 1 
 ## Couplage
 Un couplage est un ensemble d'arêtes qui n'ont aucun sommet en commun (liaisons par pointillés):
 
-<figure>
-  <img src="../images/fig10.png" alt="couplage">
-  <figcaption>Graphe 7 : couplage</figcaption>
-</figure>
-
+{{< img src="../images/fig10.png" alt="couplage" caption="Graphe 7 : couplage" >}}
 # Applications
 
 * Un graphe représente les relations entre les sommets. C'est la représentation naturelle pour les réseaux sociaux (sommets = personnes) ou les réseaux internet (sommets = routeurs).

@@ -3,38 +3,23 @@ Title : le Cloud
 ---
 
 # Le Cloud computing
-Le <a href="https://fr.wikipedia.org/wiki/Cloud_computing">cloud computing</a> correspond à l’accès à des services informatiques (serveurs, stockage, mise en réseau, logiciels) via Internet (le « cloud » ou « nuage »).
-
-<figure>
- <img src="../images/Nuage33.png">
- <a href="https://fr.wikipedia.org/wiki/Cloud_computing"><figcaption>wikipedia : cloud computing</figcaption></a>
-</figure>
-
+Le{{< a link="https://fr.wikipedia.org/wiki/Cloud_computing" caption="cloud computing" >}}
+{{< img src="../images/Nuage33.png" link="https://fr.wikipedia.org/wiki/Cloud_computing" caption="wikipedia : cloud computing" >}}
 # La consommation énergetique des centres de données
 ## Pollution numérique
 *Les services cloud s’appuient sur de nombreux serveurs répartis à travers le monde. Contrairement aux déchets pour lesquels les impacts environnementaux sont directement visibles, ceux du matériel informatique le sont moins. Néanmoins, ils ne sont pas pour autant inexistants.* 
 
 
 
-<a href="https://siecledigital.fr/2021/04/06/cloud-pollution/" target="blank">extrait d'un article de siecledigital.fr</a>
 
 Dans ce (très bon) article, on fait la disctinction entre la *compensation carbone*, evoquée par Google, et l'*empreinte carbone* liée à l'activité.
 
-<figure>
-  <img src="../images/pollution-numerique.jpeg">
-  <figcaption>une partie de la pollution est invisible aux yeux du consommateur. Image de gauche : Nick Fewings / Unsplash. Image de droite : Health Data Hub</figcaption>
-</figure>
-
+{{< img src="../images/pollution-numerique.jpeg" caption="une partie de la pollution est invisible aux yeux du consommateur. Image de gauche : Nick Fewings / Unsplash. Image de droite : Health Data Hub" >}}
 Dire que les data centers sont gourmands en énergie est un euphémisme. L’alimentation électrique moyenne d’un centre est d’environ 30MW et les plus gros dépassent les 100 MW, soit l’équivalent de la consommation de villes de 25 à 50 mille habitants.
 
 ## Le constat en video
 
-<figure>
-  <a href="https://youtu.be/JvwiMNcg9sw">
-  <img src="../images/video_impact_num.png">
-  <figcaption>Video: E-mail, cloud, data center: ces clics qui polluent; <i>Le Temps</i></figcaption></a>
-</figure>
-
+{{< img src="../images/video_impact_num.png" link="https://youtu.be/JvwiMNcg9sw" caption="Video: E-mail, cloud, data center: ces clics qui polluent; " >}}
 *Remarques:* 
 * Environ 30 % de cette consommation électrique est imputable aux équipements terminaux – ordinateurs, téléphones, objets connectés –, 30 % aux data centers qui hébergent nos données et, plus surprenant, 40 % de la consommation est liée aux réseaux, les fameuses « autoroutes de l‘information ».
 

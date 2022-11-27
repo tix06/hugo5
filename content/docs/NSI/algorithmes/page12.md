@@ -8,12 +8,7 @@ En mathématiques, la spirale d'Ulam, ou spirale des nombres premiers (dans d'au
 
 [lien wikipedia](https://fr.wikipedia.org/wiki/Spirale_d%27Ulam)
 
-<figure>
-  <div>
-    <img src="../images/ulam.gif">
-  </div>
-</figure>
-
+{{< img src="../images/ulam.gif" >}}
 ## Enoncé du projet
 Vous devrez réaliser la spirale de Ulam dans une fenêtre `turtle` en vous inspirant du modèle proposé plus haut. Le programme sera réalisé en langage python. Le programme sera organisé en modules. On pourra consulter [la page suivante](/docs/NSI/langages/page3/) pour la mise en module du script.
 
@@ -42,7 +37,4 @@ Deux autres fenêtres s'ouvrent alors:
 
 Vous pouvez alors organiser vos fenêtres comme sur l'image suivante.
 
-<figure>
-  <img src="../images/idlePython.png">
-  <figcaption>A gauche, l'editeur python, à droite les fenêtres graphique et le shell</figcaption>
-</figure>
+{{< img src="../images/idlePython.png" caption="A gauche, l'editeur python, à droite les fenêtres graphique et le shell" >}}

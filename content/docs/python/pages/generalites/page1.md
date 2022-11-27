@@ -7,25 +7,14 @@ Python, créé en 1991, est désormais le principal langage de programmation dan
 
 Son créateur est un néerlandais nommé Guido van Rossum, qui a cherché à faire un langage très simple et lisible. Certains prétendent même que lire du code Python équivaut à lire de l’anglais.
 
-<figure>
-  <a href="https://fr.wikipedia.org/wiki/Guido_van_Rossum">
-  <img src="../images/guido.jpeg">
-  <figcaption>Bio de Guido Van Rossum - wikipedia</figcaption>
-</a>
-</figure>
-
+{{< img src="../images/guido.jpeg" link="https://fr.wikipedia.org/wiki/Guido_van_Rossum" caption="Bio de Guido Van Rossum - wikipedia" >}}
 le nom du langage vient de l’affection de Guido pour le « Monty Python Flying Circus », une comédie surréaliste créée par un groupe comique anglais « Monty Python ».
 
 Le site « [Rosetta Code](http://www.rosettacode.org/wiki/Rosetta_Code) » permet de comparer des programmes réalisant le même travail dans plusieurs centaines de langages informatique différents, confirme cette lisibilité.
 
 la licence Python appartient depuis 2001 à la Python Software Foundation, organisation sans but lucratif. La licence est donc FLOSS "Free/Libre and Open Source Software", à l’instar de Linux, Ubuntu, LibreOffice, Mozilla Firefox, Mono (clone de la plateforme .NET de Microsoft), Apache Web Server et le VLC player.
 
-<figure>
-  <div>
-    <img src="../images/logoPython.jpeg">
-  </div>
-</figure>
-
+{{< img src="../images/logoPython.jpeg" >}}
 # Langage de haut-niveau
 On appelle « haut niveau » les langages de forte abstraction, qui s’éloignent de l’électronique de l’appareil opérant le programme. Un langage orienté autour du problème à résoudre sans s’occuper des caractéristiques techniques du matériel utilisé. 
 
@@ -35,11 +24,7 @@ Python est généralement appelé un langage interprété, cependant, il combine
 * Le **bytecode** est une représentation de bas niveau indépendante de la plate-forme de votre code source, cependant, il ne s'agit pas du code machine binaire et ne peut pas être exécuté directement par la machine. 
 * Le bytecode est un ensemble d'instructions pour une machine virtuelle qui s'appelle la **machine virtuelle Python (PVM)**.
 
-<figure>
- <img src="../images/pvm.png">
- <figcaption>du .py au PVM</figcaption>
-</figure>
-
+{{< img src="../images/pvm.png" caption="du .py au PVM" >}}
 Le PVM est un interpréteur qui exécute le bytecode et fait partie du système Python. Le bytecode est indépendant de la plate-forme, mais PVM est spécifique à la machine cible. L'implémentation par défaut du langage de programmation Python est CPython qui est écrit dans le langage de programmation C. (il existe d'autres implementations). CPython compile le code source python dans le bytecode, et ce bytecode est ensuite exécuté puis desassemblé par la machine virtuelle CPython.
 
 # Bytecode

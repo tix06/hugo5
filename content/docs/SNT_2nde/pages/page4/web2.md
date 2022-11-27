@@ -32,16 +32,12 @@ Testons nos premières instructions en html.
  
 
 
-> Testez le vous même: Allez dans l'editeur en ligne <a href="https://htmledit.squarefree.com/" target="blank">squarefree.com</a> et copier-coller le script suivant:
-
+> Testez le vous même: Allez dans l'editeur en ligne{{< a link="https://htmledit.squarefree.com/" caption=" Testez le vous même: Allez dans l'editeur en ligne " >}}
 ```html
 <h1>Wanted!</h1>
 ```
 
-<figure>
-  <img src="../images/squarefree.png">
-</figure>
-
+{{< img src="../images/squarefree.png" >}}
 > Comment cette instruction est-elle interprétée par le navigateur (partie inférieure de l'écran)?
 
 ### **Les balises principales**
@@ -53,16 +49,13 @@ Ce sont la plupart du temps des balises de type `<balise>argument</balise>`
 | h2 (titre secondaire) | `<h2>Mon titre secondaire</h2>` | <span style="font-size: 24px">Mon titre secondaire</span> |
 | p (paragraphe) | `<p>Voici le contenu d'un paragraphe</p>` | &nbsp; &nbsp; Voici le contenu d'un paragraphe |
 | div (container) | `<div><p>Contenu</p><p>autre contenu</p></div>` | <p>Contenu</p><p>autre contenu</p> |
-| a (lien) | `<a href="https://www.anti-moustique.net/raquette-moustique/">le meilleur antimoustique au monde</a>` | <a href="">le meilleur antimoustique au monde</a> |
-| img (image) | `<img src="https://i.postimg.cc/MHjjW4wg/moustique.png">` | <div><img src="../images/moustique.png" style="width:50px"></div> |
+| a (lien) | {{< a link="https://www.anti-moustique.net/raquette-moustique/" caption="le meilleur antimoustique au monde" >}}| img (image) | `<img src="https://i.postimg.cc/MHjjW4wg/moustique.png">` | <div><img src="../images/moustique.png" style="width:50px"></div> |
 | ul li | <div><img src="../images/listes3.png" style="height:100px"></div> |  <div><img src="../images/listes4.png" style="width:70px"></div> |
 
 <br>
-> Testez chacun des **exemples d'instruction en html** dans la page de <a href="https://htmledit.squarefree.com/" target="blank">squarefree.com</a>.
-
+> Testez chacun des **exemples d'instruction en html** dans la page de{{< a link="https://htmledit.squarefree.com/" caption=" Testez chacun des **exemples d'instruction en html** dans la page de " >}}
 ### **Balise de lien hypertexte**
-Dans le tableau précédent, la balise `<a href="...">texte à afficher</a>` possède un *attribut* obligatoire: `href="..."`. Cet attribut contient le lien hypertexte vers lequel le navigateur vous mène lorsque vous cliquez sur le *texte à afficher*.
-
+Dans le tableau précédent, la balise {{< a link="..." caption="texte à afficher" >}}
 
 ### **Balise image**
 **Pour ajouter une image :** on utilise la balise `<img>`:
@@ -83,16 +76,10 @@ Dans une page html, les instructions `HTML` sont mises dans un fichier dont l'ex
 
 <iframe src="https://trinket.io/embed/html/eb704ac5e8" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
-*Si l'affichage de l'editeur n'est pas optimal, utiliser le <a href="https://trinket.io/html/eb704ac5e8" target="blank">lien direct sur la page en plein écran</a>*
-
+*Si l'affichage de l'editeur n'est pas optimal, utiliser le{{< a link="https://trinket.io/html/eb704ac5e8" caption="lien direct sur la page en plein écran" >}}
 > Nous  allons **modifier le script** de la page pour obtenir quelque chose ressemblant à celle-ci (mais en français):
 
-<figure>
-  <div>
-  <img src="../images/wanted.png">
-</div>
-</figure>
-
+{{< img src="../images/wanted.png" >}}
 **1)** Traduire et modifier le texte (*Description*) pour qu'il soit rédigé en français.
 
 **2)** Sous le paragraphe **Description:..** vous ajouterez un nouveau paragraphe `<p>` contenant:
@@ -110,7 +97,6 @@ Ca paragraphe devra être positionné AVANT la femeture `</div>`.
 **4)** Ajouter un lien dans ce paragraphe vide `<p>  </p>` vers une nouvelle page du site: 
 
 ```html
-<a href="lune.html">=> Go to Lune Project</a>
 ```
 
 
@@ -120,13 +106,7 @@ Ca paragraphe devra être positionné AVANT la femeture `</div>`.
 ## Projet de recrutement lunaire
 Dans l'onglet *lune.html*, écrire le script HTML pour obtenir la page suivante:
 
-<figure>
-  <div>
-  <img src="../images/lune0.png">
-  <figcaption>lune.html</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/lune0.png" caption="lune.html" >}}
 **Aide:**
 
 **1)** Pour charger l'image dans le projet : bouton de droite
@@ -166,13 +146,7 @@ Une déclaration CSS comprend :
 * un sélecteur, qui peut être le nom d'une balise HTML (comme par exemple div dans l'exemple proposé) 
 * une ou plusieurs règle(s) contenant une propriété ainsi que la valeur correspondante.
 
-<figure>
-  <div>
-    <img src="../images/css.png">
-    <figcaption>règles CSS associées à tous les éléments p de la page: caractères mis en gras (font-weight: bold) et entourés d'une bordure rouge (border: 2px solid red)</figcaption>
-  </div>
-</figure>
-
+{{< img src="../images/css.png" caption="règles CSS associées à tous les éléments p de la page: caractères mis en gras (font-weight: bold) et entourés d'une bordure rouge (border: 2px solid red)" >}}
 Observez bien les caractères spéciaux {  } : et ; utilisés pour contenir et séparer les *instructions*.
 Ces instructions peuvent être mises à la ligne, ou bien dans une seule ligne : 
 
@@ -213,68 +187,30 @@ img {
 # Prolongement: travailler sur le fichier *local*
 **1)** Téléchargez votre projet sur votre ordinateur. A l'aide du menu en haut à gauche de la fenêtre d'edition, selectionner *Download*:
 
-<figure>
-  <div>
-  <img src="../images/download.png">
-  <figcaption>Download depuis le menu de l'editeur Trinket</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/download.png" caption="Download depuis le menu de l'editeur Trinket" >}}
 <br>
 
-<figure>
-  <div>
-  <img src="../images/enregistrer.png">
-  <figcaption>Choisir l'option Enregistrer sous...</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/enregistrer.png" caption="Choisir l'option Enregistrer sous..." >}}
 **2)** Atteindre le fichier à l'aide de l'**explorateur** de votre ordinateur.
 
-<figure>
-  <div>
-  <img src="../images/telechargement.png">
-  <figcaption>Dossier téléchargement</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/telechargement.png" caption="Dossier téléchargement" >}}
 **Dézipper** le fichier téléchargé et deplacer son contenu dans vos *Documents*.
 
-<figure>
-  <div>
-  <img src="../images/extraire.png">
-  <figcaption>Clic droit sur le dossier .zip et choisir <i>Extraire tout</i></figcaption>
-</div>
-</figure>
-
+{{< img src="../images/extraire.png" caption="Clic droit sur le dossier .zip et choisir " >}}
 Normalement, l'explorateur devrait montrer le contenu du nouveau dossier, avec tous les fichiers du projet.
 
-> Si votre projet n'est pas complètement terminé, vous pouvez utilisez celui-ci: <a href="/scripts/Tkinter/projet_correction.zip" download="projet_correction.zip">projet_correction</a>
-
-Vous pouvez maintenant ouvrir la page *index.html* avec votre *navigateur*, et vérifier que le lien <a href="">Go to Lune Project</a> vous envoie bien sur la page *Lune.html*.
-
+> Si votre projet n'est pas complètement terminé, vous pouvez utilisez celui-ci:{{< a link="/scripts/Tkinter/projet_correction.zip" caption=" Si votre projet n'est pas complètement terminé, vous pouvez utilisez celui-ci: " >}}
+Vous pouvez maintenant ouvrir la page *index.html* avec votre *navigateur*, et vérifier que le lien{{< a link="" caption="Go to Lune Project" >}}
 <!--
 
 **3)** Sélectionner tous les fichiers d'extensions `.html` et `.css`: Touche <i>Maj</i> enfoncée séléctionner les 3 fichiers. 
 
 On veut les ouvrir avec un editeur de script, comme par exemple *Notepad++*, ou bien *Visual Studio Code*:
 
-<figure>
-  <div>
-  <img src="../images/editer.png">
-  <figcaption>Clic droit: Ouvrir avec Notepad++</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/editer.png" caption="Clic droit: Ouvrir avec Notepad++" >}}
 <br>
 
-<figure>
-  <div>
-  <img src="../images/notepad2.png">
-  <figcaption>La fenêtre de l'editeur Notepad++</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/notepad2.png" caption="La fenêtre de l'editeur Notepad++" >}}
 **4)** Choisir parmi les différents onglets celui appelé `style.css`. Vous allez modifiez la mise en forme du texte à l'aide d'une déclaration CSS. Pour modifier les titres de niveau 1 (éléments *h1*) en bleu, et la taille des caractères à 12px, vous saisirez à la suite des autres déclarations:
 
 ```css
@@ -284,17 +220,10 @@ h1 {
   }
 ```
 
-D'autres règles peuvent être ajoutées à partir du tutoriel <a href="https://www.w3schools.com/css" target="blank">https://www.w3schools.com/css/default.asp</a>
-
+D'autres règles peuvent être ajoutées à partir du tutoriel{{< a link="https://www.w3schools.com/css" caption="https://www.w3schools.com/css/default.asp" >}}
 **5)** Ouvrir alors le fichier *index.html* de votre projet à l'aide du navigateur: depuis l'*explorateur*, faire un clic droit sur `index.html`.
 
-<figure>
-  <div>
-  <img src="../images/ouvrirAvec.png">
-  <figcaption>Choisir Ouvrir avec: Firefox</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/ouvrirAvec.png" caption="Choisir Ouvrir avec: Firefox" >}}
 
 # Le langage javascript
 Le langage javascript va permettre de gérer les évènements de la page : les animations, les données des formulaires, les boutons...
@@ -316,13 +245,7 @@ function decollage() {
 
 *Votre page devrait alors ressembler à ceci...:*
 
-<figure>
-  <div>
-  <img src="../images/lune.png">
-  <figcaption>lune.html</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/lune.png" caption="lune.html" >}}
 
 # Prolongement 2
 *S'il vous reste du temps:* ajoutez une **troisième** page à votre projet Web.
@@ -336,7 +259,4 @@ Celle-ci pourrait, par exemple, porter sur un sujet lié à l'exploration d'un a
 
 # Liens et compléments
 <ul>
-<li><a href="../web5">Compléments sur CSS</a></li>
-<li><a href="../web3">SNT TP 2: Javascript</a></li>
-<li><a href="../web1">Retour: le langage HTML</a></li>
-</ul>  
+<li{{< a link="../web5" caption="" >}}<li{{< a link="../web3" caption="" >}}<li{{< a link="../web1" caption="" >}}</ul>  

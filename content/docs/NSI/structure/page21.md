@@ -61,30 +61,17 @@ Il s'agit d'une structure *linéaire*, mais dans laquelle les éléments n'occup
 
 *illustration:*
 
-<figure>
-  <div>
-  <img src="../images/listeElem.png" alt="elements d'une liste chainée">
-  <figcaption>elements dans une liste</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/listeElem.png" alt="elements d" caption="elements dans une liste" >}}
 
 Pour relier ces éléments ensembles, dans une même structure de données, il faut alors utiliser des *pointeurs*.
 
-<figure>
-  <div>
-  <img src="../images/listeElemPoint.png" alt="liste chainée grâce aux pointeurs">
-  <figcaption>liste chainée grâce aux pointeurs</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/listeElemPoint.png" alt="liste chainée grâce aux pointeurs" caption="liste chainée grâce aux pointeurs" >}}
 L'élément **A** pointe sur **B**, qui pointe sur **C**, qui pointe sur **D**. **D**, lui, ne pointe sur ... **rien**!
 
 La plupart du temps, le lien du dernier maillon a pour valeur *None* en python, signifiant un pointeur sur *rien*.
 
 On pourra consulter la vidéo suivante jusqu'à 18min: 
 
-<a href="https://youtu.be/qB00WgCsbqo?t=495" target="blank">listes chainées de Jaques Olivier Lapeyre <img src="../images/video.png"></a>
 
 
 ## Interface
@@ -101,8 +88,7 @@ On trouve en général les opérations suivantes pour l'interface d'une *Liste*:
 * ...
 
 ## Implémentation
-L'implémentation est plus naturelle en *programmation orientée objet* (<a href="/docs/NSI/structure/page3/">voir le chapitre POO</a>). 
-
+L'implémentation est plus naturelle en *programmation orientée objet* {{< a link="/docs/NSI/structure/page3/" caption="voir le chapitre POO" >}}
 > Un maillon est une instance de la classe `Maillon`
 
 ```python
@@ -124,13 +110,7 @@ Son attribut `tete`  est de type `Maillon` , ou bien vaut `None` si la liste est
 
 Cette classe ne comporte pour l'instant que sa définition de la variable `tete`, mais elle est créée pour contenir, plus tard, l'implementation des différentes méthodes prévues par l'interface.
 
-<figure>
-  <div>
-  <img src="../images/listeC.png" alt="liste chainée">
-  <figcaption>illustration d'une liste chainée</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/listeC.png" alt="liste chainée" caption="illustration d'une liste chainée" >}}
 On peut alors créer une liste ainsi :
 
 ```python
@@ -153,13 +133,7 @@ L.tete = M1
 ## Interêt et inconvenient par rapport aux listes en python
 L'interface d'une liste chainée fournit des méthodes plus efficaces que la *Pile*, la *File* ou le *tableau*, lorsque l'on veut par exempke: **insérer**, ou **supprimer** un élément dans la séquence.
 
-<figure>
-  <div>
-  <img src="../images/listeC2.png" alt="insertion liste chainée">
-  <figcaption>insertion dans une liste</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/listeC2.png" alt="insertion liste chainée" caption="insertion dans une liste" >}}
 Cette opération est prévue par l'interface d'une liste chainée => O(n): `inserer_apres(i)`, où `i` est l'indice de l'élément après lequel on veut *insérer*.
 
 Avec une liste python, qui implémente la Pile (voir cours) cela necessite de décaler toutes les valeurs de rang supérieur à `i `. C'est une opération qui est évaluée en O(n<sup>2</sup>) pour sa complexité asymptotique.
@@ -188,15 +162,8 @@ Un autre avantage est la possibilité de faire pointer le dernier élément sur 
 >>> ma_liste.tete.suiv.suiv.val
 ```
 
-**3.** Rendez-vous sur <a href="http://pythontutor.com/visualize.html#mode=edit" target="blank">pythontutor.com</a> et coller le script dans l'editeur. Dérouler alors le script pour obtenir la représentation complète de la liste chaînée comme sur l'image suivante:
-
-<figure>
-  <div>
-  <img src="../images/pythontutor.png" alt="liste chainée et pythontutor">
-  <figcaption>liste chainée et pythontutor</figcaption>
-</div>
-</figure>
-
+**3.** Rendez-vous sur{{< a link="http://pythontutor.com/visualize.html#mode=edit" caption="pythontutor.com" >}}
+{{< img src="../images/pythontutor.png" alt="liste chainée et pythontutor" caption="liste chainée et pythontutor" >}}
 **4.** Modifier le script dans la fenêtre d'edition de *pythontutor*. Ajouter les lignes suivantes et dérouler le programme ligne par ligne:
 
 ```python
@@ -245,13 +212,7 @@ def affiche(M):
 ## Exercice 3: Insertion d'un élément
 On souhaite maintenant modifier la séquence de `ma_liste` créée dans l'exercice 1. On va insérer un élément de valeur `Deuxieme` à la 2<sup>e</sup> position.
 
-<figure>
-  <div>
-  <img src="../images/listeC2.png" alt="insertion liste chainée">
-  <figcaption>insertion dans une liste</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/listeC2.png" alt="insertion liste chainée" caption="insertion dans une liste" >}}
 Ajouter dans votre programme les instructions qui permettront de:
  
 **1.** Créer un nouveau maillon `M4`.<br>

@@ -5,11 +5,7 @@ Title : serveur Flask
 # Flask
 Flask est une *bibliothèque* python fournissant les outils pour faire fonctionner un serveur web.
 
-<figure>
-  <img src="../images/flask.png">
-  <figcaption>Fonctionnement de Flask</figcaption>
-</figure>
-
+{{< img src="../images/flask.png" caption="Fonctionnement de Flask" >}}
 L’architecture Modèle-Vue-Contrôleur est composée de trois entités distinctes, chacune ayant son propre rôle:
 
 * Le **contrôleur**: gère le fonctionnement du site Web. Le programme est écrit en python.
@@ -162,11 +158,7 @@ Ouvrir le moniteur reseau. Utiliser la page de formulaire, envoyer les donées. 
 
 
 
-<figure>
-  <img src="../images/moniteur.png" alt="moniteur reseau (Chrome)">
-  <figcaption>Exemple de moniteur reseau (Chrome)</figcaption>
-</figure>
-
+{{< img src="../images/moniteur.png" alt="moniteur reseau (Chrome)" caption="Exemple de moniteur reseau (Chrome)" >}}
 ## méthode GET
 modifier ensuite le projet de la manière suivante:
 
@@ -204,11 +196,7 @@ if __name__ == '__main__':
 
 * Aidez vous de la page [suivante (arduino103.blogspot)](https://arduino103.blogspot.com/2015/06/python-flask-pythonanywhere-partie-6.html): adaptez le tuto pour concevoir votre site en ligne, pour l'instant sans base de données.
 
-<figure>
-  <img src="../images/congratulation.png" >
-  
-</figure>
-
+{{< img src="../images/congratulation.png" >}}
 
 # Liens
 * TP inspiré de: [https://qkzk.xyz/docs/nsi/cours_premiere/ihm_web/flask/](https://qkzk.xyz/docs/nsi/cours_premiere/ihm_web/flask/)

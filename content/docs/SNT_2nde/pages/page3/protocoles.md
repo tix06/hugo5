@@ -18,11 +18,7 @@ On a vu que l'information qui circule entre 2 machines comprend des données et 
 
 Les composants du reseau n'ont accès qu'à certaines de ces données et adresses, selon leur position dans le modèle en couches.
 
-<figure>
-  <img src="../images/trame_message_OSI.png">
-  <figcaption>message -> datagramme -> trame</figcaption>
-</figure>
-
+{{< img src="../images/trame_message_OSI.png" caption="message -> datagramme -> trame" >}}
 *source: [comprendre les modèles OSI et TCP/IP - chaine Cookie connecté](https://www.youtube.com/watch?v=26jazyc7VNk)*
 
 Ainsi:
@@ -30,10 +26,7 @@ Ainsi:
 * Le switch fait partie des couches *liaison* (2)  et *physique* (1). Il a accès aux bits et à l'adresse MAC. Il en a besoin pour commuter les trames vers le bon port. (même reseau).
 * Le routeur a accès aux adresses MAC et IP de la trame. Il va interconnecter des reseaux grace aux adresses IP.
 
-<figure>
-  <img src="../images/switch_routeur_OSI.png">
-</figure>
-
+{{< img src="../images/switch_routeur_OSI.png" >}}
 ## Protocoles de la couche physique
 le rôle principal de la couche 1 est d'offrir un support de transmission pour les communications. Le protocole de la couche 1 doit permettre aux machines de communiquer sans collision (l'une après l'autre pour 2 machines de la même ligne). Il existe par exemple le protocole CSMA/CD, pour organiser le droit de parole lorsque 2 machines sont directement connectées.
 
@@ -46,11 +39,7 @@ Ainsi, lorsqu'une machine reçoit une trame, et que les premiers bits identifien
 
 Un autre protocole a été utilisé pour fiabiliser la transmission. Le protocole du bit alterné est utilisé au sein de la couche 2 du modèle OSI (distribution des trames Ethernet). Simple et léger, il peut toutefois être facilement mis en défaut, ce qui explique qu'il ait été remplacé par des protocoles plus performants.
 
-<figure><div>
-  <img src="../images/bit_alterne.png">
-  <figcaption>source: <a href="https://pixees.fr/informatiquelycee/n_site/nsi_prem_bit_alt.html">site Pixees</a></figcaption></div>
-</figure>
-
+{{< img src="../images/bit_alterne.png" alt=">  <figcaption>source: <a href=" link="https://pixees.fr/informatiquelycee/n_site/nsi_prem_bit_alt.html" caption="source: " >}}
 Cela necessite d'ajouter 1 bit dans l'en-tête prévu pour la couche 2, contenant déjà les adresses MAC.
 
 ### Principe du protocole du bit alterné
@@ -64,10 +53,7 @@ Le système de drapeau est complété avec un système d'horloge côté émetteu
 ### Code de correction d'erreur CRC
 Dans la trame, on ajoute aux données de la couche 2 un code de correction des erreurs, ou CRC. C'est une valeur mathématique qui est représentative des données envoyées.
 
-<figure>
-  <img src="../images/trame_crc.jpg">
-</figure>
-
+{{< img src="../images/trame_crc.jpg" >}}
 Lors de l'envoi, A calcule le CRC (une valeur X) et le met à la fin de la trame.
 
 B reçoit le message et fait le même calcul que A avec la trame reçue (une valeur Y).
@@ -91,19 +77,11 @@ Lorsqu'un routeur reçoit un paquet d'une machine A, et qu'il doit la transmettr
 
 La table contient, pour chaque machine à atteindre, l'interface vers laquelle doivent transiter les données, ainsi qu'un coefficient correspondant au coût pour cette interface. (Le coût étant égal au nombre de sauts, ou bien au résultat d'un calcul mettant en jeu le debit).
 
-<figure>
-  <img src="../images/routeur_table.png">
-  <figcaption>réseau de routeurs et table de routage (MOOC de l'IMT)
-</figcaption>
-</figure>
-
+{{< img src="../images/routeur_table.png" caption="réseau de routeurs et table de routage (MOOC de l'IMT)" >}}
 
 Cette table de routage ne peut contenir tous les routeurs du reseau internet (estimé à probablement 1 million). Il est donc necessaire de regrouper les sous-réseaux en *aires*, et d'indiquer le chemin vers ces *aires* dans les tables de routage.
 
-<figure>
-  <img src="../images/routeur_aire.png">
-</figure>
-
+{{< img src="../images/routeur_aire.png" >}}
 La manière avec laquelle les tables de routages sont constituées est le resultat du protocole IP. Il existe ainsi:
 
 * le routage à vecteur de distance
@@ -126,22 +104,14 @@ La fiabilité est obtenue par un mécanisme d'acquittement des segments :
 * Si elle expire, le segment est réémis
 
 
-<figure>
-<img src="../images/TCP1.png" width = 80% alt="TCP1">
-<figcaption>TCP1</figcaption>
-</figure>
-
+{{< img src="../images/TCP1.png" alt="TCP1" caption="TCP1" >}}
 * Chaque segment possède un numéro de séquence SEQ: c'est le numéro du premier octet envoyé. C'est grâce à ce numero que les segments peuvent être remis dans l'ordre.
 * Les acquittements sont identifiés par un marqueur ACK: c'est le numéro du prochain octet attendu par la machine.
 * Le concept même d'acquittement impose des notions de délai.
 Par exemple, quel est le délai au delà duquel un segment non acquitté doit être réémis
 
 
-<figure>
-<img src="../images/TCP2.png" width = 80% alt="TCP2">
-<figcaption>TCP2</figcaption>
-</figure>
-
+{{< img src="../images/TCP2.png" alt="TCP2" caption="TCP2" >}}
 *TCP permet ainsi d'être un protocole fiable sans perte de paquets, qui permet à 2 machines de communiquer entre elles (et seulement 2)*
 
 ## Protocoles DNS, HTTP, ...
@@ -204,10 +174,7 @@ Représenter cette adresse en binaire, et identifier les bits correspondant aux 
 **Ex 1:**
 
 
-<figure>
-  <img src="../images/routage4.png">
-</figure>
-
+{{< img src="../images/routage4.png" >}}
 **1.** La machine 192.168.0.1 veut joindre la machine 10.0.1.1 Combien de sauts seront necessaires?
 
 **2.** Les switchs ne sont pas représentés sur ce schéma. Positionnez celui du reseau 192.168.0.0
@@ -218,10 +185,7 @@ Représenter cette adresse en binaire, et identifier les bits correspondant aux 
 **Ex 1:** 
 Soit le reseau de routeurs A, B, C, D:
 
-<figure>
-  <img src="../images/ABCD.png">
-</figure>
-
+{{< img src="../images/ABCD.png" >}}
 On suppose que la transmission par une liaison prend une unité de temps. Un seul paquet peut emprunter une liaison pendant cette durée.
 
 A chaque unité de temps, le paquet poursuit sa route selon le parcours le plus rapide et fait 1 saut.
@@ -245,10 +209,7 @@ Au bout de ce temps, le paquet est donc forcément stocké au niveau du routeur 
 ## Trame et datagramme
 **Ex 1:** 
 
-<figure>
-  <img src="../images/trame_message_OSI.png">
-</figure>
-
+{{< img src="../images/trame_message_OSI.png" >}}
 
 1. Commenter le schéma précédent en expliquant l'encapsulation des données.
 2. Donner les principaux éléments qui composent un datagramme IP et décrire leur utilité.
@@ -256,11 +217,7 @@ Au bout de ce temps, le paquet est donc forcément stocké au niveau du routeur 
 **Ex 2:**
 Voici le modèle simplifié de datagramme IP que nous allons utiliser dans la suite de l'exercice:
 
-<figure>
-  <img src="../images/dataIP.png">
-  <figcaption>modèle simplifié de datagramme IPv4</figcaption>
-</figure>
-
+{{< img src="../images/dataIP.png" caption="modèle simplifié de datagramme IPv4" >}}
 **1.** Sur combien d'octets sont codés:
 
 * une adresse IPv4?
@@ -326,10 +283,7 @@ D- Un préfixe d'adresse.
 
 # Liens
 
-* <a href = "../circulation/">Retour vers la page Reseaux</a>
-* <a href = '../securite/index.html'>Sécurité des communications (1ere NSI)</a>
-* <a href = '../TP_reseau/index.html'>TP simulation d'un reseau</a>
-
+*{{< a link="../circulation/" caption="Retour vers la page Reseaux" >}}*{{< a link="../securite/index.html" caption="Sécurité des communications (1ere NSI)" >}}*{{< a link="../TP_reseau/index.html" caption="TP simulation d'un reseau" >}}
 # Sources
 * adresse IP, partie reseau, partie machine, plages d'adresses: [cours openclassroom](https://openclassrooms.com/fr/courses/857447-apprenez-le-fonctionnement-des-reseaux-tcp-ip/853441-la-couche-3)
 

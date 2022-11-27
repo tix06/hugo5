@@ -30,11 +30,7 @@ La machine fonctionne en 5 étapes:
 
 C'est la première machine *Türing-complète*. Sauf que celle-ci ne manipule pas les données en *binaire*.
 
-<figure>
-  <img src="../images/archi1.jpeg">
-  <figcaption>Prototype (1871) non terminé de la machine analytique de Babbage, exposée au <a href="https://www.sciencemuseum.org.uk/">Science Museum de Londres</a></figcaption>
-</figure>
-
+{{< img src="../images/archi1.jpeg" link="https://www.sciencemuseum.org.uk/" caption="Prototype (1871) non terminé de la machine analytique de Babbage, exposée au " >}}
 C'est son élève, [Ada Lovelace](https://fr.wikipedia.org/wiki/Ada_Lovelace) qui formalise les idées de Babbage et développe le premier algorithme de programmation de l'histoire, devenant la première informaticienne de l'humanité. 
 
 ## Des machines pour chiffrer et decrypter des informations
@@ -44,18 +40,10 @@ Ces machines ne sont pas *Türing-complètes*.
 
 * **1938-1943** La [Bombe](https://fr.wikipedia.org/wiki/Cryptanalyse_d%27Enigma), un supercalculateur est utilisé pour le [décryptage](https://fr.wikipedia.org/wiki/Cryptanalyse_d%27Enigma) d'[Enigma](https://fr.wikipedia.org/wiki/Enigma_(machine), une machine utilisant un système de rotors pour produire un chiffrement mécanique. Les anglais, français et polonais travaillent sur le déchiffrage en testant des combinaisons. La Bombe a été conçue pour les attaques de force brute. Cette machine abat par jour le travail de dix mille décrypteurs.  C'est le mathematicien [Alan Turing](https://fr.wikipedia.org/wiki/Alan_Turing) qui parvient à casser le chiffre grâce à l'utilisation d'une version améliorée de cette machine.
 
-<figure>
-  <img src="../images/archi3.jpeg">
-  <figcaption>La Bombe - version britannique</figcaption>
-</figure>
-
+{{< img src="../images/archi3.jpeg" caption="La Bombe - version britannique" >}}
 * **1943-1945** Les machines du projet [Colossus](https://fr.wikipedia.org/wiki/Colossus_(ordinateur)) permettent de décrypter les machines de Lorentz. Le premier, Colossus Mark 1, est opérationnel en décembre 1943: constitué de 1500 tubes à vide, il accomplissait 5000 opérations par seconde. 
 
-<figure>
-  <img src="../images/archi2.jpg">
-  <figcaption>Colossus Mark2. Le panneau incliné à gauche sert <br>à entrer les clefs de Lorenz, la sortie papier est à droite.</figcaption>
-</figure>
-
+{{< img src="../images/archi2.jpg" caption="Colossus Mark2. Le panneau incliné à gauche sert " >}}
 Le chiffrement Lorenz est beaucoup moins connu que celui d'Enigma. Il était utilisé par les hauts dirigeants allemands pour communiquer entre eux alors qu'Enigma était utilisée au quotidien pour les autres types de communication.
 
 Colossus n'est pas une *machine universelle*, mais c'est bien le premier processeur électronique, numérique, et partiellement programmable de l'histoire. Cette machine montre que l'électronique peut être utilisé pour le traitement numérique à grande vitesse.
@@ -69,11 +57,7 @@ Aucun n'avait eu l'idée d'une machine à **programme enregistré**, concept ess
 
 * **1938** le Z1, **1941** le [Z3 (Konrad Zuse)](https://fr.wikipedia.org/wiki/Zuse_3), est un ordinateur électromécanique utilisant le système binaire et lisant son programme sur une bande perforée. Le Z3 contenait plus de 2000 relais électromécaniques, pesait une Tonne et consommait plus de 4kW. Il comprend une *mémoire*, un *dispositif de contrôle* et une *unité arithmétique* calculant en binaire sur des nombres à virgule flottante! Les données et les instructions sont perforées sur du film de cinema, plus solide que des rubans en papier. Il était capable d'effectuer une addition en 0,8 s. Sa fréquence était de 5,3 Hertz, assez lente à cause des relais. A l'epoque, aucun appareil ne pouvait rivaliser.
 
-<figure>
-  <img src="../images/archi4.png">
-  <figcaption>Z3: the First Functional Programm-Controlled Automatic Calculating Machine - <a href="https://artsandculture.google.com/story/hQUBvBSY16WtIQ">Deutsches Museum</a></figcaption>
-</figure>
-
+{{< img src="../images/archi4.png" link="https://artsandculture.google.com/story/hQUBvBSY16WtIQ" caption="Z3: the First Functional Programm-Controlled Automatic Calculating Machine - " >}}
 L'institut de recherche aéronautique allemand l'utilisait pour réaliser des analyses statistiques sur les vibrations des ailes.
 
 Zuse était le premier à concevoir que les *fonctions de contrôle* pouvaient aussi s'exprimer et être stockées sous forme *numérique*, donc à créer une *machine programmable*. Ce qui permettait de changer de **programme** sans avoir à modifier les **connexions**.
@@ -93,12 +77,7 @@ Ces machines ont d'autres defauts:
 * pas d'unité centrale généraliste, mais une juxtaposition d'accumulateurs et d'unités spécialisées
 * la programmation se fait par cablage ou en positionnant des interrupteurs. Ces machines nécessitent que l'on change leur câblage à chaque type d'opération.
 
-<figure>
-  <img src="../images/architectureN.png">
-  <figcaption>illustration de la différence entre supercalculateurs<br>
-  et ordinateur Von Neumann</figcaption>
-</figure>
-
+{{< img src="../images/architectureN.png" caption="illustration de la différence entre supercalculateurs" >}}
 | année | machine | unité logique | vitesse de calcul | remarques |
 | --- | --- | --- |--- |--- |
 | 1944 | calculateur Harvard Mark 1 (IBM) | 3300 relais | 3 addition sur 23 chiffres par s |  |
@@ -117,10 +96,7 @@ Il exécute son premier programme le 12 avril, et son premier programme de produ
   * [John Von Neumann](https://fr.wikipedia.org/wiki/John_von_Neumann):  qui cherche à developper des moyens pour les Universités pour leurs besoins de calculs mathématiques.
   * [Alan Turing](https://fr.wikipedia.org/wiki/Alan_Turing): qui veut réaliser une machine à traiter les informations.
 
-<figure>
-  <img src="../images/archi5.png">
-</figure>
-
+{{< img src="../images/archi5.png" >}}
 ## La contribution de Turing à l'avènement des ordinateurs
 ### Le binaire
 Contrairement à Babbage, Türing se rend compte que les opérations arithmétiques ordinaires peuvent être traduites dans le cadre de la *logique booléenne*, sous forme de circuits logiques (booléens). Il conçoit comme première machine un *multiplicateur booléen* électrique.
@@ -175,12 +151,7 @@ Il devrait être possible de comparer des programmes en construction en évaluan
 
 Il est à l'origine du concept de **programme enregistré**: le stockage des données et des instructions sous forme d'impulsions électriques à l'intérieur même de la machine qui pourra les consulter à l'instant et à la vitesse qui lui convient. En remplacement du traitement mécanique alors utilisé, ce qui necessitait une vaste manipulation de cables et de boutons à placer sur la bonne position pour specifier le nouveau problème. Charles Babbage avait déjà eut cette idée un siècle plus tôt.
 
-<figure>
-  <img src="../images/architectureN.png">
-  <figcaption>illustration de la différence entre supercalculateurs<br>
-  et ordinateur Von Neumann</figcaption>
-</figure>
-
+{{< img src="../images/architectureN.png" caption="illustration de la différence entre supercalculateurs" >}}
 Cette architecture s'oppose à celle de Harvard (mémoires différentes pour les données et les programmes) du Mark1.
 
 Von Neumann est également le concepteur de l'ordinateur **IAS** à Princeton.
@@ -208,11 +179,7 @@ Les mémoires ROM stockent des programmes à exécuter et sont lues directement 
 
 Les RWM stockent les variables du programme à exécuter, des données que le programme va manipuler. Selon l'architecture de la machine, le programme peut être entièrement stocké dans la ROM, ou bien être partagé entre la ROM et la RWM.
 
-<figure>
-  <img src="../images/ram_rom.png">
-<figcaption>architecture et utilisation des mémoires  - source : <a href="https://fr.wikibooks.org/wiki/Fonctionnement_d%27un_ordinateur/L%27architecture_de_base_d%27un_ordinateur">wikibooks</a></figcaption>
-</figure>
-
+{{< img src="../images/ram_rom.png" link="https://fr.wikibooks.org/wiki/Fonctionnement_d%27un_ordinateur/L%27architecture_de_base_d%27un_ordinateur" caption="architecture et utilisation des mémoires  - source : " >}}
 
 ### Les bus
 Les données doivent circuler entre les différentes parties d’un ordinateur, notamment entre la mémoire vive et le CPU. Le système permettant cette circulation est appelé bus. Il existe, sans entrer dans les détails, 3 grands types de bus: adresses, données, de contrôle.
@@ -220,11 +187,7 @@ Les données doivent circuler entre les différentes parties d’un ordinateur, 
 # Architecture Von Neumann vs Harvard
 Voir la video suivante expliquant la différence entre ces 2 architectures:
 
-<figure><a href="https://www.youtube.com/watch?v=cQjllS45ReU" target=blank>
-  <img src="../images/architectureN1.png">
-  <figcaption>MooC Arduino #4 - Architecture de Von-Neumann, Harvard et Microcontrôleurs<br> - Youtube</figcaption></a>
-</figure>
-
+{{< img src="../images/architectureN1.png" link="https://www.youtube.com/watch?v=cQjllS45ReU" caption="MooC Arduino #4 - Architecture de Von-Neumann, Harvard et Microcontrôleurs" >}}
 # Liens et bibliographie
 * [cours sur l'architecture Von Neumann lattice.cnrs.fr](https://www.lattice.cnrs.fr/sites/itellier/poly_intro_info/informatique004.html#fig:Von%20Neumann)
 * article presentant les technologies de la machine à calculer aux ordinateur de 4e génération: [Evolution des machines à calculer - Alexandre Faribault](https://www.physique.usherbrooke.ca/~afaribau/essai/)

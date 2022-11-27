@@ -15,11 +15,7 @@ On note la distance entre 2 sommets quelconques u et v dans le graphe G : $$dist
 Pour le graphe exemple suivant (Graphe 1), la distance du sommet A au sommet J, vaut au minimum 4 (chemin A, B, E, I, J). Mais cela depend du chemin. Ainsi : 
 $$dist_G(A,J)=4$$.
 
-<figure>
-  <img src="../images/fig20.png" alt="graphe illustratif">
-  <figcaption>Graphe 1 : exemple</figcaption>
-</figure>
-
+{{< img src="../images/fig20.png" alt="graphe illustratif" caption="Graphe 1 : exemple" >}}
 > Calculons toutes les distances dans ce graphe : **L'algorithme de parcours en largeur (Breath First Search BFS)**
 
 **Principe :**
@@ -51,11 +47,7 @@ La méthode vue plus haut permet de rapidement établir la liste L = [E,B,F,H,I]
 
 Une fois cette première partie de l'exploration terminée, on retire E de la liste L, et on colore le sommet en rouge.
 
-<figure>
-  <img src="../images/fig21.png" alt="premiere partie parcours BFS">
-  <figcaption>L = [B,F,H,I]</figcaption>
-</figure>
-
+{{< img src="../images/fig21.png" alt="premiere partie parcours BFS" caption="L = [B,F,H,I]" >}}
 On note la distance au sommet `E` pour chacun des sommets visités, le symbole &#x221E; pour ceux qui ne l'ont pas encore été:
 
 | exploration depuis le sommet... | A | B | C | D | F | G | H | I | J |
@@ -78,11 +70,7 @@ Les distances déjà connues ne sont pas modifiées. On laisse un blanc dans le 
 
 On colore ensuite le sommet B en rouge et on le retire de la liste L.
 
-<figure>
-  <img src="../images/fig22.png" alt="premiere partie parcours BFS">
-  <figcaption>L = [F,H,I,A,C,D]</figcaption>
-</figure>
-
+{{< img src="../images/fig22.png" alt="premiere partie parcours BFS" caption="L = [F,H,I,A,C,D]" >}}
 Ensuite, depuis le sommet F: on explore le graphe jusqu'au sommet G, seul sommet adjacent encore blanc.
 
 On a alors dist<sub>G</sub>(E,G) = 2, puis le sommet F est mis en rouge et retiré de la liste:
@@ -101,11 +89,7 @@ On poursuivra l'exploration par le sommet H, suivant dans la liste. Ce qui perme
 
 A la fin du traitement, on peut représenter à l'aide d'un *arbre* tous les chemins issus de l'exploration du graphe : 
 
-<figure>
-  <img src="../images/fig23.png" alt="arbre parcours BFS">
-  <figcaption>arbre du parcours BFS</figcaption>
-</figure>
-
+{{< img src="../images/fig23.png" alt="arbre parcours BFS" caption="arbre du parcours BFS" >}}
 Pour réaliser cet arbre, il faudra remonter chaque étape du parcours du graphe le parent du sommet visité. Ainsi, il aura faudra se rappeler que le sommet D a pour parent le noeud B (D est marqué dans le tableau dont l'entrée est B). Et le sommet B a lui même pour parent le sommet E. Ainsi, en remontant le chemin, on sait que le chemin de E à D passe par B : E => B => D.
 
 ### Pour aller plus loin (term NSI)
@@ -114,13 +98,7 @@ Pour réaliser cet arbre, il faudra remonter chaque étape du parcours du graphe
 
 * Application de l'algorithme **BFS** au parcours dans un **labyrinthe**:
 
-<figure>
-  <a href="https://youtu.be/vf817b882Uw">
-  <img src="../images/maze1.png" alt="maze BFS">
-  <figcaption>video: Maze Pathfinder - Breadth First Search (BFS)</figcaption>
-</a>
-</figure>
-
+{{< img src="../images/maze1.png" alt="maze BFS" link="https://youtu.be/vf817b882Uw" caption="video: Maze Pathfinder - Breadth First Search (BFS)" >}}
 # Parcours d'un arbre en profondeur (DFS)
 ## Principe
 Soit un graphe G = (V,E) et r un sommet de G, point de départ de l'exploration.
@@ -139,52 +117,28 @@ En pratique :
 **Illustration :**
 Avec le graphe suivant, on démarre l'exploration du noeud G : 
 
-<figure>
-  <img src="../images/fig40.png" alt="graphe parcours profondeur">
-  <figcaption>exemple de graphe pour le parcours en profondeur</figcaption>
-</figure>
-
+{{< img src="../images/fig40.png" alt="graphe parcours profondeur" caption="exemple de graphe pour le parcours en profondeur" >}}
 La première étape est la phase de descente : On peut démarrer l'exploration par le sommet voisin A ou B. Les deux sont possibles. Ils sont de couleur BLANCHE.
 
 Supposons que l'on commence l'exploration par B (on aurait tout aussi bien choisir le A). On colore alors B en VERT.
 
 On poursuit l'exploration par les sommets suivants : D,C,A (il y a d'autres possibiltés) : 
 
-<figure>
-  <img src="../images/fig41.png" alt="graphe parcours profondeur">
-  <figcaption>étape 1</figcaption>
-</figure>
-
+{{< img src="../images/fig41.png" alt="graphe parcours profondeur" caption="étape 1" >}}
 Le sommet A est un bord du graphe : il n'y a pas de noeud fils BLANC. On remonte alors d'un niveau : jusqu'au sommet C. Celui ci ne presente pas davantage de voisin BLANC. A et C sont colorés en ROUGE et on remonte à D. 
 
 On peut alors poursuivre l'exploration vers E :
 
-<figure>
-  <img src="../images/fig42.png" alt="graphe parcours profondeur">
-  <figcaption>étape 2</figcaption>
-</figure>
-
+{{< img src="../images/fig42.png" alt="graphe parcours profondeur" caption="étape 2" >}}
 Depuis le sommet E, on peut visiter F et I. Choisissons F (mais on pourrait choisir également I) : 
 
-<figure>
-  <img src="../images/fig43.png" alt="graphe parcours profondeur">
-  <figcaption>étape 3</figcaption>
-</figure>
-
+{{< img src="../images/fig43.png" alt="graphe parcours profondeur" caption="étape 3" >}}
 On poursuit l'exploration jusqu'en I. Tous les sommets sont visités, et l'exploration est terminée.
 
-<figure>
-  <img src="../images/fig44.png" alt="graphe parcours profondeur">
-  <figcaption>fin du parcours</figcaption>
-</figure>
-
+{{< img src="../images/fig44.png" alt="graphe parcours profondeur" caption="fin du parcours" >}}
 Le schéma suivant illustre le parcours réalisé à partir des arêtes empruntées. Il s'agit d'un arbre couvrant le graphe : 
 
-<figure>
-  <img src="../images/fig45.png" alt="graphe parcours profondeur">
-  <figcaption>arbre couvrant</figcaption>
-</figure>
-
+{{< img src="../images/fig45.png" alt="graphe parcours profondeur" caption="arbre couvrant" >}}
 ## Applications
 Le parcours d'un graphe en profondeur s'apparente à un algorithme de type *retour sur trace*, ou *backtracking*. C'est le comportement de joueur que l'on a lorsque l'on a droit à un nouvelle chance : 
 

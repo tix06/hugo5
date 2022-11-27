@@ -38,11 +38,7 @@ Celle-ci présente toutefois plusieurs problèmes de *redondance*, ce qui va ent
 
 
 
-<figure>
-  <img src="../images/alive.png">
-  <figcaption>film Alive sur senscritique.com</figcaption>
-</figure>
-
+{{< img src="../images/alive.png" caption="film Alive sur senscritique.com" >}}
 Le site [senscritique.com](https://www.senscritique.com/liste/Ces_films_homonymes/1949422#page-1/) rescence plus de 240 films *homonymes*.
 
 > **Question:** Que va t-il se passer si vous recherchez le nom du réalisateur d'un film qui comporte un homonyme dans la même table? Le nom retourné par la fonction `recherche` sera t-il assurement le bon?
@@ -56,11 +52,7 @@ Le site [senscritique.com](https://www.senscritique.com/liste/Ces_films_homonyme
 
 
 
-<figure>
-  <img src="../images/split.png">
-  <figcaption>creation de 2 relations</figcaption>
-</figure>
-
+{{< img src="../images/split.png" caption="creation de 2 relations" >}}
 ### La bonne méthode
 La base de données doit:
 
@@ -74,11 +66,7 @@ Ensuite, il faudra décider si deux films différents peuvent avoir ou non le m�
 
 
 
-<figure>
-  <img src="../images/rea.png">
-  <figcaption>cineclubdecaen.com</figcaption>
-</figure>
-
+{{< img src="../images/rea.png" caption="cineclubdecaen.com" >}}
 #### Première proposition
 On sépare les données en 2 tables. On s'assure que l'une des colonnes fournit un identifiant unique.
 

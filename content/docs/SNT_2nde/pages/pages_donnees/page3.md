@@ -3,27 +3,18 @@ Title: table
 ---
 # Matchs de Football Nice - Marseille
 
-<figure>
-  <div>
-  <img src="../images/ligue1.png">
-</div>
-</figure>
-
+{{< img src="../images/ligue1.png" >}}
 
 
 Le fichier suivant rescence tous les matchs de football de Ligue 1 depuis 2002.
 
 Il s'agit d'un document tenu à jour sur le site *L'Equipe*.
 
-Les fichier à télecharger: <a href="../datas/L1.xlsx" target="blank"><i>L1.xlsx</i></a> 
-
-<a href="../datas/L1.xlsx" target="blank"><img src="/images/download.png"></a> 
+Les fichier à télecharger:{{< a link="../datas/L1.xlsx" caption="" >}}
 
 Vous aurez besoin pour mener à bien ce travail pratique de revoir:
 
-* les calculs avec un logiciel tableur: <a href="/docs/SNT_2nde/pages/pages_donnees/page1/#les-fonctions-de-calcul">TP Excel</a>
-* les sommes conditionnelles: <a href="/docs/SNT_2nde/pages/pages_donnees/page1/#somme-conditionnelle-avec-plusieurs-critères-somme-si-ens">TP Excel</a>
-
+* les calculs avec un logiciel tableur:{{< a link="/docs/SNT_2nde/pages/pages_donnees/page1/#les-fonctions-de-calcul" caption="TP Excel" >}}* les sommes conditionnelles:{{< a link="/docs/SNT_2nde/pages/pages_donnees/page1/#somme-conditionnelle-avec-plusieurs-critères-somme-si-ens" caption="TP Excel" >}}
 ## Comprendre les descripteurs du tableau
 **1.** Noter sur la fiche reponse le nom de ces descripteurs
 
@@ -64,8 +55,5 @@ Pour faire ceci:
 * Enfin: sous le score moyen de Nice: écrire une formule qui calcule le nombre moyen de buts marqués par Nice
 * Faire de même avec Marseille puis compléter le tableau des scores sur votre feuille de reponse.
 
-<figure>
-  <img src="../images/score.png">
-</figure>
-
+{{< img src="../images/score.png" >}}
 

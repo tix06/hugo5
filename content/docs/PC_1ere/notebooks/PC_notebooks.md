@@ -10,29 +10,17 @@ Sur chaque TP, cliquer sur le titre (téléchargement), ou bien Binder pour lanc
 L'environnement de développement utilisé est Jupyter. 
 
 
-* Si vous utiliser Jupyter avec *Binder* <a href="https://mybinder.org/v2/gh/tix06/notebooks_Physique.git/HEAD" target="_blank"><img src="/images/binder.svg"></a> (serveur distant): Attention : les données ne sont pas sauvegardées sur Binder. Pensez à download/upload votre travail à la fin.
-
-* <a href="https://basthon.fr/" target=_blank>Basthon</a> est l'acronyme de "Bac À Sable pour pyTHON". Permet l'execution d'un notebook sans installer de distribution Python. 
-  * Commencez par télécharger une copie *locale* du notebook sur votre ordinateur.
-  * Ouvrir <a href="https://basthon.fr/" target=_blank>Basthon</a> depuis votre navigateur.
-  * Il vous faudra choisir: *Notebook* à la page d'accueil, 
-<figure><div>
-  <img src="/images/basthon1.png">
-</div>
-</figure>
-
+* Si vous utiliser Jupyter avec *Binder*{{< a link="https://mybinder.org/v2/gh/tix06/notebooks_Physique.git/HEAD" caption="" >}}
+*{{< a link="https://basthon.fr/" caption="Basthon" >}}  * Commencez par télécharger une copie *locale* du notebook sur votre ordinateur.
+  * Ouvrir{{< a link="https://basthon.fr/" caption="Basthon" >}}  * Il vous faudra choisir: *Notebook* à la page d'accueil, 
+{{< img src="/images/basthon1.png" >}}
   * puis charger vos documents depuis le menu *Ouvrir*.
 
 
-<figure><div>
-  <img src="/images/basthon2.png">
-</div>
-</figure>
-
+{{< img src="/images/basthon2.png" >}}
 
 # Contenu du depôt :
-Accéder au depot: cliquer sur *launch binder* <a href="https://mybinder.org/v2/gh/tix06/notebooks_Physique.git/HEAD" target="_blank"><img src="/images/binder.svg"></a>
-
+Accéder au depot: cliquer sur *launch binder*{{< a link="https://mybinder.org/v2/gh/tix06/notebooks_Physique.git/HEAD" caption="" >}}
 ## Traitement RVB d'une photographie numerique
 * `P13_Traitement_filtre/notebook filtre.ipynb` programme pour parcourir les données d'une image et modifier les composantes RVB de chaque pixel.
 
@@ -44,15 +32,11 @@ Accéder au depot: cliquer sur *launch binder* <a href="https://mybinder.org/v2/
 * `graphique modelisation.ipynb` programme pour tracer une droite de regression linéaire et obtenir les coefficients de la modélisation.
 
 ## Chronophotographie
-* <a href="/scripts/meca/chronophotographie.zip" download="chronophotographie.zip">chronophotographie.zip</a>: programme qui permet le traitement d'une chronophotographie (pointage), et de générer un fichier de coordonnées (*coordonnees.txt*). Il faudra télécharger le dossier complet (fichier .py et dossier images) et executer en local avec un IDE Python. Notice [ici](/docs/PC_1ere/meca/page1/)
-
+*{{< a link="/scripts/meca/chronophotographie.zip" caption="chronophotographie.zip" >}}
 ## Trajectoire parabolique et conservation de l'énergie mécanique
-* <a href="/scripts/meca/paraboliqueEm.zip" download="parabolique.zip">parabolique.zip</a>: notebook qui permet de traiter les données issues de l'enregistrement d'une trajectoire parabolique. Les données sont dans le fichier `data_parabolique.csv`.
-
+*{{< a link="/scripts/meca/paraboliqueEm.zip" caption="parabolique.zip" >}}
 <!--
 <form id="fs-frm" name="bouton">
-<a href="https://mybinder.org/v2/gh/tix06/notebooks_Physique/HEAD" target="_blank">
-    <input type="button" value="ouvrir le depôt dans un nouvel onglet"></a>
 </form>
 
 lien sur mybinder : 

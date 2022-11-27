@@ -210,6 +210,5 @@ plt
 ```
 
 # Suite du TP: Les boucles et les parcours de liste
-<a href="../page4" target=_blank>Lien vers l'editeur Python et l'énoncé du TP2</a>
 
 

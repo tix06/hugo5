@@ -4,13 +4,7 @@ Title : Loi de Mariotte
 
 # Ti83 et loi de Mariotte
 
-<figure>
-  <div>
-  <img src="../images/TI_pv.png">
-  <figcaption>dispositif TI83CE microbit capteur</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/TI_pv.png" caption="dispositif TI83CE microbit capteur" >}}
 ## Matériel
 
 * TI 83 CE edition Python
@@ -38,13 +32,7 @@ Les différents programmes `PRESS.8xv` et `BOYLEMAR.8xv` seront déjà installé
   * Revenir en mode calculatrice: touche **on** puis **2nde** **mode(quitter)**. Valider.
   * touche **stats** puis *1:modifier*. La liste 1 est celle du volume(mL) et la liste 2 celle de la pression(kPa).
 
-<figure>
-  <div>
-    <img src="../images/TI_capture1.png">
-    <figcaption>tableau de mesures obtenu à 25°C</figcaption>
-  </div>
-</figure>
-
+{{< img src="../images/TI_capture1.png" caption="tableau de mesures obtenu à 25°C" >}}
 ## Liens vers les documents
 
 * Prise en main du dispositif [TP0 Fiche de JL. Balas](/pdf/SNT_texas/MBpresentation.pdf)

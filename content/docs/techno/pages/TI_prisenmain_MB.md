@@ -4,58 +4,26 @@ Title : Ti prise en main Microbit
 
 # Mettre à jour la calculatrice TI-83 Premium CE
 ## Installer TI CONNECT sur votre ordinateur
-Rendez vous sur la page de téléchargement : <a href="https://education.ti.com/fr/software/update/83-ce-software-update" target="blank">Lien
-
-<figure>
-  <div>
-    <img src="../images/maj_ti833.png"></a>
-    <figcaption>Choisissez le modèle de votre calculatrice</figcaption>
-  </div>
-</figure>
-
+{{< img src="../images/maj_ti833.png" caption="Choisissez le modèle de votre calculatrice" >}}
 Cliquez sur le bouton *Suivant*.
 
-<figure>
-  <div>
-    <img src="../images/maj_ti4.png">
-    <figcaption>Télécharger le logiciel Ti-Connect le plus récent</figcaption>
-  </div>
-</figure>
-
+{{< img src="../images/maj_ti4.png" caption="Télécharger le logiciel Ti-Connect le plus récent" >}}
 Installez alors le **logiciel TI CONNECT** sur votre ordinateur: Executer le fichier téléchargé et suivre les instructions d'installation.
 
 ## Mettre à jour la calculatrice
 
 Sur la même page du site Texas-Instruments:
 
-<figure>
-  <div>
-    <img src="../images/maj_ti5.png">
-    <figcaption>Télécharger le système d'exploitation le plus récent pour votre calculatrice</figcaption>
-  </div>
-</figure>
-
+{{< img src="../images/maj_ti5.png" caption="Télécharger le système d'exploitation le plus récent pour votre calculatrice" >}}
 * Lancer le logiciel TI CONNECT et brancher la calculatrice sur le port USB de votre ordinateur (cable USB vers usb B fourni).
 
-<figure>
-  <div>
-    <img src="../images/maj_ti7.png">
-    <figcaption>connexion calculatrice - ordinateur</figcaption>
-  </div>
-</figure>
-
+{{< img src="../images/maj_ti7.png" caption="connexion calculatrice - ordinateur" >}}
 * Cliquer sur 
 
 1. l'*explorateur de calculatrice* **(1)**,
 2. puis sur *ajouter les données de l'ordinateur vers la calculatrice connectée* **(2)**.
 
-<figure>
-
-<img src="../images/maj_ti8.png">
-<figcaption>explorateur de calculatrice sur TI CONNECT</figcaption>
-
-</figure>
-
+{{< img src="../images/maj_ti8.png" caption="explorateur de calculatrice sur TI CONNECT" >}}
 L'explorateur de votre ordinateur devrait vous permettre de retrouver le fichier `TI83CEBundle-5.5.2.44.b83` (la version peut différer au moment de votre téléchargement). 
 
 * Sélectionner le fichier.
@@ -64,39 +32,18 @@ L'explorateur de votre ordinateur devrait vous permettre de retrouver le fichier
 
 # Testez votre premier script Python
 
-<figure>
-  <a href = "https://youtu.be/db5mbuBATEs">
-  <img src="../images/ti_prise_main.png" alt="video Yvan Monka Ti83">
-  <figcaption>Video Yvan Monka: prise en main de la Ti83 Ed python</figcaption></a>
-</figure>
-
+{{< img src="../images/ti_prise_main.png" alt="video Yvan Monka Ti83" link="https://youtu.be/db5mbuBATEs" caption="Video Yvan Monka: prise en main de la Ti83 Ed python" >}}
 # Utiliser des extensions
 
 ## Préparer la calculatrice pour utiliser la carte micro:bit
 
-<figure>
-  <div>
-    <img src="../images/maj_ti2.png" alt="TI83 et microbit">
-    <figcaption>Ti-83 Premium CE Python et micro:bit</figcaption>
-  </div>
-</figure>
-
+{{< img src="../images/maj_ti2.png" alt="TI83 et microbit" caption="Ti-83 Premium CE Python et micro:bit" >}}
 ### Télécharger les modules
-Se rendre du la page de téléchargement du site Texas Instrument: <a href="https://resources.t3france.fr/t3france?resource_id=3078&cHash=513acef78cfa6d808465417be9e08cc3t" target=blank>Lien</a>
+Se rendre du la page de téléchargement du site Texas Instrument:{{< a link="https://resources.t3france.fr/t3france?resource_id=3078&cHash=513acef78cfa6d808465417be9e08cc3t" caption="Lien" >}}
+{{< img src="../images/maj_ti1.png" link="https://resources.t3france.fr/t3france?resource_id=3078&cHash=513acef78cfa6d808465417be9e08cc3t" >}} 
 
-<figure>
-  <a href="https://resources.t3france.fr/t3france?resource_id=3078&cHash=513acef78cfa6d808465417be9e08cc3t" target=blank>
-    <img src="../images/maj_ti1.png">
-  </a>
-</figure>
- 
-
-Vous pouvez télécharger l'ensemble de ces fichiers, en un seul *clic*, depuis <a href="https://resources.t3france.fr/t3france?resource_id=3078&cHash=513acef78cfa6d808465417be9e08cc3">la page du site Texas instruments</a>
-
-<figure>
-    <img src="../images/maj_TI9.png">
-</figure>
-
+Vous pouvez télécharger l'ensemble de ces fichiers, en un seul *clic*, depuis{{< a link="https://resources.t3france.fr/t3france?resource_id=3078&cHash=513acef78cfa6d808465417be9e08cc3" caption="la page du site Texas instruments" >}}
+{{< img src="../images/maj_TI9.png" >}}
 Téléchargez le dossier "modules_microbit V1.zip" ou "modules_microbit V2.zip" selon le modèle de carte dont vous disposez
 
 Ceux-ci devraient se trouver dans votre dossier *téléchargements*.
@@ -105,13 +52,7 @@ Ceux-ci devraient se trouver dans votre dossier *téléchargements*.
 
 * Lancer le logiciel TI CONNECT et brancher la calculatrice sur le port USB de votre ordinateur (cable USB vers usb B fourni).
 
-<figure>
-  <div>
-    <img src="../images/maj_ti7.png">
-    <figcaption>connexion calculatrice - ordinateur</figcaption>
-  </div>
-</figure>
-
+{{< img src="../images/maj_ti7.png" caption="connexion calculatrice - ordinateur" >}}
 Suivre la même procédure que pour la mise à jour de la calculatrice: Cliquer sur *ajouter les données de l'ordinateur à la calculatrice connectée*. Et sélectionner en une seule fois tous les modules à installer:
 
 * MICROBIT.8xv

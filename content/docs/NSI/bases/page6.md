@@ -10,13 +10,7 @@ Nous allons créer (ou télécharger) une petite base de données à deux tables
 * Editer la definition de la table selon l'image suivante
 
 
-<figure>
-
-  <img src="../images/table_brows.png">
-  <figcaption>table AUTEURS</figcaption>
-
-</figure>
-
+{{< img src="../images/table_brows.png" caption="table AUTEURS" >}}
 * Fichier > Exporter > Exporter la base de données sous format SQL. Enregistrer le fichier avec le nom `bibliotheque.sql` (ajouter l'extension `.sql`)
 * Ouvrir le fichier `bibliotheque.sql` avec un editeur de texte (*Notepad++* ou autre)
 * Ajouter les instructions de creation d'une nouvelle table LIVRES de schéma:
@@ -101,28 +95,15 @@ sqlite> select *
 Ce qui devrait afficher:
 
 
-<figure>
-  <div>
-  <img src="../images/table_cons.png">
-  <figcaption>table en format markdown</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/table_cons.png" caption="table en format markdown" >}}
 **Comme vous l'avez remarqué*:
 
   * lorsque vous écrivez `select *`, le retour à la ligne n'execute pas le script, mais attend la fin de l'instruction, jusqu'au point virgule `;` final.
   * les requêtes et instructions SQL peuvent être écrites directement dans l'application *sqlite*, comme dans le fichier d'extension `.sql`. Il faudra alors le lire dans la console avec `.read <nom_du_fichier>`.
 
 ## Utiliser une application en ligne
-* Aller sur la page <a href="https://sqliteonline.com/" target="blank">sqlonline.com</a>
-
-<figure>
-  <div>
-  <img src="../images/sqlonline.png">
-  <figcaption>sqlonline.com</figcaption>
-</div>
-</figure>
-
+* Aller sur la page{{< a link="https://sqliteonline.com/" caption="sqlonline.com" >}}
+{{< img src="../images/sqlonline.png" caption="sqlonline.com" >}}
 * Cliquer sur *Import*, puis choisir un fichier d'extension `.sql`, comme par exemple [bibliotheque.sql](/pdf/NSI/bibliotheque.sql)
 * Utiliser alors la fenêtre *SQLite* pour tester les instructions suivantes.
 

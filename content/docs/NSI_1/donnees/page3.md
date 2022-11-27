@@ -180,11 +180,7 @@ la_2e_meilleure_annee_de_ma_vie = 2020
 
 <p>En Python, on utilise l&rsquo;indentation (le retrait de la ligne) pour rendre compte des blocs de code.</p>
 
-<figure>
-  <img src="../images/pybloc1.png" alt="pybloc et indentation">
-  <figcaption>de pybloc au script python</figcaption>
-</figure>
-
+{{< img src="../images/pybloc1.png" alt="pybloc et indentation" caption="de pybloc au script python" >}}
 <p>Le bloc de code à executer peut contenir plusieurs lignes, à condition de respecter l&rsquo;indentation.</p>
 
 <h2 id="l-alternative-if-else">L&rsquo;alternative <code>if - else</code></h2>
@@ -234,8 +230,7 @@ la_2e_meilleure_annee_de_ma_vie = 2020
 <h2 id="partir-du-fichier-exemple-discotheque-py">Partir du fichier exemple <em>discotheque.py</em></h2>
 
 <ul>
-<li>Télécharger le programme suivant sur le disque dur: <a href="/scripts/tkinter_disco.zip">discotheque.py</a></li>
-<li>Déplacer le fichier dans un dossier de vos <em>documents</em> que vous nommerez de manière explicite (par exemple <code>/python</code>)</li>
+<li>Télécharger le programme suivant sur le disque dur:{{< a link="/scripts/tkinter_disco.zip" caption="Télécharger le programme suivant sur le disque dur: " >}}<li>Déplacer le fichier dans un dossier de vos <em>documents</em> que vous nommerez de manière explicite (par exemple <code>/python</code>)</li>
 <li>dezipper le fichier</li>
 <li>Ouvrir l&rsquo;IDLE python présent dans la distribution <em>Winpython</em></li>
 <li>Lancer le programme.</li>
@@ -259,11 +254,7 @@ la_2e_meilleure_annee_de_ma_vie = 2020
 
 <p>Vous pouvez alors organiser vos fenêtres comme sur l&rsquo;image suivante.</p>
 
-<figure>
-  <img src="../images/idlePython.png">
-  <figcaption>A gauche, l'editeur python, à droite les fenêtres graphique et le shell</figcaption>
-</figure>
-</ul>
+{{< img src="../images/idlePython.png" caption="A gauche, l'editeur python, à droite les fenêtres graphique et le shell" >}}</ul>
 </div>
 </div>
 

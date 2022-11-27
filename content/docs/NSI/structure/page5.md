@@ -6,11 +6,7 @@ Pour une première approche des graphes, consulter le cours [Graphes SNT](/docs/
 
 Les graphes et les arbres permettent de construire des schémas qui mettent en évidence une structure sur des données.
 
-<figure>
-  <img src="../images/graphe_intro.png" alt="modelisation reseau social">
-<figcaption>graphe modelisant un reseau social</figcaption>
-</figure>
-
+{{< img src="../images/graphe_intro.png" alt="modelisation reseau social" caption="graphe modelisant un reseau social" >}}
 # Graphes : définitions
 
 On appelle **graphe** la donnée d'un ensemble fini V de points (ou sommets du graphe, *vertices* en anglais) et d'un ensemble E de liens entre ces points.
@@ -25,11 +21,7 @@ L'ensemble E de liens peut être vu comme une relation **R** sur V &#xD7; V. Il 
 
 * Lorsque cette relation n'est pas symétrique, le graphe est dit **orienté**. On parle alors *d'arc* entre deux sommets.
 
-<figure>
-  <img src="../images/fig54.png" alt="graphe orienté/non orienté">
-<figcaption>graphe orienté/non orienté</figcaption>
-</figure>
-
+{{< img src="../images/fig54.png" alt="graphe orienté/non orienté" caption="graphe orienté/non orienté" >}}
 Un **chemin** C est une **suite consécutive d'arêtes**: C = {s<sub>0</sub>s<sub>1</sub>, s<sub>1</sub>s<sub>2</sub>, ..., s<sub>k-1</sub>s<sub>k</sub>} avec C &sub; E.
 
 
@@ -39,30 +31,18 @@ Un graphe peut servir à modéliser un reseau d'ordinateurs, un reseau social, l
 
 Lorsqu'un graphe non orienté est en *un seul morceau*, c'est à dire lorsqu'il existe pour tous sommets s<sub>1</sub> et s<sub>2</sub> un chemin les reliant, le graphe est dit **connexe**.
 
-<figure>
-  <img src="../images/connexe.png" alt="graphes connexe/non connexe">
-  <figcaption>graphes connexe/non connexe</figcaption>
-</figure>
-
+{{< img src="../images/connexe.png" alt="graphes connexe/non connexe" caption="graphes connexe/non connexe" >}}
 
 Et lorsqu'un chemin mène d'un sommet s à lui-même, on parle de **cycle**.
 
 Des **poids** peuvent être associés aux liens d'un graphe, par exemple pour représenter la distance. Il s'agit alors d'un **graphe pondéré**.
 
 
-<figure>
-  <img src="../images/fig1.png" alt="exemple de graphe pondéré">
-  <figcaption>exemple de graphe pondéré</figcaption>
-</figure>
-
+{{< img src="../images/fig1.png" alt="exemple de graphe pondéré" caption="exemple de graphe pondéré" >}}
 Et lorsqu'un chemin mène d'un sommet s à lui-même, on parle de **cycle**.
 
 
-<figure>
-  <img src="../images/fig7.png" alt="cycle dans un graphe">
-  <figcaption>cycle dans un graphe</figcaption>
-</figure>
-
+{{< img src="../images/fig7.png" alt="cycle dans un graphe" caption="cycle dans un graphe" >}}
 ## Choisir la structure de donnée adaptée
 
 > *Question:* Pour chacun des exemples suivants, choisir le type de graphe adapté parmi: graphe orienté/non orienté, pondéré, non connexe, sans cycle. Précisez également ce que représentera un *sommet*, et ce qui sera une *arête*.
@@ -95,11 +75,7 @@ $$\begin{pmatrix} 0 & 1 & 1 & 0 \\\ 1 & 0 & 1 & 1 \\\ 1 & 1 & 0 & 1 \\\ 0 & 1 & 
 Avec la premiere sous-liste [0, 1, 1, 0] le sommet 0 est lié aux sommets 1 et 2, ce qui est signifié par le *1* aux index 1 et 2.
 
 
-<figure>
-  <img src="../images/fig51.png" alt="graphe correspondant à la matrice M">
-  <figcaption>graphe correspondant à la matrice M</figcaption>
-</figure>
-
+{{< img src="../images/fig51.png" alt="graphe correspondant à la matrice M" caption="graphe correspondant à la matrice M" >}}
 Cette représentation en matrice est particulièrement adaptée aux *graphes pondérés*. On remplace alors le *1* dans la matrice par le poids de l'arête.
 
 > *Question:* représenter le graphe pondéré dont la matrice d'adjacence est donnée ci-dessous:
@@ -112,21 +88,13 @@ On utilisera un *dictionnaire* comme structure de données. Les clés étant les
 D = {'a': [ 'b', 'c'], 'b': [ 'a', 'c', 'd'], 'c': [ 'a', 'b', 'd'], 'd' : [ 'b', 'c']}
 
 
-<figure>
-  <img src="../images/fig52.png" alt="graphe correspondant au dictionnaire D">
-  <figcaption>graphe correspondant au dictionnaire D</figcaption>
-</figure>
-
+{{< img src="../images/fig52.png" alt="graphe correspondant au dictionnaire D" caption="graphe correspondant au dictionnaire D" >}}
 > *Question:* Représenter la matrice d'adjacence équivalente.
 
 ### Liste de successeurs
 Cette représentation est particulièrement adaptée aux *graphes orientés*.
 
-<figure>
-  <img src="../images/fig55.png" alt="graphe orienté">
-  <figcaption>graphe orienté</figcaption>
-</figure>
-
+{{< img src="../images/fig55.png" alt="graphe orienté" caption="graphe orienté" >}}
 On peut représenter un graphe avec une liste chaînée des successeurs: 
 
 *sommet => liste de sommets liés suivants* <br>

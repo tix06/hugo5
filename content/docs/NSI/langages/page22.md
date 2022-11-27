@@ -15,20 +15,10 @@ On considère trois tiges plantées dans une base. Au départ, sur la première 
 
 il faut à un moment ou à un autre faire la place pour pouvoir déplacer le gros disque du dessous, ce qui impose d’avoir déplacé préalablement les N–1 plus petits sur un seul et même piquet, c’est-à-dire, d’avoir résolu préalablement le problème des tours de Hanoï pour ces N–1 disques : 
 
-<a href="https://www.youtube.com/watch?v=r1Ujcw0UkrI">
-<figure>
-  <img src="../images/page2/hanoi2.png" alt="algorithme iteratif des tours de Hanoï" width=80%>
-  <figcaption>video - resolution itérative des tours de Hanoi</figcaption>
-</figure></a>
-
+{{< img src="../images/page2/hanoi2.png" alt="algorithme iteratif des tours de Hanoï" caption="video - resolution itérative des tours de Hanoi" >}}
 Le problème initial (déplacer N disques de A à C en utilisant B) devient donc "déplacer N-1 disques de A à B, déplacer le Nème disque de A à C, puis déplacer les N-1 disques de B à C". Dans les deux déplacements de N-1 disques, on dispose d'un troisième pilier dont on peut se servir...
 
-<a href="http://accromath.uqam.ca/2016/02/les-tours-de-hanoi-et-la-base-trois/">
-<figure>
-  <img src="../images/page2/hanoi.png" alt="algorithme des tours de Hanoï" width=80%>
-  <figcaption>image issue du site :<br>http://accromath.uqam.ca/2016/02/les-tours-de-hanoi-et-la-base-trois/</figcaption>
-</figure></a>
-
+{{< img src="../images/page2/hanoi.png" alt="algorithme des tours de Hanoï" caption="image issue du site :" >}}
 ## algorithme récursif
 L'algorithme récursif pour ce problème est étonnament réduit : 
 
@@ -103,12 +93,7 @@ for x in permut(mot[0:1] + mot[1 + 1:])
 
 ## Arbre des appels recursifs
 
-<figure>
-  <img src="../images/page2/permut.png">
-  <figcaption>Arbre à compléter<br>
-  	Cet arbre est d'abord parcouru en descendant<br> le long de la branche de gauche</figcaption>
-</figure>
-
+{{< img src="../images/page2/permut.png" caption="Arbre à compléter" >}}
 ## Exercice
 **1.** Dans un **editeur Python**: Compléter et tester ce script de la fonction `permut` avec la chaine 'abcd'. 
 
@@ -129,11 +114,7 @@ La récursivité se retrouvent dans d'autres situations, où elle prend parfois 
 L'**autosimilarité** est le caractère d'un objet dans laquelle on peut trouver des similarités en l'observant à différentes échelles.
 *Exemple :* le Tapis de Sierpiński.
 
-<figure>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Sierpinski_carpet_6%2C_white_on_black.svg/440px-Sierpinski_carpet_6%2C_white_on_black.svg.png" width=300px alt="le Tapis de Sierpiński">
-  <figcaption>le Tapis de Sierpiński et l'autosimilarité</figcaption>
-</figure>
-
+{{< img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Sierpinski_carpet_6%2C_white_on_black.svg/440px-Sierpinski_carpet_6%2C_white_on_black.svg.png" alt="le Tapis de Sierpiński" caption="le Tapis de Sierpiński et l'autosimilarité" >}}
 Les **fractales** ont cette propriété d'autosimilarité, mais elles ont plutôt à voir avec un phénomène un peu différent qui s'appel la corécurisivité (ou corécursion). Le tapis de Sierpiński, du nom de Wacław Sierpiński, est une fractale obtenue à partir d'un carré. Le tapis se fabrique en découpant le carré en neuf carrés égaux avec une grille de trois par trois, et en supprimant la pièce centrale, et en appliquant cette procédure récursivement aux huit carrés restants.
 
 La **mise en abyme** est un procédé consistant à représenter une œuvre dans une œuvre similaire, par exemple en incrustant dans une image cette image elle-même. 

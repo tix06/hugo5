@@ -173,11 +173,7 @@ if prix_essence > 1.8:
 ## Les blocs du programme
 En Python, on utilise l'indentation (le retrait de la ligne) pour rendre compte des blocs de code.
 
-<figure>
-  <img src="../images/pybloc1.png" alt="pybloc et indentation">
-  <figcaption>de pybloc au script python</figcaption>
-</figure>
-
+{{< img src="../images/pybloc1.png" alt="pybloc et indentation" caption="de pybloc au script python" >}}
 Le bloc de code à executer peut contenir plusieurs lignes, à condition de respecter l'indentation.
 
 ## L'alternative `if - else`
@@ -244,8 +240,4 @@ Deux autres fenêtres s'ouvrent alors:
 
 Vous pouvez alors organiser vos fenêtres comme sur l'image suivante.
 
-<figure>
-  <img src="../images/idlePython.png">
-  <figcaption>A gauche, l'editeur python, à droite les fenêtres graphique et le shell</figcaption>
-</figure>
-
+{{< img src="../images/idlePython.png" caption="A gauche, l'editeur python, à droite les fenêtres graphique et le shell" >}}

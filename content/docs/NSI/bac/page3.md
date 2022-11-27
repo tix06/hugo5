@@ -21,11 +21,7 @@ On définit la **hauteur** d'un arbre binaire non vide de la façon suivante :
 ## Question 1
 A. Donner la hauteur de l'arbre ci-dessous.
  
-<figure>
-  <img src="../images/page3_1.png">
-  <figcaption>304 × 232</figcaption>
-</figure>
-
+{{< img src="../images/page3_1.png" caption="304 × 232" >}}
 
 B. Dessiner sur la copie un arbre binaire de hauteur 4.
 
@@ -79,11 +75,7 @@ droit `droit`.
 Recopier sur la copie l'arbre binaire ci-dessous et numéroter ses nœuds de 1 en
 1 en commençant à 1, en effectuant un parcours en profondeur préfixe.
 
-<figure>
-  <img src="../images/page3_2.png">
-  <figcaption>546 × 322</figcaption>
-</figure>
-
+{{< img src="../images/page3_2.png" caption="546 × 322" >}}
 La fonction `fabrique` ci-dessous a pour but de répondre au problème posé. Pour cela, la fonction `annexe` utilise la valeur de `n`, qu'elle peut modifier, et renvoie un arbre binaire de hauteur `hauteur_max` dont le nombre de nœuds est égal à la valeur de `n` au moment de son appel.
 
 ```python
@@ -113,11 +105,7 @@ Cet exercice traite du calcul de la somme d’un arbre binaire. Cette somme cons
 
 L’arbre utilisé dans les parties A et B est le suivant :
 
-<figure>
-  <img src=../images/page3_3.png>
-  <figcaption>314 × 252</figcaption>
-</figure>
-
+{{< img src="" caption="314 × 252" >}}
 ## Partie A : Parcours d’un arbre
 ## Question 1
 Donner la somme de l’arbre précédent. Justifier la réponse en explicitant le calcul qui a permis de l’obtenir.
@@ -125,11 +113,7 @@ Donner la somme de l’arbre précédent. Justifier la réponse en explicitant l
 ## Question 2
 Indiquer la lettre correspondante aux noms ‘racine’, ‘feuille’, ‘nœud’, ‘SAG’ (Sous Arbre Gauche) et ‘SAD’ (Sous Arbre Droit). Chaque lettre **A, B, C, D** et **E** devra être utilisée une seule fois.
 
-<figure>
-  <img src=../images/page3_4.png>
-  <figcaption>Arbre avec les lettres à associer - 578 × 310</figcaption>
-</figure>
-
+{{< img src="" caption="Arbre avec les lettres à associer - 578 × 310" >}}
 
 ## Question 3
 Parmi les quatre propositions A, B, C et D ci-dessous, donnant un parcours en
@@ -181,11 +165,7 @@ indépendants.
 L’arbre présenté dans le problème peut être décomposé en racine et sous
 arbres : 
 
-<figure>
-  <img src=../images/page3_5.png>
-  <figcaption>376 × 258</figcaption>
-</figure>
-
+{{< img src="" caption="376 × 258" >}}
 Indiquer dans l’esprit de ‘diviser pour régner’ l’égalité donnant la somme d’un arbre en fonction de la somme des sous arbres et de la valeur numérique de la racine. 
 
 ## Question 8
@@ -209,11 +189,7 @@ Dans cet exercice, la **taille** d’un arbre est le nombre de nœuds qu’il co
 ## Question 1
 On considère l’arbre binaire représenté ci-dessous:
 
-<figure>
-  <img src=../images/page3_6.png>
-  <figcaption>Figure 1 - 390 × 370</figcaption>
-</figure>
-
+{{< img src="" caption="Figure 1 - 390 × 370" >}}
 
 
 A.  Donner la taille de cet arbre.

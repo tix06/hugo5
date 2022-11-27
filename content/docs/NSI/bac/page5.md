@@ -109,11 +109,7 @@ Ainsi `emploi.id_ind` est une clé étrangère faisant référence à `individu.
 
 Voici un extrait des tables individu et realisation : 
 
-<figure>
-  <img src="../images/page5_1.png">
-  <figcaption>1310 × 330</figcaption>
-</figure>
-
+{{< img src="../images/page5_1.png" caption="1310 × 330" >}}
 ## Question 1
 On s’intéresse ici à la récupération de données dans une relation.
 

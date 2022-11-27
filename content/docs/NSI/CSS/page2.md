@@ -26,11 +26,7 @@ Un élément block a les caractéristiques suivantes :
 
 Il est donc inutile pour un élément block de définir une largeur ou de lui donner une width: 100%
 
-<figure>
-<img src="../images/block.jpg" width = 80% alt="display : block">
-<figcaption>display : block</figcaption>
-</figure>
-
+{{< img src="../images/block.jpg" alt="display : block" caption="display : block" >}}
 ### Exemple utilisant le display block
 Les boites de texte *l'essentiel à retenir* pour ce site utilisent de éléments `div` ou `p` qui s'empilent grâce à leur display `block`. 
 
@@ -106,11 +102,7 @@ Un élément inline s'inscrit dans le flux de texte. On peut l'imaginer comme un
 Il ignore le propriétés `width` et `height`, mais accepte `vertical-align`
 Il s'inscrit dans le flux du texte.
 
-<figure>
-<img src="../images/inline.jpg" width = 80% alt="display : inline">
-<figcaption>display : inline</figcaption>
-</figure>
-
+{{< img src="../images/inline.jpg" alt="display : inline" caption="display : inline" >}}
 
 ### inline : application à la barre de menu horizontale
 Cette barre de menu est conçue avec des éléments de type `a`, mis dans des éléments de type `li`. La valeur par défaut d'un `<li>` pour la propriété display est `list-item`. Cette valeur est connue pour ses styles par défaut (margin-start plus ou moins élevée, puce de liste de type disc, saut de ligne, etc.).
@@ -120,10 +112,7 @@ La valeur par défaut du display de `li` est ressemblant à celui de `block` ce 
 Le display de `a` va être conservé en `inline`.
 
 <ul >
-	<li class="demoLi"><a class="exemple" href="#">Item 1</a></li>
-	<li class="demoLi"><a class="exemple" href="#">Item 2</a></li>
-	<li class="demoLi"><a class="exemple" href="#">Item 3</a></li>
-	
+	<li class="demoLi"{{< a link="#" caption="" >}}	<li class="demoLi"{{< a link="#" caption="" >}}	<li class="demoLi"{{< a link="#" caption="" >}}	
 </ul>
 
 <style>
@@ -150,10 +139,7 @@ Le display de `a` va être conservé en `inline`.
 
 ```css
 <ul >
-	<li><a class="exemple" href="#">Item 1</a></li>
-	<li><a class="exemple" href="#">Item 2</a></li>
-	<li><a class="exemple" href="#">Item 3</a></li>
-</ul>
+	<li{{< a link="#" caption="" >}}	<li{{< a link="#" caption="" >}}	<li{{< a link="#" caption="" >}}</ul>
 
 <style>
 li {
@@ -171,11 +157,7 @@ On pourra alors ajouter des règles CSS aux éléments `a` directement enfants d
 Avec Inline-block, l'élément génère une boîte block qui est mise en forme comme s'il s'agissait d'une boîte inline (c'est à dire sur la même ligne que le contenu adjacent).
 Cela offre la possibilité de définir une largeur et une hauteur, des marges et paddings top et bottom, etc.
 
-<figure>
-<img src="../images/inline-block.jpg" width = 60% alt="display : inline-block">
-<figcaption>display : inline-block</figcaption>
-</figure>
-
+{{< img src="../images/inline-block.jpg" alt="display : inline-block" caption="display : inline-block" >}}
 ### application aux formulaires
 Dans un formulaire, les éléments `label` et `input` se succèdent : un *label* précede un *input* afin d'expliciter la nature du champ *input* à remplir.
 
@@ -195,26 +177,14 @@ Le code HTML sera identique dans les 3 cas ci-dessous :
 * display `inline` (display par defaut) : 
 Ici, la règle css `width:100px` que l'on souhaite associer à l'élément `label` est inopérante. Les labels se mettent à côté de l'élément *input*, mais ces derniers ne s'alignent pas car la boite contenant l'élément *label* n'a pas une largeur fixe : 
 
-<figure>
-<img src="../images/formulaire-inline.png" width = 40% alt="display : inline">
-<figcaption>label avec display : inline</figcaption>
-</figure>
-
+{{< img src="../images/formulaire-inline.png" alt="display : inline" caption="label avec display : inline" >}}
 * display `block` : 
 Les éléments se positionnent l'un sous l'autre : 
-<figure>
-<img src="../images/formulaire-block.png" width = 25% alt="display : block">
-<figcaption>label avec display : block</figcaption>
-</figure>
-
+{{< img src="../images/formulaire-block.png" alt="display : block" caption="label avec display : block" >}}
 * display `inline-block` :
 c'est le résultat attendu : l'étiquette *label* se met côte à côte avec l'élément *input*. Ceux-ci sont alignés verticalement, et la règle css `width:100px` associée au *label* est opérante. Ce qui aligne alors les éléments *input* :
 
-<figure>
-<img src="../images/formulaire-inline-block.png" width = 40% alt="display : inline-block">
-<figcaption>label avec display : inline-block</figcaption>
-</figure>
-
+{{< img src="../images/formulaire-inline-block.png" alt="display : inline-block" caption="label avec display : inline-block" >}}
 Le code CSS correspondant : 
 
 ```css
@@ -263,11 +233,7 @@ Avec la propriété `float`, un élément va se positionner par rapport à son �
 
 L'élément `<div class="demoMain">` pour lequel la proriété `float` n'a pas été modifiée, se positionnera au centre.
 
-<figure>
-<img src="../images/troisBlocs.png" width = 80% alt="display : inline-block">
-<figcaption>display : inline-block</figcaption>
-</figure>
-
+{{< img src="../images/troisBlocs.png" alt="display : inline-block" caption="display : inline-block" >}}
 Ici, le changement de valeur du display se fait lorsque l'écran est assez grand. En CSS, les déclarations sont alors encapsulées dans un bloc conditionnel, comme le montre l'extrait ci-dessous : 
 
 ```css
@@ -353,11 +319,7 @@ la propriete position determine de quelle manière les éléments se disposent d
 
 [https://developer.mozilla.org/fr/docs/Web/CSS/position](https://developer.mozilla.org/fr/docs/Web/CSS/position)
 
-<figure>
-<img src="../images/position.png" width = 80% alt="position">
-<figcaption>valeur de position : static (à gauche), relative (centre), absolute (à droite)</figcaption>
-</figure>
-
+{{< img src="../images/position.png" alt="position" caption="valeur de position : static (à gauche), relative (centre), absolute (à droite)" >}}
 ```css
 /* image du centre */
 .jaune {
@@ -376,8 +338,7 @@ Par defaut, la valeur est *static* . Les propriétés `top`, `right`, `bottom`, 
 *  RELATIVE —L'élément est positionné dans le flux normal du document puis décalé, par rapport à lui-même, selon les valeurs fournies par top, right, bottom et left. Le décalage n'a pas d'impact sur la position des autres éléments. Aussi, l'espace fourni à l'élément sur la page est le même que celui fourni avec static.
   Par defaut, right, bottom et left ont pour valeur *auto*
 
-*  ABSOLUTE-L'élément est retiré du flux normal et aucun espace n'est créé pour l'élément sur la page. Il est ensuite positionné par rapport à son élément parent. C'est la valeur choisie pour les objets que l'on veut placer à l'aide de leurs coordonnées : voir les exemples dans les pages <a href="../../javascript_avance/page1/index.html">javascript avancé</a> et <a href="../../mini_projet_spaceInvader/page1/index.html">mini projet Space Invader</a>.<br>**Note:** Le parent, lui, doit avoir la propriété *position: relative;* 
-
+*  ABSOLUTE-L'élément est retiré du flux normal et aucun espace n'est créé pour l'élément sur la page. Il est ensuite positionné par rapport à son élément parent. C'est la valeur choisie pour les objets que l'on veut placer à l'aide de leurs coordonnées : voir les exemples dans les pages{{< a link="../../javascript_avance/page1/index.html" caption="javascript avancé" >}}
 *  FIXED — ressemble à `absolute`mais le positionnement se fait relativement à la fenêtre du navigateur. Il reste *fixe* malgré le scrolling de la page.
 
 
@@ -386,11 +347,7 @@ Pour des explications détaillés, on pourra se référer à la [page consacrée
 
 Le Holy Grail se réfère à une page web qui est constituée de quatre sections — un header, un footer, et une zone principale comportant deux sidebars, un de chaque côté : 
 
-<figure>
-<img src="../images/HolyGrail.png" width = 40% alt="saint graal css">
-<figcaption>mise en page en 3 colonnes</figcaption>
-</figure>
-
+{{< img src="../images/HolyGrail.png" alt="saint graal css" caption="mise en page en 3 colonnes" >}}
 La mise en page respecte les règles suivantes :
 
 - Elle comporte une colonne centrale de largeur fluide et des sidebars de largeur fixe.
@@ -416,10 +373,7 @@ Exemple de code html, css respectant la mise en page du saint graal, et de mani�
 <nav>
 	<h2>Menu.</h2>
 	<ul>
-		<li class="maliste"><a hreflang="fr" href="/lab/">lab</a></li>
-		<li class="maliste"><a hreflang="fr" href="/">accueil</a></li>
-		<li class="maliste"><a class="contact" hreflang="fr" href="/contact">contact</a></li>
-	</ul>
+		<li class="maliste"{{< a link="fr" caption="" >}}		<li class="maliste"{{< a link="fr" caption="" >}}		<li class="maliste"{{< a link="fr" caption="" >}}	</ul>
 </nav>
 </footer>
 
@@ -548,10 +502,7 @@ Media queries examples
 <nav>
 	<h2>Menu.</h2>
 	<ul>
-		<li><a hreflang="fr" href="/lab/">lab</a></li>
-		<li><a hreflang="fr" href="/">accueil</a></li>
-		<li><a class="contact" hreflang="fr" href="/contact">contact</a></li>
-	</ul>
+		<li{{< a link="fr" caption="" >}}		<li{{< a link="fr" caption="" >}}		<li{{< a link="fr" caption="" >}}	</ul>
 </nav>
 </footer>
 

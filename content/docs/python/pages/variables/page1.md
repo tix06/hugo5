@@ -64,11 +64,7 @@ Une variable est une étiquette associée à une valeur. Ce nom est à peu près
 
 À cet emplacement est stockée une **valeur typée** bien déterminée.
 
-<figure>
-  <img src="../images/var_normalesup1.png">
-  <figcaption>image issue du cours <a href="http://www.normalesup.org/~doulcier/teaching/python/01_variables.html">sur les variables, normalesup</a></figcaption>
-</figure>
-
+{{< img src="../images/var_normalesup1.png" link="http://www.normalesup.org/~doulcier/teaching/python/01_variables.html" caption="image issue du cours " >}}
 Cette valeur peut être en fait à peu près n’importe quel « objet » susceptible d’être placé dans la mémoire d’un ordinateur, par exemple : un nombre entier, un nombre réel, un nombre complexe, un vecteur, une chaîne de caractères, un tableau, une fonction, etc.
 
 La programme suivant permet de consulter l'adresse mémoire d'une variable:
@@ -201,23 +197,14 @@ Une séquence est une structure de données qui stocke une collection d'élémen
 ## Listes
 **Definition:** Une **liste** est une **collection ordonnée d'objets**. Au niveau de la mémoire de l'odinateur, une liste *porte un nom*, et fait *référence à des espaces mémoire* pour chaque *élément* de liste. Ces éléments (espaces mémoires) font eux-même reference aux *emplacement mémoire* qui *stockent les valeurs* ou *objets*.
 
-<figure>
-  <img src="../images/var_normalesup2.png">
-  <figcaption>image issue du cours <a href="http://www.normalesup.org/~doulcier/teaching/python/01_variables.html">sur les variables, normalesup</a></figcaption>
-</figure>
-
+{{< img src="../images/var_normalesup2.png" link="http://www.normalesup.org/~doulcier/teaching/python/01_variables.html" caption="image issue du cours " >}}
 En python: Une **liste** est entourée de **crochets** `[ ]`
 
 Les éléments contenus peuvent être de tout type.
 
 On accède à un élément d'une liste grace à sa position, appelée *indice*. Le premier élément a pour indice zero. 
 
-<figure>
-  <img src="../images/liste.png">
-  <figcaption>La liste `voyelles` est une collection contenant les caractères<br>
-  "e","i" et "o"</figcaption>
-</figure>
-
+{{< img src="../images/liste.png" caption="La liste `voyelles` est une collection contenant les caractères" >}}
 Un indice négatif donne accès à la liste à partir du dernier élément.
 
 ```python

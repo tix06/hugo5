@@ -9,10 +9,7 @@ La seringue est branchée sur le capteur de pression, lui-même relié au port g
 
 La carte est branchée sur un port USB de l'ordinateur.
 
-<figure><div>
-  <img src = "../images/pression_i1.png"></div>
-</figure>
-
+{{< img src="../images/pression_i1.png" >}}
 L'écran LED de la carte microbit affichera la valeur de la tension sur *PIN0*. 
 
 Grâce à sa liaison série sur le port USB, le logiciel *Mu* affichera les données mesurées au cours de l'acquisition sous un format: `[(volume1, tension1), (volume2, tension2), ...]`
@@ -58,26 +55,14 @@ while True:
 ## Téléversement du programme
 Appuyer sur le bouton *FLASHER* pour téléverser le programme dans la carte microbit.
 
-<figure>
-  <img src = "../images/pression_mu1.png">
-  <figcaption>bouton FLASHER</figcaption>
-</figure>
-
+{{< img src="../images/pression_mu1.png" caption="bouton FLASHER" >}}
 ## REPL
 Pour afficher les sorties textuelles de la carte microbit (`print()`), il faudra ouvrir l'interface avec le bouton REPL.
 
-<figure>
-  <img src = "../images/pression_mu2.png">
-  <figcaption>bouton REPL</figcaption>
-</figure>
-
+{{< img src="../images/pression_mu2.png" caption="bouton REPL" >}}
 Pour démarrer le programme d'acquisition, appuyer sur le bouton de démarrage du programme au dos de la carte.
 
-<figure><div>
-  <img src = "../images/pression_i3.png"></div>
-  <figcaption>Bouton de (re)démarrage</figcaption>
-</figure>
-
+{{< img src="../images/pression_i3.png" caption="Bouton de (re)démarrage" >}}
 Lors de l'appui sur le bouton **a**, une nouvelle mesure est enregistrée. la liste des valeurs acquises est alors affichée dans la fenêtre du logiciel.
 
 
@@ -95,11 +80,7 @@ Pour enregistrer votre 2e valeur:
 
 Vous devriez voir à l'écran la liste `[(volume1, tension1), (volume2, tension2)]`. 
 
-<figure>
-  <img src = "../images/pression_mu3.png">
-  <figcaption>affichage de la liste de mesures dans le REPL</figcaption>
-</figure>
-
+{{< img src="../images/pression_mu3.png" caption="affichage de la liste de mesures dans le REPL" >}}
 Verifier que les volumes enregsitrés correspondent bien aux positions du piston lors de l'acquisition, sinon recommencer (bouton **b**).
 
 ## Copier les valeurs
@@ -107,34 +88,20 @@ A la fin de l'acquisition (volume de 30, ou 20 mL):
 
 * Selectionner les valeurs directement dans la fenêtre du REPL. 
 
-<figure>
-  <img src = "../images/pression_mu4.png">
-  <figcaption>selection dans le REPL</figcaption>
-</figure>
-
+{{< img src="../images/pression_mu4.png" caption="selection dans le REPL" >}}
 * Clic droit: *enregistrer*
 
-<figure>
-  <img src = "../images/pression_mu5.png">
-  <figcaption>selection dans le REPL</figcaption>
-</figure>
-
+{{< img src="../images/pression_mu5.png" caption="selection dans le REPL" >}}
 # Traitement des données
 ## Graphique volume - tension
 Se rendre sur l'application en ligne : [basthon.fr](https://basthon.fr)
 
 Choisir *Notebook*
 
-<figure><div>
-  <img src = "../images/pression_basthon1.png"></div>
-</figure>
-
+{{< img src="../images/pression_basthon1.png" >}}
 Ecrire dans la cellule du notebook `datas = ` et coller les valeurs mesurées.
 
-<figure>
-  <img src = "../images/pression_basthon2.png">
-</figure>
-
+{{< img src="../images/pression_basthon2.png" >}}
 A la suite, coller le script suivant:
 
 ```python
@@ -162,10 +129,7 @@ plt.plot(volume,tension,'o') # nuage de points de l'acquisition
 plt.show()
 ```
 
-<figure>
-  <img src = "../images/pression_basthon3.png">
-</figure>
-
+{{< img src="../images/pression_basthon3.png" >}}
 **Executer la cellule** (Maj + Entrée) ou bonton triangle sur la barre de commande du logiciel.
 
 > Quelle est l'allure de la courbe tension = f(volume)?

@@ -103,10 +103,7 @@ On peut tester cette fonction dans une cellule d'un jupyter notebook :
 
 Par exemple, i = 0 => a est l'index du premier caractère et b celui du dernier caractère.
 
-<figure>
-  <img src="../images/page6/reverse.png">
-</figure>
-
+{{< img src="../images/page6/reverse.png" >}}
 **La condition de base:** On traite le retournement des caractères aux extremités d'une chaine dont la taille diminue au fur et à mesure des appels recursifs. 
 
 * si la longueur de chaine est un nombre impair: Au moment où la longueur de chaine est égale à 1: Le dernier caractère non retourné est au milieu de la chaine. On renvoie ce dernier caractère: `return s`

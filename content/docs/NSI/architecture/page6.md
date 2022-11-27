@@ -22,13 +22,7 @@ Ainsi, si vous envoyez un texte chiffré sur un canal non sécurisé, le texte c
 ## Le chiffrement par décalage, ou chiffre de Caesar
 Le chiffre de César fonctionne par décalage des lettres de l'alphabet. 
 
-<a href="https://fr.wikipedia.org/wiki/Chiffrement_par_décalage">
-<figure>
-  <img src="../images/Caesar3.png">
-<figcaption>Chiffrement par décalage - wikipedia</figcaption>
-</figure>
-</a>
-
+{{< img src="../images/Caesar3.png" caption="Chiffrement par décalage - wikipedia" >}}
 Cet algorithme de chiffrement utilise une fonction périodique pour transformer les rangs de chaque lettre:
 
 | a | b | c | d | e | f | g | h | i | j | k | l | m | n | o | p | q | r | s | t | u | v | w | x | y | z |
@@ -50,43 +44,24 @@ Pour chaque lettre l du message m:
 > **Décryptage par FORCE BRUTE**: Combien y-a-t-il de clés possibles à essayer pour celui qui réalise le décryptage? Conclure.
 
 ### Un chiffrement par substitution monoalphabetique
-Le chiffrement par  <a href="https://fr.wikipedia.org/wiki/Chiffrement_par_substitution">substitution monoalphabetique</a>: Chaque lettre de l'alphabet est transformée en une nouvelle lettre. Et cette nouvelle lettre est unique (sinon, il y aurait ambigüité, et le déchiffrement ne serait pas possible). Ici, la fonction utilisée pour le chiffrement de César, est un simple décalage:
-
+Le chiffrement par {{< a link="https://fr.wikipedia.org/wiki/Chiffrement_par_substitution" caption="substitution monoalphabetique" >}}
 $$x \rightarrow x + cle$$
 
 Mais il peut y avoir d'autres fonctions plus complexes utilisées. Voire, même aucune fonction, mais une table de correspondance entre lettre en clair et symbole chiffré. La clé aurait alors la longueur de l'alphabet.
 
 Le chiffrement par monosubstitution a été également utilisé par différentes méthodes utilisant une table.
 
-<a href="<a href="https://fr.wikipedia.org/wiki/Carré_de_Polybe">
-<figure>
-  <img src="../images/polybe.png">
-<figcaption>Carré de Polybe - le mot « bonjour » est ainsi chiffré par le carré de Polybe :12 34 33 24 34 45 42 - wikipedia</figcaption>
-</figure>
-</a>
-
-Vous trouvez cette méthode de chiffrement trop simpliste? Regardez alors sa déclinaison avec le <a href="https://fr.wikipedia.org/wiki/Chiffre_de_Playfair">chiffrement de Playfair</a>, qui associe une clé à la table de Polybe, et rajoute du pseudo aléatoire dans le chiffrement:
-
-<a href="https://www.youtube.com/watch?v=JMkGYoT3-Rw">
-<figure>
-  <img src="../images/playfair.png">
-<figcaption>VIDEO: chiffrement de Playfair - youtube - Astuces et tutoriels</figcaption>
-</figure>
-</a>
-
+{{< img src="../images/polybe.png" caption="Carré de Polybe - le mot « bonjour » est ainsi chiffré par le carré de Polybe :12 34 33 24 34 45 42 - wikipedia" >}}
+Vous trouvez cette méthode de chiffrement trop simpliste? Regardez alors sa déclinaison avec le{{< a link="https://fr.wikipedia.org/wiki/Chiffre_de_Playfair" caption="chiffrement de Playfair" >}}
+{{< img src="../images/playfair.png" caption="VIDEO: chiffrement de Playfair - youtube - Astuces et tutoriels" >}}
 ### Decryptage par analyse fréquentielle
-Le code issu du carré de Polybe a été utilisé par les prisonniers, qui transmettaient leur message en tapant sur les murs (<a href="https://fr.wikipedia.org/wiki/Tap_code">Tap code</a>).
-
+Le code issu du carré de Polybe a été utilisé par les prisonniers, qui transmettaient leur message en tapant sur les murs {{< a link="https://fr.wikipedia.org/wiki/Tap_code" caption="Tap code" >}}
 Le **problème** avec ce type de chiffrement monoalphabetique, est qu'il est possible de repérer comment sont transformées certaines lettres à partir de l'**analyse fréquentielle** du message chiffré.
 
 On peut alors utiliser la frequence des lettres pour dechiffrer et comparer avec la frequence moyenne dans une langue. (200 caracteres suffisent). Il y a aussi tout un tas de statistique, comme les lettres uniques, doubles lettres, finales, etc... C'est un marqueur suffisant pour savoir comment le code est fait.
 
 
-<figure>
-  <img src="../images/frequenceA_Z.gif">
-<figcaption>frequence des lettres en français, calculée sur la lecture de plusieurs ouvrages classiques (10 millions de caracteres)</figcaption>
-</figure>
-
+{{< img src="../images/frequenceA_Z.gif" caption="frequence des lettres en français, calculée sur la lecture de plusieurs ouvrages classiques (10 millions de caracteres)" >}}
 Ce n'est pas le cas du chiffrement de Playfair, car celui-ci utilise une methode de substitution d'un groupe de lettres: c'est une substitution *polyalphabetique*.
 
 ### Une amélioration: Substitution polyalphabétique
@@ -102,15 +77,8 @@ Le mot : WIKIPEDIA donne donc dans ce cas XKNJRHEKD.
 
 Mais si on chiffre le mot : AAAAAAAAA cela donnera BCDBCDBCD. La lettre A ne donne pas toujours la même correspondance chiffrée. Mais on peut analyser la périodicité et en déduire la longueur de la clé. La connaissance de la longueur de la clé est essentielle pour pouvoir pratiquer l'analyse frequentielle.
 
-La machine <a href="https://fr.wikipedia.org/wiki/Enigma_(machine)">Enigma</a> utilisait ce principe de codage.
-
-<a href="https://fr.wikipedia.org/wiki/Enigma_(machine)">
-<figure>
-  <img src="../images/enigma.jpg">
-<figcaption>Enigma est une machine électromécanique portative servant au chiffrement et au déchiffrement de l'information.  - wikipedia</figcaption>
-</figure>
-</a>
-
+La machine{{< a link="https://fr.wikipedia.org/wiki/Enigma_(machine)" caption="Enigma" >}}
+{{< img src="../images/enigma.jpg" caption="Enigma est une machine électromécanique portative servant au chiffrement et au déchiffrement de l'information.  - wikipedia" >}}
 La machine utilise des rotors qui sont mis en position selon une clé. L'alphabet est chiffré selon la position initiale de ces rotors. Ceux-ci se décalent lors de l'utilisation. Ce qui modifie l'alphabet chiffré et augmente sérieusement la complexité.
 
 Déchiffrer se fait avec la même machine, à condition d'utiliser la même clé.
@@ -119,8 +87,7 @@ Son utilisation la plus célèbre fut celle faite par l'Allemagne nazie, avant e
 
 Le **principe de la machine Enigma était connu**. Le concepteur savait à l'avance que certains modèles pourraient être volés par les alliés. Ce qui fit son efficacité, c'est le nombre immense de combinaisons possibles pour les réglages initiaux de la machine et le choix de la clef brute du message.
 
-Les cryptanalystes britanniques, dont <a href="https://fr.wikipedia.org/wiki/Alan_Turing">Alan Turing</a>, purent continuer les travaux du mathématicien polonais Marian Rejewski. Ils furent, dans des circonstances favorables, capables de decrypter les messages Enigma, ce qui donna un avantage certain aux alliés pendant la guerre.
-
+Les cryptanalystes britanniques, dont{{< a link="https://fr.wikipedia.org/wiki/Alan_Turing" caption="Alan Turing" >}}
 ### Points communs des chiffrements symétriques
 Ces algorithmes fonctionnent selon:
 
@@ -135,10 +102,7 @@ Ces algorithmes fonctionnent selon:
 
 * **Question 1:** Quelle clé a  été utilisée pour chiffer ce texte (avec l’algorithme de César)? 
 
-<figure>
-jyfwavnyhwopl hwwspxbll
-</figure>
-
+{{< img src="" >}}
 * **Question 2:** Décrypter ce message.
 
 

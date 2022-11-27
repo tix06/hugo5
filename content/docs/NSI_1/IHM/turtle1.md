@@ -1,17 +1,11 @@
 ---
 Title: Editeur Turtle
 ---
-<figure><div>
-  <img src="../images/editeurs.png"></div>
-</figure>
-Nous allons voir 3 options pour réaliser les scripts python turtle. La syntaxe diffère légèrement selon si vous utilisez la calculatrice TI83 CE Premium Python, la tablette Android, ou bien un interpreteur en ligne.
+{{< img src="../images/editeurs.png" >}}Nous allons voir 3 options pour réaliser les scripts python turtle. La syntaxe diffère légèrement selon si vous utilisez la calculatrice TI83 CE Premium Python, la tablette Android, ou bien un interpreteur en ligne.
 
 Les 3 programmes proposés permettent de réaliser cette première figure.
 
-<figure><div>
-  <img src="../images/hello_world_turtle.png"></div>
-</figure>
-
+{{< img src="../images/hello_world_turtle.png" >}}
 # TI83 CE Premium Python
 * La calculatrice doit être à jour. Il faudra ajouter le module `CE_turtle` pour pouvoir utiliser le module *python turtle*. Voir [notice d'installation](/docs/techno/pages/TI_prisenmain/)
 * Dans l'App Python: démarrer un nouveau script. Ecrire et rédiger la première ligne: `from turtle import *`. Quitter le shell et revenir dans l'editeur de programme pour poursuivre l'edition. Voir [Notice turtle pour la TI83](https://resources.t3france.fr/fileadmin/user_upload/Turtle_Getting_Started_Guide_CE_Python_FR.pdf)
@@ -51,14 +45,9 @@ exitonclick()
 ```
 
 # Notebook en ligne: Basthon
-* Aller sur la page <a href="https://basthon.fr/" target=_blank>Basthon</a> à l'aide de votre navigateur.
-* Il vous faudra choisir: *Notebook* à la page d'accueil
+* Aller sur la page{{< a link="https://basthon.fr/" caption="Basthon" >}}* Il vous faudra choisir: *Notebook* à la page d'accueil
    
-<figure><div>
-  <img src="/images/basthon1.png">
-</div>
-</figure>
-
+{{< img src="/images/basthon1.png" >}}
 Le script de démarrage sur la tablette android est le suivant:
 
 ```python

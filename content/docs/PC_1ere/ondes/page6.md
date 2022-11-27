@@ -11,27 +11,10 @@ La lumière se propage sur ce chemin selon des directions qui vont minimiser son
 ## Refraction
 **Definition:** La **refraction**, c'est le changement de direction de la lumière à la traversée de l’interface entre 2 milieux (un dioptre). Ce phénomène est à l’origine d’un effet optique sur la position apparente d’un objet.
 
-<figure>
-  <img src = "../images/refraction1.png">
-  <figcaption>position apparente trompeuse pour le pêcheur</figcaption>
-</figure>
-
-<figure>
-  <img src = "../images/refraction2.png">
-  <figcaption>position et taille apparentes fausses pour le plongeur<br> à travers son masque</figcaption>
-</figure>
-
-<figure>
-  <img src = "../images/refraction4.png">
-  <figcaption>chemin de la lumière après des refractions multiples</figcaption>
-  
-</figure>
-
-<figure>
-  <img src = "../images/refraction3.png">
-<figcaption>phénomène de <i>mirage</i></figcaption>
-</figure>
-
+{{< img src="../images/refraction1.png" caption="position apparente trompeuse pour le pêcheur" >}}
+{{< img src="../images/refraction2.png" caption="position et taille apparentes fausses pour le plongeur" >}}
+{{< img src="../images/refraction4.png" caption="chemin de la lumière après des refractions multiples" >}}
+{{< img src="../images/refraction3.png" caption="phénomène de " >}}
 ## Loi de Descartes
 ### Enoncé de la Loi de Descartes: 
 Soit un dioptre séparant deux milieux d’indices de refraction n<sub>1</sub> et n<sub>2</sub>. Lorsqu’un rayon incident arrive sur le dioptre en un point d’incidence I : si son angle d’incidence est i<sub>1</sub> , et son angle de réfraction i<sub>2</sub> , alors on a : 
@@ -57,10 +40,7 @@ La situation suivante présente une refraction de l’air (n1 = 1,0) vers le ple
 l’angle i1 du rayon incident vaut 50°.<br>
 <i>Calculer l’angle de refraction i2 d’après la loi de Descartes.</i>
 
-<figure>
-  <img src = "../images/refraction5.png">
-</figure>
-
+{{< img src="../images/refraction5.png" >}}
 *Réponse :*<br>  
 D’après la loi de Descartes : 
 
@@ -82,20 +62,13 @@ L’image peut avoir une taille apparente différente de celle de l’objet lumi
 
 La lentille est constituée de 2 faces, que l’on appelle « dioptres ». Ces faces peuvent être droites, concaves ou convexes. 
 
-<figure>
-  <img src = "../images/lentille1.png">
-  <figcaption>Sur l’image de gauche (lentille A), la lentille est constituée <br>d’un dioptre droit et d’un dioptre convexe. <br>Lentille B : 2 dioptres convexes. <br>Lentille C : dioptre droit + dioptre concave.</figcaption>
-</figure>
-
+{{< img src="../images/lentille1.png" caption="Sur l’image de gauche (lentille A), la lentille est constituée " >}}
 Ce sont les lois de Descartes, appliquées à la surface de chacun des dioptres, qui déterminent la direction des rayons lumineux à la traversée.
 
 ## Activité 1 :
 Un rayon incident, parallèle à l’axe optique arrive sur un dioptre plan (supporté par la droite dd’). Il pénètre à l’intérieur de ce dioptre SANS être dévié. Il arrive alors au point I. 
 
-<figure>
-  <img src = "../images/lentille2.png">
-</figure>
-
+{{< img src="../images/lentille2.png" >}}
 > Va-t-il ressortir du dioptre convexe, selon la direction de la droite:
 
 > * aa'
@@ -111,17 +84,11 @@ Un rayon incident, parallèle à l’axe optique arrive sur un dioptre plan (sup
 * foyer image
 * lentille
 
-<figure>
-  <img src = "../images/lentille3.png">
-</figure>
-
+{{< img src="../images/lentille3.png" >}}
 ## Activité 2 :
 Les schémas suivants illustrent la trajectoire de certains rayons lumineux passant par des points particuliers de la lentille : 
 
-<figure>
-  <img src = "../images/lentille4.png">
-</figure>
-
+{{< img src="../images/lentille4.png" >}}
 Une lentille possède un centre O, et deux points particuliers appelés foyers : un foyer objet F et un foyer image F'
 Travail : compléter : 
 

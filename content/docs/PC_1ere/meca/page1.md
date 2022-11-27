@@ -10,54 +10,31 @@ Les chronophotographies sont utiles pour repérer les phases accélérées du mo
 ## Préparer la tablette Android
 Il sera nécessaire de charger, dans cet ordre, les 2 applications suivantes:
 
-<figure><div>
-  <img src="../images/app.png">
-</div>
-</figure> 
-
+{{< img src="../images/app.png" >}}
 * *Cx explorateur de fichiers* (Play Store, gratuit)
 * *Motion shot*, qui n'est pas sur le Play store: 
   * à l'aide du navigateur (chrome par exemple), aller à l'adresse: [https://motion-shot.fr.uptodown.com/android](https://motion-shot.fr.uptodown.com/android)
   * Télecharger l'application (version en cours: 2.2.1)
 * Ouvrir l'application *Cx explorateur de fichiers*. Choisir le stockage *principal*.
 
-<figure>
-  <img src="../images/explo1.png">
-</figure> 
-
+{{< img src="../images/explo1.png" >}}
 * Aller dans le dossier *Download* et rechercher le fichier *motion-shot-2-2-1.apk*. Cliquer sur le fichier et *accepter l'installation*. Un message vous avertit des risques encourus pour l'installation d'une application non distribuée par le Play store. Accepter.
 
-<figure>
-  <img src="../images/explo2.png">
-</figure> 
-
+{{< img src="../images/explo2.png" >}}
 ## Premiers tests
 On pourra alors utiliser l'application pour enregistrer les trajectoires de quelques mouvements (pas trop rapides). Comme présenté sur la video ci-dessous.
 
-<figure><a href="https://www.youtube.com/watch?v=FF8Qd48FO7o">
-  <img src="../images/video_motionshot.png">
-  <figcaption>video de la chaine spc Richard Escudé</figcaption></a>
-</figure> 
-
+{{< img src="../images/video_motionshot.png" link="https://www.youtube.com/watch?v=FF8Qd48FO7o" caption="video de la chaine spc Richard Escudé" >}}
 Vous pouvez alors vous tester l'application avec un premier mouvement.<br>
 Choisissez un objet présentant un contraste suffisant par rapport au fond de l'image. Démarrez la vidéo, enregistrez le mouvement. 
 
 La chronophtographie est générée lors de l'arrêt de l'enregistrement. Il s'agit d'une image qui se trouve dans le dossier *Pictures/Motion_Shot*
 
-<figure>
-  <img src="../images/explo3.png">
-</figure> 
-
-<figure>
-  <img src="../images/explo4.png">
-</figure> 
-
+{{< img src="../images/explo3.png" >}}
+{{< img src="../images/explo4.png" >}}
 Un exemple de chronophotographie obtenue:
 
-<figure>
-  <img src="../images/Motion_Shot.jpg">
-</figure> 
-
+{{< img src="../images/Motion_Shot.jpg" >}}
 # Travail pratique
 ## Expérimentations
 Le matériel dans la classe permet de réaliser plusieurs situations expérimentales:
@@ -72,13 +49,9 @@ Pour chacune de ces expériences, vous réaliserez la chronophotographie la plus
 
 Vous téléchargerez ensuite l'image obtenue sur votre ordinateur (envoi en piece jointe d'un mail par exemple, ou partage par *Drive*). Il faut utiliser pour cela le menu *partager* en bas à droite de l'écran.
 
-<figure>
-  <img src="../images/explo5.png">
-</figure> 
-
+{{< img src="../images/explo5.png" >}}
 ## Pointage des positions
-Télécharger le fichier compressé <a href="/scripts/meca/chronophotographie.zip" download="chronophotograpie.zip">chronophotographie.zip</a>
-
+Télécharger le fichier compressé{{< a link="/scripts/meca/chronophotographie.zip" caption="chronophotographie.zip" >}}
 Celui-ci contient:
 
 * le fichier python à executer: chronophotograpie.py
@@ -95,11 +68,7 @@ Dans la fenêtre graphique, cliquer sur *select image* et suivre les instruction
 * Et réaliser le pointage, c'est à dire, cliquer sur la position du même point, au fur et à mesure de son avancée dans le mouvement. Des marqueurs s'ajoutent à l'image.<br>
 La liste des coordonnées s'affiche alors à droite.
 
-<figure><div>
-  <img src="../images/imTest.png" alt ="programme python chronophotographie">
-</div>
-</figure> 
-
+{{< img src="../images/imTest.png" alt="programme python chronophotographie" >}}
 Lorsque la saisie est terminée, cliquer sur *valider*. Un fichier *coordonnees.txt* est alors créé dans le même dossier, avec les coordonnées du point. On peut consulter le contenu avec un editeur de texte (Visual Studio, ou Notepad++).
 
 ## Exploitation
@@ -114,11 +83,7 @@ data = pd.read_csv("coordonnees.txt")
 print(data)
 ```
 
-<figure><div>
-  <img src="../images/data.png">
-</div>
-</figure>
-
+{{< img src="../images/data.png" >}}
 * Ajouter l'instruction suivante pour explorer l'objet *data*
 
 ```python
@@ -131,11 +96,7 @@ print(data.columns)
 print(data.Y)
 ```
 
-<figure><div>
-  <img src="../images/dataY.png">
-</div>
-</figure> 
-
+{{< img src="../images/dataY.png" >}}
 * Pour afficher le tracé (X,Y), on ajoute le module `matplotlib` et on écrit:
 
 ```python
@@ -144,11 +105,7 @@ plt.scatter(data.X,data.Y)
 plt.show()
 ```
 
-<figure><div>
-  <img src="../images/output0.png">
-</div>
-</figure>
-
+{{< img src="../images/output0.png" >}}
 On remarque que la coordonnée Y est repérée à partir du bord inférieur de la fenêtre graphique. Alors que pour le pointage, c'était à partir du bord supérieur. On peut modifier les valeurs de TOUTE la colonne Y en faisant par exemple:
 
 ```python
@@ -157,11 +114,7 @@ data.Y = 400 - data.Y
 
 Le graphique généré est alors le suivant:
 
-<figure><div>
-  <img src="../images/output.png">
-</div>
-</figure>
-
+{{< img src="../images/output.png" >}}
 * Enfin, pour sauvegarder le graphique, il faudra remplacer `plt.show()` par `plt.savefig('output.png')`. Le programme complet devrait alors être:
 
 ```python

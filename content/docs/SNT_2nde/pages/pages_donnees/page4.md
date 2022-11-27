@@ -5,11 +5,7 @@ Title: enquete police
 # Enoncé du TP
 Un pieton a été renversé par une voiture dans la nuit du 02 septembre 2022. 
 
-<figure>
-	<img src="../images/pieton.jpg">
-	<figcaption><a href="https://fr.freepik.com/vecteurs-libre/pietons-senior-traverse-route-voiture-attente-signal-feux-circulation_13009464.htm#query=circulation%20automobile&position=48&from_view=keyword">Image de upklyak</a> sur Freepik</figcaption>
-</figure>
-
+{{< img src="../images/pieton.jpg" link="https://fr.freepik.com/vecteurs-libre/pietons-senior-traverse-route-voiture-attente-signal-feux-circulation_13009464.htm#query=circulation%20automobile&position=48&from_view=keyword" caption="" >}}
 Vous enquêtez sur cet accident. Vous diposez d'une base de données comprenant:
 
 * des témoignages
@@ -17,13 +13,8 @@ Vous enquêtez sur cet accident. Vous diposez d'une base de données comprenant:
 * un fichier des personnes enregistrées au cours d'autres enquêtes réalisées par la police: les données de personnes *fichées*, ou bien temoins, soupçonnées, ou déjà condamnées.
 * un fichier avec références pour les données biométriques.
 
-Tous ces fichiers sont mis dans le même <a href="../datas/enquete.xls">classeur à télécharger ici</a>.
-
-<figure>
-	<img src="../images/classeur.png">
-	<figcaption>extrait du classeur</figcaption>
-</figure>
-
+Tous ces fichiers sont mis dans le même{{< a link="../datas/enquete.xls" caption="classeur à télécharger ici" >}}
+{{< img src="../images/classeur.png" caption="extrait du classeur" >}}
 # Travail
 ## A. Questions sur l'enquête
 1. Quels renseignements sont fournis par le fichier des témoignages?

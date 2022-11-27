@@ -32,11 +32,7 @@ Les 15 joueuses d’une équipe de volleyball ont la liste des joueuses de l’
 * Solution 2 : Une solution plus efficace et plus confortable pour la capitaine est qu’elle divise la liste de joueuses en deux moitiés. Elle appelle alors la première joueuse de chacune des deux listes obtenues. Elle leur donne l’information de report de match et leur demande à leur tour de faire la même chose : diviser en deux la demi-liste à laquelle elles appartiennent, appeler la première joueuse de chacune des parties et ainsi de suite ... jusqu’à ce qu’il n’y ait plus personne à prévenir.<br>
 Représentons l’arbre des appels pour la liste de 15 joueuses numérotées de 1 à 15.
 
-<figure>
-  <img src="../images/page5_appels.png" width="250px" alt="arbre binaire des appels">
-  <figcaption>arbre des appels</figcaption>
-</figure>
-
+{{< img src="../images/page5_appels.png" alt="arbre binaire des appels" caption="arbre des appels" >}}
 > **Question à propos de la solution 2:** *Si on suppose qu’un appel téléphonique dure 5 min. En combien de temps (noté t2) l’ensemble de l’équipe est informé ? En déduire la complexité de cette solution en fonction de n (taille de l’équipe)*
 
 **Conclusion:** La solution 2 illustre bien la méthode *Diviser pour regner* puisqu'à chaque nouvel appel telephonique, le nombre de joueuses contactées avec le même message va doubler. La durée necessaire pour la resolution du problème initial (téléphoner à toutes les joueuses) est alors réduite de manière significative.
@@ -126,11 +122,7 @@ def exp3(n,x):
 </div> 
 
 <br>
-<figure>
-  <img src="../images/expo.png" alt="exponentiation rapide: représentation en arbre">
-  <figcaption>représentation en arbre</figcaption>
-</figure>
-
+{{< img src="../images/expo.png" alt="exponentiation rapide: représentation en arbre" caption="représentation en arbre" >}}
 L’exponentiation rapide peut être utilisée pour des “multiplications” plus compliquées, comme la multiplication de matrices, la composition de fonctions,... Dans ces cas, il ne faut pas oublier de compter le coût de la multiplication dans les calculs, qui n’est pas toujours constant.
 
 # Le Tri Fusion
@@ -160,11 +152,7 @@ La fonction `fusion` ressemble à celle du *parcours récursif* d'un arbre dans 
 
 Le traitement se faisant APRES les 2 appels recursifs (gauche puis droite), le parcours s'apparente à celui appelé POSTFIXE.
 
-<figure>
-  <img src="../images/trifusion0.png" alt="tri fusion">
-  <figcaption>parcours de l'arbre pour le tri fusion</figcaption>
-</figure>
-
+{{< img src="../images/trifusion0.png" alt="tri fusion" caption="parcours de l'arbre pour le tri fusion" >}}
 ## Etude du tri fusion sur la liste L = [1,10,8,4,3,6]
 
 > **Question 1:** <i>Compléter la séquence avec l'ordre des branches parcourues et les sous-listes à chaque noeud, jusqu'à ce que tout le sous-arbre gauche soit "divisée"</i>.

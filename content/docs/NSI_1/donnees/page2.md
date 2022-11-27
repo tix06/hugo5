@@ -20,29 +20,17 @@ Une fois le compte créé:
 * 2: onglet *education*
 * 3: renseigner le champs dans le paragraphe *Your teacher*
 
-<figure>
-  <img src="../images/pytanyw1.png">
-  <figcaption>acceder à l'onglet education</figcaption>
-</figure>
+{{< img src="../images/pytanyw1.png" caption="acceder à l'onglet education" >}}
 
 
-
-<figure>
-  <img src="../images/pytanyw2.png">
-  <figcaption>renseigner l'id du professeur: etixidor06</figcaption>
-</figure>
-
+{{< img src="../images/pytanyw2.png" caption="renseigner l'id du professeur: etixidor06" >}}
 Vous aurez besoin uniquement du compte *gratuit* pendant toute votre formation.
 
 En cliquant sur le logo à gauche, ou sur *Dashboard*, vous revenez alors à votre tableau de bord. 
 
 L'explorateur montre en partie gauche: les consoles, et au centre, les fichiers.
 
-<figure>
-  <img src="../images/pytanyw3.png">
-  <figcaption>votre tableau de bord</figcaption>
-</figure>
-
+{{< img src="../images/pytanyw3.png" caption="votre tableau de bord" >}}
 ## Console Python
 Si vous n'avez pas encore de console Python ouverte: aller dans *New console* et clic sur le bouton *>>> Python* (voir image plus haut). Choisir la version la plus recente proposée (3.X).
 
@@ -122,10 +110,7 @@ Une fonction execute une opération sur un ou plusieurs paramètres, et retourne
 
 * **Question g:** à quoi servent ces fonctions? Résumer ce paragraphe en recopiant et en completant le document suivant sur votre cahier. Ecrire au niveau de chacune des flèches l'instruction ou la notation qui permet la conversion.
 
-<figure>
-  <img src="../images/conversions.png">
-</figure>
-
+{{< img src="../images/conversions.png" >}}
 
 ## fonctions programmées
 On peut également créer ses propres fonction. Il faut commencer par le déclarer avec le mot clé `def`, suivi du nom de la fonction, puis des arguments entre parenthèses, et enfin, par 2 points `:`.

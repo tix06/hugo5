@@ -4,12 +4,8 @@ Title: Energie mecanique
 
 voir le notebook sur *[trajectoire parabolique](/docs/PC_1ere/notebooks/PC_notebooks/)*
 # Animation
-Sur la page du <a href="https://phet.colorado.edu/fr/simulations/energy-skate-park-basics" target==_blank>site phet.colorado</a>:
-
-<figure><a href="https://phet.colorado.edu/fr/simulations/energy-skate-park-basics" target==_blank>
-  <img src="../images/energieMeca_phet.png"></a>
-</figure>
-
+Sur la page du{{< a link="https://phet.colorado.edu/fr/simulations/energy-skate-park-basics" caption="site phet.colorado" >}}
+{{< img src="../images/energieMeca_phet.png" link="https://phet.colorado.edu/fr/simulations/energy-skate-park-basics" >}}
 * demarrer l'animation (clic sur l'image)
 * Choisissez "Introduction".
 * Cochez les quatre cases (en haut à droite).
@@ -33,7 +29,6 @@ Augmentez sa masse.
 
 Puis terminez par la rampe double (mêmes questions).
 
-<a href="https://phet.colorado.edu/fr/simulations/energy-skate-park-basics" target==_blank>animation</a>
 
 # Energie cinetique
 Pour un système matériel de masse m et de vitesse v, l'energie cinétique Ec est:
@@ -60,11 +55,7 @@ On considère 3 cas :
   * α>90 : travail resistant (schémas 4 et 5)
   * α=90 : travail nul (schéma 3)
 
-<figure>
-  <img src="../images/travail_force.png">
-  <figcaption>angle formé entre les vecteurs<br>force <b>F</b> et deplacement <b>AB</b></figcaption>
-</figure>
-
+{{< img src="../images/travail_force.png" caption="angle formé entre les vecteurs" >}}
 
 
 # Théorème de l'énergie

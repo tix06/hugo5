@@ -4,8 +4,7 @@ bookShowToc: false
 ---
 # Suite des exercices sur les Piles
 
-On utilisera pour le TD suivant l'implementation d'un pile avec les definitions suivantes, comme vues dans les corrections des exercices 1 à 4, page des <a href="../page2/">structures linéaires (Piles)</a>.
-
+On utilisera pour le TD suivant l'implementation d'un pile avec les definitions suivantes, comme vues dans les corrections des exercices 1 à 4, page des{{< a link="../page2/" caption="structures linéaires (Piles)" >}}
 ```python
 def Pile():
     return []
@@ -29,12 +28,7 @@ def sommet(pile):
 ### Enoncé difficile
 Certains jeux comme par exemple *Candie Crush* reposent sur l'*élimination de motifs adjacents*. Je vous propose ici d'utiliser une chaine de caractères dans laquelle les motifs vont être éliminé de la manière suivante:
 
-<figure>
-<img src='../images/reduction.PNG'>
-<figcaption>méthode de reduction avec une chaine contenant<br>
-des caractères a, A, b, B, c, C, d, D</figcaption>
-</figure>
-
+{{< img src="../images/reduction.PNG" caption="méthode de reduction avec une chaine contenant" >}}
 ![méthode de reduction](../images/reduction.PNG)
 
 > Programmez la fonction `reduction` qui va permettre de réaliser ceci.
@@ -42,8 +36,7 @@ des caractères a, A, b, B, c, C, d, D</figcaption>
 *On se limitera aux caractères 'a', 'A', 'b', 'B', 'c', 'C', 'd', 'D' pour cette chaine.*
 
 ### Enoncé progressif
-On va chercher un solution qui ressemble à celle de la notation polonaise inversée, utilisant une Pile (voir Ex 4 à la page <a href="../page2/"> sur les structures linéaires</a>).
-
+On va chercher un solution qui ressemble à celle de la notation polonaise inversée, utilisant une Pile (voir Ex 4 à la page{{< a link="../page2/" caption=" sur les structures linéaires" >}}
 On donne 2 fonctions qui seront utiles pour la resolution:
 
 ```python
@@ -128,19 +121,3 @@ def simplifier(s):
     dicoS = {'a':'A','b':'B','c':'C','d':'D','A':'a','B':'b','C':'c','D':'d'}
     p = Pile()
     for c in s:
-        if # <a completer>:
-            empile(c,p)        
-        elif # <a completer>:
-            p = destruction_recur(p)
-            empile(c,p)
-            p = destruction_recur(p)
-        else:
-            empile(c,p)
-    return p
-```
-
-> Completer cette fonction, et tester son (bon) fonctionnement avec les exemples de chaines de caractères vus plus haut, par exemple:
-
-```python
-> simplifier('zacaAaAaC')
-```

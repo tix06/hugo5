@@ -4,11 +4,7 @@ Title : energie et transports
 
 # Energie et transports
 ## Document 1: Cycle de vie d’un véhicule, déchets et émission de GES
-<figure>
-  <img src="../images/transports1.png">
-  <figcaption>cycle de vie et GES</figcaption>
-</figure>
-
+{{< img src="../images/transports1.png" caption="cycle de vie et GES" >}}
 > Question 1: un véhicule propre, à zéro émission de gaz à effet de serre (comme les véhicules électriques par exemple), est-il réellement propre ? Expliquez.
 
 ## Document 2: Les biocarburants  
@@ -47,11 +43,7 @@ Les efforts du véhicule viennent à la fois des moteurs thermique et électriqu
 La voiture hybride classique permet de ne pas consommer de carburant en-dessous de 30 à 50 km/h la plupart du temps. Dans un embouteillage, dans une « Zone 30 », en manœuvre dans un parking, le moteur thermique n’est alors plus alimenté en carburant mais entraîne les roues grâce au moteur électrique intégré.
 La batterie est rechargée lors des périodes de freinage du véhicule : 
 
-<figure>
-  <img src="../images/transport4.png">
-  <figcaption>assistance électrique pour un moteur hybride</figcaption>
-</figure>
-
+{{< img src="../images/transport4.png" caption="assistance électrique pour un moteur hybride" >}}
 Aujourd'hui, les batteries les plus employées sont de type lithium – ion 
 
 > Question: Sur l’hybride essence/batterie. Rappeler quelle (quels) est (sont) la (les) source(s) d’énergie utilisée(s) dans ce véhicule ? 
@@ -66,11 +58,7 @@ Les véhicules à pile à combustible sont d'autres types de véhicules hybrides
 * d'une batterie, qui se charge à partir de l'énergie produite par la combustion de l'hydrogène, mais aussi lors des cycles de charge, comme pour l'hybride à essence (voir plus haut)
 
 
-<figure>
-  <img src="../images/transport2.png">
-  <figcaption>Chaine énergétique pour une voiture à hydrogène</figcaption>
-</figure>
-
+{{< img src="../images/transport2.png" caption="Chaine énergétique pour une voiture à hydrogène" >}}
 
 ### La Toyota Mirai : la première voiture avec pile à hydrogène.
 
@@ -80,11 +68,7 @@ Cette réaction chimique produit de l’eau en plus de l’énergie  électrique
 L’eau est alors le seul et unique rejet de la voiture.
 Cette électricité est dirigée vers la batterie [5] pour y être stockée, et vers le moteur. C’est une unité de contrôle[2], un ordinateur, qui en assure la gestion. Le moteur génère alors le mouvement à partir de cette électricité lorsque l’on appuie sur l’accélérateur. La batterie [5] est également chargée lorsque l’on décélère. Elle récupère alors une partie de l’énergie grâce à un dispositif magnétique qui convertit l’énergie mécanique en électrique. Cette batterie sert aussi d’assistance à la pile à combustible lors de l’accélération. 
 
-<figure>
-  <img src="../images/transport3.png">
-  <figcaption>Scaner de la Toyota Mirai</figcaption>
-</figure>
-
+{{< img src="../images/transport3.png" caption="Scaner de la Toyota Mirai" >}}
 > Question: Quel type d’énergie primaire permet la fabrication de dihydrogène H2 ? Ce vehicule, permet-il d'économiser les énergie fossiles?
 
 # Sources : 

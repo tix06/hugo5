@@ -20,13 +20,7 @@ Le bon fonctionnement du www nécessite le respect de normes et de formats de fi
 
 Le World Wide Web Consortium, abrégé par le sigle W3C, est un organisme de standardisation à but non lucratif, fondé en octobre 1994 chargé de promouvoir la compatibilité des technologies du World Wide Web telles que HTML, CSS, JS, ...
 
-<figure>
-  <a href="https://fr.wikipedia.org/wiki/World_Wide_Web_Consortium" target="blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/W3C®_Icon.svg/440px-W3C®_Icon.svg.png" alt="W3C®_Icon">
-  <figcaption>W3C: un organisme qui définit les standarts du web</figcaption>
-</a>
-</figure>
-
+{{< img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/W3C®_Icon.svg/440px-W3C®_Icon.svg.png" alt="W3C®_Icon" link="https://fr.wikipedia.org/wiki/World_Wide_Web_Consortium" caption="W3C: un organisme qui définit les standarts du web" >}}
 > Le web fonctionne avec : le **[protocole HTTP](#le-protocole-http)** (HyperText Transfert Protocol), les **[URL](#adresse-d-une-page-web-url)** (Uniform Resource Locator) et le langage de description **[HTML](/docs/SNT_2nde/pages/page4/web1/)** (HyperText Markup Language).
 
 La *lecture et l’usage des hyperliens* d’une page html nécessite d’utiliser un **[navigateur](/docs/SNT_2nde/pages/page4/web/#l-usage-d-un-navigateur)**.
@@ -52,11 +46,7 @@ Le classement se fait typiquement dans une arborescence de catégories, censée 
 
 Aujourd'hui, ils ont perdu de l'interêt face à la facilité d'utilisation des moteurs de recherche, et ne sont plus utilisés que dans des cas particuliers [voir article](https://fr.wikipedia.org/wiki/Annuaire_web)
 
-<figure>
-  <img src="../images/yahoo-annuaire.png">
-  <figcaption>dernière page de l'annuaire Yahoo avant sa fermeture en 2014</figcaption>
-</figure>
-
+{{< img src="../images/yahoo-annuaire.png" caption="dernière page de l'annuaire Yahoo avant sa fermeture en 2014" >}}
 
 > Un moteur de recherche: Logiciel qui dispose d'une indexation des pages internet. L'indexation est un traitement qui consiste à analyser des pages pour y detecter des mots clés utilisés fréquemment par les internautes.
 
@@ -66,31 +56,13 @@ L'utilisateur va alors cliquer sur le lien de son choix parmi les propositions d
 Les moteurs de recherche – Mediaprovence (juin 2019)
 https://www.youtube.com/watch?v=Y8l4hKNQOEY
 
-<figure>
-  <a href="https://www.youtube.com/watch?v=pMywV9ZLS4M" >
-  <img src="../images/moteur_R_fonc.png" alt="moteurs de recherche : fonctionement">
-  <figcaption>video: Fonctionnement du moteur de recherche – FenetresurWordpress</figcaption>
-</a>
-</figure>
-
+{{< img src="../images/moteur_R_fonc.png" alt="moteurs de recherche : fonctionement" link="https://www.youtube.com/watch?v=pMywV9ZLS4M" caption="video: Fonctionnement du moteur de recherche – FenetresurWordpress" >}}
 Un moteur de recherche, c’est une entreprise, qui doit faire des profits.
 Ses revenus viennent des annonceurs (sites commerçants) qui sont mis en avant par des  publicités ciblées. C’est un mode de référencement payant, par opposition à celui naturel, réalisé à partir des contenus redactionnels (SEO).
 Les moteurs de recherche mettent en avant une expérience plus personnalisée de l’internaute. Et ils ont besoin pour cela de récupérer vos données.
 
-<figure>
-  <a href="https://www.youtube.com/watch?v=Y8l4hKNQOEY" >
-  <img src="../images/moteur_R_financ.png" alt="moteurs de recherche : fonctionement">
-  <figcaption>video: Les moteurs de recherche – Mediaprovence (juin 2019)</figcaption>
-</a>
-</figure>
-
-<figure>
-  <a href="https://www.1ere-position.fr/blog/10-meilleurs-moteurs-de-recherche-alternatifs-google/" target="blank">
-  <img src="https://www.1ere-position.fr/wp-content/uploads/2017/10/moteurs-recherche-alternatifs-google-seo-1ere-position.jpg" alt="moteurs de recherche">
-  <figcaption>Article: des moteurs de recherche alternatifs à Google</figcaption>
-</a>
-</figure>
-
+{{< img src="../images/moteur_R_financ.png" alt="moteurs de recherche : fonctionement" link="https://www.youtube.com/watch?v=Y8l4hKNQOEY" caption="video: Les moteurs de recherche – Mediaprovence (juin 2019)" >}}
+{{< img src="https://www.1ere-position.fr/wp-content/uploads/2017/10/moteurs-recherche-alternatifs-google-seo-1ere-position.jpg" alt=" target=" link="https://www.1ere-position.fr/blog/10-meilleurs-moteurs-de-recherche-alternatifs-google/" caption="Article: des moteurs de recherche alternatifs à Google" >}}
 
 
 # sécurité et confidentialité
@@ -110,23 +82,14 @@ Pour limiter ses traces sur le Web, et reduire cette collecte de données qui vo
 * Le web et le droit d'auteur, licences creatice commun
 * Les traces laissées de manière voulue ou non lors de sa navigation
 
-<figure>
-  <div>
-  <img src="../images/bigdata.png" alt="bigdataiswatchingyou">
-</div>
-</figure>
-
+{{< img src="../images/bigdata.png" alt="bigdataiswatchingyou" >}}
 D’où l’importance d’un cadre juridique permettant de protéger les usagers, préoccupation à laquelle répond le règlement général sur la protection des données (RGPD).
 
 
 # Travaux pratiques
 
 <ul>
-<li><a href="../web1">SNT le langage HTML</a></li>
-<li><a href="../web2">SNT TP 1: HTML et CSS</a></li>
-<li><a href=../web5">Tuto sur CSS</a></li>
-<li><a href="../web3">SNT TP 2: Javascript</a></li>
-</ul>
+<li{{< a link="../web1" caption="" >}}<li{{< a link="../web2" caption="" >}}<li{{< a link="" caption="" >}}<li{{< a link="../web3" caption="" >}}</ul>
     
 
 

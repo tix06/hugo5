@@ -11,24 +11,10 @@ On a souvent l'impression que pour chaque problème on peut trouver un algorithm
 
 **Charles Babbage** (1791 – 1871), professeur à Cambridge, construit la machine différentielle et la machine analytique. La dernière peut être considérée comme précurseur des ordinateurs modernes, consistant d’une unité de contrôle, une unité de calcul, une mémoire, ainsi que l’entrée-sortie.
 
-<figure>
-    <a href="https://fr.wikipedia.org/wiki/Charles_Babbage" target="blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Charles_Babbage_-_1860.jpg/440px-Charles_Babbage_-_1860.jpg">
-    
-<figcaption>Charles Babbage (1791 – 1871)</figcaption>
-</a>
-</figure>
-
+{{< img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Charles_Babbage_-_1860.jpg/440px-Charles_Babbage_-_1860.jpg" link="https://fr.wikipedia.org/wiki/Charles_Babbage" caption="Charles Babbage (1791 – 1871)" >}}
 **Ada Lovelace** (1815 – 1852) travaille avec Babbage et préconise l’utilisation de la machine analytique pour la résolution de problèmes mathématiques. C'est le premier langage informatique, énoncé avant même l'existance d'une machine. Elle est considérée comme premier programmeur du monde.
 
-<figure>
-<a href="https://fr.wikipedia.org/wiki/Ada_Lovelace" target="blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Ada_lovelace.jpg">
-    
-<figcaption>Ada Lovelace (1815 – 1852)</figcaption>
-</a>
-</figure>
-
+{{< img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Ada_lovelace.jpg" link="https://fr.wikipedia.org/wiki/Ada_Lovelace" caption="Ada Lovelace (1815 – 1852)" >}}
 **David Hilbert** (1862 – 1943), professeur à Göttingen, présente en 1920 un programme de recherche visant à clarifier les fondaments des mathématiques : “tout enoncé mathématique peut être soit prouvé soit refuté”. Plus tard il enonce le “Entscheidungsproblem” : On doit pouvoir montrer de façon “mécanique” si un enoncé mathématique est vrai ou faux. 
 
 Pour cela, on s'appuie sur un systèmes d'axiomes censés fonder les mathématiques. A partir de ce système d'axiomes, on n'aura jamais des démonstrations contradictoires d'une *proposition* (*d'un problème, d'un énoncé de mathématique*).
@@ -36,38 +22,18 @@ Pour cela, on s'appuie sur un systèmes d'axiomes censés fonder les mathématiq
 Selon lui, tout est *décidable*, selon le terme qui sera employé plus tard.
 
 
-<figure>
-    <a href="https://fr.wikipedia.org/wiki/David_Hilbert" target="blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Hilbert.jpg">
-    <figcaption>David Hilbert (1862 – 1943)</figcaption>
-</a>
-</figure>
-
+{{< img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Hilbert.jpg" link="https://fr.wikipedia.org/wiki/David_Hilbert" caption="David Hilbert (1862 – 1943)" >}}
 **Kurt Gödel** (1906 – 1978), un des logiciens les plus fameux de l’histoire, répond en 1931 négativement quand au programme proposé par Hilbert. Il affirme qu'un systeme logique, aussi puissant soit-il, admet des propositions (des problèmes) ne pouvant être ni infirmées ni confirmées à partir des axiomes de la théorie. Ces propositions sont qualifiées d'*indécidables*.
 
 Il s'agit du théorème d'*incomplétude*.
 
 Paradoxalement, on sait que certaines de ces propositions *indécidables* sont *vraies*, mais on ne peut le démontrer.
 
-<figure>
-    <a href="https://fr.wikipedia.org/wiki/Kurt_Gödel" target ="blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/1925_kurt_gödel.png">
-    <figcaption>Kurt Gödel (1906 – 1978)</figcaption>
-</a>
-</figure>
-
-**Alan Turing** (1912 – 1954) et <a href="https://fr.wikipedia.org/wiki/Alonzo_Church" target="blank"><b>Alonzo Church</b> (1903 – 1995)</a> montrent indépendamment, en 1936, l’indécidabilité de l’Entscheidungsproblem. Turing propose la machine de Turing comme modèle formel de calcul, et Church le lambda-calcul. Ils enoncent le principe selon lequel tout ce qui est calculable peut être calculé sur un de ces deux modèles (“thèse de Church-Turing”).
-
+{{< img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/1925_kurt_gödel.png" link="https://fr.wikipedia.org/wiki/Kurt_Gödel" caption="Kurt Gödel (1906 – 1978)" >}}
+**Alan Turing** (1912 – 1954) et{{< a link="https://fr.wikipedia.org/wiki/Alonzo_Church" caption="" >}}
 Turing cherche s'il n'y aurait pas au moins une procédure mécanique pour trouver quelles sont les propositions que l'on peut effectivement déduire d'un système d'axiomes, c'est à dire de décider de leur vérité (équivalent du problème de décision). Il part du principe que ce qu'un humain peut déduire est équivament à ce qu'une machine peut déduire. Ainsi, il suffit de décrire convenablement une machine idéale pour préciser ce qu'est une procédure systématique. Cette machine idéale sera la *machine de Turing*. Il montre, par un raisonnement logique que cette machine ne peut pas démontrer toutes les propositions d'un système d'axiomes (*indécidabilité*).
 
-<figure>
-    <a href="https://fr.wikipedia.org/wiki/Alan_Turing" target="blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Alan_Turing_Aged_16.jpg/440px-Alan_Turing_Aged_16.jpg">
-
-<figcaption>Alan Turing (1912 – 1954)</figcaption>
-</a>
-</figure>
-
+{{< img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Alan_Turing_Aged_16.jpg/440px-Alan_Turing_Aged_16.jpg" link="https://fr.wikipedia.org/wiki/Alan_Turing" caption="Alan Turing (1912 – 1954)" >}}
 # Définitions
 ## Qu'est ce qu'un problème?
 Informatiquement, l’appellation problème sera synonyme de fonction. Un problème est caractérisé par:
@@ -137,13 +103,7 @@ Imaginons qu'il  existe des programmes qui calculent si un programme *termine*. 
 
 Si A s’arrête sur l’entrée x, le programme *termine* peut renvoyer `True`. Mais si ce n’est pas le cas, le programme ne répondra jamais. À quel moment décide-t-on qu'il n’a pas encore répondu, c’est qu’il ne répondra jamais ? On n’a aucun moyen de le faire, et c’est ce que prouve le théorème de Turing.
 
-<figure>
-<a href="https://www.youtube.com/watch?v=PsTcL7KlGBg" target="blank">
-<img src="../images/video_decidable.png" alt="decidabilité youtube">
-<figcaption>Décidabilité et indécidabilité : Problème de l'arrêt | Rachid Guerraoui</figcaption>
-</a>
-</figure>
-
+{{< img src="../images/video_decidable.png" alt="decidabilité youtube" link="https://www.youtube.com/watch?v=PsTcL7KlGBg" caption="Décidabilité et indécidabilité : Problème de l'arrêt | Rachid Guerraoui" >}}
 
 
 > Exemple de problème non décidable : 

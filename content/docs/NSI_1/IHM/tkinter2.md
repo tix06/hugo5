@@ -12,8 +12,7 @@ On verra dans une autre seance que le canvas peut aussi relever la position de l
 Vous allez poursuivre votre appentissage des algorithmes sur les listes, en positionnant les images *bombes* sur une grille du canvas.
 
 ## Contenu du projet
-Le projet <a href="/scripts/Tkinter/tkinter_grille.zip" download="tkinter_grille.zip">suivant (fichier zip)</a> contient 3 fichiers:
-
+Le projet{{< a link="/scripts/Tkinter/tkinter_grille.zip" caption="suivant (fichier zip)" >}}
 * canvas.py: le fichier principal qui contient les fonctions de dessin. Ce sera ce fichier qui faudra executer pour afficher la fenêtre graphique. 
 
 * utils.py: C'est le fichier qui contient les fonctions de calcul des positions des bombes. Au depart, ce fichier ne contient que la fonction `position_bombes`. Cette fonction génère une liste de listes adaptée à la grille $L*h$:
@@ -62,12 +61,7 @@ def position_bombes(L,h):
 
 ```
 
-<figure><div>
-  <img src="../images/tkinter_mines0.png">
-  <figcaption>grille 1</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/tkinter_mines0.png" caption="grille 1" >}}
 ```python
 def position_bombes(L,h):
     """
@@ -87,12 +81,7 @@ def position_bombes(L,h):
 
 
 ```
-<figure><div>
-  <img src="../images/tkinter_mines1.png">
-  <figcaption>grille 2</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/tkinter_mines1.png" caption="grille 2" >}}
 ```python
 def position_bombes(L,h):
     """
@@ -113,12 +102,7 @@ def position_bombes(L,h):
 
 ```
 
-<figure><div>
-  <img src="../images/tkinter_mines3.png">
-  <figcaption>grille 3</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/tkinter_mines3.png" caption="grille 3" >}}
 
 ```python
 def position_bombes(L,h):
@@ -140,12 +124,7 @@ def position_bombes(L,h):
 
 ```
 
-<figure><div>
-  <img src="../images/tkinter_mines4.png">
-  <figcaption>grille 4</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/tkinter_mines4.png" caption="grille 4" >}}
 ```python
 def position_bombes(L,h):
     """
@@ -166,12 +145,7 @@ def position_bombes(L,h):
 
 ```
 
-<figure><div>
-  <img src="../images/tkinter_mines5.png">
-  <figcaption>grille 5</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/tkinter_mines5.png" caption="grille 5" >}}
 *Aide:* on pourra utiliser la fonction `randint(0,1)` du module `random`
 
 

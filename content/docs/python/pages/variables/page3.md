@@ -7,42 +7,27 @@ Vous traiterez chacun des exemples suivants en utilisant l'editeur de  [pythontu
 
 > Saisir les 2 lignes de code suivantes : 
 
-<figure>
-  <img src="../images/pythontutor1.png">
-</figure>
-
+{{< img src="../images/pythontutor1.png" >}}
 > Cliquer sur **Visualize execution**.
 
-<figure>
-  <img src="../images/pythontutor2.png">
-</figure>
-
+{{< img src="../images/pythontutor2.png" >}}
 > Dérouler alors le script ligne par ligne avec **next**.
 
 ### créer des tests sur l'identité des variables
 
 > Revenir à la page d'edition et ajouter à la suite du script les 3 tests suivants : 
 
-<figure>
-  <img src="../images/pythontutor3.png">
-</figure>
-
+{{< img src="../images/pythontutor3.png" >}}
 > Executer le programme
 
 Chaque test ajouté est une assertion, qui arrête le programme lorsque l'un des tests retourne `False`. Sinon, le programme poursuit normalement, sans rien signaler.
 
 L'interêt est plus grand si on ajoute un commentaire explicite. C'est le message qui serait normalement affiché dans le `Traceback` de la console. (trace d'erreur).
 
-<figure>
-  <img src="../images/pythontutor4.png">
-</figure>
-
+{{< img src="../images/pythontutor4.png" >}}
 Si le programme s'arrête sur un test renvoyant `False`, mais que l'on veut poursuivre les autres tests, il faudra mettre la ligne du test en commentaire:
 
-<figure>
-  <img src="../images/pythontutor5.png">
-</figure>
-
+{{< img src="../images/pythontutor5.png" >}}
 
 
 > Reporter dans votre cahier de labo les expressions qui donnent `True`.

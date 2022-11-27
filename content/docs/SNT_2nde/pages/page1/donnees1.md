@@ -13,17 +13,11 @@ Le fichier numérique est alors constitué d'une suite de caractères binaires, 
 
 
 
-<figure><img src="../bin.png">
-<figcaption>un fichier binaire</figcaption>
-</figure>
-
+{{< img src="../bin.png" caption="un fichier binaire" >}}
 
 Le travail suivant consiste à définir le rôle des paramètres de conversion analogique à numérique. On cherche à numériser un signal sonore dont la courbe est donnée ici : 
 
-<figure>
-<img src="../CAN_graphique2.png" width = 60% alt="signal à numériser">
-</figure>
-
+{{< img src="../CAN_graphique2.png" alt="signal à numériser" >}}
 ## Créez vos données numériques : Programmation python
 * Le notebook python se trouve sur votre disque dur à l'emplacement `documents/devoirs/tixidor/notebooks/CAN_3bits.ipynb` : il s'agit du programme de numérisation. Pour l'executer, lancer le fichier .bat du dossier *devoirs*.
 * Compléter ou modifier le programme python pour réaliser la numérisation du signal musical (voir graphique plus haut). La numérisation se fera sur **3 bits**.
@@ -35,11 +29,7 @@ Le travail suivant consiste à définir le rôle des paramètres de conversion a
 ## Conversion numérique - analogique
 Une fois le signal musical numérisé, et stocké sur disque dur, on peut souhaiter le jouer. Il faut alors le restituer, c'est à dire le (re) transformer en signal analogique. Le signal aura alors suivi la chaine suivante : 
 
-<figure>
-<img src="../CAN_CNA.png" alt="chaine d'acquisition et restitution du son" width=100%>
-<figcaption>image issue du site jl.domec sur le traitement numérique</figcaption>
-</figure>
-
+{{< img src="../CAN_CNA.png" alt="chaine d" caption="image issue du site jl.domec sur le traitement numérique" >}}
 * Pour chacune des valeurs binaires que vous avez calculées, convertir cette valeur en décimal.
  * Compléter alors le tableau de valeurs ci dessous, et afficher la courbe du signal numérisé.
 * Recopier l'image de cette courbe à l'emplacement `documents/devoirs/tixidor/notebooks`, sur votre ordinateur.
@@ -237,9 +227,7 @@ function updata() {
 
 # Pour approfondir le sujet
 ## travail d'écoute sur de vrais signaux sonores
-Sur la page dont le lien est donné <a href="http://culturesciencesphysique.ens-lyon.fr/ressource/numerisation-acoustique-Chareyron1.xml" target="_blank">ici</a>, vous écouterez les morceaux et notes de musique numérisés sur 2 à 8 bits : *(utiliser un casque)*
-
-<a href="http://culturesciencesphysique.ens-lyon.fr/ressource/numerisation-acoustique-Chareyron1.xml" target="_blank">culturesciencesphysique.ens-lyon.fr/ressource/numerisation-acoustique</a>
+Sur la page dont le lien est donné{{< a link="http://culturesciencesphysique.ens-lyon.fr/ressource/numerisation-acoustique-Chareyron1.xml" caption="ici" >}}
 
 Commencer l’écoute par le signal numérisé sur 2 bits et finir par ce même signal numérisé sur 8 bits : Comment évolue la qualité sonore ?  
 
@@ -249,7 +237,6 @@ Commencer l’écoute par le signal numérisé sur 2 bits et finir par ce même 
 
 A partir de la page suivante : ouvrir l'application *Conversion analogique/numérique*
 
-<a href="http://www.ostralo.net" target="_blank">site ostralo.net</a>
 
 * Observer les modifications apportées par le choix de la *quantification*.
 

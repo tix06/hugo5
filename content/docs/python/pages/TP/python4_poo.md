@@ -38,13 +38,7 @@ La partie graphique du jeu est programmée dans le fichier `laby.py`. Celui-ci c
 
 La coordonnée de la case départ vaut par exemple (0,0), celle du dessous, (0,1),... comme illustré sur l'image suivante:
 
-<figure>
-  <div>
-    <img src="../images/depart.png">
-    <figcaption>repérage des cases du labyrinthe</figcaption>
-  </div>
-</figure>
-
+{{< img src="../images/depart.png" caption="repérage des cases du labyrinthe" >}}
 
 Ainsi, lorsque l'on clique dans une case du labyrinthe: les fonctions `pg.mouse.x` et `pg.mouse.y` renvoient la position en pixels du clic dans la fenêtre graphique. Si l'on souhaite connaitre la coordonnée de case correspondante, on utilisera la fonction `xy_2_case`.
 

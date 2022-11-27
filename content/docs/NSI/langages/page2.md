@@ -4,9 +4,7 @@ Title : recursivité
 
 Le cours comprend:
 
-* une partie 2: <a href="../page22">Suite du cours sur la recursivité</a>
-* une <a href="../page6/">page d'exercices</a> avec un *editeur python online*.
-
+* une partie 2:{{< a link="../page22" caption="Suite du cours sur la recursivité" >}}* une{{< a link="../page6/" caption="page d'exercices" >}}
 # Récursivité
 ## Principe 
 Un algorithme récursif est un algorithme qui fait appel à lui-même dans le corps de sa propre définition. Ce principe est aussi appelé : *de l'autoréférence*. 
@@ -110,11 +108,7 @@ Une grande partie des problèmes peut se résoudre avec une implémentation réc
 
 Enfin, l'algorithme récursif utilise une *pile d'appels*, comme vu sur l'animation suivante:
 
-<figure>
-  <img src="https://lyceum.fr/644c0bfaf567173ce9856250e140d861/animation-puiss-recursive.gif" alt="animation recursivité puissance">
-  <figcaption>animation issue de la page <a href="https://lyceum.fr/tg/nsi/4-langages-et-programmation/4-recursivite">lyceum - puissance recursive</a></figcaption>
-</figure>
-
+{{< img src="https://lyceum.fr/644c0bfaf567173ce9856250e140d861/animation-puiss-recursive.gif" alt="animation recursivité puissance" link="https://lyceum.fr/tg/nsi/4-langages-et-programmation/4-recursivite" caption="animation issue de la page " >}}
 Il est facile de traiter des suites avec la méthode récursive:
 
 * factorielle
@@ -265,10 +259,7 @@ Euclide propose l’algorithme suivant:
 3. Sinon recommencer l’étape 1 avec a = b et b = r
 
 
-<figure>
-  <img src="../images/page2/euclide.png">
-</figure>
-
+{{< img src="../images/page2/euclide.png" >}}
 > Exemple d’exécution : a = 32, b = 12 :
 
 > – 32 = (2 x 12) + 8
@@ -413,16 +404,11 @@ def fibo(n):
 
 Parfois, l'algorithme récursif n'est pas le plus performant: Pour l'exemple de la suite de Fibonacci, on constate que les mêmes calculs sont répétés plusieurs fois, comme fibo(2) dans le cas présent pour N = 4):
 
-<figure>
-  <img src="../images/page2/fibo.png">
-  <figcaption>pile d'appels pour la suite de fibonacci recursive</figcaption>
-</figure> 
-
+{{< img src="../images/page2/fibo.png" caption="pile d'appels pour la suite de fibonacci recursive" >}}
 # Suite du cours
 La récursivité intervient aussi dans de nombreux problèmes où elle s’impose comme la méthode la plus adaptée, pour ne pas dire la seule. Un exemple historique est celui des tours de Hanoi. Un jeu inventé par Edouard Lucas, vers 1880. Son traitement sur ordinateur a fait sensation, grâce à la simplicité de son script récursif...
 
-> <a href="../page22">Suite du cours sur la recursivité</a> (Les tours de Hanoi, fractales, permutations,...)
-
+>{{< a link="../page22" caption=" " >}}
 # Exercices
 ## Ex 1 : longueur d'une liste
  
@@ -481,11 +467,7 @@ def exp2(n,x):
 ## Ex 3: dichotomie recursif
 la méthode de dichotomie pour calculer la racine d’une fonction. Soit une fonction f : R → R continue, dont on sait qu’elle a une racine et une seule sur un intervalle [a, b]. On cherche une valeur approchée de cette racine. voir figure ci-dessous 
 
-<figure>
-  <img src="../images/page2/racine.png">
-  <figcaption>principe de la dichotomie</figcaption>
-</figure>
-
+{{< img src="../images/page2/racine.png" caption="principe de la dichotomie" >}}
 Soit c = (a + b)/2, qui divise l’intervalle initial en deux parties égales. On calcule `f(c)` et on compare son signe à `f(a)` et `f(b)`. La racine est nécessairement dans le sous-intervalle aux bornes duquel la fonction `f` prend deux valeurs de signes opposés (ou éventuellement nulles toutes les deux). On est donc conduit à répéter la recherche sur l’intervalle [a, c], qui est similaire au premier, d’où le caractère récursif de cet algorithme. La récursion doit être stoppée lorsque la valeur `|f (c)|` est inférieure à une tolérance ε que l’on fixe en fonction de la précision souhaitée.
 
 ```python

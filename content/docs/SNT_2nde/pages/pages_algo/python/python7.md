@@ -3,8 +3,7 @@ Title: de scratch à python
 ---
 
 # TP1: de scratch à python
-Aller sur l'interface de programmation python du site <a href="https://fr.vittascience.com/python/?mode=mixed&console=bottom" target=_blank>Vittascience</a>
-
+Aller sur l'interface de programmation python du site{{< a link="https://fr.vittascience.com/python/?mode=mixed&console=bottom" caption="Vittascience" >}}
 ## Partie 1: Premier programme
 ### BUT: 
 créer un programme qui demande à l'utilisateur son nom, et lui affiche un message de bienvenue.
@@ -17,74 +16,42 @@ le programme utilise les variables:
 
 On rappelle qu'une variable, c'est un nom qui fait référence à une valeur stockée dans un espace de la mémoire. *Exemple:*
 
-<figure><div>
-  <img src="../images/memoire0.png">
-  <figcaption>Le nom de variable <b>debut</b> fait reference<br>à la valeur
-  "Bonjour" stockée dans un espace mémoire</figcaption></div>
-</figure>
-
+{{< img src="../images/memoire0.png" caption="Le nom de variable " >}}
 ### ECRIRE LE PROGRAMME:
 Dans la fenêtre *SCRATCH*, on a un seul bloc de code:
 
-<figure>
-  <img src="../images/scratch0.png">
-</figure>
-
+{{< img src="../images/scratch0.png" >}}
 * Dans la rubrique AFFICHAGE:
 selectionner et glisser l'instruction: *demander un texte à l'utilisateur*.
 
-<figure>
-  <img src="../images/scratch1.png">
-</figure>
-
+{{< img src="../images/scratch1.png" >}}
 Comme cette instruction n'est pas complète, elle ne peut pas constituer un bloc de code. Il faut ajouter une affectation.
 
 * Dans la rubrique VARIABLE: cliquer sur *Créer une variable*. Nommer celle-ci *nom*
 
-<figure>
-  <img src="../images/scratch2.png">
-</figure>
-
+{{< img src="../images/scratch2.png" >}}
 * Rubrique VARIABLES: selectionner et glisser: *Affecter à `nom` la valeur `" "`*. <br>Puis mettre l'instruction *demander un texte à l'utilisateur*, et coller les 2 blocs de code.
 
-<figure>
-  <img src="../images/scratch3.png">
-</figure>
-
+{{< img src="../images/scratch3.png" >}}
 * Rubrique VARIABLES: Créer une nouvelle variable `debut`. Selectionner et glisser: *Affecter à `debut` la valeur `" "`*. <br>Ecrire `"Bonjour "`à la place de `" "`.
 
-<figure>
-  <img src="../images/scratch4.png">
-</figure>
-
+{{< img src="../images/scratch4.png" >}}
 * Rubrique VARIABLES: créer une nouvelle variable `message`.
 
 * Rubrique MATH: choisir le premier élément, celui qui permet une addition 
 
-<figure>
-  <img src="../images/scratch5.png">
-</figure>
-
+{{< img src="../images/scratch5.png" >}}
 A l'aide des variables `debut` et `nom`, vous allez construire l'instruction complète: *Affecter à `message` la valeur `debut + nom`*
 
 Vous trouverez les éléments `debut` et `nom` dans la rubrique VARIABLES:
 
-<figure>
-  <img src="../images/scratch9.png">
-</figure>
-
+{{< img src="../images/scratch9.png" >}}
 Compléter alors l'instruction pour obtenir:
 
-<figure>
-  <img src="../images/scratch7.png">
-</figure>
-
+{{< img src="../images/scratch7.png" >}}
 * Mettre à la suite les blocs de code pour former le programme:
 
-<figure>
-  <img src="../images/scratch8.png">
-</figure>
-
+{{< img src="../images/scratch8.png" >}}
 * Mettez vous maintenant dans la peau de l'utilisateur: Executer le programme (bouton du haut `>`) Et repondre à la question dans le *shell*, sous la fenêtre d'edition.
 
 > Sur votre cahier, recopier le script python correspondant. Et répondre aux questions:
@@ -106,29 +73,17 @@ Compléter alors l'instruction pour obtenir:
   * modifier le `nom_de_la_fonction`: mettre `salutation` comme nouveau nom
   * Bouton (+): ajouter le paramètre `nom`
 
-<figure><div>
-  <img src="../images/scratch10.png"></div>
-</figure>
-
+{{< img src="../images/scratch10.png" >}}
 Votre fonction est vide et ne contient pas encore d'instruction.
 
-<figure><div>
-  <img src="../images/scratch11.png"></div>
-</figure>
-
+{{< img src="../images/scratch11.png" >}}
 * Mettre le bloc du programme précédent dans la fonction:
 
-<figure><div>
-  <img src="../images/scratch12.png"></div>
-</figure>
-
+{{< img src="../images/scratch12.png" >}}
 * Supprimer la dernière ligne *afficher `message`*.
 * Dans l'espace vide après *retour* : mettre la variable `message` pour que celle-ci s'affiche lorsque l'on appelle la fonction:
 
-<figure><div>
-  <img src="../images/scratch13.png"></div>
-</figure>
-
+{{< img src="../images/scratch13.png" >}}
 * Executer le programme (bouton du haut >)<br>En apparence, il ne se passe rien, mais vous avez quand même chargé la fonction en mémoire.
 * Dans le shell (partie inférieure de la fenêtre), après les chevrons `>>>`, saisir l'instruction qui va appeler votre fonction: <br>
 
@@ -138,10 +93,7 @@ Votre fonction est vide et ne contient pas encore d'instruction.
 
 *Modifier `votre nom` par votre veritable nom...*
 
-<figure><div>
-  <img src="../images/scratch14.png"></div>
-</figure>
-
+{{< img src="../images/scratch14.png" >}}
 > Sur votre cahier, recopier le script python correspondant. Et répondre aux questions: Dans le script python: ...
 
 

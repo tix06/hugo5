@@ -210,7 +210,6 @@ L = [i * 3 for i in range(6)]
 </div>
 
 # Relire le cours
-Lien vers la page : <a href="/docs/python/pages/variables/page1/">Variables</a>
-
+Lien vers la page :{{< a link="/docs/python/pages/variables/page1/" caption="Variables" >}}
 
 <script type="text/javascript" src="/scripts/flash_cards.js"></script>

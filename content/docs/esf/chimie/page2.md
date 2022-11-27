@@ -62,19 +62,12 @@ Le diazote N<sub>2</sub>, dont la quantité ne semble pas varier, ne sera ni un 
 Cette équation rend bien compte de la nature (réactif ou produit) de chaque espèce. Mais elle ne rend pas compte des lois de conservation. Il faudra *équilibrer* les espèces à l'aide de *coefficients*.
 
 ### Lois de conservation
-En 1777, <a href="https://fr.wikipedia.org/wiki/Antoine_Lavoisier">Antoine Lavoisier</a> énonce la loi qui porte aujourd'hui son nom devant l'Académie des sciences :
-
+En 1777,{{< a link="https://fr.wikipedia.org/wiki/Antoine_Lavoisier" caption="Antoine Lavoisier" >}}
 «Rien ne se perd, rien ne se crée, tout se transforme.»[^1]
 
 La **conservation de la masse** (ou de Lavoisier) est une loi fondamentale de la chimie et de la physique. Elle indique non seulement qu'au cours de toute expérience, y compris si elle implique une transformation chimique, la masse se conserve, mais aussi que le nombre d'éléments de chaque espèce chimique se conserve. 
 
-<figure>
-    <div>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Lavoisier_explaining_to_his_wife_the_result_of_his_experimen_Wellcome_V0018151.jpg/220px-Lavoisier_explaining_to_his_wife_the_result_of_his_experimen_Wellcome_V0018151.jpg" alt="Lavoisier">
-  <figcaption>Lavoisier expliquant le résultat de ses expériences sur l’air à sa femme. Huile sur toile d’Ernest Board (image wikipedia)</figcaption>
-</div>
-</figure>
-
+{{< img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Lavoisier_explaining_to_his_wife_the_result_of_his_experimen_Wellcome_V0018151.jpg/220px-Lavoisier_explaining_to_his_wife_the_result_of_his_experimen_Wellcome_V0018151.jpg" alt="Lavoisier" caption="Lavoisier expliquant le résultat de ses expériences sur l’air à sa femme. Huile sur toile d’Ernest Board (image wikipedia)" >}}
 En pratique, il faudra <em>équilibrer</em> les éléments chimiques et les charges électriques à l'aide de <em>coefficients stoechiométriques :</em> des nombres que l'on rajoute devant les espèces.</p>
 
 <p><span class="formule">\[CH_{4(g)} + 2 O_{2(g)} \rightarrow CO_{2(g)} + 2 H_{2}O_{(g)}\]</span></p>
@@ -86,12 +79,7 @@ En pratique, il faudra <em>équilibrer</em> les éléments chimiques et les char
 *Equilibrer* = ajuster les coefficients stoechiométriques.
 
 On pourra consulter la video suivante de la chaine *mathrix* sur *youtube* : 
-<figure>
-  <a href="https://youtu.be/Oo_f8HfUUHQ">
-  <img src="../images/video_mathrix.png" alt="video youtube chaine mathrix" width = 60%></a>
-  <figcaption>lancer la video</figcaption>
-</figure>
-
+{{< img src="../images/video_mathrix.png" alt="video youtube chaine mathrix" link="https://youtu.be/Oo_f8HfUUHQ" caption="lancer la video" >}}
 *Question a :* Equilibrer l'équation chimique de combustion du propane C<sub>3</sub>H<sub>8</sub>
 
 <p><span class="formule">\[C_3H_{8(g)} + O_{2(g)} \rightarrow CO_{2(g)} + H_{2}O_{(g)}\]</span></p>
@@ -141,13 +129,7 @@ Cette réaction est d'autant plus quantitative que l'acide du couple 1 est fort,
 
 Pour déterminer l'équation de cette réaction acido-basique, on commence par écrire les 2 couples acide/base de ces 2 espèces, puis on choisit les espèces à écrire en suivant le symbole Gamma:
 
-<figure>
-    <div>
-    <img src = "../images/gamma.png">
-    <figcaption>S'aider du symbole Gamma pour écrire l'équation</figcaption>
-    </div>
-</figure>
-
+{{< img src="../images/gamma.png" caption="S'aider du symbole Gamma pour écrire l'équation" >}}
 L'équation est alors:
 
 $$NH_4^+ + HO^- \rightarrow H_2O + NH_3 $$

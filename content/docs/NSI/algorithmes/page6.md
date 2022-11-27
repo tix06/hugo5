@@ -37,29 +37,21 @@ Cette méthode s'appelle : la **mémoïzation**.
 ## Principe
 En mathématiques, le triangle de Pascal est une présentation des coefficients binomiaux dans un triangle. Il fut nommé ainsi en l'honneur du mathématicien français Blaise Pascal. Il est connu sous l'appellation « triangle de Pascal » en Occident, bien qu'il fût étudié par d'autres mathématiciens, parfois plusieurs siècles avant lui.
 
-<figure>
-  <img src="../images/page6-Pascal_triangle.jpg" width="350px" alt="triangle de Pascal">
-  <a href="https://commons.wikimedia.org/w/index.php?curid=3105222"><figcaption>premières lignes du triangle de Pascal</figcaption></a>
-</figure>
-
+{{< img src="../images/page6-Pascal_triangle.jpg" alt="triangle de Pascal" link="https://commons.wikimedia.org/w/index.php?curid=3105222" caption="premières lignes du triangle de Pascal" >}}
 Cette figure permet de calculer les coefficients binomiaux d'un polynôme (x+y) à la puissance n: 
 
 <p>
 $$\begin{matrix}\begin{align}n=2, (x+y)^2 & = x^2+2xy+y^2\\n=3, (x+y)^3 & = x^3+3x^2y+3xy^2+y^3\\n=4, (x+y)^4 & = x^4+4x^3y+6x^2y^2+4xy^3+y^4\end{align}\end{matrix}$$
 </p>
 <p>
-voir compléments sur la page wikipedia : <a href="https://fr.wikipedia.org/wiki/Triangle_de_Pascal">Lien</a>
-</p>
+voir compléments sur la page wikipedia :{{< a link="https://fr.wikipedia.org/wiki/Triangle_de_Pascal" caption="Lien" >}}</p>
 <p>
 Un coefficient quelconque du triangle, situé à la ligne i et à la colonne j est calculé à partir de la formule de récurrence : (i et j superieurs à 1)
 
 $$C\left(\begin{matrix}i\\j\end{matrix}\right)=C\left(\begin{matrix}i-1\\j-1\end{matrix}\right)+C\left(\begin{matrix}i-1\\j\end{matrix}\right)$$
 </p>
 
-<figure>
-  <img src="../images/page6_calcul.png"  width=300px>
-</figure>
-
+{{< img src="../images/page6_calcul.png" >}}
 ## Algorithme récursif non optimisé
 
 ```python
@@ -107,11 +99,7 @@ On peut alors tester le programme (jupyter notebook):
 
 On remarque que l'on calcule souvent les mêmes coefficients binomiaux : 
 
-<figure>
-  <img src="../images/page6_arbre_binomiaux.png" alt="arbre de calculs binomiaux" width=300px>
-  <figcaption>arbre de calcul des coefficients pour n=4 p=2</figcaption>
-</figure>
-
+{{< img src="../images/page6_arbre_binomiaux.png" alt="arbre de calculs binomiaux" caption="arbre de calcul des coefficients pour n=4 p=2" >}}
 La mémoïzation consistera alors à stocker dans un tableau les solutions pour les sous-problèmes afin de ne pas les recalculer...
 
 ## Algorithme avec mémoïzation
@@ -139,11 +127,7 @@ Le problème du rendu de monnaie est un problème d'algorithmique. Il s'énonce 
 
 Par exemple, la meilleure façon de rendre 7 euros est de rendre un billet de cinq et une pièce de deux, même si d'autres façons existent (rendre 7 pièces de un euro, par exemple).
 
-<figure>
-  <img src="../images/caisse.png" width="350px" alt="caisse rendu monnaie">
-  <figcaption>Image by <a href="https://pixabay.com/users/conmongt-1226108/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2048569">Christian Dorn</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2048569">Pixabay</a></figcaption></a>
-</figure>
-
+{{< img src="../images/caisse.png" alt="caisse rendu monnaie" link="https://pixabay.com/users/conmongt-1226108/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2048569" caption="Image by " >}}
 ### algorithme naif
 Une première idée, naïve serait de commencer par rendre la piece de plus grande valeur, puis sur la somme restante, la pièce un peu moins grande, et ainsi de suite.
 
@@ -228,11 +212,7 @@ Le tableau montre les choix que réalise l'algorithme.
 ### Le problème du sac à dos
 Un problème très similaire est celui du sac-à-dos. Supposons que vous découvriez la caverne d'Ali Baba (et des 40 voleurs), il y a une infinité d'objets de valeur `v1, v2, · · · , vn` mais chaque objet de valeur `vi` a un poids de `pi`. Comment remplir votre sac-à-dos avec le contenu qui rapportera le plus, sachant que votre sac ne supporte qu’un poids `W`?
 
-<figure>
-  <img src="../images/sacados.png" width="350px" alt="probleme du sac a dos">
-  <figcaption>illustration du probleme du sac à dos</figcaption></a>
-</figure>
-
+{{< img src="../images/sacados.png" alt="probleme du sac a dos" caption="illustration du probleme du sac à dos" >}}
 ## Algorithme de type glouton
 Nous allons chercher à adapter l'algorithme du rendu de monnaie:
 
@@ -265,18 +245,10 @@ Pour résoudre ce problème, une **heuristique gloutonne** construit une seule s
 La figure suivante aide à la resolution. La solution optimale est celle qui va joindre tous les noeuds du graphe, une seule fois. (Cycle hamiltonien)<br>
 Des solutions possibles, mais non optimales sont celles qui permettent de visiter tous les noeuds une seule fois, mais dont la distance parcourue cumulée n'est peut-être pas la plus courte.
 
-<figure>
-  <img src="../images/hamilton.png" width="350px" alt="cycle hamiltonien">
-  <figcaption>illustration de la recherche d'un cycle hamiltonien dans un graphe.</figcaption></a>
-</figure>
-
+{{< img src="../images/hamilton.png" alt="cycle hamiltonien" caption="illustration de la recherche d'un cycle hamiltonien dans un graphe." >}}
 Mais une illustration plus concrête est celle par exemple du problème de la tournée du candidat pour les élections présidentielles aux état-unis:
 
-<figure>
-  <img src="../images/tournee.png" width="350px">
-  <figcaption>tournée du candidat à la presidentielle</figcaption></a>
-</figure>
-
+{{< img src="../images/tournee.png" caption="tournée du candidat à la presidentielle" >}}
 On voit que la recherche d'une solution en comparant tous les tours qu'il est mathématiquement possible de faire n'est pas raisonnable. La complexité est trop importante.
 
 ## algorithme de recherche locale k-opt
@@ -286,11 +258,7 @@ L'algorithme k-opt est un algorithme de recherche locale proposé par Georges A.
 
 *Plus généralement, lorsqu'on inverse l'ordre de parcours de deux villes, il faut aussi inverser l'ordre de parcours de toutes les villes entre ces deux villes.*
 
-<figure>
-    <img src="../images/2-opt.png" alt="algorithme 2-opt TSP">
-    <figcaption><a href="https://commons.wikimedia.org/w/index.php?curid=8044684">Par PierreSelim — Travail personnel, CC BY-SA 3.0</a></figcaption>
-</figure>
-
+{{< img src="../images/2-opt.png" alt="algorithme 2-opt TSP" link="https://commons.wikimedia.org/w/index.php?curid=8044684" caption="" >}}
 # Résumé
 <div class="essentiel">
  <div class="entete">
@@ -399,16 +367,8 @@ def renduMonnaieProgDyn(x,c) :
 ```
 
 
-<figure>
-  <img src="../images/rendumonnaie1.png">
-  <figcaption>etape i=1 j=0</figcaption></a>
-</figure>
-
-<figure>
-  <img src="../images/rendumonnaie2.png">
-  <figcaption>etapes suivantes</figcaption></a>
-</figure>
-
+{{< img src="../images/rendumonnaie1.png" caption="etape i=1 j=0" >}}
+{{< img src="../images/rendumonnaie2.png" caption="etapes suivantes" >}}
 ## Le problème du sac à dos
 *Résolution*
 

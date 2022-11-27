@@ -17,12 +17,7 @@ Vous rendrez également un **fichier readme.txt** qui servira de compte-rendu de
 # Projet 1: Boîte à secret
 On veut créer une application web qui permette d'enregistrer des secrets protégés par des mots de passe.
 
-<figure>
-  <div>
-  <img src="../images/projet1.jpeg">
-</div>
-</figure>
-
+{{< img src="../images/projet1.jpeg" >}}
 
 1. Créer un *template* (un patron) appelé *index.html* contenant un formulaire permettant de spécifier un mot de passe et un message secret à enregistrer.
 2. Créer une *vue* dans le fichier *main.py* qui servira la page *index.html* lorsque l'on se connecte au serveur (route `/`).
@@ -95,12 +90,7 @@ a.msg = message
 # Projet 2: Panier d'achat sans session
 L'application que vous allez developper servira à gérer un panier d'achats sur un site de e-commerce.
 
-<figure>
-  <div>
-  <img src="../images/projet2.png">
-</div>
-</figure>
-
+{{< img src="../images/projet2.png" >}}
 L'application utilise deux patrons (*templates*): `article.html` et `panier.html`.
 
 Le premier, *article.html*, affiche la liste des articles. Un champs de formulaire permet de choisir, ou non, un (ou plusieurs) exemplaire(s) de chaque article.
@@ -110,12 +100,7 @@ Le deuxieme, *panier.html*, affichera le contenu du panier.
 # Projet 3: Interroge un dictionnaire
 Le site [https://dictionaryapi.dev/](https://dictionaryapi.dev/) permet d'acceder à un dictionnaire en ligne. Les requetes sont de la forme `https://api.dictionaryapi.dev/api/v2/entries/en/hello` si l'on souhaite par exemple consulter la definition du mot *hello* en langue anglaise.
 
-<figure>
-  <div>
-  <img src="../images/projet3.png">
-</div>
-</figure>
-
+{{< img src="../images/projet3.png" >}}
 Pour utiliser l'API, il faut d'abord importer la librairie *[requests](https://fr.python-requests.org/en/latest/)*:
 
 ```python

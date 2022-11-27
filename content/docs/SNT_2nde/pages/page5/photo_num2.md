@@ -21,60 +21,7 @@ Les valeurs des couleurs des pixels sont alors mises les unes à la suite des au
 
 Grâce aux métadonnées du fichier, l'ordinateur va traiter cette suite de chiffres selon une matrice de valeurs:
 
-<figure>
-<img src="../images/matrice1.png"></figure>
-
-On distingue 3 cas : 
-
-## image en Noir et Blanc
-Il suffira d'un seul bit par pixel. Les données sont alors une succession de 1 et de 0.
-
-Par exemple, l'image : 
-<figure>
-<img src="../images/dessin1.png"></figure>
-
-est codée avec la serie de valeurs suivantes (100 valeurs) : 
-<p class="formule">0 0 1 0 0 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 1 0 1 1 1 1 1 1 0 1 1 1 1 0 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0 0 1 1 1 0 0 0 1 0 1 1 0 1 0 0 1 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</p>
-
-**Le poids de cette image**, c'est à dire la place que celle-ci prend sur le disque dur est égale à :
-
-$$nombre\quad pixels \times 1 bit = 100\times 1 = 100 bits$$
-*pour une image de 100 pixels*
- 
-## image en niveaux de gris
-La valeur numérique associée à chaque pixel sera choisie entre 0 et 255 (1 octet par pixel).
-Cette valeur correspondra au niveau de gris de chacun des pixels.
-On dit que la **profondeur de couleurs** (c'est à dire le nombre de couleurs par pixel), est de 1 octet.
-
-* 255 correspond en général à un pixel blanc (intensité lumineuse au maximum)
-* 0 correspond au pixel noir.
-* pour des valeurs proches de 0 : gris foncé
-* pour des valeurs proches de 255 : gris clair
-
-Un exemple de données relatives à une image 10*10 pixels, en 255 niveaux de gris : 
-<p class="formule">122 117 132 127 124 127 125 130 122 123 137 117 126 137 117 125 137 127 125 135 137 118 134 128 128 133 127 131 125 130 128 137 128 126 133 134 120 135 132 133 136 133 136 128 135 136 130 127 127 127 126 134 131 130 127 127 134 134 134 125 126 120 137 117 130 136 121 134 124 117 134 129 127 122 125 118 125 122 134 132 127 123 121 127 127 123 126 127 121 118 126 118 125 119 117 123 121 126 125 123</p>
-
-**Le poids de cette image** : pour 100 pixels
-$$nombre\quad pixels \times 1 octet = 100\times 1 = 100 octets $$
-
-## image en couleur
-Pour exprimer les couleurs, on utilise le principe de *synthèse additive*. Une couleur s'exprime par la synthèse de trois couleurs primaires, rouge, vert et bleu. Pour représenter une couleur parmi les 16 millions possibles, on règle indépendamment l'intensité lumineuse de chacun de ces trois canaux colorés, avec une valeur comprise entre 0 (minimum) et 255 (maximum).
-
-Chaque pixel sera codée cette fois-ci par 3 octets.
-La première valeur exprimée est celle du rouge, puis du vert, et enfin du bleu.
-
-Ainsi, le pixel rouge est représenté par 255 0 0. Le pixel vert : 0 255 0. Le pixel bleu : 0 0 255.
-Le blanc : 255 255 255, le noir 0 0 0.
-Le jaune : 255 255 0. Le jaune orangé : 238 160 73...etc
-
-Exemple d'une image 100*100 pixels, de profondeur de couleur d'environ 16 millions $$255\times 255 \times 255$$
-
-
-<figure>
-<img src="../images/zlatan.jpg" alt="image pixelisée couleur" width="60%">
-<figcaption>image pixelisée couleur</figcaption>
-</figure>
-
+{{< img src="../images/zlatan.jpg" alt="image pixelisée couleur" caption="image pixelisée couleur" >}}
 
 **Le poids de cette image** : pour 100 pixels sur 100 pixels (10 000 px)
 $$nombre\quad pixels \times 3 octets = 10000\times 3 = 30000 octets $$
@@ -83,12 +30,7 @@ $$\tfrac{30000}{1024} = 29ko$$
 
 # Caractéristiques des images
 ## Travail pratique
-Ouvrir le notebook en cliquant sur le lien : <a href="https://mybinder.org/v2/gh/tix06/notebook_snt_images.git/master" target="blank">
-```
-https://mybinder.org/v2/gh/tix06/notebook_snt_images.git/master
-```
-</a>
-
+Ouvrir le notebook en cliquant sur le lien :{{< a link="https://mybinder.org/v2/gh/tix06/notebook_snt_images.git/master" caption="```https://mybinder.org/v2/gh/tix06/notebook_snt_images.git/master```" >}}
 
 Lorsque l'environnement est créé : cliquer sur le notebook : 
 `image numeriques.ipynb`
@@ -105,12 +47,7 @@ $$L = R+V+B$$
 
 *Exemple :*
 
-<figure>
-<img src="../images/dessinGrisclair.png" alt="image de forte luminosité" width="150 px">
-<img src="../images/dessinGrisfonce.png" alt="image de faible luminosité" width="150 px">
-<figcaption>images de forte (à gauche) et faible (à droite) luminosité</figcaption>
-</figure>
-
+{{< img src="../images/dessinGrisclair.png" alt="image de forte luminosité" caption="images de forte (à gauche) et faible (à droite) luminosité" >}}
 
 ## Contraste
 Les deux images présentées dans le paragraphe précédent, sur la luminosité, sont trop peu **contrastées** pour en apprécier le contenu. 

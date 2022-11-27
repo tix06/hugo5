@@ -13,11 +13,7 @@ Au départ, aucune distance n'est connue. Les distances provisoires notées dist
 
 Le graphe suivant servira d'exemple : 
 
-<figure>
-  <img src="../images/fig30.png" alt="graphe exemple Dijkstra">
-  <figcaption>exemple de graphe pondéré</figcaption>
-</figure>
-
+{{< img src="../images/fig30.png" alt="graphe exemple Dijkstra" caption="exemple de graphe pondéré" >}}
 Les longueurs des arêtes sur le schéma ne sont pas proportionnelles à leur *poids*. 
 
 La méthode employée diffère légèrement de la précédente. Il faudra également utiliser une liste L de sommet à parcourir. Mais cette liste est constament *remise à jour* (**triée**) en fonction des longueurs des arêtes constatées, comme on le verra plus loin.
@@ -50,11 +46,7 @@ $$L = [D,E,F]$$
 * E est à une distance de 5
 * F est à une distance de 10
 
-<figure>
-  <img src="../images/fig31.png" alt="parcours initial Dijkstra">
-  <figcaption>L = [D,E,F]</figcaption>
-</figure>
-
+{{< img src="../images/fig31.png" alt="parcours initial Dijkstra" caption="L = [D,E,F]" >}}
 On tient à jour le tableau des distances au sommet de départ, `B`:
 
 | exploration depuis le sommet... | A | C | D | E | F | G | H |
@@ -65,11 +57,7 @@ Ensuite, on passe au sommet D, le plus proche de B (le plus à gauche dans la li
 
 On ajoute C, H et A à la liste.
 
-<figure>
-  <img src="../images/fig32.png" alt="parcours 2 Dijkstra">
-  <figcaption>L = [E,F,C,H,A]</figcaption>
-</figure>
-
+{{< img src="../images/fig32.png" alt="parcours 2 Dijkstra" caption="L = [E,F,C,H,A]" >}}
 On met à jour les distance des sommets voisins : 
 
 * C est à une distance 2+3 = 5 de B
@@ -96,11 +84,7 @@ Le sommet suivant à traiter est alors le C. Ses voisins sont E, et G. L'examen 
 
 On ajoute G à la liste et on trie:
 
-<figure>
-  <img src="../images/fig33.png" alt="parcours 3 Dijkstra">
-  <figcaption>L = [E,H,G,F,A]</figcaption>
-</figure>
-
+{{< img src="../images/fig33.png" alt="parcours 3 Dijkstra" caption="L = [E,H,G,F,A]" >}}
 On passe au sommet E : il n'y a pas de modification de la distance de B à C en passant par E. Comme C est le seul fils, on retire E de la liste L et on passe au sommet suivant, le H. Alors : 
 
 * A est à une distance 6+1 = 7 du noeud B. C'est le meilleur chemin.
@@ -110,18 +94,10 @@ On passe au sommet E : il n'y a pas de modification de la distance de B à C en 
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | H | 7 |  |  |  |  |  |   |
 
-<figure>
-  <img src="../images/fig34.png" alt="parcours 4 Dijkstra">
-  <figcaption>L = [A,G,F]</figcaption>
-</figure>
-
+{{< img src="../images/fig34.png" alt="parcours 4 Dijkstra" caption="L = [A,G,F]" >}}
 On finit rapidement l'exploration : 
 
-<figure>
-  <img src="../images/fig35.png" alt="parcours 5 Dijkstra">
-  <figcaption>Fin de l'exploration</figcaption>
-</figure>
-
+{{< img src="../images/fig35.png" alt="parcours 5 Dijkstra" caption="Fin de l'exploration" >}}
 On met à jour la distance au sommet F qui est plus courte en passant par A:
 
 | exploration depuis le sommet... | A | C | D | E | F | G | H |
@@ -140,16 +116,9 @@ Ainsi, le plus court chemin pour faire B => F est trouvé en remontant dans les 
 
 L'arbre représentant les plus courts chemins est alors le suivant : 
 
-<figure>
-  <img src="../images/fig36.png" alt="arbre Dijkstra">
-  <figcaption>arbre couvrant</figcaption>
-</figure>
-
+{{< img src="../images/fig36.png" alt="arbre Dijkstra" caption="arbre couvrant" >}}
 C'est un arbre couvrant le graphe.
 
 On peut le représenter avec une forme plus conventionnelle : 
 
-<figure>
-  <img src="../images/fig37.png" alt="arbre Dijkstra">
-  <figcaption>arbre de plus court chemin</figcaption>
-</figure>
+{{< img src="../images/fig37.png" alt="arbre Dijkstra" caption="arbre de plus court chemin" >}}

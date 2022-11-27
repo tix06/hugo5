@@ -36,18 +36,10 @@ Ainsi, en prenant une valeur de masse atomique égale à 1 pour l'hydrogène :
 # L'echelle macroscopique
 On a vu dans le cours précédent ([échanges thermique](/docs/PC_2nde/physique/pages/page2) : Les atomes et molécules ont un mouvement d'agitation). Leur énergie de mouvement est proportionnelle à leur température. 
 
-<figure>
-<img src="../images/cinetique.png" width = 40% alt="agitation">
-<figcaption>agitation à l'echelle atomique</figcaption>
-</figure>
-
+{{< img src="../images/cinetique.png" alt="agitation" caption="agitation à l'echelle atomique" >}}
 Mais la mesure de cette *température* est justement une grandeur **macroscopique**, que l'on ne peut relever que pour un système constitué d'un **grand nombre d'atomes**.
 
-<figure>
-<img src="../images/thermo.jpg" width = 40% alt="thermomètre">
-<figcaption>La température est une grandeur macroscopique</figcaption>
-</figure>
-
+{{< img src="../images/thermo.jpg" alt="thermomètre" caption="La température est une grandeur macroscopique" >}}
 Étudier le comportement de chaque atome, molécule ou ion dans un milieu est en pratique impossible. Il est donc nécessaire de généraliser l’étude d’un système à un grand nombre de particules. La grandeur permettant de faire ainsi le lien entre l’échelle microscopique (c’est-à-dire l’échelle qui considère les propriétés individuelles de chaque particule) et l’échelle macroscopique (c’est-à-dire l’échelle qui étudie globalement un grand nombre de particules) est justement la constante d’Avogadro.
 
 # Exercice resolu
@@ -191,11 +183,7 @@ Soient :
 * Avogadro : sa constante : entre mythe et réalité [http://culturesciences.chimie.ens.fr/](http://culturesciences.chimie.ens.fr/content/avogadro-sa-constante%C2%A0-entre-mythe-et-réalité#mole)
 
 # tableau périodique réduit des éléments
-<figure>
-<img src="../images/TPE.png" width = 80% alt="TPE">
-<figcaption>masses molaires atomiques</figcaption>
-</figure>
-
+{{< img src="../images/TPE.png" alt="TPE" caption="masses molaires atomiques" >}}
 [^1]: La mole est la quantité de matière d'un système contenant autant d'entités élémentaires qu'il y a d'atomes dans 0,012 kilogrammes de carbone 12
 [^2]: c'est l'énoncé de la loi d'Avogadro : Le nombre de molécules contenues dans un volume V et à la température T est indépendant du type de gaz. Il y a forcément le même « vide » entre les particules donc le même nombre d’espèces dans un même volume. 
 [^3]: Avogadro (1811) : *Essai d'une manière de déterminer les masses relatives des molécules élémentaires des corps et les proportions selon lesquelles elles entrent dans les combinaisons*

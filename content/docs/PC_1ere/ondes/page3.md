@@ -12,11 +12,7 @@ Pour une personne qui a une bonne acuité visuelle, ce pouvoir de separation est
 
 La *couleur* est une *perception sensorielle* due aux cellules sur la retine de l’œil.
 
-<figure>
-  <img src="../images/vision_couleur.png">
-  <figcaption>Sensibilité des cônes pour vision des couleurs</figcaption>
-</figure>
-
+{{< img src="../images/vision_couleur.png" caption="Sensibilité des cônes pour vision des couleurs" >}}
 Ces cellules s’appellent les « cônes », et sont de 3 types :
   
 * Les cellules sensibles au Rouge 
@@ -31,27 +27,12 @@ La synthèse des couleurs est due à la composition des messages nerveux reçus 
 
 * Lorsque 2 sources colorées, et proches l’une de l’autre ne peuvent pas être résolues (séparées) par l’œil, leur lumières se confondent. Il y a synthèse additive (trichromie)
 
-<figure>
-  <img src="../images/cirque.png">
-  <a href="https://www.panoramadelart.com/seurat-cirque">
-  <figcaption>Détail du Cirque de Georges Seurat – 1891
-impressionnisme et pointillisme </figcaption></a>
-</figure>
-
-<figure>
-  <img src="../images/seurat.png">
-  <a href="https://www.youtube.com/watch?v=XJ0nuBihQyw">
-  <figcaption>Youtube - Georges Seurat, du pointillisme à la télévision </figcaption></a>
-</figure>
-
+{{< img src="../images/cirque.png" link="https://www.panoramadelart.com/seurat-cirque" caption="Détail du Cirque de Georges Seurat – 1891impressionnisme et pointillisme " >}}
+{{< img src="../images/seurat.png" link="https://www.youtube.com/watch?v=XJ0nuBihQyw" caption="Youtube - Georges Seurat, du pointillisme à la télévision " >}}
 ## Trichromie additive
 L’expérience des cercles chromatiques en synthèse additive donne une bonne représentation visuelle de la trichromie..
  
-<figure>
-  <img src="../images/Sadditive.png">
-  <figcaption>Synthèse additive des couleurs primaires</figcaption>
-</figure>
-
+{{< img src="../images/Sadditive.png" caption="Synthèse additive des couleurs primaires" >}}
 ### A savoir
 * Les cercles sont constitués des 3 couleurs primaires : R, V, B
 * La synthèse additive des couleurs primaires B + R donne du magenta, qui est une couleur secondaire.
@@ -63,11 +44,7 @@ L’expérience des cercles chromatiques en synthèse additive donne une bonne r
 Un objet qui est *soumis au rayonnement* de la lumière va *soustraire* une partie de celle-ci. La couleur de l’objet est alors celle des rayonnements restants, qu’ils soient diffusés ou transmis.
 
 
-<figure>
-  <img src="../images/diff.png">
-  <figcaption>incidence, diffusion, absorption, transmission</figcaption>
-</figure>
-
+{{< img src="../images/diff.png" caption="incidence, diffusion, absorption, transmission" >}}
 
 Ce schéma illustre comment les ondes se partagent lorsqu’elles interagissent avec un objet.
 
@@ -75,13 +52,7 @@ Um faisceau d’ondes incidentes se partage entre les ondes *diffusées, transmi
 
 ## Experiences sur la synthèse soustractive
 
-<figure>
-  <a href="https://youtu.be/q61-Kar6J1A?t=109">
-  <img src="../images/video_soustractif.png">
-  <figcaption>Youtube 3min opt La synthèse soustractive</figcaption>
-</a>
-</figure>
-
+{{< img src="../images/video_soustractif.png" link="https://youtu.be/q61-Kar6J1A?t=109" caption="Youtube 3min opt La synthèse soustractive" >}}
 
 
 * Si l'on place sur le trajet d'une lumière blanche 2 filtres correspondant à une couleur dite secondaire (magenta + jaune), on obtient une couleur primaire (m + j = R)
@@ -99,11 +70,7 @@ Um faisceau d’ondes incidentes se partage entre les ondes *diffusées, transmi
 * En synthèse soustractif, la somme de couleurs complémentaires donne du Noir.
 
 
-<figure>
-  <img src="../images/Ssoustractive.png">
-  <figcaption>Synthèse soustractive des couleurs secondaires</figcaption>
-</figure>
- 
+{{< img src="../images/Ssoustractive.png" caption="Synthèse soustractive des couleurs secondaires" >}} 
 .
 
 
@@ -137,12 +104,7 @@ argumenter en utilisant la notion de synthèse additive et de pouvoir de résolu
 Ci-contre, voici trois poivrons de couleurs différentes : rouge, vert et jaune. Quelle(s) expérience(s) proposeriez-vous de mettre en place pour démonter que la couleur d’un objet dépend à la fois de l’objet lui-même et de la couleur de la lumière qui l’éclaire ?
 Prévoyez les résultats obtenus et les conclusions à en tirer.
 
-<figure>
-  <div>
-  <img src="../images/poivrons.png">
-</div>
-</figure>
-
+{{< img src="../images/poivrons.png" >}}
 
 *Exemple de résolution :*  expérience où l'on éclaire un objet JAUNE en lumière ROUGE:
 
@@ -153,8 +115,4 @@ Si on l’éclaire en rouge, la partie verte de son spectre et atténuée : il a
 
 Expliquer pourquoi il est difficile de repondre à la question: s'agit-il d'une tranche de citron ou bien d'orange dans le verre d'Aperol Spritz?
 
-<figure>
-  <a href="https://youtu.be/U9py7cJlrXg" target="blank">
-    <img src="../images/aperol.png">
-    <figcaption>lien vers la video</figcaption>
-</figure>
+{{< img src="../images/aperol.png" link="https://youtu.be/U9py7cJlrXg" caption="lien vers la video" >}}

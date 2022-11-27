@@ -6,11 +6,7 @@ title: reseaux
 # Faire communiquer des ordinateurs
 Une première idée naïve : tout usage du numérique met des machines en connexion, et qui échangent des données.
 
-<figure>
-<img src="../images/reseau1.png" width = 80% alt="communication avec 2 ordinateurs">
-<figcaption>communication avec 2 ordinateurs</figcaption>
-</figure>
-
+{{< img src="../images/reseau1.png" alt="communication avec 2 ordinateurs" caption="communication avec 2 ordinateurs" >}}
 Ce modèle *simpliste* de réseau va devenir irréalisable lorsque celui-ci contiendra de nombreux ordinateurs : 
 
 * grand nombre de connexions (et de liaisons physiques) au départ de chaque ordinateur
@@ -32,11 +28,7 @@ Les parcs informatiques des écoles, universités, et entreprises ont leur activ
 >  * d'ordinateurs serveurs qui stockent les bases de données
 >  * d'ordinateurs clients : des ordinateurs plus simples, et qui doivent avoir accès aux ressouces.
 
-<figure>
-<img src="../images/LAN.png" width = 80% alt="LAN">
-<figcaption>local area network (LAN)</figcaption>
-</figure>
-
+{{< img src="../images/LAN.png" alt="LAN" caption="local area network (LAN)" >}}
 ### des services diversifiés
 Un réseau d'ordinateurs peut aussi servir à fournir des services de communication : 
 
@@ -61,20 +53,12 @@ les switchs (commutateurs) peuvent lire les adresses matérielles des paquets en
 
 Les réseaux sont alors reliés entre eux par un *routeur*
 
-<figure>
-<img src="../images/reseau3.png" width = 80% alt="réseau d'ordinateurs">
-<figcaption>réseaux d'ordinateurs</figcaption>
-</figure>
-
+{{< img src="../images/reseau3.png" alt="réseau d" caption="réseaux d'ordinateurs" >}}
 *Sur cette image, plusieurs sous-reseaux sont reliés par des routeurs. Par contre, l'appareil qui interconnecte les machines dans un même sous-reseau est un switch*.
 
 le **routeur** est l'appareil disposant plusieurs adresses IP, une adresse par interface (voir plus loin). Il fait office de passerelle entre les périphériques sur un réseau local (LAN) et Internet. Dans un réseau de réseaux, cette machine doit posséder plusieurs interfaces (plusieurs cartes réseau), chacune reliée à un réseau. Son rôle va être d'aiguiller les paquets reçus entre les différents réseaux.
 
-<figure>
-  <img src="../images/routeur_interface.png">
-  <figcaption>Un routeur possède plusieurs interfaces</figcaption>
-</figure>
-
+{{< img src="../images/routeur_interface.png" caption="Un routeur possède plusieurs interfaces" >}}
 ## Différences entre reseau local et reseau internet
 ### Reseau local: Systeme *réparti*[^3]
 Un système réparti permet de partager des ressources, données et logiciels.
@@ -175,66 +159,7 @@ Leur nombre est d'environ 10^29 fois plus important que pour les adresses IPv4.
 * Lorsque l'on veut atteindre un ordinateur serveur depuis notre navigateur, possédant une adresse IP publique, on pourrait saisir dans la barre d'adresse. [^5]
 
 ```
-> http://<adresse IP du serveur>
-```
-
-* De même, lorsque l'on veut tester la connexion vers une machine distante du reseau, on saisit dans la console (lignes de commande):
-
-```
-> ping <adresse IP du destinataire>
-``` 
-
-Mais, grâce au format d'adresse symbolique, l'URL, la navigation est plus facile:
-
-**URL** Habituellement, un nom de domaine est associé à une **adresse IP** qui est celle du serveur et c’est le **serveur DNS** qui permet de connaitre l’adresse IP du serveur, quand on tape une adresse URL dans la barre d’adresse. Le DNS est donc un protocole indispensable au fonctionnement d'Internet. Non pas d'un point de vue technique, mais d'un point de vue de son utilisation (les adresses URL sont plus faciles à retenir pour un humain).
-
-L’URL (Uniform Ressource Locator ) est l’adresse unique qui permet d’accéder à une page web à partir de sa saisie dans la barre d’adresses du navigateur. L‘URL est communément appelée : l’adresse web d’une page.
-
-Prenons l’exemple :  `http://www.coursinfo.fr/` 
-<br>Cette URL correspond à l'adresse IP `213.186.33.16`. Lors du protocole DNS, le serveur DNS va permuter *www.coursinfo.fr* par *213.186.33.16* dans l'URL.
-
-Revenons sur l'URL symbolique. Celle-ci se compose de 4 blocs :
-
-* `.fr` désigne le domaine de 2er niveau, le top level auquel appartient le domaine
-* `coursinfo`  désigne le nom de domaine du site web – le site coursinfo.fr a souscrit à ce nom de domaine
-* `www`          le www est la norme pour les sites Web (World Wide Web), et c'est un sous domaine dans la hierarchie de l'URL
-* `http://      qui désigne le protocole à utiliser pour accèder au site web : ici c’est donc le protocole http
-* l'URL finit en principe par un point (la racine dans la hierarchie)
-
-Il s'agit donc d'un système hiérarchique qui permet de "découper" le réseau en un ensemble de domaines, eux-mêmes composés de sous-domaines, éventuellement composés de sous-sous-domaines, etc. Ce découpage va faciliter le classement, le tri et la recherche des URL parmi les serveurs DNS.
-
-La connaissance que vous avez maintenant de la construction de l'URL / nom de domaine devrait vous permettre d'eviter l'un des grand piege d'internet : le phishing...
-
-
-# Protocole http
-**http** est le protocole qui permet à une machine de demander et de recevoir une ressource d'un serveur. C'est un protocole qui fonctionne selon le modèle *client-serveur*.
-
-*http :* est l'abréviation de HyperText Transfer Protocol. (est-ce plus clair ?)
-
-En plus clair :
-
-* **P**rotocole : c'est une règle.
-* **T**ransfert : pour transférer (communiquer).
-* **H**yperTexte : c'est du texte qui contient des liens vers d'autres ressources (documents, images etc...)
-
-On a vu qu'un système informatique fonctionne sur le modèle *client-serveur*. Ceci est vrai, même si le serveur est extérieur au réseau du client (accessible par internet) : 
-
-<figure>
-<img src="../images/http.gif" width = 80% alt="protocole HTTP">
-<figcaption>modèle client-serveur</figcaption>
-</figure>
-
-*Questions :* 
-
-1. Comment le client s'adresse t-il au *bon* serveur ? 
-2. Comment celui-ci renvoie-t-il les données au *bon* client ? 
-3. Comment circulent les données entre le client et le serveur?
-
-*Réponses:* 
-
-* pour les questions 1 et 2, c'est avec la définition du *protocole IP* que nous allons y repondre.
-* pour la question 3: il s'agit d'une partie qui sera étudiée avec le cours sur <a href="/docs/SNT_2nde/pages/page3/modele_OSI/">le modele OSI et le protocole TCP</a>. Tout ce que nous aurons à retenir, c'est que le navigateur (un logiciel de la couche *Application*), confie cette tâche à d'autres logiciels, qui vont saucissonner les messages entre le client et le serveur, en *trames*, et ajouter des données qui vont permettre leur bonne circulation. (**protocole TCP**).
-
+{{< img src="../images/http.gif" alt="protocole HTTP" caption="modèle client-serveur" >}}* pour la question 3: il s'agit d'une partie qui sera étudiée avec le cours sur{{< a link="/docs/SNT_2nde/pages/page3/modele_OSI/" caption="le modele OSI et le protocole TCP" >}}
 
 **le protocole IP:** c'est lui qui permet de se connecter à un autre ordinateur. Il gère l'adressage.
 
@@ -243,9 +168,7 @@ On a vu qu'un système informatique fonctionne sur le modèle *client-serveur*. 
 
 # Liens
 
-* <a href = '../TP_reseau/index.html'>TP simulation d'un reseau</a>
-* <a href = '../modele_OSI/'>Le modèle OSI (concerne la Spé NSI)</a>
-
+*{{< a link="../TP_reseau/index.html" caption="TP simulation d'un reseau" >}}*{{< a link="../modele_OSI/" caption="Le modèle OSI (concerne la Spé NSI)" >}}
 [^1Cloud]: Le cloud : désigne le stockage et l’accès aux données par l’intermédiaire d’internet plutôt que via le disque dur d’un ordinateur. Mais aussi des services rendus par des logiciels hébergés *côté serveur*.
 
 [^2]: configurer son réseau local (Wikihow) : https://fr.wikihow.com/configurer-un-réseau-local

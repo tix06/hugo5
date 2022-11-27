@@ -180,31 +180,11 @@ Ces complexités sont classées par temps d'execution croissant de l'agorithme c
 
 On peut observer l'evolution des courbes t(n) en fonction de n (nombre de données). t(n) sera le *temps linéaire*:
 
-<figure>
-  <img src="../images/graphique1.png">
-  <figcaption>1 et log(n) : log(n) a une croissance faible</figcaption>
-</figure>
-
-<figure>
-  <img src="../images/graphique2.png">
-  <figcaption>n*log(n) et n ont une croissance comparable</figcaption>
-</figure>
-
-<figure>
-  <img src="../images/graphique3.png">
-  <figcaption>n<sup>2</sup> domine largement, et diverge</figcaption>
-</figure>
-
-<figure>
-  <img src="../images/graphique4.png">
-  <figcaption>n<sup>3</sup> domine largement et diverge</figcaption>
-</figure>
-
-<figure>
-  <img src="../images/graphique5.png">
-  <figcaption>2<sup>n</sup> domine largement et diverge encore plus</figcaption>
-</figure>
-
+{{< img src="../images/graphique1.png" caption="1 et log(n) : log(n) a une croissance faible" >}}
+{{< img src="../images/graphique2.png" caption="n*log(n) et n ont une croissance comparable" >}}
+{{< img src="../images/graphique3.png" caption="n" >}}
+{{< img src="../images/graphique4.png" caption="n" >}}
+{{< img src="../images/graphique5.png" caption="2" >}}
 Les problèmes à résoudre ont le plus souvent un nombre n de données bien supérieur à 15, comme présenté sur le dernier graphique. Les effets de convergence sont donc encore plus marqués.
 
 Approfondir la notion de complexité : voir annexe[^2]
@@ -222,11 +202,7 @@ Cet algorithme pourrait fonctionner même si les éléments (mots, cartes, valeu
 
 *Illustration avec un jeu de cartes non trié:* Cherchons la dame de coeur dans la main d'un joueur.
 
-<figure>
-  <img src="../images/cartes_coeur.png">
-  <figcaption>main du joueur</figcaption>
-</figure>
-
+{{< img src="../images/cartes_coeur.png" caption="main du joueur" >}}
 On suppose que la seule manière de parcourir le jeu du joueur est de retourner les cartes une à une. On s'arrête si on trouve la carte. Ou bien si on arrive à la fin sans avoir trouvé la bonne carte.
 
 La fonction suivante réalise une *recherche linéaire* de la valeur X sur une liste L de valeurs numériques. Pour la recherche d'une carte dans un jeu de cartes, ou d'un nom X dans un dictionnaire, il faudra adpater légèrement le script, mais la structure est la même.
@@ -349,11 +325,7 @@ A chaque itération, l'intervale est réduit de moitié. Le programme s'arrête 
 
 *Illustration avec un jeu de cartes trié : rechercher la Dame de coeur*
 
-<figure>
-  <img src="../images/cartes_rechercheD.png">
-  <figcaption>recherche dans un jeu de cartes triées</figcaption>
-</figure>
-
+{{< img src="../images/cartes_rechercheD.png" caption="recherche dans un jeu de cartes triées" >}}
 
 
 > Le script python complet 

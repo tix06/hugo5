@@ -36,13 +36,7 @@ Title: variables
 # Variables
 **1. Definition:** Une variable sert à stocker une valeur, qui peut être un nombre, une chaine de caractère, ou autres. Une variable est identifiée par un nom, et pointe vers un espace mémoire.
 
-<figure>
-<div>
-<img src="../images/var5.png" alt="affectation variable">
-<figcaption>VARIABLE = espace de STOCKAGE</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/var5.png" alt="affectation variable" caption="VARIABLE = espace de STOCKAGE" >}}
 **2. Quel nom peut-on choisir pour une variable?:** On peut choisir une lettre simple, minuscule ou majuscule, ou une chaine de caractères SANS espaces, et commençant obligatoirement par une LETTRE. Le nom peut contenir certains caractères spéciaux comme par exemple `-` ou `_`.
 
 Exemples de noms de variables:

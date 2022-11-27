@@ -269,8 +269,7 @@ A chaque itération, 8 est comparé avec l'élément de rang supérieur, et comm
 </div>
 
 # Relire le cours
-Lien vers la page : <a href="/docs/python/pages/fonctions/page1/">fonctions</a>
-
+Lien vers la page :{{< a link="/docs/python/pages/fonctions/page1/" caption="fonctions" >}}
 
 <script>
 let selector, cards, makeActive;

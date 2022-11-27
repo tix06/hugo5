@@ -2,11 +2,8 @@
 Title : structures lineaires
 ---
 
-*Prérequis*: Cours sur les <a href="/docs/NSI/structure/page1/">types abstraits</a>.
-
-* Ce cours sur les structures lineaires se prolonge à la <a href="../page21/">page 2 avec: Listes et Files</a>
-* Ce cours peut necessiter quelques connaissances en <a href="/docs/NSI/structure/page3/">Programmation orientée objets</a>.
-
+*Prérequis*: Cours sur les{{< a link="/docs/NSI/structure/page1/" caption="types abstraits" >}}
+* Ce cours sur les structures lineaires se prolonge à la{{< a link="../page21/" caption="page 2 avec: Listes et Files" >}}* Ce cours peut necessiter quelques connaissances en{{< a link="/docs/NSI/structure/page3/" caption="Programmation orientée objets" >}}
 # Structure linéaire : La Pile
 ## Les structures de données
 <p class="definition">Definition: Une <b>structure de données</b> est une manière de stocker, d’accéder à, et de manipuler des données (comme les types list ou dict de Python).</p>
@@ -19,22 +16,10 @@ Elle correspond exactement à l’image traditionnelle d’une pile de cartes ou
 
 L'illustration suivante montre que c'est la structure de données à adopter si l'on veut sortir d'un labyrinthe...
 
-<figure>
-  <div>
-  <img src="../images/turt.gif" alt="parcours utilisant une pile">
-  <figcaption>parcours pour sortir d'un labyrinthe</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/turt.gif" alt="parcours utilisant une pile" caption="parcours pour sortir d'un labyrinthe" >}}
 Le labyrinthe peut être modélisé par les coordonnées de ses noeuds, ainsi qu'une liste de directions possibles (ouvertures) pour chacun de ses noeuds : 
 
-<figure>
-  <div>
-  <img src="../images/laby.png" alt="labyritnhe modelisation">
-  <figcaption>modelisation d'un labyrinthe</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/laby.png" alt="labyritnhe modelisation" caption="modelisation d'un labyrinthe" >}}
 En observant l'animation de la tortue dans le labyrinthe, on peut supposer que la pile des sommets visités (les cases du labyrinthe) sont, dans l'ordre : 
 
 (4,0), (3,0), (3,1), (3,2), (4,2), (4,1) ...
@@ -47,22 +32,14 @@ Une fois revenu au sommet (3,0), on reprend l'exploration vers (2,0), (2,1),...
 
 Il s'agit d'une méthode d'exploration du labyrinthe de type *parcours en profondeur*. L'algorithme est expliqué en détail à la page : [SNT algorithmes graphe : parcours en profondeur](/docs/SNT_2nde/pages/pages_algo/graphes/page2/#parcours-d-un-arbre-en-profondeur-dfs)
 
-<figure>
-  <img src="../images/logott.png" alt="turtle">
-  <figcaption>fil d'ariane</figcaption>
-</figure>
-
+{{< img src="../images/logott.png" alt="turtle" caption="fil d'ariane" >}}
 La tortue suit son chemin jusqu'à arriver à une impasse (ou un sommet déjà visité). Alors, elle doit être capable de *revenir sur ses traces*. C'est pour cela qu'elle mémorise son parcours dans une *pile*, qu'elle pourra remonter (c'est à dire *dépiler*) au besoin. Cette pile de sommets visités correspond au fil d'Ariane, rendu célèbre par la mythologie (Thésée et le Minautore).
 
 Lorsqu'elle s'avance plus en profondeur dans le labyrinthe, vers des sommets encore non explorés, elle *empile*.
 
 Lorsqu'elle revient sur ses traces, elle *dépile* (elle retire des sommets de la pile). 
 
-<figure>
-  <img src="../images/emdepile.png" alt="empiler depiler">
-  <figcaption>pile de sommets du labyrinthe</figcaption>
-</figure>
-
+{{< img src="../images/empile.png" alt="empiler depiler" caption="pile de sommets du labyrinthe" >}}
 Lorsque la tortue arrive à la case (4,1), l'impasse, la pile a alors la configuration **pile a** (voir schéma plus bas).
 
 Elle revient jusqu'à (3,0). 
@@ -71,21 +48,14 @@ Après avoir *dépilé* (4,1),(4,2),(3,2),(3,1), la pile est alors la **pile b**
 
 Puis, lorsqu'elle est parvenu à une bifurcation vers une nouvelle direction, elle poursuit son exploration (et *empile* à nouveau) : **pile c**. Qu'il faudra encore prolonger pour atteindre la sortie (en bas à droite).
 
-<figure>
-  <img src="../images/pileL.png" alt="pile DFS">
-  <figcaption>pile du parcours en profondeur</figcaption>
-</figure>
-
+{{< img src="../images/pileL.png" alt="pile DFS" caption="pile du parcours en profondeur" >}}
 ## Deuxieme exemple : une expression correctement parenthésée
 
 **Principe :** On lit l'expression de gauche à droite et on empile au fur et à mesure les caractères ouvrants : [, {, (. On dépile lorsqu'on lit le caractère fermant correspondant. A la fin, la pile doit être vide.
 
 Dans l'exemple suivant, on voit que l'expression `[a+(b+c)]` est correctement parenthesée. Ce qui ne serait pas le cas pour `[a+(b+c])`.
 
-<figure>
-  <img src="../images/parentheses.png">
-</figure>
-
+{{< img src="../images/parentheses.png" >}}
 ## Définitions
 ### La pile: interface
 La pile est une structure de données appropriée quand :
@@ -258,18 +228,9 @@ On peut utiliser une pile pour réaliser la séquence de calculs.
 
 Exemple : `1 2 + 4 * 3 +`
 
-<figure>
-  <img src='../images/npi.png'>
-</figure>
+{{< img src="../images/npi.png" >}}
 
-
-<figure>
-  <a href="https://www.youtube.com/watch?v=Ak8I7o-rXKg" target='blank'>
-<img src='../images/video_NPI.png' alt='video notation polonaise inversée'>
-<figcaption>Arnaud Bodin : Calculatrice polonaise - les piles</figcaption>
-</a>
-</figure>
-
+{{< img src="../images/video_NPI.png" alt="video notation polonaise inversée" link="https://www.youtube.com/watch?v=Ak8I7o-rXKg" caption="Arnaud Bodin : Calculatrice polonaise - les piles" >}}
 La liste L contient les caractères de l'expression POSTFIXE à calculer.
 
 1. Compléter les fonctions `add`, `soust`, et `multip` qui doivent additionner, soustraire, et multiplier les arguments x et y.
@@ -285,8 +246,7 @@ La liste L contient les caractères de l'expression POSTFIXE à calculer.
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f9d305edd765&mode=code"></iframe>
 
 ## Exercice 5: Reduction d'une chaine de caractères
-Enoncé à la <a href="/docs/nsi/structure/page22/index.html">page suivante: allophysique.com/docs/nsi/structure/page22/index.html</a>
-
+Enoncé à la{{< a link="/docs/NSI/structure/page22/" caption="page suivante" >}}
 
 # Correction des exercices
 ## Exercice 1
@@ -413,5 +373,4 @@ evalNPI(L)
 
 
 # Autres structures linéaires
-Lien vers la page <a href="../page21/">Listes et Files</a>
-
+Lien vers la page{{< a link="../page21/" caption="Listes et Files" >}}

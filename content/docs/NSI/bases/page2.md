@@ -34,20 +34,12 @@ On distingue:
 
 
 
-<figure>
-  <img src="../images/a_implique_b.png" alt="association binaire fonctionnelle">
-  <figcaption>association binaire fonctionnelle</figcaption>
-</figure>
-
+{{< img src="../images/a_implique_b.png" alt="association binaire fonctionnelle" caption="association binaire fonctionnelle" >}}
 * **L'association non fonctionnelle**: Une occurence de A peut être liée à plus d'une occurence de B. 
 
 
 
-<figure>
-  <img src="../images/b_implique_a.png" alt="association binaire non fonctionnelle">
-  <figcaption>association binaire NON fonctionnelle</figcaption>
-</figure>
-
+{{< img src="../images/b_implique_a.png" alt="association binaire non fonctionnelle" caption="association binaire NON fonctionnelle" >}}
 ## du modèle entité-relation au modèle relationnel
 
 
@@ -109,8 +101,7 @@ La base de données doit se conformer aux **contraintes d'intégrité référent
 # TP
 ## SQLite Browser
 * Le logiciel SQLite Browser se trouve sur le lecteur L:. Faites une recherche pour trouver le fichier executable.
-* Notice: <a href="http://prof.math.free.fr/mgtmn/tp/bdd_pres_dbb_sqlite.pdf" target="blank">Consulter la notice</a>
-
+* Notice:{{< a link="http://prof.math.free.fr/mgtmn/tp/bdd_pres_dbb_sqlite.pdf" caption="Consulter la notice" >}}
 ## A faire vous même
 Utiliser la page des Oscars pour les meilleurs films d'animation: https://fr.wikipedia.org/wiki/Oscar_du_meilleur_film_d%27animation
 

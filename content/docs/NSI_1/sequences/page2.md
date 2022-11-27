@@ -7,10 +7,7 @@ Title: Tri et recherche
 ## Activité: recherche dichotomique
 Imaginez un jeu où votre adversaire doit deviner le nombre que vous avez en tête.
 
-<figure>
-<img src = "../images/recherche1.png">
-</figure>
-
+{{< img src="../images/recherche1.png" >}}
 Votre adversaire connait les bornes entre lesquelles vous avez choisi votre nombre.
 
 Pour l'aider, vous l'informez à chacun de ses essais si le nombre dans votre mémoire est *plus grand*, ou bien *plus petit*.
@@ -230,9 +227,7 @@ La complexité est *linéaire* dans le meilleur des cas (liste déjà triée), m
 Pour le tri par séléction, le nombre d'opérations est constant, et egal à $b.N^2$. La complexité est *quadratique*.
 
 # Documents
-* <a href="/pdf/NSI/Algorithmiques2-algos_tri-cours.pdf" target=_blank> fiche de TD à compléter</a>
-* <a href="/pdf/NSI/algorithmes2_recherche_tri.pdf" target=_blank>fiche d'exercices</a>
-
+*{{< a link="/pdf/NSI/Algorithmiques2-algos_tri-cours.pdf" caption=" fiche de TD à compléter" >}}*{{< a link="/pdf/NSI/algorithmes2_recherche_tri.pdf" caption="fiche d'exercices" >}}
 # Liens
 * cours et animations sur la [page du site Lyceum](https://www.lyceum.fr/1g/nsi/8-algorithmique/2-algorithmes-de-tri)
 

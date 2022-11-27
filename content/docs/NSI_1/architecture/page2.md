@@ -13,11 +13,7 @@ Dans l'architecture Von Neumann:
 
 # Description d'un ordinateur
 
-<figure><a href="https://www.youtube.com/watch?v=cQjllS45ReU" target=blank>
-  <img src="../images/architectureN1.png">
-  <figcaption>MooC Arduino #4 - Architecture de Von-Neumann, Harvard et Microcontrôleurs<br> - Youtube</figcaption></a>
-</figure>
-
+{{< img src="../images/architectureN1.png" link="https://www.youtube.com/watch?v=cQjllS45ReU" caption="MooC Arduino #4 - Architecture de Von-Neumann, Harvard et Microcontrôleurs" >}}
 ## Echelle macro: périphériques
 Un ordinateur comprend des périphériques d'entrée et sortie:
 
@@ -37,11 +33,7 @@ Les constituants de l'ordinateur sont composés de circuits intégrés. On trouv
 * les circuits séquentiels: l'état de sortie dépend des états d'entrée, mais aussi de l'état courant du circuit. Ces circuits peuvent ainsi stocker une valeur appelée état courant. Les registres sont typiquement des circuits intégrant des circuits séquantiels.
 
 ## Le processeur
-<figure>
-  <img src="../images/architectureN2.png">
-  <figcaption>Architecture de Von-Neumann - processeur</figcaption>
-</figure>
-
+{{< img src="../images/architectureN2.png" caption="Architecture de Von-Neumann - processeur" >}}
 L'architecture d'un **processeur** (CPU) comporte 2 parties: 
 
 * L'**UC**: C'est l’*unité de commande*, **UC**, qui traduit chacune des instructions successives du programme en opérations élémentaires. Ces instructions sont déposées dans un **registre** spécial.  L'**UC** interprète les instructions des programmes, et provoque leur exécution.
@@ -65,11 +57,7 @@ Un langage d'assemblage ou langage assembleur est, en programmation informatique
 
 Le premier programme assembleur a été écrit par Nathaniel Rochester pour l'IBM 701 (le premier ordinateur commercialisé par IBM) en 1954.
 
-<figure>
-  <img src="../images/archi6.png">
-<figcaption>exemple de programme assembleur pour  le microprocessor Motorola 6800 8-bit  - source : <a href="https://fr.wikipedia.org/wiki/Assembleur">wikipedia</a></figcaption>
-</figure>
-
+{{< img src="../images/archi6.png" link="https://fr.wikipedia.org/wiki/Assembleur" caption="exemple de programme assembleur pour  le microprocessor Motorola 6800 8-bit  - source : " >}}
 
 Pour échanger des données avec la mémoire, le processeur transfert l'état d'un registre dans une case mémoire (STA) ou l'état d'une case mémoire dans un registre (LDA). On rappelle que la mémoire contient à la fois les instructions et les données.
 
@@ -77,8 +65,7 @@ Les instructions de traitement que l'on verra ici concernent uniquement les regi
 
 L'un de ces registres est le *Program Counter*, PC. Celui-ci repère l'état courant dans le programme (la ligne du script à executer).
 
-Voici une liste non exaustive des instructions du <a href="" target=blank>simulateur ARM</a>:
-
+Voici une liste non exaustive des instructions du{{< a link="" caption="simulateur ARM" >}}
 * `MOV Rd, operand2`: copie la valeur de opérande2 dans Rd (le registre d)<br>
 exemple: `MOV R0, #23` place la valeur R3 dans le registre 0.
 * `ADD Rd, Rn, operand2`: additionne opérande et Rn et place le résultat dans Rd. Opérande peut être un nombre (précédé de dièse) ou la valeur d'un registre Rm
@@ -94,13 +81,8 @@ exemple: `MOV R0, #23` place la valeur R3 dans le registre 0.
 La liste complète des instructions se trouve à la page INFO accessible depuis le bouton [info](https://www.peterhigginson.co.uk/AQA/info.html) du simulateur.
 
 
-<figure>
-  <img src="../images/ARM.png">
-  <a href="https://www.youtube.com/watch?v=mhpwogkbtDU&t=17s" target=blank><figcaption>Explications (video) sur le simulateur ARM -<br> monlyceenumerique.fr</figcaption></a>
-</figure>
-
-Le <a href="https://www.peterhigginson.co.uk/AQA/" target=blank>simulateur ARM</a> contient quelques exemples dont:
-
+{{< img src="../images/ARM.png" link="https://www.youtube.com/watch?v=mhpwogkbtDU&t=17s" caption="Explications (video) sur le simulateur ARM -" >}}
+Le{{< a link="https://www.peterhigginson.co.uk/AQA/" caption="simulateur ARM" >}}
 * ADD: programme qui ajoute 2 nombres entrés par l'utilisateur
 
 ```
@@ -133,8 +115,7 @@ Dans ce 2<sup>e</sup> exemple, si R1 est supérieur à R0 (test à la ligne 3), 
 *Remarque:* la ligne 6 `B DONE` est necessaire pour eviter de repeter les instructions qui suivent le repère `HIGHER: OUT R1,4`. Il s'agit d'un branchement vers le repère `DONE`.
 
 # Travail pratique: Assembleur
-Utiliser le <a href="https://www.peterhigginson.co.uk/AQA/" target=blank>simulateur</a>  pour réaliser les exercices suivants.
-
+Utiliser le{{< a link="https://www.peterhigginson.co.uk/AQA/" caption="simulateur" >}}
 ## Opérations simples
 **1.** Il s'agit d'obtenir le nombre 84 à partir des nombres 50,25,8,7,3 et 1 avec les opérations : addition et soustraction uniquement.
 

@@ -4,12 +4,7 @@ title: modele OSI
 
 # Le modèle OSI
 
-<figure>
-  <a href="https://youtu.be/26jazyc7VNk" target="blank">
-  <img src="../images/video_OSI.png">
-  <figcaption>VIDEO: modèles OSI et TCP IP</figcaption></a>
-</figure>
-
+{{< img src="../images/video_OSI.png" link="https://youtu.be/26jazyc7VNk" caption="VIDEO: modèles OSI et TCP IP" >}}
 *source: [comprendre les modèles OSI et TCP/IP - chaine Cookie connecté](https://www.youtube.com/watch?v=26jazyc7VNk)*
 
 ## Les données qui circulent sur internet
@@ -33,18 +28,10 @@ Lors de l'émission d'une requête par une application, celle-ci doit traverser 
 Ce mécanisme s'appelle l'encapsulation : la trame de données numériques est constituée de plusieurs parties distinctes et mises dans un ordre particulier.
 Au final, ce qui va circuler sur le réseau est une trame de couche 2, qui contient le datagramme de couche 3 (qui lui-même contiendra l'élément de couche 4)
 
-<figure>
-<img src="../images/encapsulation.png" width = 80% alt="encapsulation">
-<figcaption>encapsulation</figcaption>
-</figure>
-
+{{< img src="../images/encapsulation.png" alt="encapsulation" caption="encapsulation" >}}
 Lors de la réception c'est exactement l'inverse qui se produit (désencapsulation).
 
-<figure>
-<img src="../images/desencapsulation.png" width = 80% alt="desencapsulation">
-<figcaption>desencapsulation</figcaption>
-</figure>
-
+{{< img src="../images/desencapsulation.png" alt="desencapsulation" caption="desencapsulation" >}}
 **Prenons un exemple simple,** vous demandez à votre navigateur de charger votre site préféré www.informatix.fr. Vous êtes reliés à un modem par un câble à paires torsadées. 
 
 ## *couche application*
@@ -64,11 +51,7 @@ Une autre valeur transportée est le **TTL** (time to live) qui evite que le paq
 > Sortie : [en-tête IP][en tête TCP][requête HTTP].
 
 
-<figure>
-  <img src="../images/dataTCPIP.png">
-  <figcaption>modèle simplifié du datagramme</figcaption>
-</figure>
-
+{{< img src="../images/dataTCPIP.png" caption="modèle simplifié du datagramme" >}}
 ## *couche physique*
 Le paquet IP arrive dans Ethernet qui ajoute un en-tête (qui contient entre autres votre **adresse MAC** - pour le **switch** -  et celle du modem) et un checksum (vérification d'erreurs CRC). La couche 2 peut alors former la trame et l'envoyer sur le réseau.
 
@@ -76,11 +59,7 @@ Il va ajouter l'adresse MAC de l'emetteur et du destinataire, qu'il aura résolu
 
 > Sortie : [en-tête Ethernet][en-tête IP][en tête TCP][requête HTTP][checksum Ethernet].
 
-<figure>
-<img src="../images/entete.png" width = 80% alt="en-tête">
-<figcaption>en-tête Ethernet</figcaption>
-</figure>
-
+{{< img src="../images/entete.png" alt="en-tête" caption="en-tête Ethernet" >}}
 
 
 Le document complet sur la structure d'une trame: [Lien](/pdf/NSI/reseau_trame.pdf)
@@ -90,9 +69,4 @@ Ce document est issu du cours en ligne du [lycee de Taaone](http://www.mysti2d.n
 
 # Liens
 
-* Feuille d'exercices sur les reseaux: <a href="/pdf/NSI/R3_exercices.pdf">Lien</a>
-* <a href = "../circulation/">Retour vers la page Reseaux</a>
-* <a href = "/docs/SNT_2nde/pages/page3/protocoles/"> Les protocoles TCP et IP</a>
-* <a href = '../securite/index.html'>Sécurité des communications (1ere NSI)</a>
-* <a href = '../TP_reseau/index.html'>TP simulation d'un reseau</a>
-
+* Feuille d'exercices sur les reseaux:{{< a link="/pdf/NSI/R3_exercices.pdf" caption="Lien" >}}*{{< a link="../circulation/" caption="Retour vers la page Reseaux" >}}*{{< a link="/docs/SNT_2nde/pages/page3/protocoles/" caption=" Les protocoles TCP et IP" >}}*{{< a link="../securite/index.html" caption="Sécurité des communications (1ere NSI)" >}}*{{< a link="../TP_reseau/index.html" caption="TP simulation d'un reseau" >}}

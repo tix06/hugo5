@@ -16,27 +16,15 @@ Des **exemples** d'arbres:
 * L'arbre représentant les sytèmes de dossiers sur ordinateur (dossiers et sous-dossiers puis fichiers).
 * *arbre lexicographique* : représente un ensemble de mots, comme un dictionnaire, où chaque noeud est une lettre. Les prefixes communs à plusieurs mots n'apparaissent qu'une seule fois dans l'arbre:
 
-<figure>
-  <img src="../images/arbre1.png" alt="arbre lexicographique">
-  <figcaption>Retrouver le mot <i>p i l e</i> et rajouter le mot <i>p o r t a i l</i></figcaption>
-</figure>
-
+{{< img src="../images/arbre1.png" alt="arbre lexicographique" caption="Retrouver le mot " >}}
 * arbre représentant des expressions arithmétiques
 
-<figure>
-  <img src="../images/arbre2.png" alt="expression arithmetique">
-  <figcaption>Retrouver l'expression arithmetique correspondante</figcaption>
-</figure>
-
+{{< img src="../images/arbre2.png" alt="expression arithmetique" caption="Retrouver l'expression arithmetique correspondante" >}}
 Les arbres sont très utilisés en informatique, d'abord parce que les données sont souvent hierarchisées, et se prêtent bien à cette structure. Mais aussi parce que l'accès à ces données est alors plus efficace: la recherche d'une valeur se fait en *O(log(n))* dans le cas moyen, où n est la *taille de l'arbre*.
 
 ## Caractéristiques d'un arbre
 
-<figure>
-  <img src="../images/arbre3.png" alt="caracteristiques d'un arbre">
-  <figcaption>exemple d'arbre binaire et vocabulaire</figcaption>
-</figure>
-
+{{< img src="../images/arbre3.png" alt="caracteristiques d" caption="exemple d'arbre binaire et vocabulaire" >}}
 * Dans un arbre, chaque **valeur** est stockée dans un nœud. On appelle parfois cette *valeur* une **clé**.
 * Les **nœuds** sont connectés par des **arêtes**, ou **branches** qui représentent une relation de type "**parent** (prédécesseur est le terme exact) – **fils**".
 * Chaque noeud ne possède qu'**un seul noeud parent** (sauf le noeud racine).
@@ -49,42 +37,22 @@ Les arbres sont très utilisés en informatique, d'abord parce que les données 
 * Le **degré** d'un arbre est egal au plus grand des degrés de ses noeuds.
 * Un arbre de **degré** égal à 1 est ... une **liste**.
 
-<figure>
-  <img src="../images/arbre7.png" alt="degré d'un arbre">
-<figcaption>Quel est le degré de cet arbre?</figcaption>
-</figure>
-
+{{< img src="../images/arbre7.png" alt="degré d" caption="Quel est le degré de cet arbre?" >}}
 * La **hauteur** d’un arbre est le plus grand des niveaux de tous les nœuds.
 * La **taille** d'un arbre est son nombre de noeuds.
 
-<figure>
-  <img src="../images/arbre5.png" alt="dimensions d'un arbre">
-<figcaption>dimensions d'un arbre</figcaption>
-</figure>
-
+{{< img src="../images/arbre5.png" alt="dimensions d" caption="dimensions d'un arbre" >}}
 ## Arbres binaires
 * **Arbre binaire:** arbre de degré égal à 2. Chaque noeud a au plus 2 fils: le **fils droit** et le **fils gauche**.
 * **Arbre binaire équilibré:** pour chaque noeud interne, les sous-arbres gauche et droit ont une même hauteur (ou qui diffère d'une unité).
 * **Arbre binaire complet:** tous les niveaux de l’arbre sont remplis.
 
-<figure>
-  <img src="../images/arbre4.png" alt="sous arbres droit et gauche">
-<figcaption>definition recursive des arbres binaires</figcaption>
-</figure>
-
-<figure>
-  <img src="../images/arbre_complet.png" alt="arbre complet">
-<figcaption>arbre complet</figcaption>
-</figure>
-
+{{< img src="../images/arbre4.png" alt="sous arbres droit et gauche" caption="definition recursive des arbres binaires" >}}
+{{< img src="../images/arbre_complet.png" alt="arbre complet" caption="arbre complet" >}}
 # Implémenter en python
 On utilisera l'arbre suivant pour l'implémentation en python:
 
-<figure>
-  <img src="../images/arbre6.png" alt="exemple d'arbre binaire">
-<figcaption>exemple d'arbre binaire de taille 9</figcaption>
-</figure>
-
+{{< img src="../images/arbre6.png" alt="exemple d" caption="exemple d'arbre binaire de taille 9" >}}
 Comme vu pour les graphes, on pourra utiliser des listes imbriquées, un dictionnaire, ou une classe (programmation objet).
 
 ## Liste
@@ -96,13 +64,7 @@ Pour les feuilles, la liste s'écrit: `[clé,None,None]`.
 
 Le petit arbre suivant peut être représenté par `['r'`,['a',None,None],['b',None,None]` 
 
-<figure>
-  <div>
-  <img src="../images/arbre8.png">
-<figcaption>petit arbre de taille 3</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/arbre8.png" caption="petit arbre de taille 3" >}}
 Avec l'arbre de taille 9 donné en exemple:
 
 `arbre9 = [8,[3,..,..],[10,..,..]`
@@ -189,18 +151,12 @@ ParcoursInfixe ( Arbre binaire T de racine r )
   ParcoursInfixe(Arbre de racine fils_droit[r])
 ```
 
-<figure>
-  <img src="../images/arbre10.png">
-<figcaption>exemples de parcours</figcaption>
-</figure>
-
+{{< img src="../images/arbre10.png" caption="exemples de parcours" >}}
 # Travaux pratiques
 * telecharger le fichier module [hierarchyP](/pdf/NSI/hierarchyP.py) (faire un clic droit et *enregistrer sous...*)
-* utiliser le lien suivant pour acceder au <a href= "https://colab.research.google.com/drive/1y3GF5m5UI2ilRLX7wYQsFNnw6gzdvvHV?usp=sharing" target="blank">notebook colab</a>
-
+* utiliser le lien suivant pour acceder au{{< a link="https://colab.research.google.com/drive/1y3GF5m5UI2ilRLX7wYQsFNnw6gzdvvHV?usp=sharing" caption="notebook colab" >}}
 * lien alternatif: télécharger une [version locale](/pdf/NSI/sd5_notebook.ipynb) du notebook (clic droit et *enregistrer sous...*)
-* correction du <a href= "https://colab.research.google.com/drive/18VUCVjH9u9V3jF7JU2VRy0XZWQwyXtqO?usp=sharing" target="blank">notebook colab en ligne</a>, ou version <a href="/pdf/NSI/sd5_notebook_correction.ipynb">locale</a>
-
+* correction du{{< a link="https://colab.research.google.com/drive/18VUCVjH9u9V3jF7JU2VRy0XZWQwyXtqO?usp=sharing" caption="notebook colab en ligne" >}}
 
 # Liens
 

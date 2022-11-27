@@ -30,11 +30,7 @@ Lorsque l'on execute ce programme, il devrait s'afficher à l'écran:
 
 
 
-<figure>
-  <img src="../images/spyder.png" alt="IDE Spyder">
-  <figcaption>IDE Spyder</figcaption>
-</figure>
-
+{{< img src="../images/spyder.png" alt="IDE Spyder" caption="IDE Spyder" >}}
 * Sauvegardez votre fichier **(2)**. Donnez lui le nom `hello.py`. Mettez le dans votre dossier *mes Documents* (Windows).
 * Executez le programme avec le bouton *Executer* **(3)**.
 * Vous devriez voir l'affichage dans la console **(4)**.
@@ -122,11 +118,7 @@ Les opérations vues plus haut ne peuvent pas mélanger les types:
 message = 'Bienvenue en ' + 2021
 ```
 
-<figure>
-  <img src="../images/spyder2.png" alt="TypeError en console spyder">
-  <figcaption>TypeError en console</figcaption>
-</figure>
-
+{{< img src="../images/spyder2.png" alt="TypeError en console spyder" caption="TypeError en console" >}}
 cela affiche un message d'erreur dans la console: Le *Traceback* vous permet de remonter jusqu'à la ligne où se situe l'erreur. Le type d'erreur, en rouge (ici, c'est un *TypeError*) ainsi qu'un message explicite, en blanc, vous permet de repérer et corriger l'erreur: L'interpréteur ne peut pas *ajouter* une chaine de caractère avec un entier.
 
 Une solution, pour afficher le bon message, serait de remplacer `2021` par `"2021"`, entre guillemets, afin de le convertir en une autre chaine de caractères.

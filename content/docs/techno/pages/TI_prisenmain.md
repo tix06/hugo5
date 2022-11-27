@@ -4,58 +4,26 @@ Title : Ti prise en main
 
 # Mettre à jour la calculatrice TI-83 Premium CE
 ## Installer TI CONNECT sur votre ordinateur
-Rendez vous sur la page de téléchargement : <a href="https://education.ti.com/fr/software/update/83-ce-software-update" target="blank">Lien
-
-<figure>
-  <div>
-    <img src="../images/maj_ti833.png"></a>
-    <figcaption>Choisissez le modèle de votre calculatrice</figcaption>
-  </div>
-</figure>
-
+{{< img src="../images/maj_ti833.png" caption="Choisissez le modèle de votre calculatrice" >}}
 Cliquez sur le bouton *Suivant*.
 
-<figure>
-  <div>
-    <img src="../images/maj_ti4.png">
-    <figcaption>Télécharger le logiciel Ti-Connect le plus récent</figcaption>
-  </div>
-</figure>
-
+{{< img src="../images/maj_ti4.png" caption="Télécharger le logiciel Ti-Connect le plus récent" >}}
 Installez alors le **logiciel TI CONNECT** sur votre ordinateur: Executer le fichier téléchargé et suivre les instructions d'installation.
 
 ## Mettre à jour la calculatrice
 
 Sur la même page du site Texas-Instruments:
 
-<figure>
-  <div>
-    <img src="../images/maj_ti5.png">
-    <figcaption>Télécharger le système d'exploitation le plus récent pour votre calculatrice</figcaption>
-  </div>
-</figure>
-
+{{< img src="../images/maj_ti5.png" caption="Télécharger le système d'exploitation le plus récent pour votre calculatrice" >}}
 * Lancer le logiciel TI CONNECT et brancher la calculatrice sur le port USB de votre ordinateur (cable USB vers usb B fourni).
 
-<figure>
-  <div>
-    <img src="../images/maj_ti7.png">
-    <figcaption>connexion calculatrice - ordinateur</figcaption>
-  </div>
-</figure>
-
+{{< img src="../images/maj_ti7.png" caption="connexion calculatrice - ordinateur" >}}
 * Cliquer sur 
 
 1. l'*explorateur de calculatrice* **(1)**,
 2. puis sur *ajouter les données de l'ordinateur vers la calculatrice connectée* **(2)**.
 
-<figure>
-
-<img src="../images/maj_ti8.png">
-<figcaption>explorateur de calculatrice sur TI CONNECT</figcaption>
-
-</figure>
-
+{{< img src="../images/maj_ti8.png" caption="explorateur de calculatrice sur TI CONNECT" >}}
 L'explorateur de votre ordinateur devrait vous permettre de retrouver le fichier `TI83CEBundle-5.5.2.44.b83` (la version peut différer au moment de votre téléchargement). 
 
 * Sélectionner le fichier.
@@ -64,12 +32,7 @@ L'explorateur de votre ordinateur devrait vous permettre de retrouver le fichier
 
 # Testez votre premier script Python
 
-<figure>
-  <a href = "https://youtu.be/db5mbuBATEs">
-  <img src="../images/ti_prise_main.png" alt="video Yvan Monka Ti83">
-  <figcaption>Video Yvan Monka: prise en main de la Ti83 Ed python</figcaption></a>
-</figure>
-
+{{< img src="../images/ti_prise_main.png" alt="video Yvan Monka Ti83" link="https://youtu.be/db5mbuBATEs" caption="Video Yvan Monka: prise en main de la Ti83 Ed python" >}}
 # Utiliser des extensions
 ## Modules python
 On pourra ajouter des modules pour:
@@ -78,23 +41,13 @@ On pourra ajouter des modules pour:
 - représenter des vecteurs
 - réaliser des diagrammes en barre ou en boîte à moustache.
 
-Lien vers la page de <a href="https://education.ti.com/fr/ressources-et-formations/modules-python" target=_blank>téléchargement des modules</a>
-
-<figure><div>
-  <img src="../images/modules.png">
-  <figcaption>Exemple de modules au moment de la redaction<br>de ce tuto</figcaption></div>
-</figure>
-
+Lien vers la page de{{< a link="https://education.ti.com/fr/ressources-et-formations/modules-python" caption="téléchargement des modules" >}}
+{{< img src="../images/modules.png" caption="Exemple de modules au moment de la redaction" >}}
 Pour le module CE_Turtle: la page de téléchargement propose plusieurs fichiers:
 
-* <a href="https://resources.t3france.fr/t3france?resource_id=3040&cHash=16324add172400f9f5dfc57d2aba1f24" target=_blank>TURTLE.8xv </a>
-* <a href="https://resources.t3france.fr/t3france?resource_id=3040&cHash=16324add172400f9f5dfc57d2aba1f24" target=_blank>GRID.8xv </a>
-* [guide de démarrage](https://resources.t3france.fr/fileadmin/user_upload/Turtle_Getting_Started_Guide_CE_Python_FR.pdf)
+*{{< a link="https://resources.t3france.fr/t3france?resource_id=3040&cHash=16324add172400f9f5dfc57d2aba1f24" caption="TURTLE.8xv " >}}*{{< a link="https://resources.t3france.fr/t3france?resource_id=3040&cHash=16324add172400f9f5dfc57d2aba1f24" caption="GRID.8xv " >}}* [guide de démarrage](https://resources.t3france.fr/fileadmin/user_upload/Turtle_Getting_Started_Guide_CE_Python_FR.pdf)
 
-<figure>
-  <img src="../images/downl_turtle.png">
-</figure>
-
+{{< img src="../images/downl_turtle.png" >}}
 Cliquer pour télécharger TURTLE.8XV et GRID.8XV.
 
 Ceux-ci devraient se trouver dans votre dossier *téléchargements*.
@@ -103,13 +56,7 @@ Ceux-ci devraient se trouver dans votre dossier *téléchargements*.
 
 * Lancer le logiciel TI CONNECT et brancher la calculatrice sur le port USB de votre ordinateur (cable USB vers usb B fourni).
 
-<figure>
-  <div>
-    <img src="../images/maj_ti7.png">
-    <figcaption>connexion calculatrice - ordinateur</figcaption>
-  </div>
-</figure>
-
+{{< img src="../images/maj_ti7.png" caption="connexion calculatrice - ordinateur" >}}
 Suivre la même procédure que pour la mise à jour de la calculatrice: Cliquer sur *ajouter les données de l'ordinateur à la calculatrice connectée*. Et ajouter le(les) module(s) à installer. Pour Turtle, ajouter TURTLE.8XV et GRID.8XV.
 
 

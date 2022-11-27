@@ -29,10 +29,7 @@ Définition : une action mécanique est modélisée par un vecteur force qui pos
 * dirigée vers le bas
 * d'intensité $P = m\times g$, g est l'intensité de pesanteur et vaut $9,81N.kg^{-1}$ sur Terre, à la latitude de Paris.
 
-<figure><div>
-  <img src="../images/newton9.png"></div>
-</figure>
-
+{{< img src="../images/newton9.png" >}}
 # Lois de Newton
 ## Troisieme loi de Newton: Principe des actions réciproques
 Lorsque 2 systèmes A et B sont en interaction, c’est qu’ils agissent l’un sur l’autre à l’aide d’une action mécanique. On représente cette situation à l’aide de forces opposées : 
@@ -41,11 +38,7 @@ Lorsque 2 systèmes A et B sont en interaction, c’est qu’ils agissent l’un
 * B est soumis à une force $\overrightarrow{F_B}$ de la part du système A
 * $\overrightarrow{F_A}$ et $\overrightarrow{F_B}$ sont des vecteurs de normes égales, mais ils sont opposés, tels que : $\overrightarrow{F_A} + \overrightarrow{F_B} = \overrightarrow{0}$
 
-<a href="https://youtu.be/V_qc5NsoOEg"><figure><div>
-  <img src="../images/illustrationN3.png"></div>
-  <figure>video</figure>
-</figure></a>
-
+{{< img src="../images/illustrationN3.png" link="https://youtu.be/V_qc5NsoOEg" >}}
 
 Les exemples suivants vont permettre d’illustrer ce principe d’actions réciproques.
 
@@ -83,11 +76,7 @@ $$\overrightarrow{F} = m\times \overrightarrow{a}$$
 ### Remarques
 **Effet de la masse** 
 
-<a href="https://youtu.be/iiyqngvgDig"><figure><div>
-  <img src="../images/illustrationN2.png"></div>
-  <figure>video</figure>
-</figure></a>
-
+{{< img src="../images/illustrationN2.png" link="https://youtu.be/iiyqngvgDig" >}}
 Lorsque Pedro souffle avec la même force sur chacune des 3 balles, de masses différentes, celle de plus petite masse a une accéleration plus importante.
 
 **Principe d'inertie** 
@@ -103,7 +92,4 @@ C'est aussi l'énoncé de la **première loi de Newton**.
 
 C'est le mouvement naturel de tout objet lancé avec une vitesse initiale. Alors, la force subie étant le Poids, de direction verticale, seule la vitesse verticale est modifiée. La vitesse horizontale reste constante, selon la première et seconde loi de Newton. Il en resulte cette trajectoire parabolique.
 
-<a href="https://youtu.be/wRSHzenjiNA"><figure><div>
-  <img src="../images/illustrationN1.png"></div>
-  <figure>video</figure>
-</figure></a>
+{{< img src="../images/illustrationN1.png" link="https://youtu.be/wRSHzenjiNA" >}}

@@ -86,14 +86,8 @@ Afficher ("La connexion SQLite est fermée")
 
 # Murder Party à SQL City
 
-<figure>
-  <a href="https://replit.com/@ToniScullion1/Silver-TASK-2-SQL-Murder-Mystery"target="blank">
-  <img src="../images/clue-illustration.png">
-  <figcaption>retrouvez le meurtrier grâce aux bases de données de la police</figcaption></a>
-</figure>
-
-* Aller à la ressource sur Repl.it : <a href="https://replit.com/@ToniScullion1/Silver-TASK-2-SQL-Murder-Mystery" target="blank">Lien ici</a>
-
+{{< img src="../images/clue-illustration.png" link="https://replit.com/@ToniScullion1/Silver-TASK-2-SQL-Murder-Mystery" caption="retrouvez le meurtrier grâce aux bases de données de la police" >}}
+* Aller à la ressource sur Repl.it :{{< a link="https://replit.com/@ToniScullion1/Silver-TASK-2-SQL-Murder-Mystery" caption="Lien ici" >}}
 * Mettre le bouton sur `Code` à gauche
 * Lire les consignes avec le fichier *activity.md*
 * Cliquer sur le bouton `Fork` à droite
@@ -104,22 +98,3 @@ Afficher ("La connexion SQLite est fermée")
 
 ```SQL
 SELECT * from crime_scene_report 
-where date = <a completer> and city = <a completer>;
-```
-
-Cette requête devrait normalement retourner:
-
-| date | type  | description | city |
-| --- | --- |--- | --- |
-|20180215  | murder  | REDACTED | REDACTED | REDACTED  | SQL City|
-|20180215  | murder  | Someone killed the guard! He took an arrow to the knee! |SQL City|
-|20180115  | murder  | Security footage shows that there were 2 witnesses. The first witness lives at the **last house** on "Northwestern Dr". The second witness, named Annabel, lives somewhere on "Franklin Ave". | SQL City|
-
-<br>
-
-> à vous de jouer: explorez les bases de données pour retrouver le meurtrier...
-
-# Ressources
-
-* Cours complet en SQL, avec référencement des différentes instructions: [https://sql.sh/cours](https://sql.sh/cours)
-* Correction partielle de l'activité Murder Party à SQL City: [mystery.knightlab.com](https://mystery.knightlab.com/walkthrough.html)

@@ -5,10 +5,7 @@ Title: data analyse
 # Intelligence artificielle?
 Les machines sont-elles intelligentes? On peut en douter, au vu du comportement de certains logiciels. Imaginez vous un humain vous repondre qu'il est impossible de choisir une heure de stationnement pour le parking désiré, sans vous dire qu'il est toutefois possible de stationner moins de temps...?
 
-<figure>
-  <img src = "../images/IA1.png">
-</figure>
-
+{{< img src="../images/IA1.png" >}}
 Et pourtant les logiciels sont souvent comme çà. Leur **ergonomie** est souvent mal pensée, ce qui peut rendre leur utilisation *énervante*.
 
 > L'**intelligence artificielle** décrit l'ensemble des techniques permettant à des machines de *simuler l'intelligence humaine*. 
@@ -37,22 +34,14 @@ Une étude statistique permet de repérer si certains paramètres sont liés ent
 ## Régression linéaire
 La régression linéaire est un algorithme qui va trouver une droite qui se rapproche le plus possible d’un ensemble de points. Les points représentent les données d’entraînement (Training Set).
 
-<figure>
-  <img src="../images/courbe_bruit.png">
-  <figcaption>Nuage de points avec Regression Lineaire</figcaption>
-</figure>
-
+{{< img src="../images/courbe_bruit.png" caption="Nuage de points avec Regression Lineaire" >}}
 A partir de données d'entrée, les points oranges (X1,Y1), on cherche s'il existe un modèle mathématique. Par exemple:
 
 $$Y1 = a \times X1 + b$$
 
 Les écarts entre les points et la courbe du modèle devront être les plus petits possibles. 
 
-<figure>
-  <img src="../images/nuage_points_bruit.png">
-  <figcaption>Regression linéaire impossible</figcaption>
-</figure>
-
+{{< img src="../images/nuage_points_bruit.png" caption="Regression linéaire impossible" >}}
 ## Modèle prédictif
 Un modèle prédictif ne peut être établi qu’à partir d’une étude prealable de données. 
 
@@ -68,8 +57,7 @@ Cet exemple est issu du [Blog mrmint.fr](https://mrmint.fr/regression-lineaire-p
 Ce problème est de type apprentissage supervisé modélisable par un algorithme de régression linéaire. Il est de type supervisé car pour chaque ville ayant un certain nombre de population (variable prédictive X), on a le gain effectué dans cette dernière (la variable qu’on cherche à prédire : Y).
 
 ## Notebook
-Vous utiliserez le notebook en ligne sur <a href="https://tix06.github.io/jupyterlite_NSI/lab/index.html" target="_blank">Jupyterlite</a>: Dossier `TP4/linear_regression.ipynb`
-
+Vous utiliserez le notebook en ligne sur{{< a link="https://tix06.github.io/jupyterlite_NSI/lab/index.html" caption="Jupyterlite" >}}
 
 # Algorithme des K proches voisins Knn
 ## Principe
@@ -90,34 +78,18 @@ Les données sont issues de la page : [nba.com](https://fr.global.nba.com/player
 
 La ligue de basket americaine contient environ 400 joueurs professionnels. La plupart de nationalité américaine. On dispose d'un extrait de ce fichier (voir dans le dossier `datas`), constitué de moins de 100 joueurs, classés par ordre alphabetique.
 
-<figure>
-  <img src="../images/nba1.png">
-  <figcaption>extrait du tableau des joueurs NBA en 2020</figcaption>
-</figure>
-
+{{< img src="../images/nba1.png" caption="extrait du tableau des joueurs NBA en 2020" >}}
 ### Apprentissage supervisé
 Chaque joueur de basket occupe un poste particulier sur le terrain:
 
-<figure>
-  <img src="../images/nba2.png">
-  <figcaption>poste occupé sur le terrain</figcaption>
-</figure>
-
+{{< img src="../images/nba2.png" caption="poste occupé sur le terrain" >}}
 Une étude des caractéristiques physique des joueurs montre une correlation entre le poids, la taille, et le poste du joueur. Dans un diagramme taille-poids, les joueurs se repartissent en îlots selon leur poste:
 
-<figure>
-  <img src="../images/centre.png">
-  <figcaption>les joueurs <b>Centre</b> se repartissent en haut à droite</figcaption>
-</figure>
-
+{{< img src="../images/centre.png" caption="les joueurs " >}}
 ### Prédiction
 On peut alors prévoir le poste d'un nouveau joueur. Pour cela on observe ses k plus proches voisins, et on en déduit quel poste corresspnd à son physique, à partir de la classe majoritairement représentée.
 
-<figure>
-  <img src="../images/joueur9.png">
-  <figcaption>Le joueur semble être à la limite des classes <b>F</b> et <b>G</b></figcaption>
-</figure>
-
+{{< img src="../images/joueur9.png" caption="Le joueur semble être à la limite des classes " >}}
 *Méthode:*
 
 * on ajoute une nouvelle colonne calculée: Pour le joueur inconnu, on calcule la **distance** avec chaque élément *classé* dans le tableau .
@@ -126,8 +98,7 @@ On peut alors prévoir le poste d'un nouveau joueur. Pour cela on observe ses k 
 
 ### Notebook
   <ul>
-    <li>IA2-notebook sur <b>l'algo Knn</b> et le <i>basket US</i> en ligne sur Jupyterlite: <a href="https://tix06.github.io/jupyterlite_NSI/lab/index.html" target="_blank">Lien vers Jupyterlite</a>: Choisir le fichier <i>TP4/AlgoKnn.ipynb</i> sur <i>Jupyterlite</i> et completer la fiche reponse <a href="/pdf/NSI/IA2_algo_KNN_TP.pdf" download="IA2_algo_KNN_TP.pdf">IA2_algo_KNN_TP.pdf</a> pour les questions</li> 
-  </ul>
+    <li>IA2-notebook sur <b>l'algo Knn</b> et le <i>basket US</i> en ligne sur Jupyterlite:{{< a link="https://tix06.github.io/jupyterlite_NSI/lab/index.html" caption="IA2-notebook sur " >}}  </ul>
 
 # Liens
 * [Blog mrmint.fr](https://mrmint.fr/regression-lineaire-python-pratique)

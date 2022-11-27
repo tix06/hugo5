@@ -13,28 +13,16 @@ Le programme calcule et affiche les positions du point à partir de :
 
 Le programme affiche les également les vecteurs *vitesse*. Lors de l'animation, seul le vecteur vitesse de la dernière position est affiché.
 
-<figure>
-<img src="../images/exemple.png" width = 60% alt="exemple">
-<figcaption>exemple d'une trajectoire de type parabolique</figcaption>
-</figure>
-
+{{< img src="../images/exemple.png" alt="exemple" caption="exemple d'une trajectoire de type parabolique" >}}
 
 Pour utiliser le programme, vous devrez **executer** une à une toutes les cellules du notebook : 
 
-<figure>
-<img src="../images/notebook.png" width = 60% alt="notebook">
-<figcaption>cliquer sur le bouton EXECUTER</figcaption>
-</figure>
-
+{{< img src="../images/notebook.png" alt="notebook" caption="cliquer sur le bouton EXECUTER" >}}
 Lorsque la fenêtre graphique apparait, vous pouvez alors utiliser les boutons de contrôle pour afficher la trajectoire, ainsi que les vecteurs *vitesse*.
 
 Chacune des 4 trajectoires que vous allez simuler, sont celles d'une balle lancée dans des conditions expérimentales différentes : 
 
-<figure>
-<img src="../images/experiences.png" width = 100% alt="experiences">
-<figcaption>les quatre experiences</figcaption>
-</figure>
-
+{{< img src="../images/experiences.png" alt="experiences" caption="les quatre experiences" >}}
 
 * lancer d'une balle sur un support horizontal. Une fois lancée, la balle est supposée être *isolée* (voir la définition dans le cours)
 * une balle est lâchée sans vitesse initiale, dans le champs de pesanteur. Cette balle est soumise à une force appelée *Poids*
@@ -56,7 +44,5 @@ Sur le document joint (en bas de document), vous allez :
 ### Lien vers le notebook
 Cliquer sur le lien et patienter le temps que le serveur iPython se mette en route...
 
-<a href="https://mybinder.org/v2/gh/tix06/notebooks_physique_mouv2nde.git/master" target="blank">cliquer ici pour ouvrir le notebook</a>
 
 ### Document joint à completer
-<a href ="../images/document_completer.pdf" target="blank"> Lien vers le document</a>

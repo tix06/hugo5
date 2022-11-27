@@ -34,11 +34,7 @@ Python a un typage dynamique: lorsque l'on définit et que l'on affecte une vari
 int
 ```
 
-<figure>
-  <img src="../images/var5.png">
-  <figcaption>x = 5</figcaption>
-</figure>
-
+{{< img src="../images/var5.png" caption="x = 5" >}}
 **Def:** Une variable est un espace mémoire auquel on donne un nom. Une variable a un type, et stocke une valeur.
 
 Comme les types de base sont *non mutables*, la variable est écrasée et reconstruite à chaque nouvelle affectation. Ce qui peu donner l'impression que le type peut changer.
@@ -141,35 +137,19 @@ while i < 10:
 Le module turtle de python permet de tracer (lentement) des figures géométriques. Voici quelques exemple de scripts et leur résultat:
 
 
-<figure>
-  <img src="../images/turtle_0.png">
-  <figcaption>tortue immobile, au depart</figcaption>
-</figure>
-
+{{< img src="../images/turtle_0.png" caption="tortue immobile, au depart" >}}
 <br>
 
-<figure>
-  <img src="../images/turtle_1.png">
-  <figcaption>avance et tourne de 90° à gauche</figcaption>
-</figure>
-
+{{< img src="../images/turtle_1.png" caption="avance et tourne de 90° à gauche" >}}
 <br>
 
-<figure>
-  <img src="../images/turtle_2.png">
-  <figcaption>avance, tourne de 90°, avance, tourne de 90°</figcaption>
-</figure>
-
+{{< img src="../images/turtle_2.png" caption="avance, tourne de 90°, avance, tourne de 90°" >}}
 <br>
 
 > **a.** Trouver la correspondance entre le script et le parcours
 
 
-<figure>
-  <img src="../images/turtle_script.png">
-  <figcaption>correspondance</figcaption>
-</figure>
-
+{{< img src="../images/turtle_script.png" caption="correspondance" >}}
 
 > **b.** Completer le tableau de suivi du programme pour chaque script:
 
@@ -218,11 +198,7 @@ carre(5)
 ``` 
 
 
-<figure>
-  <img src="../images/def_carre.png">
-  <figcaption>illustration du passage d'argument lors de l'appel de la fonction</figcaption>
-</figure>
-
+{{< img src="../images/def_carre.png" caption="illustration du passage d'argument lors de l'appel de la fonction" >}}
 ## Portée des variables
 Lorsqu’une fonction utilise des variables, celles-ci sont normalement propres à la fonction et ne sont pas accessibles à l’extérieur de celle-ci. On dit qu’il s’agit de variables locales, par opposition aux variables globales, du programme principal.
 
@@ -360,12 +336,7 @@ Dans le Bourgeois Gentilhomme, le Maitre de Philosophie dit:
 
 *On les peut mettre premièrement comme vous avez dit : « Belle Marquise, vos beaux yeux me font mourir d’amour ». Ou bien : « D’amour mourir me font, belle Marquise, vos beaux yeux ». Ou bien : « Vos yeux beaux d’amour me font, belle Marquise, mourir ». Ou bien : « Mourir vos beaux yeux, belle Marquise, d’amour me font ». Ou bien : « Me font vos yeux beaux mourir, belle Marquise, d’amour ».*
 
-<figure>
-  <a href="https://youtu.be/LblUXhJUmJA?t=408" target="blank">
-  <img src="../images/bourgeois.png">
-  <figcaption>La leçon d'orthographe. Bourgeois Gentilhomme. Molière (acte 2 scene 4)</figcaption></a>
-</figure>
-
+{{< img src="../images/bourgeois.png" link="https://youtu.be/LblUXhJUmJA?t=408" caption="La leçon d'orthographe. Bourgeois Gentilhomme. Molière (acte 2 scene 4)" >}}
 > Définir plusieurs variables contenant les morceaux de la phrase "Belle Marquise, ...", de telle sorte que l'on puisse afficher avec la fonction `print` et l'opérateur `+` des chaines de caractères, les différentes variantes énoncées. (On ignore la distinction entre majuscule et minuscule).
 
 ### Instruction conditionnelle

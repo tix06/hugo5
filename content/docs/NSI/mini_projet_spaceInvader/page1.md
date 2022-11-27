@@ -18,10 +18,7 @@ D'abord, créer un dossier contenant :
 
 * spaceInvader.html
 * jeu.js
-* <a href="../images/ship.png">ship.png (sur fond transparent)</a>
-* <a href="../images/ufo.png">ufo.png</a>
-* <a href="../images/missile.png">missile.png</a>
-
+*{{< a link="../images/ship.png" caption="ship.png (sur fond transparent)" >}}*{{< a link="../images/ufo.png" caption="ufo.png" >}}*{{< a link="../images/missile.png" caption="missile.png" >}}
 
 
 Pour les images, on pourra faire un clic droit sur les liens proposés et choisir de télécharger le fichier.
@@ -60,11 +57,7 @@ Le code html minimal qui permet de positionner un vaisseau aux coordonnées : 20
 </html>
 ```
 
-<figure>
-<img src="../images/position.png" width = 80% alt="vaisseau">
-<figcaption>position du vaisseau à 200px à gauche et 100 px en bas</figcaption>
-</figure>
-
+{{< img src="../images/position.png" alt="vaisseau" caption="position du vaisseau à 200px à gauche et 100 px en bas" >}}
 Le problème est que l'on ne veut pas avoir à taper tout ces volumes de code pour positionner un vaisseau un missile ou un alien : on va alors utiliser une librairie que l'on va nous même écrire.
 
 On pourra effacer toutes les lignes écrites entre les balises `<body>` et `</body>`
@@ -130,11 +123,7 @@ Ce qui devrait *construire* un objet *vaisseau*, et ajouter un nouvel élément 
 
 Une fois cette nouvelle méthode attachée au constructeur *Sprite*, on peut le représenter avec le schéma suivant : 
 
-<figure>
-<img src="../images/objet.png" width = 80% alt="classe sprite">
-<figcaption>classe Sprite</figcaption>
-</figure>
-
+{{< img src="../images/objet.png" alt="classe sprite" caption="classe Sprite" >}}
 L'objet que l'on définira à partir de cette classe héritera des propriétés et des méthodes, que l'on appelera avec l'instruction `objet.propriété` ou `objet.methode` 
 
 > Pour ajouter les méthodes : Dans le fichier `jeu.js`, enlever l'accolade finale du constructeur et mettre :
@@ -255,11 +244,7 @@ ajouter :
 
 > `missile.display="none";` 
 
-<figure>
-<img src="../images/positionTous.png" width = 80% alt="éléments">
-<figcaption>à gauche : missile visible, à droite : missile caché</figcaption>
-</figure>
-
+{{< img src="../images/positionTous.png" alt="éléments" caption="à gauche : missile visible, à droite : missile caché" >}}
 # Gestionnaires d'évènements
 On ajoute un gestionnaire d'evenements lié aux touches appuyées avec : 
 
@@ -340,11 +325,7 @@ Le timer associé à l'objet, appelle à intervalle de temps régulier cette fon
 
 
 
-<figure>
-<img src="../images/pile.png" width = 80% alt="pile d'appel des fonctions">
-<figcaption>fonction callback et pile d'appel des fonctions</figcaption>
-</figure>
-
+{{< img src="../images/pile.png" alt="pile d" caption="fonction callback et pile d'appel des fonctions" >}}
 
 
 

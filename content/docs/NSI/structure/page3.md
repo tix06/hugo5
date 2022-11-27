@@ -9,13 +9,7 @@ En programmation orientée objet, on cherche à organiser les données avec la v
 
 Un *objet physique*, comme par exemple, une planche de skateboard, possède des caractéristiques propres. 
 
-<figure>
-  <a href="https://urbanart-paris.fr/event/chalk-custom-board-lart-dhabiller-skate/">
-    <img src="https://urbanart-paris.fr/wp-content/uploads/2016/04/12963624_1877786249114590_5321151849406456199_n.jpg" alt="chalk custom board">
-    <figcaption>image: CHALK CUSTOM BOARD : L’ART D’HABILLER UN SKATE (urban art)</figcaption>
-  </a>
-</figure>
-
+{{< img src="https://urbanart-paris.fr/wp-content/uploads/2016/04/12963624_1877786249114590_5321151849406456199_n.jpg" alt="chalk custom board" link="https://urbanart-paris.fr/event/chalk-custom-board-lart-dhabiller-skate/" caption="image: CHALK CUSTOM BOARD : L’ART D’HABILLER UN SKATE (urban art)" >}}
 Une planche, malgré la diversité, est toujours constituée: 
 
 * d'un deck (court, long)
@@ -93,13 +87,7 @@ On instancie alors un premier skateboard de la manière suivante:
 >>> mon_premier_skate = Skateboard()
 ```
 
-<figure>
-  <div>
-  <img src="../images/sk8_classic.jpg" alt="skateboard classic">
-  <figcaption>un premier skateboard bien classique</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/sk8_classic.jpg" alt="skateboard classic" caption="un premier skateboard bien classique" >}}
 Et on envoie le message suivant:
 
 ```python
@@ -109,13 +97,7 @@ True
 
 Instanciation d'un second skateboard:
 
-<figure>
-  <div>
-  <img src="../images/sk8_sector9.jpg" alt="skateboard cruiser">
-  <figcaption>un skateboard cruiser</figcaption>
-</div>
-</figure>
-
+{{< img src="../images/sk8_sector9.jpg" alt="skateboard cruiser" caption="un skateboard cruiser" >}}
 ```python
 >>> mon_sector_9 = Skateboard('long','plat','haut','molles','Marley')
 >>> mon_sector_9.skateboard_pour_parc()
@@ -244,13 +226,7 @@ On peut alors prendre connaissance du docstring en faisant:
 <h2> Classe et Objet</h2>
 Un <b>objet</b> est construit à partir d'une <b>classe</b>, et comporte des attributs (les variables) et des méthodes (fonctions).
 
-<figure>
-  <div>
-    <img src="../images/UML.png">
-    <figcaption>Une représentation d'une classe</figcaption>
-  </div>
-</figure>
-
+{{< img src="../images/UML.png" caption="Une représentation d'une classe" >}}
 <ul>
 <li>Les <b>attributs</b> renvoient aux variables contenues dans l’objet : ce sont les données. Ces données peuvent varier au cours du programme. Il s'agit donc de l'état de cet objet à un instant t.</li>
 <li>Les <b>méthodes</b> sont les éléments qui permettent d’interagir avec les attributs. Les méthodes sont des fonctions internes à une classe, qui doivent répondre à des <b>messages</b>.</li>

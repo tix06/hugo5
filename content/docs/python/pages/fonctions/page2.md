@@ -74,11 +74,7 @@ carre(5)
 
 *Lors de la déclaration de la fonction, le seul paramètre attendu s'appelera `x`* *Puis lors de l'appel de la fonction `carre`, l'argument choisi est 5. A l'interieur de la fonction, `x` vaut 5.*
 
-<figure>
-  <img src="../images/def_carre.png">
-  <figcaption>illustration du passage d'argument lors de l'appel de la fonction</figcaption>
-</figure>
-
+{{< img src="../images/def_carre.png" caption="illustration du passage d'argument lors de l'appel de la fonction" >}}
 Lors de l'*appel de la fonction*, le ou les arguments passés doivent correspondre aus paramètres attendus. 
 
 * *Exemple 3*: fonction qui calcule la surface d'un rectangle à partir de la longueur de ses côtés `x` et `y` (les 2 paramètres de la fonction).

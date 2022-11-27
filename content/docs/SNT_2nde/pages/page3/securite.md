@@ -11,22 +11,14 @@ Le protocole proposé pour la navigation sur internet est actuellement *https*. 
 
 La page suivante est celle d'un site internet demandant de s'identifier pour acceder aux ressources. Mais ici, l'URL montre qu'il s'agit d'une connexion non chiffrée, en *http*: `http://gaia.cs.umass.edu/wireshark-labs/protected_pages/HTTP-wireshark-file5.html`
 
-<figure>
-<img src="../images/site.png" width = 80% alt="réseau d'ordinateurs">
-<figcaption>réseaux d'ordinateurs</figcaption>
-</figure>
-
+{{< img src="../images/site.png" alt="réseau d" caption="réseaux d'ordinateurs" >}}
 L'identifiant de connexion : *wireshark-students*
 
 Le mot de passe : *network*
 
 Une fois le cache du navigateur vidé, on lance wireskark, on ouvre la page du site, on entre les identifiants et on lance la requête à l'aide de la validation du questionnaire.
 On stope alors la capture par wireshark. 
-<figure>
-<img src="../images/slide3-login2.png" width = 100% alt="réseau d'ordinateurs">
-<figcaption>réseaux d'ordinateurs</figcaption>
-</figure>
-
+{{< img src="../images/slide3-login2.png" alt="réseau d" caption="réseaux d'ordinateurs" >}}
 On recherche alors la capture par wireshark correspondant à l'envoi des données du formulaire (filtre HTTP, méthode GET) : 
 On y lit la séquence : *Authozation : Basic*, suivie de la chaine de caractères *d2lyZXNoYXJrLXN0dWRlbnRzOm5ldHdvcms=*. 
 
@@ -34,11 +26,7 @@ Cette chaine de caractères, en apparence encodée n'est pas du tout chiffrée. 
 
 En utilisant un décodeur de Base64, (comme par exemple [ http://www.base64decode.org/]( http://www.base64decode.org/), cette suite de caractères correspond à ... `wireshark-students network` 
 
-<figure>
-<img src="../images/base64.png" width = 80% alt="base64decode">
-<figcaption>information transportée par la trame</figcaption>
-</figure>
-
+{{< img src="../images/base64.png" alt="base64decode" caption="information transportée par la trame" >}}
 
 Ce logiciel, wireshark, connait la façon dont une trame est structurée. Il décompose cette trame en ses différentes parties. Ici, la requete envoyée par le navigateur utilise un protocole **HTTP**.
 La trame envoyée vers le serveur est constituée par des données binaires assemblées au cours de différents protocoles complémentaires et nécessaire pour assurer la bonne transmission des informations. Ces données transportent des informations relatives aux adresses de l'emetteur (client), du recepteur (serveur).
@@ -59,26 +47,14 @@ Pour réaliser cela, il doit :
 Pour initialiser sa connexion, il doit envoyer un SYN sur un port ouvert en se faisant passer pour A.
 
 
-<figure>
-  <img src="../images/SYN1.png">
-  <figcaption>SYN1</figcaption>
-</figure>
-
+{{< img src="../images/SYN1.png" caption="SYN1" >}}
 Le serveur va recevoir un segment SYN de la seule machine autorisée à lui parler.
 Il va donc lui répondre avec un segment SYN+ACK.
 
-<figure>
-  <img src="../images/SYN2.png">
-  <figcaption>SYN2</figcaption>
-</figure>
-
+{{< img src="../images/SYN2.png" caption="SYN2" >}}
 Il ne reste plus au pirate qu'à renvoyer un segment ACK correct pour finaliser la communication. La difficulté vient du fait que le serveur répond à la machine A en mettant son propre numéro de séquence, et çà, le pirate ne peux pas le connaitre puisque l'information part vers l'ordinateur A. Il ne sait donc pas quel numéro d'acquittement positionner vu qu'il n'a pas connaissance du numéro de séquence envoyé par le serveur. Il devrait indiquer le numéro de séquence reçu+1, mais il ne l'a jamais reçu... Il doit alors trouver une stratégie pour le deviner, et l'utiliser pour calculer la valeur de l'ACK.
 
-<figure>
-  <img src="../images/SYN3.png">
-  <figcaption>SYN3</figcaption>
-</figure>
-
+{{< img src="../images/SYN3.png" caption="SYN3" >}}
 Le but du pirate est d'envoyer un seul et unique paquet à la machine A.
 Dans ce paquet il va juste exécuter une commande shell:
 
@@ -93,11 +69,7 @@ Les ISN sont aujourd'hui aléatoires, donc ils ne sont plus prédictibles. De pl
 ## retour aux pages précédentes
 
 
-* <a href = "../modele_OSI/">Retour vers le modèle OSI (1ere NSI)</a>
-* <a href = "../circulation/">Retour vers la page Reseaux</a>
-* <a href = "../internet/"> Retour vers internet (Généralités)</a>
-* <a href = '../TP_reseau/index.html'>TP simulation d'un reseau</a>
-
+*{{< a link="../modele_OSI/" caption="Retour vers le modèle OSI (1ere NSI)" >}}*{{< a link="../circulation/" caption="Retour vers la page Reseaux" >}}*{{< a link="../internet/" caption=" Retour vers internet (Généralités)" >}}*{{< a link="../TP_reseau/index.html" caption="TP simulation d'un reseau" >}}
 # Liens
 
 * cours sur les reseaux et protocoles : [openclassroom, nouvelle version](https://openclassrooms.com/fr/courses/6944606-concevez-votre-reseau-tcp-ip) 
