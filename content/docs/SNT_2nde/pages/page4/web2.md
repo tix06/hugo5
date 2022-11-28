@@ -74,7 +74,9 @@ Dans une page html, les instructions `HTML` sont mises dans un fichier dont l'ex
 
 
 
-<iframe src="https://trinket.io/embed/html/eb704ac5e8" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+
+{{< trinket eb704ac5e8 >}}
 
 *Si l'affichage de l'editeur n'est pas optimal, utiliser le{{< a link="https://trinket.io/html/eb704ac5e8" caption="lien direct sur la page en plein écran" >}}
 > Nous  allons **modifier le script** de la page pour obtenir quelque chose ressemblant à celle-ci (mais en français):

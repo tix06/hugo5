@@ -2,6 +2,7 @@
 Title: introduction à CSS
 ---
 
+* Travail pratique sur le langage CSS: [Lien vers le TP](/docs/SNT_2nde/pages/page4/web6/)
 
 # Bases en css
 les fondamentaux du css: cascade et héritage: [MDN](https://developer.mozilla.org/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
@@ -146,8 +147,11 @@ On peut ajouter une déclaration CSS dans le début du fichier. Par exemple pour
 | list-style | square | <img src="../images/listes1.png"> |
 | list-style | none | <img src="../images/listes2.png"> |
 
-[Tutoriel sur les listes: developer.mozilla.org](https://developer.mozilla.org/fr/docs/Web/CSS/list-style)
+
+
+# TP sur le langage CSS
+[Lien vers le TP](/docs/SNT_2nde/pages/page4/web6/)
+
 
 # Liens
-<ul>
-<li{{< a link="../web1" caption="" >}}<li{{< a link="../web2" caption="" >}}<li{{< a link="../web3" caption="" >}}</ul>
+* complements sur les listes [developer.mozilla.org](https://developer.mozilla.org/fr/docs/Web/CSS/list-style)
