@@ -221,12 +221,17 @@ On peut alors prendre connaissance du docstring en faisant:
 >>> help(Sept_Familles)
 ```
 
+# Interface
+L'interface d'une classe est représentée par le diagramme suivant:
 
+{{< img src="../images/UML.png" caption="Une représentation d'une classe" >}}
+
+<!--
 # L'essentiel
 <h2> Classe et Objet</h2>
 Un <b>objet</b> est construit à partir d'une <b>classe</b>, et comporte des attributs (les variables) et des méthodes (fonctions).
 
-{{< img src="../images/UML.png" caption="Une représentation d'une classe" >}}
+
 <ul>
 <li>Les <b>attributs</b> renvoient aux variables contenues dans l’objet : ce sont les données. Ces données peuvent varier au cours du programme. Il s'agit donc de l'état de cet objet à un instant t.</li>
 <li>Les <b>méthodes</b> sont les éléments qui permettent d’interagir avec les attributs. Les méthodes sont des fonctions internes à une classe, qui doivent répondre à des <b>messages</b>.</li>
@@ -312,7 +317,7 @@ On peut, par exemple, accéder à la description de carte1 à l'aide de la méth
 
 </p>
 
-
+-->
 
 # Exercices
 ## Exercice 1: Jeu de cartes des 7 familles : Les cartes
@@ -347,6 +352,8 @@ La carte est de la famille des Jongleurs. C'est le Grand-père.
 ```
 
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5fbff48972f3c&mode=code"></iframe>
+
+{{< vitta 5fbff48972f3c >}}
 
 ## Exercice 2: Jeu de cartes des 7 familles: Les joueurs
 Le joueur est un objet qui possède, pour attributs, les cartes qu'il a en main.
@@ -389,6 +396,9 @@ Le joueur a la carte
 
 
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5fbffcb7b75fa&mode=code"></iframe>
+
+
+{{< vitta 5fbffcb7b75fa >}}
 
 <!--
 ## Exercice 3: Classe Pile créée à partir d'une liste chaînée
