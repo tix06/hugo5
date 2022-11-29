@@ -48,6 +48,21 @@ Pour pouvoir appliquer un style à un contenu, il va déjà falloir le cibler, c
 En classe de SNT, le sélecteur, c'est l'élement HTML que l'on veut cibler.
 
 ## Où met-on les déclarations CSS?
+On cherche à créer le style suivant:
+
+{{< img src="../images/texte.png" >}}
+
+Il y a 3 possibilités pour écrire les règles CSS:
+
+* Soit directement dans la balise, avec l'attribut `style`. Exemple:
+
+```html
+<div style="border:solid;">
+ <p style ="color:#26b72b;>Le texte suivant sera affiché en VERT, qui est codée en hexadécimal avec #26b72b.</p></div>
+ ```
+
+* Soit directement dans la page HTML, entre les balises `style`:
+
 L'élément `<style>` peut être inclus dans l'élément `<head>` ou dans l'élément `<body>` du document et les styles seront appliqués. Toutefois, il est recommandé de placer les styles dans l'élément `<head>` afin de clairement séparer la présentation du contenu autant que possible. 
 
 *Exemple:*
@@ -57,6 +72,7 @@ L'élément `<style>` peut être inclus dans l'élément `<head>` ou dans l'él�
   <style>
     p {
         color: #26b72b;
+        border: solid 2px;
       }
   </style>
 </head>
@@ -65,13 +81,52 @@ L'élément `<style>` peut être inclus dans l'élément `<head>` ou dans l'él�
   <p>Le texte suivant sera affiché en VERT, qui est codée en hexadécimal avec #26b72b.</p>
 </body>
 ``` 
-Le rendu dans le navigateur est alors:
 
-<div style="width:50%; border:solid;">
- <p style ="color:#26b72b; ">Le texte suivant sera affiché en VERT, qui est codée en hexadécimal avec #26b72b.</p></div>
 
-La méthode idéale consiste toutefois à utiliser des feuilles de style dans des fichiers externes et de les appliquer au document grâce à des éléments `<link>`.
+* La méthode idéale consiste toutefois à utiliser des feuilles de style dans des fichiers externes et de les appliquer au document grâce à des éléments `<link>`: 
 
+```html
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <p>Le texte suivant sera affiché en VERT, qui est codée en hexadécimal avec #26b72b.</p>
+</body>
+```
+
+C'est dans le fichier `style.css` que l'on mettra alors les déclarations css.
+
+Le choix de la position du CSS est déterminé par l'ampleur du projet à définir, doit-on par exemple appliquer ces déclarations à toute la page, aux autres pages du site, ...
+
+{{< img src="../images/alphorm.png" link="https://www.youtube.com/watch?v=vXGNjxOYxaM"  caption="introduction au CSS, video de la chaine Alphorm" >}}
+
+# Héritage
+Comme vu dans le cours sur [HTML](../web1/), les éléments ont une hierarchie selon l'imbrication de leurs balises.
+
+Par exemple, avec l'extrait de page HTML suivant:
+
+```html
+<section>
+  <h1>Titre de la section</h1>
+  <div>  
+    <p>Paragraphe 1</p>
+    <img src="photo.jpg">
+  </div>
+  <div>
+    <p>Paragraphe 2</p>
+  </div >
+ </section>
+```
+
+On a l'arbre du DOM: 
+
+{{< img src="../images/arbreDOM.png" caption="arbre du DOM d'après l'extrait HTML" >}}
+
+> Les éléments enfants héritent les règles CSS de leur parent, à condition que ces règles leurs soient applicables.
+
+Pour selectionner un élément particulier, il faudra le selectionner à partir de sa *classe*, un attribut qu'il faut rajouter à la balise de l'élément.
+
+{{< img src="../images/cssutilityfirst.png" caption="video de la chaine Mon probleme avec le CSS" >}}
 
 # Règles principales
 ## Règles appliquées aux textes

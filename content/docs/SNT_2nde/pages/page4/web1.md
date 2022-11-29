@@ -84,9 +84,13 @@ Le lien{{< a caption="Restauration" >}}
 Et cela va rediriger sur la page de wikipedia: restauration française de 1814, lorsque l'on clique sur{{< a link="https://fr.wikipedia.org/wiki/Portail:Restauration_française_1814-1830" caption="Restauration" >}}
 {{< img src="../images/balises_liens.png" alt="rendu navigateur html avec lien" caption="exemple de liens dans un paragraphe" >}}
 # Lien vers la suite du TP
-<ul>
-<li{{< a link="../web2" caption="" >}}<li{{< a link="../web5" caption="" >}}<li{{< a link="../web3" caption="" >}}</ul>   
+
+* {{< a link="../web2" caption="le TP HTML" >}}
+
+* {{< a link="../web5" caption="Le cours sur CSS" >}}
+
+* {{< a link="../web6" caption="Le TP sur CSS" >}}  
       
+* {{< a link="../web3/" caption="créer une animation en Javascript" >}}  
 
 
-# Lien vers l'exploration d'une page wikipedia
