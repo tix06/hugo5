@@ -28,13 +28,13 @@ Vous pouvez vous aider des liens suivants:
 ... ou d'autres site sur internet.
 
 # Le contenu du CV
-<pre>
+
 CV de Prenom NOM
 Qui suis-je ?
-</pre>
-<img src="../images/photo_min.jpg">
 
-<pre>
+{{< img src="../images/photo_min.jpg" >}}
+
+
 Diplômé d'un bac - 2 en sciences mathématiques littéraires, 
 je me tourne vers le developpement de sites web et les 
 thématiques liées au référencement ainsi qu'à la stratégie marketing.

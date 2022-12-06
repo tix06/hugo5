@@ -152,7 +152,11 @@ Un autre avantage est la possibilité de faire pointer le dernier élément sur 
 
 `'Premier', 'Troisieme'`, `'Quatrieme'`
 
+Vous devrez créer les maillons `M1`, `M2`, `M3` et renseigner leur contenu `M.val`.
+
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5faa722d44d4d&mode=code"></iframe>
+
+{{< vitta 5faa722d44d4d >}}
 
 **2.** Tester dans la console les instructions suivantes:
 
@@ -164,7 +168,30 @@ Un autre avantage est la possibilité de faire pointer le dernier élément sur 
 
 **3.** Rendez-vous sur{{< a link="http://pythontutor.com/visualize.html#mode=edit" caption="pythontutor.com" >}}
 {{< img src="../images/pythontutor.png" alt="liste chainée et pythontutor" caption="liste chainée et pythontutor" >}}
-**4.** Modifier le script dans la fenêtre d'edition de *pythontutor*. Ajouter les lignes suivantes et dérouler le programme ligne par ligne:
+
+*Modifier* le script dans la fenêtre d'edition de *pythontutor*: Coller les lignes ci-dessous et executer le script *pas à pas*
+
+```python
+class Maillon:
+  def __init__(self):
+    self.val = None
+    self.suiv = None
+    
+class Liste:
+  def __init__(self):
+    self.tete = None
+    
+L = Liste()
+M1, M2, M3 = Maillon(), Maillon(), Maillon()
+M1.suiv = M2
+M2.suiv = M3
+M1.val = 'A'
+M2.val = 'C'
+M3.val = 'D'
+L.tete = M1
+```
+
+**4.** Ajouter les lignes suivantes et dérouler le programme ligne par ligne:
 
 ```python
 s = ma_liste.tete
@@ -173,7 +200,7 @@ print(ma_liste.tete.val)
 print(M1.val)
 ```
 
-> Qu'affiche la console? Ce résultat était-il prévisible? Pourquoi?
+> Qu'affiche la console? Ce résultat était-il prévisible? Pourquoi? Expliquer ce qu'il s'est passé.
 
 ## Exercice 2: afficher les éléments de liste
 On cherche à parcourir les éléments d'une liste chainée `L`.

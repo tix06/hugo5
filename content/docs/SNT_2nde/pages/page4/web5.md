@@ -128,7 +128,21 @@ On a l'arbre du DOM:
 
 Pour selectionner un élément particulier, il faudra le selectionner à partir de sa *classe*, un attribut qu'il faut rajouter à la balise de l'élément.
 
-{{< img src="../images/cssutilityfirst.png" caption="video de la chaine Mon probleme avec le CSS" >}}
+Ceci oblige à co-construire le fichier *HTML* et le fichier *CSS*, ce qui peut être parfois un vrai casse-tête...
+
+{{< img src="../images/cssutilityfirst.png" caption="Youtube - Mon probleme avec le CSS" >}}
+
+Avec un *attribut classe*, le selecteur CSS fait reference à la valeur de *classe*. Le sélecteur utilise une notation avec un *point* devant la valeur de *classe*.
+
+Exemple:
+
+| balise HTML | déclaration CSS |
+|--- |--- |
+| `<p class="paragraphe_stylé">Mon paragraphe</p>` | `.paragraphe_stylé {font-family: arial; }` |
+
+* Dans le code HTML, la balise `p` que l'on veut styliser a l'attribut *class*. Et la valeur `paragraphe_stylé` pour valeur de la classe. Ce nom est librement choisi par le programmeur.
+* Dans le code CSS, le sélecteur est alors `.paragraphe_stylé`, avec un point devant le nom. La règle ne concerne alors QUE ce paragraphe. Si la déclaration avait été : `p {font-family: arial; }`, cela aurait concerné TOUT les paragraphes `p` de la page.
+
 
 # Règles principales
 ## Règles appliquées aux textes
