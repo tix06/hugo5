@@ -16,7 +16,7 @@ Le CSS, lui, va servir à mettre en forme les différents contenus définis par 
 Si votre navigateur affiche par défaut les contenus textuels que vous avez déclaré comme des titres en HTML en grand et en gras et à l’inverse les paragraphes en plus petit c’est justement parce que chaque navigateur possède sa propre feuille de styles. En fournissant nos styles CSS pour les différents contenus de notre page, nous allons donc pouvoir définir l’apparence de ceux-ci puisque les styles que nous allons fournir vont être considérés comme prioritaires par rapport à ceux du navigateur. C'est le principe du style en cascade (CSS)
 
 ## Une déclaration CSS
-Une règle typique est composée de trois parties :
+Une déclaration typique est composée de trois parties :
 
 - un **sélecteur**,
 - une **propriété**,
@@ -60,6 +60,8 @@ Il y a 3 possibilités pour écrire les règles CSS:
 <div style="border:solid;">
  <p style ="color:#26b72b;>Le texte suivant sera affiché en VERT, qui est codée en hexadécimal avec #26b72b.</p></div>
  ```
+
+Dans ce cas, seule la règle `propriete:valeur;` est écrite, pas le *sélecteur*.
 
 * Soit directement dans la page HTML, entre les balises `style`:
 
@@ -199,8 +201,8 @@ On peut ajouter une déclaration CSS dans le début du fichier. Par exemple pour
 
 | paramètre | exemples de valeurs possibles | effet |
 |--- |--- |--- |
-| list-style | square | <img src="../images/listes1.png"> |
-| list-style | none | <img src="../images/listes2.png"> |
+| list-style | square | ![puces carres](../images/listes1.png) |
+| list-style | none | ![pas de puces](../images/listes2.png) |
 
 
 

@@ -114,7 +114,7 @@ Cette classe ne comporte pour l'instant que sa définition de la variable `tete`
 On peut alors créer une liste ainsi :
 
 ```python
-L = Liste()
+ma_liste = Liste()
 M1, M2, M3 = Maillon(), Maillon(), Maillon()
 M1.val = 'A'
 M2.val = 'C'
@@ -122,7 +122,7 @@ M3.val = 'D'
 M1.suiv = M2
 M2.suiv = M3
 M3.suiv = None
-L.tete = M1
+ma_liste.tete = M1
 ```
 
 > **Questions:** à votre avis, que vaut `L.tete.val` ?
@@ -186,7 +186,8 @@ On affiche alors les valeurs `M.val` de ces maillons avec `print`.
 
 Et on passe au maillon suivant: `M = M.suiv`
 
-**1.** Ecrire le script itératif.<br>
+**1.** Ecrire le script itératif.
+
 **2.** Adapter ce script pour en faire une fonction **recursive** qui prend en paramètre un maillon M, et affiche toutes les valeurs jusqu'à la fin de la liste. La condition d'arrêt (Base) sera `M.suiv is None`. 
 
 La fonction doit renvoyer une chaine de caractères fabriquée de la manière suivante : `A => ... => ... => D`
@@ -202,10 +203,12 @@ def affiche(M):
     .....
 ```
 
-<br>
+
+
 
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5faa752e1c9a3&mode=code"></iframe>
-<br>
+
+{{< vitta 5faa752e1c9a3 >}}
 
 **3.** Comment appeler cette fonction afin qu'elle affiche TOUS les éléments de la liste L, du premier (*tête*) au dernier? Tester avec la liste **ACD** décrite dans le cours.
 
@@ -215,11 +218,15 @@ On souhaite maintenant modifier la séquence de `ma_liste` créée dans l'exerci
 {{< img src="../images/listeC2.png" alt="insertion liste chainée" caption="insertion dans une liste" >}}
 Ajouter dans votre programme les instructions qui permettront de:
  
-**1.** Créer un nouveau maillon `M4`.<br>
-**2.** Affecter 'Deuxieme' comme valeur à `M4`.<br>
-**3.** Modifier le lien `M4.suiv` pour que celui-ci pointe vers le 3<sup>e</sup> élément de `ma_liste`.<br>
-**4.** Modifier le lien `ma_liste.tete.suiv` pour recréer la liste chainée.<br>
-**5.** Utiliser la fonction `affiche` pour afficher les éléments de `ma_liste`.<br>
+**1.** Créer un nouveau maillon `M4`.
+
+**2.** Affecter 'Deuxieme' comme valeur à `M4`.
+
+**3.** Modifier le lien `M4.suiv` pour que celui-ci pointe vers le 3<sup>e</sup> élément de `ma_liste`.
+
+**4.** Modifier le lien `ma_liste.tete.suiv` pour recréer la liste chainée.
+
+**5.** Utiliser la fonction `affiche` pour afficher les éléments de `ma_liste`.
 
 
 # Correction des exercices
