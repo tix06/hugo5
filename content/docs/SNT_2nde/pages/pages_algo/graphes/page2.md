@@ -146,6 +146,7 @@ Le parcours d'un graphe en profondeur s'apparente à un algorithme de type *reto
 * Lorsque l'on joue à un jeu de labyrinthe : Si on arrive dans une impasse, on adopte là aussi un algorithme de type *retour sur trace*. On revient jusqu'au noeud parent (le croisement précédent) afin d'explorer une nouvelle voie. Et si toutes ces voies sont sans issues, on remonte encore d'un niveau (le croisement précédent encore celui ci).
 
 # Liens
+* Animation sur le parcours d'un graphe [http://mpechaud.fr/scripts/parcours/index.html](http://mpechaud.fr/scripts/parcours/index.html)
 * Approfondir le sujet: les différents algorithmes de parcours des graphes (Term NSI): [site pixees de David Roche](https://pixees.fr/informatiquelycee/n_site/nsi_term_algo_graphe.html)
 
 [^1]: algorithmes : ce sont des méthodes qui, exécutées pas à pas, permettent d'obtenir un résultat final à partir de données de départ.

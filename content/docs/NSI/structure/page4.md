@@ -1,6 +1,14 @@
 ---
 Title : arbres
 ---
+Ce cours comporte plusieurs pages:
+
+* [introduction aux graphes - SNT](/docs/SNT_2nde/pages/pages_algo/graphes/page1/)
+* [cours sur les graphes. Term NSI](/docs/NSI/structure/page5/)
+* [algorithmes de parcours des graphes](/docs/SNT_2nde/pages/pages_algo/graphes/page2/)
+* [algorithme de Dijkstra](/docs/SNT_2nde/pages/pages_algo/graphes/page4/)
+* [Protocoles de routage](/docs/NSI/architecture/page3/)
+* [Arbres](/docs/NSI/structure/page4/)
 
 # Arbres
 ## Définitions

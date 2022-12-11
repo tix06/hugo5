@@ -2,12 +2,24 @@
 Title : graphes
 ---
 
+Ce cours comporte plusieurs pages:
+
+* [introduction aux graphes - SNT](/docs/SNT_2nde/pages/pages_algo/graphes/page1/)
+* [cours sur les graphes. Term NSI](/docs/NSI/structure/page5/)
+* [algorithmes de parcours des graphes](/docs/SNT_2nde/pages/pages_algo/graphes/page2/)
+* [algorithme de Dijkstra](/docs/SNT_2nde/pages/pages_algo/graphes/page4/)
+* [Protocoles de routage](/docs/NSI/architecture/page3/)
+* [Arbres](/docs/NSI/structure/page4/)
+
 Pour une première approche des graphes, consulter le cours [Graphes SNT](/docs/SNT_2nde/pages/pages_algo/graphes/page1/)
 
+
+# Graphes
 Les graphes et les arbres permettent de construire des schémas qui mettent en évidence une structure sur des données.
 
 {{< img src="../images/graphe_intro.png" alt="modelisation reseau social" caption="graphe modelisant un reseau social" >}}
-# Graphes : définitions
+
+## Complexité et morphologie d'un graphe - définitions
 
 On appelle **graphe** la donnée d'un ensemble fini V de points (ou sommets du graphe, *vertices* en anglais) et d'un ensemble E de liens entre ces points.
 
@@ -43,7 +55,24 @@ Et lorsqu'un chemin mène d'un sommet s à lui-même, on parle de **cycle**.
 
 
 {{< img src="../images/fig7.png" alt="cycle dans un graphe" caption="cycle dans un graphe" >}}
-## Choisir la structure de donnée adaptée
+
+## Mesures sur un graphe
+* **Ordre**: le nombre de ses sommets
+* **taille** : le nombre de ses arêtes
+* **degré** d'un sommet **s**: nombre d'arêtes qui relient ce sommet à d'autres sommets.
+* un graphe est dit **complet** si tous ses sommets sont connectés entre eux deux-à-deux. Pour **N** sommets, cela correspond à un nombre d'arcs egal à: N * (N-1). Et si le graphe est non orienté:
+
+$$\tfrac{N \times (N-1)}{2}$$
+
+* La **densité** D d'un graphe est une indication générale de sa connectivité et indique s'il y a beaucoup ou peu d'arêtes. C'est le rapport entre le nombre d'arêtes existantes et leur nombre possible:
+
+$$D = \tfrac{A}{N \times (N-1)}$$
+
+Le graphe est *creux* si sa densité est proche de zero, et *dense* si elle se rapproche de 1.
+
+
+
+## Application: Choisir la structure de donnée adaptée
 
 > *Question:* Pour chacun des exemples suivants, choisir le type de graphe adapté parmi: graphe orienté/non orienté, pondéré, non connexe, sans cycle. Précisez également ce que représentera un *sommet*, et ce qui sera une *arête*.
 
@@ -128,4 +157,5 @@ Il sera alors necessaire d'établir aussi, pour chaque sommet, une liste de pred
 [Lien vers la page *arbres*](/docs/NSI/structure/page4/)
 
 # Liens
+* Exercices simples sur la morphologie des graphes avec corrections: [hmalherbe.fr](http://hmalherbe.fr/thalesm/gestclasse/documents/Terminale_NSI/2020-2021/Exercices/Exercices_Graphes.html)
 * Algorithmes et structure de données utilisant la programmation orientée objets : [https://notebooks.lecluse.fr/python/nsi/terminale/graphes/algorithmique/poo/tp/2020/08/17/nsi_t_algo_graphes.html#Exemples-de-graphes](https://notebooks.lecluse.fr/python/nsi/terminale/graphes/algorithmique/poo/tp/2020/08/17/nsi_t_algo_graphes.html#Exemples-de-graphes)

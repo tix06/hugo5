@@ -1,6 +1,14 @@
 ---
 Title : protocoles de routage
 ---
+Ce cours comporte plusieurs pages:
+
+* [introduction aux graphes - SNT](/docs/SNT_2nde/pages/pages_algo/graphes/page1/)
+* [cours sur les graphes. Term NSI](/docs/NSI/structure/page5/)
+* [algorithmes de parcours des graphes](/docs/SNT_2nde/pages/pages_algo/graphes/page2/)
+* [algorithme de Dijkstra](/docs/SNT_2nde/pages/pages_algo/graphes/page4/)
+* [Protocoles de routage](/docs/NSI/architecture/page3/)
+* [Arbres](/docs/NSI/structure/page4/)
 
 # Modéliser le réseau internet
 ## réseau internet
@@ -55,7 +63,7 @@ Dans le reseau internet, les reseaux et les machines sont identifiés par un num
 
 * Lorsque l'on veut atteindre un ordinateur serveur depuis notre navigateur, on saisit dans la barre d'adresse:[^1]
 
-```
+
 Pour plus de précisions sur l'adressage IP ainsi que le masque de sous-reseau, voir la video{{< a link="https://www.youtube.com/watch?v=RnpSaDSSjR4" caption="" >}}
 Une adresse IP de la norme IPv4 est un nombre binaire codé sur 32 bits, soit 4 octets. Le nombre d'adresses possibles est alors de plus de 4 milliards. 
 
