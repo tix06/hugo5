@@ -49,8 +49,9 @@ Ce sont la plupart du temps des balises de type `<balise>argument</balise>`
 | h2 (titre secondaire) | `<h2>Mon titre secondaire</h2>` | <span style="font-size: 24px">Mon titre secondaire</span> |
 | p (paragraphe) | `<p>Voici le contenu d'un paragraphe</p>` | &nbsp; &nbsp; Voici le contenu d'un paragraphe |
 | div (container) | `<div><p>Contenu</p><p>autre contenu</p></div>` | <p>Contenu</p><p>autre contenu</p> |
-| a (lien) | {{< a link="https://www.anti-moustique.net/raquette-moustique/" caption="le meilleur antimoustique au monde" >}}| img (image) | `<img src="https://i.postimg.cc/MHjjW4wg/moustique.png">` | <div><img src="../images/moustique.png" style="width:50px"></div> |
-| ul li | <div><img src="../images/listes3.png" style="height:100px"></div> |  <div><img src="../images/listes4.png" style="width:70px"></div> |
+| a (lien) | `<a href="https://www.anti-moustique.net/raquette-moustique/">le meilleur antimoustique au monde</a>` | {{< a link="https://www.anti-moustique.net/raquette-moustique/" caption="le meilleur antimoustique au monde" >}}| 
+|img (image) | img src="../images/listes4.png">| `<img src="https://i.postimg.cc/MHjjW4wg/moustique.png">` | ![](../images/moustique.png)|
+| ul li | ![](../images/listes3.png) | ![](../images/listes4.png)| 
 
 <br>
 > Testez chacun des **exemples d'instruction en html** dans la page de{{< a link="https://htmledit.squarefree.com/" caption=" Testez chacun des **exemples d'instruction en html** dans la page de " >}}
