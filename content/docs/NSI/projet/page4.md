@@ -8,7 +8,7 @@ bookShowToc: false
 
 {{< img src="../images/dominos.png" caption="exemple de jeu" >}}
 
-### [telecharger le fichier dominos_projet.py](/scripts/Tkinter/dominos_projet.py)
+### [fichier dominos_projet.py](/scripts/Tkinter/dominos_projet.py)
 
 
 ## Consignes
