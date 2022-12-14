@@ -8,8 +8,8 @@ bookShowToc: false
 
 {{< img src="../images/dominos.png" caption="exemple de jeu" >}}
 
-### [fichier dominos_projet.py](/scripts/Tkinter/dominos_projet.py)
 
+{{< download link="/scripts/Tkinter/dominos_projet.py" hint="dominos_projet.py" caption="télécharger le fichier dominos_projet.py" >}}
 
 ## Consignes
 Il est demandé:
