@@ -64,7 +64,8 @@ Dans le reseau internet, les reseaux et les machines sont identifiés par un num
 * Lorsque l'on veut atteindre un ordinateur serveur depuis notre navigateur, on saisit dans la barre d'adresse:[^1]
 
 
-Pour plus de précisions sur l'adressage IP ainsi que le masque de sous-reseau, voir la video{{< a link="https://www.youtube.com/watch?v=RnpSaDSSjR4" caption="" >}}
+Pour plus de précisions sur l'adressage IP ainsi que le masque de sous-reseau, voir la {{< a link="https://www.youtube.com/watch?v=RnpSaDSSjR4" caption="video sur IP et masque sous-reseau (L. Guerin)" >}}.
+
 Une adresse IP de la norme IPv4 est un nombre binaire codé sur 32 bits, soit 4 octets. Le nombre d'adresses possibles est alors de plus de 4 milliards. 
 
 *Exemple d'adresse IPv4 exprimée à l'aide de 4 valeurs décimales (0-255):*
@@ -75,6 +76,11 @@ Les derniers caractères `/24` correspondent au *masque de sous-reseau*. Ils sig
 
 Pour la norme IPv6, ce nombre est sur 128 bits, soit 16 octets.
 *Exemple d'adresse IPv6 exprimée en hexadécimal (32 caractères):* `2001:0db8:3c4d:0015:0000:0000:1a2f:1a2b` 
+
+> Voir l'exercice n°4 du sujet de Baccalaureat: centres etrangers 2021: [étude d'un reseau informatique](https://eduscol.education.fr/document/33073/download)
+
+> Voir l'exercice n°1 du sujet de Baccalaureat: Metropole Sept 2021: [reseau d'ordinateurs](https://eduscol.education.fr/document/32914/download)
+
 
 ## Table de routage
 Chaque routeur reçoit des données et doit décider à qui les transmettre. Pour cela, il dispose de *tables de routage* construites soit statiquement (par un humain), soit dynamiquement (par un programme).
@@ -106,9 +112,9 @@ La table de routage du routeur 1 est alors:
 
 *Exercices:*
 
-*Ex 1:* Donner les tables de routage des autres routeurs de ce système informatique n°1
+**Exercice 1:** Donner les tables de routage des autres routeurs de ce système informatique n°1
 
-*Ex 2:* Donner les tables de routage des routeurs du système informatique suivant:
+**Exercice 2:** Recopier et completer les tables de routage des routeurs du système informatique suivant:
 
 
 {{< img src="../images/routage3.png" alt="système n°2" caption="système informatique n°2" >}}
@@ -129,6 +135,9 @@ Routeur 2
 |  |  |
 |  |  |
 |  |  |
+
+
+> Voir l'exercice n°1 du sujet de Baccalaureat: Metropole Sept 2021: [Architecture de reseau d'ordinateurs, table de routage](https://eduscol.education.fr/document/32917/download)
 
 ## TP : simulation d'un reseau à l'aide du logiciel Filius
 Le TP se trouve à l'adresse [suivante](/docs/SNT_2nde/pages/page3/TP_reseau/)
@@ -194,10 +203,7 @@ Selon l'agorithme de routage utilisé, le coût correspondra:
 
 
 # protocoles de routage
-
-
-
-Pour chacun des videos, au cours de leur visionnage, prendre en notes pour repondre aux questions suivantes:
+> Activité: Pour chacune des videos, au cours de leur visionnage, prendre en notes pour repondre aux questions suivantes:
 
 1. Pour le routage étudié, un routeur connait-il la carte globale du reseau (quel routeur est connecté à tel autre)?
 2. Pour le routage étudié, s'agit-il des protocoles RIP ou OSPF?
@@ -205,16 +211,51 @@ Pour chacun des videos, au cours de leur visionnage, prendre en notes pour repon
 3. communique t-il aux autres routeurs de gros ou petits volumes d'informations pour établir sa table de routage?
 4. un routeur, connait-il le chemin exact pour atteindre n'importe quel routeur du reseau?
 5. connait-il le nombre de sauts pour atteindre n'importe quel routeur du reseau?
-6. selectionne t-il le routeur voisin qui va donner le plus court chemin en nombre de saut / en durée d'acheminement?
-7. Comment met-il à jour sa table de routage lorsqu'il y a une modification du reseau?
+6. Préciser si le protocole RIP utilise le nombre de sauts ou le délai de réception comme poids des arêtes. (Question de l'exercice n°4 du [sujet de baccalaureat 2021, Polynesie](https://eduscol.education.fr/document/32770/download))
+7. selectionne t-il le routeur voisin qui va donner le plus court chemin en nombre de saut / en durée d'acheminement?
+8. Comment met-il à jour sa table de routage lorsqu'il y a une modification du reseau?
 
 ## Le routage à vecteurs de distance
+Video (Youtube): [Mooc de l'INT (institut des Mines Télécom)](https://www.youtube.com/watch?v=kzablGaqUXM)
 
+{{< img src="../images/routage_RIP.png"  caption="exemple de table de routage à vecteur de distance" >}}
 
 ## Les routage à états de liens
+Video (Youtube): [Mooc de l'INT (institut des Mines Télécom)](https://www.youtube.com/watch?v=-utHPKREZV8)
 
 
+{{< img src="../images/routage_OSPF.png"  caption="exemple de table de routage à états de liens" >}}
 
+> Exercice n°3 du [sujet de baccalaureat Metropole 2022](/docs/NSI/bac/page6/#bac-2022-metropole1-exercice-3): représentations binaires et protocoles de routage. (RIP, OSPF), minimiser le nombre de routeurs à traverser pour une requête.
+
+# Débit
+Le debit est la vitesse à laquelle sont échangées les données, expimée en bits/s (ou kb/s, Mb/s...). Le débit se définit par le rapport du nombre de données circulant (en bits), par la durée (s).
+
+$$D = \tfrac{N}{s}$$
+
+Pour assurer une navigation correcte sur Internet ou regarder la télé ou des vidéos en streaming, le debit minimum doit être de 8Mb/s.
+
+En 2022, l'objectif est de fournir en france, à tous les foyers, le THD (très haut débit), soit 30Mb/s. 
+
+Avec la fibre, ce débit est encore dépassé (quelques centaines de Mb/s).
+
+{{< img src="../images/debit.png"  caption="de nombreux sites proposent un test de debit pour votre connexion internet" >}}
+
+**La notion de coût d'une liaison (OSPF)**
+
+$$cout = \tfrac{10^8}{debit}$$
+
+| Type de réseau | Coût par défaut |
+|--- |--- |
+| FDDI, FastEthernet | 1 |
+| Ethernet 10 Mbps | 10 |
+| E1 (2,048 Mbps) | 48 |
+| T1 (1,544 Mbps) | 65 |
+| 64 Kbps | 1562 |
+| 56 Kbps | 1758 |
+| 19.2 Kbps | 5208 |
+
+voir complements sur [developpez.com](https://inetdoc.developpez.com/tutoriels/routage-dynamique-protocole-ospf/)
 
 # Liens
 ## Videos présentées dans cette page

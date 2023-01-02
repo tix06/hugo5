@@ -69,4 +69,8 @@ Ce document est issu du cours en ligne du [lycee de Taaone](http://www.mysti2d.n
 
 # Liens
 
-* Feuille d'exercices sur les reseaux:{{< a link="/pdf/NSI/R3_exercices.pdf" caption="Lien" >}}*{{< a link="../circulation/" caption="Retour vers la page Reseaux" >}}*{{< a link="/docs/SNT_2nde/pages/page3/protocoles/" caption=" Les protocoles TCP et IP" >}}*{{< a link="../securite/index.html" caption="Sécurité des communications (1ere NSI)" >}}*{{< a link="../TP_reseau/index.html" caption="TP simulation d'un reseau" >}}
+* Feuille d'exercices sur les reseaux:{{< a link="/pdf/NSI/R3_exercices.pdf" caption="Lien" >}}
+* {{< a link="../circulation/" caption="Retour vers la page Reseaux" >}}
+* {{< a link="/docs/SNT_2nde/pages/page3/protocoles/" caption=" Les protocoles TCP et IP" >}}
+* {{< a link="../securite/index.html" caption="Sécurité des communications (1ere NSI)" >}}
+* {{< a link="../TP_reseau/index.html" caption="TP simulation d'un reseau" >}}

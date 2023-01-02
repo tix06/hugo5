@@ -156,10 +156,12 @@ $$1703:01b8:43c4:85a3:0000:0000:a213:bba7$$
 Leur nombre est d'environ 10^29 fois plus important que pour les adresses IPv4.
 
 ## DNS, IP et URL
-* Lorsque l'on veut atteindre un ordinateur serveur depuis notre navigateur, possédant une adresse IP publique, on pourrait saisir dans la barre d'adresse. [^5]
+* Lorsque l'on veut atteindre un ordinateur serveur depuis notre navigateur, possédant une adresse IP publique, on pourrait la saisir dans la barre d'adresse. [^5]
 
-```
-{{< img src="../images/http.gif" alt="protocole HTTP" caption="modèle client-serveur" >}}* pour la question 3: il s'agit d'une partie qui sera étudiée avec le cours sur{{< a link="/docs/SNT_2nde/pages/page3/modele_OSI/" caption="le modele OSI et le protocole TCP" >}}
+
+{{< img src="../images/http.gif" alt="protocole HTTP" caption="modèle client-serveur" >}}
+
+* En pratique, la ressource n'est pas envoyée en entier par le serveur, mais par petits morceaux. Cela rend l'utilisation d'internet plus efficace. (voir aussi le cours sur{{< a link="/docs/SNT_2nde/pages/page3/modele_OSI/" caption="le modele OSI et le protocole TCP" >}})
 
 **le protocole IP:** c'est lui qui permet de se connecter à un autre ordinateur. Il gère l'adressage.
 
@@ -168,7 +170,9 @@ Leur nombre est d'environ 10^29 fois plus important que pour les adresses IPv4.
 
 # Liens
 
-*{{< a link="../TP_reseau/index.html" caption="TP simulation d'un reseau" >}}*{{< a link="../modele_OSI/" caption="Le modèle OSI (concerne la Spé NSI)" >}}
+* {{< a link="../TP_reseau/index.html" caption="TP simulation d'un reseau" >}}
+
+* {{< a link="../modele_OSI/" caption="Le modèle OSI (concerne la Spé NSI)" >}}
 [^1Cloud]: Le cloud : désigne le stockage et l’accès aux données par l’intermédiaire d’internet plutôt que via le disque dur d’un ordinateur. Mais aussi des services rendus par des logiciels hébergés *côté serveur*.
 
 [^2]: configurer son réseau local (Wikihow) : https://fr.wikihow.com/configurer-un-réseau-local
