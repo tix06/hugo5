@@ -64,7 +64,9 @@ Dans le reseau internet, les reseaux et les machines sont identifiés par un num
 * Lorsque l'on veut atteindre un ordinateur serveur depuis notre navigateur, on saisit dans la barre d'adresse:[^1]
 
 
-Pour plus de précisions sur l'adressage IP ainsi que le masque de sous-reseau, voir la {{< a link="https://www.youtube.com/watch?v=RnpSaDSSjR4" caption="video sur IP et masque sous-reseau (L. Guerin)" >}}.
+Pour plus de précisions sur l'adressage IP ainsi que le masque de sous-reseau, voir la {{< a link="https://www.youtube.com/watch?v=RnpSaDSSjR4" caption="video sur IP et masque sous-reseau (L. Guerin)" >}}:
+
+{{< img src="/images/video.png" link="https://www.youtube.com/watch?v=RnpSaDSSjR4"  caption="video sur IP et masque sous-reseau (L. Guerin)" >}}
 
 Une adresse IP de la norme IPv4 est un nombre binaire codé sur 32 bits, soit 4 octets. Le nombre d'adresses possibles est alors de plus de 4 milliards. 
 
@@ -72,17 +74,24 @@ Une adresse IP de la norme IPv4 est un nombre binaire codé sur 32 bits, soit 4 
 
 `192.168.0.1/24` 
 
+### Machines appartenant à un même reseau
+**Definition: Deux machines sont sur le même réseau si et seulement si, la partie réseau de leur adresse IP est identique.**
+
 Les derniers caractères `/24` correspondent au *masque de sous-reseau*. Ils signifient que le reseau contenant la machine a une adresse codée sur les 24 premiers bits (192.168.0). Et que les 8 derniers bits constituent l'adresse de la machine dans ce reseau (il s'agit donc du .1 final). 
 
+### Remarque sur la norme IPv6
 Pour la norme IPv6, ce nombre est sur 128 bits, soit 16 octets.
 *Exemple d'adresse IPv6 exprimée en hexadécimal (32 caractères):* `2001:0db8:3c4d:0015:0000:0000:1a2f:1a2b` 
+
+**Definition: Deux machines sont sur le même réseau si et seulement
+si, la partie réseau de leur adresse IP est identique.**
 
 > Voir l'exercice n°4 du sujet de Baccalaureat: centres etrangers 2021: [étude d'un reseau informatique](https://eduscol.education.fr/document/33073/download)
 
 > Voir l'exercice n°1 du sujet de Baccalaureat: Metropole Sept 2021: [reseau d'ordinateurs](https://eduscol.education.fr/document/32914/download)
 
 
-## Table de routage
+## Table de routage (reseau local)
 Chaque routeur reçoit des données et doit décider à qui les transmettre. Pour cela, il dispose de *tables de routage* construites soit statiquement (par un humain), soit dynamiquement (par un programme).
 
 Lorsqu'il reçoit un message (une trame), il lit l'adresse IP du destinataire et le redirige dans la bonne direction:
@@ -140,7 +149,8 @@ Routeur 2
 > Voir l'exercice n°1 du sujet de Baccalaureat: Metropole Sept 2021: [Architecture de reseau d'ordinateurs, table de routage](https://eduscol.education.fr/document/32917/download)
 
 ## TP : simulation d'un reseau à l'aide du logiciel Filius
-Le TP se trouve à l'adresse [suivante](/docs/SNT_2nde/pages/page3/TP_reseau/)
+* Le TP de 1ere NSI se trouve à l'adresse [suivante](/docs/SNT_2nde/pages/page3/TP_reseau/)
+* Le TP de terminale se trouve à l'adresse [suivante](/docs/SNT_2nde/pages/page3/TP_reseau_term/)
 
 ## Modélisation du réseau par un graphe
 Considérons système informatique constitué de:
@@ -198,8 +208,8 @@ Cela permet de recréer la carte globale du reseau, mais cette fois, avec les ad
 
 Selon l'agorithme de routage utilisé, le coût correspondra: 
 
-* soit à la distance mesurée en nombre de sauts (routeurs intermédiaires) = algorithme à vecteur de distance RIP
-* soit une valeur calculée à partir du nombre de sauts, mais aussi du débit = algorithme à état de liaison OSPF
+* soit à la distance mesurée en nombre de sauts sur les routeurs intermédiaires (algorithme à vecteur de distance RIP)
+* soit une valeur calculée à partir du nombre de sauts, mais aussi du débit (voir plus loin avec l'algorithme à état de liaison OSPF)
 
 
 # protocoles de routage
@@ -216,12 +226,15 @@ Selon l'agorithme de routage utilisé, le coût correspondra:
 8. Comment met-il à jour sa table de routage lorsqu'il y a une modification du reseau?
 
 ## Le routage à vecteurs de distance
-Video (Youtube): [Mooc de l'INT (institut des Mines Télécom)](https://www.youtube.com/watch?v=kzablGaqUXM)
+{{< img src="/images/video.png" link="https://www.youtube.com/watch?v=kzablGaqUXM"  caption="Video (Youtube): Mooc de l'INT (institut des Mines Télécom)" >}}
+
 
 {{< img src="../images/routage_RIP.png"  caption="exemple de table de routage à vecteur de distance" >}}
 
 ## Les routage à états de liens
-Video (Youtube): [Mooc de l'INT (institut des Mines Télécom)](https://www.youtube.com/watch?v=-utHPKREZV8)
+{{< img src="/images/video.png" link="https://www.youtube.com/watch?v=-utHPKREZV8"  caption="Video (Youtube): Mooc de l'INT (institut des Mines Télécom)" >}}
+
+
 
 
 {{< img src="../images/routage_OSPF.png"  caption="exemple de table de routage à états de liens" >}}
@@ -263,5 +276,8 @@ voir complements sur [developpez.com](https://inetdoc.developpez.com/tutoriels/r
 * Video (Youtube): [reseaux, adresses IP et masques de sous-reseaux](https://www.youtube.com/watch?v=RnpSaDSSjR4)
 * Video (Youtube): [Mooc de l'INT (institut des Mines Télécom)](https://www.youtube.com/watch?v=kzablGaqUXM)
 * Video (Youtube): [Mooc de l'INT (institut des Mines Télécom)](https://www.youtube.com/watch?v=-utHPKREZV8)
+## Autres documents
+* cours complet de niveau term NSI sur les reseaux autonomes: [infoforall](https://www.infoforall.fr/act/archi/procole-de-routage-dynamique-rip/)
+* autres exercices sur les algo de routage [http://www.netlab.tkk.fi/opetus/s38121/s01/Exercises/solution3.pdf](http://www.netlab.tkk.fi/opetus/s38121/s01/Exercises/solution3.pdf) et [https://www.netlab.tkk.fi/opetus/s38122/s00/Exercises/Exercise-3.pdf](https://www.netlab.tkk.fi/opetus/s38122/s00/Exercises/Exercise-3.pdf)
 
 [^1]: En réalité, on ne saisit pas `http://adresse IP` mais `http://URL de la page` depuis la barre du navigateur. Celui-ci remplace l'URL de la page par l'adresse IP correspondante, après consultation du serveur DNS.
