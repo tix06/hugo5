@@ -74,17 +74,30 @@ Une adresse IP de la norme IPv4 est un nombre binaire codé sur 32 bits, soit 4 
 
 `192.168.0.1/24` 
 
+La notation utilisant CIDR composé d’une adresse IPv4 et d’une indication sur le **masque de sous réseau**. Par exemple : `192.168.0.1/24` signifie :
+* Adresse IP : 192.168.0.1
+* Masque de sous-réseau en notation CIDR : 24 
+* partie reseau de l'adresse: 24 premiers bits, c'est à dire les octets 192.168.0
+* partie machine de l'adresse IP: les 8 derniers bits (32 - 24), soit le dernier octet: .1
+
 ### Machines appartenant à un même reseau
 **Definition: Deux machines sont sur le même réseau si et seulement si, la partie réseau de leur adresse IP est identique.**
 
 Les derniers caractères `/24` correspondent au *masque de sous-reseau*. Ils signifient que le reseau contenant la machine a une adresse codée sur les 24 premiers bits (192.168.0). Et que les 8 derniers bits constituent l'adresse de la machine dans ce reseau (il s'agit donc du .1 final). 
 
+Le masque de sous-reseau peut être aussi exprimé sous la forme binaire. Les N premiers chiffres du masque valet alors 1 et les autres (jusqu'au 32e) valent 0. Par exemple:
+
+`/8` correspond à `11111111 00000000 00000000 00000000`. 
+
+Il est alors plus commode d'écrire l'equivalent décimal pour chacun des bits:
+
+`255.0.0.0`
+
 ### Remarque sur la norme IPv6
 Pour la norme IPv6, ce nombre est sur 128 bits, soit 16 octets.
 *Exemple d'adresse IPv6 exprimée en hexadécimal (32 caractères):* `2001:0db8:3c4d:0015:0000:0000:1a2f:1a2b` 
 
-**Definition: Deux machines sont sur le même réseau si et seulement
-si, la partie réseau de leur adresse IP est identique.**
+
 
 > Voir l'exercice n°4 du sujet de Baccalaureat: centres etrangers 2021: [étude d'un reseau informatique](https://eduscol.education.fr/document/33073/download)
 
