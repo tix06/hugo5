@@ -3,7 +3,8 @@ Title: fonctionnement internet
 ---
 # Video SNT: les protocoles
 
-{{< img src="/images/video.png" caption="Video SNT: Internet, IP un protocole universel ?" >}}
+{{< img src="/images/video.png" link="https://www.youtube.com/watch?v=s18KtOLpCg4" caption="Video SNT: Internet, IP un protocole universel ?" >}}
+
 # Constitution du reseau internet
 ## Réseau local 
 * Dans un réseau local, les ordinateurs sont interconnectés par un *switch* et peuvent communiquer entre eux par l'intermédiaire d'un *routeur*. C'est aussi le routeur qui fait passerelle vers *internet*.
