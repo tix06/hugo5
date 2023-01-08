@@ -163,6 +163,7 @@ c. Dessiner un circuit permettant de sélectionner le périphérique 0.
 
 {{< img src="../images/page6_3.png" caption="1252 × 590" >}}
 {{< img src="../images/page6_4.png" caption="1252 × 788" >}}
+
 # Bac 2022 Metropole1: Exercice 3
 Cet exercice porte sur les représentations binaires et les protocoles de routage.
 
@@ -200,7 +201,7 @@ sur la métrique via la relation : $metrique = \tfrac{10^8}{debit}$  dans laquel
 
 On rappelle qu’un kbps est égal à $10^3$  bps et qu’un Mbps est égal à $10^6$  bps.
 
-Recopier sur votre copie et compléter le tableau suivant : 
+A. Recopier sur votre copie et compléter le tableau suivant : 
 
 | Débit | 100 kbps | 500 kbps | ? | 100 Mbps |
 |--- | --- | --- | --- | --- |
@@ -210,13 +211,38 @@ Recopier sur votre copie et compléter le tableau suivant :
 Les nombres présents sur les liaisons représentent les coûts des routes avec le
 protocole OSPF.
 
-A.  Indiquer le chemin emprunté par un message d’un ordinateur du réseau F à
+B.  Indiquer le chemin emprunté par un message d’un ordinateur du réseau F à
 destination d’un ordinateur du réseau I.
 Justifier votre réponse.
 
-B.  Recopier et compléter la table de routage du routeur F.
+C.  Recopier et compléter la table de routage du routeur F.
 
-C.  Citer une unique panne qui suffirait à ce que toutes les données des échanges de tout autre réseau à destination du réseau F transitent par le routeur G.
+D.  Citer une unique panne qui suffirait à ce que toutes les données des échanges de tout autre réseau à destination du réseau F transitent par le routeur G.
 Expliquer en détail votre réponse. 
 
+## Question 4 (sup hors bac)
+A. Donner les caractéristiques du graphe de réseaux schématisé plus haut.
 
+On donne cette fois le tableau constitué à partir de l'algorithme de Dijkstra, appliqué à ce même graphe de reseaux:
+
+* le colonnes représentent les sommets à atteindre
+* les lignes sont les sommets de départ
+* On renseigne dans les cases la distance cumulée depuis le noeud **F**, jusqu'au noeud de la colonne, en passant par le noeud adjacent de la ligne. Par exemple, **I** peut être atteint en venant du noeud **H** avec une longueur de 15.
+
+|  | G | H | I | J | K | L |
+| --- | --- |--- |--- |--- |--- |--- |
+| F |   | 5 |   |   |   |   |
+| G |   |   |   |   |   |   |
+| H |   |   | 15| 6 |   |   |
+| I |   |   |   |   |   |   |
+| J | 8 |   |   |   | 8 | 11|
+| K |   |   |   |   |   |   |
+| L |   |   |   |   |   |   |
+
+B. Représenter le graphe des chemins pour explorer depuis **F** les autres noeuds, en suivant le chemin *le plus court*. 
+
+C. Ce graphe représente l'arbre couvrant du graphe. Donner les caractéristiques de cet arbre. 
+
+D. Quel est le chemin le plus court pour aller de F à G? 
+
+E. Même question, mais cette fois pour aller de H à K.

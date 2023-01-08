@@ -36,17 +36,19 @@ On part du sommet r :
 
 Ce qui change par rapport à l'algorithme précédent, c'est surtout le nouveau choix de sommet à visiter lors du parcours du graphe : lorsque tous les noeuds fils d'un sommet ont été visités, et que l'on a mémorisé leur distance au sommet de départ, on choisi d'explorer le **sommet le plus proche**, celui **le plus à gauche** dans la liste L.
 
+Il faut donc trier cette liste à la fin de chaque exploration.
+
 ## Illustration
 
 On démarre du sommet `B`voisins. Après le parcours de ses voisins, la liste L contient les sommets D,E,F classés par ordre de distance croissante : 
 
-$$L = [D,E,F]$$
+$$L = [(D,2), (E,5), (F,10)]$$
 
 * D est à une distance de 2
 * E est à une distance de 5
 * F est à une distance de 10
 
-{{< img src="../images/fig31.png" alt="parcours initial Dijkstra" caption="L = [D,E,F]" >}}
+{{< img src="../images/fig31.png" alt="parcours initial Dijkstra" caption="L = [(D,2), (E,5), (F,10)]" >}}
 On tient à jour le tableau des distances au sommet de départ, `B`:
 
 | exploration depuis le sommet... | A | C | D | E | F | G | H |
@@ -55,14 +57,18 @@ On tient à jour le tableau des distances au sommet de départ, `B`:
 
 Ensuite, on passe au sommet D, le plus proche de B (le plus à gauche dans la liste) : 
 
-On ajoute C, H et A à la liste.
-
-{{< img src="../images/fig32.png" alt="parcours 2 Dijkstra" caption="L = [E,F,C,H,A]" >}}
-On met à jour les distance des sommets voisins : 
-
 * C est à une distance 2+3 = 5 de B
 * H est à une distance 2+4 = 6 de B
 * A est à une distance 2+9 = 11 de B
+
+On ajoute C, H et A à la liste. `L = [(E,5), (F,10), (C,5), (H,6), (A,11)]` 
+
+Puis on trie cette liste:
+
+{{< img src="../images/fig32.png" alt="parcours 2 Dijkstra" caption="L = [(C,5), (E,5), (H,6), (F,10), (A,11)]" >}}
+On met à jour les distance des sommets voisins : 
+
+
 
 | exploration depuis le sommet... | A | C | D | E | F | G | H |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -70,9 +76,6 @@ On met à jour les distance des sommets voisins :
 
 *Les valeurs pour D, E et F ne sont pas remises à jour. On ne les mentionne pas dans ce tableau.*
 
-On retire D de la liste et on trie celle-ci en fonction des distances à B : 
-
-$$L = [C,E,H,F,A]$$
 
 Le sommet suivant à traiter est alors le C. Ses voisins sont E, et G. L'examen du chemin vers E ne change rien : le chemin B,D,C,E a une longueur plus importante que le chemin direct B,E (12>5). Par contre, le chemin vers G offre une nouvelle distance : 
 
@@ -84,7 +87,7 @@ Le sommet suivant à traiter est alors le C. Ses voisins sont E, et G. L'examen 
 
 On ajoute G à la liste et on trie:
 
-{{< img src="../images/fig33.png" alt="parcours 3 Dijkstra" caption="L = [E,H,G,F,A]" >}}
+{{< img src="../images/fig33.png" alt="parcours 3 Dijkstra" caption="L = [(E,5), (H,6), (G,7), (F,10), (A,11)]" >}}
 On passe au sommet E : il n'y a pas de modification de la distance de B à C en passant par E. Comme C est le seul fils, on retire E de la liste L et on passe au sommet suivant, le H. Alors : 
 
 * A est à une distance 6+1 = 7 du noeud B. C'est le meilleur chemin.
@@ -94,7 +97,7 @@ On passe au sommet E : il n'y a pas de modification de la distance de B à C en 
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | H | 7 |  |  |  |  |  |   |
 
-{{< img src="../images/fig34.png" alt="parcours 4 Dijkstra" caption="L = [A,G,F]" >}}
+{{< img src="../images/fig34.png" alt="parcours 4 Dijkstra" caption="L = [(A,7), (G,7), (F,10)]" >}}
 On finit rapidement l'exploration : 
 
 {{< img src="../images/fig35.png" alt="parcours 5 Dijkstra" caption="Fin de l'exploration" >}}

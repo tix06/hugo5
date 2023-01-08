@@ -15,8 +15,6 @@ Title: fonctionnement internet
 * Internet est un réseau de réseaux qui interconnecte toutes les machines à l'échelle mondiale.
 En pratique, ce sont les routeurs des réseaux qui sont interconnectés. Lorsqu'un routeur reçoit une requête d'une des machines de son réseau, adressée à une machine qui n'appartient pas à son réseau, il se réfère à une table de routage d'internet pour expedier la requête. Il envoie alors la requête à un autre routeur. 
 
-{{< img src="../images/reseau-internet.png" alt="reseau internet" caption="reseau local et internet" >}}
-
 
 ## Routeur et routage
 Le **routeur**: c'est une machine qui a pour rôle de communiquer avec d'autres machines. Chaque routeur est identifié par une adresse IP. Il possède une table de *routage* qui lui permet de choisir la bonne liaison entre les 2 machines qui veulent communiquer.
@@ -26,7 +24,10 @@ Cette table de routage identifie les ordinateurs de manière unique par leur *ad
 
 Le trajet possible entre les 2 machines n'est pas unique : 
 
-{{< img src="../images/internet-fig1.png" alt="reseau internet" link="https://interstices.info/internet-le-conglomerat-des-reseaux/" caption="" >}}
+{{< img src="../images/internet-fig1.png" alt="reseau internet" caption="des reseaux interconnectés" >}}
+
+[source: interstices.info](https://interstices.info/internet-le-conglomerat-des-reseaux/)
+
 # Comment utiliser le reseau Internet?
 Pour naviguer sur internet, votre machine va communiquer avec d'autres serveurs. Cette communication met en jeu plusieurs *protocoles*, dont les principaux sont **HTTP, IP et TCP**.
 

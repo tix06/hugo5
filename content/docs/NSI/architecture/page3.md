@@ -230,12 +230,11 @@ Selon l'agorithme de routage utilisé, le coût correspondra:
 
 1. Pour le routage étudié, un routeur connait-il la carte globale du reseau (quel routeur est connecté à tel autre)?
 2. Pour le routage étudié, s'agit-il des protocoles RIP ou OSPF?
-2. communique t-il avec ses voisins directs, ou avec l'ensemble du reseau?
-3. communique t-il aux autres routeurs de gros ou petits volumes d'informations pour établir sa table de routage?
-4. un routeur, connait-il le chemin exact pour atteindre n'importe quel routeur du reseau?
-5. connait-il le nombre de sauts pour atteindre n'importe quel routeur du reseau?
-6. Préciser si le protocole RIP utilise le nombre de sauts ou le délai de réception comme poids des arêtes. (Question de l'exercice n°4 du [sujet de baccalaureat 2021, Polynesie](https://eduscol.education.fr/document/32770/download))
-7. selectionne t-il le routeur voisin qui va donner le plus court chemin en nombre de saut / en durée d'acheminement?
+3. communique t-il avec ses voisins directs, ou avec l'ensemble du reseau?
+4. communique t-il aux autres routeurs de gros ou petits volumes d'informations pour établir sa table de routage?
+5. un routeur, connait-il le chemin exact pour atteindre n'importe quel routeur du reseau?
+6. connait-il le nombre de sauts pour atteindre n'importe quel routeur du reseau? 
+7. selectionne t-il le routeur voisin qui va donner le plus court chemin en nombre de saut / en durée d'acheminement? (Question de l'exercice n°4 du [sujet de baccalaureat 2021, Polynesie](https://eduscol.education.fr/document/32770/download))
 8. Comment met-il à jour sa table de routage lorsqu'il y a une modification du reseau?
 
 ## Le routage à vecteurs de distance
