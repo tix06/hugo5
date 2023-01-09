@@ -56,7 +56,10 @@ On cherche maintenant à créer un système de 2 sous-réseaux locaux. Ces resea
 
 *C'est à dire que toutes les machines du réseau 198.168.0.0 auront en commun les 3 octets 198.168.0 et toutes les machines du reseau 198.168.1.0 auront en commun les octets 198.168.1.* 
 
-* Le sous-réseau 192.168.2.0 comportera un switch et 3 ordinateurs M4, M5 et M6. Ces machines auront pour adresses IP: 192.168.2.1, 192.168.2.2 et 192.168.2.3
+* Le sous-réseau 192.168.2.0 comportera un switch et 3 ordinateurs M4, M5 et M6. Ces machines auront pour adresses IP:
+  * 192.168.2.1
+  * 192.168.2.2
+  * 192.168.2.3
 
 Votre système devrait ressembler à l'image suivante:
 
@@ -76,14 +79,18 @@ Votre système devrait ressembler à l'image suivante:
   >
   >
   >
-  > renseigner les adresses des 2 reseaux sur l'interface du routeur
+  > renseigner les adresses des 2 reseaux sur l'interface du routeur: 
+  * 192.168.0.254 du côté du reseau 192.168.0.0 (à gauche)
+  * 192.168.2.354 du côté du reseau 192.168.2.0 (à droite)
 
 
 {{< img src="../images/interface.png" alt="adresses des reseaux" caption="adresses des reseaux" >}}
+
   > cocher routage automatique:
 
 
 {{< img src="../images/routage.png" alt="option routage automatique" caption="option routage automatique" >}}
+
   * Pour chacun des ordinateurs du sous-reseau 1, M1, M2, M3, renseigner l'adresse de l'interface reseau 1 du routeur: mettre **192.168.0.254** dans le champs *passerelle*. Ce sera l'adresse IP de la carte reseau du routeur, du côté du reseau 192.168.0.0 (on met **254** à la place de **0** pour l'adresse routeur).
 
  
