@@ -2,6 +2,14 @@
 Title : algorithmes de tri
 ---
 
+Ce cours comporte plusieurs parties
+
+* voir la [page sur la complexité](../page1)
+* la [page sur la récursivité](/docs/NSI/langages/page2/)
+* [principaux algorithmes de tri](/docs/NSI/algorithmes/page8/)
+* méthodes [Diviser pour regner](/docs/NSI/algorithmes/page5/)
+
+
 # Algorithmes de tri
 Les activités de tri sont très fréquentes en informatique. Dans un projet informatique, on préfère qu'un programme pass du temps à trier les données plutôt qu'à les rechercher.
 
@@ -9,11 +17,15 @@ On presente ici TROIS algorithmes de tri. Il y en a d'autres.
 
 ## Le tri par insertion (ou tri simple)
 ### Principe
-Pour cet algorithme, trier, c’est déplacer des éléments, et y insérer l’élément rangé, depuis le debut déjà trié de la liste, jusqu’à la fin : 
+Pour cet algorithme, trier, c’est déplacer des éléments, et y insérer l’élément rangé, depuis le debut déjà trié de la liste, jusqu’à la fin. C'est un peu la manière avec laquelle on range les cartes à jouer au debut d'une partie:
+
+{{< img src="../images/jeu_cartes.jpeg" caption="main d'une partie de cartes" >}}
 
 * *Hypothèse :* l'élément non rangé est le j. Tous les autres éléments sont rangés jusqu’à j.
 * Il faut d’abord conserver sa valeur à l’aide d’une variable temp
 * On décale tous les éléments i, depuis le rang j jusqu’à l’élément dont la valeur est inférieure à celle de j (et donc de temp), en redescendant.
+
+{{< img src="/images/video.png" link="https://www.youtube.com/watch?v=3QwCnoa_6FY"  caption="animation sur le tri par insertion" >}}
 
 ```python
 def tri1(L):
@@ -67,7 +79,7 @@ Les opérations significatives sont:
 
 La boucle `for`est executée n fois.
 
-Dans la pire des cas, où la liste classerait les éléments dans l'ordre décroissant, T(n) sera alors:
+Dans le pire des cas, où la liste classerait les éléments dans l'ordre décroissant, T(n) sera alors:
 
 $$T_1(n) = n \times 2~(lignes~3~et~4)+ n~(ligne~8)$$
 $$T_2(n) = [2~(ligne~5) + 2~(ligne~6)+2~(ligne~7)]\times[1+2+ ... +(n-1)]$$
@@ -102,6 +114,7 @@ Sur un tableau de n éléments (numérotés de 0 à n-1), le principe du tri par
 * rechercher le second plus petit élément du tableau, et l'échanger avec l'élément d'indice 1 ;
 * continuer de cette façon jusqu'à ce que le tableau soit entièrement trié (jusqu'au rang n-2).
 
+{{< img src="/images/video.png" link="https://www.youtube.com/watch?v=qpeeRU_K90k"  caption="animation sur le tri par selection" >}}
 
 ```python
 def select(T,debut) :
@@ -246,6 +259,9 @@ L'algorithme est naturellement décrit de façon récursive.
 * Trier récursivement le sous-tableau de gauche avec ce même algorithme du tri
 * Trier récursivement le sous-tableau de droite avec ce même algorithme du tri
 * Fusionner les deux tableaux triés en un seul tableau trié.
+
+
+{{< img src="/images/video.png" link="https://youtu.be/OEmlVnH3aUg?t=235"  caption="introduction au tri fusion" >}}
 
 
 ```python

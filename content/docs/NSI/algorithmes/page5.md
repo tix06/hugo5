@@ -4,8 +4,8 @@ Title : diviser
 *Prérequis :* 
 
 * voir la [page sur la complexité](../page1)
-* et la [page sur la récursivité](/docs/NSI/langages/page2/)
-
+* la [page sur la récursivité](/docs/NSI/langages/page2/)
+* Et la page sur les rappels: [principaux algorithmes de tri](/docs/NSI/algorithmes/page8/)
 
 # Diviser pour regner
 C'est une technique informatique qui consiste à : 
@@ -165,7 +165,11 @@ La **fonction `interclassement`** prend deux listes en paramètres, L1 et L2, et
 
 La **complexité** de la fonction `interclassement` est O(n), où n est égal à la taille de chaque sous-liste.
 
-> **Question 3:** *Combien de fois cette fonction `interclassement` est-elle appelée pour la liste L de taille 6 vue en exemple?. Généraliser le résultat à celui d'une liste L de taille N. En déduire la complexité du tri-fusion.* 
+> **Question 3:** *Expliquer pourquoi, lors de la fusion, la complexité au rang n est donnée par la formule de recurence:*
+
+$$T(n) = T(\tfrac{n}{2}) + n$$
+
+> **Question 4:** En déduire la complexité du tri fusion.
 
 ## Complexité du tri fusion
 Le tri fusion est un tri qui est **optimal** du point de vue de la complexité temporelle: il est de l'ordre O(N*log(N)). On ne peut pas trouver un algorithme plus efficace en temps.
