@@ -52,10 +52,13 @@ On pourra ajouter des modules pour:
 
 Lien vers la page de{{< a link="https://education.ti.com/fr/ressources-et-formations/modules-python" caption="téléchargement des modules" >}}
 {{< img src="../images/modules.png" caption="Exemple de modules au moment de la redaction" >}}
-Pour le module CE_Turtle: la page de téléchargement propose plusieurs fichiers:
 
-* < img src="../images/maj_ti9.png" link="https://education.ti.com/fr/produits-ressources/turtle-module/ti83-premium-ce-edition-python" caption="page de téléchargement du module Turtle" >}}
-* [guide de démarrage](https://resources.t3france.fr/fileadmin/user_upload/Turtle_Getting_Started_Guide_CE_Python_FR.pdf)
+Pour le module CE_Turtle: 
+
+{{< img src="../images/maj_ti9.png" link="https://education.ti.com/fr/produits-ressources/turtle-module/ti83-premium-ce-edition-python" caption="page de téléchargement du module Turtle" >}}
+
+* Cliquer sur le bouton *télécharger*. Dezziper le fichier. Installer les 2 fichiers (GRID.8xv et TURTLE.8xv) dans la calculatrice (voir plus loin)
+* Le dossier contient aussi le [guide de démarrage](https://resources.t3france.fr/fileadmin/user_upload/Turtle_Getting_Started_Guide_CE_Python_FR.pdf)
 
 
 
