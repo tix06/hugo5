@@ -1,3 +1,5 @@
+connecté au **github hugo5**
+
 # Ajouter une ligne de navigation dans la baniere
 
 Il faut encore ajouter les liens de nav des autres classes puis les rubriques
