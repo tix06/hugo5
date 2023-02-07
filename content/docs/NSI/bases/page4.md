@@ -6,7 +6,43 @@ Title : SQL
 Structured Query Language, ou langage de requêtes structuré
 
 (cours donné en classe)
-<!--
+
+
+
+# Murder Party à SQL City
+
+{{< img src="../images/clue-illustration.png" link="https://replit.com/@ToniScullion1/Silver-TASK-2-SQL-Murder-Mystery" caption="retrouvez le meurtrier grâce aux bases de données de la police" >}}
+* Pour le **TP guidé**: Aller à la ressource sur {{< a link="https://mystery.knightlab.com/walkthrough.html" caption="mystery.knightlab.com" >}} et suivre les instructions.
+
+* Le fichier *sql-murder-mystery.db*: {{< a link="https://github.com/NUKnightLab/sql-mysteries" caption="ressource sur Github" >}} peut être télechargé pour une utilisation en *local* avec dbBrowserSQLite.
+
+* Pensez à **prendre des notes** au fur et à mesure de votre avancée dans l'enquête.
+
+**Aide**: 
+* Observez bien le *Diagramme Entité Relation* de cette base de données. Vous pourrez y lire le *schéma relationnel* de ces tables. Les *clés primaires* sont indiquées avec une clé *jaune* et les *clés étrangères* avec une flèche *bleue*.
+
+* La relation entre tables est indiquée par une flèche.
+
+* La liste des tables peut être obtenue avec:
+
+```SQL
+SELECT name 
+  FROM sqlite_master
+ where type = 'table';
+```
+
+* Pour obtenir la liste des 10 premières entrées de la table `crime_scene_report`: 
+
+```SQL
+SELECT * FROM crime_scene_report
+LIMIT 10;
+```
+
+* La clause `WHERE` permet d'ajouter un filtre à votre requête. Elle est suivie d'une condition, par exemple: `WHERE city = 'SQL City'`.
+
+* Lire le rappel sur les *wildcards* par exemple `'P%'` pour obtenir les noms qui commencent par `P`. Remplacer alors le signe `=` par `LIKE` dans la clause `WHERE`.
+
+
 # TP Python - SQL: base de données exoplanetes.db
 ## Principe
 Nous allons utiliser un script Python pour nous connecter à la base de données `exoplanetes.db` et tester quelques requêtes en langage SQLite.
@@ -83,42 +119,6 @@ Afficher ("La connexion SQLite est fermée")
 
 
 > **Q3.** Tester quelques unes des requêtes sur cette base, vues en TD (BDD2 - exercices). Utiliser pour cela un mécanisme de contrôle des erreurs de type `try .. except`, afin d'afficher les erreurs SQL dans la console de l'IDE.
-
--->
-# Murder Party à SQL City
-
-{{< img src="../images/clue-illustration.png" link="https://replit.com/@ToniScullion1/Silver-TASK-2-SQL-Murder-Mystery" caption="retrouvez le meurtrier grâce aux bases de données de la police" >}}
-* Pour le **TP guidé**: Aller à la ressource sur {{< a link="https://mystery.knightlab.com/walkthrough.html" caption="mystery.knightlab.com" >}} et suivre les instructions.
-
-* Le fichier *sql-murder-mystery.db*: {{< a link="https://github.com/NUKnightLab/sql-mysteries" caption="ressource sur Github" >}} peut être télechargé pour une utilisation en *local* avec dbBrowserSQLite.
-
-* Pensez à **prendre des notes** au fur et à mesure de votre avancée dans l'enquête.
-
-**Aide**: 
-* Observez bien le *Diagramme Entité Relation* de cette base de données. Vous pourrez y lire le *schéma relationnel* de ces tables. Les *clés primaires* sont indiquées avec une clé *jaune* et les *clés étrangères* avec une flèche *bleue*.
-
-* La relation entre tables est indiquée par une flèche.
-
-* La liste des tables peut être obtenue avec:
-
-```SQL
-SELECT name 
-  FROM sqlite_master
- where type = 'table';
-```
-
-* Pour obtenir la liste des 10 premières entrées de la table `crime_scene_report`: 
-
-```SQL
-SELECT * FROM crime_scene_report
-LIMIT 10;
-```
-
-* La clause `WHERE` permet d'ajouter un filtre à votre requête. Elle est suivie d'une condition, par exemple: `WHERE city = 'SQL City'`.
-
-* Lire le rappel sur les *wildcards* par exemple `'P%'` pour obtenir les noms qui commencent par `P`. Remplacer alors le signe `=` par `LIKE` dans la clause `WHERE`.
-
-
 
 
 
