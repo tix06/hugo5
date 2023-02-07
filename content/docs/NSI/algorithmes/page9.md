@@ -39,13 +39,24 @@ On souhaite maintenant diminuer le contraste, en divisant par 2 chacune de compo
 
 `planPixels=Image.new("RGB",(largeur,hauteur))`
 
+*Debut du programme:*
+
+```python
+from PIL import Image
+imageSource=Image.open("crabePortrait.bmp")
+largeur,hauteur=imageSource.size
+planPixels=Image.new("RGB",(largeur,hauteur))
+
+for ...
+```
+
 On remplira cette image avec des pixels, un par un.
 
-> *A vous de jouer:* Ecrire un script qui parcourt TOUS les pixels de l'image.
+> *A vous de jouer:* Compléter le script pour...
 
-> 1. Avant la boucle de parcours des pixels, ajouter `planPixels=Image.new("RGB",(largeur,hauteur))`
-2. Parcourir tous les pixels de l'image, largeur * hauteur.
-2. Lire la valeur RGB de chaque pixel (`getpixel`) et modifier cette valeur, en diminuant le contraste de couleur: p = (p[0]//2,p[1]//2,p[2]//2)
+
+1. parcourir tous les pixels de l'image, largeur * hauteur.
+2. lire la valeur RGB de chaque pixel (`getpixel`) et modifier cette valeur, en diminuant le contraste de couleur: $p = (p[0]//2,\ p[1]//2,\ p[2]//2)$
 3. puis placer ce pixel sur la nouvelle image en construction planPixels. Utiliser pour cela la methode putpixel((x,y),p) de l'objet `planPixels` où x et y sont les nouvelles coordonnées du pixel p que l'on veut dessiner.
 
 
@@ -58,7 +69,7 @@ On va cherche à écrire un script Python qui réalise la rotation d'un quart de
 
 > 1. Quelles sont les coordonnées des points A et B avant transformation?
 2. Quelles sont les nouvelles coordonnées des points A' et B' après transformation?
-3. pour un pixel situé initialement en (x,y), quelles sont ses coodonnées (x',y') après transformation? Exprimer ces coordonnées x' et y' en fonction de x, y, largeur, hauteur.
+3. pour un pixel situé initialement en (x,y), quelles sont ses coodonnées (x',y') après transformation? Verifier que l'on a: $x'=-y+hauteur-1$, $y'=x$. 
 4. Ecrire le script du programme qui devra réaliser la transformation de *crabePortrait.bmp*, d'un quart de tour, dans le sens horaire.
 5. Donner la complexité de cet algorithme.
 
@@ -86,7 +97,8 @@ def echange_pix(image,x0,y0,x1,y1):
     """
     start = image.getpixel((x0,y0))
     end = image.getpixel((x1,y1))
-    # à compléter
+    image.putpixel((x0,y0),...)
+    image.putpixel((x1,y1),...)
 
 
 ```
