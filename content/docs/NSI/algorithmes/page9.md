@@ -120,7 +120,7 @@ def echange_quadrant(image,x0,y0,x1,y1,n):
     x1,y1: int, int: coordonnées du pixel du coin superieur gauche de B
     n : int : largeur ou hauteur de l'image, en nombre de pixels
     Example: echange du quart d'image en haut à gauche (A) avec celui 
-    ------------ en haut à droite (B) sur une image de largeur 420
+    ------------ en haut à droite (B) sur une image de largeur 120
      
    
     >>> echange_quadrant(imageSource,0,0,120,0,120)
