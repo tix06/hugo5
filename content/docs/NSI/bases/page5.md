@@ -89,7 +89,7 @@ Il suffira d'utiliser la fonction `print` pour afficher les éléments *HTML* da
 
 > * Mettre les lignes suivantes dans le fichier:
 
-> ```python
+```python
 # coding: utf-8
 #! /usr/bin/python
 import cgi
@@ -136,6 +136,7 @@ import sqlite3 as lite
 
 Puis créer un objet-connexion vers la base de données `clients.db`, à l'aide de la fonction-fabrique `connect()`:  
 
+
 ```
 con = lite.connect('clients.db')
 ``` 
@@ -144,17 +145,20 @@ Cet objet assurera l'interface entre votre programme et la base de données.
 
 Pour dialoguer en SQL avec cet objet *con*, on utilisera encore un autre objet-interface que l'on appelle un *curseur*. Il s'agit d'une sorte de tampon mémoire intermédiaire, destiné à mémoriser temporairement les données en cours de traitement, ainsi que les opérations que vous effectuez sur elles, avant leur transfert définitif dans la base de données. Cette technique permet d'annuler et de revenir en arrière dans le traitement, sans que la base de données n'en soit affectée.
 
+
 ```
 cur = con.cursor()
 ```
 
 La requête est exprimée dans une chaîne de caractères, que nous transmettons au curseur par l'intermédiaire de sa méthode `execute()`:
 
+
 ```
 cur.execute("CREATE TABLE IF NOT EXISTS clients_login(id INTEGER, name TEXT, pass TEXT)")
 ```
 
 Tant que le curseur reste ouvert, vous pouvez bien entendu ajouter des enregistrements supplémentaires :
+
 
 ```
 cur.execute("INSERT INTO clients_login VALUES(1,?,?)",(nom,mdp))
@@ -164,6 +168,7 @@ Il sera souvent necessaire d'utiliser les contenus de variables python. Il est c
 
 Pour récuperer le contenu d'une table de la base de données: La méthode `Fetchall` (est )une alternative à `Fetchone`), permet de récupérer d'un coup l'ensemble du résultat d'une requête:
 
+
 ```
 rows = cur.fetchall
 ``` 
@@ -171,6 +176,7 @@ rows = cur.fetchall
 La variable `rows` est alors une liste de listes. (les n-uplets de la table)
 
 Le transfert dans la base de données sera déclenché par la méthode `commit` de l'objet connexion :
+
 
 ```
 conn.commit()
@@ -184,7 +190,8 @@ conn.commit()
 
 > * Ajouter les lignes suivantes après avoir défini le `Content-type` du document client:
 
-> ```python
+
+```python
 con = None
 con = lite.connect('clients.db')
 with con:
@@ -196,7 +203,8 @@ with con:
 
 > * Ajouter les instructions Python de lecture des champs du formulaire à l'aide de la fonction `form.getvalue`, ainsi que l'echange avec la base de données:
 
-> ```python
+
+```python
 if (form.getvalue("name") != None) :
     nom = html.escape(form.getvalue("name"))
     mdp = html.escape(form.getvalue("pass"))
@@ -212,12 +220,15 @@ if (form.getvalue("name") != None) :
 >  Soit:  <span style="font-size: 24px;">Entrez les identifiants des clients</span> Lorsque les champs de formulaire sont vides.
 
 {{< img src="../images/page2.png" caption="champs du formulaire video" >}}{{< img src="../images/page.png" caption="exemple de page statique" >}}
+
 >   Soit:  <span style="font-size: 24px;">VALIDER la saisie: {} => {}</span> Lorsque les champs *name* et *pass* ont été renseignés. Les symboles `{}` devront être remplacés par leur valeur à l'aide d'une expression formatée en python. (utiliser `.format`).
 
 {{< img src="../images/page3.png" caption="champs du formulaire renseigné" >}}{{< img src="../images/page.png" caption="exemple de page statique" >}}
+
 > * Enfin, modifier la variable `table_affiche` pour afficher dans le tableau TOUS les éléments de la table `clients_login`
 
-> ```python
+
+```python
 table_affiche = '<h2>Table clients</h2><table border=1><tr>'
   
 table_affiche += '<td>ID</td><td>nom</td><td>Pass</td>'
@@ -236,7 +247,11 @@ Ces boutons radio permettront de choisir les noms clients à afficher, en partag
 La page devrait ressembler à l'image ci-dessous:
 
 {{< img src="../images/page4.png" caption="page avec selection par boutons radio" >}}
-**Aide :** [Boutons radio sur mozzila.com](https://developer.mozilla.org/fr/docs/Web/HTML/Element/Input/radio)
+
+## Aides :
+* [Boutons radio sur mozzila.com](https://developer.mozilla.org/fr/docs/Web/HTML/Element/Input/radio)
+
+* [Tuto: voir aussi le document de M Jeunier](/pdf/NSI/bdd_jeunier_cgi.pdf) sur les pages web dynamiques
 
 # Frameworks Flask et Django
 Pour des projets d'applications web plus conséquents, on pourra se tourner vers des frameworks qui vont créer un environnement de travail plus complet: 

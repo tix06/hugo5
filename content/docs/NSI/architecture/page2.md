@@ -83,15 +83,42 @@ Il y a interblocage lorsque des cycles sont présents dans le graphe réalisé d
 * un arc Pj vers Ri signifie que le processus Pj demande la ressource Ri.
 
  
-{{< img src="../images/interblocage.png" caption="interblocage - wikipedia" >}}{{< img src="../images/ordonnancement.jpg" caption="gestion des processus" >}}
+{{< img src="../images/interblocage.png" caption="interblocage - wikipedia" >}}
+
 # TP en console (UNIX) ou avec l'editeur de commandes (WIN)
-## La commande `ps`
+## Commencer par s'approprier les bases du langage en console LINUX
+> Faire le TP au paragraphe 3 LINUX de la page [Levasseur.xyz: NSI](https://www.levavasseur.xyz/NSI_T/Archi/Archi_Processus.html#partie_3)
+
+> Tester également les commandes suivantes au cours de ce TP:
+|
+## Les commandes d'exploration
+* `PWD`: nom du repertoire courant
+* `cd ..`: remonter au repertoire parent
+* `ls`: lister le contenu du repertoire courant (nombreuses options possibles comme `l`, `-R`, ...)
+
+## La commande `cat`
+Cette commande permet à la fois:
+
+* de consulter le contenu d'un fichier: `cat nom_du_fichier`
+* de créer et editer le contenu d'un fichier: `cat > nom_du_fichier`. Le curseur (carré) permet d'editer le contenu. Pour sortir de l'editeur, faire CTRL + D.
+
+## afficher un contenu trop long
+Si vous utilisez `ls -R`, qui affiche de manière recursive le contenu de tous les repertoires et fichiers à partir du repertoire courant, l'affichage est trop rapide pour en voir le detail.
+
+On peut alors utiliser l'option `| more`, qui attend un appui sur le clavier pour passer à la suite de l'affichage: `ls -R | more`.
+
+Une autre possibilité est de rediriger le contenu dans un fichier, nouveau ou existant: `ls -R > fichier1.txt`
+
+Le symbole `>` va *mettre* le contenu dans le fichier, alors que `>>` va *ajouter* le contenu au fichier.
+
+## La commande `ps` ou 'ps -l'
 Pour la liste des processus obtenue par `ps`
 
 * PID : numéro du processus (processus identifier)
 * PPID : identifiant du parent qui a engendré le processus
-* TTY
-* TIME
+* PRI : numero pour indiquer la priorité
+* TTY : le terminal utilisé
+* TIME : temps d'occupation du processeur
 * CMD : commande qui a lancé le processus
 
 ## La commande `top` :
@@ -126,7 +153,8 @@ Un terminal est un programme qui permet d'interagir avec le systeme d'exploitati
 
 
 # Liens
-* ce sours est inspiré de [David Roche, sit Pixees term NSI](https://pixees.fr/informatiquelycee/n_site/nsi_term_archi_proc.html) partagé sous licence CC.
+* ce cours est inspiré de [David Roche, sit Pixees term NSI](https://pixees.fr/informatiquelycee/n_site/nsi_term_archi_proc.html) partagé sous licence CC0
+* Processeur, programmes, processus: [très bon cours de levasseur.xyz](https://www.levavasseur.xyz/NSI_T/Archi/Archi_Processus.html)
 * cours NSI qkzk : [systeme de fichiers](https://qkzk.xyz/docs/nsi/cours_terminale/architecture/processus/processus/#système-de-fichiers)
 * [multiprocessing](https://en.wikipedia.org/wiki/Multiprocessing)
 * [(multi)threading](https://fr.wikipedia.org/wiki/Thread_(informatique))

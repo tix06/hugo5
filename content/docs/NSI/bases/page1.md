@@ -1,6 +1,16 @@
 ---
 Title : modele
 ---
+# Structurer les données
+**Exemple:**
+
+Voici plusieurs informations: *M Dupont, un policier, uniforme noir et chapeau rond, Tintin.*
+
+{{< img src="../images/dupont.png" >}}
+
+Il peut exister une **relation** entre ces informations: Dupont a pour métier *policier* et c'est l'ami de *Tintin*.
+
+Des relations de ce genre définissent des **structures**.
 
 # Des problèmes de redondance
 

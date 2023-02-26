@@ -2,7 +2,7 @@
 Title : SGBD
 ---
 
-# système de gestion de base de données relationnelles
+# Système de gestion de base de données relationnelles
 ## Introduction
 Une base de donnée est necessaire pour stocker de manière permanente des données, mais aussi pour partager ces données.
 
@@ -17,15 +17,6 @@ Une base de données est constituée:
 ...et c'est bien plus qu'un simple tableur.
 
 ## Définitions
-**Exemple:**
-
-Voici plusieurs informations: *M Dupont, un policier, uniforme noir et chapeau rond, Tintin.*
-
-{{< img src="../images/dupont.png" >}}
-
-Il peut exister une **relation** entre ces informations: Dupont a pour métier *policier* et c'est l'ami de *Tintin*.
-
-Des relations de ce genre définissent des **structures**.
 
 **Définition:** une base de données est un gros ensemble d’informations *structurées*, mémorisées sur un support permanent.
 
@@ -47,5 +38,28 @@ Il existe des SGBD gratuites, et payantes. Ces logiciels ont pour rôle:
 
 L'utilisation de SGBD est généralisé dès qu'il faut pouvoir gérer des données de grande quantité, et permettre un accès plus simple et sûr à ces données.
 
-## suite du cours
-* [modèle relationnel](/docs/NSI/bases/page1/)
+# Problèmes d'accès concurents
+## Exemple de la perte de mise à jour
+{{< img src="../images/acces_img1.png" caption="Problème de la perte de mise à jour du tuple T par la transaction A" >}}
+
+Les transaction A et B accèdent au même tuple T ayant la même valeur respectivement à t1 et t2. Ils modifient chacun la valeur de T. Les modifications effectuées par A seront perdues puisqu'elle avait lu T avant sa modification par B.
+
+{{< img src="../images/acces_img2.png" caption="Doucle crédit d'un compte bancaire C" >}}
+
+Dans cet exemple le compte bancaire vaut 1010 à la fin des deux transactions à la place de 1110.
+
+## Solution
+Une solution générale à la gestion de la concurrence est une technique très simple appelée verrouillage.
+
+Poser un verrou sur un objet (typiquement un tuple) par une transaction signifie rendre cet objet inaccessible aux autres transactions.
+
+Lorsqu'une transaction se termine (COMMIT ou ROLLBACK) elle libère tous les verrous qu'elle a posé.
+
+## Autres problèmes pouvant survenir
+L'inter-blocage est le phénomène qui apparaît quand deux transactions (ou plus, mais généralement deux) se bloquent mutuellement par des verrous posés sur les données. Ces verrous empêchent chacune des transactions de se terminer et donc de libérer les verrous qui bloquent l'autre transaction. Un processus d'attente sans fin s'enclenche alors.
+
+## Documents issus de...
+[stph.scenari-community.org](https://stph.scenari-community.org/bdd/0/co/traUC031.html)
+
+## suite du cours: TP serveur SQLite en Python
+* [modèle relationnel](/docs/NSI/bases/page5/)
