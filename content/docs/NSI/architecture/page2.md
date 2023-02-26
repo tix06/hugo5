@@ -74,7 +74,7 @@ C) Un blocage se produit lorsque le premier processus verrouille la première re
 
 D) Le blocage peut être résolu en annulant et en redémarrant le premier processus.
 
-*Exemple:  le processus P1 utilise la ressource R2 qui est attendue par le processus P2 qui utilise la ressource R1, attendue par P1.*
+
 
 ### Modélisation par un graphe orienté
 Il y a interblocage lorsque des cycles sont présents dans le graphe réalisé de la manière suivante:
@@ -85,7 +85,25 @@ Il y a interblocage lorsque des cycles sont présents dans le graphe réalisé d
  
 {{< img src="../images/interblocage.png" caption="interblocage - wikipedia" >}}
 
-# TP en console (UNIX) ou avec l'editeur de commandes (WIN)
+*Exemple:  le processus P1 utilise la ressource R2 qui est attendue par le processus P2 qui utilise la ressource R1, attendue par P1.*
+
+### Illustration d'un interblocage routier
+{{< img src="../images/thread2.png" caption="saurez vous modéliser la situation suivante par un graphe présentant un cycle?" >}}
+
+### Gestion des tâches par une même application
+Un *thread* est un élément d'un processus qui va partager avec un programme l'espace des données et va s'exécuter de façon simultané avec d'autres thread. On parle aussi de processus légers. 
+
+Plusieurs *threads* peuvent exister dans le même processus. Ces *threads* partagent la mémoire et l’état du processus. En d’autres termes: ils partagent le code ou les instructions et les valeurs de ses variables.
+
+{{< img src="../images/thread1.png" caption="partage des ressources par 3 threads" >}}
+
+Ils peuvent aussi causer de multiples problèmes (accès concurent, interblocage).
+
+On a vu un problème identique sur la gestion concurente des accès à une même ressource sur le chapitre sur les SGBD.
+
+Le TP2 plus bas permet d'explorer ces notions avec le multi-threading...
+
+# TP1 en console (UNIX) ou avec l'editeur de commandes (WIN)
 ## Commencer par s'approprier les bases du langage en console LINUX
 > Faire le TP au paragraphe 3 LINUX de la page [Levasseur.xyz: NSI](https://www.levavasseur.xyz/NSI_T/Archi/Archi_Processus.html#partie_3)
 
@@ -150,7 +168,8 @@ Un terminal est un programme qui permet d'interagir avec le systeme d'exploitati
 * Editeur de texte : C'est un programme conçu pour ecrire et modifier du code. La plupart des editeurs offrent des fonctions pour faciliter l'edition (coloration syntaxique) : notepad++, sublime text, Vim, Atom, Geany...
 * IDE : c'est un editeur de texte doté de fonctionnalités de gestion de projet. Pour developper en python, c'est par exemple PyCharm, Spyder, Visual studio...
 
-
+# TP2 multi-treading et Python
+[Lien vers le TP](../page8): parallélisme en Python
 
 # Liens
 * ce cours est inspiré de [David Roche, sit Pixees term NSI](https://pixees.fr/informatiquelycee/n_site/nsi_term_archi_proc.html) partagé sous licence CC0
