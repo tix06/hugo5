@@ -1,5 +1,5 @@
 ---
-Title: multi threading
+Title: multi-threading
 ---
 
 # TP sur le parallélisme en Python
@@ -226,6 +226,8 @@ Le document suivant traite d'un *bug* informatique célèbre, du à un *interblo
 Le robot de la mission [Mars PathFinder](http://lycee.educinfo.org/index.php?page=interblocage&activite=processus)
 
 
+# Liens
+* TP issu de la page: [lycee educinfo](http://lycee.educinfo.org/index.php?page=creation_thread&activite=processus)
 
 
 
