@@ -3,11 +3,20 @@ Title: Programme informatique
 ---
 
 # A quoi sert un programme informatique
+*Sojourner* (de la sonde [Mars Pathfinder](https://fr.wikipedia.org/wiki/Mars_Pathfinder) est le premier *rover* géologue envoyé sur Mars. Il a ouvert la voie aux autres *Spirit*, *Opportunity* (2003), *Curiosity* (2011), *Perseverence* (2021) et *Zuhrong* (2021).
+
+{{< img src="../images/pathfinder.jpg"  caption="le robot explorateur Pathfinder (1997) en plein travail" >}}
+
+Ce premier *rover*, muni d'un moteur (chenilles), d'une batterie solaire et une autre au Lithium, disposait d'une camera, une station meteo, et d'un spectromètre à RX pour analyser les échantillons minéraux. Il possedait egalement une antenne, dirigée vers la Terre pour ses communications.
+
+Les programmes qui le contrôlaient devaient lui permettre d'*evoluer* de manière plus ou moins *autonome* sur la surface de Mars, et de réaliser diverses *mesures physiques*, tout en veillant à sa propre *sécurité* et *autonomie* (batteries).
+
+
 ## Que fait un programme informatique?
 Ce qui fait fonctionner un appareil numérique, c'est un **programme**: 
 C'est donc grâce à un programme que l'on fait fonctionner un ordinateur, une console de jeux, une machine à laver, le poste de pilotage d'un avion, un guichet automatique bancaire… 
 
-{{< img src="../images/machines.png" caption="des " >}}
+{{< img src="../images/machines.png" caption="des machines utilisant un programme informatique " >}}
 Mais c'est aussi grâce à un programme que ces machines peuvent fournir un service: un logiciel de bureautique, un jeu, le lavage du linge, le pilotage automatique, ou le retrait d'argent de son compte....
 
 Aujourd'hui, le smartphone est l'objet qui nous permet d'executer de nombreux programmes, en permanence.
@@ -341,6 +350,67 @@ for i in range(1,n+1):
 ```
 
 *range(a,b) permet de parcourir les valeurs a, a+1, …, b-1 (b non compris)*
+
+# Exercices issus du site Algorea
+## Boucle simple
+### Plots 
+Ecrire un programme utilisant une boucle `for`, permettant au robot de deposer un plot sur chaque repère.
+
+{{< img src="../images/robot0.png" caption="parcours initial" >}}
+
+*Fonctions disponibles :* `tournerGauche()`, `tournerDroite()`, `avancer()`, `deposerPlot()`, `surCaseMarquee()`, `plotDevant()`.
+
+*Mots-clés autorisés :* `for`.
+
+### Caisses
+Programmez le robot pour qu'il pousse les caisses sur les cases marquées.
+
+{{< img src="../images/robot1.png" caption="parcours carré" >}}
+
+*Fonctions disponibles :* `tournerGauche(), tournerDroite(), avancer(), pousserCaisse()`. 
+
+*Mots-clés autorisés :* `for`.
+
+## Boucle et test conditionnel
+Compléter le programme suivant pour qu'il permette au robot de déposer tous les plots sur les repères. Le programme doit fonctionner quel que soit le terrain (1, 2, ou 3) proposé:
+
+{{< img src="../images/robot11.png" caption="terrain 1" >}}
+
+{{< img src="../images/robot12.png" caption="terrain 2" >}}
+
+{{< img src="../images/robot13.png" caption="terrain 3" >}}
+
+
+```python
+from robot import *
+for i in range(9):
+    if surCaseMarquee():
+        deposerPlot()
+        ...
+    else:
+        ...
+```
+
+*Fonctions disponibles :* `tournerGauche()`, `tournerDroite()`, `avancer()`, `deposerPlot()`, `surCaseMarquee()`, `plotDevant()`.
+
+*Mots-clés autorisés :* `if, else, for`.
+
+## Boucle conditionnelle: `while`
+Programmer le robot pour qu'il ramasse sa bille et la pose sur le trou le plus éloigné. Cette fois, on n'utilisera pas le mot-clé `for` car on ne connait pas à l'avance le nombre de cases à parcourir.
+
+On utilisera plutôt le mot-clé `while` suivi de la condition à réaliser pour executer les instructions.
+
+Ce sujet contient deux tests, avec une position différente pour le trou. Votre programme doit fonctionner pour les deux.
+
+
+{{< img src="../images/robot21.png" caption="test 1" >}}
+
+{{< img src="../images/robot22.png" caption="test 2" >}}
+
+*Fonctions disponibles :* `droite(), ramasser(), deposer(), surTrou()`
+
+*Mots-clés autorisés :* `while, not`
+
 
 # Liens et ressources
 * Programme informatique: [wikipedia](https://fr.wikipedia.org/wiki/Programme_informatique#:~:text=Un%20programme%20informatique%20est%20un,forme%20binaire%20ou%20directement%20interpr%C3%A9t%C3%A9.)
