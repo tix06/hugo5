@@ -6,11 +6,14 @@ Title: Bases en Python
 
 *Python* est un langage de programmation très *actuel*, utilisé autant pour la création de site web, que pour l'analyse de données. On peut programmer en Python à l'aide d'une calculatrice, si celle-ci intègre un environnement de developpement.
 
+
+
 # Bases en python
 ## Découverte de l'environnement Python de la Ti83
 ### Munissez vous **au choix**:
 
 * de la calculatrice TI-83 Premium CE edition PYTHON
+* du simulateur de TI-83 installé sur les ordinateurs: TI-SMARTVIEW
 * de l'emulateur de la calculatrice sur [Vittasciences](https://fr.vittascience.com/TI-83/?mode=code&console=bottom&toolbox=texas-instruments&simu=1)
 
 ### Aller sur [Ti-codes](https://education.ti.com/fr/mises-a-jour-et-logiciels/ti-codes/python/ti-83-premium-ce/integrated-modules):

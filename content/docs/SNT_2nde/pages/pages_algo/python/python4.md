@@ -411,6 +411,26 @@ Ce sujet contient deux tests, avec une position différente pour le trou. Votre 
 
 *Mots-clés autorisés :* `while, not`
 
+## Boucle `for`, boucle conditionnelle `while`
+Même exercice que precedemment, mais cette fois, ce sont les 2 parcours suivants qui doivent être réalisés par le même programme:
+
+{{< img src="../images/robot31.png" caption="test 1" >}}
+
+{{< img src="../images/robot32.png" caption="test 2" >}}
+
+*Fonctions disponibles :* `droite(), gauche(), bas(), ramasser(), deposer(), surTrou(), surObjet()`
+
+*Mots-clés autorisés :* `for, while, not`
+
+## Utiliser des variables
+Pour la première situation, le robot consomme 1 segment de sa batterie chaque fois qu'il pose un plot. Il doit s'arrêter de travailler lorsque sa batterie ne contient plus qu'un seul segment. Comment peut-il tenir le compte du nombre de segments utilisés, et donc, du niveau de sa batterie?
+
+{{< img src="../images/robot4.png" caption="batterie du robot" >}}
+
+*Fonctions disponibles :* `tournerGauche()`, `tournerDroite()`, `avancer()`, `deposerPlot()`, `surCaseMarquee()`, `plotDevant()`.
+
+
+*Mots-clés et symboles autorisés :* `for, while, not, =, +, -, >, <`
 
 # Liens et ressources
 * Programme informatique: [wikipedia](https://fr.wikipedia.org/wiki/Programme_informatique#:~:text=Un%20programme%20informatique%20est%20un,forme%20binaire%20ou%20directement%20interpr%C3%A9t%C3%A9.)

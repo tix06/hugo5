@@ -83,15 +83,32 @@ Dans une table, l'un des attributs peut être la clé primaire d'une autre table
 #### Association binaire
 Une association binaire entre les entités E<sub>1</sub> et E<sub>2</sub> est un *ensemble de couples* (e<sub>1</sub>, e<sub>2</sub>) avec e<sub>1</sub>∈E<sub>1</sub> et e<sub>2</sub>∈E<sub>2</sub>. 
 
-Cette association peut être représentée à l'aide d'une *clé etrangère*, ou peut necessiter la création d'une nouvelle relation (et donc d'un nouveau tableau) pour répondre aux contraintes d'intégrité.
+Cette association peut être représentée à l'aide d'une *clé etrangère*, ou peut necessiter la création d'une nouvelle relation (et donc d'un nouveau tableau) pour répondre aux **contraintes d'intégrité**.
+
 
 La base de données doit se conformer aux **contraintes d'intégrité référentielles**:
 
-1. Contrainte de relation: chaque relation doit comporter une clé primaire.
-2. Clé etrangère: doit être la clé primaire de l'autre relation à laquelle elle se réfère.
-3. Modification: on ne doit pas faire de modification de la clé primaire d'une occurence si celle-ci est liée.
+# Contraintes d'intégrité
+Une contrainte d'intégrité est une règle qui définit la cohérence d'une donnée ou d'un ensemble de données de la BD.
 
-### Règles de conception d'une base de données
+Les contraintes sont définies au moment de la création des tables.
+
+PRIMARY KEY : définit l'attribut comme la clé primaire
+
+UNIQUE : interdit que deux tuples de la relation aient la même valeur pour l'attribut.
+
+REFERENCES <nom table> (<nom colonnes>) : contrôle l'intégrité référentielle entre l'attribut et la table et ses colonnes spécifiées
+
+CHECK (<condition>) : contrôle la validité de la valeur de l'attribut spécifié dans la condition dans le cadre d'une restriction de domaine
+
+Pour résumer, ce sont:
+
+1. Contrainte **de relation**: chaque relation doit comporter une clé primaire.
+2. Clé **etrangère**: doit être la clé primaire de l'autre relation à laquelle elle se réfère. Cette autre relation doit contenir l'élément auquel on veut se référencer AVANT de faire référence.
+3. Modification: on ne doit pas faire de modification de la clé primaire d'une occurence si celle-ci est liée.
+4. En option, on peut ajouter des contraintes d'unicité ou de validité avec UNIQUE ou CHECK
+
+## Compléments (hors programme): Règles de conception d'une base de données
 * **Unicité:** Toute entité donne lieu à une table dont la clé primaire est l'identifiant de l'entité.
 * Toute **association binaire fonctionnelle** est implémentée par la presence d'une **clé étrangère** dans la table, qui représente l'entité origine de la dépendance fonctionnelle.
 * **Normalisation:** Toute **association non fonctionnelle** génère une **nouvelle table** dont la clé primaire est l'ensemble des clés primaires des tables qu'elle relie. Un exemple d'association non fonctionnelle, c'est lorsqu'une information apparait plusieurs fois, et necessiterait de modifier plusieurs lignes s'il fallait effectuer un changement.
