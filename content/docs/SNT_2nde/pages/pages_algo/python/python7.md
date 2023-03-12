@@ -54,7 +54,7 @@ Compléter alors l'instruction pour obtenir:
 {{< img src="../images/scratch8.png" >}}
 * Mettez vous maintenant dans la peau de l'utilisateur: Executer le programme (bouton du haut `>`) Et repondre à la question dans le *shell*, sous la fenêtre d'edition.
 
-> Sur votre cahier, recopier le script python correspondant. Et répondre aux questions:
+> Sur **votre cahier**, recopier le script python correspondant. Et répondre aux questions:
 
 1. Quelle instruction en python permet de demander à l'utilisateur d'entrer une valeur ou un texte?
 2. Quelle instruction python permet d'afficher :
@@ -94,7 +94,10 @@ Votre fonction est vide et ne contient pas encore d'instruction.
 *Modifier `votre nom` par votre veritable nom...*
 
 {{< img src="../images/scratch14.png" >}}
-> Sur votre cahier, recopier le script python correspondant. Et répondre aux questions: Dans le script python: ...
+
+> Sur **votre cahier**, recopier le script python correspondant. Et répondre aux questions: Dans le script python: ...
+
+
 
 
 1. Quelle partie du programme associe votre nom à la variable `nom`?
@@ -102,3 +105,8 @@ Votre fonction est vide et ne contient pas encore d'instruction.
 3. Comment sont mises les instructions du bloc de code dans la fonction?
 3. Comment faut-il faire pour appeler la fonction et déclencher son execution?
 4. Quel est l'avantage d'utiliser une fonction plutôt que le script de la partie 1?
+
+## Utiliser la calculatrice TI-83 Premium CE edition Python
+*S'il vous reste du temps, recopiez ce programme dans l'environnement python de la calculatrice.* Executez le.
+
+{{< img src="../images/ti_codes.png" >}}
