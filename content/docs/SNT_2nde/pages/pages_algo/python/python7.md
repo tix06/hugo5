@@ -107,6 +107,9 @@ Votre fonction est vide et ne contient pas encore d'instruction.
 4. Quel est l'avantage d'utiliser une fonction plutôt que le script de la partie 1?
 
 ## Utiliser la calculatrice TI-83 Premium CE edition Python
-*S'il vous reste du temps, recopiez ce programme dans l'environnement python de la calculatrice.* Executez le.
+* *S'il vous reste du temps, recopiez ce programme dans l'environnement python de la calculatrice.* Executez le.
 
 {{< img src="../images/ti_codes.png" >}}
+
+* *Saurez vous adapter un jeu de devinettes à l'aide de ce script? Aidez vous du site [momes.parents](https://momes.parents.fr/apprendre/vie-de-classe/charades-blagues/blagues-denfant-monsieur-madame-918811) pour adapter une devinette sur le thème de Monsieur-Madame-ont-un-e-fils-fille*.
+
