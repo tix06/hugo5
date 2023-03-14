@@ -5,7 +5,7 @@ Title : SQL
 # langage SQL
 Structured Query Language, ou langage de requêtes structuré
 
-(cours donné en classe)
+([cours en pdf](/pdf/NSI/bdd2-e.pdf))
 
 
 
