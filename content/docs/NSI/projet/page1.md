@@ -71,7 +71,7 @@ Le blog du Monde sur l’informatique avec la société informatique de France (
 #### Le 21e Siècle
 [http://www.21siecle.quebec/](http://www.21siecle.quebec/) : le numérique et ses implications à destination des non informaticien·nes : Internet, communication, connaissances, le citoyen et la citoyenne, la société.
 
-### Le site de l’ONISEP
+### Le site de l’[ONISEP](https://www.onisep.fr/decouvrir-les-metiers/des-metiers-par-secteur/informatique-et-reseaux/les-metiers-et-l-emploi-dans-l-informatique-et-les-reseaux)
 **POURQUOI ?** Pour réfléchir aux métiers du numérique et aux possibles parcours d’orientation
 
 <input type="button" class="btn btn-lg" value="Thèmes et articles" onclick="window.location.href = '/docs/NSI/projet/page2/'">

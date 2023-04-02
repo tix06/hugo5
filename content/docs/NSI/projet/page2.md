@@ -142,6 +142,15 @@ Neurosmart : concrêtement, is’agit d’un site web où il est possible de vis
 [https://www.lemonde.fr/blog/binaire/2020/11/27/neurosmart-une-histoire-de-cerveau-et-de-passionnes/](https://www.lemonde.fr/blog/binaire/2020/11/27/neurosmart-une-histoire-de-cerveau-et-de-passionnes/)
 
 # Impact sociétal et éthique de l’informatique
+## [IA et modèles génératifs de textes: ChatGPT](https://www.societe-informatique-de-france.fr/wp-content/uploads/2023/03/2023-03-06-Communique_SIF_chatgpt.pdf)
+La mise en accès ouvert de ChatGPT par la société OpenAI a réussi le double tour de force d'amener à la une
+des médias le sujet des modèles génératifs ("MG" – c'est-à-dire les modèles d'IA qui génèrent du contenu) en
+intelligence artificielle, mais aussi de provoquer une curiosité, des réactions, et des inquiétudes parfois
+extrêmes du public. La **Société informatique de France** prend position par ce communiqué.
+
+06 mars 2023
+
+
 ## [IA et démocratie participative : la confiance règne ?](https://www.lemonde.fr/blog/binaire/2021/03/30/ia-et-democratie-participative-la-confiance-regne/)
 
 mardi 30 mars 2021 à 07:00
