@@ -6,12 +6,13 @@ Title: Flash cards mise au point
 ### Flash card 1
 
 **script 1**
-```python
+
+<pre><code>
 a = 1
 for i in range(3):
   print("i = {}, a = {}".format(i, a)
   a = 2 * a 
-```
+</code></pre>
 
 <div class="flip-card">
   <div class="flip-card-inner">
@@ -44,7 +45,8 @@ Reponse A : SyntaxError <br>(à la ligne 3, il manque une parenthèse)
 ### Flash card 2
 
 **script 2**
-```python
+
+<pre><code>
 v = 1
 while v < 100:
   if v% 7 == 0:
@@ -52,7 +54,7 @@ while v < 100:
     else:
     print(v, "n’est pas un multiple de 7")
   v = v + 1 
-```
+</code></pre>
 
 <div class="flip-card">
   <div class="flip-card-inner">
@@ -85,12 +87,13 @@ Reponse B : IndentationError <br>(à la ligne 5)
 ### Flash card 3
 
 **script 3**
-```python
+
+<pre><code>
 f = [0, 1, 0, 0, 0, 0, 0, 0, 0]
 for i in range(0, 9):
   if i>0: f[i + 1] = f[i] + f[i - 1]  
 print(f) 
-```
+</code></pre>
 
 <div class="flip-card">
   <div class="flip-card-inner">
@@ -158,10 +161,10 @@ D- Vrai
 
 **script 4** 
 
-```python
+<pre><code>
 def divise(a,b):
     return a/b
-```
+</code></pre>
 
 Si on execute l'instruction suivante: `divise(10,0)`, la console affiche:
 
@@ -206,7 +209,7 @@ except ZeroDivisionError as err:<br>
 
 **script 5** 
 
-```python
+<pre><code>
 annee = input() # L'utilisateur saisit l'année
 
 annee = int(annee) # On tente de convertir l'année
@@ -214,7 +217,7 @@ annee = int(annee) # On tente de convertir l'année
 if annee<=0:
     raise ValueError("l'année saisie est négative ou nulle")
 print('ca continu')
-```
+</code></pre>
 
 <div class="flip-card">
   <div class="flip-card-inner">
@@ -240,7 +243,8 @@ print('ca continu')
 ### Flash card 7
 
 **script 6** 
-```python
+
+<pre><code>
 annee = input() # L'utilisateur saisit l'année
 try:
     annee = int(annee) # On tente de convertir l'année
@@ -248,7 +252,7 @@ try:
         raise ValueError("année saisie est négative ou nulle")
 except ValueError:
     print("Valeur saisie invalide (l'année est peut-être négative).")
-```
+</code></pre>
 
 <div class="flip-card">
   <div class="flip-card-inner">
@@ -275,7 +279,7 @@ except ValueError:
 
 
 # Relire le cours
-Lien vers la page [mise au point d'un programme](/docs/NSI/langages/page5/)
+Lien vers la page <a href="/docs/NSI/langages/page5/">mise au point d'un programme</a>
 
 <script>
 let selector, cards, makeActive;
