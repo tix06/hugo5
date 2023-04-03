@@ -2,10 +2,10 @@
 Title: Flash cards mise au point
 ---
 
-# Exercices sur la mise au point d'un programme
-### Flash card 1
+<h1>Exercices sur la mise au point d'un programme</h1>
+<h2>Flash card 1</h2>
 
-**script 1**
+<h3>script 1</h3>
 
 <pre><code>
 a = 1
@@ -42,9 +42,9 @@ Reponse A : SyntaxError <br>(à la ligne 3, il manque une parenthèse)
   </div>
 </div>
 
-### Flash card 2
+<h2>Flash card 2</h2>
 
-**script 2**
+<h3>script 2</h3>
 
 <pre><code>
 v = 1
@@ -84,9 +84,9 @@ Reponse B : IndentationError <br>(à la ligne 5)
   </div>
 </div>
 
-### Flash card 3
+<h2>Flash card 3</h2>
 
-**script 3**
+<h3>script 3</h3>
 
 <pre><code>
 f = [0, 1, 0, 0, 0, 0, 0, 0, 0]
@@ -125,8 +125,8 @@ Reponse E : IndexError <br>(à la ligne 3, on ne pourra pas calculer f[i+1] pour
   </div>
 </div>
 
-### Flash card 4
-
+<h2>Flash card 4</h2>
+Pour chacune des propositions, choisir VRAI ou FAUX.
 
 <div class="flip-card">
   <div class="flip-card-inner">
@@ -157,29 +157,30 @@ D- Vrai
 </div>
 
 
-### Flash card 5
+<h2>Flash card 5</h2>
 
-**script 4** 
+<h3>script 4</h3>
 
 <pre><code>
 def divise(a,b):
     return a/b
 </code></pre>
 
-Si on execute l'instruction suivante: `divise(10,0)`, la console affiche:
+Si on execute l'instruction suivante: <code>divise(10,0)</code>, la console affiche:
 
-```
+<pre><code>
 ZeroDivisionError      Traceback (most recent call last)
-<ipython-input-30-8044e08140eb> in <module>
+&lt;ipython-input-30-8044e08140eb&gt; in &lt;module&gt;
 ----> 1 print(divise(10,0))
 
-<ipython-input-29-8590a608aa42> in divise(a, b)
+&lt;ipython-input-29-8590a608aa42&gt; in divise(a, b)
       1 def divise(a,b):
 ----> 2     return a/b
 
 ZeroDivisionError: division by zero
-```
+</code></pre>
 
+On procède différement: on appele maintenant cette fonction <code>divise</code> avec un mecanisme <code>try-except</code>:
 
 <div class="flip-card">
   <div class="flip-card-inner">
@@ -205,9 +206,9 @@ except ZeroDivisionError as err:<br>
   </div>
 </div>
 
-### Flash card 6
+<h2>Flash card 6</h2>
 
-**script 5** 
+<h3>script 5</h3>
 
 <pre><code>
 annee = input() # L'utilisateur saisit l'année
@@ -240,9 +241,9 @@ print('ca continu')
 </div>
 
 
-### Flash card 7
+<h2>Flash card 7</h2>
 
-**script 6** 
+<h3>script 6</h3>
 
 <pre><code>
 annee = input() # L'utilisateur saisit l'année
@@ -251,7 +252,7 @@ try:
     if annee<=0:
         raise ValueError("année saisie est négative ou nulle")
 except ValueError:
-    print("Valeur saisie invalide (l'année est peut-être négative).")
+    print("Valeur saisie invalide (l'année est peut-être négative, ou nulle).")
 </code></pre>
 
 <div class="flip-card">
@@ -278,7 +279,7 @@ except ValueError:
 
 
 
-# Relire le cours
+<h1>Relire le cours</h1>
 Lien vers la page <a href="/docs/NSI/langages/page5/">mise au point d'un programme</a>
 
 <script>

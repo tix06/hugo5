@@ -2,10 +2,12 @@
 Title : mise au point 
 ---
 
+{{< img src="../images/page5/script-au-module.png" caption="du script aux tests unitaires, une démarche de projet" >}}
+
 # Mise au point d'un programme
 Les consignes suivantes sont adaptées au langage Python. Il s'agit d'un recueil de *bonnes* pratiques.
 
-Pour créer une cohérence dans le code, il est recommandé d'utiliser un *guide de style*. Il s'agit de PEP8 sur [https://python.org](https://python.org).
+Pour créer une cohérence dans le code, il est recommandé d'utiliser un *guide de style*. Il s'agit de PEP8, présenté par exemple sur [python.sdv.univ-paris-diderot](https://python.sdv.univ-paris-diderot.fr/15_bonnes_pratiques/).
 
 Une première façon de gérer les erreurs passe par la documentation. Le but de la documentation est de permettre à l'utilisateur d'une fonction de savoir comment l'appeler correctement et comment interpréter sa valeur de retour.
 
@@ -399,7 +401,9 @@ Ran 1 tests, passed: 0 failed: 1
 
 > Testez ces exemples
 
-Ces exemples peuvent être testés dans l'éditeur en ligne *Trinket*:
+Ces exemples peuvent être testés dans l'éditeur en ligne *[Trinket](https://trinket.io/embed/python/b55ced5652)*.
+
+> Modifiez le programme précedent pour separer dans 2 fichiers: le fichier de test et le fichier contenant la fonction à tester.
 
 <iframe src="https://trinket.io/embed/python/b55ced5652" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
@@ -498,7 +502,21 @@ Please enter a number: Z
 Oops!  That was no valid number.  Try again...: invalid literal for int() with base 10: 'Z'
 Please enter a number: 2
 => vous avez entré le nombre 2
-``` 
+```
+
+# Exercice
+On souhaite traiter un ensemble de données issues d'un capteur (robot). Les données sont mises dans 2 listes:
+
+* une liste pour les positions: `x = [0, 1.0, 1.2, 1.4, ...]`
+* une liste pour le temps: `t = [0.0, 0.0123, 0.0247, 0.0247, 0.0320, ...]`
+
+On cherche à définir la vitesse du robot au cours du temps dans une 3e liste. Les valeurs sont calculées à partir de la loi:
+
+$$v[i] = \tfrac{x[i+1] - x[i]}{t[i+1]-t[i]}$$
+
+Les valeurs du temps peuvent générer des erreurs mathématiques (temps égaux pour $t_{i+1}$ et $t_i$). 
+
+> Utiliser un mécanisme de prevention des erreurs et testez votre programme.
 
 
 # Flash cards
