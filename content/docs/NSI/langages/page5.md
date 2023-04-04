@@ -1,6 +1,15 @@
 ---
 Title : mise au point 
 ---
+Ce chapitre comprend 2 pages de cours et une page exercices:
+
+* La mise au point d'un programme: [Lien 1](../page5)
+* Création et utilisation de modules: [Lien 2](../page3)
+* [Lien vers les flash cards](/docs/NSI/langages/ex1/)
+
+La liste des projets se trouve [ici](/docs/NSI/NSI_TP_algo/)
+
+# Programmer en Grand
 
 {{< img src="../images/page5/script-au-module.png" caption="du script aux tests unitaires, une démarche de projet" >}}
 
@@ -210,7 +219,15 @@ Les messages d'exception affichés par le Traceback.
 | KeyError | Une clé est utilisée pour accéder à un élément d’un dictionnaire dont elle ne fait pas partie |
 
 
-## Déclencher des exceptions
+# Les tests unitaires
+Ces tests vont concerner une petite unité d'un programme, typiquement une fonction, ou une méthode.
+
+Ils se divisent en:
+
+* **tests fonctionnels**, qui verifient qu'un programme ou une partie du programme se comportent correctement, et se conforment à leur specification.
+* des **tests structurels**, qui verifient le fonctionnement interne du programme. Leur rôle est par exemple de couvrir les différentes branches conditionnelles, les limites d'une boucle, les types de données possibles pour une opération, ...
+
+## Déclencher des exceptions: tests structurels
 ### **`Raise`**
 L’instruction `raise` permet au programmeur de déclencher une exception spécifique: 
 
@@ -281,7 +298,7 @@ en_fahrenheit(-500)
 AssertionError valeur inferieure au zero absolu
 ``` 
 
-## Créer un module de test unitaires avec **`unittest`**
+## Fonctionnel: Créer un module de test unitaires avec **`unittest`**
 **Définition:** Un test unitaire est un test réalisé sur une portion du programme, typiquement sur une fonction.
 
 Le module `unittest` offre des outils de test de code, comme la classe TestCase. Le but est de vérifier que votre code génère des résultats corrects, conformes au attentes.
@@ -403,7 +420,7 @@ Ran 1 tests, passed: 0 failed: 1
 
 Ces exemples peuvent être testés dans l'éditeur en ligne *[Trinket](https://trinket.io/embed/python/b55ced5652)*.
 
-> Modifiez le programme précedent pour separer dans 2 fichiers: le fichier de test et le fichier contenant la fonction à tester.
+> Modifiez le programme deposé sur Trinket pour separer dans 2 fichiers: le fichier de test et le fichier contenant la fonction à tester.
 
 <iframe src="https://trinket.io/embed/python/b55ced5652" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
@@ -472,6 +489,8 @@ except:
 0.5
 le programme a déclenché une erreur
 ```
+
+> Testez le vous-même: créez une liste d'entiers pour x. Et essayez (`try`) de mettre dans une nouvelle liste les valeurs retournées par `inverse`, à moins (`except`) que la valeur de x soit nulle.
 
 *Exemple 2:*
 Si on veut convertir un caractère en entier, cela génère une erreur de type *ValueError*:

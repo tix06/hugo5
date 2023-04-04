@@ -2,6 +2,13 @@
 Title : modularité
 ---
 
+Ce chapitre comprend 2 pages:
+
+* La mise au point d'un programme: [Lien1](../page5)
+* Création et utilisation de modules: [Lien2](../page3)
+
+La liste des projets se trouve [ici](/docs/NSI/NSI_TP_algo/)
+
 # Modularité
 ## Qu'est ce qu'un module ?
 Un module est un fichier python (d'extension .py) contenant des fonctions.

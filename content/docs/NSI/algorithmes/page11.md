@@ -33,7 +33,7 @@ Fonction prem1(n):
 
 <br>
 
-> Amélioration: modifier la borne supérieure dans la boucle
+> Amélioration: modification de la borne supérieure dans la boucle
 
 Soit n un entier supérieur ou égal à 2.
 Si n n’est pas premier, et si d est son plus petit diviseur supérieur ou égal à 2, on peut écrire :
@@ -62,7 +62,7 @@ C'est à dire des entiers dont le carré est inférieur ou égal à n.
 ## L'algorithme le plus efficace
 L'algorithme le plus **efficace** est celui qui prend le moins de temps pour effectuer la même tâche.
 
-On peut mesurer le temps d’exécution des programmes à l’aide du module `time`. Après avoir importer le module, il suffit de créer une variable `t = time.time()` que l'on mettra au debut de la fonction `liste_prime`.
+On peut mesurer le temps d’exécution des programmes à l’aide du module `time`. Après avoir importé le module, il suffit de créer une variable `t = time.time()` que l'on mettra au debut de la fonction `liste_prime`.
 
 Puis avant la sortie, d’afficher en console (print) le temps écoulé avec l’instruction : `print(time.time()-t)`.
 

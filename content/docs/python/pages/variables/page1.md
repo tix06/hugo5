@@ -359,11 +359,21 @@ b
 ```
 
 ## Objets mutables et non mutables
-En Python, il existe deux types d’objets: les mutables (listes, dictionnaires, sets, objets custo, etc) et les non mutables (string, int, float, tuple, etc).
+En Python, il existe deux types d’objets: les **mutables** (listes, dictionnaires, sets, objets custo, etc) et les **non mutables** (string, int, float, tuple, etc).
 
 Les mutables sont ceux qu’on peut modifier après leur création. Les non mutables sont ceux qu’on ne peut pas modifier après création.
 
+Lorsque 2 références pointent sur le même objet, ce qui est possible avec les mutables, il faut s'attendre à ce que la modification de l'un entraine celle de l'autre (effet de bord).
+
 Pour plus de précisions sur ces différences, voir le [TP sur les variables](../page3/)
+
+### Portée des variables
+Un **effet de bord** est une modification d'une variable qui affecte l'état du programme en dehors de la fonction où elle a lieu. Cela peut arriver avec des variables globales, déclarées en dehors de toute fonction.
+
+Pour une variable `x` non mutable, déclarée dans le corps du programme, celle-ci peut être lue dans une fonction où elle n'a pas été definie. Par contre, pour la modifier dans cette fonction, il faudra la déclarer avec `global x` dans cette fonction.
+
+
+
 
 # Les méthodes associées aux différentes séquences
 voir la page [méthodes et types](../page2/)
