@@ -3,16 +3,14 @@ Title : TP Python4 POO
 BookShowToc : False
 ---
 
-# Partie 1: Exercices sur la Programmation orientée objet
-Traiter les exercices de la page [Programmation Orientée Objet de M Abel](https://lyceum.fr/tg/nsi/4-langages-et-programmation/6-programmation-objet/exo)
-
+<!--
 Vous pouvez utiliser un notebook colab de votre Google Drive pour rediger le script de l'exercice 3:
 
 * [tuto bref en anglais](https://www.tutorialspoint.com/google_colab/your_first_colab_notebook.htm) 
 * et [tuto ici en français](https://ledatascientist.com/google-colab-le-guide-ultime/) 
+-->
 
-
-# Partie 2: Projet labyrinthe
+# Projet labyrinthe
 ## Principe
 Vous allez programmer un jeu de parcours d'un labyrinthe, case après case, en partant du repère **D**. Le joueur devra cliquer dans une case adjacente à celle de sa position, selon les ouvertures possible. 
 
@@ -22,9 +20,9 @@ Celui-ci permet de retirer la dernière case du parcours du joueur, c'est à dir
 
 Le parcours du joueur sera donc stocké dans une *Pile*, qui sera définie à partir de la classe `Pile`.
 
-Voici le résultat attendu:
+Voici le résultat attendu: [https://trinket.io/embed/python/26f37880fa](https://trinket.io/embed/python/26f37880fa)
 
-<iframe src="https://trinket.io/embed/python/26f37880fa?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="trinket.io/embed/python/26f37880fa" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 ## Interface graphique
 L'interface graphique est fournie par la librairie `Processing`.  Cette librairie apporte des fonctions utiles pour dessiner dans la fenêtre graphique, mais aussi interragir: On pourra ainsi cliquer dans les cases du labyrinthe, et avoir en retour les coordonnées en pixel, avec pg.mouse.x et pg.mouse.y. La fenêtre graphique est automatiquement mise à jour. Il faudra mettre dans une fonction `draw` toutes les instructions de tracé. Et finir le programme par l'instruction `pg.run()`.
@@ -54,7 +52,7 @@ Les instances de classes seront:
 * `mon_laby` pour l'objet *labyrinthe* (ligne 38)
 * `mon_parcours` pour la pile des cases empruntées. (ligne 29)
 
-L'editeur se situe en bas de la page...
+L'editeur se situe à la page [https://trinket.io/embed/python/26f37880fa](https://trinket.io/embed/python/26f37880fa)
 
 ### Programmer la classe `Pile`
 > A vous de joueur:
@@ -93,5 +91,10 @@ if pg.mouse.x > 10 and pg.mouse.x < 30 and pg.mouse.y > mon_laby.get_hauteur() :
 > Ce bloc conditionnel devra contenir une nouvelle instruction conditionnelle, qui retire le dernier élément de `mon_parcours` si celui-ci contient plus d'un élément (on ne veut pas retirer la premiere case (0,0). Utiliser la méthode de classe `Pile` appelée `pop()`.
 
 > Testez alors votre jeu. Vérifiez que vous pouvez bien revenir en arrière lorsque vous prenez une mauvaise direction...
+
+# Extension du TP: projet pour term NSI
+* Programmez une première méthode de résolution du labyrinthe par l'ordinateur, en utilisant la structure de données en pile. On pourra adapter la méthode de parcours d'un [graphe en largeur ou bien en profondeur](/docs/SNT_2nde/pages/pages_algo/graphes/page2/). La pile permettra de revenir en arrière dans l'exploration du labyrinthe.
+* Le jeu pourrait proposer plusieurs labyrinthes. Et comparer la résolution du joueur avec celle de l'ordinateur.
+* On peut programmer plusieurs méthodes de résolution du labyrinthe. Et comparer leur efficacité pour un labyrinthe donné.
 
 <iframe src="https://trinket.io/embed/python/0b360ad25a" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>

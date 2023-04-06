@@ -132,8 +132,12 @@ Adapter ensuite cette fonction pour dessiner la figure:
 
 {{< img src="../images/recur_triangle2.png" >}}
 
+# Extension du TP: projet pour Term NSI
+Dessiner des fractales à l'aide de la récursivité.
+
 # Liens
 * Les dessins recursifs sont issus de la page [fourier.ujf-grenoble.fr](https://www-fourier.ujf-grenoble.fr/~parisse/giac/doc/fr/casrouge/casrouge019.html)
+* La recursivité en term NSI [eduscol, quelques applications](https://eduscol.education.fr/document/10103/download)
 
 
 

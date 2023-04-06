@@ -3,18 +3,14 @@ Title : TP Python1 variables
 BookShowToc : False
 ---
 
-# Rappels de classe de 1ere NSI
-## Les entrées et sorties
+# TP python: Jeu de Rôle
+Le but de ce TP est de créer un jeu avec une interface TEXTUELLE
+## Rappels de classe de 1ere NSI
+### Les entrées et sorties
 voir le cours à la page [https://lyceum.fr/1g/nsi/7-langages-et-programmation/3-entrees-et-sorties](https://lyceum.fr/1g/nsi/7-langages-et-programmation/3-entrees-et-sorties)
 
-Tester au moins un des exemples proposés sur le site dans la cellule suivante.
 
-
-```python
-
-```
-
-## texte formaté
+### texte formaté
 On peut ajouter le contenu d'une variable dans du texte. Il faut pour cela utiliser un formatage. Les symboles `{}` devront se trouver à l'emplacement de la variable à disposer dans le texte : 
 
 Exemple : (executer la cellule suivante)
@@ -26,7 +22,7 @@ texte = 'je viens d\'avoir {} ans'.format(n)
 print(texte)
 ```
 
-## Listes
+### Listes
 Avec la liste suivante : 
 ```
 mois = ['janvier','fevrier','mars','avril','mai','juin','juillet','aout']
@@ -66,7 +62,7 @@ Utiliser une expression formatée utilisant `mois` pour afficher le texte :
 
 ```
 
-## Manipulation d'un dictionnaire
+### Dictionnaire
 Soit un dictionnaire : `dico = {1:2,3:4}` ayant pour couples:
 
 * clé 1 : valeur 2
@@ -153,7 +149,18 @@ quel est votre choix (1,..9) ? => 9
 vous avez gagné `
 ```
 
+# Extension du projet (term NSI)
+Ce mini projet peut être étendu. On pourra utiliser des **classes** pour la gestion du (des) scenario(scenatii), du (des) joueur(s). 
 
-```python
+On pourra également proposer une **interface** qui améliorera le confort de jeu.
 
-```
+Enfin, on pourra utiliser des **fichiers textes** (voire une **base de données**) pour une meilleure gestion des contenus, ou pour sauvegarder des éléments du jeu.
+
+# Aides
+## lire/ ecrire dans un fichier texte
+Consulter la page [Entrees/Sorties](/docs/python/pages/ES/page1/) en python
+
+## gestion de base de données en python
+* Le [TP de term NSI](/docs/NSI/bases/page5/) sur la gestion de Base de Données en Python
+
+* Le [TP serveur Flask](/docs/NSI/HTML/page6/) de 1ere NSI

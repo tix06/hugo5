@@ -38,3 +38,18 @@ Deux autres fenêtres s'ouvrent alors:
 Vous pouvez alors organiser vos fenêtres comme sur l'image suivante.
 
 {{< img src="../images/idlePython.png" caption="A gauche, l'editeur python, à droite les fenêtres graphique et le shell" >}}
+
+# Extension du TP pour projet en Term NSI
+* [Sur la page villemin.gerard.free.fr](http://villemin.gerard.free.fr/Wwwgvmm/Premier/Ulam.htm): En poursuivant cette présentation pour une très grande quantité de nombres, on remarque quantité d'alignements.
+
+Ces alignements correspondent à des polynômes du 2e degré du type:
+
+$$y = a.x^2 + b.x + c$$
+
+Tracer alors les valeurs en spirale données par l'une de ces formules. Vérifier à l'aide de tests que vous aurez programmés que la formule choisie donne bien des *nombres premiers*. 
+
+* Comparez la spirale donnée par une formule $y = a.x^2 + b.x + c$ avec la spirale donnée pour une série *complète* de nombres premiers, sur ce même intervale.
+
+* Certains affirment que la sprirale d'Ulam apporte peu d'information sur les nombres premiers, à preuve, le même dessin avec des nombres aléatoires aurait à peu près la même allure. Vérifiez le.
+
+

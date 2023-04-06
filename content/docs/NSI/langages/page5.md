@@ -13,19 +13,21 @@ La liste des projets se trouve [ici](/docs/NSI/NSI_TP_algo/)
 
 {{< img src="../images/page5/script-au-module.png" caption="du script aux tests unitaires, une démarche de projet" >}}
 
-# Mise au point d'un programme
-Les consignes suivantes sont adaptées au langage Python. Il s'agit d'un recueil de *bonnes* pratiques.
+Pour programmer *en grand*, c'est à dire programmer avec plusieurs fichiers, il va falloir:
+
+* documenter ses fonctions
+* procéder par étapes, en ajoutant des tests structurels pour aider au developpement
+* utiliser des modules pour ses fonctions et classes
+* tester ses fonctions, vérifier qu'elles *fonctionnent* correctement.
+
 
 Pour créer une cohérence dans le code, il est recommandé d'utiliser un *guide de style*. Il s'agit de PEP8, présenté par exemple sur [python.sdv.univ-paris-diderot](https://python.sdv.univ-paris-diderot.fr/15_bonnes_pratiques/).
 
-Une première façon de gérer les erreurs passe par la documentation. Le but de la documentation est de permettre à l'utilisateur d'une fonction de savoir comment l'appeler correctement et comment interpréter sa valeur de retour.
 
-## Spécification d'un algorithme
-Construire un algorithme consiste à découvrir les actions qu'il faut organiser dans le temps, et à choisir la manière de les organiser pour obtenir le résultat escompté par leurs effets cumulés. La *spécification* doit permettre d'aider à cette construction, sans ambiguïté.
-
+# Documenter: Spécification d'un algorithme
 La spécification de l'agorithme doit comprendre : 
 
-* Le nom donné à cet algorithme. Ce nom soit être explicite, en rapport avec la tâche effectuée par l'algorithme
+* Le nom donné à cet algorithme. Ce nom doit être explicite, en rapport avec la tâche effectuée par l'algorithme
 * Une description du résultat de cet algorithme, ainsi que la manière avec laquelle on va s'y prendre
 * Le type et la nature des données en *entrée* 
 * Le type et la nature des données en *sortie*
@@ -62,8 +64,10 @@ afficher max
 
 Le *pseudo langage* adopté est celui utilisé dans wikipedia : [exemple](https://fr.wikipedia.org/wiki/Tri_fusion)
 
+Nous allons adapter cette spécification, prévue pour expliquer des algorithmes, à nos fonctions écrites en python.
+
 ## Prototypage d'une fonction
-Une fonction doit être déclarée avant son utilisation. Cette déclaration est le prototype de la fonction. Le prototype doit indiquer à l'utilisateur le nom de la fonction, le type de la valeur de retour et le type des paramètres.
+Une fonction doit être déclarée avant son utilisation. Cette déclaration est le **prototype** de la fonction. Le prototype doit indiquer à l'utilisateur le nom de la fonction, le type de la valeur de retour et le type des paramètres.
 
 Pour de nombreux langages, ce prototypage est explicite, et cela provoque une erreur de compilation si ce prototypage n'est pas correct.
 
@@ -119,45 +123,6 @@ Pour sortir de la fenêtre de l'aide, appuyer sur la touche `q`.
 
 On pourra consulter la page du site [Lyceum](https://lyceum.fr/1g/nsi/7-langages-et-programmation/6-fonctions) pour plus d'informations.
 
-## Ajouter un Doctest
-Le doctest est un module qui recherche dans le prototypage (docstring) de la fonction ce qui pourrait s'apparenter à des tests sur la fonction.
-
-Comme par exemple:
-
-```
->>> a_rect(2,3)
-6
-```
-
-
-On écrit alors une simulation d'un essai directement dans le docstring, en écrivant de manière explicite les 3 chevrons. Ainsi que la valeur attendue pour des arguments choisis. (voir le paragraphe précédent)
-
-Pour réaliser des tests sur la fonction, on ajoutera alors à la suite du script les lignes suivantes:
-
-```python
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
-```
-Supposons que l'on ait fait une erreur dans la fonction `a_rect` sur la valeur calculée, et que l'on ait écrit:
-
-```python
-    a = long * long
-    return a
-```
-
-alors la console affichera, à l'execution du programme:
-
-```
-Failed example:
-    a_rect(2,3)
-Expected:
-    6
-Got:
-    9
-```
-
-Documentation officielle :[Lien](https://docs.python.org/fr/3/library/doctest.html#module-doctest)
 
 # Prévoir et gérer les erreurs
 ## Traceback
@@ -219,35 +184,12 @@ Les messages d'exception affichés par le Traceback.
 | KeyError | Une clé est utilisée pour accéder à un élément d’un dictionnaire dont elle ne fait pas partie |
 
 
-# Les tests unitaires
-Ces tests vont concerner une petite unité d'un programme, typiquement une fonction, ou une méthode.
+# Les tests STRUCTURELS
+les **tests structurels**, vont verifier le fonctionnement interne du programme. Leur rôle est par exemple de couvrir les différentes branches conditionnelles, les limites d'une boucle, les types de données possibles pour une opération, ...
 
-Ils se divisent en:
+Ces tests vont aider à *programmer en grand*, car ils vont fournir des moyens de *contrôle* à différentes étapes. Ils vont aussi *guider* l'utilisateur de vos fonctions grâce aux *messages d'erreurs* et *arrêts* du programme.
 
-* **tests fonctionnels**, qui verifient qu'un programme ou une partie du programme se comportent correctement, et se conforment à leur specification.
-* des **tests structurels**, qui verifient le fonctionnement interne du programme. Leur rôle est par exemple de couvrir les différentes branches conditionnelles, les limites d'une boucle, les types de données possibles pour une opération, ...
-
-## Déclencher des exceptions: tests structurels
-### **`Raise`**
-L’instruction `raise` permet au programmeur de déclencher une exception spécifique: 
-
-*Exemple:*
-
-```python
-raise NameError('HiThere')
-```
-Affiche:
-```
-NameError  Traceback (most recent call last)
-<ipython-input-27-72c183edb298> in <module>
-----> 1 raise NameError('HiThere')
-
-NameError: HiThere
-```
-
-
-
-### **Assertions: `assert`**
+## **Assertions: `assert`**
 **Les assertions sont les hypothèses avec vérification**.
 
 Le rajout *provisoire* d'assertions dans le script va permettre d'anticiper sur les erreurs possibles de logique.
@@ -262,7 +204,7 @@ L'expression logique doit être egale à `True` pour que le programme se poursui
 
 ```python
 def inverse (x):
-    assert b!=0,'argument nul'
+    assert x != 0, 'argument nul'
     y = 1.0 / x
     return y
 ```
@@ -298,7 +240,80 @@ en_fahrenheit(-500)
 AssertionError valeur inferieure au zero absolu
 ``` 
 
-## Fonctionnel: Créer un module de test unitaires avec **`unittest`**
+## Déclencher des exceptions **`Raise`**
+L’instruction `raise` permet au programmeur de déclencher une exception spécifique. Son utilisation diffère un peu de `assert`, car la condition qui déclenche l'arrêt du programme devra être ajoutée:
+
+
+*Exemple:*
+
+```python
+def inverse (x):
+    if x == 0:
+        raise ValueError
+    y = 1.0 / x
+    return y
+
+inverse(0)
+```
+
+Puis:
+
+```python
+> inverse(0)
+---
+Traceback (most recent call last):
+  File "<input>", line 7, in <module>
+  File "<input>", line 3, in inverse
+ValueError
+```
+
+Notez que le type d'erreur exprimé après l'instruction `raise` est librement choisie par le programmeur, mais elle doit exister dans le langage Python. (`IndexError, SyntaxError, ValueError`, ...)
+
+# Programmer des tests FONCTIONNELS
+**tests fonctionnels**: ils verifient qu'un programme ou une partie du programme se comportent correctement, et se conforment à leur specification.
+
+## Fonctionnel: avec un Doctest
+Le doctest est un module qui recherche dans le prototypage (docstring) de la fonction ce qui pourrait s'apparenter à des tests sur la fonction.
+
+Comme par exemple:
+
+```
+>>> a_rect(2,3)
+6
+```
+
+
+On écrit alors une simulation d'un essai directement dans le docstring, en écrivant de manière explicite les 3 chevrons. Ainsi que la valeur attendue pour des arguments choisis. (voir le paragraphe précédent)
+
+Pour réaliser des tests sur la fonction, on ajoutera alors à la suite du script les lignes suivantes:
+
+```python
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
+```
+Supposons que l'on ait fait une erreur dans la fonction `a_rect` sur la valeur calculée, et que l'on ait écrit:
+
+```python
+    a = long * long
+    return a
+```
+
+alors la console affichera, à l'execution du programme:
+
+```
+Failed example:
+    a_rect(2,3)
+Expected:
+    6
+Got:
+    9
+```
+
+Documentation officielle :[Lien](https://docs.python.org/fr/3/library/doctest.html#module-doctest)
+
+
+## Fonctionnel: avec un module de test unitaires: **`unittest`**
 **Définition:** Un test unitaire est un test réalisé sur une portion du programme, typiquement sur une fonction.
 
 Le module `unittest` offre des outils de test de code, comme la classe TestCase. Le but est de vérifier que votre code génère des résultats corrects, conformes au attentes.
@@ -425,7 +440,7 @@ Ces exemples peuvent être testés dans l'éditeur en ligne *[Trinket](https://t
 <iframe src="https://trinket.io/embed/python/b55ced5652" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 
-### Autres tests d'assertion
+### Autres tests 
 En fait, `unittest.TestCase` propose plusieurs méthodes d'assertion que nous utiliserons dans nos tests unitaires. 
 
 | Méthode | Explications |

@@ -2,10 +2,11 @@
 Title : modularité
 ---
 
-Ce chapitre comprend 2 pages:
+Ce chapitre comprend 2 pages de cours et une page exercices:
 
-* La mise au point d'un programme: [Lien1](../page5)
-* Création et utilisation de modules: [Lien2](../page3)
+* La mise au point d'un programme: [Lien 1](../page5)
+* Création et utilisation de modules: [Lien 2](../page3)
+* [Lien vers les flash cards](/docs/NSI/langages/ex1/)
 
 La liste des projets se trouve [ici](/docs/NSI/NSI_TP_algo/)
 
@@ -32,6 +33,7 @@ Le dossier contient alors:
 {{< img src="../images/page3/modules.png" >}}
 Le fichier principal `nombresPrem.py` sera organisé comme ceci:
 
+
 ```python
 #####partie import des modules############
 import fcts_turtle
@@ -55,6 +57,8 @@ if __name__=='__main__':
 Il est recommandé de mettre les instructions du programme principal dans un bloc avec le test `if __name__=='__main__':` 
 
 Ceci permet d'importer le contenu du fichier sans déclencher son execution; et permettre de realiser des tests sur les fonctions. Voir{{< a link="/docs/NSI/langages/page5/#créer-un-module-de-test-avec-unittest" caption="tests sur les modules avec unittest" >}}
+
+
 Le module `fcts_turtle.py` : 
 
 ```python
