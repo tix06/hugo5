@@ -3,6 +3,13 @@ Title: banc de poissons
 ---
 
 # Projet banc de poissons
+Le comportement des poissons, lorsqu'ils sont en grands groupes, montre une forme d'organisation que l'on assimile souvent à une sorte d'intelligence distribuée. On peut la simuler en modélisant le comportement de chaque individu, en prenant des informations sur ses voisins.
+
+Ainsi, la direction et la vitesse de déplacement de chaque individu sont dictées par celles de ses proches voisins, et sont une combinaison de:
+
+* *séparation*: chaque individu essaie de s'éloigner de ses voisins
+* *alignement*: chaque individu avance dans la direction moyenne de ses voisins
+* *cohésion*: chaque individu avance vers le centre de masse de ses voisins.
 
 {{< img src= "../images/poissons.png" caption="banc de poissons" >}}
 
