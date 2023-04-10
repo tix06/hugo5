@@ -33,7 +33,7 @@ Fonction prem1(n):
 
 <br>
 
-> Amélioration: modification de la borne supérieure dans la boucle
+> Amélioration: nous allons modifier la borne supérieure dans la boucle, et diminuer le nombre d'opérations...
 
 Soit n un entier supérieur ou égal à 2.
 Si n n’est pas premier, et si d est son plus petit diviseur supérieur ou égal à 2, on peut écrire :
@@ -54,10 +54,10 @@ C'est à dire des entiers dont le carré est inférieur ou égal à n.
 
 
 ## Votre fonction, calcule t-elle bien?
-1. Faites une recherche documentaire pour trouver la liste des nombres premiers entre 0 et 100. Appelons cette liste `wiki`
-2. Programmer une fonction `liste_prime` qui utilise votre fonction `prem2` pour établir la liste des nombres premiers de 0 à 100.
-3. Programmer une fonction `compare` qui détermine si votre liste est identique à celle `wiki`.
-4. Si ce n'est pas le cas, corrigez votre fonction `prem2`.
+
+1. Programmer une fonction `liste_prime` qui utilise votre fonction `prem2` pour établir la liste des nombres premiers de 0 à 100.
+2. Faites une recherche documentaire pour trouver la liste des nombres premiers entre 0 et 100. Appelons cette liste `wiki`
+3. Programmer une fonction `compare` qui détermine si tous les nombres de votre liste (donnés par `prem2`) font partie de celle `wiki`.
 
 ## L'algorithme le plus efficace
 L'algorithme le plus **efficace** est celui qui prend le moins de temps pour effectuer la même tâche.
@@ -66,7 +66,7 @@ On peut mesurer le temps d’exécution des programmes à l’aide du module `
 
 Puis avant la sortie, d’afficher en console (print) le temps écoulé avec l’instruction : `print(time.time()-t)`.
 
-Tester les différentes fonctions prem1, prem2 avec les entiers premiers. Choisir une plus grande valeur pour N (10000 par exemple).
+> Tester les différentes fonctions prem1, prem2 avec les entiers premiers. Choisir une plus grande valeur pour N (10000 par exemple).
 
 ## Créer vos modules de test
 Vous allez maintenant realiser un test unitaire sur votre fonction `prem2`.
