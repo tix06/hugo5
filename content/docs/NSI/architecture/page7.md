@@ -59,7 +59,7 @@ Lors d'une communication HTTPS: les objectifs d'authentification, authenticité 
 * Cette clé sera utilisée pour des chiffrements symétriques entre le client et le serveur (4).
 
 
-{{< img src="../images/schema_ssl.jpg" link="https://www.ovh.com/fr/ssl/fonctionnement-ssl.xml" caption="établissement d'une communication securisée - OVH" >}}
+{{< img src="../images/schema_ssl.jpg"  caption="établissement d'une communication securisée - OVH" >}}
 > **Signature numérique:** Lorsqu'on utilise sa propre clé privée pour envoyer un message, et qu'une autorité de certification peut garantir l'origine de cette clé privée, alors ce message envoyé a valeur de signature numérique. Il permet d'authentifier l'emetteur du message.
 
 

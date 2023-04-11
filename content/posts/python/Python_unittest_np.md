@@ -76,7 +76,7 @@ if __name__=='__main__':
   unittest.main()
 ``` 
 
-Dans le fichier à executer, `test_unitaire.py`: On commence par importer le module `unittest` ainsi que le module `prime` qui contient les fonctions à tester.
+Dans le fichier à executer, `main.py`: On commence par importer le module `unittest` ainsi que le module `prime` qui contient les fonctions à tester.
 
 Les noms des classes de test se terminent généralement par `TestCase` (scenario de test). La classe créée pour le test, `PrimeTestCase` doit être une classe enfant de `unittest.TestCase`.
 
