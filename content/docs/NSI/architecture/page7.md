@@ -2,6 +2,13 @@
 Title: chiffrement asymetrique
 ---
 
+
+* [introduction au chiffrement](../page9/) et nombres premiers
+* sécuriser les communications: [Lien 2](../page6/)
+* chiffrement asymetrique: [Lien 3](../page7/)
+* TP sur les nombres premiers: [Lien 4](/docs/NSI/algorithmes/page11/)
+* Projet sur le *hack* ethique et le chiffrement RSA: [Lien 5](/docs/python/pages/TP/python6_codes/)
+
 # Chiffrements asymétriques
 Pour le chiffrement symétrique, le seul secret, c'est la clé de chiffrement. Cette clé doit avoir, pour des raisons pratiques, une longueur raisonnable (64, 128, 256 bits). Ce chiffrement permet de communiquer de manière *confidentielle*, ou de préserver la *confidentialité* de nos données sur un disque dur. Le problème avec le seul chiffrement symétrique, c'est qu'il ne permet pas de repondre aux besoins d'*authentification* (reconnaitre l'identité) et d'*authenticité* (le message n'a pas été modifié).
 
