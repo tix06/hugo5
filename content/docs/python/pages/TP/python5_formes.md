@@ -3,12 +3,16 @@ Title: images et formes
 ---
 
 # Traitement d'images
-Le traitement d'images est un domaine très riche en algorithmes. Ici, nous nous intérèsserons à la **detection de formes** dans une image.
+Le [traitement d'images](https://fr.wikipedia.org/wiki/Traitement_d%27images) est un domaine très riche en algorithmes. Ici, nous nous intérèsserons à la **detection de formes** dans une image par des procédés de [morphologie mathématique](https://fr.wikipedia.org/wiki/Morphologie_math%C3%A9matique).
 
-## La morphologie mathematique
+## La morphologie mathématique
 Lien [wikipedia](https://fr.wikipedia.org/wiki/Morphologie_math%C3%A9matique)
 
-Il est fortement recommandé de procéder aux transformations proposées ci-dessous en utilisant le logiciel ImageJ. Cela permet d'observer dans un premier temps les effets de chaque transformation et d'etablir une procédure de traitement.
+On cherche à extraire des informations d'une image initiale. On va utiliser les opérateurs fournis par une librairie de morphologie mathématique à la manière de « briques logicielles », en les combinant et en les enchaînant.
+
+Il est fortement recommandé de procéder aux transformations proposées ci-dessous en utilisant le logiciel [ImageJ](https://imagej.net/ij/index.html). Cela permet d'observer dans un premier temps les effets de chaque transformation et d'etablir une procédure de traitement.
+
+Ces techniques sont la base des systèmes de [vision industrielle](https://fr.wikipedia.org/wiki/Traitement_d%27images).
 
 {{< img src = "../images/imageJ.png" caption = "distance au bord" >}}
 
@@ -35,11 +39,15 @@ Les particules présentent des formes connexes complètement incluses. Une opér
 
 Un dernier problème à résoudre est l'aspect *"collé"* des particules au contact. Il faudra les séparer pour les résoudre et appliquer les traitements statistiques à venir.
 
-* On peut réaliser une segmentation. Ce procédé peut prendre une ou plusieurs étapes.
-
-{{< img src = "../images/img_dist.jpg" caption = "calcul de la distance au bord: Binary > Distance Map" >}}
+* On peut réaliser une segmentation (partition de l'image en ensembles connexes homogènes). 
 
 {{< img src = "../images/watersh.png" caption = "image segmentée: Binary: Watershed" >}}
+
+On peut alors passer à une detection de contour, calculer sur les formes, ...
+
+Pour certains problèmes, seule la position des centres des particules est voulue. La fonction calcule pour chaque pixel son éloignement au bord. Les pixels de valeur maximale sont candidats pour être le centre de la forme.
+
+{{< img src = "../images/img_dist.jpg" caption = "calcul de la distance au bord: Binary > Distance Map" >}}
 
 ## Traitement en Python
 Pour automatiser ces traitements, nous utiliserons la librairie de traitement d'images:
