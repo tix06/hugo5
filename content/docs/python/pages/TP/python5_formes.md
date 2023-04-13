@@ -8,7 +8,7 @@ Le traitement d'images est un domaine très riche en algorithmes. Ici, nous nous
 ## La morphologie mathematique
 Lien [wikipedia](https://fr.wikipedia.org/wiki/Morphologie_math%C3%A9matique)
 
-Il est fortement recommandé de procéder aux transformations proposées ci-dessous en utilisant le logiciel ImageJ. Cela permet d'observer les effets de chaque transformation et d'etablir une procédure de traitement.
+Il est fortement recommandé de procéder aux transformations proposées ci-dessous en utilisant le logiciel ImageJ. Cela permet d'observer dans un premier temps les effets de chaque transformation et d'etablir une procédure de traitement.
 
 {{< img src = "../images/imageJ.png" caption = "distance au bord" >}}
 
@@ -18,7 +18,7 @@ L'image test sera celle-ci:
 
 Pour commencer, il sera necessaire de réaliser une première opération:
 
-* une binarisation de l'image à partir d'un seuil
+* une binarisation de l'image à partir d'un seuil (Binary > Make Binary)
 
 {{< img src = "../images/img_bin.jpg" caption = "image binarisée" >}}
 
@@ -29,11 +29,13 @@ Le fond de l'image présente des bruits qu'il faudra effacer. Les opérations de
 
 *L'ordre de ces opérations peut être inversé*.
 
-Les particules présentent des formes connexes complètement incluses. Une opération possible en traitement par morphologie mathématique est le remplissage de formes (form_fill)
+Les particules présentent des formes connexes complètement incluses. Une opération possible en traitement par morphologie mathématique est le remplissage de formes (Binary > Fill Holes)
 
 {{< img src = "../images/form_fill.png" caption = "principe du remplissage de formes (issu de wikipedia)" >}}
 
-On peut enfin procéder à une segmentation. Ce procédé peut prendre une ou plusieurs étapes.
+Un dernier problème à résoudre est l'aspect *"collé"* des particules au contact. Il faudra les séparer pour les résoudre et appliquer les traitements statistiques à venir.
+
+* On peut réaliser une segmentation. Ce procédé peut prendre une ou plusieurs étapes.
 
 {{< img src = "../images/img_dist.jpg" caption = "calcul de la distance au bord: Binary > Distance Map" >}}
 
@@ -51,34 +53,21 @@ Voici un scipt minimal d'ouverture de l'image suivi de sa binarisation:
 
 ```python
 import matplotlib.pyplot as plt
-from scipy.ndimage import distance_transform_edt
-
-
 from skimage import io
-from skimage.feature import peak_local_max
-from skimage.filters import gaussian
-from skimage.measure import label
-from skimage.morphology import binary_erosion, binary_opening, disk
-from skimage.filters.rank import gradient
-from skimage.segmentation import watershed
 from skimage.morphology import binary_dilation,binary_erosion,disk
-from scipy.ndimage import binary_fill_holes
-from skimage.measure import label, regionprops
-from skimage import morphology
-from scipy import ndimage as nd
-from skimage.util import invert
 import numpy as np
+
 
 fichier_image = "oblates/essai_23_04_04_bis.bmp"
 img = io.imread(fichier_image,as_gray=True)
 img = np.array(img, dtype=np.float64)/255.
 
-
+# binariser
 img_bin = (img < 0.7) * 1
-
+# dilater + eroder
 img_result = binary_erosion(binary_dilation(img_bin,footprint=disk(1)),footprint=disk(1))
 
-
+# afficher l'image
 f,ax = plt.subplots()
 ax.imshow(img_result)
 plt.show()
