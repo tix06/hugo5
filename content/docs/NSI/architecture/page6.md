@@ -60,8 +60,10 @@ Mais il peut y avoir d'autres fonctions plus complexes utilisées. Voire, même 
 Le chiffrement par monosubstitution a été également utilisé par différentes méthodes utilisant une table.
 
 {{< img src="../images/polybe.png" caption="Carré de Polybe - le mot « bonjour » est ainsi chiffré par le carré de Polybe :12 34 33 24 34 45 42 - wikipedia" >}}
+
 Vous trouvez cette méthode de chiffrement trop simpliste? Regardez alors sa déclinaison avec le{{< a link="https://fr.wikipedia.org/wiki/Chiffre_de_Playfair" caption="chiffrement de Playfair" >}}
-{{< img src="../images/playfair.png" caption="VIDEO: chiffrement de Playfair - youtube - Astuces et tutoriels" >}}
+
+{{< img src="../images/playfair.png" link="https://www.youtube.com/watch?v=JMkGYoT3-Rw" caption="VIDEO: chiffrement de Playfair - youtube - Astuces et tutoriels" >}}
 ### Decryptage par analyse fréquentielle
 Le code issu du carré de Polybe a été utilisé par les prisonniers, qui transmettaient leur message en tapant sur les murs {{< a link="https://fr.wikipedia.org/wiki/Tap_code" caption="Tap code" >}}
 Le **problème** avec ce type de chiffrement monoalphabetique, est qu'il est possible de repérer comment sont transformées certaines lettres à partir de l'**analyse fréquentielle** du message chiffré.
@@ -70,10 +72,10 @@ On peut alors utiliser la frequence des lettres pour dechiffrer et comparer avec
 
 
 {{< img src="../images/frequenceA_Z.gif" caption="frequence des lettres en français, calculée sur la lecture de plusieurs ouvrages classiques (10 millions de caracteres)" >}}
-Ce n'est pas le cas du chiffrement de Playfair, car celui-ci utilise une methode de substitution d'un groupe de lettres: c'est une substitution *polyalphabetique*.
+Cette analyse frequentielle est plus difficile *(mais pas impossible)* dans le cas du chiffrement de Playfair, car celui-ci utilise une methode de substitution d'un groupe de 2 lettres: c'est une substitution *polyalphabetique*. Le nombre de combinaisons possibles avec 2 lettres est alors de $26^2 = 676$.
 
 ### Une amélioration: Substitution polyalphabétique
-L'analyse des fréquences est moins pertinente lorsque le message a été chiffré avec un chiffrement polyalphabétique (qui tend à rendre aléatoire la fréquence des lettres). <br>
+L'analyse des fréquences est moins pertinente lorsque le message a été chiffré avec un chiffrement polyalphabétique (qui tend à rendre aléatoire la fréquence des lettres).
 
 **Polyalphabetique:** Se dit d'un chiffre où un groupe de n lettres est codé par un groupe de n symboles. Le chiffrement *Playfair*, vu plus haut s'apparente à une substitution polyalphabetique, puisqu'il substitue des digrammes (groupes de 2 lettres) dans le texte d'origine.
 
@@ -85,8 +87,8 @@ Le mot : WIKIPEDIA donne donc dans ce cas XKNJRHEKD.
 
 Mais si on chiffre le mot : AAAAAAAAA cela donnera BCDBCDBCD. La lettre A ne donne pas toujours la même correspondance chiffrée. Mais on peut analyser la périodicité et en déduire la longueur de la clé. La connaissance de la longueur de la clé est essentielle pour pouvoir pratiquer l'analyse frequentielle.
 
-La machine{{< a link="https://fr.wikipedia.org/wiki/Enigma_(machine)" caption="Enigma" >}}
-{{< img src="../images/enigma.jpg" caption="Enigma est une machine électromécanique portative servant au chiffrement et au déchiffrement de l'information.  - wikipedia" >}}
+### La machine{{< a link="https://fr.wikipedia.org/wiki/Enigma_(machine)" caption="Enigma" >}}
+{{< img src="../images/enigma.jpg" caption="Enigma: machine électromécanique portative servant au chiffrement et au déchiffrement - wikipedia" >}}
 La machine utilise des rotors qui sont mis en position selon une clé. L'alphabet est chiffré selon la position initiale de ces rotors. Ceux-ci se décalent lors de l'utilisation. Ce qui modifie l'alphabet chiffré et augmente sérieusement la complexité.
 
 Déchiffrer se fait avec la même machine, à condition d'utiliser la même clé.
@@ -110,7 +112,8 @@ Ces algorithmes fonctionnent selon:
 
 * **Question 1:** Quelle clé a  été utilisée pour chiffer ce texte (avec l’algorithme de César)? 
 
-{{< img src="" >}}
+$$jyfwavnyhwopl hwwspxbll$$
+
 * **Question 2:** Décrypter ce message.
 
 
@@ -153,6 +156,47 @@ b. YOHGMV MFCBRB GWFNIZ ZPSURW FUOIPU WYITFA NIETGG DOCKAC PQE- BEW PMXEMK VGRAI
 
 * **Question 2:** L'un des 2 a été chiffré avec un algorithme de substitution mon-alphabetique, et l'autre, poly-alphabétique. Lequel est mono-alphabétique?
 
+## Chiffrement symétrique par la fonction XOR
+exercice inspiré de la page sur le chiffrement de [glassus.github.io](https://glassus.github.io/terminale_nsi/T5_Architecture_materielle/5.4_Cryptographie/cours/)
+
+* **Question 1:** La fonction XOR est la fonction du OU EXCLUSIF.
+
+Donner la table de vérité de la fonction XOR
+
+* **Question 2:** A partir des lignes suivantes, vérifier que l'opérateur `^` en python réalise la fonction XOR sur 2 nombres écrits en valeur décimale:
+
+```python
+> 3 ^ 4
+7
+> 4 ^ 5
+1
+```
+
+* **Question 3:** Programmer la fonction `xor` en python qui retourne le resultat de XOR appliqué aux 2 paramètres a et b.
+
+*Exemple:*
+
+```
+>>> xor(0,1)
+>>> 1
+```
+
+* **Question 4:** On s'interresse maintenant à la programmation de la fonction XOR pour chiffrer un message à partir d'un masque:
+
+$$masque = "CETTEPHRASEESTVRAIMENTTRESTRESLONGUEMAISCESTFAITEXPRES"$$
+
+Compléter la fonction chiffre(message, masque) qui chiffre message en le XORant avec masque.
+
+Cette fonction doit pouvoir aussi servir à déchiffrer le message chiffré.
+
+```python
+def chiffre(message, masque):
+    message_chiffre = ""
+    for i in range(len(message)):
+        ...
+```
+
+<!--
 ## Chiffrement symetrique par la fonction XOR
 Cet exercice est inspiré du TP cryptographie du site de [hmalherbe.fe - NSI](http://hmalherbe.fr/thalesm/gestclasse/documents/Terminale_NSI/2020-2021/TP/TP_Term_NSI_cryptographie/TP_Term_NSI_cryptographie.html)
 
@@ -237,9 +281,9 @@ On souhaite chiffrer un message (par exemple une chaîne de caractères) à l’
   * afficher le message chiffré
   * dechiffrer le message
   * afficher le message dechiffré
-
+-->
 # Liens
-## Suite du cours: chiffrement asymétrique
+* Suite du cours: [chiffrement asymétrique](../page7)
 
 ## Documentation, sitographie
 * Chiffrement : notre antisèche pour l'expliquer à vos parents [article de NextImpact](https://www.nextinpact.com/article/24930/99777-chiffrement-notre-antiseche-pour-expliquer-a-vos-parents)

@@ -138,6 +138,9 @@ Dessiner des fractales à l'aide de la récursivité.
 # Liens
 * Les dessins recursifs sont issus de la page [fourier.ujf-grenoble.fr](https://www-fourier.ujf-grenoble.fr/~parisse/giac/doc/fr/casrouge/casrouge019.html)
 * La recursivité en term NSI [eduscol, quelques applications](https://eduscol.education.fr/document/10103/download)
+* dynamique holomorphe, ensemble de Julia, Mandelbrot, Fractales: [wikipedia](https://fr.wikipedia.org/wiki/Ensemble_de_Mandelbrot)
+* Mandelbrot par la pratique: [page de villemin.gerard](http://villemin.gerard.free.fr/Wwwgvmm/Suite/FracPrat.htm)
+* Une discussion sur le theme des fractales, autosimilarités exacte et statistique, applications [blog futura-sciences](https://forums.futura-sciences.com/physique/154964-fractal-autosimilarite.html)
 
 
 

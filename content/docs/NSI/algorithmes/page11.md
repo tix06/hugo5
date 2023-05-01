@@ -74,6 +74,10 @@ Pour faire cela, vous allez réorganiser vos fonctions dans différents fichiers
 
 Suivre l'énoncé du TP à la page [/posts/python/Python_unittest_np/](/posts/python/Python_unittest_np/)
 
+# Liens
+* Les nombres premiers, [podcastsciences](https://www.podcastscience.fm/dossiers/2012/09/26/les-nombres-premiers/)
+* Comment les nombres premiers protègent vos données: [loic_demeulenaere](https://www.reflexions.uliege.be/upload/docs/application/pdf/2016-12/loic_demeulenaere.pdf)
+
 <!--
 # Spirale de Ulam
 ## Principe
