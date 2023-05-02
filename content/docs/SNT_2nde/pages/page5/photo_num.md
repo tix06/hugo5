@@ -37,8 +37,15 @@ L’image est construite en données numériques qui correspondent aux pixels.
 
 C’est le grain de coloration d’une image, l’atome de l’image numérique.
 
-Un des algorithmes possibles consiste à créer un pixel à partir de 4 photosites : un bleu, un rouge et deux verts. Un pixel sera alors composé de 3 couleurs : rouge, vert, bleu (RVB). 
+### Codage
+Un des algorithmes possibles consiste à créer un pixel à partir de **4 photosites** : un bleu, un rouge et deux verts. Un pixel sera alors composé de 3 couleurs : rouge, vert, bleu (RVB). 
 
+### Restitution
+Sur un écran numérique, un pixel est constitué de 3 diodes luminescentes, presque au contact, et qui vont restituer la couleur en un point. Ces 3 diodes constituent *le pixel*.
+
+Lorsque l'on agrandit l'image, celle-ci parrait nette si la **définition** de l'image numérique est supérieure à celle de l'écran.
+
+{{< img src="../images/pixels_iphone.png" alt="pixels sur un smartphone" caption="detail des pixels d'un iphone" >}}
 
 # réglages lors de la prise de photographie
 Les réglages de l'appareil photographique se font la plupart du temps de manière automatique. 
@@ -78,7 +85,7 @@ L'[algorithme utilisé](http://recherche.ign.fr/labos/matis/pdf/articles_revues/
 # Qu'est ce qu'une photographie numérique ?
 Une photographie numérique, comme tout autre objet numérique, c'est un **fichier de données numériques**, c'est à dire des valeurs codées en binaire.
 
-Une partie des données correspond à des métadonnées, c'est à dire des données *périphériques*. L'autre partie contient les données relatives à l'image.
+Une partie des données correspond à des métadonnées, c'est à dire des données *périphériques*. L'autre partie contient les données relatives à l'image: pour chaque pixel, le fichier contient les données des intensités RVB.
 
 On pourra consulter la page sur les 
 

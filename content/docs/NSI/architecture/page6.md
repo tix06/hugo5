@@ -137,7 +137,7 @@ A partir des explications données dans la video:
 * **Question 1:** Construisez la matrice pour l’algorithme de Playfair avec la clé *estienne*. 
 * **Question 2:** Chiffrer le message: *COUPERLETRANSMETTEUR*.
 * **Question 3:** S'agit-il d'une méthode utilisant la substitution monoalphabetique, ou polyalphabetique?
-* **Question 4:** Est-ce qu'avec cette méthode, le decryptage peut être facilité par l'analyse fréquentielle? 
+* **Question 4:** Est-ce qu'avec cette méthode, le decryptage est-il possible par l'analyse fréquentielle? 
 
 ## Frequences des lettres dans un texte
 La fonction suivante retourne une liste de 26 valeurs de type *float*, donnant dans l'ordre de l'alphabet, la frequence pour chaque lettre dans un texte:

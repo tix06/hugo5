@@ -65,7 +65,7 @@ La **définition**  D d'une  image  est  définie  par  un  nombre  de  pixels  
 
 On l'exprime le plus souvent en donnant les dimensions du plan de pixels, par exemple, une image de définition : 
 
-$$1900 \times 1700 pixels$$
+$$1900 \times 1700~pixels$$
 
 Pour les exercices, on prendra la dimension d'un seul des côtés de l'image pour utiliser la relation suivante entre la **Définition** D, la **Résolution** R, et le nombre de cm par pouces (2,54).
 
@@ -90,14 +90,14 @@ En réalité, les images sont compressées. Ce qui permet d'avoir un poids moind
 Les formats suivants sont des exemples de formats images compressés : png, jpg.
 
 # Calcul du poids d'une image non compressée
-A partir de ce qui a été vu plus haut, le poids d'une image nn compressée de définition D et de profondeur de couleur C a un poids P : 
+A partir de ce qui a été vu plus haut, le poids d'une image non compressée de définition D et de profondeur de couleur C a un poids P : 
 $$P = D \times C$$
 
 *Exemple :* D = 1900 pixels * 1700 pixels et C = 3 octets 
 
 $$P = 1900 \times 1700 \times 3 = 9,7.10^6 octets = 9,7 Mo$$ 
 
-La **compression** d'une imagec’est la réduction de la quantité d’informations nécessaires pour décrire l’image. Les idées générales sont : 
+La **compression** d'une image c’est la réduction de la quantité d’informations nécessaires pour décrire l’image. Les idées générales sont : 
 
 - De rassembler plusieurs pixels de même couleur, et établir une couleur moyenne des pixels sur une zone donnée.
 - supprimer des informations : par exemple en diminuant le nombre de couleurs possibles. On fait une réduction de l'espace des couleurs à celles qui sont  les plus fréquentes dans l'image.

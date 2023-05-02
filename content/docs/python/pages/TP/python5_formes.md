@@ -14,7 +14,7 @@ Il est fortement recommandé de procéder aux transformations proposées ci-dess
 
 Ces techniques sont la base des systèmes de [vision industrielle](https://fr.wikipedia.org/wiki/Traitement_d%27images).
 
-{{< img src = "../images/imageJ.png" caption = "distance au bord" >}}
+{{< img src = "../images/imageJ.png" caption = "menus de ImageJ" >}}
 
 L'image test sera celle-ci:
 
@@ -92,3 +92,5 @@ Cette approximation va permettre de faire des mesures sur ces formes, et peut ê
 {{< img src = "../images/img_bin_poly.png" caption = "approximation par un polygone" >}}
 
 {{< img src = "../images/img_ellipse.png" caption = "approximation par une ellipse" >}}
+
+{{< img src = "../images/axes_ratio.png" caption = "histogramme sur les rapports rx/ry des axes des ellipses" >}}
