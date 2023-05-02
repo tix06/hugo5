@@ -160,6 +160,26 @@ b. YOHGMV MFCBRB GWFNIZ ZPSURW FUOIPU WYITFA NIETGG DOCKAC PQE- BEW PMXEMK VGRAI
 
 * **Question 2:** L'un des 2 a été chiffré avec un algorithme de substitution mon-alphabetique, et l'autre, poly-alphabétique. Lequel est mono-alphabétique?
 
+* **Question 3:** Tracer un histogramme à partir du texte chiffré en mono-substitution. On donne un exemple de script ci-dessous pour réaliser le graphique:
+
+```python
+fig = plt.figure()
+ax = fig.add_axes([0, 0, 1, 1])
+
+etiquettes = ['a', 'b', 'c', 'd', 'e']
+valeurs = [23, 17, 35, 29, 12]
+
+# Affichage des données
+ax.bar(etiquettes, valeurs)
+
+plt.title("Histogramme")  # Titre du graphique
+plt.ylabel('Nombre')  # Titre de l'axe y
+plt.xlabel('alphabet')
+plt.show()  # Affichage d'une courbe
+```
+
+{{< img src="../images/histoabc.png" >}}
+
 ## Chiffrement symétrique par la fonction XOR
 exercice inspiré de la page sur le chiffrement de [glassus.github.io](https://glassus.github.io/terminale_nsi/T5_Architecture_materielle/5.4_Cryptographie/cours/)
 
