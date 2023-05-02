@@ -11,6 +11,7 @@ Ce chapitre contient plusieurs pages:
 * Projet sur le *hack* ethique et le chiffrement RSA: [Lien 5](/docs/python/pages/TP/python6_codes/)
 
 # Chiffrements symétriques
+du chiffrement de *Cesar* à celui de la *machine Enigma*...
 ## Vocabulaire
 * **Chiffrer:** transformer les caractères d'un texte pour le rendre incompréhensible, sauf pour celui qui possède la clé de chiffrement.
 * **Déchiffrer:** transformer le texte chiffré en texte clair à l'aide de la clé de chiffrement
@@ -26,6 +27,9 @@ Le chiffrement a pour but de protéger nos données, nos communications, mais au
 * **L'intégrité** des données désigne le fait que les données ne soient pas modifiées au cours d'une communication ou de leur stockage. <br>
 Ainsi, si vous envoyez un texte chiffré sur un canal non sécurisé, le texte chiffré pourra être intercepté et altéré par un attaquant avant d'atteindre son destinataire. Pour contrôler cette intégrité, on associe au message une valeur de contrôle.
 * **La confidentialité:** Le chiffrement permet de protéger la confidentialité de vos données à l'aide d'une clé secrète. 
+
+## Chiffrement symétrique - definition
+Le chiffrement symétrique utilise la même clé (ou la même table) pour chiffrer et déchiffrer le message. L'algorithme peut être connu par l'adversaire. Mais le secret repose sur celui de la *clé*.
 
 ## Le chiffrement par décalage, ou chiffre de Caesar
 Le chiffre de César fonctionne par décalage des lettres de l'alphabet. 
@@ -49,11 +53,14 @@ Pour chaque lettre l du message m:
 
 ### Facilité du décryptage
 
+> **monosubstitution par décalage ou par substitution:** Une lettre du message clair va t-elle donner différentes lettres chiffrées, ou une seule?
+
 > **Décryptage par FORCE BRUTE**: Combien y-a-t-il de clés possibles à essayer pour celui qui réalise le décryptage? Conclure.
 
 ### Un chiffrement par substitution monoalphabetique
-Le chiffrement par {{< a link="https://fr.wikipedia.org/wiki/Chiffrement_par_substitution" caption="substitution monoalphabetique" >}}
-$$x \rightarrow x + cle$$
+Le chiffrement par {{< a link="https://fr.wikipedia.org/wiki/Chiffrement_par_substitution" caption="substitution monoalphabetique" >}} utilise une fonction avec *modulo*:
+
+$$x \rightarrow x + cle ~[26]$$
 
 Mais il peut y avoir d'autres fonctions plus complexes utilisées. Voire, même aucune fonction, mais une table de correspondance entre lettre en clair et symbole chiffré. La clé aurait alors la longueur de l'alphabet.
 
@@ -79,7 +86,7 @@ L'analyse des fréquences est moins pertinente lorsque le message a été chiffr
 
 **Polyalphabetique:** Se dit d'un chiffre où un groupe de n lettres est codé par un groupe de n symboles. Le chiffrement *Playfair*, vu plus haut s'apparente à une substitution polyalphabetique, puisqu'il substitue des digrammes (groupes de 2 lettres) dans le texte d'origine.
 
-L'exemple suivant montre une polysubstitution simple avec une clé de longueur 3 qui va décaler les lettres de l'alphabet :
+L'exemple suivant montre une polysubstitution simple avec une **clé de longueur 3** qui va décaler les lettres de l'alphabet :
 
 On définit la clé '123' qui indique que le premier caractère sera décalé d'une position, le second de 2 et le troisième de 3 positions, etc.
 
@@ -89,22 +96,19 @@ Mais si on chiffre le mot : AAAAAAAAA cela donnera BCDBCDBCD. La lettre A ne don
 
 ### La machine{{< a link="https://fr.wikipedia.org/wiki/Enigma_(machine)" caption="Enigma" >}}
 {{< img src="../images/enigma.jpg" caption="Enigma: machine électromécanique portative servant au chiffrement et au déchiffrement - wikipedia" >}}
-La machine utilise des rotors qui sont mis en position selon une clé. L'alphabet est chiffré selon la position initiale de ces rotors. Ceux-ci se décalent lors de l'utilisation. Ce qui modifie l'alphabet chiffré et augmente sérieusement la complexité.
+La machine utilise des **rotors** qui sont mis en position selon une **clé**. L'alphabet est chiffré selon la position initiale de ces rotors. Ceux-ci se **décalent** lors de l'utilisation. 
 
-Déchiffrer se fait avec la même machine, à condition d'utiliser la même clé.
+Des branchements permettent d'ajouter des **permutations** des caractères.
+
+Tout ceci modifie l'alphabet chiffré et augmente sérieusement la complexité.
+
+Comme tout *chiffrement symétrique*, *déchiffrer* se fait avec la même machine, à condition d'utiliser la *même clé*.
 
 Son utilisation la plus célèbre fut celle faite par l'Allemagne nazie, avant et pendant la Seconde Guerre mondiale, la machine étant réputée inviolable selon ses concepteurs. 
 
 Le **principe de la machine Enigma était connu**. Le concepteur savait à l'avance que certains modèles pourraient être volés par les alliés. Ce qui fit son efficacité, c'est le nombre immense de combinaisons possibles pour les réglages initiaux de la machine et le choix de la clef brute du message.
 
 Les cryptanalystes britanniques, dont{{< a link="https://fr.wikipedia.org/wiki/Alan_Turing" caption="Alan Turing" >}}
-### Points communs des chiffrements symétriques
-Ces algorithmes fonctionnent selon:
-
-- Entrée
-- repetition n fois de substitutions et permutations. Utilise une clé unique pour chiffrer et dechiffrer.
-- Sortie
-
 
 
 # Exercices
