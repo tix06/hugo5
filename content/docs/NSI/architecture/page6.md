@@ -81,7 +81,7 @@ On peut alors utiliser la frequence des lettres pour dechiffrer et comparer avec
 {{< img src="../images/frequenceA_Z.gif" caption="frequence des lettres en français, calculée sur la lecture de plusieurs ouvrages classiques (10 millions de caracteres)" >}}
 Cette analyse frequentielle est plus difficile *(mais pas impossible)* dans le cas du chiffrement de Playfair, car celui-ci utilise une methode de substitution d'un groupe de 2 lettres: c'est une substitution *polyalphabetique*. Le nombre de combinaisons possibles avec 2 lettres est alors de $26^2 = 676$.
 
-Enfin, il existe des methodes de chiffrement monoalphabetique qui resistent à l'analyse fréquentielle, mais il faut qu'une même lettre ne donne pas toujours le mêm caractère chiffré (voir [chiffrement de Vigenère](https://fr.wikipedia.org/wiki/Chiffre_de_Vigen%C3%A8re))
+
 
 ### Une amélioration: Substitution polyalphabétique
 L'analyse des fréquences est moins pertinente lorsque le message a été chiffré avec un chiffrement polyalphabétique (qui tend à rendre aléatoire la fréquence des lettres).
@@ -97,6 +97,8 @@ On définit la clé '123' qui indique que le premier caractère sera décalé d'
 Le mot : WIKIPEDIA donne donc dans ce cas XKNJRHEKD.
 
 Mais si on chiffre le mot : AAAAAAAAA cela donnera BCDBCDBCD. La lettre A ne donne pas toujours la même correspondance chiffrée. Mais on peut analyser la périodicité et en déduire la longueur de la clé. La connaissance de la longueur de la clé est essentielle pour pouvoir pratiquer l'analyse frequentielle.
+
+Une même lettre ne donne pas toujours le même caractère chiffré, sauf si on connait la longueur de cette clé. (voir aussi le [chiffrement de Vigenère](https://fr.wikipedia.org/wiki/Chiffre_de_Vigen%C3%A8re)) qui utilise ce principe de décalage à partir d'une clé exprimée par un mot.
 
 ### La machine{{< a link="https://fr.wikipedia.org/wiki/Enigma_(machine)" caption="Enigma" >}}
 {{< img src="../images/enigma.jpg" caption="Enigma: machine électromécanique portative servant au chiffrement et au déchiffrement - wikipedia" >}}
