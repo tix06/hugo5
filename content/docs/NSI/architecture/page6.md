@@ -41,7 +41,7 @@ Cet algorithme de chiffrement utilise une fonction périodique pour transformer 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 |
 
-<br>
+
 
 > Compléter l'algorithme du chiffrement de César. On suppose qu'il existe une clé `c` correspondant au décalage utilisé. Le message clair est `m` et le message chiffré est `m_chiffre`
 
@@ -86,6 +86,8 @@ L'analyse des fréquences est moins pertinente lorsque le message a été chiffr
 
 **Polyalphabetique:** Se dit d'un chiffre où un groupe de n lettres est codé par un groupe de n symboles. Le chiffrement *Playfair*, vu plus haut s'apparente à une substitution polyalphabetique, puisqu'il substitue des digrammes (groupes de 2 lettres) dans le texte d'origine.
 
+Contrairement aux chiffrements monoalphabetiques, qui sont des chiffrements par **flot** (caractères transformés un à un), les chiffrements polyalphabetiques réalisent un chiffrement par **blocs** (plusieurs caractères transformés en une fois).
+
 L'exemple suivant montre une polysubstitution simple avec une **clé de longueur 3** qui va décaler les lettres de l'alphabet :
 
 On définit la clé '123' qui indique que le premier caractère sera décalé d'une position, le second de 2 et le troisième de 3 positions, etc.
@@ -109,6 +111,7 @@ Son utilisation la plus célèbre fut celle faite par l'Allemagne nazie, avant e
 Le **principe de la machine Enigma était connu**. Le concepteur savait à l'avance que certains modèles pourraient être volés par les alliés. Ce qui fit son efficacité, c'est le nombre immense de combinaisons possibles pour les réglages initiaux de la machine et le choix de la clef brute du message.
 
 Les cryptanalystes britanniques, dont{{< a link="https://fr.wikipedia.org/wiki/Alan_Turing" caption="Alan Turing" >}}
+
 
 
 # Exercices
