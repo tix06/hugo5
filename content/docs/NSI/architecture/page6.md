@@ -81,6 +81,8 @@ On peut alors utiliser la frequence des lettres pour dechiffrer et comparer avec
 {{< img src="../images/frequenceA_Z.gif" caption="frequence des lettres en français, calculée sur la lecture de plusieurs ouvrages classiques (10 millions de caracteres)" >}}
 Cette analyse frequentielle est plus difficile *(mais pas impossible)* dans le cas du chiffrement de Playfair, car celui-ci utilise une methode de substitution d'un groupe de 2 lettres: c'est une substitution *polyalphabetique*. Le nombre de combinaisons possibles avec 2 lettres est alors de $26^2 = 676$.
 
+Enfin, il existe des methodes de chiffrement monoalphabetique qui resistent à l'analyse fréquentielle, mais il faut qu'une même lettre ne donne pas toujours le mêm caractère chiffré (voir [chiffrement de Vigenère](https://fr.wikipedia.org/wiki/Chiffre_de_Vigen%C3%A8re))
+
 ### Une amélioration: Substitution polyalphabétique
 L'analyse des fréquences est moins pertinente lorsque le message a été chiffré avec un chiffrement polyalphabétique (qui tend à rendre aléatoire la fréquence des lettres).
 
@@ -314,5 +316,6 @@ On souhaite chiffrer un message (par exemple une chaîne de caractères) à l’
 
 ## Documentation, sitographie
 * Chiffrement : notre antisèche pour l'expliquer à vos parents [article de NextImpact](https://www.nextinpact.com/article/24930/99777-chiffrement-notre-antiseche-pour-expliquer-a-vos-parents)
+* chiffrement de Vigenère: [wikipedia](https://fr.wikipedia.org/wiki/Chiffre_de_Vigen%C3%A8re)
 * Interstices : [coder et decoder. La machine Enigma](https://interstices.info/turing-a-lassaut-denigma/)
 * sécurisez vos données avec la cryptographie [openclassroom](https://openclassrooms.com/fr/courses/1757741-securisez-vos-donnees-avec-la-cryptographie/6031870-controlez-lintegrite-de-vos-messages#:~:text=L'int%C3%A9grit%C3%A9%20des%20donn%C3%A9es%20d%C3%A9signe,prot%C3%A9ger%20la%20confidentialit%C3%A9%20des%20donn%C3%A9es.)
