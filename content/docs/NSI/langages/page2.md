@@ -129,7 +129,7 @@ def fact(n):
 ```
 
 
-
+<!--
 <div class="preuve">
   <div class="entete">
     Prouver l'algorithme itératif
@@ -154,7 +154,24 @@ def fact(n):
     </ol>
   </div>
 </div>
+-->
 
+**terminaison**: l'algorithme consiste en une boucle qui execute n itérations. Le **convergent**</strong>** n-i decroit strictement à chaque itération et on sort de la boucle quand il vaut 0.
+
+Chaque iteration contient un nombre fini d'opérations élémentaires : 1 mutiplication et 1 affectation. Donc il termine après 2n+1 operations.
+
+**correction (ou validité)**: 
+On prouve par recurrence sur le nombre d'iterations qu'apres la ieme iteration de la boucle for : res=i!
+
+**Preuve par récurrence**: après la 1ere itération, res = 1  ! (OK)
+
+Hypothèse de récurrence : (H.R.) supposons qu'après la ieme itération, res=i ! Montrons qu'après la (i+1)ieme iteration, res=(i+1)! :
+
+avant la (i+1)e iteration, res = i ! 
+
+La (i+1)e iteration multiplie res par i+1, donc après la (i+1)e iteration, $$res= i! \times (i+1) = (i+1)!$$
+
+Après n iterations, res contient n ! donc le resultat est celui attendu.
 
 ### Programme recursif
 On a la **relation de récurence** suivante: <b>u<sub>n</sub> = n * u<sub>n-1</sub></b>
@@ -196,7 +213,7 @@ Retour de la valeur 24
 ```
 
 
-
+<!--
 <div class="preuve">
   <div class="entete">
     Prouver l'algorithme recursif
@@ -219,6 +236,21 @@ Retour de la valeur 24
   </ol>
   </div>
 </div>
+-->
+
+Dans le cas d'un algo recursif, pas de convergent ni d'invariant de boucle. On prouve par recurrence sur n.
+
+**Teminaison**: si n=0, fact(0) fait un test et renvoie 1, sans appel recursif.
+
+**Hypothèse de récurrence**: fact(n) termine après n appels recursifs. Montrons que fact(n+1) termine après (n+1) appels recursifs.
+
+fact(n+1) fait un test n+1>0 donc on passe au `else` puis on appelle fact(n) par recurrence qui termine apres n appels recursifs. Finallement fact(n+1) termine après (n+1) appels recursifs.
+
+ **correction**: par recurrence fact(n) = n ! :
+
+pour n = 0 : fact(n) = fact(0) = 1 = 0! (OK)
+
+si vrai pour n, alors $fact(n+1) = (n+1)*fact(n)$ et par hyp H.R., $fact(n) = n!$ donc $(n+1)*n! = (n+1)!$ (OK)
 
 ### Complexité
 Calcul de la complexité : Soit T(n) le nombre d'opérations fondamentales. Pour une fonction récurrente, c'est le nombre de résolution de la fonction de récurence.<br>

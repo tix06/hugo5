@@ -2,6 +2,12 @@
 Title: codage d'une image
 ---
 
+# Une image: un tableau de pixels
+
+{{< img src="../images/grille_a.png" alt="image pixelisée monochrome" caption="image pixelisée monochrome" >}}
+
+> Comment représenter l'image de ce symbole de manière numérique?
+
 # Afficher les pixels d'une image
 On a vu en [travaux pratiques](/docs/SNT_2nde/pages/page5/photo_num3/), que le programme qui permet l'affichage des données en tableau utilise 2 boucles bornées, imbriquées:
 
@@ -37,7 +43,6 @@ Lorsque l'environnement est créé : cliquer sur le notebook :
 
 Et répondre aux questions sur la fiche à compléter.
 
-*Pensez à faire `Executer` lorsque la cellule est une cellule de code (In [1], In[2], In[3] et In[4])*
 
 ## Luminosité d'une image
 La luminosité d'une image représente la clarté de l'image. 

@@ -1,6 +1,21 @@
 ---
 Title : Photographie numérique
 ---
+
+# Peut-on faire de l'astrophotographie avec un smartphone?
+
+{{< img src="../images/astro.png" link="https://www.youtube.com/watch?v=nSsUccJkNXA&t=272s" caption="Jupyter au smartphone" >}}
+
+En disposant un smartphone sur un téléscope, on approche rapidement les limites de la qualité de l'appareil photo: sa capacité à capter les détails: les contours, les petits objets, le manque de contraste et de lumière.
+
+On peut deviner que ce qui caractérise une image numérique, c'est:
+
+* sa définition
+* sa profondeur de couleurs
+* son poids (en Mo)
+
+Ces caractéristiques vont dépendre de la chaine d'acquisition de l'image, dont l'appareil photographique fait partie.
+
 # L'appareil photographique numérique
 *Présentation*
 
@@ -37,8 +52,12 @@ L’image est construite en données numériques qui correspondent aux pixels.
 
 C’est le grain de coloration d’une image, l’atome de l’image numérique.
 
+La **Definition** d'une image correspond au nombre de pixels de l'image, exprimé en largeur * hauteur (par exemple 800 * 600).
+
 ### Codage
-Un des algorithmes possibles consiste à créer un pixel à partir de **4 photosites** : un bleu, un rouge et deux verts. Un pixel sera alors composé de 3 couleurs : rouge, vert, bleu (RVB). 
+Pour une image en *noir et blanc*: le codage numerique sera de 1 bit par pixel.
+
+Pour une image *couleur*: Un des algorithmes possibles consiste à créer un pixel à partir de **4 photosites** : un bleu, un rouge et deux verts. Un pixel sera alors composé de 3 couleurs : rouge, vert, bleu (RVB). 
 
 ### Restitution
 Sur un écran numérique, un pixel est constitué de 3 diodes luminescentes, presque au contact, et qui vont restituer la couleur en un point. Ces 3 diodes constituent *le pixel*.
@@ -46,6 +65,12 @@ Sur un écran numérique, un pixel est constitué de 3 diodes luminescentes, pre
 Lorsque l'on agrandit l'image, celle-ci parrait nette si la **définition** de l'image numérique est supérieure à celle de l'écran.
 
 {{< img src="../images/pixels_iphone.png" alt="pixels sur un smartphone" caption="detail des pixels d'un iphone" >}}
+
+De manière générale, c'est la *densité de pixels* qui va donner le détail de l'image. Elle est exprimée en pixels/cm ou pixels/pouces. C'est la **résolution** d'un écran.
+
+{{< img src="../images/densite.png" alt="faible et forte densité" caption="faible/forte densité de pixels, image de formettic.be" >}}
+
+*image issue de la page [formettic.be](http://www.formettic.be/Module3/Gimp/web/co/0393-00-Types-image-formats.html)*
 
 # réglages lors de la prise de photographie
 Les réglages de l'appareil photographique se font la plupart du temps de manière automatique. 

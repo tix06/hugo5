@@ -21,14 +21,15 @@ La programmation dynamique permet de résoudre plus *efficacement des problèmes
 3. On reconstruit la solution optimale en remontant les calculs de la valeur de la solution optimale.
 -->
 
-La programmation dynamique consiste à résoudre un problème en le décomposant en sous-problèmes, puis à **résoudre les sous-problèmes**, des plus petits aux plus grands **en stockant les résultats intermédiaires**.
+La programmation dynamique consiste à résoudre un problème en le décomposant en sous-problèmes, puis à **résoudre les sous-problèmes**, des plus petits aux plus grands **en stockant les résultats intermédiaires**, et en suivant une règle d'optimalité.
 
-Cela differe des algorithmes de type diviser pour régner par le fait que les sous-problèmes considérés ne sont pas nécessairement indépendants.
+Cela diffère des *algorithmes de type diviser pour régner* par le fait que les sous-problèmes considérés ne sont pas nécessairement indépendants. Pour les algorithmes de type *diviser pour régner*, on partitionne le problème en sous problèmes indépendants, qui seront résolus recursivement. Puis on combine leurs solutions pour résoudre le problème initial. Mais cela peut revenir à résoudre plusieurs fois le même sous-problème, et peut être parfois inefficace.
+
+Pour la *méthode de programmation dynamique*, on va se rappeler des sous-problèmes résolus (de leurs solutions), et eviter de les re-calculer.
 
 Cette méthode a été introduite au début des années 1950 par Richard Bellman.
 
-## Des solutions pas toujours optimales
-Parfois, le calcul des valeurs de sous problèmes est redondant : on calcule plusieurs fois la même chose. Cela n'est pas *efficace*.
+## Comment s'y prendre pour mémoriser les solutions?
 La méthode demande alors de *mémoriser* ce résultat intermédiaire dans un dictionnaire ou un tableau afin de le réutiliser au besoin. Sans avoir besoin de les recalculer. La complexité spatiale augmente, mais celle temporelle diminue.
 
 Cette méthode s'appelle : la **mémoïzation**.
@@ -40,15 +41,16 @@ En mathématiques, le triangle de Pascal est une présentation des coefficients 
 {{< img src="../images/page6-Pascal_triangle.jpg" alt="triangle de Pascal" link="https://commons.wikimedia.org/w/index.php?curid=3105222" caption="premières lignes du triangle de Pascal" >}}
 Cette figure permet de calculer les coefficients binomiaux d'un polynôme (x+y) à la puissance n: 
 
-<p>
-$$\begin{matrix}\begin{align}n=2, (x+y)^2 & = x^2+2xy+y^2\\n=3, (x+y)^3 & = x^3+3x^2y+3xy^2+y^3\\n=4, (x+y)^4 & = x^4+4x^3y+6x^2y^2+4xy^3+y^4\end{align}\end{matrix}$$
-</p>
-<p>
-voir compléments sur la page wikipedia :{{< a link="https://fr.wikipedia.org/wiki/Triangle_de_Pascal" caption="Lien" >}}</p>
-<p>
+
+$$\begin{matrix}\begin{align}n=2, (x+y)^2 & = x^2+2xy+y^2\\\n=3, (x+y)^3 & = x^3+3x^2y+3xy^2+y^3\\\n=4, (x+y)^4 & = x^4+4x^3y+6x^2y^2+4xy^3+y^4\end{align}\end{matrix}$$
+
+
+voir compléments sur la page wikipedia :{{< a link="https://fr.wikipedia.org/wiki/Triangle_de_Pascal" caption="Lien" >}}
+
+
 Un coefficient quelconque du triangle, situé à la ligne i et à la colonne j est calculé à partir de la formule de récurrence : (i et j superieurs à 1)
 
-$$C\left(\begin{matrix}i\\j\end{matrix}\right)=C\left(\begin{matrix}i-1\\j-1\end{matrix}\right)+C\left(\begin{matrix}i-1\\j\end{matrix}\right)$$
+$$C\left(\begin{matrix}i\\\j\end{matrix}\right)=C\left(\begin{matrix}i-1\\\j-1\end{matrix}\right)+C\left(\begin{matrix}i-1\\\j\end{matrix}\right)$$
 </p>
 
 {{< img src="../images/page6_calcul.png" >}}
@@ -259,7 +261,8 @@ L'algorithme k-opt est un algorithme de recherche locale proposé par Georges A.
 *Plus généralement, lorsqu'on inverse l'ordre de parcours de deux villes, il faut aussi inverser l'ordre de parcours de toutes les villes entre ces deux villes.*
 
 {{< img src="../images/2-opt.png" alt="algorithme 2-opt TSP" link="https://commons.wikimedia.org/w/index.php?curid=8044684" caption="" >}}
-# Résumé
+# Résumé. L'essentiel à retenir
+<!--
 <div class="essentiel">
  <div class="entete">
   L'essentiel à retenir
@@ -284,6 +287,36 @@ L'un des algorithmes existant pour la resolution, le 2-opt, va rechercher un min
 Il s'agit d'une succession de choix qui determine la solution. Là aussi, il s'agit d'un <i>algorithme glouton</i>.
 </div>
 </div>
+-->
+
+
+**Programmation dynamique**
+
+L'idée de la **programmation dynamique**, c'est de **gagner en efficacité**. On cherche à reduire la complexité temporelle et spatiale.
+
+Par exemple, pour la suite de Fibonacci, ou le triangle de Pascal, les coefficients de la suite ou du triangle sont calculés à partir des précédents, ceux de rang inférieur. En stockant ces valeurs dans une liste, on peut les réutiliser sans les calculer à nouveau.
+
+**Algorithmes gloutons**
+
+Un algorithme glouton dépend du problème que l'on cherche à resoudre. Il n'y a pas d'algorithme glouton universel. Il permet de trouver une solution à un problème d'optimalité. Il part du principe que l'on peut trouver une solution approchante pour un problème NP-complet, en utilisant une stratégie et en faisant des choix. Chacun de ces choix semble être le **meilleur sur le moment**.
+
+Cette stratégie peut être par exemple: 
+
+* pour le *rendu de monnaie*: de commencer par résoudre le problème d'optimalité pour rendre de plus petites sommes. Puis, on utilise cette solution pour rendre une partie des sommes plus importantes.
+
+* pour le *problème du sac à dos*: de commencer par remplir un sac de plus petite contenance. Puis, on utilise ce résultat pour compléter de plus gros sacs.
+
+On fait des choix à chaque étape, mais selon une stratégie bien définie, et qui **ne change plus**, en esperant que la somme des solutions intermédiaires va donner finalement une solution optimale. Mais on n'en est pas sûr. Et on ne revient pas en arrière.
+
+**Algorithme avec recherche locale**
+
+Pour le problème du TSP (Traveling salesman problem, ou problème du voyageur du commerce), on peut utiliser un algorithme de recherche locale, comme le *k-opt*. Celui-ci va cette fois remettre en doute les choix précédents.
+
+Les étapes et leurs liens peuvent être représentés par un graphe connexe.
+
+L'un des algorithmes existant pour la resolution, le 2-opt, va rechercher un minimum local pour un morceau de tour constitué de quelques noeuds. L'algorithme procède par permutation des arêtes entre noeuds. Et il conserve le morceau de tour de plus courte distance.
+
+Il s'agit d'une succession de choix qui determine la solution. Là aussi, il s'agit d'un algorithme glouton.
 
 # Annexes
 ## Programmes python du rendu de monnaie
@@ -438,6 +471,7 @@ Tous les algorithmes connus pour résoudre des problèmes NP-complets ont un tem
 On y retrouve les problèmes de décision (oui/non) et d'optimisation (max ou min d'une fonction), dont les problèmes vus plus haut.
 
 # Liens
+* page de cours NSI sur les algorithmes de complexité exponentielle, et la programmation dynamique [cours de qkzk](https://qkzk.xyz/docs/nsi/cours_terminale/algorithmique/prog_dynamique/td/)
 * [wikipedia: la programmation dynamique](https://fr.wikipedia.org/wiki/Programmation_dynamique)
 * [wikipedia: le problème du rendu de monnaie](https://fr.wikipedia.org/wiki/Probl%C3%A8me_du_rendu_de_monnaie)
 * [wikipedia: le problème du sac à dos](https://fr.wikipedia.org/wiki/Probl%C3%A8me_du_sac_%C3%A0_dos)
