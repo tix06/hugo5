@@ -19,7 +19,7 @@ Ces caractéristiques vont dépendre de la chaine d'acquisition de l'image, dont
 # L'appareil photographique numérique
 *Présentation*
 
-{{< img src="../images/video_photo_num.png" link="https://youtu.be/Rs5ab3X9Oxo" caption="Video: Fonctionnement d un appareil photo numérique" >}}
+{{< img src="../images/video_photo_num.png" link="https://christophebellessort.canoprof.fr/eleve/SNT/CapteurImage_corrige/" caption="Video: Fonctionnement d un appareil photo numérique" >}}
 ## Composants principaux
 On retrouve dans un appareil photographique numérique, ou pour la partie photographie d'un smartphone ou d'une tablette, les constituants suivant : 
 
