@@ -34,6 +34,10 @@ La méthode demande alors de *mémoriser* ce résultat intermédiaire dans un di
 
 Cette méthode s'appelle : la **mémoïzation**.
 
+Elle va permettre d'eviter la *répétition* des calculs que l'on voit dans l'exemple suivant, le triangle de Pascal. Sans cette *reduction*, la compléxité de l'algorithme est exponentielle (voir l'arbre des calculs, présenté plus bas). 
+
+Ce problème de *répétitions* a été vu avec l'exemple du calcul des termes de la suite de Fibonacci.
+
 # Exemple : le triangle de Pascal
 ## Principe
 En mathématiques, le triangle de Pascal est une présentation des coefficients binomiaux dans un triangle. Il fut nommé ainsi en l'honneur du mathématicien français Blaise Pascal. Il est connu sous l'appellation « triangle de Pascal » en Occident, bien qu'il fût étudié par d'autres mathématiciens, parfois plusieurs siècles avant lui.
@@ -73,31 +77,25 @@ def pascal(n):
 ```
 
 
-On peut alors tester le programme (jupyter notebook):
+On peut alors tester le programme:
 
-<table>
-    <tr>
-        <th scope="row">IN</th>
-        <td>pascal(9)
-        </td>
-    </tr>
-   
-    <tr>
-        <th scope="row">OUT</th>
-        <td>
-         [[1, 0, 0, 0, 0, 0, 0, 0, 0, 0],<br>
- [1, 1, 0, 0, 0, 0, 0, 0, 0, 0],<br>
- [1, 2, 1, 0, 0, 0, 0, 0, 0, 0],<br>
- [1, 3, 3, 1, 0, 0, 0, 0, 0, 0],<br>
- [1, 4, 6, 4, 1, 0, 0, 0, 0, 0],<br>
- [1, 5, 10, 10, 5, 1, 0, 0, 0, 0],<br>
- [1, 6, 15, 20, 15, 6, 1, 0, 0, 0],<br>
- [1, 7, 21, 35, 35, 21, 7, 1, 0, 0],<br>
- [1, 8, 28, 56, 70, 56, 28, 8, 1, 0],<br>
+```
+> pascal(9)
+
+[[1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+ [1, 2, 1, 0, 0, 0, 0, 0, 0, 0],
+ [1, 3, 3, 1, 0, 0, 0, 0, 0, 0],
+ [1, 4, 6, 4, 1, 0, 0, 0, 0, 0],
+ [1, 5, 10, 10, 5, 1, 0, 0, 0, 0],
+ [1, 6, 15, 20, 15, 6, 1, 0, 0, 0],
+ [1, 7, 21, 35, 35, 21, 7, 1, 0, 0],
+ [1, 8, 28, 56, 70, 56, 28, 8, 1, 0],
  [1, 9, 36, 84, 126, 126, 84, 36, 9, 1]]
-        </td>
-    </tr>
-</table>
+```
+
+
+
 
 On remarque que l'on calcule souvent les mêmes coefficients binomiaux : 
 
@@ -174,6 +172,8 @@ Contrairement aux problèmes étudiés précédement (tri d’un tableau, calcul
 
 Si la taille du ou des paramètres en entrée est importante, il n'y a pas d'algorithme déterministe efficace. (on ne peut pas trouver LA solution au problème en parcourant toutes les solutions possibles car la complexité est trop grande).
 
+> Avec l'exemple précédent (rendre 21 avec une caisse {1, 10, 15}): représenter l'arbre des solutions possibles (toutes les combinaisons). Expliquer alors pourquoi l'agorithme naïf a une complexité exponentielle.
+
 On utilise alors d'autres stratégies, qui donneront parfois une solution, parfois une solution optimale. C'est ce que l'on réalise avec l'utilisation d'un algorithme glouton.
 
 Le problème du rendu de monnaie est *NP-difficile* relativement au nombre de pièce et billet du système monétaire considéré. (voir annexe).
@@ -208,6 +208,8 @@ L'algorithme remplit le tableau depuis la valeur 1 jusqu'à 15.
 
 Le tableau montre les choix que réalise l'algorithme.
 
+> Représenter l'arbre des combinaisons possibles pour rendre un montant égal à 9, en choisissant une à une chaque piece de la caisse {1, 7, 9}. On utilisera alors les résultats déjà trouvés pour rendre la valeur restante. Quel est le choix optimal? La complexité a t-elle été réduite?
+
 **Remarque:** Ce problème est [NP-complet](https://fr.wikipedia.org/wiki/Probl%C3%A8me_NP-complet) dans le cas général, c'est-à-dire difficile à résoudre. Cependant pour certains systèmes de monnaie dits canoniques, l'[algorithme glouton](https://fr.wikipedia.org/wiki/Algorithme_glouton) est optimal.
 
 
@@ -215,6 +217,9 @@ Le tableau montre les choix que réalise l'algorithme.
 Un problème très similaire est celui du sac-à-dos. Supposons que vous découvriez la caverne d'Ali Baba (et des 40 voleurs), il y a une infinité d'objets de valeur `v1, v2, · · · , vn` mais chaque objet de valeur `vi` a un poids de `pi`. Comment remplir votre sac-à-dos avec le contenu qui rapportera le plus, sachant que votre sac ne supporte qu’un poids `W`?
 
 {{< img src="../images/sacados.png" alt="probleme du sac a dos" caption="illustration du probleme du sac à dos" >}}
+
+Voir l'article et l'animation sur [Interstices](https://interstices.info/le-probleme-du-sac-a-dos/)
+
 ## Algorithme de type glouton
 Nous allons chercher à adapter l'algorithme du rendu de monnaie:
 
@@ -294,7 +299,12 @@ Il s'agit d'une succession de choix qui determine la solution. Là aussi, il s'a
 
 L'idée de la **programmation dynamique**, c'est de **gagner en efficacité**. On cherche à reduire la complexité temporelle et spatiale.
 
-Par exemple, pour la suite de Fibonacci, ou le triangle de Pascal, les coefficients de la suite ou du triangle sont calculés à partir des précédents, ceux de rang inférieur. En stockant ces valeurs dans une liste, on peut les réutiliser sans les calculer à nouveau.
+Les problèmes à resoudre:
+
+* peuvent être décomposés en sous-problèmes
+* présentent un *chevauchement* des sous-problèmes.
+
+Par exemple, pour la suite de Fibonacci, ou le triangle de Pascal, les coefficients de la suite ou du triangle sont calculés à partir des précédents, ceux de rang inférieur(sous problèmes). En stockant ces valeurs dans une liste, on peut les réutiliser sans les calculer à nouveau.
 
 **Algorithmes gloutons**
 
@@ -399,9 +409,10 @@ def renduMonnaieProgDyn(x,c) :
     return res[x]
 ```
 
-
+<!--
 {{< img src="../images/rendumonnaie1.png" caption="etape i=1 j=0" >}}
 {{< img src="../images/rendumonnaie2.png" caption="etapes suivantes" >}}
+-->
 ## Le problème du sac à dos
 *Résolution*
 
