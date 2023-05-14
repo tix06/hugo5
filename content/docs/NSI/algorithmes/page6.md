@@ -129,50 +129,18 @@ Par exemple, la meilleure façon de rendre 7 euros est de rendre un billet de ci
 
 {{< img src="../images/caisse.png" alt="caisse rendu monnaie" link="https://pixabay.com/users/conmongt-1226108/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2048569" caption="Image by " >}}
 ### algorithme naif
-Une première idée, naïve serait de commencer par rendre la piece de plus grande valeur, puis sur la somme restante, la pièce un peu moins grande, et ainsi de suite.
+Ce problème est traité d'une manière différente de ce que l'on a vu en [1ere NSI](/docs/NSI_1/algo/page3/). Supposons que l'on dispose d'une fonction recursive, qui pour chaque piece de la caisse fait le choix suivant:
 
-Pour une somme `cost` à rendre, et un systeme de monnaie appelé `caisse` :
+* soit la piece est inférieure à la monnaie à rendre: alors on soustrait la piece à la somme à rendre et on appelle la fonction de manière récursive avec cette même caisse, et la nouvelle somme à rendre.
+* soit la piece est supérieure à la somme à rendre. on retire la piece de la caisse. Et on appelle de manière récursive la fonction avec la nouvelle caisse, et la même somme.
 
-```python
-pour chaque piece de caisse, parcouru en sens decroissant:
-    si cost > piece
-    n = cost // piece
-    ajouter n pieces dans le rendu de monnaie
-    cost = cost - n * piece
-```
 
-Le programme python est donné en annexe. Les essais sont proposés ci-dessous:
-
-```python
->>> caisse = {1,2,5,10,20,50}
->>> rendre(93,caisse) # OK optimal
-{1: 1, 2: 1, 5: 0, 10: 0, 20: 2, 50: 1}
->>> caisse = {1,10,15}
->>> rendre(21,caisse) # non optimal
-{1: 6, 10: 0, 15: 1}
-``` 
-
-* Lorsque l'on veut rendre 93 à l'aide d'une caisse constituée de billets ou de pieces de {1,2,5,10,20,50}, le résultat est:
-
-    * 1 billet de 50
-    * 2 billets de 20
-    * 1 piece de 2
-    * 1 piece de 1
-
-Ce rendu est optimal: on ne peut pas rendre moins de billets/pieces.
-
-* Lorsque l'on veut rendre 21 à l'aide d'une caisse constituée de billets ou de pieces de {1, 10, 15}, le résultat est:
-
-    * 1 piece de 15
-    * 6 pieces de 1
-
-Ce rendu n'est pas optimal. On trouve une solution, mais celle-ci contient trop de pieces.
+> Que renvoie la fonction pour rendre 24 pences avec le [système imperial](https://fr.wikipedia.org/wiki/Shilling_britannique) où pieces = [240,60,30,24,12,6,3,1] ? Représenter pour cela l'arbre des appels. Quel est le rendu optimal avec cette méthode? Expliquer alors pourquoi l'agorithme naïf a une complexité exponentielle.
 
 Contrairement aux problèmes étudiés précédement (tri d’un tableau, calcul de x<sub>n</sub>...), où il y avait toujours une unique solution, dans les problèmes d’optimisation, il peut y avoir des solutions valides (satisfaisant les contraintes) non optimales, une ou plusieurs solutions (valides), optimales (minimisant/maximisant une certaine mesure), voire pas du tout de solution valide. 
 
 Si la taille du ou des paramètres en entrée est importante, il n'y a pas d'algorithme déterministe efficace. (on ne peut pas trouver LA solution au problème en parcourant toutes les solutions possibles car la complexité est trop grande).
 
-> Avec l'exemple précédent (rendre 21 avec une caisse {1, 10, 15}): représenter l'arbre des solutions possibles (toutes les combinaisons). Expliquer alors pourquoi l'agorithme naïf a une complexité exponentielle.
 
 On utilise alors d'autres stratégies, qui donneront parfois une solution, parfois une solution optimale. C'est ce que l'on réalise avec l'utilisation d'un algorithme glouton.
 
@@ -180,7 +148,7 @@ Le problème du rendu de monnaie est *NP-difficile* relativement au nombre de pi
 
 ### algorithme de type glouton
 
-On cherche à créer une liste de rendu de monnaie pour chaque montant de 0 à x. 
+On cherche à créer une liste de rendu de monnaie pour chaque montant de 0 à x. On aura une approche ASCENDANTE: on commence par déterminer la manière de rendre la somme la plus petite somme à rendre, puis une somme juste supérieure, etc... Chaque fois, la somme rendu le sera de manière optimale.
 
 Pour rendre x, il faut au moins une pièce, à prendre parmi n pieces possibles. Une fois choisie cette pièce, la somme restante inférieure strictement à x, donc on sait la rendre de façon optimale. Il suffit donc d'essayer les n possibilités. Et de faire un choix parmi les solutions trouvées: celle qui rend le moins de pieces.
 
@@ -239,7 +207,12 @@ Nous allons chercher à adapter l'algorithme du rendu de monnaie:
 | **Test 2**: Si j'ajoute la piece pour rendre la monnaie, le nombre de pieces rendues sera-t-il inférieur à celui stocké pour i? (le reste de la somme à rendre a deja été calculé precedemment) | **Test 2**: Si je prend l'objet, le montant total rapporté est-il supérieur à la valeur stockée pour i? |
 | Si oui: rendre la piece | Si oui: prendre l'objet |
 
+> Déterminer le choix idéal pour un sac à dos de capacité 30kg, avec les objets suivants, proposés en nombre infini:
 
+|Objets | 1 | 2 | 3  | 4 |
+| --- | --- | --- | --- | --- |
+| valeur | 7 | 4 | 3 | 3 |
+|poids (kg) | 13 |12| 8 |10|
 
 # Le problème du voyageur du commerce
 ## énoncé du problème
@@ -330,7 +303,7 @@ Il s'agit d'une succession de choix qui determine la solution. Là aussi, il s'a
 
 # Annexes
 ## Programmes python du rendu de monnaie
-### algo naîf
+### algo naîf vu en classe de 1ere
 
 ```python
 def estvide(ensemble):
@@ -378,6 +351,9 @@ essais
 >>> rendre(21,caisse) # non optimal
 {1: 6, 10: 0, 15: 1}
 ``` 
+
+### algo naïf recursif
+(non donné)
 
 ### algorithme glouton
 ```python
