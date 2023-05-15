@@ -127,13 +127,14 @@ Le problème du rendu de monnaie est un problème d'algorithmique. Il s'énonce 
 
 Par exemple, la meilleure façon de rendre 7 euros est de rendre un billet de cinq et une pièce de deux, même si d'autres façons existent (rendre 7 pièces de un euro, par exemple).
 
-{{< img src="../images/caisse.png" alt="caisse rendu monnaie" link="https://pixabay.com/users/conmongt-1226108/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2048569" caption="Image by " >}}
+{{< img src="../images/caisse.png" alt="caisse rendu monnaie" link="https://pixabay.com/users/conmongt-1226108/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2048569" caption="Image by conmongt-pixabay" >}}
 ### algorithme naif
 Ce problème est traité d'une manière différente de ce que l'on a vu en [1ere NSI](/docs/NSI_1/algo/page3/). Supposons que l'on dispose d'une fonction recursive, qui pour chaque piece de la caisse fait le choix suivant:
 
 * soit la piece est inférieure à la monnaie à rendre: alors on soustrait la piece à la somme à rendre et on appelle la fonction de manière récursive avec cette même caisse, et la nouvelle somme à rendre.
 * soit la piece est supérieure à la somme à rendre. on retire la piece de la caisse. Et on appelle de manière récursive la fonction avec la nouvelle caisse, et la même somme.
 
+**Un système monétaire non canonique:** 
 
 > Que renvoie la fonction pour rendre 24 pences avec le [système imperial](https://fr.wikipedia.org/wiki/Shilling_britannique) où pieces = [240,60,30,24,12,6,3,1] ? Représenter pour cela l'arbre des appels. Quel est le rendu optimal avec cette méthode? Expliquer alors pourquoi l'agorithme naïf a une complexité exponentielle.
 
@@ -206,6 +207,9 @@ Nous allons chercher à adapter l'algorithme du rendu de monnaie:
 | **Test 1**: le montant de la piece est-il < i? | **Test 1**: Le poids de l'objet est-il < i? |
 | **Test 2**: Si j'ajoute la piece pour rendre la monnaie, le nombre de pieces rendues sera-t-il inférieur à celui stocké pour i? (le reste de la somme à rendre a deja été calculé precedemment) | **Test 2**: Si je prend l'objet, le montant total rapporté est-il supérieur à la valeur stockée pour i? |
 | Si oui: rendre la piece | Si oui: prendre l'objet |
+
+
+*Question*:
 
 > Déterminer le choix idéal pour un sac à dos de capacité 30kg, avec les objets suivants, proposés en nombre infini:
 
