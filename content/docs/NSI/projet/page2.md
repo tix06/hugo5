@@ -45,9 +45,9 @@ La portée classique, retranscrivant des notes de hauteurs bien séparées s'enc
 [https://www.larecherche.fr/chronique-num%C3%A9rique/musique-et-informatique-un-mariage-damour](https://www.larecherche.fr/chronique-num%C3%A9rique/musique-et-informatique-un-mariage-damour)
 
 # Données structurées et structures de données
-## [Réguler grâce aux données](https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/r%C3%A9guler-gr%C3%A2ce-aux-donn%C3%A9es)
+## [Réguler grâce aux données](https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es-chroniques/r%C3%A9guler-gr%C3%A2ce-aux-donn%C3%A9es)
 Le monde se transforme de plus en plus rapidement en se complexifiant. Cela s'accompagne de nouveaux défis pour l'action de l'État. Les données numériques, souvent à l'origine d'innovations, peuvent participer à la régulation par l'État de systèmes économiques ou sociaux. Ainsi, la ville de Paris publie, depuis septembre 2019, Pollutrack, une carte interactive pour connaître le niveau de pollution de l'air dans la capitale…
-[https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/r%C3%A9guler-gr%C3%A2ce-aux-donn%C3%A9es](https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/r%C3%A9guler-gr%C3%A2ce-aux-donn%C3%A9es)
+[https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/r%C3%A9guler-gr%C3%A2ce-aux-donn%C3%A9es](https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es-chroniques/r%C3%A9guler-gr%C3%A2ce-aux-donn%C3%A9es)
 
 ## [Le décodage à grande distance](https://www.lemonde.fr/blog/binaire/2021/03/02/le-decodage-a-grande-distance/)
 mardi 2 mars 2021 à 07:41
@@ -125,10 +125,11 @@ Les services cloud s’appuient sur de nombreux serveurs répartis à travers le
 [https://siecledigital.fr/2021/04/06/cloud-pollution/](https://siecledigital.fr/2021/04/06/cloud-pollution/)
 
 # Architectures matérielles, systèmes d’exploitation, réseaux et securité
-## [Internet : Un bond de géant pour l'humanité](https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/un-bond-de-g%C3%A9ant-pour-lhumanit%C3%A9)
+## [Internet : Un bond de géant pour l'humanité](https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es-chroniques/un-bond-de-g%C3%A9ant-pour-lhumanit%C3%A9)
 cette magnifique invention est porteuse des plus belles valeurs humaines : apporter les connaissances à tous, permettre à tous de communiquer. Mais pourrons-nous continuer longtemps à utiliser Internet ? Peut-être pas. 
 
-[https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/un-bond-de-g%C3%A9ant-pour-lhumanit%C3%A9](https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/un-bond-de-g%C3%A9ant-pour-lhumanit%C3%A9)
+[https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es/un-bond-de-g%C3%A9ant-pour-lhumanit%C3%A9](https://www.larecherche.fr/chronique-num%C3%A9rique-id%C3%A9es-chroniques/un-bond-de-g%C3%A9ant-pour-lhumanit%C3%A9)
+
 
 ## [Comprendre les blockchains : fonctionnement et enjeux de ces nouvelles technologies](http://www.senat.fr/rap/r17-584/r17-584_mono.html)
 les blockchains permettent des échanges décentralisés et sécurisés, sans qu'il soit besoin d'un tiers de confiance. Plus précisément, elles sont des technologies de stockage et de transmission d'informations, permettant la constitution de registres répliqués et distribués, sans organe central de contrôle, sécurisées grâce à la cryptographie, et structurées par des blocs liés les uns aux autres, à intervalles de temps réguliers....
