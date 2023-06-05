@@ -22,6 +22,7 @@ Il s'agit d'un cas très classique d'algorithme utilisé dans le web marketing. 
 
 ![articlesCompatibles.png](../images/articlesCompatibles.png)
 
+
 La première étape pour calculer les similarités consiste à découper les descriptions en listes de mots (c'est la tokenisation) puis à prendre les racines des mots, les stems.
 
 ## Extraire les mots d'un texte
@@ -306,7 +307,7 @@ df2
 
 
 
-
+<!--
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -449,7 +450,13 @@ df2
 </table>
 <p>4 rows × 29 columns</p>
 </div>
-
+-->
+||**bande**|**dessinee**|**ouvrage**|**illustre**|**racontant**|**histoire**|**images**|**aventure**|**fantaisie**|**lire**|**...**|**produire**|**consulter**|**objets**|**numeriques**|**communiquer**|**calculer**|**jouer**|**videos**|**console**|**jeux**|
+| -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: | -: |
+|**bande dessinee**|0\.1|0\.1|0\.1|0\.1|0\.1|0\.1|0\.1|0\.1|0\.1|0\.100000|...|0\.000000|0\.000000|0\.000000|0\.000000|0\.000000|0\.000000|0\.000000|0\.000000|0\.0|0\.0|
+|**roman**|0\.0|0\.0|0\.1|0\.0|0\.0|0\.1|0\.0|0\.1|0\.0|0\.100000|...|0\.000000|0\.000000|0\.000000|0\.000000|0\.000000|0\.000000|0\.000000|0\.000000|0\.0|0\.0|
+|**ordinateur**|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.083333|...|0\.083333|0\.083333|0\.083333|0\.083333|0\.083333|0\.083333|0\.083333|0\.083333|0\.0|0\.0|
+|**console de jeux**|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.1|0\.1|0\.100000|...|0\.000000|0\.000000|0\.000000|0\.000000|0\.000000|0\.000000|0\.100000|0\.200000|0\.1|0\.1|
 
 
 # Calcul des similarités
@@ -515,7 +522,7 @@ df3
 ```
 
 
-
+<!--
 
 <div>
 <style scoped>
@@ -573,7 +580,14 @@ df3
   </tbody>
 </table>
 </div>
+-->
 
+|  | bande dessinee | roman | ordinateur | console de jeux |
+|--- |--- |--- |---|--- |
+| bande dessinee | 1.000000 | 0.400000 | 0.091287 | 0.273861 |
+| roman | 0.400000 | 1.000000 | 0.091287 | 0.182574 |
+| ordinateur | 0.091287 | 0.091287 | 1.000000 | 0.500000 |
+| console de jeux | 0.273861 | 0.182574 | 0.500000 | 1.000000 |
 
 
 
@@ -595,7 +609,7 @@ sns.heatmap(mat, square=True, annot=True, cbar=False
 
 
 
-![png](../images/output_15_1.png)
+![png](../images/output_15_0.png)
 
 
 
@@ -728,4 +742,7 @@ Il existe ainsi les :
 Les algorithmes pour construire les arbres de décision sont construits en divisant l'arbre du sommet vers les feuilles en choisissant à chaque étape une variable d'entrée qui réalise le meilleur partage de l'ensemble d'objets, comme décrit précédemment. Pour choisir la variable de séparation sur un nœud, les algorithmes testent les différentes variables d'entrée possibles et sélectionnent celle qui maximise un critère donné.
 
 > suite : voir la page sur les arbres de décision : [graphes_mini_prog.md](../graphes_mini_prog/index.html)
+
+# Liens
+* [construire un chatbot en python - moncoachdata.com](https://moncoachdata.com/blog/construire-un-chatbot-en-python/)
 

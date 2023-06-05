@@ -18,7 +18,12 @@ Lien vers le notebook en ligne : [https://mybinder.org/v2/gh/tix06/notebooks_cla
 > Choisir alors le fichier : `graphes_mini_prog.ipynb`
 
 ## Définition
-Un arbre de classification est utile pour réaliser des prévisions de manière *explicite*. C'est une méthode d'appentissage automatisé (machine learning) supervisé (les classes des entrées sont connue).
+Un arbre de classification est utile pour réaliser des prévisions de manière *explicite*. C'est un outil utilisé 
+
+* pour les algorithmes de *backtracking* (modéliser une partie d'echecs)
+* pour l'appentissage automatisé (machine learning) supervisé (les classes des entrées sont connue)
+
+Pour le *machine learning* l'arbre peut évoluer et se restructurer à partir d'informations reçues.
 
 A partir des valeurs des données en entrée, l'algorithme va créer des règles pour segmenter, au mieux, la population (les index des entrées) à chaque noeud. En descendant dans l'arbre de classification, on parcourt ses noeuds. Le nombre d'éléments qu'il reste à classer diminue du noeud parent vers un noeud fils : tous les éléments se répartissent sur tous les noeuds fils.
 
@@ -405,9 +410,7 @@ tree.plot_tree(clf)
 
 
 
-
-![png](../images/jouer.pdf)
-
+{{< img src="../images/jouer.png" caption="décider de jouer avec un arbre de décision" >}}
 
 Contenu de chaque noeud : 
 

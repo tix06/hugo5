@@ -18,23 +18,29 @@ weight: 16
 # Intelligence artificielle (IA)
 L'intelligence artificielle désigne des algorithmes plus ou moins évolués qui traitent des problèmes dont la résolution fait appel à l'intelligence humaine. Ils imitent des *actions humaines*.
 
-*Exemple :* L'algorithme suivant : 
+Le comportement de l'algorithme **évolue au cours du temps**, en fonction des données qui lui sont fournies.
 
-```
-input(poids)
-if poids > 120 then print('vous êtes en surpoids')
-```
-Ce n'est pas un algorithme digne d'une *intelligence artificielle*.
-On trouvera dans la suite du document, de nombreux exemples qui traitent d'*intelligence artificielle*.
+Aujourd'hui, ce sont les [chatbots](https://powervirtualagents.microsoft.com/fr-fr/what-is-a-chatbot/#:~:text=Un%20chatbot%20est%20une%20application,fonctionnent%20de%20fa%C3%A7on%20tr%C3%A8s%20similaire.) qui illustrent le mieux cette notion d'IA. Il existe ainsi:
+
+* les chatbots basés sur des règles: (plus simples que l' IA): 
+	* suivent un ensemble de règles pré définies
+	* servent pour un flux de discussion prédeterminé
+	* doivent être configurés à chaque mise à jour
+* les chatbots basés sur IA: 
+	* comprennent le contexte, interprètent l'intention d'une conversation
+	* peuvent apprendre des interactions
+	* peuvent traiter des projets plus complexes
+
+Les chatbots issus de *l'IA conversationnelle:* sont des technologies grâce auxquelles les logiciels peuvent converser avec des personnes en utilisant le langage naturel. 
+
+* Voir article [sur le test de Turing](https://www.lemonde.fr/blog/binaire/2023/05/19/chatgpt-et-test-de-turing-inverse/)
+* Voir aussi l'article de Thierry Viéville, illustré de videos de D. Louapre [*chatgpt: voulez vous comprendre ce que c'est?*](https://www.lemonde.fr/blog/binaire/2023/05/12/chatgpt-voulez-vous-comprendre-ce-que-cest/)
+	* Voir en particulier la video sur le machine learning et les reseaux de neurone, après 10min: [Lien vers la video](https://youtu.be/trWrEWfhTVg?t=537)
 
 # Analyse de données et machine learning
 ## une définition
 imaginons que vous vouliez créer une IA qui vous donne le prix d’un appartement à partir de sa superficie.
 
-<figure>
-  <img src="../images/appartement.jpg" alt="-pixabay" width=60%>
-  <figcaption>comment estimer le prix d'un appartement ?</figcaption>
-</figure>
 
 Dans les années 1950, vous auriez fait un programme du type « si la superficie est inférieure à 20m², le prix vaut 60 000€, si elle est entre 20m² et 30m², le prix vaut 80 000€, etc… », ou peut-être « prix = superficie*3 000 ».
 
@@ -52,7 +58,7 @@ Le machine learning est un domaine large, qui comprend de très nombreux algorit
 
 ## Les domaines professionnels
 Tous les champs professionnels, du moment où il y a des données qui sont collectées : 
-dans l'entreprise, le commerce, dans la recherche, .... 
+dans l'entreprise, le commerce, dans la recherche, ... 
 
 Ces données sont collectés à partir d’objets connectés, à partir de l’activité des internautes sur les sites de e-commerce (marketing digital), des statistiques d’utilisation de produits, de véhicules, de bâtiments, voire des données collectées suite à des évènements naturels, biologiques, etc.
 
@@ -112,40 +118,7 @@ C'est ce que l'on réalise lorsque l'on fait l'analyse d'un panier de courses au
 
 Une technique pratiquée en apprentissage non supervisé : la **Segmentation** : consiste à former des groupes homogène à l'intérieur d'une  population (des *clusters*). 
 
-## Des exemples de méthodes de fouille de données
-Les programmes d'analyse de données (classification, de prédiction, d'estimation, d'association) utilisent des algorithmes que l'on peut essayer de classer, comme le montre le tableau suivant : 
 
-<table>
-	<tr>
-		<td></td><td>Supervisées</td><td>Non supervisées</td>
-	</tr>
-	<tr>
-	  <td>
-	  		Classification prédiction
-	  </td>
-		<td>
-			<ul>
-				<li>Arbre de décision (analyse discriminante)</li>
-				<li>Réseaux de neurones</li>
-				<li>Modèles relatifs aux réseaux Bayésiens</li>
-				<li>Machines à vecteurs de supports</li>
-				<li>...</li>
-			 </ul>
-		 </td>
-		 <td>
-		 	<ul>
-				<li>Segmentation</li>
-				<li>k plus proches voisins</li>
-				<li>Recherche de séquences</li>
-				<li>Reconnaissance de formes</li>
-				<li>...</li>
-			 </ul>
-		 </td>
-		</tr>
-	<tr>
-		<td>Association</td><td></td><td>Règles d'association</td>
-	</tr>
-</table>
 
 ## Les étapes du traitement de données
 * Aggréger ces données dans un data lake.
@@ -157,12 +130,10 @@ Les programmes d'analyse de données (classification, de prédiction, d'estimati
 	* Dans le premier cas, à partir de valeurs dites **discrètes** (des *catégories*), on devra réaliser une segmentation des objets en entrée en différentes catégories. La prédiction réalisée à partir d'une nouvelle entrée donne en sortie une liste de labels possibles.
 	* Dans le deuxième cas, il s'agira d'un traitement statistique des données. 
 
-<figure>
-<img src="../images/donneesRegression.png" width = 80% alt="classification et regression">
-<figcaption>illutration de la différence entre classification et regression linéaire</figcaption>
-</figure>
 
-* Déployer le modèle. Une fois le modèle établit, on va encore le vérifier et l'ajuster à partir de certaines des données : il faudra donc prévoir une séparation initiale de ces données : certaines des données servent à générer le modèle (le *training set*). Les autres sont celles qui vont permettre de valider (tester) ou améliorer si besoin le modèle (le *testing set*). 
+{{< img src="../images/donneesRegression.png" caption="illutration de la différence entre classification et regression linéaire" >}}
+
+* Déployer le modèle. Une fois le modèle établi, on va encore le vérifier et l'ajuster à partir de certaines des données : il faudra donc prévoir une séparation initiale de ces données : certaines des données servent à générer le modèle (le *training set*). Les autres sont celles qui vont permettre de valider (tester) ou améliorer si besoin le modèle (le *testing set*). 
 * Prévoir la catégorie ou faire de la prédiction à partir des nouvelles données. 
 
 > Le machine learning est l'apprentissage d'un modèle statistique par la machine grâce à des données d'entraînement. Un problème de machine learning comporte parmi les étapes une **mesure des performances**. S'il améliore les performances sur cette tâche lorsqu'on lui fournit les données d'entraînement, on dit alors qu'il apprend.
@@ -178,10 +149,8 @@ La recommandation est une problématique qui revient très souvent dans l'ananly
 
 Sur l'image ci-dessous, on regarde par exemple ce qu'ont voté les utilisateurs similaires, c'est-à-dire ceux qui ont déjà voté la même chose sur d'autres produits (surlignés en vert). On peut alors prédire ce qu'aurait voté notre utilisateur sur le produit cherché, et ne proposer que les produits sur lesquels il aurait mis un pouce vert.
 
-<figure>
-<img src="../images/recommandation.png" width = 80% alt="recommandation à partir de pouces verts">
-<figcaption>Les utilisateurs similaires (en vert) n'ont pas aimé le produit que notre utilisateur n'a pas encore noté. L'algorithme aura donc tendance à prédire une mauvaise note et à ne pas recommander le produit ici</figcaption>
-</figure>
+
+{{< img src="../images/recommandation.png" caption="Les utilisateurs similaires (en vert) n'ont pas aimé le produit que notre utilisateur n'a pas encore noté. L'algorithme aura donc tendance à prédire une mauvaise note et à ne pas recommander le produit ici" >}}
 
 Les utilisateurs similaires (en vert) n'ont pas aimé le produit que notre utilisateur n'a pas encore noté. L'algorithme aura donc tendance à prédire une mauvaise note et à ne pas recommander le produit ici.
 
@@ -195,17 +164,15 @@ Il existe alors plusieurs méthodes d'association :
 
 * l'association basée sur les objets (l'exemple dit du *panier de la ménagère*)
 
-<figure>
-<img src="../images/achats.png" width = 80% >
-<figcaption>une liste d'achats</figcaption>
-</figure>
+
+
+{{< img src="../images/achats.png" caption="une liste d'achats" >}}
 
 > Cette fois on ne s'interesse plus au profil du client, mais on cherche une règle d'occurence entre les objets. Pour trouver les associations entre 2 produits, on construit le tableau de co-occurrence montrant combien de fois 2 produits ont été achetés ensemble.
 
-<figure>
-<img src="../images/produits.png" width = 80% >
-<figcaption>tableau de co-occurence</figcaption>
-</figure>
+
+
+{{< img src="../images/produits.png" caption="tableau de co-occurence" >}}
 
 *Ici : le produit A apparaît dans 80% des achats, le produit C n'apparaît jamais en même temps que le produit E, les produits A et D apparaissent simultanément dans 40% des achats.
 Ces observations peuvent suggérer une règle de la forme : « Si un client achète le produit A ALORS il achète le produit D ».*
@@ -217,10 +184,9 @@ On cherche alors à générer des règles du type : *si A alors D* avec, pour ch
 
 Le clustering désigne les méthodes de regroupement automatique de données qui se ressemblent le plus en un ensemble de "nuages", appelés clusters. On cherche repérer, et mesurer la similarité entre les différentes données. Par exemple, les points sur le graphe ci-dessous peuvent être considérés comme similaires s'ils sont proches en termes de distance.
 
-<figure>
-<img src="../images/clustering.png" width = 50% alt="clustering">
-<figcaption>L'objectif du clustering est de retrouver les différents clusters de données, c'est-à-dire de regrouper les données similaires entre elles</figcaption>
-</figure>
+
+
+{{< img src="../images/clustering.png" caption="L'objectif du clustering est de retrouver les différents clusters de données, c'est-à-dire de regrouper les données similaires entre elles" >}}
 
 *On pourra étudier cet exemple en détail avec la page `Python algo KNN` de ce même site*.
 
@@ -236,10 +202,9 @@ Une fois l'arbre construit, pour prédire la classe (la variable cible) d'une no
 
 *Exemple 1 :*  Il s'agit de prédire si, selon la météo(ciel, temp., humidité et vent), on va aller jouer au tennis.
 
-<figure>
-<img src="../images/arbre.png" width = 80% alt="clustering">
-<figcaption>construction d'un arbre de décision</figcaption>
-</figure>
+
+
+{{< img src="../images/arbre.png" caption="construction d'un arbre de décision" >}}
 
 > Chaque chemin, depuis la racine jusqu'à une feuille est une règle de décision. Par exemple ici : `si ('ciel' == 'soleil') et ('temp.' == 'doux') et  ('humidité' = 'élevée') et ('vent' == 'faible' ) alors (classe = 'oui')` 
 
@@ -253,10 +218,10 @@ L'exemple suivant montre la répartition des éléments dans un diagramme (x1;x2
 si x2<0.42 alors classe = 'Vert'
 ``` 
 
-<figure>
-<img src="../images/splittedDatas.png" width = 50% alt="splittedDatas">
-<figcaption>résultat obtenu par recherche de clusters sur un jeu de données bidimensionnelles à trois classes</figcaption>
-</figure>
+
+
+{{< img src="../images/splittedDatas.png" caption="résultat obtenu par recherche de clusters sur un jeu de données bidimensionnelles à trois classes" >}}
+
 
 
 # Liens
