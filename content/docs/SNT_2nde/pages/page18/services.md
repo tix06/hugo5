@@ -16,6 +16,10 @@ Lorsque l'on choisit une app, celle-ci précise à quoi serviront les données d
 * météo: "quand des épisodes de pluie ou de neige commencent"
 * ...
 
+Par défaut, de nombreuses applications sont susceptibles de traquer vos données de géolocalisation, afin d'étbalir au mieux votre profil. Voir la video ci-dessous: [Un espion dans ma poche?](https://www.francetvinfo.fr/internet/telephonie/video-un-espion-dans-la-poche_4507625.html)
+
+{{< img src="../images/video_espion.png" link="https://www.francetvinfo.fr/internet/telephonie/video-un-espion-dans-la-poche_4507625.html" caption="Envoyé special, Francetvinfo.fr" >}}
+
 # Les cartes numériques
 Elles offrent de nombreux avantages par rapport aux cartes papier.
 ## Géoportail
@@ -25,6 +29,8 @@ Elles permettent de zoomer, et ainsi de modifier dynamiquement l'echelle, mais a
 
 
 Les fichiers d’itinéraires sont un autre exemple de données standardisées afin de pouvoir être échangées entre applis de cartes numériques: c’est le format .GPX
+
+Voir le [TP Cartographie numerique](../tp_OSM)
 
 # Calcul d'initéraire
 L’ensemble des itinéraires peut être représenté à l’aide d’un graphe pondéré. Les noeuds sont des intersections, souvent des villes, croisements, points d’interêt. Les arêtes sont les routes.
