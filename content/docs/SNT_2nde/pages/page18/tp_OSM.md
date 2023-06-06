@@ -61,11 +61,11 @@ video presentation OSM: https://www.youtube.com/watch?v=zJSGOpqa9ew
 ## Utiliser Openstreetmap, contribuer
 * Sur le site [Openstreetmap](https://www.openstreetmap.org/edit#map=16/43.6991/7.2509), repérez votre lycée.
 
-* Identifiez-vous pour contribuer à la carte publique:
+* Identifiez-vous avec le compte de la classe pour contribuer à la carte publique:
 
-compte: etixidor@ac-nice.fr
+compte: ..
 
-mot de passe: classe_snt_LEO
+mot de passe: ..
 
 * Avec l'**editeur**, dans la partie **MODIFIER**, renseigner certains points de la carte (lycée ou autres) que vous connaissez parfaitement. (rampe accès chaise roulante, parking 2 roues, entrées du lycée, de la cantine, ...). Vous pouvez aussi ajouter des informations manquantes à certains points déjà ajoutés à la carte publique.
 
