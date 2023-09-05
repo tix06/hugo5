@@ -110,7 +110,7 @@ Les opérations possibles sur une variable dépendent de son type.
 
 
 # Editeur Python
-* L'**editeur** suivant se présente comme un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
+* Utiliser comme **editeur** un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
 
 <div>
 <py-repl id="my-repl" auto-generate="true"></py-repl>
@@ -128,7 +128,7 @@ age = age + 1
 age
 ```
 
-* **Question a:** quelle est la valeur de `age` à la fin du script?
+* **Question a:** quelle est la valeur de `age` à la fin du script? 
 
 ### Script 2
 Le programme suivant permet de connaitre en quelle année un enfant, né en 2022, aura 17 ans
@@ -178,7 +178,7 @@ message = debut + milieu + fin
 message
 ```
 
-* **Question e:** L'exemple précedent vous a rappelé que l'opérateur `+` est l'opérateur de concaténation avec les chaines de caractères. Ecrire un nouveau script qui construit le message suivant: `HoHoHoHoHoHoHoHoHoHo` avec le minimum d'instructions. *Astuce: utiliser l'opérateur* `*`
+* **Question e:** L'exemple précedent vous a rappelé que l'opérateur `+` est l'opérateur de concaténation avec les chaines de caractères. Ecrire un nouveau script qui construit le message suivant: `HoHoHoHoHoHoHoHoHoHo` avec le minimum d'instructions. Utiliser des chaines de caractère de 2 lettres maximum. *Astuce: utiliser l'opérateur* `*`
 
 ### Script 6
 Associer des valeurs numériques et des chaines de caractères
@@ -206,17 +206,36 @@ print('le reste de la division de ' + str(a) + ' par ')
 
 * **Question h:** Completer la derniere ligne du script pour afficher la phrase suivante: `Le reste de la division de 45 par 26 est egal a 19` Vous ne devrez pas écrire les chiffres 26 et 19 dans le message. Seulement utiliser les variables, ou une opération sur ces variables.
 
+Une autre méthode pour construire une chaine de caractères est d'utiliser la fonction `format`:
+
+Cela créé une chaine de caractères mise en forme avec des variables de types divers. Essayez dans une cellule:
+
+```python
+message = 'le reste de la division de {} par {} est egal à {}'.format(a, b, a//b)
+print(message)
+print(type(message))
+print(type(a))
+print(type(a//b))
+```
+
+Les variables utilisées pour construire la chaine de caractère se placent au niveau des `{ }` et sont énoncées dans l'ordre, dans la fonction `format`.
+
+Vous remarquerez que la variable `message` est bien de type `str`, alors que `a`, `b` et `a//b` sont des `int`, comme l'affichent les instruction utilisant la fonction `type`.
+
+
 ### Script 8
 Calculer en physique
 
 Dans une cellule Python, 
 
 * commencez par attribuer 100 à la variable `m`, et 20 à la variable `v`
-* calculer puis afficher E, l'energie cinetique pour un systeme de masse 100kg et de vitesse 20m.s<sup>-1</sup>, selon la loi:
+* calculer puis afficher E, l'energie cinetique pour un systeme de masse 100kg et de vitesse $20m.s^{-1}$, selon la loi:
 
-E = 1/2 mv<sup>2</sup>
+$$Ec = \tfrac{1}{2}m.v^2$$
 
 * **Question i:** Quelle est l'expression que vous avez saisie en langage Python? Quelle est la valeur calculée pour l'énergie cinetique?
+
+* **Question j:** Construire une chaine de caractères, en utilisant la fonction `format` et précisant les conditions initiales, les valeurs pour m et pour v, et le résultat du calcul de l'énergie cinétique. Recopier ici cette instruction en python.
 
 
 

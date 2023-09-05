@@ -63,9 +63,9 @@ video presentation OSM: https://www.youtube.com/watch?v=zJSGOpqa9ew
 
 * Identifiez-vous avec le compte de la classe pour contribuer à la carte publique:
 
-compte: ..
+compte: (adresse academique)
 
-mot de passe: ..
+mot de passe: classe_snt_LEO
 
 * Avec l'**editeur**, dans la partie **MODIFIER**, renseigner certains points de la carte (lycée ou autres) que vous connaissez parfaitement. (rampe accès chaise roulante, parking 2 roues, entrées du lycée, de la cantine, ...). Vous pouvez aussi ajouter des informations manquantes à certains points déjà ajoutés à la carte publique.
 

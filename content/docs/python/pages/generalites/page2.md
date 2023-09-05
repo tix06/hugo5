@@ -33,6 +33,10 @@ bookShowToc: false
 
   <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 
+# Les nombres
+* Un entier peut avoir une valeur aussi grande que celle que la machine peut stocker. Pour un nombre entier stocké sur 32 bits, cette valeur maximale vaut $2^{32}-1$
+* un nombre entier négatif s'écrit avec un $-$ devant: $-10$ par exemple.
+* un nombre décimal s'écrit avec un *point* comme séparateur, comme par exemple: $6.02$
 
 # Les opérations de base
 **1.** Un langage informatique permet de réaliser des opérations sur des valeurs. L'écriture de ces opétations peut différer de ce que l'on écrit avec la calculatrice. Voici la liste des opérateurs en Python:
@@ -46,7 +50,7 @@ bookShowToc: false
 | // | division entière | pas d'équivalent |
 | % | reste de la division | pas d'équivalent |
 | ** | exposant | $2^{4}$ |
-| e | puissance de 10<br><i>(pour l'écriture en notation scientifique)</i> | $1.2E-3$ <br>ou<br>$1.2\times 10^{-3}$ |
+| e | puissance de 10 (pour l'écriture en notation scientifique) | $1.2E-3$ ou $1.2\times 10^{-3}$ |
 
 **2.** Ces opérateurs peuvent aussi être appliqués sur des chaines de caractères.
 
@@ -90,17 +94,21 @@ False
 True
 ```
 
-*Remarque:* Ne pas tester l'égalité entre nombres réels. Seulement avec les nombres entiers. Ainsi, en Python, l'opération `0.1*3 == 0.3` renvoie ... `False`!
+*Remarque:* Le test de l'égalité n'est pas adapté pour les nombres réels. Seulement pour les nombres entiers. Ainsi, en Python, l'opération `0.1*3 == 0.3` renvoie ... `False`!
 
 # Editeur Python
+Ouvrir une **console** python.
+
+<!--
 * L'**editeur** suivant se présente comme un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
+-->
 
 <div>
 <py-repl id="my-repl" auto-generate="true"></py-repl>
 </div>
 
 ## Travaux pratiques: opérateurs pour les nombres
-> Tester alors les opérations suivantes dans l'editeur Python et répondez aux questions:
+> Tester les opérations suivantes dans l'editeur Python et répondez aux questions:
 
 <br>
 
@@ -123,7 +131,7 @@ True
 
 
 * **Question a:** Quel est le rôle pour chacun de ces opérateurs? Que donne `N%2` pour N pair; pour N impair?
-* **Question b:** Calculer à l'aide de la console le résultat de: 1127 + 9.10<sup>21</sup> / 10<sup>4</sup> <br>Ecrivez sur votre cahier l'expression utilisée en python, ainsi que le résultat, exprimé en langage mathématique.
+* **Question b:** Calculer à l'aide de la console le résultat de: $11,27 + \tfrac{9.10^{21}}{10^4}$. Ecrivez sur votre cahier l'expression utilisée en python pour effectuer ce calcul, ainsi que le résultat, exprimé en langage mathématique.
 * **Question c:** Quel est le signe utilisé pour séparateur décimal en python?
 
 
