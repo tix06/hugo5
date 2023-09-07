@@ -38,7 +38,7 @@ bookShowToc: false
 
 # TP1: Structures conditionnelles
 # Editeur Python
-* L'**editeur** suivant se présente comme un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
+* Utiliser un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
 
 <div>
 <py-repl id="my-repl" auto-generate="true"></py-repl>
@@ -56,7 +56,9 @@ else:
   print("n est impair")
 ```
 
-* **Question a:** Adapter ce script qui demande à l’utilisateur un entier, puis affiche si cet entier est divisible par 11.
+> Adapter ce script qui demande à l’utilisateur un entier, puis affiche si cet entier est divisible par 11.
+
+* **Question a:** Comment faites vous pour convertir la valeur saisie par l'utilisateur en un entier?
 
 ## Ex 2: 18 ans ou plus
 > Compléter (et tester avec plusieurs valeurs de age) le programme suivant qui renseigne votre age (à la premiere ligne), et vous laisse entrer en discothèque, seulement si vous avez 18 ans ou plus:
@@ -68,6 +70,8 @@ if int(age) ...:
 else:
     print('...')
 ```
+
+* **Question b:** Quels sont les différents opérateurs de comparaison en python? *(est égal à, est différent de, est supérieur, est supérieur ou égal, ...)*
 
 ## Ex 3: Comparer 2 nombres
 > Completer (et tester avec plusieurs valeurs de a et de b) le programme suivant qui compare a et b et retourne un message selon leur ordre ou leur egalité.
@@ -83,7 +87,10 @@ else:
   print(...)
 ```
 
+* **Question c:** Laquelle de ces alternatives doit toujours être suivie d'une condition: `elif` ou `else`?
+
 ## Ex 4: Comparer 3 nombres
+### version 1
 > Completer (et tester avec plusieurs valeurs de a de b et de c) le programme suivant qui compare a et b et retourne un message selon leur ordre.
 
 On suppose que les 3 nombres a, b et c ne sont jamais égaux. On utilisera l'opérateur `and` qui retourne `True` si les 2 conditions (à gauche et à droite de `and`) sont toutes les 2 évaluées à `True`, `False` sinon.
@@ -97,10 +104,12 @@ if a > b and a > c:
 elif ...
 ```
 
-## Ex 5: Comparer 3 nombres - version 2
+* **Question d:** Peut-il y avoir plusieurs `elif` pour une même structure conditionnelle `if`? Peut-il y avoir plusieurs alternative `else`?
+
+### version 2
 > Completer (et tester avec plusieurs valeurs de a de b et de c) le programme suivant qui compare a et b et retourne un message selon leur ordre.
 
-Cette fois, on n'utilisera pas l'opérateur `and`, ce qui oblige à utiliser 2 structures conditionnelles imbriquées.
+Cette fois, on **n'utilisera pas** l'opérateur `and`, ce qui oblige à utiliser 2 structures conditionnelles imbriquées.
 
 ```python
 a = 10
@@ -112,17 +121,25 @@ if a > b:
   ...
 ...
 ```
-# TP2: Boucles non bornées
-## Ex 2: compte epargne
-Un étudiant ouvre un compte epargne et dépose la somme de 10 euros. Ce compte est remunéré à hauteur de 2% par an. Il oublie complètement l'existance de ce comte. Au bout de combien d'années aura t-il doublé la somme sur ce compte?
 
-> Resoudre le problème en completant et en testant le script suivant dans une cellule Python
+* **Question e:** Traduire en langage naturel la double condition pour laquelle `a` est le plus grand: si ... ... ... alors si ... ... ... alors ...
 
-```python
-somme = 10
-annee = 0
-while somme <= 20:
-  ...
-  ...
-...
-``` 
+## Ex 5: IMC
+L'Indice de Masse Corporelle (IMC) est un indicateur chiffré utilisé en médecine. L'IMC d'une personne est donné par la formule:
+
+$$IMC = \tfrac{masse}{taille^2}$$
+
+où la masse est en kilos et la taille en mètres.
+
+Proposez un algorithme qui demande à l'utilisateur sa taille et sa masse puis qui affiche l'IMC de la personne.
+
+*Pensez à écrire un texte clair à destination de l'utilisateur pour qu'il sache quoi saisir.*
+
+Utilisez le tableau suivant pour fournir une information à la personne en fonction de son IMC:
+
+{{< img src="../images/imc.png" alt="classification de l'IMC" caption="classification de l'IMC - source: has-sante.fr" >}}
+
+# Suite
+{{< a link="../page4" caption="Lien vers le TP2: boucles non bornées" >}}
+
+

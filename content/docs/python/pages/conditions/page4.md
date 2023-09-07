@@ -38,7 +38,7 @@ bookShowToc: false
 
 # TP2: Boucles non bornées - while
 # Editeur Python
-* L'**editeur** suivant se présente comme un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
+* Utiliser un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
 
 <div>
 <py-repl id="my-repl" auto-generate="true"></py-repl>
@@ -57,12 +57,17 @@ Le script contient une boucle non bornée. La *condition d'éxecution* est que l
 a = 20
 b = 6
 N = 0
-while <condition>:
+while a > b:
   a = a - b
   N = N + 1
 ```
 
-* **Question a:** Compléter le script en écrivant la condition à réaliser sur `a`. Que vaut `a` à la fin du script? Quel est le résultat de la division entière?
+Vous pouvez visualiser les étapes de mise en oeuvre de ce programme en utilisant le lien suivant: {{< a link="https://pythontutor.com/render.html#code=a%20%3D%2020%0Ab%20%3D%206%0AN%20%3D%200%0Awhile%20a%20%3E%20b%3A%0A%20%20a%20%3D%20a%20-%20b%0A%20%20N%20%3D%20N%20%2B%201&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" caption="pythontutor.com" >}}
+
+
+
+
+* **Question a:** Que vaut `a` à la fin du script? Quelle variable stocke le résultat de la division? Quel est le résultat de la division entière de 20 par 6?
 
 ## Ex 2: Racine carrée
 On va adapter le script suivant pour déterminer la racine carrée de 13. La méthode va permettre d'évaluer à 10<sup>-2</sup> près la valeur de $\sqrt {13}$.
@@ -77,11 +82,11 @@ while <condition>:
 
 La *condition d'execution* de la boucle non bornée sera `x**2 < 13`.
 
-On part d'une variable x que l'on initialise à 3, puisque 3<sup>2</sup>=9, donc inférieur à 13.
+On part d'une variable x que l'on initialise à 3, puisque $3^2 = 9$, donc inférieur à 13.
 
 On incrémente `x` de 0.01 à chaque itération, dans le bloc de la boucle bornée.
 
-* **Question b:** Quelle est la valeur approchée de $\sqrt {13}$?
+* **Question b:** Recopiez le script sur votre feuille de réponse. Quelle est la valeur approchée de $\sqrt {13}$?
 
 ## Ex 3: compte epargne
 Un étudiant ouvre un compte epargne et dépose la somme de 10 euros. Ce compte est remunéré à hauteur de 2% par an. Il oublie complètement l'existance de ce comte. Au bout de combien d'années aura t-il doublé la somme sur ce compte?
@@ -97,7 +102,9 @@ while somme <= 20:
 ...
 ``` 
 
-* **Question c:** Quel nombre **x** d'années se sont écoulées? La somme a t-elle exactement doublé au bout de ces **x** années?
+* **Question c:** Quel nombre **x** d'années se sont écoulées? La somme a t-elle exactement doublé au bout de ces **x** années? Pourquoi?
+
+* **Question d:** Le programme finira-t-il **toujours**, quelle que soit la valeur de départ pour `somme`? Argumentez.
 
 ## Ex 4: tirage aleatoire
 Le programme suivant utilise la fonction `randint`, qui effectue le tirage aleatoire d'une valeur comprise entre 2 bornes:
@@ -112,8 +119,12 @@ while randint(1,6) != 6:
 print(n)
 ```
 
-* **Question d:** A quoi sert ce programme:
+Vous pouvez visualiser les étapes de mise en oeuvre de ce programme en utilisant le lien suivant: {{< a link="https://pythontutor.com/render.html#code=from%20random%20import%20randint%0An%20%3D%201%0Awhile%20randint%281,6%29%20!%3D%206%3A%0A%20%20n%20%3D%20n%20%2B%201%0Aprint%28n%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" caption="pythontutor.com" >}}
+
+
+
+* **Question e:** A quoi sert ce programme: *(choisir et justifier)*
   * à compter le nombre d'apparion du nombre 6?
   * ou à calculer le nombre de lancers jusqu’à l’apparition du premier 6?
 
-* **Question e:** La boucle « Tant que » pourrait en théorie ne jamais s’arrêter. Pourquoi ? Corriger le script pour pallier ce problème.
+* **Question f:** La boucle « Tant que » pourrait en théorie ne jamais s’arrêter. Pourquoi ? Ajouter une condition supplémentaire dans l'instruction `while randint(1,6) != 6 and ... :` pour résoudre ce problème de l'arrêt.

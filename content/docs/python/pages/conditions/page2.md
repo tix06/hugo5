@@ -32,7 +32,7 @@ bookShowToc: false
   <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 
 # Editeur Python
-* L'**editeur** suivant se présente comme un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
+* Utiliser un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
 
 <div>
 <py-repl id="my-repl" auto-generate="true"></py-repl>
@@ -58,7 +58,7 @@ if prix_essence > 1.8:
 En Python, on utilise l'indentation (le retrait de la ligne) pour rendre compte des blocs de code.
 
 {{< img src="../images/pybloc1.png" alt="pybloc et indentation" caption="de pybloc au script python" >}}
-Le bloc de code à executer peut contenir plusieurs lignes, à condition de respecter l'indentation.
+Le bloc de code à executer peut contenir plusieurs lignes, à condition de respecter **l'indentation**. (2 ou 4 espaces, ou touche *TAB*).
 
 **3. L'alternative `if - else`**
 Une instruction `if - else` contient une instruction `if` qui s'execute si la condition est `True` et une clause `else` qui s'execute si la condition est `False`.
@@ -84,6 +84,54 @@ elif hauteur_plant < 15 :
 else : 
   print('Pret pour la recolte')
 ```
+
+## Condition sur une valeur entrée (`INPUT`)
+La fonction `input` permet d'ouvrir une boite de dialogue, d'attendre la saisie, et de récupérer une information donnée par l'utilisateur.
+
+On utilisera une variable pour stocker l'information saisie:
+
+```python
+prenom = input('Comment vous appelez-vous? ')
+print('Bonjour ' + prenom)
+```
+
+{{< img src="../images/input1.png" alt="boite dialogue input" caption="demarrage du programme" >}}
+
+{{< img src="../images/input2.png" alt="boite dialogue input" caption="saisie dans la boite de dialogue" >}}
+
+{{< img src="../images/input3.png" alt="boite dialogue input" caption="utilisation de la variable prenom" >}}
+
+*Remarquer* que le type retourné par la fonction `input` est toujours de format `str`. Pour modifier en un format numérique, et réaliser des opérations, il faudra utiliser l'une des fonctions `int` (pour obtenir un entier) ou `float` (pour un décimal):
+
+```python
+celcius = input('Entrer la température en degrés Celcius: T = ')
+kelvin = float(celcius) + 273
+print('En degrés absolus T = ' + str(kelvin))
+```
+
+{{< img src="../images/input4.png" alt="boite dialogue input" caption="conversion de 23°C en °K" >}}
+
+**Combinons** maintenant cette instruction `input` avec l'instruction conditionnelle:
+
+*Un boulanger désire un programme qui demande à l'utilisateur le nombre de baguettes qu'il désire, qui calcule le prix total (sachant qu'une baguette coûte 1.10 €) et qui affiche le prix que l'utilisateur doit payer.*
+
+```python
+nombre=input("Combien de baguettes désirez-vous ?")
+prix = nombre * 1.1
+print("Vous avez à payer",prix,"euros.")
+```
+
+> Testez ce programme. Quel message d'erreur obtenez-vous ?
+
+Testez le script suivant :
+
+```python
+nombre=int(input("Combien de baguettes désirez-vous ?"))
+prix = nombre * 1.1
+print("Vous avez à payer",prix,"euros.")
+```
+
+> Quelle est la différence avec le code précédent de cet exemple ?
 
 ## Boucles non bornées
 **1. Definition:** Une *boucle non bornée* permet de répéter un élément de code un nombre à priori inconnu de fois.
@@ -120,9 +168,37 @@ Pour le script précédent, si l'on avait remplacé la condition `r > 0` par `r 
 
 C'est le problème avec les boucles non bornées. Celles-ci peuvent ne pas finir, ce qui peut bloquer la machine.
 
+Cet effet de boucle *infini* peut être recherché, par exemple en robotique, où l'on veut que le programme se poursuive indéfiniment. Ainsi, la structure d'un programme *python* sur carte microbit commence par la structure suivante:
+
+```python
+from microbit import *
+
+while True:
+  # instructions
+  # ...
+``` 
 
 
- 
+**3. Le jeu de devinette**
+On veut créer un jeu qui questionne le joueur jusqu'à ce que celui-ci trouve le nombre choisi au hasard par l'ordinateur.
+
+```python
+from random import randint
+N_aleatoire = randint(0,10)
+choix_joueur = int(input('Choisir un nombre entre 0 et 10 :'))
+while choix_joueur != N_aleatoire:
+    print('Recommencez')
+    choix_joueur = int(input('Choisir un nombre entre 0 et 10 :'))
+print('Bravo vous avez gagné')
+``` 
+
+{{< img src="../images/input5.png" alt="boite dialogue input et jeu de hasard" caption="Trouve au bout de 3 essais" >}}
+
+A chaque fois que la condition `choix_joueur != N_aleatoire` est `True`, c'est à dire que le nombre `choix_joueur` est différent de `N_aleatoire`, alors le bloc de la boucle `while` est exécutée. 
+
+Lorsque les valeurs `choix_joueur` et `N_aleatoire` sont identiques, le programme passe à la ligne `print('Bravo vous avez gagné')` 
 
 # Travaux Pratiques
-*{{< a link="../page3" caption="Lien vers le TP1: structures conditionnelles" >}}*{{< a link="../page4" caption="Lien vers le TP2: boucles non bornées" >}}
+* {{< a link="../page3" caption="Lien vers le TP1: structures conditionnelles" >}}
+
+* {{< a link="../page4" caption="Lien vers le TP2: boucles non bornées" >}}
