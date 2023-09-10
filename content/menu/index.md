@@ -8,6 +8,7 @@ headless: false
 - [**NSI 1ere**]({{< relref "/docs/NSI_1/NSI_index" >}}) 
 - [**NSI Term**]({{< relref "/docs/NSI/NSI_index" >}})  
 
+ 
 
 
 
@@ -24,6 +25,7 @@ headless: false
 
 - [**Techno**]({{< relref "/docs/techno/index_microcontroleurs" >}})
 
+- [**Competences numeriques**]({{< relref "/docs/competences/comp_index" >}}) 
 
 - [**Posts**]({{< relref "/posts" >}})
 - [**Contact**]({{< relref "/docs/contact/simple-contact-form.html" >}})  
