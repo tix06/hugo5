@@ -126,7 +126,15 @@ positions = [[0,0], [1,2], [2,4]]
 C'est la représentation d'un tableau, qui sur un tableur peut être représenté sous la forme suivante:
 
 {{< img src="../images/tableau.png" >}}
-Les éléments de la liste `positions` sont `[0,0]`, `[1,2]`, et `[2,4]`
+Les 3 éléments de la liste `positions` sont `[0,0]`, `[1,2]`, et `[2,4]`
+
+Pour accéder au premier élément `[0,0]`, on fait:
+
+```python
+positions[0]
+# retourne
+[0,0]
+```
 
 Pour accéder au deuxieme élément `[1,2]`, on fait:
 
@@ -136,7 +144,7 @@ positions[1]
 [1,2]
 ```
 
-Et pour acceder au premier élément du 2e élément de `posiotns`, c'est à dire à la valeur 1, on fait:
+Et pour acceder au premier élément du 2e élément de `positions`, c'est à dire à la valeur 1, on fait:
 
 ```python
 positions[1][0]
@@ -186,6 +194,8 @@ for c in range(3):
 2
 ```
 
+*Remarque:* `range(3)` va créer une liste itérable constituée des valeurs 0, 1, 2. Ce sont les valeurs prises successivement par le variant `c` dans `for c in range(3)`
+
 **2. Parcourir les éléments d'une liste L avec `range(len(L))`**
 
 ```python
@@ -197,6 +207,9 @@ for i in range(len(L)):
 1 b
 2 c
 ```
+
+*Remarque:* Rappelez-vous que `len(L)` est une fonction qui retourne la longueur de la liste `L`. Si `L` contient 3 éléments, alors `len(L)` vaut 3.
+
 **3. Parcourir les éléments d'une liste L avec `in L`**
 
 ```python
@@ -209,7 +222,18 @@ b
 c
 ```
 
-**4. Tracer un graphique y = f(x)**
+*Ramarque:* Cette fois-ci, le variant `c` prend successivement toutes les valeurs de la liste `L`.
+
+### Conclusion: Itérable et variant de boucle
+Les instructions `for i in range(len(L))` et `for c in L` ont à peu près le même objectif: celui de parcourir TOUS les éléments de la liste L. 
+
+* Ce qui est COMMUN: c'est l'utilisation du mot clé `IN`, qui va créer ce que l'on appelle un *itérable*, c'est-à-dire une liste de valeurs qui seront proposées l'une après l'autre pour le variant de boucle.
+
+* Ce qui est DIFFERENT: Dans le premier cas, on utilise la fonction `range`, qui créé un itérable entre 0 et la valeur mise en paramètre (valeur -1 pour être exact). Ce sont par exemple **les indices** de la liste `L`.
+
+L'instruction `for c in L` va, elle, créer un itérable constitué des **valeurs** de la liste `L`.
+
+## Tracer un graphique y = f(x)
 Pour tracer un graphique `y=f(x)`, il faut disposer de 2 listes de mêmes dimensions `x` et `y`. Les coordonnées des points sont alors:
 
 * (x[0],y[0]) pour le point M<sub>0</sub> 
@@ -236,5 +260,7 @@ plt
 {{< img src="../images/graphique.png" >}}
 
 
-# Travaux pratiques TP1 et TP2
-*{{< a link="../page3" caption="Lien vers l'editeur Python et l'énoncé du TP1: Listes" >}}*{{< a link="../page4" caption="Lien vers l'editeur Python et l'énoncé du TP2: boucles et parcours de listes" >}}
+# Travaux pratiques TP5 et TP6
+*{{< a link="../page3" caption="Lien vers l'editeur Python et l'énoncé du TP5: Listes" >}}
+
+*{{< a link="../page4" caption="Lien vers l'énoncé du TP6: boucles et parcours de listes" >}}

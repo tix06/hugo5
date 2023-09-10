@@ -75,6 +75,7 @@ Une *opération logique* consiste à comparer 2 valeurs et tester si celles-ci s
 | opérateur | pour tester... |
 |--- |--- |
 | `==` | l'égalité |
+| `!=` | l'inégalité (est différent de) !
 | > | l'ordre supérieur |
 | < | l'ordre inférieur |
 | >= | l'ordre supérieur ou égal |
@@ -160,6 +161,7 @@ Ouvrir une **console** python.
 | opérateur | exemple |
 | --- |--- |
 | `==` et nombres entiers| `10*5 == 50` |
+| `!=` et nombres entiers| `10*4 != 50` |
 | >= et nombres entiers| `10*5 >= 50` ||
 | `==` et nombres réels| `0.1 == 0.3/3` |
 | `>,+,/,*,()` | `(50/2+3) > 12.5*2` |

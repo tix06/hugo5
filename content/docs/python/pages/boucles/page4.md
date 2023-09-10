@@ -37,13 +37,13 @@ bookShowToc: false
 </py-env>
 
 # Editeur Python
-* L'**editeur** suivant se présente comme un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
+* Utiliser un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
 
 <div >
 <py-repl id="my-repl" auto-generate="true"></py-repl>
 </div>
 
-# TP2: Boucles bornées et parcours d'une liste
+# TP6: Boucles bornées et parcours d'une liste
 ## Ex 1: Parcours d'une liste
 
 * script 1
@@ -63,6 +63,7 @@ for i in range(len(L)):
 * **Question a:** Lequel des 2 scripts précédents affiche `1 10 100 1000`? Lequel des 2 affiche `0 1 2 3`? Expliquez.
 
 ## Ex 2: table de 3
+On peut créer une liste VIDE, en faisant `L = []`, puis lui ajouter des valeurs. C'est ce qui est réalisé par ce programme.
 
 ```python
 L = []
@@ -118,7 +119,7 @@ for n in range(100):
 somme
 ```
 
-* **Question d:** adapter ce script pour que celui-ci calcule la somme des termes 2<sup>i</sup> pour `i` variant de 0 à 99: $$2^0 + 2^1 + 2^2 + ... + 2^{99}$$
+* **Question d:** adapter ce script pour que celui-ci calcule la somme des termes $2^î$ pour `i` variant de 0 à 99: $$2^0 + 2^1 + 2^2 + ... + 2^{99}$$
 
 * **Question e:** adapter ce script pour calculer le nombre de boules de la pyramique à 7 étages suivante. Quel est ce nombre? Quel serait ce nombre pour une pyramide à 99 étage?
 

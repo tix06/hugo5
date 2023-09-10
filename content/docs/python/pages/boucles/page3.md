@@ -37,14 +37,14 @@ bookShowToc: false
 </py-env>
 
 # Editeur Python
-* L'**editeur** suivant se présente comme un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
+* Utiliser un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
 
 <div >
 <py-repl id="my-repl" auto-generate="true"></py-repl>
 </div>
 
 
-# TP1 Listes
+# TP5 Listes
 ## Ex 1: Elements d'une liste
 Dans une cellule, saisir la ligne suivante:
 
@@ -58,11 +58,33 @@ Puis tester chacune des propositions suivantes:
 |--- |--- |
 | `s[0]` |  |
 | `s[1]` |   |
-| `s[2] = "jeudi"`<br>`s` |   |
-| `s[4] = 'samedi' ` |  erreur de type: ... ... |
-| `s[1:]` |    |
+| `s[2] = "jeudi"` |   |
+| `s[4] = "samedi"` |  erreur de type: ... ... |
 
-* **Question a:** Comment obtient-on la liste `['lundi', 'mardi',  'jeudi']` à partir de `['lundi', 'mardi',  'mercredi']`?
+
+* **Question a:** Comment modifie-t-on la liste `['lundi', 'mardi',  'mercredi']` pour obtenir `['lundi', 'mardi',  'jeudi']`? Pourquoi l'instruction `s[4] = "samedi"` génère t-elle une erreur?
+
+
+## Slice: découpage d'une liste
+Pour découper une liste, on utilise le séparateur `:` entre les indices de début et fin de liste.
+
+Avec la liste:
+
+```python
+s = ['lundi', 'mardi',  'mercredi', 'jeudi', 'vendredi']
+```
+
+Tester les propositions:
+
+| proposition | résultat/commentaire |
+|--- |--- |
+| `s[1:]` |  |
+| `s[1:4]` |   |
+| `s[:4]`|   |
+| `s[1:-1]`|   |
+| `s[0:-1]`|   |
+| `s[0:-2]`|   |
+
 * **Question b:** Que retourne la proposition `s[1:]`? Découpe t-elle la liste à partir du premier élément, du 2e élément, ou bien retourne t-elle la liste entière?
 
 ## Ex 2: Opérations sur les éléments de listes
@@ -70,11 +92,10 @@ Saisir le script suivant:
 
 ```python
 t = [2, 8,  9,  2]
-t[2]  = t[2]  + 5
+t[2]  = t[2] + 5
 ```
 
-* **Question c:** Que vaut t à la fin du script?
-
+* **Question c:** Que vaut t à la fin du script `t[2]  = t[2] + 5`? La valeur 5 est-elle ajoutée à chaque élément de la liste, ou bien à un seul élément?  
 
 Saisir le script suivant:
 
@@ -97,11 +118,11 @@ Puis tester chacune des propositions suivantes:
 | proposition | résultat/commentaire |
 |--- |--- |
 | `len(s)` |  |
-| `s.append('jeudi') `<br>`s` |  |
+| `s.append('jeudi')` |  |
 | `len(s)` |  |
-| `s.append('vendredi') ` <br>`s` |   |
+| `s.append('vendredi')` |   |
 | `len(s)` |  |
-| `s.pop()  `<br>`s` |   |
+| `s.pop()` |   |
 | `len(s)` |  |
 
 * **Question e:** Pourquoi la valeur renvoyée par `len(s)` évolue t-elle au cours de l'exercice?
@@ -131,7 +152,7 @@ fin = [2,2]
 debut + fin
 ```
 
-* **Question f:** pour chacun des scripts précédents, que réalise l'oparation `+`? Y-a-t-il une différence entre 
+* **Question f:** pour chacun des scripts précédents, que réalise l'opération `+`? Y-a-t-il une différence entre 
   *  l'opérateur `+`appliqué à une chaine de caractères
   *  l'opérateur `+` appliqué à une liste?
 
@@ -142,8 +163,8 @@ Ce programme utilise une liste `semaine` que vous devrez renseigner.
 
 ```python
 n = 3
-semaine = [...]
-...
+semaine = ['Lundi', 'Mardi','Mercredi','Jeudi',...]
+print(...)
 ```
 
 
@@ -162,6 +183,8 @@ Utiliser un autre cellule de l'editeur pour explorer les propositions du tableau
 
 | proposition | valeur |
 |--- |--- |
+| `matrice[0]` |  retourne le premier élément de `matrice` |
+| `matrice[1]` |  ... |
 | `matrice[1][2]` |   |
 | `matrice[2][1]` |   | 
 | `matrice[3][0]` |   | 
@@ -183,7 +206,7 @@ tictactoe = [['X', 'O',  'O'],
 ```
 *(la liste peut être écrite sur une même ligne ou avec un retour à la ligne pour chaque élément comme vu ici)*
 
-Quelle instruction permet d'obtenir une diagonale de 'X' ?
+* **Question j:** Quelle instruction permet d'obtenir une diagonale de 'X' ?
 
 
 ## Ex 7: tracer un graphique
@@ -210,5 +233,5 @@ plt
 ```
 
 # Suite du TP: Les boucles et les parcours de liste
-
+{{< a link="../page4" caption="Lien vers l'énoncé du TP6" >}}
 

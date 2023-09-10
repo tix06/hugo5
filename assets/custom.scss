@@ -157,13 +157,15 @@ blockquote p::before {
   border-radius: 20px;
   padding: 5px;
   margin: 2em auto;
-  align-items: center;
+  align-items: left;
 }
 div.blog {
-  margin: auto;
+  //margin: auto;
+  margin-left: 0;
+  width:100%;
 }
 .info>svg {
-  width: 40px;
+  width: 100px;
   height: 40px;
 }
 
