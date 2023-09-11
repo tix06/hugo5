@@ -36,7 +36,7 @@ bookShowToc: false
 
   <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 
-# TP1: Structures conditionnelles
+# TP3: Structures conditionnelles
 # Editeur Python
 * Utiliser un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
 

@@ -36,7 +36,7 @@ bookShowToc: false
 
   <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 
-# TP2: Boucles non bornées - while
+# TP4: Boucles non bornées - while
 # Editeur Python
 * Utiliser un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
 
@@ -114,17 +114,19 @@ Le programme suivant utilise la fonction `randint`, qui effectue le tirage aleat
 ```python
 from random import randint
 n = 1
-while randint(1,6) != 6:
+nombre = randint(1,6)
+while nombre != 7:
   n = n + 1
+  nombre = randint(1,6)
 print(n)
 ```
 
-Vous pouvez visualiser les étapes de mise en oeuvre de ce programme en utilisant le lien suivant: {{< a link="https://pythontutor.com/render.html#code=from%20random%20import%20randint%0An%20%3D%201%0Awhile%20randint%281,6%29%20!%3D%206%3A%0A%20%20n%20%3D%20n%20%2B%201%0Aprint%28n%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" caption="pythontutor.com" >}}
+Vous pouvez visualiser les étapes de mise en oeuvre de ce programme en utilisant le lien suivant: {{< a link="https://pythontutor.com/render.html#code=from%20random%20import%20randint%0An%20%3D%201%0Anombre%20%3D%20randint%281,6%29%0Awhile%20nombre%20!%3D%206%3A%0A%20%20n%20%3D%20n%20%2B%201%0A%20%20nombre%20%3D%20randint%281,6%29%0Aprint%28n%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" caption="pythontutor.com" >}}
 
 
 
 * **Question e:** A quoi sert ce programme: *(choisir et justifier)*
-  * à compter le nombre d'apparion du nombre 6?
+  * à compter le nombre d'apparition du nombre 6?
   * ou à calculer le nombre de lancers jusqu’à l’apparition du premier 6?
 
 * **Question f:** La boucle « Tant que » pourrait en théorie ne jamais s’arrêter. Pourquoi ? Ajouter une condition supplémentaire dans l'instruction `while randint(1,6) != 6 and ... :` pour résoudre ce problème de l'arrêt.
