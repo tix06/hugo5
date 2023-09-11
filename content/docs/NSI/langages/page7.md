@@ -146,7 +146,7 @@ Soit P une proposition. On définit sa négation, notée nonP (ou ⌉P), à 
 
 On peut exprimer cette proposition à partir des affirmation L (je lave mon linge) et P (il pleut), à l'aide de l'opérateur implication => :
 
-$$P \Rightarrow -L$$
+$$P \Rightarrow -~L$$
 
 ## Les connecteurs logiques « ET » et « OU »
 Soient P et Q deux propositions. On peut définir les propositions « P ou Q », notée P ∨ Q, et « P et Q », notée P ∧ Q par les tables de vérité ci-dessous.
