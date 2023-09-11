@@ -6,9 +6,11 @@ Title: langages mathematiques
 Pour comprendre cette opération, il faut déjà comprendre la signification de chacun des symboles utilisés, les chiffres 1 et 2, et les opérateurs + et =
 
 * 1
-* +
-* =
+* `+`
+* `=` 
 * 2
+
+*Ainsi, pour apprendre à compter à une machine, il faudra lui expliquer comment les nombres se succèdent, et quel rôle jouent chaque opérateur sur ces nombres.*
 
 ## Les chiffres
 Les symboles des chiffres nous sont ainsi intuitifs, mais, dans l'idée d'une construction du langage mathématique, il doit exister une règle qui nous dit:
@@ -76,15 +78,35 @@ Pour exemple, la{{< a link="https://fr.wikipedia.org/wiki/Conjecture_de_Goldbach
 > Tout nombre entier pair supérieur à 3 peut s’écrire comme la somme de deux nombres premiers.
 
 {{< img src="../images/page7/goldbach.png" link="https://fr.wikipedia.org/wiki/Conjecture_de_Goldbach" caption="Illustration de la" >}}
+
 # Calcul propositionnel
-On va avoir besoin d'ajouter aux ensembles de nombres un nouvel ensemble particulier: un ensemble contenant 2 éléments contenant les valeurs de verité *vrai / faux*. Cela nous permettra de produire des démonstrations, et ainsi de prouver des propositions.
+On va avoir besoin d'ajouter aux ensembles de nombres un nouvel ensemble particulier: un ensemble contenant 2 éléments contenant les valeurs de verité *vrai / faux*. Cela nous permettra d'utiliser des machines pour automatiser le raisonnement. C'est à dire pour produire des démonstrations, et ainsi de prouver des propositions.
+
+Le **calcul propositionnel** est un ensemble de règles permettant un nombre fini d'étapes pour démonter si une proposition est VRAIE ou FAUSSE.
+
+Les **Propositions** contiennent des **affirmations** telles que:
+
+* le moteur est en marche
+* la vanne de sécurité est ouverte
+* la cuve fuit, etc...
+
+On remplace ces *affirmations* par des **symboles neutres**, qui prennent l'un des 2 états: VRAI ou FAUX. Cet état est choisi pour établir une certaine cohérence avec l'information à traduire du monde exterieur (moteur en marche = VRAI, ...)
+
+Les propositions vont combiner ces affirmations à l'aide d'opérateurs logiques. Cela va constituer une **formule**.
+
+Une propriété faisant intervenir n éléments offre $2^n$ interprétations envisageables.
+
+La formule doit prendre les valeurs VRAI pour toutes les **interprétations** de l'énoncé.
 
 Dans ce paragraphe, on étudie les propositions en tant que telles, et les liens qui peuvent exister entre elles, sans se préoccuper du contenu de ces propositions.
 
-On rappelle qu’une proposition est un énoncé pouvant être vrai ou faux. On dit alors que les deux valeurs de vérité d’une proposition sont « vrai » et « faux ».
+On rappelle qu’une proposition est un énoncé pouvant être Vrai ou Faux. On dit alors que les deux valeurs de vérité d’une proposition sont « vrai » et « faux ».
 
 ## Equivalence logique
-Définition 1. Deux propositions équivalentes P et Q sont deux propositions ayant les mêmes valeurs de vérité. Cette phrase peut se visualiser dans un tableau appelé table de vérité dans lequel on fait apparaître les différentes valeurs de vérité possibles pour le couple (P, Q) (Vrai et Vrai, Vrai et Faux, ...) et, en correspondance, les valeurs de vérité de la proposition P ⇔ Q. Ainsi, la table de vérité de l’équivalence logique P ⇔ Q est :
+### Définition 
+Deux propositions équivalentes P et Q sont deux propositions ayant les mêmes valeurs de vérité. 
+
+Cette phrase peut se visualiser dans un tableau appelé table de vérité dans lequel on fait apparaître les différentes valeurs de vérité possibles pour le couple (P, Q) (Vrai et Vrai, Vrai et Faux, ...) et, en correspondance, les valeurs de vérité de la proposition P ⇔ Q. Ainsi, la table de vérité de l’équivalence logique P ⇔ Q est :
 
 | P | Q | P <=> Q |
 | --- | --- | --- |
@@ -97,6 +119,7 @@ On peut ainsi lire, deuxième ligne, que si P est vraie et Q est fausse, P ⇔ 
 L’équivalence logique joue pour les propositions, le rôle que joue l’égalité pour les nombres. Les expressions 3 + 2 et 5 ne sont pas identiques et pourtant on écrit 3+2 = 5. De même, les propositions (x^2 = 1) et (x = 1 ou x = −1) ne sont pas identiques et pourtant on écrit (x^2 = 1) ⇔ (x = 1 ou x = −1).
 
 ## Implication
+### Definition
 Si P et Q sont deux propositions, on définit l’implication logique : P ⇒ Q par sa table de vérité.
 
 | P | Q | P => Q |
@@ -109,6 +132,8 @@ Si P et Q sont deux propositions, on définit l’implication logique : P ⇒ Q 
 P et Q deux propositions. (P ⇒ Q) ⇔ (nonP ∨ Q).
 P ⇒ Q est fausse dans l’unique cas où P est vraie et Q est fausse: si P (est vraie) alors forcément Q (est vraie aussi). Mais pas réciproquement.
 
+*Exemple:* Lorsque le facteur dépose une lettre, le chien aboie. Parmi les interprétations envisageables pour cet énoncé, il se peut que le chien aboie alors que le facteur n'a PAS deposé de lettre.
+
 ## Négation d’une proposition
 Soit P une proposition. On définit sa négation, notée nonP (ou ⌉P), à partir de sa table de vérité.
 
@@ -117,7 +142,13 @@ Soit P une proposition. On définit sa négation, notée nonP (ou ⌉P), à 
 | V | F |
 | F | V |
 
-## Les connecteurs logiques « et » et « ou »
+*Exemple:* Je ne lave pas mon linge (nonL ou -L) s'il pleut (P)
+
+On peut exprimer cette proposition à partir des affirmation L (je lave mon linge) et P (il pleut), à l'aide de l'opérateur implication => :
+
+$$P \Rightarrow -L$$
+
+## Les connecteurs logiques « ET » et « OU »
 Soient P et Q deux propositions. On peut définir les propositions « P ou Q », notée P ∨ Q, et « P et Q », notée P ∧ Q par les tables de vérité ci-dessous.
 
 | P | Q | P ∧ Q | P ∨ Q |
@@ -152,16 +183,63 @@ On considère qu'il existe une fonction d'affichage
 ### Ex 2: Trouver une procédure pour calculer 3 - 2
 Mêmes outils que pour l'exercice 1. La relation de prédecesseur est également connue.
 
+<!--
 ### Ex 3: Trouver une procédure pour calculer 30 * 20
 On peut utiliser toute proposition issue du calcul propositionnel, dont les opérateurs d'implication, ET, OU, NON, les opérations de comparaison.
 On pourra également utiliser les variables simples, les branchements (*aller à* dans le programme), les blocs. On evitera les branchements *tant que* et *pour*.
+-->
 
-## Exercices sur le langage mathématique
+## Exercices sur le calcul propositionnel
+### Exercice 1: Le Soleil brille
+En utilisant les affirmations S (le soleil brille), P (il pleut), B (il bruine), A (il y a un arc en ciel), O (il a un vent d’Ouest), E (il y a du vent d’Est), traduire dans la logique des propositions suivantes:
+
+1. La bruine est une forme de pluie.
+2. S’il pleut et que le soleil brille en même temps, alors il y a un arc en ciel.
+3. Si le vent d’ouest amène la pluie, on n’a jamais vu qu’un vent d’est soit porteur de pluie.
+
+### Exercice 2: 
+Représenter dans le formalisme de la logique des propositions les théorèmes de géométrie suivants:
+
+1. Si un triangle est équilatéral alors il est isocèle.
+2. Un triangle rectangle n’est jamais équilatéral.
+Un carré est à la fois un parallélogramme et un rectangle.
+3. Un losange n’est ni un quadrilatère rectangle ni un triangle.
+
+### Exercice 3:
+Lors de ses aventures au pays des merveilles rapportées par Lewis Carroll, Alice est souvent accompagnée par le chat de Cheshire. Ce félin énigmatique s’exprime sous la forme d’affirmations logiques qui sont toujours vraies. Alice se trouve dans un corridor dont toutes les portes à sa taille sont fermées. La seule porte ouverte est nettement trop petite pour qu’elle puisse l’emprunter. Une étagère est fixée au-dessus de cette porte. Le chat dit alors à Alice: «L’un des flacons posés sur cette étagère contient un liquide qui te permettra de prendre une taille plus adéquate. Mais attention, les autres flacons peuvent contenir un poison fatal.» 
+
+Trois flacons sont effectivement posés sur l’étagère. Le premier est rouge, le second jaune, le troisième bleu. Une étiquette est collée sur chaque flacon. Alice lit l’inscription figurant sur chaque étiquette:
+
+* Flacon rouge: le flacon jaune contient un poison; le bleu n’en contient pas;
+* Flacon jaune: si le flacon rouge contient un poison, alors le bleu aussi;
+* Flacon bleu: je ne contiens pas de poison.
+
+Nous noterons R, J et B les variables propositionnelles correspondant au fait que les flacons rouge, jaune et bleu contiennent un poison. 
+
+Nous noterons $I_R$, $I_J$ et $I_B$ les propositions correspondant aux inscriptions sur les flacons rouge, jaune et bleu.
+
+On résoudra les questions suivantes en utilisant une table de vérité.
+
+Exprimez les formules $I_R$, $I_J$ et $I_B$ sous la forme de formules dépendant de R, J et B.
+
+1. Les inscriptions sur les trois flacons sont-elles compatibles?
+2. Si les trois inscriptions sont vraies, est-ce qu’un ou plusieurs flacons contiennent un poison?
+3. Dans le cas où aucun des trois flacons ne contient un poison, est-ce qu’une ou plusieurs inscriptions sont fausses?
+
+### Enoncé d'origine (issu du site [emse.fr](https://www.emse.fr/~zimmermann/Teaching/Logique/Livret/corrections/)
+
+* Flacon rouge: le flacon jaune contient un poison; le bleu n’en contient pas;
+* Flacon jaune: si le flacon rouge contient un poison, alors le bleu aussi;
+* Flacon bleu: je ne contiens pas de poison, mais au moins l’un des deux autres si.
+
+
+
+<!--
 Pour chacun de ces exercices, lorsque cela est possible vous devrez écrire une proposition mathématique qui résoud le problème posé.
 
 ### Ex 1: Le problème peut il être mis sous forme de langage mathématique?
 
-* Bois<sup>2</sup> = Argent
+* $Bois^2 = Argent$
 * Or - Perle = Porcelaine
 * (Bois * Cuir) + Bois = Cristal
 * Vermeil - Perle = ?
@@ -206,6 +284,7 @@ On dispose d'une liste de mots.
 "MUSER", "MÛRES", "SUPER", "PEURS", "ECARTS", "CARTES", "ESPAR", "REPAS", "AMUSER", "MAURES", "PATERES", "EPATER"
 
 Est-ce que leur reflet a un sens?
+-->
 
 # Liens
 * Article [sur la construction des ensembles, site automaths](https://automathssite.wordpress.com/2017/08/18/savez-vous-compter-les-choux-a-la-mode-de-peano/)
