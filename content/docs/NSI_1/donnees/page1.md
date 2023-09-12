@@ -118,13 +118,52 @@ Les techniques de stockage mécaniques, par exemple par rubans perforés ont ét
 ## Simulateur de circuit électronique en ligne: [https://logic.ly/demo/](https://logic.ly/demo/)
 
 {{< img src="../images/sim-circ.png" link="https://logic.ly/demo/" caption="Exemples de circtuits créés à l'aide du simulateur logic.ly" >}}
+
 **Questions:** Pour chacun des circuits ci-dessus:
 
-**a.** Le circuit permet-il une interaction avec l'utilisateur?<br>
-**b.** Quels sont les composants utilisés?<br>
-**c.** Expliquer le comportement du circuit, pourquoi la lampe s'allume t-elle (ou pas)?<br>
+**a.** Le circuit permet-il une interaction avec l'utilisateur?
 
+**b.** Quels sont les composants utilisés?
 
+**c.** Expliquer le comportement du circuit, pourquoi la lampe s'allume t-elle (ou pas)?
+
+Toute fonction logique peut se décomposer en fonctions NON, ET, OU. Les exemples suivants ont pour but de se familiariser avec ces combinaisons de portes logiques, et d'aboutir à la construction d'un ADDITIONNEUR à 2 bits.
+
+Voici le schéma formel représentant la fonction NON, réalisée à l'aide d'une porte logique NAND (NON ET):
+
+{{< img src="../images/Nand2Not.png" caption="schéma formel" >}}
+
+Vous allez adapter ce schéma pour réaliser sur le circuit suivant sur le simulateur:
+
+{{< img src="../images/Nand2Not2.png" caption="realisation sur logic.ly" >}}
+
+Les 2 entrées de la portes NAND sont reliées au même interrupteur. L'interrupteur fournit une tension au circuit, à 2 état (Allumé / Eteint).
+
+Une lampe est aussi mise en entrée, sur l'interrupteur, afin de visualiser l'état d'entrée.
+
+**d.** Représenter la table des états pour ce dispositif. S'agit-il de la même table que celle de l'opérateur NON?
+
+La formule logique associée au schéma que vous avez réalisé est:
+
+$$NOT(x) = NAND(x,x)$$
+
+**e.** Commentez cette formule. Identifiez chacun des termes par rapport au circuit.
+
+Voici le schéma formel représentant la fonction ET, réalisée à partir des portes logiques NOT et NAND:
+
+{{< img src="../images/Nand2And.png" caption="schéma formel" >}}
+
+Réalisez le circuit correspondant sur *logic.ly*
+
+**f.** Représenter la table des états pour ce dispositif. S'agit-il de la même table que celle de l'opérateur ET?
+
+La formule correspondant à cette association est:
+
+$$AND(x,y) = NOT(NAND(x,y))$$
+
+**g.** Commentez cette formule. Identifiez chacun des termes par rapport au circuit.
+
+La suite du TP se trouve sur la fiche {{< a link="http://www.mathly.fr/tp_portes.php" caption="mathly.fr" >}}
 
 ## autres
 

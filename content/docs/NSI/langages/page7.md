@@ -1,8 +1,8 @@
 ---
 Title: langages mathematiques
 ---
-
-# Pourquoi 1 + 1 = 2 ?
+# Langages mathematiques
+## Pourquoi 1 + 1 = 2 ?
 Pour comprendre cette opération, il faut déjà comprendre la signification de chacun des symboles utilisés, les chiffres 1 et 2, et les opérateurs + et =
 
 * 1
@@ -50,34 +50,14 @@ $$0 + S_0 = S_0$$
 * **Q4**: Qu'est ce que l'addition +?
 * **Q5**: Qu'est ce que l'égalité =? Commenter les 2 propriétés qui la définissent.
 
-# Compléments sur les Mathématiques
-- notes issues d'un cours d'Université math.[UNICE](https://math.unice.fr/~frapetti/analyse/Logique.pdf)
+## Conclusion
+Les mathématiques sont formées:
 
-Les mathématiques actuelles sont bâties de la façon suivante :
+* d'un ensemble de valeurs, comme par exemple l'ensemble des entiers naturels $\mathbb{N}$
+* de relations entre les éléments de cet ensemble. Comme par exemple la relation de *successeur* vue plus haut.
+* de règles sur ces valeurs. Ces règles définissent les opérateurs sur ces valeurs.
 
-* on part d’un petit nombre d’affirmations, appelées axiomes, supposées vraies à priori (et que l’on ne cherche donc pas à démontrer) ;
-* on définit ensuite la notion de démonstration (en décidant par exemple de ce qu’est une implication, une équivalence...) ;
-* on décide enfin de qualifier de vraie toute affirmation obtenue en fin de démonstration et on appelle « théorème » une telle affirmation (vraie).
-A partir des axiomes, on obtient donc des théorèmes qui viennent petit à petit enrichir la théorie mathématique. En raison des bases (les axiomes) non démontrées, la notion de « vérité » des mathématiques est sujette à débat.
-
-**Axiome**. Un axiome est un énoncé supposé vrai à priori et que l’on ne cherche pas à démontrer.
-Ainsi, par exemple, Euclide a énoncé cinq axiomes (« les cinq postulats d’Euclide »), qu’il a renoncé à démontrer et qui devaient être la base de la géométrie (euclidienne). Le cinquième de ces axiomes a pour énoncé : « par un point extérieur à une droite, il passe une et une seule droite parallèle à cette droite ».
-
-Aujourd'hui, ces axiomes constituant le langage mathématique traitent tous les signes mathématiques et logiques, et jouent un rôle analogue à celui de la grammatisation dans les langues naturelles.
-
-**Proposition** (ou assertion ou affirmation). Une proposition est un énoncé énoncé auquel on peut attribuer une valeur de vérité *vrai* ou *faux*. Par exemple, « tout nombre premier est impair » et « tout carré de réel est un réel positif » sont deux propositions. Il est facile de démontrer que la première est fausse et la deuxième est vraie. Le mot proposition est clair : on propose quelque chose, mais cela reste à démontrer. Une proposition est construite à partir des axiomes du langage.
-
-**Théorème**. Un théorème est une proposition vraie (et en tout cas démontrée comme telle). On utilise aussi en informatique le terme d'**assertion** pour une proposition vraie.
-
-**Définition**: souvent équivalent à axiome
-
-**Conjecture**:  proposition que l’on suppose vraie sans parvenir à la démontrer. (et qu'il est peut être impossible de démontrer).
-
-Voici la liste des{{< a link="https://fr.wikipedia.org/wiki/Probl%C3%A8mes_non_r%C3%A9solus_en_math%C3%A9matiques" caption="plus célèbres conjectures" >}}
-Pour exemple, la{{< a link="https://fr.wikipedia.org/wiki/Conjecture_de_Goldbach" caption="conjecture de Goldbach" >}}
-> Tout nombre entier pair supérieur à 3 peut s’écrire comme la somme de deux nombres premiers.
-
-{{< img src="../images/page7/goldbach.png" link="https://fr.wikipedia.org/wiki/Conjecture_de_Goldbach" caption="Illustration de la" >}}
+Dans le chapitre suivant, on verra que l'on peut créer un **langage mathématique pour le traitement de l'information**.
 
 # Calcul propositionnel
 On va avoir besoin d'ajouter aux ensembles de nombres un nouvel ensemble particulier: un ensemble contenant 2 éléments contenant les valeurs de verité *vrai / faux*. Cela nous permettra d'utiliser des machines pour automatiser le raisonnement. C'est à dire pour produire des démonstrations, et ainsi de prouver des propositions.
@@ -233,6 +213,34 @@ Exprimez les formules $I_R$, $I_J$ et $I_B$ sous la forme de formules dépendant
 * Flacon bleu: je ne contiens pas de poison, mais au moins l’un des deux autres si.
 
 
+# Compléments sur les Mathématiques
+- notes issues d'un cours d'Université math.[UNICE](https://math.unice.fr/~frapetti/analyse/Logique.pdf)
+
+Les mathématiques actuelles sont bâties de la façon suivante :
+
+* on part d’un petit nombre d’affirmations, appelées axiomes, supposées vraies à priori (et que l’on ne cherche donc pas à démontrer) ;
+* on définit ensuite la notion de démonstration (en décidant par exemple de ce qu’est une implication, une équivalence...) ;
+* on décide enfin de qualifier de vraie toute affirmation obtenue en fin de démonstration et on appelle « théorème » une telle affirmation (vraie).
+A partir des axiomes, on obtient donc des théorèmes qui viennent petit à petit enrichir la théorie mathématique. En raison des bases (les axiomes) non démontrées, la notion de « vérité » des mathématiques est sujette à débat.
+
+**Axiome**. Un axiome est un énoncé supposé vrai à priori et que l’on ne cherche pas à démontrer.
+Ainsi, par exemple, Euclide a énoncé cinq axiomes (« les cinq postulats d’Euclide »), qu’il a renoncé à démontrer et qui devaient être la base de la géométrie (euclidienne). Le cinquième de ces axiomes a pour énoncé : « par un point extérieur à une droite, il passe une et une seule droite parallèle à cette droite ».
+
+Aujourd'hui, ces axiomes constituant le langage mathématique traitent tous les signes mathématiques et logiques, et jouent un rôle analogue à celui de la grammatisation dans les langues naturelles.
+
+**Proposition** (ou assertion ou affirmation). Une proposition est un énoncé énoncé auquel on peut attribuer une valeur de vérité *vrai* ou *faux*. Par exemple, « tout nombre premier est impair » et « tout carré de réel est un réel positif » sont deux propositions. Il est facile de démontrer que la première est fausse et la deuxième est vraie. Le mot proposition est clair : on propose quelque chose, mais cela reste à démontrer. Une proposition est construite à partir des axiomes du langage.
+
+**Théorème**. Un théorème est une proposition vraie (et en tout cas démontrée comme telle). On utilise aussi en informatique le terme d'**assertion** pour une proposition vraie.
+
+**Définition**: souvent équivalent à axiome
+
+**Conjecture**:  proposition que l’on suppose vraie sans parvenir à la démontrer. (et qu'il est peut être impossible de démontrer).
+
+Voici la liste des{{< a link="https://fr.wikipedia.org/wiki/Probl%C3%A8mes_non_r%C3%A9solus_en_math%C3%A9matiques" caption="plus célèbres conjectures" >}}
+Pour exemple, la{{< a link="https://fr.wikipedia.org/wiki/Conjecture_de_Goldbach" caption="conjecture de Goldbach" >}}
+> Tout nombre entier pair supérieur à 3 peut s’écrire comme la somme de deux nombres premiers.
+
+{{< img src="../images/page7/goldbach.png" link="https://fr.wikipedia.org/wiki/Conjecture_de_Goldbach" caption="Illustration de la" >}}
 
 <!--
 Pour chacun de ces exercices, lorsque cela est possible vous devrez écrire une proposition mathématique qui résoud le problème posé.
