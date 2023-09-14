@@ -33,10 +33,82 @@ bookShowToc: false
 
   <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 
-# Les nombres
-* Un entier peut avoir une valeur aussi grande que celle que la machine peut stocker. Pour un nombre entier stocké sur 32 bits, cette valeur maximale vaut $2^{32}-1$
-* un nombre entier négatif s'écrit avec un $-$ devant: $-10$ par exemple.
-* un nombre décimal s'écrit avec un *point* comme séparateur, comme par exemple: $6.02$
+# Les types
+En python, les objets **natifs de base** ont pour type:
+
+* nombre entier: integer ou `int` en Python
+* nombre réel décimal: `float` 
+* chaine de caractères: `str`
+* les valeurs logiques: booléen `bool`
+
+Lorsque l'on présente une valeur dans le programme, le langage s'adapte selon le type, comme on le verra plus loin.
+
+
+## Les nombres entiers et décimaux
+**Un entier:** C'est un **nombre** qui n'a pas de point décimal. Les *algorithmes* utilisent en général des *entiers*, ce qui est avantageux pour les opérations de comparaison comme `=` ou `!=`.
+
+*valeurs possibles*: $1, 2492042932330932, -23, etc expressions possibles : 13 + 3928, 34 * 2 + 10 // 3 % 5, etc$
+
+Un entier peut avoir une valeur aussi grande que celle que la machine peut stocker. Pour un nombre entier stocké sur 32 bits, cette valeur maximale vaut $2^{32}-1$
+
+**un nombre entier négatif** s'écrit avec un $-$ devant: $-10$ par exemple.
+
+**un nombre décimal** s'écrit avec un *point* comme séparateur, comme par exemple: $6.02$. Les float en Python ont une précision limité. Ils sont généralement codés sur 15 chiffres significatifs et encodés sur 53 bits.
+
+## Les chaines de caractère
+C'est une séquence constituée d'un ou plusieurs caractères, entourés de guillemets simples ou doubles.
+
+Notez que des chiffres mis entre guillemets sont des chaines de caractères et ne peuvent pas être manipulés comme des nombres (voir plus loin).
+
+```python
+"Bonjour"
+'Hello'
+"18"
+"Un longue chaine de caractères"
+'une autre chaine'
+```
+
+Certains caractères spéciaux ne sont pas affichés, mais permettent la mise en forme: 
+
+* Par exemple, les caractères `\n`:
+
+```python
+citation_python = 'je disais, "être ou ne pas être,\ntelle est la question"'
+print(citation_python)
+# affiche
+# être ou ne pas être,
+# telle est la question
+```
+
+* Ou bien les accolades `{}` dans une expression formatée:
+
+```python
+m = 100
+Ec = 1200
+resultat = "Pour le systeme m = {} et E = {}".format(m,Ec)
+print(resultat)
+# affiche
+# Pour le systeme m = 100 et E = 1200
+```
+
+## Les valeurs logiques
+Ce sont les valeurs `True` et `False`. On peut les combiner dans des forules logiques avec les opérateurs `not`, `and`, `or`.
+
+Une opération de comparaison, utilisant les signes  `==`, '!=', `>`, `>=`, `<`, `<=` retourne un booléen `True` ou `False.
+
+*Expressions possibles*: $0 == 0, 8+1 == 2 * 3, 13 >= a, etc$.
+
+Le booléen permet un branchement dans un algorithme (voir les structures conditionnelles): 
+
+```python
+if True:
+  # instruction 1
+else:
+  instruction 2
+
+while True:
+  # bloc d'instructions
+```
 
 # Les opérations de base
 **1.** Un langage informatique permet de réaliser des opérations sur des valeurs. L'écriture de ces opétations peut différer de ce que l'on écrit avec la calculatrice. Voici la liste des opérateurs en Python:
@@ -156,7 +228,7 @@ Ouvrir une **console** python.
 
 > à tester dans l'éditeur Python:
 
-<br>
+
 
 | opérateur | exemple |
 | --- |--- |
@@ -166,7 +238,17 @@ Ouvrir une **console** python.
 | `==` et nombres réels| `0.1 == 0.3/3` |
 | `>,+,/,*,()` | `(50/2+3) > 12.5*2` |
 
-<br>
-
 * **Question f:** Quel opérateur est prioritaire entre `/` et `+`? <i>Comme par exemple dans le calcul `(50/2+3)`</i>
 * **Question g:** Quel résultat devrait-on normalement obtenir avec `0.1 == 0.3/3`? Conclure.
+
+## Opérations logiques
+> à tester dans l'éditeur Python:
+
+| opérateur | exemple |
+| --- |--- |
+| `not` |  `not True` |
+| `and`| `True and False` |
+| `and` |   `True and True`  |
+| `or` |  `False or True` |
+
+* **Question h:** Que vaut `not True and False`? Et `not (True and False)`? Pourquoi?

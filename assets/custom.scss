@@ -361,6 +361,11 @@ a.btn-lg:hover {
 }
 
 
+.fleche {display:none;}
+
+#bloc1:checked ~ .fleche{
+  display:contents;
+}
 
 label {
     
@@ -370,6 +375,7 @@ label {
      -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
      -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
  user-select: none; /* Propriété standard */
+ 
 }
 
 .derouler{

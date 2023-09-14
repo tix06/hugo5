@@ -1,5 +1,5 @@
 ---
-Title : méthodes et types
+Title : types construits
 ---
 
   
@@ -32,106 +32,138 @@ Title : méthodes et types
 
   <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 
-# Editeur Python
-* L'**editeur** suivant se présente comme un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
+Cette page aborde les notions avancées sur les Listes. Il est nécessaire de consulter auparavant la page sur les Listes: [les notions de base](/docs/python/pages/boucles/page2/).
 
-<div>
-<py-repl id="my-repl" auto-generate="true"></py-repl>
-</div>
+On pourra également revenir sur la page 1 : [variables natives de base](../page1/)
 
-# méthodes de chaines
-Les chaines sont des objets qui possèdent leurs méthodes. il est difficile de se souvenir de toutes les méthodes travaillant sur les chaînes de caractères. Aussi il est toujours utile de recourir à la documentation embarquée
+Après la lecture, on traitera le [TP sur les variables](../page3/) utilisant *Pythontutor*.
 
+# Les structures de données et les types construits
+Les *structures de données* définissent la manière avec laquelle sont stockées les données dans un langage.
+
+Les types construits, comme les listes et les dictionnaires sont *contruits* à partir des types de bases que l'on a déjà vus. Ce sont d'autres moyens d'organiser et d'agencer les types de base dans d'autres structures.
+
+
+# Types séquentiels : les listes et les tuples
+Une séquence est une structure de données qui stocke une collection d'éléments dans un ordre déterminé.
+## Listes
+**Definition:** Une **liste** est une **collection ordonnée d'objets**. Au niveau de la mémoire de l'odinateur, une liste *porte un nom*, et fait *référence à des espaces mémoire* pour chaque *élément* de liste. Ces éléments (espaces mémoires) font eux-même reference aux *emplacement mémoire* qui *stockent les valeurs* ou *objets*.
+
+{{< img src="../images/var_normalesup2.png" link="http://www.normalesup.org/~doulcier/teaching/python/01_variables.html" caption="" >}}
+En python: Une **liste** est entourée de **crochets** `[ ]`
+
+Les éléments contenus peuvent être de tout type.
+
+On accède à un élément d'une liste grace à sa position, appelée *indice*. Le premier élément a pour indice zero. 
+
+{{< img src="../images/liste.png" caption="La liste `voyelles` est une collection contenant les caractères" >}}
+Un indice négatif donne accès à la liste à partir du dernier élément.
 
 ```python
-help(str)
+voyelles = ['e','i','o']
+voyelles[0]
+# affiche e
+voyelles[-1]
+# affiche o
+voyelles
+# affiche ['e','i','o']
+```
+Les listes sont **mutables** : On peut modifier un seul de ses éléments à partir de son indice : 
+```python
+voyelles[2] = 'y'
+voyelles
+# affiche ['e','i','y']
 ```
 
-Ce qui donne:
+Ceci n'est pas possible avec le type natif `str`, qui, lui est un type **non mutable**.
 
+### Construire une liste avec une boucle
+Les boucles `while` et`for` permettent d’itérer sur les éléments d’une séquence: (testez le dans l'[editeur Python](#editeur-python))
+
+```python
+# Boucle while
+squares = []
+i = 0
+while i <= 100:
+  squares.append (i ** 2)
+  i += 1
+
+# Boucle for
+squares = []
+for i in range (101) :
+  squares.append (i ** 2)
 ```
-Help on class str in module builtins:
 
-class str(object)
- |  str(object='') -> str
- |  str(bytes_or_buffer[, encoding[, errors]]) -> str
- |  
- |  Methods defined here:
- | ...
- |  format(...)
- |      S.format(*args, **kwargs) -> str
- |      
- |      Return a formatted version of S, using substitutions from args and kwargs.
- |      The substitutions are identified by braces ('{' and '}').
- |  ...
- |  join(self, iterable, /)
- |      Concatenate any number of strings.
- |      
- |      The string whose method is called is inserted in between each given string.
- |      The result is returned as a new string.
- |      
- |      Example: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'
- | ...
+### Construire une liste par compréhension
+Pour construire une liste par compréhension, on place une boucle bornée à l'INTERIEUR les crochets. Cela créé un éléments dans la matrice pour chaque valeur de l'itérable
+
+```python
+# Définition par compréhension
+squares = [i ** 2 for i in range (10) ]
+squares
+# affiche [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+```
+
+
+
+On peut combiner les expressions entre les crochets, en ajoutant par exemple une condition. Ainsi, si l'on veut uniquement le carré des nombres pairs (`if i % 2 == 0`):
+
+```python
+# carre des nombres pairs
+squares = [i ** 2 for i in range (101) if i % 2 == 0]
+```
+
+Pour un tableau, on peut créer une liste par compréhension à l'intérieur de la première liste:
+
+```python
+M = [[0 for j in range(3)] for i in range(3)]
+M
+# affiche [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 ``` 
 
+## Tuples
+Un *tuple* est entouré de **parenthèses** `( )`
 
-### Découpage - assemblage : `split` et `join`
+On accède à l'un des éléments à l'aide de son indice, comme pour les listes.
 
-Les méthodes `split` et `join` permettent de découper une chaîne selon un séparateur pour obtenir une liste, et à l'inverse de reconstruire une chaîne à partir d'une liste.
-
-`split` permet donc de découper :
-
-
-```python
-'abc=:=def=:=ghi=:=jkl'.split('=:=')
-# affiche ['abc', 'def', 'ghi', 'jkl']
-```
-
-Et à l'inverse :
-
+Par contre, le tuple est **non mutable** : on ne peut pas en modifier l'un de ses éléments. Il faut refaire, au besoin, une affectation complète de tout le tuple.
 
 ```python
-"=:=".join(['abc', 'def', 'ghi', 'jkl'])
-# affiche abc=:=def=:=ghi=:=jkl
-```
+elementaire = ('CP','CE1','CE2')
+elementaire[1]
+# affiche CE1
+elementaire[2] = 'CM2'
+# affiche TypeError
+elementaire = ('CP','CE1','CM2')
+elementaire
+# affiche ('CP','CE1','CM2')
+``` 
 
-*Remarque:* Si le séparateur est un terminateur, comme par exemple ';', ou`"\n"`, il conviendra d'utiliser d'abord la méthode `strip`. Voir *[compléments](http://localhost:1313/docs/python/pages/variables/page2/#compl%C3%A9ments-sur-les-strings)* en bas de page.
+# Mappages : les dictionnaires
+Un *mappage* est une structure de données qui relie 2 informations ou plus, appelées *paires clé : valeur*. En python, cette structure est le dictionnaire.
 
+Un dictionnaire est entouré d'*accolades* `{ }`. Les paires sont séparées par une virgule.
 
-### Remplacement : `replace`
-
-`replace` est très pratique pour remplacer une sous-chaîne par une autre, avec une limite éventuelle sur le nombre de remplacements :
-
-
+Par exemple, pour créer un dictionnaire non vide, on peut faire : 
 ```python
-"abcdefabcdefabcdef".replace("abc", "zoo")
-```
-
-
-### modifier la casse d'une chaine
-utiliser les méthodes `title()` (titre), `upper()` (mise en majuscule), `lower()` (minuscule).
-
+capitales = {'France':'Paris','Italie':'Rome','Allemagne':'Berlin'}
+``` 
+Mais on peut aussi ajouter chaque paire en faisant :
 ```python
-nom = 'charles babbage'
-nom.title()
-# affiche Charles Babbage
-nom.upper()
-# affiche CHARLES BABBAGE
+capitales = {} # dictionnaire vide
+capitales['France'] = 'Paris'
+capitales
+# affiche {'France': 'Paris'}
 ```
 
-Les méthodes `lstrip()` (à gauche), `rstrip()` (droite), et `strip()` (à droite et à gauche) suppriment les espaces en trop dans les chaines.
+Pour accéder aux clés d'un dictionnaire, aux valeurs, aux paires clé-valeurs, on utilisera les méthodes `keys`, `value`, et `items`. Voir plus bas.
 
-> à tester vous-même : 
 
-```python
-nom = 'charles babbage'
-nom.strip()
-```
 
 # méthodes de listes
-Les listes sont présentées à la page [variables](/docs/python/pages/variables/page1/#séquences-les-listes-et-les-tuples)
+Les listes sont présentées à la page [variables](/docs/python/pages/variables/page1/)
 
-Pour commencer, rappelons comment retrouver la liste des méthodes définies sur le type list :
+Pour commencer, rappelons comment retrouver la liste des méthodes définies sur le type `list` :
 
 ```python
 help(list)
@@ -202,13 +234,23 @@ etats[3:] # sans specifier l'indice de fin
 ## copie d'une liste
 Une *copie* d'une liste permet d'utiliser le contenu de la liste copiée sans affecter la liste d'origine (voir [TP sur les variables](../page3/)). C'est une copie par *valeurs*.
 
-Pour copier une liste, on peut : la découper sans mentionner les 2 indices, ou bien utiliser la fonction `list` : 
+Pour copier une liste, on peut : 
+
+* la découper sans mentionner les 2 indices:
+
+```python
+etats = ['CH','GB','NL','PL']
+mes_etats = etats[:] # liste copiée par valeur dans mes_etats
+``` 
+* ou bien utiliser la fonction `list`: 
+
 ```python
 etats = ['CH','GB','NL','PL']
 mes_etats = etats[:] # liste copiée par valeur dans mes_etats
 mes_etats = list(etats)
 ```
-On peut alors vérifier qu'il s'agit maintenant d'une copie par valeurs : 
+On peut alors vérifier qu'il s'agit maintenant d'une copie par valeurs :
+
 ```python
 mes_etats.append('DK')
 mes_etats
@@ -217,7 +259,7 @@ etats
 # affiche ['CH','GB','NL','PL']
 ```
 
-Sans cette *astuce*, la copie se ferait par référence (Liste = mutable)
+Sans cette *astuce*, la copie se ferait par **référence** (*rappelez-vous: Liste = mutable*)
 
 ## Trier une liste
 Il y a 2 fonctions de tri : 
@@ -292,31 +334,45 @@ On peut utiliser la fonction `dict` pour faire une copie par *valeur* d'un dicti
 mes_capitales = dict(capitales)
 ```
 
-Sans cette *astuce*, la copie se ferait par référence (Dictionnaire = mutable)
+Sans cette *astuce*, la copie se ferait par **référence** (Dictionnaire = mutable)
 
 <input type="button" class="btn btn-lg" value="Retour à la page : Variables" onclick="window.location.href = '../page1/'">
 
-# Compléments sur les strings
 
-Si le séparateur est un terminateur, comme par exemple ';', ou`\n`, la liste résultat contient alors une dernière chaîne vide. En pratique, on utilisera la méthode `strip`, que nous allons voir ci-dessous, avant la méthode `split` pour éviter ce problème.
 
+# Objets mutables et non mutables
+En Python, il existe deux types d’objets: les **mutables** (listes, dictionnaires, sets, objets customisés, etc) et les **non mutables** (string, int, float, tuple, etc).
+
+Les **mutables** sont ceux qu’on peut modifier après leur création. Les non mutables sont ceux qu’on ne peut pas modifier après création.
+
+Lorsque 2 références **pointent sur le même objet**, ce qui est possible avec les mutables, il faut s'attendre à ce que la modification de l'un entraine celle de l'autre (effet de bord).
+
+C'est le mot-clé `IS` qui va permettre de tester si 2 noms pointent vers la même réference en mémoire:
 
 ```python
-"abc;def;ghi;jkl;".split(';')
-# affiche ['abc', 'def', 'ghi', 'jkl', '']
-```
+x = ["apple", "banana", "cherry"]
+y = ["apple", "banana", "cherry"]
+x == y
+# affiche True
+x is y
+# affiche False
+``` 
 
-alors que 
+Pour plus de précisions sur ces différences, voir le [TP utilisant Pythontutor](../page3/)
 
-```python
-"abc;def;ghi;jkl;".strip(';')
-# affiche abc;def;ghi;jkl
-```
+### Portée des variables
+Un **effet de bord** est une modification d'une variable qui affecte l'état du programme en dehors de la fonction où elle a lieu. Cela peut arriver avec des variables globales, déclarées en dehors de toute fonction.
 
+Pour une variable `x` non mutable, déclarée dans le corps du programme, celle-ci peut être lue dans une fonction où elle n'a pas été definie. Par contre, pour la modifier dans cette fonction, il faudra la déclarer avec `global x` dans cette fonction.
 
+# Suite
+[TP utilisant Pythontutor](../page3/)
+
+<!--
 # Flash cards
 Lien : 
 
 * Lien vers les [Flash cards](../ex1) sur les variables et séquences C22
 * Lien vers les [Flash cards](../ex3) sur les séquences et boucles C32
+-->
 

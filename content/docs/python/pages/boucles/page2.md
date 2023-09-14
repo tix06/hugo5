@@ -253,7 +253,7 @@ plt.grid()
 plt.scatter(temps,T)
 plt.xlabel('temps(min)')
 plt.ylabel('Temperature(°C)')
-plt
+plt.show()
 ```
 
 

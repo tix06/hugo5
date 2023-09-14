@@ -31,40 +31,255 @@ Title : variables
 
   <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 
+
 # Les variables et les types natifs en Python
+
+*Cette page apporte des informations sur sur les types de base, sur les fonctions de la librairie `math`, sur les références, et les méthodes de chaines.*
 
 Cette rubrique contient 4 pages : 
 
-* page 1 : variables, valeurs et structures de données
-* page 2 : [méthodes et types](../page2/)
+* page 1 : variables natives de base
+* page 2 : [types construits](../page2/)
 * page 3 : [TP sur les variables](../page3/)
-* page 4 : [flash-card sur les variables](../ex1/)
+<!--* page 4 : [flash-card sur les variables](../ex1/)
+-->
+Les types natifs de base, ce sont les types numérique, `int` et `float`, les chaines de caractères `str`, mais aussi le type `None`
+
+## le type de « rien » : `None`
+C'est le type des instrutions. Valeur possible : None
+
+`None` est utile par exemple lorsque l'on veut terminer un fonction sans valeur de retour:
+
+```python
+def f(x):
+  # instructions
+  return None
+``` 
+
+## Transformer le type des donnée
+Pour consulter le type d'une donnée: fontion  `type`:
+
+```python
+a = 3
+# Créé un objet de type int et lui associe le nom 'a'
+type(a) 
+# affiche int
+``` 
+
+Pour transformer vers un autre type de base, on utilise les fonctions `int`, `float`, `str`:
+
+| transformer x en ... | fonction |
+|--- |--- |
+| integer | `int(x)` |
+| float | `float(x)` |
+| string | `str(x)` |
+
+* Exemple: tranformer en `float`:
+
+```python
+float(3)
+# affiche 3.0
+float('3.8')
+# affiche 3.0
+```
+
+* transformer en `int`
+convertit par exemple un flottant en entier en éliminant la partie décimale du nombre : 
+
+```python
+int(3.5)
+# affiche 3
+``` 
+
+ou une chaine de caractères en un entier:
+
+```python
+int("3")
+# affiche 3
+```
+
+# Opérations sur les types numériques
+Les opérateurs sur les nombres ont été vus dans le cours [Python les bases](http://localhost:1313/docs/python/index_python_D/).
+
+* Certaines fonctions natives vont enrichir les possibilités de calcul:
+
+*Exemple:* **arrondir** : fonction `round(nombre,decimales)`
+
+    `round(3.1415926,2)` donne `3.14`
+
+* La [bibliothèque **math**](https://docs.python.org/fr/3.5/library/math.html) contient de nombreuses fonctions utiles au calcul scientifique: 
+
+```python
+import math
+math.sqrt(9)
+# affiche 3.0
+PI = math.pi
+PI
+# affiche 3.141592653589793
+math.sin(PI/2)
+# affiche 1.0
+# le sinus de l'angle en radians
+math.fabs(-101)
+# affiche 101
+# Renvoie la valeur absolue de (-101)
+math.isnan(x)
+# Renvoie True si x est NaN (Not a Number)
+```
+
+# Opérations sur les booléens - rappels
+| operateur | symbole | exemple d'expression | resultat |
+| --- | --- |--- | --- |
+| intersection | and | True and False | False |
+| reunion | or | True or False | True |
+| negation | not | not False | True |
+| est égal à | == | True == False | False |
+| est différent de | != | True != False | True |
 
 
 
-# Editeur Python
-* L'**editeur** suivant se présente comme un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
+# Opérations avec les chaines de caractères
+Les opérateurs `+` et `*` sont autorisés dans les expressions avec les chaines de caractère.
 
-<div>
-<py-repl id="my-repl" auto-generate="true"></py-repl>
-</div>
-  
+Le `+` réalise un *concaténation* de 2 chaines. Le `*` répète et concatène la chaine : 
 
-# Les structures de données
-Les *structures de données* définissent la manière avec laquelle sont stockées les données dans un langage de programmation. L'approche choisie pour modéliser des données renseigne sur ce que vous pensez des données.
+```python
+a, b = 'Alan', 'Turing'
+a + b 
+# affiche AlanTuring
+a * 3
+# affiche AlanAlanAlan
+```
 
-Parmi les structures de données les plus courantes en python, on peut citer : les variables numériques, textuelles, les sequences (listes), les mappages (dictionnaires), les classes et les objets.
+Les caractères sont *placés* dans une chaine. On peut donc y accéder avec leur *index*, comme pour les Listes:
+
+```python
+chaine = 'Hello World'
+chaine[0]
+# affiche 'H'
+chaine[1:4]
+# affiche 'ell'
+``` 
+
+Mais, contrairement aux Listes, on ne pourra pas modifier un caractère par son index:
+
+```python
+chaine[0] = 'P'
+# TypeError: 'str' object does not support item assignment
+```
+
+Une chaine de caractères est *itérable*: On peut la parcourir avec une boucle bornée. Par exemple, le script suivant élimine tous les espaces dans la chaine:
+
+```python
+s = "Il fait beau."
+res = ""
+for carac in s:
+  if carac != ' ':
+    res = res + carac
+print(res)
+# affiche Ilfaitbeau.
+```
+
+## méthodes de chaines
+Les chaines sont des objets qui possèdent leurs méthodes. il est difficile de se souvenir de toutes les méthodes travaillant sur les chaînes de caractères. Aussi il est toujours utile de recourir à la documentation embarquée
+
+
+```python
+help(str)
+```
+
+Ce qui donne:
+
+```
+Help on class str in module builtins:
+
+class str(object)
+ |  str(object='') -> str
+ |  str(bytes_or_buffer[, encoding[, errors]]) -> str
+ |  
+ |  Methods defined here:
+ | ...
+ |  format(...)
+ |      S.format(*args, **kwargs) -> str
+ |      
+ |      Return a formatted version of S, using substitutions from args and kwargs.
+ |      The substitutions are identified by braces ('{' and '}').
+ |  ...
+ |  join(self, iterable, /)
+ |      Concatenate any number of strings.
+ |      
+ |      The string whose method is called is inserted in between each given string.
+ |      The result is returned as a new string.
+ |      
+ |      Example: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'
+ | ...
+``` 
+
+
+### Découpage - assemblage: `split` et `join`
+
+Les méthodes `split` et `join` permettent de découper une chaîne selon un séparateur pour obtenir une liste, et à l'inverse de reconstruire une chaîne à partir d'une liste.
+
+`split` permet donc de découper :
+
+
+```python
+'abc=:=def=:=ghi=:=jkl'.split('=:=')
+# affiche ['abc', 'def', 'ghi', 'jkl']
+```
+
+Et à l'inverse :
+
+
+```python
+"=:=".join(['abc', 'def', 'ghi', 'jkl'])
+# affiche abc=:=def=:=ghi=:=jkl
+```
+
+*Remarque:* Si le séparateur est un terminateur, comme par exemple ';', ou`"\n"`, il conviendra d'utiliser d'abord la méthode `strip`. Voir *[compléments](http://localhost:1313/docs/python/pages/variables/page2/#compl%C3%A9ments-sur-les-strings)* en bas de page.
+
+
+### Remplacement: `replace`
+
+`replace` est très pratique pour remplacer une sous-chaîne par une autre, avec une limite éventuelle sur le nombre de remplacements :
+
+
+```python
+"abcdefabcdefabcdef".replace("abc", "zoo")
+```
+
+
+### modifier la casse d'une chaine
+utiliser les méthodes `title()` (titre), `upper()` (mise en majuscule), `lower()` (minuscule).
+
+```python
+nom = 'charles babbage'
+nom.title()
+# affiche Charles Babbage
+nom.upper()
+# affiche CHARLES BABBAGE
+```
+
+Les méthodes `lstrip()` (à gauche), `rstrip()` (droite), et `strip()` (à droite et à gauche) suppriment les espaces en trop dans les chaines.
+
+> à tester vous-même : 
+
+```python
+nom = 'charles babbage'
+nom.strip()
+```
+
+
+# Compléments sur les variables et types
 
 ## Valeur et référence
 Les **variables** en Python sont des **références nommées**.
 
-Pour pouvoir accéder aux données, le programme d’ordinateur (quel que soit le langage dans lequel il est écrit) fait abondamment usage d’un grand nombre de variables de différents types.
 
-Une variable est une étiquette associée à une valeur. Ce nom est à peu près quelconque (voir ci-après), mais pour l’ordinateur il s’agit d’une **référence** désignant une **adresse mémoire**, c’est-à-dire un emplacement précis dans la mémoire vive.
+Une variable est une donc **étiquette** associée à une **valeur**. Ce nom est à peu près quelconque, mais pour l’ordinateur il s’agit d’une **référence** désignant une **adresse mémoire**, c’est-à-dire un emplacement précis dans la mémoire vive.
 
 À cet emplacement est stockée une **valeur typée** bien déterminée.
 
-{{< img src="../images/var_normalesup1.png" link="http://www.normalesup.org/~doulcier/teaching/python/01_variables.html" caption="image issue du cours " >}}
+{{< img src="../images/var_normalesup1.png" link="http://www.normalesup.org/~doulcier/teaching/python/01_variables.html" caption="image issue du cours sur http://www.normalesup.org/" >}}
 Cette valeur peut être en fait à peu près n’importe quel « objet » susceptible d’être placé dans la mémoire d’un ordinateur, par exemple : un nombre entier, un nombre réel, un nombre complexe, un vecteur, une chaîne de caractères, un tableau, une fonction, etc.
 
 La programme suivant permet de consulter l'adresse mémoire d'une variable:
@@ -80,258 +295,10 @@ id(a) #=> La position de l'objet nommé a dans la mémoire de l'ordinateur.
 94875962855936
 ```
 
-
-# Les types numériques
-Les types élementaires que peuvent prendre les variables et expressions sont : 
-
-## les entiers (int)
-**Un entier:** C'est un **nombre** qui n'a pas de point décimal. Les *algorithmes* utilisent en général des *entiers*, ce qui est avantageux pour les opérations de comparaison comme `=` ou `!=`.
-
-*valeurs possibles*: 1, 2492042932330932, -23, etc expressions possibles : 13 + 3928, 34 * 2 + 10 // 3 % 5, etc
-
-## les réels (float)
-**Un flottant:** C'est un nombre qui possède un point décimal. Tout nombre, rationnel, irrationnel peut être représenté par un flottant. Les flottants sont très utiles par exemple en *Physique*, où l'on réalise des *mesures physiques*, ou pour le *calcul scientifique* de manière générale. Le problème, c'est que la plupart du temps, ce nombre n'est qu'*approché* par l'ordinateur lors de sa représentation en binaire. 
-
-Ex : 4.3, 3.14159265359, 1,414 213 562, 9.02E-11
-
-La *virgule* se représente par un *point*. Les float en Python ont une précision limité. Ils sont généralement codés sur 15 chiffres significatifs et encodés sur 53 bits.
-
-
-
-## Opérations sur les nombres
-Les opérateurs sur les nombres ont été vus dans le cours [Python les bases](http://localhost:1313/docs/python/index_python_D/).
-
-* Certaines fonctions natives vont enrichir les possibilités de calcul:
-
-*Exemple:* **arrondir** : fonction `round(nombre,decimales)`
-
-    `round(3.1415926,2)` donne `3.14`
-
-* La bibliothèque **math** contient de nombreuses fonctions : 
-
-```python
-import math
-math.sqrt(9)
-# affiche 3.0
-PI = math.pi
-PI
-# affiche 3.141592653589793
-math.sin(PI/2)
-1.0
-```
-
-# les booléens (bolean)
-**Un booléen** a 2 valeurs possibles : **True** et **False**.
-
-Un bolléen stocke le résultat d'une opération de comparaison. 
-
-*Expressions possibles*: 0 == 0, 8+1 == 2 * 3, 13 >= a, etc.
-
-Le booléen permet un branchement dans un algorithme (voir les structures conditionnelles): 
-
-```python
-if True:
-  # instruction 1
-else:
-  instruction 2
-
-while True:
-  # bloc d'instructions
-```
-
-## Opérations sur les booléens - rappels
-| operateur | symbole | exemple d'expression | resultat |
-| --- | --- |--- | --- |
-| intersection | and | True and False | False |
-| reunion | or | True or False | True |
-| negation | not | not False | True |
-| est égal à | == | True == False | False |
-| est différent de | != | True != False | True |
-
-# le type de « rien » : `None`
-C'est le type des instrutions. Valeur possible : None
-
-`None` est utile par exemple lorsque l'on veut terminer un fonction sans valeur de retour:
-
-```python
-def f(x):
-  # instructions
-  return None
-``` 
-
-# Types séquences de texte (string)
-Ce sont les chaines de caractères **(str)**
-
-C'est une séquence constituée d'un ou plusieurs caractères, entourés de guillemets simples ou doubles.
-
-Valeurs possibles : ‘Hello, world’, ‘la valeur de a est’, ‘234’ , etc. 
-
-```python
-citation_python = 'je disais, "être ou ne pas être,\ntelle est la question"'
-print(citation_python)
-# affiche
-# être ou ne pas être,
-# telle est la question
-```
-
-
-
-
-## Opérations avec les chaines de caractères
-Les opérateurs `+` et `*` sont autorisés dans les expressions avec les chaines de caractère.
-
-Le `+` réalise un *concaténation* de 2 chaines. Le `*` répète et concatène la chaine : 
-
-```python
-a, b = 'Alan', 'Turing'
-a + b 
-# affiche AlanTuring
-a * 3
-# affiche AlanAlanAlan
-```
-
-
-
-# Types séquentiels : les listes et les tuples
-Une séquence est une structure de données qui stocke une collection d'éléments dans un ordre déterminé.
-## Listes
-**Definition:** Une **liste** est une **collection ordonnée d'objets**. Au niveau de la mémoire de l'odinateur, une liste *porte un nom*, et fait *référence à des espaces mémoire* pour chaque *élément* de liste. Ces éléments (espaces mémoires) font eux-même reference aux *emplacement mémoire* qui *stockent les valeurs* ou *objets*.
-
-{{< img src="../images/var_normalesup2.png" link="http://www.normalesup.org/~doulcier/teaching/python/01_variables.html" caption="image issue du cours " >}}
-En python: Une **liste** est entourée de **crochets** `[ ]`
-
-Les éléments contenus peuvent être de tout type.
-
-On accède à un élément d'une liste grace à sa position, appelée *indice*. Le premier élément a pour indice zero. 
-
-{{< img src="../images/liste.png" caption="La liste `voyelles` est une collection contenant les caractères" >}}
-Un indice négatif donne accès à la liste à partir du dernier élément.
-
-```python
-voyelles = ['e','i','o']
-voyelles[0]
-# affiche e
-voyelles[-1]
-# affiche o
-voyelles
-# affiche ['e','i','o']
-```
-Les listes sont **mutables** : On peut modifier un seul de ses éléments à partir de son indice : 
-```python
-voyelles[2] = 'y'
-voyelles
-# affiche ['e','i','y']
-```
-
-### Construire une liste avec une boucle
-Les boucles `while` et`for` permettent d’itérer sur les éléments d’une séquence: (testez le dans l'[editeur Python](#editeur-python))
-
-```python
-# Boucle while
-squares = []
-i = 0
-while i <= 100:
-  squares.append (i ** 2)
-  i += 1
-
-# Boucle for
-squares = []
-for i in range (101) :
-  squares.append (i ** 2)
-```
-
-### Construire une liste par compréhension
-
-```python
-# Définition par compréhension
-squares = [i ** 2 for i in range (101) ]
-```
-
-On peut combiner les expressions entre les crochets, en ajoutant par exemple une condition. Ainsi, si l'on veut uniquement le carré des nombres pairs (`if i % 2 == 0`):
-
-```python
-# carre des nombres pairs
-squares = [i ** 2 for i in range (101) if i % 2 == 0]
-```
-
-## Tuples
-Un *tuple* est entouré de **parenthèses** `( )`
-
-On accède à l'un des éléments à l'aide de son indice, comme pour les listes.
-
-Par contre, le tuple est **non mutable** : on ne peut pas en modifier l'un de ses éléments. Il faut refaire, au besoin, une affectation complète de tout le tuple.
-
-```python
-elementaire = ('CP','CE1','CE2')
-elementaire[1]
-# affiche CE1
-elementaire[2] = 'CM2'
-# affiche TypeError
-elementaire = ('CP','CE1','CM2')
-elementaire
-# affiche ('CP','CE1','CM2')
-``` 
-
-# Mappages : les dictionnaires
-Un *mappage* est une structure de données qui relie 2 informations ou plus, appelées *paires clé : valeur*. En python, cette structure est le dictionnaire.
-
-Un dictionnaire est entouré d'*accolades* `{ }`. Les paires sont séparées par une virgule.
-
-Par exemple, pour créer un dictionnaire non vide, on peut faire : 
-```python
-capitales = {'France':'Paris','Italie':'Rome','Allemagne':'Berlin'}
-``` 
-Mais on peut aussi ajouter chaque paire en faisant :
-```python
-capitales = {} # dictionnaire vide
-capitales['France'] = 'Paris'
-capitales
-# affiche {'France': 'Paris'}
-```
-
-Pour accéder aux clés d'un dictionnaire, aux valeurs, aux paires clé-valeurs, on utilisera les méthodes `keys`, `value`, et `items`. Voir la page [méthodes et types](../page2/)
-
-
-
-
-
-
-
-
-# Compléments sur les variables et types
 ## Typage dynamique
 Python est un langage à typage dynamique, ce qui signifie qu'il n'est pas necessaire de déclarer le type de donnée que représentera une variable (c'est la différence avec le typage *statique*). C'est l'interpréteur qui examine la donnée tout au long de la vie du programme et choisit le type.
 
-## Changer de type
-Certaines opérations nécessitent que la donnée associée à une variable soit dans un format précis. Cela peut obliger à modifier le type de cette variable, ce qui transforme en adaptant la donnée : 
 
-* transformer en float : fonction `float`
-```python
-float(3)
-# affiche 3.0
-float('3.8')
-# affiche 3.0
-```
-
-* transformer en int : fonction `int`
-convertit par exemple un flottant en entier en éliminant la partie décimale du nombre : 
-
-```python
-int(3.5)
-affiche 3
-``` 
-`int` peut aussi convertir des chaines en entier : `int('3')` donne `3`.
-
-## Nommer une variable
-Un nom de variable est une séquence de lettres (a→z,A→Z) et de chiffres (0→9), qui doit toujours commencer par une lettre, ou un underscore `_`.
-
-Des bons noms de variables doivent être courts mais descriptifs : 
-
-```python
-prenom = 'albert'
-nom_famille = 'einstein'
-age = 42
-```
 
 ## Affectation simple et multiple
 **Affectation simple :**
@@ -358,27 +325,29 @@ b
 # affiche True
 ```
 
-## Objets mutables et non mutables
-En Python, il existe deux types d’objets: les **mutables** (listes, dictionnaires, sets, objets custo, etc) et les **non mutables** (string, int, float, tuple, etc).
-
-Les mutables sont ceux qu’on peut modifier après leur création. Les non mutables sont ceux qu’on ne peut pas modifier après création.
-
-Lorsque 2 références pointent sur le même objet, ce qui est possible avec les mutables, il faut s'attendre à ce que la modification de l'un entraine celle de l'autre (effet de bord).
-
-Pour plus de précisions sur ces différences, voir le [TP sur les variables](../page3/)
-
-### Portée des variables
-Un **effet de bord** est une modification d'une variable qui affecte l'état du programme en dehors de la fonction où elle a lieu. Cela peut arriver avec des variables globales, déclarées en dehors de toute fonction.
-
-Pour une variable `x` non mutable, déclarée dans le corps du programme, celle-ci peut être lue dans une fonction où elle n'a pas été definie. Par contre, pour la modifier dans cette fonction, il faudra la déclarer avec `global x` dans cette fonction.
 
 
+# Compléments sur les strings
+
+Si le séparateur est un terminateur, comme par exemple ';', ou`\n`, la liste résultat contient alors une dernière chaîne vide. En pratique, on utilisera la méthode `strip`, que nous allons voir ci-dessous, avant la méthode `split` pour éviter ce problème.
 
 
-# Les méthodes associées aux différentes séquences
-voir la page [méthodes et types](../page2/)
+```python
+"abc;def;ghi;jkl;".split(';')
+# affiche ['abc', 'def', 'ghi', 'jkl', '']
+```
+
+alors que 
+
+```python
+"abc;def;ghi;jkl;".strip(';')
+# affiche abc;def;ghi;jkl
+```
+
+# Les types construits (séquences)
+voir la page suivante: [Types construits](../page2/)
 
 # Liens
-* Lien vers les [Flash cards](../ex1) sur les variables et séquences
+<!--* Lien vers les [Flash cards](../ex1) sur les variables et séquences-->
 * Compléments: valeur, references, espace de nom: [Lien vers le cours de normalesup](http://www.normalesup.org/~doulcier/teaching/python/01_variables.html)
 

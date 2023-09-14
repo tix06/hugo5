@@ -199,6 +199,6 @@ A chaque fois que la condition `choix_joueur != N_aleatoire` est `True`, c'est �
 Lorsque les valeurs `choix_joueur` et `N_aleatoire` sont identiques, le programme passe à la ligne `print('Bravo vous avez gagné')` 
 
 # Travaux Pratiques
-* {{< a link="../page3" caption="Lien vers le TP1: structures conditionnelles" >}}
+* {{< a link="../page3" caption="Lien vers le TP3: structures conditionnelles" >}}
 
-* {{< a link="../page4" caption="Lien vers le TP2: boucles non bornées" >}}
+* {{< a link="../page4" caption="Lien vers le TP4: boucles non bornées" >}}
