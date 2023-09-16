@@ -229,7 +229,7 @@ plt.grid()
 plt.scatter(...
 plt.xlabel('temps(min)')
 plt.ylabel('...')
-plt
+plt.show()
 ```
 
 # Suite du TP: Les boucles et les parcours de liste

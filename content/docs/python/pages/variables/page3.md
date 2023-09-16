@@ -167,7 +167,44 @@ print(coordonnees_init)
 **Question i:** Cette fois, `deplacement` est-il une copie par valeur ou par reference de `coordonnees_init`? Précisez ce qu'est une copie par *valeur*.
 
 
+# Dictionnaires
+Un dictionnaire est un tableau associatif qui stocke des couples: `clé: valeur`. Un dictionnaire est entouré d'accolades `{}`.
 
 
+```python
+mondico = {}# un dictionnaire vide
+mon_autre_dico = dict()# une autre façon de créer un dictionnaire vide
 
-<input type="button" class="btn btn-lg" value="Retour à la page : Variables" onclick="window.location.href = '../page1/'">
+personne = {'Nom': 'Nastic', 'Prénom': 'Jim', 'Age': 42}
+print(personne)
+```
+
+Dans l'exemple précédent, le dictionnaire *personne* contient trois couples clé: valeur, à savoir :
+
+| clé | | valeur |
+|------| --| ------|
+|'Nom' | &rarr; | 'Nastic'|
+|'Prénom' | &rarr; | 'Jim'|
+|'Age' | &rarr; | 42|
+
+> à tester:
+
+```python
+Jim = {'Nom': 'Nastic', 'Prénom': 'Jim', 'Age': 42}
+Dan = {'Nom': 'Nastic', 'Prénom': 'Dan', 'Age': 33}
+famille = {}
+famille['aine'] = Jim
+famille['cadet'] = Dan 
+```
+
+Puis modifier l'age de Jim:
+
+```python
+Jim['Age'] = 43
+```
+
+**Question j**: Cela a-t-il modifié la valeur de l'age de Dan? Cela a-t-il modifié l'une des valeurs de `famille`? 
+
+Conclure (`famille` pointe t-il vers la reference de `Jim` ou bien s'agit-il d'une copie par valeur?). Reproduire le schéma de la structure de données telle que représentée dans Pythontutor.
+
+

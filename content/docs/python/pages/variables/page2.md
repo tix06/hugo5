@@ -156,7 +156,13 @@ capitales
 # affiche {'France': 'Paris'}
 ```
 
-Pour accéder aux clés d'un dictionnaire, aux valeurs, aux paires clé-valeurs, on utilisera les méthodes `keys`, `value`, et `items`. Voir plus bas.
+Pour accéder à une *valeur*, on utilise la clé comme index: `capitales['France'] = 'Paris'`
+
+Pour accéder **aux clés** d'un dictionnaire: on utilisera les méthodes `keys` avec par exemple `capitales.keys()`
+
+Pour accéder **aux valeurs**: on utilise la méthode `value`, avec par exemple `capitales.values()`
+
+Pour accéder **aux paires clé-valeurs**: méthode `items`, avec par exemple `capitales.items()`
 
 
 

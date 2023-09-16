@@ -44,7 +44,7 @@ bookShowToc: false
 <py-repl id="my-repl" auto-generate="true"></py-repl>
 </div>
 
-# TP1: Conditions
+
 ## Ex 1: test sur un nombre divisible
 Le script suivant permet de tester la parité d'un nombre `n`. Saisir dans l'editeur Python le script suivant.
 
@@ -140,6 +140,6 @@ Utilisez le tableau suivant pour fournir une information à la personne en fonct
 {{< img src="../images/imc.png" alt="classification de l'IMC" caption="classification de l'IMC - source: has-sante.fr" >}}
 
 # Suite
-{{< a link="../page4" caption="Lien vers le TP2: boucles non bornées" >}}
+{{< a link="../page4" caption="Lien vers le TP4: boucles non bornées" >}}
 
 

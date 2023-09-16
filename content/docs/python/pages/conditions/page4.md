@@ -45,7 +45,7 @@ bookShowToc: false
 </div>
 
 
-# TP2: Boucles non bornées
+
 ## Ex 1: Diviser sans l'opérateur `/`
 La division entière de `a`par `b` revient à soustraire `N` fois `b` à la valeur `a`. Ce nombre `N` est le résultat de ce que l'on appelle, la division entière de `a` par `b`.
 

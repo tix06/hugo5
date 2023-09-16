@@ -207,23 +207,6 @@ Ouvrir une **console** python.
 * **Question b:** Calculer à l'aide de la console le résultat de: $11,27 + \tfrac{9.10^{21}}{10^4}$. Ecrivez sur votre cahier l'expression utilisée en python pour effectuer ce calcul, ainsi que le résultat, exprimé en langage mathématique.
 * **Question c:** Quel est le signe utilisé pour séparateur décimal en python?
 
-
-## Opérations sur les chaines de caractères
-
-> à tester dans l'éditeur Python:
-
-<br>
-
-| opérateur | exemple |
-| --- |--- |
-| `+` | &quot;a&quot;+&quot;b&quot;|
-| `*` | &quot;bonjour&quot; * 10 |
-| `+,*,()` | (&quot;bonjour&quot; + &quot; &quot;) * 10 |
-
-
-* **Question d:** expliquer ce que réalisent les opérateurs + et * avec les chaines de caractères.
-* **Question e:** Quelle erreur est retournée par l'opération `"bonjour tous les " +2`? (relever la fin du Traceback à partir de *TypeError...*)
-
 ## Opérations de comparaisons
 
 > à tester dans l'éditeur Python:
@@ -238,8 +221,38 @@ Ouvrir une **console** python.
 | `==` et nombres réels| `0.1 == 0.3/3` |
 | `>,+,/,*,()` | `(50/2+3) > 12.5*2` |
 
-* **Question f:** Quel opérateur est prioritaire entre `/` et `+`? <i>Comme par exemple dans le calcul `(50/2+3)`</i>
-* **Question g:** Quel résultat devrait-on normalement obtenir avec `0.1 == 0.3/3`? Conclure.
+* **Question d:** Quel opérateur est prioritaire entre `/` et `+`? <i>Comme par exemple dans le calcul `(50/2+3)`</i>
+* **Question e:** Quel résultat devrait-on normalement obtenir avec `0.1 == 0.3/3`? Conclure.
+
+## Opérations sur les chaines de caractères
+
+> à tester dans l'éditeur Python:
+
+<br>
+
+| opérateur | exemple |
+| --- |--- |
+| `+` | &quot;a&quot;+&quot;b&quot;|
+| `*` | &quot;bonjour&quot; * 10 |
+| `+,*,()` | (&quot;bonjour&quot; + &quot; &quot;) * 10 |
+
+
+* **Question f:** expliquer ce que réalisent les opérateurs + et * avec les chaines de caractères.
+
+
+
+On peut aussi réaliser les opérations de comparaison `>, <, ==, !=`sur les chaines. Et aussi le test d'appartenance `in, not in`. Ces opérations retournent un booléen.
+
+* comparaison d'ordre: `A < B` vaut `True`, `Ab < A` vaut `False`.
+* d'égalité: `HA == ha` vaut False
+* `ou in jour` vaut `True` 
+*  `ou not in jour` vaut False
+
+* **Question g:** que vaut `Books > Money` ?
+
+* **Question h:** Quelle erreur est retournée par l'opération `"bonjour tous les " +2`? (relever la fin du Traceback à partir de *TypeError...*)
+
+
 
 ## Opérations logiques
 > à tester dans l'éditeur Python:
@@ -251,4 +264,4 @@ Ouvrir une **console** python.
 | `and` |   `True and True`  |
 | `or` |  `False or True` |
 
-* **Question h:** Que vaut `not True and False`? Et `not (True and False)`? Pourquoi?
+* **Question i:** Que vaut `not True and False`? Et `not (True and False)`? Pourquoi?
