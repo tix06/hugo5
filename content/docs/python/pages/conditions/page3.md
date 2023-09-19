@@ -58,20 +58,33 @@ else:
 
 > Adapter ce script qui demande à l’utilisateur un entier, puis affiche si cet entier est divisible par 11.
 
-* **Question a:** Comment faites vous pour convertir la valeur saisie par l'utilisateur en un entier?
+* **Question a:** Quelle modification avez-vous faite?
 
 ## Ex 2: 18 ans ou plus
 > Compléter (et tester avec plusieurs valeurs de age) le programme suivant qui renseigne votre age (à la premiere ligne), et vous laisse entrer en discothèque, seulement si vous avez 18 ans ou plus:
 
 ```python
 age = 18
-if int(age) ...:
+if age ...:
     print('...')
 else:
     print('...')
 ```
 
 * **Question b:** Quels sont les différents opérateurs de comparaison en python? *(est égal à, est différent de, est supérieur, est supérieur ou égal, ...)*
+
+On peut modifier ce programme pour qu'il demande l'age de la personne qui execute le script:
+
+```python
+age = input('Quel age avez-vous? ')
+age = int(age)
+if age ...:
+    print('...')
+else:
+    print('...')
+```
+
+**Question a:** Quelle instruction est utilisée à la ligne 2 pour convertir la valeur saisie par l'utilisateur en un entier?
 
 ## Ex 3: Comparer 2 nombres
 > Completer (et tester avec plusieurs valeurs de a et de b) le programme suivant qui compare a et b et retourne un message selon leur ordre ou leur egalité.
@@ -138,6 +151,8 @@ Proposez un algorithme qui demande à l'utilisateur sa taille et sa masse puis q
 Utilisez le tableau suivant pour fournir une information à la personne en fonction de son IMC:
 
 {{< img src="../images/imc.png" alt="classification de l'IMC" caption="classification de l'IMC - source: has-sante.fr" >}}
+
+* **Question f:** Recopier la série d'instructions conditionnelles qui affichent une information sur l'IMC.
 
 # Suite
 {{< a link="../page4" caption="Lien vers le TP4: boucles non bornées" >}}
