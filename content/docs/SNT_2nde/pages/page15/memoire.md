@@ -2,6 +2,11 @@
 Title : memoire des machines
 ---
 
+## Numérisation - video du site du CEA
+{{< img src="../images/ordinateur.png" link="https://www.cea.fr/multimedia/Pages/videos/culture-scientifique/technologies/fonctionnement-ordinateur.aspx"  caption="introduction à l'architecture de l'ordinateur" >}} 
+
+
+
 Les machines ne comprennent que les chiffres ! Et pas n’importe lesquels : 0 et 1 sont ses préférés... Pourtant, une machine comme celle qui vous sert à afficher cette page n'est pas (seulement) une calculatrice:
 
 *Comment peut-on travailler avec du texte ou des images sur une machine, qui ne manipule que du binaire?*
@@ -26,7 +31,8 @@ Le nombre de transistors sur une puce électronique devrait être doublé tous l
 La figure suivante montre l'évolution du nombre de transistors pour un même élement de surface:
 
 {{< img src="../images/mem-moore.png" link="https://fr.wikipedia.org/wiki/Loi_de_Moore" caption="illustration de la loi de Moore - source wikipedia" >}}
-# Coder de plus grandes valeurs
+
+# Coder et manipuler de plus grandes valeurs
 Les transistors sont gravés sur circuits intégrés, ce qui a permi d'atteindre des fortes densités par unité de surface. La finesse de gravure est actuellement de 10 nm environ (Intel).
 
 {{< img src="../images/memory.png" caption="Le transistor: un composant électronique à 2 états" >}}
@@ -41,15 +47,19 @@ La quantité de mémoire, même importante, n’est pas infinie dans une machine
 {{< img src="../images/mem-bits.png" caption="Le transistor: un composant électronique à 2 états" >}}
 Pour coder une information qui peut prendre plus de 2 valeurs, il faudra utiliser plusieurs *bits*. Ceux-ci sont souvent rassemblés par 8, formant un mot-octet. Celui-ci peut prendre 256 valeurs.
 
+# Stocker de manière durable: Disque dur
+Le disque dur utilise des pistes magnétiques sur un plateau pour écrire et lire avec une tête magnétique.
+
+{{< img src="../images/Harddrive.svg" link="https://fr.wikipedia.org/wiki/Disque_dur" caption="disque dur - Wikipedia" >}}
+
 Actuellement, les disques durs vendus dans le commerce contiennent 1 à plusieurs To (teraoctets: 10<sup>15</sup> octets)
 
-# Format des données
-Dès l’invention de l’informatique, les ordinateurs ont pu manipuler des textes composés de caractères, que ce soit pour la saisie des commandes sur un clavier ou pour l’impression des résultats sur le papier. Il a donc fallu adopter une convention commune qui soit utilisée par tous les ordinateurs. Ainsi, est né en 1961 le code ASCII (American Standard Code for Information Interchange) qui associe une valeur numérique à chaque caractère de l’alphabet : 65 pour A, 66 pour B…
+# Numériser des données - les standards internationaux
+Dès l’invention de l’informatique, les ordinateurs ont pu manipuler des textes composés de caractères, que ce soit pour la saisie des commandes sur un clavier ou pour l’impression des résultats sur le papier. Il a donc fallu adopter une convention commune qui soit utilisée par tous les ordinateurs. Ainsi, est né en 1961 le **code ASCII** (American Standard Code for Information Interchange) qui associe une valeur numérique à chaque caractère de l’alphabet : 65 pour A, 66 pour B…
 
 {{< img src="../images/ascii.png" link="https://www.lookuptables.com/text/ascii-table" caption="table ascii, source: lookuptable.com" >}}
 Avec la taille des mémoires, et les performances des machines qui ont progressé, il a été possible de coder des données de plus en plus complexes. Il a fallu trouver un moyen de structurer ces données, c’est à dire de les mettre en forme et en lien dans un format approprié.
 
-# Histoire des données
-
-La video suivante présente l'histoire du stockage des données et ses enjeux:
+# Sources
+* Image du disque dur: [Par I, Surachit, CC BY-SA 3.0](https://commons.wikimedia.org/w/index.php?curid=2537310)
 
