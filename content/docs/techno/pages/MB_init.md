@@ -1,5 +1,6 @@
 ---
 Title : informatique des objets
+bookShowToc: false
 ---
 
 
@@ -96,10 +97,15 @@ for x in range(5):
 x,y : int, valeur de 0 à 4<br>
 b : int, 0 à 9 (intensité lumineuse de la diode en x,y)
 
-# Application: TP évalué
+# Application: *Dessine ton LOGO* (SNT)
 Lien vers{{< a link="/docs/SNT_2nde/pages/page5/photo_num3/" caption="l'énoncé en ligne" >}}
 Lien vers le{{< a link="/pdf/SNT/TP_intro_MB.pdf" caption="Document pdf à rendre" >}}
 {{< img src="../images/TP.png" >}}
+
+# Application: *niveau à bulle 2D* (NSI)
+Lien vers{{< a link="../MB_bulle/" caption="l'énoncé en ligne" >}}
+
+
 # Liens
 * Documentation micro:bit [microbit-micropython.readthedocs](https://microbit-micropython.readthedocs.io/en/v1.0.1/)
 * Travaux pratiques: [microbit.org/make-it-code-it](https://microbit.org/projects/make-it-code-it/)

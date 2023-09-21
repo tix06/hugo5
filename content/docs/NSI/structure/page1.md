@@ -1,5 +1,6 @@
 ---
 Title : types abstraits
+bookShowToc: false
 ---
 
 <style>
@@ -53,11 +54,19 @@ On verra dans un premier temps, 2 exemples de types abstraits: Les *listes chain
 
 # Listes chaînées
 Une liste chaînée est une séquence ordonnée d'éléments.
+L'avantage sur un tableau (la Liste native en Python), c'est qu'en parcourant la Liste chainée, quelle que soit la profondeur de parcours, celle-ci présente la même structure.
 
-La *liste L* suivante représente la chaine: `"Lundi" -> "Mardi" -> "Mercredi"` 
+On peut donc lui associer des méthodes ou fonctions, qui seront indépendantes de cette profondeur. Que l'on pourra utiliser de la même manière à chaque niveau de la liste chainée.
+
+{{< img src="../images/liste_classes.png" caption="classes à parcourir après le collège" >}}
+
+{{< img src="../images/liste_classes2.png" caption="classes à parcourir après la 2nde" >}}
+
+
+La *liste L* précédente représente la chaine: `"2nde" -> "1ere" -> "Term" -> "Univ` 
 
 ```
-L = ("Lundi",("Mardi",("Mercredi",())))
+L = ("2nde",("1ere",("Term",("Univ.", ()))))
 ```
 
 La liste chainée L contient 2 éléments `(tete, queue)` et `queue` est elle-même une liste chainée, contenant aussi `(tete, queue)`. Le dernier élément: `(tete, ())`. 
@@ -342,5 +351,7 @@ Ce type abstrait, appelé `Classe_209` va utiliser l'interface des tableaux stat
 
 **2.** Programmer l'implémentation en python de `moyenne_matiere`
 
-# Liens
+# Liens et prolongements
 * Types séquentiels natifs [cours David Latreyte](https://dlatreyte.github.io/terminales-nsi/chap-6/1-structures-integrees/)
+
+Les types abstraits se prêtent très bien à la programmation recursive, et  

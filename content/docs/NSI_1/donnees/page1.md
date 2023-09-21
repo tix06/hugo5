@@ -1,5 +1,6 @@
 ---
 Title : Denombrer
+bookShowToc: false
 ---
 
 *Données, machines, algorithmes, langages*
@@ -126,7 +127,7 @@ Représenter les 3 circuits ci-dessous avec l'editeur logic.ly
 
 **1.a.** Le circuit permet-il une interaction avec l'utilisateur?
 
-**1.b.** Quels sont les composants utilisés?
+**1.b.** Pour chaque circuit: Quels sont les composants utilisés?
 
 **1.c.** Expliquer le comportement du circuit, pourquoi la lampe s'allume (ou pas)?
 
@@ -182,11 +183,15 @@ $$AND(x,y) = NOT(NAND(x,y))$$
 
 ## 4. Porte logique OR
 Sachant que:
-$$NOT(OR) = AND(NOT(x),NOT(y))$$
+$$NOT(OR(x,y)) = AND(NOT(x),NOT(y))$$
 
-construire cette porte logique à partir des portes AND et NOT
 
-**4.a.** Construire et représenter le schéma électronique
+
+**4.a.** Construire et représenter le schéma électronique de $AND(NOT(x),NOT(y))$ à partir des portes AND et NOT.
+
+**4.b.** Ce circuit est-il équivalent à $NOT(OR(x,y))$?
+
+**4.c.** Conclure: Comment réaliser la fonction $OR(x,y)$ à partir des portes NOT et AND?
 
 ## 5. Additionneur 1 bit
 Un additionneur 1 bit est vu comme deux fonctions booléennes `s` le chiffre des unités et `cout` la retenue de sortie dépendant de trois entrées:
@@ -195,7 +200,13 @@ Un additionneur 1 bit est vu comme deux fonctions booléennes `s` le chiffre des
 
 * 2 sorties : Le bit de résultat `s` et une retenue de sortie `cout`
 
-**5.a.** Compléter la table de vérité des fonctions `s` et `cout`
+
+
+**5.a.** Créer un circuit add1 qui implémente l'additionneur 1 bit à partir du schéma ci-dessous
+
+{{< img src="../images/add_1_bit.png" caption="Additionneur 1 bit" >}}
+
+**5.b.** Compléter la table de vérité des fonctions `s` et `cout`
 
 | a | b | cin | s | cout |
 | --- | --- | --- |--- | --- |
@@ -208,11 +219,9 @@ Un additionneur 1 bit est vu comme deux fonctions booléennes `s` le chiffre des
 |   |  1 | 0 |   |    |
 |   |  1 | 1 |   |  |
 
-**5.b.** Créer un circuit add1 qui implémente l'additionneur 1 bit à partir du schéma ci-dessous
+**5.c.** Expliquez en quoi le circuit suivant est bien un additionneur de 2 bits, avec retenue.
 
-{{< img src="../images/add_1_bit.png" caption="Additionneur 1 bit" >}}
-
-Le TP est inspiré de {{< a link="http://www.mathly.fr/tp_portes.php" caption="mathly.fr" >}}
+*Le TP est inspiré de {{< a link="http://www.mathly.fr/tp_portes.php" caption="mathly.fr" >}}*
 
 ## autres
 
