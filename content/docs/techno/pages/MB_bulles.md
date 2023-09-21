@@ -43,6 +43,8 @@ On pourra se conformer au diagramme ci-dessous:
 
 **Flasher**. La lettre qui est affichée depend alors de l'inclinaison!
 
+**sauvegarder** le fichier `.py`dans votre classeur numérique (vos documents, dans un dossier particulier)
+
 ## Afficher une bulle
 L'inclinaison va maintenant mettre en mouvement une bulle à l'écran. (Un pixel de coordonnées x, y).
 
@@ -94,6 +96,8 @@ Votre fonction doit aussi prendre en compte cette possibilité et ne pas retourn
 
 **Flasher** et testez votre programme. *Parviendrez-vous à maintenir le pixel au centre pendant quelques secondes*?
 
+**sauvegarder** le fichier `.py`
+
 ## Prolongements
 On peut augmenter la complexité du programme en affichant un serpent à l'écran comme dans le jeu *snake*. Les coordonnées des pixels du serpent sont alors stockées dans une Liste `[(x1,y1),(x2,y2),...]` pour permettre leur affichage:
 
@@ -108,9 +112,26 @@ A chaque déplacement, cela ajoute un pixel à la fin du serpent, et retire le p
 
 {{< img src="../images/depl_snake.png" caption="deplacement du serpent vers le bas" >}}
 
-On pourra aussi programmer des fonctions selon l'appui sur l'un des boutons **a** ou **b** de la carte microbit.
+<!--
+Dans la boucle principale, une fois que la variable `direction`a été mise à jour, on ajoutera les lignes suivantes pour la gestion du deplacement du serpent:
 
+```python
+    x, y =  tete(serpent)
+    if direction != "-":
+        x, y = deplace(direction, x, y)
+        ajoute_tete(serpent, x, y)
+        supprime_queue(serpent)
+    sleep(100)
+    display.clear()
+    affiche(serpent)
+ ```
 
+ L'objet `serpent` est alors une liste Python à laquelle on associes les fonctions  `tete`, 'ajoute_tete`, `supprime_queue`et `affiche`.
+
+ Il restera à écrire le script de ces fonctions. Cette méthode de programmation introduit le chapitre sur les types construits en Terminale NSI: On s'intéresse d'abord à l'*interface* de ce nouveau type appelé `serpent`. Puis à son *implémentation*.
+
+ * *interface*: Ce que réalisent les fonctions associées au type construit. Comment on les utilise.
+ * *implémentation*: Programmation de ces fonctions.
 
 
 

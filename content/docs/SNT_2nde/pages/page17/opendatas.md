@@ -75,13 +75,18 @@ Darcis, Pauline, 16
 <membre>
 	<nom>Dupont</nom>
 	<prenom>Francois</prenom>
-<figure{{< a link="https://www.data.gouv.fr/fr/" caption="" >}}{{< img src="../images/data.gouv.png" link="https://www.data.gouv.fr/fr/" caption="Plateforme ouverte des données publiques françaises" >}}
+```
+
+{{< a link="https://www.data.gouv.fr/fr/" caption="" >}}{{< img src="../images/data.gouv.png" link="https://www.data.gouv.fr/fr/" caption="Plateforme ouverte des données publiques françaises" >}}
+
 Le Répertoire National des Élus (RNE) a pour finalité le suivi des titulaires d’un mandat électoral. Il est renseigné et tenu à jour par les préfectures et hauts commissariats et par les services du ministère de l'intérieur, notamment sur la base des éléments fournis par les élus lors de la phase d’enregistrement des candidatures.
 
 {{< img src="../images/elus.png" caption="Données du RNE pour les conseillers municipaux - extrait en csv" >}}
 Les [données du RNE](https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/) sont structurées par mandat. Neuf fichiers sont publiés ici :
 
-1.{{< a link="https://www.data.gouv.fr/fr/datasets/r/d5f400de-ae3f-4966-8cb6-a85c70c6c24a" caption="les conseillers municipaux ;" >}}2. les conseillers communautaires ;
+1.{{< a link="https://www.data.gouv.fr/fr/datasets/r/d5f400de-ae3f-4966-8cb6-a85c70c6c24a" caption="les conseillers municipaux ;" >}}
+
+2. les conseillers communautaires ;
 3. les conseillers départementaux ;
 4. les conseillers régionaux ;
 5. les membres des assemblées des collectivités à statut particulier ;

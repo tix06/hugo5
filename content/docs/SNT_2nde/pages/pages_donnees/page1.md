@@ -22,7 +22,7 @@ La première partie du TP utilise le fichier{{< a link="../datas/fruits.xlsx" ca
 
 
 {{< img src="../images/tableau_orig.png" caption="exemple de présentation structurée des données en tableau" >}}
-> * Ajouter les informations suivantes dans le tableau: *le commercial Sébastien a vendu 9814 Pommes dans la région Sud*.
+> Ajouter les informations suivantes dans le tableau: *le commercial Sébastien a vendu 9814 Pommes dans la région Sud*.
 
 
 <!--
