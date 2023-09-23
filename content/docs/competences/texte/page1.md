@@ -68,6 +68,9 @@ On s'aidera du tutoriel pour LibreOffice Writer à l'adresse suivante: {{< a lin
 ## Réutiliser ses Styles personnalisés
 A l'ouverture d'un nouveau document, les *Styles* sont remis à ceux d'origine. Pour retrouver ceux que vous avez déjà définis, il faut charger les *Styles* à partir de votre ancien document: {{< a link="https://help.libreoffice.org/latest/fr/text/swriter/guide/load_styles.html?DbPAR=WRITER" caption="Voir ici les explications" >}}.
 
+# Correcteur orthographique
+l’extension [Grammalecte](https://grammalecte.net/#download) est un excellent correcteur grammatical et typographique qui vous permettra d’améliorer grandement la qualité de votre compte-rendu(fautes d’orthographe, formes grammaticales, insertion d’espaces insécables...).
+
 # Liens
 * Guide pour rediger un memoire de recherche - [https://www.sciencespo-lille.eu/](https://www.sciencespo-lille.eu/sites/default/files/guide_preparer_et_rediger_un_memoire_de_recherche.pdf)
 * Complément: Autour du livre - EDILIVRE. [Prologue, préambule, préface et introduction : comment bien comprendre ?](https://www.edilivre.com/prologue-preambule-preface-introduction-comment-sy-retrouver/)
