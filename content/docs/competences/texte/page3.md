@@ -3,8 +3,25 @@ Title: guide Utiliser Writer
 bookShowToc: false
 ---
 
-# Formater le texte d’un document
-## Writer: Choisir une feuille de style à l'ouverture
+Cette fiche montre les similitudes de conception d'un document:
+1. Textuel avec LibreOffice Writer
+2. Pour le Web, en langage HTML
+
+# Partie 1: Formater le texte d’un document avec Writer
+Mettre en forme un document *textuel* demande une certaine maitrise du logiciel, mais surtout, connaitre le nom des objets et des fonctions utilisés:
+
+* feuille de Style
+* Objets *paragraphes, Titre 1, Titre 2, ..., listes.
+
+Ainsi que le nom des *propriétés* de ces objets:
+
+* Police, taille de la police, couleur
+* indentation, surlignage, encadré
+* ...
+
+*Remarque*: Le logiciel appelle ces éléments et objets des *Styles*. Nous préférons conserver les termes *objets* ou *éléments* pour désigner les *paragraphes, Titre 1, ...*, comme il est d'usage en HTML (voir partie 2).
+
+## Choisir une feuille de style à l'ouverture
 A l'ouverture du logiciel *Writer*, vous pouvez choisir parmi plusieurs styles prédéfinis. Mais que se passe-t-il si vous avez besoin d'un style différent tel qu'un style poème qui n'est pas dans la fenêtre Styles et formatage? 
 
 Avec Writer, vous pouvez créer les styles correspondant à vos besoins ...[openoffice.org](https://wiki.openoffice.org/wiki/FR/Documentation/Writer_Guide/Cr%C3%A9ation_styles_personnalis%C3%A9s)
@@ -19,7 +36,7 @@ Depuis la fenêtre des Styles (à droite), sélectionner l’un des élements, c
 
 * `Nouveau`: cela créé un nouvel objet fils de celui sélectionné, qui s’ajoute à la liste des Styles
 
-* `Modifier`: cela ouvre la fenêtre de modification du Style, que l’on peut aussi attendre depuis la barre de menu Styles , puis Editer le Style. La nouvelle fenêtre contient alors toutes les propriétés modifiables pour ce Style, classées par onglet.
+* `Modifier`: cela ouvre la fenêtre de modification du Style, que l’on peut aussi atteindre depuis la barre de menu du haut (Styles > choisir `Editer le Style`). La nouvelle fenêtre contient alors toutes les propriétés modifiables pour ce Style, classées par onglet.
 
 {{< img src="../images/text5.png" >}}
 
@@ -50,9 +67,43 @@ Le but est alors de retrouver la bonne Propriété.
 
 {{< img src="../images/text7.png" >}}
 
+## Créer un élément pour insérer des scripts
+Les scripts sont des programmes informatiques. Leur format suit des règles précises, et ceux-ci ne doivent pas être reformatés par le logiciel Writer. Leur indentation doit être conservée, la casse (minuscule / majuscule) aussi.
+
+Cela peut nécéssiter la création d'un nouvel élément dans Writer. Cela permettra d'avoir un format personnalisé, comme une nouvelle *police de caractères*. Souvent, celle utilisée pour les scripts est *Courier New*, en *gras*.
+
+On peut aussi faire un collage du script avec la coloration syntaxique. Le logiciel en ligne [highlight.hohli.com](https://highlight.hohli.com/index.php) permet de faire cela. Coller le script dans la fenêtre, choisir le langage, et copier le texte mis en couleur avant de la coller dans Writer. Puis utiliser le nouveau Style personnalisé pour le formater (script).
+
+{{< img src="../images/text8.png" >}}
+
 ## Ajouter une numérotation
 Vous souhaitez ajouter un numéro aux éléments de type `Titre 1`. 
 
 Voir les explications ici: [pdf de lyceedupaysdesoule.fr](http://www.lyceedupaysdesoule.fr/ressources/libreoffice/libreoffice_writer_6_numerotation_titres.pdf)
+
+# Partie 2: Rédiger un document pour le Web
+## Qu'est-ce que le HTML
+Un document pour le Web est constitué d’un ou plusieurs fichiers de type texte, avec un format qui précise le contenu (en langage HTML), et le style (en langage CSS). Il est prévu pour être ouvert avec un **navigateur**.
+
+La manière avec laquelle vous allez construire ce document suit les même étapes que la rédaction d’un document textuel. Mais ici, les instructions de **mise en page** seront ajoutées au **contenu**, dans le même fichier. Ce fichier aura pour extension **.html**
+
+Le HTML s'occupe de la **structure du document**, grâce à des **balises** qui intègrent le **contenu**.
+
+## Définir des éléments dans la page
+La structure du document est définie à l’aide de balises HTML. Pour créer un paragraphe, le contenu devra être inséré entre une balise de début `<p>` et une balise de fin `</p>`.
+
+Les autres balises principales sont:
+
+* Titre 1: `<h1> ... </h1>`
+* Titre 2: `<h2> ... </h2>`
+* Titre 3: `<h3> ... </h3>`
+* Bloc de citation: `<blockquote> ... </blockquote>`
+
+Où les `...` signifient le contenu.
+
+
+> Télecharger le document textuel sur {{< a link="/pdf/competences/exercice_les_plastiques.odt" caption="les plastiques" >}}. Copiez le texte dans le **bloc note** de windows, ou, mieux, avec un logiciel d’edition de code comme **Notepad++** (ajoute la coloration syntaxique).
+
+> Puis modifier sa structure pour en faire un document HTML
 
 
