@@ -60,7 +60,7 @@ Maintenant que la présentation est satisfaisante, ajoutez l'information suivant
 
 > *le commercial Sébastien a vendu 9814 Pommes dans la région Sud*
 
-**Question d:** Quelle est la réference (la coordonnée) de la case dans laquelle vous avez renseigné *9814*? 
+**Question d:** Quelle est la réference (la coordonnée) de la case dans laquelle vous avez renseigné *9814*? Pourquoi avez-vous choisi cette colonne?
 
 # Rechercher et Filtrer 
 ## Rechercher
@@ -89,7 +89,7 @@ Vous devriez obtenir un tableau ressemblant à celui-ci, mais avec plus de ligne
 
 {{< img src="../images/tableau_tri_2.png" caption="exemple de tableau filtré par Région ET par Produit (n'affiche que la 1ere ligne)" >}}
 
-**Question f:** Combien de lignes sont affichées dans ce tableau filtré?
+**Question f:** Combien de lignes sont affichées dans ce tableau filtré? Qu'ont-elles en commun?
 
 # Les fonctions de calcul
 
@@ -109,10 +109,30 @@ Cela retire tous les filtres.
 
 **Question h:** Cliquer dans la case. Recopier la formule du calcul généré par le logiciel.
 
-# Conclusion
-Un logiciel tableur (Excel, Calc, Number) permet de présenter les données à l'utilisateur en tableau, mais apporte aussi des fonctions de traitement. Ce sont les mêmes fonctions que l'on peut programmer avec un langage de traitement sur une Base de Données (SQL).
+## Somme conditionnelle: SOMME.SI
+La fonction SOMME.SI permet de sélectionner certaines cellules d'une selection étendue.
 
-**Question i:** Quelles sont les fonctions de traitement que vous avez utilisées lors de ce TP? Donner leur nom.
+> On va s'aider du *concepteur de formule*:
+
+* Cliquer dans la cellule dans laquelle vous souhaitez rentrer la formule, sous le tableau.
+* écrire `= SOMME.SI(`
+
+{{< img src="../images/cadre_tab.png" caption="somme conditionnelle " >}}
+> * cliquer sur le bouton *fx* de la barre de saisie.
+* Aidez vous des champs suivants pour remplir les plages pour cette formule:
+	* Plage: faire une selection étendue des valeurs de la colonne *Produits*
+	* Critères: écrire "Pommes", ou bien cliquer sur le mot "Pommes" dans l'une des cellules du tableau (la *C24* dans cet exemple.
+	* Somme_plage: selectionner toutes les valeurs numériques de la colonne *Unités*:
+
+{{< img src="../images/sommesi.png" caption="concepteur de formule pour SOMME.SI" >}}
+On a alors le nombre de Pommes vendues dans toute la France.
+
+**Question i:** Quel est le résultat? Recopier aussi la formule qui a été générée.
+
+# Conclusion
+Un logiciel tableur (Excel, Calc, Number) permet de présenter les données à l'utilisateur en tableau, mais apporte aussi des **fonctions de traitement**. Ce sont les mêmes fonctions que l'on peut programmer avec un langage de traitement sur une Base de Données (SQL).
+
+**Question j:** Quelles sont les *fonctions de traitement*que vous avez utilisées lors de ce TP? Donner leur nom.
 
 # Document
 Fiche reponse à {{< a link="/pdf/SNT/C21_TP_Excel.pdf" caption="télecharger / remplir" >}}

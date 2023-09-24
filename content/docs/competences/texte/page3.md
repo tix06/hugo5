@@ -7,6 +7,8 @@ Cette fiche montre les similitudes de conception d'un document:
 1. Textuel avec LibreOffice Writer
 2. Pour le Web, en langage HTML
 
+Un document réponse est à télécharger et compléter: {{< img src="../images/odt.png" link="/pdf/competences/feuille_reponse.odt"  caption="Document" >}}
+
 # Partie 1: Formater le texte d’un document avec Writer
 Mettre en forme un document *textuel* demande une certaine maitrise du logiciel, mais surtout, connaitre le nom des objets et des fonctions utilisés:
 
@@ -24,7 +26,7 @@ Ainsi que le nom des *propriétés* de ces objets:
 ## Choisir une feuille de style à l'ouverture
 A l'ouverture du logiciel *Writer*, vous pouvez choisir parmi plusieurs styles prédéfinis. Mais que se passe-t-il si vous avez besoin d'un style différent tel qu'un style poème qui n'est pas dans la fenêtre Styles et formatage? 
 
-Avec Writer, vous pouvez créer les styles correspondant à vos besoins ...[openoffice.org](https://wiki.openoffice.org/wiki/FR/Documentation/Writer_Guide/Cr%C3%A9ation_styles_personnalis%C3%A9s)
+Avec Writer, vous pouvez créer les styles correspondant à vos besoins ...[openoffice.org > Créer des styles personnalisés](https://wiki.openoffice.org/wiki/FR/Documentation/Writer_Guide/Cr%C3%A9ation_styles_personnalis%C3%A9s)
 
 Une fois votre document ouvert, vous pouvez toujours **changer de feuille de style**. Pour afficher les styles sous Libre Office : Choisissez dans la barre des menus (en haut): `Styles > Charger les styles`.
 
@@ -72,7 +74,7 @@ Les scripts sont des programmes informatiques. Leur format suit des règles pré
 
 Cela peut nécéssiter la création d'un nouvel élément dans Writer. Cela permettra d'avoir un format personnalisé, comme une nouvelle *police de caractères*. Souvent, celle utilisée pour les scripts est *Courier New*, en *gras*.
 
-On peut aussi faire un collage du script avec la coloration syntaxique. Le logiciel en ligne [highlight.hohli.com](https://highlight.hohli.com/index.php) permet de faire cela. Coller le script dans la fenêtre, choisir le langage, et copier le texte mis en couleur avant de la coller dans Writer. Puis utiliser le nouveau Style personnalisé pour le formater (script).
+On peut aussi faire un collage du script avec la coloration syntaxique *highlight*). Le logiciel en ligne [highlight.hohli.com](https://highlight.hohli.com/index.php) permet de faire cela. Coller le script dans la fenêtre, choisir le langage, et copier le texte mis en couleur avant de la coller dans Writer. Puis utiliser le nouveau Style personnalisé pour le formater (script).
 
 {{< img src="../images/text8.png" >}}
 
@@ -106,4 +108,4 @@ Où les `...` signifient le contenu.
 
 > Puis modifier sa structure pour en faire un document HTML
 
-
+{{< img src="../images/odt.png" link="/pdf/competences/feuille_reponse.odt"  caption="Document à compléter" >}}
