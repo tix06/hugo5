@@ -30,7 +30,7 @@ Ouest;Noël;Poires;4894;;
 Nord;Jérome;Raisins;7580;;
 ```
 
-> Copiez ces données et collez les dans un fichier à l'aide du *bloc notes* (du menu Programmes > accessoires de l'ordinateur).
+> Copiez ces données et collez les dans un fichier à l'aide de *Notepad* (du menu Programmes > accessoires de l'ordinateur).
 
 > Sauvegardez le fichier dans *vos documents* en écrivant entre guillemets le nom du fichier `"fruits.csv"`
 Les guillemets vous permettent de choisir l'extension du fichier et de remplacer celle par defaut choisie par le bloc note (`.txt`).
@@ -56,7 +56,9 @@ Le logiciel Excel sert à PRESENTER les données. C'est à dire à reconstruire 
 
 **Question c:** Quelles sont les **propriétés** que vous avez modifiées? (le nom des boutons que vous avez utilisés, comme par exemple *couleur de fond*)
 
-Maintenant que la présentation est satisfaisante, ajoutez l'information suivante, en renseigant certaines valeurs dans le tableau:
+Maintenant que la présentation est satisfaisante:
+
+> ajoutez l'information suivante, en renseigant certaines valeurs dans le tableau:
 
 > *le commercial Sébastien a vendu 9814 Pommes dans la région Sud*
 

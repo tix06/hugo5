@@ -66,7 +66,7 @@ On peut donc lui associer des méthodes ou fonctions, qui seront indépendantes 
 La *liste L* précédente représente la chaine: `"2nde" -> "1ere" -> "Term" -> "Univ` 
 
 ```
-L = ("2nde",("1ere",("Term",("Univ.", ()))))
+L = ("Univ",("Term",("1ere",("2nde", ()))))
 ```
 
 La liste chainée L contient 2 éléments `(tete, queue)` et `queue` est elle-même une liste chainée, contenant aussi `(tete, queue)`. Le dernier élément: `(tete, ())`. 
@@ -147,14 +147,14 @@ Python implémente naturellement un autre type de tableau, que l'on appelera *dy
 Attention: les listes chaînées (vues plus haut) et les Listes Python sont différentes, il ne s'agit pas des mêmes objets.
 
 # Editeur Python
-* L'**editeur** suivant se présente comme un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
+* Utiliser un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
 
 <div>
 <py-repl id="my-repl" auto-generate="true"></py-repl>
 </div>
 
 # Exercices sur les listes
-On propose l'implémentation suivante pour les listes chainées:
+On propose l'**implémentation** suivante pour les listes chainées:
 
 ```python
 def creer_liste():
@@ -195,6 +195,36 @@ def elements_liste(L):
   # 
   
 ```
+
+## Exercice sur le parcours scolaire
+Le `parcours` scolaire est un type abstrait qui s'apparente à une Liste. Les éléments sont disposés dans cette Liste sous la forme:
+
+```
+['Terminale', ['Premiere', ['Seconde', []]]]
+```
+
+L'interface propose les fonctions suivantes:
+
+`creer_liste, liste_vide, inserer, tete, queue`.
+
+**1.** Quelles instructions, utilisant l'interface, vont créer la Liste `parcours_lycee` de la manière suivante: `['Terminale', ['Premiere', ['Seconde', []]]]`?
+
+**2.** Quelle instruction va permettre de connaitre la dernière classe visitée lors du parcours scolaire?
+
+**3.** Que retourne `queue(parcours)`? *(choisir)*
+
+* la première classe du parcours scolaire
+* le parcours scolaire sans la dernière année
+
+**4.** Que retourne le script suivant?
+
+```python
+while not liste_vide(parcours):
+  print(tete(parcours))
+  parcours = queue(parcours)
+```
+
+**5.** On souhaite utiliser ce type abstrait pour décrire le parcours universitaire. Quelles instructions vont créer la structure de données du parcours qui ira de `Licence 1` à `Master 2`?
 
 ## Exercice d'introduction aux listes
 On cherche à implémenter l'historique du navigateur pour permettre de revenir en arrière lors de la navigation.
