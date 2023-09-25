@@ -226,7 +226,7 @@ while not liste_vide(parcours):
 
 **5.** On souhaite utiliser ce type abstrait pour décrire le parcours universitaire. Quelles instructions vont créer la structure de données du parcours qui ira de `Licence 1` à `Master 2`?
 
-## Exercice d'introduction aux listes
+## Exercice sur l'historique de navigation
 On cherche à implémenter l'historique du navigateur pour permettre de revenir en arrière lors de la navigation.
 
 On visite, dans l'ordre les sites suivants:
