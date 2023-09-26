@@ -4,7 +4,7 @@ Title : codage
 
 
 # Civilisations anciennes
-Le document suivant donne un aperçu des périodes d'existence d'anciennes civilisations. On pourra se référer à la page suivante pour plus de détails : [http://www.essential-humanities.net/history-overview/world-history-timeline/](http://www.essential-humanities.net/history-overview/world-history-timeline/)
+Le document suivant donne un aperçu des périodes d'existence d'anciennes civilisations. 
 
 L'apparition des grandes civilisations commence alors que le néolithique prend fin. C'est l'usage de la metallurgie qui aura pour conséquence de structurer davantage la société, avec l'usage d'armes en métal par des soldats spécialisés. La protection des richesses accumulées par les producteurs est confiée à des guerriers professionnels. La société se hiérarchise.
 
@@ -155,7 +155,7 @@ Pour chacun des systèmes de numération, la valeur d'un nombre est égale à la
 Il s'agit d'une numération en base 10 (numération décimale), mais différente de la notre: Un autre symbole correspond à la dizaine de dizaine, etc.
 
 {{< img src="../images/egyptien2.png" alt="tableau a remplir" caption="symboles utilisés par les egyptiens, de 1 à 1 million" >}}
-> Comment les egyptiens écrivaient-ils le nombre 1637 ?
+
 
 **Base 60:** Pour les **[Babylonniens](https://fr.wikipedia.org/wiki/Num%C3%A9ration_m%C3%A9sopotamienne)[^3]** cependant, cette numération ne permettait de compter que jusqu'à 59. Ils ont alors utilisé les mêmes chiffres pour dénombrer les **soixantaines**:
 
@@ -165,7 +165,9 @@ Ce qui s'écrira en notation babylonienne:
 
 $$| ~ >|$$
 
-> Comment les mésopotamiens écrivaient-ils le nombre 1637 ?
+{{< img src="../images/base60.png" alt="equivalence base 60 vers decimale" caption="Equivalence entre la base 60 sumérienne et notre base décimale" >}}
+
+
 
 Toutes les civilisations n'ont pas adopté la numération décimale, ni les mêmes symboles  pour compter : 
 
@@ -220,26 +222,85 @@ Fondamentalement, ce sont les savants indiens qui vont faire évoluer le zéro v
 {{< img src="../images/zero.png" alt="video Futura Sciences" link="https://youtu.be/kH3S8vIt-8g" caption="video Futura Sciences : Les découvertes du zero" >}}
 
 
-# Epoque médievale
+## Epoque médievale
 
 Le savoir circule à travers le monde de l'Extrême-Orient à l'Egypte, de la Méditerranée à l'lslande.
 
 Au IXe siècle, les Arabes emprunteront aux Indiens le zéro, le mot sunya devenant sifr. Ce ne sera finalement qu'au XIIe siècle que cette écriture arrivera en Occident, issue des « Ghubâr », les arabes occidentaux.
 
-{{< img src="../images/tabletteBab.png" alt="tablette Babylonienne" >}}
-1. En vous aidant du documents suivant, traduire les inscriptions de la tablette sumérienne : compter le nombre d’animaux de chacune des espèces.
-2. Combien de symboles différents utilisent les sumériens pour écrire les chiffres ? 
-{{< img src="../images/base60.png" alt="equivalence base 60 vers decimale" caption="Equivalence entre la base 60 sumérienne et notre base décimale" >}}3. Ces symboles, sont-ils différents pour les unités, les soixantaines, et les soixantaines de soixantaines ? 
-4. Expliquer en quoi on peut considérer que les sumériens utilisaient une numération de position ?
 
-## Numération egyptienne
+# Questions
+## Numération Babylonienne
+
+1. En vous aidant du documents suivant, traduire les inscriptions de la tablette sumérienne : compter le nombre d’animaux de chacune des espèces.
+{{< img src="../images/tabletteBab.png" alt="tablette Babylonienne" >}}
+2. Combien de symboles différents utilisent les sumériens pour écrire les chiffres ? 
+3. Ces symboles, sont-ils différents pour les unités, les soixantaines, et les soixantaines de soixantaines ? 
+4. Comment les mésopotamiens (et Sumeriens) écrivaient-ils le nombre 1637 ?
+5. Expliquer en quoi on peut considérer que les sumériens utilisaient une numération de position ?
+
+## Numération Egyptienne
 C’est une numération de type additif.
 
 Les Égyptiens de l’Antiquité utilisaient des hiéroglyphes pour écrire leurs nombres. Ce système de hiéroglyphes est assez proche de notre système de numération décimale : chaque symbole possède une valeur (1,10,100,1 000...) et peut être écrit jusqu’à neuf fois.
 
 1. En étudiant les trois exemples donnés ci-dessous, retrouver la valeur des sept hiéroglyphes utilisés. (voir images)
-2. Comparer les numérations Babylonienne et Egyptienne : laquelle des deux est une numération de position ? Justifiez.
+2. Comment les egyptiens écrivaient-ils le nombre 1637 ?
+3. Comparer les numérations Babylonienne et Egyptienne : laquelle des deux est une numération de position ? Justifiez.
+4. Les egyptiens, avaient-il une manière de représenter les fractioos de 1 (par exemple 1/2)? Expliquer.
 
+## Numération Romaine
+1. Quels sont les symboles romains utilisés pour compter jusqu'à 2000?
+2. En quelle année, exprimée en chiffres romains, Jésus est-il né ?
+3. La numération romaine, peut-elle être considérée comme une numération de position?
+4. Comment les romains écrivaient-ils le nombre 1637 ?
+
+## Numération binaire
+1. Quelle est la valeur de la base de la numération binaire?
+2. Sans effectuer de calcul, dire si le nombre binaire 10011001 est pair ou impair.
+3. Quelle est la valeur la plus élevée que l'on peut écrire avec 8 symboles, en notation binaire?
+4. Comment écrit-on le nombre 1637 en binaire?
+5. Citer un ou des avantages de la notation binaire.
+6. Le binaire est aussi utilisé pour écrire des lettres et des caractères. Comment?
+7. Additionnez 1010 (binaire) + 1101 (binaire), réponse en binaire. Expliquez la procédure.
+
+## Numération Hexadécimale
+1. Quelle est la valeur de la base de la numération hexadécimale?
+2. L'écriture #F4 représente t-elle un nombre héxadecimal? Si oui, quelle est sa valeur?
+3. Quelle est la valeur la plus élevée que l'on peut écrire avec 2 symboles, en notation hexadécimale?
+4. Comment écrit-on le nombre 1637 en hexadecimal?
+5. Citer un ou des avantages de la notation hexadécimale.
+6. L'hexadécimal est aussi utilisé pour écrire des lettres et des caractères. Comment?
+7. Comment convertir rapidement 1100 1001 (binaire) en héxadecimal? 
+
+## Le système bibinaire
+Le chanteur et mathématicien [Boby Lapointe](https://fr.wikipedia.org/wiki/Boby_Lapointe), surtout connu pour ses talents d’auteur, de compositeur et d’acteur, a inventé un système de numération qu’il voulait universel et proche
+du langage des ordinateurs. Ce système, qualifié de bibinaire, s’appuie sur l’écriture binaire des nombres et présente deux aspects, un langage écrit qui repose sur des symboles associés aux nombres, et un langage oral.
+
+Soit un nombre N. Par exemple : N = 347, donc N = 101011011 (binaire).
+
+Dans le système bibinaire, on décompose l’écriture binaire en quartets (groupements de quatre bits) en partant de la droite et en ajoutant à gauche, si besoin est, les zéros complémentaires pour former un nombre entier de quartets.
+
+Ici, N = (0001 0101 1011).
+
+On considère que chaque quartet est composé de deux duets (00, 01, 10 ou 11). A chaque duet est associé une consone ou une voyelle, selon que ce duet est en tête ou en queue du quartet : 
+
+| Duet | Correspondance duet de tête | Correspondance en duet de queue |
+| --- | --- | --- |
+| 00 | H | O |
+| 01 | B | A |
+| 10 | K | E |
+| 11 | D | I |
+
+Ainsi, le quartet 0111 se lit BI, car 01 est en tête et correspond à B et 11 est en queue et correspond à I.
+Le nombre N = 347 après écriture binaire, se lit HABAKI. 
+
+1. Combien de quartes différents peut-on écrire en numération binaire ?
+2. Quelle est la base réellement utilisée dans le système bibinaire ?
+3. Quels nombres décimaux correspondent aux mots : HEKAKA, BOKEKE, KEBOBO et KEBAHI ?
+4. Comment sont traduits les nombres 52326 et 11847 dans le langage bibinaire?
+
+# Notes
 {{< img src="../images/egyptien1.png" alt="exemple de numeration egyptienne" caption="exemples, numeration egyptienne" >}}
 {{< img src="../images/egyptien2.png" alt="tableau a remplir" caption="tableau a remplir" >}}
 [^1]: Mésopotamiens : La civilisation babylonienne est héritière de Sumer, et elle s'est épanouie en Mésopotamie du Sud du début du IIe millénaire av. J.-C. jusqu'au début de notre ère. Elle est marquée par l'affirmation progressive, de la cité de Babylone, capitale de l'État qui connait son apogée à partir du VIe siècle av. J.-C. Cette cité prospère étend son influence du nord-est de la Syrie, au nord de l'Irak actuel, ainsi que les plaines plus au sud. Les milliers de tablettes cunéiformes découvertes sur les différents sites de Babylonie (Babylone, Ur, Uruk, Nippur, Sippar, etc.) ont permis de dresser le tableau d'une civilisation urbaine reposant sur une agriculture irriguée potentiellement très productive. [https://fr.wikipedia.org/wiki/Babylone](https://fr.wikipedia.org/wiki/Babylone)
