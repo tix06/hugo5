@@ -492,6 +492,8 @@ plt.show()
 
 * On calcule la moyenne de valeurs de `signal` avec la fonction `moyenne` vue dans l'exercice précédent.
 
+{{< img src="../images/moyenne_gli.png" caption="" >}}
+
 * On place la valeur moyenne dans `signal_filtre[i]`
 
 * On répète l'operation pour tous les index `i` compris entre $largeur//2,len(signal_filtre)-largeur//2)$
