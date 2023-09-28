@@ -102,8 +102,31 @@ def creer_liste():
   return []
 ```
 
+## Généralités sur les listes chainées
+Une liste chainée est un objet:
+
+* **dynamique**:
+on peut modifier sa taille après création, par exemple en faisant: `inserer(L, e)`
+
+* et **mutable**: 
+on peut le modifier en partie (ajout/suppression d'un élément), et sa copie se fait par reference. 
+
+* dont les éléments ont une relation d'ordre entre eux. 
+
+* dont on peut atteindre un élément au rang i en temps proportionnel à i, avec une boucle par exemple.
+
+L'**interface** d'une liste chainée doit aussi proposer **l'insertion d'un élément au rang i, en temps constant.** (Intercaler cet élément entre 2 éléments de la liste). Ceci ne peut pas être réalisé avec l'implémentation vue plus haut.
+
+Nous verrons d'autres implémentations pour ce type abstrait.
+
+
 # Tableaux
 Les tableaux se comportent de manière très similaire aux listes, sauf que les types d'objets qui y sont stockés sont limités. (Array)
+
+C'est un objet qui est:
+
+* statique: sa taille ne varie pas une fois celui-ci créé 
+* et mutable: on peut le modifier en partie, par exemple avec une instruction du genre: `T[i] = x`. Sa copie se fait par reference.
 
 Un tableau peut être représenté en Python par un tuple contenant 2 éléments: 
 
@@ -145,6 +168,11 @@ Les tableaux vus ci-dessus sont des tableaux *statiques*: leur taille ne peut pa
 Python implémente naturellement un autre type de tableau, que l'on appelera *dynamique*: Les *Listes Python*. Ce problème de dimension n'apparait pas dans les Listes Python, qui apportent de surcroit des méthodes bien pratiques comme `append` et `pop`.
 
 Attention: les listes chaînées (vues plus haut) et les Listes Python sont différentes, il ne s'agit pas des mêmes objets.
+
+# La liste python dynamique (type list)
+Le type `list` python est dynamique. Il peut lui aussi implémenter une Liste chainée ou bien un Tableau. 
+
+Pour un Tableau, si on l'implémente avec le type `list`, la taille de celui-ci ne devra pas être modifiée à la fin du traitement.
 
 # Editeur Python
 * Utiliser un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
@@ -285,7 +313,7 @@ def elements_liste(L):
 ```
 
 ## Exercice sur la separation d'une liste
-Ecrire une fonction `separe` qui sépare les éléments d'une liste en deux listes selon s'ils sont inférieurs (strictement) ou supérieurs (et égal) à une valeur `v`:
+Compléter la fonction `separe` qui sépare les éléments d'une liste en deux listes selon s'ils sont inférieurs (strictement) ou supérieurs (et égal) à une valeur `v`:
 
 ```python
 def separe(L,v):
@@ -294,12 +322,28 @@ def separe(L,v):
   L_sup = creer_liste()
   while not liste_vide(L_copie):
     # à completer
+    # utilise les fonctions tete, queue et insere
     # 
     # 
-    # 
+  return L_inf, L_sup
 ```
 
-# Exercices sur les tableaux statiques
+Compléter alors le programme qui affiche les 2 listes une fois celles-ci séparées. La liste L contiendra les valeurs à séparer. Pour utiliser les fonctions de l'interface des listes chainées (voir plus haut), on créé une liste chainée à partir d'un ensemble de valeurs mises entre `[]`: 
+
+```python
+L = creer_liste()
+for elem in [1,3,20,18,16,11,101,12,15,2,5,4,2,8,1]:
+    L = inserer(L,elem)
+
+v = 12 
+# appel de la fonction separe
+print(L_inf)
+print(L_sup)
+# [1, [3, [11, [2, [5, [4, [2, [8, [1, []]]]]]]]]]
+# [20, [18, [16, [101, [12, [15, []]]]]]]
+``` 
+
+# Exercices sur les Tableaux statiques
 On propose l'implémentation suivante pour les tableaux statiques:
 
 ```python
@@ -330,7 +374,9 @@ def remplacer(T,i,e):
 
 ## Utiliser l'interface du tableau
 
-**1.** Soit le tableau suivant qui implémente les notes de Kyle dans les matières C1, C2, C3:
+{{< img src="../images/array.png" caption="Tableau de notes" >}}
+
+**1.** Soit le tableau qui implémente les notes de Kyle dans les matières C1, C2, C3:
 
 ```python
 T = ([6, 7, 8], 3) 
@@ -348,15 +394,19 @@ T = ([6, 7, 8], 3)
 T = ([[6, 7, 8],
       [10, 0, 10],
       ['?', '?', '?']
-      ['?', '?', '?']], ..)
+      ['?', '?', '?']], (4,3))
 ```
 
-**a.** Recopier le tableau T et remplacer les '?' et les '..' par les bonnes valeurs (utiliser l'image plus haut).
+**a.** Recopier le tableau T et remplacer les '?' par les bonnes valeurs (utiliser l'image plus haut). Que signifie le tuple `(4,3)` placé comme 2e élément du tableau?
 
-**b.** Quelle instruction de l'interface va donner le nombre d'élèves dans le tableau?
+**b.** Utiliser l'instruction `taille` de l'interface pour donner le nombre d'élèves dans le tableau? Puis le nombre de colonnes (matières).
 
 
-**c.** Modifier la fonction `remplacer` pour que celle-ci modifie la note dans la matière voulue pour un élève donné. Par exemple:
+**c.** Modifier la fonction `remplacer` pour que celle-ci modifie la note dans la matière voulue pour un élève donné. 
+
+Par exemple: Pour modifier la note de la colonne 2 de l'élève au rang 0 (premiere ligne): 
+
+Si on veut lui mettre 12, on fera: `remplacer(T,0,2,12)`
 
 
 ```python
@@ -374,14 +424,111 @@ Afin de gérer les notes des élèves de la classe de seconde 209, on veut défi
 
 Ce type abstrait, appelé `Classe_209` va utiliser l'interface des tableaux statiques définie plus haut. Mais il va aussi calculer la moyenne des notes grâce à 2 nouvelles fonctions de son interface:
 
-* `moyenne_eleve`: va calculer la moyenne de l'élève au rang `eleve_i` (par exemple, pour Kyle, `eleve_i` vaut 0)
-* `moyenne_matiere`: va calculer la moyenne sur une matière à partir du rang `matiere_i`. Par exemple, pour C3, `matiere_i` vaut 3)
+### `moyenne`: 
+Fonction qui va calculer la moyenne `m` de l'élève au rang `eleve_i` (par exemple, pour Kyle, `eleve_i` vaut 0) avec l'instruction: 
 
-**1.** Programmer l'implémentation en python de `moyenne_eleve`
+```python
+i = 0 # Kyle
+m = moyenne(T[0][i])
+``` 
 
-**2.** Programmer l'implémentation en python de `moyenne_matiere`
+Pour programmer cette fonction `moyenne(L)`, il faudra:
+
+* parcourir toutes les notes de la liste `L` mise en paramètre.
+* Ajouter la note à une variable  `s`, qui vaut 0 au depart.
+* Puis, à la fin, retourner la moyenne, c'est à dire $s / len(L)$
+
+**1.** Programmez cette fonction
+
+### `moyenne_matiere`
+Fonction qui va calculer la moyenne sur une matière `mm` à partir du rang `j`. Par exemple, pour C3, `j` vaut 2, le rang dans le Tableau de notes):
+
+```python
+j = 2 # colonne C3
+mm = moyenne_matiere(T[0])
+``` 
+
+Pour programmer cette fonction `moyenne_matiere(M)`, il faudra:
+
+* Faire la somme $M[0][j] + M[1][j] + M[2][j] + M[3][j]$
+* Calculer la moyenne
+* retourner la valeur
+
+**2.** Programmez cette fonction
+
+## moyenne glissante et tableau statique
+Les courbes de données issues du monde réel sont souvent *bruitées*. Pour simuler ce type de données, nous allons créer une liste de valeurs cumulées aléatoires.
+
+{{< img src="../images/filtre.png" caption="courbe de donnees brutes et donnees filtrees" >}}
+
+Pour créer et afficher ces valeurs cumulées, nous créons la liste `signal2` qui est produite à partir de valeurs aléatoires (`signal0`), puis cumulées dans `signal2`:
+
+```python
+import numpy as np
+from numpy.random import randn
+import matplotlib.pyplot as plt
+
+plt.clf()
+signal0 = (randn(800))*2
+plt.plot(signal0,color='silver',label='Signal aleatoire')
+plt.grid(True,which='both')
+plt.legend(loc='best')
+plt.title('Signal avec bruit')
+
+signal2 = np.cumsum(randn(800))
+plt.plot(signal2,color='red',label='Signal cumulé')
+plt.grid(True,which='both')
+plt.legend(loc='best')
+plt.show()
+```
+
+**Etapes:**
+
+* On fait une copie par valeur de `signal2` (valeurs d'origine) dans `signal_filtre` (valeurs moyenées)
+
+* On choisit une certaine largeur de liste pour les valeurs dont on fait la moyenne. Par exemple largeur = 10.
+
+* Au rang i, dans la liste bruitée `signal2`: On prélève les valeurs entre les rangs $i- largeur//2$ et $i + largeur//2 - 1$ que l'on stocke dans le tableau STATIQUE appelé `signal`. Ce tableau conserve la même *taille* pendant tout l'exercice. (ici, largeur = 10)
+
+* On calcule la moyenne de valeurs de `signal` avec la fonction `moyenne` vue dans l'exercice précédent.
+
+* On place la valeur moyenne dans `signal_filtre[i]`
+
+* On répète l'operation pour tous les index `i` compris entre $largeur//2,len(signal_filtre)-largeur//2)$
+
+Puis on affiche les graphique de `signal2` (inchangé) et `signal_filtre` (courbe lissée)
+
+**1.** Suivre ces étapes pour obtenir les graphiques des courbes de données bruitées et lissées.
+
+**2.** Créer une fonction `lissage` à partir de votre script, qui prend en paramètres une liste `L` et une largeur `v`, et retourne une liste de valeurs filtrées par une moyenne glissante sur `v` valeurs.
+
+<!-- Correction
+```python
+def moyenne(signal):
+    s = 0
+    b = len(signal)
+    for elem in signal[:b]:
+        s += elem
+    return s / (b)
+
+
+
+def lissage(L,largeur):
+    signal_filtre = L.copy()
+    for i in range(largeur//2,len(L)-largeur//2):
+        signal = L[i-largeur//2:i+largeur//2]
+        # signal est le petit tableau de dimension largeur 
+        # dont on fait la moyenne glissante
+        # puis on stocke dans signal_filtre
+        signal_filtre[i] = moyenne(signal)
+    return signal_filtre
+
+signal_filtre = lissage(signal2,10)
+``` 
+-->
+
 
 # Liens et prolongements
 * Types séquentiels natifs [cours David Latreyte](https://dlatreyte.github.io/terminales-nsi/chap-6/1-structures-integrees/)
 
-Les types abstraits se prêtent très bien à la programmation recursive, et  
+
