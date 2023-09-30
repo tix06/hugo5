@@ -70,3 +70,5 @@ Il s'agit d'un texte long (plusieurs centaines de pages), fruit de la concertati
 
 Alessandro Acquisti is a Professor of Information Technology and Public Policy at the Heinz College, Carnegie Mellon University. His research combines economics, decision research, and data mining to investigate the role of privacy in a digital society. His studies have spearheaded the economic analysis of privacy, the application of behavioral economics to the understanding of consumer privacy valuations and decision-making, and the investigation of privacy and personal disclosures in online social networks.
 
+# Compléments
+Voir notes du cours du dossier [competences numeriques > protection des données](/docs/competences/texte/page4/)
