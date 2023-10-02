@@ -7,7 +7,7 @@ Cette fiche montre les similitudes de conception d'un document:
 1. Textuel avec LibreOffice Writer
 2. Pour le Web, en langage HTML
 
-Un document réponse est à télécharger et compléter: {{< img src="../images/odt.png" link="/pdf/competences/feuille_reponse.odt"  caption="Document" >}}
+Un document réponse est à télécharger et compléter: {{< img src="/images/doc_reponse.png" link="/pdf/competences/feuille_reponse.odt"  caption="Document à compléter" >}}
 
 # Partie 1: Formater le texte d’un document avec Writer
 Mettre en forme un document *textuel* demande une certaine maitrise du logiciel, mais surtout, connaitre le nom des objets et des fonctions utilisés:
@@ -108,4 +108,4 @@ Où les `...` signifient le contenu.
 
 > Puis modifier sa structure pour en faire un document HTML
 
-{{< img src="../images/odt.png" link="/pdf/competences/feuille_reponse.odt"  caption="Document à compléter" >}}
+{{< img src="../images/odt.png" link="/pdf/competences/feuille_reponse.odt"  caption="Document à télécharger" >}}

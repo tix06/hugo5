@@ -484,11 +484,11 @@ plt.show()
 
 **Etapes:**
 
-* On fait une copie par valeur de `signal2` (valeurs d'origine) dans `signal_filtre` (valeurs moyenées)
+* On fait une copie par valeur de `signal2` (liste des valeurs d'origine) dans `signal_filtre` (liste dont les termes seront remplacés par la valeur moyenée).
 
 * On choisit une certaine largeur de liste pour les valeurs dont on fait la moyenne. Par exemple largeur = 10.
 
-* Au rang i, dans la liste bruitée `signal2`: On prélève les valeurs entre les rangs $i- largeur//2$ et $i + largeur//2 - 1$ que l'on stocke dans le tableau STATIQUE appelé `signal`. Ce tableau conserve la même *taille* pendant tout l'exercice. (ici, largeur = 10)
+* Au rang i, dans la liste bruitée `signal2`: On prélève les valeurs entre les rangs $i- largeur//2$ et $i + largeur//2$ que l'on stocke dans un tableau STATIQUE appelé `signal`. Ce tableau conserve la même *taille* pendant tout l'exercice. (ici, largeur = 10)
 
 * On calcule la moyenne de valeurs de `signal` avec la fonction `moyenne` vue dans l'exercice précédent.
 
@@ -496,7 +496,9 @@ plt.show()
 
 * On place la valeur moyenne dans `signal_filtre[i]`
 
-* On répète l'operation pour tous les index `i` compris entre $largeur//2,len(signal_filtre)-largeur//2)$
+{{< img src="../images/moyenne_gli2.png" caption="" >}}
+
+* On répète l'opération pour tous les index `i` compris entre $largeur//2,len(signal_filtre)-largeur//2)$
 
 Puis on affiche les graphique de `signal2` (inchangé) et `signal_filtre` (courbe lissée)
 
@@ -509,9 +511,9 @@ Puis on affiche les graphique de `signal2` (inchangé) et `signal_filtre` (courb
 def moyenne(signal):
     s = 0
     b = len(signal)
-    for elem in signal[:b]:
+    for elem in signal:
         s += elem
-    return s / (b)
+    return s / b
 
 
 
