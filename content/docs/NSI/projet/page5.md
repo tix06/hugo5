@@ -75,7 +75,7 @@ quit()
 
 Copier-coller celui-ci dans la fenêtre du fichier `main.py`.
 
-Puis programmer les fonctions utiles pour le bon fonctionnement du jeu dans un nouveau fichier (nouvel onglet dans Trinket) que vous appelerez `utils.py`. Ce seront les fonction de l'*interface* du type abstrait `serpent`.
+Puis programmer les fonctions utiles pour le bon fonctionnement du jeu dans un nouveau fichier (nouvel onglet dans Trinket) que vous appelerez `utils.py`. Ce seront les fonctions de l'*interface* du type abstrait `serpent`.
 
 Dans le programme `main.py`:
 
@@ -115,6 +115,10 @@ def supprime_queue(S):
 ```  
 
 # Démarche de projet
+## La structure de données choisie
+Expliquer pourquoi la structure de données `serpent`, et son interface constituée de `affiche, tete, ajoute_tete, et supprime_queue` est bien adpatée pour implémenter le jeu du Snake.
+
+## Prolongement
 Quelles fonctionnalités du jeu manque-t-il pour que celui-ci soit complet? 
 
 * quelles fonctions de l'interface serpent?
