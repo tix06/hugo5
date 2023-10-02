@@ -101,7 +101,7 @@ Tout individu doit:
 
 # La CNIL
 ## Definition
-Comission Nationale pour l'informatique et les libertés. La CNIL est la premiere autorité administrative instaurée en France (1978) à la faveur de l'adoption de la loi "informatique et libertés". 
+Commission Nationale pour l'informatique et les libertés. La CNIL est la premiere autorité administrative instaurée en France (1978) à la faveur de l'adoption de la loi "informatique et libertés". 
 
 ## Les actions de la CNIL
 La CNIL exerce un pouvoir de contrôle et de sanctions pour la protection des données. Elle est indépendante et ne reçoit d'instruction d'aucune autorité publique.
