@@ -124,10 +124,9 @@ Quelles fonctionnalités du jeu manque-t-il pour que celui-ci soit complet?
 * quelles fonctions de l'interface serpent?
 * quel objet? Quelle structure de données envisagez-vous pour cet objet?
 
-# Liens
-Ce TP est inspiré de la page [www.edureka.co](https://www.edureka.co/blog/snake-game-with-pygame/)
 
-<!--
+
+
 # Correction fichier main.py
 ```python
 import pygame
@@ -218,4 +217,6 @@ def supprime_queue(S):
         S[i] = S[i+1]
     S.pop()
 ```
---->
+
+# Liens
+Ce TP est inspiré de la page [www.edureka.co](https://www.edureka.co/blog/snake-game-with-pygame/)
