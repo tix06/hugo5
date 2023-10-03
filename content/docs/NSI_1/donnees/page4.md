@@ -21,7 +21,7 @@ C’est la représentation standard sur les ordinateurs pour exprimer les nombr
 
 **Définition**
 
-> Sur n bits, on exprime les nombres de l’intervalle [–2<sup>{n-1}</sup>; 2<sup>{n – 1}</sup> – 1] selon les 2 règles suivantes:
+> Sur n bits, on exprime les nombres de l’intervalle $[–2^{(n-1)}; 2^{(n – 1)}– 1]$ selon les 2 règles suivantes:
 
 > * Un nombre positif est représenté de façon standard par son écriture binaire. 
 * un nombre négatif est représenté en ajoutant 1 à son complément à 1 (obtenu en inversant tous les bits) et en laissant tomber une éventuelle retenue finale.
