@@ -2,10 +2,69 @@
 Title: fonctions en python
 ---
 
+# Boucles bornées en Python
+**1. Definition:** Une **boucle bornée**  est un système d’instructions qui permet de répéter un certain nombre de fois toute une série d’opérations.
+
+La syntaxe d'une boucle bornée, en langage algorithmique peut s'écrire:
+
+```python
+Pour i allant de 0 a n-1
+Faire:
+   instruction 1
+   instruction 2
+FinPour
+```
+
+En python, la syntaxe correspondante est:
+
+```python
+for i in range(n):
+  instruction 1
+  instruction 2
+``` 
+
+* **Remarques:**
+
+  * Le bloc d'instruction sera executé n fois. Celui-ci peut contenir une ou plusieurs instructions, du moment qu'elles sont bien positionnées dans le bloc.
+  * En *Python*, le **bloc** est identifié par une **indentation**: un retrait par rapport au bord gauche, comprenant 2 espaces (ou 4).
+  * Pour sortir du bloc, on élimine l'indentation (on revient sur le bord gauche)
+  * La fonction `range(n)` renvoie la liste des entiers de 0 à n-1. C’est un principe général en informatique, on commence toujours à compter à partir de 0, et il faut donc s’arrêter à n-1 pour effectuer n fois la boucle.
+  * Pour chaque itération, le variant `i` prend une nouvelle valeur de l'ensemble `{0,1,2,... n-1}`, et peut être utilisé dans le bloc d'instructions. 
+  * On peut choisir n'importe quel nom pour le variant, pas seulement `i`.
+
+* *Exemple 1*: afficher le variant de boucle `i`
+
+```python
+for i in range(3):
+  print(i)
+# affiche
+0
+1
+2
+```
+
+
+
+*Remarque:* la fonction `range(3)` va créer une liste itérable constituée des valeurs 0, 1, 2. Ce sont les valeurs prises successivement par le variant `i` dans `for i in range(3)`
+
+* *Exemple 2*: Ce variant peut être utiliser pour une formule arithmétique, à l'intérieur de la boucle:
+
+```python
+for i in range(3):
+  x = i**2 + 1
+  print(x)
+# affiche
+1
+2
+5
+```
+
+**2. Exercice:** Programmez une boucle bornée qui affiche (fonction `print`) les 10 valeurs de la table de 7 ($7 \times 1 = 7...$)
+
 # Les fonctions en python
 ## Généralités
 ### fonctions natives du langage
-Tous les langages de programmation fournissent un large ensemble de fonctions prêtes à être utilisées. Nous avons déjà rencontré diverses fonctions prédéfinies, de la librairie standart : `print`, `input`, `range`, `len`.
+Tous les langages de programmation fournissent un large ensemble de fonctions prêtes à être utilisées. Nous avons déjà rencontré diverses fonctions prédéfinies, de la librairie standart : `print`, `input`, `range`.
 
 > Tester dans un notebook, ou en console les fonctions natives suivantes:
 
@@ -24,9 +83,6 @@ Dans ces 2 exemples, on a utilisé un ou plusieurs arguments, positionnés entre
 Les fonctions permettent de rendre le script plus efficace, plus facile à lire et à vérifier. Un bonne pratique est de faire régulierement du *remaniement* de son code : C'est à dire ré-écrire les parties du programme qui *fonctionnent* et les mettre dans une fonction ou un module. Cela evite aussi les répétitions. On remplace alors le code par un appel à une fonction.
 
 
-> On peut revoir la fin du TP sur les fonctions à la page [TPn°1 Calculs en python](/docs/NSI_1/donnees/page2/#fonctions-programm%C3%A9es)
-
-<br>
 
 > *Définition :* Une fonction est un bloc de code auquel on donne un nom en vue de le reutiliser. L'appel de son nom exécute tout le bloc de code que cette fonction contient.
 
@@ -48,9 +104,29 @@ salut()
 # retourne (et affiche) 'bonjour tout le monde'
 ```
 
+Souvent, cette donnée retournée doit être affectée à une variable:
+
+```python
+message = salut()
+print(message)
+# affiche: bonjour tout le monde
+```
+
 ## Travaux pratiques: fonction sans paramètre
-* Ecrire une fonction appelée `etoiles` en python qui écrit une série de 5 symboles `*`, séparés chacun par un espace.
-* Afficher une ligne en appelant une seule fois la fonction: Pour appeler la fonction, faire suivre le nom de la fonction par des parenthèses `()`: `etoiles`<br>Pour afficher la ligne, faire: `print(etoiles())`
+* Ecrire une fonction appelée `etoiles` en python qui écrit une série de 5 symboles `*`, séparés chacun par un espace:
+
+```
+* * * * * 
+```
+
+* Appeler la fonction: faire suivre le nom de la fonction par des parenthèses `()`: 
+
+```
+etoiles()
+```
+
+Pour afficher la ligne, faire: `print(etoiles())`
+
 * Appeler alors 5 fois cette fonction pour afficher l'image suivante:
 
 ```
@@ -61,14 +137,16 @@ salut()
 * * * * * 
 ```
 
-*Astuce: avez vous pensé à utiliser une boucle bornée pour répéter 5 fois l'appel de la fonction?*
+*Astuce: avez-vous pensé à utiliser une **boucle bornée** pour répéter 5 fois l'appel de la fonction?*
 
+
+**Sur document-reponse:** Ecrire le script utilisé
 
 ## Fonction avec paramètres
 ### Principe
-Souvent, la fonction calcule sur un ou plusieurs arguments qui lui sont passés lors de l'appel de la fonction.
+Souvent, la fonction calcule sur un ou plusieurs paramètres qui lui sont passés lors de l'appel de la fonction.
 
-Pour prévoir ceci, il faudra définir un ou plusieurs arguments lors de la constuction de la fonction.
+Pour prévoir ceci, il faudra définir un ou plusieurs paramètres lors de la constuction de la fonction.
 
 Par exemple, si l'on souhaite améliorer la fonction `salut` et personnaliser le message:
 
@@ -91,16 +169,44 @@ bonjour George
 
 *Attention, lors de l'appel de la fonction, il devra y avoir autant d'arguments que de paramètres définis (donc un seul pour ce dernier exemple).* 
 
-### TP: ASCII art
+### TP: ASCII-art
 On cherche à realiser des figures en à partir de caractères, comme vu dans le paragraphe precedent.
 
-**ex1** Vous commencerez par ré-écrire la fonction `etoiles` pour que celle-ci prenne un paramètre **(nb)**. Ce paramètre definit le nombre d'espaces entre les 2 symboles `*` de la ligne. La ligne n'affiche que 2 symboles `*`. <br>Par exemple, `etoiles(5)` retourne `*     *` avec 5 espaces.
 
-**ex2** Vous appelerez ensuite cette fonction avec des arguments judicieusement choisis, afin de dessiner les figures suivantes:
+
+**ex1** Utilisez la fonction `etoiles` pour que celle-ci utilise un paramètre **(nb)**. Ce paramètre definit le nombre d'espaces entre les 2 symboles `*` de la ligne. La ligne n'affiche que 2 symboles `*`. 
+
+Par exemple, `etoiles(5)` retourne `*     *` avec 5 espaces:
+
+```python
+def etoiles(nb):
+    return '*' + nb*' ' + '*'
+``` 
+
+**ex2** afficher la figure suivante (un seul espace à chaque ligne entre 2 etoiles)?
+
+```python
+for i in range(..):
+  print(etoile(..))
+
+# resultat
+* *
+* *
+* *
+* *
+```
+
+
+
+**ex3** Vous appelerez ensuite cette fonction avec des arguments judicieusement choisis, afin de dessiner les figures suivantes:
 
 figure 1:
 
-```
+```python
+for i in range(..):
+  print(etoile(..))
+
+# resultat
 **
 * *
 *  *
@@ -184,7 +290,7 @@ import math
 math.pi
 ```
 
-Puis modifier la fonction `fonc1`:
+Puis modifier la fonction `fonc1` en `fonc2`:
 
 ```python
 def fonc1(angle):
@@ -203,7 +309,7 @@ Le module `math` apporte aussi les fonctions trigonométriques `sin` et son inve
 
 > `math.asin(1)`
 
-<br>
+
 
 On cherche maintenant à écrire la fonction qui permettra de calculer l'angle **r** selon la relation:
 
@@ -212,13 +318,15 @@ $$r = asin(\tfrac{n_1\times sin(i_1)}{n_2})$$
 On definira une fonction appelée `angleRefraction`, qui aura pour parametres `i1, n1, n2` et qui contiendra:
 
 ```python
-radian = fonc1(i1)
-r = math.asin(...a completer...)
-return r * 180 / math.pi
+def angleRefraction( .... ):
+    radian = fonc1(i1)
+    r = math.asin(...           ...)
+    return r * 180 / math.pi
 ```
 
 > Tester votre fonction: avec un angle d'incidence de 30°, des indices de refraction n<sub>1</sub>=1 et n<sub>2</sub>=1.5, on doit avoir r = 19.47°.
 
+<!--
 # Fonctions utiles pour la représentation des nombres en binaire
 ## Inversion de bits
 On veut créer une fonction `inverse_bits` qui fait le complement à 1 de la chaine de bits passée en argument.
@@ -266,7 +374,7 @@ On pourra ajouter un compteur et permettre au joueur de jouer plusieurs parties 
 
 * Au fur et à mesure de votre avancée dans le projet, vous devrez tenir à jour un fichier `readme.txt` expliquant les tâches effectuées.
 
-
+-->
 
 
 
