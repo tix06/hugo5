@@ -83,29 +83,3 @@ Vous souhaitez ajouter un numéro aux éléments de type `Titre 1`.
 
 Voir les explications ici: [pdf de lyceedupaysdesoule.fr](http://www.lyceedupaysdesoule.fr/ressources/libreoffice/libreoffice_writer_6_numerotation_titres.pdf)
 
-# Partie 2: Rédiger un document pour le Web
-## Qu'est-ce que le HTML
-Un document pour le Web est constitué d’un ou plusieurs fichiers de type texte, avec un format qui précise le contenu (en langage HTML), et le style (en langage CSS). Il est prévu pour être ouvert avec un **navigateur**.
-
-La manière avec laquelle vous allez construire ce document suit les même étapes que la rédaction d’un document textuel. Mais ici, les instructions de **mise en page** seront ajoutées au **contenu**, dans le même fichier. Ce fichier aura pour extension **.html**
-
-Le HTML s'occupe de la **structure du document**, grâce à des **balises** qui intègrent le **contenu**.
-
-## Définir des éléments dans la page
-La structure du document est définie à l’aide de balises HTML. Pour créer un paragraphe, le contenu devra être inséré entre une balise de début `<p>` et une balise de fin `</p>`.
-
-Les autres balises principales sont:
-
-* Titre 1: `<h1> ... </h1>`
-* Titre 2: `<h2> ... </h2>`
-* Titre 3: `<h3> ... </h3>`
-* Bloc de citation: `<blockquote> ... </blockquote>`
-
-Où les `...` signifient le contenu.
-
-
-> Télecharger le document textuel sur {{< a link="/pdf/competences/exercice_les_plastiques.odt" caption="les plastiques" >}}. Copiez le texte dans le **bloc note** de windows, ou, mieux, avec un logiciel d’edition de code comme **Notepad++** (ajoute la coloration syntaxique).
-
-> Puis modifier sa structure pour en faire un document HTML
-
-{{< img src="../images/odt.png" link="/pdf/competences/feuille_reponse.odt"  caption="Document à télécharger" >}}

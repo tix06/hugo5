@@ -221,15 +221,13 @@ Pour effectuer son étude sur les prénoms à partir du fichier CSV, le programm
 A.  La bibliothèque csv est un module natif du moteur python.
 Donner, dans ce cas, l’instruction d’importation.
 
-B.  Au cours du développement de son projet, le programmeur souhaite insérer une
-assertion sur l’argument donné à la fonction.
+B.  Au cours du développement de son projet, le programmeur souhaite insérer une assertion sur l’argument donné à la fonction.
 Proposer une assertion sur le type de l’argument qui corrige une erreur lorsque
 le type ne correspond pas à celui attendu.
 
 C.  Avant le déploiement de sa solution, le programmeur décide de rendre sa fonction plus robuste.
 Pour cela il veut remplacer l’assertion proposée dans la question **2.B)** par une
-gestion de l’argument pour éviter toutes erreurs empêchant la poursuite du
-programme.
+gestion de l’argument pour éviter toutes erreurs empêchant la poursuite du programme.
 Proposer alors une ou plusieurs instructions en Python utilisant l’argument afin de s’assurer que la fonction se termine quel que soit le type de l’argument.
 
 ## 3. Améliorations

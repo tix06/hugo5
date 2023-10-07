@@ -1,6 +1,16 @@
 ---
 Title: recherche dichotomique
 ---
+# Activité d'introduction 
+**Recherche dans un jeu de cartes**
+
+![cartes triées]()
+
+{{< img src="../images/cartes_rechercheD.png" caption="jeu de cartes triées" >}}
+
+1. Ecrire une liste L représentant le jeu de cartes de l'image. La carte qui a pour valeur 7 sera représentée par l'entier 1, puis celle de valeur 8 aura la valeur 2, etc ... jusqu'à l'As qui vaut 8.
+2. Expliquer avec une méthode de votre choix comment l'algorithme de recherche réduit cette liste jusqu'à trouver la carte de la Dame de Coeur. Comparer ainsi l'efficacité des 2 algorithmes, celui de recherche sequentielle et celui de recherche dichotomique.
+
 
 # TP: Recherche dans une liste de mots
 
