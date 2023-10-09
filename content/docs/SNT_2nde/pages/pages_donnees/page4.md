@@ -15,18 +15,21 @@ Vous enquêtez sur cet accident. Vous diposez d'une base de données comprenant:
 
 Tous ces fichiers sont mis dans le même{{< a link="../datas/enquete.xls" caption="classeur à télécharger ici" >}}
 {{< img src="../images/classeur.png" caption="extrait du classeur" >}}
-# Travail
+
+# Travail (à rendre sur feuille)
 ## A. Questions sur l'enquête
-1. Quels renseignements sont fournis par le fichier des témoignages?
-2. Comment utilisez vous ces renseignements pour identifier le principal suspect?
+1. Quels renseignements relevez-vous dans la page témoignages du fichier? 
+2. Comment utilisez-vous les renseignements donnés par les différentes pages du fichier pour identifier le-s suspect-s? Préciser le lien existant  entre chaque page du fichier?
+3. Quels sont les suspects identifiés? (remplir un tableau)
+4. Quel est alors le PRINCIPAL suspect? Pourquoi?
+5. L'enquête à partir de ces fichiers va-t-elle, à coup sûr, permettre de désigner le coupable? Expliquez
 
 ## B. Prolongement: questions sur la protection des données personnelles
 > A partir des liens proposées ci-dessous, ou bien d'autres issus d'une recherche personnelle, repondez de manière argumentée à *au moins une* des questions suivantes:
 
 1. Quelles personnes sont renseignées dans le fichier de la police? Des criminels, des personnes ayant eu affaire avec la justice, les victimes, ou bien tout citoyen français?
-2. L'enquête à partir de ces fichiers va-t-elle, à coup sûr, permettre de désigner le coupable? 
-3. La CNIL va s'opposer à l'existance d'un fichier du type de celui appelé *proprietaire* dans le classeur. Pourquoi?
-4. Imaginez que l'on enquête sur une personne soupçonnée d'être responsable d'un délis: Quels renseignements peut-on trouver à partir de ses traces numériques?
+2. La CNIL va s'opposer à l'existance d'un fichier du type de celui appelé *proprietaire* dans le classeur. Pourquoi?
+
 
 
 # Liens 

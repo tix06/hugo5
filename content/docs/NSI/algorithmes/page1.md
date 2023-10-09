@@ -2,7 +2,11 @@
 Title : Complexité
 ---
 
-# cout spatial et temporel
+* Actvité d'introduction: comparaison des algoritmes de recherche:
+  * version utilisant `time.time()` (chronométrage) et `numpy` (courbe des fonctions)
+  * version utilisant `%%timer`: [Lien](/docs/NSI/algorithmes/page14/)
+
+# Cout spatial et temporel
 L'execution d'un algorithme nécessite l'utilisation des ressources de l'ordinateur : 
 
 - complexité en temps : temps de calcul pour executer les operations. On supposera qu'il correspond au nombre d'opérations effectuées par le programme.
