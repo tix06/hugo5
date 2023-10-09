@@ -148,17 +148,15 @@ La petite différence d'implementation de ces 2 fonctions est visible en calcula
 # Règles pour estimer la complexité O(g(n))
 ## Règles
 
-<ul>
-<li>Poser n = &#8220;la taille des paramètres&#8221;.</li>
-<li>Enoncer les instructions que vous compterez comme significatives</li>
-<li>définir des blocs d'instructions dans le script</li>
-<li>Ne compter que les instructions essentielles, à partir d'une unité de mesure: noter la somme des instructions élémentaires T(n).
-</li>
-<li>Pour chacune des boucles du programme, repérer le <strong>variant de boucle</strong> et calculer le nombre d&#8217;itérations : combien de fois on passe dans la boucle.</li>
-<li>Si T(n) contient une somme de termes, conserver uniquement le plus divergent.</li>
-<li>Prendre pour g(n) une fonction approchée de T(n). Ne pas considérer les multiplicateurs C : si T(n) = C.f(n), alors g(n) = f(n). Par exemple, si T(n) = 3*n, prendre g(n) = n</li>
-<li>Sauf précision contraire, la complexité demandée est la complexité au pire en temps.</li>
-</ul>
+* Poser n = &#8220;la taille des paramètres&#8221;.
+* Enoncer les instructions que vous compterez comme significatives</li>
+* définir des blocs d'instructions dans le script
+* Ne compter que les instructions essentielles, à partir d'une unité de mesure: noter la somme des instructions élémentaires T(n).
+* Pour chacune des boucles du programme, repérer le **variant de boucle** et calculer le nombre d&#8217;itérations : combien de fois on passe dans la boucle.
+* Si T(n) contient une somme de termes, conserver uniquement le plus divergent.
+* Prendre pour g(n) une fonction approchée de T(n). Ne pas considérer les multiplicateurs C : si T(n) = C.f(n), alors g(n) = f(n). Par exemple, si $T(n) = 3\times n$, prendre g(n) = n
+* Sauf précision contraire, la complexité demandée est la complexité au pire en temps.
+
 
 
 
@@ -275,11 +273,11 @@ Les **éléments significatifs** pour analyser le nombre d'opérations sont :
 
 > I1 contient 2 instructions.
 
-<br>
+
 
 >I3 contient 2 instructions (une comparaison et une instruction return)
 
-<br>
+
 
 > Pour le bloc I2 : La variant de boucle, c'est n-j qui doit être >0 pour que la boucle continue. 
 
@@ -289,11 +287,11 @@ L'instruction `j+=1` peut compter pour une instruction
 
 Chacune des conditions d'arrêt `j<n` et `X!=L[j]` peuvent être considérées comme significatives. Il y aura alors 3 instructions par itération.
 
-On aura, dans ce que l'on appelle le PIRE des cas (l'élément n'est pas trouvé): T<sub>2</sub>(n) = 3*n
+On aura, dans ce que l'on appelle le PIRE des cas (l'élément n'est pas trouvé): $T_2 (n) = 3\times n$
 
 
 
-> On fait alors la somme des 3 termes : T(n) = T<sub>1</sub>(n) + T<sub>2</sub>(n) + T<sub>3</sub>(n)
+> On fait alors la somme des 3 termes : $T(n) = T_1 (n) + T_2 (n) + T_3 (n)$
 
 
 $$T(n) = 2 + 3\times n + 2$$
@@ -401,28 +399,19 @@ def rechDich(tab,x):
 
 On peut alors tester le programme (jupyter notebook):
 
-<table>
-    <tr>
-        <th scope="row">IN</th>
-        <td>tab = [23, 34, 45, 56, 67, 104]<br>
-          rechDich(tab,67)
-        </td>
-    </tr>
-   
-    <tr>
-        <th scope="row">OUT</th>
-        <td>
-         4
-        </td>
-    </tr>
-</table>
+```
+tab = [23, 34, 45, 56, 67, 104]
+rechDich(tab,67)
+4
+```
+
 
 
 
 ### Complexité
-Le second algorithme demandera dans le pire des cas de séparer en deux l'annuaire, puis de séparer à nouveau cette sous-partie en deux, ainsi de suite jusqu'à n'avoir qu'un seul nom. Le nombre d'étapes nécessaire sera le nombre entier qui est immédiatement plus grand que log<sub>2</sub>(N), qui vaut 15 lorsque N=30 000.
+Le second algorithme demandera dans le pire des cas de séparer en deux l'annuaire, puis de séparer à nouveau cette sous-partie en deux, ainsi de suite jusqu'à n'avoir qu'un seul nom. Le nombre d'étapes nécessaire sera le nombre entier qui est immédiatement plus grand que $log_2 (N)$, qui vaut 15 lorsque N=30 000.
 
-La complexité est alors O(log<sub>2</sub>(N))
+La complexité est alors O(log2(N))
 
 
 
