@@ -198,5 +198,6 @@ plt.legend()
 
 **5.** Recopier l'allure de ces courbes. Conclure.
 
-# Sources
-Les fichiers de mots viennent de la page: [www.3zsoftware.com](http://www.3zsoftware.com/fr/listes.php)
+# Lien
+* Version initiale du TP sur la recherche sequentielle et dichotomique: [Lien](../page14/)
+* Les fichiers de mots viennent de la page: [www.3zsoftware.com](http://www.3zsoftware.com/fr/listes.php)
