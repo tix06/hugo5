@@ -162,7 +162,7 @@ def recherche_dicho_mot():
 
 **2.** L'algorithme de recherche dichotomique ne fonctionne que pour des listes sans accents. Tester la fonction avec les seules listes `ods4.txt` et `pli07.txt`. 
 
-**3.** Comparer le nouveau tableau de valeurs `T = [[len(mots1), r1], [len(mots2),[0,0]]` avec le précédent. Conclure.
+**3.** Comparer le nouveau tableau de valeurs `T = [[len(mots1), r1], [len(mots2),r2], [0,0]]` avec le précédent. Conclure.
 
 # Tracé de représentations graphiques pour quelques fonctions
 
