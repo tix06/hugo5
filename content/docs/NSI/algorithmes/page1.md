@@ -3,7 +3,7 @@ Title : Complexité
 ---
 
 * Actvité d'introduction: comparaison des algoritmes de recherche:
-  * version utilisant `time.time()` (chronométrage) et `numpy` (courbe des fonctions)
+  * version utilisant `time.time()` (chronométrage) et `numpy` (courbe des fonctions): [Lien](/docs/NSI/algorithmes/page14_bis/)
   * version utilisant `%%timer`: [Lien](/docs/NSI/algorithmes/page14/)
 
 # Cout spatial et temporel

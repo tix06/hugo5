@@ -170,7 +170,6 @@ La librairie `numpy` facilite la creation des ensembles X,Y pour le tracé des c
 
 ```python
 X=np.linspace(0.1,50,100)
-#plt.plot(X,1,label='1')
 #plt.plot(X,np.log2(X),label='log2(X)') 
 #plt.plot(X,X,label='X')
 #plt.plot(X,X*np.log2(X),label='X*log2(X)')
@@ -196,6 +195,8 @@ plt.legend()
 **4.** Ajouter:
 
 * $Y = 2**X$
+
+**5.** Recopier l'allure de ces courbes. Conclure.
 
 # Sources
 Les fichiers de mots viennent de la page: [www.3zsoftware.com](http://www.3zsoftware.com/fr/listes.php)
