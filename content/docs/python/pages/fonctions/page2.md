@@ -34,7 +34,7 @@ bookShowToc: false
   <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 
 
-# Fonctions
+
 # Les fonctions
 **1. Definition:** Une fonction permet d'encapsuler un bloc d'instructions et de lui donnéer un *nom*. 
 
@@ -153,4 +153,8 @@ bonjour George
 ```  
 
 * **Question b:** Citer un avantage d'utiliser une fonction plutôt qu'une serie d'instructions pour afficher *bonjour* de manière personalisée.
+
+## Travaux pratiques
+* Le TP sur les boucles bornées, et les fonctions avec et sans paramètres: [Lien](/docs/NSI_1/donnees/page5/)
+* Le TP d'application des fonctions à Turtle: [Lien](../page3/)
 
