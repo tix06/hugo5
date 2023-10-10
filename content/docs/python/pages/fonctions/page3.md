@@ -89,7 +89,7 @@ Ajouter une fonction `spirale` qui devra reproduire une figure sur le modèle de
 * La fonction utilisera un paramètres: la `longueur` du segment initial
 * le nombre d'itérations `N` voulues
 
-Dans la fonction  `spirale`: utiliser une boucle bornée `for` pour executer un certain nombre de traits.
+Dans la fonction  `spirale`: utiliser une boucle pour executer un certain nombre de traits.
 
 **question 3.2.:** recopier le script de votre fonction
 
