@@ -36,7 +36,7 @@ bookShowToc: false
 </py-env>
 
 # Editeur Python
-* L'**editeur** suivant se présente comme un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
+* Utiliser un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
 
 <div>
 <py-repl id="my-repl" auto-generate="true"></py-repl>
@@ -224,14 +224,31 @@ c
 
 *Ramarque:* Cette fois-ci, le variant `c` prend successivement toutes les valeurs de la liste `L`.
 
-### Conclusion: Itérable et variant de boucle
+### Conclusion: Itérable et variant de boucle bornée
 Les instructions `for i in range(len(L))` et `for c in L` ont à peu près le même objectif: celui de parcourir TOUS les éléments de la liste L. 
 
 * Ce qui est COMMUN: c'est l'utilisation du mot clé `IN`, qui va créer ce que l'on appelle un *itérable*, c'est-à-dire une liste de valeurs qui seront proposées l'une après l'autre pour le variant de boucle.
 
 * Ce qui est DIFFERENT: Dans le premier cas, on utilise la fonction `range`, qui créé un itérable entre 0 et la valeur mise en paramètre (valeur -1 pour être exact). Ce sont par exemple **les indices** de la liste `L`.
 
-L'instruction `for c in L` va, elle, créer un itérable constitué des **valeurs** de la liste `L`.
+```
+# exemple 1
+for i in range(5):
+  # instruction
+```
+
+La boucle va s'executer 5 fois. Mais à chaque fois, le variant i prend successivement l'une des valeurs dans `[0,1,2,3,4]` 
+
+```
+# exemple 2
+L = [0, 10, 20, 30]
+for c in L:
+  # instruction
+```
+
+L'instruction `for c in L` va, elle, créer un itérable constitué des **valeurs** de la liste `L`
+
+Le nombre d'itération sera égal au nombre `len(L)`, soit 4. Au cours des itérations, le variant `c` va prendre successivement chaque valeur de `L`, soit `[0, 10, 20, 30]`
 
 ## Tracer un graphique y = f(x)
 Pour tracer un graphique `y=f(x)`, il faut disposer de 2 listes de mêmes dimensions `x` et `y`. Les coordonnées des points sont alors:

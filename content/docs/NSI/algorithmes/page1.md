@@ -3,8 +3,9 @@ Title : Complexité
 ---
 
 * Actvité d'introduction: comparaison des algoritmes de recherche:
-  * version utilisant `time.time()` (chronométrage) et `numpy` (courbe des fonctions): [Lien](/docs/NSI/algorithmes/page14_bis/)
-  * version utilisant `%%timer`: [Lien](/docs/NSI/algorithmes/page14/)
+  * version 1 utilisant `time.time()` (chronométrage) et `numpy` (courbe des fonctions): [Lien](/docs/NSI/algorithmes/page14_bis/)
+  * version 2 utilisant `%%timer`: [Lien](/docs/NSI/algorithmes/page14/)
+* Feuille d'exercices en version [pdf](http://localhost:1313/pdf/NSI/algo1_complex_cours.pdf)
 
 # Cout spatial et temporel
 L'execution d'un algorithme nécessite l'utilisation des ressources de l'ordinateur : 
@@ -501,6 +502,8 @@ En pratique, cela correspond au nombre d&#8217;opérations effectuées par le pr
 
 
 # Exercices
+Feuille d'exercices en version [pdf](http://localhost:1313/pdf/NSI/algo1_complex_cours.pdf)
+
 ## Exercice 1
 Déterminer la complexité des fonctions suivantes en terme de nombre d’additions et de soustractions. On donnera d’abord la valeur exacte T(n) puis l’ordre de grandeur O(n).
 
@@ -538,7 +541,7 @@ On donne deux algorithmes de recherche dans une liste de mots.
 
 Vous aller comparer l'efficacité de la recherche de ces 2 algorithmes lorsque l'on cherche un mot dans une liste (dictionnaire français).
 
-L'énonce du TP se trouve [ici](/docs/NSI/algorithmes/page14/)
+L'énonce du TP se trouve ici: [version 1](/docs/NSI/algorithmes/page14_bis/) et ici: [version 2](/docs/NSI/algorithmes/page14/)
 
 
 

@@ -2,6 +2,8 @@
 Title : Fonctions
 ---
 
+* Un cours de niveau debutant sur les fonctions se trouve à la page suivante: [Lien](../page2/)
+
 # Fonctions
 Les fonctions permettent de rendre le script plus efficace, plus facile à lire et à vérifier. Un bonne pratique est de faire régulierement du *remaniement* de son code : C'est à dire ré-écrire les parties du programme qui *fonctionnent* et les mettre dans une fonction ou un module. Cela evite aussi les répétitions. On remplace alors le code par un appel à une fonction.
 

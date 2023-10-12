@@ -113,6 +113,8 @@ print(message)
 ```
 
 ## Travaux pratiques: fonction sans paramètre
+Un cours sur les fonctions se trouve à la page suivante: [Lien](/docs/python/pages/fonctions/page2/)
+
 * Ecrire une fonction appelée `etoiles` en python qui écrit une série de 5 symboles `*`, séparés chacun par un espace:
 
 ```
@@ -297,34 +299,39 @@ def fonc1(angle):
     radian = angle * math.pi/180
 ```
 
-## Fonctions `sin` et `asin`
+## Fonctions `sin` et `asin` du module math
 Le module `math` apporte aussi les fonctions trigonométriques `sin` et son inverse `asin`. 
 
-<br>
+
 > Tester ces fonctions pour quelques valeurs:
 
-> `math.sin(1.57)`
+* `math.sin(1.57)`
 
-> `math.sin(math.pi/2)`
+* `math.sin(math.pi/2)`
 
-> `math.asin(1)`
+* `math.asin(1)`
 
 
-
+## Fonction à plusieurs paramètres
 On cherche maintenant à écrire la fonction qui permettra de calculer l'angle **r** selon la relation:
 
 $$r = asin(\tfrac{n_1\times sin(i_1)}{n_2})$$
 
-On definira une fonction appelée `angleRefraction`, qui aura pour parametres `i1, n1, n2` et qui contiendra:
+On definira une fonction appelée `angleRefraction`, qui aura cette fois 3 parametres `i1, n1, n2`. Ces 3 paramètres seront écrits entre parenthèses, séparés par une virgule:
 
 ```python
-def angleRefraction( .... ):
+def angleRefraction(i1,n1,n2):
     radian = fonc1(i1)
     r = math.asin(...           ...)
     return r * 180 / math.pi
 ```
 
-> Tester votre fonction: avec un angle d'incidence de 30°, des indices de refraction n<sub>1</sub>=1 et n<sub>2</sub>=1.5, on doit avoir r = 19.47°.
+> Compléter les pointillés `...` 
+
+> Tester votre fonction: avec un angle d'incidence de 30°, des indices de refraction n1=1 et n2=1.5, on doit avoir r = 19.47°.
+
+# Compléments
+* Un cours sur les fonctions se trouve à la page suivante: [Lien](/docs/python/pages/fonctions/page2/)
 
 <!--
 # Fonctions utiles pour la représentation des nombres en binaire
