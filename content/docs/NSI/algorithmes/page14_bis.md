@@ -80,7 +80,8 @@ recherche_mot(mots)
 ``` 
 
 
-On peut lancer un chronomètre au debut de la fonction avec l'instruction:
+On peut lancer un chronomètre juste avant l'appel de la fonction avec l'instruction, puis relever le temps t1-t0:
+
 
 ```python
 import time

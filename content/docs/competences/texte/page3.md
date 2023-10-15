@@ -13,7 +13,7 @@ Un document réponse est à télécharger et compléter: {{< img src="/images/do
 Mettre en forme un document *textuel* demande une certaine maitrise du logiciel, mais surtout, connaitre le nom des objets et des fonctions utilisés:
 
 * feuille de Style
-* Objets *paragraphes, Titre 1, Titre 2, ..., listes.
+* Objets *paragraphes, Titre 1, Titre 2, ..., listes*.
 
 Ainsi que le nom des *propriétés* de ces objets:
 
@@ -79,7 +79,18 @@ On peut aussi faire un collage du script avec la coloration syntaxique *highligh
 {{< img src="../images/text8.png" >}}
 
 ## Ajouter une numérotation
-Vous souhaitez ajouter un numéro aux éléments de type `Titre 1`. 
+Si vous souhaitez ajouter un numéro aux éléments de type `Titre 4`:
 
-Voir les explications ici: [pdf de lyceedupaysdesoule.fr](http://www.lyceedupaysdesoule.fr/ressources/libreoffice/libreoffice_writer_6_numerotation_titres.pdf)
+Ouvrir le menu *Outils* de la barre des menus et choisir numérotation des chapitres:
 
+{{< img src="../images/tools.png" >}}
+
+Dans la fenêtre, choisir l'onglet *numérotation* et paramétrer pour démarrer une numérotation *1,2,3* pour les titres de niveau 4:
+
+{{< img src="../images/numbering.png" >}}
+
+
+Voir pour plus de détails les explications ici: [pdf de lyceedupaysdesoule.fr](http://www.lyceedupaysdesoule.fr/ressources/libreoffice/libreoffice_writer_6_numerotation_titres.pdf)
+
+# Liens
+* Notice sur les styles et modèles: [wiki.documentfoundation.org](https://wiki.documentfoundation.org/images/9/94/GS6003FR-Styles_et_mod%C3%A8les.pdf)

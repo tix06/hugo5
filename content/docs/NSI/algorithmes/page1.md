@@ -177,17 +177,17 @@ Ces complexités sont classées par temps d'execution croissant de l'agorithme c
 | &Theta;(log n) | logarithmique en base 2 : log<sub>2</sub>(n) | 
 | &Theta;(n) | linéaire |
 | &Theta;(n*log n) | quasi linéaire  |
-| &Theta;(n<sup>2</sup>) | quadratique, polynômial   |
-| &Theta;(n<sup>3</sup>) | cubique, polynômial   |
-| &Theta;(2<sup>n</sup>) |  exponentiel (problème très difficiles) |
+| &Theta;($n^2$) | quadratique, polynômial   |
+| &Theta;($n^3$) | cubique, polynômial   |
+| &Theta;($2^n$) |  exponentiel (problème très difficiles) |
 
 On peut observer l'evolution des courbes t(n) en fonction de n (nombre de données). t(n) sera le *temps linéaire*:
 
 {{< img src="../images/graphique1.png" caption="1 et log(n) : log(n) a une croissance faible" >}}
 {{< img src="../images/graphique2.png" caption="n*log(n) et n ont une croissance comparable" >}}
-{{< img src="../images/graphique3.png" caption="n" >}}
-{{< img src="../images/graphique4.png" caption="n" >}}
-{{< img src="../images/graphique5.png" caption="2" >}}
+{{< img src="../images/graphique3.png" caption="n**2" >}}
+{{< img src="../images/graphique4.png" caption="n**3" >}}
+{{< img src="../images/graphique5.png" caption="2**n" >}}
 Les problèmes à résoudre ont le plus souvent un nombre n de données bien supérieur à 15, comme présenté sur le dernier graphique. Les effets de convergence sont donc encore plus marqués.
 
 Approfondir la notion de complexité : voir annexe[^2]
@@ -414,6 +414,58 @@ Le second algorithme demandera dans le pire des cas de séparer en deux l'annuai
 
 La complexité est alors O(log2(N))
 
+## Le tri par insertion
+### Principe 
+
+On recherche le plus petit élément et on le met à sa place (en l’échangeant  avec le premier). On recherche le second plus petit et on le met à sa place, etc. 
+
+{{< img src="../images/triSelection.png" >}}
+
+```python
+def tri_selection(L):  
+  n = len(L)
+  for i in range(0, n - 1):
+    #recherche le plus petit élément de i à la fin
+    mini = i
+    for j in range(i + 1, n):
+      if L[j] < L[mini]:
+        mini = j
+    #échanger les cases i et mini
+    tmp = L[i]
+    L[i] = L[mini]
+    L[mini] = tmp 
+```
+
+### Description: boucle externe et boucle interne
+Dans la boucle **externe**: On pose `i` comme position droite du tableau déjà trié. La valeur L[i] sera permutée avec la plus petite valeur trouvée dans la partie droite du tableau, celle non triée.
+
+Dans la boucle **interne**. Le variant `j` représente l'index dans la partie droite, non triée du tableau. Le tableau non trié commençant au rang `i+1`, `j` va varier de `i+1` à len(L). On recherche le rang de la plus petite valeur, rang que l'on appelle *mini*. La plus petite valeur est alors L[mini].
+
+### Permutations
+Une fois identifié la valeur `mini`: On permute L[i] avec L[mini]. Pour permuter 2 valeurs, il faut utiliser une 3e variable, appelée `tmp`:
+
+```python
+    tmp = L[i]
+    L[i] = L[mini]
+    L[mini] = tmp
+```
+
+### Complexité du tri par sélection
+La boucle interne est executée `n-1` fois, vu qu'elle est appelée à chaque itération de la boucle externe: `for i in range(0, n - 1)`. 
+
+Dans la boucle interne, supposons que les opérations significatives sont celles de comparaison: `if L[j] < L[mini]`. On compte alors 1 seule opération à chaque itération de la boucle interne.
+
+Pour la première itération de la boucle externe, `i=0`. Donc, pour la boucle interne, la boucle `for` s'écrit `for j in range(1, n)`. Il y a alors `n-1` itérations.
+
+Pour la deuxième itération de la boucle externe, `i=1`. Pour la boucle interne, on a alors `for j in range(2, n)`. Il y a alors `n-2` itérations.
+
+Le nombre d'itération de la boucle interne vaut `n-1`. On a alors `n-1` termes pour le calcul de T(n), dont les valeurs iront de `n-1` à 1:
+
+$$T(n) = (n-1) + (n-2) + ... + 1$$
+
+Il s'agit d'une somme de `n-1` termes d'une suite arithmétique, tels que $u_0 = 1$ et $u_{n-1} = n-1$
+
+La complexité, exprimée en notation de Landau est donc $O(n^2)$. La classe de complexité est donc quadratique.
 
 
 <div class="essentiel">
@@ -547,7 +599,7 @@ L'énonce du TP se trouve ici: [version 1](/docs/NSI/algorithmes/page14_bis/) et
 
 
 
-## Exercice 3 : 
+## Exercice 3:[^5] 
 Dans un groupe de n individus , une star est quelqu’un que tout le monde connait mais qui ne connait personne. Pour trouver une star, s’il en existe une, vous ne pouvez poser aux individus de ce groupe que des questions du type : « connaissez-vous x ? ».
 
 1. Combien de stars au maximum peut-il exister dans un groupe ?
@@ -785,4 +837,5 @@ $$Min(n) = Max(n) = Moy(n) = n^3 $$
 
 [^3]: recherche linéaire et dichotomique : [document eduscol 1ere NSI](https://cache.media.eduscol.education.fr/file/NSI/76/3/RA_Lycee_G_NSI_algo-dichoto_1170763.pdf)
 [^4]: invariant de boucle : [wikipedia](https://fr.wikipedia.org/wiki/Invariant_de_boucle)
+[^5]: Exercice issu de ENS Lyon, Marc De Visme & Laureline Pinault: [Algorithmique, exos corrigés](http://perso.ens-lyon.fr/laureline.pinault/Algo1/TD01-correction.pdf)
 
