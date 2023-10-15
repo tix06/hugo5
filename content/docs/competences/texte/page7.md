@@ -25,7 +25,7 @@ Dans un logiciel de traitement de texte, on fait simultanément les 2 actions su
 Mettre en forme un document *textuel* demande de connaitre le nom et la nature des objets et des fonctions utilisés:
 
 * feuille de Style
-* Objets *paragraphes, Titre 1, Titre 2, ..., listes.
+* Objets *paragraphes, Titre 1, Titre 2, ..., listes*.
 
 Tous ces objets sont accessibles dans le bandeau de droite
 Vous allez identifier ou ajouter ces différents éléments éléments au document:
