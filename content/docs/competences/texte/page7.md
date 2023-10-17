@@ -104,7 +104,9 @@ Sélectionner l'option *Overwrite* et cliquer sur le bouton *From File*.
 Choisir alors le fichier `.odt`. Cela devrait appliquer les styles à votre page, et écraser ceux existants.
 
 ### Charger une feuille de style (extension .ott): 
-Il faut la charger dans vos *templates* existants. Utilisez par exemple la feuille [document.ott](/pdf/competences/document.ott). 
+Il faut la charger dans vos *templates* existants. Utilisez par exemple la feuille [document.ott](/pdf/competences/documentaire.ott). 
+
+{{< img src="../images/ott.png" link="/pdf/competences/documentaire.ott">}}
 
 * Téléchargez et collez la feuille dans vos *Documents*.
 * Ouvrir la feuille de style: double-clic sur le fichier `.ott`

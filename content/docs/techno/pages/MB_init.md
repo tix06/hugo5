@@ -98,12 +98,15 @@ x,y : int, valeur de 0 à 4<br>
 b : int, 0 à 9 (intensité lumineuse de la diode en x,y)
 
 # Application: *Dessine ton LOGO* (SNT)
-Lien vers{{< a link="/docs/SNT_2nde/pages/page5/photo_num3/" caption="l'énoncé en ligne" >}}
+Lien vers {{< a link="/docs/SNT_2nde/pages/page5/photo_num3/" caption="l'énoncé en ligne" >}}
+
 Lien vers le{{< a link="/pdf/SNT/TP_intro_MB.pdf" caption="Document pdf à rendre" >}}
 {{< img src="../images/TP.png" >}}
 
-# Application: *niveau à bulle 2D* (NSI)
-Lien vers{{< a link="../MB_bulle/" caption="l'énoncé en ligne" >}}
+# Application: *Capteur de luminosité* (1ere NSI)
+Lien vers {{< a link="../MB_lumi/" caption="l'énoncé en ligne" >}}
+# Application: *niveau à bulle 2D* (Term NSI)
+Lien vers {{< a link="../MB_bulles/" caption="l'énoncé en ligne" >}}
 
 
 # Liens
