@@ -555,13 +555,17 @@ Media queries examples
 </div>
 
 # Liens
-[https://developer.mozilla.org/fr/docs/Web/CSS/display](https://developer.mozilla.org/fr/docs/Web/CSS/display)
+* [https://developer.mozilla.org/fr/docs/Web/CSS/display](https://developer.mozilla.org/fr/docs/Web/CSS/display)
 
-[https://developer.mozilla.org/fr/docs/Web/CSS/position](https://developer.mozilla.org/fr/docs/Web/CSS/position)
+* [https://developer.mozilla.org/fr/docs/Web/CSS/position](https://developer.mozilla.org/fr/docs/Web/CSS/position)
 
-[https://la-cascade.io/la-difference-entre-block-et-inline/](https://la-cascade.io/la-difference-entre-block-et-inline/)
+* [https://la-cascade.io/la-difference-entre-block-et-inline/](https://la-cascade.io/la-difference-entre-block-et-inline/)
 
-[https://www.pierre-giraud.com/html-css-apprendre-coder-cours/display/](https://www.pierre-giraud.com/html-css-apprendre-coder-cours/display/)
+* Cours html css, apprendre à coder: [pierre-giraud.com](https://www.pierre-giraud.com/html-css-apprendre-coder-cours/display/)
+
+* Best practices: optimiser le chargement des pages:  [github.com/cnumr/best-practices](https://github.com/cnumr/best-practices/blob/main/chapters/BP_037_fr.md)
+
+
 
 
 

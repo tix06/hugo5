@@ -126,7 +126,7 @@ Exemple issu de la page [python.sdv.univ-paris-diderot.fr/07_fichiers](https://p
 ## Caractères speciaux
 Certains caractères sont fort utiles lors de l’écriture de fichiers texte afin d’organiser les données. Le symbole ; est très utilisé comme séparateur de colonnes pour une matrice, on utilise également le passage à la ligne ou la tabulation. Comme ce ne sont pas des caractères « visibles », ils ont des codes :
 
-* `\` caractère d'echapement (par exemple pour écrire des guillemets dans une chaine)
+* `\` caractère d'echappement (par exemple pour écrire des guillemets dans une chaine)
 * `\n` : passage à la ligne
 * `\t` : tabulation, indique un passage à la colonne suivante dans le format tsv (Tabulation-separated values).
 

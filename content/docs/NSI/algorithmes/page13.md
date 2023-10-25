@@ -9,7 +9,9 @@ Le Répertoire National des Élus (RNE) a pour finalité le suivi des titulaires
 {{< img src="../images/page13/elus.png" caption="Données du RNE pour les conseillers municipaux - extrait en csv" >}}
 Les données du RNE sont structurées par mandat. Neuf fichiers sont publiés ici :
 
-1.{{< a link="https://www.data.gouv.fr/fr/datasets/r/d5f400de-ae3f-4966-8cb6-a85c70c6c24a" caption="les conseillers municipaux ;" >}}2. les conseillers communautaires ;
+1.{{< a link="https://www.data.gouv.fr/fr/datasets/r/d5f400de-ae3f-4966-8cb6-a85c70c6c24a" caption="les conseillers municipaux ;" >}}
+
+2. les conseillers communautaires ;
 3. les conseillers départementaux ;
 4. les conseillers régionaux ;
 5. les membres des assemblées des collectivités à statut particulier ;
@@ -32,7 +34,7 @@ Lire et stocker le contenu du fichier dans une liste python que vous appelerez `
 
 > On pourra s'aider de la page [Python > entrées / sorties](/docs/python/pages/ES/page1/#lire-écrire-dans-un-fichier) pour importer le fichier csv.
 
-Explorer la liste table pour qu'elle affiche les informations suivantes:
+> Dans une cellule du Notebook, explorer la liste table pour qu'elle affiche les informations suivantes
 
 ```python
 > len(table)
@@ -52,6 +54,10 @@ Explorer la liste table pour qu'elle affiche les informations suivantes:
  'F',
  ...
 ```
+
+**Question:** Quels sont les rangs auxquels se trouvent le numero de departement, ainsi que celui du sexe de l'élu 'H'/'F'?
+
+> Explorer pour définir l'ordre dans lequel sont classés les élus. Les élus du *Gers*, occupent-ils les premiers rangs? Et si oui, jusqu'à quel rang? Ecrire un script python qui recherche cette information.
 
 ## Traitements
 ### Fonction recherche
@@ -83,3 +89,6 @@ Représenter alors cette parité dans votre notebook sur un diagramme circulaire
 > On s'aidera du [lien suivant](https://python.doctor/page-creer-graphiques-scientifiques-python-apprendre) pour représenter des diagrammes avec *Matplolib*.
 
 {{< img src="../images/page13/diagramme.png" caption="exemple de diagramme sur la proportion des élus H/F" >}}
+
+### Prolongement
+Rechercher si, pour l'un des departements, le ratio 'F'/'M' est supérieur à 1.
