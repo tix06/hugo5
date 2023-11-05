@@ -23,14 +23,11 @@ Il existe des Bus de différentes nature pour relier les composants:
 Les bus peuvent être bi-directionnels: les données transitent dans les 2 sens. Mais aussi directionnel: c'est le cas du bus d'adresse entre le processeur et la RAM, qui n'est parcouru que dans le sens processeur => RAM.
 
 # Description d'un ordinateur
-## CPU et MCU: des architectures différentes
-* Certaines machines comportent des composants séparés sur la carte mère. Le microprocesseur (CPU) est relié aux autres composants par des bus.
+## En video
+{{< img src="/images/video.png" link="https://www.youtube.com/watch?v=5hF4ziHwJBQ" caption="Fonctionnement d'un ordinateur - Mooc Architecture" >}}
 
-* Pour d'autres machines, les composants occupent une même puce (un même *chip*). Ces machines sont moins chères et consomment moins d'électricité. 
 
-{{< img src="../images/architectureN1.png" link="https://www.youtube.com/watch?v=cQjllS45ReU" caption="MooC Arduino #4 - Architecture de Von-Neumann, Harvard et Microcontrôleurs" >}}
 
-*Compléments sur la différence des architectures: [www.arrow.com/fr-fr/research-and-events](https://www.arrow.com/fr-fr/research-and-events/articles/mpu-v-mcu)*
 
 ## Echelle macro: périphériques
 Un ordinateur comprend des périphériques d'entrée et sortie:
@@ -50,10 +47,24 @@ Certains ports vont ajouter des extensions à l'ordinateur (carte son, video, wi
 Les constituants de l'ordinateur sont composés de circuits intégrés. On trouve 2 grandes catégories de circuits intégrés:
 
 * les circuits combinatoires: l'état de sortie de ces circuits ne dépend que des états d'entrée.
-* les circuits séquentiels: l'état de sortie dépend des états d'entrée, mais aussi de l'état courant du circuit. Ces circuits peuvent ainsi stocker une valeur appelée état courant. Les registres sont typiquement des circuits intégrant des circuits séquantiels.
+* les circuits séquentiels: l'état de sortie dépend des états d'entrée, mais aussi de l'état courant du circuit. Ces circuits peuvent ainsi stocker une valeur appelée état courant. Les registres sont typiquement des circuits intégrant des circuits séquentiels.
+
+## CPU et MCU: des architectures différentes
+* Certaines machines comportent des composants séparés sur la carte mère. Le **microprocesseur** (CPU) est relié aux autres composants par des bus.
+
+* Pour d'autres machines, comportant **microcontrôleur** (MCU), les composants occupent une même puce (un même *chip*). Ces machines sont moins chères et consomment moins d'électricité. 
+
+{{< img src="../images/architectureN1.png" link="https://www.youtube.com/watch?v=cQjllS45ReU" caption="MooC Arduino #4 - Architecture de Von-Neumann, Harvard et Microcontrôleurs" >}}
+
+*Compléments sur la différence des architectures: [www.arrow.com/fr-fr/research-and-events](https://www.arrow.com/fr-fr/research-and-events/articles/mpu-v-mcu)*
 
 # Le fonctionnement du processeur
 ## Généralités
+{{< img src="/images/video.png" link="https://www.youtube.com/watch?v=etlFow3LB6o" caption="Généralités sur le fonctionnement d'un processeur" >}}
+
+{{< img src="/images/video.png" link="https://www.youtube.com/watch?v=75BI9TBe1Sw" caption="Brève introduction sur le fonctionnement d'un processeur" >}}
+
+
 {{< img src="../images/architectureN2.png" caption="Architecture de Von-Neumann - processeur" >}}
 L'architecture d'un **processeur** (CPU) comporte 2 parties: 
 
