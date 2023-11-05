@@ -98,6 +98,7 @@ Les instructions de style, en langage CSS, vont déclarer:
 * la propriété que l'on veut styliser
 * la valeur que l'on veut mettre pour cette propriété
 
+**Question d:**: Ecrire une règle CSS complète en identifiant: le *sélecteur, la propriété, la valeur*.
 
 ## Police, coloration, alignement
 Les principales règles de style pour le texte sont `color`, `font-size`, `text-align`, ainsi que `font-family`.
@@ -144,7 +145,7 @@ On reviendra sur le tutoriel [developper.mozilla](https://developer.mozilla.org/
 
 {{< img src="../images/css1.png" >}}
 
-**Question d:**: faire un tableau avec 3 colonnes: *nom de la propriété*, *effet de style*. Mettre dans ce tableau au moins 3 propriétés prévues pour styliser le texte, et 3 propriétés pour styliser le container de ce texte.
+**Question e:**: faire un tableau avec 3 colonnes: *nom de la propriété*, *effet de style*. Mettre dans ce tableau au moins 3 propriétés prévues pour styliser le texte, et 3 propriétés pour styliser le container de ce texte.
 
 ## Positionnement des éléments
 Les éléments `section` se placent naturellement l'un sous l'autre. Ce qui donne, pour la page avec 2 éléments `section`:
@@ -164,7 +165,7 @@ dipslay: flex;
 
 {{< img src="../images/css3.png" >}}
 
-**Question e:**: Ecrire la règle complète que vous avez utilisée.
+**Question f:**: Ecrire la règle complète que vous avez utilisée.
 
 *Approfondir: [developper.mozilla](https://developer.mozilla.org/fr/docs/Learn/CSS/CSS_layout/Flexbox)*
 
