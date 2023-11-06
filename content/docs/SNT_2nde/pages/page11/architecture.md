@@ -5,16 +5,16 @@ Title : histoire informatique et reseaux
 # Histoire de l'informatique et des reseaux
 
 
-> Dans ce TP nous allons créer une petite chronologie de l'informatique à l'aide du traitement de
-> textes LibreOffice Writer.
+> Dans ce TP nous allons créer une petite chronologie de l'informatique à l'aide du traitement de textes **LibreOffice Writer**.
 
 En utilisant l'article Wikipédia sur la
-[chronologie de l'informatique](https://fr.wikipedia.org/wiki/Chronologie_de_l%27informatique),
-**créer un document texte** qui rassemble **deux ou trois dates** par période de **l'histoire de l'informatique et d'internet**. Faites un choix pertinent pour chacune des **dates et descriptions**. Choisir ce qui selon vous, résume le mieux **chaque période**.
+[chronologie de l'informatique](https://fr.wikipedia.org/wiki/Chronologie_de_l%27informatique), ainsi que la page sur l'architecture des ordinateurs [site allophysique](/docs/NSI_1/architecture/page1/):
+
+> **créer un document texte** qui rassemble **deux ou trois dates** par période de **l'histoire de l'informatique et d'internet**. Faites un choix pertinent pour chacune des **dates et descriptions**. Choisir ce qui selon vous, résume le mieux **chaque période**.
 
 **Consignes**
 
-- Le document ne doit pas excéder une page A4.
+- Le document ne doit pas excéder DEUX pages A4.
 - Vous utiliserez des styles pour le mettre en forme:
   
   - `Titre principal` pour le titre du document: «Chronologie de l'informatique»
@@ -28,5 +28,5 @@ En utilisant l'article Wikipédia sur la
   - Sauvegarder votre fichier sous le titre `histoire_informatique_reseaux` dans le dossier `Documents/Devoirs/tixidor/`
 
 
-*Remarque: Vous pouvez coller du texte issu d'une page en supprimant sa mise en forme grâce au collage spécial `<CTRL+MAJ+V>`(ou bien clic droit: coller sans mise en forme)*
+*Remarque: Vous pouvez coller du texte issu d'une page en supprimant sa mise en forme grâce au collage spécial `<CTRL+MAJ+V>`(ou bien clic droit: coller sans Formatage)*
 

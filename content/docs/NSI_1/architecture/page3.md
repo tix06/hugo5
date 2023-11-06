@@ -9,7 +9,7 @@ Le premier programme assembleur a été écrit par Nathaniel Rochester pour l'IB
 
 {{< img src="../images/archi6.png" link="https://fr.wikipedia.org/wiki/Assembleur" caption="exemple de programme assembleur pour  le microprocessor Motorola 6800 8-bit  - source : " >}}
 
-Pour échanger des données avec la mémoire, le processeur transfert l'état d'un registre dans une case mémoire (STA) ou l'état d'une case mémoire dans un registre (LDA). On rappelle que la mémoire contient à la fois les instructions et les données.
+Pour échanger des données avec la mémoire, le processeur transfert l'état d'un registre dans une case mémoire (STR) ou l'état d'une case mémoire dans un registre (LDR). On rappelle que la mémoire contient à la fois les instructions et les données.
 
 D'ailleurs, une instruction machine est une chaine binaire composée de 2 parties:
 
@@ -51,11 +51,13 @@ Le programme suivant affecte une valeur dans un registre, puis la copie dans la 
       HALT
 ```
 
-> Copier-coller le script, *assembler*.
+> Copier-coller le script, *assembler*. Régler le bouton *OPTIONS* sur *hex*
 
 **question a**: Vérifier que 16 (base 10) = 10 (base 16).
 
 **question b**: Combien de lignes fait le programme? Quelles sont les adresses dans la RAM des instructions (donner la somme colonne + ligne)?
+
+> Dérouler le script pas à pas (appuis successifs sur *STEP*)
 
 **question c:** Quel est le registre utilisé? Quelle est la valeur déplacée? Quelle adresse de la RAM va contenir la valeur à stocker?
 
@@ -121,7 +123,7 @@ L'un de ces registres est le *Program Counter*, PC. Celui-ci repère l'état cou
 
 **question a:** Ce programme, permet-il d'additionner $123 + (-145)$? Pourquoi?
 
-**question b:** Créer un programme qui multiplie par 2 le nombre saisi par l'utilisateur, affiche le résultat, et le stocke dans la RAM. (ou dans une variable).
+**question b:** Créer un programme qui multiplie par 2 le nombre saisi par l'utilisateur (avec LSL), affiche le résultat, et le stocke dans la RAM. (ou dans une variable).
 
 ### Rupture de séquence
 Les ruptures de séquence utilisent des étiquettes, à définir dans le programme. Le programme va alors s'executer normalement, ligne après ligne, sauf si un branchement l'amène à une ligne, portant une etiquette.
@@ -152,7 +154,7 @@ La liste complète des instructions se trouve à la page INFO accessible depuis 
 
 
 
-#### Exemple 3 boucle infinie
+#### Exemple 4 boucle infinie
 Le programme s'execute de la manière suivante: ligne 0 (affectation de la valeur 16 au registre R0), puis ligne 1 (on definit une etiquette `boucle`), puis ligne 2 (addition R0+1), puis ligne 3, ligne 4, ...
 
 ```
@@ -177,7 +179,7 @@ L'étiquette `break` devra alors être placée après celle `B boucle` afin de p
 
 **question b:** Ré-écrire le script précédent afin de sortir de la boucle lorsque R0 stocke une vameur supérieure à 20.
 
-#### Exemple 4 max: programme qui retourne le plus grand des 2 nombres saisis par l'utilisateur
+#### Exemple 5 max: programme qui retourne le plus grand des 2 nombres saisis par l'utilisateur
 
 ```
       INP R0,2
@@ -195,7 +197,8 @@ DONE:
 
 Dans ce 2eme exemple, si R1 est supérieur à R0 (test à la ligne 3), alors le programme effectue un *branchement conditionnel* à la ligne 4 (BGT est le branchement pour Greater Than). Il execute à ligne 4 l'appel de la fonction HIGHER), sinon il passe à la ligne 5 (OUT R0,4).
 
-*Remarque:* la ligne 6 `B DONE` est necessaire pour eviter de repeter les instructions qui suivent le repère `HIGHER: OUT R1,4`. Il s'agit d'un branchement vers le repère `DONE`.
+**question a:** qu'est ce qui est affiché si l'on saisit la valeur 18 pour R0 et 9 pour R1? Puis 10 pour R0 et 20 pour R1?
+**question b:** à quoi sert la ligne 6 `B DONE`? Que se passerait-il si cette ligne n'y était pas, et que l'on saisit la valeur 18 pour R0 et 9 pour R1?
 
 # Travail pratique: Assembleur
 Utiliser le{{< a link="https://www.peterhigginson.co.uk/AQA/" caption="simulateur" >}}
@@ -220,7 +223,7 @@ Tester le programme en le déroulant pas à pas (appuis successifs sur le bouton
 
 **2.** **Prog 2**. Obtenir 84 à partir de 90,25,8,7,3 et 1 avec les opérations : addition et soustraction uniquement.
 
-**3.** **Prog 3**. Obtenir 128, en partant de la valeur 1 stockée dans R0. Utilisez les  instructions de multiplication par 2 du langage. *Voir la documentation du simulateur ARM (cliquer sur INFO) et chercher dans le paragraphe The AQA Instruction Set les commandes LSL et LSR*
+**3.** **Prog 3**. Obtenir 128, en partant de la valeur 1 stockée dans R0. Utilisez les  instructions de multiplication par 2 du langage.
 
 ## Programmer avec des boucles
 **1.** Cliquer sur SELECT et choisir le programme `max` en assembleur qui affiche le plus grand de deux entiers entrés au clavier, le comprendre et l'exécuter (Bien comprendre les instructions B, CMP et BGT voir le manuel)

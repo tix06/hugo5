@@ -2,16 +2,39 @@
 Title: architecture 2
 ---
 
-# architecture 2
-Un ordinateur est une *machine* qui traite de *l'information*, stockée dans la *mémoire*, par le *processeur*. Ces traitements sont aussi stockés dans la mémoire, sous forme de *programmes*.
+# Qu'est ce qu'un ordinateur?
+Un ordinateur est une *machine* qui traite de *l'information*, stockée dans la *mémoire*, à l'aide du *processeur*. Les instructions de ces traitements sont aussi stockés dans la mémoire, sous forme de *programmes*.
 
-## Rappels
+Il existe donc une très grande variété de machines que l'on peut appeler des *ordinateurs*: celles présentes dans une PC de bureau, dans un mac, dans un smartphone, un objet connecté, une voiture...
+
+## Rappels sur l'architecture Von Neumann
 Dans l'architecture Von Neumann:
 
 * une machine universelle est contrôlée par un programme.
 * Les données et programmes sont écrits sur une même mémoire (en binaire). L'ordinateur enregistre les instructions des programmes qu'il exécute dans sa mémoire vive.
 * Les instructions sont executée de manière séquentielle, par un **processeur**.
 * Les mémoires RAM d'une part et les mémoires non volatiles d'autre part (Disques durs, mémoires flash) sont reliées au processeur (donc aux registres du processeur) par une liaison appelée Bus. En réalité, seule la RAM est directement accessible au processeur.
+
+
+# Description d'un ordinateur avec microprocesseur
+## En video
+{{< img src="/images/video.png" link="https://www.youtube.com/watch?v=5hF4ziHwJBQ" caption="Fonctionnement d'un ordinateur - Mooc Architecture" >}}
+
+## à l'echelle de la carte mère
+La carte mère d'un ordinateur comprend:
+
+* un microprocesseur
+* de la mémoire volatile (random access memory, RAM)
+* de la mémoire de masse
+* des ports:
+  * port ethernet, RJ45
+  * port USB
+  * ports pour carte wifi, carte son, carte graphique, ...
+* des périphériques d'entrée et sortie: écran, haut-parleur, souris, clavier...
+
+Ces périphériques sont connectés aux 3 *Bus* définis plus loin et se comportent comme une mémoire. On leur affecte des adresses (différentes de celles de la RAM) et on communique avec eux en écrivant à ces adresses. Le Bus de contrôle va detecter un changement sur l'une de ces adresses et interrompre le traitement en cours.
+
+Certains ports vont ajouter des extensions à l'ordinateur (carte son, video, wifi). Certains vont être essentiels au fonctionnement de l'ordinateur (mémoires).
 
 ## Liaisons entre composants: les Bus
 Il existe des Bus de différentes nature pour relier les composants:
@@ -22,28 +45,8 @@ Il existe des Bus de différentes nature pour relier les composants:
 
 Les bus peuvent être bi-directionnels: les données transitent dans les 2 sens. Mais aussi directionnel: c'est le cas du bus d'adresse entre le processeur et la RAM, qui n'est parcouru que dans le sens processeur => RAM.
 
-# Description d'un ordinateur
-## En video
-{{< img src="/images/video.png" link="https://www.youtube.com/watch?v=5hF4ziHwJBQ" caption="Fonctionnement d'un ordinateur - Mooc Architecture" >}}
 
-
-
-
-## Echelle macro: périphériques
-Un ordinateur comprend des périphériques d'entrée et sortie:
-
-* écran, haut-parleur, souris, clavier...
-
-Ces périphériques sont connectés aux 3 *Bus* définis plus loin et se comportent comme une mémoire. On leur affecte des adresses (différentes de celles de la RAM) et on communique avec eux en écrivant à ces adresses. Le Bus de contrôle va detecter un changement sur l'une de ces adresses et interrompre le traitement en cours.
-
-## Echelle intermédiaire
-A une echelle plus proche du processeur: Un ordinateur a une carte mère sur laquelle on trouve différents ports et supports de cartes:
-
-* port de branchement des mémoires, disques durs, port RJ45 (reseau), carte wifi, carte son, carte graphique, ...
-
-Certains ports vont ajouter des extensions à l'ordinateur (carte son, video, wifi). Certains vont être essentiels au fonctionnement de l'ordinateur (mémoires).
-
-## Echelle micro
+## à l'echelle des composants
 Les constituants de l'ordinateur sont composés de circuits intégrés. On trouve 2 grandes catégories de circuits intégrés:
 
 * les circuits combinatoires: l'état de sortie de ces circuits ne dépend que des états d'entrée.
@@ -60,11 +63,12 @@ Les constituants de l'ordinateur sont composés de circuits intégrés. On trouv
 
 # Le fonctionnement du processeur
 ## Généralités
+### Videos sur le fonctionnement du processeur
 {{< img src="/images/video.png" link="https://www.youtube.com/watch?v=etlFow3LB6o" caption="Généralités sur le fonctionnement d'un processeur" >}}
 
 {{< img src="/images/video.png" link="https://www.youtube.com/watch?v=75BI9TBe1Sw" caption="Brève introduction sur le fonctionnement d'un processeur" >}}
 
-
+### Les 2 sous parties du processeur
 {{< img src="../images/architectureN2.png" caption="Architecture de Von-Neumann - processeur" >}}
 L'architecture d'un **processeur** (CPU) comporte 2 parties: 
 
@@ -78,6 +82,7 @@ L'architecture d'un **processeur** (CPU) comporte 2 parties:
 
 *L'UC traite une séquence d'instructions, alors que l'UAL traite une séquence de données*. L’**UC** est chargée de la reconnaissance des instructions et de leur exécution par l’unité de traitement au *rythme de l’horloge*.
 
+## Le cycle Von Neumann
 Le processeur réalise le **cycle de Von Neumann**:
 
 1. Lire une case mémoire d’adresse PC (envoyer l’adresse à la mémoire, et recevoir en retour la donnée à cette adresse).
@@ -85,18 +90,20 @@ Le processeur réalise le **cycle de Von Neumann**:
 3. Ajouter 1 au *program Counter* (PC), qui stocke l'adresse de la prochaine instruction.
 4. Recommencer
 
-## Un cycle d'execution
+## Détail d'un cycle d'execution
+**Important**:
+
 Le processeur ne manipule *pas directement* les données mais leurs *adresses*.
 
 Des **registres** servent à lire et écrire les données en mémoire. Ce sont les registres d'adresse et de données.
 
-### Utilisation en lecture
+### Utilisation des registres en lecture: rôle de l'unité de contrôle
 * registre d'adresse: stocke l'adresse de la donnée, avant d'envoyer le signal de lecture
-* registre de données: la mémoire va chercher le contenu de l'adresse qui lui est envoyée, et retourne la donnée vers le registre de données.
+* registre de données: la mémoire va chercher le contenu de l'adresse qui lui est envoyée, et retourne la donnée vers le registre de données. 
 
 La donnée peut être interprétée comme une instruction. Celle-ci est alors décomposée en un code d'opération (OP) ainsi qu'en 2 opérandes, qui sont les adresses d'une données (A et B). OP, A et B sont stockés dans le registre d'instruction (RI).
 
-### Execution de l'opération
+### Execution de l'opération: rôle de l'unité de traitement
 La figure ci-contre représente un schéma classique d'UAL. Celle-ci possède deux entrées A et B sur lesquelles on présente les données à traiter. L'entrée F désigne l'opération à effectuer (vient du code OP). [Source: wikipedia - Unité Arithmétique et Logique](https://fr.wikipedia.org/wiki/Unit%C3%A9_arithm%C3%A9tique_et_logique)
 
 Enfin, l'UAL possède deux sorties, R qui est le résultat de l'opération, et D les éventuels drapeaux. (information d'erreur ou de dépassement)

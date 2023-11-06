@@ -184,13 +184,20 @@ Les RWM stockent les variables du programme à exécuter, des données que le pr
 ### Les bus
 Les données doivent circuler entre les différentes parties d’un ordinateur, notamment entre la mémoire vive et le CPU. Le système permettant cette circulation est appelé bus. Il existe, sans entrer dans les détails, 3 grands types de bus: adresses, données, de contrôle.
 
+
+
+# Loi de Moore
+Des années 1970 aux années 2000, la miniaturisation des circuits a suivi al Loi de Moore qui prédit un doublement du nombre de transistors par cm2 tous les 18 mois. Cette miniaturisation et l'augmentation des fréquences d'horloge (qui ont aussi doublé environ tous les 18 mois) ont permis d'augmenter la puissance des processeurs de façon exponentielle pendant près de 40 ans.
+
+La figure suivante montre l'évolution du nombre de transistors pour un même élement de surface:
+
+{{< img src="../images/mem-moore.png" link="https://fr.wikipedia.org/wiki/Loi_de_Moore" caption="illustration de la loi de Moore - source wikipedia" >}}
+
+
 # Architecture Von Neumann vs Harvard
 Voir la video suivante expliquant la différence entre ces 2 architectures:
 
 {{< img src="../images/architectureN1.png" link="https://www.youtube.com/watch?v=cQjllS45ReU" caption="MooC Arduino #4 - Architecture de Von-Neumann, Harvard et Microcontrôleurs" >}}
-
-# Loi de Moore
-Des années 1970 aux années 2000, la miniaturisation des circuits a suivi al Loi de Moore qui prédit un doublement du nombre de transistors par cm2 tous les 18 mois. Cette miniaturisation et l'augmentation des fréquences d'horloge (qui ont aussi doublé environ tous les 18 mois) ont permis d'augmenter la puissance des processeurs de façon exponentielle pendant près de 40 ans.
 
 # Liens et bibliographie
 * [cours sur l'architecture Von Neumann lattice.cnrs.fr](https://www.lattice.cnrs.fr/sites/itellier/poly_intro_info/informatique004.html#fig:Von%20Neumann)
