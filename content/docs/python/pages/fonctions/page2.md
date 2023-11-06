@@ -203,6 +203,16 @@ bonjour George
 
 * **Question b:** Citer un avantage d'utiliser une fonction plutôt qu'une serie d'instructions pour afficher *bonjour* de manière personalisée.
 
+## Ex 3: fonction pour calculer
+1. Écrire une fonction cube qui retourne le `cube` de son argument.
+2. Écrire une fonction `volumeSphere` qui calcule le volume d’une sphère de rayon r fourni en argument et qui utilise la fonction cube.
+
+*Donnée:*
+
+$$V = \tfrac{4}{3}\times\pi\times R^3$$
+
+3. Calculer le volume en $cm^3$ d'une sphere de rayon 10cm (à l'aide de la fonction `volumeSphere`)
+
 ## Travaux pratiques
 * Le TP sur les boucles bornées, et les fonctions avec et sans paramètres: [Lien](/docs/NSI_1/donnees/page5/)
 * Le TP d'application des fonctions à Turtle: [Lien](../page3/)
