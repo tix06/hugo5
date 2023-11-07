@@ -10,7 +10,7 @@ Title : histoire informatique et reseaux
 En utilisant l'article Wikipédia sur la
 [chronologie de l'informatique](https://fr.wikipedia.org/wiki/Chronologie_de_l%27informatique), ainsi que la page sur l'architecture des ordinateurs [site allophysique](/docs/NSI_1/architecture/page1/):
 
-> **créer un document texte** qui rassemble **deux ou trois dates** par période de **l'histoire de l'informatique et d'internet**. Faites un choix pertinent pour chacune des **dates et descriptions**. Choisir ce qui selon vous, résume le mieux **chaque période**.
+> **créer un document texte** qui rassemble **3 à 6 dates** par période de **l'histoire de l'informatique et d'internet**. Faites un choix pertinent pour chacune des **dates et descriptions**. Choisir ce qui selon vous, résume le mieux **chaque période**.
 
 **Consignes**
 
