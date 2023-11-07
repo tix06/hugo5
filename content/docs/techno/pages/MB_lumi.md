@@ -39,8 +39,8 @@ from microbit import *
 
 while True:
     lumi = display.read_light_level()
-	display.scroll(lumi)
-	sleep(100)
+    display.scroll(lumi)
+    sleep(100)
 ```
 
 ## Version 1 du projet: Seuil de lumière
@@ -59,7 +59,7 @@ while True:
     if lumi ... ...:
         ...
     else:
-    	...
+        ...
 ```
 
 La surface de DEL alterne alors entre mesure d'intensité et affichage. D'où le clignottement.
@@ -106,7 +106,9 @@ L'intensité lumineuse du motif affiché dépend de la valeur attribuée à chaq
 
 On peut créer une chaine de caractères en fonction d'une variable `I` qui varie de 0 à 9 et qui dessine un motif carré. Les 2 premieres lignes du motif sont construites à partir de:
 
+```
 motif = str(I + I + I + I + I + ":" + I + "000" + I + ":")
+```
 
 La valeur de `I` sera calculée d'après la variable `lumi`selon la loi:
 
@@ -118,11 +120,11 @@ Le programme principal du script 3 (à compléter) sera alors:
 
 ```python
 while True:
-	lumi = display.read_light_level()
-	I = ...
-	motif = ...
-	img = Image(...)
-	display.show(img)
+    lumi = display.read_light_level()
+    I = ...
+    motif = ...
+    img = Image(...)
+    display.show(img)
 ```
 
 > Afficher avec le script 3 un carré dont l'intensité lumineuse varie entre 0 et 9 selon l'intensité lumineuse mesurée. Tester et mettre au point le programme. 
