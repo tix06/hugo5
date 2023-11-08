@@ -98,11 +98,6 @@ Les nœuds h1, p, img et p sont les **fils** du nœud article.<br>
 {{< img src="../images/sections.jpg" alt="page avec sections" caption="page avec sectionnements" >}}
 
 
-```  
-
-
-
-
 *Question :* L'adresse de l'image peut être *relative*/ *absolue*, *locale* / externe*. Définir chacun de ces termes. Puis expliquer comment chacune de ces adresses a une expression particulière pour valeur de l'attribut *src*.
 
 # Un outil de vérification de la syntaxe
@@ -117,6 +112,58 @@ S'il y a des erreurs, elles vous seront indiquées, avec des explications (en an
 
 Conseil : vérifier et corriger systématiquement vos pages Web avec cet outil.C'est contraignant au début, mais cela vous fera prendre rapidement de bonnes habitudes.
 
+# L'essentiel à retenir
+
+## Le Web
+
+**Le web** fonctionne avec : le protocole HTTP (HyperText Transfert Protocol), les URL (Uniform Resource Locator) et le langage de description HTML (HyperText Markup Language).
+
+**Le W3C**  
+Le World Wide Web Consortium, abrégé par le sigle W3C, est un organisme de standardisation à but non lucratif, fondé en octobre 1994 chargé de promouvoir la compatibilité des technologies du World Wide Web telles que HTML, CSS, JS... Le W3C permet la normalisation de la présentation de l’information.
+
+## Le HTML
+
+HTML (HyperText Markup Langage) permet de **structurer le contenu** de la page web. C'est un langage interprété par le navigateur (client).
+
+C'est un langage constitué de _balises_. La plupart du temps, le contenu se met entre les balises ouvrantes / fermantes. Mais il existe des balises _orphelines_ qui n'ont pas de fermeture (img, br).
+
+Le **squelette** du document est constitué du doctype (première ligne), puis des éléments _html, head, et body_.
+
+La manière avec laquelle les balises sont imbriquées correspond à une filiation entre les éléments (parent-fille). Ainsi, _html_ est la balise parente de toutes les autres. _html_ est aussi le parent direct de _head_ et _body_.
+
+Le contenu de la page sera mis entre les balises de _body_.
+
+## Le CSS
+
+Le langage CSS (Cascading Style Sheets) est le langage de mise en forme d'une page web. C'est un langage interprété par le navigateur. Le lien vers la feuille de style est souvent insérée dans l'en-tête de la page web:
+
+```
+<link href="style.css" rel="stylesheets">
+```
+
+## Le Javascript
+
+Langage utilisé pour les scripts cöté client. Permet de gérer l'interactivité d'une page web, son aspect _dynamique_. L'aspect _étant reservé aux langages HTML et CSS._
+
+Le lien vers le fichier contenant le script javascript est souvent insérée dans la page web:
+
+```
+<script src="script.js">
+```
+
+## Tâches synchrones et asynchrones
+
+Deux opérations sont **synchrones** lorsque la seconde attend que la première ait fini son travail pour démarrer. Par exemple, le protocole HTTP (lors du chargement et rechargement d'une page web), mais aussi l'interprétation des langages HTML et CSS par le navigateur.
+
+Des opérations sont **asynchrones** en informatique lorsqu’elles sont indépendantes. Souvent, le navigateur interprète les scripts javascript de manière asynchrone, ce qui ne créé pas de blocage lors de la construction de la page.
+
+Toujours côté client, la technologie AJAX permet le transfert de données en arrière plan, sans avoir à recharger la page web.
+
+## Scripts côté serveur
+
+Les scripts côté serveur nécessitent une communication avec le serveur de manière synchrone ou asynchrone. Ils serviront par exemple à collecter des données, à générer le code HTML de la page, à communiquer avec une base de données. Les langages les plus utilisées sont PHP, Python, Javascript ...
+
+<!--
 # Résumé
 
 <div class="essentiel">
@@ -167,13 +214,13 @@ Conseil : vérifier et corriger systématiquement vos pages Web avec cet outil.C
   Toujours côté client, la technologie AJAX permet le transfert de données en arrière plan, sans avoir à recharger la page web.</p>
 
   <h3>Scripts côté serveur</h3>
-  Les scipts côté serveur nécessitent une communication avec le serveur de manière synchrone ou asynchrone. Ils serviront par exemple à collecter des données, à générer le code HTML de la page, à communiquer avec une base de données. Les langages les plus utilisées sont PHP, Python, Javascript ...
+  Les scripts côté serveur nécessitent une communication avec le serveur de manière synchrone ou asynchrone. Ils serviront par exemple à collecter des données, à générer le code HTML de la page, à communiquer avec une base de données. Les langages les plus utilisées sont PHP, Python, Javascript ...
 
 
   </div>
 </div>
   
-
+-->
 
 
 # Liens

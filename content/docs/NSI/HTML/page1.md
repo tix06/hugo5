@@ -48,59 +48,14 @@ Voici le code HTML utilisé :
 
 
 * Résultat obtenu SANS aucune règle CSS : 
-<div style = "background: rgb(230,230,230)">
-  <div>La bataille de Marignan</div>
-  <div>
-      <div>
-        La bataille de Marignan (Marignano en Italie, aujourd’hui Melegnano, ville à 16 km au sud-est de Milan) eut lieu les 13 et 14 septembre 1515 et opposa le roi de France <span onclick="window.location.href = 'https://fr.wikipedia.org/wiki/François_Ier_(roi_de_France)'">François Ier</span> et ses alliés vénitiens aux mercenaires suisses qui défendaient le duché de Milan.
-      </div>
-      <div>
-        Première victoire du jeune roi François Ier, acquise dès la première année de son règne, elle fit environ 16 000 morts en seize heures de combat.
-      </div>
-  </div>
-</div>
-<br>
-<i>Remarques: le contenu apparait de manière structuré, mais sans aucune mise en forme. Le lien est fonctionnel: cliquer sur le nom François Ier pour vous en apercevoir.</i>
+
+{{< img src="../images/marignan1.png" >}}
+
+*Remarques: le contenu apparait de manière structuré, mais sans aucune mise en forme. Le lien est fonctionnel: cliquer sur le nom François Ier pour vous en apercevoir.*
 
 * Résultat obtenu AVEC les règles CSS : 
-<div class="cont">
-  <div class="titreDIV">La bataille de Marignan</div>
-  <div class="contenu">
-      <div class="paragraphe">
-        La bataille de Marignan (Marignano en Italie, aujourd’hui Melegnano, ville à 16 km au sud-est de Milan) eut lieu les 13 et 14 septembre 1515 et opposa le roi de France <span class="lien" onclick="window.location.href = 'https://fr.wikipedia.org/wiki/François_Ier_(roi_de_France)'">François Ier</span> et ses alliés vénitiens aux mercenaires suisses qui défendaient le duché de Milan.
-      </div>
-      <div class="paragraphe">
-        Première victoire du jeune roi François Ier, acquise dès la première année de son règne, elle fit environ 16 000 morts en seize heures de combat.
-      </div>
-  </div>
-</div>
 
-<style>
-.cont{
-  background: rgb(230,230,230);
-}
-.contenu{
-  border:solid;
-  margin: 0.5em;
-  padding: 0.5em;
-}
-.titreDIV{
-  font-size:1.5em;
-  text-decoration: none;
-}
-
-.paragraphe{
-  margin:1.2em;
-  text-indent:20px;
-  text-align:justify;
-}
-.lien{
-  color:blue;
-  cursor: pointer;
-}
-
-</style>
-
+{{< img src="../images/marignan2.png" >}}
 
 
 Les règles CSS utilisées pour ce 2<sup>e</sup> exemple:
@@ -142,16 +97,21 @@ Les balises `<style>` peuvent être insérées n'importe où dans le document *h
 Pour le cours complet sur CSS, voir la{{< a link="/docs/NSI/CSS/page1/" caption="page CSS" >}}
 Les règles CSS sont construites de la manière suivante:
 
-<div style="text-align:center; font-weight: bold;">selecteur { propriete: valeur; }</div>
+```css
+selecteur { propriete: valeur; }
+``` 
 
 La valeur de la propriété se met après le séparateur `:`.
 
 Le selecteur fait référence à un ou plusieurs éléments du document (sera développé plus tard).
 
 {{< img src="../images/css.png" >}}
+
 *Exemple:* Pour colorier TOUS les titres `h1` en bleu, on utilise la règle CSS que l'on peut mettre entre les balises `<style>`:
 
-<div style="text-align:center; font-weight: bold;">h1 { color: blue;}</div>
+```css 
+h1 { color: blue;}
+``` 
 
 ## Activité 1: Construire un premier paragraphe en html et css
 > Utiliser un editeur en ligne, comme par exemple{{< a link="https://htmledit.squarefree.com/" caption=" Utiliser un editeur en ligne, comme par exemple " >}}

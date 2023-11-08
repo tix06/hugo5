@@ -114,7 +114,7 @@ Selon cette norme IEEE 754, en 32 bits (simple precision):
 * les 8 bits suivants sont les bits de l'exposant E, exprimé en nombre relatif. Ce qui permet de coder l'exposant avec des valeurs comprises dans l'intervalle [-127; 128]
 * les bits restants sont ceux de M
 
-<img src="../images/mantisse823bits.png"> 
+{{< img src="../images/mantisse823bits.png" >}}
 
 ### Cette méthode est-elle précise?
 
