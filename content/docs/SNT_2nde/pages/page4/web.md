@@ -86,10 +86,7 @@ Pour limiter ses traces sur le Web, et reduire cette collecte de données qui vo
 D’où l’importance d’un cadre juridique permettant de protéger les usagers, préoccupation à laquelle répond le règlement général sur la protection des données (RGPD).
 
 
-# Travaux pratiques
 
-<ul>
-<li{{< a link="../web1" caption="" >}}<li{{< a link="../web2" caption="" >}}<li{{< a link="" caption="" >}}<li{{< a link="../web3" caption="" >}}</ul>
     
 
 

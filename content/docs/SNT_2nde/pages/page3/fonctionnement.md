@@ -3,7 +3,7 @@ Title: fonctionnement internet
 ---
 # Video SNT: les protocoles
 
-{{< img src="/images/video.png" link="https://www.youtube.com/watch?v=s18KtOLpCg4" caption="Video SNT: Internet, IP un protocole universel ?" >}}
+{{< img src="/images/video.png" link="https://www.youtube.com/watch?v=s18KtOLpCg4" caption="Video SNT: Internet, TCP-IP un protocole universel ?" >}}
 
 # Constitution du reseau internet
 ## Réseau local 

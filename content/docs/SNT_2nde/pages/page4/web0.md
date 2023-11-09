@@ -2,7 +2,10 @@
 Title: modele client serveur
 ---
 
+# Qu'est ce que le Web
 Le web est un de ces services qui consiste à pouvoir naviguer sur des pages web reliées entre elles par des liens hypertextes. 
+
+{{< img src="../images/mooc_web.png" link="https://www.lumni.fr/video/le-web-site-internet-ou-site-web" caption="mooc SNT: Internet et le Web" >}}
 
 # Adresse d'une page web: URL
 ## Uniform Ressource Locator: où est la page?
@@ -23,7 +26,7 @@ Par exemple, la page `html` que vous consultez, fait partie du domaine *allophys
 
 # Le modèle client-serveur
 
-*Activité d’introduction:*  
+## Activité d’introduction: Le Web nous traque
 
 {{< img src="../images/donottrack1.png" link="https://episode1.donottrack-doc.com/fr/" >}}
  
