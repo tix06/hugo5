@@ -9,7 +9,7 @@ Il est nécessaire de séparer le travail de la forme du document de celui du co
 
 # Rappels sur la forme attendue pour un document texte
 * Utiliser les niveaux de titres pour structurer votre document (Titre1, Titre2, Titre3...).
-* Numéroter les titres est sous-titres(Menu Outils> Numérotation des chapitres).
+* Numéroter les titres et sous-titres(Menu Outils> Numérotation des chapitres).
 * Insérer des sauts de pages avant les titres de niveau 1 (Menu Style de paragraphe: Titre1)
 * Utiliser peu de polices, une pour les titres et une pour le texte. Utiliser des polices de qualité bien lisibles par exemple: Times new Roman(serif pour le texte), Arial(sans serif pour les titres).
 * Utiliser les images avec parcimonie et numéroter et légender les figures(clic droit sur l’image: Insérer une légende). Pensez à citer la source, et respecter les *droits d'auteur* sur l'image.
