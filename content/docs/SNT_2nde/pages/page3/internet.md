@@ -15,7 +15,7 @@ Maintenant, c'est l'accès à internet qui est recherché, pour :
 - commande d'un taxi ou d'un repas, avec suivi en temps réel du délai d'attente
 - autres services : téléformation, télémedecine, ...
 
-
+{{< img src="../images/survey.png" caption="https://fr.surveymonkey.com/r/T8GSRTW" >}}
 
 ## Quel est votre terminal ?
 On entend par *terminal*, l'appareil que vous utilisez pour utiliser les services fournis par internet. Progressivement, l'ordinateur a reculé et a été remplacé par les smartphones, tablettes, assistant vocal ou montre connectées pour la plupart de ces services.

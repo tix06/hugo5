@@ -39,13 +39,27 @@ Il est nécessaire de séparer le travail de la forme du document (Partie 2) de 
 {{< img src="../images/document.png" link="https://www.sciencespo-lille.eu/sites/default/files/guide_preparer_et_rediger_un_memoire_de_recherche.pdf"  caption="Exemple de document - rediger un mémoire - sciencespo-lille.eu" >}} 
 
 ## Travail demandé
-### Définir les éléments du document
+Vous allez personnaliser le Style de votre document. Vous allez poursuivre la mise en structure de ce document, puis vous modifierez les propriétés des différents éléments.
+
+{{< img src="../images/elements_page.png" caption="personnalisation des propriétés couleur, alignement, police, ..." >}}
+
+### Définir les éléments, structurer le document
 * Utiliser des niveaux de titres pour structurer votre document (Titre1, Titre2, Titre3...).
 * Ajouter un épigraphe à chaque début de chapitre. Pour faire cela, vous allez créer un nouvel *élément de style*. Voir plus loin la méthode à employer.
-### Styliser le document de manière personnelle
-
 
 *L’épigraphe est une courte citation placée au début d’un ouvrage ou d’un chapitre, et qui permet d’en indiquer l’esprit, de résumer son contenu.*
+
+* Choisir le Style *Titre 3* pour les dates relatives aux machines et leurs systèmes d'exploitation.
+* Créer de nouveaux Styles *enfants* de *Titre 3*, comme sur l'image ci-dessous. L'un des Styles servira à mettre en évidence les dates relatives aux algorithmes et programmes. L'autre pour les reseaux et les programmes relatifs à ces reseaux.
+
+{{< img src="../images/hierarchie_heading.png" >}}
+
+Seule la propriété couleurs des Styles *enfants* diffèrent de *Titre 3*. Les autres propriétés sont héritées.
+
+### Styliser le document de manière personnelle
+Utiliser les indications ci-dessous.
+
+
 
 
 

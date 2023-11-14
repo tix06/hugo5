@@ -86,8 +86,22 @@ Pour limiter ses traces sur le Web, et reduire cette collecte de données qui vo
 D’où l’importance d’un cadre juridique permettant de protéger les usagers, préoccupation à laquelle répond le règlement général sur la protection des données (RGPD).
 
 
+# Exercice
+Construire une URL (Uniform Ressource Locator)
+
+Pour accéder aux documents d’un serveur, il faut saisir une URL (une adresse) dans un navigateur.
+
+Un ordinateur serveur héberge des dossiers et des fichiers. Le chemin vers un document est mis après l’adresse du nom de domaine dans l’URL.
+
+Par exemple, pour atteindre fichier1.css, il faut saisir l’adresse :
+
+`http://nom_du_domaine.fr/dossier2/fichier1.css`
+
+{{< img src="../images/dossier_fichier.png" caption="exercice inspiré de la page web du site pixees.fr/informatiquelycee" >}}
 
     
+* Quelle est l’URL à saisir pour atteindre fichier4.js ?
+* Quelle est l’URL à saisir pour atteindre fichier6.html ?
 
 
 <!--

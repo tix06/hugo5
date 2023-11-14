@@ -5,7 +5,13 @@ Title: modele client serveur
 # Qu'est ce que le Web
 Le web est un de ces services qui consiste à pouvoir naviguer sur des pages web reliées entre elles par des liens hypertextes. 
 
+* Une brève introduction:
+
 {{< img src="../images/mooc_web.png" link="https://www.lumni.fr/video/le-web-site-internet-ou-site-web" caption="mooc SNT: Internet et le Web" >}}
+
+* le rôle du navigateur: présenter et rendre les pages interactives
+
+{{< img src="/images/video.png" link="https://www.youtube.com/watch?v=YVn7jrDYjUQ" caption="histoire du web - Delagrave" >}}
 
 # Adresse d'une page web: URL
 ## Uniform Ressource Locator: où est la page?
