@@ -459,7 +459,7 @@ Pour la première itération de la boucle externe, `i=0`. Donc, pour la boucle i
 
 Pour la deuxième itération de la boucle externe, `i=1`. Pour la boucle interne, on a alors `for j in range(2, n)`. Il y a alors `n-2` itérations.
 
-Le nombre d'itération de la boucle interne vaut `n-1`. On a alors `n-1` termes pour le calcul de T(n), dont les valeurs iront de `n-1` à 1:
+Le nombre d'itérations de la boucle interne vaut `n-1`. On a alors `n-1` termes pour le calcul de T(n), dont les valeurs iront de `n-1` à 1:
 
 $$T(n) = (n-1) + (n-2) + ... + 1$$
 

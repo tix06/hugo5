@@ -8,7 +8,7 @@ Title : histoire informatique et reseaux
 > Dans ce TP nous allons créer une petite chronologie de l'informatique à l'aide du traitement de textes **LibreOffice Writer**.
 
 En utilisant l'article Wikipédia sur la
-[chronologie de l'informatique](https://fr.wikipedia.org/wiki/Chronologie_de_l%27informatique), ainsi que la page sur l'architecture des ordinateurs [site allophysique](/docs/NSI_1/architecture/page1/):
+[chronologie de l'informatique](https://fr.wikipedia.org/wiki/Chronologie_de_l%27informatique):
 
 > **créer un document texte** qui rassemble **3 à 6 dates** par période de **l'histoire de l'informatique et d'internet**. Faites un choix pertinent pour chacune des **dates et descriptions**. Choisir ce qui selon vous, résume le mieux **chaque période**.
 
@@ -38,49 +38,30 @@ Pour être lisible, un texte doit comporter une certaine hiérarchie.
 ## Définir les éléments, structurer le document
 Utiliser des niveaux de titres pour structurer votre document (Titre1, Titre2, Titre3...).
 
-{{< img src="../images/exemple0.png" caption="Le document initial" >}}
+{{< img src="../images/exemple0.png" link="/pdf/SNT/recherche_info.odt" caption="Le document initial" >}}
 
 * Choisir *Titre 1* pour le titre principal
 * Choisir *Titre 2* pour chacune des phases de l'histoire de l'informatique: *Les prémices de l'informatique*, ...
 * Choisir le Style *Titre 3* pour les dates relatives aux machines et leurs systèmes d'exploitation.
+* Créer un nouveau Style *enfants* de *Titre 3*, comme sur l'image ci-dessous. Le nouveau Style servira pour les reseaux et les programmes relatifs à ces reseaux.
+
+{{< img src="../images/titre3_bis.png" >}}
+
+Votre document:
 
 {{< img src="../images/exemple1.png" caption="Le document devrait maintenant ressembler à ceci" >}}
 
-* Créer ensuite DEUX nouveaux Styles *enfants* de *Titre 3*, comme sur l'image ci-dessous. 
-  * L'un des ces nouveaux Style servira à mettre en relief les Algorithmes
-  * L'autre pour les reseaux et les programmes relatifs à ces reseaux.
-
-{{< img src="../images/hierarchie_heading.png" >}}
-
-Seule la propriété couleurs des Styles *enfants* diffèrent de *Titre 3*. Les autres propriétés sont héritées.
-
-* Ajouter une numérotation aux chapitres (phases de l'histoire)
-
-
-## Créer un épigraphe pour chaque phase de l'histoire
-
-*L’épigraphe est une courte citation placée au début d’un ouvrage ou d’un chapitre, et qui permet d’en indiquer l’esprit, de résumer son contenu.*
-
-
 ## Personnaliser le style
-Vous allez personnaliser les Styles utilisés dans votre document. Vous modifierez les propriétés des différents éléments. Un exemple de document stylisé est donné ci-dessous:
+Vous allez personnaliser les Styles utilisés dans votre document. Vous modifierez les **propriétés** des différents éléments.
 
 
 
-{{< img src="../images/elements_page.png" caption="personnalisation des propriétés couleur, alignement, police, ..." >}}
+{{< img src="../images/exemple.png" caption="personnalisation des propriétés couleur, alignement, police, ..." >}}
 
 
 
+Utiliser les indications ci-dessous.
 
-
-
-## Styliser le document de manière personnelle
-Voici un modèle utilisé pour un mémoire (document long), pour sciences politiques Lille:
-
-{{< img src="../images/document.png" link="https://www.sciencespo-lille.eu/sites/default/files/guide_preparer_et_rediger_un_memoire_de_recherche.pdf"  caption="Exemple de document - rediger un mémoire - sciencespo-lille.eu" >}} 
-
-
-Les manières de mettre en forme un document sont très variés. Les choix de design personnels. Dans tous les cas, il sera nécessaire de modifier les **propriétés** des Styles en modifiant leurs **valeurs**. Utiliser les tutoriels ci-dessous.
 
 # Modifier le style d’un élément ou en créer un nouveau
 
@@ -123,10 +104,10 @@ Le but est alors de retrouver la bonne Propriété.
 
 {{< img src="../images/text7.png" >}}
 
+
 ## Aide en video
 
-On s'aidera des tutoriels pour LibreOffice Writer à l'adresse suivante: {{< a link="https://www.youtube.com/watch?v=ekh2Q1DU8Mw" caption="Youtube - LibreOffice Writer 1/11 : Mettre en forme le style principal " >}}
-
+On pourra s'aider des tutoriels pour LibreOffice Writer à l'adresse suivante: {{< a link="https://www.youtube.com/watch?v=ekh2Q1DU8Mw" caption="Youtube - LibreOffice Writer 1/11 : Mettre en forme le style principal " >}}
 
 
 
