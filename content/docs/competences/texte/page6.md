@@ -80,7 +80,9 @@ Voici un modèle utilisé pour un mémoire (document long), pour sciences politi
 {{< img src="../images/document.png" link="https://www.sciencespo-lille.eu/sites/default/files/guide_preparer_et_rediger_un_memoire_de_recherche.pdf"  caption="Exemple de document - rediger un mémoire - sciencespo-lille.eu" >}} 
 
 
-Les manières de mettre en forme un document sont très variés. Les choix de design personnels. Dans tous les cas, il sera nécessaire de modifier les **propriétés** des Styles en modifiant leurs **valeurs**. Utiliser les tutoriels ci-dessous.
+Les manières de mettre en forme un document sont très variés, les choix de design sont personnels. Dans tous les cas, il sera nécessaire de modifier les **propriétés** des Styles en modifiant leurs **valeurs**. 
+
+Utiliser les tutoriels ci-dessous.
 
 # Modifier le style d’un élément ou en créer un nouveau
 
