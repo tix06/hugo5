@@ -831,7 +831,7 @@ $$Min(n) = Max(n) = Moy(n) = n^3 $$
 
 -->
 
-## Liens
+# Liens
 [^1]: itération : succession d'états dans un processus
 [^2]: wikipedia : analyse de la complexité : [wikipedia.org/wiki/Analyse_de_la_complexité_des_algorithmes](https://fr.wikipedia.org/wiki/Analyse_de_la_complexité_des_algorithmes)
 

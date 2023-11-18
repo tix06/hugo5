@@ -188,6 +188,35 @@ p.rubrik {
       justify-content: space-between;
 }
 
+/****************************************/
+/* font et style pour les titres et s/t */
+/****************************************/
+body {
+counter-reset:h2
+}
+
+h1 {
+counter-reset:h2
+}
+
+h2:before {
+content:counter(h2) ".\0000a0\0000a0";
+counter-increment:h2
+}
+
+h2 {
+counter-reset:h3
+}
+
+h3:before {
+content:counter(h2) "." counter(h3) ".\0000a0\0000a0";
+counter-increment:h3
+}
+
+h4:before {
+content: counter(h2) "." counter(h3) "." "\266F" ".\0000a0\0000a0";
+}
+
 /*****trait de surlignement *******/
 h1{border-bottom:solid 1px #ccc;} 
 

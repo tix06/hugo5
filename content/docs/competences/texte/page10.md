@@ -78,6 +78,10 @@ L'editeur visuel permet de renseigner le contenu tout en structurant le document
 
 {{< img src="../images/css4.png" >}}
 
+#### structure du texte
+Le choix des niveaux de sous-titres doit avoir une certaine logique. Le titre de niveau 1 (balise `<h1>`) n’a généralement pas besoin d’être balisé manuellement, il s’agit du titre principal de votre page. (Premiere ligne au dessus du menu des outils).
+
+#### Structurer la page
 Sous l'editeur, on trouve un bouton: *Ajouter une ligne*, et *Ajouter une colonne*. 
 
 Pour une nouvelle ligne, il s'agit plutôt d'ajouter un nouveau *paragraphe*, avec un nouvel editeur, sous le précédent.
@@ -118,20 +122,22 @@ Vous allez probablement publier une image dont vous n'êtes pas l'auteur ou le p
 
 
 ## Styliser le document
-### Styliser le texte ou le paragraphe
+### Styliser le texte
 Les propriétés de texte peuvent être modifiées avec le bouton en haut à gauche (1).
-
-Ceux dont container (paragraphe) à l'aide du bouton *Options* en bas à gauche (2).
+###  ou le paragraphe
+Ceux dont le container (paragraphe) à l'aide du bouton *Options* en bas à gauche (2).
 
 {{< img src="../images/cms16.png" >}}
 
+
 Cette manière de formater les éléments (paragraphes, colonnes) de manière directe doit être employée avec parcimonie. Cela va entrainer un problème d'unité pour le site. 
 
+### design du site
 Pour une modification générale des pages du site, on utilisera le menu **Configuration > Apparence** du tableau de bord. 
 
 {{< img src="../images/cms18.png" >}}
 
-*Ne pas modifier le thème.*
+#### *Ne pas modifier le thème.*
 
 ## Visualiser les commentaires
 Depuis l'interface de gestion de pages, dans la liste des pages, un lien *commentaires* amène directement sur les commentaires et identité de la personne qui a publié le commentaire.
