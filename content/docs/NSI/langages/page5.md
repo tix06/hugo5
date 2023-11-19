@@ -10,30 +10,45 @@ Ce chapitre comprend 2 pages de cours et une page exercices:
 La liste des projets se trouve [ici](/docs/NSI/NSI_TP_algo/)
 
 # Programmer en Grand
+L'infographie ci-contre montre une mesure des lignes de code dans certains programmes conséquents. Les mesures sont en millions de ligne de code:
 
-{{< img src="../images/page5/script-au-module.png" caption="du script aux tests unitaires, une démarche de projet" >}}
+{{< img src="../images/page5/codebase.png" link="https://informationisbeautiful.net/visualizations/million-lines-of-code/" caption="codebase - millions lines of code visualized" >}}
 
-Pour programmer *en grand*, c'est à dire programmer avec plusieurs fichiers, il va falloir:
+On peut ajouter qu'il y a omniprésence de programmes longs dans des systèmes critiques : finance, transports, économie, santé... La moindre erreur peut coûter « cher » : on aimerait qu’un programme s’exécute correctement dans toutes les situations…
+
+Maintenir le code, travailler en équipe demande également une certaine méthodologie.
+
+Pour programmer *en grand*, c'est à dire programmer avec plusieurs fichiers, il faudra adopter les bonnes pratiques, c'est à dire:
 
 * documenter ses fonctions
 * procéder par étapes, en ajoutant des tests structurels pour aider au developpement
 * utiliser des modules pour ses fonctions et classes
 * tester ses fonctions, vérifier qu'elles *fonctionnent* correctement.
 
+{{< img src="../images/page5/script-au-module.png" caption="du script aux tests unitaires, une démarche de projet" >}}
 
-Pour créer une cohérence dans le code, il est recommandé d'utiliser un *guide de style*. Il s'agit de PEP8, présenté par exemple sur [python.sdv.univ-paris-diderot](https://python.sdv.univ-paris-diderot.fr/15_bonnes_pratiques/).
+En Python, pour créer une cohérence dans le code, il est recommandé d'utiliser un *guide de style*. Il s'agit de PEP8, présenté par exemple sur [python.sdv.univ-paris-diderot](https://python.sdv.univ-paris-diderot.fr/15_bonnes_pratiques/).
 
 
-# Documenter: Spécification d'un algorithme
-La spécification de l'agorithme doit comprendre : 
+# Spécification d'un algorithme ou d'une fonction
+Spécifier un algorithme signifie qu'on le décrit avec précision. On spécifie chacun des composants, structures de données et fonctions.
+
+* La documentation peut-être en consultation dans un *document externe* au programme (un fichier `readme.md`, une page sur `wikipedia`, ...). Cette *documentation* peut alors fournir un *pseudo-code*, c'est à dire une série d'instruction avec des conventions de langages empruntées aux principaux langages existants, sans toutefois être rédigée dans un langage particulier.
+* Mais cela peut-être réalisé aussi *au sein même du code* du programme ou de la fonction. On y ajoute alors des informations facultatives lors de la *déclaration* de la fonction ou dans le *docstring*.
+
+De manière générale, la spécification va comprendre : 
 
 * Le nom donné à cet algorithme. Ce nom doit être explicite, en rapport avec la tâche effectuée par l'algorithme
 * Une description du résultat de cet algorithme, ainsi que la manière avec laquelle on va s'y prendre
 * Le type et la nature des données en *entrée* 
 * Le type et la nature des données en *sortie*
-* eventuellement, le type et la nature des variables internes
+* eventuellement, le type et la nature des variables internes.
 
-*Exemple :* recherche_maximum
+## Documentation externe à l'aide d'un pseudo-code
+Le *pseudo langage* adopté est celui utilisé dans wikipedia : [exemple](https://fr.wikipedia.org/wiki/Tri_fusion)
+
+*Exemple de pseudo langage:* `recherche_du_maximum` 
+
 ```
 """
 L'algorithme recherche la valeur maximale dans la liste.
@@ -62,12 +77,18 @@ fin
 afficher max
 ```
 
-Le *pseudo langage* adopté est celui utilisé dans wikipedia : [exemple](https://fr.wikipedia.org/wiki/Tri_fusion)
+
 
 Nous allons adapter cette spécification, prévue pour expliquer des algorithmes, à nos fonctions écrites en python.
 
-## Prototypage d'une fonction
-Une fonction doit être déclarée avant son utilisation. Cette déclaration est le **prototype** de la fonction. Le prototype doit indiquer à l'utilisateur le nom de la fonction, le type de la valeur de retour et le type des paramètres.
+## Documentation interne
+La spécification au sein même de la fonction se fait en 2 temps:
+
+* lors de la déclaration
+* juste après la déclaration, dans le *prototype* (*docstring*) de la fonction.
+
+### Dans la **déclaration** de la fonction (prototype)
+Une fonction doit être déclarée avant son utilisation. Cette déclaration est le **prototype** de la fonction. Le prototype doit indiquer à l'utilisateur le **nom** de la fonction, le **type** de la **valeur de retour** et le type des **paramètres**.
 
 Pour de nombreux langages, ce prototypage est explicite, et cela provoque une erreur de compilation si ce prototypage n'est pas correct.
 
@@ -82,9 +103,23 @@ begin
 end A_Rect ;
 ```
 
-En python, malheureusement, ce prototypage est facultatif, mais il fait partie des *bonnes méthodes* de le réaliser.
+**En pratique:** en Python, ces déclarations sont *facultatives*, mais on pourra les ajouter dans la première ligne, de la manière suivante:
 
-En python, on pourra construire le prototypage dans le commentaire, mis tout de suite après la déclaration de la fonction : 
+```python
+def a_rect(larg: float, longueur: float) -> float:
+    a = larg * longueur
+    return a
+```
+
+*Remarquez la difference avec la déclaration minimale suivante, qui n'apporte pas d'information sur les types:*
+
+```python
+def a_rect(larg, longueur):
+    ...
+```
+
+###  **Docstring** d'une fonction
+En python, on pourra construire le *docstring* dans le commentaire, mis tout de suite après la déclaration de la fonction : 
 
 ```python
 def a_rect(larg,long):
@@ -109,9 +144,8 @@ def a_rect(larg,long):
     return a
 ``` 
 
-On voit que le prototypage d'une fonction donne à peu près les mêmes informations que la *spécification d'un algorithme*.
 
-Pour accéder au contenu du prototypage depuis le shell python, il faudra charger le fichier: `> from fichier import *`, puis utiliser `help`:
+Pour accéder au contenu du *docstring* depuis le shell python, il faudra charger le fichier: `> from fichier import *`, puis utiliser `help`:
 
 ```python
 > help(a_rect)
@@ -119,13 +153,11 @@ Pour accéder au contenu du prototypage depuis le shell python, il faudra charge
 
 Pour sortir de la fenêtre de l'aide, appuyer sur la touche `q`.
 
-
-
 On pourra consulter la page du site [Lyceum](https://lyceum.fr/1g/nsi/7-langages-et-programmation/6-fonctions) pour plus d'informations.
 
 
 # Prévoir et gérer les erreurs
-## Traceback
+## Gérer les erreurs: lire le Traceback
 L'exécution d'un programme peut provoquer une erreur, une *exception*. Lorsque c'est le cas, l'exécution s'arrête immédiatement et l'interpréteur Python affiche une trace d'erreur.
 
 Cette dernière fournit des informations quant au chemin d'exécution qui a mené jusqu'à l'erreur et sur la cause de cette dernière.
@@ -148,6 +180,7 @@ print(a)
 b = inverse(0)
 print(b)
 ```
+
 L’interpréteur Python affiche ce qu’on appelle la pile d’appels ou pile d’exécution. La pile d’appel permet d’obtenir la liste de toutes les fonctions pour remonter jusqu’à celle où l’erreur s’est produite.
 
 ```python
@@ -167,7 +200,8 @@ ZeroDivisionError                         Traceback (most recent call last)
 
 ZeroDivisionError: float division by zero
 ``` 
-### Messages d'exception
+
+## Connaitre les messages d'exception
 Les messages d'exception affichés par le Traceback. 
 
 
@@ -184,12 +218,16 @@ Les messages d'exception affichés par le Traceback.
 | KeyError | Une clé est utilisée pour accéder à un élément d’un dictionnaire dont elle ne fait pas partie |
 
 
-# Les tests STRUCTURELS
+## Anticiper les erreurs: Les tests STRUCTURELS
 les **tests structurels**, vont verifier le fonctionnement interne du programme. Leur rôle est par exemple de couvrir les différentes branches conditionnelles, les limites d'une boucle, les types de données possibles pour une opération, ...
 
 Ces tests vont aider à *programmer en grand*, car ils vont fournir des moyens de *contrôle* à différentes étapes. Ils vont aussi *guider* l'utilisateur de vos fonctions grâce aux *messages d'erreurs* et *arrêts* du programme.
 
-## **Assertions: `assert`**
+Attention, il s'agit de *trouver* des erreurs, plutôt que de *prouver* que ça marche. C'est une *validation* expérimentale du programme.
+
+On placera des **pré-conditions** et **post-conditions** autour de la fonction à tester. Ce sont des tests structurels, qui vont arrêter le programme et spécifier le type d'erreur, pour aider à debugger.
+
+### **Assertions: `assert`**
 **Les assertions sont les hypothèses avec vérification**.
 
 Le rajout *provisoire* d'assertions dans le script va permettre d'anticiper sur les erreurs possibles de logique.
@@ -228,7 +266,7 @@ def en_fahrenheit(c) :
       C.U. c doit être supérieure au zéro absolu.
 
     """
-    assert c>-273.15, valeur inferieure au zero absolu
+    assert c>-273.15, "valeur inferieure au zero absolu"
     return 9*c/5+32
 ```
 
@@ -240,7 +278,7 @@ en_fahrenheit(-500)
 AssertionError valeur inferieure au zero absolu
 ``` 
 
-## Déclencher des exceptions **`Raise`**
+### Déclencher des exceptions **`Raise`**
 L’instruction `raise` permet au programmeur de déclencher une exception spécifique. Son utilisation diffère un peu de `assert`, car la condition qui déclenche l'arrêt du programme devra être ajoutée:
 
 
@@ -269,10 +307,96 @@ ValueError
 
 Notez que le type d'erreur exprimé après l'instruction `raise` est librement choisie par le programmeur, mais elle doit exister dans le langage Python. (`IndexError, SyntaxError, ValueError`, ...)
 
-# Programmer des tests FONCTIONNELS
+### Gestion des exceptions: **`try-except`**
+Le mécanisme **`try-except`** va combiner des pré-conditions et post-conditions.
+
+On pourra consulter les compléments sur la gestion des exceptions:
+
+* [docs.python.org](https://docs.python.org/fr/3.5/tutorial/errors.html#handling-exceptions)
+* [pierre-giraud.com](https://www.pierre-giraud.com/python-apprendre-programmer-cours/gestion-exception-try-except-else/)
+
+
+Le mécanisme des exceptions permet au programme de « rattraper » les erreurs, de détecter qu’une erreur s’est produite et d’agir en conséquence afin que le programme ne s’arrête pas.
+
+Afin de rattraper l’erreur, on insère le code susceptible de produire une erreur entre les mots clés `try` et `except`. 
+
+*Méthode :*
+
+```python
+try:
+    # ... instructions à protéger
+except:
+    # ... que faire en cas d'erreur
+else:
+    # ... que faire lorsque aucune erreur n'est apparue
+finally: 
+    # ... ce que l’on réalise quel que soit le fonctionnement precedent
+```
+
+L’instruction try fonctionne comme ceci.
+
+* Premièrement, la clause try (instruction(s) placée(s) entre les mots-clés try et except) est exécutée.
+* Si aucune exception n’intervient, la clause except est sautée et l’exécution de l’instruction try est terminée.
+* Si une exception intervient pendant l’exécution de la clause “try”, le reste de cette clause est sauté. Si son type correspond à un nom d’exception indiqué après le mot-clé except, la clause “except” correspondante est exécutée, puis l’exécution continue après l’instruction try.
+
+*Exemple 1:*
+
+```python
+def inverse(x):
+    y = 1.0 / x
+    return y
+
+
+try:
+    a = inverse(2)
+    print(a)
+    b = inverse(0)  # déclenche une exception
+    print(b)
+except:
+    print("le programme a déclenché une erreur")
+
+# affiche : 
+0.5
+le programme a déclenché une erreur
+```
+
+> Testez le vous-même: créez une liste d'entiers pour x. Et essayez (`try`) de mettre dans une nouvelle liste les valeurs retournées par `inverse`, à moins (`except`) que la valeur de x soit nulle.
+
+*Exemple 2:*
+Si on veut convertir un caractère en entier, cela génère une erreur de type *ValueError*:
+```python
+>>> int(input("Please enter a number: "))
+Please enter a number: q
+ValueError: invalid literal for int() with base 10: 'q'
+```
+
+On peut utiliser un mecanisme d'exception pour rattraper cette erreur possible:
+
+
+```python
+while True:
+     try:
+         x = int(input("Please enter a number: "))
+         break
+     except ValueError as typ:
+         print("Oops!  That was no valid number.  Try again...: {}".format(typ))
+print('=> vous avez entré le nombre {}'.format(x))
+```
+
+Executons ce script:
+```
+Please enter a number: d
+Oops!  That was no valid number.  Try again...: invalid literal for int() with base 10: 'd'
+Please enter a number: Z
+Oops!  That was no valid number.  Try again...: invalid literal for int() with base 10: 'Z'
+Please enter a number: 2
+=> vous avez entré le nombre 2
+```
+
+## Programmer des tests FONCTIONNELS
 **tests fonctionnels**: ils verifient qu'un programme ou une partie du programme se comportent correctement, et se conforment à leur specification.
 
-## Fonctionnel: avec un Doctest
+### Fonctionnel: avec un Doctest
 Le doctest est un module qui recherche dans le prototypage (docstring) de la fonction ce qui pourrait s'apparenter à des tests sur la fonction.
 
 Comme par exemple:
@@ -313,7 +437,7 @@ Got:
 Documentation officielle :[Lien](https://docs.python.org/fr/3/library/doctest.html#module-doctest)
 
 
-## Fonctionnel: avec un module de test unitaires: **`unittest`**
+### Fonctionnel: avec un module de test unitaires: **`unittest`**
 **Définition:** Un test unitaire est un test réalisé sur une portion du programme, typiquement sur une fonction.
 
 Le module `unittest` offre des outils de test de code, comme la classe TestCase. Le but est de vérifier que votre code génère des résultats corrects, conformes au attentes.
@@ -459,84 +583,7 @@ En fait, `unittest.TestCase` propose plusieurs méthodes d'assertion que nous ut
 | assertNotIsInstance(a, b) | not isinstance(a, b) |
 | assertRaises(exception, fonction, *args, **kwargs) | Vérifie que la fonction lève l'exception attendue.|
 
-# Gestion des exceptions: **`try-except`**
-[compléments sur la gestion des exceptions](https://docs.python.org/fr/3.5/tutorial/errors.html#handling-exceptions)
 
-
-Le mécanisme des exceptions permet au programme de « rattraper » les erreurs, de détecter qu’une erreur s’est produite et d’agir en conséquence afin que le programme ne s’arrête pas.
-
-Afin de rattraper l’erreur, on insère le code susceptible de produire une erreur entre les mots clés `try` et `except`. 
-
-*Méthode :*
-
-```python
-try:
-    # ... instructions à protéger
-except:
-    # ... que faire en cas d'erreur
-else:
-    # ... que faire lorsque aucune erreur n'est apparue
-```
-
-L’instruction try fonctionne comme ceci.
-
-* Premièrement, la clause try (instruction(s) placée(s) entre les mots-clés try et except) est exécutée.
-* Si aucune exception n’intervient, la clause except est sautée et l’exécution de l’instruction try est terminée.
-* Si une exception intervient pendant l’exécution de la clause “try”, le reste de cette clause est sauté. Si son type correspond à un nom d’exception indiqué après le mot-clé except, la clause “except” correspondante est exécutée, puis l’exécution continue après l’instruction try.
-
-*Exemple 1:*
-
-```python
-def inverse(x):
-    y = 1.0 / x
-    return y
-
-
-try:
-    a = inverse(2)
-    print(a)
-    b = inverse(0)  # déclenche une exception
-    print(b)
-except:
-    print("le programme a déclenché une erreur")
-
-# affiche : 
-0.5
-le programme a déclenché une erreur
-```
-
-> Testez le vous-même: créez une liste d'entiers pour x. Et essayez (`try`) de mettre dans une nouvelle liste les valeurs retournées par `inverse`, à moins (`except`) que la valeur de x soit nulle.
-
-*Exemple 2:*
-Si on veut convertir un caractère en entier, cela génère une erreur de type *ValueError*:
-```python
->>> int(input("Please enter a number: "))
-Please enter a number: q
-ValueError: invalid literal for int() with base 10: 'q'
-```
-
-On peut utiliser un mecanisme d'exception pour rattraper cette erreur possible:
-
-
-```python
-while True:
-     try:
-         x = int(input("Please enter a number: "))
-         break
-     except ValueError as typ:
-         print("Oops!  That was no valid number.  Try again...: {}".format(typ))
-print('=> vous avez entré le nombre {}'.format(x))
-```
-
-Executons ce script:
-```
-Please enter a number: d
-Oops!  That was no valid number.  Try again...: invalid literal for int() with base 10: 'd'
-Please enter a number: Z
-Oops!  That was no valid number.  Try again...: invalid literal for int() with base 10: 'Z'
-Please enter a number: 2
-=> vous avez entré le nombre 2
-```
 
 # Exercice
 On souhaite traiter un ensemble de données issues d'un capteur (robot). Les données sont mises dans 2 listes:

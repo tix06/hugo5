@@ -110,7 +110,7 @@ Une grande partie des problèmes peut se résoudre avec une implémentation réc
 
 Enfin, l'algorithme récursif utilise une *pile d'appels*, comme vu sur l'animation suivante:
 
-{{< img src="https://lyceum.fr/644c0bfaf567173ce9856250e140d861/animation-puiss-recursive.gif" alt="animation recursivité puissance" link="https://lyceum.fr/tg/nsi/4-langages-et-programmation/4-recursivite" caption="animation issue de la page " >}}
+{{< img src="https://lyceum.fr/644c0bfaf567173ce9856250e140d861/animation-puiss-recursive.gif" alt="animation recursivité puissance" link="https://lyceum.fr/tg/nsi/4-langages-et-programmation/4-recursivite" caption="animation issue de la page lyceum > recursivite (B. Abel)" >}}
 Il est facile de traiter des suites avec la méthode récursive:
 
 * factorielle
@@ -156,7 +156,7 @@ def fact(n):
 </div>
 -->
 
-**terminaison**: l'algorithme consiste en une boucle qui execute n itérations. Le **convergent**</strong>** n-i decroit strictement à chaque itération et on sort de la boucle quand il vaut 0.
+**terminaison**: l'algorithme consiste en une boucle qui execute n itérations. Le **convergent** `n-i` decroit strictement à chaque itération et on sort de la boucle quand il vaut 0.
 
 Chaque iteration contient un nombre fini d'opérations élémentaires : 1 mutiplication et 1 affectation. Donc il termine après 2n+1 operations.
 
@@ -174,7 +174,9 @@ La (i+1)e iteration multiplie res par i+1, donc après la (i+1)e iteration, $$re
 Après n iterations, res contient n ! donc le resultat est celui attendu.
 
 ### Programme recursif
-On a la **relation de récurence** suivante: <b>u<sub>n</sub> = n * u<sub>n-1</sub></b>
+On a la **relation de récurence** suivante: 
+
+$$u_n = n \times u_{n-1}$$
 
 La relation d'heredité est alors `return n*fact_recur(n-1)`
 
@@ -266,20 +268,21 @@ On a T(n) = T(n-1) + 1 donc T(n) = n
 ## Complexité d'un algorithme recursif
 Pour un algorithme récursif, on compte le nombre d’appel récursif et il suffit en général de se ramener à une relation définissant une suite récurrente. On se ramène souvent à évaluer une relation du type : 
 
-T<sub>n</sub> =a * T<sub>f(n)</sub> + T
+
+$$T_n = a \times T_{f(n)} + T$$
 
 où : 
 
-* T<sub>n</sub> est la complexité pour une donnée de taille n ; a est le nombre d’appel récursif ;
+* $T_n$ est la complexité pour une donnée de taille n ; a est le nombre d’appel récursif ;
 * f(n) décrit la variation de n dans l’appel récursif;
 * T est la complexité des calculs hors appel récursif.
 
 | relation de récurrence sur T | solution | comportement asymtotique |
 | --- | --- | --- |
 | T(n) = T(n-1) + b | T(n) = T(0) + b×n (somme de termes constants)| O(n) |
-| T(n) = a×T(n-1) + b, a ≠ 1 | T(n) = an × (T(0) – b/(1-a)) + b/(1-a) (suite géométrique)| O(a<sup>n</sup>) |
-| T(n) = T(n-1) + a×n + b | T(n) = T(0) + a×n×(n+1)/2 + n×b (suite arithmetique pour le 2e terme) | O(n<sup>2</sup>) |
-| T(n) = T(n/2) + b | T(n) = T(1) + b×log<sub>2</sub>(n) | O(log<sub>2</sub>n) |
+| T(n) = a×T(n-1) + b, a ≠ 1 | T(n) = an × (T(0) – b/(1-a)) + b/(1-a) (suite géométrique)| $O(a^n)$ |
+| T(n) = T(n-1) + a×n + b | T(n) = T(0) + a×n×(n+1)/2 + n×b (suite arithmetique pour le 2e terme) | $O(n^2)$ |
+| T(n) = T(n/2) + b | $T(n) = T(1) + b×log_2 (n)$ | $O(log_2 n)$ |
 
 # Application : recherche du PGCD
 ## Problème  
@@ -296,15 +299,15 @@ Euclide propose l’algorithme suivant:
 {{< img src="../images/page2/euclide.png" >}}
 > Exemple d’exécution : a = 32, b = 12 :
 
-> – 32 = (2 x 12) + 8
+– 32 = (2 x 12) + 8
 
-> – 12 = (1 x 8) + 4
+– 12 = (1 x 8) + 4
 
-> – 8 = (2 x 4) + 0
+– 8 = (2 x 4) + 0
 
-> On a donc pgcd(32, 12) = 4
+On a donc pgcd(32, 12) = 4
 
-## Algorithme PGCD itératif
+### Algorithme PGCD itératif
 ```python
 def euclide(a,b):
     """
@@ -338,7 +341,7 @@ def euclide(a,b):
 </div>
 </div>
 
-## algorithme recursif
+### algorithme recursif
 ```python
 def PGCD(a,b):
   """
