@@ -111,13 +111,25 @@ for x in permut(mot[0:1] + mot[1 + 1:])
 # D'autres domaines exploitant la récursivité
 La récursivité se retrouvent dans d'autres situations, où elle prend parfois d'autres noms.
 
+## L'autosimilarité
 L'**autosimilarité** est le caractère d'un objet dans laquelle on peut trouver des similarités en l'observant à différentes échelles.
 *Exemple :* le Tapis de Sierpiński.
 
 {{< img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Sierpinski_carpet_6%2C_white_on_black.svg/440px-Sierpinski_carpet_6%2C_white_on_black.svg.png" alt="le Tapis de Sierpiński" caption="le Tapis de Sierpiński et l'autosimilarité" >}}
+
+## Corécursivité
 Les **fractales** ont cette propriété d'autosimilarité, mais elles ont plutôt à voir avec un phénomène un peu différent qui s'appel la corécurisivité (ou corécursion). Le tapis de Sierpiński, du nom de Wacław Sierpiński, est une fractale obtenue à partir d'un carré. Le tapis se fabrique en découpant le carré en neuf carrés égaux avec une grille de trois par trois, et en supprimant la pièce centrale, et en appliquant cette procédure récursivement aux huit carrés restants.
 
+## Mise en abyme
 La **mise en abyme** est un procédé consistant à représenter une œuvre dans une œuvre similaire, par exemple en incrustant dans une image cette image elle-même. 
+
+{{< img src="../images/page2/g2Z2.gif" link="https://gifer.com/fr/gifs/escher" >}}
+
+## L'intrigue du film Inception
+Dans «Inception», Nolan voulait explorer l’idée de personnes partageant un espace de rêve. Cela vous donne la possibilité d’accéder à l’inconscient de quelqu’un. La majorité de l’intrigue du film se déroule dans ces mondes oniriques interconnectés. Cette structure crée un cadre dans lequel **les actions dans les mondes réels ou oniriques se répercutent sur les autres**.
+
+{{< img src="../images/page2/inception.jpeg" >}}
+
 
 # Travail pratique
 Lien vers le TP: [dessins recursifs](/docs/NSI/algorithmes/page10/) 

@@ -89,21 +89,13 @@ def reverse_iterative(seq):
 
 On peut tester cette fonction dans une cellule d'un jupyter notebook : 
 
-<table>
-    <tr>
-        <th scope="row">IN</th>
-        <td>seq = 'abcd'<br>
-        reverse_iterative(seq)
-        </td>
-    </tr>
-   
-    <tr>
-        <th scope="row">OUT</th>
-        <td>
-         ['d', 'c', 'b', 'a']
-        </td>
-    </tr>
-</table>
+
+```python
+seq = 'abcd'
+reverse_iterative(seq)
+# affiche
+# ['d', 'c', 'b', 'a']
+```
 
 *Aide pour l'écriture de l'algorithme récursif :* 
 

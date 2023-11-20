@@ -9,7 +9,24 @@ Le cours comprend:
 
 # Récursivité
 ## Principe 
-Un algorithme récursif est un algorithme qui fait appel à lui-même dans le corps de sa propre définition. Ce principe est aussi appelé : *de l'autoréférence*. 
+Un algorithme récursif est un algorithme qui fait appel à lui-même dans le corps de sa propre définition. Ce principe est aussi appelé : *de l'autoréférence*. (traité dans la partie *autres applications* de la [page 2 du cours](../page22/)).
+
+Cependant, cette premiere definition pourrait faire penser qu'une fonction récursive va s'appeler indéfiniment, et créer sans arrêt les mêmes figures, ou les mêmes traitements. 
+
+{{< img src="../images/page2/script_recur1.png" >}}
+
+Ce n'est pas tout à fait cela.
+
+Pour une fonction récursive, il y a plus que de la simple autoréférence:
+
+* Il y a transmission de valeurs entre 2 étapes de la pile d'appels recursifs. Une valeur va remonter d'un niveau $n$ vers le niveau $n-1$ qui l'a appelé.
+{{< img src="../images/page2/script_recur3.png" >}}
+
+* On remonte la pile d'appels parce que la fonction contient une condition de fin (appelée *condition de base*).
+
+{{< img src="../images/page2/script_recur2.png" >}}
+
+* enfin, les traitements ne sont pas tous identiques parce les arguments de la fonction changent à chaque nouvel appel recursif.
 
 <!--
 Les questions à se poser pour élaborer l'algorithme : 
@@ -49,8 +66,12 @@ On a la **relation de récurence** sur les éléments de la suite $u_n$:
 
 $$u_{n+1} = 2 + u_n$$
 
+ou encore:
 
-On va adapter cette relation dans l'appel de la fonction:
+$$u_{n} = 2 + u_{n-1}$$
+
+
+On va adapter cette dernière relation dans l'appel de la fonction:
 
 
 ```python
@@ -84,7 +105,7 @@ dans le script `ajoute2`: le problème se resoud immediatement pour N == 0).
 
 - **L'Hérédité**  : calcul à partir de paramètres plus "petits" : `return 2 + ajoute2(N-1)`. 
 
-Une définition plus générale serait que, pour l'hérédité, il y a un appel recursif avec un argument qui se rapproche plus de la condition de base.
+Une définition plus générale serait que, **pour l'hérédité, il y a un appel recursif avec un argument qui se rapproche plus de la condition de base.**
 
 ```
 def fonction_recursive(param):
@@ -95,7 +116,7 @@ def fonction_recursive(param):
     fonction_recursive(f(param))
 ```
  
-*Remarque:* Une instruction conditionnelle est incluse dans le corps de la fonction pour forcer la fonction à retourner sans que l’appel de récurrence soit exécuté (La **Base**). Sans cela, le programme pourrait tourner en boucle...
+*Remarque:* Une instruction conditionnelle est incluse dans le corps de la fonction pour forcer la fonction à retourner sans que l’appel de récurence soit exécuté (La **Base**). Sans cela, le programme pourrait tourner en boucle...
 
 ## Comparatif itératif - récursif
 Une grande partie des problèmes peut se résoudre avec une implémentation récursive, comme avec une implémentation itérative. L'une ou l'autre peut paraître plus ou moins naturelle suivant le problème, ou suivant les habitudes du programmeur.
@@ -110,7 +131,7 @@ Une grande partie des problèmes peut se résoudre avec une implémentation réc
 
 Enfin, l'algorithme récursif utilise une *pile d'appels*, comme vu sur l'animation suivante:
 
-{{< img src="https://lyceum.fr/644c0bfaf567173ce9856250e140d861/animation-puiss-recursive.gif" alt="animation recursivité puissance" link="https://lyceum.fr/tg/nsi/4-langages-et-programmation/4-recursivite" caption="animation issue de la page lyceum > recursivite (B. Abel)" >}}
+{{< img src="https://lyceum.fr/644c0bfaf567173ce9856250e140d861/animation-puiss-recursive.gif" alt="animation recursivité puissance"  caption="animation issue de la page lyceum > recursivite (B. Abel)" >}}
 Il est facile de traiter des suites avec la méthode récursive:
 
 * factorielle
@@ -266,7 +287,7 @@ On a T(n) = T(n-1) + 1 donc T(n) = n
 - puis finir en montrant que l'invariant de boucle ou bien le resultat obtenu repond bien à la specification de l'algorithme
 
 ## Complexité d'un algorithme recursif
-Pour un algorithme récursif, on compte le nombre d’appel récursif et il suffit en général de se ramener à une relation définissant une suite récurrente. On se ramène souvent à évaluer une relation du type : 
+Pour un algorithme récursif, on compte le nombre d’appel récursif et il suffit en général de se ramener à une relation définissant une suite récurente. On se ramène souvent à évaluer une relation du type : 
 
 
 $$T_n = a \times T_{f(n)} + T$$
@@ -280,7 +301,7 @@ où :
 | relation de récurrence sur T | solution | comportement asymtotique |
 | --- | --- | --- |
 | T(n) = T(n-1) + b | T(n) = T(0) + b×n (somme de termes constants)| O(n) |
-| T(n) = a×T(n-1) + b, a ≠ 1 | T(n) = an × (T(0) – b/(1-a)) + b/(1-a) (suite géométrique)| $O(a^n)$ |
+| T(n) = a×T(n-1) + b, a ≠ 1 | $T(n) = a^n × (T(0) – b/(1-a)) + b/(1-a)$ (suite géométrique)| $O(a^n)$ |
 | T(n) = T(n-1) + a×n + b | T(n) = T(0) + a×n×(n+1)/2 + n×b (suite arithmetique pour le 2e terme) | $O(n^2)$ |
 | T(n) = T(n/2) + b | $T(n) = T(1) + b×log_2 (n)$ | $O(log_2 n)$ |
 
@@ -350,7 +371,7 @@ def PGCD(a,b):
   """
   if b == 0 : return a
   else:
-    r = a % b;
+    r = a % b
     return PGCD(b,r)
 ```
 
@@ -393,13 +414,15 @@ On peut compléter le tableau suivant présentant l'effectif de ces couples de l
 | --- | --- | --- |
 | 0 | 0 | 0 |
 | 1 | 1 | 1 |
-| 2 | 1 | 1 + 0 |
-| 3 | 1 | 1 + 1 |
-| 4 | 2 | 2 + 1 |
-| 5 | 3 | 3 + 2 |
+| 2 | 1 | 1 + 0 = 1|
+| 3 | 1 | 1 + 1 = 2|
+| 4 | 2 | 2 + 1 = 3|
+| 5 | 3 | 3 + 2 = 5|
 | 6 | ... | ... |
 
-On définit la suite (f<sub>n</sub>) des nombres de Fibonacci par :
+{{< img src="../images/page2/fibo2.png"  >}}
+
+On définit la suite ($f_n$) des nombres de Fibonacci par :
 $$\left\\{\begin{matrix}\begin{align}f\_0 & =0\\\f\_1 & =1\\\f\_{n+1} & =f\_{n}+f\_{n-1}, \forall n \in \mathbb{N}^+\end{align}\end{matrix}\right.$$
 
 Les nombres de Fibonacci apparaissent aussi dans la croissance des plantes. Le nombre de pétales des différentes fleurs est souvent un nombre de la suite de Fibonacci. On remarque que l’ angle entre deux primordia successifs, tend vers L’ANGLE D’OR, et que plus les nombres successifs sont grands, plus le rapport s’approche du NOMBRE D’OR.
@@ -443,9 +466,10 @@ Parfois, l'algorithme récursif n'est pas le plus performant: Pour l'exemple de 
 
 {{< img src="../images/page2/fibo.png" caption="pile d'appels pour la suite de fibonacci recursive" >}}
 # Suite du cours
+Aller à la [page 2](../page22/) du cours.
+
 La récursivité intervient aussi dans de nombreux problèmes où elle s’impose comme la méthode la plus adaptée, pour ne pas dire la seule. Un exemple historique est celui des tours de Hanoi. Un jeu inventé par Edouard Lucas, vers 1880. Son traitement sur ordinateur a fait sensation, grâce à la simplicité de son script récursif...
 
->{{< a link="../page22" caption=" " >}}
 # Exercices
 ## Ex 1 : longueur d'une liste
  
@@ -462,11 +486,11 @@ def len_iterative(seq):
     return count
 ```
 
-#### 1. réaliser la preuve de cet algorithme. 
+#### réaliser la preuve de cet algorithme. 
 
 ### algorithme récursif
 
-#### 2. Ecrire le script python de l'algorithme récursif
+#### Ecrire le script python de l'algorithme récursif
 
 *Aide pour l'écriture de l'algorithme recursif :* la fonction récursive s'appelera `len_recursive`, et aura aussi pour argument `seq`. Si on veut passer en argument la liste `seq` de laquelle on retire le premier élément, on fait : `len_recursive(seq[1:])`. Il faudra alors s'inspirer de la relation de récurence suivante : $$u_{n+1} = 1 + u_n$$ lors de l'appel recursif.
 
@@ -498,8 +522,8 @@ def exp2(n,x):
 ```
 
 1. Combien de produits sont necessaires pour calculer une puissance n-ième avec la fonction `exp1` ?
-2. Pour la fonction `exp2` : Soit u<sub>n</sub> le nombre de produits nécessaires pour calculer une puissance n-ième. Quelle est la relation de récurrence vérifiée par u<sub>n+1</sub> ? $$u_{n+1} = u_n + ...$$
-3. En déduire la complexité pour ces 2 fonctions.
+2. Pour la fonction `exp2` : Soit $u_n$ le nombre de produits nécessaires pour calculer une puissance n-ième. Quelle est la relation de récurrence vérifiée par $u_{n+1}$ ? $$u_{n+1} = u_n + ...$$
+3. En déduire la complexité pour chacune de ces 2 fonctions.
 
 ## Ex 3: dichotomie recursif
 la méthode de dichotomie pour calculer la racine d’une fonction. Soit une fonction f : R → R continue, dont on sait qu’elle a une racine et une seule sur un intervalle [a, b]. On cherche une valeur approchée de cette racine. voir figure ci-dessous 
@@ -538,7 +562,7 @@ On fait alors:
 2. Que valent chacun des paramètres de la fonction lors du premier appel avec `dichotomie_recursive(f,0.0,2.0,1e-3))` ?
 3. Que valent chacun des paramètres lors du premier appel recursif par cette fonction?
 4. A quel moment cette fonction va-t-elle finir?
-5. **Prouver la terminaison de cette fonction.**
+5. Prouver la terminaison de cette fonction.
 6. Soit un tableau contenant des nombres entiers triés par ordre croissant :
 
 ```

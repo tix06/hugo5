@@ -257,12 +257,12 @@ AssertionError : argument nul
 
 Mais l'interêt réside surtout dans l'utilisation d'*assertion* pour prévenir une possible erreur logique: 
 
-On souhaite maintenant obtenir le même comportement (arrêt pour une valeur sortant de l'ensemble de définition d'une fonction) pour la fonction de conversion de degré Celsius en degré Fahrenheit. En effet, il n’y aurait aucun sens de convertir une température inférieure à la température correspondant au zéro absolu. (exemple issu de [univ.lille](https://www.fil.univ-lille1.fr/~wegrzyno/portail/Info/Doc/HTML/seq2_booleens_conditionnelles.html))
+On souhaite maintenant obtenir le même comportement (arrêt pour une valeur sortant de l'ensemble de définition d'une fonction) pour la fonction de conversion de degré Celsius en degré Kelvin. En effet, il n’y aurait aucun sens de convertir une température inférieure à la température correspondant au zéro absolu. (exemple issu de [univ.lille](https://www.fil.univ-lille1.fr/~wegrzyno/portail/Info/Doc/HTML/seq2_booleens_conditionnelles.html))
 
 ```python
-def en_fahrenheit(c) :
+def en_kelvin(c) :
     """
-      conversion en Fahrenheit d'une température donnée en Celsius
+      conversion en kelvin d'une température donnée en Celsius
       C.U. c doit être supérieure au zéro absolu.
 
     """
@@ -273,7 +273,7 @@ def en_fahrenheit(c) :
 Alors : 
 
 ```python
-en_fahrenheit(-500)
+en_kelvin(-500)
 # Affichage
 AssertionError valeur inferieure au zero absolu
 ``` 
