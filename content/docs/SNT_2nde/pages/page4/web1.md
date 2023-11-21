@@ -20,7 +20,7 @@ Le contenu des documents Web est rédigé en langage HTML (acronyme de Hypertext
 ### Balises
 Les élements sont décrits par des *balises*, comme par exemple, l'élément paragraphe `p`, est déclaré à l'aide d'une balise `<p>`. Toute balise ouverte doit être refermée, ici avec `</p>`. Et le contenu (souvent textuel), est mis entre ces deux balises:
 
-{{< img src="../images/balises.png" alt="exemple d" caption="exemple d'une balise paragraphe" >}}
+{{< img src="../images/balises.png" caption="exemple d'une balise paragraphe" >}}
 Ces balises s'utilisent comme des *parenthèses* et peuvent être imbriquées. Une mauvaise imbrication de balises constitue une erreur.
 
 Par exemple: Une imbrication **correcte**:
@@ -74,7 +74,57 @@ Dans l'exemple qui suit, on peut lire dans le script html que la balise `html` c
 
 > **Exercice:** A l'aide du script complet, poursuivre le diagramme représentant la hierarchie entre ces balises.
 
-## Attribut d'une balise
+## Les balises principale
+**Les balises sont les instructions en langage HTML des éléments structurants de la page web.**
+
+Les balises se distinguent entre celles qui n'ont pas d'attribut obligatoire, et celles qui en ont. Un attribut va ajouter des fonctionnalités à l'élément HTML, et modifier son allure ou son fonctionnement.
+
+### Balises sans attribut
+Les principales balises structurantes sont:
+
+* h1, h2, h3, ... h6
+* div
+* p
+* span
+* ...
+
+Elles s'utilisent de la manière suivante:
+
+```html
+<h1>Texte</h1>
+<p>Texte</p>
+```
+
+Il existe aussi des balises qui doivent être combinées, comme celles de listes:
+
+* ul (parent) => li (enfants) pour une liste à puces
+* ol (parent) => li (enfants) pour une liste ordonnée (numérotée)
+
+*exemple:*
+
+```html
+<ul>
+<li>ligne1</li>
+<li>ligne2</li>
+</ul>
+```
+
+### balises avec attribut obligatoire
+
+#### image
+Il s'agit d'une balise *orpheline*.
+
+```html
+<img src="lien_vers_la_ressource.jpg">
+```
+
+#### lien
+
+```html
+<a href="lien_vers_la_ressource.html">texte cliquable</a>
+```
+
+
 On peut ajouter des attributs à une balise. Cela permet de modifier son comportement. Par exemple, la balise de lien `a` prend un argument obligatoire qui est `href`, et qui pointe vers la ressource. Lorsque l'on clique sur le contenu (ce qui est affiché par la balise), on est dirigé vers cette ressource.
 
 *Exemple:* En reprenant l'exemple initial, on souhaite maintenant créer un lien hypertexte sur l'un des mots affichés. On inclue la balise suivante dans le paragraphe:

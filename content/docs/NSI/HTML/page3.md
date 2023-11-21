@@ -7,20 +7,32 @@ Title : HTML theorie
 
 HTML : HyperTextMarkup Langage; CSS : Cascading StyleSheets; Javascript sont des langages interprétés par le navigateur, côté client. Ces 3 langages, en combinaison, vont permettre de créer des *sites internet*.
 
-Pour que les pages soient accéssibles à tout le monde, sur le web[^2], ces pages doivent être hébergés sur un serveur. Lorsque le navigateur client envoie une requête au serveur, celui-ci lui renvoie les fichiers HTML, CSS et JS. Les instructions sont alors interprétées et permettent l'affichage des pages.
+Pour que les pages soient accessibles à tout le monde, sur le web[^2], ces pages doivent être hébergés sur un **serveur**. Lorsque le navigateur client envoie une requête au serveur, celui-ci lui renvoie les fichiers HTML, CSS et JS. Les instructions sont alors interprétées par le **navigateur** et permettent l'affichage des pages.
 
 Ces langages sont en constante évolution. Ce sont des langages *open sources*[^5] et de nombreux contributeurs en proposent des améliorations.
 
 Il existe plusieurs logiciels navigateurs (Mozilla, Chrome, Safari,...). Et pourtant, malgré cette diversité et ces évolutions du langage, ceux-ci vont interpréter ces fichiers et afficher les pages (presque) de la même manière car ils se réferent tous aux mêmes recommandations, celles du w3c[^4].
+
+Une petite différence peut exister pour le rendu d'une même page, mais avec plusieurs navigateurs différents. Cela est du aux **propriétés par défaut utilisées par le navigateur** pour l'affichage des différents éléments html de la page. Ces propriétés peuvent être déclarées (CSS) afin d'avoir un rendu toujours identique.
 
 Rappels de SNT sur le{{< a link="/docs/SNT_2nde/pages/page4/web/" caption="Web" >}}
 ## des tâches différentes
 Les langages web se partagent les tâches : 
 Une bonne pratique dans le développement d'un site internet (côté front-end, ce qui est executé sur la machine du client) consiste à utiliser:
 
-*  HTML pour le contenu (avec un contenu correctement balisé, sémantique, accessible), 
-*  CSS pour la mise en forme et le design de la page, 
-*  et JavaScript pour gérer les interactions (qui peuvent éventuellement amener à modifier le contenu via les méthodes du DOM[^1]).
+*  HTML pour le **contenu** , et la **structure** (avec un contenu correctement balisé, sémantique, accessible)
+*  CSS pour la mise en forme et le design de la page, les **propriétés** relatives à chaque élément de Style (balise html).
+*  et JavaScript pour gérer les **interactions** (qui peuvent éventuellement amener à modifier le contenu via les méthodes du DOM[^1]).
+
+C'est un langage de description qui gère le contenu (le texte et les images), en ajoutant des éléments de structure, comme par exemple:
+
+* mettre le texte dans un paragraphe
+* mettre du texte en relief
+* insérer un hyperlien sur le texte
+* mettre un titre à la page, au paragraphe
+* ...
+
+{{< img src="../images/contenustructure.png" link="https://vimeo.com/138623721" caption="Lire la video depuis 20' => 1min40'" >}}
 
 Le langage HTML est un langage constitué de *balises*, comme par exemple : 
 `<title>le titre de ma page</title>` qui permet d'afficher le titre de la page dans l'onglet du navigateur.
@@ -32,11 +44,13 @@ Les éléments mis dans le programme à l'aide de ces balises vont permettre d'a
 
 > Le *web* est justement basé sur l'utilisation de ces *hyperliens*, qui permettent de *naviguer* de pages en pages, sur internet.
 
+
+
 # Le HTML et la page Web
 
 ## le squelette du document
 
-Cette partie du programme est le contenu minimum à mettre dans vos pages HTML: 
+Cette partie du script est le contenu minimum à mettre dans vos pages HTML: 
 
 
 ```html
@@ -83,6 +97,7 @@ On peut aussi y ajouter des éléments `<link>` et `<script>` :
 Si vous avez un script qui est très gros mais indépendant, il est préférable de le placer tout à la fin, afin de ne pas retarder le navigateur dans sa construction de l'arbre du DOM et de l'affichage de la page.
 
 ## Imbrication et filiation des balises
+### Arbre du DOM
 Si vous débutez complètement en HTML, consultez les ressources de SNT:
 
 * Une introduction à la redaction d'un document en HTML:{{< a link="/docs/SNT_2nde/pages/page4/web1/" caption="Document Web, contenu et structure" >}}
@@ -92,13 +107,79 @@ On représente la structure d’un document html à l’aide d’un arbre.
 On parle d’**arbre DOM** (Document Object Model) du document.
 
 {{< img src="../images/DOM.png" caption="Exemple d'arbre du DOM" >}}
-<i>Pour cet exemple: <br>
-Le **nœud** article est le **père** des noeuds h1, p, img et p.<br>
-Les nœuds h1, p, img et p sont les **fils** du nœud article.<br>
+
+Pour cet exemple:
+Le **nœud** article est le **père** des noeuds h1, p, img et p.
+Les nœuds h1, p, img et p sont les **fils** du nœud article.
+
+
+### Quand faut-il recourir à des balises parentes?
+Supposons que l'on ait besoin de structurer la page comme sur l'image suivante:
+
 {{< img src="../images/sections.jpg" alt="page avec sections" caption="page avec sectionnements" >}}
 
+Les éléments *containers* s'ils sont de type paragraphes, sections, header, nav, article, ... vont se placer naturellement l'un sous l'autre. Il n'y a pas besoin d'imbriquer les balises.
 
-*Question :* L'adresse de l'image peut être *relative*/ *absolue*, *locale* / externe*. Définir chacun de ces termes. Puis expliquer comment chacune de ces adresses a une expression particulière pour valeur de l'attribut *src*.
+Par contre, s'il faut disposer côte à côte 2 éléments containers, pour faire 2 colonnes, il faudra les disposer à l'interieur d'un autre élément parent. Puis modifier leur disposition naturelle (paramètre display).
+
+Pour cet exemple, au niveau de l'élément au fond blanc, il faudra:
+
+* un container parent, par exemple un élément `div`
+* (colonne gauche): un container fils de `div`  qui contiendra lui-même les éléments fils 'section`, `article`, `article`
+* (colonne droite): un élément fils de `div`  qui sera l'élément `aside`
+
+
+## Les balises principale
+**Les balises sont les instructions en langage HTML des éléments structurants de la page web.**
+
+Les balises se distinguent entre celles qui n'ont pas d'attribut obligatoire, et celles qui en ont. Un attribut va ajouter des fonctionnalités à l'élément HTML, et modifier son allure ou son fonctionnement.
+
+### Balises sans attribut
+Les principales balises structurantes sont:
+
+* h1, h2, h3, ... h6
+* div
+* p
+* span
+* ...
+
+Elles s'utilisent de la manière suivante:
+
+```html
+<h1>Texte</h1>
+<p>Texte</p>
+```
+
+Il existe aussi des balises qui doivent être combinées, comme celles de listes:
+
+* ul (parent) => li (enfants) pour une liste à puces
+* ol (parent) => li (enfants) pour une liste ordonnée (numérotée)
+
+*exemple:*
+
+```html
+<ul>
+<li>ligne1</li>
+<li>ligne2</li>
+</ul>
+```
+
+### balises avec attribut obligatoire
+#### lien
+
+```html
+<a href="lien_vers_la_ressource.html">texte cliquable</a>
+```
+
+#### image
+Il s'agit d'une balise *orpheline*.
+
+```html
+<img src="lien_vers_la_ressource.jpg">
+```
+
+
+*Question :* L'adresse placée pour l'attribut `href` ou bien `src` peut être *relative/absolue*, *locale/externe*. Définir chacun de ces termes.
 
 # Un outil de vérification de la syntaxe
 
