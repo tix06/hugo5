@@ -19,7 +19,10 @@ Le contenu doit être mis dans un document avec l'extension `.html`.
 
 > **Ouvrir à l'aide d'un navigateur**: Double clic sur le document depuis l'*explorateur windows*, ou bien, depuis le menu fichier du *navigateur*: `Ouvrir..` et rechercher le document.
 
-**Problèmes:** On obtient alors un document qui n'a aucune structure, et où certains caractères ne sont pas reconnus...
+**Problèmes:** 
+
+* On obtient alors un document qui n'a aucune structure
+* De plus, avec certains navigateurs, certains caractères ne sont pas reconnus et cela peut donner le rendu suivant:
 
 {{< img src="../images/html3.png" caption="fichier texte non formaté ouvert avec un navigateur" >}}
 
@@ -70,17 +73,17 @@ Où les `...` signifient le contenu.
 
 > **Balises HTML**: modifier la structure du document à l'aide des balises HTML: 
 
-### 1. ajouter la balise `h1` pour le titre principal
+### ajouter la balise `h1` pour le titre principal
 
 {{< img src="../images/html1.png" caption="" >}}
 
-### 2. ajouter les balises `h2` pour les titres des chapitres
+### ajouter les balises `h2` pour les titres des chapitres
 
 {{< img src="../images/html2.png" caption="" >}}
 
-### 3. ajouter les balises `p` pour les paragraphes
+### ajouter les balises `p` pour les paragraphes
 
-### 4. ajouter les balises `a` pour les liens: Le lien se trouve en fin de document dans cet exemple. 
+### ajouter les balises `a` pour les liens: Le lien se trouve en fin de document dans cet exemple. 
 Il s'agit du texte: `Article issu de la page histoire du plastique de cabriolice.com https://www.carbiolice.com/blog/lhistoire-du-plastique-en-15-dates-cle/`
 
 * Identifier l'URL de redirection (l'adresse du lien): `https:/ ... dates-cle/`
@@ -100,7 +103,7 @@ Placer après cette dernière ligne un autre lien, vers la page de wikipedia sur
 
 > **Navigateur:** Recharger la page (CTRL + r). Que remarquez vous? Les liens sont-ils actifs lorsque l'on clique dessus?
 
-## *Facultatif*: Ajouter une image
+## Ajouter une image
 L'ajout d'image diffère de la procédure d'un logiciel d'edition de texte comme *Word* ou *Writer*. Ici, on n'insère pas l'image elle-même, mais on indique son adresse sur le net. La syntaxe est la suivante:
 
 ```html
