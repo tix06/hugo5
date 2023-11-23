@@ -2,7 +2,7 @@
 Title: modele client serveur
 ---
 
-# Qu'est ce que le Web
+# Le Web et les documents hypertexte
 Le web est un de ces services qui consiste à pouvoir naviguer sur des pages web reliées entre elles par des liens hypertextes. 
 
 * Une brève introduction:
@@ -12,6 +12,14 @@ Le web est un de ces services qui consiste à pouvoir naviguer sur des pages web
 * le rôle du navigateur: présenter et rendre les pages interactives
 
 {{< img src="/images/video.png" link="https://www.youtube.com/watch?v=YVn7jrDYjUQ" caption="histoire du web - Delagrave" >}}
+
+Il existe plusieurs logiciels navigateurs (Mozilla, Chrome, Safari,...). Et pourtant, malgré cette diversité et ces évolutions du langage, ceux-ci vont interpréter ces fichiers et afficher les pages (presque) de la même manière car ils se réferent tous aux mêmes recommandations, qui sont les **normes dictées par le w3c**.
+
+Une petite différence peut exister pour le rendu d'une même page, mais avec plusieurs navigateurs différents. Cela est du aux **propriétés par défaut utilisées par le navigateur** pour l'affichage des différents éléments html de la page.
+
+**Bilan**: Le Web fonctionne avec des documents qui sont interconnectés par des **hyperliens**. Le web necessite d'utiliser un logiciel appelé *navigateur* qui sert à présenter les pages, *surfer*, mais aussi remplir des formulaires, interagir avec la page.
+
+Cette navigation sur le web est possible grâce à la **relation client-serveur** du navigateur avec le serveur qui **heberge la page**. Ce serveur possède une adresse sur le net que l'on traduit de manière symbolique grace à l'**URL**. Cette relation necessite d'utiliser des protocole de communication, comme **http**.
 
 # Adresse d'une page web: URL
 ## Uniform Ressource Locator: où est la page?

@@ -128,6 +128,7 @@ Pour cet exemple, au niveau de l'élément au fond blanc, il faudra:
 * (colonne gauche): un container fils de `div`  qui contiendra lui-même les éléments fils 'section`, `article`, `article`
 * (colonne droite): un élément fils de `div`  qui sera l'élément `aside`
 
+Voir aussi: [cours HTML de SNT](/docs/SNT_2nde/pages/page4/web1/)
 
 ## Les balises principale
 **Les balises sont les instructions en langage HTML des éléments structurants de la page web.**

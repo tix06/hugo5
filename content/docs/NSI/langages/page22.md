@@ -15,10 +15,10 @@ On considère trois tiges plantées dans une base. Au départ, sur la première 
 
 il faut à un moment ou à un autre faire la place pour pouvoir déplacer le gros disque du dessous, ce qui impose d’avoir déplacé préalablement les N–1 plus petits sur un seul et même piquet, c’est-à-dire, d’avoir résolu préalablement le problème des tours de Hanoï pour ces N–1 disques : 
 
-{{< img src="../images/page2/hanoi2.png" alt="algorithme iteratif des tours de Hanoï" caption="video - resolution itérative des tours de Hanoi" >}}
+{{< img src="../images/page2/hanoi2.png" alt="algorithme iteratif des tours de Hanoï" link="https://www.youtube.com/watch?v=r1Ujcw0UkrI" caption="video - resolution itérative des tours de Hanoi" >}}
 Le problème initial (déplacer N disques de A à C en utilisant B) devient donc "déplacer N-1 disques de A à B, déplacer le Nème disque de A à C, puis déplacer les N-1 disques de B à C". Dans les deux déplacements de N-1 disques, on dispose d'un troisième pilier dont on peut se servir...
 
-{{< img src="../images/page2/hanoi.png" alt="algorithme des tours de Hanoï" caption="image issue du site :" >}}
+{{< img src="../images/page2/hanoi.png" alt="algorithme des tours de Hanoï" link="https://accromath.uqam.ca/2016/02/les-tours-de-hanoi-et-la-base-trois/" caption="image issue du site : accromath" >}}
 ## algorithme récursif
 L'algorithme récursif pour ce problème est étonnament réduit : 
 

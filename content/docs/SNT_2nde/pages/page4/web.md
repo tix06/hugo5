@@ -2,7 +2,7 @@
 title : le web
 ---
 
-# le Web
+# le Web et les moteurs de recherche
 *Le world wide web, ou toile en français, est un service construit sur l'infrastructure du reseau internet pour mettre à la disposition des utilisateurs des documents repartis au niveau mondial.*
 
 Lors de sa navigation, l'usager d'internet va suivre des liens qui connectent les pages entre-elles (ce que l'on appelle *surfer* sur le Web).

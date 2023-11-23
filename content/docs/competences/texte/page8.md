@@ -158,7 +158,7 @@ Pour modifier cette mise en page, et mettre les 2 éléments côte à côte, il 
 La règle à appliquer, c'est:
 
 ```css
-dipslay: flex;
+display: flex;
 ```
 
 > Ajouter cette règle CSS pour obtenir la disposition suivante:

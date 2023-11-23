@@ -18,7 +18,9 @@ body {
 
 .ital {font-style: italic;}
 
+/************************************/ 
 /* règles relatives au contenu main */
+/************************************/ 
 main.flex.container {
 
 height:100%;
@@ -34,7 +36,9 @@ height:100%;
    padding-left:40px;
 } 
 
+/*****************************************/ 
 /* règles relatives aux 2 menus latéraux */
+/*****************************************/ 
 #TableOfContents{
    margin-top:220px;
    margin-bottom:50px;
@@ -58,14 +62,20 @@ height:100%;
     background: transparent;
     }   /*pour chrome*/
 
-/* position des tableaux formules formulaires, gestion de l'overflow*/   
+/*********************************************/ 
+/* position des tableaux formules formulaires, 
+gestion de l'overflow*/   
+/*********************************************/ 
 div[id=tableau], form, table, iframe, .formule, .timeline {
 	overflow: scroll;
 	display: block;
    	justify-content: center;
 	}
-	
+
+/***************************************/	
 /* regle pour les boutons personnalisés*/
+/***************************************/ 
+
 input[type=button]{
 	/*display: block;*/
 	margin-top: 50px;
@@ -76,7 +86,9 @@ input[type="button"]:hover {
     /* dans les boutons de navigation du site */
     }
 
-/* dessins canvas */	  
+/******************/
+/* dessins canvas */
+/******************/	  
 canvas { 
     margin-top: 50px;
     border: 2px solid black;
@@ -84,11 +96,18 @@ canvas {
     align : center; 
     max-width: 100%;
     }
-/* champs formulaire */   
+
+/*********************/
+/* champs formulaire */ 
+/*********************/  
 input[type="text"]{
     font-size:12px;
 	}
-/*images et figures*/	
+
+/*******************/
+/*images et figures*/
+/*******************/
+
 figure{
   text-align : center;
   width : 100%;
@@ -114,6 +133,7 @@ figure > img {
     -webkit-transition-duration: 0.2s;
     -webkit-transition-timing-function: linear;
     -webkit-transition-delay: 0s;  
+    box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
 }
 figure > img:hover{
   width : 80%;

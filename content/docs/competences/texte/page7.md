@@ -183,4 +183,4 @@ Ademe. (2021). Rapport de diagnostic-Actualisation de l’étude d’évaluation
 * Pour la bibliographie, l’insertion de notes de bas de page ou de fin peut suffire(Menu Insertion > Note de bas de page/ de fin).
 
 # S'il vous reste du temps
-TP suivant: les moteurs de recherche: [Lien](/docs/competences/texte/page6/)
+TP suivant: les moteurs de recherche: [Lien](/docs/competences/texte/page9/)

@@ -41,7 +41,7 @@ def fibo(n):
 {{< vitta 5f8726ff0f497 >}}
 
 # Ex 3: Les tours de Hanoï
-Le problème des tours de Hanoi est présenté en détails dans le cours sur la recursivité [ici](/docs/NSI/langages/page2/#application-les-tours-de-hanoï)
+Le problème des tours de Hanoi est présenté en détails dans le cours sur la recursivité [ici](/docs/NSI/langages/page22/#application-les-tours-de-hanoï)
 
 
 1. Dans l'editeur plus bas: Executer le script. Puis aller dans la console et tester l'exemple proposé dans le prototypage de la fonction.
@@ -53,15 +53,17 @@ Le problème des tours de Hanoi est présenté en détails dans le cours sur la 
 
 *3.* Proposez une loi de recurence entre le nombre de déplacements T(N) pour N disques, et le nombre de déplacements T(N-1) pour N-1 disques.
 
+*Aide: on pourra consulter la page [accromath](https://accromath.uqam.ca/2016/02/les-tours-de-hanoi-et-la-base-trois/).*
+
 # Ex 4: Nombre d'occurences dans une chaine de caractères
 il s'agit d'écrire une fonction recursive nombre_r(lettre, phrase) qui renvoit le nombre de fois où la lettre apparaît dans la phrase. 
 
 * Dans le cas de base: on retourne 0 si la phrase est vide `""`.
 * Pour l'heredité: On réduit la phrase en eliminant le premier caractère après chaque appel recursif: on met comme argument `phrase[1:]` à la place du paramètre `phrase`.
 
-    * Si le caractère `phrase[0]` est identique à `lettre`: on applique la formule de recurence suivante: u<sub>n</sub> = 1 + u<sub>n-1</sub> que l'on adapte ici en: `return 1 + nombre_r(lettre,phrase[1:]`
+    * Si le caractère `phrase[0]` est identique à `lettre`: on applique la formule de recurence suivante: $u_n = 1 + u_{n-1}$ que l'on adapte ici en: `return 1 + nombre_r(lettre,phrase[1:]`
 
-    * sinon, on adapte la formule de recurence : u<sub>n</sub> = u<sub>n-1</sub> 
+    * sinon, on adapte la formule de recurence : $u_n = u_{n-1}$
 
 > Compléter le script et testez votre fonction avec, par exemple les arguments: `u` et `lustucru`.
 
@@ -87,7 +89,7 @@ def reverse_iterative(seq):
     return reversed_seq
 ```
 
-On peut tester cette fonction dans une cellule d'un jupyter notebook : 
+On peut tester cette fonction dans l'editeur ci-dessous : 
 
 
 ```python
