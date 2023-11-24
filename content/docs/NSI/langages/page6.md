@@ -61,7 +61,7 @@ il s'agit d'écrire une fonction recursive nombre_r(lettre, phrase) qui renvoit 
 * Dans le cas de base: on retourne 0 si la phrase est vide `""`.
 * Pour l'heredité: On réduit la phrase en eliminant le premier caractère après chaque appel recursif: on met comme argument `phrase[1:]` à la place du paramètre `phrase`.
 
-    * Si le caractère `phrase[0]` est identique à `lettre`: on applique la formule de recurence suivante: $u_n = 1 + u_{n-1}$ que l'on adapte ici en: `return 1 + nombre_r(lettre,phrase[1:]`
+    * Si le caractère `phrase[0]` est identique à `lettre`: on applique la formule de recurence suivante: $u_n = 1 + u_{n-1}$ que l'on adapte ici en: `return 1 + nombre_r(lettre,phrase[1:])`
 
     * sinon, on adapte la formule de recurence : $u_n = u_{n-1}$
 

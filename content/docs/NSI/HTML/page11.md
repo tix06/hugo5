@@ -1,5 +1,5 @@
 ---
-Title: html css
+Title: html et design web
 ---
 
 # Encodage des caracteres et header en html
@@ -101,7 +101,7 @@ Les instructions de style, en langage CSS, vont déclarer:
 **Question d:**: Ecrire une règle CSS complète en identifiant: le *sélecteur, la propriété, la valeur*.
 
 ## Police, coloration, alignement
-Les principales règles de style pour le texte sont `color`, `font-size`, `text-align`, ainsi que `font-family`.
+Les principales règles de **style pour le texte** sont [color](https://developer.mozilla.org/fr/docs/Web/CSS/color), [font-size](https://developer.mozilla.org/fr/docs/Web/CSS/font-size), [text-align](https://developer.mozilla.org/fr/docs/Web/CSS/text-align), ainsi que [font-family](https://developer.mozilla.org/fr/docs/Web/CSS/font-family).
 
 Vous pouvez tester les effets de certaines de ces instructions en les plaçant entre les balises `<style>` de votre document. Par exemple:
 
@@ -114,6 +114,7 @@ h3 {
 }
 
 p {
+  font-family: Georgia, serif;
   font-size: 16px;
   line-height: 2;
   letter-spacing: 1px;
@@ -123,7 +124,7 @@ p {
 
 Pour approfondir, suivre le tutoriel à la page [developper.mozilla](https://developer.mozilla.org/fr/docs/Learn/Getting_started_with_the_web/CSS_basics) sur le CSS niveau débutant.
 
-## Hierarchie des éléments html, bordures
+## Containers de type block
 Dans le document `marignan.html`, les éléments HTML ont une certaine hierarchie: Les balises `<h3>` et `<p>` sont à l'intérieur de la balise `<section>`. Si on veut encadrer le contenu, il faudra appliquer les règles à l'élément `section`:
 
 ```css
@@ -134,18 +135,22 @@ section {
 
 Les règles peuvent permettre de 
 
-* fixer la largeur
-* mettre une marge entre les éléments
-* mettre une couleur de fond
-* dessiner une bordure
+* fixer la largeur: [width](https://developer.mozilla.org/fr/docs/Web/CSS/width)
+* mettre une marge entre les éléments: [margin](https://developer.mozilla.org/fr/docs/Web/CSS/margin)
+* mettre une marge à l'intérieur de l'élément: [padding](https://developer.mozilla.org/fr/docs/Web/CSS/padding)
+* mettre une couleur de fond: [background-color](https://developer.mozilla.org/fr/docs/Web/CSS/background-color)
+* dessiner une bordure: [border](https://developer.mozilla.org/fr/docs/Web/CSS/border)
+* bordure avec coins arrondis: [border-radius](https://developer.mozilla.org/fr/docs/Web/CSS/border-radius)
 
-On reviendra sur le tutoriel [developper.mozilla](https://developer.mozilla.org/fr/docs/Learn/Getting_started_with_the_web/CSS_basics) pour voir un exemple d'application de ces règles.
+On rappelle qu'il n'est pas possible de fixer la hauteur des éléments dont le display est *block*, mais que l'on peut fixer leur largeur.
+
+
 
 > travaux pratiques: écrire les règles de style CSS qui vont permettre d'obtenir la mise en forme suivante:
 
 {{< img src="../images/css1.png" >}}
 
-**Question e:**: faire un tableau avec 3 colonnes: *nom de la propriété*, *effet de style*, *exemple*. Mettre dans ce tableau au moins 3 propriétés prévues pour styliser le texte, et 3 propriétés pour styliser le container de ce texte.
+**Question e:** faire un tableau avec 3 colonnes: *nom de la propriété*, *effet de style*, *exemple*. Mettre dans ce tableau au moins 3 propriétés prévues pour styliser le texte, et 3 propriétés pour styliser le container de ce texte.
 
 ## Positionnement des éléments
 Les éléments `section` se placent naturellement l'un sous l'autre. Ce qui donne, pour la page avec 2 éléments `section`:
@@ -153,7 +158,7 @@ Les éléments `section` se placent naturellement l'un sous l'autre. Ce qui donn
 
 {{< img src="../images/css2.png" >}}
 
-Pour modifier cette mise en page, et mettre les 2 éléments côte à côte, il faut appliquer la règle de positionnement à l'élément PARENT des 2 éléments `section`. Ici, cet élément parent, c'est `body`.
+Pour modifier cette mise en page, et mettre les 2 éléments côte à côte, il faut appliquer la règle de positionnement à **l'élément PARENT** des 2 éléments `section`. Ici, cet élément parent, c'est `body`.
 
 La règle à appliquer, c'est:
 
@@ -165,9 +170,51 @@ display: flex;
 
 {{< img src="../images/css3.png" >}}
 
-**Question f:**: Ecrire la règle complète que vous avez utilisée.
+**Question f:** Ecrire la règle complète que vous avez utilisée (sélecteur, propriété, valeur).
 
 *Approfondir: [developper.mozilla](https://developer.mozilla.org/fr/docs/Learn/CSS/CSS_layout/Flexbox)*
 
+## Eviter les dépassements
+Dans une nouvelle page, que vous appelerez `page2.html`, écrire le script suivant:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>page secondaire</title>
+</head>
+<style>
+	div {
+  		width:50%;
+  		border: solid 2px;
+  		margin:20px;
+  		padding: 20px;
+		}
+</style>
+<body>
+    <div>
+    <img src="marignan.jpeg">
+    </div>
+</body>
+</html>
+```
+
+Mettre le fichier [marignan.jpeg](../images/marignan.jpeg) dans le même dossier. Ouvrir la page avec le navigateur.
+
+{{< img src="../images/css9.png" >}}
+
+Vous devriez constater un dépassement de la boîte par l'image.
+
+Pour que l'image rentre complètement dans le cadre, il faudra lui donner la propriété `width: 100%;`
+
+Elle va alors occuper toute la largeur de la boite `div`, son élément parent.
+
+## Agencer les éléments
+Vous savez maintenant positionner les éléments dans le flux vertical, horizontal, mettre une image dans un container sans que celle-ci déborde, et utiliser des règles CSS pour personnaliser les styles.
+
+Vous allez assembler ces connaissances pour concevoir une page comme celle donnée ci-dessous:
+
+{{< img src="../images/css10.png" caption="Page complète, avec styles" >}}
 
 
