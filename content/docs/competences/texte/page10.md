@@ -28,17 +28,23 @@ Suivre ensuite les étapes de création:
 * après vérification de votre email, votre espace en ligne est créé. Finir les étapes de création de compte.
 
 ## Rejoindre un site collaboratif
-La page [d'accueil](https://www.e-monsite.com) contient:
+La page [d'accueil](http://site-demo-2-3.e-monsite.com/) contient:
 
 * un bandeau de navigation (partie supérieure)
 * un contenu de page (images, articles, ...)
 * un formulaire de connexion ou de création de compte **pour les membres**. Attention, il s'agit ici des membres de votre **communauté**, auxquels vous donnez les droits de publier de manière non anonyme. Ces membres n'auront **PAS** les **droits administrateurs**.
 * un formulaire de commentaires de type *blog*.
-Le professeur va vous permettre d'editer le site colaboratif de la classe. Celui-ci se trouve à la page : [http://site-demo-2-3.e-monsite.com/](http://site-demo-2-3.e-monsite.com/)
+Le professeur va vous permettre d'editer le site colaboratif de la classe. 
+
+**Pour le groupe 1**: Celui-ci se trouve à la page 1 du site: [http://site-demo-2-3.e-monsite.com/](http://site-demo-2-3.e-monsite.com/)
 
 {{< img src="../images/cms11.png" link="http://site-demo-2-3.e-monsite.com/" >}}
 
-* Aller dans le formulaire *commentaire* de la *page 1* du [site](https://www.e-monsite.com).
+**Pour le groupe 2:** Celui-ci se trouve à la page 1 du site: [http://site-demo-3-4.e-monsite.com/](http://site-demo-3-4.e-monsite.com/)
+
+{{< img src="../images/cms19.png" link="http://site-demo-3-4.e-monsite.com/" >}}
+
+* Aller dans le formulaire *commentaire* de la *page 1* du [site du groupe 1](http://site-demo-2-3.e-monsite.com/) ou bien du [site du groupe 2](http://site-demo-3-4.e-monsite.com/).
 * Renseigner votre nom, votre email et votre site internet dans la partie *commentaire* de la page.
 
 Cette derniere étape va permettre à l'administrateur du site de vous ajouter comme *administrateur*.
