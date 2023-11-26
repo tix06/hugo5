@@ -281,6 +281,9 @@ On a T(n) = T(n-1) + 1 donc T(n) = n
 
 # Analyser un algorithme récursif
 ## Preuve de correction d'un algorithme récursif
+Alan Turing  (1912 – 1954) énonce ainsi son principe d'indéciablité de la terminaison d'un algorithme(1936): *L’indecidabilite c’est l’impossibilité absolue et définitivement démontrée de résoudre par un procédé général de calcul un problème donné.*
+
+La terminaison, ainsi que la correction ou la complexité doivent être prouvées par des arguments mathématiques.
 
 - terminaison : recherche du convergent
 - correction / validité : recherche de l'invariant de boucle pour démontrer sa variation selon un argument de recurence
