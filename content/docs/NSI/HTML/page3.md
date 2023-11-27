@@ -96,6 +96,96 @@ On peut aussi y ajouter des éléments `<link>` et `<script>` :
 
 Si vous avez un script qui est très gros mais indépendant, il est préférable de le placer tout à la fin, afin de ne pas retarder le navigateur dans sa construction de l'arbre du DOM et de l'affichage de la page.
 
+
+
+## Les balises principale
+**Les balises sont les instructions en langage HTML des éléments structurants de la page web.**
+
+Les balises se distinguent entre celles qui n'ont pas d'attribut obligatoire, et celles qui en ont. Un attribut va ajouter des fonctionnalités à l'élément HTML, et modifier son allure ou son fonctionnement.
+
+### Balises sans attribut
+Les principales balises structurantes sont:
+
+* h1, h2, h3, ... h6
+* div
+* p
+* span
+* ...
+
+Elles s'utilisent de la manière suivante:
+
+```html
+<h1>Texte</h1>
+<p>Texte</p>
+```
+
+Il existe aussi des **balises qui doivent être combinées**, comme celles de listes:
+
+* ul (parent) => li (enfants) pour une liste à puces
+* ol (parent) => li (enfants) pour une liste ordonnée (numérotée)
+
+```html
+<ul>
+  <li>Premier</li>
+  <li>Deuxieme</li>
+</ul>
+
+<ol>
+  <li>Premier</li>
+  <li>Deuxieme</li>
+</ol>
+```
+
+*Résultat:*
+
+* Premier
+* Deuxieme
+
+1. Premier
+2. Deuxieme
+
+
+### balises avec attribut obligatoire
+Les attributs seront obligatoires pour certaines balises selon leur fonction. Certains attributs sont facultatifs et vont juste enrichir leur comportement.
+
+#### lien
+**href** est un attribut obligatoire.
+
+```html
+<a href="lien_vers_la_ressource.html">texte cliquable</a>
+```
+
+
+
+#### image
+Il s'agit d'une balise *orpheline*.
+
+**src** est un attribut obligatoire.
+
+```html
+<img src="lien_vers_la_ressource.jpg">
+```
+
+**alt** est un attribut facultatif, que l'on ajoute pour afficher un texte lorsque l'adresse de l'image est erronée, ou que celle-ci ne s'affiche pas.
+
+```html
+<img src="lien_vers_la_ressource.jpg" alt="texte alternatif">
+```
+
+### Remarque sur les adresses (href et src)
+L'adresse placée pour l'attribut `href` ou bien `src` peut être *relative/absolue*, *locale/externe*. 
+
+#### Absolue
+Une adresse est *absolue* lorsque le chemin de celle-ci commence par `/`. Par exemple, pour un lien interne: `/docs/2nde/chimie/images/photo1.jpeg`
+
+Et pour un lien externe: `http://nom_du_domaine.xyz/docs/2nde/chimie/images/photo1.jpeg`
+
+#### Relative
+L'adresse est relative lorsqu'il n'y a pas `/`. Ce lien ne peut être qu'interne: `src = "chimie/images/photo1.jpeg"`
+
+
+
+
 ## Imbrication et filiation des balises
 ### Arbre du DOM
 Si vous débutez complètement en HTML, consultez les ressources de SNT:
@@ -129,58 +219,6 @@ Pour cet exemple, au niveau de l'élément au fond blanc, il faudra:
 * (colonne droite): un élément fils de `div`  qui sera l'élément `aside`
 
 Voir aussi: [cours HTML de SNT](/docs/SNT_2nde/pages/page4/web1/)
-
-## Les balises principale
-**Les balises sont les instructions en langage HTML des éléments structurants de la page web.**
-
-Les balises se distinguent entre celles qui n'ont pas d'attribut obligatoire, et celles qui en ont. Un attribut va ajouter des fonctionnalités à l'élément HTML, et modifier son allure ou son fonctionnement.
-
-### Balises sans attribut
-Les principales balises structurantes sont:
-
-* h1, h2, h3, ... h6
-* div
-* p
-* span
-* ...
-
-Elles s'utilisent de la manière suivante:
-
-```html
-<h1>Texte</h1>
-<p>Texte</p>
-```
-
-Il existe aussi des balises qui doivent être combinées, comme celles de listes:
-
-* ul (parent) => li (enfants) pour une liste à puces
-* ol (parent) => li (enfants) pour une liste ordonnée (numérotée)
-
-*exemple:*
-
-```html
-<ul>
-<li>ligne1</li>
-<li>ligne2</li>
-</ul>
-```
-
-### balises avec attribut obligatoire
-#### lien
-
-```html
-<a href="lien_vers_la_ressource.html">texte cliquable</a>
-```
-
-#### image
-Il s'agit d'une balise *orpheline*.
-
-```html
-<img src="lien_vers_la_ressource.jpg">
-```
-
-
-*Question :* L'adresse placée pour l'attribut `href` ou bien `src` peut être *relative/absolue*, *locale/externe*. Définir chacun de ces termes.
 
 # Un outil de vérification de la syntaxe
 
