@@ -74,7 +74,7 @@ Quelques propriétés CSS relatives aux textes
 | color | #0..F0..F0..F | selon le code RGB exprimé en hexadecimal, sans separateur |
 | background-color | idem color | couleur de fond |
 | font-family | arial, courier new... | choix de la police de caractères |
-| font | italic 12 pt sans-serif | informations complémentaires pour la police |
+| font | italic 12 px sans-serif | informations complémentaires pour la police |
 | text-align | center, left, right, justify | alignement du texte |
 | font-weight | bold | mettre en gras |
 
@@ -86,9 +86,9 @@ En CSS, tout élément est inclus dans une boîte
 {{< img src="../images/boite.png" >}}
 | paramètre | valeurs possibles | effet |
 |--- |--- |--- |
-| border | solid, dashed, none | bordure en trait plein, pointillé, sans bordure |
-| margin | 1px | marge exterieur, dimension en pixels |
-| padding | 1px | marge intérieure |
+| [border](https://developer.mozilla.org/fr/docs/Web/CSS/border) | solid, dashed, none | bordure en trait plein, pointillé, sans bordure |
+| [margin](https://developer.mozilla.org/fr/docs/Web/CSS/margin) | 1px | marge exterieur, dimension en pixels |
+| [padding](https://developer.mozilla.org/fr/docs/Web/CSS/padding) | 1px | marge intérieure |
 
 ## Rappel sur la propriété display
 
