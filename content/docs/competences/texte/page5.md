@@ -118,7 +118,7 @@ https://upload.wikimedia.org/wikipedia/commons/8/80/Compounding.png
 
 
 
-Faites référence à l'auteur de l'image si vous l'identifiez, ou bien la page dont est issue l'image, à l'aide d'un élément `html` qui suivra l'image. On peut utiliser une balise `<caption> ... légende ... </caption>`.
+Faites référence à l'auteur de l'image si vous l'identifiez, ou bien la page dont est issue l'image, à l'aide d'un élément `html` qui suivra l'image. On peut utiliser une balise `<figcaption> ... légende ... </figcaption>`.
 
 {{< img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Compounding.png" caption="production de granulés de polymères - image de la page *Matières plastiques* (wikipedia)" >}}
 

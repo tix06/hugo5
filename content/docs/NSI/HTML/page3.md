@@ -187,10 +187,17 @@ L'adresse est relative lorsqu'il n'y a pas `/`. Ce lien ne peut être qu'interne
 
 
 ## Imbrication et filiation des balises
+### La premiere page de l'histoire du Web
+Voir l'article sur [Lumni.fr](https://www.lumni.fr/article/le-premier-site-web-de-l-histoire#:~:text=Lumniz%20%C3%A0%20remporter.-,En%201990%20par%20Tim%20Berners%2DLee%2C%20l'inventeur%20du,%C3%A9t%C3%A9%20r%C3%A9guli%C3%A8rement%20mis%20%C3%A0%20jour.)
+
+Cette page ne présentait pas de mise en forme particulière. Le code ne contenait pas de balises *fermantes*. Les pages n'étaient pas hierarchisées.
+
 ### Arbre du DOM
 Si vous débutez complètement en HTML, consultez les ressources de SNT:
 
-* Une introduction à la redaction d'un document en HTML:{{< a link="/docs/SNT_2nde/pages/page4/web1/" caption="Document Web, contenu et structure" >}}
+*Une introduction à la redaction d'un document en HTML:{{< a link="/docs/SNT_2nde/pages/page4/web1/" caption="Document Web, contenu et structure" >}}*
+
+
 L'imbrication des balises traduit le lien (la filiation) entre les éléments.
 
 On représente la structure d’un document html à l’aide d’un arbre.
