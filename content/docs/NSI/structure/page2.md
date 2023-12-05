@@ -195,7 +195,7 @@ Voir le cours sur la [recursivité](/docs/NSI/langages/page2/)
 ## Exercice 1 : implementer une pile
 1. Programmer les fonctions qui implémentent la *pile*: `Pile`,`est_vide`,`empile`,`depile`,`sommet`. (editeur python en fin d'exerice)
 2. Tester votre implémentation pour resoudre l'exercice suivant: (utiliser l'editeur python):
-* Soit une liste L = ['a',1,'b',2,'c',3,'d',4]
+* Soit une liste L = ["a",1,"b",2,"c",3,"d",4]
 * Parcourir les éléments de la liste L avec une boucle bornée
   * empiler tous les nombres entiers dans une pile `p`.
 

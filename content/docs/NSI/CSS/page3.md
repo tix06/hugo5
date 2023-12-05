@@ -82,7 +82,7 @@ Pour démarrer, il faudra placer la ligne suivante dans le `<head>`:
 
 Sous la balise `<body>`, ajouter les lignes suivantes:
 
-``html
+```html
 <h1 class="text-3xl font-bold underline">
 Hello world!
 </h1>
@@ -90,18 +90,20 @@ Hello world!
 
 Ouvrir ensuite les *developper tools* du navigateur > [inspecteur](https://developer.mozilla.org/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 
-Puis survoler le script HTML du *dev tools* pour atteindre l'élément `h1`.
+> Puis survoler le script HTML du *dev tools* pour atteindre l'élément `h1`.
 
-**question:** Quelles sont les propriétés css qui sont ajoutées à partir des classes *text-3xl font-bold et underline*? Faire une liste de ces propriétés.
+**question a:** Quelles sont les propriétés css qui sont ajoutées à partir des classes *text-3xl font-bold et underline*? Faire une liste de ces propriétés.
 
 
 ## Positionner des éléments dans une carte
-Copier-coller le script donné plus haut pour le chat (la version courte).
+> Remplacer le titre *Hello World* par le script donné plus haut pour le chat (la version courte).
 
-Telecharger et ajouter le logo dans le même dossier que celui du fichier html: {{< img src="../images/chat.svg" link="../images/chat.svg" >}} 
+> Telecharger et ajouter le logo *chat.svg* dans le même dossier que celui du fichier html: 
+
+{{< img src="../images/chat.svg" link="../images/chat.svg" caption="cliquer pour telecharger l'image" >}} 
 
 
-**question**: Dans la fenêtre *inpecteur du dev tools*: Quelles sont les propriétés css ajoutées pour obtenir chacune des cartes A, B, C?
+**question b**: Dans la fenêtre *inpecteur du dev tools*: Quelles sont les propriétés css ajoutées pour obtenir chacune des cartes A, B, C?
 
 {{< img src="../images/chitchat.png" >}}
 
@@ -116,7 +118,7 @@ Telecharger et ajouter le logo dans le même dossier que celui du fichier html: 
 * margin-left
 * margin-right
 
-**question:** même question pour les cartes D, E, F
+**question c:** même question pour les cartes D, E, F
 
 {{< img src="../images/chitchat3.png" link="../images/chitchat3.png" caption="cliquer pour agrandir" >}}
 
@@ -161,23 +163,30 @@ Ajouter le script:
 
 Son positionnement peut être ajusté en le mettant dans un élément `div` et en ajoutant les classes `px-XX` et `py-YY`, où XX et YY sont des valeurs en pixels (1, 2, 3, ...).
 
-**question:** quelles sont les propriétés css modifiées par ces 2 classes `px-XX` et `py-YY`? Chercher la réponse dans l'inspecteur du *dev tools*.
+**question d:** quelles sont les propriétés css modifiées par ces 2 classes `px-XX` et `py-YY`? Chercher la réponse dans l'inspecteur du *dev tools*.
 
 # Paramètres réseau
 ## Quels éléments sont chargés par le navigateur?
-Ouvrir maintenant le moniteur réseau (onglet réseau ou network).
+Ouvrir maintenant le **moniteur réseau** (onglet réseau ou network).
 Après le chargement de la page, observer les informations affichées.
 
 {{< img src="../images/chitchat6.png" >}}
 
 Recommencer le chargement de la page, mais cette fois après avoir coché l'option *désactiver les caches* (*disable caches*). *La procédure peut différer selon le navigateur utilisé.*
 
-**question:** Combien d'éléments sont chargés pour afficher la page? Quels sont ces éléments?
+**question e:** Combien d'éléments sont chargés pour afficher la page? Quels sont ces éléments?
 
 ## Analyse de la requête client - serveur
 Dans la liste des éléments rechargés par la page, repérer la ligne qui concerne l'échange avec le serveur `cdn.tailwindcss.com/`
 
-Cliquer sur cette ligne et afficher le `header`
+Cliquer sur cette ligne et afficher le `header`. Parcourir les informations d'échange entre client (navigateur) et le serveur distant. Les informations précisent les requêtes-reponses entre le client et le serveur. Un code de statut (**statut code**) spécifie cet échange. 
+
+
+**question f:** combien de serveurs différents sont solicités pour le chargement de votre page?
+
+**question g:** Quel a été ce code lors de la communication client-serveur? Que signifie t-il? 
+
+
 
 
 
