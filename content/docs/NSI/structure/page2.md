@@ -149,7 +149,6 @@ Voir le cours sur la [programmation orientée objet](/docs/NSI/structure/page3/)
 ## Pile et recursivité
 Tout algorithme récursif peut être mis sous forme d'algorithme itératif avec une structure de données en pile.
 
-La pile d'instruction doit être la même.
 
 Voir le cours sur la [recursivité](/docs/NSI/langages/page2/)
 
@@ -211,6 +210,7 @@ Certaines des fonctions que vous avez écrites vont lever des exceptions dans le
 
 
 ## Exercice 3 : déverser une pile
+### Méthode itérative
 Dans l'editeur de l'exercice 1:
 
 Ecrire une fonction `deversepile` qui déverse une pile `p1` dans une pile `p2`.
@@ -225,8 +225,22 @@ deversepile(p3,p2)
 
 Les fonctions que vous pourrez utiliser pour les piles seront celles définies dans l'exercice 1 : `Pile,est_vide,empile,depile,sommet`.
 
+### Visualiser sur Pythontutor
+Ouvrir l'editeur pythontutor et executer le script pas à pas. 
+
+{{< img src="../images/pythontutor2.png" link="https://pythontutor.com/render.html#code=def%20deverse%28p_1,p_2%29%3A%0A%20%20%20%20while%20p_1%20!%3D%20%5B%5D%3A%0A%20%20%20%20%20%20%20%20p_2.append%28p_1.pop%28%29%29%0A%0Ap1,p2%20%3D%20%5B%5D,%5B%5D%0Ap1%20%3D%20%5B1,2,3,4%5D%0Adeverse%28p1,p2%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" caption="cliquer pour ouvrir sur pythontutor" >}}
+
+*Remarquez-vous?*
+
+* le dépilement retourne l'élément au sommet de `p1`, tout en supprimant ce sommet
+* les éléments se rangent en sens inverse dans `p2` avec l'empilement
+* la fonction ne retourne rien. Les listes `p1` et `p2` sont modifiées par effet de bord, dans la fonction.
+
+
+
 ## Exercice 4 : Evaluation d'une opération en notation polonaise inversée
-Principe : la notation polonaise inversée permet d'écrire une opération sans utiliser de parenthèses. Il faut alors écrire les 2 opérandes avant l'opérateur. L'opérateur se trouve à droite des 2 opérandes.
+### Principe 
+la notation polonaise inversée permet d'écrire une opération sans utiliser de parenthèses. Il faut alors écrire les 2 opérandes avant l'opérateur. L'opérateur se trouve à droite des 2 opérandes.
 
 En parcourant l'expression de gauche à droite, chaque fois que l'on rencontre un opérateur, on remonte vers la gauche pour rechercher les 2 opérandes et on remplace les 3 termes (2 operandes et 1 opérateur) par le resultat de l'opération.
 
@@ -238,6 +252,8 @@ Exemple : `1 2 + 4 * 3 +`
 
 {{< img src="../images/video_NPI.png" alt="video notation polonaise inversée" link="https://www.youtube.com/watch?v=Ak8I7o-rXKg" caption="Arnaud Bodin : Calculatrice polonaise - les piles" >}}
 La liste L contient les caractères de l'expression POSTFIXE à calculer.
+
+### Questions
 
 1. Compléter les fonctions `add`, `soust`, et `multip` qui doivent additionner, soustraire, et multiplier les arguments x et y.
 2. Testez vos fonctions à l'aide du tableau associatif: Executer en console l'instruction: `dicoP['-'](3,4)` qui doit renvoyer ... -1
@@ -252,6 +268,45 @@ La liste L contient les caractères de l'expression POSTFIXE à calculer.
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f9d305edd765&mode=code"></iframe>
 
 {{< vitta 5f9d305edd765 >}}
+
+### Variante utilisant les fonctions lambda
+On peut racourcir l'écriture du script en utilisant des fonctions lambda. Elles utilisent des paramètres pour calculer une valeur de retour, comme une fonction. Elles ne peuvent contenir qu'une expression.
+
+On les déclare de la manière suivante:
+
+```python
+lambda arguments: expression
+```
+
+*Exemple 1:*
+
+```python  
+sum = lambda a,b : a+b
+```
+
+Ces fonctions peuvent ne pas être nommées. On les place alors dans une liste, ou un dictionnaire.
+
+
+```python
+dico = {'+' : lambda x,y : x+y,
+        '-' : lambda x,y : x-y,
+        '*' : lambda x,y : x*y
+        }
+```
+
+On calcule alors avec cette fonction en faisant: `dico[a](3,4)` par exemple:
+
+*Exemple 2:*
+
+```python
+a = '+'
+if a == '+':
+    r = dico[a](3,4)
+    print(r)
+# affiche 7
+```
+
+L'interêt des fonctions *lambda* est surtout de **rendre le script plus lisible**. Cela donne une autre option d'écriture.
 
 ## Exercice 5: Reduction d'une chaine de caractères
 Enoncé à la{{< a link="/docs/NSI/structure/page22/" caption="page suivante" >}}

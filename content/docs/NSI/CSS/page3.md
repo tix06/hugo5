@@ -3,61 +3,14 @@ Title: direct css
 ---
 
 # Direct css
-La technique de direct-css est une manière originale de styliser le document, qui s'apparente à faire de la stylisation directe en inline).
+La technique de direct-css est une manière originale de styliser le document, qui s'apparente à faire de la stylisation directe en inline.
 
 L'idée est d'ajouter des valeurs à l'attribut class. Ces classes font référence au fichier *framework* en ligne. Voir pour plus d'infos [tailwindcss.com](https://tailwindcss.com/docs/utility-first).
 
-Ainsi, pour réaliser le pop up suivant, il faudra de nombreuses lignes de script css:
+Ainsi, pour réaliser le pop up suivant, le script HTML ne contient que queslques lignes. Sans écriture d'une seule ligne de css. On fait alors référence à des classes définies sur une feuille de style externe, chargée au démarrage:
 
 {{< img src="../images/direct_css.png" >}}
 
-```html
-<!-- version longue -->
-<div class="chat-notification">
-  <div class="chat-notification-logo-wrapper">
-    <img class="chat-notification-logo" src="/img/logo.svg" alt="ChitChat Logo">
-  </div>
-  <div class="chat-notification-content">
-    <h4 class="chat-notification-title">ChitChat</h4>
-    <p class="chat-notification-message">You have a new message!</p>
-  </div>
-</div>
-
-<style>
-  .chat-notification {
-    display: flex;
-    max-width: 24rem;
-    margin: 0 auto;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    background-color: #fff;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  }
-  .chat-notification-logo-wrapper {
-    flex-shrink: 0;
-  }
-  .chat-notification-logo {
-    height: 3rem;
-    width: 3rem;
-  }
-  .chat-notification-content {
-    margin-left: 1.5rem;
-    padding-top: 0.25rem;
-  }
-  .chat-notification-title {
-    color: #1a202c;
-    font-size: 1.25rem;
-    line-height: 1.25;
-  }
-  .chat-notification-message {
-    color: #718096;
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-</style>
-```
-
-Mais cela peut être remplacé par le script HTML minimum suivant. Sans écriture d'une seule ligne de css. On fait alors référence à des classes définies sur une feuille de style externe, chargée au démarrage:
 
 ```html
 <!-- version courte -->
@@ -71,14 +24,27 @@ Mais cela peut être remplacé par le script HTML minimum suivant. Sans écritur
   </div>
 ```
 
+**Remarque:** les styles sont ajoutés en nommant les classes, dans l'attribut `class`. Il peut y avoir plusieurs classes par balise. Chaque classe ajoutée sera séparée par un espace.
+
 ## Démarrer
-
-
 Pour démarrer, il faudra placer la ligne suivante dans le `<head>`:
 
 ```html
 <script src="https://cdn.tailwindcss.com"></script>
 ```
+
+Le squelette du document est alors:
+
+```html
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+``` 
+
 
 Sous la balise `<body>`, ajouter les lignes suivantes:
 
@@ -86,6 +52,8 @@ Sous la balise `<body>`, ajouter les lignes suivantes:
 <h1 class="text-3xl font-bold underline">
 Hello world!
 </h1>
+</body>
+</html>
 ``` 
 
 Ouvrir ensuite les *developper tools* du navigateur > [inspecteur](https://developer.mozilla.org/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
@@ -96,7 +64,7 @@ Ouvrir ensuite les *developper tools* du navigateur > [inspecteur](https://devel
 
 
 ## Positionner des éléments dans une carte
-> Remplacer le titre *Hello World* par le script donné plus haut pour le chat (la version courte).
+> Remplacer le contenu de la page (titre h1 *Hello World*) par le script donné plus haut pour le *chat*.
 
 > Telecharger et ajouter le logo *chat.svg* dans le même dossier que celui du fichier html: 
 
@@ -186,6 +154,75 @@ Cliquer sur cette ligne et afficher le `header`. Parcourir les informations d'é
 
 **question g:** Quel a été ce code lors de la communication client-serveur? Que signifie t-il? 
 
+
+# Compléments (lecture)
+La technique de direct-css est une manière originale de styliser le document, qui s'apparente à faire de la stylisation directe en inline).
+
+L'idée est d'ajouter des valeurs à l'attribut class. Ces classes font référence au fichier *framework* en ligne. Voir pour plus d'infos [tailwindcss.com](https://tailwindcss.com/docs/utility-first).
+
+Ainsi, pour réaliser le pop up suivant, il faudra de nombreuses lignes de script css:
+
+{{< img src="../images/direct_css.png" >}}
+
+```html
+<!-- version longue -->
+<div class="chat-notification">
+  <div class="chat-notification-logo-wrapper">
+    <img class="chat-notification-logo" src="/img/logo.svg" alt="ChitChat Logo">
+  </div>
+  <div class="chat-notification-content">
+    <h4 class="chat-notification-title">ChitChat</h4>
+    <p class="chat-notification-message">You have a new message!</p>
+  </div>
+</div>
+
+<style>
+  .chat-notification {
+    display: flex;
+    max-width: 24rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  .chat-notification-logo-wrapper {
+    flex-shrink: 0;
+  }
+  .chat-notification-logo {
+    height: 3rem;
+    width: 3rem;
+  }
+  .chat-notification-content {
+    margin-left: 1.5rem;
+    padding-top: 0.25rem;
+  }
+  .chat-notification-title {
+    color: #1a202c;
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+  .chat-notification-message {
+    color: #718096;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+</style>
+```
+
+Mais cela peut être remplacé par le script HTML minimum suivant. Sans écriture d'une seule ligne de css. On fait alors référence à des classes définies sur une feuille de style externe, chargée au démarrage:
+
+```html
+<!-- version courte -->
+  <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
+  <div class="shrink-0">
+    <img class="h-12 w-12" src="chat.svg" alt="ChitChat Logo">
+  </div>
+  <div>
+    <div class="text-xl font-medium text-black">ChitChat</div>
+    <p class="text-slate-500">You have a new message!</p>
+  </div>
+```
 
 
 
