@@ -202,3 +202,4 @@ if __name__ == '__main__':
 * TP inspiré de: [https://qkzk.xyz/docs/nsi/cours_premiere/ihm_web/flask/](https://qkzk.xyz/docs/nsi/cours_premiere/ihm_web/flask/)
 * Autre TP de NSI utilisant Flask, avec explications sur le modèle MVC: [site du Yeti](https://lesmathsduyeti.fr/fr/lycee/nsi-premiere/interactions-client-serveur-flask/)
 * Flask pas à pas: [liris.cnrs dpt bio informatique](https://perso.liris.cnrs.fr/pierre-antoine.champin/2017/progweb-python/cours/cm2.html)
+* creation d'un petit dictionnaire [info-mounier.fr/premiere_nsi](https://info-mounier.fr/premiere_nsi/web/activite-traitement-formulaire)
