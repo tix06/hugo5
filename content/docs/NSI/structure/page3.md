@@ -400,6 +400,9 @@ Le joueur a la carte
 
 {{< vitta 5fbffcb7b75fa >}}
 
+Correction des exercices: [Lien](../page32)
+
+
 <!--
 ## Exercice 3: Classe Pile créée à partir d'une liste chaînée
 La notion de *classe* permet de créer de nouveaux types de structure. Nous allons créer à la main une structure de liste chaînée; pour ce faire, nous allons utiliser une premiere classe *Maillon*; et une deuxième classe Pile, qui se servira de cette structure. Cette nouvelle structure n'utilise pas le type *List* de python.
