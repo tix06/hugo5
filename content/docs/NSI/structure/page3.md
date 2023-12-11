@@ -342,14 +342,18 @@ Puis tester les méthodes de classe:
 >>> carte1.get_Attributs()
 ```
 
+* Ajouter les autres membres de l'une des familles (carte5, carte6,...). *Une famille est constituée de Grand-père, Grand-mère, Père, Mère, Fils, Fille.*
 
-* Question 3: Ajouter la méthode `__repr__` qui permettra de décrire la carte: 
+
+* Question 4: Ajouter la méthode `__repr__` qui permettra de décrire la carte: 
 
 Exemple de message attendu:
 ```
 >>> print(carte1)
 La carte est de la famille des Jongleurs. C'est le Grand-père.
 ```
+
+*Testez votre fonction pour quelques unes des cartes.*
 
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5fbff48972f3c&mode=code"></iframe>
 
@@ -392,8 +396,13 @@ le joueur possède les cartes : [('Jongleurs', 'Grand-père'), ('Jongleurs', 'Fi
 pioche
 >>> joueur1.demande('Jongleurs','Fille')
 Le joueur a la carte
+>>> joueur1.demande(carte1.getAttributs())
+Le joueur a la carte
 ```
 
+* Question 5: Quelles fonctionnalités du jeu reste t-il à programmer pour avoir un jeu *complet*? 
+
+* Question 6: *(mini projet)* Programmer l'une de ces fonctionnalités.
 
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5fbffcb7b75fa&mode=code"></iframe>
 
