@@ -29,7 +29,7 @@ Les **attributs du projectile** seront:
 * vx
 * vy
 
-On utilisera l'editeur [Trinket + Python](https://trinket.io/python) comme pour le [TP sur les dessins recursifs](/docs/NSI/algorithmes/page10/).
+On utilisera l'editeur [Python + Turtle](https://pythonandturtle.com/turtle/) comme pour le [TP sur les dessins recursifs](/docs/NSI/algorithmes/page10/).
 
 **1.** Ecrire une méthode de la classe Projectile qui s'appelera `translation` et qui modifiera les attributs x, y, et vy après un pas de temps `dt`. (`dt` est un paramètre de la méthode).
 
