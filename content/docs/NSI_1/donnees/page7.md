@@ -51,3 +51,37 @@ Avec un encodage ASCII, le navigateur essaiera d'afficher 2 symboles. Celui de c
 
 
 # Codage des couleurs
+## Colorer avec une règle CSS
+Les valeurs de couleur peuvent être codées de manière numérique en décimal ou bien en hexadécimal. Voici 2 exemples d'expression de la couleur en CSS:
+
+```css
+/*vert clair*/
+color: #00a400;
+/*rouge pâle*/
+color: rgb(214, 122, 127);
+```
+
+## synthèse additive des couleurs
+Pour une image en couleur: À chaque pixel on associe 3 couleurs, le rouge, le vert et le bleu. On parle du canal rouge, du canal vert et du canal bleu d’un pixel (système RVB ou RGB en anglais).
+
+La valeur de l’intensité lumineuse associée à chaque canal de chaque pixel d’une image est comprise entre 0 et 255 (256 valeurs possibles). On codera donc un pixel à l'aide d'un triplet de valeur (par exemple (247,56,98) en code décimal, ou son équivalent en hexadecimal : (f7,38,62)
+
+Ouvrir le lien suivant :{{< a link="http://www.proftnj.com/RGB3.htm" caption="www.proftnj.com/RGB3.htm" >}}
+
+**Question a**: à l’aide du logiciel : 
+Quelle est la couleur donnée par ce triplet de valeurs ? (247,56,98)
+  
+**Question b**: Combien de couleurs différentes est-il possible d’obtenir avec ce système RVB ? *(combinaison de 3 couleurs, codées chacune sur 256 valeurs,...)*
+
+**Question c**: Pour chacune des couleurs du tableau, indiquer le code couleur RGB décimal correspondant:
+
+| code couleur RGB | |
+|--- |--- |
+|   | ![blanc](../images/coul_b.png) |
+|   | ![bleu](../images/coul_bleu.png)|
+|   | ![vert](../images/coul_v.png)|
+|   | ![rouge](../images/coul_r.png) |
+|   | ![jaune](../images/coul_j.png) |
+|   | ![gris](../images/coul_g.png) |
+|   | ![noir](../images/coul_n.png) |
+

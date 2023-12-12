@@ -389,12 +389,12 @@ Tester alors la méthode : `joueur1.get_cartes()` pour afficher la liste.
 le joueur possède les cartes : [('Jongleurs', 'Grand-père'), ('Jongleurs', 'Fille')]
 ```
 
-* Question 4: On souhaite maintenant avoir une interaction plus poussée avec le Joueur, selon les règles du jeu. L'idée est de créer une méthode `demande` qui prend en paramètres `famille` et `qui`, et qui retourne un message selon la main du joueur, comme par exemple:
+* Question 4: On souhaite maintenant avoir une interaction plus poussée avec le Joueur, selon les règles du jeu. L'idée est de créer une méthode `demande` qui prend en paramètre un tupple (`famille`,`qui`), et qui retourne un message selon la main du joueur, comme par exemple:
 
 ```
->>> joueur1.demande('Jongleurs','Fils')
+>>> joueur1.demande(('Jongleurs','Fils'))
 pioche
->>> joueur1.demande('Jongleurs','Fille')
+>>> joueur1.demande(('Jongleurs','Fille'))
 Le joueur a la carte
 >>> joueur1.demande(carte1.getAttributs())
 Le joueur a la carte

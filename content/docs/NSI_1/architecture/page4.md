@@ -2,6 +2,8 @@
 Title: HTTP vs HTTPS
 ---
 
+Vous repondrez aux question sur le document: [reseau_tp_form.odt](/pdf/NSI_1/reseau_tp_form.odt)
+
 # HTTP
 ## But de la séance
 Ce TP a pour but d'illustrer ce qui arrive quand un utilisateur soumet un formulaire: où les données vont-elles et comment les gère-t-on une fois à destination? Nous examinerons aussi quelques problèmes de sécurité associés à l'envoi des données d'un formulaire.
