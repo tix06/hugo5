@@ -75,6 +75,12 @@ Répondre aux même questions *(qu 1 à 6 de la méthode GET)*.
 3. Dans un autre onglet du navigateur: saisir l'adresse [http://resaonline.la-bo.xyz/getcookie](http://resaonline.la-bo.xyz/getcookie). Les informations du formulaire sont-elles toujours présentes dans la carte d'identité?
 4. Saisir maintenant cette adresse dans un AUTRE navigateur. Les informations du formulaire sont-elles toujours présentes dans la carte d'identité?
 
+5. Rechercher le cookie grace aux options du navigateur. (Voir tuto sur cette [page](https://support.mozilla.org/fr/kb/cookies-informations-sites-enregistrent). Quels autres cookies ont été déposés lors de votre session (aujourd'hui)? Comment peut-on se debarrasser de ces cookies?
+
+{{< img src="../images/moz3.png" >}}
+
+6. *Conclure:* Les traces numériques laissées sur mon ordinateur peuvent-elles contenir des informations sur mon identité numérique?
+
 ## Sécurité sur le Web
 Video: transfert encryptage ssl
 
@@ -83,7 +89,9 @@ Video: transfert encryptage ssl
 
 *Questions*
 
-1. parmi les éléments suivants, quels sont ceux qui sont cryptés lors d'une communication en *https*: (lire les discussions sur [https://www.ssl.com/faqs/what-is-https/](https://www.ssl.com/faqs/what-is-https/) ou bien [https://stackoverflow.com/questions](https://stackoverflow.com/questions/323200/is-a-https-query-string-secure))
+1. Quel est le scénario mettant en jeu un cyberpirate proposé dans cette vidéo?
+2. Est-ce que cela change quelque chose, de naviguer en http ou bien en https?
+3. parmi les éléments suivants, quels sont ceux qui sont cryptés lors d'une communication en *https*: (lire les discussions sur [https://www.ssl.com/faqs/what-is-https/](https://www.ssl.com/faqs/what-is-https/) ou bien [https://stackoverflow.com/questions](https://stackoverflow.com/questions/323200/is-a-https-query-string-secure))
 
 	* Domain name
 	* Request URL (which web page was requested by the client)
@@ -92,8 +100,8 @@ Video: transfert encryptage ssl
 	* Headers
 	* Cookies
 
-2. Si votre échange avec le serveur est en *https*. Est-ce une bonne idée d'échanger des informations personnelles par la méthode GET si le site internet ne propose que la méthode GET? Pourquoi?
-3. Conclure: Quels conseils peut-on donner à un utilisateur qui navigue et fait des achats sur le net?
+4. Si votre échange avec le serveur est en *https*. Est-ce une bonne idée d'échanger des informations personnelles par la méthode GET si le site internet ne propose que la méthode GET? Pourquoi?
+5. Conclure: Quels conseils peut-on donner à un utilisateur qui navigue et fait des achats sur le net?
 
 # Liens
 * Cette page est largement inspirée de [MDN developer.mozilla.org](https://developer.mozilla.org/fr/docs/Learn/Forms/Sending_and_retrieving_form_data)
