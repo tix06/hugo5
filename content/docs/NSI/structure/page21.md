@@ -70,7 +70,6 @@ L'élément **A** pointe sur **B**, qui pointe sur **C**, qui pointe sur **D**. 
 
 La plupart du temps, le lien du dernier maillon a pour valeur *None* en python, signifiant un pointeur sur *rien*.
 
-On pourra consulter la vidéo suivante jusqu'à 18min: 
 
 
 
@@ -131,12 +130,12 @@ ma_liste.tete = M1
 
 
 ## Interêt et inconvenient par rapport aux listes en python
-L'interface d'une liste chainée fournit des méthodes plus efficaces que la *Pile*, la *File* ou le *tableau*, lorsque l'on veut par exempke: **insérer**, ou **supprimer** un élément dans la séquence.
+L'interface d'une liste chainée fournit des méthodes plus efficaces que la *Pile*, la *File* ou le *tableau*, lorsque l'on veut par exemple: **insérer**, ou **supprimer** un élément dans la séquence.
 
 {{< img src="../images/listeC2.png" alt="insertion liste chainée" caption="insertion dans une liste" >}}
 Cette opération est prévue par l'interface d'une liste chainée => O(n): `inserer_apres(i)`, où `i` est l'indice de l'élément après lequel on veut *insérer*.
 
-Avec une liste python, qui implémente la Pile (voir cours) cela necessite de décaler toutes les valeurs de rang supérieur à `i `. C'est une opération qui est évaluée en O(n<sup>2</sup>) pour sa complexité asymptotique.
+Avec une liste python, qui implémente la Pile (voir cours) cela necessite de décaler toutes les valeurs de rang supérieur à `i `. C'est une opération qui est évaluée en O($n^2$) pour sa complexité asymptotique.
 
 Il s'agit du même problème lorsque l'on veut *supprimer après `i`*.
 
@@ -169,7 +168,7 @@ Vous devrez créer les maillons `M1`, `M2`, `M3` et renseigner leur contenu `M.v
 **3.** Rendez-vous sur{{< a link="http://pythontutor.com/visualize.html#mode=edit" caption="pythontutor.com" >}}
 {{< img src="../images/pythontutor.png" alt="liste chainée et pythontutor" caption="liste chainée et pythontutor" >}}
 
-*Modifier* le script dans la fenêtre d'edition de *pythontutor*: Coller les lignes ci-dessous et executer le script *pas à pas*
+Dans la fenêtre d'edition de *pythontutor*: Coller les lignes ci-dessous et executer le script *pas à pas*
 
 ```python
 class Maillon:
@@ -194,13 +193,13 @@ L.tete = M1
 **4.** Ajouter les lignes suivantes et dérouler le programme ligne par ligne:
 
 ```python
-s = ma_liste.tete
+s = L.tete
 s.val = '1'
-print(ma_liste.tete.val)
+print(L.tete.val)
 print(M1.val)
 ```
 
-> Qu'affiche la console? Ce résultat était-il prévisible? Pourquoi? Expliquer ce qu'il s'est passé.
+> Qu'affiche la console? Ce résultat était-il prévisible? Pourquoi? (la copie `s = L.tete` se fait-elle par valeur ou bien par référence)
 
 ## Exercice 2: afficher les éléments de liste
 On cherche à parcourir les éléments d'une liste chainée `L`.
