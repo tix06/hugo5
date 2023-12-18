@@ -257,10 +257,66 @@ Ajouter dans votre programme les instructions qui permettront de:
 
 # Correction des exercices
 ## Exercice 1
-(à venir)
+
+```python
+# correction de l'exercice 1
+class Maillon:
+  def __init__(self):
+    self.val = None
+    self.suiv = None
+    
+class Liste:
+  def __init__(self):
+    self.tete = None
+    
+ma_liste = Liste()
+M1, M2, M3 = Maillon(), Maillon(), Maillon()
+M1.val = 'Premier'
+M2.val = 'Troisieme'
+M3.val = 'Quatrieme'
+M1.suiv = M2
+M2.suiv = M3
+M3.suiv = None
+ma_liste.tete = M1
+
+print(ma_liste.tete.val)
+print(ma_liste.tete.suiv.val)
+print(ma_liste.tete.suiv.suiv.val)
+
+s = ma_liste.tete
+s.val = '1'
+print(ma_liste.tete.val)
+print(M1.val)
+```
+
 
 ## Exercice 2
-(à venir)
+
+```python
+# Correction de l'exercice 2 en ligne question 2.1
+M = L.tete
+while not M.suiv is None:
+    print(M.val)
+    M = M.suiv
+print(M.val)
+```
+
+Pour le script recursif:
+
+```python
+# Correction de l'exercice 2.2 en ligne
+
+def affiche(M):
+    if M.suiv is None:
+        return M.val
+    else:
+        return str(M.val) + '=>' + affiche(M.suiv)
+
+
+# Correction question 2.3 en ligne
+>>> print(affiche(L.tete))
+'A=>B=>C=>D'
+```
 
 ## Exercice 3
 (à venir)
