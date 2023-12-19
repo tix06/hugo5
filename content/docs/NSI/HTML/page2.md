@@ -40,9 +40,9 @@ Ce protocole HTTP contrôle la façon dont le client formule ses demandes et la 
 c'est la méthode HTTP qui est utilisée pour demander une ressource, par exemple un fichier HTML, au serveur Web. Dans le navigateur, on fait cette demande grâce à une URL (*uniform ressource locator*)
 
 
-**Comprendre les URL et leur structure:**
+**[Comprendre les URL et leur structure (MDN)](https://developer.mozilla.org/fr/docs/Learn/Common_questions/What_is_a_URL)**
 
-{{< img src="../images/url_detail.png" link="https://developer.mozilla.org/fr/docs/Learn/Common_questions/What_is_a_URL" caption="Comprendre les URL et leur structure" >}}
+{{< img src="../images/url_detail.png" caption="Comprendre les URL et leur structure" >}}
 Si l'on saisit l’URL `www.exemple.com/test.html` dans la barre d'adresse du navigateur, celui-ci se connecte au serveur Web et lui envoie la requête GET :      
 
 ```
@@ -59,9 +59,7 @@ Une URL valide est alors **construite de la manière suivante:**
 
 ```
 # nom de domaine symbolique
-http://nom du domaine.org/ressource/chaine query
-# adresse IP du domaine
-http://adresse IP du domaine/ressource/chaine query
+http://nom du domaine.org/chemin_vers_la_ressource?chaine query
 ```
 
 La requête GET contient alors des informations supplémentaires que le serveur Web doit traiter. 
@@ -256,7 +254,14 @@ Pour plus de détails, voir la page: [Quel est le cadre juridique applicable?](h
 
 
 
-# Travaux Pratiques: le moniteur réseau
+# Travaux Pratiques: 
+## Formulaire et protocoles de transmission
+La vulnérabilité des services d'authentification web correspond aux faiblesses des protocoles d'authentification du web.
+
+On traitera de ces problème avec le TP suivant: [Lien](/docs/NSI_1/architecture/page4/)
+
+
+## le moniteur réseau
 TP inspiré de la page [MDN Mozilla](https://developer.mozilla.org/fr/docs/Tools/Network_Monitor)
 
 Le moniteur réseau du navigateur affiche des informations sur les requêtes effectuées (par exemple, au chargement d'une page).
