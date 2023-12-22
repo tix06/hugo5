@@ -258,7 +258,7 @@ Pour plus de détails, voir la page: [Quel est le cadre juridique applicable?](h
 ## Formulaire et protocoles de transmission
 La vulnérabilité des services d'authentification web correspond aux faiblesses des protocoles d'authentification du web.
 
-On traitera de ces problème avec le TP suivant: [Lien](/docs/NSI_1/architecture/page4/)
+On traitera de ces problèmes avec le TP suivant: [Lien](/docs/NSI_1/architecture/page4/)
 
 
 ## le moniteur réseau
