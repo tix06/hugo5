@@ -2,8 +2,12 @@
 Title: MB radio
 ---
 
-# Radio
+# Communication radio
+Une présentation générale de la carte microbit se trouve à la page [suivante](../MB_init).
+
 ## Prise en main de l'interface microbit sur Vittascience
+*Ce premier travail permet de découvrir l'interface Vittascience.com pour la programmation de la carte microbit. Les questions qui suivent cette manipulation vont présenter le langage Python. Aucune connaissance du langage n'est requise pour ce premier travail.*
+
 * Aller à la page [Editeur microbit](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience) sur Vittascience.com
 
 * Bancher la carte microbit sur l'un des ports USB de l'ordinateur. La carte est alors visible depuis l'explorateur comme une nouvelle mémoire flash.
@@ -97,11 +101,17 @@ Avec la programmation par blocs sur l'interface [Vittascience.com](https://fr.vi
 | `button_a.is_pressed()` |   |
 | `button_b.is_pressed()` |   |
 
+Les instructions qui terminent par des parenthèses `()` sont des *fonctions*. Les *fonctions* executent une série d'instructions, qui sont rassemblées dans un seul bloc appelé *fonction*. Cela permet de rendre le script plus court et plus lisible. Une fonction peut être réutilisée à plusieurs endroits du programme. 
+
+Parmi ces *fonctions*, certaines doivent être écrites en plaçant un argument entre les parenthèses. Cela permet de préciser leur comportement.
+
+3. Dans le tableau précédent, quelle est LA fonction qui nécessite un argument? A quoi sert-il?
+
 Certaines instructions vont permettre des répétitions (boucles), d'autres vont executer des branchements conditionnels. Ce sont les mots clés `while` et `if`.
 
-3. Retrouver les familles pour chacun de ces 2 mots clés.
+4. Retrouver les familles pour chacun de ces 2 mots clés.
 
-4. Recopier et compléter le tableau avec la description de chacune des instructions:
+5. Recopier et compléter le tableau avec la description de chacune des instructions:
 
 | instruction | description |
 |--- |--- |
@@ -168,21 +178,25 @@ while True:
 | `receive` |   |
 | `sleep` |   |
 
-2. Comment devrait-il fonctionner? Quel-s problème-s voyez-vous lorsque plusieurs cartes microbits fonctionnent de concert, avec ce même programme?
-2. Choisir le-s terme-s adapté-s parmi les mots suivants: il s'agit d'un problème de...
+2. Ce programme, comment devrait-il fonctionner? Quel-s problème-s voyez-vous lorsque plusieurs cartes microbits fonctionnent de concert, avec ce même programme?
+3. Choisir le-s terme-s adapté-s parmi les mots suivants: il s'agit d'un problème de...
 
 * intégrité
 * authenticité
 * confidentialité
 
-
+{{< img src="../images/vitta_init8.png" >}}
 
 ### Réseau privé
+> But: Reduire à 2 cartes sur un même réseau.
+
+{{< img src="../images/vitta_init12.png" >}}
+
 Utiliser maintenant l'interface Python pour réaliser les modifications.
 
 * regler les cartes par binome sur le même reseau
 
-* modifier le programme des 2 boutons: le **bouton_a** sert à selectionner le message dans une liste, selon une règle d'arithmétique modulaire:
+* modifier le programme des 2 boutons: le **bouton_a** sert à selectionner le message dans une liste, en passant au message suivant dans la liste. L'indice est calculé selon une règle d'arithmétique modulaire:
 
 ```python
 L = ['message', 'like', 'unlike']
@@ -196,17 +210,79 @@ Le **bouton_b** servira à envoyer le message.
 
 Lorsqu'un message est reçu:
 
-* si c'est un message textuel, on l'affiche avec `display.roll()`
+* si c'est un message textuel, on l'affiche avec `display.scroll()`
 * si c'est 'like', on affiche un smiley happy
 * si c'est 'unlike', on affiche un smiley triste
 
-### auteurs authentifiés
-* trouver une règle d'authentification entre 2 cartes de votre réseau privé
+Poursuivre cette séance en choisissant l'un des 2 projets suivants:
 
-### chiffrement
-* chiffrer / Cesar
+### Projet 1: Auteurs authentifiés
+> But: trouver une règle d'authentification entre 2 cartes de votre réseau privé.
+
+Votre reseau privé n'est pas à l'abris d'un utilisateur non invité. Vous souhaiteriez alors savoir de QUI vient le message reçu. 
+
+{{< img src="../images/vitta_init11.png" >}}
+
+L'idée est d'utiliser la chaine de caractère émise pour y placer des informations, en plus du message. Ces informations pourraient identifier la carte émettrice. Ainsi, plutôt que d'envoyer:
+
+```
+"le lundi ne mange pas a la cantine"
+```
+
+la carte n°1 enverra: 
+
+```
+"1_le lundi ne mange pas a la cantine"
+```
+
+Le programme recepteur pourra, au choix:
+
+* Afficher la chaine de caractère entière, renseignant à la fois le numéro de la carte emettrice ET le message.
+* n'afficher que les messages provenant de la carte n°1 (ou autre).
+
+Dans ce 2e cas: Pour les recepteurs du message, il faudra alors PARSER cette chaine. *Parser* signifie: *diviser une chaîne de caractères en une liste ordonnée de sous-chaînes*.
+
+Python offre une [multitude de possibilités](https://konfuzio.com/fr/python-string-parsing-pour-debutants-et-experts/) pour travailler avec des chaînes de caractères (strings).
+
+Il faudra tranformer la chaine `"1_le lundi ne mange pas a la cantine"` en 2 chaines: `"1"` et `"le lundi ne mange pas a la cantine"`.
+
+Et utiliser une instruction conditionnelle sur le numéro de carte pour afficher (ou non) le message.
+
+> Adapter le programme pour permettre une communication avec un auteur *authentifié* dans un reseau à plusieurs cartes. Décrire le programme avec un diagramme d'état.
+
+### Projet 2: Chiffrement
+> But: réaliser une communication privée dans un reseau public.
+
+**Chiffrer / Code Cesar:** Le code César réalise une permutation des caractères, selon leur rang (table ASCII), grâce à une clé de chiffrement/ déchiffrement.
+
+Les fonctions utiles du langage sont: `ord` et `chr`:
+
+```python
+>>> ord('a')
+97
+>>> chr(98)
+'b'
+>>> chr(122)
+'z'
+``` 
+
+Pour utiliser une clé de chiffrement, il sera nécessaire d'utiliser un décalage avec un modulo(26) afin d'obtenir une lettre chiffrée dans l'alphabet a-z:
+
+```python
+no_lettre = ord(lettre)
+chiffre = no_lettre + cle # pas de modulo, depassement possible
+chiffre = (lettre-97 + cle)%26 + 97 # decalage avec modulo 26
+``` 
+
+> Créer une fonction de chiffrement appelée `chiffre`, qui retourne la lettre chiffrée selon les arguments `lettre` (lettre en clair) et `cle` (la clé de chiffrement).
+
+La fonction chiffre peut aussi servir à déchiffrer. Il suffira de remplacer la clé de chiffrement par son opposé: $3 => -3$.
+
+> Adapter le programme pour permettre une communication *confidentielle* entre 2 cartes microbit. Décrire le programme avec un diagramme d'état.
 
 # Liens
 * Introduction au module radio (TP Lucioles): [microbit-micropython.readthedocs.io](https://microbit-micropython.readthedocs.io/fr/latest/tutorials/radio.html)
 * TP message secret: [microbit.org](https://microbit.org/fr/projects/make-it-code-it/tell-me-a-secret/)
-* specifications du contrôleur radio [lancaster-university](https://lancaster-university.github.io/microbit-docs/ubit/radio/)
+* specifications du contrôleur radio [lancaster-university](https://lancaster-university.github.io/microbit-docs/ubit/radio/)`
+* diagramme d'état [laurent-audibert.developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagramme-etats-transitions)
+* diagramme d'état [www.uv.es](https://www.uv.es/nemiche/cursos/UML5.pdf)
