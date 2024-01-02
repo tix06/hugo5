@@ -118,23 +118,64 @@ Certaines instructions vont permettre des répétitions (boucles), d'autres vont
 | `while True:` |   |
 | `if button_a.is_pressed():` |   |
 
-## Réseau social, public
-### Créer pas à pas le programme suivant à l'aide de l'[Editeur microbit](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience) sur Vittascience.com
+
+
+## Dessiner son propre logo
+Le bloc suivant permet de personnaliser l'image affichée:
+
+{{< img src="../images/vitta_init12.png" >}}
+
+Lorsque l'on ajoute ce bloc au programme, cela insère les 2 lignes suivantes dans le script python:
+
+```python
+led_image = Image('00000:00000:00000:00000:00000')
+display.show(led_image)
+```
+
+L'image est alors générée par la ligne `led_image = Image('00000:00000:00000:00000:00000')`. L'instruction `display.show(led_image)` va afficher cette image sur la carte microbit.
+
+Remplacer les 2 images du programme précédent par 2 blocs comme celui-ci. 
+
+Pour dessiner l'image, il faut cliquer dans les cellules (pixels). Le bloc suivant affiche un **Y** sur la carte microbit.
+
+{{< img src="../images/vitta_init13.png" >}}
+
+1. Quel est le code correspondant pour le **Y**?
+2. Dessiner vos propres images. Recopier le code Python généré pour celles-ci. `led_image = Image('...`
+
+# Réseau social, public
+## Créer pas à pas le programme suivant à l'aide de l'[Editeur microbit](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience) sur Vittascience.com
+
+Commencer par écrire les instructions de debut du programme (ne sont executées qu'une seule fois, au démarrage).
 
 {{< img src="../images/radio1.png" >}}
 
 {{< img src="../images/radio2.png" >}}
 
+Puis ajouter les instructions de la boucle principale: d'abord les instructions d'émission:
 {{< img src="../images/radio3.png" >}}
 
 {{< img src="../images/radio4.png" >}}
 
+Puis les instructions de reception:
 {{< img src="../images/radio5.png" >}}
 
 {{< img src="../images/radio6.png" >}}
 
+Retrouver la variable `stringData` dans les *Variables*
+{{< img src="../images/radio71.png" >}}
+
+Placer la variable `stringData` dans l'expression conditionnelle:
 {{< img src="../images/radio7.png" >}}
 
+Retrouver le paramètre `" "` dans le menu *Texte*
+
+{{< img src="../images/radio72.png" >}}
+
+Remplacer le paramètre **1** par le caractère **"1"**:
+{{< img src="../images/radio81.png" >}}
+
+Puis les instructions pour le comportement de la carte selon le message reçu:
 {{< img src="../images/radio8.png" >}}
 
 {{< img src="../images/radio9.png" >}}
@@ -159,18 +200,27 @@ while True:
   if stringData:
     if stringData == '1':
       display.show(Image.HAPPY)
-      utime.sleep(0.5)
+      utime.sleep(0.015)
       display.clear()
     elif stringData == '2':
       display.show(Image.SAD)
-      utime.sleep(0.5)
+      utime.sleep(0.015)
       display.clear()
 
 ```
 
 > Téléverser et tester le programme. 
 
-1. Le programme utilise des instructions apportées par les librairies `radio` et `utime`, utiles pour la programmation de la carte microbit. Quel est le rôles des fonctions suivantes: Recopier et compléter le tableau:
+1. Quel est la signification de chacune des instructions suivantes?
+
+| instruction | description |
+|--- |--- |
+| `if stringData:` |   |
+| `if stringData == '1':` |   |
+
+2. Le programme utilise des instructions apportées par les librairies `radio` et `utime`, utiles pour la programmation de la carte microbit. 
+
+* Quel est le rôles des fonctions suivantes: Recopier et compléter le tableau:
 
 | instruction | description |
 |--- |--- |
@@ -178,8 +228,12 @@ while True:
 | `receive` |   |
 | `sleep` |   |
 
-2. Ce programme, comment devrait-il fonctionner? Quel-s problème-s voyez-vous lorsque plusieurs cartes microbits fonctionnent de concert, avec ce même programme?
-3. Choisir le-s terme-s adapté-s parmi les mots suivants: il s'agit d'un problème de...
+* Quel est le rôle de la variable `stringData`? *(Que contient-elle?)*
+
+3. Analyse du programme: Décrire le programme avec un diagramme d'état.
+
+3. Ce programme, comment devrait-il fonctionner? Quel-s problème-s voyez-vous lorsque plusieurs cartes microbits fonctionnent de concert, avec ce même programme?
+4. Choisir le-s terme-s adapté-s parmi les mots suivants: il s'agit d'un problème de...
 
 * intégrité
 * authenticité
@@ -187,7 +241,7 @@ while True:
 
 {{< img src="../images/vitta_init8.png" >}}
 
-### Réseau privé
+## Réseau privé
 > But: Reduire à 2 cartes sur un même réseau.
 
 {{< img src="../images/vitta_init12.png" >}}
@@ -216,7 +270,7 @@ Lorsqu'un message est reçu:
 
 Poursuivre cette séance en choisissant l'un des 2 projets suivants:
 
-### Projet 1: Auteurs authentifiés
+## Projet 1: Auteurs authentifiés
 > But: trouver une règle d'authentification entre 2 cartes de votre réseau privé.
 
 Votre reseau privé n'est pas à l'abris d'un utilisateur non invité. Vous souhaiteriez alors savoir de QUI vient le message reçu. 
@@ -250,7 +304,7 @@ Et utiliser une instruction conditionnelle sur le numéro de carte pour afficher
 
 > Adapter le programme pour permettre une communication avec un auteur *authentifié* dans un reseau à plusieurs cartes. Décrire le programme avec un diagramme d'état.
 
-### Projet 2: Chiffrement
+## Projet 2: Chiffrement
 > But: réaliser une communication privée dans un reseau public.
 
 **Chiffrer / Code Cesar:** Le code César réalise une permutation des caractères, selon leur rang (table ASCII), grâce à une clé de chiffrement/ déchiffrement.
@@ -279,6 +333,62 @@ chiffre = (lettre-97 + cle)%26 + 97 # decalage avec modulo 26
 La fonction chiffre peut aussi servir à déchiffrer. Il suffira de remplacer la clé de chiffrement par son opposé: $3 => -3$.
 
 > Adapter le programme pour permettre une communication *confidentielle* entre 2 cartes microbit. Décrire le programme avec un diagramme d'état.
+
+## Projet 3: Compteur de *likes*
+On considère le réseau social de type "X (ex Twitter)" dans lequel A, B, C, et D sont des usagers (des twittos)
+
+* A suit B
+* B suit C
+* C suit A et B
+* D suit B
+
+La structure de données sera un *dictionnaire* Python: 
+
+```python
+G = {'A':['B'],'B':['C'],'C':['A','B'],'D':['B']}
+```
+
+Le debut du programme va alors s'écrire:
+
+```python
+from microbit import *
+import radio
+import utime
+
+radio.on()
+G = {'A':['B'],'B':['C'],'C':['A','B'],'D':['B']}
+```
+
+Chaque twittos envoie, en continu, un message sur le reseau.
+Ce message contient pour unique contenu la lettre du *twittos*.
+
+```python
+# pour le twittos B
+radio.send("B")
+```
+
+Lorsque A lit un message de B (c'est à dire le message `"B"`): alors A envoie un like à B. (un message `"B_LIKE"`).
+
+```python
+radio.send("B_LIKE")
+```
+
+Si B reçoit le message `"B_LIKE"`, il affiche un COEUR, puis la valeur de son compteur, incrémentée:
+
+```python
+message = radio.receive()
+if message == 'B_LIKE':
+  display.show(Image.HEART, delay=15, wait=True)
+  utime.sleep(0.015)
+  compteur = compteur + 1
+  display.show(compteur, delay=15, wait=True)
+  utime.sleep(0.015)
+```
+
+> Démarrer le programme de manière synchrone sur chaque carte microbit du reseau. Laisser tourner le programme pendant 2 minutes, puis relever les valeurs des compteurs sur chaque carte.
+
+Les valeurs sont-elles en accord avec la structure du reseau?
+
 
 # Liens
 * Introduction au module radio (TP Lucioles): [microbit-micropython.readthedocs.io](https://microbit-micropython.readthedocs.io/fr/latest/tutorials/radio.html)
