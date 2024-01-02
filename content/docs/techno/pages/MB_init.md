@@ -113,5 +113,5 @@ Lien vers {{< a link="../MB_bulles/" caption="l'énoncé en ligne" >}}
 * Documentation micro:bit [microbit-micropython.readthedocs](https://microbit-micropython.readthedocs.io/en/v1.0.1/)
 * Travaux pratiques: [microbit.org/make-it-code-it](https://microbit.org/projects/make-it-code-it/)
 * Prise en main de la micro:bit avec des exemples [DANE Normandie ac-Caen](https://numerique-sciences-informatiques.discip.ac-caen.fr/IMG/pdf/initiation-mu-microbit.pdf)
-* Une premiere approche de la communication entre microbits : [l'exemple de la luciole](https://microbit-micropython.readthedocs.io/en/v1.0.1/tutorials/radio.html)
-* TP Reseaux : comment faire communiquer [deux cartes microbit par ondes radio](https://www.lossendiere.com/2017/12/10/faire-communiquer-2-microbit-par-onde-radio/)
+* TP Reseaux : comment faire communiquer [deux cartes microbit par ondes radio](../MB_radio)
+* Une autre approche de la communication reseau entre microbits : [l'exemple de la luciole](https://microbit-micropython.readthedocs.io/en/v1.0.1/tutorials/radio.html)
