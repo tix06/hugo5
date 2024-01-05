@@ -425,7 +425,8 @@ On rappelle qu'une liste chaînée est une structure linéaire, constituée de c
 -->
 
 # La suite en TP
-TP sur trajectoires de projectiles: [Lien](../page31/) 
+* TP sur trajectoires de projectiles: [Lien](../page31/) 
+* TP sur la programmation d'un jeu de Dominos: [Lien](../page33/). *(Sans interface graphique)*
 
 # Liens
 * cours sur [python.developpez.com](https://python.developpez.com/cours/apprendre-python-3/?page=la-programmation-orientee-objet): compléments sur les méthodes spéciales de [surcharge des opérateurs](https://python.developpez.com/cours/apprendre-python-3/?page=la-programmation-orientee-objet#L7-4), d'[héritage et polymorphisme](https://python.developpez.com/cours/apprendre-python-3/?page=la-programmation-orientee-objet#L7-5)

@@ -4,6 +4,8 @@ bookShowToc: false
 ---
 
 # Jeu de Dominos avec interface graphique
+La programmation du jeu de Dominos a été réalisée dans [cette séance](/docs/NSI/structure/page33). *(sans interface graphique)*
+
 *Vous allez réaliser un jeu de Dominos avec l'interface Tkinter. A partir d'un fichier existant, vous allez ajouter des fonctionnalités utiles. Vous devrez collaborer efficacement et vous partager le travail équitablement.*
 
 {{< img src="../images/dominos.png" caption="exemple de jeu" >}}

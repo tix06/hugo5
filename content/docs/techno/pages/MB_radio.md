@@ -123,7 +123,7 @@ Certaines instructions vont permettre des répétitions (boucles), d'autres vont
 ## Dessiner son propre logo
 Le bloc suivant permet de personnaliser l'image affichée:
 
-{{< img src="../images/vitta_init12.png" >}}
+{{< img src="../images/vitta_init13.png" >}}
 
 Lorsque l'on ajoute ce bloc au programme, cela insère les 2 lignes suivantes dans le script python:
 
@@ -138,10 +138,10 @@ Remplacer les 2 images du programme précédent par 2 blocs comme celui-ci.
 
 Pour dessiner l'image, il faut cliquer dans les cellules (pixels). Le bloc suivant affiche un **Y** sur la carte microbit.
 
-{{< img src="../images/vitta_init13.png" >}}
+{{< img src="../images/vitta_init14.png" >}}
 
 1. Quel est le code correspondant pour le **Y**?
-2. Dessiner vos propres images. Recopier le code Python généré pour celles-ci. `led_image = Image('...`
+2. Dessiner vos propres images. Recopier le code Python généré pour celles-ci: `led_image = Image('...`
 
 # Réseau social, public
 ## Créer pas à pas le programme suivant à l'aide de l'[Editeur microbit](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience) sur Vittascience.com
