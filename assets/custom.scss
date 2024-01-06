@@ -209,6 +209,11 @@ p.rubrik {
 }
 
 /****************************************/
+/* Style pour le titre Allophysique.com */
+/* class non identifiée pour l'instant  */
+/****************************************/
+
+/****************************************/
 /* font et style pour les titres et s/t */
 /****************************************/
 body {
@@ -220,6 +225,7 @@ counter-reset:h2
 }
 
 h2:before {
+color: #555;
 content:counter(h2) ".\0000a0\0000a0";
 counter-increment:h2
 }

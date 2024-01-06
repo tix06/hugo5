@@ -37,13 +37,17 @@ Ce protocole HTTP contrôle la façon dont le client formule ses demandes et la 
 
 # Méthodes HTTP
 ## GET
-c'est la méthode HTTP qui est utilisée pour demander une ressource, par exemple un fichier HTML, au serveur Web. Dans le navigateur, on fait cette demande grâce à une URL (*uniform ressource locator*)
+c'est la méthode HTTP qui est **la plus utilisée** pour **demander une ressource**, par exemple un fichier HTML, au serveur Web. Dans le navigateur, on fait cette demande grâce à une URL (*uniform ressource locator*)
 
 
 **[Comprendre les URL et leur structure (MDN)](https://developer.mozilla.org/fr/docs/Learn/Common_questions/What_is_a_URL)**
 
 {{< img src="../images/url_detail.png" caption="Comprendre les URL et leur structure" >}}
-Si l'on saisit l’URL `www.exemple.com/test.html` dans la barre d'adresse du navigateur, celui-ci se connecte au serveur Web et lui envoie la requête GET :      
+
+Si l'on saisit l’URL `www.exemple.com/test.html` dans la barre d'adresse du navigateur, celui-ci se connecte au serveur Web `www.exemple.com` et lui envoie la **requête GET** qui contiendra:
+
+* la méthode de communication client-serveur: ici `GET`
+* le chemin vers la ressource: `/test.html`      
 
 ```
 GET /test.html 
@@ -53,8 +57,8 @@ Le serveur renvoie alors le fichier `test.html`.
 
 ### Paramètres URL
 Des paramètres d’URL qui peuvent être ajoutés à l’URL s'appelent *chaine query*
-<br>
-Ce sont des paramètres optionnels.<br>
+
+
 Une URL valide est alors **construite de la manière suivante:**
 
 ```
@@ -77,14 +81,23 @@ Par exemple, sur un site de météo, `Nice` est saisi comme `ville` et `12` comm
 http://ma_meteo.fr/search?ville=Nice&UTC=12
 ```
 
-Et le navigateur enverra au serveur du site `ma_meteo.fr` l'instruction suivante:
+Et le navigateur enverra au serveur du site `ma_meteo.fr` la requette HTTP suivante:
 
 ```
 GET /search?ville=Nice&UTC=12
 ```
 
+Il se produit alors plusieurs étapes avant l'affichage de la page par le navigateur:
+
+* (1): saisie de l'URL dans la barre d'adresse (ou activation d'un *lien* depuis la page web)
+* (2): émission de la requette HTTP dans un format normalisé (ex. HTTP/1.1)
+* (3): la requette est *parsée* `[voir ci-dessous]`et interprétée par le serveur
+* (4): reponse du serveur avec un en-tête HTTP ainsi que le script html de la page demandée.
+
 {{< img src="../images/requestHTTP.png" >}}
 En réalité, pour des problèmes de standardisation, l'URL ne contient pas tout à fait les mêmes symboles, et l'extension de l'adresse (la chaîne Query) pourrait plutôt ressembler à: %2Fsearch%3Fville%3DNice%26UTC%3D12 (voir [URL encoder.org](https://www.urlencoder.org/)
+
+*Definition du terme PARSE*: "Parser" signifie analyser et convertir un script en un format interne que l'environnement d'exécution peut interpréter. Un paragraphe plus bas sera consacré à la méthode *parse* en Python.
 
 ### inconvenients de la méthode GET
 La méthode GET est la plus utilisée pour obtenir les ressources qui construisent la page Web dans le navigateur.
