@@ -55,7 +55,7 @@ GET /test.html
 
 Le serveur renvoie alors le fichier `test.html`.
 
-### Paramètres URL
+### Déroulé d'une requête HTTP par la méthode GET
 Des paramètres d’URL qui peuvent être ajoutés à l’URL s'appelent *chaine query*
 
 
@@ -75,29 +75,33 @@ Les règles de syntaxe employées:
 * Si plusieurs paramètres doivent être inclus, ils sont reliés par un « & ».
 
 {{< img src="../images/meteo.png" >}}
-Par exemple, sur un site de météo, `Nice` est saisi comme `ville` et `12` comme heure `UTC`: L'URL affichée dans le navigateur pourrait être:
+
+Par exemple, sur un site de météo, `Nice` est saisi comme `ville` et `12` comme heure `UTC`. L'URL saisie dans le navigateur pourrait être:
 
 ```
 http://ma_meteo.fr/search?ville=Nice&UTC=12
 ```
 
-Et le navigateur enverra au serveur du site `ma_meteo.fr` la requette HTTP suivante:
+Il se produit alors plusieurs étapes avant l'affichage de la page par le navigateur:
+
+* (1): saisie de l'URL dans la barre d'adresse (ou activation d'un *lien* depuis la page web)
+
+le navigateur enverra au serveur du site `ma_meteo.fr` la requête HTTP suivante:
 
 ```
 GET /search?ville=Nice&UTC=12
 ```
 
-Il se produit alors plusieurs étapes avant l'affichage de la page par le navigateur:
-
-* (1): saisie de l'URL dans la barre d'adresse (ou activation d'un *lien* depuis la page web)
-* (2): émission de la requette HTTP dans un format normalisé (ex. HTTP/1.1)
-* (3): la requette est *parsée* `[voir ci-dessous]`et interprétée par le serveur
+* (2): émission de la requêtte HTTP dans un format normalisé (ex. HTTP/1.1)
+* (3): la requête est *parsée* `[voir ci-dessous]`et interprétée par le serveur
 * (4): reponse du serveur avec un en-tête HTTP ainsi que le script html de la page demandée.
+
 
 {{< img src="../images/requestHTTP.png" >}}
 En réalité, pour des problèmes de standardisation, l'URL ne contient pas tout à fait les mêmes symboles, et l'extension de l'adresse (la chaîne Query) pourrait plutôt ressembler à: %2Fsearch%3Fville%3DNice%26UTC%3D12 (voir [URL encoder.org](https://www.urlencoder.org/)
 
-*Definition du terme PARSE*: "Parser" signifie analyser et convertir un script en un format interne que l'environnement d'exécution peut interpréter. Un paragraphe plus bas sera consacré à la méthode *parse* en Python.
+#### *Definition du terme PARSE*: 
+"Parser" signifie analyser et convertir un script en un format interne que l'environnement d'exécution peut interpréter. Il s'agit d'une [analyse syntaxique](https://developer.mozilla.org/fr/docs/Glossary/Parse). Un paragraphe de la page sur les [variables en python](/docs/python/pages/variables/page1/) est consacré à la manipulation d'une chaine de caractères, ainsi qu'à la méthode *parse* en Python.
 
 ### inconvenients de la méthode GET
 La méthode GET est la plus utilisée pour obtenir les ressources qui construisent la page Web dans le navigateur.

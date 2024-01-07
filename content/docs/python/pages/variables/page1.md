@@ -328,20 +328,92 @@ b
 
 
 # Compléments sur les strings
-
+## `strip` ou `split` 
 Si le séparateur est un terminateur, comme par exemple ';', ou`\n`, la liste résultat contient alors une dernière chaîne vide. En pratique, on utilisera la méthode `strip`, que nous allons voir ci-dessous, avant la méthode `split` pour éviter ce problème.
 
 
 ```python
 "abc;def;ghi;jkl;".split(';')
-# affiche ['abc', 'def', 'ghi', 'jkl', '']
+# retourne ['abc', 'def', 'ghi', 'jkl', '']
+# le dernier element de la liste est ''
 ```
 
-alors que 
+alors que:
 
 ```python
 "abc;def;ghi;jkl;".strip(';')
-# affiche abc;def;ghi;jkl
+# retourne abc;def;ghi;jkl
+# on a supprime le dernier ';'
+# on peut alors utiliser la methode split:
+"abc;def;ghi;jkl;".strip(';').split(';')
+# retourne ['abc', 'def', 'ghi', 'jkl']
+```
+
+## PARSER une chaine de caractères
+"Parser" signifie analyser et convertir un script en un format interne que l'environnement d'exécution peut interpréter. Il s'agit d'une [analyse syntaxique](https://developer.mozilla.org/fr/docs/Glossary/Parse).
+
+Soit la chaine de caractères suivante, issue d'une requête HTTP:
+
+```
+'GET /search ville=nice UTC=12'
+```
+
+On souhaite stocker dans 4 variables différentes les informations séparées chacune par des espaces ' '.
+
+### méthode utilisant un slide
+
+```python
+c = 'GET /search ville=nice UTC=12'
+C1 = c[:3]
+print(C1)
+# GET
+C2 = c[4:11]
+print(C2)
+# /search
+C3 = c[12:22]
+print(C3)
+# ville=nice
+C4 = c[23:]
+print(C4)
+# UTC=12
+```
+
+### méthode utilisant une boucle non bornée
+On ne connait pas à priori les positions des séparateurs dans la chaine (les espaces ' '). On peut faire une recherche en parcourant la chaine du premier au dernier caractère avec l'instruction `while i < len(c):
+    caract = c[i] ...`
+    
+```python
+i=0
+caract = c[i]
+
+# recherche des espaces dans la chaine c
+while i < len(c):
+    caract = c[i]
+    if caract == ' ':
+        print(i)
+    i = i + 1
+# affiche les index tels que c[i] == ' '
+# 3
+# 11
+# 22
+```
+
+Les séparateurs se trouvent aux indices 3, 11, et 22. On sait alors que les 4 informations de la chaines sont:
+
+```python
+C1 = c[:3]
+C2 = c[4:11]
+C3 = c[12:22]
+C4 = c[23:]
+```
+
+### méthode split
+La méthode la plus adaptée pour réaliser le *parsing* d'une chaine, c'est:
+
+```python
+c.split(' ')
+# retourne les elements dans une liste
+# ['GET', '/search', 'ville=nice', 'UTC=12']
 ```
 
 # Les types construits (séquences)
