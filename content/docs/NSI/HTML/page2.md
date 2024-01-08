@@ -86,7 +86,7 @@ Il se produit alors plusieurs étapes avant l'affichage de la page par le naviga
 
 * (1): saisie de l'URL dans la barre d'adresse (ou activation d'un *lien* depuis la page web)
 
-le navigateur enverra au serveur du site `ma_meteo.fr` la requête HTTP suivante:
+le navigateur se connecte au serveur du site `ma_meteo.fr` puis lui envoie la **requête HTTP** suivante:
 
 ```
 GET /search?ville=Nice&UTC=12
@@ -108,7 +108,7 @@ La méthode GET est la plus utilisée pour obtenir les ressources qui construise
 
 Cette méthode présente des limites lorsque cette page doit être personnalisée:
 
-**Avec la méthode GET, les données à envoyer au serveur sont écrites directement dans l’URL.**
+**Avec la méthode GET, les données à envoyer au serveur sont aussi écrites dans l’URL.**
 
 Cela présente un avantage: Les paramètres de l’URL peuvent être enregistrés avec l’adresse du site Web. (utile pour un marque page, historique de navigation, enregistrer des pages Web contenant certains paramètres de filtrage et de tri, meteo avec conservation de la localisation...).
 

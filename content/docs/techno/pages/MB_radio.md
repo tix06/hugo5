@@ -220,7 +220,7 @@ while True:
 
 2. Le programme utilise des instructions apportées par les librairies `radio` et `utime`, utiles pour la programmation de la carte microbit. 
 
-* Quel est le rôles des fonctions suivantes: Recopier et compléter le tableau:
+* Quel est le rôle des fonctions suivantes: Recopier et compléter le tableau:
 
 | instruction | description |
 |--- |--- |
@@ -296,7 +296,7 @@ Le programme recepteur pourra, au choix:
 
 Dans ce 2e cas: Pour les recepteurs du message, il faudra alors PARSER cette chaine. *Parser* signifie: *diviser une chaîne de caractères en une liste ordonnée de sous-chaînes*.
 
-Python offre une [multitude de possibilités](https://konfuzio.com/fr/python-string-parsing-pour-debutants-et-experts/) pour travailler avec des chaînes de caractères (strings).
+Python offre une multitude de possibilités pour travailler avec des chaînes de caractères (strings): voir [page du cours python sur les variables et string](/docs/python/pages/variables/page1/) 
 
 Il faudra tranformer la chaine `"1_le lundi ne mange pas a la cantine"` en 2 chaines: `"1"` et `"le lundi ne mange pas a la cantine"`.
 
@@ -307,6 +307,7 @@ Et utiliser une instruction conditionnelle sur le numéro de carte pour afficher
 ## Projet 2: Chiffrement
 > But: réaliser une communication privée dans un reseau public.
 
+### Premier programme utilisant un notebook python
 **Chiffrer / Code Cesar:** Le code César réalise une permutation des caractères, selon leur rang (table ASCII), grâce à une clé de chiffrement/ déchiffrement.
 
 Les fonctions utiles du langage sont: `ord` et `chr`:
@@ -324,14 +325,29 @@ Pour utiliser une clé de chiffrement, il sera nécessaire d'utiliser un décala
 
 ```python
 no_lettre = ord(lettre)
-chiffre = no_lettre + cle # pas de modulo, depassement possible
-chiffre = (lettre-97 + cle)%26 + 97 # decalage avec modulo 26
+chiffre = no_lettre + cle # decalage sans modulo, depassement possible
+chiffre = (lettre + cle)%26 # decalage avec modulo 26, chiffre de 0 à 25
+chiffre = (lettre-97 + cle)%26 + 97 # decalage avec modulo 26, chiffre de 97 à (97 + 25) = 122
 ``` 
+
+Comme l'alphabet a-z va du rang 97 à 122 dans la table ascii, on choisira la 3e méthode:
+
+```
+chiffre = (lettre-97 + cle)%26 + 97
+```
 
 > Créer une fonction de chiffrement appelée `chiffre`, qui retourne la lettre chiffrée selon les arguments `lettre` (lettre en clair) et `cle` (la clé de chiffrement).
 
+
 La fonction chiffre peut aussi servir à déchiffrer. Il suffira de remplacer la clé de chiffrement par son opposé: $3 => -3$.
 
+Assurez vous à l'aide de quelques tests, que la fonction donne de bons résultats, pour chiffrer et dechiffrer un caractère.
+
+> Créer une fonction de chiffrement appelée `chiffre_texte`, qui retourne la texte chiffré. La fonction aura pour arguments: `texte` (texte en clair) et `cle` (la clé de chiffrement).
+
+Assurez vous à l'aide de quelques tests, que la fonction donne de bons résultats, pour chiffrer et dechiffrer un texte.
+
+### Programmation de la carte microbit
 > Adapter le programme pour permettre une communication *confidentielle* entre 2 cartes microbit. Décrire le programme avec un diagramme d'état.
 
 ## Projet 3: Compteur de *likes*
@@ -396,3 +412,4 @@ Les valeurs sont-elles en accord avec la structure du reseau?
 * specifications du contrôleur radio [lancaster-university](https://lancaster-university.github.io/microbit-docs/ubit/radio/)`
 * diagramme d'état [laurent-audibert.developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagramme-etats-transitions)
 * diagramme d'état [www.uv.es](https://www.uv.es/nemiche/cursos/UML5.pdf)
+* [Konfusio: python-string-parsing-pour-debutants-et-expert](https://konfuzio.com/fr/python-string-parsing-pour-debutants-et-experts/) 
