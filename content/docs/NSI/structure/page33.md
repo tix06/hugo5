@@ -33,24 +33,44 @@ class Partie:
         self.first = first
         
     def last(self):
+        """parcours de la liste chainee jusqu'a la fin
+        return: str, valeurs du dernier domino sous la forme
+        val1:val2
+        """
         M = self.first
         while not M.suiv is None:
             M = M.suiv
         return '{}:{}'.format(M.val1,M.val2)
         
-    def atteindre_domi(self,val1,val2):
+    def atteindre_domi(self,val2):
     	"""docstring a ajouter
     	"""
         D = self.first
-        while not D.suiv is None and (D.val1,D.val2) != (val1,val2):
+        while not D.suiv is None and D.val2 != val2:
             D = D.suiv
-        if (D.val1,D.val2) == (val1,val2):
+        if D.val2 == val2:
+            # domino trouve
             return D
         else:
-            return self.first    
+            # domino non trouve, retourne False
+            return False   
             
-    def inserer(self,D_place,D_a_inserer):
-    		#à completer
+    def inserer(self,D_a_inserer):
+    		"""insere le domino D_a_inserer a la premiere place possible
+            dans le jeu
+            param:
+            D_a_inserer est une instance de la classe Domino. Il s'agit d'un domino double: D_a_inserer.val1 == D_a_inserer.val2
+
+            exemple d'utilisation:
+            etat de la partir avant insertion
+            4:3=>3:2=>2:1
+            on insere le domino D4 de valeur 3:3 en trouvant sa place
+            dans la partie
+            >>> partie.inserer(D4)
+            etat de la partie apres insertion
+            4:3=>3:3=>3:2=>2:1
+            """
+            #à completer
 
     def __repr__(self):
         M = self.first
@@ -59,7 +79,7 @@ class Partie:
         return s
 ```
 
-**Qu a.** On cherche à représenter la partie de l'image de gauche (voir plus haut).
+**Qu a.** On cherche à modéliser la partie de l'image de gauche (voir plus haut).
 Les dominos seront instanciés à l'aide des noms D1, D2, D3, ... Ecrire les instructions qui instancient tous les dominos de la partie, avec, pour chacun, leurs valeurs et le domino suivant.
 
 **Qu b.** Ecrire l'instruction qui doit créer l'objet `partie1` à partir de ce plateau de jeu. (classe `Partie`)
@@ -78,9 +98,9 @@ print(partie1)
 > Compléter la méthode de classe `inserer` qui permet d'insérer un domino (double) dans la chaine de dominos à partir des instructions suivantes:
 
 ```python
-D = partie1.atteindre_domi(4,2)
+D = partie1.atteindre_domi(2)
 D10 = Domino(2,2)
-partie1.inserer(D,D10)
+partie1.inserer(D10)
 ```
 
 > Le nouvel état de la partie devrait alors être :
@@ -92,33 +112,81 @@ print(partie1)
 
 **Qu f.** Insérer le domino `1:1` à sa place, dans la partie.
 
+**Qu g.** Ajouter une méthode de classe `poser` qui pose un domino à la suite du dernier domino posé dans la partie, à condition que celui-ci soit bien en correspondance. La fonction va alors retourner l'état de la partie (si le nouveau domino peut être posé), ou bien un message signifiant que la pose est interdite. Tester votre methode de classe `poser` en choisissant un domino correct, puis un domino non correct.
+
 # Corrections
+*à venir*
+<!--
 ## Jeu de dominos *classique*
 
 ```python
+class Domino:
+    def __init__(self,val1,val2):
+        self.val1 = val1
+        self.val2 = val2
+        self.suiv = None
+
+    
 class Partie:
     def __init__(self,first):
         self.first = first
         
     def last(self):
+        """parcours de la liste chainee jusqu'a la fin
+        return: str, valeurs du dernier domino sous la forme
+        val1:val2
+        """
         M = self.first
         while not M.suiv is None:
             M = M.suiv
         return '{}:{}'.format(M.val1,M.val2)
-    
-    def atteindre_domi(self,val1,val2):
+        
+    def atteindre_domi(self,val2):
+        """docstring a ajouter
+        """
         D = self.first
-        while not D.suiv is None and (D.val1,D.val2) != (val1,val2):
+        while not D.suiv is None and D.val2 != val2:
             D = D.suiv
-        if (D.val1,D.val2) == (val1,val2):
+        if D.val2 == val2:
+            # domino trouve
             return D
         else:
-            return self.first
-        
-    def inserer(self,D_place,D_a_inserer):
-        D_a_inserer.suiv = D_place.suiv
-        D_place.suiv = D_a_inserer
-    
+            # domino non trouve, retourne False
+            return False   
+            
+    def inserer(self,D_a_inserer):
+            """insere le domino D_a_inserer a la premiere place possible
+            dans le jeu
+            param:
+            D_a_inserer est une instance de la classe Domino. Il s'agit d'un domino double: D_a_inserer.val1 == D_a_inserer.val2
+
+            exemple d'utilisation:
+            etat de la partir avant insertion
+            4:3=>3:2=>2:1
+            on insere le domino D4 de valeur 3:3 en trouvant sa place
+            dans la partie
+            >>> partie.inserer(D4)
+            etat de la partie apres insertion
+            4:3=>3:3=>3:2=>2:1
+            """
+            if self.atteindre_domi(D_a_inserer.val2):
+                D = self.atteindre_domi(D_a_inserer.val2)
+                D_a_inserer.suiv = D.suiv
+                D.suiv = D_a_inserer
+                return self.__repr__()
+            else:
+                return "insertion impossible"
+
+    def poser(self,D_a_poser):
+            D = self.first
+            while not D.suiv is None:
+                D = D.suiv 
+            if D.val2 == D_a_poser.val1:
+                D.suiv = D_a_poser
+                return self.__repr__()
+            else:
+                return "pose impossible"
+
     def __repr__(self):
         M = self.first
         s = '{}:{} '.format(M.val1,M.val2)
@@ -126,6 +194,7 @@ class Partie:
             M = M.suiv
             s += '=> {}:{} '.format(M.val1,M.val2)
         return s
+
                 
 D1 = Domino(4,4)
 D2 = Domino(4,6)
@@ -135,6 +204,9 @@ D5 = Domino(5,4)
 D6 = Domino(4,2)
 D7 = Domino(2,1)
 D8 = Domino(1,3)
+D9 = Domino(1,1) # domino double pour insertion
+D10 = Domino(3,6) # domino correct pour pose apres D8
+D11 = Domino(5,3) # domino incorrect pour pose
 D1.suiv = D2
 D2.suiv = D3
 D3.suiv = D4
@@ -145,4 +217,12 @@ D7.suiv = D8
 partie1 = Partie(D1)
 ```
 
+puis les différents tests des méthodes de Partie:
+
+```python
+>>> partie1.inserer(D9)
+>>> partie1.poser(D10)
+>>> partie1.poser(D11)
+```
+-->
 
