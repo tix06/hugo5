@@ -10,7 +10,7 @@ Une présentation générale de la carte microbit se trouve à la page [suivante
 
 * Aller à la page [Editeur microbit](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience) sur Vittascience.com
 
-* Bancher la carte microbit sur l'un des ports USB de l'ordinateur. La carte est alors visible depuis l'explorateur comme une nouvelle mémoire flash.
+* Brancher la carte microbit sur l'un des ports USB de l'ordinateur. La carte est alors visible depuis l'explorateur comme une nouvelle mémoire flash.
 
 ## Premier programme
 La page présente 2 espaces. L'edition du programme se fait dans la partie gauche (celle présentant les blocs à assembler). A droite, c'est la traduction du programme en langage Python, qui est réalisée de manière automatique.
@@ -241,175 +241,15 @@ while True:
 
 {{< img src="../images/vitta_init8.png" >}}
 
-## Réseau privé
-> But: Reduire à 2 cartes sur un même réseau.
 
-{{< img src="../images/vitta_init12.png" >}}
+# Compléments
+`radio.config(channel=7)`: Configure la fréquence d'émission : la valeur est un numéro entre 0 et 83
 
-Utiliser maintenant l'interface Python pour réaliser les modifications.
-
-* regler les cartes par binome sur le même reseau
-
-* modifier le programme des 2 boutons: le **bouton_a** sert à selectionner le message dans une liste, en passant au message suivant dans la liste. L'indice est calculé selon une règle d'arithmétique modulaire:
-
-```python
-L = ['message', 'like', 'unlike']
-i = 0
-...
-if button_a.is_pressed():
-  i = (i+1)%3
-```
-
-Le **bouton_b** servira à envoyer le message.
-
-Lorsqu'un message est reçu:
-
-* si c'est un message textuel, on l'affiche avec `display.scroll()`
-* si c'est 'like', on affiche un smiley happy
-* si c'est 'unlike', on affiche un smiley triste
-
-Poursuivre cette séance en choisissant l'un des 2 projets suivants:
-
-## Projet 1: Auteurs authentifiés
-> But: trouver une règle d'authentification entre 2 cartes de votre réseau privé.
-
-Votre reseau privé n'est pas à l'abris d'un utilisateur non invité. Vous souhaiteriez alors savoir de QUI vient le message reçu. 
-
-{{< img src="../images/vitta_init11.png" >}}
-
-L'idée est d'utiliser la chaine de caractère émise pour y placer des informations, en plus du message. Ces informations pourraient identifier la carte émettrice. Ainsi, plutôt que d'envoyer:
-
-```
-"le lundi ne mange pas a la cantine"
-```
-
-la carte n°1 enverra: 
-
-```
-"1_le lundi ne mange pas a la cantine"
-```
-
-Le programme recepteur pourra, au choix:
-
-* Afficher la chaine de caractère entière, renseignant à la fois le numéro de la carte emettrice ET le message.
-* n'afficher que les messages provenant de la carte n°1 (ou autre).
-
-Dans ce 2e cas: Pour les recepteurs du message, il faudra alors PARSER cette chaine. *Parser* signifie: *diviser une chaîne de caractères en une liste ordonnée de sous-chaînes*.
-
-Python offre une multitude de possibilités pour travailler avec des chaînes de caractères (strings): voir [page du cours python sur les variables et string](/docs/python/pages/variables/page1/) 
-
-Il faudra tranformer la chaine `"1_le lundi ne mange pas a la cantine"` en 2 chaines: `"1"` et `"le lundi ne mange pas a la cantine"`.
-
-Et utiliser une instruction conditionnelle sur le numéro de carte pour afficher (ou non) le message.
-
-> Adapter le programme pour permettre une communication avec un auteur *authentifié* dans un reseau à plusieurs cartes. Décrire le programme avec un diagramme d'état.
-
-## Projet 2: Chiffrement
-> But: réaliser une communication privée dans un reseau public.
-
-### Premier programme utilisant un notebook python
-**Chiffrer / Code Cesar:** Le code César réalise une permutation des caractères, selon leur rang (table ASCII), grâce à une clé de chiffrement/ déchiffrement.
-
-Les fonctions utiles du langage sont: `ord` et `chr`:
-
-```python
->>> ord('a')
-97
->>> chr(98)
-'b'
->>> chr(122)
-'z'
-``` 
-
-Pour utiliser une clé de chiffrement, il sera nécessaire d'utiliser un décalage avec un modulo(26) afin d'obtenir une lettre chiffrée dans l'alphabet a-z:
-
-```python
-no_lettre = ord(lettre)
-chiffre = no_lettre + cle # decalage sans modulo, depassement possible
-chiffre = (lettre + cle)%26 # decalage avec modulo 26, chiffre de 0 à 25
-chiffre = (lettre-97 + cle)%26 + 97 # decalage avec modulo 26, chiffre de 97 à (97 + 25) = 122
-``` 
-
-Comme l'alphabet a-z va du rang 97 à 122 dans la table ascii, on choisira la 3e méthode:
-
-```
-chiffre = (lettre-97 + cle)%26 + 97
-```
-
-> Créer une fonction de chiffrement appelée `chiffre`, qui retourne la lettre chiffrée selon les arguments `lettre` (lettre en clair) et `cle` (la clé de chiffrement).
-
-
-La fonction chiffre peut aussi servir à déchiffrer. Il suffira de remplacer la clé de chiffrement par son opposé: $3 => -3$.
-
-Assurez vous à l'aide de quelques tests, que la fonction donne de bons résultats, pour chiffrer et dechiffrer un caractère.
-
-> Créer une fonction de chiffrement appelée `chiffre_texte`, qui retourne la texte chiffré. La fonction aura pour arguments: `texte` (texte en clair) et `cle` (la clé de chiffrement).
-
-Assurez vous à l'aide de quelques tests, que la fonction donne de bons résultats, pour chiffrer et dechiffrer un texte.
-
-### Programmation de la carte microbit
-> Adapter le programme pour permettre une communication *confidentielle* entre 2 cartes microbit. Décrire le programme avec un diagramme d'état.
-
-## Projet 3: Compteur de *likes*
-On considère le réseau social de type "X (ex Twitter)" dans lequel A, B, C, et D sont des usagers (des twittos)
-
-* A suit B
-* B suit C
-* C suit A et B
-* D suit B
-
-La structure de données sera un *dictionnaire* Python: 
-
-```python
-G = {'A':['B'],'B':['C'],'C':['A','B'],'D':['B']}
-```
-
-Le debut du programme va alors s'écrire:
-
-```python
-from microbit import *
-import radio
-import utime
-
-radio.on()
-G = {'A':['B'],'B':['C'],'C':['A','B'],'D':['B']}
-```
-
-Chaque twittos envoie, en continu, un message sur le reseau.
-Ce message contient pour unique contenu la lettre du *twittos*.
-
-```python
-# pour le twittos B
-radio.send("B")
-```
-
-Lorsque A lit un message de B (c'est à dire le message `"B"`): alors A envoie un like à B. (un message `"B_LIKE"`).
-
-```python
-radio.send("B_LIKE")
-```
-
-Si B reçoit le message `"B_LIKE"`, il affiche un COEUR, puis la valeur de son compteur, incrémentée:
-
-```python
-message = radio.receive()
-if message == 'B_LIKE':
-  display.show(Image.HEART, delay=15, wait=True)
-  utime.sleep(0.015)
-  compteur = compteur + 1
-  display.show(compteur, delay=15, wait=True)
-  utime.sleep(0.015)
-```
-
-> Démarrer le programme de manière synchrone sur chaque carte microbit du reseau. Laisser tourner le programme pendant 2 minutes, puis relever les valeurs des compteurs sur chaque carte.
-
-Les valeurs sont-elles en accord avec la structure du reseau?
-
+`radio.config(group=0)`:  Configure le groupe : au sein d'une même adresse, 256 groupes numérotés de 0 à 255 peuvent cohabiter`
 
 # Liens
 * Introduction au module radio (TP Lucioles): [microbit-micropython.readthedocs.io](https://microbit-micropython.readthedocs.io/fr/latest/tutorials/radio.html)
 * TP message secret: [microbit.org](https://microbit.org/fr/projects/make-it-code-it/tell-me-a-secret/)
 * specifications du contrôleur radio [lancaster-university](https://lancaster-university.github.io/microbit-docs/ubit/radio/)`
-* diagramme d'état [laurent-audibert.developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagramme-etats-transitions)
-* diagramme d'état [www.uv.es](https://www.uv.es/nemiche/cursos/UML5.pdf)
-* [Konfusio: python-string-parsing-pour-debutants-et-expert](https://konfuzio.com/fr/python-string-parsing-pour-debutants-et-experts/) 
+* diagramme d'état et diagramme d'activité[www.uv.es](https://www.uv.es/nemiche/cursos/UML5.pdf)
+
