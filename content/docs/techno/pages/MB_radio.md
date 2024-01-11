@@ -107,7 +107,7 @@ Parmi ces *fonctions*, certaines doivent être écrites en plaçant un argument 
 
 3. Dans le tableau précédent, quelle est LA fonction qui nécessite un argument? A quoi sert-il?
 
-Certaines instructions vont permettre des répétitions (boucles), d'autres vont executer des branchements conditionnels. Ce sont les mots clés `while` et `if`.
+Certaines instructions vont permettre des répétitions (famille des boucles), d'autres vont executer des branchements conditionnels (famille logique). Ce sont les mots clés `while` et `if`.
 
 4. Retrouver les familles pour chacun de ces 2 mots clés.
 
@@ -119,6 +119,10 @@ Certaines instructions vont permettre des répétitions (boucles), d'autres vont
 | `if button_a.is_pressed():` |   |
 
 
+## Communiquer par radio
+La carte microbit possède une antenne radio, ce qui lui permet d'emettre et de recevoir des messages:
+
+{{< img src="../images/E_R_MB.png" caption="communication radio en reseau" >}}
 
 ## Dessiner son propre logo
 Le bloc suivant permet de personnaliser l'image affichée:
@@ -143,71 +147,29 @@ Pour dessiner l'image, il faut cliquer dans les cellules (pixels). Le bloc suiva
 1. Quel est le code correspondant pour le **Y**?
 2. Dessiner vos propres images. Recopier le code Python généré pour celles-ci: `led_image = Image('...`
 
-# Réseau social, public
-## Créer pas à pas le programme suivant à l'aide de l'[Editeur microbit](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience) sur Vittascience.com
 
-Commencer par écrire les instructions de debut du programme (ne sont executées qu'une seule fois, au démarrage).
 
-{{< img src="../images/radio1.png" >}}
+# Envoyer un message par ondes radio
+Vous allez maintenant envoyer un message dans le reseau de cartes.
+L'une de ces cartes est une *carte mystère*. Celle-ci est programmée pour repondre lorsqu'elle reçoit le message "Hello". 
 
-{{< img src="../images/radio2.png" >}}
+Vous cherchez à découvrir ce que la carte mystère va répondre. Aussi, vous allez programmer votre carte pour qu'elle emette le mot "Hello", et qu'elle n'affiche que les mots différents de "Hello": c'est à dire les messages qui proviennent de la carte mystère...
 
-Puis ajouter les instructions de la boucle principale: d'abord les instructions d'émission:
-{{< img src="../images/radio3.png" >}}
+{{< img src="../images/carte_mystere.png" >}}
 
-{{< img src="../images/radio4.png" >}}
+Voici le programme que vous devrez saisir:
 
-Puis les instructions de reception:
-{{< img src="../images/radio5.png" >}}
-
-{{< img src="../images/radio6.png" >}}
+{{< img src="../images/prog_mystere.png" >}}
 
 Retrouver la variable `stringData` dans les *Variables*
 {{< img src="../images/radio71.png" >}}
-
-Placer la variable `stringData` dans l'expression conditionnelle:
-{{< img src="../images/radio7.png" >}}
 
 Retrouver le paramètre `" "` dans le menu *Texte*
 
 {{< img src="../images/radio72.png" >}}
 
-Remplacer le paramètre **1** par le caractère **"1"**:
-{{< img src="../images/radio81.png" >}}
 
-Puis les instructions pour le comportement de la carte selon le message reçu:
-{{< img src="../images/radio8.png" >}}
 
-{{< img src="../images/radio9.png" >}}
-
-{{< img src="../images/radio10.png" >}}
-
-```python
-from microbit import *
-import radio
-import utime
-
-radio.on()
-
-print('Bonjour !' + "")
-
-while True:
-  if button_a.is_pressed():
-    radio.send('1')
-  if button_b.is_pressed():
-    radio.send('2')
-  stringData = radio.receive()
-  if stringData:
-    if stringData == '1':
-      display.show(Image.HAPPY)
-      utime.sleep(0.015)
-      display.clear()
-    elif stringData == '2':
-      display.show(Image.SAD)
-      utime.sleep(0.015)
-      display.clear()
-
-```
 
 > Téléverser et tester le programme. 
 
@@ -216,7 +178,6 @@ while True:
 | instruction | description |
 |--- |--- |
 | `if stringData:` |   |
-| `if stringData == '1':` |   |
 
 2. Le programme utilise des instructions apportées par les librairies `radio` et `utime`, utiles pour la programmation de la carte microbit. 
 
