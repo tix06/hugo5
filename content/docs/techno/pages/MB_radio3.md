@@ -1,9 +1,9 @@
 ---
-Title: reseau radio 1ere
+Title: reseau radio
 ---
 
 # Communication radio
-Une présentation générale de la carte microbit et des editeurs pour sa programmation se trouve à la page [MB_init](../MB_init). Ce TP fait suite à celui de SNT, à la page [MB radio](../MB_radio).
+Une présentation générale de la carte microbit et des editeurs pour sa programmation se trouve à la page [MB_init](../MB_init). Ce TP fait suite à celui de 1ere NSI, à la page [MB radio2](../MB_radio2).
 
 La carte microbit possède une antenne radio, ce qui lui permet d'emettre et de recevoir des messages:
 
@@ -18,70 +18,53 @@ La carte microbit possède une antenne radio, ce qui lui permet d'emettre et de 
 
 # Réseau social, public
 ## Programmation du script initial
-> Créer pas à pas le programme suivant à l'aide de l'[Editeur microbit](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience) sur Vittascience.com
+> Copier-coller le programme suivant à l'aide de l'[Editeur microbit](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience) sur Vittascience.com
+
 
 {{< img src="../images/E_R_MB.png" caption="communication radio en reseau" >}}
-
-Commencer par écrire les instructions de debut du programme (ne sont executées qu'une seule fois, au démarrage).
-
-{{< img src="../images/radio1.png" >}}
-
-{{< img src="../images/radio2.png" >}}
-
-Puis ajouter les instructions de la boucle principale: d'abord les instructions d'émission:
-{{< img src="../images/radio3.png" >}}
-
-{{< img src="../images/radio4.png" >}}
-
-Puis les instructions de reception:
-{{< img src="../images/radio5.png" >}}
-
-{{< img src="../images/radio6.png" >}}
-
-Retrouver la variable `stringData` dans les *Variables*
-{{< img src="../images/radio71.png" >}}
-
-Placer la variable `stringData` dans l'expression conditionnelle:
-{{< img src="../images/radio7.png" >}}
-
-Retrouver le paramètre `" "` dans le menu *Texte*
-
-{{< img src="../images/radio72.png" >}}
-
-Remplacer le paramètre **1** par le caractère **"1"**:
-{{< img src="../images/radio81.png" >}}
-
-Puis les instructions pour le comportement de la carte selon le message reçu:
-{{< img src="../images/radio8.png" >}}
-
-{{< img src="../images/radio9.png" >}}
-
-{{< img src="../images/radio10.png" >}}
 
 ```python
 from microbit import *
 import radio
 import utime
 
+# variables globales
+ch = 7
+gpe = 0
+messages = ['lundi','LIKE','UNLIKE']
+i = 0
+img = [Image.DIAMOND,Image.DIAMOND_SMALL]
+# parametres radio
 radio.on()
-radio.config(channel = 7, power = 6, length = 32, group=0)
-print('Bonjour !' + "")
+radio.config(channel = ch, power = 6, length = 32, group=gpe)
 
 while True:
   if button_a.is_pressed():
-    radio.send('1')
+    i = (i+1)%3
+    display.clear()
+    l = len(messages)
+    i = (i + 1) % l
+    display.set_pixel(i,0,9)
+    utime.sleep(0.2)
   if button_b.is_pressed():
-    radio.send('2')
+    radio.send(messages[i])
+    display.show(img,delay=100)
+    utime.sleep(0.015)
+    display.clear()
+    
+
   stringData = radio.receive()
   if stringData:
-    if stringData == '1':
+    if stringData == 'LIKE':
       display.show(Image.HAPPY)
-      utime.sleep(0.015)
+      utime.sleep(0.2)
       display.clear()
-    elif stringData == '2':
+    elif stringData == 'UNLIKE':
       display.show(Image.SAD)
-      utime.sleep(0.015)
+      utime.sleep(0.2)
       display.clear()
+    else:
+      display.scroll(stringData)
 
 ```
 
@@ -106,10 +89,19 @@ while True:
 
 * Quel est le rôle de la variable `stringData`? *(Que contient-elle?)*
 
-3. Analyse du programme: Décrire le programme avec un diagramme d'activités.
+3. Selection de message:
+Expliquez le rôle des instructions suivantes:
 
-3. Ce programme, comment devrait-il fonctionner? Quel-s problème-s voyez-vous lorsque plusieurs cartes microbits fonctionnent de concert, avec ce même programme?
-4. Choisir le-s terme-s adapté-s parmi les mots suivants: il s'agit d'un problème de...
+```python
+i = (i+1)%3
+l = len(messages)
+i = (i + 1) % l
+```
+
+4. Analyse du programme: Décrire le programme avec un diagramme d'activités.
+
+5. Ce programme, comment devrait-il fonctionner? Quel-s problème-s voyez-vous lorsque plusieurs cartes microbits fonctionnent de concert, avec ce même programme?
+6. Choisir le-s terme-s adapté-s parmi les mots suivants: il s'agit d'un problème de...
 
 * intégrité
 * authenticité
@@ -117,83 +109,62 @@ while True:
 
 {{< img src="../images/vitta_init8.png" >}}
 
-## Projet commun: Réseau privé
+## Programmation orientée objet
+On souhaite effacer du programme les variables globales. Les variables  seront regroupées comme attributs de la classe `Communication_radio`. On ajoutera à cette classe les méthodes qui serviront à rendre le script plus concis.
+
+Voici le script que vous allez utiliser:
+
+```python
+from microbit import *
+import radio
+import utime
+
+
+class Communication_radio:
+  def __init__(self, # a completer)
+    # a completer
+  
+  def message_suivant(self):
+    # a completer
+  
+  def select_message(self):
+    # a completer
+  
+  def img_send(self):
+    # a completer
+
+
+com = Communication_radio(7,0,['lundi','LIKE','UNLIKE'])
+radio.on()
+radio.config(channel = com.channel, power = 6, length = 32, group=com.group)
+   
+while True:
+  if button_a.is_pressed():
+    com.message_suivant()
+  if button_b.is_pressed():
+    radio.send(com.select_message())
+    com.img_send() # affiche l'animation lors de l'envoi du message
+
+  stringData = radio.receive()
+  if stringData:
+    if stringData == 'LIKE':
+      display.show(Image.HAPPY)
+      utime.sleep(0.2)
+      display.clear()
+    elif stringData == 'UNLIKE':
+      display.show(Image.SAD)
+      utime.sleep(0.2)
+      display.clear()
+    else:
+      display.scroll(stringData)
+```
+
+## Réseau privé
 > But: Reduire à 2 cartes sur un même réseau. Puis envoyer un message privé, ou bien des messages de reaction de type LIKE/ UNLIKE.
 
 {{< img src="../images/vitta_init12.png" >}}
 
-### Premier programme utilisant un notebook python
-Cette fois, le nombre de messages possibles est supérieur au nombre de boutons (3 messages pour 2 boutons).
-
-Nous allons utiliser une **liste** de messages. Pour acceder à un element de cette liste, nous allons utiliser un **index**.
-
-Dans un notebook (Atrium > Capytale) ou bien [basthon.fr/](https://notebook.basthon.fr/), saisir les lignes suivantes:
-
-```python
-# declaration de la liste
-L = ['mon message a envoyer', 'LIKE', 'UNLIKE']
-# acceder a l'un des elements de la liste:
-# 1er element: index 0
-print(L[0])
-# 2e element: index 1
-print(L[1])
-# 3e element: index 2
-print(L[2])
-# attention au depassement d'index de la liste
-# l'index 3 n'existe pas
-print(L[3])
-```
-
-On peut utiliser un index numérique pour parcourir tous les éléments de la liste. Tester dans une nouvelle cellule du notebook:
-
-```python
-for i in range(len(L)):
-  print(i,L[i])
-``` 
-
-Là aussi, avec un variant de boucle `i` qui depasse 2, cela va générer une erreur:
-
-```python
-for i in range(10):
-  print(i,L[i])
-# erreur
-``` 
-
-Pour eviter de depasser l'index maximum de la liste, utiliser l'opérateur *modulo*:
-
-```python
-for i in range(10):
-  j = i % 3
-  print(i,j,L[j])
-``` 
-
-### Programmation de la carte microbit
-Utiliser maintenant l'interface Python sur *Vittascience.com* pour réaliser les modifications.
-
-* Bloc "Au démarrage": régler les cartes par binome sur le **même reseau** (même *canal*, et même *group*).
-
-* modifier le programme des 2 boutons: le **bouton_a** sert à selectionner le message dans une liste, en passant au message suivant dans la liste. L'indice est calculé selon une règle d'arithmétique modulaire. Voici un extrait du script à utiliser:
-
-```python
-# a placer au "demarrage"
-L = ['message', 'like', 'unlike']
-i = 0
-...
-# a placer dans le bloc "repeter indefiniment"
-if button_a.is_pressed():
-  i = (i+1)%3
-...
-if button_b.is_pressed():
-  radio.send(L[i])
-```
-
-Le **bouton_b** servira à envoyer le message.
-
-Lorsqu'un message est reçu:
-
-* si c'est un message textuel, on l'affiche avec `display.scroll()`
-* si c'est 'like', on affiche un smiley happy
-* si c'est 'unlike', on affiche un smiley triste
+**Question:** quelles sont les différentes méthodes que vous pouvez envisager pour que la communication entre 2 cartes microbit reste confidentielle?
 
 > Poursuivre cette séance avec les 2 projets suivants.
 
@@ -228,7 +199,7 @@ Python offre une multitude de possibilités pour travailler avec des chaînes de
 Il faudra tranformer la chaine `"1_le lundi ne mange pas a la cantine"` en 2 chaines: `"1"` et `"le lundi ne mange pas a la cantine"`.
 
 ### Premier programme utilisant un notebook python
-Dans un notebook (Atrium > Capytale) ou bien [basthon.fr/](https://notebook.basthon.fr/), saisir les lignes suivantes:
+Dans un notebook (Atrium > Capytale) ou bien [basthon.fr/](https://notebook.basthon.fr/), saisir et tester les lignes suivantes:
 
 ```python
 message = "1_la feve est dans la 3e part"
@@ -242,7 +213,7 @@ print(message)
 print("la carte n°",n," vous informe que\n", message)
 ```
 
-> Adapter maintenant ce programme pour traiter un message dont l'identifiant numérique est composé de **2 chiffres**. Quelle instruction faut-il écrire pour stocker cet identifiant dans n? Et pour réduire le message (enlever le numero n et le symbole `'_'`).
+> Adapter ce script pour traiter un message dont l'identifiant numérique est composé de **2 chiffres**. Quelle instruction faut-il écrire pour stocker cet identifiant dans n? Et le message dans une variable m ?(enlever le numero n et le symbole `'_'`)
 
 
 ### Programmation de la carte microbit
@@ -254,11 +225,12 @@ Utiliser maintenant l'interface Python sur *Vittascience.com* pour réaliser les
 
 A partir du programme initial, apporter les modifications pour:
 
-* envoyer un message avec un numero d'identification à 2 chiffres. Ce numero doit être le même pour une paire de cartes microbits du reseau, et doit rester secret.
+* envoyer un message avec un numero d'identification à 2 chiffres. Ce numero doit être le même pour une paire de cartes microbits du reseau, et doit rester secret. Ce numero pourrait être le **numéro du groupe** utilisé pour l'instruction `radio.config`.
 * afficher tout message qui commence par cet identifiant, pas les autres messages reçus. Il faudra utiliser une instruction conditionnelle sur le numéro de carte pour afficher (ou non) le message.
 
-
-> Décrire le programme avec un diagramme d'état.
+> Programmer 2 nouvelles méthodes de la classe `Communication_radio`: 
+>* la méthode `construire_message` pour construire le message avant de l'expedier. 
+>* Et la méthode `parse` pour lire le message. Cette méthode ne retourne la chaine de caractère QUE si le numero qui debute la chaine de caractères est celui du groupe.
 
 ## Projet 2: Chiffrement
 > But: réaliser une communication privée dans un reseau public.
