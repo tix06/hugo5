@@ -233,11 +233,11 @@ Choisir la *sous-chaine depuis la* **premiere lettre**:
 
 {{< img src="../images/pro_mys_14.png" >}}
 
-Dans le menu math, trouver le selecteur de variable:
+Dans le menu math, trouver le selecteur de valeur numerique:
 
-{{< img src="../images/pro_mys_16.png" caption="mettre la valeur 2" >}}
+{{< img src="../images/pro_mys_16.png" caption="mettre la valeur 1" >}}
 
-Compléter l'instruction avec la variable **n**:
+Modifier le signe (mettre `=`) et compléter l'instruction avec la variable **n**:
 
 {{< img src="../images/pro_mys_15.png" >}}
 
@@ -264,7 +264,50 @@ Compléter l'instruction avec la variable **n**:
 
 `radio.config(group=0)`:  Configure le groupe : au sein d'une même adresse, 256 groupes numérotés de 0 à 255 peuvent cohabiter`
 
+## Programme de la carte MB mystere
 
+```python
+from microbit import *
+import radio
+import utime
+"""
+# chaque carte eleve recoit son propre message
+# meme apres plusieurs appuis successifs sur le btn a
+# son id est stocke dans le dict D
+"""
+radio.on()
+
+radio.config(channel = 7, power = 6, length = 32, group=0)
+i = 0
+L = [# mots mysteres a completer]
+l = len(L)
+D = {}
+n_precedent = 0
+
+while True:
+  stringData = radio.receive()
+  if stringData or button_a.is_pressed():
+    n = stringData[:2]
+    if n_precedent != n:
+      if n not in D.keys():
+        D[n] = [L[i%l],3]
+      message = stringData[:2]+ " " + D[n][0]
+      i += 1
+      radio.send(message)
+      utime.sleep(0.5)
+      display.clear()
+      # repere pour avoir le nombre de message retournes
+      display.set_pixel(i%5,(i%25)//5,9)
+      n_precedent = n
+    elif n_precedent == n and D[n][1]>0: 
+        D[n][1] -= 1
+    elif n_precedent == n and D[n][1]<=0:
+        D[n][1] = 3
+        n_precedent = 0
+        # RAZ du TTL et id precedent
+        # on renvoie le mot
+
+```
 
 # Liens
 * Introduction au module radio (TP Lucioles): [microbit-micropython.readthedocs.io](https://microbit-micropython.readthedocs.io/fr/latest/tutorials/radio.html)
