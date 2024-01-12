@@ -2,8 +2,10 @@
 Title: MB radio
 ---
 
-# Communication radio
+# Partie 1: Communication radio
 Une présentation générale de la carte microbit se trouve à la page [suivante](../MB_init).
+
+La fiche reponse pour les questions: [ici](/pdf/SNT/fiche_reponse_radio.pdf)
 
 ## Prise en main de l'interface microbit sur Vittascience
 *Ce premier travail permet de découvrir l'interface Vittascience.com pour la programmation de la carte microbit. Les questions qui suivent cette manipulation vont présenter le langage Python. Aucune connaissance du langage n'est requise pour ce premier travail.*
@@ -72,7 +74,7 @@ Si on met à nouveau les blocs en correspondance avec les instructions du langag
 
 ### Introduction au langage Python
 
-1. Recopier le script et colorer les différentes parties du script comme dans les exemples précédents. Expliquer la signification de l'indentation en Python (la marge par rapport au bord gauche de l'editeur Python).
+1. Recopier le script et colorier les différentes parties du script comme dans les exemples précédents. Expliquer la signification de l'indentation en Python (la marge par rapport au bord gauche de l'editeur Python).
 
 Ces couleurs indiquent la famille d'instructions. Les instructions du langage peuvent être rassemblées selon les principales familles qui sont:
 
@@ -119,12 +121,8 @@ Certaines instructions vont permettre des répétitions (famille des boucles), d
 | `if button_a.is_pressed():` |   |
 
 
-## Communiquer par radio
-La carte microbit possède une antenne radio, ce qui lui permet d'emettre et de recevoir des messages:
 
-{{< img src="../images/E_R_MB.png" caption="communication radio en reseau" >}}
-
-## Dessiner son propre logo
+## Complément: Dessiner son propre logo
 Le bloc suivant permet de personnaliser l'image affichée:
 
 {{< img src="../images/vitta_init13.png" >}}
@@ -149,11 +147,17 @@ Pour dessiner l'image, il faut cliquer dans les cellules (pixels). Le bloc suiva
 
 
 
-# Envoyer un message par ondes radio
-Vous allez maintenant envoyer un message dans le reseau de cartes.
+
+
+# Partie 2 : Envoyer un message par ondes radio
+La carte microbit possède une antenne radio, ce qui lui permet d'emettre et de recevoir des messages.
+
+{{< img src="../images/E_R_MB.png" caption="communication radio en reseau" >}}
+
+Vous allez envoyer un message dans le reseau de cartes.
 L'une de ces cartes est une *carte mystère*. Celle-ci est programmée pour repondre lorsqu'elle reçoit le message "Hello". 
 
-Vous cherchez à découvrir ce que la carte mystère va répondre. Aussi, vous allez programmer votre carte pour qu'elle emette le mot "Hello", et qu'elle n'affiche que les mots différents de "Hello": c'est à dire les messages qui proviennent de la carte mystère...
+Vous cherchez à découvrir ce que la **carte mystère va répondre**. Aussi, vous allez programmer votre carte pour qu'elle emette le mot "Hello", et qu'elle n'affiche que les mots différents de "Hello": c'est à dire les messages qui proviennent de la carte mystère...
 
 {{< img src="../images/carte_mystere.png" >}}
 
@@ -161,25 +165,89 @@ Voici le programme que vous devrez saisir:
 
 {{< img src="../images/prog_mystere.png" >}}
 
-Retrouver la variable `stringData` dans les *Variables*
-{{< img src="../images/radio71.png" >}}
-
-Retrouver le paramètre `" "` dans le menu *Texte*
-
-{{< img src="../images/radio72.png" >}}
+Dans le menu *Variables*, créer une nouvelle variable que vous nommerez **n**.
 
 
+{{< img src="../images/pro_mys_1.png" >}}
 
+Créez 2 autres variables que vous nommerez *texte* et *message*.
+
+Ajouter l'instruction *Affecter à n la valeur " "*.
+
+{{< img src="../images/pro_mys_2.png" >}}
+
+Saisir une valeur numerique à 2 chiffres dans ce bloc. Ce sera votre identifiant. Cette valeur doit être unique, personne ne devra avoir la même parmi les autres cartes du reseau. (L'exemple suivant sera traité avec la valeur **19**).
+
+Ajouter l'instruction *Affecter à texte la valeur " "*. 
+
+{{< img src="../images/pro_mys_3.png" caption="La variable n se trouve dans la liste des blocs du menu Variables" >}}
+
+Ajouter la variable *n* dans ce bloc. 
+
+{{< img src="../images/pro_mys_4.png" >}}
+
+Ajouter alors les blocs suivants pour finir la partie *Au demarrage*:
+
+{{< img src="../images/pro_mys_5.png" >}}
+
+Ces instructions permettent de construire la variable *message* par collage des 2 chaines de caractère, *n* et *texte*.
+
+```python
+n = '19'
+message = n
+texte = 'Hello'
+message = message + texte
+```
+
+**Question**: Quel est le contenu de la variable *message*?
+
+Dans la partie *Répéter indefiniment*:
+
+Ajouter les blocs qui permettront d'envoyer par radio la chaine *message*.
+{{< img src="../images/pro_mys_6.png" >}}
+
+
+
+{{< img src="../images/pro_mys_7.png" caption="Remplacer le texte par la variable message" >}}
+
+Ajouter les blocs qui vont traiter les messages radio reçus (s'il y en a):
+
+{{< img src="../images/pro_mys_8.png" caption="choisir la variable stringData" >}}
+
+{{< img src="../images/pro_mys_9.png" >}}
+
+Placer ce bloc dans l'instruction conditionnelle:
+
+{{< img src="../images/pro_mys_11.png" >}}
+
+Rechercher l'instruction suivante dans le menu *Textes*:
+
+{{< img src="../images/pro_mys_12.png" caption="il faudra probablement remplacer la variable proposée" >}}
+
+Choisir la variable *stringData*
+
+
+{{< img src="../images/pro_mys_13.png" >}}
+
+Choisir la *sous-chaine depuis la* **premiere lettre**:
+
+{{< img src="../images/pro_mys_14.png" >}}
+
+Dans le menu math, trouver le selecteur de variable:
+
+{{< img src="../images/pro_mys_16.png" caption="mettre la valeur 2" >}}
+
+Compléter l'instruction avec la variable **n**:
+
+{{< img src="../images/pro_mys_15.png" >}}
 
 > Téléverser et tester le programme. 
 
-1. Quel est la signification de chacune des instructions suivantes?
 
-| instruction | description |
-|--- |--- |
-| `if stringData:` |   |
 
-2. Le programme utilise des instructions apportées par les librairies `radio` et `utime`, utiles pour la programmation de la carte microbit. 
+1. Vous devriez recevoir un message personnalisé de la carte microbit mystère. BRAVO!! Recopiez ce message.
+
+2. Le programme utilise des instructions apportées par la librairie `radio`, utiles pour la programmation de la carte microbit. 
 
 * Quel est le rôle des fonctions suivantes: Recopier et compléter le tableau:
 
@@ -187,26 +255,16 @@ Retrouver le paramètre `" "` dans le menu *Texte*
 |--- |--- |
 | `send` |   |
 | `receive` |   |
-| `sleep` |   |
 
 * Quel est le rôle de la variable `stringData`? *(Que contient-elle?)*
 
-3. Analyse du programme: Décrire le programme avec un diagramme d'état.
 
-3. Ce programme, comment devrait-il fonctionner? Quel-s problème-s voyez-vous lorsque plusieurs cartes microbits fonctionnent de concert, avec ce même programme?
-4. Choisir le-s terme-s adapté-s parmi les mots suivants: il s'agit d'un problème de...
-
-* intégrité
-* authenticité
-* confidentialité
-
-{{< img src="../images/vitta_init8.png" >}}
-
-
-# Compléments
+## Compléments: Configuration radio
 `radio.config(channel=7)`: Configure la fréquence d'émission : la valeur est un numéro entre 0 et 83
 
 `radio.config(group=0)`:  Configure le groupe : au sein d'une même adresse, 256 groupes numérotés de 0 à 255 peuvent cohabiter`
+
+
 
 # Liens
 * Introduction au module radio (TP Lucioles): [microbit-micropython.readthedocs.io](https://microbit-micropython.readthedocs.io/fr/latest/tutorials/radio.html)

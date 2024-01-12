@@ -40,7 +40,6 @@ radio.config(channel = ch, power = 6, length = 32, group=gpe)
 
 while True:
   if button_a.is_pressed():
-    i = (i+1)%3
     display.clear()
     l = len(messages)
     i = (i + 1) % l
@@ -93,7 +92,6 @@ while True:
 Expliquez le rôle des instructions suivantes:
 
 ```python
-i = (i+1)%3
 l = len(messages)
 i = (i + 1) % l
 ```
