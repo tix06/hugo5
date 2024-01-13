@@ -437,3 +437,6 @@ evalNPI(L)
 
 # Autres structures linéaires
 Lien vers la page{{< a link="../page21/" caption="Listes et Files" >}}
+
+# Liens
+* cours sur [info.blaisepascal.fr](https://info.blaisepascal.fr/nsi-pile-file/)

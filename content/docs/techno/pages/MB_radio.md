@@ -265,6 +265,7 @@ Modifier le signe (mettre `=`) et compléter l'instruction avec la variable **n*
 `radio.config(group=0)`:  Configure le groupe : au sein d'une même adresse, 256 groupes numérotés de 0 à 255 peuvent cohabiter`
 
 ## Programme de la carte MB mystere
+*notes pour l'enseignant*
 
 ```python
 from microbit import *
@@ -279,7 +280,7 @@ radio.on()
 
 radio.config(channel = 7, power = 6, length = 32, group=0)
 i = 0
-L = [# mots mysteres a completer]
+L = ['lundi', 'juin', 'ballon'] # ...liste de mots mysteres a completer
 l = len(L)
 D = {}
 n_precedent = 0
