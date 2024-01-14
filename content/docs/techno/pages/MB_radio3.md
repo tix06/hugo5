@@ -74,7 +74,7 @@ while True:
 | instruction | description |
 |--- |--- |
 | `if stringData:` |   |
-| `if stringData == '1':` |   |
+| `if stringData == 'LIKE':` |   |
 
 2. Le programme utilise des instructions apportées par les librairies `radio` et `utime`, utiles pour la programmation de la carte microbit. 
 
