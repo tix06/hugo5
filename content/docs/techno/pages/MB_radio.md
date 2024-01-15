@@ -5,7 +5,7 @@ Title: MB radio
 # Partie 1: Communication radio
 Une présentation générale de la carte microbit se trouve à la page [suivante](../MB_init).
 
-La fiche reponse pour les questions: [ici](/pdf/SNT/diagramme_activite.pdf)
+La [fiche reponse](/pdf/SNT/diagramme_activite.pdf) pour les questions.
 
 ## Prise en main de l'interface microbit sur Vittascience
 *Ce premier travail permet de découvrir l'interface Vittascience.com pour la programmation de la carte microbit. Les questions qui suivent cette manipulation vont présenter le langage Python. Aucune connaissance du langage n'est requise pour ce premier travail.*
