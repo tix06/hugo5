@@ -109,18 +109,21 @@ while True:
 3. Analyse du programme: Décrire le programme avec un diagramme d'activités.
 
 3. Ce programme, comment devrait-il fonctionner? Quel-s problème-s voyez-vous lorsque plusieurs cartes microbits fonctionnent de concert, avec ce même programme?
+
+{{< img src="../images/vitta_init8.png" >}}
+
 4. Choisir le-s terme-s adapté-s parmi les mots suivants: il s'agit d'un problème de...
 
 * intégrité
 * authenticité
 * confidentialité
 
-{{< img src="../images/vitta_init8.png" >}}
 
-## Projet commun: Réseau privé
-> But: Reduire à 2 cartes sur un même réseau. Puis envoyer un message privé, ou bien des messages de reaction de type LIKE/ UNLIKE.
 
-{{< img src="../images/vitta_init12.png" >}}
+## Projet: Générateur de messages
+> But: On améliore le dispositif pour faire une selection parmi plusieurs messages (au moins 3). Les messages peuvent être des textes brefs, ou bien des messages de reaction de type LIKE/ UNLIKE.
+
+{{< img src="../images/radio_13.png" caption="discussion" >}}
 
 ### Premier programme utilisant un notebook python
 Cette fois, le nombre de messages possibles est supérieur au nombre de boutons (3 messages pour 2 boutons).
@@ -168,11 +171,18 @@ for i in range(10):
 ``` 
 
 ### Programmation de la carte microbit
-Utiliser maintenant l'interface Python sur *Vittascience.com* pour réaliser les modifications.
+Utiliser maintenant l'interface Python sur [Vittascience.com](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience) pour réaliser les modifications.
 
 * Bloc "Au démarrage": régler les cartes par binome sur le **même reseau** (même *canal*, et même *group*).
 
-* modifier le programme des 2 boutons: le **bouton_a** sert à selectionner le message dans une liste, en passant au message suivant dans la liste. L'indice est calculé selon une règle d'arithmétique modulaire. Voici un extrait du script à utiliser:
+{{< img src="../images/vitta_init12.png" >}}
+
+* Dans le bloc: Répéter indéfiniment (`while True`), il faudra modifier le rôle des boutons et le comportement lorsqu'un message est reçu.
+
+{{< img src="../images/radio11.png" caption="rôle des boutons a et b" >}}
+
+#### Bouton a
+* le **bouton_a** sert à selectionner le message dans une liste, en passant au message suivant dans la liste. L'indice est calculé selon une règle d'arithmétique modulaire. Voici un extrait du script à utiliser:
 
 ```python
 # a placer au "demarrage"
@@ -187,13 +197,46 @@ if button_b.is_pressed():
   radio.send(L[i])
 ```
 
-Le **bouton_b** servira à envoyer le message.
+* *[En option] Ajout d'un repère visuel*: On peut ajouter un repère visuel pour la selection du message. On éclaire alors la diode de la première ligne (`y=0`), dont la position `x` correspond à l'index `x=i`. Cela donne: `display.set_pixel(i,0,9)`
 
+```python
+if button_a.is_pressed():
+  i = (i+1)%3
+  display.clear()
+  display.set_pixel(i,0,9)
+  utime.sleep(0.2)
+```
+
+Les 2 autre instructions servent à effacer l'écran `display.clear()`, et à placer un délai d'attente `utime.sleep(0.2)`, necessaire pour eviter de nombreux appuis prolongés sur le bouton.
+
+
+
+#### Bouton b
+
+* Le **bouton_b** servira à envoyer le message.
+
+```python
+if button_b.is_pressed():
+    radio.send(messages[i])
+```
+
+* On pourra placer un repère visuel qui montre l'envoi du message:
+
+```python
+if button_b.is_pressed():
+    radio.send(messages[i])
+    display.show([Image.DIAMOND,Image.DIAMOND_SMALL],delay=100)
+    utime.sleep(0.015)
+    display.clear()
+```
+
+#### Reception d'un message
 Lorsqu'un message est reçu:
 
-* si c'est un message textuel, on l'affiche avec `display.scroll()`
-* si c'est 'like', on affiche un smiley happy
-* si c'est 'unlike', on affiche un smiley triste
+
+* **if**, si c'est 'like', on affiche un smiley happy
+* **elif**, sinon si c'est 'unlike', on affiche un smiley triste
+* **else**, sinon, c'est un message textuel, on l'affiche avec `display.scroll(stringData)`
 
 > Poursuivre cette séance avec les 2 projets suivants.
 
@@ -202,7 +245,9 @@ Lorsqu'un message est reçu:
 
 Votre reseau privé n'est pas à l'abris d'un utilisateur non invité. Vous souhaiteriez alors savoir de QUI vient le message reçu. 
 
-{{< img src="../images/vitta_init11.png" >}}
+{{< img src="../images/radio_12.png" >}}
+
+
 
 L'idée est d'utiliser la chaine de caractère émise pour y placer des informations, en plus du message. Ces informations pourraient identifier la carte émettrice. Ainsi, plutôt que d'envoyer:
 
@@ -219,16 +264,29 @@ la carte n°1 enverra:
 Le programme recepteur pourra, au choix:
 
 * Afficher la chaine de caractère entière, renseignant à la fois le numéro de la carte emettrice ET le message.
-* n'afficher que les messages provenant de la carte n°1 (ou autre).
+* ou n'afficher que les messages provenant de la carte n°1 (ou autre).
 
 Dans ce 2e cas: Pour les recepteurs du message, il faudra alors PARSER cette chaine. *Parser* signifie: *diviser une chaîne de caractères en une liste ordonnée de sous-chaînes*.
 
 Python offre une multitude de possibilités pour travailler avec des chaînes de caractères (strings): voir [page du cours python sur les variables et string](/docs/python/pages/variables/page1/) 
 
-Il faudra tranformer la chaine `"1_le lundi ne mange pas a la cantine"` en 2 chaines: `"1"` et `"le lundi ne mange pas a la cantine"`.
+
 
 ### Premier programme utilisant un notebook python
 Dans un notebook (Atrium > Capytale) ou bien [basthon.fr/](https://notebook.basthon.fr/), saisir les lignes suivantes:
+
+* Composer le message:
+
+```python
+n = 1
+texte = "la feve est dans la 3e part"
+message = str(n) + "_" + texte
+print(message)
+```
+
+* Parser le message:
+
+Il faudra tranformer la chaine `"1_la feve est dans la 3e part"` en 2 chaines: `"1"` et `"la feve est dans la 3e part"`.
 
 ```python
 message = "1_la feve est dans la 3e part"
@@ -248,15 +306,18 @@ print("la carte n°",n," vous informe que\n", message)
 ### Programmation de la carte microbit
 > Adapter le programme pour permettre une communication avec un auteur *authentifié* dans un reseau à plusieurs cartes. 
 
-Vous allez mettre 4 cartes microbits dans un même réseau (Réglage dans l'instruction `radio.config(channel = 7, power = 6, length = 32, group=0)`). Choisir le même *channel* et le même *group* pour 4 cartes microbit.
+Vous allez mettre 4 cartes microbits dans un même réseau (Réglage dans l'instruction `radio.config(channel = 7, power = 6, length = 32, group=0)`). Choisir le même *channel* et le **même** *group* pour **4 cartes microbit.**
 
-Utiliser maintenant l'interface Python sur *Vittascience.com* pour réaliser les modifications.
+
+
+Utiliser maintenant l'interface Python sur [Vittascience.com](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience) pour réaliser les modifications.
 
 A partir du programme initial, apporter les modifications pour:
 
 * envoyer un message avec un numero d'identification à 2 chiffres. Ce numero doit être le même pour une paire de cartes microbits du reseau, et doit rester secret.
 * afficher tout message qui commence par cet identifiant, pas les autres messages reçus. Il faudra utiliser une instruction conditionnelle sur le numéro de carte pour afficher (ou non) le message.
 
+{{< img src="../images/vitta_init111.png" >}}
 
 > Décrire le programme avec un diagramme d'état.
 
@@ -304,62 +365,11 @@ Assurez vous à l'aide de quelques tests, que la fonction donne de bons résulta
 Assurez vous à l'aide de quelques tests, que la fonction donne de bons résultats, pour chiffrer et dechiffrer un texte.
 
 ### Programmation de la carte microbit
+[Vittascience.com](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience)
+
 > Adapter le programme pour permettre une communication *confidentielle* entre 2 cartes microbit. Décrire le programme avec un diagramme d'état.
 
-## Projet 3: Compteur de *likes*
-On considère le réseau social de type "X (ex Twitter)" dans lequel A, B, C, et D sont des usagers (des twittos)
 
-* A suit B
-* B suit C
-* C suit A et B
-* D suit B
-
-La structure de données sera un *dictionnaire* Python: 
-
-```python
-G = {'A':['B'],'B':['C'],'C':['A','B'],'D':['B']}
-```
-
-Le debut du programme va alors s'écrire:
-
-```python
-from microbit import *
-import radio
-import utime
-
-radio.on()
-G = {'A':['B'],'B':['C'],'C':['A','B'],'D':['B']}
-```
-
-Chaque twittos envoie, en continu, un message sur le reseau.
-Ce message contient pour unique contenu la lettre du *twittos*.
-
-```python
-# pour le twittos B
-radio.send("B")
-```
-
-Lorsque A lit un message de B (c'est à dire le message `"B"`): alors A envoie un like à B. (un message `"B_LIKE"`).
-
-```python
-radio.send("B_LIKE")
-```
-
-Si B reçoit le message `"B_LIKE"`, il affiche un COEUR, puis la valeur de son compteur, incrémentée:
-
-```python
-message = radio.receive()
-if message == 'B_LIKE':
-  display.show(Image.HEART, delay=15, wait=True)
-  utime.sleep(0.015)
-  compteur = compteur + 1
-  display.show(compteur, delay=15, wait=True)
-  utime.sleep(0.015)
-```
-
-> Démarrer le programme de manière synchrone sur chaque carte microbit du reseau. Laisser tourner le programme pendant 2 minutes, puis relever les valeurs des compteurs sur chaque carte.
-
-Les valeurs sont-elles en accord avec la structure du reseau?
 
 # Compléments
 `radio.config(channel=7)`: Configure la fréquence d'émission : la valeur est un numéro entre 0 et 83
