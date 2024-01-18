@@ -169,7 +169,7 @@ while True:
 
 > Poursuivre cette séance avec les 2 projets suivants.
 
-## Projet 1
+# Projet 1
 > But: Utiliser une règle d'authentification entre 2 cartes de votre réseau privé.
 
 Votre reseau privé n'est pas à l'abris d'un utilisateur non invité. Vous souhaiteriez alors savoir de QUI vient le message reçu. 
@@ -201,7 +201,7 @@ Python offre une multitude de possibilités pour travailler avec des chaînes de
 
 
 
-### Premier programme utilisant un notebook python
+## Premier programme utilisant un notebook python
 Dans un notebook (Atrium > Capytale) ou bien [basthon.fr/](https://notebook.basthon.fr/), saisir les lignes suivantes:
 
 * Composer le message:
@@ -241,7 +241,7 @@ print(texte)
 > Adapter maintenant ce programme pour traiter un message dont l'identifiant numérique est composé de **1 ou plusieurs chiffres**. Quelle instruction faut-il privilégier pour découper la chaine de caracetères? Stocker cet identifiant dans n? Et pour réduire le message (enlever le numero n et le symbole `'_'`)?
 
 
-### Programmation de la carte microbit
+## Programmation de la carte microbit
 > Adapter le programme pour permettre une communication avec un auteur *authentifié* dans un reseau à plusieurs cartes. 
 
 Vous allez mettre 4 cartes microbits dans un même réseau (Réglage dans l'instruction `radio.config(channel = 7, power = 6, length = 32, group=0)`). Choisir le même *channel* et le **même** *group* pour **4 cartes microbit.**
@@ -320,7 +320,11 @@ while True:
 
 ```
 
-## Projet 2: Chiffrement
+Solution: [projet_authentifier_POO.py](/scripts/radio_microbit/projet2_authentifier_POO.py)
+
+
+
+# Projet 2: Chiffrement
 > But: réaliser une communication privée dans un reseau public.
 
 ### Premier programme utilisant un notebook python
@@ -363,12 +367,13 @@ Assurez vous à l'aide de quelques tests, que la fonction donne de bons résulta
 
 Assurez vous à l'aide de quelques tests, que la fonction donne de bons résultats, pour chiffrer et dechiffrer un texte.
 
-### Programmation de la carte microbit
+## Programmation de la carte microbit
 Editeur [Vittascience.com](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience)
 
 > Adapter le programme pour permettre une communication *confidentielle* entre 2 cartes microbit. Décrire le programme avec un diagramme d'état.
 
-## Projet 3: Compteur de *likes*
+# Projet 3: Compteur de *likes*
+## Programme
 On considère le réseau social de type "X (ex Twitter)" dans lequel A, B, C, et D sont des usagers (des twittos)
 
 * A suit B
@@ -379,49 +384,105 @@ On considère le réseau social de type "X (ex Twitter)" dans lequel A, B, C, et
 La structure de données sera un *dictionnaire* Python: 
 
 ```python
+# un exemple de dictionnaire représentant un graphe à 4 cartes
 G = {'A':['B'],'B':['C'],'C':['A','B'],'D':['B']}
 ```
 
-Le debut du programme va alors s'écrire:
+Vous allez expérimenter la chaine de messages dans ce réseau social.
 
-```python
-from microbit import *
-import radio
-import utime
+* Chaque twittos envoie, régulièrement, un message sur le reseau:
 
-radio.on()
-G = {'A':['B'],'B':['C'],'C':['A','B'],'D':['B']}
-```
-
-Chaque twittos envoie, en continu, un message sur le reseau.
-Ce message contient pour unique contenu la lettre du *twittos*.
+Ce message contient pour unique contenu le mot *Publi*. L'émetteur du message devra s'identifier lorsqu'il fait une *publi*:
 
 ```python
 # pour le twittos B
-radio.send("B")
+radio.send("B_Publi")
 ```
 
-Lorsque A lit un message de B (c'est à dire le message `"B"`): alors A envoie un like à B. (un message `"B_LIKE"`).
+Lorsque A reçoit un message de B (c'est à dire le message qui commence par `"B"`): comme `"B"` est dans sa liste `self.reseau['A'], A envoie un like à B. (un message `"B_LIKE"`). Et affiche un smiley HAPPY:
 
 ```python
-radio.send("B_LIKE")
+display.show(Image.HEART)
+utime.sleep(0.2)
+display.clear()
 ```
 
-Si B reçoit le message `"B_LIKE"`, il affiche un COEUR, puis la valeur de son compteur, incrémentée:
+Si B reçoit le message `"B_LIKE"`. Il verifie que le premier caractère `n` correspond à son propre numero de carte (`n == self.numero`). il affiche un COEUR, puis la valeur de son compteur, incrémentée de 1.
 
-```python
-message = radio.receive()
-if message == 'B_LIKE':
-  display.show(Image.HEART, delay=15, wait=True)
-  utime.sleep(0.015)
-  compteur = compteur + 1
-  display.show(compteur, delay=15, wait=True)
-  utime.sleep(0.015)
-```
 
-> Démarrer le programme de manière synchrone sur chaque carte microbit du reseau. Laisser tourner le programme pendant 2 minutes, puis relever les valeurs des compteurs sur chaque carte.
+> Démarrer le programme de manière synchrone sur chaque carte microbit du reseau. Faites une publication de manière régulière (chronométer). Expérimenter pendant 2 à 5 minutes, puis relever les valeurs des compteurs sur chaque carte.
 
 Les valeurs sont-elles en accord avec la structure du reseau?
+
+> Redigez une description de votre programme, de votre experimentation, ainsi qu'un commentaire des résultats.
+
+## Aide
+On utilisera la classe: 
+
+```python
+class Communication_radio:
+  def __init__(self, ch=7,gpe=0,messages=['LIKE','Publi'],numero='A', reseau = {'A':['B'],'B':['A']}):
+    self.channel = ch
+    self.group = gpe
+    self.messages = messages
+    self.img = [Image.DIAMOND,Image.DIAMOND_SMALL]
+    self.numero = numero
+    self.reseau = reseau
+    self.compteur = 0
+  
+  def select_message(self):
+    message_complet = str(self.numero) + "_" + self.messages[1]
+    return message_complet
+  
+  def img_send(self):
+    display.show(self.img,delay=100)
+    utime.sleep(0.015)
+    display.clear()
+    
+  def parse(self,stringData):
+    """decoupage de stringData en une chaine n ('A, 'B', ...)
+    et un texte grace a la methode split('_')
+    returns:
+    - etat du compteur si n == self.numero
+    - 'LIKE' si n est le numero d'un compte suivi. Et emission radio avec radio.send('n_LIKE')
+    - '', string vide, si n ne correspond a aucun des 2 cas precedents
+    """
+    # a completer
+```
+
+Le travail demandé consiste alors à compléter la méthode de classe `parse`. Il est conseillé de bien comprendre la correction du Projet 1 avant de commencer: [Solution du projet_authentifier_POO.py](/scripts/radio_microbit/projet2_authentifier_POO.py)
+
+Après l'import des librairies, et la déclaration de la classe `Communication_radio`, le programme sera le suivant:
+
+```python
+# Attention a changer le 4e argument par la lettre attribuee a votre carte ('A', 'B', ...)
+# modifier aussi le reseau {'A':['B'],'B':['A']} si vous avez plus
+# de 4 cartes
+com = Communication_radio(7,0,['LIKE','Publi'],'B',{'A':['B'],'B':['A']})
+radio.on()
+radio.config(channel = com.channel, power = 6, length = 32, group=com.group)
+   
+while True:
+  if button_a.is_pressed():
+    # on fait une publi
+    radio.send(com.select_message())
+    com.img_send() # affiche l'animation lors de l'envoi du message
+
+  stringData = radio.receive()
+  if stringData:
+    texte = com.parse(stringData)
+    if texte == 'LIKE':
+      # on aime la publication
+      display.show(Image.HAPPY)
+      utime.sleep(0.2)
+      display.clear()
+    else:
+        # on affiche le compteur 
+        display.scroll(texte)
+        utime.sleep(0.2)
+        display.clear()
+```
+
 
 # Compléments
 `radio.config(channel=7)`: Configure la fréquence d'émission : la valeur est un numéro entre 0 et 83
