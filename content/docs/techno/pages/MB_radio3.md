@@ -327,7 +327,7 @@ Solution: [projet_authentifier_POO.py](/scripts/radio_microbit/projet2_authentif
 # Projet 2: Chiffrement
 > But: réaliser une communication privée dans un reseau public.
 
-### Premier programme utilisant un notebook python
+## Premier programme utilisant un notebook python
 **Chiffrer / Code Cesar:** Le code César réalise une permutation des caractères, selon leur rang (table ASCII), grâce à une clé de chiffrement/ déchiffrement.
 
 Les fonctions utiles du langage sont: `ord` et `chr`:

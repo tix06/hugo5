@@ -120,3 +120,5 @@ Sur le document suivant, on voit que les groupes communautaires peuvent avoir de
 {{< img src="../images/rs11.png" >}}
 Les reseaux sociaux conduisent fréquemment à rester dans un "petit monde" où l'on est en relation avant tout avec des personnes qui nous ressemblent et pensent comme nous, au risuue d'un certain repli sur soi.
 
+# Liens
+* Autre cours de SNT: [jlrichter.fr](https://www.cours.jlrichter.fr/lycee/snt-sciences-numeriques-et-technologie/2snt-c-les-reseaux-sociaux/)

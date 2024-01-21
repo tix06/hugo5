@@ -70,7 +70,7 @@ $$D = \tfrac{A}{N \times (N-1)}$$
 
 Le graphe est *creux* si sa densité est proche de zero, et *dense* si elle se rapproche de 1.
 
-
+* **Diamètre** d'un graphe: plus longue distance entre sommets du graphe. Voir plus loin.
 
 ## Application: Choisir la structure de donnée adaptée
 
@@ -86,13 +86,13 @@ Le graphe est *creux* si sa densité est proche de zero, et *dense* si elle se r
 Plusieurs modes de représentation sont possibles pour stocker des graphes: matrices d'adjacence, listes des voisins, des successeurs ou des prédécesseurs.
 
 ### Liste de voisins et matrice d'adjacence
-#### > **Liste de voisins**
+#### **Liste de voisins**
 Un exemple simple présente ici un graphe créé à partir d'une liste de voisins: 
 [[1, 2], [0, 2, 3], [0, 1, 3], [1, 2]] 
 
 La première sous-liste correspond aux liens que forme le sommet 0. Ici, c'est donc avec les sommets 1 et 2.
 
-#### > **Liste d'adjacence**
+#### **Liste d'adjacence**
 Cette liste L peut aussi être mise sous forme d'une matrice M:
 
 `M = [[0, 1, 1, 0], [1, 0, 1, 1], [1, 1, 0, 1], [0, 1, 1, 0]]` 
@@ -111,6 +111,27 @@ Cette représentation en matrice est particulièrement adaptée aux *graphes pon
 
 $$\begin{pmatrix} 0 & 10 & 10 & 9 \\\ 10 & 0 & 5 & 10 \\\ 10 & 5 & 0 & 10 \\\ 9 & 10 & 10 & 0 \end{pmatrix}$$
 
+### Matrice de distance entre sommets
+Une matrice d'adjacence peut aussi indiquer la distance entre sommets. Soit le reseau social ci-dessous:
+
+
+
+{{< img src="../images/reseau1.png" caption="un reseau social" >}}
+
+Exemple issu de la page [PythonLycee - auteur Franck CHEVRIER](https://notebook.basthon.fr/?from=https://raw.githubusercontent.com/PythonLycee/PyLyc/master/SNT_Graphes_Reseaux_Sociaux_vd.ipynb)
+
+Simplifions la représentation de ce reseau social en un *Graphe*:
+
+{{< img src="../images/reseau2.png" caption="avec etiquettes aux sommets" >}}
+
+Et utilisons la matrice d'adjacence pour indiquer le plus cours chemin  d'un sommet à l'autre.
+
+{{< img src="../images/reseau3.png" caption="matrice des distances entre sommets" >}}
+
+Ainsi, une fois la matrice établie, nous pouvons en déduire le **diamètre** de ce graphe (*plus grande longueur entre 2 sommets du graphe*). Ici, cette distance vaut 3.
+
+*Dans un graphe plus grand, la détermination du plus chemin necessite une méthode basée sur un algorithme. Par exemple, l'algorithme [BFS](/docs/SNT_2nde/pages/pages_algo/graphes/page2/) ou bien l'agorithme de [Dijkstra](/docs/SNT_2nde/pages/pages_algo/graphes/page4/)*.
+
 ### Graphe avec étiquette
 On utilisera un *dictionnaire* comme structure de données. Les clés étant les étiquettes des sommets, et les valeurs, la liste des sommets adjacents:
 
@@ -126,24 +147,48 @@ Cette représentation est particulièrement adaptée aux *graphes orientés*.
 {{< img src="../images/fig55.png" alt="graphe orienté" caption="graphe orienté" >}}
 On peut représenter un graphe avec une liste chaînée des successeurs: 
 
-*sommet => liste de sommets liés suivants* <br>
-0 => 1, 2 <br>
-1 => ... <br>
-2 => ... <br>
-3 => ... <br>
+*sommet => liste de sommets liés suivants*
 
-Le sommet 0 aura alors 2 successeurs, les noeuds 1 et 2.
+```
+0 => 1, 2
+1 => ...
+2 => ...
+3 => ...
+```
+
+Le sommet 0 aura alors 2 successeurs, les noeuds 1 et 2. 
 
 > *Question:* Compléter la liste de successeurs
 
-Il sera alors necessaire d'établir aussi, pour chaque sommet, une liste de predecesseurs:
+L'implémentation utilise le même principe que pour une [liste chainée linéaire](/docs/NSI/structure/page21/). Sauf qu'ici, le nombre de successeur est supposé être supérieur à 1. 
+
+Il y aura alors plus d'un attribut `suiv`. Supposons que le *degré sortant maximum* est égal à 3:
+
+```python
+class Sommet:
+	def __init__(self,val,suiv1=None,suiv2=None,suiv3=None):
+		self.val = val # etiquette du sommet
+		self.suiv1 = suiv1
+		self.suiv2 = suiv2
+		self.suiv3 = suiv3
+
+S2 = Sommet(2)
+S1 = Sommet(1)
+S0 = Sommet(0,1,2)
+```
+
+### Liste de predecesseurs
+Il peut être necessaire d'établir aussi, pour chaque sommet, une liste de predecesseurs:
 
 
-*sommet => liste de sommets liés précédents* <br>
-0 => None <br>
-1 => 0 <br>
-2 => ... <br>
-3 => ... <br>
+*sommet => liste de sommets liés précédents*
+
+```
+0 => None
+1 => 0 
+2 => ... 
+3 => ...
+```
 
 > *Question:* Compléter la liste de prédécesseurs
 
@@ -159,3 +204,4 @@ Il sera alors necessaire d'établir aussi, pour chaque sommet, une liste de pred
 # Liens
 * Exercices simples sur la morphologie des graphes avec corrections: [hmalherbe.fr](http://hmalherbe.fr/thalesm/gestclasse/documents/Terminale_NSI/2020-2021/Exercices/Exercices_Graphes.html)
 * Algorithmes et structure de données utilisant la programmation orientée objets : [https://notebooks.lecluse.fr/python/nsi/terminale/graphes/algorithmique/poo/tp/2020/08/17/nsi_t_algo_graphes.html#Exemples-de-graphes](https://notebooks.lecluse.fr/python/nsi/terminale/graphes/algorithmique/poo/tp/2020/08/17/nsi_t_algo_graphes.html#Exemples-de-graphes)
+* Notebook: [PythonLycee - auteur Franck CHEVRIER](https://notebook.basthon.fr/?from=https://raw.githubusercontent.com/PythonLycee/PyLyc/master/SNT_Graphes_Reseaux_Sociaux_vd.ipynb)

@@ -44,9 +44,8 @@ Cela necessite d'ajouter 1 bit dans l'en-tête prévu pour la couche 2, contenan
 
 ### Principe du protocole du bit alterné
 la première trame envoyée par A aura pour drapeau 0, dès cette trame
-reçue par B, ce dernier va envoyer un accusé de réception avec le drapeau 1 (ce 1 signifie "la prochaine trame
-que A va m'envoyer devra avoir son drapeau à 1"). Dès que A reçoit l'accusé de réception avec le drapeau à
-1, il envoie la 2e trame avec un drapeau à 1, et ainsi de suite... 
+reçue par B, ce dernier va envoyer un accusé de réception avec le même drapeau 0. Dès que A reçoit l'accusé de réception avec le drapeau à
+0, il envoie la 2e trame avec un drapeau à 1, et ainsi de suite... 
 
 Le système de drapeau est complété avec un système d'horloge côté émetteur. Un "chronomètre" est déclenché à chaque envoi de trame, si au bout d'un certain temps, l'émetteur n'a pas reçu un acquittement correct (avec le bon drapeau), la trame précédemment envoyée par l'émetteur est considérée comme perdue et est de nouveau envoyée. 
 
@@ -287,3 +286,4 @@ D- Un préfixe d'adresse.
 # Sources
 * adresse IP, partie reseau, partie machine, plages d'adresses: [cours openclassroom](https://openclassrooms.com/fr/courses/857447-apprenez-le-fonctionnement-des-reseaux-tcp-ip/853441-la-couche-3)
 
+* Protocole du bit alterné [nsinfo.yo.fr](https://nsinfo.yo.fr/nsi_prem_bit_alt.html)
