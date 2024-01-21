@@ -205,3 +205,4 @@ Il peut être necessaire d'établir aussi, pour chaque sommet, une liste de pred
 * Exercices simples sur la morphologie des graphes avec corrections: [hmalherbe.fr](http://hmalherbe.fr/thalesm/gestclasse/documents/Terminale_NSI/2020-2021/Exercices/Exercices_Graphes.html)
 * Algorithmes et structure de données utilisant la programmation orientée objets : [https://notebooks.lecluse.fr/python/nsi/terminale/graphes/algorithmique/poo/tp/2020/08/17/nsi_t_algo_graphes.html#Exemples-de-graphes](https://notebooks.lecluse.fr/python/nsi/terminale/graphes/algorithmique/poo/tp/2020/08/17/nsi_t_algo_graphes.html#Exemples-de-graphes)
 * Notebook: [PythonLycee - auteur Franck CHEVRIER](https://notebook.basthon.fr/?from=https://raw.githubusercontent.com/PythonLycee/PyLyc/master/SNT_Graphes_Reseaux_Sociaux_vd.ipynb)
+* Cours [GLasius - ac-Bdx](https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.4_Graphes/cours/)

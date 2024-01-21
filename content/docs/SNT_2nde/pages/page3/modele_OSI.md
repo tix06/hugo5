@@ -12,16 +12,34 @@ title: modele OSI
 
 ## Principe du modèle OSI
 On peut rentrer un peu plus dans le détail du modèle OSI et en particulier de la communication TCP/IP.
-Le modèle OSI est une norme qui préconise comment les ordinateurs devraient communiquer entre eux avec 5 *couches* technologiques adjacentes, numérotées selon leur *distance* au support d'emission (la couche n°1).
+Le modèle OSI est une norme qui préconise comment les ordinateurs devraient communiquer entre eux avec 5 *couches* technologiques adjacentes, numérotées selon leur *distance* au support d'emission (la couche n°1). On peut rassembler les couches 5, 6 et 7 en une seule.
 
 Les couches forment une hiérarchie qui va de l'application (HTTP, FTP etc...) jusqu'au support physique (cable coaxial, ondes etc...).
 
 Ce modèle OSI (un modèle theorique) a été conçu pour cloisonner les différents processus, langages et technologies employés. 
 
+> *Combien de couches?*:
+
+Selon le degré de description, on parle plutôt du modèle TCP/IP en 4 couches.
+
+{{< img src="../images/OSI3.png" caption="illustration du TCP/IP" >}}
+*image issue de la chaine [youtube - Cookie connecté]((https://www.youtube.com/watch?v=26jazyc7VNk))*
+
+> *Quelles applications pour quelle couche?:
+
+Les 2 schémas ci-contre illustrent le découpage couche-application.
+
+{{< img src="../images/OSI2.png" >}}
+*tableau issu de la page [wikipedia - TLS, SSL](https://fr.wikipedia.org/wiki/Transport_Layer_Security)*
+
+SSH et SSL sont deux technologies qui permettent de chiffrer et d’authentifier les données qui passent entre deux ordinateurs. Ce sont des applications de la couche 5. Ces données sont chiffrées avant leur mise en forme pour le transport. Pour approfondir: [différence entre SSH et SSL](https://kinsta.com/fr/base-de-connaissances/ssh-vs-ssl/).
+
+> *Quelles sont les liens entre couches?*
+
 Le modèle OSI ajoute deux règles plus générales entre les couches :
 
-* chaque couche est indépendante ;
-* chaque couche ne peut communiquer qu'avec une couche adjacente.
+> * chaque couche est indépendante ;
+> * chaque couche ne peut communiquer qu'avec une couche adjacente.
 
 Lors de l'émission d'une requête par une application, celle-ci doit traverser toutes les couches, depuis la 7 (application), puis de la 4 vers la 1; durant le trajet les données subiront des modifications et chaque couche rajoutera ce qu'elle voudra (généralement des en-têtes) pour mieux exercer sa fonction, mais pas seulement (la couche 1, de transport concerne... le transport). 
 
@@ -33,6 +51,17 @@ Lors de la réception c'est exactement l'inverse qui se produit (désencapsulati
 
 {{< img src="../images/desencapsulation.png" alt="desencapsulation" caption="desencapsulation" >}}
 **Prenons un exemple simple,** vous demandez à votre navigateur de charger votre site préféré www.informatix.fr. Vous êtes reliés à un modem par un câble à paires torsadées. 
+
+
+
+
+{{< img src="../images/OSI1.png" >}}
+
+
+
+
+
+
 
 ## *couche application*
 Le navigateur demande au système d'envoyer une requête HTTP (couche 7). Dans cette couche, le logiciel lui même n'en fait pas partie. Cette couche concerne *l'interface* entre le logiciel est la couche de transport, et transporte l'information du **protocole application** utilisé (ici http par exemple, c'est à dire le protocole lié à l'affichage des pages html)
@@ -62,9 +91,13 @@ Il va ajouter l'adresse MAC de l'emetteur et du destinataire, qu'il aura résolu
 {{< img src="../images/entete.png" alt="en-tête" caption="en-tête Ethernet" >}}
 
 
-Le document complet sur la structure d'une trame: [Lien](/pdf/NSI/reseau_trame.pdf)
+Le document complet sur la structure d'une trame: [Lien](/pdf/NSI/reseau_trame.pdf). *document est issu du cours en ligne du lycee de Taaone, série technologique.*
 
-Ce document est issu du cours en ligne du [lycee de Taaone](http://www.mysti2d.net/polynesie2/ETT/C044/31/SerruresBioIP/index.html?Cours4.html), série technologique.
+Lors du transport, chaque machine va désencapsuler les informations de la partie Ethernet et les remplacer par de nouvelles informations pour assurer le transport jusqu'à la prochaine étape.
+
+{{< img src="../images/OSI4.png" >}}
+
+Seule la machine de destination va acceder au contenu.
 
 
 # Liens
@@ -73,5 +106,6 @@ Ce document est issu du cours en ligne du [lycee de Taaone](http://www.mysti2d.n
 * {{< a link="../circulation/" caption="Retour vers la page Reseaux" >}}
 * {{< a link="/docs/SNT_2nde/pages/page3/protocoles/" caption=" Les protocoles TCP et IP" >}}
 * {{< a link="../securite/index.html" caption="Sécurité des communications (1ere NSI)" >}}
-* {{< a link="../TP_reseau/index.html" caption="TP simulation d'un reseau" >}}
+* {{< a link="../TP_reseau/index.html" caption="TP simulation d'un reseau avec Filius" >}}
+* [TP Filius et cours sur les protocoles, GLasius](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/)
 
