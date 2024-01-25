@@ -5,6 +5,7 @@ Ce cours comporte plusieurs pages:
 
 * [introduction aux graphes - SNT](/docs/SNT_2nde/pages/pages_algo/graphes/page1/)
 * [cours sur les graphes. Term NSI](/docs/NSI/structure/page5/)
+* [modele OSI et TCP/IP. 1ere Nsi](/docs/SNT_2nde/pages/page3/modele_OSI/)
 * [algorithmes de parcours des graphes](/docs/SNT_2nde/pages/pages_algo/graphes/page2/)
 * [algorithme de Dijkstra](/docs/SNT_2nde/pages/pages_algo/graphes/page4/)
 * [Protocoles de routage](/docs/NSI/architecture/page3/)
@@ -55,13 +56,11 @@ Les machines reliées dans le réseau internet peuvent être:
 
 Un routeur possède plusieurs cartes réseaux. Sur le modèle suivant, il y a 3 ports ethernet, ainsi qu'une antenne wifi. Ce qui fait 4 cartes reseau:
 
-![routeur de la marque Siretta](../images/routeur1.png)
 
+{{< img src="../images/routeur1.png" caption="routeur de la marque Siretta" >}}
 
 ## Adresse IP
 Dans le reseau internet, les reseaux et les machines sont identifiés par un numéro unique, l'adresse IP. Pour être exact, ce sont les cartes reseaux des machines qui possèdent une adresse IP.
-
-* Lorsque l'on veut atteindre un ordinateur serveur depuis notre navigateur, on saisit dans la barre d'adresse:[^1]
 
 
 Pour plus de précisions sur l'adressage IP ainsi que le masque de sous-reseau, voir la {{< a link="https://www.youtube.com/watch?v=RnpSaDSSjR4" caption="video sur IP et masque sous-reseau (L. Guerin)" >}}:
@@ -81,11 +80,11 @@ La notation utilisant CIDR composé d’une adresse IPv4 et d’une indication s
 * partie machine de l'adresse IP: les 8 derniers bits (32 - 24), soit le dernier octet: .1
 
 ### Machines appartenant à un même reseau
-**Definition: Deux machines sont sur le même réseau si et seulement si, la partie réseau de leur adresse IP est identique.**
+**Definition: Deux machines sont sur le même réseau si et seulement si, les parties réseau de leur adresse IP sont identiques.**
 
 Les derniers caractères `/24` correspondent au *masque de sous-reseau*. Ils signifient que le reseau contenant la machine a une adresse codée sur les 24 premiers bits (192.168.0). Et que les 8 derniers bits constituent l'adresse de la machine dans ce reseau (il s'agit donc du .1 final). 
 
-Le masque de sous-reseau peut être aussi exprimé sous la forme binaire. Les N premiers chiffres du masque valet alors 1 et les autres (jusqu'au 32e) valent 0. Par exemple:
+Le masque de sous-reseau peut être aussi exprimé sous la forme binaire. Les N premiers chiffres du masque valent alors 1 et les autres (jusqu'au 32e) valent 0. Par exemple:
 
 `/8` correspond à `11111111 00000000 00000000 00000000`. 
 

@@ -467,6 +467,7 @@ while True:
     # on fait une publi
     radio.send(com.select_message())
     com.img_send() # affiche l'animation lors de l'envoi du message
+    stringData = "" # RAZ du buffer
 
   stringData = radio.receive()
   if stringData:
@@ -481,6 +482,7 @@ while True:
         display.scroll(texte)
         utime.sleep(0.2)
         display.clear()
+    stringData = "" # RAZ du buffer
 ```
 
 

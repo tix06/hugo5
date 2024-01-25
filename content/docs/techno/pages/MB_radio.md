@@ -267,6 +267,31 @@ Modifier le signe (mettre `=`) et compléter l'instruction avec la variable **n*
 ## Programme de la carte MB mystere
 *notes pour l'enseignant*
 
+### Programme de la carte eleve
+
+```python
+from microbit import *
+import radio
+
+radio.on()
+
+n = 19
+message = n
+texte = 'Hello'
+message = message + texte
+
+while True:
+  if button_a.is_pressed():
+    radio.send(str(message))
+  stringData = radio.receive()
+  if stringData:
+    print(str(stringData) + "")
+    if stringData[:2] == n:
+      display.show(stringData)
+```
+
+### Programme de la carte enseignant
+
 ```python
 from microbit import *
 import radio

@@ -81,7 +81,7 @@ Votre système devrait ressembler à l'image suivante:
   >
   > renseigner les adresses des 2 reseaux sur l'interface du routeur: 
   * 192.168.0.254 du côté du reseau 192.168.0.0 (à gauche)
-  * 192.168.2.354 du côté du reseau 192.168.2.0 (à droite)
+  * 192.168.2.254 du côté du reseau 192.168.2.0 (à droite)
 
 
 {{< img src="../images/interface.png" alt="adresses des reseaux" caption="adresses des reseaux" >}}
