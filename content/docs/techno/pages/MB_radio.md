@@ -163,7 +163,7 @@ Vous cherchez à découvrir ce que la **carte mystère va répondre**. Aussi, vo
 
 Voici le programme que vous devrez saisir:
 
-{{< img src="../images/prog_mystere.png" >}}
+{{< img src="../images/prog_mystere.png" caption="programme complet" >}}
 
 Dans le menu *Variables*, créer une nouvelle variable que vous nommerez **n**.
 
@@ -176,7 +176,9 @@ Ajouter l'instruction *Affecter à n la valeur " "*.
 
 {{< img src="../images/pro_mys_2.png" >}}
 
-Saisir une valeur numerique à 2 chiffres dans ce bloc. Ce sera votre identifiant. Cette valeur doit être unique, personne ne devra avoir la même parmi les autres cartes du reseau. (L'exemple suivant sera traité avec la valeur **19**).
+Saisir une valeur numerique à 2 chiffres dans ce bloc. Ce sera votre identifiant. Cette valeur doit être unique, personne ne devra avoir la même parmi les autres cartes du reseau. (L'exemple suivant sera traité avec la valeur **19**). 
+
+> **Ne pas choisir 19: ce nombre doit être différent pour chacune des cartes élèves de la classe.**
 
 Ajouter l'instruction *Affecter à texte la valeur " "*. 
 
@@ -199,8 +201,32 @@ texte = 'Hello'
 message = message + texte
 ```
 
-**Question**: Quel est le contenu de la variable *message*?
+> Un langage informatique utilise des *variables*. Ce sont des caractères ou des mots, qui n'existent pas dans le langage, et que vous choisissez pour y stocker une valeur. En langage *Python*, le signe '=' devant une variable indique que l'on stocke la valeur de droite dans la variable ecrite à gauche:
 
+```python
+jour = 'lundi'
+```
+
+> Cette instruction signifie que l'on stocke le mot 'lundi' dans la variable `jour`.
+
+**Question a:** Quelles sont les variables utilisées dans ce programme?
+
+**Question b:** Quelles chaines de caractères sont stockées dans les variables lors des 3 premieres instructions:
+
+```python
+n = '19'
+message = n
+texte = 'Hello'
+```
+
+
+**Question c**: Quel est le contenu de la variable *message* apres la dernière instruction? 
+
+```python
+message = message + texte
+```
+
+*Poursuivre la programmation:* 
 Dans la partie *Répéter indefiniment*:
 
 Ajouter les blocs qui permettront d'envoyer par radio la chaine *message*.
@@ -211,6 +237,10 @@ Ajouter les blocs qui permettront d'envoyer par radio la chaine *message*.
 {{< img src="../images/pro_mys_7.png" caption="Remplacer le texte par la variable message" >}}
 
 Ajouter les blocs qui vont traiter les messages radio reçus (s'il y en a):
+
+* Ajouter le bloc *`[radio]` si une chaine est reçu dans stringData alors:*
+
+* Puis, pour obtenir la condition *si dans la chaine strigData obtenir la sous-chaine...*, vous allez passer par les étapes suivantes:
 
 {{< img src="../images/pro_mys_8.png" caption="choisir la variable stringData" >}}
 
@@ -245,18 +275,18 @@ Modifier le signe (mettre `=`) et compléter l'instruction avec la variable **n*
 
 
 
-1. Vous devriez recevoir un message personnalisé de la carte microbit mystère. BRAVO!! Recopiez ce message.
+**Question d**: Vous devriez recevoir un message personnalisé de la carte microbit mystère. BRAVO!! Recopiez ce message.
 
-2. Le programme utilise des instructions apportées par la librairie `radio`, utiles pour la programmation de la carte microbit. 
+**Question e**: Le programme utilise des instructions apportées par la librairie `radio`, utiles pour la programmation de la carte microbit. 
 
-* Quel est le rôle des fonctions suivantes: Recopier et compléter le tableau:
+Quel est le rôle des fonctions suivantes: Recopier et compléter le tableau:
 
 | instruction | description |
 |--- |--- |
 | `send` |   |
 | `receive` |   |
 
-* Quel est le rôle de la variable `stringData`? *(Que contient-elle?)*
+**Question f**: Quel est le rôle de la variable `stringData`? *(Que contient-elle?)*
 
 
 ## Compléments: Configuration radio
@@ -268,14 +298,15 @@ Modifier le signe (mettre `=`) et compléter l'instruction avec la variable **n*
 *notes pour l'enseignant*
 
 ### Programme de la carte eleve
-
+Correction à venir
+<!--
 ```python
 from microbit import *
 import radio
 
 radio.on()
 
-n = 19
+n = '19'
 message = n
 texte = 'Hello'
 message = message + texte
@@ -289,6 +320,7 @@ while True:
     if stringData[:2] == n:
       display.show(stringData)
 ```
+-->
 
 ### Programme de la carte enseignant
 
@@ -305,14 +337,14 @@ radio.on()
 
 radio.config(channel = 7, power = 6, length = 32, group=0)
 i = 0
-L = ['lundi', 'juin', 'ballon'] # ...liste de mots mysteres a completer
+L = ['mardi', 'juillet', 'but'] # ...liste de mots mysteres a completer
 l = len(L)
 D = {}
 n_precedent = 0
 
 while True:
   stringData = radio.receive()
-  if stringData or button_a.is_pressed():
+  if stringData:
     n = stringData[:2]
     if n_precedent != n:
       if n not in D.keys():

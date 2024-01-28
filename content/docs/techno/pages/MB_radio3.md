@@ -443,8 +443,9 @@ class Communication_radio:
     """decoupage de stringData en une chaine n ('A, 'B', ...)
     et un texte grace a la methode split('_')
     returns:
-    - etat du compteur si n == self.numero
-    - 'LIKE' si n est le numero d'un compte suivi. Et emission radio avec radio.send('n_LIKE')
+    --------
+    - etat du compteur +1 si n == self.numero ET texte == 'LIKE'
+    - 'LIKE' si n est le numero d'un compte suivi ET texte == 'Publi'. Et emission radio avec radio.send('n_LIKE')
     - '', string vide, si n ne correspond a aucun des 2 cas precedents
     """
     # a completer
@@ -464,27 +465,23 @@ radio.config(channel = com.channel, power = 6, length = 32, group=com.group)
    
 while True:
   if button_a.is_pressed():
-    # on fait une publi
     radio.send(com.select_message())
     com.img_send() # affiche l'animation lors de l'envoi du message
-    stringData = "" # RAZ du buffer
 
   stringData = radio.receive()
   if stringData:
     texte = com.parse(stringData)
     if texte == 'LIKE':
-      # on aime la publication
       display.show(Image.HAPPY)
-      utime.sleep(0.2)
+      utime.sleep(0.4)
       display.clear()
     else:
-        # on affiche le compteur 
         display.scroll(texte)
-        utime.sleep(0.2)
-        display.clear()
-    stringData = "" # RAZ du buffer
+        utime.sleep(0.4)
+        display.clear()  
 ```
 
+*Correction:* [script](/scripts/radio/compteur_LIKE.py)
 
 # Compléments
 `radio.config(channel=7)`: Configure la fréquence d'émission : la valeur est un numéro entre 0 et 83
