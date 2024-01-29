@@ -49,7 +49,7 @@ Une fois le compte créé, aller dans l'editeur et commencer à concevoir le for
 
 {{< img src="../images/Q12.png" >}}
 
-> Répétez ansuite ces manipulations pour coder:
+> Répétez ensuite ces manipulations pour coder:
 > * toutes les autres questions A2->A8
 > * Les questions du groupe B3 (explorer les possibilités du menu *champ*)
 > * Les questions du groupe B7

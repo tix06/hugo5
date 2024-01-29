@@ -19,13 +19,13 @@ Dans *Composants d'export inclus*, choisir les informations à importer. Ne pas 
 
 {{< img src="../images/graph3.png" >}}
 
-**Télécharger le ficher**.
+**Télécharger** votre fichier.
 
 **Question a:** Quelle est l'extension du fichier? Avec quel logiciel (editeur texte) peut on *ouvrir et visualiser* les données? Donner au moins 2 exemples à partir des logiciels installés sur votre ordinateur.
 
 **Question b:** Comment sont organisées les données dans le fichier? Décrire le format des données.
 
-Pour faciliter le traitement, nous allons prendre le [fichier suivant]() pour analyse. 
+Pour la suite de la séance, nous allons prendre le fichier suivant, [resultats.csv](../datas/resultats.csv) pour analyse.
 
 Vous allez réaliser un premier travail de mise en forme des données avant leur représentation graphique.
 
