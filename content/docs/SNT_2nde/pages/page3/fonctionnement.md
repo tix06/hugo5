@@ -1,6 +1,7 @@
 ---
-Title: fonctionnement internet
+Title: circulation des données
 ---
+
 # Video SNT: les protocoles
 
 {{< img src="/images/video.png" link="https://www.youtube.com/watch?v=s18KtOLpCg4" caption="Video SNT: Internet, TCP-IP un protocole universel ?" >}}
