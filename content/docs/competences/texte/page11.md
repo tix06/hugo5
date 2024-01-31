@@ -26,19 +26,20 @@ Suivre ensuite les étapes de création:
 
 ## Rejoindre un site collaboratif
 
-### Pour le groupe 1**
+### Pour le groupe 1
 Celui-ci se trouve à la page 1 du site: [http://site-demo-2-3.e-monsite.com/](http://demo-autre.e-monsite.com)
 
-{{< img src="../images/cms11.png" link="http://demo-autre.e-monsite.com" >}}
+{{< img src="../images/cms20.png" link="http://demo-autre.e-monsite.com" >}}
 
-* Aller dans le formulaire *commentaire* de la **page 1** du [site du groupe 1](http://demo-autre.e-monsite.com/pages/typographies-et-boutons.html) ou bien du [site du groupe 2](http://site-demo-3-4.e-monsite.com/).
+* Aller dans le formulaire *commentaire* de la **page 1** du [site du groupe 1](http://demo-autre.e-monsite.com/pages/typographies-et-boutons.html)
 * Renseigner votre nom, votre email et votre site internet dans la partie *commentaire* de la page.
 
-**Pour le groupe 2:** Celui-ci se trouve à la page 1 du site: [http://site-demo-3-4.e-monsite.com/](http://site-demo-3-4.e-monsite.com/)
+### Pour le groupe 2
+Celui-ci se trouve à la page 1 du site: [http://site-demo-3-4.e-monsite.com/](http://educosmos2.e-monsite.com)
 
-{{< img src="../images/cms20.png" link="http://site-demo-3-4.e-monsite.com/" >}}
+{{< img src="../images/cms21.png" link="http://educosmos2.e-monsite.com" >}}
 
-* Aller dans le formulaire *commentaire* de la **page 1** du [site du groupe 1](http://demo-autre.e-monsite.com/pages/typographies-et-boutons.html) ou bien du [site du groupe 2](http://site-demo-3-4.e-monsite.com/).
+* Aller dans le formulaire *commentaire* de la **page 1** du [site du groupe 2](http://educosmos2.e-monsite.com/pages/page-1.html).
 * Renseigner votre nom, votre email et votre site internet dans la partie *commentaire* de la page.
 
 Cette étape va permettre à l'administrateur du site de vous ajouter comme *administrateur*.
