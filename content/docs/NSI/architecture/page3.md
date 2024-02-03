@@ -10,6 +10,8 @@ Ce cours comporte plusieurs pages:
 * [Protocoles de routage](/docs/NSI/architecture/page31/)
 * [algorithmes de parcours des graphes](/docs/SNT_2nde/pages/pages_algo/graphes/page2/)
 * [algorithme de Dijkstra](/docs/SNT_2nde/pages/pages_algo/graphes/page4/)
+* [Activite sur les arbres couvrants](/docs/NSI/structure/page41/)
+* [Arbres](/docs/NSI/structure/page4/)
 
 # Modéliser le réseau internet
 ## réseau internet

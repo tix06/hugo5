@@ -2,7 +2,7 @@
 Title: graphiques tableur
 ---
 
-# Traitement de données avec un tableur
+# Partie 1: Traitement de données avec un tableur
 Lors de la [seance précédente](/docs/competences/Form/page1), vous avez réalisé un questionnaire en ligne. L'interface de [framaforms](https://framaforms.org/abc/fr/) permet de visualiser les réponses, et d'établir des statistiques. 
 
 Mais, les réponses étant accessibles dans un format standard, le fichier de données peut également être ouvert avec un logiciel tableur.
@@ -69,8 +69,11 @@ Ainsi, pour savoir combien d'élèves de "CP" déjeunent à la cantine, il y aur
 
 **Question f:** Quelle est alors la formule utilisée dans la cellule du tableur?
 
-### Nouvelle présentation des données
-Reproduire alors le traitement sous forme de 2 nouvelles tables:
+# Partie 2: Etude statistique
+## Tableau statistique à 2 entrées
+Cette deuxième partie demande une nouvelle présentation des données.
+
+Vous allez créer 2 nouvelles tables à partir des résultats bruts:
 
 * Une table donnant les effectifs cantine, suivi périscolaire:
 
@@ -80,9 +83,11 @@ Reproduire alors le traitement sous forme de 2 nouvelles tables:
 
 {{< img src="../images/graph6.png" >}}
 
-Les valeurs sont indicatives. Celles affichées dans chacune de vos tables doivent être calculées à partir du fichier .csv fourni, à l'aide des formules nb.si et nb.si.ens vues précédemment.
+Les valeurs sont indicatives. Celles affichées dans chacune de vos tables doivent être calculées à partir du fichier .csv fourni, à l'aide des formules nb.si et nb.si.ens vues dans la partie 1.
 
-# Graphiques
+**Completer la fiche reponse:** [tableau](/pdf/competences/formulaire.pdf)
+
+## Graphiques, histogrammes
 Il est conseillé de suivre le tutoriel suivant pour l'affichage des graphiques.
 
 {{< img src="../images/graph1.png" link="https://www.youtube.com/watch?v=JNl-H6VRz6U" caption="Excel - 1 Basique - Cours Graphique" >}}

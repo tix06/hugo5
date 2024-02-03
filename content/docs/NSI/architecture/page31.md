@@ -10,6 +10,7 @@ Ce cours comporte plusieurs pages:
 * [Protocoles de routage](/docs/NSI/architecture/page31/)
 * [algorithmes de parcours des graphes](/docs/SNT_2nde/pages/pages_algo/graphes/page2/)
 * [algorithme de Dijkstra](/docs/SNT_2nde/pages/pages_algo/graphes/page4/)
+* [Activite sur les arbres couvrants](/docs/NSI/structure/page41/)
 * [Arbres](/docs/NSI/structure/page4/)
 
 
@@ -85,6 +86,7 @@ voir complements sur [developpez.com](https://inetdoc.developpez.com/tutoriels/r
 * Video (Youtube): [Mooc de l'INT (institut des Mines Télécom)](https://www.youtube.com/watch?v=-utHPKREZV8)
 ## Autres documents
 * cours de term NSI très complet sur l'architecture machine et reseau. Auteurs Eric ROUGIER / Paul GODARD : [https://pgdg.frama.io/tnsi/](https://pgdg.frama.io/tnsi/)
+* Document d'accompagnement du pdf, cours de DUT [rt.bethune.free.fr](http://rt.bethune.free.fr/iut-gtr2/Cours/R4/cours/R4_Cours2_Routage_ip_6parpage.pdf)
 * cours complet de niveau term NSI sur les reseaux autonomes: [infoforall](https://www.infoforall.fr/act/archi/procole-de-routage-dynamique-rip/)
 * autres exercices sur les algo de routage [http://www.netlab.tkk.fi/opetus/s38121/s01/Exercises/solution3.pdf](http://www.netlab.tkk.fi/opetus/s38121/s01/Exercises/solution3.pdf) et [https://www.netlab.tkk.fi/opetus/s38122/s00/Exercises/Exercise-3.pdf](https://www.netlab.tkk.fi/opetus/s38122/s00/Exercises/Exercise-3.pdf)
 
