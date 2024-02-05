@@ -16,7 +16,7 @@ Le graphe suivant servira d'exemple :
 {{< img src="../images/fig30.png" alt="graphe exemple Dijkstra" caption="exemple de graphe pondéré" >}}
 Les longueurs des arêtes sur le schéma ne sont pas proportionnelles à leur *poids*. 
 
-La méthode employée diffère légèrement de la précédente. Il faudra également utiliser une liste L de sommet à parcourir. Mais cette liste est constament *remise à jour* (**triée**) en fonction des longueurs des arêtes constatées, comme on le verra plus loin.
+La méthode employée diffère légèrement de celle du parcours en largeur. Il faudra également utiliser une liste L de sommet à parcourir. Mais cette liste est constament *remise à jour* (**triée**) en fonction des longueurs des arêtes constatées, comme on le verra plus loin.
 
 De plus, il faudra mémoriser le sommet parent d'un sommet visité. Ce sommet parent pourra être modifié si on trouve un chemin plus court pour atteindre ce sommet depuis le sommet de départ.
 

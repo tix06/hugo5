@@ -25,7 +25,7 @@ Des **exemples** d'arbres:
 * L'arbre représentant les sytèmes de dossiers sur ordinateur (dossiers et sous-dossiers puis fichiers).
 * *arbre lexicographique* : représente un ensemble de mots, comme un dictionnaire, où chaque noeud est une lettre. Les prefixes communs à plusieurs mots n'apparaissent qu'une seule fois dans l'arbre:
 
-{{< img src="../images/arbre1.png" alt="arbre lexicographique" caption="Retrouver le mot " >}}
+{{< img src="../images/arbre1.png" alt="arbre lexicographique" caption="Retrouver le mot PILE" >}}
 * arbre représentant des expressions arithmétiques
 
 {{< img src="../images/arbre2.png" alt="expression arithmetique" caption="Retrouver l'expression arithmetique correspondante" >}}
@@ -47,7 +47,7 @@ Les arbres sont très utilisés en informatique, d'abord parce que les données 
 * Un arbre de **degré** égal à 1 est ... une **liste**.
 
 {{< img src="../images/arbre7.png" alt="degré d" caption="Quel est le degré de cet arbre?" >}}
-* La **hauteur** d’un arbre est le plus grand des niveaux de tous les nœuds.
+
 * La **taille** d'un arbre est son nombre de noeuds.
 
 {{< img src="../images/arbre5.png" alt="dimensions d" caption="dimensions d'un arbre" >}}
@@ -65,7 +65,7 @@ On utilisera l'arbre suivant pour l'implémentation en python:
 Comme vu pour les graphes, on pourra utiliser des listes imbriquées, un dictionnaire, ou une classe (programmation objet).
 
 ## Liste
-Un noeud peut être représenté par une liste `[clé,fils gauche,fils droit]`.
+Un noeud peut être représenté par une liste imbriquée `[clé,fils gauche,fils droit]`.
 
 Et comme les *fils gauche* ou *fils droit* sont des noeuds, on y mettra une nouvelle liste imbriquée `[clé,fils gauche,fils droit]`.
 
