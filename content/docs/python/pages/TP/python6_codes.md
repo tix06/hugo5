@@ -2,7 +2,7 @@
 Title: Securité informatique
 ---
 
-# Projet hacker de mot de passe
+# Projet 1: hacker le mot de passe
 Dans ce projet, vous allez programmer un script de Hack qui va tenter d'entrer par *force brute* dans une base de donnée protégée par mot de passe.
 
 Imaginez que vous souhaitiez entrer par le formulaire suivant vers une page necessitant un mot de passe de longueur égale à 8 caractères (l'identifiant est supposé connu):
@@ -20,7 +20,10 @@ Vous pouvez mesurer le temps mis pour trouver le bon mot de passe. Et répéter 
 
 Lien vers le script html/css du [formulaire](/scripts/bootstrap.zip)
 
-# Projet RSA
+## Variante du projet: hacker le serveur microbit
+Approfondir le TP a la page [MB communication radio](/docs/techno/pages/MB_radio3/).
+
+# Projet 3: RSA
 cette page est en cours de redaction. Vous pouvez suivre:
 
 * le TP à la page [suivante (niveau Term NSI)](https://glassus.github.io/terminale_nsi/T5_Architecture_materielle/5.4_Cryptographie/cours/) 

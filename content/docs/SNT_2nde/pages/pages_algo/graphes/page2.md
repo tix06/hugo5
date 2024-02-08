@@ -99,7 +99,7 @@ Pour réaliser cet arbre, il faudra remonter chaque étape du parcours du graphe
 * Application de l'algorithme **BFS** au parcours dans un **labyrinthe**:
 
 {{< img src="../images/maze1.png" alt="maze BFS" link="https://youtu.be/vf817b882Uw" caption="video: Maze Pathfinder - Breadth First Search (BFS)" >}}
-# Parcours d'un arbre en profondeur (DFS)
+# Parcours d'un graphe en profondeur (DFS)
 ## Principe
 Soit un graphe G = (V,E) et r un sommet de G, point de départ de l'exploration.
 Le parcours en profondeur du graphe va permettre de visiter tous les noeuds du graphe, mais selon un chemin où l'on plonge dans la profondeur du graphe. Le prochain sommet visité sera un sommet fils non encore visité.

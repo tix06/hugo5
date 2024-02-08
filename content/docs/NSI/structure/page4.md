@@ -6,10 +6,12 @@ Ce cours comporte plusieurs pages:
 * [introduction aux graphes - SNT](/docs/SNT_2nde/pages/pages_algo/graphes/page1/)
 * [cours sur les graphes. Term NSI](/docs/NSI/structure/page5/)
 * [algorithmes de parcours des graphes](/docs/SNT_2nde/pages/pages_algo/graphes/page2/)
+* [TP sur les algorithmes de parcours des graphes](/docs/NSI/structure/page6/)
 * [algorithme de Dijkstra](/docs/SNT_2nde/pages/pages_algo/graphes/page4/)
 * [Protocoles de routage](/docs/NSI/architecture/page3/)
-* [Activite sur les arbres couvrants](/docs/NSI/structure/page41/)
 * [Arbres](/docs/NSI/structure/page4/)
+
+
 
 # Arbres
 ## Définitions

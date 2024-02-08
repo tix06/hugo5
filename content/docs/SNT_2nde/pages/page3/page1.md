@@ -2,6 +2,14 @@
 Title : le Cloud
 ---
 
+On a vu que la constitution d'un reseau local permet d'avoir des services repartis entre les différentes machines du reseau: Partage d'imprimante, serveur de base de données, disque dur partagé, ...
+
+Cette repartition des fonctions est également proposée en services *dématérialisés*, c'est à dire à base d'abonnements et connexions à des serveurs distants, qui ne font pas partie du reseau local. 
+
+L'usager n'a plus à gérer la complexité de la maintenance de ces outils.
+
+On parle de service du *cloud*. Ce mot *cloud* pourrait suggérer que ces outils sont non matériels. Il n'en est rien: Ce sont des véritables machines qui nous fournissent ces services, et leur usage a un coût financier et environnemental réel.
+
 # Le Cloud computing
 Le{{< a link="https://fr.wikipedia.org/wiki/Cloud_computing" caption="cloud computing" >}}
 {{< img src="../images/Nuage33.png" link="https://fr.wikipedia.org/wiki/Cloud_computing" caption="wikipedia : cloud computing" >}}
@@ -12,9 +20,14 @@ Le{{< a link="https://fr.wikipedia.org/wiki/Cloud_computing" caption="cloud comp
 
 
 
-Dans ce (très bon) article, on fait la disctinction entre la *compensation carbone*, evoquée par Google, et l'*empreinte carbone* liée à l'activité.
+Dans cette série d'articles, on fait la distinction entre la *compensation carbone*, evoquée par Google, et l'*empreinte carbone* liée à l'activité:
+
+* [www.logitourisme.com](https://www.logitourisme.com/google-neutre-carbone-depuis-2007/)
+* [www.humanite.fr](https://www.humanite.fr/planete/google/neutralite-carbone-pourquoi-google-reste-malgre-tout-un-danger-pour-le-climat-697530)
 
 {{< img src="../images/pollution-numerique.jpeg" caption="une partie de la pollution est invisible aux yeux du consommateur. Image de gauche : Nick Fewings / Unsplash. Image de droite : Health Data Hub" >}}
+
+
 Dire que les data centers sont gourmands en énergie est un euphémisme. L’alimentation électrique moyenne d’un centre est d’environ 30MW et les plus gros dépassent les 100 MW, soit l’équivalent de la consommation de villes de 25 à 50 mille habitants.
 
 ## Le constat en video

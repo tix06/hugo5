@@ -2,9 +2,16 @@
 Title: Pygame Snake
 ---
 
-*pygame est une combinaison de Python avec la SDL (Simple Directmedia Library), une bibliothèque libre multi-plateformes permettant la gestion du multimédia dans la programmation.*
+
+# Microbit: Petit jeu de type Snake en 2D
+
+Se rendre à la page du [TP de term NSI](/docs/techno/pages/MB_bulles/) et approfondir la seance.
+
+
 
 # Jeu du Snake avec le module Pygame
+*pygame est une combinaison de Python avec la SDL (Simple Directmedia Library), une bibliothèque libre multi-plateformes permettant la gestion du multimédia dans la programmation.*
+
 Ce projet traite des types abstraits personnalisés.
 
 Le type *serpent* proposera pour interface les fonctions suivantes:
