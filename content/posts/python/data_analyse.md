@@ -12,6 +12,7 @@ weight: 16
 ---
 # Notebooks associés
 
+* algorithme de recherche de plus proches voisins KNN: [algKnn](../algKnn/)
 * algorithme de recommandation : [algorithme de recommandation.md](../algorithme_recommandation/index.html)
 * arbres de décision : [graphes_mini_prog.md](../graphes_mini_prog/index.html)
 

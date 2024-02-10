@@ -13,7 +13,7 @@ weight: 15
 
 # Algorithme des k plus proches voisins
 ## notebook
-
+<!--
 Le notebook présenté ici est à télécharger à l'adresse suivante : 
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tix06/notebook_datas.git/master)
@@ -21,6 +21,10 @@ Le notebook présenté ici est à télécharger à l'adresse suivante :
 [https://mybinder.org/v2/gh/tix06/notebook_datas.git/master](https://mybinder.org/v2/gh/tix06/notebook_datas.git/master)
 
 Choisir : `algoKNN.ipynb`
+-->
+Le notebook présenté ici se trouve à l'adresse [tix06.github.io/jupyterlite_NSI](https://tix06.github.io/jupyterlite_NSI/lab/index.html)
+
+Choisir le dossier `TP4_data_analyse` puis le notebook `algoKNN.ipynb`.
 
 Exercez vous en suivant le tutoriel avec ce notebook.
 
