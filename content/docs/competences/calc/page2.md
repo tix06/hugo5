@@ -91,3 +91,15 @@ Les valeurs sont indicatives. Celles affichées dans chacune de vos tables doive
 Il est conseillé de suivre le tutoriel suivant pour l'affichage des graphiques.
 
 {{< img src="../images/graph1.png" link="https://www.youtube.com/watch?v=JNl-H6VRz6U" caption="Excel - 1 Basique - Cours Graphique" >}}
+
+Obtenir les graphiques suivants (*les valeurs ont été modifiées pour le tracé et ne correspondent pas au tableau fourni*):
+
+{{< img src="../images/excel1.png" caption="graphique 1" >}}
+
+{{< img src="../images/excel2.png" caption="graphique 2" >}}
+
+> Lequel de ces graphiques répond à la question:
+* A. Quelle est la distribution de reponses des élèves de CP à propos de la qualité de la cantine?
+* B. Quelle distribution en age ou classe des élèves repond favorablement à la question sur la qualité de la cantine?
+
+> Etablir un diagnostic à propos de cette enquête. (max 5 lignes)
