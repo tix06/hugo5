@@ -3,7 +3,7 @@ Title: etude comparée algos de tri
 ---
 
 # Etude comparée des algorithmes de tri
-## Enoncé
+## Explorer le sujet
 Les algorithmes de tri sont vus à la page: [rappels sur les algorithmes de tri](../page8/)
 
 Le projet a pour but de faire une étude comparée des 3 algorithmes de tri: insertion, selection et fusion, pour différentes listes d'entiers non rangés.
@@ -14,8 +14,8 @@ Le temps de calcul de chaque algorithme dépend de sa complexité. Le graphique 
 
 > Vous allez réaliser un programme Python qui permettra de comparer les 3 principaux algorithmes de tri à l'aide d'un graphique. Vous vérifierez ensuite par une étude mathematique si la complexité de chaque algorithme correspond à la courbe obtenue.
 
-# Aides pour la réalisation du projet
-## Tracé de courbe de type nuage de points
+## Aides pour la réalisation du projet
+### Tracé de courbe de type nuage de points
 Le script suivant permet de tracer plusieurs *nuages de points* sur le même graphique.
 
 ```python
@@ -28,7 +28,7 @@ plt.scatter(x,y2)
 plt.show()
 ```
 
-## Modélisation
+### Modélisation
 Le script suivant permet de modéliser une courbe à partir de ses points. Le programme permet d'obtenir les coefficients pour un modèle mathématique donné.
 
 ```python
@@ -65,7 +65,7 @@ Pour obtenir la documentation de cette fonction, dans une console Python, faites
 
 *Rappel*: pour mesurer une durée, il faut faire $t=t_2 - t_1$
 
-## Créer une liste non ordonnée de valeurs
+### Créer une liste non ordonnée de valeurs
 Pour mélanger une liste `L0`, utiliser la fonction `shuffle` du module random:
 
 ```python
@@ -73,10 +73,17 @@ import random
 random.shuffle(L0)
 ```
 
-## Copie par valeur d'une liste
+### Copie par valeur d'une liste
 
 ```python
 L1 = L0.copy()
 ```
+
+# Suggestion de projets
+L'efficacité d'un algorithme vient aussi de la nature de la liste à trier. Il peut être intéressant de mesurer la durée de tri pour certaines formes de listes particulières (déjà triée, triée en sens inverse, avec des doublons, ...). 
+
+Quel sera l'algorithme le plus *efficace*, le plus *inéfficace*?
+
+Le programme pourrait décider alors du meilleur algorithme en fonction de la nature de la liste.
 
 

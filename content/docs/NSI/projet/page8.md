@@ -29,9 +29,13 @@ On peut envisager de complexifier le scenario:
 * ...
 
 ### Expérience de Milgram
-Selon la complexité du reseau et des mesures envisagées, on pourra remplacer le reseau de cartes microbits par un reseau simulé entièrement par un programme en python. Une représentation graphique du reseau peut être réalisée avec la librairie Networkx: voir [séance de TP de term](/docs/NSI/structure/page6/).
+L'experience des 6 degrés de séparation: Milgram en 1967 avait comme but de démontrer que chaque individu peut être relié à un autre par une chaîne de relations sociales avec seulement 6 degrés de séparation.
 
-L'[expérience de Milgram](https://fr.wikipedia.org/wiki/Exp%C3%A9rience_de_Milgram) est un exemple qui peut être mis en oeuvre avec un traitement sur un **graphe**. Il s'agit d'un exemple de *sociologie structurale*.
+
+
+L'[expérience de Milgram](https://www.lemonde.fr/big-browser/article/2011/11/23/reseaux-sociaux-les-6-degres-de-separation-entre-deux-personnes-tombent-a-4-74-degres_5987939_4832693.html) est un exemple qui peut être mis en oeuvre avec un traitement sur un **graphe**. Il s'agit d'un exemple de *sociologie structurale*.
+
+Selon la complexité du reseau et des mesures envisagées, on pourra remplacer le reseau de cartes microbits par un reseau simulé entièrement par un programme en python. Une représentation graphique du reseau peut être réalisée avec la librairie Networkx: voir [séance de TP de term](/docs/NSI/structure/page6/).
 
 # Liens
 * La sociologie structurale, appelée maintenant analyse de réseaux a développé une grande panoplie de métriques pour caractériser les réseaux sociaux... [Mémoire de maitrise par FRANCK GOUDJO](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiZoKiDmZyEAxUfQ6QEHZ5kBawQFnoECBcQAQ&url=https%3A%2F%2Farchipel.uqam.ca%2F3672%2F1%2FM11510.pdf&usg=AOvVaw0GqGUBx-QWUzPAEfpdhgfv&opi=89978449) sur la Réalisation d'un outil de simulation de réseaux sociaux 

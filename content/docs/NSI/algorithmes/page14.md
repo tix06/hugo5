@@ -1,7 +1,9 @@
 ---
 Title: recherche dichotomique
 ---
-# Activité d'introduction 
+
+# Recherche dichotomique
+## Explorer le sujet 
 **Recherche dans un jeu de cartes**
 
 {{< img src="../images/cartes_rechercheD.png" caption="jeu de cartes triées" >}}
@@ -12,7 +14,8 @@ Title: recherche dichotomique
 4. Expliquer avec une méthode de votre choix comment l'algorithme de recherche réduit cette liste jusqu'à trouver la carte de la Dame de Coeur. Comparer ainsi l'efficacité des 2 algorithmes, celui de recherche sequentielle et celui de recherche dichotomique.
 
 
-# TP: Recherche dans une liste de mots
+## TP: Recherche dans une liste de mots
+Une autre version du TP utilisant la librairie `time` se trouve [ici](../page14_bis)
 
 * Télécharger la liste de mots liste_francais.txt à partir du lien suivant:{{< a link="../datas/liste_francais.txt" caption="liste_francais.txt" >}}
 * Ouvrir un notebook et mettre le fichier dans le MÊME dossier.
@@ -32,7 +35,7 @@ mots[:13]
 ```
 
 
-## Recherche séquentielle
+### Recherche séquentielle
 On lance le chronomètre au debut du script avec l'instruction `%%timeit`
 
 ```python
@@ -67,7 +70,7 @@ recherche_mot('tracts',mots)
 
 > Recopier et compléter le script. Mesurer également le temps mis par la fonction pour trouver le mot *tracts*.
 
-## Recherche dichotomique
+### Recherche dichotomique
 
 ```python
 %%timeit
@@ -112,7 +115,7 @@ recherche_dicho_mot('tracts',mots)
 
 > Recopier et compléter le script. Mesurer également le temps mis par la fonction pour trouver le mot *tracts*. Commenter la différence de temps entre les 2 algorithmes. Cette différence est-elle toujours significative, quel que soit le mot recherché? (Faire des tests).
 
-# Comparer les fonctions g(n)
+## Comparer les fonctions g(n)
 Comme sur l'image suivante, vous allez représenter sur la même figure les fonctions:
 
 * $y = 1$
@@ -138,3 +141,17 @@ Puis
 * $y = 2**x$
 
 > Comparer alors ces fonctions: Sont-elles classées selon leur *divergence* lorsque x augmente?
+
+# Suggestion de projets
+La recherche dichotomique est plus efficace que les méthodes:
+
+* de recherche sequentielle
+* de recherche par hachage
+
+Elle présente l'avantage d'être rapide, mais aussi de pouvoir consulter les éléments adjacents à la valeur cherchée.
+
+Elle peut s'adpater dans divers contextes, tels que la recherche dans des *tableaux, des listes chaînées, des arbres binaires de recherche*, etc. C'est aussi la méthode utilisée pour la fonction de recherche dans une **base de données**. Le programme de gestion d'une base de données gagnera à classer les éléments par ordre alphabetique, à réactualiser sa liste lors d'une nouvelle insertion (*long*), puis de proposer une recherche par méthode dichotomique (*rapide*).
+
+# Liens 
+* [wikipedia](https://fr.wikipedia.org/wiki/Recherche_dichotomique)
+

@@ -2,7 +2,8 @@
 Title: Traitement csv
 ---
 
-# Un exemple de données ouvertes
+# Open Datas
+## Un exemple de données ouvertes
 {{< img src="../images/page13/data.gouv.png" link="https://www.data.gouv.fr/fr/" caption="Plateforme ouverte des données publiques françaises" >}}
 Le Répertoire National des Élus (RNE) a pour finalité le suivi des titulaires d’un mandat électoral. Il est renseigné et tenu à jour par les préfectures et hauts commissariats et par les services du ministère de l'intérieur, notamment sur la base des éléments fournis par les élus lors de la phase d’enregistrement des candidatures.
 
@@ -26,7 +27,7 @@ En [bas de page](https://www.data.gouv.fr/fr/datasets/repertoire-national-des-el
 {{< img src="../images/page13/utilisation.png" link="https://www.spallian.com/2020/03/01/donnees-parite-aux-sein-des-conseils-municipaux/" caption="exemples de réutilisation des données ouvertes sur les elus municipaux" >}}
 *Ouvrir les données jugées d'intérêt public, c'est encourager leur réutilisation par tout un chacun. Cela permet d'encourager la transparence démocratique, de bénéficier de services au quotidien ou de prendre des décisions plus éclairées.*
 
-# Exploration et traitement de données 
+## Exploration et traitement de données 
 Télécharger sur le site gouvernemental le fichier des élus municipaux `rne-cm.csv`
 Ouvrir un nouveau notebook en local. Déplacer le fichier `rne-cm.csv` dans le même dossier que le notebook.
 
@@ -59,8 +60,8 @@ Lire et stocker le contenu du fichier dans une liste python que vous appelerez `
 
 > Explorer pour définir l'ordre dans lequel sont classés les élus. Les élus du *Gers*, occupent-ils les premiers rangs? Et si oui, jusqu'à quel rang? Ecrire un script python qui recherche cette information.
 
-## Traitements
-### Fonction recherche
+
+## Fonction recherche
 Ecrire une fonction `recherche` qui *recherche* le premier élu dans un departement donné. La fonction *recherche* aura pour seul argument la variable textuelle `dpt` correspondant au departement recherché.
 
 Cette fonction prend les éléments du tableau un par un, en commençant par le debut, et recherche la premiere occurence (le premier élu de ce departement).
@@ -72,7 +73,7 @@ Par exemple:
 363891
 ```
 
-### Fonction pariteHF
+## Fonction pariteHF
 Ecrire une fonction *pariteHF* qui compte le nombre d'élus Hommes et le nombre d'élues Femmes pour un departement donné. La fonction renvoie alors le couple de valeurs H/F.
 
 Exemple:
@@ -83,12 +84,27 @@ Exemple:
 (3143, 2646)
 ```
 
-### Graphique
+## Graphique
 Représenter alors cette parité dans votre notebook sur un diagramme circulaire.
 
 > On s'aidera du [lien suivant](https://python.doctor/page-creer-graphiques-scientifiques-python-apprendre) pour représenter des diagrammes avec *Matplolib*.
 
 {{< img src="../images/page13/diagramme.png" caption="exemple de diagramme sur la proportion des élus H/F" >}}
 
-### Prolongement
+## Prolongement
 Rechercher si, pour l'un des departements, le ratio 'F'/'M' est supérieur à 1.
+
+# Suggestion de projet
+Utiliser une API en python avec le module `request`, et charger directement le fichier de données. Une API est une interface logicielle qui permet de se « connecter » à un service, ou un serveur.
+
+*Exemple* issu de [realpython.com](https://realpython.com/python-api/)
+
+```python
+>>> import requests
+>>> response = requests.get("https://randomuser.me/api/")
+>>> response.text
+'{"results":[{"gender":"female",
+"name":{"title":"Ms","first":"Isobel","last":"Wang"}...'
+```
+
+Cette méthode permet de consulter la version la plus recente, mise à jour sur le serveur. On peut imaginer de nombreuses applications (météo, prix du carburant, ...)
