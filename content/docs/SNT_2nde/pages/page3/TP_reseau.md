@@ -32,14 +32,18 @@ On s'aidera de la video de présentation{{< a link="https://www.youtube.com/watc
 
 * Puis faire un *double clic* sur chacune des machines, et installer le logiciel *ligne de commandes*.
 
-{{< img src="../images/instal.png" alt="console d" caption="console d'installation de logiciels" >}}
+{{< img src="../images/instal.png" alt="console installation logiciel" caption="console d'installation de logiciels" >}}
   
 
 * tester alors les commandes suivantes depuis la machine M1:
 
   * `ipconfig` : vérifier la correspondance de l'adresse IP de la machine M1
-  * `ping 192.168.0.2` : pour établir une connexion avec la machine M2 
+  * `ping 192.168.0.2` : pour établir et tester une connexion avec la machine M2 
   * `traceroute 192.168.0.2` : pour établir le trajet qui mène jusqu'à M2
+
+  * Tester alors les commandes `ping` et `traceroute` vers une adresse de machine inexistante dans le réseau. Par exemple `192.168.0.3`
+
+> **Qu.a**: comment voit-on si le chemin vers une machine du reseau existe? Quelle information lit-on dans la console?
 
 
 
@@ -49,6 +53,7 @@ On s'aidera de la video de présentation{{< a link="https://www.youtube.com/watc
   * ajouter l'ordinateur M3. Modifier son IP en 192.168.0.3. Relier ces machines à l'aide d'un switch.
   * tester alors la commande de `traceroute` entre M1 et M3
 
+> **Qu.b**: Pourquoi a-t-on besoin d'un *switch* dans un réseau à 3 ordinateurs?
 
 # TP Filius 2 : créer un reseau de type lycée
 
@@ -65,9 +70,14 @@ Votre système devrait ressembler à l'image suivante:
 
 
 {{< img src="../images/reseauSansrouteur.png" alt="systeme de 2 sous-reseaux sans routeur" caption="systeme de 2 sous-reseaux sans routeur" >}}
-* Tester alors la commande `ping` depuis la machine M1 vers celle M6 du 2e sous-reseau. Vous constatez que l'accès à M6 n'est pas possible. En effet, votre système doit disposer d'un routeur, une machine capable de faire interface entre 2 reseaux...
+* Tester alors la commande `ping` depuis la machine M1 vers celle M6 du 2e sous-reseau. 
 
-* Modifier le système en ajoutant un routeur:
+> **Qu.c:**: La machine M6 est-elle accessible depuis M1? Pourquoi?
+<!--
+Vous constatez que l'accès à M6 n'est pas possible. En effet, votre système doit disposer d'un routeur, une machine capable de faire interface entre 2 reseaux...
+-->
+
+* Modifier le système en ajoutant **un routeur**:
 
   * clic droit sur le Switch2 : faire *supprimer tous les cables*
   * ajouter le routeur
@@ -99,11 +109,13 @@ Votre système devrait ressembler à l'image suivante:
   * Même travail pour M4, M5, M6: renseigner la passerelle **192.168.2.254**
   * refaire le cablage
 
-* Démarrer le système et tester alors la commande `ping` à nouveau. Que constatez-vous?
+> **Qu.d:** Pourquoi le routeur de votre système informatique possède t-il 2 adresses IP?
+
+> **Qu.e:** Démarrer le système et tester alors la commande `ping` de M1 vers M6, puis de M6 vers M1. Que constatez-vous?
 
 
 
-*En cas de difficultés: on pourra consulter la{{< a link="https://www.youtube.com/watch?v=xyK6ThdQeR0" caption="video Filius 2 de David Roche" >}}
+*En cas de difficultés: on pourra consulter la{{< a link="https://www.youtube.com/watch?v=xyK6ThdQeR0" caption="video Filius 2 de David Roche" >}}*
 
 # TP Filius 3 : système avec ordinateur serveur
 On utilisera pour la suite un système informatique constitué de nombreux sous-reseaux:
