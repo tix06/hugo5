@@ -211,12 +211,17 @@ def dessine(G):
                             font_family='sans-serif')
 
     nx.draw_networkx_edges(G, pos)
+    plt.show()
 
 dessine(G)
-plt.show()
 ```
 
-* Adapter ensuite la fonction de recherche pour tracer les graphes au fur et à mesure du parcours. Démarrer du sommet 0.
+* Adapter ensuite la fonction de recherche pour tracer les graphes au fur et à mesure du parcours. Démarrer du sommet 0:
+
+```python
+plt.figure() # utile pour afficher TOUS les graphes
+recursive_dfs(D,0)
+```
 
 {{< img src="../images/g4.png" >}}
 
@@ -239,12 +244,11 @@ for edge in L:
     for i in range(2):
         node = edge[i]
         if node in D:
-            D[node].append(edge[(i+1)%2])
+            D[node].append(edge[(i+1)%2]) # ajout nouvel element
         else:
-            D[node] = [edge[(i+1)%2]]
+            D[node] = [edge[(i+1)%2]] # ajout nouvelle liste
 for node in D:
-    D[node] = list(set(D[node]))
-
+    D[node] = list(set(D[node])) # suppression des doublons
 ```
 
 ## Fonction recursive DFS avec tracé du graphe
@@ -255,29 +259,26 @@ def recursive_dfs(graph, node, visited=None):
     if visited is None:
         visited = []
 
-    if node not in visited and G.nodes()[node]['col'] != 'red':
+    if node not in visited:
         visited.append(node)
     
         nx.set_node_attributes(G, {node:{"col":'red'}})
         for n in graph[node]:
-            if n not in visited and G.nodes()[n]['col'] != 'green':
+            if n not in visited:# and G.nodes()[n]['col'] != 'green':
                 nx.set_node_attributes(G, {node:{"col":'green'}})
         dessine(G)
-        plt.show()
 
     unvisited = [n for n in graph[node] if n not in visited]
 
     for node2 in unvisited:
         recursive_dfs(graph, node2, visited)
         if G.nodes()[node2]['col'] == 'green':
+            # condition pour eviter de colorer plusieur fois un sommet deja rouge
             nx.set_node_attributes(G, {node2:{"col":'red'}})
             dessine(G)
-            plt.show()
-    
     
     nx.set_node_attributes(G, {node:{"col":'red'}})
     dessine(G)
-    plt.show()
     return visited
 
 plt.figure()
