@@ -43,7 +43,7 @@ On s'aidera de la video de présentation{{< a link="https://www.youtube.com/watc
 
   * Tester alors les commandes `ping` et `traceroute` vers une adresse de machine inexistante dans le réseau. Par exemple `192.168.0.3`
 
-> **Qu.a**: comment voit-on si le chemin vers une machine du reseau existe? Quelle information lit-on dans la console?
+> **Qu.1a**: comment voit-on si le chemin vers une machine du reseau existe? Quelle information lit-on dans la console?
 
 
 
@@ -53,7 +53,7 @@ On s'aidera de la video de présentation{{< a link="https://www.youtube.com/watc
   * ajouter l'ordinateur M3. Modifier son IP en 192.168.0.3. Relier ces machines à l'aide d'un switch.
   * tester alors la commande de `traceroute` entre M1 et M3
 
-> **Qu.b**: Pourquoi a-t-on besoin d'un *switch* dans un réseau à 3 ordinateurs?
+> **Qu.1b**: Pourquoi a-t-on besoin d'un *switch* dans un réseau à 3 ordinateurs?
 
 # TP Filius 2 : créer un reseau de type lycée
 
@@ -72,7 +72,7 @@ Votre système devrait ressembler à l'image suivante:
 {{< img src="../images/reseauSansrouteur.png" alt="systeme de 2 sous-reseaux sans routeur" caption="systeme de 2 sous-reseaux sans routeur" >}}
 * Tester alors la commande `ping` depuis la machine M1 vers celle M6 du 2e sous-reseau. 
 
-> **Qu.c:**: La machine M6 est-elle accessible depuis M1? Pourquoi?
+> **Qu.1c:**: La machine M6 est-elle accessible depuis M1? Pourquoi?
 <!--
 Vous constatez que l'accès à M6 n'est pas possible. En effet, votre système doit disposer d'un routeur, une machine capable de faire interface entre 2 reseaux...
 -->
@@ -109,9 +109,9 @@ Vous constatez que l'accès à M6 n'est pas possible. En effet, votre système d
   * Même travail pour M4, M5, M6: renseigner la passerelle **192.168.2.254**
   * refaire le cablage
 
-> **Qu.d:** Pourquoi le routeur de votre système informatique possède t-il 2 adresses IP?
+> **Qu.1d:** Pourquoi le routeur de votre système informatique possède t-il 2 adresses IP?
 
-> **Qu.e:** Démarrer le système et tester alors la commande `ping` de M1 vers M6, puis de M6 vers M1. Que constatez-vous?
+> **Qu.1e:** Démarrer le système et tester alors la commande `ping` de M1 vers M6, puis de M6 vers M1. Que constatez-vous? Pourquoi?
 
 
 
@@ -129,7 +129,9 @@ Lancer la simulation
 1. Prendre connaissance de l'adresse IP de l'ordinateur n°15
 2. Depuis l'ordinateur n°1: Lancer le logiciel *Ligne de commande*
 3. Faire: `traceroute` suivi de l'adresse IP de la machine 15
-4. Repérer alors quels sont les routeurs par lesquels circulent les données entre ces 2 ordinateurs. Est-ce que le nombre de sauts effectués vous semble cohérent?
+4. Repérer alors quels sont les routeurs par lesquels circulent les données entre ces 2 ordinateurs. 
+
+> **Qu.2a.** Est-ce que le nombre de sauts effectués vous semble cohérent?
 
 
 Toujours en mode *simulation*:
@@ -156,7 +158,9 @@ Toujours en mode *simulation*:
   * Ouvrir le l'app *webserveur* et démarrer (**Start**)
 
 * test en local:
-  * ouvrir le webbrowser. Dans la barre d'adresse, saisir `http://localhost`. Voyez vous votre page?
+  * ouvrir le webbrowser. Dans la barre d'adresse, saisir `http://localhost`. 
+
+> **Qu.2b.**: Voyez vous votre page? Expliquer alors ce signifie l'adresse *localhost*.
 
 {{< img src="../images/localhost.png" >}}
   * Aller sur l'application webserver: Les informations affichées devraient montrer l'entête HTTP avec la requête reçue (méthode GET, ...), l'entête de la reponse (HTTP/1.1 200 OK), ainsi que le script HTML téléchargé.
@@ -170,7 +174,9 @@ Toujours en mode *simulation*:
 
 ## protocole HTTP
 * **Côté serveur**
-Comme pour la connexion en localhost: Lire les informations de la fenêtre de l'application Webserver: *Quelles informations ont changé?*
+Comme pour la connexion en localhost: Lire les informations de la fenêtre de l'application Webserver: 
+
+> **Qu.2c**: Quelles informations ont changé?
 
 ## Protocole TCP
 * **Côté client** 
@@ -180,10 +186,10 @@ Faire un clic droit sur la *machine M1*. Choisir *show data exchange*
 Dérouler alors *trames échangées jusqu'à arriver à celles de protocole TCP*
 
 {{< img src="../images/trame_tcp.png" >}}
-* Dans la série de *trames TCP*:
-  * L'adresse source et celle destination, sont-elles toujours les mêmes? Ou y-a-t-il un alternance?
-  * Observer le détail de la première trame: vous avez accès aux informations de la couche liaison (2), reseau (3), ainsi que la couche transport (4): identifier les informations pour chacune de ces couches: IP et TTL pour la couche 3, SEQ et ACK pour la couche 4...
-  * Ces informations, évoluent-elles d'une trame à l'autre?
+> **Qu.2d:** Dans la série de *trames TCP*:
+>  * L'adresse source et celle destination, sont-elles toujours les mêmes? Ou y-a-t-il un alternance?
+>  * Observer le détail de la première trame: vous avez accès aux informations de la couche liaison (2), reseau (3), ainsi que la couche transport (4): identifier les informations pour chacune de ces couches: IP et TTL pour la couche 3, SEQ et ACK pour la couche 4...
+>  * Ces informations, évoluent-elles d'une trame à l'autre?
 
 {{< img src="../images/detail_tcp_ip.png" >}}
 # TP Filius 4: Serveur DNS
@@ -207,6 +213,8 @@ Puis, à partir de l'une des machines du reseau, comme par exemple M1, vous alle
 
 
 {{< img src="../images/adressesymbolique.png" caption="navigation avec adresse symbolique" >}}
+
+> **Qu.2e**: Expliquer quel est le principe du protocole DNS.
 
 # Compléments théoriques sur les adresses des machines
 

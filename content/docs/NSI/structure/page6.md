@@ -226,66 +226,95 @@ recursive_dfs(D,0)
 {{< img src="../images/g4.png" >}}
 
 # Correction
-*à venir*
 
-<!--
-## obtenir le dictionnaire D
+
+
 
 ```python
+import matplotlib.pyplot as plt
+import networkx as nx
+from numpy import array
 
-## a partir de la fonction neighbors
+def dessine(G):
+    plt.clf()
+    L = list(G.nodes(data='col'))
+    colorNodes = [node[1] for node in L]
+    nx.draw_networkx_nodes(G, pos, node_size=700,node_color=colorNodes,alpha=0.9)
+
+    # labels
+    labels_nodes={node:label for node,label in G.nodes(data='label')}
+
+    nx.draw_networkx_labels(G, pos, labels=labels_nodes, \
+                            font_size=20, \
+                            font_color='black', \
+                            font_family='sans-serif')
+
+    nx.draw_networkx_edges(G, pos)
+
+G = nx.Graph()
+# definition des noeuds
+G.add_node(0,label='A',col='white')
+G.add_node(1,label='B',col='white')
+G.add_node(2,label='C',col='white')
+G.add_node(3,label='D',col='white')
+G.add_node(4,label='E',col='white')
+G.add_node(5,label='F',col='white')
+# definition des aretes
+G.add_edge(0,1)
+G.add_edge(0,2)
+G.add_edge(0,4)
+G.add_edge(4,1)
+G.add_edge(4,2)
+G.add_edge(4,3)
+G.add_edge(2,3)
+G.add_edge(4,5)
+G.add_edge(3,5)
+
+# calcul des positions pour repartir les sommets du graphe
+pos = nx.spring_layout(G) 
+
+
+# Dictionnaire du graphe
 D = {}
 for node in list(G.nodes()):
     D[node] = list(nx.neighbors(G,node))
-## a partir de la liste de liens
-L = list(G.edges())
-D = {}
-for edge in L:
-    for i in range(2):
-        node = edge[i]
-        if node in D:
-            D[node].append(edge[(i+1)%2]) # ajout nouvel element
-        else:
-            D[node] = [edge[(i+1)%2]] # ajout nouvelle liste
-for node in D:
-    D[node] = list(set(D[node])) # suppression des doublons
-```
+print (D)
 
-## Fonction recursive DFS avec tracé du graphe
-
-```python
+# Parcours en profondeur avec coloration des sommets
 def recursive_dfs(graph, node, visited=None):
 
     if visited is None:
         visited = []
 
-    if node not in visited:
+    if node not in visited and G.nodes()[node]['col'] != 'red':
         visited.append(node)
-    
-        nx.set_node_attributes(G, {node:{"col":'red'}})
-        for n in graph[node]:
-            if n not in visited:# and G.nodes()[n]['col'] != 'green':
-                nx.set_node_attributes(G, {node:{"col":'green'}})
+        nx.set_node_attributes(G, {node:{"col":'green'}})
         dessine(G)
+        plt.show()
+    else: 
+        return
 
     unvisited = [n for n in graph[node] if n not in visited]
 
     for node2 in unvisited:
+        if G.nodes()[node2]['col'] == 'white':
+            nx.set_node_attributes(G, {node:{"col":'green'}})
         recursive_dfs(graph, node2, visited)
         if G.nodes()[node2]['col'] == 'green':
-            # condition pour eviter de colorer plusieur fois un sommet deja rouge
             nx.set_node_attributes(G, {node2:{"col":'red'}})
-            dessine(G)
+            dessine(G)  
     
     nx.set_node_attributes(G, {node:{"col":'red'}})
     dessine(G)
+    plt.show()
+
     return visited
 
+# appel de recursive_dfs depuis le sommet 0 et affichage graphique
 plt.figure()
 recursive_dfs(D,0)
 ```
 
--->
 
 # Liens
 * Documentation de [python networkx](https://networkx.org)
