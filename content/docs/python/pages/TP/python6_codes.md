@@ -18,7 +18,12 @@ Vous pouvez mesurer le temps mis pour trouver le bon mot de passe. Et répéter 
 
 * Vous pouvez également vous intéresser à la programmation d'un veritable formulaire d'entrée dans un site, et utiliser une architecture utilisant le module Flask vu en [classe de 1ere](/docs/NSI/HTML/page6/).
 
-Lien vers le script html/css du [formulaire](/scripts/bootstrap.zip)
+L'attaque se fera à l'aide de fonctions du module `requests` (python).
+
+* Solutions CSS pour design du formulaire:
+
+	* Lien vers le script html/css/bootstrap du [formulaire](/scripts/bootstrap.zip)
+	* autre solution utilisant le *direct css*: [TP de 1ereNSI](/docs/NSI/CSS/page3/)
 
 ## Variante du projet: hacker le serveur microbit
 Approfondir le TP a la page [MB communication radio](/docs/techno/pages/MB_radio3/).

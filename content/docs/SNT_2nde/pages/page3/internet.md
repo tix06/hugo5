@@ -163,11 +163,15 @@ Voir la page [fonctionnement d'internet, prococoles](/docs/SNT_2nde/pages/page3/
 </div>
 
 # Liens
-*{{< a link="https://www.economie.gouv.fr/files/files/directions_services/cge/barometre-numerique-2019.pdf" caption="Etude : le baromètre du numérique 2019" >}}*{{< a link="https://www.lemonde.fr/verification/" caption="Le Décodex du journal en ligne Le Monde" >}}*{{< a link="https://www.lumni.fr/programme/data-science-vs-fake" caption="data sciences vs fake news sur la chaine Lumni" >}}*{{< a link="https://fr.statista.com" caption="Site avec visuels sur des enquetes statisiques : Statista.com" >}}*{{< a link="https://www.cnil.fr/fr" caption="La CNIL :" >}}* conglomérat de réseaux (interstice.info) : [https://interstices.info/internet-le-conglomerat-des-reseaux/](https://interstices.info/internet-le-conglomerat-des-reseaux/)
+* {{< a link="https://www.economie.gouv.fr/files/files/directions_services/cge/barometre-numerique-2019.pdf" caption="Etude : le baromètre du numérique 2019" >}}
+* {{< a link="https://www.lemonde.fr/verification/" caption="Le Décodex du journal en ligne Le Monde" >}}
+* {{< a link="https://www.lumni.fr/programme/data-science-vs-fake" caption="data sciences vs fake news sur la chaine Lumni" >}}
+* {{< a link="https://fr.statista.com" caption="Site avec visuels sur des enquetes statisiques : Statista.com" >}}
+* {{< a link="https://www.cnil.fr/fr" caption="La CNIL :" >}}* conglomérat de réseaux (interstice.info) : [https://interstices.info/internet-le-conglomerat-des-reseaux/](https://interstices.info/internet-le-conglomerat-des-reseaux/)
 * Le web :[https://isn-icn-ljm.pagesperso-orange.fr/web/co/module_WEB.html](https://isn-icn-ljm.pagesperso-orange.fr/web/co/module_WEB.html)
 * article du CNRS, [Numérique : le grand gâchis énergétique](https://lejournal.cnrs.fr/articles/numerique-le-grand-gachis-energetique)
 
 
 # Approfondir
 
-*{{< a link="../circulation/index.html" caption="Compléments de cours : Les Reseaux" >}}
+* {{< a link="../circulation/index.html" caption="Compléments de cours : Les Reseaux" >}}

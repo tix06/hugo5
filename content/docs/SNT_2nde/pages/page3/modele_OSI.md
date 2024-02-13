@@ -3,6 +3,7 @@ title: modele OSI
 ---
 
 # Le modèle OSI
+Introduction: voir [page SNT](/docs/SNT_2nde/pages/page3/fonctionnement/)
 
 {{< img src="../images/video_OSI.png" link="https://youtu.be/26jazyc7VNk" caption="VIDEO: modèles OSI et TCP IP" >}}
 *source: [comprendre les modèles OSI et TCP/IP - chaine Cookie connecté](https://www.youtube.com/watch?v=26jazyc7VNk)*
@@ -104,7 +105,7 @@ Seule la machine de destination va acceder au contenu.
 
 * Feuille d'exercices sur les reseaux:{{< a link="/pdf/NSI/R3_exercices.pdf" caption="Lien" >}}
 * {{< a link="../circulation/" caption="Retour vers la page Reseaux" >}}
-* {{< a link="/docs/SNT_2nde/pages/page3/protocoles/" caption=" Les protocoles TCP et IP" >}}
+* {{< a link="/docs/SNT_2nde/pages/page3/protocoles/" caption="Compléments sur les protocoles TCP et IP" >}}
 * {{< a link="../securite/index.html" caption="Sécurité des communications (1ere NSI)" >}}
 * {{< a link="../TP_reseau/index.html" caption="TP simulation d'un reseau avec Filius" >}}
 * [TP Filius et cours sur les protocoles, GLasius](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/)

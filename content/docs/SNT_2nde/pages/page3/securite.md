@@ -55,7 +55,7 @@ Il va donc lui répondre avec un segment SYN+ACK.
 Il ne reste plus au pirate qu'à renvoyer un segment ACK correct pour finaliser la communication. La difficulté vient du fait que le serveur répond à la machine A en mettant son propre numéro de séquence, et çà, le pirate ne peux pas le connaitre puisque l'information part vers l'ordinateur A. Il ne sait donc pas quel numéro d'acquittement positionner vu qu'il n'a pas connaissance du numéro de séquence envoyé par le serveur. Il devrait indiquer le numéro de séquence reçu+1, mais il ne l'a jamais reçu... Il doit alors trouver une stratégie pour le deviner, et l'utiliser pour calculer la valeur de l'ACK.
 
 {{< img src="../images/SYN3.png" caption="SYN3" >}}
-Le but du pirate est d'envoyer un seul et unique paquet à la machine A.
+Le but du pirate est d'envoyer un seul et unique paquet à la machine S.
 Dans ce paquet il va juste exécuter une commande shell:
 
 `echo ++ > /etc/known_hosts`
@@ -69,7 +69,12 @@ Les ISN sont aujourd'hui aléatoires, donc ils ne sont plus prédictibles. De pl
 ## retour aux pages précédentes
 
 
-*{{< a link="../modele_OSI/" caption="Retour vers le modèle OSI (1ere NSI)" >}}*{{< a link="../circulation/" caption="Retour vers la page Reseaux" >}}*{{< a link="../internet/" caption=" Retour vers internet (Généralités)" >}}*{{< a link="../TP_reseau/index.html" caption="TP simulation d'un reseau" >}}
+* {{< a link="../modele_OSI/" caption="Retour vers le modèle OSI (1ere NSI)" >}}
+* {{< a link="../circulation/" caption="Retour vers la page Reseaux" >}}
+* {{< a link="../internet/" caption=" Retour vers internet (Généralités)" >}}
+* {{< a link="../TP_reseau/index.html" caption="TP simulation d'un reseau" >}}
+
 # Liens
 
 * cours sur les reseaux et protocoles : [openclassroom, nouvelle version](https://openclassrooms.com/fr/courses/6944606-concevez-votre-reseau-tcp-ip) 
+* attaque du blind spoofing: [openclassroom](https://openclassrooms.com/fr/courses/2340511-maitrisez-vos-applications-et-reseaux-tcp-ip/2882186-mettez-en-place-le-suivi-des-connexions-tcp-et-la-securite-avec-le-blind-ip-spoofing)
