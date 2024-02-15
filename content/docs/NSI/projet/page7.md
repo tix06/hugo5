@@ -17,10 +17,23 @@ Le robot dispose de 2 capteurs d'intensité lumineuse, sous le chassis. Une diff
 * Exemple de courbe à imprimer en format [pdf](../images/courbe.pdf)
 * Exemple de courbe en format photoshop [eps](../images/courbe.eps)
 
+### Avancer d'une case
+Pour programmer les deplacements du robot indépendemment du marquage au sol, il sera necessaire de calibrer la longueur de ses deplacements.
+
+{{< img src="../images/quadrillage.png" >}}
+
+Le [programme suivant](/scripts/robot/robot_marqueen_5.py) montre un exemple de fonction utile pour *avancer d'une case*.
+
+Les paramètres doivent être ajustés dans le script python (blocs inopérants pour ajustements).
+
+De la même manière, il sera utile de calibrer l'angle de rotation lors de la commande de pivot à droite ou à gauche.
+
 ### Enregister des données
 L'enregistrement de données peut être utile pour calibrer les capteurs du robot.
 
-Le programme suivant peut être importer depuis l'interface [Vittascience.com](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience). Télécharger et ouvrir le [fichier](/scipts/robot/robot_marquenn_us__202419_12120.py) depuis l'interface.
+{{< img src="../images/marq_us.png" >}}
+
+Le programme suivant peut être chargé dans l'interface [Vittascience.com](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience). Télécharger le [fichier](/scripts/robot/robot_marquenn_us__202419_12120.py). Puis l'ouvrir  depuis l'interface.
 
 * La fonction `getUltrasonicData` permet de mesurer une distance/un temps selon le paramètre `data`.
 * Pour écrire des données sur la carte, ce sont les fonctions:
@@ -82,10 +95,11 @@ Le format des données dans le fichier de *log* permet un traitement comme on le
 ## Suggestion de projets
 * Conduite autonome
 * Course déclenchée par un *clap*
+* Evolution dans un labyrinthe
 * Programme d'exploration type robot aspirateur
 * Detection de formes (la forme de l'arêne dans laquelle est le robot)
 
-Avec quelques extensions, les actions du robot peuvent être complexifiées (ramassage d'objets, ...).
+Avec quelques extensions, les actions du robot peuvent être complexifiées (detection de couleur, ramassage d'objets, ...).
 
 
 # Liens 
