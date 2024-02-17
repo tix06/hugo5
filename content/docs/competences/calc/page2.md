@@ -30,7 +30,13 @@ Pour la suite de la séance, nous allons prendre le fichier suivant, [resultats.
 Vous allez réaliser un premier travail de mise en forme des données avant leur représentation graphique.
 
 ## Mise en forme des données sous Excel
-Télécharger le ficher, et ouvrir avec Excel, comme vu dans le TP sur le [format des données](/docs/SNT_2nde/pages/pages_donnees/page5/).
+Télécharger le ficher, [resultats.csv](../datas/resultats.csv)
+
+- Ouvrir le fichier de données [nobels.csv](../datas/nobels.csv)  avec Excel (*ou bien LibreOffice Calc*) comme vu dans le TP sur le [format des données](/docs/SNT_2nde/pages/pages_donnees/page5/).
+
+- Enregistrer le fichier au format `xls` dans le même répertoire.
+
+Maintenant que nous sommes sur un fichier tableur, nous pouvons utiliser les fonctionnalités avancées de ce type de logiciel.
 
 **Question c:** Combien de réponses au formulaire sont présentées dans le tableau?
 
