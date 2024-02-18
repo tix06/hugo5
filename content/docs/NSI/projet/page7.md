@@ -4,9 +4,11 @@ Title: Robotique
 
 # Robot marqueen
 ## Prise en main du robot
+Le TP de 1ere NSI se trouve à la page suivante: [Lien](/docs/NSI_1/projets/page1/). *Vous y trouverez un énoncé plus détaillé, et une démarche plus guidée pour vous approprier la programmation du robot.*
+
 Documentation sur le site de l'[ac-normandie.fr](https://nsi-snt.ac-normandie.fr/IMG/pdf/le_robot_maqueen.pdf)
 
-### Suivre une ligne
+## Suivre une ligne
 Le robot dispose de 2 capteurs d'intensité lumineuse, sous le chassis. Une différence de clarté sous le robot (bord du chmin) permet de programmer un virage du robot.
 
 {{< img src="../images/marq1.png" caption="blanc/noir => virage a droite" >}}
@@ -17,7 +19,16 @@ Le robot dispose de 2 capteurs d'intensité lumineuse, sous le chassis. Une diff
 * Exemple de courbe à imprimer en format [pdf](../images/courbe.pdf)
 * Exemple de courbe en format photoshop [eps](../images/courbe.eps)
 
-### Avancer d'une case
+## Prolongement
+Pour la suite, il sera parfois utile de partir du programme réalisé avec les *blocs* (Vittascience), mais aussi de modifier certains paramètre *à la main*, directement dans le script python.
+
+Vous devrez vous familiariser avec les instructions en python spécifiques au robot marqueen.
+
+> Téléchargez le document [marqueen.py](/scripts/robot/marqueen.py) et complétez le avec les instructions python des différents blocs.
+
+*Certaines commandes necessitent la declaration de fonctions, et occupent plusieurs lignes d'instructions.*
+
+## Avancer d'une case
 Pour programmer les deplacements du robot indépendemment du marquage au sol, il sera necessaire de calibrer la longueur de ses deplacements.
 
 {{< img src="../images/quadrillage.png" >}}
@@ -28,7 +39,7 @@ Les paramètres doivent être ajustés dans le script python (blocs inopérants 
 
 De la même manière, il sera utile de calibrer l'angle de rotation lors de la commande de pivot à droite ou à gauche.
 
-### Enregister des données
+## Enregister des données
 L'enregistrement de données peut être utile pour calibrer les capteurs du robot.
 
 {{< img src="../images/marq_us.png" >}}
@@ -92,7 +103,7 @@ while True:
 
 Le format des données dans le fichier de *log* permet un traitement comme on le ferait pour un ficher *txt* ou *csv*.
 
-## Suggestion de projets
+# Suggestion de projets
 * Conduite autonome
 * Course déclenchée par un *clap*
 * Evolution dans un labyrinthe
