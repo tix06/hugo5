@@ -164,8 +164,14 @@ ParcoursInfixe ( Arbre binaire T de racine r )
 
 {{< img src="../images/arbre10.png" caption="exemples de parcours" >}}
 # Travaux pratiques
+## Sur Capytale
+=> [Lien vers le notebook](https://capytale2.ac-paris.fr/web/c/5799-3034742)
+
+## Sur Google Colab
 * telecharger le fichier module [hierarchyP](/pdf/NSI/hierarchyP.py) (faire un clic droit et *enregistrer sous...*)
 * utiliser le lien suivant pour acceder au{{< a link="https://colab.research.google.com/drive/1y3GF5m5UI2ilRLX7wYQsFNnw6gzdvvHV?usp=sharing" caption="notebook colab" >}}
+
+## Notebook avec un IDE local
 * lien alternatif: télécharger une [version locale](/scripts/notebooks/sd5_notebook.ipynb) du notebook (clic droit et *enregistrer sous...*)
 * correction du{{< a link="https://colab.research.google.com/drive/18VUCVjH9u9V3jF7JU2VRy0XZWQwyXtqO?usp=sharing" caption="notebook colab en ligne" >}}
 
