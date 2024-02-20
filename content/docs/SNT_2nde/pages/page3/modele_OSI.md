@@ -74,6 +74,8 @@ La requête arrive dans TCP qui ajoute son en-tête. Le protocole TCP va mettre 
 
 > Sortie : [en-tête TCP][requête HTTP]
 
+fragmentation TCP: [cours sur openclassroom](https://openclassrooms.com/fr/courses/2340511-maitrisez-vos-applications-et-reseaux-tcp-ip/5677997-fragmentez-vos-paquets)
+
 ## *couche réseau*
 Le segment TCP arrive dans IP qui ajoute aussi son en-tête (qui contient entre autres votre **adresse IP**  (pour le **routage**) et celle du serveur demandé). La couche 3 indique à la couche 2 quel protocole a été utilisé (TCP, UDP...). Il y a aussi un numéro de connexions établies (IPID) sur le port en question et d'autres informations qui servent à l'eventuelle fragmentation du datagramme (les données ne peuvent pas exceder 1500 octets.  
 Une autre valeur transportée est le **TTL** (time to live) qui evite que le paquet ne circule indefiniment sur les reseaux.
@@ -102,7 +104,7 @@ Seule la machine de destination va acceder au contenu.
 
 
 # Liens
-
+* Complements sur la fragmentation TCP: [cours sur openclassroom](https://openclassrooms.com/fr/courses/2340511-maitrisez-vos-applications-et-reseaux-tcp-ip/5677997-fragmentez-vos-paquets)
 * Feuille d'exercices sur les reseaux:{{< a link="/pdf/NSI/R3_exercices.pdf" caption="Lien" >}}
 * {{< a link="../circulation/" caption="Retour vers la page Reseaux" >}}
 * {{< a link="/docs/SNT_2nde/pages/page3/protocoles/" caption="Compléments sur les protocoles TCP et IP" >}}

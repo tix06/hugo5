@@ -15,34 +15,26 @@ Selon la tâche à executer, il faudra bien distinguer ce que l'on veut que le r
 
 {{< img src="../images/marq12.png" caption="disposer les instruction dans le bon bloc de code" >}}
 
-## Défi n°1: Suivre une ligne
-Le robot peut être prévu pour circuler selon une piste tracée au sol.
+## Défi n°1: S'arrêter au parking
+Le robot peut être prévu pour circuler selon une couleur marquée au sol.
 
-{{< img src="../images/marq9.png" >}}
 
-Les différentes fonctions d'**actions des moteurs** sont (**en gras** les fonction utiles pour le **suivi de ligne**, en *italique* les *paramètres ajustables*):
 
-* **[Marqueen]** Contrôler le robot *avancer* vitesse *255*
+
+Les différentes fonctions d'**actions des moteurs** sont (en *italique* les *paramètres ajustables*):
+
+* **[Marqueen]** Contrôler le robot *avancer* vitesse *155*
 
 {{< img src="../images/marq11.png" >}}
 
-* [Marqueen] Arrêter le robot
+* **[Marqueen]** Arrêter le robot
 
 {{< img src="../images/marq2.png" >}}
 
-* **[Marqueen]** Contrôler le moteur *droit* direction *...* vitesse *125*
 
-{{< img src="../images/marq3.png" >}}
 
-* [Marqueen] Pivoter à *droite*
 
-{{< img src="../images/marq4.png" >}}
-
-* [Marqueen] Avancer d'une case
-
-{{< img src="../images/marq5.png" >}}
-
-La mesure de l'**état du capteur de ligne** se fait grâce à la fonction:
+La mesure de l'**état du capteur de ligne**, sous le robot se fait grâce à la fonction:
 
 * **[Marqueen]** Etat du capteur ligne *droit*
 
@@ -62,24 +54,57 @@ Le robot dispose de 2 capteurs d'intensité lumineuse, sous le chassis.
 
 {{< img src="../images/marq13.png" >}}
 
+## Défi n°2: Suivi de ligne
+Le robot peut circuler en suivant une courbe peinte au sol.
+
+{{< img src="../images/marq9.png" >}}
+
 Une différence de clarté sous le robot (bord du chemin) permet de programmer un virage du robot.
 
+Il faudra alors placer les instructions de commande du moteur Droit et Gauche dans une sequence d'intructions conditionnelles.
+
+```
+if
+...
+elif
+...
+else
+```
+
+Pour faire pivoter le robot, il faudra contrôler différement chaque moteur (Droit / Gauche). Utiliser: 
+
+* **[Marqueen]** Contrôler le moteur *droit* direction *...* vitesse *125*
+
+{{< img src="../images/marq3.png" >}}
 
 
 > à vous de jouer: Créer un deuxième programme qui fera:
 > * avancer le robot tout droit lorsque les 2 capteurs mesurent la couleur noire
-> * et tourner le robot vers la droite lorsqu'il se trouve dans la situation suivante:
+> * s'arrêter lorsqu'il est sur une zone blanche
+> * tourner le robot vers la droite lorsqu'il se trouve dans la situation suivante:
 
 {{< img src="../images/marq1.png" caption="blanc/noir => virage a droite" >}}
 
-*Tester alors votre programme sur une piste circulaire. Vous remarquez qu'il faudra aussi programme le redressement vers la gauche. Adapter alors le programmer pour permettre au robot de faire le tour entier.*
+>* Et tourner vers la gauche dans la situation inverse
+
+*Tester alors votre programme sur une piste circulaire.*
 
 Votre robot fait le tour entierement? Vous avez relevé le **premier défi**!
 
+*Aide*: [detection de la ligne noire](https://fr.vittascience.com/learn/tutorial.php?id=42/maqueen-part-3-suiveur-de-ligne-avec-micro-bit)
 
+## Avant le défi n°3: Programmer en python
+D'autres fonctions du robot peuvent être exploitées pour réaliser d'autres tâches. Par exemple:
 
-## Prolongement
-Pour la suite, il sera parfois utile de partir du programme réalisé avec les *blocs* (Vittascience), mais aussi de modifier certains paramètre *à la main*, directement dans le script python.
+* [Marqueen] Pivoter à *droite*
+
+{{< img src="../images/marq4.png" >}}
+
+* [Marqueen] Avancer d'une case
+
+{{< img src="../images/marq5.png" >}}
+
+Pour la suite, il sera parfois utile de partir du programme réalisé avec les *blocs* (Vittascience), puis d'adapter, modifier certains paramètre *à la main*, directement dans le script python.
 
 Vous devrez vous familiariser avec les instructions en python spécifiques au robot marqueen.
 
@@ -87,7 +112,7 @@ Vous devrez vous familiariser avec les instructions en python spécifiques au ro
 
 *Certaines commandes necessitent la declaration de fonctions, et occupent plusieurs lignes d'instructions.*
 
-## Défi n°2: Avancer d'une case
+## Défi n°3: Avancer d'une case
 Pour programmer les deplacements du robot indépendemment du marquage au sol, il sera necessaire de calibrer la longueur de ses deplacements.
 
 {{< img src="../images/quadrillage.png" >}}
@@ -100,7 +125,7 @@ La longueur du deplacement dépend de la durée d'attente  `utime.sleep_ms(int(1
 
 De la même manière, il sera utile de calibrer l'angle de rotation lors de la commande de pivot à droite ou à gauche.
 
-### Enregister des données
+## Défi 4:  Enregister des données
 L'enregistrement de données peut être utile pour calibrer les capteurs du robot.
 
 {{< img src="../images/marq_us.png" >}}
