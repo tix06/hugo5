@@ -2,11 +2,11 @@
 Title: IOT
 ---
 
-# Robotique
+# Robot: Mythe et réalité
 
 {{< img src="../images/atlas_frontview.jpeg" caption="Atlas (2013), robot androïde de Boston Dynamics. Wikipedia." >}}
 
-Le terme robot est issu des langues slaves et formé à partir du radical rabot, rabota (работа en russe) qui signifie travail, corvée que l'on retrouve dans le mot Rab (раб), **esclave** en russe. [wiki](https://fr.wikipedia.org/wiki/Robot#:~:text=Le%20terme%20robot%20est%20issu,%D1%80%D0%B0%D0%B1)%2C%20esclave%20en%20russe.)
+Le terme robot est issu des langues slaves et formé à partir du radical rabot, rabota (работа en russe) qui signifie travail, corvée que l'on retrouve dans le mot Rab (раб), **esclave** en russe. [wiki](https://fr.wikipedia.org/wiki/Robot).
 
 *Dans l'antiquité: Le mythe de Pygmalion racontait déjà comment la statue Galatée devint vivante et s’affranchit de son créateur afin de partir à la conquête du monde des hommes.*
 
@@ -25,11 +25,11 @@ Cette diversité de machines montre que le *robot* fait partie d'une plus grande
 > A partir de la video: citer un ou des *capteurs*, *actionneurs*, un exemple de *programme*. Qu'est-ce qu'un objet connecté?
 
 ## Premier exemple: robots agricoles
-Ces robots ont en commun:
+Ces robots ont en commun qu'ils:
 
 * utilisent la reconnaissance de formes et de couleurs
 * analysent, déclenchent une action en rapport avec cette mesure
-* Utilisent une source d'énergie adaptée, qui les rend autonome
+* utilisent une source d'énergie adaptée, qui les rend autonome
 * communiquent sur le reseau (internet)
 * echangent avec un logiciel (IHM)
 
@@ -39,7 +39,7 @@ Ces robots ont en commun:
 
 {{< img src="../images/robot4.png" link="https://www.youtube.com/watch?v=3xL8Db60YUk&list=PLTvT0yWRovX-at4Dmg9kej99798ndCPrR&index=12"  caption="Exemple 3" >}}
 
-On parlera plus d'une famille d'*objets connectés* que de *robots*.
+On parlera plus d'*objets connectés* que de *robots*.
 
 ## Constitution d'un objet connecté
 Un objet connecté a une **fonction**: il est prévu pour réaliser certaines **tâches** en rapport avec la **mission** qu'il doit accomplir.
