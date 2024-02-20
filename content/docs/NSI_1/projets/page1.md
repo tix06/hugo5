@@ -21,9 +21,9 @@ Le robot peut être prévu pour circuler selon une couleur marquée au sol.
 
 
 
-Les différentes fonctions d'**actions des moteurs** sont (en *italique* les *paramètres ajustables*):
+Pour ce 1er défi: les différentes fonctions d'**actions des moteurs** sont (en *italique* les *paramètres ajustables*):
 
-* **[Marqueen]** Contrôler le robot *avancer* vitesse *155*
+* **[Marqueen]** Contrôler le robot *avancer* vitesse *125*
 
 {{< img src="../images/marq11.png" >}}
 
@@ -36,7 +36,7 @@ Les différentes fonctions d'**actions des moteurs** sont (en *italique* les *pa
 
 La mesure de l'**état du capteur de ligne**, sous le robot se fait grâce à la fonction:
 
-* **[Marqueen]** Etat du capteur ligne *droit*
+* **[Marqueen]** Etat du capteur ligne *droit / gauche*
 
 {{< img src="../images/marq8.png" >}}
 
