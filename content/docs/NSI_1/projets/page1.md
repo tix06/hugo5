@@ -5,11 +5,13 @@ Title: Robotique
 
 # Robot marqueen
 ## Prise en main du robot
-Documentation sur le site de l'[ac-normandie.fr](https://nsi-snt.ac-normandie.fr/IMG/pdf/le_robot_maqueen.pdf) 
+
 
 ![logo](../images//marq10.png)
 
 *Programmer un robot a pour but de lui faire réaliser des tâches autonomes, répétitives. Il va prendre des décisions en fonction de son environnement grâce à un algorithme.*
+
+La programmation se fera sur l'editeur [Vittascience.com](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience)
 
 Selon la tâche à executer, il faudra bien distinguer ce que l'on veut que le robot n'execute qu'une seule fois, ou bien ce qu'il devra répéter indéfiniment
 
@@ -18,12 +20,23 @@ Selon la tâche à executer, il faudra bien distinguer ce que l'on veut que le r
 ## Défi n°1: S'arrêter au parking
 Le robot peut être prévu pour circuler selon une couleur marquée au sol.
 
+{{< img src="../images/marq13.png" >}}
 
 
+Pour ce 1er défi: 
+* Votre programme utilise une structure conditionnelle: retrouvez celle-ci dans le menu **logique**.
 
-Pour ce 1er défi: les différentes fonctions d'**actions des moteurs** sont (en *italique* les *paramètres ajustables*):
+{{< img src="../images/marq14.png" >}}
 
-* **[Marqueen]** Contrôler le robot *avancer* vitesse *125*
+* les différentes fonctions d'**actions des moteurs** sont dans le menu *Robots* de la page de l'editeur [Vittascience.com](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience)
+
+Le menu propose les instructions de plusieurs robots. Le votre s'appelle **Marqueen**.
+
+{{< img src="../images/selection.GIF" >}}
+
+Les valeurs en *italique* sont des *paramètres ajustables*:
+
+* **[Marqueen]** Contrôler le robot *avancer* vitesse *50*
 
 {{< img src="../images/marq11.png" >}}
 
@@ -32,7 +45,7 @@ Pour ce 1er défi: les différentes fonctions d'**actions des moteurs** sont (en
 {{< img src="../images/marq2.png" >}}
 
 
-
+Le robot dispose de 2 capteurs d'intensité lumineuse, sous le chassis. 
 
 La mesure de l'**état du capteur de ligne**, sous le robot se fait grâce à la fonction:
 
@@ -40,19 +53,24 @@ La mesure de l'**état du capteur de ligne**, sous le robot se fait grâce à la
 
 {{< img src="../images/marq8.png" >}}
 
-Cette instruction renvoie un booléen (`True`, `False`), qui sera affectée à une variable: 
+Cette instruction renvoie un booléen (`True`, `False`), qui sera affectée à une variable. Créez 2 nouvelles variables, **G** et **D**.
+{{< img src="../images/marq15.png" >}}
+
+* Affecter les instructions des capteurs de ligne à chacune de ces variables:
 
 {{< img src="../images/marq7.png" >}}
 
-On place alors ces variables dans une structure conditionnelle:
+On place alors ces variables dans une structure conditionnelle (si G ET D faire...):
 
-{{< img src="../images/marq6.png" caption="Si le capteur D vaut False et le capteur G vaut False: avancer" >}}
+{{< img src="../images/marq6.png" caption="Si le capteur G vaut True et le capteur D vaut True: avancer" >}}
 
-Le robot dispose de 2 capteurs d'intensité lumineuse, sous le chassis. 
+
 
 > à vous de jouer: Créez un programme qui fait avancer le robot tant qu'il est sur une piste **blanche**. Et qui s'arrête lorsqu'il est sur son *parking*, **noir**.
 
-{{< img src="../images/marq13.png" >}}
+Vous avez reussi? Téléchargez le programme dans vos *documents*.
+
+{{< img src="../images/marq16.png" >}}
 
 ## Défi n°2: Suivi de ligne
 Le robot peut circuler en suivant une courbe peinte au sol.
@@ -73,19 +91,19 @@ else
 
 Pour faire pivoter le robot, il faudra contrôler différement chaque moteur (Droit / Gauche). Utiliser: 
 
-* **[Marqueen]** Contrôler le moteur *droit* direction *...* vitesse *125*
+* **[Marqueen]** Contrôler le moteur *gauche* direction *...* vitesse *50*
 
 {{< img src="../images/marq3.png" >}}
 
 
 > à vous de jouer: Créer un deuxième programme qui fera:
-> * avancer le robot tout droit lorsque les 2 capteurs mesurent la couleur noire
-> * s'arrêter lorsqu'il est sur une zone blanche
+
 > * tourner le robot vers la droite lorsqu'il se trouve dans la situation suivante:
 
 {{< img src="../images/marq1.png" caption="blanc/noir => virage a droite" >}}
 
->* Et tourner vers la gauche dans la situation inverse
+>* tourner vers la gauche dans la situation inverse
+>* sinon: avancer tout droit lorsque les 2 capteurs mesurent la même couleur noire, ou blanche.
 
 *Tester alors votre programme sur une piste circulaire.*
 
@@ -215,6 +233,7 @@ Avec quelques extensions, les actions du robot peuvent être complexifiées (det
 * Explorer, enregistrer des données sur la carte microbit: [Lien](https://microbit.org/fr/projects/make-it-code-it/environment-data-logger/)
 * Course, tour de piste [site ac-nantes.fr](https://www.pedagogie.ac-nantes.fr/medias/fichier/challenge-robotmaqueen_1656062635314-pdf?ID_FICHE=1424110252680&INLINE=FALSE)
 * Documentation [site ac-normandie.fr](https://nsi-snt.ac-normandie.fr/IMG/pdf/le_robot_maqueen.pdf)
+* Documentation du robot Marqueen sur le site de l'[ac-normandie.fr](https://nsi-snt.ac-normandie.fr/IMG/pdf/le_robot_maqueen.pdf) 
 
 
 

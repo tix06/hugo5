@@ -13,13 +13,22 @@ L'année 2023 a vu une féminisation des lauréats au prix Nobel. Mais depuis sa
 Narges Mohammadi, Claudia Goldin, Anne L'Huillier, Katalin Karikó. Quatre noms de femmes s'ajoutent cette année à la liste des "Nobélisé•es".
 
 ## Fichier de données
+Selon la version Excel installée:
 
-- **Fichier: Importer** le fichier de données [nobels.csv](../datas/nobels.csv)  avec Excel (*ou bien LibreOffice Calc*). Bien sélectionner: 
-	* séparateur par point virgule
-	* Origine du fichier: unicode utf-8 afin de bien gérer les caractères avec accents.
+###  méthode 1: avec Excel jusqu'à la version 16 (2019), *ou bien LibreOffice Calc*:
+- **Fichier: Importer** le fichier de données [nobels.csv](../datas/nobels.csv). 
 
-- Enregistrer le fichier au format `xls` dans le même répertoire.
+### méthode 2: Excel version plus récente
+* **Données: Obtenir des données**, puis choisir "à partir d'un fichier", "fichier text ou csv", choisir le fichier [nobels.csv](../datas/nobels.csv). 
 
+{{< img src="../images/excel3.png" >}}
+
+Dans les 2 cas (méthode 1 ou 2): Bien sélectionner: 
+
+* séparateur par point virgule
+* Origine du fichier: unicode utf-8 afin de bien gérer les caractères avec accents.
+
+Puis **Enregistrer** le fichier au format **xls** (ou **xlsx**) dans le même répertoire.
 Maintenant que nous sommes sur un fichier en format tableur, nous pouvons utiliser les fonctionnalités avancées de ce type de logiciel.
 
 ## Rechercher et remplacer
