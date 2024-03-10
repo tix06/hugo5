@@ -68,7 +68,7 @@ On place alors ces variables dans une structure conditionnelle (si G ET D faire.
 
 > à vous de jouer: Créez un programme qui fait avancer le robot tant qu'il est sur une piste **blanche**. Et qui s'arrête lorsqu'il est sur son *parking*, **noir**.
 
-Vous avez reussi? Téléchargez le programme dans vos *documents*.
+Vous avez reussi? Téléchargez le programme dans vos *documents*. Et recopier le script sur votre cahier.
 
 {{< img src="../images/marq16.png" >}}
 

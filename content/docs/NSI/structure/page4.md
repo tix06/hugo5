@@ -73,12 +73,12 @@ Et comme les *fils gauche* ou *fils droit* sont des noeuds, on y mettra une nouv
 
 Pour les feuilles, la liste s'écrit: `[clé,None,None]`.
 
-Le petit arbre suivant peut être représenté par `['r'`,['a',None,None],['b',None,None]` 
+Le petit arbre suivant peut être représenté par `['r'`,['a',None,None],['b',None,None]]` 
 
 {{< img src="../images/arbre8.png" caption="petit arbre de taille 3" >}}
 Avec l'arbre de taille 9 donné en exemple:
 
-`arbre9 = [8,[3,..,..],[10,..,..]`
+`arbre9 = [8,[3,..,..],[10,..,..]]`
 
 > Question: compléter cette liste.
 
