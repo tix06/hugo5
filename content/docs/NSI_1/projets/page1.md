@@ -13,7 +13,7 @@ Title: Robotique
 
 La programmation se fera sur l'editeur [Vittascience.com](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience)
 
-Selon la tâche à executer, il faudra bien distinguer ce que l'on veut que le robot n'execute qu'une seule fois, ou bien ce qu'il devra répéter indéfiniment
+Selon la tâche à executer, il faudra bien distinguer les instructions que le robot n'execute qu'une seule fois, et celles qu'il devra répéter indéfiniment.
 
 {{< img src="../images/marq12.png" caption="disposer les instruction dans le bon bloc de code" >}}
 
@@ -23,26 +23,38 @@ Le robot peut être prévu pour circuler selon une couleur marquée au sol.
 {{< img src="../images/marq13.png" >}}
 
 
-Pour ce 1er défi: 
-* Votre programme utilise une structure conditionnelle: retrouvez celle-ci dans le menu **logique**.
 
-{{< img src="../images/marq14.png" >}}
 
 * les différentes fonctions d'**actions des moteurs** sont dans le menu *Robots* de la page de l'editeur [Vittascience.com](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience)
 
-Le menu propose les instructions de plusieurs robots. Le votre s'appelle **Maqueen**.
+Le menu *Robots* propose les instructions de plusieurs robots. Le votre s'appelle **Maqueen**.
 
 {{< img src="../images/selection.GIF" >}}
 
-Les valeurs en *italique* sont des *paramètres ajustables*:
+
 
 * **[Maqueen]** Contrôler le robot *avancer* vitesse *50*
 
-{{< img src="../images/marq11.png" >}}
+{{< img src="../images/marq11.png" caption="la valeur de vitesse est un paramètre ajustable. Mettre 50" >}}
 
 * **[Maqueen]** Arrêter le robot
 
 {{< img src="../images/marq2.png" >}}
+
+Dans le menu Entrees/Sorties, choisir le bloc *attendre 1 seconde-s*, et réaliser le programme suivant:
+
+
+{{< img src="../images/marq17.png" >}}
+
+> Tester ce premier programme avec le robot maqueen. Puis démarrer un nouveau projet pour stopper le robot dans une zone *noire*.
+
+Pour ce défi: 
+
+* Votre programme utilise une structure conditionnelle: retrouvez celle-ci dans le menu **logique**.
+
+{{< img src="../images/marq14.png" >}}
+
+
 
 
 Le robot dispose de 2 capteurs d'intensité lumineuse, sous le chassis. 
@@ -68,7 +80,10 @@ On place alors ces variables dans une structure conditionnelle (si G ET D faire.
 
 > à vous de jouer: Créez un programme qui fait avancer le robot tant qu'il est sur une piste **blanche**. Et qui s'arrête lorsqu'il est sur son *parking*, **noir**.
 
-Vous avez reussi? Téléchargez le programme dans vos *documents*. Et recopier le script sur votre cahier.
+Vous avez reussi? 
+
+* Sauvegardez le programme dans vos *documents*. 
+* Et recopier le script sur votre cahier.
 
 {{< img src="../images/marq16.png" >}}
 
