@@ -2,7 +2,7 @@
 Title: Robotique
 ---
 
-# Robot marqueen
+# Robot maqueen
 ## Prise en main du robot
 Le TP de 1ere NSI se trouve à la page suivante: [Lien](/docs/NSI_1/projets/page1/). *Vous y trouverez un énoncé plus détaillé, et une démarche plus guidée pour vous approprier la programmation du robot.*
 
@@ -24,7 +24,7 @@ Pour la suite, il sera parfois utile de partir du programme réalisé avec les *
 
 Vous devrez vous familiariser avec les instructions en python spécifiques au robot marqueen.
 
-> Téléchargez le document [marqueen.py](/scripts/robot/marqueen.py) et complétez le avec les instructions python des différents blocs.
+> Téléchargez le document [maqueen.py](/scripts/robot/marqueen.py) et complétez le avec les instructions python des différents blocs.
 
 *Certaines commandes necessitent la declaration de fonctions, et occupent plusieurs lignes d'instructions.*
 
@@ -33,11 +33,13 @@ Pour programmer les deplacements du robot indépendemment du marquage au sol, il
 
 {{< img src="../images/quadrillage.png" >}}
 
-Le [programme suivant](/scripts/robot/robot_marqueen_5.py) montre un exemple de fonction utile pour *avancer d'une case*.
+Le [programme suivant](/scripts/robot/robot_marqueen_5.py) montre un exemple pour *avancer d'une case* et faire une mesure de distance (Ultra Sons).
 
 Les paramètres doivent être ajustés dans le script python (blocs inopérants pour ajustements).
 
 De la même manière, il sera utile de calibrer l'angle de rotation lors de la commande de pivot à droite ou à gauche.
+
+> Programmer le robot pour lui faire suivre le parcours proposé.
 
 ## Enregister des données
 L'enregistrement de données peut être utile pour calibrer les capteurs du robot.

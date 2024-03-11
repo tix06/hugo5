@@ -3,7 +3,7 @@ Title: Robotique
 ---
 
 
-# Robot marqueen
+# Robot maqueen
 ## Prise en main du robot
 
 
@@ -30,17 +30,17 @@ Pour ce 1er défi:
 
 * les différentes fonctions d'**actions des moteurs** sont dans le menu *Robots* de la page de l'editeur [Vittascience.com](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience)
 
-Le menu propose les instructions de plusieurs robots. Le votre s'appelle **Marqueen**.
+Le menu propose les instructions de plusieurs robots. Le votre s'appelle **Maqueen**.
 
 {{< img src="../images/selection.GIF" >}}
 
 Les valeurs en *italique* sont des *paramètres ajustables*:
 
-* **[Marqueen]** Contrôler le robot *avancer* vitesse *50*
+* **[Maqueen]** Contrôler le robot *avancer* vitesse *50*
 
 {{< img src="../images/marq11.png" >}}
 
-* **[Marqueen]** Arrêter le robot
+* **[Maqueen]** Arrêter le robot
 
 {{< img src="../images/marq2.png" >}}
 
@@ -49,7 +49,7 @@ Le robot dispose de 2 capteurs d'intensité lumineuse, sous le chassis.
 
 La mesure de l'**état du capteur de ligne**, sous le robot se fait grâce à la fonction:
 
-* **[Marqueen]** Etat du capteur ligne *droit / gauche*
+* **[Maqueen]** Etat du capteur ligne *droit / gauche*
 
 {{< img src="../images/marq8.png" >}}
 
@@ -91,7 +91,7 @@ else
 
 Pour faire pivoter le robot, il faudra contrôler différement chaque moteur (Droit / Gauche). Utiliser: 
 
-* **[Marqueen]** Contrôler le moteur *gauche* direction *...* vitesse *50*
+* **[Maqueen]** Contrôler le moteur *gauche* direction *...* vitesse *50*
 
 {{< img src="../images/marq3.png" >}}
 
@@ -114,11 +114,11 @@ Votre robot fait le tour entierement? Vous avez relevé le **premier défi**!
 ## Avant le défi n°3: Programmer en python
 D'autres fonctions du robot peuvent être exploitées pour réaliser d'autres tâches. Par exemple:
 
-* [Marqueen] Pivoter à *droite*
+* [Maqueen] Pivoter à *droite*
 
 {{< img src="../images/marq4.png" >}}
 
-* [Marqueen] Avancer d'une case
+* [Maqueen] Avancer d'une case
 
 {{< img src="../images/marq5.png" >}}
 
@@ -126,7 +126,7 @@ Pour la suite, il sera parfois utile de partir du programme réalisé avec les *
 
 Vous devrez vous familiariser avec les instructions en python spécifiques au robot marqueen.
 
-> Téléchargez le document [marqueen.py](/scripts/robot/marqueen.py) et complétez le avec les instructions python des différents blocs.
+> Téléchargez le document [maqueen.py](/scripts/robot/marqueen.py) et complétez le avec les instructions python des différents blocs.
 
 *Certaines commandes necessitent la declaration de fonctions, et occupent plusieurs lignes d'instructions.*
 
@@ -135,13 +135,15 @@ Pour programmer les deplacements du robot indépendemment du marquage au sol, il
 
 {{< img src="../images/quadrillage.png" >}}
 
-Le [programme suivant](/scripts/robot/robot_marqueen_5.py) montre un exemple de fonction utile pour *avancer d'une case*.
+Le [programme suivant](/scripts/robot/robot_marqueen_5.py) montre un exemple de script pour *avancer d'une case*, et réaliser une mesure de distance (capteur US).
 
 Les paramètres doivent être ajustés dans le script python (blocs inopérants pour ajustements).
 
 La longueur du deplacement dépend de la durée d'attente  `utime.sleep_ms(int(15e-2/speed_mps*1000))` dans la fonction `maqueen_moveWithSquare`.
 
 De la même manière, il sera utile de calibrer l'angle de rotation lors de la commande de pivot à droite ou à gauche.
+
+> Créer le programme qui permet au robot de suivre le parcours proposé.
 
 ## Défi 4:  Enregister des données
 L'enregistrement de données peut être utile pour calibrer les capteurs du robot.

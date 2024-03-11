@@ -105,7 +105,8 @@ Cet exercice traite du calcul de la somme d’un arbre binaire. Cette somme cons
 
 L’arbre utilisé dans les parties A et B est le suivant :
 
-{{< img src="" caption="314 × 252" >}}
+{{< img src="../images/page3_3.png" caption="314 × 252" >}}
+
 ## Partie A : Parcours d’un arbre
 ## Question 1
 Donner la somme de l’arbre précédent. Justifier la réponse en explicitant le calcul qui a permis de l’obtenir.
@@ -113,7 +114,7 @@ Donner la somme de l’arbre précédent. Justifier la réponse en explicitant l
 ## Question 2
 Indiquer la lettre correspondante aux noms ‘racine’, ‘feuille’, ‘nœud’, ‘SAG’ (Sous Arbre Gauche) et ‘SAD’ (Sous Arbre Droit). Chaque lettre **A, B, C, D** et **E** devra être utilisée une seule fois.
 
-{{< img src="" caption="Arbre avec les lettres à associer - 578 × 310" >}}
+{{< img src="../images/page3_4.png" caption="Arbre avec les lettres à associer - 578 × 310" >}}
 
 ## Question 3
 Parmi les quatre propositions A, B, C et D ci-dessous, donnant un parcours en
@@ -165,7 +166,7 @@ indépendants.
 L’arbre présenté dans le problème peut être décomposé en racine et sous
 arbres : 
 
-{{< img src="" caption="376 × 258" >}}
+{{< img src="../images/page3_5.png" caption="376 × 258" >}}
 Indiquer dans l’esprit de ‘diviser pour régner’ l’égalité donnant la somme d’un arbre en fonction de la somme des sous arbres et de la valeur numérique de la racine. 
 
 ## Question 8
@@ -189,7 +190,7 @@ Dans cet exercice, la **taille** d’un arbre est le nombre de nœuds qu’il co
 ## Question 1
 On considère l’arbre binaire représenté ci-dessous:
 
-{{< img src="" caption="Figure 1 - 390 × 370" >}}
+{{< img src="../images/page3_6.png" caption="Figure 1 - 390 × 370" >}}
 
 
 A.  Donner la taille de cet arbre.
@@ -218,7 +219,9 @@ sur la copie la lettre correspondant à celle qui construit et
 stocke dans la variable abr l’arbre représenté ci-contre.
 
 (A) `abr=Noeud(Noeud(Noeud(None,13,None),15,None),21,None)`
+
 (B) `abr=Noeud(None,13,Noeud(Noeud(None,15,None),21,None))`
+
 (C) `abr=Noeud(Noeud(None,13,None),15,Noeud(None,21,None))`
 
 B.  Recopier et compléter la ligne 7 du code de la fonction `ins` ci-dessous qui prend en paramètres une valeur `v` et un arbre binaire de recherche `abr` et qui renvoie l’arbre obtenu suite à l’insertion de la valeur `v` dans l’arbre `abr`. Les lignes 8 et 9 permettent de ne pas insérer la valeur `v` si celle-ci est déjà présente dans `abr`. 
