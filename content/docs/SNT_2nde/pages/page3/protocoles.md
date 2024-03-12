@@ -93,6 +93,8 @@ Cette partie sera développée en Term NSI.
 **TTL**: Le protocole prend en compte le *time to live* (TTL), une valeur numerique du datagramme (couche reseau), qui diminue d'une unité à chaque saut (routeur). Lorsque ce TTL arrive à zero, alors que le paquet n'est pas parvenu à destination, celui-ci est détruit. On verra que dans le protocole TCP, cette eventualité est prévue. Un compte à rebours du côté de la machine emettrice va provoquer la ré expedition du paquet lorsque ce compteur arrive à 0, et qu'aucun accusé de reception n'est parvenu.
 
 ## Le protocole TCP
+L'hôte source va créer une session de connexion avec l'hôte distant (protocole HTTP). Une fois la connexion établie, l'échange de données commence. C'est le protocole TCP qui va s'assurer que tous les paquets sont bien transmis. Cette connexion est maintenue jusqu'à ce qu'elle soit fermée. [voir sur it-connect.fr](https://www.it-connect.fr/les-protocoles-tcp-et-udp-pour-les-debutants/)
+
 > Le protocole TCP permet d'assurer le transport des données de sorte que celles-ci arrivent complètes, sans trop occuper les lignes du reseau. C'est le protocole de la **couche 4**. A ce niveau de la couche de transport, l'identifiant ajouté au *message* est le **numéro de port** de l'application qui est à l'origine du message.
 
 
@@ -107,11 +109,25 @@ La fiabilité est obtenue par un mécanisme d'acquittement des segments :
 * Chaque segment possède un numéro de séquence SEQ: c'est le numéro du premier octet envoyé. C'est grâce à ce numero que les segments peuvent être remis dans l'ordre.
 * Les acquittements sont identifiés par un marqueur ACK: c'est le numéro du prochain octet attendu par la machine.
 * Le concept même d'acquittement impose des notions de délai.
-Par exemple, quel est le délai au delà duquel un segment non acquitté doit être réémis
+Par exemple, quel est le délai au delà duquel un segment non acquitté doit être réémis (typiquement 30' à 1min).
+
+TCP effectue une tâche importante: le **multiplexage/demultiplexage**: c'est à dire, faire transiter sur une même ligne, en **série**, des données qui sont à priori en **parallèle**, non hierachisées (une page web constituée de différents fragments, ...). Ces données sont alors **reconstruites**, grâce au **format** utilisé pour leur transport. Voir le detail du [modèle OSI](/docs/SNT_2nde/pages/page3/modele_OSI/)
 
 
 {{< img src="../images/TCP2.png" alt="TCP2" caption="TCP2" >}}
 *TCP permet ainsi d'être un protocole fiable sans perte de paquets, qui permet à 2 machines de communiquer entre elles (et seulement 2)*
+
+> La communication serveur-client est-elle toujours synchrone?
+
+Cette attente de l'acquittement est pénalisante, sauf si on utilise un mécanisme de « fenêtres glissantes», comme le suggère la figure suivante:
+
+{{< img src="../images/fen_gli.png" alt="fenetre glissante" caption="laissus.developpez.com" >}}
+
+image issue de la page [laissus.developpez.com introduction tcp/ip](https://laissus.developpez.com/tutoriels/cours-introduction-tcp-ip/?page=page_7)
+
+Les fragments peuvent être envoyés quasi simultanément, sans attente de l'acquittement. La couche TCP du destinataire aura toute l'information pour le replacer dans le bon ordre. À chaque paquet est associée une horloge. Si l'un des paquets n'est pas acquité dans les temps, il est réémis
+
+Avec ce principe, la bande passante du réseau est beaucoup mieux employée.
 
 ## Protocoles DNS, HTTP, ...
 > C'est un protocole de la couche Application. Le sujet a déja été traité [ici](http://localhost:1313/docs/SNT_2nde/pages/page3/circulation/#dns-ip-et-url)
@@ -282,6 +298,7 @@ D- Un préfixe d'adresse.
 
 # Liens
 * [Retour vers la page Reseaux](../circulation/) 
+* [modele OSI, mise en forme des données](/docs/SNT_2nde/pages/page3/modele_OSI/)
 * [Sécurité des communications (1ere NSI)](../securite/index.html)
 * [TP simulation d'un reseau](../TP_reseau/index.html)
 

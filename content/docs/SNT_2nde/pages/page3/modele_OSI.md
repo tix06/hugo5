@@ -3,7 +3,10 @@ title: modele OSI
 ---
 
 # Le modèle OSI
-Introduction: voir [page SNT](/docs/SNT_2nde/pages/page3/fonctionnement/)
+Introduction: 
+
+* voir [page SNT](/docs/SNT_2nde/pages/page3/fonctionnement/)
+* [Les protocoles internet](/docs/SNT_2nde/pages/page3/protocoles/)
 
 {{< img src="../images/video_OSI.png" link="https://youtu.be/26jazyc7VNk" caption="VIDEO: modèles OSI et TCP IP" >}}
 *source: [comprendre les modèles OSI et TCP/IP - chaine Cookie connecté](https://www.youtube.com/watch?v=26jazyc7VNk)*
