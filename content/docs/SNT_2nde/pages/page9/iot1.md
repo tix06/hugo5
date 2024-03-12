@@ -8,7 +8,7 @@ Title: IOT
 
 Le terme robot est issu des langues slaves et formé à partir du radical rabot, rabota (работа en russe) qui signifie travail, corvée que l'on retrouve dans le mot Rab (раб), **esclave** en russe. [wiki](https://fr.wikipedia.org/wiki/Robot).
 
-Les robots sont utilisés pour des tâches qu'ils remplissent mieux que les umains. Il peut s'agir d'un travail répétitif, d'une tâche de haute précision, ou d'une activité dans un milieu hostile.
+Les robots sont utilisés pour des tâches qu'ils remplissent mieux que les humains. Il peut s'agir d'un travail répétitif, d'une tâche de haute précision, ou d'une activité dans un milieu hostile.
 
 *Dans l'antiquité: Le mythe de Pygmalion racontait déjà comment la statue Galatée devint vivante et s’affranchit de son créateur afin de partir à la conquête du monde des hommes.*
 

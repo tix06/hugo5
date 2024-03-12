@@ -141,24 +141,28 @@ Pour la suite, il sera parfois utile de partir du programme réalisé avec les *
 
 Vous devrez vous familiariser avec les instructions en python spécifiques au robot marqueen.
 
+> Editeur [Vittascience.com](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience). Placer l'une des commandes du robot dans le bloc "Au demarrage". Et lire le script python généré.
+
 > Téléchargez le document [maqueen.py](/scripts/robot/marqueen.py) et complétez le avec les instructions python des différents blocs.
 
 *Certaines commandes necessitent la declaration de fonctions, et occupent plusieurs lignes d'instructions.*
 
 ## Défi n°3: Avancer d'une case
-Pour programmer les deplacements du robot indépendemment du marquage au sol, il sera necessaire de calibrer la longueur de ses deplacements.
+Pour programmer les deplacements du robot indépendemment du marquage au sol, il sera necessaire de **calibrer** la longueur de ses deplacements.
 
 {{< img src="../images/quadrillage.png" >}}
 
-Le [programme suivant](/scripts/robot/robot_marqueen_5.py) montre un exemple de script pour *avancer d'une case*, et réaliser une mesure de distance (capteur US).
+> Ouvrir un nouveau projet et mettre dans le bloc "Au demarrage", l'instruction "avancer d'une case". La longueur parcourue correspond-elle à la dimension d'une case sur le support? 
 
-Les paramètres doivent être ajustés dans le script python (blocs inopérants pour ajustements).
+Les paramètres doivent être ajustés dans le script python (blocs inopérants pour ajustements). 
 
 La longueur du deplacement dépend de la durée d'attente  `utime.sleep_ms(int(15e-2/speed_mps*1000))` dans la fonction `maqueen_moveWithSquare`.
 
+> Passer en mode programmation python. Ne plus revenir sur l'interface avec les blocs. Modifier le script python et tester avec le robot. Quelle(s) modification(s) lui permet(ent) d'avancer d'une case sur le support?
+
 De la même manière, il sera utile de calibrer l'angle de rotation lors de la commande de pivot à droite ou à gauche.
 
-> Créer le programme qui permet au robot de suivre le parcours proposé.
+> Créer le programme qui permet au robot de suivre le parcours proposé sur l'image plus haut.
 
 ## Défi 4:  Enregister des données
 L'enregistrement de données peut être utile pour calibrer les capteurs du robot.
@@ -251,6 +255,7 @@ Avec quelques extensions, les actions du robot peuvent être complexifiées (det
 * Course, tour de piste [site ac-nantes.fr](https://www.pedagogie.ac-nantes.fr/medias/fichier/challenge-robotmaqueen_1656062635314-pdf?ID_FICHE=1424110252680&INLINE=FALSE)
 * Documentation [site ac-normandie.fr](https://nsi-snt.ac-normandie.fr/IMG/pdf/le_robot_maqueen.pdf)
 * Documentation du robot Marqueen sur le site de l'[ac-normandie.fr](https://nsi-snt.ac-normandie.fr/IMG/pdf/le_robot_maqueen.pdf) 
+* Le [programme suivant](/scripts/robot/robot_marqueen_5.py) montre un exemple de script pour *avancer d'une case*, et réaliser une mesure de distance (capteur US).
 
 
 
