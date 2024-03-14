@@ -174,7 +174,9 @@ $$T(n) = T(\tfrac{n}{2}) + n$$
 ## Complexité du tri fusion
 Le tri fusion est un tri qui est **optimal** du point de vue de la complexité temporelle: il est de l'ordre O(N*log(N)). On ne peut pas trouver un algorithme plus efficace en temps.
 
-Par contre, cet algorithme demande beaucoup de ressources *spatiales*, du fait de la construction de nombreuses sous-listes pour réaliser le tri. Ce n'est pas un *tri en place*, comme on a pu le voir avec les algorithmes essentiels vus en classe de 1ere NSI.
+*Analyse simplifée:* A chaque étape de la remontée, lors de l'interclassement, si l'on compte le nombre d'affectations: Il y a n affectations (n éléments partagés en 2 sous listes, à placer dans une nouvelle liste). Le nombre d'étapes est egal à $log_2(n)$. Ce qui fait un nombre d'opérations proportionnel à $n \times log_2(n)$.
+
+Remarque: l'inconvenient majeur de cet algorithme est qu'il demande beaucoup de ressources *spatiales*, du fait de la construction de nombreuses sous-listes pour réaliser le tri. Ce n'est pas un *tri en place*, comme on a pu le voir avec les algorithmes essentiels vus en classe de 1ere NSI.
 
 # Liens
 * page wikipedia [https://fr.wikipedia.org/wiki/Diviser_pour_régner_(informatique)](https://fr.wikipedia.org/wiki/Diviser_pour_régner_(informatique))

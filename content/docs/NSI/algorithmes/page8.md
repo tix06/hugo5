@@ -9,14 +9,34 @@ Ce cours comporte plusieurs parties
 * [principaux algorithmes de tri](/docs/NSI/algorithmes/page8/)
 * méthodes [Diviser pour regner](/docs/NSI/algorithmes/page5/)
 
-
 # Algorithmes de tri
-Les activités de tri sont très fréquentes en informatique. Dans un projet informatique, on préfère qu'un programme pass du temps à trier les données plutôt qu'à les rechercher.
+Les activités de tri sont très fréquentes en informatique. Dans un projet informatique, on préfère qu'un programme passer du temps à trier les données plutôt qu'à les rechercher.
 
-On presente ici TROIS algorithmes de tri. Il y en a d'autres.
+On presente dans ce chapitre TROIS algorithmes de tri. Mais il en existe de très nombreux, dont l'efficacité diffère grandement. Voici un aperçu de la durée comparée de quelques [algorithmes de tri](https://toptal.com/developers/sorting-algorithms), selon la nature de la liste à trier:
 
-## Le tri par insertion (ou tri simple)
-### Principe
+{{< img src="../images/sort_comp.png" link="https://toptal.com/developers/sorting-algorithms" caption="comparatif de performance de quelques algorithmes de tri" >}}
+
+| Nombre d’éléments « n » | Nombre d’opérations pour un tri en « O(n²)  » |   Durée pour un tri en « O(n²) » |
+|--- |--- |--- |
+|10 | 100 |100 ns|
+|100| 10 000 | 10 us|
+|1 000 |  1 000 000 |  1 ms|
+|10 000 | 100 000 000| 100 ms|
+|100 000 |10 000 000 000 | 10 s|
+|1 000 000 |  1 000 000 000 000  | 16 min 40 s|
+|10 000 000  |100 000 000 000 000 |27 heures|
+|100 000 000 |10 000 000 000 000 000 | 115 jours|
+|1 000 000 000 |  1 000 000 000 000 000 000  | 31 ans|
+| 8 000 000 000 (population mondiale) | 64 000 000 000 000 000 000 | 1984 ans |
+
+Pour un algorithme de complexité O(n.log(n)), la durée de tri d'un ensemble de 8 000 000 000 valeurs prendrait 4 min!
+
+*tableau issu de [podcastscience.fm](https://www.podcastscience.fm/dossiers/2014/09/04/les-tris/)*
+
+
+
+# Le tri par insertion
+## Principe
 Pour cet algorithme, trier, c’est déplacer des éléments, et y insérer l’élément rangé, depuis le debut déjà trié de la liste, jusqu’à la fin. C'est un peu la manière avec laquelle on range les cartes à jouer au debut d'une partie:
 
 {{< img src="../images/jeu_cartes.jpeg" caption="main d'une partie de cartes" >}}
@@ -26,6 +46,12 @@ Pour cet algorithme, trier, c’est déplacer des éléments, et y insérer l’
 * On décale tous les éléments i, depuis le rang j jusqu’à l’élément dont la valeur est inférieure à celle de j (et donc de temp), en redescendant.
 
 {{< img src="/images/video.png" link="https://www.youtube.com/watch?v=3QwCnoa_6FY"  caption="animation sur le tri par insertion" >}}
+
+*Sur l'animation:* on devine le script de la boucle interne:
+
+1. Dans la partie non triée, selectionner la premiere carte. La reserver en laissant la place libre
+2. faire glisser les cartes de la partie gauche (triée) vers la droite pour laiser la place libre à la carte à insérer (correspond à un copier-coller des cartes i-1 => i)
+3. insérer la carte réservée à sa place.
 
 ```python
 def tri1(L):
@@ -39,7 +65,7 @@ def tri1(L):
     return L
 ```
 
-### Preuve de correction
+## Preuve de correction
 Montrons qu'à la fin d'un tour de boucle, les valeurs de la liste sont triées jusqu'au rang j inclus:
 
 * au début, j vaut 0. Il ne se passe rien.
@@ -67,8 +93,8 @@ On verifie que `while` quitte pour i = 0 et que la clé `temp` est bien inséré
 
 *Conclusion:* Lorsque la boucle `for` execute son dernier tour, j designe la dernière case, et on a bien montré que la liste sera bien triée jusqu'à cette case. Donc la liste est *entièrement triée*.
 
-### Complexité
-#### Calcul du nombre d'opération
+## Complexité
+### Calcul du nombre d'opération
 Supposons que la taille de la liste est **n**.
 
 Les opérations significatives sont:
@@ -90,7 +116,7 @@ $$T(n) = 3n^2$$
 
 La complexité est donc $O(n^2)$. (coût quadratique). Et si la liste est déjà triée, le nombre d'opérations est quand même T(n) = 5.n (coût linéaire).
 
-#### Evaluation rapide de la complexité
+### Evaluation rapide de la complexité
 On peut compter le nombre de déplacaments / affectations réalisés pour trier les valeurs de la liste, en fonction de la valeur j:
 
 | j | nombre d'opérations dans le pire des cas |
@@ -106,8 +132,8 @@ La somme de cette série arithmétique est alors $S_n = (n+4)\times(n-1)$
 
 Soit $O(n^2)$ pour la complexité asymptotique.
 
-## Le tri par selection
-### Tri par selection du plus petit élement
+# Le tri par selection
+## Tri par selection du plus petit élement
 Sur un tableau de n éléments (numérotés de 0 à n-1), le principe du tri par sélection est le suivant :
 
 * rechercher le plus petit élément du tableau, et l'échanger avec l'élément d'indice 0 ;
@@ -116,13 +142,20 @@ Sur un tableau de n éléments (numérotés de 0 à n-1), le principe du tri par
 
 {{< img src="/images/video.png" link="https://www.youtube.com/watch?v=qpeeRU_K90k"  caption="animation sur le tri par selection" >}}
 
+*Sur l'animation:* on devine le script de la boucle interne:
+
+1. On *selectionne la premiere carte* de la partie non triée
+2. On *observe* la première carte à sa droite
+3. Si la carte *marquée* est *inférieure* à la carte du debut, on *marque* la nouvelle carte (et on retire la marque de la precedente marquée)
+4. Une fois arrivée au bout de la liste: si la carte marquée est différente de la carte selectionnée (donc inférieure), on *permute* les 2 cartes.
+
 ```python
 def select(T,debut) :
-    indiceDuMin=debut
-    for k in range(debut+1,len(T)) :
-        if T[k]< T[indiceDuMin] :
-            indiceDuMin=k
-    if indiceDuMin !=debut :
+    indiceDuMin=debut # (1)
+    for k in range(debut+1,len(T)) : # (2)
+        if T[k]< T[indiceDuMin] : 
+            indiceDuMin=k # (3)
+    if indiceDuMin !=debut : # (4)
         T[debut],T[indiceDuMin]=T[indiceDuMin],T[debut]
 
         
@@ -132,12 +165,12 @@ def tri2(T):
     return T
 ```
 
-### Tri à l'aide d'une clé
+## TP: Tri à l'aide d'une clé
 On peut réaliser un tri à l'aide d'une **clé**. Les objets (les lignes d'un fichier *csv*) contiennent ainsi des valeurs sur plusieurs colonnes. On peut choisir l'une de ces colonnes pour réaliser le tri.
 
-On prendra pour exemple le fichier du classement UEFA des équipes feminines sur plusieurs années:
+On prendra pour exemple le fichier du classement UEFA des équipes feminines sur plusieurs années. Le tableau est consultable à la page de l'[UEFA.com](https://fr.uefa.com/nationalassociations/uefarankings/womensclub/#/yr/2022)
 
-* fichier *[classement_uefa.csv](/pdf/NSI/classement_uefa.csv)* à telecharger
+* fichier csv *[classement_uefa.csv](/pdf/NSI/classement_uefa.csv)* à telecharger
 
 * Programme pour lire le fichier csv:
 
@@ -148,7 +181,7 @@ with open('datas/classement_uefa.csv', newline='') as csvfile:
     teams = []
     for row in spamreader:
         s = ".".join(row) 
-        # pour joindre les chaines entre "" et conserver le . de separation
+        # instruction necessaire pour le format de la derniere valeur decimale
         # .join(row) créé une chaine de caractères à partir de la liste
         s = list(s.split(";"))
         # on recréé une liste
@@ -158,7 +191,7 @@ del(teams[0])
 print(teams)
 ```
 
-La premiere ligne du tableau contient:
+On supprime la premiere ligne du tableau qui contient:
 
 ```
 ['\ufeffClub', 'Pays', '16/17', '17/18', '18/19', '19/20', '20/21', '\xa0pts\xa0', '\xa0Ass\xa0']
@@ -174,6 +207,8 @@ L'execution du programme affiche au depart les équipes classées par ordre alph
 ['Apollon Ladies FC', 'CYP', '4', '3', '-', '2', '0', '9', '4.62']
 ...
 ```
+
+*Remarque sur la valeur decimale (dernière colonne): Le classement par coefficient des associations ou des pays prend en compte les résultats de tous les clubs d'une association. Il est utilisé pour déterminer le nombre de clubs que pourra engager une association dans les compétitions de l'UEFA les saisons suivantes. Cette valeur n'est pas retenue pour notre classement dans cet exercice.*
 
 On veut adapter l'agorithme de tri par selection pour classer les equipes selon une *clé*, qui sera l'indice de la colonne contenant les points UEFA de l'équipe.
 
@@ -208,7 +243,7 @@ Vous devriez obtenir:
 
 
 
-### Tri par selection du plus grand élément
+## Tri par selection du plus grand élément
 Dans cette variante du tri par selection, la liste est triée depuis la droite vers la gauche:
 
 ```python
@@ -230,7 +265,7 @@ def select(T,debut) :
         T[debut],T[indiceDuMax]=T[indiceDuMax],T[debut]
 ```
 
-### Exemple
+## Exemple
 Soit la liste à trier ['T', 'I', 'M', 'O', 'L', 'E', 'O', 'N'] <br>
 La liste prend successivement les valeurs:
 
@@ -243,15 +278,28 @@ La liste prend successivement les valeurs:
 | 4 | ['E', 'I', 'M', 'L', 'N', 'O', 'O', 'T'] | 3 |
 | 5 | ['E', 'I', 'M', 'L', 'N', 'O', 'O', 'T'] | 2 |
 
-### Complexité
+## Complexité
 On voit que le nombre d'operations de comparaisons est constant quelle que soit la liste à trier. Alors que l'affectation est aleatoire, et depend de la position des elements. On decide donc de compter le nombre de comparaisons. 
 
 Pour l'exemple ci-dessus, ce nombre T(8) = 2 + 3 +' 4 + 5 + 6 + 7 = 27
 
-De manière plus générale: $T(n) = \tfrac{(n \times (n-1)}{2}$, ce qui fait une complexité $O(n^2)$
+De manière plus générale: $T(n) = \tfrac{n \times (n-1)}{2}$, ce qui fait une complexité $O(n^2)$
 
 
-## Le tri fusion
+# Le tri fusion
+## Principe
+Le tri pas fusion procède en 2 étapes distinctes. Il s'agit d'un algorithme de type récursif. Au cours de la descente, la liste de valeurs non triées est divisée en 2 parties égales (ou presque) à chaque appel recursif. Puis, lors de la remontée, ces listes, triées sont interclassées, comme vu sur l'animation suivante:
+
+{{< img src="/images/video.png" link="https://www.youtube.com/watch?v=A4uGnjEQsN0"  caption="animation sur l'interclassement de 2 listes triées" >}}
+
+C'est donc sur la remontée que l'on range les éléments par valeur croissante.
+
+*Sur l'animation:* on devine le script de la fonction d'interclassement:
+
+1. comparer les valeurs des bords gauche de chaque sous liste triée
+2. ajouter le plus petit élément des 2 sous listes dans une troisieme liste
+3. déplacer le bord gauche de la sous liste dont on a selectionné l'élément
+
 L'algorithme est naturellement décrit de façon récursive.
 
 * Si le tableau n'a qu'un élément, il est déjà trié.
@@ -292,5 +340,8 @@ Le tri fusion est traité en détail au chapitre [diviser pour regner](/docs/NSI
 
 # Liens
 
-<ul>
-  <li>Cours <i>Diviser pour Regner</i> :{{< a link="/docs/NSI/algorithmes/page5/" caption="Cours " >}}  <li>TP <i>Comparaison de divers algorithmes de tri</i> :{{< a link="/pdf/NSI/algo4_algorithmes_tri.ipynb" caption="TP " >}}  <li>version{{< a link="https://drive.google.com/file/d/1TFnknrNxeMdtlzIonrdyw6iyexj3mDC1/view?usp=sharing" caption="version " >}}  <li>TP <i>variations sur le tri par selection</i>:{{< a link="https://colab.research.google.com/drive/1qUHTnjr4jxbKXsbwu6Af2USlJuSB7U4W?usp=sharing" caption="TP " >}}</ul>
+ 
+* TP1: Comparaison de l'efficacité de divers algorithmes de tri:{{< a link="/pdf/NSI/algo4_algorithmes_tri.ipynb" caption="notebook a telecharger " >}}  
+* TP1: version{{< a link="https://drive.google.com/file/d/1TFnknrNxeMdtlzIonrdyw6iyexj3mDC1/view?usp=sharing" caption="Colab du notebook" >}}  
+* TP2: variations sur le tri par selection, indice UEFA:{{< a link="https://colab.research.google.com/drive/1qUHTnjr4jxbKXsbwu6Af2USlJuSB7U4W?usp=sharing" caption="version colab" >}}
+* Suite: Diviser pour Regner:{{< a link="/docs/NSI/algorithmes/page5/" caption="Cours " >}} 
