@@ -40,7 +40,7 @@ Représentons l’arbre des appels pour la liste de 15 joueuses numérotées 
 # Exponentiation
 L'exponentiation consiste à trouver une méthode pour calculer x à la puissance n, SANS utiliser l'opérateur *puissance*. L'idée est de se rappocher de l'algorithme utilisé par le processeur d'un ordinateur, qui n'utilise que les 3 opérateurs de base pour effectuer les calculs (+,-,*).
 
-## Programme itératif
+## Programme itératif $x^n$
 ```python
 def exp1(n,x) : 
   """
@@ -67,7 +67,7 @@ def exp1(n,x) :
   </div>
 </div>
 
-## Programme récursif
+## Programme récursif $x^n$
 ```python
 def exp2(n,x):
     """
@@ -81,7 +81,9 @@ def exp2(n,x):
 
 On pourrait montrer que la complexité est aussi O(n).
 
-## Exponentiation rapide : application de la méthode diviser pour regner
+## Exponentiation rapide $x^n$ 
+**application de la méthode diviser pour regner**
+
 Comme de nombreux algorithmes utilisant cette méthode, celui-ci fait des appels recursifs. Mais à la différence du précédent, l'appel recursif se fait avec un paramètre que l'on divise par 2 (le paramètre n). C'est ce qui fait que le nombre d'appels récursifs est plus réduit.
 On retrouve l'étape 3 évoquée en introduction (la combinaison des sous problèmes) lorsque l'on réalise l'opération : `return y*y` ou bien `return x*y*y`.
 

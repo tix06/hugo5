@@ -28,21 +28,21 @@ Avec la liste suivante :
 mois = ['janvier','fevrier','mars','avril','mai','juin','juillet','aout']
 ```
 
-Utiliser la cellule suivante pour compléter la liste des mois de l'année (utiliser l'une des méthodes de liste)
+1. compléter la liste des mois de l'année (utiliser l'une des méthodes de liste)
 
 
 ```python
 
 ```
 
-Quelle instruction, utilisant un indice numerique va retourner le mois 'juin' ?
+2. Quelle instruction, utilisant un indice numerique va retourner le mois 'juin' ?
 
 
 ```python
 
 ```
 
-Quelle instruction permettra de retourner la liste suivante, découpée à partir de celle `mois`? :
+3. Quelle instruction permettra de retourner la liste suivante, découpée à partir de celle `mois`? :
 
 ```
 ['juillet','aout']
@@ -53,7 +53,7 @@ Quelle instruction permettra de retourner la liste suivante, découpée à parti
 
 ```
 
-Utiliser une expression formatée utilisant `mois` pour afficher le texte : 
+4. Utiliser une expression formatée utilisant `mois` pour afficher le texte : 
 
 *Le mois de juin est celui du début de l'été.*  
 
@@ -87,7 +87,7 @@ Avec le dictionnaire :
 ```
 dico = {1:2,3:{4:5}}
 ```
-Utiliser la cellule suivante pour trouver l'expression qui aura pour valeur : 5
+1. Trouver l'expression qui aura pour valeur : 5
 
 
 ```python
@@ -98,7 +98,8 @@ Même exercice, mais on dispose maintenant du dictionnaire :
 ```
 dico = {'1':'2','3':{'4':'5'}}`
 ```
-Utiliser la cellule suivante pour trouver l'expression qui aura pour valeur, **l'entier** 5
+
+2. Trouver l'expression qui aura pour valeur, **l'entier** 5
 
 
 ```python
@@ -109,7 +110,8 @@ On dispose d'un dictionnaire de nom `laby` contenant les données suivantes :
 ```
 laby = {1:{2:{3:9,5:6},7:8}}
 ```
-Ecrire une série d'instructions qui permettent de parcourir les valeurs jusqu'à renvoyer la valeur 9.
+
+3. Ecrire une série d'instructions qui permettent de parcourir les valeurs jusqu'à renvoyer la valeur 9.
 
 
 ```python
@@ -149,12 +151,17 @@ quel est votre choix (1,..9) ? => 9
 vous avez gagné `
 ```
 
+{{< img src="../img/xyzzy1.GIF" caption="Xyzzy Blast, premier jeu de rôle sur ordinateur" >}}
+
+
 # Extension du projet (term NSI)
 Ce mini projet peut être étendu. On pourra utiliser des **classes** pour la gestion du (des) scenario(scenatii), du (des) joueur(s). 
 
 On pourra également proposer une **interface** qui améliorera le confort de jeu.
 
 Enfin, on pourra utiliser des **fichiers textes** (voire une **base de données**) pour une meilleure gestion des contenus, ou pour sauvegarder des éléments du jeu.
+
+{{< img src="../img/xyzzy.GIF" caption="Xyzzy Blast, Computer History Museum" >}}
 
 # Aides
 ## lire/ ecrire dans un fichier texte
