@@ -13,21 +13,34 @@ Ce TP a pour but d'illustrer la relation Client / Serveur lors de la connexion s
 
 Le schéma ci-dessus décrit la situation où un client demande une page web à un serveur.
 
-Dans une relation Client / Serveur sans authentification, les opérations se passent dans l'ordre suivant:
+Le client demande une page web au serveur en saisissant directement l'adresse (l'**URL**) dans la barre du navigateur.
 
+{{< img src="../images/form_url.png" >}}
+
+Ou bien, en cliquant sur un **lien**.
+
+{{< img src="../images/form_lien.png" >}}
+
+Dans une relation Client / Serveur sans identification du client, les opérations se passent dans l'ordre suivant:
 
 
 1. Le client saisit l'adresse (URL) dans son navigateur. 
-2. Le navigateur met en forme la requête à partir des renseignements contenus dans l'URL ou bien dans la page web. 
-3. L'ordinateur client envoie la requête au serveur. 
-4. Le serveur repond à la requête en retournant le code html de la page.
-5. Le navigateur du client affiche la page web.
+2. Le navigateur utilise l'URL pour envoyer la requête au serveur. 
+3. Le serveur repond à la requête en retournant le code html de la page.
+4. Le navigateur du client affiche la page web.
 
 Dans de nombreux cas, le client ne peut acceder à la ressource que s'il s'identifie au préalable (site de e-commerce, banque, ENT...)
 
 {{< img src="../images/sarenza.png" caption="un site de e-commerce" >}}
 
-> **Qu a:** Lorsque le client doit s'authentifier sur le serveur, à l'aide d'un formulaire de connexion, quelles autres étapes sont necessaires dans le processus décrit ci-dessus? Placer ces étapes dans l'ordre.
+> **Qu a:** Lorsque le client doit s'authentifier sur le serveur, à l'aide d'un formulaire de connexion, d'autres étapes sont necessaires dans le processus décrit ci-dessus. Placer ces étapes dans l'ordre.
+
+- Le serveur vérifie la bonne identité du client.
+- Le client clique sur la page "s'identifier / login / compte".
+- Le serveur démarre une session avec le client identifié.
+- Le client envoie son identifiant et son mot de passe à l'aide du formulaire.
+- Le serveur lui retourne le formulaire de connexion.
+- Le client ferme la session.
 
 ### Le formulaire en ligne
 Il est conseillé d'utiliser le navigateur **MOZILLA** pour la clarté des renseignements fournis par les outils réseau.
@@ -42,7 +55,9 @@ On utilisera le formulaire à la page [http://resaonline.la-bo.xyz](http://resao
 * méthode POST
 * authentification par cookie
 
-Normalement, c'est le programmeur du site web qui choisit la méthode, pas le client. Mais ici, il s'agit d'un formulaire *pédagogique*.
+{{< img src="../images/form_nav.png" >}}
+
+Normalement, c'est le programmeur du site web qui choisit la méthode, pas le client. Mais ici, il s'agit d'un formulaire *pédagogique*, permettant de tester chacune des méthodes.
 
 ### Lecture d'une URL
 L'URL est l'adresse qui est placée dans la *barre d'adresse* du navigateur. En cliquant sur les boutons de navigation du bandeau, GET, POST et Cookie:

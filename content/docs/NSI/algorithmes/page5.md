@@ -133,7 +133,7 @@ Le tri fusion est un autre [algorithme de tri](/docs/NSI/algorithmes/page8/). Ce
 
 Les étapes 1 et 2 de la méthode *Diviser pour Regner* consistent à diviser la liste en 2 sous-listes, de manière recursive, jusqu'à obtenir des listes de 1 élément.
 
-L'étape 3, enfin consiste à **interclasser** les sous-listes deux à deux.
+
 
 Le tri fusion est réalisé par la fonction `fusion` suivante:
 
@@ -147,6 +147,23 @@ def fusion(L):
     return interclassement(gauche,droite)
 ```
 
+L'étape 3, enfin consiste à **interclasser** les sous-listes deux à deux.
+
+```python
+def interclassement(L1,L2):
+    lN = []
+    n1, n2 = len(L1),len(L2)
+    i1, i2 = 0,0
+    while i1<n1 and i2<n2:
+        if L1[i1] <= L2[i2]:
+            lN.append(L1[i1])
+            i1 += 1
+        else:
+            lN.append(L2[i2])
+            i2 += 1
+    return lN + L1[i1:] + L2[i2:]
+```
+
 La fonction `fusion` ressemble à celle du *parcours récursif* d'un arbre dans lequel, pour un noeud contenant une liste L: 
 
 * le fils gauche est la sous-liste de gauche (la première moitié de L)
@@ -157,7 +174,7 @@ Le traitement se faisant APRES les 2 appels recursifs (gauche puis droite), le p
 {{< img src="../images/trifusion0.png" alt="tri fusion" caption="parcours de l'arbre pour le tri fusion" >}}
 ## Etude du tri fusion sur la liste L = [1,10,8,4,3,6]
 
-> **Question 1:** <i>Compléter la séquence avec l'ordre des branches parcourues et les sous-listes à chaque noeud, jusqu'à ce que tout le sous-arbre gauche soit "divisée"</i>.
+> **Question 1:** *Compléter la séquence avec l'ordre des branches parcourues et les sous-listes à chaque noeud, jusqu'à ce que tout le sous-arbre gauche soit "divisée"*.
 
 La **remontée** dans la pile d'appels commence lorsque l'on arrive à une sous-liste d'un seul élément pour *droite*.
 
@@ -176,7 +193,12 @@ $$T(n) = T(\tfrac{n}{2}) + n$$
 ## Complexité du tri fusion
 Le tri fusion est un tri qui est **optimal** du point de vue de la complexité temporelle: il est de l'ordre O(N*log(N)). On ne peut pas trouver un algorithme plus efficace en temps.
 
-*Analyse simplifée:* A chaque étape de la remontée, lors de l'interclassement, si l'on compte le nombre d'affectations: Il y a n affectations (n éléments partagés en 2 sous listes, à placer dans une nouvelle liste). Le nombre d'étapes est egal à $log_2(n)$. Ce qui fait un nombre d'opérations proportionnel à $n \times log_2(n)$.
+*Analyse simplifée:* A chaque étape de la remontée, lors de l'interclassement:
+
+* si l'on compte le nombre d'affectations: Il y a n affectations (n éléments partagés en 2 sous listes, à placer dans une nouvelle liste). Le nombre d'étapes est egal à $log_2(n)$. Ce qui fait un nombre d'opérations proportionnel à $n \times log_2(n)$.
+* Pour le nombre de comparaisons: Ce nombre est inférieur, à chaque étape, au nombre n d'éléments de la liste à trier. Le nombre de comparaisons est donc $< n \times log_2(n)$
+
+On peut donc considérer que le tri fusion a une complexité asymptotique $n \times log_2(n)$
 
 Remarque: l'inconvenient majeur de cet algorithme est qu'il demande beaucoup de ressources *spatiales*, du fait de la construction de nombreuses sous-listes pour réaliser le tri. Ce n'est pas un *tri en place*, comme on a pu le voir avec les algorithmes essentiels vus en classe de 1ere NSI.
 

@@ -165,6 +165,39 @@ def tri2(T):
     return T
 ```
 
+## Tri par selection du plus grand élément
+Dans cette variante du tri par selection, la liste est triée depuis le plus grand élément jusqu'au plus petit.
+
+
+On modifie pour cela la fonction `select`: on remplace les instructions `ndiceDuMin=debut` et `T[k]< T[indiceDuMin]` afin de rechercher la valeur max et non celle min.
+
+```python
+def select(T,debut) :
+    indiceDuMax=debut
+    for k in range(debut+1,len(T)) :
+        if T[k]> T[indiceDuMax] :
+            indiceDuMax=k
+    if indiceDuMax !=debut :
+        T[debut],T[indiceDuMax]=T[indiceDuMax],T[debut]
+```
+
+### Exemple
+Le tri peut aussi se faire à partir du rang des caractéres dans l'alphabet (lexicographique).
+
+Soit la liste à trier ['T', 'I', 'M', 'O', 'L', 'E', 'O', 'N']
+La liste prend successivement les valeurs:
+
+| j | Liste à la fin de `select` | nombre de comparaisons effectuées |
+| --- | --- | --- |
+| 0 | ['T', 'I', 'M', 'O', 'L', 'E', 'O', 'N'] | 7 |
+| 1 | ['T', 'O', 'M', 'I', 'L', 'E', 'O', 'N'] | 6 |
+| 2 | ['T', 'O', 'O', 'I', 'L', 'E', 'M', 'N'] | 5 |
+| 3 | ['T', 'O', 'O', 'N', 'L', 'E', 'M', 'I'] | 4 |
+| 4 | ['T', 'O', 'O', 'N', 'M', 'E', 'L', 'I'] | 3 |
+| 6 | ['T', 'O', 'O', 'N', 'M', 'L', 'E', 'I'] | 2 |
+| 7 | ['T', 'O', 'O', 'N', 'M', 'L', 'I', 'E'] | 1 |
+
+
 ## TP: Tri à l'aide d'une clé
 On peut réaliser un tri à l'aide d'une **clé**. Les objets (les lignes d'un fichier *csv*) contiennent ainsi des valeurs sur plusieurs colonnes. On peut choisir l'une de ces colonnes pour réaliser le tri.
 
@@ -172,7 +205,49 @@ On prendra pour exemple le fichier du classement UEFA des équipes feminines sur
 
 * fichier csv *[classement_uefa.csv](/pdf/NSI/classement_uefa.csv)* à telecharger
 
-* Programme pour lire le fichier csv:
+> Ci-dessous, le programme minimal pour lire le fichier csv. Testez le à l'aide d'un IDE (Pyzo ou autre):
+
+```python
+import csv
+with open('datas/classement_uefa.csv', newline='') as csvfile:
+    spamreader = csv.reader(csvfile)
+    teams = []
+    for row in spamreader:
+        teams.append(row)
+print(teams[:10])
+```
+
+La premiere ligne contient l'en-tête du tableau. Il faudra supprimer cette premiere ligne. 
+
+```
+['\ufeffClub', 'Pays', '16/17', '17/18', '18/19', '19/20', '20/21', '\xa0pts\xa0', '\xa0Ass\xa0']
+```
+
+De plus, le parametrage de la fonction par defaut decoupe les lignes au niveau des virgules ',':
+
+```
+['AC Sparta Praha;CZE;3;9;3;3;8;26;11', '715']
+```
+
+> Essayer à nouveau, mais cette fois, avec le paramètre `delimiter = ";"`.
+
+
+```python
+import csv
+with open('datas/classement_uefa.csv', newline='') as csvfile:
+    spamreader = csv.reader(csvfile, delimiter = ";")
+    teams = []
+    for row in spamreader:
+        teams.append(row)
+del(teams[0])
+print(teams[0])
+
+>>> ['AC Sparta Praha', 'CZE', '3', '9', '3', '3', '8', '26', '11,715']
+```
+
+Une autre option possible: joindre les 2 sous-listes avec un point '.', puis séparer les éléments de la chaine de caractères au niveau des ';':
+
+> Tester également cette 2e option:
 
 ```python
 import csv
@@ -183,19 +258,16 @@ with open('datas/classement_uefa.csv', newline='') as csvfile:
         s = ".".join(row) 
         # instruction necessaire pour le format de la derniere valeur decimale
         # .join(row) créé une chaine de caractères à partir de la liste
-        s = list(s.split(";"))
+        s = s.split(";")
         # on recréé une liste
         teams.append(s)
 
 del(teams[0])
-print(teams)
+print(teams[0])
+
+>>> ['AC Sparta Praha', 'CZE', '3', '9', '3', '3', '8', '26', '11.715']
 ```
 
-On supprime la premiere ligne du tableau qui contient:
-
-```
-['\ufeffClub', 'Pays', '16/17', '17/18', '18/19', '19/20', '20/21', '\xa0pts\xa0', '\xa0Ass\xa0']
-```
 
 L'execution du programme affiche au depart les équipes classées par ordre alphabetique:
 
@@ -215,15 +287,16 @@ On veut adapter l'agorithme de tri par selection pour classer les equipes selon 
 > **A vous de jouer**: adapter le script de `tri2`:
 
 > 1. Ajouter un nouveau paramètre `cle` aux fonctions `select` et `tri2`.
-2. modifier la condition dans la boucle `for` de la fonction `select` avec `if float(T[k][cle])<float(T[indiceDuMin][cle]) :`
-3. modifier la 3e ligne de la fonction `tri2` avec `select(T,j,cle)`
-4. Trier maintenant la liste `teams` selon la colonne de rang 7. Si vous affichez cette liste, elle presente 2 inconvenients:
+> 2. modifier la condition dans la boucle `for` de la fonction `select` avec `if float(T[k][cle])<float(T[indiceDuMin][cle]) :`
+> 3. modifier la 3e ligne de la fonction `tri2` avec `select(T,j,cle)`
+> 4. Trier maintenant la liste `teams` selon la colonne de rang 7. Si vous affichez cette liste, elle presente 2 inconvenients:
   * elle est triée telle que l'equipe la plus faible est au debut du tableau et la meilleure à la fin.
-  * elle ne donne pas le rang du classement UEFA. Nous allons corriger ceci:
-5. Ajouter les instructions suivantes qui permettront d'afficher les equipes : 
+  * l'affichage ne facilite pas la lecture
+> 5. Modifier la fonction de tri pour réaliser un tri par l'élément le plus grand d'abord.
+> 6. Ajouter les instructions suivantes qui permettront d'afficher les equipes : 
   * Créer un tableau vide T.
   * faire une boucle bornée `for` sur la liste `teams` : `for t in range(...)`
-  * Dans la boucle for, à chaque itération, ajouter dans T un tuple constitué des colonnes 0, 1 et 7 pour chacune des équipes, en partant de la fin de la liste `teams` (rang = len(teams) - t - 1)
+  * Dans la boucle for, à chaque itération, ajouter dans T un tuple constitué des colonnes 0, 1 et 7 pour chacune des équipes.
   * afficher classement et equipe avec :  `print(t,T[t])` 
 
 
@@ -243,40 +316,7 @@ Vous devriez obtenir:
 
 
 
-## Tri par selection du plus grand élément
-Dans cette variante du tri par selection, la liste est triée depuis la droite vers la gauche:
 
-```python
-def tri2(T):
-    for j in range(0,len(T)-1) :
-        select(T,len(T)-1-j)
-    return T
-```
-
-On appelle alors la fonction `select` avec cette fois l'argument `len(T)-1-j` pour le paramètre `debut`: les éléments triés sont accumulés à droite. On selectionne parmis les éléments à gauche de debut celui qui a la valeur maximale. Et on le place au rang: `debut`.
-
-```python
-def select(T,debut) :
-    indiceDuMax=debut
-    for k in range(0,debut-1) :
-        if T[k]> T[indiceDuMax] :
-            indiceDuMax=k
-    if indiceDuMax !=debut :
-        T[debut],T[indiceDuMax]=T[indiceDuMax],T[debut]
-```
-
-## Exemple
-Soit la liste à trier ['T', 'I', 'M', 'O', 'L', 'E', 'O', 'N'] <br>
-La liste prend successivement les valeurs:
-
-| j | Liste à la fin de `select` | nombre de comparaisons effectuées |
-| --- | --- | --- |
-| 0 | ['N', 'I', 'M', 'O', 'L', 'E', 'O', 'T'] | 7 |
-| 1 | ['N', 'I', 'M', 'O', 'L', 'E', 'O', 'T'] | 6 |
-| 2 | ['N', 'I', 'M', 'E', 'L', 'O', 'O', 'T'] | 5 |
-| 3 | ['L', 'I', 'M', 'E', 'N', 'O', 'O', 'T'] | 4 |
-| 4 | ['E', 'I', 'M', 'L', 'N', 'O', 'O', 'T'] | 3 |
-| 5 | ['E', 'I', 'M', 'L', 'N', 'O', 'O', 'T'] | 2 |
 
 ## Complexité
 On voit que le nombre d'operations de comparaisons est constant quelle que soit la liste à trier. Alors que l'affectation est aleatoire, et depend de la position des elements. On decide donc de compter le nombre de comparaisons. 
