@@ -253,8 +253,8 @@ Le nombre d'itération sera égal au nombre `len(L)`, soit 4. Au cours des itér
 ## Tracer un graphique y = f(x)
 Pour tracer un graphique `y=f(x)`, il faut disposer de 2 listes de mêmes dimensions `x` et `y`. Les coordonnées des points sont alors:
 
-* (x[0],y[0]) pour le point M<sub>0</sub> 
-* (x[1],y[1]) pour le point M<sub>1</sub> 
+* (x[0],y[0]) pour le point M0
+* (x[1],y[1]) pour le point M1
 * ...
 
 On utilise la fonction `plt.scatter` (nuage de points) ou bien `plt.plot` (courbe) du module `matplotlib.pyplot` qui est importé à la premiere ligne du script de la manière suivante: `import matplotlib.pyplot as plt`
@@ -277,7 +277,9 @@ plt.show()
 {{< img src="../images/graphique.png" >}}
 
 
-# Travaux pratiques TP5 et TP6
-*{{< a link="../page3" caption="Lien vers l'editeur Python et l'énoncé du TP5: Listes" >}}
+# Travaux pratiques
+* Lien vers l'énoncé du {{< a link="../page5" caption="TP4: Tableaux Excel et tableaux Python" >}}
 
-*{{< a link="../page4" caption="Lien vers l'énoncé du TP6: boucles et parcours de listes" >}}
+* Lien vers l'énoncé du {{< a link="../page3" caption="TP5: Listes" >}}
+
+* Lien vers l'énoncé du {{< a link="../page4" caption="TP6: boucles et parcours de listes" >}}
