@@ -89,6 +89,11 @@ Utiliser une distribution python en *local*.
 > Traiter la partie 1 du notebook
 
 # Partie 2: Tableaux python
+> 1. Commencer par traiter la feuille d'exercices sur les tableaux en python: [lien vers le pdf](/pdf/NSI_1/TP_excel_vers_python.pdf)
+
+Puis...
+
+> 2. Traiter la partie 2 du notebook
 Il s'agit de la partie 2 du notebook. Vous allez placer le fichier $classe.csv$ à proximité du notebook. 
 
 {{< img src="../images/exc16.png" >}}
@@ -96,5 +101,26 @@ Il s'agit de la partie 2 du notebook. Vous allez placer le fichier $classe.csv$ 
 * Vous pouvez le placer dans le même dossier que le notebook: Depuis le script python, ouvrez le alors avec l'instruction `with open('classe.csv', newline='') as csvfile:`
 * ou bien dans un sous dossier `datas`. Ouvrir alors avec `with open('datas/classe.csv', newline='') as csvfile:` 
 
-> Traiter la partie 2 du notebook
+
+> 3. Animation sur Pythontutor: modifier une liste, copie par référence.
+
+Pour finir, voir l'execution du script suivant sur [Pythontutor](https://pythontutor.com/render.html#code=classe%20%3D%20%5B%5B'%5Cufeff','moyenne','note1','note2','note3','note4','note5',%0A%20%20'note6','note7','note8','note9'%5D,%0A%20%5B'eleve1',%20'12,5',%2010.0,%208.9,%209.9,%2012.3,%2011.1,%2012.3,%2013.1,%2014.5,%2020.0%5D,%0A%20%5B'eleve2',%20'',%204.2,%202.1,%2016.5,%2015.0,%2019.6,%207.5,%2010.3,%2018.8,%2017.4%5D%5D%0A%0Adef%20moyenne%28tab%29%3A%0A%20%20%20%20s%20%3D%200%0A%20%20%20%20for%20note%20in%20tab%3A%0A%20%20%20%20%20%20%20%20s%20%2B%3D%20note%0A%20%20%20%20return%20s%20/%20len%28tab%29%0A%0Aeleve%20%3D%20classe%5B2%5D%0Aeleve%5B1%5D%20%3D%20round%28moyenne%28eleve%5B2%3A%5D%29,2%29%0Aprint%28eleve%29%0Aprint%28classe%5B2%5D%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false)
+
+```python
+classe = [['\ufeff','moyenne','note1','note2','note3','note4','note5',
+  'note6','note7','note8','note9'],
+ ['eleve1', '12,5', 10.0, 8.9, 9.9, 12.3, 11.1, 12.3, 13.1, 14.5, 20.0],
+ ['eleve2', '', 4.2, 2.1, 16.5, 15.0, 19.6, 7.5, 10.3, 18.8, 17.4]]
+
+def moyenne(tab):
+    s = 0
+    for note in tab:
+        s += note
+    return s / len(tab)
+
+eleve = classe[2]
+eleve[1] = round(moyenne(eleve[2:]),2)
+print(eleve)
+print(classe[2])
+```
 
