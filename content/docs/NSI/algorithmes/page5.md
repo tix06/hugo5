@@ -50,7 +50,7 @@ def exp1(n,x) :
   exp1 : reel
   """
   acc=1
-  for i in range(1,n+1):
+  for i in range(n):
     acc*=x
   return acc
 ```
