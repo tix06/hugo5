@@ -90,7 +90,7 @@ pix = [
 ]
 ```
 
-*Saurez-vous deviner l'ordre et les couleurs de ce motif coloré?
+*Saurez-vous deviner le codage des couleurs sur cette image?*
 
 {{< img src="../images/bmp2.png" caption="certains logiciels de design proposent de faire des essais de coloration. Ici, données en hex" >}}
 
@@ -101,9 +101,7 @@ Pour un pixel donné, on peut établir une mesure de la luminosité de la maniè
 Soient R, V et B les valeurs des intensités de chaque canal coloré. La luminosité L est égale à :
 $$L = R+V+B$$
 
-*Exemple :*
 
-{{< img src="../images/dessinGrisclair.png" alt="image de forte luminosité" caption="images de forte (à gauche) et faible (à droite) luminosité" >}}
 
 ## Contraste
 Les deux images présentées dans le paragraphe précédent, sur la luminosité, sont trop peu **contrastées** pour en apprécier le contenu. 
@@ -113,6 +111,9 @@ En d'autres termes, les tons sombres et les tons clairs de l'image ont des lumin
 
 Le **contraste** mesure la différence de luminosité entre les tons clairs et les tons sombre.
 
+*Exemple :*
+
+{{< img src="../images/dessinGrisclair.png" alt="image et contrastes" caption="images faible contraste" >}}
 
 ## Qualité des images
 

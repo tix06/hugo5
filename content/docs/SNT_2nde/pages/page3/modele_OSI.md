@@ -16,7 +16,7 @@ Introduction:
 
 ## Principe du modèle OSI
 On peut rentrer un peu plus dans le détail du modèle OSI et en particulier de la communication TCP/IP.
-Le modèle OSI est une norme qui préconise comment les ordinateurs devraient communiquer entre eux avec 5 *couches* technologiques adjacentes, numérotées selon leur *distance* au support d'emission (la couche n°1). On peut rassembler les couches 5, 6 et 7 en une seule.
+Le modèle OSI est une norme qui préconise comment les ordinateurs devraient communiquer entre eux avec 4 *couches* technologiques adjacentes, numérotées selon leur *distance* au support d'emission (la couche n°1). On peut rassembler les couches 5, 6 et 7 en une seule.
 
 Les couches forment une hiérarchie qui va de l'application (HTTP, FTP etc...) jusqu'au support physique (cable coaxial, ondes etc...).
 
@@ -47,7 +47,9 @@ Le modèle OSI ajoute deux règles plus générales entre les couches :
 
 Lors de l'émission d'une requête par une application, celle-ci doit traverser toutes les couches, depuis la 7 (application), puis de la 4 vers la 1; durant le trajet les données subiront des modifications et chaque couche rajoutera ce qu'elle voudra (généralement des en-têtes) pour mieux exercer sa fonction, mais pas seulement (la couche 1, de transport concerne... le transport). 
 
-Ce mécanisme s'appelle l'encapsulation : la trame de données numériques est constituée de plusieurs parties distinctes et mises dans un ordre particulier.
+Ce mécanisme s'appelle l'encapsulation : la trame de données numériques est constituée de plusieurs parties distinctes et mises dans un ordre particulier. *L'encapsulation, en informatique et spécifiquement pour les réseaux informatiques, est un procédé
+consistant à inclure les données d'un protocole dans un autre protocole.*
+
 Au final, ce qui va circuler sur le réseau est une trame de couche 2, qui contient le datagramme de couche 3 (qui lui-même contiendra l'élément de couche 4)
 
 {{< img src="../images/encapsulation.png" alt="encapsulation" caption="encapsulation" >}}
@@ -86,7 +88,7 @@ Une autre valeur transportée est le **TTL** (time to live) qui evite que le paq
 > Sortie : [en-tête IP][en tête TCP][requête HTTP].
 
 
-{{< img src="../images/dataTCPIP.png" caption="modèle simplifié du datagramme" >}}
+{{< img src="../images/dataIP.png" caption="modèle simplifié du datagramme" >}}
 ## *couche physique*
 Le paquet IP arrive dans Ethernet qui ajoute un en-tête (qui contient entre autres votre **adresse MAC** - pour le **switch** -  et celle du modem) et un checksum (vérification d'erreurs CRC). La couche 2 peut alors former la trame et l'envoyer sur le réseau.
 

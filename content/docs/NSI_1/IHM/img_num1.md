@@ -189,7 +189,7 @@ Après lecture du fichier, on peut constituer une nouvelle image. Voici le progr
 from PIL import Image
 
 
-imageSource=Image.open("chat.bmp")
+imageSource=Image.open("chats.bmp")
 largeur,hauteur=imageSource.size
 planPixels=Image.new("RGB",(largeur,hauteur))
 
@@ -214,7 +214,7 @@ Avec l'image d'origine suivante:
 
 {{< img src="../images/img4.jpg" caption="Marylin Monroe type Pop-art" >}}
 
-*Aide:* La condition suivante permet de selectionner les pixels de la partie gauche de l'image, et qui ont une composante Rouge supérieure à 100:
+*Aide:* La condition suivante permet de selectionner les pixels de la partie gauche de l'image, **et** qui ont une composante Rouge supérieure à 100:
 
 ```python
 if (x<largeur//2 & p[0] > 100) :
