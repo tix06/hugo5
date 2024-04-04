@@ -29,18 +29,32 @@ Une image RVB est composée de la somme des trois rayonnements lumineux Rouge, V
 * norme 4K : UHD = 10 bits par canal coloré
 
 ## Gimp: colorimètre
+> A vous de jouer: vous allez mesurer l'intensité des couleurs sur l'image suivante
+
 {{< img src="../images/img1.png" link="../images/img1.png" caption="clic droit: telecharger" >}}
 
 [Télécharger l'image](../images/img1.png).
+
+> Adopter tout de suite les BONNES PRATIQUES:
+
+> * Créer un nouveau dossier pour y mettre tous les fichiers sources et les images.
+
 
 A l'aide du logiciel Gimp, ouvrir l'image du carré rouge et relever les valeurs RVB du colorimètre.
 
 
 # Synthèse d'images
 ## Rectangle rouge
-Utiliser un IDE python pour les exercices suivants: *Pyzo* ou *Spyder*
-
 Vous allez créer une image (rectangle rouge) à partir d'un programme python.
+
+Utiliser un IDE python pour les exercices suivants: *Pyzo* ou *Spyder*.
+
+> Adopter tout de suite les BONNES PRATIQUES:
+
+> * pour chaque exercice, vous allez créer un NOUVEAU fichier python.
+> * Donner un nom explicite au fichier, par exemple `rouge.py` pour le premier exercice
+
+
 
 * Définir les variables globales largeur et hauteur:
 
@@ -52,7 +66,7 @@ hauteur=420
 * Créer un nouveau fichier texte avec les instructions:
 
 ```python
-f=open('red_square','w') 
+f=open('red_square.ppm','w') 
 
 ############ entête du fichier ##################
 f.write('P3'+'\n') # P1 était le code pour un pbm format ascii
@@ -85,16 +99,10 @@ rectangle('255 0 0',largeur,hauteur)
 f.close()
 ```
 
-* On peut alors ouvrir le fichier avec un editeur de texte et observer les données.
 
-* Enfin, remplacer le nom de fichier dans l'instruction: `f=open('red_square.ppm','w')`
 
-* Ajouter la librairie PIL. Et ajouter les 2 lignes suivantes pour ouvrir l'image:
 
-```python
-im = Image.open("red_square.ppm")
-im.show()
-```
+* Ajouter la librairie PIL. 
 
 Ce qui donne le script complet suivant:
 
@@ -128,17 +136,25 @@ def rectangle(couleur,h,l) :
 rectangle('255 0 0',largeur,hauteur)
 ########### fermeture fichier ############################
 f.close()
-# affichage image
-im = Image.open("red_square.ppm")
-im.show()
 ```
 
+> Executer le programme avec les commandes de l'IDE python, puis...
+> * Ouvrir le fichier avec un **editeur de texte** (notepad++) et observer les données.
+> * Ouvrir le fichier avec un logiciel de dessin (GIMP)
+
 ## Drapeaux de pays
+> Adopter tout de suite les BONNES PRATIQUES:
+
+> * pour chaque nouveau défi, vous allez créer un NOUVEAU fichier python.
+> * Donner un nom explicite au fichier, par exemple `allemagne.py` pour le premier défi, `belgique.py` pour le 2e...
+
 Adapter maintenant le script du rectangle rouge pour editer en python les drapeau suivants.
 
 Attention à BIEN faire correspondre le nombre de valeurs codantes pour la couleur des pixels. Si le nombre ne correspond par exactement à la dimension $largeur \times hauteur$ définie dans l'en-tête du fichier, vous risquez d'avoir une image sombre (erreur à l'affichage)
 
 {{< img src="../images/img2.png" link="../images/img2.png" caption="drapeau allemand. 3 appels de la fonction rectangle('255 0 0',largeur,hauteur//3)" >}}
+
+Attention à bien modifier le nom du fichier généré. Le nommer par exemple `drapeau_all.ppm`
 
 {{< img src="../images/img3.png" link="../images/img3.png" caption="drapeau belge. Utiliser une boucle bornée pour créer le drapeau ligne par ligne." >}}
 

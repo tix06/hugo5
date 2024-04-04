@@ -2,29 +2,40 @@
 Title : SGBD
 ---
 
+*Plan du cours*:
+
+**La structuration des données:**
+
+* Généralités sur les [SGBD: page 1](../page3/)
+* TD sur le [modele relationnel: page 2](../page1/)
+* TD sur le modele relationnel, [entité-relation: page 3](../page2/)
+* TP sur la gestion d'une base de données de romans de sciences fiction, utilisant [SQL Browser : page 4](../page6)
+
+**Le langage de requêtes:**
+
+* TP sur le langage SQL avec une [enquete de police: page 5](../page4)
+* TP sur le langage SQL avec des requetes sur une base de données d'[exoplanetes: bas de la page 5](../page4)
+* TP sur la creation d'un serveur avec gestion d'un formulaire [en python/SQL: page 6](../page5/)
+
 # Système de gestion de base de données relationnelles
-## Introduction
+## Deux problématiques complémentaires
 Une base de donnée est necessaire pour stocker de manière permanente des données, mais aussi pour partager ces données.
 
-Il faudra organiser ces données et utiliser un langage spécifique pour acceder à ces données.
+*La structuration des données:* Une base de données est une représentation tabulaire de ces données. Les tables respectent des contraintes sur leur contenu. Il existe des liens entre tables qui doivent obéir à certaines règles et satisfaire certaines proprietés. La théorie sous-jacente, la *normalisation*, a été développée pour s’assurer que l’on construit un schéma correct.
+
+Il faudra organiser ces données et utiliser un langage spécifique pour acceder à ces données: le *langage de requêtes*.
 
 
-Une base de données est constituée:
 
-* de données
-* d'un système de gestion de base de données: 
+## BDD et SGBD
 
-...et c'est bien plus qu'un simple tableur.
-
-## Définitions
-
-**Définition:** une base de données est un gros ensemble d’informations *structurées*, mémorisées sur un support permanent.
+**Définition:** une base de données est une collection de données, constituant un ensemble d’informations *structurées*, mémorisées sur un support permanent, et qui peut être partagée entre plusieurs services, serveurs, utilisateurs. (grâce à un SGBD).
 
 > **Question:** Mais alors, qu'est ce qui différencie la base de donnée d'un simple fichier stocké sur serveur?
 
 > *Réponse:* l'utilisation d'un simple fichier (par exemple de type tableur) va entrainer une certaine lourdeur lors de l'accès aux données, un manque de sécurité, une absence de contrôle de concurence d'accès. Ces problèmes amènent à utiliser un SGBD...
 
-**Définition:** Le **Système de Gestion de Bases de Données (SGBD)** est un logiciel qui a pour rôle de gérer les informations stockées dans une base de données. 
+**Définition:** Le **Système de Gestion de Bases de Données (SGBD)** est un logiciel qui a pour rôle de gérer les informations stockées dans une base de données, et leur accès. 
 
 
 
@@ -37,6 +48,49 @@ Il existe des SGBD gratuites, et payantes. Ces logiciels ont pour rôle:
 * de gérer les accès concurents: plusieurs personnes peuvent avoir besoin d'accéder aux informations et modifier des informations en même temps.
 
 L'utilisation de SGBD est généralisé dès qu'il faut pouvoir gérer des données de grande quantité, et permettre un accès plus simple et sûr à ces données.
+
+## Description des termes utilisés
+### DML = SQL
+**DML** signifie data manipulation langage. Il s'agit du langage SQL.
+
+Exemple d'instructions:
+
+* Sélection de données dans une table :
+
+```sql
+SELECT nom, prenom, classe FROM eleves;
+```
+
+* Insertion de données dans une table :
+
+```sql
+INSERT INTO eleves (nom, prenom)
+VALUES ('Dupont', 'Matthieu');
+```
+
+* Suppression de données dans une table :
+
+```sql
+DELETE FROM eleves
+WHERE prenom = 'Paul' and nom = 'Durand';
+```
+
+* Mise à jour de données dans une table :
+
+```sql
+UPDATE eleves
+SET prenom = 'Henry'
+WHERE nom = 'Leroy';
+```
+
+Cette partie du cours sera developpée en TP [ici](/docs/NSI/bases/page6/)
+
+### Schema d'une BDD
+Le terme « schéma de base de données » fait référence à la représentation visuelle d'une base de données, à un ensemble de règles qui régissent une base de données.
+
+On parle aussi de sous-schéma pour l'ensemble des objets appartenant à un utilisateur particulier.
+
+Cette partie du cours sera developpée [ici](/docs/NSI/bases/page1/)
 
 # Problèmes d'accès concurents
 ## Exemple de la perte de mise à jour
@@ -62,4 +116,10 @@ L'inter-blocage est le phénomène qui apparaît quand deux transactions (ou plu
 [stph.scenari-community.org](https://stph.scenari-community.org/bdd/0/co/traUC031.html)
 
 ## suite du cours: TP serveur SQLite en Python
-* [modèle relationnel](/docs/NSI/bases/page5/)
+* Généralités sur les [SGBD: page 1](../page3/)
+* TD sur le [modele relationnel: page 2](../page1/)
+* TD sur le modele relationnel, [entité-relation: page 3](../page2/)
+* TP sur la gestion d'une base de données de romans de sciences fiction, utilisant [SQL Browser : page 4](../page6)
+* TP sur le langage SQL avec une [enquete de police: page 5](../page4)
+* TP sur le langage SQL avec des requetes sur une base de données d'[exoplanetes: bas de la page 5](../page4)
+* TP sur la creation d'un serveur avec gestion d'un formulaire [en python/SQL: page 6](../page5/)
