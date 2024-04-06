@@ -20,11 +20,17 @@ Title : modele
 # Structurer les données
 **Exemple:**
 
-Voici plusieurs informations: *M Dupont, un policier, uniforme noir et chapeau rond, Tintin.*
+Voici plusieurs informations: *M Dupont, un policier, uniforme noir et chapeau rond, le capitaine Hadock fume une pipe, c'est un marin et il porte une casquette de marin; Tintin est journaliste, habillé avec une chemise.*
 
 {{< img src="../images/dupont.png" >}}
 
-Il peut exister une **relation** entre ces informations: Dupont a pour métier *policier* et c'est l'ami de *Tintin*.
+Il existe une **relation** entre ces informations. Chacune se réfère à un individu et le décrit avec les mêmes descripteurs. On peut les rassembler en un tableau de données.
+
+Ces personnages prennent vie dans certains des albums de la collection Tintin. Chaque album a une date de parution, un auteur, un editeur.
+
+{{< img src="../images/tintin.png" >}}
+
+On peut rassembler ces autres informations dans un nouveau tableau. Il existe alors une association entre ces 2 tableaux: l'association *est présent dans l'album*.
 
 Des relations de ce genre définissent des **structures**.
 

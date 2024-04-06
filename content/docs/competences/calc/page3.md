@@ -83,7 +83,7 @@ Dans la cellule **Chimie** -> **femme**, écrire `=` puis `NB.SI.ENS(`
 
 La fonction `NB.SI.ENS` applique des critères aux cellules de plusieurs plages et compte le nombre de fois où tous les critères sont remplis.
 
-$$NB.SI.ENS(plage~critères1; critères1; plage~critères2; critères2…)$$
+$$=NB.SI.ENS(plage~critères1; critères1; plage~critères2; critères2…)$$
 
 
 
