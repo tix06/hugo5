@@ -178,6 +178,8 @@ Lorsqu'une base de données comporte **plusieurs tables**, l'ensemble des schém
 {{< img src="../images/base1.png" caption="schéma relationnel de la base de données films-realisateurs, base de libreoffice" >}}
 
 # TP Browser SQL: Base, SQLite Browser, Access 
+**Base de données sur FILMS et REALISATEURS**
+
 ## Base de Libre Office
 ### Démarrage
 Lancer Libre Office > Base. Au demarrage:
