@@ -199,7 +199,7 @@ L'association entre ces 2 tables est assurée par une nouvelle table *FilmsRéal
 
 *FilmsRéalisés* (à compléter)
 
-| **id_film** | **idMES** |
+| **id_film** | **id_rea** |
 |--- | --- |
 | 0 |  | 
 | 1 |  | 

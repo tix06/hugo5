@@ -23,7 +23,7 @@ Une **base de données** est une *collection de données* qui vont être partag�
 ## Le modèle entité-association
 La première étape pour aboutir à un modèle permettant de stocker les données dans une base consiste à *identifier les objets* et définir leurs *liens*.
 
-Cette modélisation qui repose sur des principes mathématiques mis en avant par [E.F. Codd](https://fr.wikipedia.org/wiki/Edgar_Frank_Codd) (1923 - 2003, un informaticien britannique), et c'est cette modélisation qui est implémentée dans les bases de données.
+Cette modélisation repose sur des principes mathématiques mis en avant par [E.F. Codd](https://fr.wikipedia.org/wiki/Edgar_Frank_Codd) (1923 - 2003, un informaticien britannique), et c'est cette modélisation qui est implémentée dans les bases de données.
 
 
 ### Entité
