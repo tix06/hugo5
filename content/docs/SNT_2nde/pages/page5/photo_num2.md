@@ -13,12 +13,36 @@ Title: codage d'une image
 
 
 ## Construire une image numérique
+On utilise des boucles simples ou imbriquées, constituées d'une seule ou plusieurs instructions pour peindre les pixels (voir activité sur le site Algorea):
 
 {{< img src="../images/algo1.png" caption="pixels sur une ligne: boucle simple" >}}
 
+```
+faire 6 fois:
+  peindre en rouge
+faire 6 fois:
+  peindre en bleu
+```
+
 {{< img src="../images/algo2.png" caption="tableau de pixels. boucles imbriquées" >}}
 
+```
+faire 12 fois:
+  faire 6 fois:
+    peindre bleu
+    peindre rouge
+```
+
+
 {{< img src="../images/algo3.png" caption="tableau de pixels. utiliser un variant de boucle" >}}
+
+```
+pour i variant de 0 à 11:
+  pour j variant de 0 à i:
+    peindre bleu
+  pour k variant de i+1 à 11:
+    peindre en magenta
+```
 
 ## codage de l'image dans un fichier
 Les plus petits détails de l'image sont ses *pixels* : des petits carrés remplis chacun avec une seule couleur.
@@ -101,6 +125,21 @@ Pour un pixel donné, on peut établir une mesure de la luminosité de la maniè
 Soient R, V et B les valeurs des intensités de chaque canal coloré. La luminosité L est égale à :
 $$L = R+V+B$$
 
+Pour calculer la luminosité moyenne d'une image, voici l'algorithme:
+
+```
+s = 0
+pour chaque ligne:
+  pour chaque colonne:
+    p <- couleur du pixel
+    s = s + (p[0] + p[1] + p[2])/3
+luminosite <- s / (ligne*colonne)
+``` 
+
+Pour chaque pixel, on fait la moyenne de ses 3 couleurs primaires. 
+
+On ajoute la valeur à l'accumulateur s. Puis on fait la moyenne des valeurs de s en divisant par le nombre de pixels `(ligne*colonne)`.
+
 
 
 ## Contraste
@@ -115,9 +154,36 @@ Le **contraste** mesure la différence de luminosité entre les tons clairs et l
 
 {{< img src="../images/dessinGrisclair.png" alt="image et contrastes" caption="images faible contraste" >}}
 
+Soient les fonctions `recherche_du_max` et `recherche_du_min` qui retournent la valeur du max ou du min dans une liste python simple.
+
+img est un tableau de valeurs des couleurs en niveau de gris des pixels. Par exemple:
+
+```
+img = [[101,202,210,255,213,...], 
+       [101,202,210,255,213,...], 
+       [...]]
+
+```
+
+Le programme va parcourir chaque ligne, c'est à dire chaque sous-liste de img.
+
+Si la fonction `max_ligne` retourne une valeur supérieure à max, c'est qu'une valeur plus grande d'intensité a été trouvée dans cette ligne. On remet à jour la valeur max de l'image avec `max = max_ligne`, et on passe à la ligne suivante.
+
+(même principe pour `min_ligne`)
+
+```
+max = 0
+min = 255
+pour chaque ligne de img:
+  max_ligne = recherche_du_max(ligne)
+  min_ligne = recherche_du_min(ligne)
+  si max_ligne > max: max = max_ligne
+  si min_ligne < min: min = min_ligne
+```
+
 ## Qualité des images
 
-{{< img src="../images/bmp1.png" caption="agrandissement jusqu'à pixelisation" >}}
+
 
 
 
@@ -129,20 +195,30 @@ $$1900 \times 1700~pixels$$
 
 La  **résolution**  R d'une  image  numérique  correspond  à sa **densité** en points (pixels).  On mesure la densité de pixels sur l'écran en pixels par pouce (ppi) et la densité de points sur l'image imprimée en points par pouce (dpi). Ce n'est pas une caractéristique de l'image elle-même, mais de sa restitution par un écran (ou imprimé).
 
-Pour les exercices, on prendra la dimension d'un seul des côtés de l'image pour utiliser la relation suivante entre la **Définition** D, la **Résolution** R, et le nombre de cm par pouces (2,54).
+Selon le cas, on calculera la résolution selon l'un des côtés de l'image. Ou bien selon la diagonale de l'iamge.
 
-$$Definition(px) = \tfrac{resolution(px/pouce)}{2,54(cm/pouce)}\times longueur(cm)$$
+La résolution peut s'exprimer en pixels par pouce. On peut en déduire la résolution en pixels par cm à l'aide de la relation suivante 
+
+entre la **Définition** D, la **Résolution** R, et le nombre de cm par pouces (2,54).
+
+$$R(px/cm) = \tfrac{R(px/pouce)}{2,54(cm/pouce)}$$
 
 En effet : *1 pouce vaut 2,54 cm*. Un petit calcul montre que R = 72 ppi correspond à 28,3 pixels pour 1 cm.
 
 
 
-*Exemple :* Soit une image de définition 800x533 que l'on imprime sur du papier photo de taille 15x10 (en cm), calculez la résolution de cette image en ppp (rappel 1 pouce = 2,54 cm).
+*Exemple :* Soit une image de définition 800x533 que l'on imprime sur du papier photo de taille 15x10 (en cm), calculez la résolution de cette image en ppp.
 
 *Réponse : On prendra :*
 
 *Définition : D = 800px et Longueur : L = 15 cm*. *On cherche R : resolution*
 $$R = \tfrac{D}{L}\times 2,54 = \tfrac{800}{15}\times 2,54 = 135 ppp$$
+
+**Agrandissement et perte de qualité**: lorsque le nombre de points codés dans l'image est inférieur au nombre de pixels de l'écran, il n'y a pas assez de points. L'agrandissement va déteriorer l'image, car un même point va être placé sur plusieurs pixels côte à côte. C'est ce que l'on appelle la pixelisation de l'image.
+
+{{< img src="../images/bmp1.png" caption="agrandissement jusqu'à pixelisation" >}}
+
+*La selection d'une partie des points de l'image montre qu'il n'y a plus assez de points avec le zoom x12. On peut afficher une image à partir de cet agrandisement, mais il y a pixelisation.*
 
 # formats d'images
 Le calcul du poids des images a été réalisé dans les paragraphes précédents, en supposant que l'image est non compressée, dans un *format brut*.
@@ -151,7 +227,7 @@ En réalité, les images sont compressées. Ce qui permet d'avoir un poids moind
 
 Les formats suivants sont des exemples de formats images compressés : png, jpg.
 
-# Calcul du poids d'une image non compressée
+# Calcul du poids d'une image avec/sans compression
 A partir de ce qui a été vu plus haut, le poids d'une image non compressée de définition D et de profondeur de couleur C a un poids P : 
 $$P = D \times C$$
 
@@ -164,13 +240,34 @@ La **compression** d'une image c’est la réduction de la quantité d’informa
 - De rassembler plusieurs pixels de même couleur, et établir une couleur moyenne des pixels sur une zone donnée.
 - supprimer des informations : par exemple en diminuant le nombre de couleurs possibles. On fait une réduction de l'espace des couleurs à celles qui sont  les plus fréquentes dans l'image.
 
+# Transformation de la taille d'une image
+Certains logiciels permettent de reduire ou agrandir la taille d'une image (resize). Cela modifie le nombre de pixels. Cette transformation se fait en conservant les proportions de l'image (homothétie).
+
+La reduction consiste à choisir certains points de l'image d'origine pour les placer dans celle reduite.
+
+{{< img src="../images/transfo3.png" >}}
+
+Un agrandissement simple peut se faire en reportant la valeur d'un point sur un carré de points de l'image agrandie:
+
+{{< img src="../images/transfo4.png" >}}
+
+L'agrandissement peut aussi se faire en faisant une interpolation des valeurs des points (on invente les couleurs manquantes par un calcul de moyenne)
+
+
+{{< img src="../images/transfo2.png" >}}
+
+Merci à [zonensi.fr](https://www.zonensi.fr/NSI/Premiere/C04/ImagesBMP/ImagesBMP.pdf) pour le travail sur cette partie du cours.
+
 # Travail pratique
+
+<!--
 Ouvrir le notebook en cliquant sur le lien :{{< a link="https://mybinder.org/v2/gh/tix06/notebook_snt_images.git/master" caption="```https://mybinder.org/v2/gh/tix06/notebook_snt_images.git/master```" >}}
 
 Lorsque l'environnement est créé : cliquer sur le notebook : 
 `image numeriques.ipynb`
 
 Et répondre aux questions sur la fiche à compléter.
+-->
 
 # Suite du cours
 * [Enjeux ethiques et societaux de l'image](/docs/SNT_2nde/pages/page5/photo_num4/)
