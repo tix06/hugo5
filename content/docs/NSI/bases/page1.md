@@ -53,8 +53,8 @@ Avec un tableau simple, comme ceux manipulés par un tableur, on peut avoir la r
 | Mon oncle | 1958 | Tati | Jacques | 1907 |
 | Volver | 2006 | Almodovar | Pedro | 1949 |
 | Reservoir Dogs | 1992 | Tarantino | Quentin | 1963 |
-| Alive | 2003  | Kitamura |  Ryûhei |  1969 |
-| Godzilla: Final Wars | 2004 | Kitamura |  Ryûhei |  1969 |
+| Alive | 2003  | Kitamura |  Ryûhei |  Null |
+| Godzilla: Final Wars | 2004 | Kitamura |  Ryûhei |  Null |
 
 Une **relation** est donc une table. Cette table possède un *en-tête*, constitué des attributs *Titre, Annee, NomMES, PrenomMES, AnneeNaiss*. La table contient des *n-uplets*, comme par exemple: *Hana-bi, 1997, Kitano, Takeshi, 1947*.
 
