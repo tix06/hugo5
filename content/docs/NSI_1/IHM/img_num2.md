@@ -114,6 +114,8 @@ image_ruban.show()
 
 L'algorithme qui *fabrique* la nouvelle image parcourt les pixels de l'image d'origine (celle avec le fond vert). A partir d'un certain seuil, si la couleur du pixel est franchement verte, c'est le pixel du decors qui placé dans la nouvelle image.
 
+ENONCE de l'exercice 3:
+
 Utilisez les 2 images suivantes pour en créer une nouvelle, artificielle, en incrustant la première image dans la seconde.
 
 {{< img src="../images/fond_vert.jpeg" caption="image issue du site www.event-picture.com" >}}
