@@ -218,16 +218,17 @@ $$R = \tfrac{D}{L}\times 2,54 = \tfrac{800}{15}\times 2,54 = 135 ppp$$
 
 {{< img src="../images/bmp1.png" caption="agrandissement jusqu'à pixelisation" >}}
 
-*La selection d'une partie des points de l'image montre qu'il n'y a plus assez de points avec le zoom x12. On peut afficher une image à partir de cet agrandisement, mais il y a pixelisation.*
+*La selection d'une partie des points de l'image montre qu'il n'y a plus assez de points avec le zoom x12. On peut afficher une image à partir de cet agrandisement, mais il y a pixelisation.* (voir la partie sur la transformation d'une image)
 
-# formats d'images
-Le calcul du poids des images a été réalisé dans les paragraphes précédents, en supposant que l'image est non compressée, dans un *format brut*.
+# Transformation des images
 
-En réalité, les images sont compressées. Ce qui permet d'avoir un poids moindre pour leur stockage, leur transfert...
 
-Les formats suivants sont des exemples de formats images compressés : png, jpg.
+## Poids d'une image avec/sans compression
+### Image matricielle sans compression
+En *format brut*.
 
-# Calcul du poids d'une image avec/sans compression
+
+
 A partir de ce qui a été vu plus haut, le poids d'une image non compressée de définition D et de profondeur de couleur C a un poids P : 
 $$P = D \times C$$
 
@@ -235,32 +236,52 @@ $$P = D \times C$$
 
 $$P = 1900 \times 1700 \times 3 = 9,7.10^6 octets = 9,7 Mo$$ 
 
+En réalité, les images sont compressées. Ce qui permet d'avoir un poids moindre pour leur stockage, leur transfert...
+
+### Image matricielle avec compression
+
+
 La **compression** d'une image c’est la réduction de la quantité d’informations nécessaires pour décrire l’image. Les idées générales sont : 
 
 - De rassembler plusieurs pixels de même couleur, et établir une couleur moyenne des pixels sur une zone donnée.
 - supprimer des informations : par exemple en diminuant le nombre de couleurs possibles. On fait une réduction de l'espace des couleurs à celles qui sont  les plus fréquentes dans l'image.
 
-# Transformation de la taille d'une image
+**Le format PNG** est un format d'image bitmap qui utilise la **compression sans perte**. Le facteur de compression n'est alors pas très élevé. Les données y sont réorganisées pour tenir moins de place. La compression utilise l'algorithme [Deflate](https://fr.wikipedia.org/wiki/Deflate), basé sur le [code de Huffman](https://cermics.enpc.fr/polys/info1/main/node76.html).
+
+*Rappelez vous que le fichier image est constitué de caractères (base 64). C'est donc les occurences de ces caractères dans le fichier qui permet la compression avec l'agorithme Deflate.*
+
+{{< img src="../images/compression.png" caption="exemple de code de Huffman pour la compression d'un texte" >}}
+
+Le **format jpg** est un format compressé avec pertes. L'idée est de supprimer la différence de valeur des couleurs pour des pixels contigûs, aux couleurs proches.
+
+{{< img src="../images/compressionjpg.png" caption="La compression réduit la taille du fichier, mais dégrade la qualité de l’image." >}}
+
+*image issue du site [adobe.com](https://helpx.adobe.com/fr/lightroom-classic/lightroom-key-concepts/compression.html)*
+
+## Transformation de la taille d'une image
 Certains logiciels permettent de reduire ou agrandir la taille d'une image (resize). Cela modifie le nombre de pixels. Cette transformation se fait en conservant les proportions de l'image (homothétie).
 
-La reduction consiste à choisir certains points de l'image d'origine pour les placer dans celle reduite.
+La **reduction** consiste à choisir certains points de l'image d'origine pour les placer dans celle reduite.
 
 {{< img src="../images/transfo3.png" >}}
 
-Un agrandissement simple peut se faire en reportant la valeur d'un point sur un carré de points de l'image agrandie:
+Un **agrandissement** simple peut se faire en reportant la valeur d'un point sur un carré de points de l'image agrandie:
 
 {{< img src="../images/transfo4.png" >}}
 
-L'agrandissement peut aussi se faire en faisant une interpolation des valeurs des points (on invente les couleurs manquantes par un calcul de moyenne)
+L'agrandissement peut aussi se faire en faisant une **interpolation** des valeurs des points (on invente les couleurs manquantes par un calcul de moyenne)
 
 
 {{< img src="../images/transfo2.png" >}}
 
+*Interpoler: introduire dans une série de valeurs, de nouvelles valeurs intermédiaires.*
+
 Merci à [zonensi.fr](https://www.zonensi.fr/NSI/Premiere/C04/ImagesBMP/ImagesBMP.pdf) pour le travail sur cette partie du cours.
 
-# Travail pratique
+
 
 <!--
+# Travail pratique
 Ouvrir le notebook en cliquant sur le lien :{{< a link="https://mybinder.org/v2/gh/tix06/notebook_snt_images.git/master" caption="```https://mybinder.org/v2/gh/tix06/notebook_snt_images.git/master```" >}}
 
 Lorsque l'environnement est créé : cliquer sur le notebook : 

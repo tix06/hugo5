@@ -15,9 +15,29 @@ Title: images numeriques 2
 * modifier la couleur `p` à l'aide d'un filtre
 * Coller ces pixels dans la nouvelle image, selon la transformation voulue: `image_nouvelle.putpixel((x,y),p)`
 
+```python
+### copie d'une image ##########
+from PIL import Image
+
+imageSource=Image.open("image_d_origine.jpeg")
+largeur,hauteur=imageSource.size
+imageCopie=Image.new("RGB",(largeur,hauteur))
+
+for y in range(hauteur): 
+    for x in range(largeur): 
+        p=imageSource.getpixel((x,y))
+        # p est un tuple (p[0],p[1],p[2])
+        # modification selective des valeurs de p 
+        imageCopie.putpixel((x,y),p)
+
+imageCopie.save("image_copie.jpeg")
+imageCopie.show()
+```
+
+
 # Filtres appliqués à une image
 
-Quand on applique un filtre vert à une image numérique, on parcourt l'image entière en ne récupérant pour chaque pixel que sa composante verte, et en mettant le rouge et le bleu à 0. 
+Quand on applique un filtre vert à une image numérique, on parcourt l'image entière en recopiant pour chaque pixel sa composante verte, et en mettant le rouge et le bleu à 0. 
 
 {{< img src="../images/naruto1.png" >}}
 

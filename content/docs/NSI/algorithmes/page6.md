@@ -469,4 +469,5 @@ On y retrouve les problèmes de décision (oui/non) et d'optimisation (max ou mi
 * [wikipedia: le problème du voyageur du commerce](https://fr.wikipedia.org/wiki/Probl%C3%A8me_du_voyageur_de_commerce)
 * [programmation dynamique: site Pixees.fr, David Roche](https://pixees.fr/informatiquelycee/n_site/nsi_term_algo_progdyn.html)
 * calcul de complexité de Fibonacci recursif et definition de la programmation dynamique: [univ-mlv.fr](http://igm.univ-mlv.fr/~nicaud/poly/IR2_progdyn.pdf)
+* algorithme glouton pour la compression des fichiers: [code de Huffman](https://cermics.enpc.fr/polys/info1/main/node76.html)
 
