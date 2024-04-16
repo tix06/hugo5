@@ -238,6 +238,67 @@ $$P = 1900 \times 1700 \times 3 = 9,7.10^6 octets = 9,7 Mo$$
 
 En réalité, les images sont compressées. Ce qui permet d'avoir un poids moindre pour leur stockage, leur transfert...
 
+### Lire/écrire dans un fichier
+Les algorithmes de compression d'image agissent sur D ou sur C définis plus haut.
+
+Soit le fichier `image_source.ppm`, dont le contenu est donné ci-dessous (4 premiers pixels)
+
+```
+P3
+1000 801
+255
+87 87 87 
+84 84 84 
+81 81 81 
+80 80 80
+```
+
+On peut manipuler les pixels d'une image à l'aide des instructions natives du langage python.
+
+```python
+f1 = open('image_source.ppm','r')
+for line in f1.readlines()[3:]:
+    L = line.split()
+    print(L)
+```
+
+Sortie:
+
+```
+# affichage des 4 premieres lignes :
+['87', '87', '87']
+['84', '84', '84']
+['81', '81', '81']
+['80', '80', '80']
+```
+
+Ce format en listes pour les valeurs des couleurs de pixels est utile pour appliquer un traitement.
+
+Pour recomposer la chaine de caractère à partir de la liste, il faut faire l'opération inverse de `line.split()`, c'est à dire:
+
+```
+> ' '.join(['87', '87', '87'])
+'87 87 87'
+```
+
+On peut rediriger les valeurs vers un nouveau fichier:
+
+```python
+f1 = open('image_source.ppm','r')
+f2 = open('image_copie.ppm','w')
+largeur = 1000
+hauteur = 801
+f.write('P3'+'\n')
+f.write(str(largeur)+' '+str(hauteur)+'\n')
+f.write('255'+'\n')
+
+for line in f1.readlines()[3:]:
+    L = line.split()
+    # ici: traitement sur les valeurs du pixel
+    pixel = ' '.join(L)
+    f2.write(pixel + '\n')
+```
+
 ### Image matricielle avec compression
 
 

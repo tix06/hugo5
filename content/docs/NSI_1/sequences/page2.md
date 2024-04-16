@@ -206,7 +206,7 @@ Fin pour chaque
 
 ```python
 def tri1(table):
-    for k in range(len(table)):
+    for k in range(1,len(table)):
         temp = table[k]
         j = k
         while j>0 and table[j-1]>temp:
