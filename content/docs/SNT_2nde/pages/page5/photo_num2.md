@@ -238,8 +238,51 @@ $$P = 1900 \times 1700 \times 3 = 9,7.10^6 octets = 9,7 Mo$$
 
 En réalité, les images sont compressées. Ce qui permet d'avoir un poids moindre pour leur stockage, leur transfert...
 
-### Lire/écrire dans un fichier
-Les algorithmes de compression d'image agissent sur D ou sur C définis plus haut.
+
+
+### Image matricielle avec compression
+
+
+La **compression** d'une image c’est la réduction de la quantité d’informations nécessaires pour décrire l’image. Les idées générales sont : 
+
+- De rassembler plusieurs pixels de même couleur, et établir une couleur moyenne des pixels sur une zone donnée.
+- supprimer des informations : par exemple en diminuant le nombre de couleurs possibles. On fait une réduction de l'espace des couleurs à celles qui sont  les plus fréquentes dans l'image.
+
+**Le format PNG** est un format d'image bitmap qui utilise la **compression sans perte**. Le facteur de compression n'est alors pas très élevé. Les données y sont réorganisées pour tenir moins de place. La compression utilise l'algorithme [Deflate](https://fr.wikipedia.org/wiki/Deflate), basé sur le [code de Huffman](https://cermics.enpc.fr/polys/info1/main/node76.html).
+
+*Rappelez vous que le fichier image est constitué de caractères (base 64). C'est donc les occurences de ces caractères dans le fichier qui permet la compression avec l'agorithme Deflate.*
+
+{{< img src="../images/compression.png" caption="exemple de code de Huffman pour la compression d'un texte" >}}
+
+Le **format jpg** est un format compressé avec pertes. L'idée est de supprimer la différence de valeur des couleurs pour des pixels contigûs, aux couleurs proches.
+
+{{< img src="../images/compressionjpg.png" caption="La compression réduit la taille du fichier, mais dégrade la qualité de l’image." >}}
+
+*image issue du site [adobe.com](https://helpx.adobe.com/fr/lightroom-classic/lightroom-key-concepts/compression.html)*
+
+## Transformation de la taille d'une image
+Certains logiciels permettent de reduire ou agrandir la taille d'une image (resize). Cela modifie le nombre de pixels. Cette transformation se fait en conservant les proportions de l'image (homothétie).
+
+La **reduction** consiste à choisir certains points de l'image d'origine pour les placer dans celle reduite.
+
+{{< img src="../images/transfo3.png" >}}
+
+Un **agrandissement** simple peut se faire en reportant la valeur d'un point sur un carré de points de l'image agrandie:
+
+{{< img src="../images/transfo4.png" >}}
+
+L'agrandissement peut aussi se faire en faisant une **interpolation** des valeurs des points (on invente les couleurs manquantes par un calcul de moyenne)
+
+
+{{< img src="../images/transfo2.png" >}}
+
+*Interpoler: introduire dans une série de valeurs, de nouvelles valeurs intermédiaires.*
+
+Merci à [zonensi.fr](https://www.zonensi.fr/NSI/Premiere/C04/ImagesBMP/ImagesBMP.pdf) pour le travail sur cette partie du cours.
+
+
+## Lire/écrire dans un fichier
+Les algorithmes de compression, d'agrandissement ou de reduction d'image agissent sur D (definition) ou sur C (profondeur de couleur) définis plus haut. Voyons ici la méthode pour lire et écrire dans un fichier image d'extension `.ppm`. Cela peut se faire à l'aide des fonctions natives de Python. Une autre option est d'utiliser la librairie PIL, comme vu en TP.
 
 Soit le fichier `image_source.ppm`, dont le contenu est donné ci-dessous (4 premiers pixels)
 
@@ -298,47 +341,6 @@ for line in f1.readlines()[3:]:
     pixel = ' '.join(L)
     f2.write(pixel + '\n')
 ```
-
-### Image matricielle avec compression
-
-
-La **compression** d'une image c’est la réduction de la quantité d’informations nécessaires pour décrire l’image. Les idées générales sont : 
-
-- De rassembler plusieurs pixels de même couleur, et établir une couleur moyenne des pixels sur une zone donnée.
-- supprimer des informations : par exemple en diminuant le nombre de couleurs possibles. On fait une réduction de l'espace des couleurs à celles qui sont  les plus fréquentes dans l'image.
-
-**Le format PNG** est un format d'image bitmap qui utilise la **compression sans perte**. Le facteur de compression n'est alors pas très élevé. Les données y sont réorganisées pour tenir moins de place. La compression utilise l'algorithme [Deflate](https://fr.wikipedia.org/wiki/Deflate), basé sur le [code de Huffman](https://cermics.enpc.fr/polys/info1/main/node76.html).
-
-*Rappelez vous que le fichier image est constitué de caractères (base 64). C'est donc les occurences de ces caractères dans le fichier qui permet la compression avec l'agorithme Deflate.*
-
-{{< img src="../images/compression.png" caption="exemple de code de Huffman pour la compression d'un texte" >}}
-
-Le **format jpg** est un format compressé avec pertes. L'idée est de supprimer la différence de valeur des couleurs pour des pixels contigûs, aux couleurs proches.
-
-{{< img src="../images/compressionjpg.png" caption="La compression réduit la taille du fichier, mais dégrade la qualité de l’image." >}}
-
-*image issue du site [adobe.com](https://helpx.adobe.com/fr/lightroom-classic/lightroom-key-concepts/compression.html)*
-
-## Transformation de la taille d'une image
-Certains logiciels permettent de reduire ou agrandir la taille d'une image (resize). Cela modifie le nombre de pixels. Cette transformation se fait en conservant les proportions de l'image (homothétie).
-
-La **reduction** consiste à choisir certains points de l'image d'origine pour les placer dans celle reduite.
-
-{{< img src="../images/transfo3.png" >}}
-
-Un **agrandissement** simple peut se faire en reportant la valeur d'un point sur un carré de points de l'image agrandie:
-
-{{< img src="../images/transfo4.png" >}}
-
-L'agrandissement peut aussi se faire en faisant une **interpolation** des valeurs des points (on invente les couleurs manquantes par un calcul de moyenne)
-
-
-{{< img src="../images/transfo2.png" >}}
-
-*Interpoler: introduire dans une série de valeurs, de nouvelles valeurs intermédiaires.*
-
-Merci à [zonensi.fr](https://www.zonensi.fr/NSI/Premiere/C04/ImagesBMP/ImagesBMP.pdf) pour le travail sur cette partie du cours.
-
 
 
 <!--

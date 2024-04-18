@@ -7,16 +7,23 @@ Structured Query Language, ou langage de requêtes structuré
 
 ([cours en pdf](/pdf/NSI/bdd2-e.pdf))
 
+> Traiter au choix l'un des 2 sujets suivants
 
+# Explorer une base de données à tables et liens multiples
+## Base de données Films
+Lien: [Exercices sur le langage SQL rédigés par N. Revéret](https://e-nsi.forge.aeif.fr/exercices_bdd/41_films/films/)
 
-# Murder Party à SQL City
+{{< img src="../images/bdd_films.png" caption="schema de la base de données films" >}}
+## Murder Party à SQL City
 
 {{< img src="../images/clue-illustration.png" link="https://replit.com/@ToniScullion1/Silver-TASK-2-SQL-Murder-Mystery" caption="retrouvez le meurtrier grâce aux bases de données de la police" >}}
 * Pour le **TP guidé**: Aller à la ressource sur {{< a link="https://mystery.knightlab.com/walkthrough.html" caption="mystery.knightlab.com" >}} et suivre les instructions.
 
-* Le fichier *sql-murder-mystery.db*: {{< a link="https://github.com/NUKnightLab/sql-mysteries" caption="ressource sur Github" >}} peut être télechargé pour une utilisation en *local* avec dbBrowserSQLite.
+* Le fichier *sql-murder-mystery.db*: peut être télechargé pour une utilisation en *[local](/scripts/BDD/sql-murder-mystery.db* avec dbBrowserSQLite. Le projet peut être directement consulté sur {{< a link="https://github.com/NUKnightLab/sql-mysteries" caption="Github" >}}.
 
 * Pensez à **prendre des notes** au fur et à mesure de votre avancée dans l'enquête.
+
+{{< img src="../images/bdd_murder.png" caption="schema de la base de données murders" >}}
 
 **Aide**: 
 * Observez bien le *Diagramme Entité Relation* de cette base de données. Vous pourrez y lire le *schéma relationnel* de ces tables. Les *clés primaires* sont indiquées avec une clé *jaune* et les *clés étrangères* avec une flèche *bleue*.
