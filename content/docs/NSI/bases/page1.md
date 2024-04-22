@@ -9,12 +9,14 @@ Title : modele
 * Généralités sur les [SGBD: page 1](../page3/)
 * TD sur le [modele relationnel: page 2](../page1/)
 * TD sur le modele relationnel, [entité-relation: page 3](../page2/)
-* TP sur la gestion d'une base de données de romans de sciences fiction, utilisant [SQL Browser : page 4](../page6)
+* TP sur la creation d'une [BDD cinéma](/docs/NSI/bases/page2/), utilisant un SGBD (Base de LibreOffice)
+* TP sur la gestion d'une base de données de romans de sciences fiction, utilisant [SQLite Browser : page 4](../page6)
 
 **Le langage de requêtes:**
 
-* TP sur le langage SQL avec une [enquete de police: page 5](../page4)
+* TD en ligne sur une base de données de prenoms: [Lien] (https://e-nsi.forge.aeif.fr/exercices_bdd/31_prenoms/prenoms/)"> vers le site e-nsi.forge.aeif.fr
 * TP sur le langage SQL avec des requetes sur une base de données d'[exoplanetes: bas de la page 5](../page4)
+* TP sur le langage SQL avec **plusieurs tables** et jointures: une [enquete de police: page 5](../page4)
 * TP sur la creation d'un serveur avec gestion d'un formulaire [en python/SQL: page 6](../page5/)
 
 # Structurer les données
