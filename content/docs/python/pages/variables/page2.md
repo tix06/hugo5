@@ -344,7 +344,8 @@ Sans cette *astuce*, la copie se ferait par **référence** (Dictionnaire = muta
 
 <input type="button" class="btn btn-lg" value="Retour à la page : Variables" onclick="window.location.href = '../page1/'">
 
-
+# Dataframes
+Un Dataframe est un objet qui permet de mieux représenter et travailler sur les tables. C'est un outil puissant, qui necessite un apprentissage supplémentaire, comme une extension du langage python. Voir ici : [towardsdatascience.com](https://towardsdatascience.com/pandas-ground-zero-selection-and-projection-3827f74ae6c5)
 
 # Objets mutables et non mutables
 En Python, il existe deux types d’objets: les **mutables** (listes, dictionnaires, sets, objets customisés, etc) et les **non mutables** (string, int, float, tuple, etc).

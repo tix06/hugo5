@@ -2,11 +2,14 @@
 Title: Donnees en table
 ---
 
-# Données en table - intro
+# Données en table - introduction
+Les tables structurent les données et permettent de réaliser facilement des opérations de recherche d'informations ou de calcul sur ces données. 
+
+Prenons l'exemple une agence de voyage, qui propose des activités sur mesure à ses clients.
 
 {{< img src="../images/voyage1.png" >}}
 
-Pour une agence de voyage, les données sont organisées en 2 tables *clients* et *sejours*.
+les données sont organisées en 2 tables *clients* et *sejours*. Il y aura autant de tables que d'*entités*
 
 Les tables *clients* et *sejours* ont un identifiant unique attribué lors de leur enregistrement.
 
@@ -35,25 +38,25 @@ Les tables *clients* et *sejours* ont un identifiant unique attribué lors de le
 | 88 | Rome | Art |
 | 90 | Durban | Surf |
 
-L'agence de voyage a besoin d'un programme prenant en entrée un nom de ville **v**, et affichant la table contenant la reponse à la question:
+L'agence de voyage a besoin d'un programme prenant en entrée un nom de **VILLE**, et affichant la table contenant la reponse à la question:
 
-*Donner les couples (nom de client, identifiant de sejour) tel que ce sejour est est dans la ville **v**, et propose l'activité favorite de ce client*.
+*Donner les couples (nom de client, identifiant de sejour) tel que ce sejour est est dans la **VILLE**, et propose l'activité favorite de ce client*.
 
-*Exemple:* ``suggestion_client(V = 'Oahu')``
+*Exemple:* ``suggestion_client(VILLE = 'Oahu')``
 
 **Sortie:**
 
-| V | Client | IDS |
+| VILLE | NOM | IDS |
 |--- |--- |--- |
 | Oahu | Kelly | 12 |
 | Oahu | Dupond | 12 |
 
 *Le but de l'activité est de comprendre les différentes étapes utiles à ce programme*.
 
-1. Prendre les lignes de `SEJOURS` pour ``VILLE = Durban` et les ajouter à la table `CHOIX_SEJOUR` 
-2. Pour la table `CHOIX_SEJOUR`, ajouter les colonnes `IDC, NOM, AGE`
-2. Pour chaque ligne de `CHOIX_SEJOUR`, coller bout à bout les lignes de `CLIENTS` ayant la même ACTIVITE. Représenter cette table.
-3. Créer une nouvelle table `RESULTAT` à partir de `CHOIX_SEJOUR` en ne conservant que les colonnes `V, CLIENT, IDS`. Représenter cette table.
+1. Créer une table unique `CHOIX_SEJOUR` vide avec toutes les colonnes des 2 tables.
+2. Pour chaque ligne de `CHOIX_SEJOUR`, coller bout à bout les lignes de `SEJOUR` et de `CLIENTS` ayant la même `ACTIVITE`. Représenter cette table. Il peut y avoir plusieurs clients pour un même sejour. Dans ce cas, il doit y avoir une ligne unique pour chaque coupe sejour-client.
+3. Dans cette table `CHOIX_SEJOUR`, conserver uniquement les lignes correspondant à la ville *Oahu*.
+3. Créer une nouvelle table `RESULTAT` à partir de `CHOIX_SEJOUR` en ne conservant que les colonnes `VILLE, NOM, IDS`. Représenter cette table.
 4. Attribuer à chaque instruction le nom de l'opération réalisée. Choisir parmi: 
   * Jointure
   * Projection
@@ -63,7 +66,7 @@ L'agence de voyage a besoin d'un programme prenant en entrée un nom de ville **
 # COURS
 ## Tables - généralités
 ### Une table
-Une table est une liste de lignes, dont les éléments partagent les mêmes colonnes.
+Une table est une liste de lignes, dont les éléments partagent les mêmes colonnes (descripteurs).
 
 {{< img src="../images/table1.png" >}}
 ### Une ligne
@@ -100,10 +103,23 @@ Parmi les colonnes, l'une d'entre-elles a un statut particulier: L'IDENTIFIANT. 
 
 {{< img src="../images/table5.png" >}}
 
+## Représenter une table
+On peut représenter une table sous forme de texte structuré: en *csv*, *json*, ou *xml*.
 
-## Représentations en python
-### Deux manières de représenter une table
-La représentation d'une table est une LISTE de lignes en python.
+Ces formats sont interopérables. On peut les manipuler avec de nombreuses applications. (tableurs, langages informatique). 
+
+### Table mise dans une liste python
+Pour ouvrir et lire un fichier *csv* en langage python, on peut utiliser le script suivant:
+
+```python
+import csv
+with open('voyage.csv', mode='r', encoding='utf-8') as f:
+     table = list(csv.reader(f,delimiter=";"))
+```
+
+On suppose qu'il n'y a qu'une table par fichier *csv*. 
+
+La représentation d'une table est alors une LISTE de lignes en python.
 
 **Ligne**: La représentation d'une ligne de la table peut être, au choix:
 
@@ -116,24 +132,77 @@ La représentation d'une table est une LISTE de lignes en python.
 
 Pour une représentation en *tuple*:
 
-```
+```python
 ligne1 = (27, 'Ritta', 19, 'Danse')
 ```
 
 Les valeurs doivent être placées, sans en omettre une.
 
+Voici alors un extrait de la table CLIENTS mise dans une liste de listes (3 premiere lignes):
+
+| IDC | NOM | AGE | ACTIVITE |
+|--- |--- |--- |--- |
+| 27 | Ritta | 19 | Danse |
+| 19 | Blaise | 29 | Cinema |
+| 11 | Dede | 59 | Nature |
+
+```python
+table = [(27, 'Ritta', 19, 'Danse'),
+         (19, 'Blaise', 29, 'Cinema'),
+         (11, 'Dede', 59, 'Nature'),
+         ...
+         ]
+```
+
+### Table mise dans un dictionnaire python
+Un dictionnaire est un tableau associatif. Les éléments sont rangés en couples *clé:valeurs*, séparés par une virgule, et mis entre accollades `{}`.
+
+
 Pour une représentation en *dictionnaire*:
 
 ```
-ligne1 = {'IDC' : 27, 'NOM': 'Ritta', 'AGE': 19, 'ACITIVITE: 'Danse'}
+ligne1 = {'IDC' : 27, 'NOM': 'Ritta', 'AGE': 19, 'ACTIVITE: 'Danse'}
 ```
 
-Les *descripteurs* sont les *clés* du dictionnaire. A chaque clé est associée une valeur, en correspondance.
+Les *descripteurs* sont les *clés* du dictionnaire. A chaque clé est associée une valeur. 
+
+On accède à l'**une des valeurs** en plaçant la clé entre les `[]`:
+
+```python
+>>> print(ligne1['NOM'])
+Ritta
+```
+
+La **liste des clés** est obtenue par la méthode de classe `keys()` du dictionnaire:
+
+```python
+>>> for c in ligne1.keys():
+    ....print(c)
+IDC
+NOM
+AGE
+ACTIVITE
+```
+
+Voici alors un extrait de la table CLIENTS mise dans une liste de dictionnaires (3 premiere lignes):
+
+```python
+table = [{'IDC' : 27, 'NOM': 'Ritta', 'AGE': 19, 'ACTIVITE: 'Danse'},
+         {'IDC' : 19, 'NOM': 'Blaise', 'AGE': 29, 'ACTIVITE: 'Cinema'},
+         {'IDC' : 11, 'NOM': 'Dede', 'AGE': 59, 'ACTIVITE: 'Nature'},
+         ...
+         ]
+```
+
+### Table mise dans un Dataframe
+Cette partie sera developpée en TP.
 
 ## Opérations sur les tables
 Ces opérations vont créer une nouvelle table.
 ### Selection
 **Definition:** Selectionner revient à extraire les lignes d'une table qui satisfont un critère. Pour réaliser une selection, on utilise une fonction `test` qui prend en paramètre une ligne de la table et retourne un booléen:
+
+{{< img src="../images/table11.png" >}}
 
 **Méthode utilisant une boucle bornée:**
 
@@ -151,7 +220,9 @@ for ligne in table:
 ```
 
 ### Projection
-**Definition:** Une projection revient à supprimer certaines colonnes de la table. Pour réaliser une projection, on créé une nouvelle table:
+**Definition:** Une projection revient à ne conserver que certaines colonnes de la table. Pour réaliser une projection, on créé une nouvelle table:
+
+{{< img src="../images/table12.png" >}}
 
 **Méthode utilisant une boucle bornée et une table de listes:**
 

@@ -75,16 +75,16 @@ fonction devine_un_nombre(borne_inf: entier, borne_sup: entier) -> c: entier
 > Questions:
 
 >1. Faire plusieurs parties avec pour bornes: [0 .. 100]. Quelle est la valeur de c dans chaque cas?
-2. Quelles sont les  puissances m et n de 2 qui encadrent la valeur $2^n < 100 < 2^m$?
-2. Jouer à ce même jeu, mais avec les bornes: [0 .. 1000]
-3. Comparer c avec n et m tels que $2^n < 1000 < 2^m$
+> 2. Quelles sont les  puissances m et n de 2 qui encadrent la valeur $2^n < 100 < 2^m$?
+> 3. Jouer à ce même jeu, mais avec les bornes: [0 .. 1000]
+> 4. Comparer c avec n et m tels que $2^n < 1000 < 2^m$
 
 *Le jeu auquel vous avez joué est celui d'une recherche dichotomique. Vous avez cherché un élément (une valeur) dans un ensemble trié (l'ensemble des entiers [0 ..100])* 
 
 ## COURS: recherche linéaire
 **Def:** La recherche dans une liste consiste à trouver un élément x dans cette liste, et retourner l'indice de x. Cet algorithme consiste à observer les valeurs de la table, l'une après l'autre, jusqu'à trouver la valeur cherchée **x**, ou arriver au bout de la table.
 
-Dans le cas d'une **table non triée**, l'algorithme de recherche le plus efficace est l'algorithme de **recherche linéaire**. 
+Dans le cas d'une **table non triée**, seul l'algorithme de **recherche linéaire** est susceptible de donner un resultat. 
 
 L'algorithme suivant retourne l'index de x, ou bien -1 si x n'est pas dans la liste.
 
@@ -105,9 +105,9 @@ def recherche1(T, x)->int:
     return i
 ``` 
 
-### Questions
+> Questions
 >1. Que retourne l'instructiion suivante: `recherche1([i for i in range(0,10,2)], 8)`? 
-2. Que retourne l'instruction suivante: `recherche1([i for i in range(0,10,2)], 10)`?
+>2. Que retourne l'instruction suivante: `recherche1([i for i in range(0,10,2)], 10)`?
 
 ### Efficacité de la recherche linéaire
 **Def**: **L'efficacité** est mesurée par la *COMPLEXITE*: La **complexité** mesure le nombre d'opérations effectuées par la fonction. Ce nombre d'opérations dépend des *valeurs des paramètres*, mais aussi de la *taille* de ces paramètres. C'est pourquoi, il est d'usage de considérer plusieurs cas pour mesurer l'efficacité. Elle est en général exprimée comme une **fonciton de n**, où n est la **taille de la liste** passée en paramètre.
@@ -314,9 +314,12 @@ La complexité est *linéaire* dans le meilleur des cas (liste déjà triée), m
 Pour le tri par séléction, le nombre d'opérations est constant, et egal à $b.N^2$. La complexité est *quadratique*.
 
 # Documents
-*{{< a link="/pdf/NSI/Algorithmiques2-algos_tri-cours.pdf" caption=" fiche de TD à compléter" >}}*{{< a link="/pdf/NSI/algorithmes2_recherche_tri.pdf" caption="fiche d'exercices" >}}
+*{{< a link="/pdf/NSI/Algorithmiques2-algos_tri-cours.pdf" caption=" fiche de TD à compléter" >}}
+
+*{{< a link="/pdf/NSI/algorithmes2_recherche_tri.pdf" caption="fiche d'exercices" >}}
 # Liens
-* cours et animations sur la [page du site Lyceum](https://www.lyceum.fr/1g/nsi/8-algorithmique/2-algorithmes-de-tri)
+* cours et animations sur la [page du site Lyceum](https://www.lyceum.fr/1g/nsi/8-algorithmique/2-algorithmes-de-tri). La complexité y est traitée de manière experimentale.
+* Eduscol: Preuve de l'algorithme de recherche dichotomique [detail en pdf](https://eduscol.education.fr/document/30064/download)
 
 
 
