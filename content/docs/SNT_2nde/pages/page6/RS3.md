@@ -6,7 +6,7 @@ Title: TP reseaux sociaux
 
 # Partie 1: Véracité vs Viralité
 ## Contexte
-Les usagers des réseaux sociaux vont souvent partager de fausses informations, parce que celles-ci vont créer de l'émotion chez le lecteur. Ce comportement ressemble à ce que l'on appelait le bouche-à-oreille avant l'existance des réseaux sociaux. Le problème, c'est que ce type de re-publication occupe une grande part des publications réalisées sur le réseau social. Et que l'algorithme du logiciel va lui proposer toujours plus de posts du même type. Au final, les posts les plus sensationnels, à defaut d'être Vrais, vont se propager plus facilement, et amener l'algorithme à les privilegier au détriment de Vrais informations, moins spectaculaires.
+*Les usagers des réseaux sociaux vont souvent partager de fausses informations, parce que celles-ci vont créer de l'émotion chez le lecteur. Ce comportement ressemble à ce que l'on appelait le bouche-à-oreille avant l'existance des réseaux sociaux. Le problème, c'est que ce type de re-publication occupe une grande part des publications réalisées sur le réseau social. Et que l'algorithme du logiciel va lui proposer toujours plus de posts du même type. Au final, les posts les plus sensationnels, à defaut d'être Vrais, vont se propager plus facilement, et amener l'algorithme à les privilegier au détriment de Vrais informations, moins spectaculaires.*
 
 ## Travail de recherche
 Choisir l'une des publications suivantes. 
@@ -30,6 +30,11 @@ Vous disposerez de 60 secondes pour nous convaincre de la (non) *véracité* de 
 # Partie 2: Créer la carte d’identité d’un réseau social
 ## Travail de recherche
 Choisir l'un des reseaux sociaux ci-dessous. Faire une recherche documentaire sur les caractéristiques principales de celui-ci. Ces caractéristiques doivent permettrent de comparer les différents réseaux sociaux. Il peut s'agir d'informations relatives à ses origines, son type, sa notoriété, spécificité, son modèle économique, les revenus réalisés, ...
+
+Mais aussi: 
+
+* Pourquoi être présents sur ce réseau social?
+* Quelle stratégie digitale faut-il employer pour se faire connaitre, et créer une grande communauté d’adhérents?
 
 Rassembler ces informations de manière organisée, dans une vignette du logiciel de présentation (Powerpoint). 
 
@@ -70,6 +75,7 @@ Vous disposerez de 60 secondes pour nous convaincre d’utiliser ou non ce rése
 31. Discord
 32. Steam
 33. Tinder
+34. Myfool
 
 # Autres liens
 * Viralité et information sur les réseaux sociaux : quels mécanismes ? quelles menaces ? [Lumni](https://enseignants.lumni.fr/parcours/1225/viralite-et-information-sur-les-reseaux-sociaux-quels-mecanismes-quelles-menaces.html)
