@@ -258,6 +258,7 @@ grâce à l'arrêt de la Cour de justice de l'Union européeenne du 13 mai 2014,
 * Autre cours de SNT: [jlrichter.fr](https://www.cours.jlrichter.fr/lycee/snt-sciences-numeriques-et-technologie/2snt-c-les-reseaux-sociaux/)
 * Parcours sur les reseaux sociaux à base de videos: [Lumni](https://enseignants.lumni.fr/parcours/1225/viralite-et-information-sur-les-reseaux-sociaux-quels-mecanismes-quelles-menaces.html)
 * Kit atelier collège sur [internet sans craintes](https://www.internetsanscrainte.fr/sid/kitsateliers)
+* Guide de prevention des cyberviolences en milieu scolaire: [Lien vers le pdf](https://cache.media.education.gouv.fr/file/11_-_novembre/10/2/2016_non_harcelement_guide_prevention_cyberviolence_WEB_654102.pdf)
 * fun video:
 
 {{< img src="../images/rs12.png" link="https://youtu.be/F7pYHN9iC9I" caption="Amazing mind reader reveals his 'gift' - video - le mentaliste" >}}

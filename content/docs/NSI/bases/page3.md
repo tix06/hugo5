@@ -23,9 +23,9 @@ Title : SGBD
 ## Deux problématiques complémentaires
 Une base de donnée est necessaire pour stocker de manière permanente des données, mais aussi pour partager ces données.
 
-*La structuration des données:* Une base de données est une représentation tabulaire de ces données. Les tables respectent des contraintes sur leur contenu. Il existe des liens entre tables qui doivent obéir à certaines règles et satisfaire certaines proprietés. La théorie sous-jacente, la *normalisation*, a été développée pour s’assurer que l’on construit un schéma correct.
+**La structuration des données:** Une base de données est une représentation tabulaire de ces données. Les tables respectent des contraintes sur leur contenu. Il existe des liens entre tables qui doivent obéir à certaines règles et satisfaire certaines proprietés. La théorie sous-jacente, la *normalisation*, a été développée pour s’assurer que l’on construit un schéma correct.
 
-Il faudra organiser ces données et utiliser un langage spécifique pour acceder à ces données: le *langage de requêtes*.
+Il faudra organiser ces données et utiliser un langage spécifique pour acceder à ces données: le **langage de requêtes**.
 
 
 

@@ -13,14 +13,14 @@ Il reçoit des demandes d'utilisation des ressources de l'ordinateur — ressour
 ## Définitions
 **Exécution d'un programme:** le lancement d’un programme entraîne des lectures et écritures dans des registres et une partie de la mémoire. Le microprocesseur réalise des opérations sur les données mises dans les registres.
 
-**Un processus** représente une instance d’exécution d’un programme dans une  machine donnée.  
+**Un processus** représente une instance d’exécution d’un programme dans une  machine donnée, qui a sa propre zone mémoire virtuelle.  
 
 ## Les états d’un processus  
 Les systèmes d'exploitation sont capables de gérer l'execution de plusieurs processus en même temps. En réalité, ce n'est pas tout à fait *en même temps*: pour gérer ce *chacun son  tour*, les **systèmes d'exploitation** attribuent des *états* au processus.
 
 Ces états sont résumés ci-dessous.  
 
-* Lorsqu'un processus est créé, il démarre dans l’état *prêt*: il attend de pouvoir  avoir accès au processeur.  
+* Lorsqu'un processus est créé, il démarre dans l’état *prêt*: il attend l'accès au processeur.  
 * Le processus obtient, grâce au systeme d'exploitation, l’accès au processeur. Il passe alors dans l’état *élu*.  
 * Alors qu’il est *élu*, le processus peut avoir besoin d’attendre une ressource quelconque comme, par exemple, une ressource en mémoire ou sur le disque dur. Il doit alors quitter  momentanément le processeur pour que celui-ci puisse être utilisé à d’autres tâches  (le processeur ne doit pas attendre!). Le processus passe donc de l'état élu à l’état *bloqué*. (c'est un *blocage*) 
 * Lorsque le processus a obtenu la ressource attendue mais s’est fait prendre sa place dans le  processeur par un autre processus, il se met en attente: C'est l'état *prêt*, en attente que la *place se libère*. Cette étape, de bloqué à prêt est l'opération de *déblocage*.
@@ -154,7 +154,7 @@ Cette commande est l'équivalent du gestionnaire de tâches de Windows. Elle app
 | `ps` | `tasklist / svc`, `tasklist /?` (processus) | liste des processus |
 | `ps -aef` | `tasklist / svc`, `sc /?` (services) | liste des services |
 | `kill <PID>` ou `kill <PPID>` | `taskkill <nom>`  |  fermer un processus, directement ou avec le PID du parent  |
-| `top` |  | suivi en temps réel des processus (sortie avec `q`) |
+| `top` |  | suivi en temps réel des processus (sortir avec la touche `q`) |
 
 Sous windows, on peut aussi utiliser le Task manager
 

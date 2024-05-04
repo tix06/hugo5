@@ -246,3 +246,79 @@ C. Ce graphe représente l'arbre couvrant du graphe. Donner les caractéristique
 D. Quel est le chemin le plus court pour aller de F à G? 
 
 E. Même question, mais cette fois pour aller de H à K.
+
+# bac 2021 candidat libre exercice 3
+La commande UNIX `ps` présente un cliché instantané des processus en cours d’exécution.
+
+Avec l’option `−eo pid,ppid,stat,command`, cette commande affiche dans l’ordre l’identifiant du processus `PID` (process identifier), le `PPID` (parent process identifier), l’état `STAT` et le nom de la commande à l’origine du processus.
+
+Les valeurs du champ `STAT` indique l’état des processus :
+
+`R` : processus en cours d’exécution
+
+`S` : processus endormi
+
+Sur un ordinateur, on exécute la commande `ps −eo pid,ppid,stat,command` et on obtient un affichage dont on donne ci-dessous un extrait:
+
+{{< img src="../images/page6_7.png" >}}
+
+À l’aide de cet affichage, répondre aux questions ci-dessous.
+
+1. Quel est le nom de la première commande exécutée par le système d’exploitation lors du démarrage?
+2. Quels sont les identifiants des processus actifs sur cet ordinateur au moment de l’appel de la commande `ps`? Justifier la réponse.
+3. Depuis quelle application a-t-on exécuté la commande `ps`? Donner les autres commandes qui ont été exécutées à partir de cette application.
+4. Expliquer l’ordre dans lequel les deux commandes `python programme1.py` et `python programme2.py` ont été exécutées.
+5. Peut-on prédire que l’une des deux commandes `python programme1.py` et `python programme2.py` finira avant l’autre?
+
+# bac 2021 candidat libre exercice 2 sujet 2
+## Les états possibles d’un processus sont : prêt, élu, terminé et bloqué.
+### Expliquer à quoi correspond l’état élu.
+
+### Proposer un schéma illustrant les passages entre les différents états.
+
+On suppose que quatre processus C₁, C₂, C₃ et C₄ sont créés sur un ordinateur, et qu’aucun autre processus n’est lancé sur celui-ci, ni préalablement ni pendant l’exécution des quatre processus.
+
+L’ordonnanceur, pour exécuter les différents processus prêts, les place dans une structure de données de type file. Un processus prêt est enfilé et un processus élu est défilé.
+
+## Parmi les propositions suivantes, recopier celle qui décrit le fonctionnement des entrées/sorties dans une file :
+
+* Premier entré, dernier sorti
+* Premier entré, premier sorti
+* Dernier entré, premier sorti
+
+## On suppose que les quatre processus arrivent dans la file et y sont placés dans l’ordre C₁, C₂, C₃ et C₄.
+
+Les temps d’exécution totaux de C₁, C₂, C₃ et C₄ sont respectivement 100 ms, 150 ms, 80 ms et 60 ms.
+
+Après 40 ms d’exécution, le processus C₁ demande une opération d’écriture disque, opération qui dure 200 ms. Pendant cette opération d’écriture, le processus C₁ passe à l’état bloqué.
+
+Après 20 ms d’exécution, le processus C₃ demande une opération d’écriture disque, opération qui dure 10 ms. Pendant cette opération d’écriture, le processus C₃ passe à l’état bloqué.
+
+Sur la frise chronologique donnée en annexe (à rendre avec la copie), les états du processus C₂ sont donnés. 
+
+> Compléter la frise avec les états des processus C₁, C₃ et C₄.
+
+
+{{< img src="../images/page6_8.png" caption="Annexe de l’exercice 2" >}}
+
+
+## On trouvera ci-dessous deux programmes rédigés en pseudo-code.
+
+Verrouiller un fichier signifie que le programme demande un accès exclusif au fichier et l’obtient si le fichier est disponible.
+
+| Programme 1 | 	Programme 2 |
+|--- |--- |
+| Verrouiller fichier_1	| Verrouiller fichier_2 |
+| Calculs sur fichier_1 | 	Verrouiller fichier_1 |
+| Verrouiller fichier_2 |	Calculs sur fichier_1 |
+| Calculs sur fichier_1	 | Calculs sur fichier_2 |
+| Calculs sur fichier_2 |	Déverrouiller fichier_1 |
+| Calculs sur fichier_1	 | Déverrouiller fichier_2 |
+| Déverrouiller fichier_2	 |   |
+| Déverrouiller fichier_1	 |   |
+
+### En supposant que les processus correspondant à ces programmes s’exécutent simultanément (exécution concurrente), expliquer le problème qui peut être rencontré.
+
+### Proposer une modification du programme 2 permettant d’éviter ce problème.
+
+
