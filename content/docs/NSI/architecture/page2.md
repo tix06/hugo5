@@ -112,7 +112,8 @@ Le TP2 plus bas permet d'explorer ces notions avec le multi-threading...
 ## Les commandes d'exploration
 * `PWD`: nom du repertoire courant
 * `cd ..`: remonter au repertoire parent
-* `ls`: lister le contenu du repertoire courant (nombreuses options possibles comme `l`, `-R`, ...)
+* `ls`: lister le contenu du repertoire courant. Nombreuses options possibles comme `l` (affiche le contenu et les droits), `-r` (parcours et affichage recursif), ...
+
 
 ## La commande `cat`
 Cette commande permet à la fois:
@@ -158,7 +159,54 @@ Cette commande est l'équivalent du gestionnaire de tâches de Windows. Elle app
 
 Sous windows, on peut aussi utiliser le Task manager
 
+## Edition de fichiers ou dossiers
+### Créer un nouveau fichier vide
+`touch <nom fichier>`
 
+On rappelle que la commande `cat` permet aussi de créer ET editer un fichier.
+
+### Copie
+`cp <chemin du fichier a copier> <dossier destination>`
+
+`cp -r <chemin dossier a copier> <destination>`
+
+*Rappel:* Le chemin est:
+
+* absolu s'il commence par `/`
+* relatif sinon
+
+### deplacer
+`mv <chemin du fichier a copier> <dossier destination>`
+
+*Remarque*: cette commande sert aussi à *renommer* un fichier. 
+
+`mv <ancien nom> <nouveau nom>`
+
+## Gestion des droits
+### Consulter les droits
+L'utilisateur peut avoir le *statut*:
+
+* 'u' (user) propriétaire de la ressource
+* `g` (group) fait partie du groupe d'utilisateurs
+* `o` (other) autre
+
+L'utilsateur est repéré dans le systeme par son numero *user id* (uid) et *group id* (gid).
+
+L'utilisateur possède selon son statut les *droits*:
+
+* `r` en lecture
+* `w` en écriture
+* `x` en execution ou ouverture (dossier)
+
+avec la commande `ls -l` on affiche le contenu du repertoire ainsi que les droits, dans l'ordre *user group other*
+
+*Exemple*: 
+
+`rwx r-x --x` signifie que *user* possède les droits *rwx*, que *group* possède les droits *rx* et *other* uniquement *x*.
+
+### Changer les droits
+* `chmod <ressource> g-x`  va *retirer* le droit en execution à *g*
+* `chmod <ressource> g+x`  va *ajouter* le droit en execution à *g*
 
 # Vocabulaire
 ## Terminal
