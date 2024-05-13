@@ -106,7 +106,7 @@ def recherche1(T, x)->int:
 ``` 
 
 > Questions
->1. Que retourne l'instructiion suivante: `recherche1([i for i in range(0,10,2)], 8)`? 
+>1. Que retourne l'instruction suivante: `recherche1([i for i in range(0,10,2)], 8)`? 
 >2. Que retourne l'instruction suivante: `recherche1([i for i in range(0,10,2)], 10)`?
 
 ### Efficacité de la recherche linéaire
@@ -202,6 +202,9 @@ Pour chaque carte de la donne :
 Fin pour chaque
 ```
 
+> Question: 
+représenter la main du joueur lorsqu’il reçoit les cartes 6, puis 9 puis Valet. Il utilise l’algorithme de tri par insertion pour les classer. Il possède au debut de la partie: 8, 10, Dame, Roi,  As
+
 *Programme python*
 
 ```python
@@ -215,6 +218,13 @@ def tri1(table):
         table[j]=temp
     return table
 ```
+
+> Question: quelle partie du programme python correspond à: 
+
+```
+Tant que la nouvelle carte va avant la carte de la main triée :
+    Avancer le regard d’une carte vers la gauche dans la main triée
+``` 
 
 ## Le tri par selection
 *Principe*: On recherche le plus petit élément dans la partie non triée et on l'insère à la fin de la partie *triée*.

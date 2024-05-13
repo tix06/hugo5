@@ -183,14 +183,30 @@ On rappelle que la commande `cat` permet aussi de créer ET editer un fichier.
 `mv <ancien nom> <nouveau nom>`
 
 ## Gestion des droits
+Les utilisateurs et les groupes sont utilisés sous Linux pour le contrôle d'accès c'est-à-dire pour contrôler l'accès aux fichiers, répertoires et périphériques du système.
+
 ### Consulter les droits
+Un utilisateur est toute personne qui utilise un ordinateur. Il doit porter un nom, vrai ou faux (alice, pirate, votre prenomnom, ...). Tout ce qui compte, c'est que l'ordinateur ait un nom pour chaque compte qu'il crée.
+
+Les utilisateurs peuvent être regroupés dans un "groupe", regroupant les contrôles d'accès prévus pour chaque fichier.
+
 L'utilisateur peut avoir le *statut*:
 
-* 'u' (user) propriétaire de la ressource
-* `g` (group) fait partie du groupe d'utilisateurs
-* `o` (other) autre
+* `u` (user) propriétaire de la ressource
+* `g` (group) fait partie du groupe d'utilisateurs propriétaires de ce fichier
+* `o` (other) autres (ceux qui ne sont pas propriétaires)
 
-L'utilsateur est repéré dans le systeme par son numero *user id* (uid) et *group id* (gid).
+Ce statut est indiqué dans la 3e colonne sur l'image suivante:
+
+{{< img src="../images/term_usr.png" caption="image de linux-console.net" >}}
+
+*La 4e colonne indique le groupe d'utilisateurs propriétaires. (Souvent, c'est le même que le propriétaire). Le numero dans la 2e colonne est le nombre de lien pointant vers la ressource.*
+
+L'utilisateur est repéré dans le systeme par son numero *user id* (uid) et *group id* (gid). 
+
+Chaque fichier sur un système GNU/Linux appartient à un utilisateur et à un groupe.
+
+Différentes autorisations d'accès peuvent être appliquées à l'utilisateur propriétaire d'un fichier, au groupe propriétaire et aux *autres*.
 
 L'utilisateur possède selon son statut les *droits*:
 
@@ -202,7 +218,7 @@ avec la commande `ls -l` on affiche le contenu du repertoire ainsi que les droit
 
 *Exemple*: 
 
-`rwx r-x --x` signifie que *user* possède les droits *rwx*, que *group* possède les droits *rx* et *other* uniquement *x*.
+`drwx r-x --x` signifie que *user* possède les droits *rwx*, que *group* possède les droits *rx* et *other* uniquement *x*. Le *d* initial signifie *directory*, le type d'élément (dossier, fichier). Le tiret signifie que le droit est *desactivé*.
 
 ### Changer les droits
 * `chmod <ressource> g-x`  va *retirer* le droit en execution à *g*
@@ -226,4 +242,4 @@ Un terminal est un programme qui permet d'interagir avec le systeme d'exploitati
 * [multiprocessing](https://en.wikipedia.org/wiki/Multiprocessing)
 * [(multi)threading](https://fr.wikipedia.org/wiki/Thread_(informatique))
 * [multiprocessing or multithreading](https://timber.io/blog/multiprocessing-vs-multithreading-in-python-what-you-need-to-know/)
-
+* Guide complet sur la propriété et les groupes de fichiers Linux: [linux-console.net](https://fr.linux-console.net/?p=12841)
