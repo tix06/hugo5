@@ -4,6 +4,12 @@ Title: Tri et recherche
 ---
 
 # Algorithmes de recherche et de tri
+Deux familles d'algorithmes fortement liées:
+
+*Algorithmes de recherche: essentiels pour les bases de données. Par exemple: de l'identifiant du client pour retrouver la fiche client. L'algorithme le plus simple est celui de la recherche séquentielle.*
+ 
+*Algorithmes de tri: la recherche dichotomique sur une table déjà triée va être beaucoup plus efficace que la recherche sequentielle sur une table non triée* 
+
 ## Recherche séquentielle
 Imaginez un jeu où votre adversaire doit deviner le nombre que vous avez en tête.
 
