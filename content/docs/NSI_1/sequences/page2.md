@@ -23,7 +23,6 @@ A chacune de ses propositions, vous lui répondez **VRAI** ou **FAUX**, sans aut
 Et si la plage de recherche fait **n** valeurs, le nombre d'essais peut aller jusqu'à **n** propositions. On dit que la complexité algorithmique pour résoudre ce problème (trouver la valeur en parcourant tous les nombres possibles), est **O(n)**. C'est-à-dire une classe de complexité *linéaire*.  Il existe un algorithme plus efficaces, comme celui de recherche par *dichotomie*, dont la complexité est **O(log(n))**.
 
 
-
 Cette différence d'efficacité entre fonctions de **n** (taille du paramètre d'entrée) est d'autant marquée que le nombre **n** est grand.
 
 Ce problème s'apparente à celui de la recherche séquentielle dans une table:
@@ -191,6 +190,7 @@ Le tri peut être effectué avec des éléments numériques. Mais il peut aussi 
 On a vu [deux algorithmes de tri](/pdf/NSI/algos_tri_simples.pdf): le tri par insertion, et le tri par selection. Le langage Python possède une fonction de tri native: `sorted`, et une méthode de tri associée aux listes: `sort`.
 
 ## Le tri par insertion
+### Principe
 *Principe:* Pour cet algorithme, trier, c’est déplacer des éléments, et y **insérer** l’élément rangé, depuis le debut déjà trié de la liste, jusqu’à la fin. Voir le detail dans le cours de [terminale NSI](/docs/NSI/algorithmes/page8/)
 
 
@@ -215,13 +215,13 @@ représenter la main du joueur lorsqu’il reçoit les cartes 6, puis 9 puis Val
 
 ```python
 def tri1(table):
-    for k in range(1,len(table)):
-        temp = table[k]
-        j = k
-        while j>0 and table[j-1]>temp:
-            table[j]=table[j-1]
-            j-=1
-        table[j]=temp
+    for i in range(1,len(table)):
+        temp = table[i]
+        k = i
+        while k>0 and table[k-1]>temp:
+            table[k]=table[k-1]
+            k-=1
+        table[k]=temp
     return table
 ```
 
@@ -231,6 +231,43 @@ def tri1(table):
 Tant que la nouvelle carte va avant la carte de la main triée :
     Avancer le regard d’une carte vers la gauche dans la main triée
 ``` 
+
+### Efficacité du tri par insertion
+La mesure la durée d'execution de l'algorithme pour une liste donnée s'appelle la *complexité*. C'est une mesure en *unités* de temps. La complexité depend de la taille de la liste. C'est donc une fonction de n, tel que `n = len(L)`.
+
+Pour expérimenter la mesure de cette durée, aller sur [pythontutor](https://pythontutor.com/render.html#code=from%20random%20import%20sample%0AL%20%3D%20%5Bchr%28i%2B97%29%20for%20i%20in%20range%283%29%5D%0AL%20%3D%20sample%28L,len%28L%29%29%0A%0Adef%20tri1%28L%29%3A%0A%20%20%20%20for%20i%20in%20range%281,len%28L%29%29%3A%0A%20%20%20%20%20%20%20%20temp%20%3D%20L%5Bi%5D%0A%20%20%20%20%20%20%20%20k%20%3D%20i%0A%20%20%20%20%20%20%20%20while%20k%3E0%20and%20L%5Bk-1%5D%3Etemp%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20L%5Bk%5D%20%3D%20L%5Bk-1%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20k%20%3D%20k-1%0A%20%20%20%20%20%20%20%20L%5Bk%5D%20%3D%20temp%0A%20%20%20%20%20%20%20%20%0Atri1%28L%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false).
+
+Voici le script utilisé:
+
+```python
+from random import sample
+L = [chr(i+97) for i in range(3)]
+L = sample(L,len(L))
+
+def tri1(L):
+    for i in range(1,len(L)):
+        temp = L[i]
+        k = i
+        while k>0 and L[k-1]>temp:
+            L[k] = L[k-1]
+            k = k-1
+        L[k] = temp
+        
+tri1(L)
+```
+
+Puis executer le script pour avoir la mesure du nombre de *steps*... Cette mesure dépend de l'argument placé dans la fonction `range`, utilisée pour créer la liste `L`. Compléter le tableau:
+
+| liste L | n | nombre de steps pour trier |
+|--- |--- |--- |
+| `L = [chr(i+97) for i in range(3)]` | 3 |30 |
+| `L = [chr(i+97) for i in range(6)]` | 6 | 63 |
+| `L = [chr(i+97) for i in range(12)]` | 12 | ... |
+| `L = [chr(i+97) for i in range(24)]` | 24 | ... |
+
+*Analyser alors la fonction **steps=f(n)***
+
+> Question: Ce nombre, augmente t-il de manière régulière avec `n`? La fonction *temps=f(n)* est-elle linéaire?
 
 ## Le tri par selection
 *Principe*: On recherche le plus petit élément dans la partie non triée et on l'insère à la fin de la partie *triée*.
