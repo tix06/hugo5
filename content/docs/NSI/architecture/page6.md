@@ -46,10 +46,13 @@ Cet algorithme de chiffrement utilise une fonction périodique pour transformer 
 > Compléter l'algorithme du chiffrement de César. On suppose qu'il existe une clé `c` correspondant au décalage utilisé. Le message clair est `m` et le message chiffré est `m_chiffre`
 
 ```python
+m = ""
 Pour chaque lettre l du message m:
   l_chiffre = ...
   m_chiffre = ...
 ```
+
+*On peut utiliser les fonctions `numero(l:str)->int` et `caractere(n:int)->str`*
 
 ### Facilité du décryptage
 
@@ -142,9 +145,9 @@ Par exemple, `ord('A')` retourne 65, `ord('B')` retourne 66,...
 A partir des explications données dans la video:
 
 * **Question 1:** Construisez la matrice pour l’algorithme de Playfair avec la clé *estienne*. 
-* **Question 2:** Chiffrer le message: *COUPERLETRANSMETTEUR*.
+* **Question 2:** Chiffrer le message: *ACTIONREACTION*
 * **Question 3:** S'agit-il d'une méthode utilisant la substitution monoalphabetique, ou polyalphabetique?
-* **Question 4:** Est-ce qu'avec cette méthode, le decryptage est-il possible par l'analyse fréquentielle? 
+* **Question 4:** Avec cette méthode, le decryptage est-il possible par analyse fréquentielle? 
 
 ## Frequences des lettres dans un texte
 La fonction suivante retourne une liste de 26 valeurs de type *float*, donnant dans l'ordre de l'alphabet, la frequence pour chaque lettre dans un texte:
@@ -161,15 +164,24 @@ def freq(m):
 
 Soient les deux textes chiffrés suivants:
 
-a. DGFHTMOMEIAMTLMFGOKFGOKEGDDTRWEIAKZGFGFSTEKGOMLASTTIFG FOSTLM FTFGOK MGWMFG OKRTSA JWTWTA WDTFMG FDAOLT WMOSSA FGOKET WKRWFD TEIAFM ROAZSG MOFKOT FFTXAW MLARGW ETWKJW AFROSD OAWSTA WDAMOF HGWKDT STEITK SADAOF
+a. 
 
-b. YOHGMV MFCBRB GWFNIZ ZPSURW FUOIPU WYITFA NIETGG DOCKAC PQE- BEW PMXEMK VGRAIL KWWXZO CILGPM QOVCGE GMYEBQ RYACJM WX- ULFR VQMDCY LZFYZM YTPCRF DCRJNS FIHIQG RZEPRC VWMDIL KGYDQO RVFMXM CRCNIM UGRBKR BOOIUG PQCBVZ NEYACE
+```
+DGFHTMOMEIAMTLMFGOKFGOKEGDDTRWEIAKZGFGFSTEKGOMLASTTIFGFOSTLMFTFGOKMGWMFGOKRTSAJWTWTAWDTFMGFDAOLTWMOSSAFGOKETWKRWFDTEIAFMROAZSGMOFKOTFFTXAWMLARGWETWKJWAFROSDOAWSTAWDAMOFHGWKDTSTEITKSADAOF
+```
+
+b. 
+
+```
+YOHGMVMFCBRBGWFNIZZPSURWFUOIPUWYITFANIETGGDOCKACPQEBEWPMXEMKVGRAILKWWXZOCILGPMQOVCGEGMYEBQRYACJMWXULFRVQMDCYLZFYZMYTPCRFDCRJNSFIHIQGRZEPRCVWMDILKGYDQORVFMXMCRCNIMUGRBKRBOOIUGPQCBVZNEYACE
+```
 
 * **Question 2:** L'un des 2 a été chiffré avec un algorithme de substitution mon-alphabetique, et l'autre, poly-alphabétique. Lequel est mono-alphabétique?
 
 * **Question 3:** Tracer un histogramme à partir du texte chiffré en mono-substitution. On donne un exemple de script ci-dessous pour réaliser le graphique:
 
 ```python
+import matplotlib.pyplot as plt
 fig = plt.figure()
 ax = fig.add_axes([0, 0, 1, 1])
 
@@ -209,23 +221,45 @@ Donner la table de vérité de la fonction XOR
 
 ```
 >>> xor(0,1)
->>> 1
+1
+>>> xor(53,23)
+34
+>>> xor(34,23)
+53
 ```
 
-* **Question 4:** On s'interresse maintenant à la programmation de la fonction XOR pour chiffrer un message à partir d'un masque:
+* **Question 4:** Peut-on utiliser la fonction XOR pour chiffrer PUIS dechiffrer un message, avec la MEME clé de chiffrement? Expliquer à partir de l'exemple ci-dessus. 
 
-$$masque = "CETTEPHRASEESTVRAIMENTTRESTRESLONGUEMAISCESTFAITEXPRES"$$
+* **Question 5:** On s'interresse maintenant à la programmation de la fonction XOR pour chiffrer un message à partir d'un masque:
 
-Compléter la fonction chiffre(message, masque) qui chiffre message en le XORant avec masque.
+$$message = "CETTEPHRASEESTVRAIMENTTRESTRESLONGUEMAISCESTFAITEXPRES"$$
+
+Le masque (correspond à la clé) aura une longueur inférieur au message. On utilise le masque selon la méthode de chiffrement polyalphabetique vue en cours.
+
+Le chiffrement demande de faire correspondre les caractères avec des nombres entiers. On utilisera pour cela un alphabet de 32 caractères ($2^5$). Chaque lettre de l'alphabet correspondra alors à un nombre compris entre 0 et 31. 
+
+* **Question 6:** Lorsque l'on place 2 entiers inférieurs à 31 dans la fonction XOR, celle-ci retourne un entier également inférieur à 31. Pourquoi?
+
+* **Question 7:** Compléter la fonction chiffre(message, masque) qui chiffre message en le XORant avec masque.
 
 Cette fonction doit pouvoir aussi servir à déchiffrer le message chiffré.
 
 ```python
+alphabet=[chr(i+ord('A')) for i in range(26)] + ['*','/','@','&','!','à']
 def chiffre(message, masque):
+    assert len(message)>=len(masque)
     message_chiffre = ""
     for i in range(len(message)):
-        ...
+        indice_lettre = alphabet.index(message[i])
+        indice_masque = ...
+        val = xor(...,...)
+        message_chiffre+=alphabet[val]
+    return ...
 ```
+
+* **Question 8:** Utiliser la fonction `chiffre` pour montrer le chiffrement puis le dechiffrement du *message*.
+
+* **Question 9:** Pensez vous que cette méthode de chiffrement est assez resistante face à une attaque de cryptoanalyse? Si oui, pourquoi?
 
 <!--
 ## Chiffrement symetrique par la fonction XOR
