@@ -238,9 +238,9 @@ Le masque (correspond à la clé) aura une longueur inférieur au message. On ut
 
 Le chiffrement demande de faire correspondre les caractères avec des nombres entiers. On utilisera pour cela un alphabet de 32 caractères ($2^5$). Chaque lettre de l'alphabet correspondra alors à un nombre compris entre 0 et 31. 
 
-* **Question 6:** Lorsque l'on place 2 entiers inférieurs à 31 dans la fonction XOR, celle-ci retourne un entier également inférieur à 31. Pourquoi?
+* **Question 6:** Lorsque l'on place 2 entiers inférieurs à 32 dans la fonction XOR, celle-ci retourne un entier également inférieur à 32. Pourquoi? (*Representer ces nombres en binaire, sur un octet, et verifier cette affirmation*)
 
-* **Question 7:** Compléter la fonction chiffre(message, masque) qui chiffre message en le XORant avec masque.
+* **Question 7:** Compléter la fonction `chiffre(message, masque)` qui chiffre message en le XORant avec masque.
 
 Cette fonction doit pouvoir aussi servir à déchiffrer le message chiffré.
 
@@ -257,7 +257,7 @@ def chiffre(message, masque):
     return ...
 ```
 
-* **Question 8:** Utiliser la fonction `chiffre` pour montrer le chiffrement puis le dechiffrement du *message*.
+* **Question 8:** Utiliser la fonction `chiffre` pour effectuer le chiffrement puis le dechiffrement du *message*.
 
 * **Question 9:** Pensez vous que cette méthode de chiffrement est assez resistante face à une attaque de cryptoanalyse? Si oui, pourquoi?
 
