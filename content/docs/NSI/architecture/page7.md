@@ -20,8 +20,18 @@ Pour comprendre ces termes, on utilise le scenario suivant. Alice et Bob sont 2 
 
 {{< img src="../images/trudy.png" caption="Le trio Alice - Bob - Trudy" >}}
 
-Le chiffrement asymétrique utilise plusieurs clés, une pour le chiffrement, et une autre pour le dechiffrement. Il repose sur des propriétés mathématiques de l'arithmetique modulaire. (voir principe du chiffrement RSA)
+Le chiffrement asymétrique utilise plusieurs clés, une pour le chiffrement, et une autre pour le dechiffrement. Il repose sur des propriétés mathématiques de l'arithmetique modulaire. (voir principe du chiffrement RSA: [wikipedia](https://fr.wikipedia.org/wiki/Chiffrement_RSA))
 
+
+> Complément sur RSA (Grand Oral)
+
+*Lors de la confection de la clé publique `e`, le propietaire de la clé utilise la valeur de 2 entiers `p` et `q` premiers entre eux (secrets). La clé privée `d` est alors calculée comme inverse modulaire de `e` (modulo $(p-1).(q-1)$).*
+
+*Pour chiffrer le caractère de valeur numérique M on fait: $M^e (mod~ n)$ et pour dechiffrer: $M^d (mod n)$ ou `n=p.q`*
+
+*On exploite la propiété qui veut que $(M^e)^d = M (mod~n)$*
+
+*Or, casser la clé revient à rechercher l'inverse modulaire de `e`, ce qui est impossible sans connaitre `p` et `q`, du moins en un temps limité. Et avec les algorithmes classiques, casser la factorisation croit exponentiellement avec la longueur de la clé.*
 
 ## Principe du chiffrement RSA
 ### Confidentialité
@@ -129,12 +139,16 @@ Si on appliquait cette méthode à un alphabet de 95 caractères (les caractère
 4. Pour les proriétaires d'un site internet, vaut-il mieux conserver dans la base de données, les mots de passe des clients, ou bien le hachage de chacun de ces mots de passe?
 
 ## RSA
-1. Quel est la valeur de $8^7$ modulo 55? Appeler ce nombre $n$.
-2. Quel est l'inverse de $n$ modulo 55?
+1. Quel est la valeur de $8^7$ modulo 40? 
+2. Verifier que 55 est decomposable en produit de 2 nombres premiers p et q. Calculer `(p-1)*(q-1)`
+3. Soit la clé publique $e=3$. Quel est l'inverse de $e$ modulo 40? Appeler ce nombre $d$.
+3. Chiffrer le message M = 5 avec la clé publique `e`, selon $M^e(mod~ 55)$
+4. Dechiffrer $M^e(mod~ 55)$ avec la clé privée `d`, selon la même fonction que précédemment.
 2. Dans un protocole de chiffement asymétrique, les algorithmes de chiffrement et de déchiffrement sont-ils les mêmes?
 3. Dans un protocole de chiffrement asymétrique, toutes les personnes possédant la clé publique de Bob peuvent lui envoyer un message?
 4. Dans un protocole d'authentification, toutes les personnes possédant la clé publique de Bob peuvent vérifier sa signature émise?
 5. Supposons que Bob envoie à Alice un message chiffré de la manière suivante: `C = chiffrement(m,Bob_public_key)`. Est-ce qu'Alice peut authentifier Bob avec ce message?
+6. Supposons que Bob envoie à Alice un message chiffré de la manière suivante: `C = chiffrement(m,Bob_private_key)`. Est-ce que ce message est confidentiel?
 
 # Liens
 * autres exercices: [mathly.fr](http://www.mathly.fr/TLS.pdf)
