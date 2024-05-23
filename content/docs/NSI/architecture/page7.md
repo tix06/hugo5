@@ -23,15 +23,7 @@ Pour comprendre ces termes, on utilise le scenario suivant. Alice et Bob sont 2 
 Le chiffrement asymétrique utilise plusieurs clés, une pour le chiffrement, et une autre pour le dechiffrement. Il repose sur des propriétés mathématiques de l'arithmetique modulaire. (voir principe du chiffrement RSA: [wikipedia](https://fr.wikipedia.org/wiki/Chiffrement_RSA))
 
 
-> Complément sur RSA (Grand Oral)
 
-*Lors de la confection de la clé publique `e`, le propietaire de la clé utilise la valeur de 2 entiers `p` et `q` premiers entre eux (secrets). La clé privée `d` est alors calculée comme inverse modulaire de `e` (modulo $(p-1).(q-1)$).*
-
-*Pour chiffrer le caractère de valeur numérique M on fait: $M^e (mod~ n)$ et pour dechiffrer: $M^d (mod n)$ ou `n=p.q`*
-
-*On exploite la propiété qui veut que $(M^e)^d = M (mod~n)$*
-
-*Or, casser la clé revient à rechercher l'inverse modulaire de `e`, ce qui est impossible sans connaitre `p` et `q`, du moins en un temps limité. Et avec les algorithmes classiques, casser la factorisation croit exponentiellement avec la longueur de la clé.*
 
 ## Principe du chiffrement RSA
 ### Confidentialité
@@ -93,6 +85,18 @@ Si la chaine de confiance est rompue, votre navigateur affiche cette image qui v
 En pratique, le certificat est un ensemble d'informations sur le propriétaire du domaine, la durée de validité, l'algorithme utilisé pour l'authentification, la clé publique, et surtout l'*emetteur*. Lorsqu'Alice reçoit le certificat que lui envoie Bob, elle consulte l'*emetteur* du certificat pour verifier qu'il s'agit bien du bon certificat, que celui-ci appartient bien à Bob.
 
 {{< img src="../images/echange_certif.png" caption="procedure d'echange de certificat" >}}
+
+### Complément sur RSA (Grand Oral)
+
+*Lors de la confection de la clé publique `e`, le propietaire de la clé utilise la valeur de 2 entiers `p` et `q` premiers entre eux (secrets). La clé privée `d` est alors calculée comme inverse modulaire de `e` (modulo $(p-1).(q-1)$):*
+
+$$e.d = 1 + k\times(p-1)(q-1)$$
+
+*Pour chiffrer le caractère de valeur numérique M on fait: $M^e (mod~ n)$ et pour dechiffrer: $M^d (mod n)$ ou `n=p.q`*
+
+*On exploite la propiété qui veut que $(M^e)^d = M (mod~n)$*
+
+*Or, casser la clé revient à rechercher l'inverse modulaire de `e`, ce qui est impossible sans connaitre `p` et `q`, du moins en un temps limité. Et avec les algorithmes classiques, casser la factorisation croit exponentiellement avec la longueur de la clé.*
 
 # Principe d'une communication securisée HTTPS
 Lors d'une communication HTTPS: les objectifs d'authentification, authenticité et de confidentialité sont remplis. Lors du protocole de communication, les chiffrements asymétriques et symétriques sont tous 2 utilisés:
