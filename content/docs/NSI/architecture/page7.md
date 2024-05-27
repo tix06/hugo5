@@ -113,15 +113,32 @@ Lors d'une communication HTTPS: les objectifs d'authentification, authenticité 
 > **Signature numérique:** Lorsqu'on utilise sa propre clé privée pour envoyer un message, et qu'une autorité de certification peut garantir l'origine de cette clé privée, alors ce message envoyé a valeur de signature numérique. Il permet d'authentifier l'emetteur du message.
 
 # Fonction de hachage: intégrité
-Une fonction de hachage est un algorithme qui prend en entrée une chaine de caractères de longueur quelconque, et qui retourne en sortie une chaine de caractères de longueur n fixée, appelée *empreinte*. Il est presque impossible de retrouver la chaine de caractères d'origine à partir de cette empreinte.
+Une fonction de hachage est un algorithme qui prend en entrée une chaine de caractères de longueur quelconque, et qui retourne en sortie une chaine de caractères de longueur n fixée, appelée *empreinte*. Il est presque impossible de retrouver la chaine de caractères d'origine à partir de cette empreinte, tant la diffusion est importante suite à la modification d'une partie même infime du texte à chiffrer par cette méthode.
 
-Une application classique de l'utilisation de la fonction de hachage est le stockage de mots de passe, ou bien la verification de l'intégrité d'un message envoyé (comme un checksum).
+Une application classique de l'utilisation de la fonction de hachage est le stockage de mots de passe, ou bien la verification de l'intégrité d'un message envoyé (comme un checksum). Mais aussi pour la constitution d'une *blockchain*:
 
+Voir: [L'utilité du hachage pour la chaîne de blocs: rapport du Sénat](https://www.senat.fr/rap/r17-584/r17-584_mono.html#toc75)
 
+Dans la blockchain, chaque *bloc* contient le *hash* du bloc précédent, les données des nouvelles transactions, et le nouveau *hash* constitué à partir de ces données (hash du bloc precedent + transactions).
 
-# Le Blockchain
+# Blockchain
+*Une blockchain est un registre, une grande base de données qui a la particularité d’être partagée simultanément avec tous ses utilisateurs (constituant les noeuds d'un réseau distribué), tous également détenteurs de ce registre, et qui ont également tous la capacité d’y inscrire des données, selon des règles spécifiques fixées par un protocole informatique très bien sécurisé grâce à la cryptographie. Il est impossible d'effacer ou modifier ce qui a déjà été écrit dans ce registre. En pratique, une chaîne de blocs (blockchain) est une base de données qui contient l’historique de tous les échanges effectués entre ses utilisateurs depuis sa création.* [economie.gouv](https://www.economie.gouv.fr/entreprises/blockchain-definition-avantage-utilisation-application#)
+
+La sécurité vient du consensus (PoW, Proof of Work) des validateurs lorsque de nouveaux ajouts sont proposés. La validation consiste en un calcul long et difficile sur les données de l'historique de la blockchain. Une fois qu'il y a *consensus* (un commun accord), un nouveau bloc est ajouté, et la base de données (la blockchain) est alors proposée à tous les noeuds du reseau. (mise à jour).
+
+Cette tâche “ingrate” realisée par les validateurs est remunérée. Le bloc contient ainsi l'adresse de cryptomonnaies, qui sont partagées entre validateurs: Un registre distribué doit être accompagné d'une cryptomonnaie (propriétaire ou utilisée à partir d'un autre registre) afin de fournir des incitations pour maintenir opérationnels les programmes de validation et de synchronisation.
+
+*Pour résumer, une blockchain est un registre regroupant les transactions et adresses possédants des Bitcoins (ou autre cryptomonnaie), sécurisé par un protocole de validation par calcul et consensus.*
+
+La technologie "blockchain" s’est développée pour soutenir des transactions réalisées via les cryptomonnaies/crypto-actifs. Mais d'autres domaines et secteurs d’activités, marchands ou non marchands, publics ou privés, utilisent déjà la chaîne de blocs (blockchain) ou prévoient de le faire dans les années à venir: Dans le secteur de l’assurance par exemple, l’apport de la blockchain tient par exemple à l’automatisation des procédures de remboursement.
+
+Il est possible de *lire* dans la blockchain. On utilise pour cela un *[explorateur de blocs](https://www.ledger.com/fr/academy/comment-consulter-lhistorique-des-transactions-sur-la-blockchain)*.
 
 {{< img src="../images/scienceetonnante2.png" link="https://www.youtube.com/watch?v=du34gPopY5Y" caption="video sciences etonnantes - blockchain" >}}
+
+Il existe un autre type de validation, le PoS (Proof of Stake, ou preuve d'enjeu), qui permet d'augmenter grandement le flux de transactions. La blockchain Ethereum par exemple a effectué sa transition de la preuve de travail (PoW) vers une preuve d'enjeu (PoS) en septembre 2022. Pour participer à la sécurisation du réseau d’une blockchain PoS, il suffit d’avoir accumulé une quantité suffisante de jetons de la cryptomonnaie échangée sur le réseau. Plus une personne possédera de jetons d’une cryptomonnaie, plus on considérera que la sécurité du réseau est un enjeu important pour elle. Il y aura alors plus de chances d’être sélectionné (il y a une part d'aleatoire) pour produire un nouveau bloc et obtenir une récompense, en jetons. 
+
+
 
 # Exercices
 ## Nombre de clés: 

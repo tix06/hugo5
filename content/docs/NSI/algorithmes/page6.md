@@ -21,7 +21,7 @@ La programmation dynamique permet de résoudre plus *efficacement des problèmes
 3. On reconstruit la solution optimale en remontant les calculs de la valeur de la solution optimale.
 -->
 
-La programmation dynamique consiste à résoudre un problème en le décomposant en sous-problèmes, puis à **résoudre les sous-problèmes**, des plus petits aux plus grands **en stockant les résultats intermédiaires**, et en suivant une règle d'optimalité.
+La programmation dynamique consiste à résoudre un problème en le décomposant en sous-problèmes, puis à **résoudre les sous-problèmes**, des plus petits aux plus grands **en stockant les résultats intermédiaires**, et en suivant une règle d'optimalité. La solution donnée par un algorithme glouton est optimale, mais n'est pas forcement la solution *la plus optimale* au problème.
 
 Cela diffère des *algorithmes de type diviser pour régner* par le fait que les sous-problèmes considérés ne sont pas nécessairement indépendants. Pour les algorithmes de type *diviser pour régner*, on partitionne le problème en sous problèmes indépendants, qui seront résolus recursivement. Puis on combine leurs solutions pour résoudre le problème initial. Mais cela peut revenir à résoudre plusieurs fois le même sous-problème, et peut être parfois inefficace.
 
@@ -59,9 +59,11 @@ $$C\left(\begin{matrix}i\\\j\end{matrix}\right)=C\left(\begin{matrix}i-1\\\j-1\e
 
 {{< img src="../images/page6_calcul.png" >}}
 ## Algorithme récursif non optimisé
+Les algorithmes de type *diviser pour regner* sont souvent exprimés de manière recursive.
 
 ```python
 def pascal_recur(n,p):
+    # calcul d'un coefficient par recursivité
     if p==0:return 1
     if p>n:
         return 0
@@ -100,6 +102,9 @@ On peut alors tester le programme:
 On remarque que l'on calcule souvent les mêmes coefficients binomiaux : 
 
 {{< img src="../images/page6_arbre_binomiaux.png" alt="arbre de calculs binomiaux" caption="arbre de calcul des coefficients pour n=4 p=2" >}}
+
+*On voit que certains termes, comme celui (n=2, p=1) est calculé plusieurs fois. Dans les branches (n=3, p=1) et (n=3, p=2). Cela est du au fait que les 2 branches de l'arbre sont indépendantes.*
+
 La mémoïzation consistera alors à stocker dans un tableau les solutions pour les sous-problèmes afin de ne pas les recalculer...
 
 ## Algorithme avec mémoïzation
@@ -109,21 +114,20 @@ Chaque valeur du triangle n'est calculée qu'une seule fois.
 def trianglePascal(n):
     T = [[0] * (n+1) for p in range(n+1)]
     for n in range(n+1):
-        if n == 0:
-            T[n][0] = 1
-        else:
-            for k in range(n+1):
-                if k == 0:
-                    T[n][0] = 1
-                else:
-                    T[n][k] = T[n-1][k-1] + T[n-1][k]
+        for k in range(n+1):
+            if k == 0:
+                T[n][0] = 1
+            else:
+                T[n][k] = T[n-1][k-1] + T[n-1][k]
     return T
 ```
+
+L'algorithme non recursif, avec mémoïzation est plus efficace.
 
 
 # Algorithmes gloutons
 ## Le problème du rendu de monnaie 
-Le problème du rendu de monnaie est un problème d'algorithmique. Il s'énonce de la façon suivante : étant donné un système de monnaie (pièces et billets), comment rendre une somme donnée de façon optimale, c'est-à-dire avec le nombre minimal de pièces et billets ?
+Le problème du rendu de monnaie est un problème d'algorithmique. Il s'énonce de la façon suivante : étant donné un système de monnaie (pièces et billets), comment **rendre une somme donnée de façon optimale**, c'est-à-dire avec le **nombre minimal** de pièces et billets ?
 
 Par exemple, la meilleure façon de rendre 7 euros est de rendre un billet de cinq et une pièce de deux, même si d'autres façons existent (rendre 7 pièces de un euro, par exemple).
 
@@ -134,9 +138,38 @@ Ce problème est traité d'une manière différente de ce que l'on a vu en [1ere
 * soit la piece est inférieure à la monnaie à rendre: alors on soustrait la piece à la somme à rendre et on appelle la fonction de manière récursive avec cette même caisse, et la nouvelle somme à rendre.
 * soit la piece est supérieure à la somme à rendre. on retire la piece de la caisse. Et on appelle de manière récursive la fonction avec la nouvelle caisse, et la même somme.
 
+La condition de base sera: la liste de pieces est vide.
+
+On utilisera une liste `rendu` pour placer les pieces rendues.
+
+```python
+def rendre_monnaie(somme,pieces,rendu):
+    if pieces == []:
+        return rendu
+    if pieces[-1]<=somme:
+        rendu.append(pieces[-1])
+        return rendre_monnaie(somme-pieces[-1],pieces,rendu)
+    else:
+        pieces.pop()
+        return rendre_monnaie(somme,pieces,rendu)
+
+rendre_monnaie(49,[1,2,5,10,20,50,100],[])
+# affiche 
+# [20, 20, 5, 2, 2]
+```
+
+
+
 **Un système monétaire non canonique:** 
 
-> Que renvoie la fonction pour rendre 24 pences avec le [système imperial](https://fr.wikipedia.org/wiki/Shilling_britannique) où pieces = [240,60,30,24,12,6,3,1] ? Représenter pour cela l'arbre des appels. Quel est le rendu optimal avec cette méthode? Expliquer alors pourquoi l'agorithme naïf a une complexité exponentielle.
+> 1. Que renvoie la fonction pour rendre 53 pences avec le [système imperial](https://fr.wikipedia.org/wiki/Shilling_britannique) où pieces = [240,60,30,24,12,6,3,1] ? 
+> 2. Le rendu est-il optimal avec cette méthode? Ou bien existe t-il une autre façon de rendre la monnaie, avec moins de pieces?
+
+> 3. Représenter une partie de l'arbre des combinaisons possibles pour rendre un montant égal à 15, en choisissant une à une chaque piece de la caisse `[1, 7, 9]`. Quel est le choix optimal? 
+
+**Voir l'animation sur le site** [mpechaud.fr](https://mpechaud.fr/scripts/recursivite/recursivite.html#:~:text=Rendu%20de%20Monnaie%20(diviser%20pour%20r%C3%A9gner),-On%20se%20donne&text=On%20peut%20utiliser%20la%20strat%C3%A9gie,utilis%C3%A9es%2C%20class%C3%A9e%20par%20valeurs%20d%C3%A9croissantes.&text=Si%20s%3D0%2C%20afficher%20l.&text=On%20appelle%20alors%20cet%20algorithme%20en%20partant%20de%20la%20liste%20l%20vide.)
+
+Sur l'animation, l'algorithme traite TOUTES les combinaisons de rendu de monnaie. L'arbre des appels recursifs montre que la complexité de cette méthode croit exponentiellement avec la taille des paramètres d'entrée.
 
 Contrairement aux problèmes étudiés précédement (tri d’un tableau, calcul de x<sub>n</sub>...), où il y avait toujours une unique solution, dans les problèmes d’optimisation, il peut y avoir des solutions valides (satisfaisant les contraintes) non optimales, une ou plusieurs solutions (valides), optimales (minimisant/maximisant une certaine mesure), voire pas du tout de solution valide. 
 
@@ -177,7 +210,7 @@ L'algorithme remplit le tableau depuis la valeur 1 jusqu'à 15.
 
 Le tableau montre les choix que réalise l'algorithme.
 
-> Représenter l'arbre des combinaisons possibles pour rendre un montant égal à 9, en choisissant une à une chaque piece de la caisse {1, 7, 9}. On utilisera alors les résultats déjà trouvés pour rendre la valeur restante. Quel est le choix optimal? La complexité a t-elle été réduite?
+> Comment cet algorithme parvient-il à reduire le nombre de combinaisons pour rendre la monnaie?
 
 **Remarque:** Ce problème est [NP-complet](https://fr.wikipedia.org/wiki/Probl%C3%A8me_NP-complet) dans le cas général, c'est-à-dire difficile à résoudre. Cependant pour certains systèmes de monnaie dits canoniques, l'[algorithme glouton](https://fr.wikipedia.org/wiki/Algorithme_glouton) est optimal.
 
@@ -211,12 +244,13 @@ Nous allons chercher à adapter l'algorithme du rendu de monnaie:
 
 *Question*:
 
-> Déterminer le choix idéal pour un sac à dos de capacité 30kg, avec les objets suivants, proposés en nombre infini:
+> Déterminer le choix idéal pour un sac à dos de capacité 32kg, avec les objets suivants, proposés en nombre infini: `[{"valeur": 7, "poids":13},{"valeur": 4, "poids":11},{"valeur": 3.1, "poids":9},{"valeur": 1, "poids":3.5}]
 
 |Objets | 1 | 2 | 3  | 4 |
 | --- | --- | --- | --- | --- |
-| valeur | 7 | 4 | 3 | 3 |
-|poids (kg) | 13 |12| 8 |10|
+| valeur | 7 | 4 | 3.1 | 1 |
+|poids (kg) | 14 |11| 9 |3.5|
+|ratio val/poids | 0.5  | 0.36  |  0.34 | 0.29  |
 
 # Le problème du voyageur du commerce
 ## énoncé du problème
