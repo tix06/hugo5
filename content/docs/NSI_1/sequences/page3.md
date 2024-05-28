@@ -40,7 +40,7 @@ Les tables *clients* et *sejours* ont un identifiant unique attribué lors de le
 
 L'agence de voyage a besoin d'un programme prenant en entrée un nom de **VILLE**, et affichant la table contenant la reponse à la question:
 
-*Donner les couples (nom de client, identifiant de sejour) tel que ce sejour est est dans la **VILLE**, et propose l'activité favorite de ce client*.
+*Donner les couples (nom de client, identifiant de sejour) tel que ce sejour est dans la **VILLE**, et propose l'activité favorite de ce client*.
 
 *Exemple:* ``suggestion_client(VILLE = 'Oahu')``
 

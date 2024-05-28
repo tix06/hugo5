@@ -3,7 +3,9 @@ Title : geolocaliser
 ---
 
 # Géolocaliser
-## principe de la trilatération
+*Prérequis:* La lumière, transport d'une information par modulation [cours de PC 2nde](/docs/PC_2nde/physique/pages/page3/)
+
+## Mesurer le temps pour determiner une distance
 Les systèmes américains GPS et européens Galiléo permettent la *géolocalisation* par satellite d'un recepteur.
 
 La *géolocalisation* est le calcul de la position sur Terre.
@@ -12,7 +14,7 @@ La *géolocalisation* est le calcul de la position sur Terre.
 Le récepteur va recevoir en continu 2 types d'informations de la part de chacun des satellites:
 
 * la position du satellite
-* l'heure d'envoi du signal depuis le satellite
+* l'heure d'envoi du signal depuis le satellite t0
 
 Le recepteur va utiliser ces informations pour réaliser un calcul de positionnement. D'abord en calculant sa distance au satellite: Il utilise les temps t0 d'emission du signal et t1, celui de reception:
 
@@ -23,12 +25,32 @@ Le signal se deplaçant à la vitesse de la lumière, c = 300 000 km/s.
 {{< img src="../images/Ti-9-SNT-1.png" >}}
 Cette durée, t1 - t0 est calculée à partir des temps t1 et t0, mesurés par deux horloges différentes, et qu’il faudra synchroniser au mieux. 
 
+> Exercice: Calculer la distance satellite-recepteur si le temps de transit t1-t0 est egal à 70ms. 
+
 {{< img src="../images/Ti-9-SNT-4.png" >}}
 L’horloge du récepteur nécessite d’être régulièrement synchronisée avec celle des satellites émetteurs. C’est grâce à un algorithme calculant sur  les écarts de positionnement, que l’horloge du récepteur se met à l’heure des émetteurs. Cela nécessite de capter les signaux ﻿d’au moins 4 satellites GPS.
 
-Pour déterminer la position précise du recepteur sur Terre, il faut utiliser le resultat du calcul de la distance à ces 4 satellites, et déterminer le point d'intersection de 4 sphères (video explicative).
+## Principe de la trilatération
+**1964 :** Le premier système de positionnement par satellites est développé par les États-Unis, à usage uniquement militaire 
+
+**1995 :** ouverture mondiale au reseau GPS, le Global Positioning System
+
+GNSS est l’appellation du groupement de systèmes de positionnements par satellites qui *envoie des données de localisation et d’horaire* depuis leur orbite. Le système GNSS comprend le célèbre système de positionnement GPS (Global Positioning System), le système de positionnement russe GLONASS, le système de positionnement chinois BeiDou mais aussi le nouveau système de positionnement européen Galileo.
+
+En équipant chaque satellite d'un émetteur radio, il est possible de réceptionner les signaux provenant d'appareils reconnus et d'estimer les délais de synchronisation.
+
+{{< img src="../images/ConstellationGPS.gif" caption="Orbites de la constellation de satellites du système GPS - wikipedia" >}}
+
+
+
+image issue de la page [GNNS-wikipedia](https://fr.wikipedia.org/wiki/Syst%C3%A8me_de_positionnement_par_satellites)
+
+Pour déterminer la position précise du recepteur sur Terre, il faut utiliser le resultat du calcul de la distance à 4 satellites, et déterminer le point d'intersection de 4 sphères (video explicative).
 
 {{< img src="../images/videoGPS.png" caption="KEZAKO: Comment fonctionne un GPS?" >}}
+
+Pour optimiser le système, les satellites de navigation circulent sur une orbite moyenne à une altitude d'environ 20000 kilomètres. Compte tenu de cette donnée et de la nécessité que le récepteur puisse en permanence avoir quatre satellites visibles au-dessus de l'horizon, un système de navigation (GPS, Galileo, Beidou, Glonass) doit comporter environ 25 satellites de navigation opérationnels pour fournir une position, quelle que soit la position de l'utilisateur à la surface de la Terre. [GNNS-wikipedia](https://fr.wikipedia.org/wiki/Syst%C3%A8me_de_positionnement_par_satellites)
+
 ## Coordonnées terrestres
 La géolocalisation est un procédé qui permet de repérer une personne, un objet, un lieu sur une carte (le plus souvent numérique) à l’aide de ses coordonnées géographiques qui sont : 
 
