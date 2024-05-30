@@ -2,6 +2,76 @@
 Title: TP openstreetmap
 ---
 
+Ce TP va permettre d'explorer la zone du lycée d'Estienne d'Orves, à Nice, grace aux applications de cartes numériques.
+
+{{< img src="../images/LEO.png" caption="Lycée H. d'Estienne d'Orves, GoogleMap" >}}
+
+
+# Utiliser Geoportail
+Aller sur le site Geoportail.
+
+## Plan cadastral
+* Utiliser le fond de carte *plan cadastral*
+
+
+{{< img src="../images/geoportail.png" caption="choix d'un fond de carte" >}}
+
+> **Question a:** **retrouvez les numéros de parcelles** correspondant au lycée. 
+
+* Choisir maintenant un fond de carte: aller sur le menu *CARTES* puis choisir *IGN*
+
+## Surface
+Le menu de droite permet diverses actions comme ajouter des marqueurs, mesure des distances, etc...
+
+{{< img src="../images/geoportail2.png" caption="outils divers de Geoportail" >}}
+
+A l'aide de l'outil mesures > mesurer une surface:
+
+> **Question b:** mesurer la surface totale du lycée (toutes les parcelles cadastrales)
+
+> **Question c:** mesurer la surface de la cour
+
+{{< img src="../images/LEO_surf.png" caption="" >}}
+
+## Distances
+* à l'aide des outils de Geoportail, **ajouter des marqueurs** sur les lycée d'Estienne d'Orves et sur celui du Parc Impérial.
+
+{{< img src="../images/geoportail3.png" caption="carte avec marqueurs" >}}
+
+> **Question d:** **Mesurer alors la distance** *à vol d'oiseau* entre ces 2 marqueurs. (outil MESURES)
+
+> **Question e:** **déterminer l'itinéraire** à pied entre ces 2 marqueurs (outil ITINERAIRE)
+
+
+
+# Planifier un itinéraire
+A l'aide des outils vus plus haut, choisir le mode *calcul d'itinéraire*.
+
+Placer les étapes suivantes, dans un ordre quelconque:
+
+* lycée d'Estienne d'Orves
+* lycée du Parc Impérial
+* Avenue François Mitterand
+* 4 rue de Rivoli
+* 6 Place Charles Pasqua
+* 5 boulevard Victor Hugo
+* 31 avenue Jean Médecin
+
+
+* 16 place Garibaldi
+
+{{< img src="../images/LEO_iti2.png" caption="itineraire avec plusieurs étapes" >}}
+
+> **Question f:** Calculer alors l'itinéraire pieton qui relie tous ces points.
+
+Ce n'est peut être pas le meilleur itinéraire. Faites alors une recherche simplifiée du parcours à vol d'oiseau, en traçant un nouvel itinéraire depuis *mesure de distance*, et en joignant les différents marqueurs dans ordre que vous aurez choisi.
+
+{{< img src="../images/LEO_iti.png" caption="Un exemple d'itinéraire, pas forcement le plus court ;-)" >}}
+
+> **Question g:** Quel est l'itinéraire le plus court? Quel est le plus long?
+
+*Le calcul de l'itinéraire le plus court, tout en visitant tous les lieux marqués est un problème d'optimisation, qui peut être résolu avec un ordinateur, à condition que le nombre d'étapes ne soit pas trop important. Sinon, le temps de calcul peut être TRES long, même pour une machine actuelle.*
+
 # Remonter le temps
 Aller sur le site [remonterletemps.ign.fr](https://remonterletemps.ign.fr/telecharger?x=7.265133&y=43.696776&z=14&layer=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2&demat=DEMAT.PVA$GEOPORTAIL:DEMAT;PHOTOS&missionId=missions.6491585) et repérer le lycée sur le fond de carte.
 
@@ -9,31 +79,10 @@ Aller sur le site [remonterletemps.ign.fr](https://remonterletemps.ign.fr/telech
 
 Les petits points verts mènent vers l'image aerienne choisie. Les limites de l'image aerienne sont données par les frontières blanches déssinées sur le fond de carte. Pour ouvrir la photographie aerienne, il faut rechercher le point vert au centre de la figure (polygone).
 
-**A partir de quelle année le lycée a-t-il été construit?**
-
-# Utiliser Geoportail
-Aller sur le site Geoportail.
-
-* En utilisant le fond de carte *plan cadastral*, **retrouvez les numéros de parcelles** correspondant au lycée. Pour choisir un fond de carte, aller sur le menu *CARTES*:
-
-{{< img src="../images/geoportail.png" caption="choix d'un fond de carte" >}}
-
-Le menu de droite permet diverses actions comme ajouter des marqueurs, mesure des distances, etc...
-
-{{< img src="../images/geoportail2.png" caption="outils divers de Geoportail" >}}
-
-* à l'aide des outils de Geoportail, **ajouter des marqueurs** sur les lycée d'Estienne d'Orves et sur celui du Parc Impérial.
-
-{{< img src="../images/geoportail3.png" caption="carte avec marqueurs" >}}
-
-* **Mesurer alors la distance** *à vol d'oiseau* entre ces 2 marqueurs. (outil MESURES)
-* Puis **déterminer l'itinéraire** à pied entre ces 2 marqueurs (outil ITINERAIRE)
+> **Question h**: A partir de quelle année le lycée a-t-il été construit?
 
 
-
-
-
-
+<!--
 # Calcul d'isochrone
 
 
@@ -50,6 +99,7 @@ Puis paramétrer le logiciel en *temps* pour obtenir les surfaces de la ville at
 Peut-on atteindre la gare **à pied, en vélo, en voiture**?
 
 {{< img src="../images/isochrone2.png" caption="isochrones en voiture" >}}
+
 
 # Présentation du projet Openstreetmap
 
@@ -68,7 +118,7 @@ compte: (adresse academique)
 mot de passe: classe_snt_LEO
 
 * Avec l'**editeur**, dans la partie **MODIFIER**, renseigner certains points de la carte (lycée ou autres) que vous connaissez parfaitement. (rampe accès chaise roulante, parking 2 roues, entrées du lycée, de la cantine, ...). Vous pouvez aussi ajouter des informations manquantes à certains points déjà ajoutés à la carte publique.
-
+-->
 # Liens
 * [guide pour la classe de snt](https://www.openstreetmap.fr/les-bonnes-pratiques-pour-contribuer-a-openstreetmap-en-snt/)
 * [tutoriel version texte, sur educosm](https://educosm.openstreetmap.fr/?ModeEmploi)
