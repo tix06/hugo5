@@ -174,30 +174,73 @@ Un **programme** est une suite d’instructions codées sous forme binaire. Il p
 ### Le processeur CPU
 L'unité de traitement est un circuit qui s'occupe de faire des calculs et de manipuler l'information provenant des entrées-sorties ou récupérée dans la mémoire. Dans les ordinateurs, l'unité de traitement porte le nom de processeur, ou encore de Central Processing Unit, abrévié en CPU. Tout processeur est conçu pour effectuer un nombre limité d'opérations bien précises, comme des calculs, des échanges de données avec la mémoire, etc.
 
+**Les processeurs multicœurs**: regroupement de plusieurs processeurs dans le même boitier. Un processeurs multicœurs, contient plusieurs cœurs, chaque cœur pouvant exécuter un programme tout seul. Chaque coeur contient un séquenceur d'instruction, des registres, une unité de calcul. Mais il manque certains circuits dédiés au processeur principal, comme les circuits de communication avec la mémoire. Les systemes d'exploitation se sont adaptés à cette nouvelle architecture. Un processus peut lancer plusieurs *threads*, partagés sur les différents coeurs.  
+
+Pour calculer plus rapidement, le processeur utilise une mémoire plus rapide que la RAM: *Les caches*, qui sont des mémoires intermédiaires entre les registres internes du micro-processeur et la mémoires vive.
+
+Pour un processeur multicoeur, certains caches sont dédié à chaque "coeur", d'autres sont partagés. [wikipedia - multicoeur](https://fr.wikipedia.org/wiki/Microprocesseur_multi-c%C5%93ur)
+
+{{< img src="../images/processeur4.png" caption="cache dédié / cache partagé" >}}
+
+La puissance de la machine augmente significativement en élevant la fréquence de calcul, supérieure à celle d'un processeur monocœur. Mais cette méthode a ses limites: En effet, l'augmentation de fréquence d’un processeur cause rapidement des problèmes de surchauffe.
+
+
+**Les coprocesseurs**: Ce sont des processeurs qui complètent un processeur principal pour certaines fonctions [wikipedia](https://fr.wikibooks.org/wiki/Fonctionnement_d%27un_ordinateur/L%27architecture_de_base_d%27un_ordinateur#Les_coprocesseurs):
+
+* des coprocesseurs arithmétiques: assurent certains types de calculs que ne peuvent pas realiser le processeur principal (division entiere, flottante, racines carées...). Par exemple sur la *Nitendo DS*.
+* coprocesseurs pour le rendu 2D/3D et les coprocesseurs sonores: sur les anciennes consoles de jeux vidéo, comme La Nintendo 64, la Playstation et autres consoles de cette génération ou antérieure.
+* coprocesseurs pour l'accès aux périphériques: L'accès aux périphériques peut demander beaucoup de puissance de calculs. La *Nintendo 3DS* disposait d'un processeur principal de type ARM9, du coprocesseur pour les divisions, et d'un second processeur ARM7. L'ARM 7 était le seul à communiquer avec les périphériques et les entrées-sorties.
+
+{{< img src="../images/processeur2.gif" >}}
+
 ### mémoires ROM et RWM
 Les mémoires ROM stockent des programmes à exécuter et sont lues directement par le processeur. Pour les mémoires RWM ou RAM, on peut y acceder en lecture et écriture.
 
 Les RWM stockent les variables du programme à exécuter, des données que le programme va manipuler. Selon l'architecture de la machine, le programme peut être entièrement stocké dans la ROM, ou bien être partagé entre la ROM et la RWM.
 
-{{< img src="../images/ram_rom.png" link="https://fr.wikibooks.org/wiki/Fonctionnement_d%27un_ordinateur/L%27architecture_de_base_d%27un_ordinateur" caption="architecture et utilisation des mémoires  - source : " >}}
+[source:wikibooks.org](https://fr.wikibooks.org/wiki/Fonctionnement_d%27un_ordinateur/L%27architecture_de_base_d%27un_ordinateur#Les_architectures_Harvard_et_Von_Neumann)
+
+{{< img src="../images/ram_rom.png" caption="adressage differencié ou commun pour les mémoires  - source : wikibooks" >}}
 
 ### Les bus
 Les données doivent circuler entre les différentes parties d’un ordinateur, notamment entre la mémoire vive et le CPU. Le système permettant cette circulation est appelé bus. Il existe, sans entrer dans les détails, 3 grands types de bus: adresses, données, de contrôle.
 
+### Les péripheriques
+Les périphériques sont très divers. On les classe en périphérique d'entrée, sortie, entrée-sortie. 
 
+Toutes les entrées-sorties contiennent des *registres d’interfaçage*, qui permettent de faire l'intermédiaire entre le périphérique et le reste de l'ordinateur. [source:wikipedia](https://fr.wikibooks.org/wiki/Fonctionnement_d%27un_ordinateur/L%27architecture_de_base_d%27un_ordinateur#Les_entr%C3%A9es-sorties)
+
+{{< img src="../images/processeur5.png" caption="registres d’interfaçage - wikipedia" >}}
 
 # Loi de Moore
 Des années 1970 aux années 2000, la miniaturisation des circuits a suivi al Loi de Moore qui prédit un doublement du nombre de transistors par cm2 tous les 18 mois. Cette miniaturisation et l'augmentation des fréquences d'horloge (qui ont aussi doublé environ tous les 18 mois) ont permis d'augmenter la puissance des processeurs de façon exponentielle pendant près de 40 ans.
 
-La figure suivante montre l'évolution du nombre de transistors pour un même élement de surface:
+La figure suivante montre l'évolution du nombre de transistors pour un même élement de surface: [source-wikipedia](https://fr.wikipedia.org/wiki/Loi_de_Moore)
 
-{{< img src="../images/mem-moore.png" link="https://fr.wikipedia.org/wiki/Loi_de_Moore" caption="illustration de la loi de Moore - source wikipedia" >}}
+{{< img src="../images/processeur3.png" caption="illustration de la loi de Moore - source wikipedia" >}}
 
 
 # Architecture Von Neumann vs Harvard
+La différence de ces architectures repose sur la gestion des mémoires pour les programmes et données:
+
+* Von Neumann: un même support (RWM) contient programme et données pour les processus en cours. Les instructions des programmes sont dupliquées dans la RAM. Elles existent alors à 2 endroits distincts de la machine: dans la mémoire de masse (persistante) du systeme, mais aussi dans la RAM. Il serait assez inefficace d'executer le programme depuis la mémoire de masse, car celle-ci est beaucoup plus lente.
+* Harvard: Données dans une mémoire de travail différente de la RAM (mémoire flash) utilisée pour les programmes. Pas de duplication du programme. Economie des *supports de stockage*, et *economie d'énergie*.
+
 Voir la video suivante expliquant la différence entre ces 2 architectures:
 
 {{< img src="../images/architectureN1.png" link="https://www.youtube.com/watch?v=cQjllS45ReU" caption="MooC Arduino #4 - Architecture de Von-Neumann, Harvard et Microcontrôleurs" >}}
+
+L'architecture Harvard est utilisée pour les microcontrôleurs, pour lesquels le besoin de miniaturisation amène à intégrer tous les composants internes dans une même puce (onchip). Les microcontrôleurs embarquent une mémoire de type EEPROM, suffisement rapide d'accès pour l'utiliser directement, et sans avoir besoin de charger le programme dans une nouvelle RAM.
+
+*source image: extrait de la video youtube:*[MOOC Arduino, chaine Paul Pinault](https://www.youtube.com/watch?v=cQjllS45ReU)
+
+{{< img src="../images/processeur7.png" caption="microcontroleur: systeme onchip" >}}
+
+La machine avec architecture Harvard peut aussi gérer une mémoire de masse (persistante) comme un disque dur, ou carte flash externe. Il s'agit alors d'une extension, utile pour augmenter la capacité de la mémoire flash interne, qui est souvent réduite.
+
+{{< img src="../images/processeur8.png" caption="architecture Harvard" >}}
+
+*Compléments sur la différence des architectures: [www.arrow.com/fr-fr/research-and-events](https://www.arrow.com/fr-fr/research-and-events/articles/mpu-v-mcu)*
 
 # Liens et bibliographie
 * [cours sur l'architecture Von Neumann lattice.cnrs.fr](https://www.lattice.cnrs.fr/sites/itellier/poly_intro_info/informatique004.html#fig:Von%20Neumann)

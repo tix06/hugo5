@@ -57,9 +57,9 @@ Les constituants de l'ordinateur sont composés de circuits intégrés. On trouv
 
 * Pour d'autres machines, comportant **microcontrôleur** (MCU), les composants occupent une même puce (un même *chip*). Ces machines sont moins chères et consomment moins d'électricité. 
 
-{{< img src="../images/architectureN1.png" link="https://www.youtube.com/watch?v=cQjllS45ReU" caption="MooC Arduino #4 - Architecture de Von-Neumann, Harvard et Microcontrôleurs" >}}
+*voir page 1 du cours sur l'architecture:* [lien](/docs/NSI_1/architecture/page1/)
 
-*Compléments sur la différence des architectures: [www.arrow.com/fr-fr/research-and-events](https://www.arrow.com/fr-fr/research-and-events/articles/mpu-v-mcu)*
+
 
 # Le fonctionnement du processeur
 ## Généralités
