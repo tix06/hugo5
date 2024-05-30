@@ -38,7 +38,7 @@ Elle va permettre d'eviter la *répétition* des calculs que l'on voit dans l'ex
 
 Ce problème de *répétitions* a été vu avec l'exemple du calcul des termes de la suite de Fibonacci.
 
-# Exemple : le triangle de Pascal
+# Limites de la méthode *diviser pour regner* : le triangle de Pascal
 ## Principe
 En mathématiques, le triangle de Pascal est une présentation des coefficients binomiaux dans un triangle. Il fut nommé ainsi en l'honneur du mathématicien français Blaise Pascal. Il est connu sous l'appellation « triangle de Pascal » en Occident, bien qu'il fût étudié par d'autres mathématiciens, parfois plusieurs siècles avant lui.
 
@@ -125,7 +125,7 @@ def trianglePascal(n):
 L'algorithme non recursif, avec mémoïzation est plus efficace.
 
 
-# Algorithmes gloutons
+# Problèmes de décision et *algorithmes gloutons*
 ## Le problème du rendu de monnaie 
 Le problème du rendu de monnaie est un problème d'algorithmique. Il s'énonce de la façon suivante : étant donné un système de monnaie (pièces et billets), comment **rendre une somme donnée de façon optimale**, c'est-à-dire avec le **nombre minimal** de pièces et billets ?
 
@@ -468,20 +468,26 @@ Supposons un graphe à 50 sommets qui représente la carte de ces villes. Il y a
 Si l'ordinateur évalue une solution en 0,1 ms, cela fait 6,08.10<sup>58</sup>s, soit 1,9.10<sup>49</sup> siecles de calculs !! (L'Univers a 14 milliards d'années).
 
 
+**Les algorithmes des problèmes de décision sont classés selon leur complexité:**
 
+### Problèmes P: probleme faciles à trouver
 
-### Problèmes P
-
-Un problème est dit **polynomial** si il existe un algorithme pour le résoudre dont la complexité peut s’exprimer comme un polynôme de la taille de l’entrée (comme c’est le cas pour des problèmes de tri). L’ensemble des problèmes polynomiaux est noté P et est considéré comme un ensemble de problèmes “faciles” (ils peuvent être résolus relativement efficacement).
+Un problème est dit **polynomial** si il existe un algorithme pour le résoudre dont la complexité peut s’exprimer comme un polynôme de la taille de l’entrée. L’ensemble des problèmes polynomiaux est noté P et est considéré comme un ensemble de problèmes “faciles” (ils peuvent être résolus relativement efficacement).
 
 
 Un *exemple de problème polynomial* est celui de la *connexité dans un graphe*. Étant donné un graphe à n sommets (on considère que la taille de la donnée, donc du graphe, est son nombre de sommets), il s'agit de savoir si toutes les paires de sommets sont reliées par un chemin. Un algorithme de parcours en profondeur construit un arbre couvrant du graphe à partir d'un sommet. Si cet arbre contient tous les sommets du graphe, alors le graphe est connexe.([wikipedia](https://fr.wikipedia.org/wiki/P_(complexité)))
 
-### Problèmes NP
+### Problèmes NP: problèmes faciles à vérifier
 
 Une autre classe de problèmes importante est celle des problèmes dont on peut tester en temps polynomial si une solution est valide (par exemple, je vous donne un tableau et vous devez non pas le trier mais me dire si il est déjà trié ou non). Cette classe s’appelle NP pour **Non déterministe Polynomial**. 
 
+*Supposons que vous soyez chargé de loger un groupe de quatre cents étudiants. Le nombre de places est limité, seuls cent étudiants se verront attribuer une place dans la résidence universitaire. Pour compliquer les choses le doyen vous a fourni une liste de paires d'étudiants incompatibles, et demande que deux étudiants d'une même paire ne puissent jamais apparaître dans votre choix final.* [wikipedia](https://fr.wikipedia.org/wiki/Probl%C3%A8me_P_%E2%89%9F_NP).
+
+*Produire une telle liste à partir de zéro paraît tellement difficile qu'elle en est même impraticable, car le nombre de façons de regrouper cent étudiants parmi quatre cents dépasse le nombre d'atomes de l'univers !. Par contre, une fois que l'on vous fournit une solution, il est facile de montrer que celle-ci est juste ou fausse.*
+
 Si un problème est connu comme étant NP et si une solution au problème est connue, la démonstration de l’exactitude de la solution peut toujours être réduite à une vérification P (temps polynomial). Les algorithmes de cette classe sont non déterministes.
+
+Existe t-il pour les problèmes connus de la classe NP un algorithme susceptible de trouver une solution et de complexité polynomiale. On n'en est pas sûr. Peut-être que cette apparente difficulté ne fait que refléter le manque d'ingéniosité de nos programmeurs.
 
 Le problème de savoir si P = NP est un des problèmes du millénaire de l’institut de mathématiques Clay. Informellement, il s’agit de savoir si vérifier efficacement qu’une "solution à un problème est bien une solution valide" revient à "pouvoir trouver efficacement une solution valide au problème."
 
@@ -489,11 +495,14 @@ Le problème de savoir si P = NP est un des problèmes du millénaire de l’ins
 
 Les problèmes dits NP-complets sont des problèmes au moins aussi difficiles que les plus difficiles de la classe NP.
 
-Tous les algorithmes connus pour résoudre des problèmes NP-complets ont un temps d'exécution exponentiel en la taille des données d'entrée dans le pire des cas, et sont donc inexploitables en pratique même pour des instances de taille modérée. On peut donc raisonnablement penser qu'il est inutile d'en chercher une solution sous forme d'un algorithme de complexité polynomiale.
+{{< img src="../images/P=NP.png" caption="source: page P=NP wikipedia" >}}
 
-*Exemples de problèmes NP-complets:*
+*Exemples: le voyageur du commerce, le calcul de solutions optimales en économie (enoncé semblable mais à une echelle plus grande que celui du sac à dos), ou dans les processus de fabrication ou de transport...*
 
-On y retrouve les problèmes de décision (oui/non) et d'optimisation (max ou min d'une fonction), dont les problèmes vus plus haut.
+Tous les algorithmes connus pour résoudre des problèmes NP-complets ont un temps d'exécution exponentiel en la taille des données d'entrée dans le pire des cas, et sont donc inexploitables en pratique même pour des instances de taille modérée. 
+
+Trouver un algorithme qui résout un problème NP-complet, comme le problème du voyageur de commerce, en temps polynomial, suffirait à démontrer que P = NP, ce serait alors toute une série de problèmes très importants qui se trouveraient résolus. Sans exhiber un algorithme, une preuve pourrait donner des indices précieux pour construire un tel algorithme. [wikipedia](https://fr.wikipedia.org/wiki/Probl%C3%A8me_P_%E2%89%9F_NP).
+
 
 # Liens
 * page de cours NSI sur les algorithmes de complexité exponentielle, et la programmation dynamique [cours de qkzk](https://qkzk.xyz/docs/nsi/cours_terminale/algorithmique/prog_dynamique/td/)

@@ -230,7 +230,7 @@ Voir la video suivante expliquant la différence entre ces 2 architectures:
 
 {{< img src="../images/architectureN1.png" link="https://www.youtube.com/watch?v=cQjllS45ReU" caption="MooC Arduino #4 - Architecture de Von-Neumann, Harvard et Microcontrôleurs" >}}
 
-L'architecture Harvard est utilisée pour les microcontrôleurs, pour lesquels le besoin de miniaturisation amène à intégrer tous les composants internes dans une même puce (onchip). Les microcontrôleurs embarquent une mémoire de type EEPROM, suffisement rapide d'accès pour l'utiliser directement, et sans avoir besoin de charger le programme dans une nouvelle RAM.
+L'architecture Harvard est utilisée pour les microcontrôleurs, pour lesquels le besoin de miniaturisation amène à intégrer tous les composants internes dans une même puce (onchip). Les microcontrôleurs embarquent une mémoire de type EEPROM *(electrically erasable programmable read only memory 64-256ko)*, suffisement rapide d'accès pour l'utiliser directement, et sans avoir besoin de charger le programme dans une nouvelle RAM.
 
 *source image: extrait de la video youtube:*[MOOC Arduino, chaine Paul Pinault](https://www.youtube.com/watch?v=cQjllS45ReU)
 
