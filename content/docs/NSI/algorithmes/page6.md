@@ -10,6 +10,7 @@ On verra dans cette page:
 * la programmation dynamique
 * les algorithmes gloutons
 * un exemple d'algorithme avec recherche locale. Pour la résolution d'un problème de TSP (Traveling salesman problem)
+* Les classes de problèmes de decision, P, NP, NP-complet
 
 # Programmation dynamique
 ## Principe de la méthode
@@ -212,7 +213,10 @@ Le tableau montre les choix que réalise l'algorithme.
 
 > Comment cet algorithme parvient-il à reduire le nombre de combinaisons pour rendre la monnaie?
 
-**Remarque:** Ce problème est [NP-complet](https://fr.wikipedia.org/wiki/Probl%C3%A8me_NP-complet) dans le cas général, c'est-à-dire difficile à résoudre. Cependant pour certains systèmes de monnaie dits canoniques, l'[algorithme glouton](https://fr.wikipedia.org/wiki/Algorithme_glouton) est optimal.
+**Remarques:** 
+
+* Ce problème est [NP-complet](https://fr.wikipedia.org/wiki/Probl%C3%A8me_NP-complet) dans le cas général, c'est-à-dire difficile à résoudre. Cependant pour certains systèmes de monnaie dits canoniques, l'[algorithme glouton](https://fr.wikipedia.org/wiki/Algorithme_glouton) est optimal.
+* Regarder aussi: le probleme de l'allocation des ressources pour un systeme d'exploitation: [l'algorithme du banquier](https://fr.wikipedia.org/wiki/Algorithme_du_banquier)
 
 
 ### Le problème du sac à dos
@@ -269,6 +273,27 @@ Mais une illustration plus concrête est celle par exemple du problème de la to
 {{< img src="../images/tournee.png" caption="tournée du candidat à la presidentielle" >}}
 On voit que la recherche d'une solution en comparant tous les tours qu'il est mathématiquement possible de faire n'est pas raisonnable. La complexité est trop importante.
 
+## Exemple
+Un voyageur cherche un itinéraire passant par toutes les villes du tableau, et qui minimise la distance totale parcourue. Les villes peuvent être visitées dans n'importe quel ordre mais aucune ne doit être négligée, et le visiteur doit revenir à la fin à sa ville de départ.
+
+Le voyageur part de Nancy et souhaite visiter Metz, Paris, Reims et Troyes, avant de retourner à Nancy.
+
+Voici un tableau donnant les distances kilométriques entre chacune des ces villes.
+
+|       | Nancy | Metz | Paris | Reims | Troyes |
+| ---   | ---   | ---  | ---   | ---   | ---    |
+| Nancy |       | 55   | 303   | 188   | 183    |
+| Metz  | 55    |      | 306   | 176   | 203    |
+| Paris | 303   | 306  |       | 142   | 153    |
+| Reims | 188   | 176  | 142   |       | 123    |
+| Troyes| 183   | 203  | 153   | 123   |        |
+
+1. Quelle est la stratégie gloutonne à mettre en oeuvre ?
+2. Mettez en oeuvre cette stratégie et donnez la solution.
+3. Calculez la distance totale pour le parcours Metz - Reims - Paris - Troyes (départ et arrivée à Nancy sous-entendus)
+4. Que dire de la solution gloutonne ?
+
+
 ## algorithme de recherche locale k-opt
 L'algorithme k-opt est un algorithme de recherche locale proposé par Georges A. Croes en 19581 pour résoudre le problème du voyageur de commerce en améliorant une solution initiale. On représente le tour par un graphe connexe.
 
@@ -277,6 +302,7 @@ L'algorithme k-opt est un algorithme de recherche locale proposé par Georges A.
 *Plus généralement, lorsqu'on inverse l'ordre de parcours de deux villes, il faut aussi inverser l'ordre de parcours de toutes les villes entre ces deux villes.*
 
 {{< img src="../images/2-opt.png" alt="algorithme 2-opt TSP" link="https://commons.wikimedia.org/w/index.php?curid=8044684" caption="" >}}
+
 # Résumé. L'essentiel à retenir
 <!--
 <div class="essentiel">
@@ -338,6 +364,59 @@ Les étapes et leurs liens peuvent être représentés par un graphe connexe.
 L'un des algorithmes existant pour la resolution, le 2-opt, va rechercher un minimum local pour un morceau de tour constitué de quelques noeuds. L'algorithme procède par permutation des arêtes entre noeuds. Et il conserve le morceau de tour de plus courte distance.
 
 Il s'agit d'une succession de choix qui determine la solution. Là aussi, il s'agit d'un algorithme glouton.
+
+
+# Complexité
+## Rappels
+
+**Complexité temporelle d’un algorithme**. Il s’agit du nombre d’opérations élémentaires executées par l’algorithme dans un pire cas (une instance en entrée qui demande le plus de calculs). Cette complexité est exprimée en fonction de la “taille de l’entrée”. Par exemple, nous avons vu des algorithmes de tri avec des complexité en O(n2) ou en O(nlogn) avec n la longueur du tableau en entrée.
+
+Pour l'exemple du voyageur du commerce: Le nombre de solutions possibles, où les villes sont toutes parcourues une fois, il y a un nombre TRES élevé d'alternatives:
+
+Supposons un graphe à 50 sommets qui représente la carte de ces villes. Il y a 49! possibiltés. Ce qui fait 6,08.10<sup>62</sup> solutions.
+
+Si l'ordinateur évalue une solution en 0,1 ms, cela fait 6,08.10<sup>58</sup>s, soit 1,9.10<sup>49</sup> siecles de calculs !! (L'Univers a 14 milliards d'années).
+
+
+**Les algorithmes des problèmes de décision sont classés selon leur complexité:**
+
+## Problèmes P: probleme faciles à trouver
+
+Un problème est dit **polynomial** si il existe un algorithme pour le résoudre dont la complexité peut s’exprimer comme un polynôme de la taille de l’entrée. L’ensemble des problèmes polynomiaux est noté P et est considéré comme un ensemble de problèmes “faciles” (ils peuvent être résolus relativement efficacement).
+
+
+Un *exemple de problème polynomial* est celui de la *connexité dans un graphe*. Étant donné un graphe à n sommets (on considère que la taille de la donnée, donc du graphe, est son nombre de sommets), il s'agit de savoir si toutes les paires de sommets sont reliées par un chemin. Un algorithme de parcours en profondeur construit un arbre couvrant du graphe à partir d'un sommet. Si cet arbre contient tous les sommets du graphe, alors le graphe est connexe.([wikipedia](https://fr.wikipedia.org/wiki/P_(complexité)))
+
+
+
+## Problèmes NP: problèmes faciles à vérifier
+
+Une autre classe de problèmes importante est celle des problèmes dont on peut tester en temps polynomial si une solution est valide (par exemple, je vous donne un tableau et vous devez non pas le trier mais me dire si il est déjà trié ou non). Cette classe s’appelle NP pour **Non déterministe Polynomial**. 
+
+*Supposons que vous soyez chargé de loger un groupe de quatre cents étudiants. Le nombre de places est limité, seuls cent étudiants se verront attribuer une place dans la résidence universitaire. Pour compliquer les choses le doyen vous a fourni une liste de paires d'étudiants incompatibles, et demande que deux étudiants d'une même paire ne puissent jamais apparaître dans votre choix final.* [wikipedia](https://fr.wikipedia.org/wiki/Probl%C3%A8me_P_%E2%89%9F_NP).
+
+*Produire une telle liste à partir de zéro paraît tellement difficile qu'elle en est même impraticable, car le nombre de façons de regrouper cent étudiants parmi quatre cents dépasse le nombre d'atomes de l'univers !. Par contre, une fois que l'on vous fournit une solution, il est facile de montrer que celle-ci est juste ou fausse.*
+
+Si un problème est connu comme étant NP et si une solution au problème est connue, la démonstration de l’exactitude de la solution peut toujours être réduite à une vérification P (temps polynomial). Les algorithmes de cette classe sont non déterministes.
+
+Existe t-il pour les problèmes connus de la classe NP un algorithme susceptible de trouver une solution et de complexité polynomiale. On n'en est pas sûr. Peut-être que cette apparente difficulté ne fait que refléter le manque d'ingéniosité de nos programmeurs.
+
+Le problème de savoir si P = NP est un des problèmes du millénaire de l’institut de mathématiques Clay. Informellement, il s’agit de savoir si vérifier efficacement qu’une "solution à un problème est bien une solution valide" revient à "pouvoir trouver efficacement une solution valide au problème."
+
+## Problèmes NP-complets
+
+Les problèmes dits NP-complets sont des problèmes au moins aussi difficiles que les plus difficiles de la classe NP.
+
+{{< img src="../images/P=NP.png" caption="source: page P=NP wikipedia" >}}
+
+*Exemples: le voyageur du commerce, le calcul de solutions optimales en économie (enoncé semblable mais à une echelle plus grande que celui du sac à dos), ou dans les processus de fabrication ou de transport...*
+
+Tous les algorithmes connus pour résoudre des problèmes NP-complets ont un temps d'exécution exponentiel en la taille des données d'entrée dans le pire des cas, et sont donc inexploitables en pratique même pour des instances de taille modérée. 
+
+Les classes P, NP, NP-complet ne concernent stricto sensus que *[les problèmes de décision](https://scienceetonnante.com/2020/07/17/est-ce-que-p-np/)*. Donc quand on dit que le problème du voyageur de commerce est NP-complet, il faut l’entendre : dans sa version « décisionnelle », qui est : est-il possible de trouver un chemin qui passe par toute les villes et qui soit de longueur inférieure à L? De manière générale, tous les problèmes d'optimisation sous contrainte, comme ceux vus plus haut, sont aussi des problèmes de décision.
+
+Trouver un algorithme qui résout un problème NP-complet, comme le problème du voyageur de commerce, en temps polynomial, suffirait à démontrer que P = NP, ce serait alors toute une série de problèmes très importants qui se trouveraient résolus. Sans exhiber un algorithme, une preuve pourrait donner des indices précieux pour construire un tel algorithme. [wikipedia](https://fr.wikipedia.org/wiki/Probl%C3%A8me_P_%E2%89%9F_NP).
+
 
 # Annexes
 ## Programmes python du rendu de monnaie
@@ -456,54 +535,6 @@ def sacADosRemise(W, s) :
 [12, [0, 0, 3, 0]]
 ``` 
 
-## Complexité
-### Rappels
-
-**Complexité temporelle d’un algorithme**. Il s’agit du nombre d’opérations élémentaires executées par l’algorithme dans un pire cas (une instance en entrée qui demande le plus de calculs). Cette complexité est exprimée en fonction de la “taille de l’entrée”. Par exemple, nous avons vu des algorithmes de tri avec des complexité en O(n2) ou en O(nlogn) avec n la longueur du tableau en entrée.
-
-Pour l'exemple du voyageur du commerce: Le nombre de solutions possibles, où les villes sont toutes parcourues une fois, il y a un nombre TRES élevé d'alternatives:
-
-Supposons un graphe à 50 sommets qui représente la carte de ces villes. Il y a 49! possibiltés. Ce qui fait 6,08.10<sup>62</sup> solutions.
-
-Si l'ordinateur évalue une solution en 0,1 ms, cela fait 6,08.10<sup>58</sup>s, soit 1,9.10<sup>49</sup> siecles de calculs !! (L'Univers a 14 milliards d'années).
-
-
-**Les algorithmes des problèmes de décision sont classés selon leur complexité:**
-
-### Problèmes P: probleme faciles à trouver
-
-Un problème est dit **polynomial** si il existe un algorithme pour le résoudre dont la complexité peut s’exprimer comme un polynôme de la taille de l’entrée. L’ensemble des problèmes polynomiaux est noté P et est considéré comme un ensemble de problèmes “faciles” (ils peuvent être résolus relativement efficacement).
-
-
-Un *exemple de problème polynomial* est celui de la *connexité dans un graphe*. Étant donné un graphe à n sommets (on considère que la taille de la donnée, donc du graphe, est son nombre de sommets), il s'agit de savoir si toutes les paires de sommets sont reliées par un chemin. Un algorithme de parcours en profondeur construit un arbre couvrant du graphe à partir d'un sommet. Si cet arbre contient tous les sommets du graphe, alors le graphe est connexe.([wikipedia](https://fr.wikipedia.org/wiki/P_(complexité)))
-
-### Problèmes NP: problèmes faciles à vérifier
-
-Une autre classe de problèmes importante est celle des problèmes dont on peut tester en temps polynomial si une solution est valide (par exemple, je vous donne un tableau et vous devez non pas le trier mais me dire si il est déjà trié ou non). Cette classe s’appelle NP pour **Non déterministe Polynomial**. 
-
-*Supposons que vous soyez chargé de loger un groupe de quatre cents étudiants. Le nombre de places est limité, seuls cent étudiants se verront attribuer une place dans la résidence universitaire. Pour compliquer les choses le doyen vous a fourni une liste de paires d'étudiants incompatibles, et demande que deux étudiants d'une même paire ne puissent jamais apparaître dans votre choix final.* [wikipedia](https://fr.wikipedia.org/wiki/Probl%C3%A8me_P_%E2%89%9F_NP).
-
-*Produire une telle liste à partir de zéro paraît tellement difficile qu'elle en est même impraticable, car le nombre de façons de regrouper cent étudiants parmi quatre cents dépasse le nombre d'atomes de l'univers !. Par contre, une fois que l'on vous fournit une solution, il est facile de montrer que celle-ci est juste ou fausse.*
-
-Si un problème est connu comme étant NP et si une solution au problème est connue, la démonstration de l’exactitude de la solution peut toujours être réduite à une vérification P (temps polynomial). Les algorithmes de cette classe sont non déterministes.
-
-Existe t-il pour les problèmes connus de la classe NP un algorithme susceptible de trouver une solution et de complexité polynomiale. On n'en est pas sûr. Peut-être que cette apparente difficulté ne fait que refléter le manque d'ingéniosité de nos programmeurs.
-
-Le problème de savoir si P = NP est un des problèmes du millénaire de l’institut de mathématiques Clay. Informellement, il s’agit de savoir si vérifier efficacement qu’une "solution à un problème est bien une solution valide" revient à "pouvoir trouver efficacement une solution valide au problème."
-
-### Problèmes NP-complets
-
-Les problèmes dits NP-complets sont des problèmes au moins aussi difficiles que les plus difficiles de la classe NP.
-
-{{< img src="../images/P=NP.png" caption="source: page P=NP wikipedia" >}}
-
-*Exemples: le voyageur du commerce, le calcul de solutions optimales en économie (enoncé semblable mais à une echelle plus grande que celui du sac à dos), ou dans les processus de fabrication ou de transport...*
-
-Tous les algorithmes connus pour résoudre des problèmes NP-complets ont un temps d'exécution exponentiel en la taille des données d'entrée dans le pire des cas, et sont donc inexploitables en pratique même pour des instances de taille modérée. 
-
-Trouver un algorithme qui résout un problème NP-complet, comme le problème du voyageur de commerce, en temps polynomial, suffirait à démontrer que P = NP, ce serait alors toute une série de problèmes très importants qui se trouveraient résolus. Sans exhiber un algorithme, une preuve pourrait donner des indices précieux pour construire un tel algorithme. [wikipedia](https://fr.wikipedia.org/wiki/Probl%C3%A8me_P_%E2%89%9F_NP).
-
-
 # Liens
 * page de cours NSI sur les algorithmes de complexité exponentielle, et la programmation dynamique [cours de qkzk](https://qkzk.xyz/docs/nsi/cours_terminale/algorithmique/prog_dynamique/td/)
 * [wikipedia: la programmation dynamique](https://fr.wikipedia.org/wiki/Programmation_dynamique)
@@ -513,4 +544,5 @@ Trouver un algorithme qui résout un problème NP-complet, comme le problème du
 * [programmation dynamique: site Pixees.fr, David Roche](https://pixees.fr/informatiquelycee/n_site/nsi_term_algo_progdyn.html)
 * calcul de complexité de Fibonacci recursif et definition de la programmation dynamique: [univ-mlv.fr](http://igm.univ-mlv.fr/~nicaud/poly/IR2_progdyn.pdf)
 * algorithme glouton pour la compression des fichiers: [code de Huffman](https://cermics.enpc.fr/polys/info1/main/node76.html)
+* les problèmes de décision: [sciencesetonantes.com](https://scienceetonnante.com/2020/07/17/est-ce-que-p-np/)
 
