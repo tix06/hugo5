@@ -3,10 +3,13 @@ Title: data analyse
 ---
 
 # Intelligence artificielle?
+<!--
 Les machines sont-elles intelligentes? On peut en douter, au vu du comportement de certains logiciels. Imaginez vous un humain vous repondre qu'il est impossible de choisir une heure de stationnement pour le parking désiré, sans vous dire qu'il est toutefois possible de stationner moins de temps...?
 
 {{< img src="../images/IA1.png" >}}
 Et pourtant les logiciels sont souvent comme çà. Leur **ergonomie** est souvent mal pensée, ce qui peut rendre leur utilisation *énervante*.
+-->
+
 
 > L'**intelligence artificielle** décrit l'ensemble des techniques permettant à des machines de *simuler l'intelligence humaine*. 
 
@@ -26,7 +29,9 @@ En apprentissage automatique, on distingue les algorithmes d'apprentissage:
 
 * **supervisés**: apprentissage à partir d'exemples déjà etiquettés (classes discretes ou valeurs Y=f(X) connues)
 * **non supervisées**: découverte de la structure de données sans exemples étiquettés.
+* **par réenforcement**: système qui augmente ses performances à partir de ses interactions avec l'environnement. Le système va alors modifier les règles de son modèle au fur et à mesure de ces interactions (plutôt catégorisé comme un apprentissage *supervisé*).
 
+{{< img src="../images/IA2.png" caption="prediction par un modèle de machine learning avec apprentissage supervisé" >}}
 
 # Analyse données par regression lineaire
 Une étude statistique permet de repérer si certains paramètres sont liés entre eux. Alors, si ces données étaient suffisamment nombreuses et précises, il est possible d’établir des lois mathematiques sur ces données. Une manière de représenter ce lien entre paramètres est, par exemple d’établir une loi de regression linéaire.
@@ -45,7 +50,9 @@ Les écarts entre les points et la courbe du modèle devront être les plus peti
 ## Modèle prédictif
 Un modèle prédictif ne peut être établi qu’à partir d’une étude prealable de données. 
 
-A partir de nouvelles données, on peut alors, grâce à une simulation, prédire le comportement futur du nouvel objet. A condition que celui-ci fasse partie de la même famille d’objets que ceux qui ont permis d’établir le modèle.
+Pour de nouvelles données, on peut alors, grâce à un modèle, prédire le comportement futur du nouvel objet. Faire une estimation, calculer une valeur. A condition que celui-ci fasse partie de la même famille d’objets que ceux qui ont permis d’établir le modèle.
+
+{{< img src="../images/IA4.png" caption="nouvelle donnée d'absisse X1 => Y1 determiné grace au modèle (regression)" >}}
 
 ## Exemple
 Cet exemple est issu du [Blog mrmint.fr](https://mrmint.fr/regression-lineaire-python-pratique).
