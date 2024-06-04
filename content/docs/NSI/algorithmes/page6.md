@@ -174,12 +174,105 @@ Sur l'animation, l'algorithme traite TOUTES les combinaisons de rendu de monnaie
 
 Contrairement aux problèmes étudiés précédement (tri d’un tableau, calcul de x<sub>n</sub>...), où il y avait toujours une unique solution, dans les problèmes d’optimisation, il peut y avoir des solutions valides (satisfaisant les contraintes) non optimales, une ou plusieurs solutions (valides), optimales (minimisant/maximisant une certaine mesure), voire pas du tout de solution valide. 
 
-Si la taille du ou des paramètres en entrée est importante, il n'y a pas d'algorithme déterministe efficace. (on ne peut pas trouver LA solution au problème en parcourant toutes les solutions possibles car la complexité est trop grande).
+Si la taille du ou des paramètres en entrée est importante, il n'y a pas d'algorithme déterministe efficace. (on ne peut pas trouver LA solution au problème en parcourant toutes les solutions possibles car la complexité est trop grande). *Voir paragraphe suivant sur la recherche exhaustive*.
 
 
 On utilise alors d'autres stratégies, qui donneront parfois une solution, parfois une solution optimale. C'est ce que l'on réalise avec l'utilisation d'un algorithme glouton.
 
 Le problème du rendu de monnaie est *NP-difficile* relativement au nombre de pièce et billet du système monétaire considéré. (voir annexe).
+
+### Algorithme exhaustif
+Une autre méthode pourrait être d'envisager TOUTES les combinaisons. On pourrait alors imaginer que l'on commence par rendre la monnaie avec une des pieces de la caisse (pas forcément la plus haute), puis on choisit une autre piece possible (egale ou moins haute), ... Jusqu'à ce que la somme à rendre soit nulle. On envisage ainsi toutes les combinaisons possibles, ce qui, avec une valeur élevée de la somme à rendre, et un grand nombre de pieces dans la caisse, va donner un très grand nombre de combinaisons. On selectionne enfin la meilleure des solutions (celle optimale).
+
+
+Par exemple, pour rendre 7 euros, voici toutes les combinaisons possibles (la solution optimale étant la première):
+
+* 5 + 2 
+* 5 + 1 + 1 
+* 2 + 2 + 2 + 1
+* 2 + 2 + 1 + 1 + 1
+* 2 + 1 + 1 + 1 + 1 + 1
+* 1 + 1 + 1 + 1 + 1 + 1 + 1
+
+Un programme python exprimerait le rendu sous forme de liste:
+
+```python
+> rendu(7,[5,2,1])
+# 6 solutions
+[[5, 2],
+ [5, 1, 1],
+ [2, 2, 2, 1],
+ [2, 2, 1, 1, 1],
+ [2, 1, 1, 1, 1, 1],
+ [1, 1, 1, 1, 1, 1, 1]]
+> rendu(14,[10,5,2,1])
+# 19 solutions
+[[10, 2, 2],
+ [10, 2, 1, 1],
+ [10, 1, 1, 1, 1],
+ [5, 5, 2, 2],
+ [5, 5, 2, 1, 1],
+ [5, 5, 1, 1, 1, 1],
+ [5, 2, 2, 2, 2, 1],
+ [5, 2, 2, 2, 1, 1, 1],
+ [5, 2, 2, 1, 1, 1, 1, 1],
+ [5, 2, 1, 1, 1, 1, 1, 1, 1],
+ [5, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [2, 2, 2, 2, 2, 2, 2],
+ [2, 2, 2, 2, 2, 2, 1, 1],
+ [2, 2, 2, 2, 2, 1, 1, 1, 1],
+ [2, 2, 2, 2, 1, 1, 1, 1, 1, 1],
+ [2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1],
+ [2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]
+rendu(21,[20,10,5,2,1])
+# 44 solutions
+[[20, 1],
+ [10, 10, 1],
+ [10, 5, 5, 1],
+ [10, 5, 2, 2, 2],
+ [10, 5, 2, 2, 1, 1],
+ [10, 5, 2, 1, 1, 1, 1],
+ [10, 5, 1, 1, 1, 1, 1, 1],
+ [10, 2, 2, 2, 2, 2, 1],
+ [10, 2, 2, 2, 2, 1, 1, 1],
+ [10, 2, 2, 2, 1, 1, 1, 1, 1],
+ [10, 2, 2, 1, 1, 1, 1, 1, 1, 1],
+ [10, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [10, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [5, 5, 5, 5, 1],
+ [5, 5, 5, 2, 2, 2],
+ [5, 5, 5, 2, 2, 1, 1],
+ [5, 5, 5, 2, 1, 1, 1, 1],
+ [5, 5, 5, 1, 1, 1, 1, 1, 1],
+ [5, 5, 2, 2, 2, 2, 2, 1],
+ [5, 5, 2, 2, 2, 2, 1, 1, 1],
+ [5, 5, 2, 2, 2, 1, 1, 1, 1, 1],
+ [5, 5, 2, 2, 1, 1, 1, 1, 1, 1, 1],
+ [5, 5, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [5, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [5, 2, 2, 2, 2, 2, 2, 2, 2],
+ [5, 2, 2, 2, 2, 2, 2, 2, 1, 1],
+ [5, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1],
+ [5, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1],
+ [5, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1],
+ [5, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [5, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [5, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+ [2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1],
+ [2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1],
+ [2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1],
+ [2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]
+```
 
 ### algorithme de type glouton
 
@@ -506,6 +599,34 @@ def renduMonnaieProgDyn(x,c) :
 {{< img src="../images/rendumonnaie1.png" caption="etape i=1 j=0" >}}
 {{< img src="../images/rendumonnaie2.png" caption="etapes suivantes" >}}
 -->
+
+### Algorithme exhaustif
+Programme utilisé pour determiner toutes les combinaisons possibles de rendu de monnaie. Complexité exponentielle...
+
+```python
+def rendu_expo(somme,caisse,rendu=[]):
+    if somme==0:
+        solutions.append(sorted(rendu, reverse=True))
+    for i in range(len(caisse)):
+        if caisse[i]<=somme:
+            rendu_expo(somme-caisse[i],caisse[i:],rendu+[caisse[i]])
+        else:
+            rendu_expo(somme,caisse[1:],rendu)
+def unique(L):
+    # pour eliminer les doublons de la liste
+    T = []
+    T.append(L[0])
+    for sol in L:
+        if sol not in T:
+            T.append(sol)
+    return T
+
+solutions=[]
+rendu_expo(53,[30,24,12,6,3,1])
+solution_min = unique(solutions)
+print(len(solution_min))
+solution_min
+```
 ## Le problème du sac à dos
 *Résolution*
 

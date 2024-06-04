@@ -71,16 +71,100 @@ On utilisera le notebook <i>TP5/rendu_monnaie_NSI1.ipynb</i> sur{{< a link="http
 ## Méthode par recherche exhaustive
 Quelques essais avec le script précédent montrent que le rendu n'est pas toujours optimal. Il faut envisager d'**autres possibilités** pour rendre la monnaie. 
 
-Une autre méthode pourrait être de mélanger l'ordre des pieces utilisées pour le rendu de monnaie. Et d'envisager TOUTES les combinaisons. On pourrait alors imaginer que l'on commence par rendre la monnaie avec une des pieces de la caisse (pas forcément la plus haute), puis on choisit une autre piece possible (egale ou moins haute), ... Jusqu'à ce que la somme à rendre soit nulle. On envisage ainsi toutes les combinaisons possibles, ce qui, avec une valeur élevée de la somme à rendre, et un grand nombre de pieces dans la caisse, va donner un très grand nombre de combinaisons. On selectionne enfin la meilleure des solutions (celle optimale).
+Une autre méthode pourrait être d'envisager TOUTES les combinaisons. On pourrait alors imaginer que l'on commence par rendre la monnaie avec une des pieces de la caisse (pas forcément la plus haute), puis on choisit une autre piece possible (egale ou moins haute), ... Jusqu'à ce que la somme à rendre soit nulle. On envisage ainsi toutes les combinaisons possibles, ce qui, avec une valeur élevée de la somme à rendre, et un grand nombre de pieces dans la caisse, va donner un très grand nombre de combinaisons. On selectionne enfin la meilleure des solutions (celle optimale).
 
-Par exemple, pour rendre 7 euros:
+Par exemple, pour rendre 7 euros, voici toutes les combinaisons possibles (la solution optimale étant la première):
 
-* 1 + 1 + 1 + 1 + 1 + 1 + 1
-* 2 + 1 + 1 + 1 + 1 + 1
-* 2 + 2 + 1 + 1 + 1
-* 2 + 2 + 2 + 1
-* 5 + 1 + 1 
 * 5 + 2 
+* 5 + 1 + 1 
+* 2 + 2 + 2 + 1
+* 2 + 2 + 1 + 1 + 1
+* 2 + 1 + 1 + 1 + 1 + 1
+* 1 + 1 + 1 + 1 + 1 + 1 + 1
+
+Un programme python exprimerait le rendu sous forme de liste:
+
+```python
+> rendu(7,[5,2,1])
+# 6 solutions
+[[5, 2],
+ [5, 1, 1],
+ [2, 2, 2, 1],
+ [2, 2, 1, 1, 1],
+ [2, 1, 1, 1, 1, 1],
+ [1, 1, 1, 1, 1, 1, 1]]
+> rendu(14,[10,5,2,1])
+# 19 solutions
+[[10, 2, 2],
+ [10, 2, 1, 1],
+ [10, 1, 1, 1, 1],
+ [5, 5, 2, 2],
+ [5, 5, 2, 1, 1],
+ [5, 5, 1, 1, 1, 1],
+ [5, 2, 2, 2, 2, 1],
+ [5, 2, 2, 2, 1, 1, 1],
+ [5, 2, 2, 1, 1, 1, 1, 1],
+ [5, 2, 1, 1, 1, 1, 1, 1, 1],
+ [5, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [2, 2, 2, 2, 2, 2, 2],
+ [2, 2, 2, 2, 2, 2, 1, 1],
+ [2, 2, 2, 2, 2, 1, 1, 1, 1],
+ [2, 2, 2, 2, 1, 1, 1, 1, 1, 1],
+ [2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1],
+ [2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]
+rendu(21,[20,10,5,2,1])
+# 44 solutions
+[[20, 1],
+ [10, 10, 1],
+ [10, 5, 5, 1],
+ [10, 5, 2, 2, 2],
+ [10, 5, 2, 2, 1, 1],
+ [10, 5, 2, 1, 1, 1, 1],
+ [10, 5, 1, 1, 1, 1, 1, 1],
+ [10, 2, 2, 2, 2, 2, 1],
+ [10, 2, 2, 2, 2, 1, 1, 1],
+ [10, 2, 2, 2, 1, 1, 1, 1, 1],
+ [10, 2, 2, 1, 1, 1, 1, 1, 1, 1],
+ [10, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [10, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [5, 5, 5, 5, 1],
+ [5, 5, 5, 2, 2, 2],
+ [5, 5, 5, 2, 2, 1, 1],
+ [5, 5, 5, 2, 1, 1, 1, 1],
+ [5, 5, 5, 1, 1, 1, 1, 1, 1],
+ [5, 5, 2, 2, 2, 2, 2, 1],
+ [5, 5, 2, 2, 2, 2, 1, 1, 1],
+ [5, 5, 2, 2, 2, 1, 1, 1, 1, 1],
+ [5, 5, 2, 2, 1, 1, 1, 1, 1, 1, 1],
+ [5, 5, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [5, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [5, 2, 2, 2, 2, 2, 2, 2, 2],
+ [5, 2, 2, 2, 2, 2, 2, 2, 1, 1],
+ [5, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1],
+ [5, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1],
+ [5, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1],
+ [5, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [5, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [5, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+ [2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1],
+ [2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1],
+ [2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1],
+ [2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]
+```
+
+
+
+
 
 <!--
 On utilisera le notebook <i>TP5/rendu_monnaie_NSI1.ipynb</i> sur{{< a link="https://tix06.github.io/jupyterlite_NSI/lab/index.html" caption="TP5/rendu_monnaie_NSI1.ipynb" >}}
@@ -91,7 +175,7 @@ On utilisera le notebook <i>TP5/rendu_monnaie_NSI1.ipynb</i> sur{{< a link="http
 2. La solution dépend de l'ordre des pieces dans la caisse: V / F
 3. La solution est toujours optimale en commençant par rendre la monnaie avec la plus grande piece, puis la piece moins grande, etc...: V / F
 4. Avec la 2e méthode, celle de recherche exhaustive: cette méthode permet de tester toutes les possibilités, toutes les combinaisons possibles pour le rendu de monnaie: V / F
-5. Suposons que le programme, pour la méthode 2, commence par calculer le rendu pour pour la somme 7 avec la combinaison `[5,2]`. Plus loin, dans le programme, il calcule une autre solution pour rendre 7, et commence avec la combinaison `[1,1,1]`. Doit-il aller au bout du calcul de la solution avec cette combinaison, ou bien, peut-il arrêter son calcul au milieu? Cela est-il réalisé par le programme, tel que vous l'avez écrit?
+5. Supposons que le programme, pour la méthode 2, commence par calculer le rendu pour pour la somme 7 avec la combinaison `[5,2]`. Plus loin, dans le programme, il calcule une autre solution pour rendre 7, et commence avec la combinaison `[1,1,1]`. Doit-il aller au bout du calcul de la solution avec cette combinaison, ou bien, peut-il arrêter son calcul au milieu? Cela est-il réalisé par le programme, tel que vous l'avez écrit?
 
 ## Conclusion
 En analysant les 2 méthodes précédentes, on voit que le rendu de monnaie sera optimal pour toute somme à rendre, et pour tout type de caisse, à condition de tester toutes les combinaisons de rendu possible. Puis de selectionner la meilleure.

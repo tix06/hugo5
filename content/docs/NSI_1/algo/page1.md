@@ -104,9 +104,10 @@ On peut alors prévoir le poste d'un nouveau joueur. Pour cela on observe ses k 
 * on observe la classe majoritaire pour les k prremiers éléments classés de la liste triée. La valeur de **k** doit être représentative. On prendra la plupart du temps $k = \sqrt N$
 
 ### Notebook
-  <ul>
+Predire le poste d'un joueur de NBA: [Lien vers le TP](https://capytale2.ac-paris.fr/web/c/1844-3652011)
+<!--
     <li>IA2-notebook sur <b>l'algo Knn</b> et le <i>basket US</i> en ligne sur Jupyterlite:{{< a link="https://tix06.github.io/jupyterlite_NSI/lab/index.html" caption="IA2-notebook sur " >}}  </ul>
-
+-->
 # Liens
 * [Blog mrmint.fr](https://mrmint.fr/regression-lineaire-python-pratique)
 ## documents utilisés pour la redaction de la page
