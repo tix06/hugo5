@@ -17,7 +17,10 @@ Concrêtement, il s'agit de programmer les machines pour qu'elles s'adaptent en 
 
 Dans certains domaines, l'essor de l'*intelligence artificielle* est lié à l'*explosion des données accessibles* et des *capacités de traitement*.
 
+Voir compléments plus théoriques sur l'IA: [page du site](/docs/NSI_1/algo/page2/)
+<!--
 *Retour sur l'exemple: L'amélioration de l'interface du programme de stationnement n'est pas à proprement parlé de l'intelligence artificielle. Par contre, la prise en compte de la densité de voitures qui stationnent pour différents jours de la semaine, et différents horaires de la journée peut être réalisé selon une technique de programmation relative à l'intelligence artificielle.*
+-->
 
 # Apprentissage automatique
 Le *machine learning* est l'un des domaines de l'intelligence artificielle. Il s'agit:
@@ -101,10 +104,11 @@ On peut alors prévoir le poste d'un nouveau joueur. Pour cela on observe ses k 
 
 * on ajoute une nouvelle colonne calculée: Pour le joueur inconnu, on calcule la **distance** avec chaque élément *classé* dans le tableau .
 * on *trie* le tableau selon la **distance**.
-* on observe la classe majoritaire pour les k prremiers éléments classés de la liste triée. La valeur de **k** doit être représentative. On prendra la plupart du temps $k = \sqrt N$
+* on observe la classe majoritaire pour les k premiers éléments classés de la liste triée. La valeur de **k** doit être représentative. On prendra la plupart du temps $k = \sqrt N$
 
-### Notebook
-Predire le poste d'un joueur de NBA: [Lien vers le TP](https://capytale2.ac-paris.fr/web/c/1844-3652011)
+### Travaux pratiques
+* Predire le poste d'un joueur de NBA: [Lien vers le TP](https://capytale2.ac-paris.fr/web/c/1844-3652011)
+* Activité sur feuille: [lien vers pdf](/pdf/NSI_1/IA2_KNN_activite.pdf)
 <!--
     <li>IA2-notebook sur <b>l'algo Knn</b> et le <i>basket US</i> en ligne sur Jupyterlite:{{< a link="https://tix06.github.io/jupyterlite_NSI/lab/index.html" caption="IA2-notebook sur " >}}  </ul>
 -->
