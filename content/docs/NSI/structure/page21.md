@@ -2,6 +2,16 @@
 Title : autres structures lineaires
 ---
 
+*Prérequis*: 
+
+* Cours sur les{{< a link="/docs/NSI/structure/page1/" caption="types abstraits" >}}
+
+*Ce cours comporte plusieurs pages:*
+
+* [PILES](../page2)
+* {{< a link="../page21/" caption="FILES et LISTE" >}}
+* {{< a link="/docs/NSI/structure/page3/" caption="Programmation orientée objets" >}}
+
 # Structures de données: rappels
 Les piles, files et listes sont des structures de données **linéaires**. Ce sont des types **abstraits**.
 

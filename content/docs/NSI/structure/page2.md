@@ -2,10 +2,15 @@
 Title : structures lineaires
 ---
 
-*Prérequis*: Cours sur les{{< a link="/docs/NSI/structure/page1/" caption="types abstraits" >}}
+*Prérequis*: 
 
-* Ce cours sur les structures lineaires se prolonge à la{{< a link="../page21/" caption="page 2 avec: Listes et Files" >}}
-* Ce cours peut necessiter quelques connaissances en{{< a link="/docs/NSI/structure/page3/" caption="Programmation orientée objets" >}}
+* Cours sur les{{< a link="/docs/NSI/structure/page1/" caption="types abstraits" >}}
+
+*Ce cours comporte plusieurs pages:*
+
+* [PILES](../page2)
+* {{< a link="../page21/" caption="FILES et LISTE" >}}
+* {{< a link="/docs/NSI/structure/page3/" caption="Programmation orientée objets" >}}
 
 # Structure linéaire : La Pile
 ## Les structures de données
