@@ -193,17 +193,17 @@ La page [suivante du site marcarea.com](https://marcarea.com/weblog/2019/02/17/p
 
 * Pour utiliser l'une de ces fonctions, il faudra une structure de données de type *dictionnaire* pour le graphe: revoir le paragraphe *Fonctions utiles de networkx*.
 
-* Ajouter une fonction pour dessiner le graphe:
+* Ajouter une fonction pour dessiner et sauvegarder le graphe dans un fichier:
 
 ```python
-def dessine(G):
-	plt.clf()
+def dessine(G,filename):
+    plt.clf()
     L = list(G.nodes(data='col'))
     colorNodes = [node[1] for node in L]
-    nx.draw_networkx_nodes(G, pos, node_size=700,node_color=colorNodes,alpha=0.9)
+    nx.draw_networkx_nodes(G, pos, node_size=700, node_color=colorNodes, alpha=0.9)
 
     # labels
-    labels_nodes={node:label for node,label in G.nodes(data='label')}
+    labels_nodes = {node: label for node, label in G.nodes(data='label')}
 
     nx.draw_networkx_labels(G, pos, labels=labels_nodes, \
                             font_size=20, \
@@ -211,9 +211,7 @@ def dessine(G):
                             font_family='sans-serif')
 
     nx.draw_networkx_edges(G, pos)
-    plt.show()
-
-dessine(G)
+    plt.savefig(filename)
 ```
 
 * Adapter ensuite la fonction de recherche pour tracer les graphes au fur et à mesure du parcours. Démarrer du sommet 0:
@@ -235,14 +233,17 @@ import matplotlib.pyplot as plt
 import networkx as nx
 from numpy import array
 
-def dessine(G):
+def inverse(L):
+    return [L[i] for i in range(len(L)-1,-1,-1)]
+
+def dessine(G,filename):
     plt.clf()
     L = list(G.nodes(data='col'))
     colorNodes = [node[1] for node in L]
-    nx.draw_networkx_nodes(G, pos, node_size=700,node_color=colorNodes,alpha=0.9)
+    nx.draw_networkx_nodes(G, pos, node_size=700, node_color=colorNodes, alpha=0.9)
 
     # labels
-    labels_nodes={node:label for node,label in G.nodes(data='label')}
+    labels_nodes = {node: label for node, label in G.nodes(data='label')}
 
     nx.draw_networkx_labels(G, pos, labels=labels_nodes, \
                             font_size=20, \
@@ -250,69 +251,76 @@ def dessine(G):
                             font_family='sans-serif')
 
     nx.draw_networkx_edges(G, pos)
+    plt.savefig(filename)
+
+
 
 G = nx.Graph()
 # definition des noeuds
-G.add_node(0,label='A',col='white')
-G.add_node(1,label='B',col='white')
-G.add_node(2,label='C',col='white')
-G.add_node(3,label='D',col='white')
-G.add_node(4,label='E',col='white')
-G.add_node(5,label='F',col='white')
+G.add_node(0, label='A', col='white')
+G.add_node(1, label='B', col='white')
+G.add_node(2, label='C', col='white')
+G.add_node(3, label='D', col='white')
+G.add_node(4, label='E', col='white')
+G.add_node(5, label='F', col='white')
 # definition des aretes
-G.add_edge(0,1)
-G.add_edge(0,2)
-G.add_edge(0,4)
-G.add_edge(4,1)
-G.add_edge(4,2)
-G.add_edge(4,3)
-G.add_edge(2,3)
-G.add_edge(4,5)
-G.add_edge(3,5)
+G.add_edge(0, 1)
+G.add_edge(0, 2)
+G.add_edge(0, 4)
+G.add_edge(4, 1)
+G.add_edge(4, 2)
+G.add_edge(4, 3)
+G.add_edge(2, 3)
+G.add_edge(4, 5)
+G.add_edge(3, 5)
 
 # calcul des positions pour repartir les sommets du graphe
-pos = nx.spring_layout(G) 
-
+pos = nx.spring_layout(G)
 
 # Dictionnaire du graphe
 D = {}
 for node in list(G.nodes()):
-    D[node] = list(nx.neighbors(G,node))
-print (D)
+    D[node] = list(nx.neighbors(G, node))
+print(D)
 
 # Parcours en profondeur avec coloration des sommets
-def recursive_dfs(graph, node, visited=None):
-
+def dfs(graph, node, visited=None,stack=None):
+    compteur_image=0
     if visited is None:
         visited = []
+    if stack is None:
+        stack = []
+    stack.append(node)
+    nx.set_node_attributes(G, {node: {"col": 'green'}})
+    dessine(G, 'img/figure' + str(compteur_image) + '.png')
+    compteur_image+=1
+    while stack:
+        node = stack.pop()
 
-    if node not in visited and G.nodes()[node]['col'] != 'red':
-        visited.append(node)
-        nx.set_node_attributes(G, {node:{"col":'green'}})
-        dessine(G)
-        plt.show()
-    else: 
-        return
+        if node not in visited :
+            #and G.nodes()[node]['col'] != 'red':
+            visited.append(node)
 
-    unvisited = [n for n in graph[node] if n not in visited]
-
-    for node2 in unvisited:
-        if G.nodes()[node2]['col'] == 'white':
-            nx.set_node_attributes(G, {node:{"col":'green'}})
-        recursive_dfs(graph, node2, visited)
-        if G.nodes()[node2]['col'] == 'green':
-            nx.set_node_attributes(G, {node2:{"col":'red'}})
-            dessine(G)  
-    
-    nx.set_node_attributes(G, {node:{"col":'red'}})
-    dessine(G)
-    plt.show()
+            #plt.show()
+            unvisited = [n for n in graph[node] if n not in visited]
+            stack.extend(inverse(unvisited))
+            for n in unvisited :
+                nx.set_node_attributes(G, {n: {"col": 'green'}})
+            dessine(G, 'img/figure' + str(compteur_image) + '.png')
+            compteur_image += 1
+            nx.set_node_attributes(G, {node: {"col": 'red'}})
+            dessine(G,'img/figure'+str(compteur_image)+'.png')
+            compteur_image += 1
+    #plt.show()
 
     return visited
 
-# appel de recursive_dfs depuis le sommet 0 et affichage graphique
-plt.figure()
-recursive_dfs(D,0)
+
+# appel de dfs depuis le sommet 0 et affichage graphique
+#plt.figure()
+visited = dfs(D, 0)
+
+print(visited)
 ```
 
 

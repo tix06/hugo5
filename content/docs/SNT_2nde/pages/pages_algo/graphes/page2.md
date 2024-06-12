@@ -6,6 +6,24 @@ Title : algorithmes de parcours d'un graphe
 * Algorithme : voir définition en bas de page[^1]
 * Graphe : voir définitions à la page [Graphes](../page1/index.html)
 
+Voici le programme python de parcours en largeur d'un graphe:
+
+* Programme de type itératif:
+
+```python
+from collections import deque
+
+def BFS_ite(d,s,visited=[], queue=deque()):
+        queue.append(s)
+        while queue:
+            v = queue.popleft()
+            if v not in visited:
+                visited.append(v)
+                unvisited = [n for n in d[v] if n not in visited]
+                queue.extend(unvisited)
+                print(queue)
+        return visited
+```
 
 ## Parcours d'un graphe non pondéré
 Soit G(V,E) un graphe de sommets V = {A,B,C,D,E,F,G,H,I,J} et d'arêtes E.
@@ -100,6 +118,33 @@ Pour réaliser cet arbre, il faudra remonter chaque étape du parcours du graphe
 
 {{< img src="../images/maze1.png" alt="maze BFS" link="https://youtu.be/vf817b882Uw" caption="video: Maze Pathfinder - Breadth First Search (BFS)" >}}
 # Parcours d'un graphe en profondeur (DFS)
+Voici les 2 programmes python de parcours en profondeur d'un graphe:
+
+* Itératif:
+
+```python
+def DFS(d,s,visited=[]):
+    visited.append(s)
+    for v in d[s]:
+        if v not in visited:
+            DFS(d,v)
+    return visited
+```
+
+* récursif:
+
+```python
+def DFS_ite(d,s,visited=[], stack=[]):
+        stack.append(s)
+        while stack:
+            v = stack.pop()
+            if v not in visited:
+                visited.append(v)
+                unvisited = [n for n in d[v] if n not in visited]
+                stack.extend(inverse(unvisited))
+        return visited
+```
+
 ## Principe
 Soit un graphe G = (V,E) et r un sommet de G, point de départ de l'exploration.
 Le parcours en profondeur du graphe va permettre de visiter tous les noeuds du graphe, mais selon un chemin où l'on plonge dans la profondeur du graphe. Le prochain sommet visité sera un sommet fils non encore visité.
