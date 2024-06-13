@@ -2,6 +2,16 @@
 Title : algorithmes de parcours d'un graphe
 ---
 
+Ce cours comporte plusieurs pages:
+
+* [introduction aux graphes](/docs/SNT_2nde/pages/pages_algo/graphes/page1/)
+* [cours sur les graphes. Term NSI](/docs/NSI/structure/page5/)
+* [algorithmes de parcours des graphes](/docs/SNT_2nde/pages/pages_algo/graphes/page2/)
+* [TP sur les algorithmes de parcours des graphes](/docs/NSI/structure/page6/)
+* [algorithme de Dijkstra](/docs/SNT_2nde/pages/pages_algo/graphes/page4/)
+* [Protocoles de routage](/docs/NSI/architecture/page3/)
+* [Arbres](/docs/NSI/structure/page4/)
+
 # algorithmes de parcours d'un graphe en largeur
 * Algorithme : voir définition en bas de page[^1]
 * Graphe : voir définitions à la page [Graphes](../page1/index.html)
@@ -120,7 +130,7 @@ Pour réaliser cet arbre, il faudra remonter chaque étape du parcours du graphe
 # Parcours d'un graphe en profondeur (DFS)
 Voici les 2 programmes python de parcours en profondeur d'un graphe:
 
-* Itératif:
+* récursif:
 
 ```python
 def DFS(d,s,visited=[]):
@@ -131,7 +141,8 @@ def DFS(d,s,visited=[]):
     return visited
 ```
 
-* récursif:
+
+* Itératif:
 
 ```python
 def DFS_ite(d,s,visited=[], stack=[]):
@@ -143,6 +154,11 @@ def DFS_ite(d,s,visited=[], stack=[]):
                 unvisited = [n for n in d[v] if n not in visited]
                 stack.extend(inverse(unvisited))
         return visited
+
+def inverse(L):
+	# fonction utile pour avoir le meme ordre de parcours 
+	# des sommets adjacents, pour les fonctions DFS et DFS_ite
+    return [L[i] for i in range(len(L)-1,-1,-1)]
 ```
 
 ## Principe
