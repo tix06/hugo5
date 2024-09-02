@@ -37,7 +37,8 @@ Title: variables
 **1. Definition:** Une variable sert à stocker une valeur, qui peut être un nombre, une chaine de caractère, ou autres. Une variable est identifiée par un nom, et pointe vers un espace mémoire.
 
 {{< img src="../images/var5.png" alt="affectation variable" caption="VARIABLE = espace de STOCKAGE" >}}
-**2. Quel nom peut-on choisir pour une variable?:** On peut choisir une lettre simple, minuscule ou majuscule, ou une chaine de caractères SANS espaces, et commençant obligatoirement par une LETTRE. Le nom peut contenir certains caractères spéciaux comme par exemple `-` ou `_`.
+
+**2. Quel nom peut-on choisir pour une variable?:** On peut choisir une lettre simple, minuscule ou majuscule, ou une chaine de caractères SANS espaces, et commençant obligatoirement par une LETTRE. Le nom peut contenir certains caractères spéciaux comme par exemple `_`. *(ne pas utiliser le signe `-`, utilisé pour une soustraction entre 2 variables)*.
 
 Exemples de noms de variables:
 
@@ -52,6 +53,8 @@ Exemples de noms de variables:
 * Score
 * Points_de_vie
 * ...
+
+L'idée est de choisir un nom assez explicite, et d'éviter d'utiliser trop souvent x, y, a, b, c, ...
 
 **3. Affectation** On **affecte** une valeur à une variable en utilisant l'opérateur `=`.
 
@@ -71,7 +74,7 @@ x
 5
 ``` 
 
-* soit à la dernière ligne de la cellule du notebook:
+* soit à la *dernière ligne* de la cellule du notebook:
 
 ```python
 x = 5
@@ -90,7 +93,8 @@ x
 6
 ```
 
-On peut même utiliser la valeur de cette même variable pour l'opération:
+
+Et utiliser la valeur de cette même variable pour l'opération:
 
 ```python
 x = x + 1
@@ -98,6 +102,7 @@ x
 # retourne
 7
 ```
+
 **4. Opérations sur les variables**
 Une variable a un **TYPE** qui est défini lors de l'affectation. Python s'adapte lorsque vous faites une affectation et choisit le type correspondant.
 
@@ -157,11 +162,13 @@ nombre=nombre-5
 ### Script 4
 Écrire un programme dans l’éditeur qui :
 
-- affecte 3 à la variable nombre
-- Ajoute 7 au triple du nombre donné
-- Multiplie le résultat par le nombre donné
+- affecte 3 à la variable `nombre` 
+- Ajoute 7 au triple du nombre.
+- Multiplie le résultat par le nombre lui-même.
 - Soustrait au résultat le nombre 1 ;
 - Affiche le résultat obtenu.
+
+Ne pas utiliser de nouvelles variables pour les résultats intermédiaires. Seulement `nombre`
 
 * **Question d:** Quel est le résultat?
 
@@ -178,7 +185,11 @@ message = debut + milieu + fin
 message
 ```
 
-* **Question e:** L'exemple précedent vous a rappelé que l'opérateur `+` est l'opérateur de concaténation avec les chaines de caractères. Ecrire un nouveau script qui construit le message suivant: `HoHoHoHoHoHoHoHoHoHo` avec le minimum d'instructions. Utiliser des chaines de caractère de 2 lettres maximum. *Astuce: utiliser l'opérateur* `*`
+* **Question e:** L'exemple précedent vous a rappelé que l'opérateur `+` est l'opérateur de concaténation avec les chaines de caractères. Ecrire un nouveau script qui construit le message suivant: `HoHoHoHoHoHoHoHoHoHo` avec le minimum d'instructions. 
+
+Utiliser des chaines de caractère de 2 lettres maximum. 
+
+*Astuce: utiliser l'opérateur* `*`
 
 ### Script 6
 Associer des valeurs numériques et des chaines de caractères
@@ -195,12 +206,17 @@ message
 
 *Remarque:* La fonction `str` va tranformer la valeur numerique `age` en une chaine de caractères (les caractères "2" et "1").
 
+*Tester également l'instruction:* `print("mon nom est ",nom ," et j'ai ",age, "ans")`
+
+*Que constatez-vous?*
+
 ### Script 7
 Afficher avec la fonction `print`
 
 ```python
 a = 45
 b = 26
+c = a % b
 print('le reste de la division de ' + str(a) + ' par ')
 ```
 
@@ -211,7 +227,7 @@ Une autre méthode pour construire une chaine de caractères est d'utiliser la f
 Cela créé une chaine de caractères mise en forme avec des variables de types divers. Essayez dans une cellule:
 
 ```python
-message = 'le reste de la division de {} par {} est egal à {}'.format(a, b, a//b)
+message = 'le reste de la division de {} par {} est egal à {}'.format(a, b, a%b)
 print(message)
 print(type(message))
 print(type(a))
@@ -220,7 +236,7 @@ print(type(a//b))
 
 Les variables utilisées pour construire la chaine de caractère se placent au niveau des `{ }` et sont énoncées dans l'ordre, dans la fonction `format`.
 
-Vous remarquerez que la variable `message` est bien de type `str`, alors que `a`, `b` et `a//b` sont des `int`, comme l'affichent les instruction utilisant la fonction `type`.
+Vous remarquerez que la variable `message` est bien de type `str`, alors que `a`, `b` et `a%b` sont des `int`, comme l'affichent les instruction utilisant la fonction `type`.
 
 
 ### Script 8
@@ -237,5 +253,16 @@ $$Ec = \tfrac{1}{2}m.v^2$$
 
 * **Question j:** Construire une chaine de caractères, en utilisant la fonction `format` et précisant les conditions initiales, les valeurs pour m et pour v, et le résultat du calcul de l'énergie cinétique. Recopier ici cette instruction en python.
 
+# Portfolio
+* Le changement de type entre variables se fait grace aux fonctions `str`, 'float', `int`, et `bool`
+  * Comment transformer la chaine "12" en une valeur entière égale à 12? "12" => 12
+  * Comment réaliser l'opération inverse? 12 => "12"
+  * Comment transformer la chaine "12" en un nombre flottant? "12" => 12.0
+  * Comment transformer l'information 1 en un booléen `True`?
+  * Comment réaliser l'opération inverse?
+* Comment construire une chaine de caractère répétant 50 fois les caractères "Hi"? Expliquer.
+* Pourquoi l'instruction: `print("aujourd'hui j'ai "+18 +"ans")` ne fonctionne t-elle pas? Corriger cette expression.
+* Donner un exemple d'utilisation d'une expression formatée pour écrire le résultat du calcul de la force de gravitation $F=G\times m1 \times m2/d^2$, à partir des différentes variables.
+* Quel sera le type associé à F si l'on réalise le calcul?
 
 

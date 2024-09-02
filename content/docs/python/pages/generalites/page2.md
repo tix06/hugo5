@@ -45,17 +45,32 @@ Lorsque l'on présente une valeur dans le programme, le langage s'adapte selon l
 
 
 ## Les nombres entiers et décimaux
-**Un entier:** C'est un **nombre** qui n'a pas de point décimal. Les *algorithmes* utilisent en général des *entiers*, ce qui est avantageux pour les opérations de comparaison comme `=` ou `!=`.
+**Un entier: type int** C'est un **nombre** qui n'a pas de point décimal. Les *algorithmes* utilisent en général des *entiers*, ce qui est avantageux pour les opérations de comparaison comme `==` ou `!=`.
 
-*valeurs possibles*: $1, 2492042932330932, -23, etc expressions possibles : 13 + 3928, 34 * 2 + 10 // 3 % 5, etc$
+*valeurs possibles*: `1, 2492042932330932, -23,...` 
 
-Un entier peut avoir une valeur aussi grande que celle que la machine peut stocker. Pour un nombre entier stocké sur 32 bits, cette valeur maximale vaut $2^{32}-1$
+*expressions possibles*: `13+3928, 34*2+10//3, 12%5, 2**8, ...` 
 
-**un nombre entier négatif** s'écrit avec un $-$ devant: $-10$ par exemple.
+Un entier peut avoir une valeur aussi grande que celle que la machine peut stocker. Pour un nombre entier non signé, stocké sur 32 bits, cette valeur maximale vaut $2^{32}-1$
 
-**un nombre décimal** s'écrit avec un *point* comme séparateur, comme par exemple: $6.02$. Les float en Python ont une précision limité. Ils sont généralement codés sur 15 chiffres significatifs et encodés sur 53 bits.
+**un nombre entier négatif: type int** s'écrit avec un $-$ devant: $-10$ par exemple. Les entiers signés, codés sur 32 bits ont des valeurs qui s'étendent entre $[-2^{31},2^{31}-1]$
 
-## Les chaines de caractère
+**un nombre décimal: type float** s'écrit avec un *point* comme séparateur, comme par exemple: `6.02` 
+
+Les nombres exprimés avec l'opérateur `e` (*puissance de 10*), sont aussi des *float*, des décimaux:
+
+```python
+> a = 12e3 # a vaut 12000
+> print(a)
+12000.0
+> type(a)
+float
+```
+
+
+Les *float* en Python ont une précision limité. Ils sont généralement codés sur 15 chiffres significatifs et encodés sur 53 bits.
+
+## Chaine de caractère
 C'est une séquence constituée d'un ou plusieurs caractères, entourés de guillemets simples ou doubles.
 
 Notez que des chiffres mis entre guillemets sont des chaines de caractères et ne peuvent pas être manipulés comme des nombres (voir plus loin).
@@ -96,7 +111,7 @@ Ce sont les valeurs `True` et `False`. On peut les combiner dans des forules log
 
 Une opération de comparaison, utilisant les signes  `==`, '!=', `>`, `>=`, `<`, `<=` retourne un booléen `True` ou `False.
 
-*Expressions possibles*: $0 == 0, 8+1 == 2 * 3, 13 >= a, etc$.
+*Expressions possibles*: `0 == 0, 8+1 == 2 * 3, 13 >= a, ...`
 
 Le booléen permet un branchement dans un algorithme (voir les structures conditionnelles): 
 
@@ -104,8 +119,21 @@ Le booléen permet un branchement dans un algorithme (voir les structures condit
 if True:
   # instruction 1
 else:
-  instruction 2
+  # instruction 2
 
+# execution du bloc d'instruction 1
+
+if False:
+  # instruction 1
+else:
+  # instruction 2
+
+# execution du bloc d'instruction 2
+```
+
+On peut souhaiter executer infiniment le même bloc d'instructions:
+
+```python
 while True:
   # bloc d'instructions
 ```
@@ -221,7 +249,7 @@ Ouvrir une **console** python.
 | `==` et nombres réels| `0.1 == 0.3/3` |
 | `>,+,/,*,()` | `(50/2+3) > 12.5*2` |
 
-* **Question d:** Quel opérateur est prioritaire entre `/` et `+`? <i>Comme par exemple dans le calcul `(50/2+3)`</i>
+* **Question d:** Quel opérateur est prioritaire entre `/` et `+`? *Comme par exemple dans le calcul `2*(50/2+3)`*
 * **Question e:** Quel résultat devrait-on normalement obtenir avec `0.1 == 0.3/3`? Conclure.
 
 ## Opérations sur les chaines de caractères
@@ -243,12 +271,15 @@ Ouvrir une **console** python.
 
 On peut aussi réaliser les opérations de comparaison `>, <, ==, !=`sur les chaines. Et aussi le test d'appartenance `in, not in`. Ces opérations retournent un booléen.
 
-* comparaison d'ordre: `A < B` vaut `True`, `Ab < A` vaut `False`.
-* d'égalité: `HA == ha` vaut False
-* `ou in jour` vaut `True` 
-*  `ou not in jour` vaut False
+* comparaison d'ordre: `"A" < "B"` vaut `True`, `"Ab" < "A"` vaut `False`.
+* d'égalité: `"HA" == "ha"` vaut False
 
-* **Question g:** que vaut `Books > Money` ?
+L'opérateur `in` permet de tester si une suite de caractères se trouvent dans un chaine:
+
+* `"ou" in "jour"` vaut `True` 
+*  `"ou" not in "jour"` vaut False
+
+* **Question g:** que vaut `"Books" > "Money"` ?
 
 * **Question h:** Quelle erreur est retournée par l'opération `"bonjour tous les " +2`? (relever la fin du Traceback à partir de *TypeError...*)
 
@@ -257,7 +288,7 @@ On peut aussi réaliser les opérations de comparaison `>, <, ==, !=`sur les cha
 ## Opérations logiques
 > à tester dans l'éditeur Python:
 
-| opérateur | exemple |
+| opérateur | exemples à tester |
 | --- |--- |
 | `not` |  `not True` |
 | `and`| `True and False` |
@@ -265,3 +296,29 @@ On peut aussi réaliser les opérations de comparaison `>, <, ==, !=`sur les cha
 | `or` |  `False or True` |
 
 * **Question i:** Que vaut `not True and False`? Et `not (True and False)`? Pourquoi?
+
+# Portfolio
+* Quels sont les types de base? 
+* Donner quelques exemples de valeurs pour chacun de ces types.
+* Que donne l'instruction: `type(123e3)`
+* Quelle valeur maximale peut prendre un entier signé codé sur 32 bits?
+* Donner le symbole de tous les opérateurs de base pour chacun de ces types.
+* Pour les entiers, donner un exemple d'utilisation de l'opérateur `//` et de l'opérateur `%`
+* Que donne `x%2` si `x` est pair? Si `x` est impair?
+* Pour les chaines de caractères, qu'est-ce qu'une concaténation?
+
+* Donner un exemple d'utilisation du mot clé `in`
+* Donner un exemple de comparaison d'ordre lexicographique entre chaines de caractères.
+* Soit l'opération logique ci-contre:
+
+`S or not P`
+
+Cette séquence d'opérations logiques est censée représenter l'idée: 
+
+> le temps est ensoleillée (S) ou il n'y a pas de pluie (P)
+
+Evaluer cette séquence d'instructions pour chaque valeur logique possible pour S et P. Résumer dans un tableau.
+
+
+
+

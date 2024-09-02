@@ -155,6 +155,7 @@ Utilisez le tableau suivant pour fournir une information à la personne en fonct
 * **Question f:** Recopier la série d'instructions conditionnelles qui affichent une information sur l'IMC.
 
 # Suite
-{{< a link="../page4" caption="Lien vers le TP4: boucles non bornées" >}}
+* {{< a link="../page4" caption="Lien vers le TP4: boucles non bornées" >}}
+* retour vers le cours [Python: les conditions](/docs/python/pages/conditions/page2/)
 
 

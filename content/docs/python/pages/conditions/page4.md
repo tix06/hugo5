@@ -115,18 +115,22 @@ Le programme suivant utilise la fonction `randint`, qui effectue le tirage aleat
 from random import randint
 n = 1
 nombre = randint(1,6)
-while nombre != 7:
+while nombre != 1:
   n = n + 1
   nombre = randint(1,6)
 print(n)
 ```
 
-Vous pouvez visualiser les étapes de mise en oeuvre de ce programme en utilisant le lien suivant: {{< a link="https://pythontutor.com/render.html#code=from%20random%20import%20randint%0An%20%3D%201%0Anombre%20%3D%20randint%281,6%29%0Awhile%20nombre%20!%3D%206%3A%0A%20%20n%20%3D%20n%20%2B%201%0A%20%20nombre%20%3D%20randint%281,6%29%0Aprint%28n%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" caption="pythontutor.com" >}}
+> Visualiser les étapes de mise en oeuvre de ce programme en utilisant le lien suivant: {{< a link="https://pythontutor.com/render.html#code=from%20random%20import%20randint%0An%20%3D%201%0Anombre%20%3D%20randint%281,6%29%0Awhile%20nombre%20!%3D%201%3A%0A%20%20n%20%3D%20n%20%2B%201%0A%20%20nombre%20%3D%20randint%281,6%29%0Aprint%28n%29&cumulative=false&curInstr=11&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" caption="pythontutor.com" >}}
 
 
 
 * **Question e:** A quoi sert ce programme: *(choisir et justifier)*
-  * à compter le nombre d'apparition du nombre 6?
-  * ou à calculer le nombre de lancers jusqu’à l’apparition du premier 6?
+  * à compter le nombre d'apparition du nombre 1?
+  * ou à calculer le nombre de lancers jusqu’à l’apparition du premier 1?
 
-* **Question f:** La boucle « Tant que » pourrait en théorie ne jamais s’arrêter. Pourquoi ? Ajouter une condition supplémentaire dans l'instruction `while randint(1,6) != 6 and ... :` pour résoudre ce problème de l'arrêt.
+* **Question f:** La boucle « Tant que » pourrait en théorie ne jamais s’arrêter. Pourquoi ? Ajouter une condition supplémentaire dans l'instruction `while randint(1,6) != 1 and ... :` pour résoudre ce problème de l'arrêt.
+
+# Liens
+* {{< a link="../page3" caption="Lien vers le TP3: structures conditionnelles" >}}
+* retour vers le cours [Python: les conditions](/docs/python/pages/conditions/page2/)
