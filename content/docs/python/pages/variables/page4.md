@@ -115,7 +115,10 @@ Les opérations possibles sur une variable dépendent de son type.
 
 
 # Editeur Python
-* Utiliser comme **editeur** un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
+Ouvrir dans *winpython > python QTConsole*
+
+
+{{< img src="/images/qtconsole.png" >}}
 
 <div>
 <py-repl id="my-repl" auto-generate="true"></py-repl>

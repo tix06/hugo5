@@ -198,7 +198,10 @@ True
 *Remarque:* Le test de l'égalité n'est pas adapté pour les nombres réels. Seulement pour les nombres entiers. Ainsi, en Python, l'opération `0.1*3 == 0.3` renvoie ... `False`!
 
 # Editeur Python
-Ouvrir une **console** python.
+Ouvrir dans *winpython > python QTConsole*
+
+
+{{< img src="/images/qtconsole.png" >}}
 
 <!--
 * L'**editeur** suivant se présente comme un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.

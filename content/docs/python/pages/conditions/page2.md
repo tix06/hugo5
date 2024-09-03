@@ -32,7 +32,10 @@ bookShowToc: false
   <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 
 # Editeur Python
-* Utiliser un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
+Ouvrir dans *winpython > python QTConsole*
+
+
+{{< img src="/images/qtconsole.png" >}}
 
 <div>
 <py-repl id="my-repl" auto-generate="true"></py-repl>
@@ -141,12 +144,12 @@ print("Vous avez à payer",prix,"euros.")
 ## Boucles non bornées
 **1. Definition:** Une *boucle non bornée* permet de répéter un élément de code un nombre à priori inconnu de fois.
 
-On écrit l'instruction:  <br> `while <condition>:`
+On écrit l'instruction:  `while <condition d execution>:`
 
 Le bloc de code est indenté sous cette première ligne:
 
 ```python
-while <condition>:
+while <condition d execution>:
   instruction 1
   instruction 2
 instruction suivante # suite du programme
@@ -156,10 +159,12 @@ Cette boucle repète l'execution d'un bloc de code (*instruction 1, instruction 
 
 Lorsque cette `<condition>` n'est plus réalisée, le programme passe à l'*instruction suivante*.
 
+Souvent, il sera nécessaire de démarrer le programme par initier une variable *(celle utile pour la condition d'execution)*. De sorte que cette condition d'execution soit évaluée à `True`, et que le bloc de cette boucel s'execute au moins une fois.
+
 *Exemple 1: Réaliser un compteur*
 
 ```python
-print("Donner les prénoms des 3 neveux de Donald-Duck")
+print("Donner les prénoms des 3 neveux de Donald Duck")
 i = 1
 while i <= 3:
   nom = input("neveu n°"+str(i)+": ")
@@ -179,7 +184,7 @@ while r > 3:
 print('à la fin du programme, r vaut ' + str(r))
 ```
 * A la première itération, `r` vaut 40 donc la `<condition>` r > 3 est `True. r est diminué de 3 et prend la valeur`1
-* A la dernière itération, `4 > 3` est evalué à `True`. `r` est diminué de 3 et prend la valeur`1
+* A la dernière itération, `4 > 3` est evalué à `True`. `r` est diminué de 3 et prend la valeur 1
 * Puis `r > 3` est evalué à `False`. Le bloc n'est pas executé et le programme s'arrête s'il n'y a pas d'autres instructions (ou poursuit le script sinon).
 
 **2. Le problème de l'arrêt**
@@ -224,6 +229,7 @@ Lorsque les valeurs `choix_joueur` et `N_aleatoire` sont identiques, le programm
 
 > Ajouter aussi un compteur du nombre d'essais. Afficher ce nombre à la fin du jeu.
 
+
 # Portfolio
 * Quelle est l'instruction python qui génère une *sortie*? Donner un exemple.
 * Quelle instruction python permet de saisir une *entrée*? Donner un exemple. Quel est le type systématiquement retourné par cette instruction? Comment obtenir une valeur entière à partir de la saisie par l'utilisateur?
@@ -231,7 +237,7 @@ Lorsque les valeurs `choix_joueur` et `N_aleatoire` sont identiques, le programm
 * Quelle est l'instruction conditionnelle avec différents cas?
 * Quelle instruction génère une boucle infinie avec `while`
 * Boucle non bornée: Comment **réaliser un compteur simple**, avec une condition d'arrêt lorsque celui-ci atteint la valeur 10? Ecrire le script complet. Votre programme doit être fonctionnel.
-* *Algorithme essentiel*: Ecrire le script complet du calcul du **reste de la division euclidienne** entre 2 entiers `a` et `b`. *Vous devrez initialiser les variables a et b avec des valeurs*.
+* *Algorithme essentiel*: Ecrire le script complet du calcul de **la division euclidienne** entre 2 entiers `a` et `b`. Le programme affiche le quotient et le reste de la division de `a` par `b`. *Vous devrez initialiser les variables a et b avec des valeurs*.
 
 
 # Travaux Pratiques

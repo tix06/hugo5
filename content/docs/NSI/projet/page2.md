@@ -132,10 +132,19 @@ cette magnifique invention est porteuse des plus belles valeurs humaines : appor
 
 
 ## [Comprendre les blockchains : fonctionnement et enjeux de ces nouvelles technologies](http://www.senat.fr/rap/r17-584/r17-584_mono.html)
-les blockchains permettent des échanges décentralisés et sécurisés, sans qu'il soit besoin d'un tiers de confiance. Plus précisément, elles sont des technologies de stockage et de transmission d'informations, permettant la constitution de registres répliqués et distribués, sans organe central de contrôle, sécurisées grâce à la cryptographie, et structurées par des blocs liés les uns aux autres, à intervalles de temps réguliers....
-[des blocs liés entre eux par des fonctions de hachage](http://www.senat.fr/rap/r17-584/r17-584_mono.html#toc75)
+les blockchains permettent des échanges décentralisés et sécurisés, sans qu'il soit besoin d'un tiers de confiance. Plus précisément, elles sont des technologies de stockage et de transmission d'informations, permettant la constitution de registres répliqués et distribués, sans organe central de contrôle, sécurisées grâce à la cryptographie, et structurées par des blocs liés les uns aux autres, à intervalles de temps réguliers....des blocs liés entre eux par des fonctions de hachage
+
+[Rapport du sénat sur la technologie Blockchain](http://www.senat.fr/rap/r17-584/r17-584_mono.html#toc75)
 
 # Interfaces Hommes-Machines (IHM)
+## [La vision par ordinateur à votre service](https://www.lemonde.fr/blog/binaire/2024/08/30/la-vision-par-ordinateur-a-votre-service/)
+
+{{< img src="../images/cube.jpg" caption="image de cube, @Magda Ehlers" >}}
+
+Gerard Médioni:  Il a travaillé sur des questions fondamentales comme : Comment déduire des descriptions d’objets à partir d’images ? Comment « reconnaître » des objets que nous n’avons jamais vus ? Ses recherches ont inspiré nombre d’inventions qu’il a porté dans des startups puis chez Amazon.
+
+{{< img src="../images/amazoneone.jpg" caption="L’appareil de Amazon One, ©Amazon" >}}
+
 ## [Neurosmart, une histoire de cerveau et de passionnés](https://www.lemonde.fr/blog/binaire/2020/11/27/neurosmart-une-histoire-de-cerveau-et-de-passionnes/)
 Comment expliquer au mieux au grand public, aux étudiantes et étudiants, mais aussi à d’autres collègues chercheurs, notre métier de chercheuses et chercheurs ? Comment expliquer le lien entre les neurosciences, la cognition et l’informatique de manière la plus accessible à chacune et chacun, quel que soit le niveau de connaissance dans ces domaines ?
 Neurosmart : concrêtement, is’agit d’un site web où il est possible de visualiser plusieurs scénarios. Un scénario est le nom donné à une situation particulière que vit un individu et pour laquelle ses fonctions cognitives vont être sollicitées pour pouvoir y réagir. L’interface propose alors de visualiser. pour chaque action les structures cérébrales qui sont impliquées et mettre en avant cela par une visualisation 3D dynamique (c’est littéralement le cerveau qui s’illumine au sens propre du terme !)
@@ -183,6 +192,8 @@ une identité unique est-elle souhaitable pour se connecter à toutes les platef
 Depuis quelques années, on établit souvent un lien entre les voitures autonomes et des dilemmes éthiques insolubles auxquels les ingénieurs seraient sommés de trouver des solutions consensuelles : comment choisir entre tuer cinq personnes qui traversent au feu vert ou condamner le passager du véhicule, qui en est aussi le propriétaire, à une mort certaine ?
 
 [https://www.larecherche.fr/chronique-%C3%A9thique/la-voiture-autonome-met-en-%C3%A9chec-lutilitarisme](https://www.larecherche.fr/chronique-%C3%A9thique/la-voiture-autonome-met-en-%C3%A9chec-lutilitarisme)
+
+{{< img src="/docs/SNT_2nde/pages/page9/images/robot6.GIF" caption="Jaguar électriques I-PACE Waymo One: taxi autonome" >}}
 
 
 <input type="button" class="btn btn-lg" value="Préparer l'entretien" onclick="window.location.href = '/docs/NSI/projet/page3/'">

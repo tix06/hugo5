@@ -38,7 +38,11 @@ bookShowToc: false
 
 # TP3: Structures conditionnelles
 # Editeur Python
-* Utiliser un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
+* Utiliser un **notebook**. 
+
+{{< img src="/images/notebook.png" >}}
+
+Dans une même cellule: Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
 
 <div>
 <py-repl id="my-repl" auto-generate="true"></py-repl>
