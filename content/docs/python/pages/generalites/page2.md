@@ -107,7 +107,7 @@ print(resultat)
 ```
 
 ## Les valeurs logiques
-Ce sont les valeurs `True` et `False`. On peut les combiner dans des forules logiques avec les opérateurs `not`, `and`, `or`.
+Ce sont les valeurs `True` et `False`. On peut les combiner dans des formules logiques avec les opérateurs `not`, `and`, `or`.
 
 Une opération de comparaison, utilisant les signes  `==`, '!=', `>`, `>=`, `<`, `<=` retourne un booléen `True` ou `False.
 
@@ -139,7 +139,7 @@ while True:
 ```
 
 # Les opérations de base
-**1.** Un langage informatique permet de réaliser des opérations sur des valeurs. L'écriture de ces opétations peut différer de ce que l'on écrit avec la calculatrice. Voici la liste des opérateurs en Python:
+**1.** Un langage informatique permet de réaliser des opérations sur des valeurs. L'écriture de ces opérations peut différer de ce que l'on écrit avec la calculatrice. Voici la liste des opérateurs en Python:
 
 | opérateur | rôle | équivalent  sur une calculatrice |
 |--- |--- |--- |
@@ -277,7 +277,7 @@ On peut aussi réaliser les opérations de comparaison `>, <, ==, !=`sur les cha
 * comparaison d'ordre: `"A" < "B"` vaut `True`, `"Ab" < "A"` vaut `False`.
 * d'égalité: `"HA" == "ha"` vaut False
 
-L'opérateur `in` permet de tester si une suite de caractères se trouvent dans un chaine:
+L'opérateur `in` permet de tester si une suite de caractères se trouve dans un chaine:
 
 * `"ou" in "jour"` vaut `True` 
 *  `"ou" not in "jour"` vaut False
