@@ -240,7 +240,9 @@ Lorsque les valeurs `choix_joueur` et `N_aleatoire` sont identiques, le programm
 * *Algorithme essentiel*: Ecrire le script complet du calcul de **la division euclidienne** entre 2 entiers `a` et `b`. Le programme affiche le quotient et le reste de la division de `a` par `b`. *Vous devrez initialiser les variables a et b avec des valeurs*.
 
 
-# Travaux Pratiques
-* {{< a link="../page3" caption="Lien vers le TP3: structures conditionnelles" >}}
-
-* {{< a link="../page4" caption="Lien vers le TP4: boucles non bornées" >}}
+# Liens
+* [TP1 sur les opérations et types de base](../../generalites/page2)
+* [TP2 sur les variables](../../variables/page4/)
+* [cours: structures conditionnelles](../../conditions/page2/)
+* [TP3 conditions](../../conditions/page3/)
+* [TP4 Boucles non bornées - while](../../conditions/page4/)

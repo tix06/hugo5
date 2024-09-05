@@ -68,7 +68,6 @@ Un langage informatique permet de réaliser des opérations sur des valeurs. L'�
 | // | 12 // 10 |
 | % | 4 % 2 |
 | % | 5 % 2 |
-| % | 5 % 2 |
 | - | 10 - 12 |
 | ** | 2**8 |
 | e | 12e-3 |
@@ -179,8 +178,6 @@ L'égalité est testée avec l'opérateur *double égal* `==` et l'inégalité a
 True
 > 12 != 3
 True
-> 12 == 24/2
-False
 ```
 
 *Dans ce dernier exemple, la division `24/2` donne `12.0`, qui est alors codé en un nombre **réel**, ce qui n'est pas égal à l'**entier** `12`*
@@ -282,18 +279,16 @@ True
 ## Exemple d'opérations logiques
 > à tester dans l'éditeur Python:
 
-| opérateur | exemples à tester |
+| opérateur | autres exemples à tester |
 | --- |--- |
 | `not` |  `not True` |
-| `and`| `True and False` |
-| `and` |   `True and True`  |
+| `or` |   `False or False`  |
 | `or` |  `False or True` |
 
-* **Question i:** Que vaut `not True and False`? Et `not (True and False)`? Pourquoi?
+* **Question j:** Que vaut `not True and False`? Et `not (True and False)`? Pourquoi?
 
 # Portfolio
 * Quels types de données avez-vous vus dans ce chapitre?
-* Donner quelques exemples de valeurs pour chacun de ces types.
 * Que vaut le nombre suivant: `123e3` 
 * Pour les entiers, donner un exemple d'utilisation de l'opérateur `//` et de l'opérateur `%`
 * Que donne `x%2` si `x` est pair? Si `x` est impair?

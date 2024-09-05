@@ -108,7 +108,7 @@ else:
 
 ## Ex 4: Comparer 3 nombres
 ### version 1
-> Completer (et tester avec plusieurs valeurs de a de b et de c) le programme suivant qui compare a et b et retourne un message selon leur ordre.
+> Completer (et tester avec plusieurs valeurs de a de b et de c) le programme suivant qui compare a, b et c, et retourne un message précisant le plus grand des 3.
 
 On suppose que les 3 nombres a, b et c ne sont jamais égaux. On utilisera l'opérateur `and` qui retourne `True` si les 2 conditions (à gauche et à droite de `and`) sont toutes les 2 évaluées à `True`, `False` sinon.
 
@@ -158,8 +158,11 @@ Utilisez le tableau suivant pour fournir une information à la personne en fonct
 
 * **Question f:** Recopier la série d'instructions conditionnelles qui affichent une information sur l'IMC.
 
-# Suite
-* {{< a link="../page4" caption="Lien vers le TP4: boucles non bornées" >}}
-* retour vers le cours [Python: les conditions](/docs/python/pages/conditions/page2/)
+# Liens
+* [TP1 sur les opérations et types de base](../../generalites/page2)
+* [TP2 sur les variables](../../variables/page4/)
+* [cours: structures conditionnelles](../../conditions/page2/)
+* [TP3 conditions](../../conditions/page3/)
+* [TP4 Boucles non bornées - while](../../conditions/page4/)
 
 

@@ -4,36 +4,9 @@ bookShowToc: false
 ---
 
   
-  <!--<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
- -->
-  <style>
-    .editor-box{
-      width: 60%;
-      display: block;
-    }
-    #output > div {
-    font-family: 'monospace';
-    background-color: #e5e5e5;
-    border: 1px solid lightgray;
-    /*border-top: 0;*/
-    font-size: 0.875rem;
-    padding: 0.5rem;
-  
-  }
 
-  #output > div:first-child {
-    border-top: 1px solid lightgray;
-    display: block;
-  }
 
-  #output > div:nth-child(even) {
-    border: 0;
-  } 
-</style>
-
-  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-
-# Les types
+# Les types de base: numériques, string, booléens
 En python, les objets **natifs de base** ont pour type:
 
 * nombre entier: integer ou `int` en Python
@@ -43,6 +16,16 @@ En python, les objets **natifs de base** ont pour type:
 
 Lorsque l'on présente une valeur dans le programme, le langage s'adapte selon le type, comme on le verra plus loin.
 
+Pour vérifier le type d'un objet, on utilise la fonction `type`
+
+*Exemples*
+
+```python
+> type(12)
+int
+> type(12.0)
+float
+```
 
 ## Les nombres entiers et décimaux
 **Un entier: type int** C'est un **nombre** qui n'a pas de point décimal. Les *algorithmes* utilisent en général des *entiers*, ce qui est avantageux pour les opérations de comparaison comme `==` ou `!=`.
@@ -75,6 +58,8 @@ C'est une séquence constituée d'un ou plusieurs caractères, entourés de guil
 
 Notez que des chiffres mis entre guillemets sont des chaines de caractères et ne peuvent pas être manipulés comme des nombres (voir plus loin).
 
+*Exemples*
+
 ```python
 "Bonjour"
 'Hello'
@@ -88,14 +73,14 @@ Certains caractères spéciaux ne sont pas affichés, mais permettent la mise en
 * Par exemple, les caractères `\n`:
 
 ```python
-citation_python = 'je disais, "être ou ne pas être,\ntelle est la question"'
-print(citation_python)
+> citation_python = 'je disais, "être ou ne pas être,\ntelle est la question"'
+> print(citation_python)
 # affiche
-# être ou ne pas être,
-# telle est la question
+être ou ne pas être,
+telle est la question
 ```
 
-* Ou bien les accolades `{}` dans une expression formatée:
+* Ou bien les accolades `{}` dans une expression formatée. Exemple:
 
 ```python
 m = 100
@@ -113,7 +98,7 @@ Une opération de comparaison, utilisant les signes  `==`, '!=', `>`, `>=`, `<`,
 
 *Expressions possibles*: `0 == 0, 8+1 == 2 * 3, 13 >= a, ...`
 
-Le booléen permet un branchement dans un algorithme (voir les structures conditionnelles): 
+Le booléen permet un branchement dans un algorithme (voir les structures conditionnelles). *Exemples:*
 
 ```python
 if True:
@@ -197,21 +182,21 @@ True
 
 *Remarque:* Le test de l'égalité n'est pas adapté pour les nombres réels. Seulement pour les nombres entiers. Ainsi, en Python, l'opération `0.1*3 == 0.3` renvoie ... `False`!
 
-# Editeur Python
-Ouvrir dans *winpython > python QTConsole*
+# Travaux pratiques
+Au choix: 
 
+* Ouvrir une console python dans *winpython > python QTConsole*
 
 {{< img src="/images/qtconsole.png" >}}
+
+* Ouvrir un shell python: dans *Pyzo* ou *Spyder* par exemple.
 
 <!--
 * L'**editeur** suivant se présente comme un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
 -->
 
-<div>
-<py-repl id="my-repl" auto-generate="true"></py-repl>
-</div>
 
-## Travaux pratiques: opérateurs pour les nombres
+## Opérations avec des nombres
 > Tester les opérations suivantes dans l'editeur Python et répondez aux questions:
 
 <br>
@@ -223,20 +208,22 @@ Ouvrir dans *winpython > python QTConsole*
 | / | 12 / 10 |
 | // | 12 // 10 |
 | % | 4 % 2 |
-| % | 5 % 2 |
+| % | 5 % 2 |
 | - | 10 - 12 |
 | ** | 2**8 |
 | e | 12e-3 |
-| % | 1%3 <br> 2%3 <br> 3%3 <br> 4%3 <br> 5%3 <br> 6%3 <br> 7%3 |
-
-
-
+| `*, /, +, -, ()` | 3-2*(50/2+3) |
+| % | 1%3 |
+| % | 2%3 |
+| % | 3%3 |
+| % | 4%3  |
+| % | 5%3 |
 
 
 
 * **Question a:** Quel est le rôle pour chacun de ces opérateurs? Que donne `N%2` pour N pair; pour N impair?
-* **Question b:** Calculer à l'aide de la console le résultat de: $11,27 + \tfrac{9.10^{21}}{10^4}$. Ecrivez sur votre cahier l'expression utilisée en python pour effectuer ce calcul, ainsi que le résultat, exprimé en langage mathématique.
-* **Question c:** Quel est le signe utilisé pour séparateur décimal en python?
+* **Question b:** Calculer à l'aide de la console le résultat de: $11,27 \times \tfrac{9.10^{21}}{10^4}$. Ecrivez sur votre cahier l'expression utilisée en python pour effectuer ce calcul, ainsi que le résultat, exprimé en langage mathématique.
+* **Question c:** Quelles sont les différentes manières d'écrire $9.10^{21}$ en python? 
 
 ## Opérations de comparaisons
 
@@ -253,7 +240,7 @@ Ouvrir dans *winpython > python QTConsole*
 | `>,+,/,*,()` | `(50/2+3) > 12.5*2` |
 
 * **Question d:** Quel opérateur est prioritaire entre `/` et `+`? *Comme par exemple dans le calcul `2*(50/2+3)`*
-* **Question e:** Quel résultat devrait-on normalement obtenir avec `0.1 == 0.3/3`? Conclure.
+* **Question e:** Quel résultat donne `0.1 == 0.3/3`? Expliquer.
 
 ## Opérations sur les chaines de caractères
 
@@ -268,7 +255,7 @@ Ouvrir dans *winpython > python QTConsole*
 | `+,*,()` | (&quot;bonjour&quot; + &quot; &quot;) * 10 |
 
 
-* **Question f:** expliquer ce que réalisent les opérateurs + et * avec les chaines de caractères.
+* **Question f:** à partir des exemples proposés, expliquer ce que réalisent les opérateurs + et * avec les chaines de caractères.
 
 
 
@@ -282,7 +269,13 @@ L'opérateur `in` permet de tester si une suite de caractères se trouve dans un
 * `"ou" in "jour"` vaut `True` 
 *  `"ou" not in "jour"` vaut False
 
-* **Question g:** que vaut `"Books" > "Money"` ?
+* **Question g:** que valent chacune des opérations: 
+  * `"A" == "a"` 
+  * `"Ab" > "Ac"`
+  * `"Ab" > "A"`
+  * `"Books" > "Money"` 
+  * `"Bo" in "Books"`
+  * `"Bk" in "Books"`
 
 * **Question h:** Quelle erreur est retournée par l'opération `"bonjour tous les " +2`? (relever la fin du Traceback à partir de *TypeError...*)
 
@@ -301,26 +294,36 @@ L'opérateur `in` permet de tester si une suite de caractères se trouve dans un
 * **Question i:** Que vaut `not True and False`? Et `not (True and False)`? Pourquoi?
 
 # Portfolio
-* Quels sont les types de base? 
-* Donner quelques exemples de valeurs pour chacun de ces types.
+* Quels sont les types de base vus dans cette leçon? Faire un tableau avec le symbole de tous les opérateurs vus pour chacun de ces types.
 * Que donne l'instruction: `type(123e3)`
 * Quelle valeur maximale peut prendre un entier signé codé sur 32 bits?
-* Donner le symbole de tous les opérateurs de base pour chacun de ces types.
 * Pour les entiers, donner un exemple d'utilisation de l'opérateur `//` et de l'opérateur `%`
 * Que donne `x%2` si `x` est pair? Si `x` est impair?
 * Pour les chaines de caractères, qu'est-ce qu'une concaténation?
-
 * Donner un exemple d'utilisation du mot clé `in`
 * Donner un exemple de comparaison d'ordre lexicographique entre chaines de caractères.
 * Soit l'opération logique ci-contre:
 
-`S or not P`
+`S and not P`
 
-Cette séquence d'opérations logiques est censée représenter l'idée: 
+`S` peut prendre l'une des 2 valeurs logiques `True` ou `False`. De même que `P`.
 
-> le temps est ensoleillée (S) ou il n'y a pas de pluie (P)
+Evaluer cette expression pour chaque combinaison de valeurs pour `S` et `P`. Par exemple, pour `S = True` et `P = True`, cette expression devient `True and not True`, qui est alors evaluée à `False`.
 
-Evaluer cette séquence d'instructions pour chaque valeur logique possible pour S et P. Résumer dans un tableau.
+> Résumer dans un tableau.
+
+* Donner la valeur de S et de P pour représenter l'information suivante:
+
+> le temps est ensoleillée (S) et il n'y a pas de pluie (P)
+
+* Donner alors la valeur retournée par l'opération logique `S and not P`
+
+# Liens
+* [TP1 sur les opérations et types de base](../../generalites/page2)
+* [TP2 sur les variables](../../variables/page4/)
+* [cours: structures conditionnelles](../../conditions/page2/)
+* [TP3 conditions](../../conditions/page3/)
+* [TP4 Boucles non bornées - while](../../conditions/page4/)
 
 
 

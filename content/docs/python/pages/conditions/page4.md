@@ -138,5 +138,8 @@ print(n)
 * **Question g:** La boucle « Tant que » pourrait en théorie ne jamais s’arrêter. Pourquoi ? Ajouter une condition supplémentaire dans l'instruction `while randint(1,6) != 1 and ... :` pour résoudre ce problème de l'arrêt.
 
 # Liens
-* {{< a link="../page3" caption="Lien vers le TP3: structures conditionnelles" >}}
-* retour vers le cours [Python: les conditions](/docs/python/pages/conditions/page2/)
+* [TP1 sur les opérations et types de base](../../generalites/page2)
+* [TP2 sur les variables](../../variables/page4/)
+* [cours: structures conditionnelles](../../conditions/page2/)
+* [TP3 conditions](../../conditions/page3/)
+* [TP4 Boucles non bornées - while](../../conditions/page4/)
