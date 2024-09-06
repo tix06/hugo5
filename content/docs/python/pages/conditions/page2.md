@@ -2,44 +2,26 @@
 Title: conditions
 bookShowToc: false
 ---
- <!--<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
- -->
-  <style>
-    .editor-box{
-      width: 60%;
-      display: block;
-    }
-    #output > div {
-    font-family: 'monospace';
-    background-color: #e5e5e5;
-    border: 1px solid lightgray;
-    /*border-top: 0;*/
-    font-size: 0.875rem;
-    padding: 0.5rem;
-  
-  }
 
-  #output > div:first-child {
-    border-top: 1px solid lightgray;
-    display: block;
-  }
-
-  #output > div:nth-child(even) {
-    border: 0;
-  } 
-</style>
-
-  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 
 # Editeur Python
-Ouvrir dans *winpython > python QTConsole*
+Au choix:
 
+* Utiliser un **notebook**. 
 
-{{< img src="/images/qtconsole.png" >}}
+{{< img src="/images/notebook.png" >}}
 
-<div>
-<py-repl id="my-repl" auto-generate="true"></py-repl>
-</div>
+Dans une même cellule: Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
+
+* Utiliser l'editeur Pyzo:
+
+Mettre `##` avant chaque script pour créer une *cellule*. Executer la cellule et passer à la suivante avec *MAJ+CTRL+ENTREE*.
+
+* Utiliser l'editeur Spyder:
+
+Mettre `#%%` avant chaque script pour créer une *cellule*. Executer la cellule et passer à la suivante avec *MAJ+ENTREE*.
+
+{{< img src="../images/cell.png" >}}
   
 # Conditions et boucles non bornées
 ## Conditions
@@ -88,6 +70,11 @@ elif hauteur_plant < 15 :
 else : 
   print('Pret pour la recolte')
 ```
+
+*Rappelez vous:*
+
+* `elif` est toujours suivi d'une condition
+* `else` n'est pas suivi d'une condition. C'est l'alternative, dont le bloc est executé lorsqu'aucune des conditions precedentes n'est *vraie*.
 
 ## Condition sur une valeur entrée (`INPUT`)
 La fonction `input` permet d'ouvrir une boite de dialogue, d'attendre la saisie, et de récupérer une information donnée par l'utilisateur.
@@ -183,7 +170,7 @@ while r > 3:
   r = r - 3
 print('à la fin du programme, r vaut ' + str(r))
 ```
-* A la première itération, `r` vaut 40 donc la `<condition>` r > 3 est `True. r est diminué de 3 et prend la valeur`1
+* A la première itération, `r` vaut 40 donc la `<condition>` r > 3 est `True`. r est diminué de 3 et prend la valeur 37.
 * A la dernière itération, `4 > 3` est evalué à `True`. `r` est diminué de 3 et prend la valeur 1
 * Puis `r > 3` est evalué à `False`. Le bloc n'est pas executé et le programme s'arrête s'il n'y a pas d'autres instructions (ou poursuit le script sinon).
 
@@ -233,16 +220,19 @@ Lorsque les valeurs `choix_joueur` et `N_aleatoire` sont identiques, le programm
 # Portfolio
 * Quelle est l'instruction python qui génère une *sortie*? Donner un exemple.
 * Quelle instruction python permet de saisir une *entrée*? Donner un exemple. Quel est le type systématiquement retourné par cette instruction? Comment obtenir une valeur entière à partir de la saisie par l'utilisateur?
-* Quelle est l'instruction conditionnelle avec alternative en python?
-* Quelle est l'instruction conditionnelle avec différents cas?
-* Quelle instruction génère une boucle infinie avec `while`
-* Boucle non bornée: Comment **réaliser un compteur simple**, avec une condition d'arrêt lorsque celui-ci atteint la valeur 10? Ecrire le script complet. Votre programme doit être fonctionnel.
-* *Algorithme essentiel*: Ecrire le script complet du calcul de **la division euclidienne** entre 2 entiers `a` et `b`. Le programme affiche le quotient et le reste de la division de `a` par `b`. *Vous devrez initialiser les variables a et b avec des valeurs*.
+* Quelle est l'instruction conditionnelle avec *alternative* en python? `if .. else` ou bien `if .. elif .. else`?
+* Quelle est l'instruction conditionnelle avec *différents cas*? `if .. else` ou bien `if .. elif .. else`?
+* Quelle instruction génère une boucle infinie avec `while`?
+* Boucle non bornée: Comment **réaliser un compteur simple**, utlisant une boucle bornée, avec une condition d'arrêt lorsque la variable atteint la valeur 10? Ecrire le script complet. Votre programme doit être fonctionnel.
+* Compléter la phrase: Le quotient d'une division euclidienne de a par b (`a//b`) est égal au nombre de fois qu'il faut executer `a = a ... b` pour que l'on obtienne `a ... b`. 
 
+<!--
+* *Algorithme essentiel*: Ecrire le script complet du calcul de **la division euclidienne** entre 2 entiers `a` et `b`. Le programme affiche le quotient et le reste de la division de `a` par `b`. *Vous devrez initialiser les variables a et b avec des valeurs*. Vous ne pouvez utiliser que l'opérateur soustraction `-`.
+-->
 
 # Liens
 * [TP1 sur les opérations et types de base](../../generalites/page2)
 * [TP2 sur les variables](../../variables/page4/)
 * [cours: structures conditionnelles](../../conditions/page2/)
-* [TP3 conditions](../../conditions/page3/)
+* [TP3 conditions et fonctions](../../conditions/page3/)
 * [TP4 Boucles non bornées - while](../../conditions/page4/)

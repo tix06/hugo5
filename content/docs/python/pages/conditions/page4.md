@@ -38,7 +38,7 @@ bookShowToc: false
 
 # TP4: Boucles non bornées - while
 # Editeur Python
-* Utiliser un **notebook**. 
+* Utiliser un **notebook**, ou bien pyzo ou spyder, en delimitant des *cellules* dans la page d'edition. 
 
 <div>
 <py-repl id="my-repl" auto-generate="true"></py-repl>
@@ -51,7 +51,7 @@ La division entière de `a`par `b` revient à soustraire `N` fois `b` à la vale
 
 Il s'agit de la DIVISION EUCLIDIENNE.
 
-Le script contient une boucle non bornée. La *condition d'éxecution* est que le nombre **a** doit rester supérieur ou égal à **b** lorsqu'on lui soustrait **b**
+Le script contient une boucle non bornée. La *condition d'éxecution* est que le nombre **a** doit rester supérieur à **b** lorsqu'on lui soustrait **b**
 
 *script*
 
@@ -69,12 +69,23 @@ Vous pouvez visualiser les étapes de mise en oeuvre de ce programme en utilisan
 
 
 
-* **Question a:** Que vaut `a` à la fin du script? Quelle variable stocke le résultat de la division? Quel est le résultat de la division entière de 20 par 6?
+* **Question a:** Que vaut `a` à la fin du script? Quelle variable stocke le reste de la division? Quel est le quotient de la division entière de 20 par 6?
 
-> Adapter maintenant le programme pour afficher le *résultat* de la division euclidienne, mais aussi le *reste*. Utiliser une expression formatée avec la fonction `print`.
+> Adapter maintenant le programme pour afficher le *quotient* de la division euclidienne, mais aussi le *reste*. Utiliser une expression formatée avec la fonction `print`.
 
-* **Question b:** Recopier la script et cette expression formatée sur votre feuille.
+* **Question b:** Recopier le script de cette expression formatée sur votre feuille.
 
+## Ex 2: fonction division_euclidienne
+Créer une fonction `division_euclidienne` à partir de l'exercice 1. Cette fonction devra retourner l'expression formatée.
+
+```python
+def division_euclidienne(a,b):
+  ...
+  return 'quotient: {}, reste: {}'.format(...,...)
+```
+
+* **Question c:** Recopier le script sur votre feuille.
+<!--
 ## Ex 2: Racine carrée
 On va adapter le script suivant pour déterminer la racine carrée de 13. La méthode va permettre d'évaluer à $10^-{2}$ près la valeur de $\sqrt {13}$.
 
@@ -93,9 +104,9 @@ while <condition d execution>:
 * Dans le bloc de la boucle `while`: On va **incrémenter** `x` de 0.01 à chaque itération, dans le bloc de la boucle bornée.
 
 * **Question c:** Recopiez le script sur votre feuille de réponse. Quelle est la valeur approchée de $\sqrt {13}$?
-
+-->
 ## Ex 3: compte epargne
-Un étudiant ouvre un compte epargne et dépose la somme de 10 euros. Ce compte est remunéré à hauteur de 2% par an. Il oublie complètement l'existance de ce comte. Au bout de combien d'années aura t-il doublé la somme sur ce compte?
+Un étudiant ouvre un compte epargne et dépose la somme de 10 euros. Ce compte est remunéré à hauteur de 2% par an. Il oublie complètement l'existance de ce compte. Au bout de combien d'années aura t-il doublé la somme?
 
 > Resoudre le problème en completant et en testant le script suivant dans une cellule Python
 
@@ -108,9 +119,11 @@ while somme <= ...:
 ...
 ``` 
 
-* **Question d:** Quel nombre **x** d'années se sont écoulées? La somme a t-elle exactement doublé au bout de ces **x** années? Pourquoi?
+* **Question d:** Quel nombre **x** d'années se sont écoulées? La somme a t-elle exactement doublé au bout de ces **x** années? 
 
 * **Question e:** Le programme finira-t-il **toujours**, quelle que soit la valeur de départ pour `somme`? Argumentez.
+
+* **Question f:** Créer une fonction à partir de ce script. Testez la dans le *shell* (pyzo).
 
 ## Ex 4: tirage aleatoire
 Le programme suivant utilise la fonction `randint`, qui effectue le tirage aleatoire d'une valeur comprise entre 2 bornes:
@@ -135,11 +148,32 @@ print(n)
   * à compter le nombre d'apparition du nombre 1?
   * ou à calculer le nombre de lancers jusqu’à l’apparition du premier 1?
 
-* **Question g:** La boucle « Tant que » pourrait en théorie ne jamais s’arrêter. Pourquoi ? Ajouter une condition supplémentaire dans l'instruction `while randint(1,6) != 1 and ... :` pour résoudre ce problème de l'arrêt.
+
+
+* **Question g:** Supposons que le tirage aléatoire `randint(1,6)` donne successivement les valeurs: 2, 4, 3, 5, 5, 1. Quelle valeur pour `n` est affichée à la fin du programme?
+
+<!--
+Ajouter une condition supplémentaire dans l'instruction `while randint(1,6) != 1 and ... :` pour résoudre ce problème de l'arrêt.
+-->
+
+# Portfolio
+Lorsque l'on écrit une boucle bornée, le programme comporte 3 phases:
+
+* une première phase d'initialisation de la variable
+* une instruction `while <condition d execution>`
+* un bloc qui sera répété dans la boucle tant que la condition est Vraie. Le bloc doit contenir une instruction qui modifie la valeur de la variable, et la rapproche de la condition d'arrêt.
+
+> Définir chacun des termes:
+
+* initialisation de la variable
+* condition d'execution
+* bloc d'instructions
+* condition d'arrêt
+
 
 # Liens
 * [TP1 sur les opérations et types de base](../../generalites/page2)
 * [TP2 sur les variables](../../variables/page4/)
 * [cours: structures conditionnelles](../../conditions/page2/)
-* [TP3 conditions](../../conditions/page3/)
+* [TP3 conditions et fonctions](../../conditions/page3/)
 * [TP4 Boucles non bornées - while](../../conditions/page4/)

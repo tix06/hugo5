@@ -3,52 +3,45 @@ Title: TP conditions
 bookShowToc: false
 ---
 
-  
-  <!--<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
- -->
-   <style>
-    .editor-box{
-      width: 60%;
-      display: block;
-      border: none;
-      margin-right: 10px;
-      box-shadow: 0px 2px 5px 0px rgb(77, 77, 77, 0.46);
-    }
-    #output > div {
-    font-family: 'monospace';
-    background-color: #e5e5e5;
-    border: 1px solid lightgray;
-    /*border-top: 0;*/
-    font-size: 0.875rem;
-    padding: 0.5rem;
-  
-  }
 
-  #output > div:first-child {
-    border-top: 1px solid lightgray;
-    display: block;
-  }
-
-  #output > div:nth-child(even) {
-    border: 0;
-  } 
-</style>
-
-  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 
 # TP3: Structures conditionnelles
-# Editeur Python
-* Utiliser un **notebook**. 
+## Editeur Python
+Au choix, utilisez:
+
+* un **notebook**. 
 
 {{< img src="/images/notebook.png" >}}
 
-Dans une même cellule: Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
+Dans une même **cellule**: Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
 
-<div>
-<py-repl id="my-repl" auto-generate="true"></py-repl>
-</div>
+* l'editeur **Pyzo**:
 
+Mettre **`##`** avant chaque script pour créer une *cellule*. Executer la cellule et passer à la suivante avec *MAJ+CTRL+ENTREE*.
 
+* l'editeur **Spyder**:
+
+Mettre **`#%%`** avant chaque script pour créer une *cellule*. Executer la cellule et passer à la suivante avec *MAJ+ENTREE*.
+
+{{< img src="../images/cell.png" >}}
+
+## Exemple
+Le programme suivant demande de renseigner votre age (à la premiere ligne), et vous laisse entrer en discothèque, seulement si vous avez plus de 18 ans:
+
+```python
+age = input('Quel age avez-vous? ')
+age = int(age)
+if age >18:
+    print('Vous pouvez entrer')
+elif age == 18:
+    print('Montrez moi votre carte d identite SVP')
+else:
+    print('Desole, ca ne va pas etre possible')
+```
+
+Cette structure servira pour les prochains scripts.
+
+# Enoncé des exercices
 ## Ex 1: test sur un nombre divisible
 Le script suivant permet de tester la parité d'un nombre `n`. Saisir dans l'editeur Python le script suivant.
 
@@ -60,37 +53,13 @@ else:
   print("n est impair")
 ```
 
-> Adapter ce script qui demande à l’utilisateur un entier, puis affiche si cet entier est divisible par 11.
+> Tester puis adapter ce script, pour demander à l’utilisateur un entier, puis afficher si cet entier est divisible par 11.
 
-* **Question a:** Quelle modification avez-vous faite?
+* **Question a:** Recopier ce nouveau programme.
 
-## Ex 2: 18 ans ou plus
-> Compléter (et tester avec plusieurs valeurs de age) le programme suivant qui renseigne votre age (à la premiere ligne), et vous laisse entrer en discothèque, seulement si vous avez 18 ans ou plus:
 
-```python
-age = 18
-if age ...:
-    print('...')
-else:
-    print('...')
-```
 
-* **Question b:** Quels sont les différents opérateurs de comparaison en python? *(est égal à, est différent de, est supérieur, est supérieur ou égal, ...)*
-
-On peut modifier ce programme pour qu'il demande l'age de la personne qui execute le script:
-
-```python
-age = input('Quel age avez-vous? ')
-age = int(age)
-if age ...:
-    print('...')
-else:
-    print('...')
-```
-
-**Question a:** Quelle instruction est utilisée à la ligne 2 pour convertir la valeur saisie par l'utilisateur en un entier?
-
-## Ex 3: Comparer 2 nombres
+## Ex 2: Comparer 2 nombres
 > Completer (et tester avec plusieurs valeurs de a et de b) le programme suivant qui compare a et b et retourne un message selon leur ordre ou leur egalité.
 
 ```python 
@@ -104,9 +73,9 @@ else:
   print(...)
 ```
 
-* **Question c:** Laquelle de ces alternatives doit toujours être suivie d'une condition: `elif` ou `else`?
+* **Question b:** Qui a la plus grande valeur parmi `a` et `b` après le `else`?
 
-## Ex 4: Comparer 3 nombres
+## Ex 3: Comparer 3 nombres
 ### version 1
 > Completer (et tester avec plusieurs valeurs de a de b et de c) le programme suivant qui compare a, b et c, et retourne un message précisant le plus grand des 3.
 
@@ -121,10 +90,10 @@ if a > b and a > c:
 elif ...
 ```
 
-* **Question d:** Peut-il y avoir plusieurs `elif` pour une même structure conditionnelle `if`? Peut-il y avoir plusieurs alternative `else`?
+* **Question c:** Combien de `elif` faut-il utiliser au minimum?
 
 ### version 2
-> Completer (et tester avec plusieurs valeurs de a de b et de c) le programme suivant qui compare a et b et retourne un message selon leur ordre.
+> Completer (et tester avec plusieurs valeurs de a de b et de c) le programme suivant (version 2) qui compare a et b et retourne un message selon leur ordre.
 
 Cette fois, on **n'utilisera pas** l'opérateur `and`, ce qui oblige à utiliser 2 structures conditionnelles imbriquées.
 
@@ -139,9 +108,9 @@ if a > b:
 ...
 ```
 
-* **Question e:** Traduire en langage naturel la double condition pour laquelle `a` est le plus grand: si ... ... ... alors si ... ... ... alors ...
+* **Question d:** Traduire en langage naturel la double condition pour laquelle `a` est le plus grand: *si ... ... ... alors si ... ... ... alors ...*
 
-## Ex 5: IMC
+## Ex 4: IMC
 L'Indice de Masse Corporelle (IMC) est un indicateur chiffré utilisé en médecine. L'IMC d'une personne est donné par la formule:
 
 $$IMC = \tfrac{masse}{taille^2}$$
@@ -156,13 +125,64 @@ Utilisez le tableau suivant pour fournir une information à la personne en fonct
 
 {{< img src="../images/imc.png" alt="classification de l'IMC" caption="classification de l'IMC - source: has-sante.fr" >}}
 
-* **Question f:** Recopier la série d'instructions conditionnelles qui affichent une information sur l'IMC.
+* **Question e:** Recopier la série d'instructions conditionnelles qui affichent une information sur l'IMC.
+
+# Utiliser des fonctions
+*Définition : Une fonction est un bloc de code auquel on donne un nom en vue de le reutiliser. L’appel de son nom exécute tout le bloc de code que cette fonction contient.*
+
+Voir le cours: [Lien](/docs/python/pages/fonctions/page1/)
+
+Une fonction possède des paramètres, mis entre parenthèses et séparés chacun par une virgule. Une fonction retourne une valeur ou un objet, mis après le mot-clé `return` 
+
+Avec le programme en exemple:
+
+```python
+age = input('Quel age avez-vous? ')
+age = int(age)
+if age >18:
+    print('Vous pouvez entrer')
+else:
+    print('Desole, ca ne va pas etre possible')
+```
+
+* les entrées et variables sont mises en paramètre: il s'agit de `age`
+* Les `print` sont remplacés par `return`
+* Il faut choisir un nom à la fonction, écrit après `def`
+
+```python
+def entrer_en_discotheque(age):
+  if age >18:
+      return 'Vous pouvez entrer'
+  else:
+      return 'Desole, ca ne va pas etre possible'
+```
+
+Lorsque vous executez le programme, ... il ne se passe rien. Vous avez seulement *chargé* la fonction.
+
+Il faut appeler la fonction pour que celle-ci soit executée. 
+
+Voici un exemple d'execution d'une fonction à partir du shell. 
+
+{{< img src="../images/spyder_fct.png" caption="1:charger la fonction (executer cellule), 2: appel, 3: sortie" >}}
+
+Son execution cesse lorsqu'elle arrive à l'instruction `return`. Le programme reprend alors son cours.
+
+> Créer une fonction que vous nommerez IMC à partir de votre script de l'exercice 4. Testez la dans le shell de votre editeur.
+
+# Portfolio
+Compléter le tableau suivant avec le nom et les paramètres que vous choisiriez pour les fonctions précédentes. Chaque fonction aura pour rôle de remplacer le script proposé dans chaque exercice.
+
+| nom de la fonction | paramètre-s | valeur de retour |
+|--- |--- |--- |
+| `entrer_en_discotheque` | `age` | 'vous entrez' si `age`>=18, 'desole' sinon |
+| `parite`  | `N`  |   |
+|   |   |   |
 
 # Liens
 * [TP1 sur les opérations et types de base](../../generalites/page2)
 * [TP2 sur les variables](../../variables/page4/)
 * [cours: structures conditionnelles](../../conditions/page2/)
-* [TP3 conditions](../../conditions/page3/)
+* [TP3 conditions et fonctions](../../conditions/page3/)
 * [TP4 Boucles non bornées - while](../../conditions/page4/)
 
 

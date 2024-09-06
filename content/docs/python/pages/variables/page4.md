@@ -304,6 +304,6 @@ $$Ec = \tfrac{1}{2}m.v^2$$
 * [TP1 sur les opérations et types de base](../../generalites/page2)
 * [TP2 sur les variables](../../variables/page4/)
 * [cours: structures conditionnelles](../../conditions/page2/)
-* [TP3 conditions](../../conditions/page3/)
+* [TP3 conditions et fonctions](../../conditions/page3/)
 * [TP4 Boucles non bornées - while](../../conditions/page4/)
 
