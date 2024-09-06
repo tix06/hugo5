@@ -78,6 +78,7 @@ x
 
 ```python
 x = 5
+x
 # retourne 
 5
 ```
@@ -173,9 +174,10 @@ annee
 * **Question b:** en quelle année aura-t-il 17 ans?
 
 ### Script 3
-On veut réaliser les opérations suivantes:
+On veut réaliser les opérations suivantes: on veut *doubler* `nombre`, puis *soustraire* 10 au resultat, le *mettre au carré*, puis soustraire 5:
 
 ```python
+nombre = 5
 nombre=2*nombre
 nombre=nombre-10
 nombre=nombre**2
@@ -184,6 +186,7 @@ nombre=nombre-5
 
 * **Question c:** Quel est le résultat (c'est à dire la valeur finale de `nombre`) pour une valeur de depart `nombre = 5`?
 
+<!--
 ### Script 4
 Écrire un programme dans l’éditeur qui :
 
@@ -195,9 +198,12 @@ nombre=nombre-5
 
 Ne pas utiliser de nouvelles variables pour les résultats intermédiaires. Seulement `nombre`
 
+
 * **Question d:** Quel est le résultat?
 
-### Script 5: permuter la valeur de 2 variables
+-->
+
+### Script 4: permuter la valeur de 2 variables
 On veut mettre la valeur de `a` dans `b` et celle de `b` dans `a`. Le problème est que lorsque l'on fait...
 
 ```python
@@ -208,11 +214,11 @@ a = b
 ... on se retrouve avec les mêmes valeurs pour `b` et pour `a`. Il n'y a pas eu d'echange. L'idée est d'utiliser une troisième variable, `c` pour stocker la valeur de `b`, puis de l'affecter à `a`
 
 
-* **Question e:** Ecrire la série d'instructions correspondantes. Puis vérifier qu'il y a bien eu échange entre les variables.
+* **Question d:** Ecrire la série d'instructions correspondantes. Puis vérifier qu'il y a bien eu échange entre les variables.
 
 ## Opérations sur les chaines de caractères
 
-### Script 6
+### Script 5
 Associer des chaines de caractères.
 
 ```python
@@ -223,13 +229,11 @@ message = debut + milieu + fin
 message
 ```
 
-Cet exemple vous a rappelle que l'opérateur `+` est l'opérateur de *concaténation* avec les chaines de caractères. 
-
-* **Question f:** Ecrire un nouveau script qui construit le message suivant: `Ho Ho Ho Ho Ho Ho Ho Ho Ho Ho`, où le nombre de `Ho` est stocké dans une variable N. 
+* **Question e:** Ecrire un nouveau script qui construit le message suivant: `Ho Ho Ho Ho Ho Ho Ho Ho Ho Ho`, où le nombre de `Ho` est stocké dans une variable N. 
 
 *Astuce: utiliser l'opérateur* `*`
 
-### Script 7
+### Script 6
 Associer des valeurs numériques et des chaines de caractères
 
 ```python
@@ -239,16 +243,16 @@ message = "mon nom est " + nom + ", et j'ai " + age + " ans"
 message
 ```
 
-* **Question g:** Le script s'execute t-il, ou bien renvoie-t-il une erreur? Quelle erreur le cas écheant?
-* **Question h:** Modifier l'avant derniere ligne par: `message = "mon nom est " + nom + ", et j'ai " + str(age) + " ans"`. Le script fonctionne t-il? Que renvoie t-il?
+* **Question f:** Le script s'execute t-il, ou bien renvoie-t-il une erreur? Quelle erreur le cas écheant?
+* **Question g:** Modifier l'avant derniere ligne par: `message = "mon nom est " + nom + ", et j'ai " + str(age) + " ans"`. Le script fonctionne t-il? Que renvoie t-il?
 
 *Remarque:* La fonction `str` va tranformer la valeur numerique `age` en une chaine de caractères (les caractères "2" et "1").
 
 *Tester également l'instruction:* `print("mon nom est ",nom ," et j'ai ",age, "ans")`
 
-*Que constatez-vous?*
+* **Question h:** A quoi sert la fonction `str`? 
 
-### Script 8
+### Script 7
 Afficher avec la fonction `print`
 
 ```python
@@ -259,7 +263,21 @@ print('le reste de la division de ' + str(a) + ' par ' + ...)
 ```
 
 * **Question i:** Completer la derniere ligne du script pour afficher la phrase suivante: `Le reste de la division de 45 par 26 est egal a 19` Vous ne devrez pas écrire les chiffres 45, 26 et 19 dans le message. Seulement utiliser les variables, ou une opération sur ces variables.
+<!--
+Une autre méthode pour construire une chaine de caractères est d'utiliser la fonction `format`:
 
+Cela créé une chaine de caractères mise en forme avec des variables de types divers. Essayez dans une cellule:
+
+```python
+message = 'le reste de la division de {} par {} est egal à {}'.format(a, b, a%b)
+print(message)
+print(type(message))
+print(type(a))
+print(type(a//b))
+```
+
+Les variables utilisées pour construire la chaine de caractère se placent au niveau des `{ }` et sont énoncées dans l'ordre, dans la fonction `format`.
+-->
 
 Nous avons vu qu'une chaine de caractère pouvait être construite comme une association de plusieurs chaines de caractères. Une chaine de caractères est de type *string* (ou `str`) en python.
 
@@ -291,9 +309,7 @@ type(m)
 | 45//26 |  | 
 | str(45) |  |
 
-
-
-### Script 9
+### Script 8
 Calculer en physique
 
 Dans une cellule Python, 
@@ -303,27 +319,27 @@ Dans une cellule Python,
 
 $$Ec = \tfrac{1}{2}m.v^2$$
 
-* **Question j:** Quelle est l'expression que vous avez saisie en langage Python? Quelle est la valeur calculée pour l'énergie cinetique?
+* **Question k:** Quelle est l'expression que vous avez saisie en langage Python? Quelle est la valeur calculée pour l'énergie cinetique?
 
-* **Question k:** Construire une chaine de caractères, en utilisant la fonction `format` et précisant les conditions initiales, les valeurs pour m et pour v, et le résultat du calcul de l'énergie cinétique. Recopier ici cette instruction en python.
+* **Question l:** Construire une chaine de caractères, les valeurs pour m et pour v, et le résultat du calcul de l'énergie cinétique. Recopier ici cette instruction en python.
 
 # Portfolio
 * Le changement de type entre variables se fait grace aux fonctions `str`, 'float', `int`, et `bool`
   * Comment transformer la chaine "12" en une valeur entière égale à 12? "12" => 12
   * Comment réaliser l'opération inverse? 12 => "12"
   * Comment transformer la chaine "12" en un nombre flottant? "12" => 12.0
-  * Comment transformer l'information 1 en un booléen `True`?
-  * Comment réaliser l'opération inverse?
 * Qu'est-ce qu'une affectation multiple, en une seule ligne d'instruction?
 * Comment échange t-on la valeur de 2 variables `a` et `b`?
-* Pourquoi l'instruction: `print("aujourd'hui j'ai "+ 18 +"ans")` ne fonctionne t-elle pas? Corriger cette expression (donner 2 moyens).
-* Donner un exemple d'utilisation d'une expression formatée pour écrire le résultat du calcul de la force de gravitation $F=G\times m_1 \times m_2/d^2$, à partir des différentes variables.
-* Quel sera le type associé à F si l'on réalise le calcul?
+* Pourquoi l'instruction: `print("aujourd'hui j'ai "+ 18 +"ans")` ne fonctionne t-elle pas? Corriger cette expression.
+
 
 # Liens
-* [TP1 sur les opérations et types de base](../../generalites/page2)
-* [TP2 sur les variables](../../variables/page4/)
+* [TP1 sur les opérations et types de base](../../generalites/page2_D)
+* [TP2 sur les variables](../../variables/page4_D/)
+
+<!--
 * [cours: structures conditionnelles](../../conditions/page2/)
 * [TP3 conditions et fonctions](../../conditions/page3/)
 * [TP4 Boucles non bornées - while](../../conditions/page4/)
+-->
 

@@ -324,7 +324,15 @@ Evaluer cette expression pour chaque combinaison de valeurs pour `S` et `P`. Par
 * Donner alors la valeur retournée par l'opération logique `S and not P`
 
 
+# Liens
+* [TP1 sur les opérations et types de base](../../generalites/page2_D)
+* [TP2 sur les variables](../../variables/page4_D/)
 
+<!--
+* [cours: structures conditionnelles](../../conditions/page2/)
+* [TP3 conditions et fonctions](../../conditions/page3/)
+* [TP4 Boucles non bornées - while](../../conditions/page4/)
+-->
 
 
 

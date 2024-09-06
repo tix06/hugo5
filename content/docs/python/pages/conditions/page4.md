@@ -69,7 +69,7 @@ Vous pouvez visualiser les étapes de mise en oeuvre de ce programme en utilisan
 
 
 
-* **Question a:** Que vaut `a` à la fin du script? Quelle variable stocke le reste de la division? Quel est le quotient de la division entière de 20 par 6?
+* **Question a:** Que vaut la variable `a` à la fin du script? Quelle variable stocke le reste de la division? Quel est le quotient de la division entière de 20 par 6?
 
 > Adapter maintenant le programme pour afficher le *quotient* de la division euclidienne, mais aussi le *reste*. Utiliser une expression formatée avec la fonction `print`.
 
@@ -159,16 +159,16 @@ Ajouter une condition supplémentaire dans l'instruction `while randint(1,6) != 
 # Portfolio
 Lorsque l'on écrit une boucle bornée, le programme comporte 3 phases:
 
-* une première phase d'initialisation de la variable
-* une instruction `while <condition d execution>`
-* un bloc qui sera répété dans la boucle tant que la condition est Vraie. Le bloc doit contenir une instruction qui modifie la valeur de la variable, et la rapproche de la condition d'arrêt.
+* une première phase d'*initialisation de la variable*
+* une instruction *`while <condition d execution>`*
+* un *bloc* qui sera répété dans la boucle tant que la condition est Vraie. Le bloc doit contenir une instruction qui modifie la valeur de la variable, et la rapproche de la *condition d'arrêt*.
 
 > Définir chacun des termes:
 
-* initialisation de la variable
-* condition d'execution
-* bloc d'instructions
-* condition d'arrêt
+* *initialisation de la variable*
+* *condition d'execution*
+* *bloc d'instructions*
+* *condition d'arrêt*
 
 
 # Liens
