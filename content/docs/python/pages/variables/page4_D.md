@@ -2,35 +2,66 @@
 Title: variables
 ---
 
-  
-  <!--<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
- -->
-  <style>
-    .editor-box{
-      width: 60%;
-      display: block;
+# Introduction: le rôle clé des variables 
+Les exemples suivants montrent le rôle crucial des variables dans les algorithmes...
+
+## Compteur de passages
+Un dispositif numérique, équipé d'un capteur, compteur le nombre de passage par une porte. 
+
+
+{{< img src="../images/detecteur.jpg" caption="detecteur de passage à capteur infra rouge" >}}
+
+L'algorithme utilisé comporte 3 parties:
+
+* initialisation de la variable
+* boucle avec condition d'execution
+* modification de la variable
+
+Il utilise la fonction: `coupure_faisceau`
+
+Et la variable: `i` nombre de passages detectés
+
+```
+i = 0
+repeter indefiniment:
+  {
+  si coupure_faisceau_lumiere():
+    {
+    i = i + 1
+    fin si
     }
-    #output > div {
-    font-family: 'monospace';
-    background-color: #e5e5e5;
-    border: 1px solid lightgray;
-    /*border-top: 0;*/
-    font-size: 0.875rem;
-    padding: 0.5rem;
-  
+  fin repeter
   }
+```
 
-  #output > div:first-child {
-    border-top: 1px solid lightgray;
-    display: block;
+## Point neutre Terre-Lune
+Dans l’un de ses célèbres romans intitulé De la Terre à la Lune, Jules Verne (1828-1905) relate les aventures de trois héros ayant pris place à l’intérieur d’un énorme projectile qu’un gigantesque canon, baptisé Colombiad, propulse en direction de la Lune. Lors de ce périple, Jules Verne fait allusion à un point neutre, situé à une distance d = 350 000 km du centre de la Terre où les forces
+gravitationnelles exercées par la Terre et la Lune sur le projectile se compensent.
+
+
+
+{{< img src="../images/terre_lune.png" caption="point neutre sur la droite Terre-Lune" >}}
+
+L'algorithme utilisé comporte 3 parties:
+
+* phase d'initialisation de la variable
+* boucle avec condition d'execution
+* modification de la variable
+
+Il utilise les fonctions: `F1` force de gravitation de la Terre, `F2` force de gravitation de la Lune
+
+Et la variable: `d` distance à la surface de la Terre
+
+```
+d = 0
+repeter tant que F1 (d) > F2(d):
+  {
+  d = d + 1
+  fin repeter
   }
+afficher d
+```
 
-  #output > div:nth-child(even) {
-    border: 0;
-  } 
-</style>
-
-  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 
 
 # Variables
@@ -324,7 +355,8 @@ $$Ec = \tfrac{1}{2}m.v^2$$
 * **Question l:** Construire une chaine de caractères, les valeurs pour m et pour v, et le résultat du calcul de l'énergie cinétique. Recopier ici cette instruction en python.
 
 # Portfolio
-* Le changement de type entre variables se fait grace aux fonctions `str`, 'float', `int`, et `bool`
+* Comment se nomment *en python* les 4 types primitifs que l'on a vus lors de ces premieres séances?
+* Le changement de type entre variables se fait grace aux fonctions `str`, `float`, `int`, et `bool`
   * Comment transformer la chaine "12" en une valeur entière égale à 12? "12" => 12
   * Comment réaliser l'opération inverse? 12 => "12"
   * Comment transformer la chaine "12" en un nombre flottant? "12" => 12.0

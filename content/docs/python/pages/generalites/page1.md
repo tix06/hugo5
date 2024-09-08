@@ -27,6 +27,90 @@ Python est généralement appelé un langage interprété, cependant, il combine
 {{< img src="../images/pvm.png" caption="du .py au PVM" >}}
 Le PVM est un interpréteur qui exécute le bytecode et fait partie du système Python. Le bytecode est indépendant de la plate-forme, mais PVM est spécifique à la machine cible. L'implémentation par défaut du langage de programmation Python est CPython qui est écrit dans le langage de programmation C. (il existe d'autres implementations). CPython compile le code source python dans le bytecode, et ce bytecode est ensuite exécuté puis desassemblé par la machine virtuelle CPython.
 
+# Objets de type primitif et type construit
+[Objet et noms](https://www.f-legrand.fr/pynum/python/objets.html)
+
+Il faut distinguer en programmation les variables et les valeurs (ou objet). *Une variable est un nom donné à une valeur*. Cette valeur a un type. En python, celui-ci est imposé lors de l'affectation d'une valeur (objet) à la variable créée. (typage dynamique)
+
+Un *objet désigne une entité stockée en mémoire*.
+
+Un objet est toujours d'un certain *type*.
+
+* Les types int, float, bool, list, str sont les types d’objet *primitifs*. Par exemple, un nombre entier est représenté par un objet de la classe int.
+* Mais il existe aussi des types construits (tuple, list, dict, function...).
+
+Lorsqu’on créé un nom (c.a.d. une variable), on ajoute dans la *table de noms de l’espace de nom courant* ce nom associé à la référence de l’objet auquel ce nom permet d’accéder. 
+
+On peut consulter l'adresse mémoire associé à la valeur grâce à la fonction `id`
+
+```python
+> a = 10
+> print(a)
+10
+> print(id(a))
+1611691328
+```
+
+## Variables et espace de nom
+*Une variable est un nom donné à une valeur, stockée en mémoire*. En python, une variable est créée lorsque l'on réalise une affectation. Le nom pointe alors vers une adresse mémoire, dans la RAM:
+
+
+{{< img src="../images/mem.png" caption="La mémoire: une énorme grille de valeurs et objets" >}}
+
+Cette représentation est toutefois incomplète: Au niveau machine, les informations associées au nom de la variable contiennent aussi le *type*. Au niveau logiciel (interpreteur python), les noms de variables sont stockés dans un espace virtuel du programme python: la *table des noms*.
+
+La figure suivante montre l’évolution de la table des noms et des objets lors des trois affectations. L’adresse est l’emplacement en mémoire de l’objet.
+
+
+{{< img src="../images/valeurs.png" caption="valeur, adresse et affectation" >}}
+
+Lorsque l'on fait appel à une variable, le programme consulte l'espace de noms et trouve la valeur en mémoire, puis retourne cette valeur.
+
+## mutable et non mutable
+[mutable et non mutable](https://paperman.name/enseignement/2023/AP2/reference.html)
+
+Les types en Python se décompose en deux groupes:
+
+* les types représentant des éléments non-mutable
+* les types représentant des éléments mutable
+
+Si une variable est mutable alors on peut modifier son contenu sans créer une nouvelle valeur. Ce sont les *types primitifs* en python, auquels on ajoute les *tuple* et le *type de rien*, `None`. Chaque fois que l'on modifie une variable par une nouvelle affectation, cela modifie son `id`... et créé une nouvelle variable avec le même nom.
+
+Pour les objets non mutables, c'est différents. Ce sont les types *construits*, comme les list, dict, fonctions, classes, objets (issus de classes)...
+
+# Fonctions
+## Definitions
+Une fonction permet d’encapsuler un bloc d’instructions et de lui donnéer un nom:
+
+[cours sur allophysique.com](/docs/python/pages/fonctions/page2/)
+
+
+
+## Représentation en mémoire
+* Lorsqu’on fait appel à une fonction, les instructions de cette fonction opèrent dans un espace de noms propre à la fonction, c’est-à-dire que les noms créés dans la fonction sont créés dans une table particulière appelée espace de noms de la fonction. Ces noms internes à la fonction sont appelées variables locales. Cette table est détruite lorsque la fonction a terminé son exécution.
+
+Ainsi, les noms créés à l’intérieur d’une fonction ont une portée limitée à cette fonction. En revanche, l’espace des noms (c.a.d. la table des noms) utilisée par le code qui appelle la fonction est bien accessible à l’intérieur de la fonction et on parle alors de variables globales.
+
+*Exemple:*
+
+```python
+x=10
+def f(a):
+    b = 7
+    return a * b
+
+f(x)
+```
+
+[pythontutor](https://pythontutor.com/render.html#code=x%3D10%0Adef%20f%28a%29%3A%0A%20%20%20%20b%20%3D%207%0A%20%20%20%20return%20a%20*%20b%0A%0Af%28x%29&cumulative=false&curInstr=6&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
+
+
+{{< img src="../images/valeurs2.png" caption="valeur, adresse et affectation" >}}
+
+> Exercice: Résumer les opérations réalisées sur la mémoire lors de l'appel de la fonction `f(x)`
+
+
+
 # Bytecode
 On peut verifier comment sont codés les nombres dans la machine en lisant le Bytecode.<br>
 Le **module struct** permet la conversion entre valeurs typées de python, et données binaires du C, le bytecode. C'est ce bytecode qui est passé à la machine après compilation lors de l'execution.

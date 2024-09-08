@@ -246,6 +246,7 @@ La machine avec architecture Harvard peut aussi gérer une mémoire de masse (pe
 * [cours sur l'architecture Von Neumann lattice.cnrs.fr](https://www.lattice.cnrs.fr/sites/itellier/poly_intro_info/informatique004.html#fig:Von%20Neumann)
 * article presentant les technologies de la machine à calculer aux ordinateur de 4e génération: [Evolution des machines à calculer - Alexandre Faribault](https://www.physique.usherbrooke.ca/~afaribau/essai/)
 * 5000 ans d'histoire [Deutsches Museum](https://artsandculture.google.com/story/hQUBvBSY16WtIQ)
+* [histoire du stockage des données-TomsHardware](https://www.tomshardware.fr/de-la-carte-perforee-a-la-memoire-flash-la-grande-histoire-du-stockage-des-donnees/)
 * [Fiche pdf cours architecture - niveau terminale NSI](https://isn-icn-ljm.pagesperso-orange.fr/1-NSI/res/res_histoire_1.pdf)
 * présentation ppt d'un cours de DIU informatique sur l'architecture [ecursus.univ-antilles.fr](https://ecursus.univ-antilles.fr/pluginfile.php/189469/mod_resource/content/1/Cours%20SE.pdf)
 * Sciences et avenir, hors série, Les géants de la Science: Alan Türing

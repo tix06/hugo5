@@ -294,7 +294,7 @@ L'opérateur `in` permet de tester si une suite de caractères se trouve dans un
 * **Question i:** Que vaut `not True and False`? Et `not (True and False)`? Pourquoi?
 
 # Portfolio
-* Quels sont les types de base vus dans cette leçon? Faire un tableau avec le symbole de tous les opérateurs vus pour chacun de ces types.
+* Quels sont les types primitifs vus dans cette leçon? Faire un tableau avec le symbole de tous les opérateurs vus pour chacun de ces types.
 * Que donne l'instruction: `type(123e3)`
 * Quelle valeur maximale peut prendre un entier signé codé sur 32 bits?
 * Pour les entiers, donner un exemple d'utilisation de l'opérateur `//` et de l'opérateur `%`

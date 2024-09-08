@@ -308,6 +308,7 @@ $$Ec = \tfrac{1}{2}m.v^2$$
 * **Question k:** Construire une chaine de caractères, en utilisant la fonction `format` et précisant les conditions initiales, les valeurs pour m et pour v, et le résultat du calcul de l'énergie cinétique. Recopier ici cette instruction en python.
 
 # Portfolio
+* Comment se nomment *en python* les 4 types primitifs que l'on a vus lors de ces premieres séances?
 * Le changement de type entre variables se fait grace aux fonctions `str`, 'float', `int`, et `bool`
   * Comment transformer la chaine "12" en une valeur entière égale à 12? "12" => 12
   * Comment réaliser l'opération inverse? 12 => "12"
