@@ -102,7 +102,7 @@ print('En degrés absolus T = ' + str(kelvin))
 
 {{< img src="../images/input4.png" alt="boite dialogue input" caption="conversion de 23°C en °K" >}}
 
-**Combinons** maintenant cette instruction `input` avec l'instruction conditionnelle:
+**Autre exemple**:
 
 *Un boulanger désire un programme qui demande à l'utilisateur le nombre de baguettes qu'il désire, qui calcule le prix total (sachant qu'une baguette coûte 1.10 €) et qui affiche le prix que l'utilisateur doit payer.*
 
@@ -159,7 +159,7 @@ while i <= 3:
 print("c'est fini")
 ```
 
-* à la première itération, i vaut 0, donc la condition `i <= 3` est évaluée à `True` et le bloc est executé. l'utilisateur est invité à entrer le premier nom, et i finit avec la valeur 1 (i + 1)
+* à la première itération, i vaut 0, donc la condition `i <= 3` est évaluée à `True` et le bloc est executé. l'utilisateur est invité à entrer le premier nom, (*il va certainement entrer Riri*), et i finit avec la valeur 1 (`i = i + 1`)
 * La boucle se poursuit jusqu'à ce que i soit égal à 4. Alors `i <= 3` est évaluée à `False` et le programme poursuit APRES la boucle, avec la dernière instruction: affiche `"c'est fini"`
 
 *Exemple 2: reste de la division euclidienne de 40 par 3* 

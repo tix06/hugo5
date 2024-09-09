@@ -170,13 +170,15 @@ Son execution cesse lorsqu'elle arrive à l'instruction `return`. Le programme r
 > Créer une fonction que vous nommerez IMC à partir de votre script de l'exercice 4. Testez la dans le shell de votre editeur.
 
 # Portfolio
-Compléter le tableau suivant avec le nom et les paramètres que vous choisiriez pour les fonctions précédentes. Chaque fonction aura pour rôle de remplacer le script proposé dans chaque exercice.
+* Ecrire les fonctions pour chacun des programmes, pour remplacer les scripts: `parite`, `est_divisible`, `compare_2_nombres`, `compare_3_nombres`.
+* Compléter le tableau suivant avec le nom et les paramètres que vous avez choisis pour les fonctions précédentes.
 
 | nom de la fonction | paramètre-s | valeur de retour |
 |--- |--- |--- |
 | `entrer_en_discotheque` | `age` | 'vous entrez' si `age`>=18, 'desole' sinon |
 | `parite`  | `N`  |   |
-|   |   |   |
+|  ... |   |   |
+
 
 # Liens
 * [TP1 sur les opérations et types de base](../../generalites/page2)
