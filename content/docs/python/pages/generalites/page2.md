@@ -80,7 +80,14 @@ Certains caractères spéciaux ne sont pas affichés, mais permettent la mise en
 telle est la question
 ```
 
-* Ou bien les accolades `{}` dans une expression formatée. Exemple:
+* L'addition de chaines se fait avec l'opérateur `+`
+
+```python
+> print("Bonjour"+"Hello")
+BonjourHello
+```
+
+* Ou bien avec des accolades `{}` dans une expression formatée. Exemple:
 
 ```python
 m = 100
