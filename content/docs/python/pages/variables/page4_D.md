@@ -133,6 +133,8 @@ x
 ```
 
 
+
+
 Et utiliser la valeur de cette même variable pour l'opération:
 
 ```python
@@ -140,6 +142,13 @@ x = x + 1
 x
 # retourne
 7.0
+```
+
+Pour vérifier le type d'une variable, utiliser la fonction `type`
+
+```python
+type(x)
+float
 ```
 
 **Affectation multiple:** On peut affecter une valeur à plusieurs variables en une seule ligne, ce qui amèliore la lecture d'un script:
@@ -192,13 +201,12 @@ age
 * **Question a:** quelle est la valeur de `age` à la fin du script? 
 
 ### Script 2
-Le programme suivant permet de connaitre en quelle année un enfant, né en 2022, aura 17 ans
+Le programme suivant permet de connaitre en quelle année un enfant, qui a 12 ans en 2022, aura 17 ans
 
 ```python
-age = 0
+age = 12
 annee = 2022
-age = age + 17
-annee = annee + age
+annee = annee + 17 - age
 annee
 ```
 
@@ -312,7 +320,7 @@ Les variables utilisées pour construire la chaine de caractère se placent au n
 
 Nous avons vu qu'une chaine de caractère pouvait être construite comme une association de plusieurs chaines de caractères. Une chaine de caractères est de type *string* (ou `str`) en python.
 
-Pour vérifier le type d'une variable, on utilise la fonction `type`
+Pour connaitre le type d'une variable, on utilise la fonction `type`
 
 > Testez chacune des instructions suivantes pour vérifier le type des différentes variables
 
@@ -330,7 +338,7 @@ m = str(a)
 type(m)
 ```
 
-* **Question j:** Compléter le tableau
+* **Question j1:** Compléter le tableau:
 
 | x= |  type(x) |
 | --- | --- |
@@ -339,6 +347,19 @@ type(m)
 | 45/26 |  | 
 | 45//26 |  | 
 | str(45) |  |
+
+Pour connaitre l'emplacement de la valeur d'une variable, dans la mémoire de la machine, utiliser la fonction `id`:
+
+```python
+a = 45
+b = 26
+print(id(a))
+print(id(b))
+```
+
+
+
+* **Question j2:** L'emplacement en mémoire du 45 est il le même que le 26? 
 
 ### Script 8
 Calculer en physique
@@ -363,6 +384,7 @@ $$Ec = \tfrac{1}{2}m.v^2$$
 * Qu'est-ce qu'une affectation multiple, en une seule ligne d'instruction?
 * Comment échange t-on la valeur de 2 variables `a` et `b`?
 * Pourquoi l'instruction: `print("aujourd'hui j'ai "+ 18 +"ans")` ne fonctionne t-elle pas? Corriger cette expression.
+* Quel type de valeur a le résultat d'une division simple? D'une division avec 2 barres `//`? De l'opérateur modulo `%`?
 
 
 # Liens

@@ -213,9 +213,9 @@ p.rubrik {
 /* class non identifiée pour l'instant  */
 /****************************************/
 
-/****************************************/
-/* font et style pour les titres et s/t */
-/****************************************/
+/**************************************************/
+/* Compteur, font et style pour les titres et s/t */
+/**************************************************/
 body {
 counter-reset:h1
 }
@@ -224,7 +224,7 @@ h1 {
 counter-reset:h2
 }
 
-h2:before {
+h2:not(.nocount):before {
 color: #555;
 content:counter(h2) ".\0000a0\0000a0";
 counter-increment:h2
@@ -234,12 +234,12 @@ h2 {
 counter-reset:h3
 }
 
-h3:before {
+h3:not(.nocount):before {
 content:counter(h2) "." counter(h3) ".\0000a0\0000a0";
 counter-increment:h3
 }
 
-h4:before {
+h4:not(.nocount):before {
 content: counter(h2) "." counter(h3) "." "\266F" ".\0000a0\0000a0";
 }
 
