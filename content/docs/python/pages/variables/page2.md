@@ -3,34 +3,7 @@ Title : types construits
 ---
 
   
-  <!--<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
- -->
-  <style>
-    .editor-box{
-      width: 60%;
-      display: block;
-    }
-    #output > div {
-    font-family: 'monospace';
-    background-color: #e5e5e5;
-    border: 1px solid lightgray;
-    /*border-top: 0;*/
-    font-size: 0.875rem;
-    padding: 0.5rem;
-  
-  }
 
-  #output > div:first-child {
-    border-top: 1px solid lightgray;
-    display: block;
-  }
-
-  #output > div:nth-child(even) {
-    border: 0;
-  } 
-</style>
-
-  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 
 Cette page aborde les notions avancées sur les Listes. Il est nécessaire de consulter auparavant la page sur les Listes: [les notions de base](/docs/python/pages/boucles/page2/).
 
@@ -78,7 +51,7 @@ voyelles
 Ceci n'est pas possible avec le type natif `str`, qui, lui est un type **non mutable**.
 
 ### Construire une liste avec une boucle
-Les boucles `while` et`for` permettent d’itérer sur les éléments d’une séquence: (testez le dans l'[editeur Python](#editeur-python))
+Les boucles `while` et`for` permettent d’itérer sur les éléments d’une séquence.
 
 ```python
 # Boucle while
@@ -140,7 +113,7 @@ elementaire
 ``` 
 
 # Mappages : les dictionnaires
-Un *mappage* est une structure de données qui relie 2 informations ou plus, appelées *paires clé : valeur*. En python, cette structure est le dictionnaire.
+Un *mappage* est une structure de données qui relie 2 informations ou plus, appelées *paires clé : valeur*. Aussi appelée *table de hashage*. En python, cette structure est le dictionnaire.
 
 Un dictionnaire est entouré d'*accolades* `{ }`. Les paires sont séparées par une virgule.
 
@@ -156,14 +129,32 @@ capitales
 # affiche {'France': 'Paris'}
 ```
 
+Dans cet exemple, les clés du dictionnaire `capitales` sont les pays ("France", "Italie"...) et les valeurs sont les villes ("Paris","Rome",...).
+
+On ne peut placer comme clé d'un dictionnaire que des objets de type **non mutable**.
+
 Pour accéder à une *valeur*, on utilise la clé comme index: `capitales['France'] = 'Paris'`
 
 Pour accéder **aux clés** d'un dictionnaire: on utilisera les méthodes `keys` avec par exemple `capitales.keys()`
 
+```python
+for pays in capitales.keys():
+  print(pays)
+```
+
 Pour accéder **aux valeurs**: on utilise la méthode `value`, avec par exemple `capitales.values()`
+
+```python
+for ville in capitales.values():
+  print(ville)
+```
 
 Pour accéder **aux paires clé-valeurs**: méthode `items`, avec par exemple `capitales.items()`
 
+```python
+for pays,ville in capitales.items():
+  print(pays,ville)
+```
 
 
 # méthodes de listes
@@ -342,7 +333,6 @@ mes_capitales = dict(capitales)
 
 Sans cette *astuce*, la copie se ferait par **référence** (Dictionnaire = mutable)
 
-<input type="button" class="btn btn-lg" value="Retour à la page : Variables" onclick="window.location.href = '../page1/'">
 
 # Dataframes
 Un Dataframe est un objet qui permet de mieux représenter et travailler sur les tables. C'est un outil puissant, qui necessite un apprentissage supplémentaire, comme une extension du langage python. Voir ici : [towardsdatascience.com](https://towardsdatascience.com/pandas-ground-zero-selection-and-projection-3827f74ae6c5)

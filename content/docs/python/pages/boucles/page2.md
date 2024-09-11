@@ -2,48 +2,7 @@
 Title: listes
 bookShowToc: false
 ---
- <!--<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
- -->
-  <style>
-    .editor-box{
-      width: 60%;
-      display: block;
-    }
-    #output > div {
-    font-family: 'monospace';
-    background-color: #e5e5e5;
-    border: 1px solid lightgray;
-    /*border-top: 0;*/
-    font-size: 0.875rem;
-    padding: 0.5rem;
-  
-  }
 
-  #output > div:first-child {
-    border-top: 1px solid lightgray;
-    display: block;
-  }
-
-  #output > div:nth-child(even) {
-    border: 0;
-  } 
-</style>
-
-  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-
-<py-env>
-    - matplotlib
-</py-env>
-
-# Editeur Python
-Ouvrir dans *winpython > python QTConsole*
-
-
-{{< img src="/images/qtconsole.png" >}}
-
-<div>
-<py-repl id="my-repl" auto-generate="true"></py-repl>
-</div>
 
   
 # Listes et boucles bornées

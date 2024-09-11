@@ -359,7 +359,7 @@ print(id(b))
 
 
 
-* **Question j2:** L'emplacement en mémoire du 45 est il le même que le 26? 
+* **Question j2:** L'emplacement en mémoire du 45 (c'est à dire de la valeur associée à `a`), est il le même que le 26 (valeur de  `b`)? 
 
 ### Script 8
 Calculer en physique
@@ -373,7 +373,7 @@ $$Ec = \tfrac{1}{2}m.v^2$$
 
 * **Question k:** Quelle est l'expression que vous avez saisie en langage Python? Quelle est la valeur calculée pour l'énergie cinetique?
 
-* **Question l:** Construire une chaine de caractères, les valeurs pour m et pour v, et le résultat du calcul de l'énergie cinétique. Recopier ici cette instruction en python.
+* **Question l:** Construire une chaine de caractères précisant que vous affichez l'energie cinetique, avec les valeurs de m et v, et le résultat du calcul de l'énergie cinétique. Recopier ici cette instruction en python. Utiliser les variables m, v et Ec.
 
 # Portfolio
 * Comment se nomment *en python* les 4 types primitifs que l'on a vus lors de ces premieres séances?
@@ -384,12 +384,13 @@ $$Ec = \tfrac{1}{2}m.v^2$$
 * Qu'est-ce qu'une affectation multiple, en une seule ligne d'instruction?
 * Comment échange t-on la valeur de 2 variables `a` et `b`?
 * Pourquoi l'instruction: `print("aujourd'hui j'ai "+ 18 +"ans")` ne fonctionne t-elle pas? Corriger cette expression.
-* Quel type de valeur a le résultat d'une division simple? D'une division avec 2 barres `//`? De l'opérateur modulo `%`?
+* Quel est le type pour le résultat d'une division simple? D'une division avec 2 barres `//`? De l'opérateur modulo `%`?
 
 
 # Liens
 * [TP1 sur les opérations et types de base](../../generalites/page2_D)
 * [TP2 sur les variables](../../variables/page4_D/)
+* [cours-TD sur les conditions](../../conditions/page2_D/)
 
 <!--
 * [cours: structures conditionnelles](../../conditions/page2/)

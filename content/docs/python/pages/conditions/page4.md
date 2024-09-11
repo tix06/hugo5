@@ -150,11 +150,37 @@ print(n)
 
 
 
-* **Question g:** Supposons que le tirage aléatoire `randint(1,6)` donne successivement les valeurs: 2, 4, 3, 5, 5, 1. Quelle valeur pour `n` est affichée à la fin du programme?
+* **Question g:** Supposons que le tirage aléatoire `randint(1,6)` donne successivement les valeurs: 2, 4, 3, 5, 5, 1. Quelle valeur pour `n` est affichée à la fin du programme? Faire un suivi des variables avec un **tableau**.
 
 <!--
 Ajouter une condition supplémentaire dans l'instruction `while randint(1,6) != 1 and ... :` pour résoudre ce problème de l'arrêt.
 -->
+
+## Ex 5: PGCD 
+### Principe
+*PGCD: Plus grand commun diviseur.*
+
+**algorithme d'Euclide**
+
+Euclide propose l’algorithme suivant:
+
+1. Calculez le reste r dans la division de a par b
+2. Si r est nul alors le pgcd est b
+3. Sinon recommencer l’étape 1 avec a = b et b = r
+
+
+*Exemple d’exécution : a = 32, b = 12 :*
+
+– 32 = (2 x 12) + 8
+
+– 12 = (1 x 8) + 4
+
+– 8 = (2 x 4) + 0
+
+On a donc pgcd(32, 12) = 4
+
+### Exercice
+Programmer la fonction `PGCD` qui prend 2 paramètres, `a` et `b`, et qui retourne le *PGCD* de `a` et `b`. Utiliser une boucle non bornée `while`.
 
 # Portfolio
 Lorsque l'on écrit une boucle bornée, le programme comporte 3 phases:

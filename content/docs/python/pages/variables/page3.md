@@ -13,7 +13,7 @@ Vous traiterez chacun des exemples suivants en utilisant l'editeur de  [pythontu
 {{< img src="../images/pythontutor2.png" >}}
 > Dérouler alors le script ligne par ligne avec **next**.
 
-### créer des tests sur l'identité des variables
+## créer des tests sur l'identité des variables
 
 > Revenir à la page d'edition et ajouter à la suite du script les 3 tests suivants : 
 
@@ -32,17 +32,10 @@ Si le programme s'arrête sur un test renvoyant `False`, mais que l'on veut pour
 
 **Question a:** Quelles expressions donnent `True`.
 
-> Revenir dans la fenêtre d'edition et modifier maintenant la ligne : `b = a` par `b = 3`. 
+> Revenir dans la fenêtre d'edition et ajouter maintenant la ligne :`b = b + 1` après la ligne `b = a`  
 
 **Question b:** Refaire les tests et préciser quelles sont les expressions qui donnent `True`. 
 
-> Tester l'affectation multiple: Exprimer en une seule ligne l'affectation de 2 à `a` et de 3 à `b`: 
-
-```python
-a, b = 2, 3
-``` 
-
-**Question c:** Que donnent les tests d'assertion? Le résultat de l'affectation en une seule ligne est-il le même qu'en plusieurs lignes?
 
 ## types mutables
 > Remplacer le script précédent par celui-ci :
@@ -59,7 +52,9 @@ print('b = {}, a = {}'.format(b,a))
 ``` 
 > Puis réaliser les mêmes opérations : *Visualiser pas à pas*, tester l'identité des variables avec les assertions.
 
-**Question d:** Que valent `a` et `b` après l'execution du programme? La copie `b = a`, est-elle une copie par valeur ou par reference?
+**Question c:** Que valent `a` et `b` après l'execution du programme? 
+
+**Question d:** La copie `b = a`, est-elle une copie par valeur ou par reference?
 
 
 
@@ -85,7 +80,6 @@ print(resultat)
 
 **Question e:** Et resumer les étapes observées lors du déroulement du script.
 
-> On pourra s'aider du cours en ligne [Université Diderot](https://python.sdv.univ-paris-diderot.fr/09_fonctions/#96-variables-locales-et-variables-globales)
 
 ## Objets mutables : copie par référence
 
@@ -93,6 +87,7 @@ Cette fois, c'est une liste (objet mutable) qui est passée en argument :
 
 ```python
 L1 = [1,2,3]
+
 def mafonction(L2):
     L2[2]=4
     print(L1 is L2)
@@ -133,7 +128,7 @@ print(coordonnees_init)
 
 **Question g:** Les nouvelles coordonnées sont stockées dans la Liste `deplacement`. Comment évoluent les coordonnées dans les 2 listes? La liste de coordonnées d'origine est-elle modifiée par le script?
 
-> Tester le script de la fonction2 
+> Ajouter maintenant le script de la fonction2 
 
 ```python
 def fonction2():
@@ -205,6 +200,28 @@ Jim['Age'] = 43
 
 **Question j**: Cela a-t-il modifié la valeur de l'age de Dan? Cela a-t-il modifié l'une des valeurs de `famille`? 
 
-Conclure (`famille` pointe t-il vers la reference de `Jim` ou bien s'agit-il d'une copie par valeur?). Reproduire le schéma de la structure de données telle que représentée dans Pythontutor.
+Conclure (`famille` pointe t-il vers la reference de `Jim` ou bien s'agit-il d'une copie par valeur?). 
+
+# Portfolio
+Pour le script suivant:
+
+```python
+a = 1
+b = a
+L1 = [1,2,3]
+L2 = L1
+L3 = list(L1)
+def ma_fonction(L):
+    L = L + [4]
+
+ma_fonction(L1)
+```
+
+Reproduire sommairement le schéma de la structure de données telle qu'elle serait représentée dans Pythontutor, à la fin de ce script.
+
+# Liens
+* activité sur les copies par valeur et par reference: [pythontutor](/docs/python/pages/variables/page3/)
+* TP5 [listes, indices, méthodes](/docs/python/pages/boucles/page3/)
+* TP6 [boucles et parcours de liste](../page4)
 
 

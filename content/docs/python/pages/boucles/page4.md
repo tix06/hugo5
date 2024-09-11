@@ -1,49 +1,23 @@
 ---
-Title: TP2 listes et boucles
+Title: TP2 listes, indices, méthodes
 bookShowToc: false
 ---
 
   
-  <!--<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
- -->
-  <style>
-    .editor-box{
-      width: 60%;
-      display: block;
-    }
-    #output > div {
-    font-family: 'monospace';
-    background-color: #e5e5e5;
-    border: 1px solid lightgray;
-    /*border-top: 0;*/
-    font-size: 0.875rem;
-    padding: 0.5rem;
-  
-  }
+**Rappels de cours sur les listes**
 
-  #output > div:first-child {
-    border-top: 1px solid lightgray;
-    display: block;
-  }
+* [page 1: listes et boucles bornées](/docs/python/pages/boucles/page2/)
+* [page 2: types construits: list, tuple, dict](/docs/python/pages/variables/page2/)
 
-  #output > div:nth-child(even) {
-    border: 0;
-  } 
-</style>
+**Editeur Python**
 
-<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-<py-env>
-    - matplotlib
-</py-env>
-
-# Editeur Python
 * Utiliser un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
 
-<div >
-<py-repl id="my-repl" auto-generate="true"></py-repl>
-</div>
+
+
 
 # TP6: Boucles bornées et parcours d'une liste
+<!--
 ## Ex 1: Parcours d'une liste
 
 * script 1
@@ -62,18 +36,25 @@ for i in range(len(L)):
 ```
 * **Question a:** Lequel des 2 scripts précédents affiche `1 10 100 1000`? Lequel des 2 affiche `0 1 2 3`? Expliquez.
 
-## Ex 2: table de 3
-On peut créer une liste VIDE, en faisant `L = []`, puis lui ajouter des valeurs. C'est ce qui est réalisé par ce programme.
+-->
+## Ex 1: table de 3
+On peut créer une liste VIDE, en faisant `L = []`, puis lui ajouter des valeurs. C'est ce qui doit être réalisé par ce programme.
 
 ```python
 L = []
 for  i in  range(11):
-  L.append(i  * 3)
+  L.append(...)
 ```
 
-* **Question b:** Que vaut la liste `L` après ce programme? Quelles sont les valeurs prises par l'iterable `i`? 
+> Recopier et compléter le programme.
 
-## Ex 3: Energies en SPC
+* **Question a1:** Que vaut la liste `L` après ce programme? Quelles sont les valeurs prises par l'iterable `i`? 
+
+* **Question a2:** Comment avez vous complété les `...`?
+
+> Ecrire l'instruction en compréhension de liste qui construit la liste L. (voir cours sur les types sequentiels > listes > [comprehension de liste](/docs/python/pages/variables/page2/))
+
+## Ex 3: Energie en sciences physiques
 On donne les listes de relevés du temps et de la vitesse pour un mobile. 
 
 La vitesse `vitesse[0]`est relevée au temps `t[0]`, `vitesse[1]`est relevée au temps `t[1]`, etc...
@@ -92,25 +73,31 @@ Dans une cellule Python,
 
 `E = 1/2 * m * v**2`
 
-Pour réaliser cela, vous completerez la boucle bornée sur les valeurs de `vitesse`:
+> Pour réaliser cela, vous completerez la boucle bornée sur les valeurs de `vitesse`:
 
 ```python
 for v in vitesse:
   E.append(...)
 ```
 
+> Ecrire l'instruction en compréhension de liste qui construit la liste E. (voir cours sur les types sequentiels > listes > [comprehension de liste](/docs/python/pages/variables/page2/))
+
+* **Question b:** Recopier le script sur votre feuille.
+
+<!--
 * **Question c:** Afficher le graphique de l'Energie cinétique E au cours du temps. (abscisses: t, ordonnées: E). Recopier le script entier dans votre cahier. Identifier dans le script les parties qui servent à:
   * déclarer des variables et des listes
   * calculer les termes d'une liste avec une boucle bornée
   * importer un module
   * tracer un graphique
+-->
 
 ## Ex 4: algorithmes simples utilisant une boucle bornée
 Le script suivant calcule la somme des 99 premiers entiers:
 
 $$0 + 1 + 2 + 3 + ...99$$
 
-> Tester ce script et lire le résultat.
+> Tester le script suivant et lire le résultat.
 
 ```python
 somme = 0
@@ -119,8 +106,55 @@ for n in range(100):
 somme
 ```
 
-* **Question d:** adapter ce script pour que celui-ci calcule la somme des termes $2^î$ pour `i` variant de 0 à 99: $$2^0 + 2^1 + 2^2 + ... + 2^{99}$$
+* **Question d:** adapter ce script pour que celui-ci calcule la somme des termes $2^i$ pour `i` variant de 0 à 99: $$2^0 + 2^1 + 2^2 + ... + 2^{99}$$
 
 * **Question e:** adapter ce script pour calculer le nombre de boules de la pyramique à 7 étages suivante. Quel est ce nombre? Quel serait ce nombre pour une pyramide à 99 étage?
 
 {{< img src="../images/pyramide.jpeg" caption="ID 32142797 © [Ekostsov](https://fr.dreamstime.com/ekostsov_info) | Dreamstime.com" >}}
+
+## Ex 5: Autres types construits
+### Tuple
+Soit le tuple `T` suivant:
+
+```python
+T = (("A",1),("B",2),("C",3))
+```
+
+> Ecrire un programme qui parcourt les éléments de `T`, et affiche le caractère lu à la première position: 
+
+```
+"A"
+"B"
+"C"
+```
+
+
+### Dictionnaire
+On souhaite construire un dictionnaire python `D` à partir du tuple `T`.
+
+Les caractères seront les clés du dictionnaire, et les entiers, les valeurs correspondantes.
+
+On souhaite que `D` soit constitué de: `{"A":1,"B":2,"C":3}`
+
+> Adapter le script précédent pour construire `D` à partir des éléments de `T`.
+
+On peut aussi construire un dictionnaire par compréhension, en une seule ligne.
+
+*Exemple:*
+
+```python
+>>> L1 = ("a","b","c")
+>>> dico = {i:L1[i] for i  in range(len(L1))}
+>>> dico
+{0: 'a', 1: 'b', 2: 'c'}
+```
+
+> Construire le dictionnaire `D` par compréhension de dictionnaire.
+
+# Portfolio
+* Utiliser l'un des exemples utilisant une compréhension de liste pour repérer ce qu'est le variant de boucle, à quels endroits il faut le placer pour construire la liste.
+
+# Liens 
+* activité sur les copies par valeur et par reference: [pythontutor](/docs/python/pages/variables/page3/)
+* TP5 [listes, indices, méthodes](/docs/python/pages/boucles/page3/)
+* TP6 [boucles et parcours de liste]("../page4")
