@@ -166,16 +166,16 @@ print("c'est fini")
 
 ```python
 r = 40
-while r > 3:
+while r >= 3:
   r = r - 3
 print('à la fin du programme, r vaut ' + str(r))
 ```
 * A la première itération, `r` vaut 40 donc la `<condition>` r > 3 est `True`. r est diminué de 3 et prend la valeur 37.
-* A la dernière itération, `4 > 3` est evalué à `True`. `r` est diminué de 3 et prend la valeur 1
-* Puis `r > 3` est evalué à `False`. Le bloc n'est pas executé et le programme s'arrête s'il n'y a pas d'autres instructions (ou poursuit le script sinon).
+* A la dernière itération, `4 >= 3` est evalué à `True`. `r` est diminué de 3 et prend la valeur 1
+* Puis `r >= 3` est evalué à `False`. Le bloc n'est pas executé et le programme s'arrête s'il n'y a pas d'autres instructions (ou poursuit le script sinon).
 
 **2. Le problème de l'arrêt**
-Pour le script précédent, si l'on avait remplacé la condition `r > 3` par `r == 3` le programme aurait pu executer le bloc `r = r - 3` indefiniment. `r` aurait pris successivement les valeurs 40, 37, ... 4, 1, -2, -5, ... etc, sans jamais prendre la valeur 0.
+Pour le script précédent, si l'on avait remplacé la condition `r >= 3` par `r == 3` le programme aurait pu executer le bloc `r = r - 3` indefiniment. `r` aurait pris successivement les valeurs 40, 37, ... 4, 1, -2, -5, ... etc, sans jamais prendre la valeur 0.
 
 C'est le problème avec les boucles non bornées. Celles-ci peuvent ne pas finir, ce qui peut bloquer la machine.
 
