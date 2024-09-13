@@ -3,46 +3,11 @@ Title: TP boucles non bornées
 bookShowToc: false
 ---
 
-  
-  <!--<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
- -->
-   <style>
-    .editor-box{
-      width: 60%;
-      display: block;
-      border: none;
-      margin-right: 10px;
-      box-shadow: 0px 2px 5px 0px rgb(77, 77, 77, 0.46);
-    }
-    #output > div {
-    font-family: 'monospace';
-    background-color: #e5e5e5;
-    border: 1px solid lightgray;
-    /*border-top: 0;*/
-    font-size: 0.875rem;
-    padding: 0.5rem;
-  
-  }
-
-  #output > div:first-child {
-    border-top: 1px solid lightgray;
-    display: block;
-  }
-
-  #output > div:nth-child(even) {
-    border: 0;
-  } 
-</style>
-
-  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 
 # TP4: Boucles non bornées - while
 # Editeur Python
 * Utiliser un **notebook**, ou bien pyzo ou spyder, en delimitant des *cellules* dans la page d'edition. 
 
-<div>
-<py-repl id="my-repl" auto-generate="true"></py-repl>
-</div>
 
 
 
@@ -59,7 +24,7 @@ Le script contient une boucle non bornée. La *condition d'éxecution* est que l
 a = 20
 b = 6
 N = 0
-while a > b:
+while a >= b:
   a = a - b
   N = N + 1
 ```

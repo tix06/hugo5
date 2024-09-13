@@ -202,6 +202,21 @@ Jim['Age'] = 43
 
 Conclure (`famille` pointe t-il vers la reference de `Jim` ou bien s'agit-il d'une copie par valeur?). 
 
+# Classe et objets
+Pour les objets, c'est le même principe: toute variable de classe pointe pour toute la durée du programme sur la même réference. La référence va être partagée entre toutes les instances de la classe. C’est donc le même objet !
+
+```python
+class glace():
+    supplements = ['chantilly', 'praline']
+
+g1 = glace()
+g2 = glace()
+
+g1.supplements.pop()
+```
+
+**Question k**: lire la valeur de `g1.supplements`, puis celle de `g2.supplements`. Que constatez vous?
+
 # Portfolio
 Pour le script suivant:
 

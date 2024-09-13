@@ -17,6 +17,7 @@ bookShowToc: false
 
 # TP5 Listes
 ## Ex 1: Elements d'une liste
+### Utiliser un indice
 Dans une cellule, saisir la ligne suivante:
 
 ```python
@@ -38,7 +39,7 @@ Puis tester chacune des propositions suivantes:
 * **Question a2:** Pourquoi l'instruction `s[4] = "samedi"` génère t-elle une erreur?
 
 
-## Slice: découpage d'une liste
+### Slice: découpage d'une liste à partir des indices
 Pour découper une liste, on utilise le séparateur `:` entre les indices de début et fin de liste.
 
 Avec la liste:
@@ -61,6 +62,7 @@ Tester les propositions:
 * **Question b:** Que retourne la proposition `s[1:]`? Découpe t-elle la liste à partir du premier élément, du 2e élément, ou bien retourne t-elle la liste entière?
 
 ## Ex 2: Opérations sur les éléments de listes
+### Modifier une valeur (opérateur +)
 Saisir le script suivant:
 
 ```python
@@ -70,6 +72,9 @@ t[2]  = t[2] + 5
 
 * **Question c:** Que vaut t à la fin du script `t[2]  = t[2] + 5`? La valeur 5 est-elle ajoutée à chaque élément de la liste, ou bien à un seul élément?  
 
+
+
+### Modifier une valeur (opérateur -)
 Saisir le script suivant:
 
 ```python
