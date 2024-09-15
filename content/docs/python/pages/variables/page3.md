@@ -212,10 +212,13 @@ class glace():
 g1 = glace()
 g2 = glace()
 
-g1.supplements.pop()
+
+print(g1.supplements,g2.supplements)
 ```
 
-**Question k**: lire la valeur de `g1.supplements`, puis celle de `g2.supplements`. Que constatez vous?
+**Question k1**: Executer le script. Que valent `g1.supplements` et `g2.supplements`? Quel est leur type?
+
+**Question k2**: Ajouter l'instruction `g1.supplements.pop()` avant la dernière ligne. Que valent maintenant . `g1.supplements` et `g2.supplements`? Conclure.
 
 # Portfolio
 Pour le script suivant:
