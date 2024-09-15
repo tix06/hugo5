@@ -216,6 +216,24 @@ Lorsque les valeurs `choix_joueur` et `N_aleatoire` sont identiques, le programm
 
 > Ajouter aussi un compteur du nombre d'essais. Afficher ce nombre à la fin du jeu.
 
+# Remarque : 0 et None 
+Dans le test logique, 0 et None se comportent comme s'il s'agissait de `False`:
+
+```python
+ch = input('Entrez un nombre entier quelconque')
+n =eval(ch)
+if n:
+ print("vrai")
+else:
+ print("faux")
+```
+
+Ce petit script, lorsqu'il est executé, renvoie toujours `True` quel que soit le nombre saisi, mais `False` dans les cas suivants. Si on saisit 
+
+* 0     # zero
+* None  # le type Rien
+
+**A savoir:** dans certains cas, on peut faire l'économie de l'opérateur logique. Dans l'instruction conditionnelle `if n`, la condition vaut `True` dès que `n` est différent de `0` ou de `None`.
 
 # Portfolio
 * Quelle est l'instruction python qui génère une *sortie*? Donner un exemple.
@@ -225,6 +243,7 @@ Lorsque les valeurs `choix_joueur` et `N_aleatoire` sont identiques, le programm
 * Quelle instruction génère une boucle infinie avec `while`?
 * Boucle non bornée: Comment **réaliser un compteur simple**, utlisant une boucle bornée, avec une condition d'arrêt lorsque la variable atteint la valeur 10? Ecrire le script complet. Votre programme doit être fonctionnel.
 * Compléter la phrase: Le quotient d'une division euclidienne de a par b (`a//b`) est égal au nombre de fois qu'il faut executer `a = a ... b` pour que l'on obtienne `a ... b`. 
+* Dans quel cas peut-on faire l'économie d'un opérateur lors de l'écriture d'une opération logique?
 
 <!--
 * *Algorithme essentiel*: Ecrire le script complet du calcul de **la division euclidienne** entre 2 entiers `a` et `b`. Le programme affiche le quotient et le reste de la division de `a` par `b`. *Vous devrez initialiser les variables a et b avec des valeurs*. Vous ne pouvez utiliser que l'opérateur soustraction `-`.
