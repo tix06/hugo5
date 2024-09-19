@@ -46,15 +46,15 @@ for  i in  range(11):
   L.append(...)
 ```
 
-> Recopier et compléter le programme.
+> Recopier et compléter le programme. Celui-ci doit compléter la liste avec les valeurs de la table de 3.
 
 * **Question a1:** Que vaut la liste `L` après ce programme? Quelles sont les valeurs prises par l'iterable `i`? 
 
-* **Question a2:** Comment avez vous complété les `...`?
+* **Question a2:** Comment avez vous complété les `...`? Comment feriez-vous pour compléter les valeurs de la table de 7?
 
 > Ecrire l'instruction en compréhension de liste qui construit la liste L. (voir cours sur les types sequentiels > listes > [comprehension de liste](/docs/python/pages/variables/page2/))
 
-## Ex 3: Energie en sciences physiques
+## Ex 2: Energie en sciences physiques
 On donne les listes de relevés du temps et de la vitesse pour un mobile. 
 
 La vitesse `vitesse[0]`est relevée au temps `t[0]`, `vitesse[1]`est relevée au temps `t[1]`, etc...
@@ -92,7 +92,7 @@ for v in vitesse:
   * tracer un graphique
 -->
 
-## Ex 4: algorithmes simples utilisant une boucle bornée
+## Ex 3: algorithmes simples utilisant une boucle bornée
 Le script suivant calcule la somme des 99 premiers entiers:
 
 $$0 + 1 + 2 + 3 + ...99$$
@@ -112,13 +112,27 @@ somme
 
 {{< img src="../images/pyramide.jpeg" caption="ID 32142797 © [Ekostsov](https://fr.dreamstime.com/ekostsov_info) | Dreamstime.com" >}}
 
-## Ex 5: Autres types construits
+## Ex 4: Autres types construits
 ### Tuple
 Soit le tuple `T` suivant:
 
 ```python
 T = (("A",1),("B",2),("C",3))
 ```
+
+L'interpreteur python construit l'objet `T` de la manière suivante:
+
+{{< img src="../images/tuple1.png" caption="image - pythontutor" >}}
+
+Lorsque l'on utilise la boucle bornée:
+
+```python
+for elem in T:
+```
+
+...cela créé un itérable (un ensemble), comme sur l'image suivante:
+
+{{< img src="../images/tuple2.png" caption="en orange: ensemble des itérables" >}}
 
 > Ecrire un programme qui parcourt les éléments de `T`, et affiche le caractère lu à la première position: 
 
@@ -157,4 +171,4 @@ On peut aussi construire un dictionnaire par compréhension, en une seule ligne.
 # Liens 
 * activité sur les copies par valeur et par reference: [pythontutor](/docs/python/pages/variables/page3/)
 * TP5 [listes, indices, méthodes](/docs/python/pages/boucles/page3/)
-* TP6 [boucles et parcours de liste]("../page4")
+* TP6 [boucles et parcours de liste](../page4)

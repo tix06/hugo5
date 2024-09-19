@@ -21,30 +21,7 @@ Il est nécessaire de séparer le travail de la forme du document de celui du co
 * Pour la bibliographie, l’insertion de notes de bas de page ou de fin peut suffire(Menu Insertion > Note de bas de page/ de fin).
 * Pensez à exporter votre document au format pdf pour le partager.
 
-# Les éléments du document
-Voici la liste des éléments mentionnés dans le guide de style. On retrouve la plupart de ces éléments comme des objets communs aux logiciels de traitement de texte (Word, Writer).
-<!--
-Pour chaque élément, les propriétés sont:
 
-la police, la taille, la décoration, le retrait, l'espacement vertical avant/après...
-
-En informatique, une règle, est un couple `propriete: valeur`. C'est ainsi qu'elle est définie, par exemple en `CSS`. Dans le traitement de texte *Writer*, une *Règle* est appelée un *Style*.
--->
-## Le titre
-## Le sous-titre
-## Les chapitres (HEADER) de niveau 1, niveau 2, etc
-## Les paragraphes
-## Les listes
-## L'en-tête et le pied de page
-## L'épigraphe 
-*L'épigraphe est une courte citation placée au début d'un ouvrage ou d'un chapitre, et qui permet d'en indiquer l'esprit. 
-La table des matières correspond à une liste complète des parties et des sous-parties d’un document.*
-
-## La table des matières
-*La **table des matières** (table of contents en anglais) est placée à la fin de l'ouvrage. Elle détaille l'ensemble des divisions d'un document.*
-
-## Le sommaire
-*Le sommaire est généralement plus succinct et ne reprend pas forcément toutes les sous-parties. Le sommaire propose un résumé des parties à venir dans le document et se situe ainsi au début de celui-ci.*
 
 # TP1 - Evaluer la forme d'un mémoire
 ## Le modèle
@@ -74,6 +51,33 @@ Le {{< a link="/pdf/competences/exercice_les_plastiques.odt" caption="document s
 
 
 *Remarque:* Si on a *malencontreusement stylé du texte* par le menu du haut, utiliser le raccourci CTRL+M pour «Effacer le formatage direct» (ou par le menu Format)
+
+## Les éléments du document
+Voici la liste des éléments mentionnés dans le guide de style. On retrouve la plupart de ces éléments comme des objets communs aux logiciels de traitement de texte (Word, Writer).
+<!--
+Pour chaque élément, les propriétés sont:
+
+la police, la taille, la décoration, le retrait, l'espacement vertical avant/après...
+
+En informatique, une règle, est un couple `propriete: valeur`. C'est ainsi qu'elle est définie, par exemple en `CSS`. Dans le traitement de texte *Writer*, une *Règle* est appelée un *Style*.
+-->
+
+* Le titre
+* Le sous-titre
+* Les chapitres (HEADER) de niveau 1, niveau 2, etc
+* Les paragraphes
+* Les listes
+* L'en-tête et le pied de page
+* L'épigraphe 
+
+*L'épigraphe est une courte citation placée au début d'un ouvrage ou d'un chapitre, et qui permet d'en indiquer l'esprit. 
+La table des matières correspond à une liste complète des parties et des sous-parties d’un document.*
+
+* La table des matières
+*La **table des matières** (table of contents en anglais) est placée à la fin de l'ouvrage. Elle détaille l'ensemble des divisions d'un document.*
+
+* Le sommaire
+*Le sommaire est généralement plus succinct et ne reprend pas forcément toutes les sous-parties. Le sommaire propose un résumé des parties à venir dans le document et se situe ainsi au début de celui-ci.*
 
 ## Réutiliser ses Styles personnalisés
 A l'ouverture d'un nouveau document, les *Styles* sont remis à ceux d'origine. Pour retrouver ceux que vous avez déjà définis, il faut charger les *Styles* à partir de votre ancien document: {{< a link="https://help.libreoffice.org/latest/fr/text/swriter/guide/load_styles.html?DbPAR=WRITER" caption="Voir ici les explications" >}}.

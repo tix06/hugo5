@@ -120,10 +120,43 @@ touches = 0
 manques = 0
 while ...:
   choix = input("X pour manqué ou O pour touché: ")
+  ...
   if ...
+...
 ```
 
-* **Question f**: Dans votre programme, quel est le variant de boucle? Etes-vous sûr que le programme finira, quelles que soient les entrées saisies par l'utilisateur?
+* **Question f**: Dans votre programme, quel est le variant de boucle? 
+
+* **Question g**: Supposons que l'utilisateur entre la série: "X", "O", "O", "O", "X", "O". Comment évoluent les différentes variables? Recopier et compléter le tableau de suivi.
+
+| `n` *avant itération* | `touches` *avant iteration* | `manques` *avant iteration* | condition d'execution `True/False` | `choix` |
+| --- | --- | --- | --- | --- |
+|   |   |   |   |   |
+
+* **Question h**: Etes-vous sûr que le programme finira, quelles que soient les entrées saisies par l'utilisateur?
+
+## Ex 5: Multiplier sans utiliser `*`
+La multiplication de `x` par `a` revient à additionner `x + x + x ...` un nombre `a` de fois.
+
+Par exemple, `x + x + x` correspond à `3 * x`.
+
+On peut alors utiliser `a` comme variant dans une boucle `while`avec pour condition d'arrêt, `a == 0`. 
+
+Dans le bloc executé par la boucle, il faudra ajouter à la variable `produit`, la valeur de `x`. Et diminuer `a` d'une unité.
+
+Compléter le programme afin de réaliser le produit de `x` par `a`, sans utiliser l'opérateur `*`.
+
+```python
+x = int(input('entrer la valeur de x: '))
+a = int(input('entrer la valeur de a: '))
+produit = 0
+while ...:
+  ...
+  ...
+print('le produit x * a vaut: ' + ...)
+```
+
+* **Question i:** Précisez combien d'itérations ont lieu, en fonction de la valeur de `a`.
 
 <!--
 # Utiliser des fonctions
@@ -173,6 +206,7 @@ Son execution cesse lorsqu'elle arrive à l'instruction `return`. Le programme r
 * Quand faut-il utiliser `input("blabla")` ou `int(input("blabla"))`?
 * A quoi sert l'indentation en python sous une instruction conditionnelle?
 * Que faut-il contrôler dans une boucle non bornée (`while`) pour s'assurer que celle-ci finira toujours?
+* Montrer qu'il est possible de déterminer le nombre d'itérations du bloc conditionnel en fonction du variant. Prenez un exemple.
 
 
 

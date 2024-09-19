@@ -3,33 +3,6 @@ Title : types abstraits
 bookShowToc: false
 ---
 
-<style>
-    .editor-box{
-      width: 60%;
-      display: block;
-    }
-    #output > div {
-    font-family: 'monospace';
-    background-color: #e5e5e5;
-    border: 1px solid lightgray;
-    /*border-top: 0;*/
-    font-size: 0.875rem;
-    padding: 0.5rem;
-  
-  }
-
-  #output > div:first-child {
-    border-top: 1px solid lightgray;
-    display: block;
-  }
-
-  #output > div:nth-child(even) {
-    border: 0;
-  } 
-</style>
-
-  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-
 
 # Types abstraits
 
@@ -44,13 +17,13 @@ Un type abstrait est défini par son *interface*, qui est indépendante de son *
 
 Les types abstraits sont des types *structurés*. On a déjà vu des types *structurés* natifs: les types séquences de texte (string), les types séquentiels (listes, tuples), et les mappages (dictionnaires).
 
-*Un type abstrait* est caractérisé par une *interface* de programmation qui permet de manipuler les données de ce type. Sans pour autant avoir connaissance du contenu des fonctions proposées par l'interface.
+**Un type abstrait** est caractérisé par une *interface* de programmation qui permet de manipuler les données de ce type. Sans pour autant avoir connaissance du contenu des fonctions proposées par l'interface.
 
-*Spécifier* un type abstrait, c'est définir son *interface*, sans prejuger de la façon dont ses opérations sont implémentées.
+**Spécifier** un type abstrait, c'est définir son *interface*, sans prejuger de la façon dont ses opérations sont implémentées.
 
-*Implémenter*, c'est fournir le code de ces opérations. Plusieurs implémentations peuvent correspondent à la même spécification. On verra dans ce chapitre la programmation dans un style fonctionnel. Il viendra plus tard la programmation par objet.
+**Implémenter**, c'est fournir le code de ces opérations. Plusieurs implémentations peuvent correspondre à la même spécification. On verra dans ce chapitre la programmation dans un style fonctionnel. Il viendra plus tard la programmation par objet.
 
-On verra dans un premier temps, 2 exemples de types abstraits: Les *listes chainées* et les *tableaux*. Dans un chapitre ultérieur, nous verrons les types abstraits *Piles*, *Files*, et *Graphes*.
+On verra dans un premier temps, deux exemples de types abstraits: Les *listes chainées* et les *tableaux*. Dans un chapitre ultérieur, nous verrons les types abstraits *Piles*, *Files*, et *Graphes*.
 
 # Listes chaînées
 Une liste chaînée est une séquence ordonnée d'éléments.
@@ -81,9 +54,10 @@ L'*interface* fournit certaines fonctions.
 | --- | --- |
 | créer une liste vide | `creer_liste()` |
 | questionner si la liste est vide | `liste_vide(L)` |
-| insérer un élément **e** en tête de liste et retourne une nouvelle liste | `inserer(L,e)` |
+| insérer un élément **e** en tête de liste et retourne une nouvelle liste | `inserer_tete(L,e)` |
 | retourne l'élément de tête (premier élément)| `tete(L)` |
-| retourne la liste privée de son premier élément (retourne donc le 2<sup>e</sup> élément)| `queue()` |
+| retourne la liste privée de son premier élément (retourne donc le 2<sup>e</sup> élément)| `queue(L)` |
+| insere un nouvel `element_a_inserer` juste avant l'élement recherché dans la liste | `insere(L,element_recherche,element_a_inserer)` |
 | retourne une liste python avec tous les éléments de la liste chainée | `elements_liste(L)` |
 
 Le *contenu* de ces fonctions va dépendre de l'*implémentation* choisie par le programmeur.
@@ -115,11 +89,13 @@ on peut le modifier en partie (ajout/suppression d'un élément), et sa copie se
 
 * dont on peut atteindre un élément au rang i en temps proportionnel à i, avec une boucle par exemple.
 
+**Mémoire**: Contrairement aux tableaux, les éléments d'une liste chaînée ne sont pas placés côte à côte dans la mémoire. Chaque case pointe vers une autre case en mémoire, qui n'est pas nécessairement stockée juste à côté.
+
 L'**interface** d'une liste chainée doit aussi proposer **l'insertion d'un élément au rang i, en temps constant.** (Intercaler cet élément entre 2 éléments de la liste). Ceci ne peut pas être réalisé avec l'implémentation vue plus haut.
 
 Nous verrons d'autres implémentations pour ce type abstrait.
 
-
+*Attention: les listes chaînées et les Listes Python sont différentes, il ne s'agit pas des mêmes objets.*
 # Tableaux
 Les tableaux se comportent de manière très similaire aux listes, sauf que les types d'objets qui y sont stockés sont limités. (Array)
 
@@ -155,10 +131,7 @@ T = ([6, 7, 8, None, None], 5)
 | fonctions qui implémentent un tableau T (Array) | nom |
 | --- | --- |
 | taille du tableau | `taille(T)` |
-| demander l'élément au rang i | `ieme(T,i)` |
-| ajouter à la fin | `ajouter(T,e)` |
-| insérer l'élément e au rang i | `inserer(T,i,e)` |
-| supprimer l'élément au rang i | `supprimer(T,i)` |
+| demander l'élément au rang i | `element(T,i)` |
 | remplacer l'élément au rang i par e | `remplacer(T,i,e)` |
 
 
@@ -167,7 +140,7 @@ Les tableaux vus ci-dessus sont des tableaux *statiques*: leur taille ne peut pa
 
 Python implémente naturellement un autre type de tableau, que l'on appelera *dynamique*: Les *Listes Python*. Ce problème de dimension n'apparait pas dans les Listes Python, qui apportent de surcroit des méthodes bien pratiques comme `append` et `pop`.
 
-Attention: les listes chaînées (vues plus haut) et les Listes Python sont différentes, il ne s'agit pas des mêmes objets.
+
 
 # La liste python dynamique (type list)
 Le type `list` python est dynamique. Il peut lui aussi implémenter une Liste chainée ou bien un Tableau. 
@@ -189,31 +162,49 @@ def creer_liste():
   """exemple: 
   L = creer_liste()
   """
-  return []
+  return ()
 
 def liste_vide(L):
   """exemple: 
   liste_vide(L)
   """
-  return L == []
+  return L == ()
 
-def inserer(L,e):
+def inserer_tete(L,e):
   """exemple:
-  L = inserer(L,e)
+  L = inserer_tete(L,e)
   """
-  return [e,L]
+  return (e,L)
 
 def tete(L):
   """exemple:
-  elem = tete(L)
+  L = (1,(2,()))
+  tete(L) -> 1
   """
   return L[0]
 
 def queue(L):
   """exemple:
-  L2 = queue(L)
+  L = (1,(2,()))
+  queue(L) -> (2,())
   """
-  return L[1]
+  return L[-1]
+
+def inserer(L,element_recherche,element_a_inserer):
+  """exemple:
+  L = (1,(2,()))
+  inserer(L,2,3) -> (1,(3,(2,())))
+  """
+  Liste_des_elements = []
+  # recherche
+  while element_recherche != tete(L):
+    Liste_des_elements.append(tete(L))
+    L = queue(L)
+  # insertion
+  L = inserer_tete(L,element_a_inserer)
+  for i in range(len(Liste_des_elements)-1,-1,-1):
+    L = inserer_tete(L,Liste_des_elements[i])
+  return L
 
 def elements_liste(L):
   """exemple:
@@ -224,18 +215,18 @@ def elements_liste(L):
   
 ```
 
-## Exercice sur le parcours scolaire
+## Exercice 1: parcours scolaire
 Le `parcours` scolaire est un type abstrait qui s'apparente à une Liste. Les éléments sont disposés dans cette Liste sous la forme:
 
 ```
-['Terminale', ['Premiere', ['Seconde', []]]]
+('Terminale', ('Premiere', ('Seconde', ())))
 ```
 
 L'interface propose les fonctions suivantes:
 
 `creer_liste, liste_vide, inserer, tete, queue`.
 
-**1.** Quelles instructions, utilisant l'interface, vont créer la Liste `parcours_lycee` de la manière suivante: `['Terminale', ['Premiere', ['Seconde', []]]]`?
+**1.** Quelles instructions, utilisant l'interface, vont créer la Liste `parcours_lycee` de la manière suivante: `('Terminale', ('Premiere', ('Seconde', ())))`?
 
 **2.** Quelle instruction va permettre de connaitre la dernière classe visitée lors du parcours scolaire?
 
@@ -252,75 +243,76 @@ while not liste_vide(parcours):
   parcours = queue(parcours)
 ```
 
-**5.** On souhaite utiliser ce type abstrait pour décrire le parcours universitaire. Quelles instructions vont créer la structure de données du parcours qui ira de `Licence 1` à `Master 2`?
+**5.** On souhaite utiliser ce type abstrait pour décrire le parcours universitaire. Quelle serie d'instructions va créer la structure de données du parcours qui ira de `Licence 1` à `Master 2`? Cette liste s'appelera `parcours_univ`
 
-## Exercice sur l'historique de navigation
-On cherche à implémenter l'historique du navigateur pour permettre de revenir en arrière lors de la navigation.
+**6.** On souhaite maintenant créer une liste unique appelée `scolarite`, issue de la jonction des deux listes, `parcours_lycee` et `parcours_univ`. Ecrire le script correspondant.
 
-On visite, dans l'ordre les sites suivants:
+## Exercice 2: composition d'un train
+On cherche à implémenter la construction d'un train pour voyageurs, motrice et wagons, à l'aide d'une liste chainée.
 
-* site 1 
-* site 2
-* site 3
+Le train suit l'ordre suivant:
+
+* motrice
+* wagon_1
+* wagon_2
+* wagon_3
 
 **1.** Qu'est ce qui est affiché par le programme suivant?
 
 ```python
 L1 = creer_liste()
-L1 = inserer(L1,'site 1')
+L1 = inserer(L1,'motrice')
 print(L1)
-L1 = inserer(L1,'site 2')
+L1 = inserer(L1,'wagon_1')
 print(L1)
-L1 = inserer(L1,'site 3')
+L1 = inserer(L1,'wagon_2')
+print(L1)
+L1 = inserer(L1,'wagon_3')
 print(L1)
 ```
 
-**2.** Lorsque l'on retourne en arrière, on veut acceder au dernier site visité. Supposons que cela retourne la valeur `site 3`. Quelle instruction de l'interface de liste faut-il utiliser?
+**2.** Quelle instruction de l'interface de liste faut-il utiliser pour consulter la nature du dernier wagon du train?
 
-**3.** On souhaite alors que cela modifie la liste L1 en supprimant  `site 3`. Quelle instruction utilisant l'interface de liste va modifier L1 de cette façon?
-
-**4.** On revient à la liste L1 contenant la navigation sur les 3 sites. Compléter la boucle non bornée pour former la liste python `['site 3', 'site 2', 'site 1']` à partir de la liste chainée L1:
+**3.** La fonction `elements_liste` va retourner les éléments de la liste chainée de la manière suivante: `['wagon_3', 'wagon_2', 'wagon_1','motrice']`
 
 ```python
-L2 = []
-while not liste_vide(L1):
-  # à completer
-  # 
-  # 
+elements_liste(L1)
+# affiche ['wagon_3', 'wagon_2', 'wagon_1','motrice']
 ```
 
-**5.** Ajouter au script les instructions qui vont déverser la liste python L2 dans une liste python L3. Cette liste L3 devra présenter les sites dans l'ordre de la navigation: `['site 1', 'site 2', 'site 3']`
-
-**6.** Ecrire l'implémentation de la fonction `elements_liste` qui va retourner une liste python avec les éléments d'une liste chainée L mise en paramètre. Pour l'exemple précédent, cette fonction retourne la liste python L3 lorsque L est mise en paramètre de la fonction `elements_liste`:
-
-```python
-elements_liste(L)
-# affiche ['site 1', 'site 2', 'site 3']
-```
-
-On utilisera à l'intérieur de la fonction une instruction de copie de la liste L afin de ne pas modifier L lors des traitements:
+Compléter le script de cette fonction.
 
 ```python
 def elements_liste(L):
-  L_copie = list(L)
-  L2 = []
-  L3 = []
-  while not liste_vide(L_copie):
-    # à completer
-    # 
-    # 
-    # 
+  Liste_des_elements = []
+  while not liste_vide(L):
+    element = ... (L)
+    L = ... (L)
+    Liste_des_elements.append(...)
+  return ...
 ```
 
+**4.** INSERTION: On souhaite modifier la liste L1 et intercaler  `wagon_bar` entre le `wagon_1` et le `wagon_2`. 
+
+* Quelle instruction utilisant la fonction `insere` de l'interface de liste va modifier L1 de cette façon? 
+* Quelle sera l'objet retourné? 
+* Expliquer en détail les différentes parties de cette fonction.
+
+**5.** Supprimer le wagon de queue à l'aide d'une instruction de l'interface.
+
+
+
+
+
+
 ## Exercice sur la separation d'une liste
-Compléter la fonction `separe` qui sépare les éléments d'une liste en deux listes selon s'ils sont inférieurs (strictement) ou supérieurs (et égal) à une valeur `v`:
+**1.** Compléter la fonction `separe` qui sépare les éléments d'une liste en deux listes selon s'ils sont inférieurs (strictement) ou supérieurs (et égal) à une valeur `v`:
 
 ```python
 def separe(L,v):
-  L_copie = list(L)
   L_inf = creer_liste()
   L_sup = creer_liste()
-  while not liste_vide(L_copie):
+  while not liste_vide(L):
     # à completer
     # utilise les fonctions tete, queue et insere
     # 
@@ -337,10 +329,11 @@ for elem in [1,3,20,18,16,11,101,12,15,2,5,4,2,8,1]:
 
 v = 12 
 # appel de la fonction separe
+L_inf, L_sup = separe(L,v)
 print(L_inf)
 print(L_sup)
-# [1, [3, [11, [2, [5, [4, [2, [8, [1, []]]]]]]]]]
-# [20, [18, [16, [101, [12, [15, []]]]]]]
+# (1, (3, (11, (2, (5, (4, (2, (8, (1, ())))))))))
+# (20, (18, (16, (101, (12, (15, ()))))))
 ``` 
 
 # Exercices sur les Tableaux statiques
@@ -356,9 +349,9 @@ def taille(T):
   """
   return T[1]
 
-def ieme(T,i):
+def element(T,i):
   """exemple:
-  > ieme(T,3)
+  > element(T,3)
   > 'jeudi'
   """
   return T[0][i]
@@ -388,6 +381,8 @@ T = ([6, 7, 8], 3)
 
 **c.** Compléter le script donné plus haut pour cette fonction.
 
+**d.** Ecrire le script d'une fonction `moyenne` qui calcule la moyenne des notes du tableau T.
+
 **2.** Soit le tableau suivant qui implémente les notes de Kyle, Sean, Quentin et Zinedine dans les matières C1, C2, C3:
 
 ```python
@@ -399,7 +394,12 @@ T = ([[6, 7, 8],
 
 **a.** Recopier le tableau T et remplacer les '?' par les bonnes valeurs (utiliser l'image plus haut). Que signifie le tuple `(4,3)` placé comme 2e élément du tableau?
 
-**b.** Utiliser l'instruction `taille` de l'interface pour donner le nombre d'élèves dans le tableau? Puis le nombre de colonnes (matières).
+**b.** Utiliser l'instruction `taille` de l'interface pour donner le nombre d'élèves dans le tableau. Puis le nombre de colonnes (matières):
+
+```python
+n_eleves = taille(...)
+n_matieres = taille(...)
+```
 
 
 **c.** Modifier la fonction `remplacer` pour que celle-ci modifie la note dans la matière voulue pour un élève donné. 
@@ -419,6 +419,9 @@ T
  ['?', '?', '?']], ..)
 ```
 
+**3.** Quelle instruction, utilisant la fonction `moyenne` va retourner la moyenne des notes de Zinedine?
+
+<!--
 ## Un nouveau type abstrait
 Afin de gérer les notes des élèves de la classe de seconde 209, on veut définir un type abstrait qui permet de calculer sur les notes des élèves.
 
@@ -439,14 +442,9 @@ Pour programmer cette fonction `moyenne(L)`, il faudra:
 * Puis, à la fin, retourner la moyenne, c'est à dire $s / len(L)$
 
 **1.** Programmez cette fonction
-
-### `moyenne_matiere`
-Fonction qui va calculer la moyenne sur une matière `mm` à partir du rang `j`. Par exemple, pour C3, `j` vaut 2, le rang dans le Tableau de notes):
-
-```python
-j = 2 # colonne C3
-mm = moyenne_matiere(T[0])
-``` 
+-->
+**4.** `moyenne_matiere`
+Programmer la fonction `moyenne_matiere` qui va calculer la moyenne sur une matière `mm` à partir du rang `j`. 
 
 Pour programmer cette fonction `moyenne_matiere(M)`, il faudra:
 
@@ -454,7 +452,7 @@ Pour programmer cette fonction `moyenne_matiere(M)`, il faudra:
 * Calculer la moyenne
 * retourner la valeur
 
-**2.** Programmez cette fonction
+
 
 ## moyenne glissante et tableau statique
 Les courbes de données issues du monde réel sont souvent *bruitées*. Pour simuler ce type de données, nous allons créer une liste de valeurs cumulées aléatoires.

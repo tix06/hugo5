@@ -240,6 +240,6 @@ Reproduire sommairement le schéma de la structure de données telle qu'elle ser
 # Liens
 * activité sur les copies par valeur et par reference: [pythontutor](/docs/python/pages/variables/page3/)
 * TP5 [listes, indices, méthodes](/docs/python/pages/boucles/page3/)
-* TP6 [boucles et parcours de liste](../page4)
+* TP6 [boucles et parcours de liste](../../boucles/page4)
 
 
