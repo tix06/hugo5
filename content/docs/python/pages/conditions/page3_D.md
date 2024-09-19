@@ -65,8 +65,8 @@ else:
 > Completer (et tester avec plusieurs valeurs de a et de b) le programme suivant qui compare a et b et retourne un message selon leur ordre ou leur egalité.
 
 ```python 
-a = int(input("entrer la valeur de a: "))
-b = int(input("entrer la valeur de a: "))
+a = float(input("entrer la valeur de a: "))
+b = float(input("entrer la valeur de b: "))
 if a ... :
   print("a est plus grand que b")
 elif ... :
@@ -84,7 +84,7 @@ L'Indice de Masse Corporelle (IMC) est un indicateur chiffré utilisé en médec
 
 $$IMC = \tfrac{masse}{taille^2}$$
 
-où la masse est en kilos et la taille en mètres.
+où la masse est en **kg** et la taille en **mètres**.
 
 Proposez un algorithme qui demande à l'utilisateur sa taille et sa masse puis qui affiche l'IMC de la personne.
 

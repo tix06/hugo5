@@ -173,7 +173,7 @@ print("c'est fini")
 *Exemple 2: Soustractions multiples* 
 
 ```python
-b = 40
+r = 40
 while r >= 3:
   r = r - 3
 print('à la fin du programme, r vaut ' + str(r))
@@ -252,3 +252,4 @@ Lorsque les valeurs `choix_joueur` et `N_aleatoire` sont identiques, le programm
 * [TP1 sur les opérations et types de base](../../generalites/page2_D)
 * [TP2 sur les variables](../../variables/page4_D/)
 * [cours-TD sur les conditions](../../conditions/page2_D/)
+* [TP3 structures ]
