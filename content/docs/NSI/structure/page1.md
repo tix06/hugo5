@@ -150,10 +150,6 @@ Pour un Tableau, si on l'implémente avec le type `list`, la taille de celui-ci 
 # Editeur Python
 * Utiliser un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
 
-<div>
-<py-repl id="my-repl" auto-generate="true"></py-repl>
-</div>
-
 # Exercices sur les listes
 On propose l'**implémentation** suivante pour les listes chainées:
 
@@ -305,7 +301,7 @@ def elements_liste(L):
 
 
 
-## Exercice sur la separation d'une liste
+## Exercice 3: separation d'une liste
 **1.** Compléter la fonction `separe` qui sépare les éléments d'une liste en deux listes selon s'ils sont inférieurs (strictement) ou supérieurs (et égal) à une valeur `v`:
 
 ```python
@@ -314,21 +310,21 @@ def separe(L,v):
   L_sup = creer_liste()
   while not liste_vide(L):
     # à completer
-    # utilise les fonctions tete, queue et insere
+    # utilise les fonctions tete, queue et insere_tete
     # 
     # 
   return L_inf, L_sup
 ```
 
-Compléter alors le programme qui affiche les 2 listes une fois celles-ci séparées. La liste L contiendra les valeurs à séparer. Pour utiliser les fonctions de l'interface des listes chainées (voir plus haut), on créé une liste chainée à partir d'un ensemble de valeurs mises entre `[]`: 
+**2.** Compléter alors le programme au niveau du repère ICI. Le programme affiche les 2 listes une fois celles-ci séparées. La liste L contiendra les valeurs à séparer. 
 
 ```python
 L = creer_liste()
 for elem in [1,3,20,18,16,11,101,12,15,2,5,4,2,8,1]:
-    L = inserer(L,elem)
+    L = inserer_tete(L,elem)
 
 v = 12 
-# appel de la fonction separe
+# ICI, appel de la fonction separe
 L_inf, L_sup = separe(L,v)
 print(L_inf)
 print(L_sup)
@@ -365,7 +361,7 @@ def remplacer(T,i,e):
   # à completer
 ```
 
-## Utiliser l'interface du tableau
+## Exercice 1: Utiliser l'interface du tableau
 
 {{< img src="../images/array.png" caption="Tableau de notes" >}}
 
@@ -419,45 +415,25 @@ T
  ['?', '?', '?']], ..)
 ```
 
+
 **3.** Quelle instruction, utilisant la fonction `moyenne` va retourner la moyenne des notes de Zinedine?
 
-<!--
-## Un nouveau type abstrait
-Afin de gérer les notes des élèves de la classe de seconde 209, on veut définir un type abstrait qui permet de calculer sur les notes des élèves.
 
-Ce type abstrait, appelé `Classe_209` va utiliser l'interface des tableaux statiques définie plus haut. Mais il va aussi calculer la moyenne des notes grâce à 2 nouvelles fonctions de son interface:
-
-### `moyenne`: 
-Fonction qui va calculer la moyenne `m` de l'élève au rang `eleve_i` (par exemple, pour Kyle, `eleve_i` vaut 0) avec l'instruction: 
-
-```python
-i = 0 # Kyle
-m = moyenne(T[0][i])
-``` 
-
-Pour programmer cette fonction `moyenne(L)`, il faudra:
-
-* parcourir toutes les notes de la liste `L` mise en paramètre.
-* Ajouter la note à une variable  `s`, qui vaut 0 au depart.
-* Puis, à la fin, retourner la moyenne, c'est à dire $s / len(L)$
-
-**1.** Programmez cette fonction
--->
 **4.** `moyenne_matiere`
-Programmer la fonction `moyenne_matiere` qui va calculer la moyenne sur une matière `mm` à partir du rang `j`. 
+Programmer la fonction `moyenne_matiere` qui va calculer la moyenne sur une matière pour la colonne `j`. 
 
-Pour programmer cette fonction `moyenne_matiere(M)`, il faudra:
+Pour programmer cette fonction `moyenne_matiere(j)`, il faudra:
 
-* Faire la somme $M[0][j] + M[1][j] + M[2][j] + M[3][j]$
-* Calculer la moyenne
+* Faire la somme $M[0][j] + M[1][j] + M[2][j] + M[3][j]$. Utiliser un **accumulateur `s` dans une boucle bornée**.
+* Diviser `s` par le nombre de notes
 * retourner la valeur
 
 
 
-## moyenne glissante et tableau statique
+## Exercice 2: moyenne glissante et tableau statique
 Les courbes de données issues du monde réel sont souvent *bruitées*. Pour simuler ce type de données, nous allons créer une liste de valeurs cumulées aléatoires.
 
-{{< img src="../images/filtre.png" caption="courbe de donnees brutes et donnees filtrees" >}}
+{{< img src="../images/filtre.png" caption="courbes de données brutes et donnees filtrees" >}}
 
 Pour créer et afficher ces valeurs cumulées, nous créons la liste `signal2` qui est produite à partir de valeurs aléatoires (`signal0`), puis cumulées dans `signal2`:
 
@@ -480,9 +456,9 @@ plt.legend(loc='best')
 plt.show()
 ```
 
-**Etapes:**
+**Etapes du traitement: Fonction `lissage`**
 
-* On fait une copie par valeur de `signal2` (liste des valeurs d'origine) dans `signal_filtre` (liste dont les termes seront remplacés par la valeur moyenée):
+* On fait une copie par valeur de `signal2` (liste des valeurs d'origine) dans `signal_filtre` (liste dont les termes seront remplacés par la valeur moyennée):
 
 ```
 signal_filtre = signal2.copy()
@@ -499,7 +475,7 @@ signal = signal2[i-largeur//2:i+largeur//2]
 
 * On calcule la moyenne de valeurs de `signal` avec la fonction `moyenne` vue dans l'exercice précédent.
 
-{{< img src="../images/moyenne_gli.png" caption="" >}}
+{{< img src="../images/moyenne_gli.png" caption="moyenne sur l'ensemble des valeurs de `signal`" >}}
 
 
 ```
@@ -508,7 +484,7 @@ signal_filtre[i] = moyenne(signal)
 
 * On place la valeur moyenne dans `signal_filtre[i]`
 
-{{< img src="../images/moyenne_gli2.png" caption="" >}}
+{{< img src="../images/moyenne_gli2.png" caption="signal filtre contient 10 valeur identiques contigües, il n'y a plus de bruit" >}}
 
 * On répète l'opération pour tous les index `i` compris entre `largeur//2,len(signal2)-largeur//2)`:
 
@@ -516,11 +492,17 @@ signal_filtre[i] = moyenne(signal)
 for i in range(largeur//2,len(signal2)-largeur//2):
 ```
 
-Puis on affiche les graphique de `signal2` (inchangé) et `signal_filtre` (courbe lissée)
+Puis on affiche les graphique de `signal2` (inchangé) et celle du signal après traitement (courbe lissée).
 
-**1.** Suivre ces étapes pour obtenir les graphiques des courbes de données bruitées et lissées.
+Nous allons suivre ces étapes:
 
-**2.** Créer une fonction `lissage` à partir de votre script, qui prend en paramètres une liste `L` et une largeur `v`, et retourne une liste de valeurs filtrées par une moyenne glissante sur `v` valeurs.
+**1.** Ecrire le script de la fonction `moyenne`
+
+**2.** Créer une fonction `lissage`, qui prend en paramètres une liste `L` et une largeur `v`, et retourne une liste de valeurs filtrées par une moyenne glissante sur `v` valeurs.
+
+**3.** Placer les valeurs filtrées dans une liste `signal_apres_traitement`: `signal_apres_traitement = lissage(signal2,10)`
+
+**4.** Afficher les 2 courbes, `signal2` et `signal_apres_traitement`
 
 <!-- Correction
 ```python
