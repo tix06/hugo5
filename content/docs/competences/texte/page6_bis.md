@@ -2,8 +2,8 @@
 Title : histoire informatique et reseaux
 ---
 
-# Partie 1: Histoire de l'informatique et des reseaux
-
+# Histoire de l'informatique et des reseaux
+## Partie 1: Recherche documentaire
 
 > Dans ce TP nous allons créer une petite chronologie de l'informatique à l'aide du traitement de textes **LibreOffice Writer**.
 
@@ -18,20 +18,27 @@ En utilisant l'article Wikipédia sur la
 - Vous utiliserez des styles pour le mettre en forme:
   
   - `Titre principal` pour le titre du document: «Chronologie de l'informatique»
-  - `Titre 1` pour chacune des phases de l'histoire de l'informatique:
+  - `Titre 1` pour chacune des **périodes** de l'histoire de l'informatique:
+
+  **Périodes:**
+
     - «Les prémices de l'informatique»
     - «L'époque des pionniers»
     - «Les débuts de la micro-informatique»
     - «L'ère d'Internet et du World Wide Web»
     - «L'ère de la mobilité et des données partagées»
-  - Les dates et leur description sont écrites sous forme d'une liste non-ordonnée avec le `Style de paragraphe par défaut`.
-  - Sauvegarder votre fichier sous le titre `histoire_informatique_reseaux` dans le dossier `Documents/Devoirs/tixidor/`
+
+- Dans un premier temps: Les dates et leur description sont écrites sous forme d'une *liste non-ordonnée* avec le `Style de paragraphe par défaut`.
+- Sauvegarder votre fichier sous le titre `histoire_informatique_reseaux` dans le dossier `Documents/Devoirs/tixidor/`
 
 
 *Remarque: Vous pouvez coller du texte issu d'une page en supprimant sa mise en forme grâce au collage spécial `<CTRL+MAJ+V>`(ou bien clic droit: coller sans Formatage)*
 
 Il est nécessaire de séparer l'écriture du contenu du document (Partie 1) de celui de sa mise en forme (Partie 2).
 
+*Une fois ce premier travail réalisé, vous allez styliser le document, et améliorer sa forme.*
+
+<!--
 # Partie 2: mise en forme du document
 Pour être lisible, un texte doit comporter une certaine hiérarchie.
 
@@ -104,8 +111,8 @@ Le but est alors de retrouver la bonne Propriété.
 
 {{< img src="../images/text7.png" >}}
 
-
-## Aide en video
+-->
+## Tuto (video): mise en forme du document
 
 On pourra s'aider des tutoriels pour LibreOffice Writer à l'adresse suivante: {{< a link="https://www.youtube.com/watch?v=ekh2Q1DU8Mw" caption="Youtube - LibreOffice Writer 1/11 : Mettre en forme le style principal " >}}
 
