@@ -203,11 +203,13 @@ def inserer(L,element_recherche,element_a_inserer):
   return L
 
 def elements_liste(L):
-  """exemple:
-  L2 = elements_liste(L)
-  """
-  # à completer
-  # 
+  Liste_des_elements = []
+  while not liste_vide(L):
+    element = tete(L)
+    L = queue(L)
+    Liste_des_elements.append(element)
+  return Liste_des_elements
+  
   
 ```
 
@@ -226,7 +228,7 @@ L'interface propose les fonctions suivantes:
 
 **2.** Quelle instruction va permettre de connaitre la dernière classe visitée lors du parcours scolaire?
 
-**3.** Que retourne `queue(parcours)`? *(choisir)*
+**3.** Que retourne `queue(parcours_lycee)`? *(choisir)*
 
 * la première classe du parcours scolaire
 * le parcours scolaire sans la dernière année
@@ -234,9 +236,9 @@ L'interface propose les fonctions suivantes:
 **4.** Que retourne le script suivant?
 
 ```python
-while not liste_vide(parcours):
-  print(tete(parcours))
-  parcours = queue(parcours)
+while not liste_vide(parcours_lycee):
+  print(tete(parcours_lycee))
+  parcours_lycee = queue(parcours_lycee)
 ```
 
 **5.** On souhaite utiliser ce type abstrait pour décrire le parcours universitaire. Quelle serie d'instructions va créer la structure de données du parcours qui ira de `Licence 1` à `Master 2`? Cette liste s'appelera `parcours_univ`
@@ -257,42 +259,25 @@ Le train suit l'ordre suivant:
 
 ```python
 L1 = creer_liste()
-L1 = inserer(L1,'motrice')
+L1 = inserer_tete(L1,'motrice')
 print(L1)
-L1 = inserer(L1,'wagon_1')
+L1 = inserer_tete(L1,'wagon_1')
 print(L1)
-L1 = inserer(L1,'wagon_2')
+L1 = inserer_tete(L1,'wagon_2')
 print(L1)
-L1 = inserer(L1,'wagon_3')
+L1 = inserer_tete(L1,'wagon_3')
 print(L1)
 ```
 
 **2.** Quelle instruction de l'interface de liste faut-il utiliser pour consulter la nature du dernier wagon du train?
 
-**3.** La fonction `elements_liste` va retourner les éléments de la liste chainée de la manière suivante: `['wagon_3', 'wagon_2', 'wagon_1','motrice']`
-
-```python
-elements_liste(L1)
-# affiche ['wagon_3', 'wagon_2', 'wagon_1','motrice']
-```
-
-Compléter le script de cette fonction.
-
-```python
-def elements_liste(L):
-  Liste_des_elements = []
-  while not liste_vide(L):
-    element = ... (L)
-    L = ... (L)
-    Liste_des_elements.append(...)
-  return ...
-```
+**3.** La fonction `elements_liste` va retourner les éléments de la liste chainée, en une liste python. Quelle instruction, utilisant `elements_liste`, va retourner la liste `['wagon_3', 'wagon_2', 'wagon_1','motrice']`?
 
 **4.** INSERTION: On souhaite modifier la liste L1 et intercaler  `wagon_bar` entre le `wagon_1` et le `wagon_2`. 
 
 * Quelle instruction utilisant la fonction `insere` de l'interface de liste va modifier L1 de cette façon? 
 * Quelle sera l'objet retourné? 
-* Expliquer en détail les différentes parties de cette fonction.
+* Repérer les différentes parties de cette fonction.
 
 **5.** Supprimer le wagon de queue à l'aide d'une instruction de l'interface.
 
@@ -384,7 +369,7 @@ T = ([6, 7, 8], 3)
 ```python
 T = ([[6, 7, 8],
       [10, 0, 10],
-      ['?', '?', '?']
+      ['?', '?', '?'],
       ['?', '?', '?']], (4,3))
 ```
 
@@ -396,9 +381,8 @@ T = ([[6, 7, 8],
 n_eleves = taille(...)
 n_matieres = taille(...)
 ```
-
-
-**c.** Modifier la fonction `remplacer` pour que celle-ci modifie la note dans la matière voulue pour un élève donné. 
+ 
+**2c.** Modifier la fonction `remplacer` pour que celle-ci modifie la note dans la matière voulue pour un élève donné. 
 
 Par exemple: Pour modifier la note de la colonne 2 de l'élève au rang 0 (premiere ligne): 
 
@@ -420,9 +404,9 @@ T
 
 
 **4.** `moyenne_matiere`
-Programmer la fonction `moyenne_matiere` qui va calculer la moyenne sur une matière pour la colonne `j`. 
+Programmer la fonction `moyenne_matiere` qui va calculer la moyenne sur une matière pour la colonne `j` d'une matrice `M`. 
 
-Pour programmer cette fonction `moyenne_matiere(j)`, il faudra:
+Pour programmer cette fonction `moyenne_matiere(M,j)`, il faudra:
 
 * Faire la somme $M[0][j] + M[1][j] + M[2][j] + M[3][j]$. Utiliser un **accumulateur `s` dans une boucle bornée**.
 * Diviser `s` par le nombre de notes
