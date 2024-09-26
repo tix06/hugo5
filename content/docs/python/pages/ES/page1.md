@@ -130,7 +130,7 @@ Certains caractères sont fort utiles lors de l’écriture de fichiers texte af
 * `\n` : passage à la ligne
 * `\t` : tabulation, indique un passage à la colonne suivante dans le format tsv (Tabulation-separated values).
 
-On peut avoir besoin de supprimer ces caractères spéciaux:
+Lors de la **lecture d'un fichier**, on peut avoir besoin de supprimer ces caractères spéciaux:
 
 ```python
 table = []
@@ -142,9 +142,17 @@ with open('datas/rne-cm.csv', encoding='utf-8') as f:
 table[2]
 # affiche
 '32\tGers\t\t\t32249\tMauvezin\tPASCOLINI\tJean-Marc\tM\t'
+print(table[2])
+# affiche
+32 Gers   32249 Mauvezin PASCOLINI Jean-Marc M
+len(table[2])
+# affiche 
+1
 ```
 
-On peut alors remplacer la chaine de caractères `line` par `line.split('\t')` avant de la placer dans `table`, ce qui découpe la chaine au niveau des `\t`:
+L'import des données n'a pas placé les valeurs comme des éléments de liste. Il faudrait découper la chaine de caractères au niveau des espaces:
+
+On peut alors remplacer l'instruction `table.append(line)` par `table.append(line.split('\t'))`, ce qui découpe la chaine au niveau des `\t`:
 
 ```python
 with open('datas/rne-cm.csv', encoding='utf-8') as f:
@@ -163,7 +171,17 @@ table[2]
  'M',...]
 ```
 
+Bien entendu, il faudra adapter l'argument de la fonction `split` en fonction du caractère de séparation utilisé dans le fichier:
 
+Pour le contenu suivant, il faudra utiliser `line.split(';')`
+
+```
+;2020;2021;2022;2023;2024;total
+seconde;480;495;420;465;465;
+premiere;420;525;420;510;465;
+terminale;495;480;420;435;435;
+;;;;;;
+```
 
 # Liens
 * Voir cours sur le formatage des sorties : [Lien python.org](https://docs.python.org/fr/3/tutorial/inputoutput.html)

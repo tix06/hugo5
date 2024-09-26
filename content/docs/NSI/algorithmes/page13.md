@@ -28,21 +28,21 @@ En [bas de page](https://www.data.gouv.fr/fr/datasets/repertoire-national-des-el
 *Ouvrir les données jugées d'intérêt public, c'est encourager leur réutilisation par tout un chacun. Cela permet d'encourager la transparence démocratique, de bénéficier de services au quotidien ou de prendre des décisions plus éclairées.*
 
 ## Exploration et traitement de données 
-Télécharger sur le site gouvernemental le fichier des élus municipaux `rne-cm.csv`
-Ouvrir un nouveau notebook en local. Déplacer le fichier `rne-cm.csv` dans le même dossier que le notebook.
+Télécharger sur le site gouvernemental le fichier des élus municipaux, au format `.csv`
+
+Ouvrir un nouveau notebook, ou bien un nouveau fichier dans votre IDE python (Spyder ou Pyzo). Déplacer le fichier `*.csv` dans le même dossier que le notebook/fichier python.
 
 Lire et stocker le contenu du fichier dans une liste python que vous appelerez `table`. 
 
-> On pourra s'aider de la page [Python > entrées / sorties](/docs/python/pages/ES/page1/#lire-écrire-dans-un-fichier) pour importer le fichier csv.
+> On pourra s'aider du dernier paragraphe de la page [Python > entrées / sorties](/docs/python/pages/ES/page1/#lire-écrire-dans-un-fichier) pour importer le fichier csv.
 
-> Dans une cellule du Notebook, explorer la liste table pour qu'elle affiche les informations suivantes
+> Dans votre editeur python, explorer la liste table pour qu'elle affiche les informations sur la longueur, sur les premiers élus.
+
+Si vous choisissez le bon caractère de séparation des données, vous devriez obtenir quelque chose d'approchant (la mise à jour est régulière, et les données peuvent différer):
 
 ```python
 > len(table)
-500100
-```
-
-```python
+490805
 > table[1]
 ['32',
  'Gers',
@@ -54,6 +54,24 @@ Lire et stocker le contenu du fichier dans une liste python que vous appelerez `
  'Sylvie',
  'F',
  ...
+```
+
+Si par contre, vous identifiez mal le caractère de séparation, vous allez obtenir quelque chose comme cela:
+
+```python
+> len(table)
+1
+> table[1]
+['32\tGers\t\t\t32249\tMauvezin\tMASAROTTI\tSylvie\tF']
+```
+
+ou peut-être:
+
+```python
+> len(table)
+1
+> table[1]
+['32;Gers;;;32249;Mauvezin;MASAROTTI;Sylvie;F']
 ```
 
 **Question:** Quels sont les rangs auxquels se trouvent le numero de departement, ainsi que celui du sexe de l'élu 'H'/'F'?
@@ -84,6 +102,8 @@ Exemple:
 (3143, 2646)
 ```
 
+
+
 ## Graphique
 Représenter alors cette parité dans votre notebook sur un diagramme circulaire.
 
@@ -93,6 +113,8 @@ Représenter alors cette parité dans votre notebook sur un diagramme circulaire
 
 ## Prolongement
 Rechercher si, pour l'un des departements, le ratio 'F'/'M' est supérieur à 1.
+
+**Faire un compte rendu avec les réponses, les scripts et graphiques**. *Utiliser un editeur de texte.*
 
 # Suggestion de projet
 Utiliser une API en python avec le module `request`, et charger directement le fichier de données. Une API est une interface logicielle qui permet de se « connecter » à un service, ou un serveur.
