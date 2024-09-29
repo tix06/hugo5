@@ -79,15 +79,17 @@ def creer_liste():
 ## Généralités sur les listes chainées
 Une liste chainée est un objet:
 
+
+
+* **non mutable**: 
+on peut la modifier en partie (ajout/suppression d'un élément), mais sa copie se fait par valeur. 
+
 * **dynamique**:
-on peut modifier sa taille après création, par exemple en faisant: `inserer(L, e)`
+on peut modifier sa taille après création, par exemple en faisant: `L = inserer(L, e)`, mais cela va créer un nouvel objet.
 
-* et **mutable**: 
-on peut le modifier en partie (ajout/suppression d'un élément), et sa copie se fait par reference. 
+* les éléments ont une relation d'ordre entre eux. 
 
-* dont les éléments ont une relation d'ordre entre eux. 
-
-* dont on peut atteindre un élément au rang i en temps proportionnel à i, avec une boucle par exemple.
+* on peut atteindre un élément au rang i en temps proportionnel à i, avec une boucle par exemple.
 
 **Mémoire**: Contrairement aux tableaux, les éléments d'une liste chaînée ne sont pas placés côte à côte dans la mémoire. Chaque case pointe vers une autre case en mémoire, qui n'est pas nécessairement stockée juste à côté.
 
@@ -99,11 +101,6 @@ Nous verrons d'autres implémentations pour ce type abstrait.
 # Tableaux
 Les tableaux se comportent de manière très similaire aux listes, sauf que les types d'objets qui y sont stockés sont limités. (Array)
 
-C'est un objet qui est:
-
-* statique: sa taille ne varie pas une fois celui-ci créé 
-* et mutable: on peut le modifier en partie, par exemple avec une instruction du genre: `T[i] = x`. Sa copie se fait par reference.
-
 Un tableau peut être représenté en Python par un tuple contenant 2 éléments: 
 
 * la liste des valeurs, de dimension fixe. On mettra `None` pour les valeurs non renseignés.
@@ -114,6 +111,17 @@ Par exemple:
 ```python
 T = ([6, 7, 8, None, None], 5)
 ```
+
+
+C'est alors un objet qui est:
+
+* **statique**: sa taille ne varie pas une fois celui-ci créé 
+* **non mutable**: mais avec un élément qui est lui *mutable*: 
+
+On ne peut pas modifier `T[0]` ou `T[1]`. Ce sont les éléments d'un tuple.
+
+Mais on peut modifier en partie `T[0]`, par exemple avec une instruction du genre: `T[0][i] = x`. La copie de T[0] se fait par reference.
+
 
 Un tableau peut servir à implémenter une grille de notes par exemple:
 
