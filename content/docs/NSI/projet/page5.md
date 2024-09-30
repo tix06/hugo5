@@ -39,7 +39,8 @@ black = (0, 0, 0)
 red = (255, 0, 0)
  
 dis = pygame.display.set_mode((800, 600))
- 
+clock = pygame.time.Clock()
+
 game_over = False
  
 x1 = 300
@@ -73,6 +74,7 @@ while not game_over:
     pygame.draw.rect(dis, black, [x1, y1, 10, 10])
  
     pygame.display.update()
+    clock.tick(30)
  
  
 pygame.quit()
@@ -182,7 +184,7 @@ from utils import *
 
 
 
-<!--
+
 # Correction fichier main.py
 ```python
 import pygame
@@ -273,7 +275,6 @@ def supprime_queue(S):
         S[i] = S[i+1]
     S.pop()
 ```
--->
 
 # Microbit: Petit jeu de type Snake en 2D
 
