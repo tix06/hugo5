@@ -35,7 +35,7 @@ Il est nécessaire de séparer le travail de la forme du document de celui du co
 
 
 # TP2 - Mettre en forme un document
-On s'aidera du tutoriel pour **LibreOffice Writer** à l'adresse suivante: {{< a link="https://www.youtube.com/watch?v=ekh2Q1DU8Mw" caption="Youtube - LibreOffice Writer 1/11 : Mettre en forme le style principal " >}}
+On s'aidera du tutoriel pour **LibreOffice Writer** à l'adresse suivante: {{< img src="/images/video.png" link="https://www.youtube.com/watch?v=ekh2Q1DU8Mw" caption="Youtube - LibreOffice Writer 1/11 : Mettre en forme le style principal " >}}
 
 ## Document .odt > LibreOffice Writer
 Le {{< a link="/pdf/competences/exercice_les_plastiques.odt" caption="document suivant" >}} ne présente aucune mise en forme pour son contenu.

@@ -48,7 +48,9 @@ A l'ouverture, il vous sera demandé de préciser le format des données.
 
 {{< img src="../images/excel_import2.png" caption="le format a été correctement renseigné" >}}
 
-Le logiciel Excel sert à PRESENTER les données. C'est à dire à reconstruire le tableau. Le visuel peut être important pour lire les informations contenues. Modifier les propriétés des éléments du tableau (lignes, colonnes, cellules, texte) pour copier celui présenté ci-dessous:
+Le logiciel Excel sert à PRESENTER les données. C'est à dire à reconstruire le tableau. Le visuel peut être important pour lire les informations contenues. 
+
+> Modifier les propriétés des éléments du tableau (lignes, colonnes, cellules, texte, couleurs) pour copier celui présenté ci-dessous:
 
 
 
@@ -98,7 +100,9 @@ Vous devriez obtenir un tableau ressemblant à celui-ci, mais avec plus de ligne
 ## Somme de toutes les valeurs de la colonne *Unités*
 Pour revenir au tableau initial, rappuyer sur Filtre dans le bandeau d'Excel.
 
-Cela retire tous les filtres.
+Cela retire tous les filtres. Vous allez maintenant programmer une fonction de calcul sur le tableau: La fonction *SOMME*.
+
+Voici un lien vers le [tuto de microsoft office.](https://support.microsoft.com/fr-fr/office/somme-somme-fonction-043e1c7d-7726-4e80-8f32-07b23e057f89)
 
 > Dans le tableau d'origine: 
 
