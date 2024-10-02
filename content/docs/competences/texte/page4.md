@@ -4,27 +4,35 @@ bookShowToc: false
 ---
 
 # Travail collaboratif 
-Document reponse: [framapad de la classe](https://mypads2.framapad.org/mypads/?/mypads/group/leo-9e5qut9tw/pad/view/rgpd-bd5qwt9ga)
+Document reponse: 
+
+* [framapad du groupe A](https://mypads2.framapad.org/mypads/?/mypads/group/ppe1-xj380s96i/pad/view/rgpd-a-wg381s95n)
+* [framapad du groupe B](https://mypads2.framapad.org/mypads/?/mypads/group/ppe1-xj380s96i/pad/view/rgpd-b-i338ds93d)
 
 Le *framapad* est un document avec editeur en ligne de la societé de logiciels libre *Framasoft*.
 
-* Commencer par entrer votre prénom pour savoir qui a édité le fichier.
-* Rédiger votre réponse à l'une ou plusieurs des questions posées, en ajoutant un paragraphe avec des mises en forme de caractères(Gras, Italique...).
-* Une fois tous les changements terminés, marquer votre version avec une étoile pour la sauvegarder en ligne et la retrouver dans l'historique.
-* Enregistrer le document au format open office `odt` pour l'avoir sur votre disque dur et l'éditer de façon plus complète dans LibreOffice Writer.
+* Commencer par *entrer votre prénom* pour vous identifier lors de votre travail d'edition.
+* Rédiger votre réponse: pour une seule ou plusieurs des questions posées. Préciser le numero de la question.
+* Une fois tous les changements terminés, marquez votre version avec une étoile pour la sauvegarder en ligne et la retrouver dans l'historique.
+
+{{< img src="../images/frama2.png" >}}
+
+* Enregistrer le document au format *.text* dans vos documents. Vous pourrez l'éditer de façon plus complète dans LibreOffice Writer dans une prochaine séance.
+
+{{< img src="../images/frama1.png" >}}
 
 ## Recherche Documentaire: Questions
 1. Quelles données relèvent de l'identité numérique, l'identité administrative, ou de l'indirectement nominatif?
 2. Qu'est ce que le RGPD
 3. Qu'est ce que la CNIL?
 4. Qui a pour devoir de se mettre en conformité vis à vis du RGPD?
-5. Une entreprise, pour être en conformité sur le traitement de données de ses clients, soit-elle adresser une demande auprès de la CNIL? Comment doit-elle s'y prendre?
+5. Une entreprise, pour être en conformité avec le traitement de données de ses clients, doit-elle adresser une demande auprès de la CNIL? Que doit-elle faire?
 6. Le RGPD interdit-il l'utilisation à des fins commerciales des données?
-6. Quelle est la différence entre une donnée, et une infrormation sur une personne?
+6. Quelle est la différence entre une donnée, et une information sur une personne?
 7. A partir de quelles données personnelles peut-on trouver des renseignements sur la santé et l'hygiène de vie d'une personne? Peut-on l'utiliser pour prendre des décisions sur son embauche, ou bien pour calculer le prix de sa cotisation mutuelle santé?
 8. Un restaurant qui livre des pizzas: quelles données va-t-il avoir besoin de collecter sur ses clients? Ces données peuvent-elles être considérées comme sensibles? Si la base de données du restaurant est piratée, celui-ci est-il responsable au regard de la loi?
-9. Que pensez-vous d'une entreprise qui utilise les données biométriques de ses employés pour contrôler leur identité et accès à leur poste de travail le matin (voir le film de science fiction Bienvenue à Gattaca)
-10. Lorsque je surfe sur le web, à la recherche d'un article à acheter: Le prix de l'article proposé par les commerçants va-t-il evoluer au fur et à mesure de mes activités sur le web? Y-a-t-il des traces de ma navigation?
+9. Que pensez-vous d'une entreprise qui utilise les données biométriques de ses employés pour contrôler leur identité et accès à leur poste de travail le matin (voir le film de science fiction *Bienvenue à Gattaca*)
+10. Lorsque je surfe sur le web, à la recherche d'un article à acheter: Le prix de l'article proposé par les commerçants va-t-il evoluer au fur et à mesure de mes activités sur le web? Y-a-t-il des traces de ma navigation? Qu'est-ce qu'un *tracker*?
 11. Suis-je en droit de demander à l'entreprise Google qu'elle me fournisse toutes mes traces numériques qui me concernent? Quelles seront ces traces numériques?
 
 

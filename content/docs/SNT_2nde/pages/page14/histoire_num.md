@@ -6,102 +6,9 @@ Title : codage
 # Civilisations anciennes
 Le document suivant donne un aperçu des périodes d'existence d'anciennes civilisations. 
 
-L'apparition des grandes civilisations commence alors que le néolithique prend fin. C'est l'usage de la metallurgie qui aura pour conséquence de structurer davantage la société, avec l'usage d'armes en métal par des soldats spécialisés. La protection des richesses accumulées par les producteurs est confiée à des guerriers professionnels. La société se hiérarchise.
-
-<div class="timeline">
-<div class="grid">
-  <div>-7000</div>
-  <div>-6000</div>
-  <div>-5000</div>
-  <div>-4000</div>
-  <div>-3000</div> 
-  <div>-2000</div>
-  <div>-1000</div>
-  <div>0</div>
-  <div>1000</div>
-  <div>2000</div>
-</div>
-<div class="wrapper" id="wrapper"></div>
-</div>
-
-<script>
-  let wrapper = document.getElementById('wrapper');
-let data = [
-  ['Néolithique', -7000,-3000],
-  ['Sumériens puis Babyloniens (Mésopotamie)', -3500, -550],
-  ['Egyptiens', -3000, -550],
-  ['Civilisations anciennes en Inde', -1600, 1200],
-  ['Période égéenne', -2000, -1200],
-  ['Grèce antique et empire romain', -1200, 500],
-  ['Chine ancienne', -2000, 500],
-  ['numération indienne',400,500],
-  ['numération indo-arabe',800,900],
-  ['numération arabe adoptée en occident',900,1000],
-  ['numération binaire',1700,1800]
-
-];
-data.sort((a, b) => {
-  if (a[1] < b[1]) {
-    return -1;
-  } else if (a[1] > b[1]) {
-    return 1;
-  } else if (a[2] < b[2]) {
-    return -1;
-  } else if (a[2] > b[2]) {
-    return 1;
-  } else {
-    return 0;
-  }
-});
-for (let i = 0; i < data.length; i++) {
-  let entry = data[i];
-  let div = document.createElement('div');
-  div.classList.add('entry');
-  div.style.width = 2000*0.9/9000*(entry[2]-entry[1]) + 'px';
-  //div.style.left = entry[1]*2 - 2000 + 'px';
-  div.style.left = (entry[1] + 7000)*2000*0.9/9000 + 'px';
-  div.style.top = 20 * i + 'px';
-  div.innerHTML = entry[0];
-  div.title = entry[0] + ' (' + entry[1] + '-' + entry[2] + ')';
-  wrapper.appendChild(div);
-}
-</script>
+L'apparition des grandes civilisations commence alors que le néolithique prend fin. C'est l'usage de la metallurgie qui aura pour conséquence de structurer davantage la société, avec l'usage d'armes en métal par des soldats spécialisés. La protection des richesses accumulées par les producteurs est confiée à des guerriers professionnels. La société se hiérarchise: [timeline](../timeline)
 
 
-<style>
-  .grid {
-  display:grid;
-  grid-template-columns:repeat(10, 200px) 40px;
-}
-.grid > div {
-  width:40px;
-  box-sizing:border-box;
-  /*border:1px solid green;*/*
-  color:#303;
-  background-color:#cfc;
-  text-align:center;
-}
-.grid > div:last-child {
-  width:40px;
-}
-
-.entry {
-  position:absolute;
-  box-sizing:border-box;
-  height:20px;
-  background-color:#201;
-  border:1px solid black;
-  color:white;
-  white-space:nowrap;
-  cursor:default;
-}
-.wrapper {
-  position:relative;
-  background-color:#804;
-  height:400px;
-  width:2040px;
-}
-</style>
 
 {{< img src="../images/carte.png" alt="IREM Lille" caption="Carte du monde. IREM Lille" >}}
 # La naissance de l'écriture... et du nombre
@@ -173,7 +80,7 @@ Toutes les civilisations n'ont pas adopté la numération décimale, ni les mêm
 
 - Les Sumériens au proche-orient comptaient en base 60 (numération sexagésimale).
 - La base 12 (système duodécimal) était connue et utilisée par certaines populations (Moyen-Orient, Roumanie, Égypte, etc.)
-- En Eurasie, les peuples indo-européens utilisaient un système décimal mais avec des symboles alphabétiques, notamment par les signes I, V, X, L, C, D et M, appelés chiffres romains: [voir article et exemples](https://fr.wikipedia.org/wiki/Num%C3%A9ration_romaine#Exemples)
+- En Eurasie, les peuples indo-européens utilisaient un système décimal mais avec des symboles alphabétiques, notamment par les signes I, V, X, L, C, D et M, appelés chiffres romains: [voir article et exemples](https://fr.wikipedia.org/wiki/Num%C3%A9ration_romaine#Exemples)[^4]
 
 {{< img src="../images/romain.png" caption="symboles romains" >}}
 
@@ -230,7 +137,7 @@ Au IXe siècle, les Arabes emprunteront aux Indiens le zéro, le mot sunya deven
 
 
 # Questions
-## Numération Babylonienne
+## Numération Babylonienne[^3]
 
 1. En vous aidant du documents suivant, traduire les inscriptions de la tablette sumérienne : compter le nombre d’animaux de chacune des espèces.
 {{< img src="../images/tabletteBab.png" alt="tablette Babylonienne" >}}
@@ -239,7 +146,7 @@ Au IXe siècle, les Arabes emprunteront aux Indiens le zéro, le mot sunya deven
 4. Comment les mésopotamiens (et Sumeriens) écrivaient-ils le nombre 1637 ?
 5. Expliquer en quoi on peut considérer que les sumériens utilisaient une numération de position ?
 
-## Numération Egyptienne
+## Numération Egyptienne[^2]
 C’est une numération de type additif.
 
 Les Égyptiens de l’Antiquité utilisaient des hiéroglyphes pour écrire leurs nombres. Ce système de hiéroglyphes est assez proche de notre système de numération décimale : chaque symbole possède une valeur (1,10,100,1 000...) et peut être écrit jusqu’à neuf fois.
@@ -247,13 +154,47 @@ Les Égyptiens de l’Antiquité utilisaient des hiéroglyphes pour écrire 
 1. En étudiant les trois exemples donnés ci-dessous, retrouver la valeur des sept hiéroglyphes utilisés. (voir images)
 2. Comment les egyptiens écrivaient-ils le nombre 1637 ?
 3. Comparer les numérations Babylonienne et Egyptienne : laquelle des deux est une numération de position ? Justifiez.
-4. Les egyptiens, avaient-il une manière de représenter les fractioos de 1 (par exemple 1/2)? Expliquer.
+4. Les egyptiens, avaient-il une manière de représenter les fractions de 1 (par exemple 1/2)? Expliquer.
 
-## Numération Romaine
+{{< img src="../images/egyptien1.png" alt="exemple de numeration egyptienne" caption="exemples, numeration egyptienne" >}}
+{{< img src="../images/egyptien2.png" alt="tableau a remplir" caption="tableau a remplir" >}}
+
+## Numération Maya[^7]
+La numération maya est une numération de base vingt pratiquée dans la civilisation mésoaméricaine maya. 
+
+Pour écrire les petits nombres, par exemple la durée d'une lunaison (c'est-à-dire les entiers 29 ou 30) ou les petits déplacements (dans l'almanach divinatoire de 260 jours), les Mayas disposaient d'une numération de type additif utilisant trois signes pour 1, 5 et 20 ; dans cette écriture : '20,9' s'interprète 20 + 9. On trouve ainsi le nombre 62 écrit à l'aide de 3 signes « 20 » complétés de 2 points ... (wikipedia).
+
+L'écriture d'un nombre se fait par empilement de chiffres. Chaque étage correspond à un poids 20 fois supérieur au poids de l'étage inférieur, à l'exception du passage du 2e au 3e étage où la multiplication n'est que de 18. Ainsi la valeur de l'étage le plus bas est multipliée par 1, du second étage par 20, du troisième étage par 20 × 18 = 360
+
+{{< img src="../images/mayas.jpg" caption="LeMonde Histoire">}}
+
+1. Les Mayas, utilisaient-ils l'écriture pour représenter les nombres? Si oui, sur quel support écrivaient-ils?
+2. S'agit-il d'une numération de position?
+3. Commenter le document ci-dessus et expliquer cette numération.
+
+## Numération Romaine[^4]
 1. Quels sont les symboles romains utilisés pour compter jusqu'à 2000?
 2. En quelle année, exprimée en chiffres romains, Jésus est-il né ?
 3. La numération romaine, peut-elle être considérée comme une numération de position?
 4. Comment les romains écrivaient-ils le nombre 1637 ?
+
+## Numération Chinoise[^5]
+1. S'agit-il d'une numération de position?
+2. Quels sont les symboles utilisés?
+3. Enoncer les principes d'une [numération en base 10](https://fr.wikipedia.org/wiki/Syst%C3%A8me_d%C3%A9cimal). 
+4. Comment les chinois écrivent-ils le nombre 1637 (dans l'écriture dite *normale*? Y-a-t-il des similitudes avec l'écriture Japonnaise?
+5. Est-ce que cette numération facilite les opérations entre les nombres? Comment? Expliquer en utilisant le principe du [boulier](https://fr.wikipedia.org/wiki/Boulier)
+
+Voir exemples sur le [monde-du-boulier.com](https://monde-du-boulier.com/blogs/news/calcul_boulier_chinois)
+
+## Numération Indo-arabe[^6]
+1. S'agit-il d'une numération de position?
+2. Quels sont les symboles utilisés? Comparer ceux utilisés par les indiens (Gurmukhi), les arabes (occidental/oriental), les européens.
+3. Enoncer les principes d'une [numération en base 10](https://fr.wikipedia.org/wiki/Syst%C3%A8me_d%C3%A9cimal). 
+4. Comment les indiens écrivent-ils le nombre 1637 (dans l'écriture dite (Gurmukhi)?
+5. Est-ce que cette numération facilite les opérations entre les nombres? Comment? Expliquer en utilisant le principe du [boulier](https://fr.wikipedia.org/wiki/Boulier)
+
+Voir exemples sur le [monde-du-boulier.com](https://monde-du-boulier.com/blogs/news/calcul_boulier_chinois)
 
 ## Numération binaire
 1. Quelle est la valeur de la base de la numération binaire?
@@ -301,11 +242,18 @@ Le nombre N = 347 après écriture binaire, se lit HABAKI.
 4. Comment sont traduits les nombres 52326 et 11847 dans le langage bibinaire?
 
 # Notes
-{{< img src="../images/egyptien1.png" alt="exemple de numeration egyptienne" caption="exemples, numeration egyptienne" >}}
-{{< img src="../images/egyptien2.png" alt="tableau a remplir" caption="tableau a remplir" >}}
+
 [^1]: Mésopotamiens : La civilisation babylonienne est héritière de Sumer, et elle s'est épanouie en Mésopotamie du Sud du début du IIe millénaire av. J.-C. jusqu'au début de notre ère. Elle est marquée par l'affirmation progressive, de la cité de Babylone, capitale de l'État qui connait son apogée à partir du VIe siècle av. J.-C. Cette cité prospère étend son influence du nord-est de la Syrie, au nord de l'Irak actuel, ainsi que les plaines plus au sud. Les milliers de tablettes cunéiformes découvertes sur les différents sites de Babylonie (Babylone, Ur, Uruk, Nippur, Sippar, etc.) ont permis de dresser le tableau d'une civilisation urbaine reposant sur une agriculture irriguée potentiellement très productive. [https://fr.wikipedia.org/wiki/Babylone](https://fr.wikipedia.org/wiki/Babylone)
 
 [^2]: Numération egyptienne, [lien wikipedia](https://fr.wikipedia.org/wiki/Num%C3%A9ration_%C3%A9gyptienne)
 
 [^3]: Numération babylonienne, [lien wikipedia](https://fr.wikipedia.org/wiki/Num%C3%A9ration_m%C3%A9sopotamienne)
+
+[^4]: Numération Romaine: [lien wikipedia](https://fr.wikipedia.org/wiki/Num%C3%A9ration_romaine#Exemples)
+
+[^5]: Numération Chinoise: [Lien wikipedia](https://fr.wikipedia.org/wiki/Num%C3%A9ration_chinoise)
+
+[^6]: Numération indienne [lien wikipedia](https://fr.wikipedia.org/wiki/Num%C3%A9ration_indienne) et Numération Indo-arabe: [Lien wikipedia](https://fr.wikipedia.org/wiki/Syst%C3%A8me_de_num%C3%A9ration_indo-arabe)
+
+[^7]: Numération Maya: [lien wikipedia](https://fr.wikipedia.org/wiki/Num%C3%A9ration_maya)
 
