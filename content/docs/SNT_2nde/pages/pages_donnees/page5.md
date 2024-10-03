@@ -40,7 +40,9 @@ Les guillemets vous permettent de choisir l'extension du fichier et de remplacer
 **Question b:** Même question, mais cette fois pour les fichiers `.csv`. Précisez, pour les données de votre fichier *fuits.csv*, si les données sont séparées, et si oui, quel est le caractère séparateur?
 
 # Présenter les données à l'aide d'un tableur
-> Démarrer le logiciel Excel (un tableur de la suite bureautique microsoft). Puis ouvrir le fichier *fruits.csv*.
+> Démarrer le logiciel Excel (un tableur de la suite bureautique microsoft). 
+
+> Choisir le bandeau **Données**. Chercher ensuite le bouton *importer un fichier texte ou csv*. Ouvir le fichier *fruits.csv*.
 
 A l'ouverture, il vous sera demandé de préciser le format des données.
 
@@ -48,23 +50,27 @@ A l'ouverture, il vous sera demandé de préciser le format des données.
 
 {{< img src="../images/excel_import2.png" caption="le format a été correctement renseigné" >}}
 
+Choisir aussi l'encodage des données, en utf-8. Cela permetra d'afficher aussi les caractères accentués:
+
+{{< img src="../images/excel4.png" >}}
+
 Le logiciel Excel sert à PRESENTER les données. C'est à dire à reconstruire le tableau. Le visuel peut être important pour lire les informations contenues. 
 
-> Modifier les propriétés des éléments du tableau (lignes, colonnes, cellules, texte, couleurs) pour copier celui présenté ci-dessous:
+> Vous devriez obtenir un tableau (lignes, colonnes, cellules, texte, couleurs) comme celui présenté ci-dessous:
 
 
 
 {{< img src="../images/tableau_orig_2.png" caption="exemple de présentation structurée des données en tableau" >}}
 
-**Question c:** Quelles sont les **propriétés** que vous avez modifiées? (le nom des boutons que vous avez utilisés, comme par exemple *couleur de fond*)
+**Question c:** Comment le logiciel a-t-il analysé le contenu du fichier pour obtenir cet affichage, en lignes et en colonnes?
 
 Maintenant que la présentation est satisfaisante:
 
 > ajoutez l'information suivante, en renseigant certaines valeurs dans le tableau:
 
-> *le commercial Sébastien a vendu 9814 Pommes dans la région Sud*
+> *le commercial **Sébastien** a vendu **9814 Pommes** dans la région **Sud***
 
-**Question d:** Quelle est la réference (la coordonnée) de la case dans laquelle vous avez renseigné *9814*? Pourquoi avez-vous choisi cette colonne?
+**Question d:** Quelles sont les réferences (coordonnées) des cases dans laquelle vous avez renseigné *Sébastien*, *Pommes*, région *Sud*, *9814*? Comment avez-vous choisi ces différentes colonnes?
 
 # Rechercher et Filtrer 
 ## Rechercher
@@ -75,10 +81,13 @@ Souvent, les tables contiennent de très nombreuses lignes, et ne peuvent pas to
 **Question e:** Quelles sont les réferences des cases qui sont sélectionnés lorsque l'on clique plusieurs fois sur *Suivant*?
 
 ## Filtrer par critère simple
+Si la feuille de calcul ne présente pas de filtres en tête de colonnes:
+
 * Commencer par selectionner toutes les colonnes A, B, C, D, E dans laquelles se trouvent les données du tableau.
 
 {{< img src="../images/excel1.png" >}}
-Dans le bandeau *Données*, choisir Filtrer (entonoir).
+
+* Dans le bandeau *Données*, choisir Filtrer (entonoir).
 
 Il apparait alors des listes de choix au dessus des descripteurs du tableau. Pour filtrer selon l'un des descripteurs, cliquer sur l'une de ces listes de choix:
 
@@ -100,11 +109,18 @@ Vous devriez obtenir un tableau ressemblant à celui-ci, mais avec plus de ligne
 ## Somme de toutes les valeurs de la colonne *Unités*
 Pour revenir au tableau initial, rappuyer sur Filtre dans le bandeau d'Excel.
 
-Cela retire tous les filtres. Vous allez maintenant programmer une fonction de calcul sur le tableau: La fonction *SOMME*.
+Cela retire tous les filtres. 
+
+### Format numérique
+Commencer par définir une plage de valeurs numériques. Lors de l'import des données, le format des cellules est souvent incompatible avec les fonctions de calcul. 
+
+> Sélectionner toutes les valeurs numériques du tableau. Dans le bandeau **Données**, choisir: **Convertir**. Et faire suivant, plusieurs fois, sans changer les options proposées. Les cellules sont maintenant en format NOMBRE.
+
+
+### Fonction somme
+Vous allez maintenant programmer une fonction de calcul sur le tableau: La fonction *SOMME*.
 
 Voici un lien vers le [tuto de microsoft office.](https://support.microsoft.com/fr-fr/office/somme-somme-fonction-043e1c7d-7726-4e80-8f32-07b23e057f89)
-
-> Dans le tableau d'origine: 
 
 > * cliquer dans la cellule juste sous la dernière valeur de la colonne *Unités*. 
 * Ecrire debut de la formule: `= SOMME(` 
@@ -118,14 +134,12 @@ Voici un lien vers le [tuto de microsoft office.](https://support.microsoft.com/
 ## Somme conditionnelle: SOMME.SI
 La fonction SOMME.SI permet de sélectionner certaines cellules d'une selection étendue.
 
-> On va s'aider du *concepteur de formule*:
-
-* Cliquer dans la cellule dans laquelle vous souhaitez rentrer la formule, sous le tableau.
-* écrire `= SOMME.SI(`
+> On va s'aider du *concepteur de formule*: Cliquer dans la cellule dans laquelle vous souhaitez rentrer la formule, sous le tableau, puis:
+> * écrire `= SOMME.SI(`
 
 {{< img src="../images/cadre_tab.png" caption="somme conditionnelle " >}}
 > * cliquer sur le bouton *fx* de la barre de saisie.
-* Aidez vous des champs suivants pour remplir les plages pour cette formule:
+> * Aidez vous des champs suivants pour remplir les plages pour cette formule:
 	* Plage: faire une selection étendue des valeurs de la colonne *Produits*
 	* Critères: écrire "Pommes", ou bien cliquer sur le mot "Pommes" dans l'une des cellules du tableau (la *C24* dans cet exemple.
 	* Somme_plage: selectionner toutes les valeurs numériques de la colonne *Unités*:
