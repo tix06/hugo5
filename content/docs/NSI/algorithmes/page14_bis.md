@@ -4,7 +4,9 @@ Title: algoritmes de recherche
 
 # Recherche dans une liste de mots
 * Télécharger les listes de mots à partir du lien suivant:{{< a link="/scripts/fichiersmots.zip" caption="fichiersmots.zip" >}}
-* Ouvrir un notebook et mettre le fichier dans le MÊME dossier. Dezipper les fichiers de mots.
+
+> Dezipper les fichiers de mots. Obtenir 4 fichier avec extension `.txt`
+> Ouvrir un editeur python et enregistrer le fichier (save as ...) dans le MÊME dossier. 
 
 Les fichiers:
 
@@ -15,10 +17,28 @@ Les fichiers:
 | ods4.txt | Officiel du Scrabble - Version 4 - 2004 - Sans accents |
 | pli07.txt | Petit Larousse Illustré 2007 - Sans accents |
 
-Pour chaque fichier de mots
-* Importer la liste de mots sous forme de liste et afficher les 13 premiers éléments de la liste à l'aide du script suivant. 
+## Import des librairies
+On aura besoin pour le TP de l'import suivant. Copier et coller ces lignes dans votre première cellule:
 
-Par exemple, pour la liste de mots `liste_francais.txt`:
+```python
+## import
+import os
+from random import choice
+import time
+import numpy as np
+os.chdir('U://Documents/scripts_python/dictionnaire_de_mots')
+```
+
+La dernière ligne règle le problème de dossier courant pour la lecture de fichiers texte avec la fonction `open`. Il faudra adapter le chemin de `os.chdir` en fonction de votre installation.
+
+> Executer le fichier
+
+> Dans le shell, vérifier que le dossier contient les fichiers `.txt` avec la fonction `os.listdir()`
+
+## Importer un premier fichier texte
+Importer la liste de mots du fichier `liste_francais.txt` dans une liste et afficher les 13 derniers éléments de la liste à l'aide du script suivant. 
+
+Par exemple, pour `liste_francais.txt`:
 
 ```python
 mots = []
@@ -91,15 +111,19 @@ t1 = time.time()
 t1-t0 # affichage en s
 ``` 
 
-> **4.** Répéter plusieurs fois l'appel de la fonction `recherche_mot(mots)`. Par exemple 100 fois. Stocker dans une liste `T` le temps $t1-t0$ mis par la fonction pour trouver un mot aleatoire. Puis calculer la moyenne des valeurs de `T` avec la fonction `mean` de `numpy`:
+> **4.** Répéter plusieurs fois l'appel de la fonction `recherche_mot(mots)`. Par exemple 100 fois (ou 1000 fois pour être encore plus précis). Stocker dans une liste `T` le temps $t1-t0$ mis par la fonction pour trouver un mot aleatoire. Puis calculer la moyenne des valeurs de `T` avec la fonction `mean` de `numpy`:
 
 ```python
 import numpy as np
 T = []
 
-# a completer
 # appel de la fonction recherche_mot et ajouter le temps
 # a la liste T
+for i in range(100):
+    t0 = time.time()
+    recherche_mot(mots)
+    t1 = time.time()
+    T.append(t1-t0)
 
 r = np.mean(T)
 r

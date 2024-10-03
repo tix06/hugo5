@@ -44,15 +44,23 @@ Les guillemets vous permettent de choisir l'extension du fichier et de remplacer
 
 > Choisir le bandeau **Données**. Chercher ensuite le bouton *importer un fichier texte ou csv*. Ouvir le fichier *fruits.csv*.
 
-A l'ouverture, il vous sera demandé de préciser le format des données.
+{{< img src="../images/gimp1.png" caption="importer un fichier csv depuis le bandeau Données" >}}
+
+A l'ouverture, il vous sera demandé de préciser l'encodage et les caractères de séparation des données.
+
+Choisir l'encodage des données, en utf-8. Cela permetra d'afficher aussi les caractères accentués:
+
+{{< img src="../images/gimp2.png" caption="à gauche, les caractères accentués ne sont pas gérés. à droite, en utf-8, les caractères accentués sont pris en charge." >}}
+
+Le paramètre *semicolon* (point virgule) précise le caractère séparateur.
+
+Dans une version plus ancienne du logiciel Excel, la boite de dialogue peut différer:
 
 {{< img src="../images/excel_import1.png" caption="le format n'a pas été correctement renseigné" >}}
 
 {{< img src="../images/excel_import2.png" caption="le format a été correctement renseigné" >}}
 
-Choisir aussi l'encodage des données, en utf-8. Cela permetra d'afficher aussi les caractères accentués:
 
-{{< img src="../images/excel4.png" >}}
 
 Le logiciel Excel sert à PRESENTER les données. C'est à dire à reconstruire le tableau. Le visuel peut être important pour lire les informations contenues. 
 
@@ -81,6 +89,10 @@ Souvent, les tables contiennent de très nombreuses lignes, et ne peuvent pas to
 **Question e:** Quelles sont les réferences des cases qui sont sélectionnés lorsque l'on clique plusieurs fois sur *Suivant*?
 
 ## Filtrer par critère simple
+Le fichier, lorsqu'il est importé depuis le bandeau *Données*, s'ouvre dans un classeur avec *filtres*.
+
+{{< img src="../images/gimp3.png" caption="à gauche: ouverture du classeur AVEC filtres. à droite, ouverture SANS filtres" >}}
+
 Si la feuille de calcul ne présente pas de filtres en tête de colonnes:
 
 * Commencer par selectionner toutes les colonnes A, B, C, D, E dans laquelles se trouvent les données du tableau.
