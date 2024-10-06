@@ -126,8 +126,11 @@ Cela retire tous les filtres.
 ### Format numérique
 Commencer par définir une plage de valeurs numériques. Lors de l'import des données, le format des cellules est souvent incompatible avec les fonctions de calcul. 
 
-> Sélectionner toutes les valeurs numériques du tableau. Dans le bandeau **Données**, choisir: **Convertir**. Et faire suivant, plusieurs fois, sans changer les options proposées. Les cellules sont maintenant en format NOMBRE.
+> Sélectionner toutes les valeurs numériques du tableau. 
 
+{{< img src="../images/gimp4.png" >}}
+
+> Dans le bandeau **Données**, choisir: **Convertir**. Et faire suivant, plusieurs fois, sans changer les options proposées. Les cellules sont maintenant en format NOMBRE.
 
 ### Fonction somme
 Vous allez maintenant programmer une fonction de calcul sur le tableau: La fonction *SOMME*.

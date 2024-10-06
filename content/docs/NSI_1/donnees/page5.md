@@ -3,7 +3,8 @@ Title: fonctions en python
 ---
 
 # Boucles bornées en Python
-**1. Definition:** Une **boucle bornée**  est un système d’instructions qui permet de répéter un certain nombre de fois toute une série d’opérations.
+## Definition
+Une **boucle bornée**  est un système d’instructions qui permet de répéter un certain nombre de fois toute une série d’opérations.
 
 La syntaxe d'une boucle bornée, en langage algorithmique peut s'écrire:
 
@@ -23,15 +24,28 @@ for i in range(n):
   instruction 2
 ``` 
 
-* **Remarques:**
+On peut représenter ce script avec des modules à assembler:
 
+{{< img src="../images/bloc1.png" caption="analogie avec des briques de construction du programme" >}}
+
+## Remarques
+### Construction de la boucle bornée
   * Le bloc d'instruction sera executé n fois. Celui-ci peut contenir une ou plusieurs instructions, du moment qu'elles sont bien positionnées dans le bloc.
   * En *Python*, le **bloc** est identifié par une **indentation**: un retrait par rapport au bord gauche, comprenant 2 espaces (ou 4).
   * Pour sortir du bloc, on élimine l'indentation (on revient sur le bord gauche)
-  * La fonction `range(n)` renvoie la liste des entiers de 0 à n-1. C’est un principe général en informatique, on commence toujours à compter à partir de 0, et il faut donc s’arrêter à n-1 pour effectuer n fois la boucle.
+
+  {{< img src="../images/bloc2.png" caption="bloc de retour à la fin de la boucle" >}}
+
+  * La fonction `range(n)` renvoie la liste des entiers de 0 à n-1. C’est un principe général en informatique, on commence toujours à compter à partir de 0, et il faut donc s’arrêter à **n-1 pour effectuer n fois** la boucle.
   * Pour chaque itération, le variant `i` prend une nouvelle valeur de l'ensemble `{0,1,2,... n-1}`, et peut être utilisé dans le bloc d'instructions. 
   * On peut choisir n'importe quel nom pour le variant, pas seulement `i`.
 
+### Boucle bornée et non bornée
+Pour la boucle bornée `for`, il n'est pas necessaire d'ajouter une instruction dans le bloc pour que le variant change de valeur à chaque itération. Cela se fait tout seul, à chaque fois que le programme revient sur l'instruction `for`.
+
+{{< img src="../images/bloc3.png" caption="modification du variant i à chaque itération" >}}
+
+## Exemples
 * *Exemple 1*: afficher le variant de boucle `i`
 
 ```python
@@ -59,7 +73,19 @@ for i in range(3):
 5
 ```
 
-**2. Exercice:** Programmez une boucle bornée qui affiche (fonction `print`) les 10 valeurs de la table de 7 ($7 \times 1 = 7...$)
+## Exercices:
+*Pour chacun des exercices, on pourra s'aider de briques à assembler pour représenter le programme.*
+
+1. Programmez une boucle bornée qui affiche (fonction `print`) les 5 premières valeurs de la table de 7 ($7 \times 1 = 7...$). 
+
+Remplir ensuite le tableau de suivi des valeurs:
+
+| itération n° | i | x |
+| --- | --- | --- |
+| 1  | 0  | ...  |
+| ...  | ...  | ...  |
+
+2. Ecrire un programme qui demande les notes obtenues aux 3 contrôles de NSI. Et lorsque la note renseignée est inférieure à 10, affiche le message: "Peut mieux faire".
 
 # Les fonctions en python
 ## Généralités
