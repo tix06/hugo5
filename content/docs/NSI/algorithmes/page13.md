@@ -28,13 +28,18 @@ En [bas de page](https://www.data.gouv.fr/fr/datasets/repertoire-national-des-el
 *Ouvrir les données jugées d'intérêt public, c'est encourager leur réutilisation par tout un chacun. Cela permet d'encourager la transparence démocratique, de bénéficier de services au quotidien ou de prendre des décisions plus éclairées.*
 
 ## Exploration et traitement de données 
-Télécharger sur le site gouvernemental le fichier des élus municipaux, au format `.csv`
+Télécharger sur le site gouvernemental le fichier {{< a link="https://www.data.gouv.fr/fr/datasets/r/d5f400de-ae3f-4966-8cb6-a85c70c6c24a" caption="ldes élus municipaux ;" >}}, au format `.csv`
 
 Ouvrir un nouveau notebook, ou bien un nouveau fichier dans votre IDE python (Spyder ou Pyzo). Déplacer le fichier `*.csv` dans le même dossier que le notebook/fichier python.
 
 Lire et stocker le contenu du fichier dans une liste python que vous appelerez `table`. 
 
-> On pourra s'aider du dernier paragraphe de la page [Python > entrées / sorties](/docs/python/pages/ES/page1/#lire-écrire-dans-un-fichier) pour importer le fichier csv.
+> On pourra s'aider: 
+>* du dernier paragraphe de la page [Python > entrées / sorties](/docs/python/pages/ES/page1/#lire-écrire-dans-un-fichier) pour importer le fichier csv.
+* du TP sur les algorithmes de recherche dans un dictionnaire: [voir TP ici](/docs/NSI/algorithmes/page14_bis/)
+
+
+Une fois la liste des élus importée dans une liste python:
 
 > Dans votre editeur python, explorer la liste table pour qu'elle affiche les informations sur la longueur, sur les premiers élus.
 
@@ -74,13 +79,15 @@ ou peut-être:
 ['32;Gers;;;32249;Mauvezin;MASAROTTI;Sylvie;F']
 ```
 
-**Question:** Quels sont les rangs auxquels se trouvent le numero de departement, ainsi que celui du sexe de l'élu 'H'/'F'?
+**Question 1:** Quels sont les rangs auxquels se trouvent le numero de departement, ainsi que celui du sexe de l'élu 'H'/'F'?
 
-> Explorer pour définir l'ordre dans lequel sont classés les élus. Les élus du *Gers*, occupent-ils les premiers rangs? Et si oui, jusqu'à quel rang? Ecrire un script python qui recherche cette information.
+> Explorer pour définir l'ordre dans lequel sont classés les élus. 
+
+**Question 2:** Les élus du *Gers*, occupent-ils les premiers rangs? Et si oui, jusqu'à quel rang? Ecrire un script python qui recherche cette information.
 
 
 ## Fonction recherche
-Ecrire une fonction `recherche` qui *recherche* le premier élu dans un departement donné. La fonction *recherche* aura pour seul argument la variable textuelle `dpt` correspondant au departement recherché.
+> Ecrire une fonction `recherche` qui *recherche* le premier élu dans un departement donné. La fonction *recherche* aura pour seul argument la variable textuelle `dpt` correspondant au departement recherché.
 
 Cette fonction prend les éléments du tableau un par un, en commençant par le debut, et recherche la premiere occurence (le premier élu de ce departement).
 
@@ -91,8 +98,10 @@ Par exemple:
 363891
 ```
 
+**Question 3:** Donner le script de cette fonction.
+
 ## Fonction pariteHF
-Ecrire une fonction *pariteHF* qui compte le nombre d'élus Hommes et le nombre d'élues Femmes pour un departement donné. La fonction renvoie alors le couple de valeurs H/F.
+> Ecrire une fonction *pariteHF* qui compte le nombre d'élus Hommes et le nombre d'élues Femmes pour un departement donné. La fonction renvoie alors le couple de valeurs H/F.
 
 Exemple:
 
@@ -102,7 +111,7 @@ Exemple:
 (3143, 2646)
 ```
 
-
+**Question 4:** Donner le script de cette fonction.
 
 ## Graphique
 Représenter alors cette parité dans votre notebook sur un diagramme circulaire.
