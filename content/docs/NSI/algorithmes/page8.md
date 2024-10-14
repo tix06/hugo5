@@ -10,7 +10,7 @@ Ce cours comporte plusieurs parties
 * méthodes [Diviser pour regner](/docs/NSI/algorithmes/page5/)
 
 # Algorithmes de tri
-Les activités de tri sont très fréquentes en informatique. Dans un projet informatique, on préfère qu'un programme passer du temps à trier les données plutôt qu'à les rechercher.
+Les activités de tri sont très fréquents en informatique. Dans un projet informatique, on préfère qu'un programme passer du temps à trier les données plutôt qu'à les rechercher.
 
 On presente dans ce chapitre TROIS algorithmes de tri. Mais il en existe de très nombreux, dont l'efficacité diffère grandement. Voici un aperçu de la durée comparée de quelques [algorithmes de tri](https://toptal.com/developers/sorting-algorithms), selon la nature de la liste à trier:
 
