@@ -2,8 +2,10 @@
 Title: de Writer a HTML
 ---
 
-# Partie 2: Rédiger un document pour le Web
-## Le HTML : Structurer le document
+# docx, odt, txt et html: différents documents textuels
+Les fichiers aux extensions docx, odt, txt et html permettent d'écrire et présenter du texte. Pour afficher le texte de manière structurée, il faut lui ajouter des *métadonnées*. Cela se fait d'une manière très speciale avec le html, ce que nous allons voir ici.
+
+## Le HTML : Document pour le Web
 Un document pour le Web est constitué d’un ou plusieurs fichiers de type texte, avec un format qui précise le contenu (en langage HTML), et le style (en langage CSS). Il est prévu pour être ouvert avec un **navigateur**.
 
 La manière avec laquelle vous allez construire ce document suit les même étapes que la rédaction d’un document textuel. Mais ici, les instructions de **mise en page** seront ajoutées au **contenu**, dans le même fichier. Ce fichier aura pour extension **.html**
@@ -22,7 +24,7 @@ Le contenu doit être mis dans un document avec l'extension `.html`.
 **Problèmes:** 
 
 * On obtient alors un document qui n'a aucune structure
-* De plus, avec certains navigateurs, certains caractères ne sont pas reconnus et cela peut donner le rendu suivant:
+* De plus, avec *certains navigateurs*, certains caractères ne sont pas reconnus et cela peut donner le rendu suivant:
 
 {{< img src="../images/html3.png" caption="fichier texte non formaté ouvert avec un navigateur" >}}
 
@@ -50,7 +52,10 @@ Plusieurs siècles av. J.C, les hommes utilisaient déjà ...
 </html>
 ```
 
-> **Navigateur:** Recharger la page (CTRL + r). Que remarquez vous?
+> **Navigateur:** 
+> * Recharger la page (CTRL + r). Que remarquez vous?
+> * Dans le fichier *html*. Remplacer `<meta charset="utf-8">` par `<meta charset="us-ascii">`. Recharger la page. Que remarquez vous? Lequel des 2 encodages, *us-ascii* ou *utf-8* est le plus adapté pour présenter les caractères. 
+> * Choisir le bon encodage
 
 
 ## Définir des éléments dans la page
