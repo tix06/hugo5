@@ -3,7 +3,7 @@ Title: assembleur
 ---
 
 # Le langage *assembleur*
-Un langage d'assemblage ou langage assembleur est, en programmation informatique, le langage de plus bas niveau qui représente le langage machine sous une forme lisible par un humain. ([wiki](https://fr.wikipedia.org/wiki/Assembleur))
+Le langage assembleur est, en programmation informatique, le langage de plus bas niveau qui représente le langage machine sous une forme lisible par un humain. ([wiki](https://fr.wikipedia.org/wiki/Assembleur))
 
 Le premier programme assembleur a été écrit par Nathaniel Rochester pour l'IBM 701 (le premier ordinateur commercialisé par IBM) en 1954.
 

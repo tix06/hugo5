@@ -65,4 +65,4 @@ Title: ordinateur et processeur
 * A l'aide d'un schéma, placer les différentes mémoires, présentes à l'intérieur ou à l'exterieur d'un microprocesseur, en précisant leur éloignement par rapport à l'Unité de Contrôle: registres, cache, et RAM.
 * Définir ce qu'est le *parallélisme*.
 
-# Décrire le fil d'execution d'un processeur (prochaine seance)
+# Décrire le fil d'execution d'un processeur ([seance 2](../page51))

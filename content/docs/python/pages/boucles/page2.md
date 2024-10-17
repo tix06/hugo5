@@ -136,6 +136,8 @@ for i in range(n):
   instruction 2
 ``` 
 
+{{< img src="../images/cb_boucle1.png" caption="demonstration avec python_puzzle. La boucle realise 4 itérations." >}}
+
 * **Remarques:**
 
   * Le bloc d'instruction sera executé n fois. Celui-ci peut contenir une ou plusieurs instructions, du moment qu'elles sont bien positionnées dans le bloc.
