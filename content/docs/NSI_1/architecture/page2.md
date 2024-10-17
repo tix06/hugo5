@@ -2,6 +2,16 @@
 Title: architecture 2
 ---
 
+*Séquence composée de 3 parties:*
+
+* TP1 Composer son ordinateur à partir d'un site commercial: [Lien](/docs/NSI_1/architecture/page5/)
+* TP2: Comment fonctionne un processeur? [Lien](/docs/NSI_1/architecture/page51/)
+* TP3: Programmes plus evolués, de python à l'assembleur: [Lien](/docs/NSI_1/architecture/page3/)
+
+*Cours*:
+
+* Modèle d'architecture Von Neumann: [Lien](/docs/NSI_1/architecture/page2/)
+
 # Qu'est ce qu'un ordinateur?
 Un ordinateur est une *machine* qui traite de *l'information*, stockée dans la *mémoire*, à l'aide du *processeur*. Les instructions de ces traitements sont aussi stockés dans la mémoire, sous forme de *programmes*.
 
@@ -64,9 +74,12 @@ Les constituants de l'ordinateur sont composés de circuits intégrés. On trouv
 # Le fonctionnement du processeur
 ## Généralités
 ### Videos sur le fonctionnement du processeur
-{{< img src="/images/video.png" link="https://www.youtube.com/watch?v=etlFow3LB6o" caption="Généralités sur le fonctionnement d'un processeur" >}}
+{{< img src="../images/hervediscours.png" link="https://youtu.be/hJnEnrOqHzM?si=VvWwweDQNsbL6CGC&t=295" caption="Hervé Discours - architecture Von Neumann - illustration avec une cuisine (min 5 - 10)" >}}
 
-{{< img src="/images/video.png" link="https://www.youtube.com/watch?v=75BI9TBe1Sw" caption="Brève introduction sur le fonctionnement d'un processeur" >}}
+{{< img src="/images/video.png" link="https://youtu.be/hJnEnrOqHzM?si=m93F0xs8KLClVrNG&t=903" caption="Hervé Discours - architecture Von Neumann - déroulé d'un programme (min 15 - 20), archi X2, memoire cache (min 20-25)" >}}
+
+{{< img src="/images/video.png" link="https://youtu.be/hJnEnrOqHzM?si=jxuQmhHcsPg7C3Vc&t=1788" caption="Hervé Discours - architecture Von Neumann - langage assembleur (min 29 - 35)" >}}
+
 
 ### Les 2 sous parties du processeur
 {{< img src="../images/architectureN2.png" caption="Architecture de Von-Neumann - processeur" >}}

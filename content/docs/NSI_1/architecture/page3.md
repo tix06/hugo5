@@ -2,6 +2,16 @@
 Title: assembleur
 ---
 
+*Séquence composée de 3 parties:*
+
+* TP1 Composer son ordinateur à partir d'un site commercial: [Lien](/docs/NSI_1/architecture/page5/)
+* TP2: Comment fonctionne un processeur? [Lien](/docs/NSI_1/architecture/page51/)
+* TP3: Programmes plus evolués, de python à l'assembleur: [Lien](/docs/NSI_1/architecture/page3/)
+
+*Cours*:
+
+* Modèle d'architecture Von Neumann: [Lien](/docs/NSI_1/architecture/page2/)
+
 # Le langage *assembleur*
 Le langage assembleur est, en programmation informatique, le langage de plus bas niveau qui représente le langage machine sous une forme lisible par un humain. ([wiki](https://fr.wikipedia.org/wiki/Assembleur))
 

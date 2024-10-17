@@ -2,6 +2,16 @@
 Title: simulateur processeur
 ---
 
+*Séquence composée de 3 parties:*
+
+* TP1 Composer son ordinateur à partir d'un site commercial: [Lien](/docs/NSI_1/architecture/page5/)
+* TP2: Comment fonctionne un processeur? [Lien](/docs/NSI_1/architecture/page51/)
+* TP3: Programmes plus evolués, de python à l'assembleur: [Lien](/docs/NSI_1/architecture/page3/)
+
+*Cours*:
+
+* Modèle d'architecture Von Neumann: [Lien](/docs/NSI_1/architecture/page2/)
+
 # Comment fonctionne un processeur?
 ## Modèle d'architecture de von Neumann
  
@@ -176,8 +186,11 @@ y:    18
 
 
 ## Suite du TP
-s'il vous reste du temps, faire les question *à faire vous même 5 et 6* du TP [qkzk](https://qkzk.xyz/docs/nsi/cours_premiere/architecture/5_aqa/6_assembleur_aqa_intro/) 
+{{< img src="/images/video.png" link="https://www.youtube.com/watch?app=desktop&v=hOvSJbqBdMo" caption="Video MOOC NSI - de python à l'assembleur" >}}
 
+* s'il vous reste du temps, faire les question *à faire vous même 5 et 6* du TP [qkzk](https://qkzk.xyz/docs/nsi/cours_premiere/architecture/5_aqa/6_assembleur_aqa_intro/) 
+
+* La séance 2: programmes plus évolués en assembleur: [Lien](/docs/NSI_1/architecture/page5/)
 # Liens
 * interstices [- modèle d'architecture Von Neumann](https://interstices.info/le-modele-darchitecture-de-von-neumann/)
 * wikipedia: [Von Neumann](https://fr.wikipedia.org/wiki/Architecture_de_von_Neumann)
