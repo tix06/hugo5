@@ -4,6 +4,7 @@ Title : recursivité
 
 Le cours comprend:
 
+* une partie 1: Introduction à la recursivité {{< a link="../page2" caption="Recursivité et fonction récurente" >}}
 * une partie 2:{{< a link="../page22" caption="Suite du cours sur la recursivité" >}}
 * une{{< a link="../page6/" caption="page d'exercices" >}}
 
@@ -131,7 +132,7 @@ Une grande partie des problèmes peut se résoudre avec une implémentation réc
 
 Enfin, l'algorithme récursif utilise une *pile d'appels*, comme vu sur l'animation suivante:
 
-{{< img src="https://lyceum.fr/644c0bfaf567173ce9856250e140d861/animation-puiss-recursive.gif" alt="animation recursivité puissance"  caption="animation issue de la page lyceum > recursivite (B. Abel)" >}}
+{{< img src="../images/page2/pythontutor.GIF" alt="animation recursivité additions successives"  caption="animation issue de l'application pythontutor" >}}
 Il est facile de traiter des suites avec la méthode récursive:
 
 * factorielle
@@ -308,103 +309,13 @@ où :
 | T(n) = T(n-1) + a×n + b | T(n) = T(0) + a×n×(n+1)/2 + n×b (suite arithmetique pour le 2e terme) | $O(n^2)$ |
 | T(n) = T(n/2) + b | $T(n) = T(1) + b×log_2 (n)$ | $O(log_2 n)$ |
 
-# Application : recherche du PGCD
-## Problème  
-Etant donné deux entiers naturels n et m, calculer leur pgcd (plus grand commun diviseur)
-
-## algorithme d'Euclide 
-Euclide propose l’algorithme suivant:
-
-1. Calculez le reste r dans la division de a par b
-2. Si r est nul alors le pgcd est b
-3. Sinon recommencer l’étape 1 avec a = b et b = r
-
-
-{{< img src="../images/page2/euclide.png" >}}
-> Exemple d’exécution : a = 32, b = 12 :
-
-– 32 = (2 x 12) + 8
-
-– 12 = (1 x 8) + 4
-
-– 8 = (2 x 4) + 0
-
-On a donc pgcd(32, 12) = 4
-
-### Algorithme PGCD itératif
-```python
-def euclide(a,b):
-    """
-    a et b sont des entiers, a > b
-    euclide retourne un entier qui est le PGCD de a et b
-    """
-    r = a % b
-    while r>0 :
-        a = b
-        b = r
-        r = a % b
-    return b
-```
-
-<div class="preuve">
-  <div class="entete">
-    Prouver l'algorithme itératif
-  </div>
-  <div class="demo">
-    <ol>
-      <li>Terminaison : on utilise une boucle non bornée avec y qui est le convergent. On affecte à y le reste de la division par y (c'est donc inferieur à y). y décroit ainsi jusqu'à 0, ce qui est la condition de fin de la boucle.</li>
-      <li>Correction : Tout diviseur commun de a et b divise aussi r = a - bq, et réciproquement tout diviseur commun de b et r divise aussi a = bq + r. Donc le calcul du PGCD de a et b se ramène à celui du PGCD de b et r. <br>l'invariant de boucle, c'est donc :<br>
-      euclide(a,b) = euclide(b, a modulo b)<br>
-      C'est ce qui est réalisé par la fonction, puisque l'on a comme valeurs pour les couples (x,y) successivement : <br>
-      (a,b)<br>
-      (b, a mod b)<br>
-      (a mod b, (a mod b) mod (a mod b))...<br>
-      (* , 0)<br>
-    </li>
-  </ol>
-</div>
-</div>
-
-### algorithme recursif
-```python
-def PGCD(a,b):
-  """
-  PGCD : entier correspondant au plus grand diviseur commun de a par b
-  a et b : entiers tels que a > b
-  """
-  if b == 0 : return a
-  else:
-    r = a % b
-    return PGCD(b,r)
-```
-
-
-<div class="preuve">
-  <div class="entete">
-    Complexité
-  </div>
-  <div class="demo">
-On prouve par récurrence que le cas le pire (c'est à dire celui où le nombre d'itérations à exécuter est le plus grand), est celui où a et b sont des termes consécutifs de la <strong>suite de Fibonacci</strong>. Cela revient à montrer que  deux termes successifs de la suite de Fibonacci sont premiers entre eux.
-(si leur plus grand diviseur commun est 1)
-
-<ul><li>La propriété est vraie pour n = 1 : f<sub>2</sub> et f<sub>1</sub> sont premiers entre eux.</li>
-<li>Supposons que f<sub>n</sub> et f<sub>n-1</sub> soient premiers entre eux :<br>
-Soit d le PGCD de fn et fn+1, alors d divise f<sub>n+1</sub>– f<sub>n</sub>.<br>
-d est à la fois diviseur de f<sub>n+1</sub> et f<sub>n</sub><br>
-Or : (suite de Fibonacci)<br>
-$$f_{n+1} = f_n + f_{n-1}$$
-Donc : 
-$$f_{n-1} = f_{n+1} - f_n$$
-Il faut alors que f<sub>n-1</sub>, f<sub>n+1</sub> et f<sub>n</sub> aient un même diviseur, d. Or le diviseur commun de f<sub>n-1</sub> et f<sub>n</sub> est 1, donc d = 1.
-</li>
-</ul>
-Dans ce <strong>pire</strong> cas, la complexité de l'algorithme est alors O(log<sub>10</sub> b). C'est proportionnel au nombre de divisions euclidiennes réalisées.
-</div>
-</div>
 
 
 
-# Application : suite de Fibonacci
+
+# Application 1: suite de Fibonacci
+*La suite de Fibonacci est une suite récurente d'ordre 2: On calcule l'un de ses termes à l’aide des deux termes précédents.*
+
 ## Définitions
 Fibonacci était le surnom de Léonard de Pise (1170 -1250) . Il a posé un problème dans lequel il cherche à calculer le nombre de couples de lapins au bout de n années, lorsqu’ils se reproduisent selon les règles suivantes :
 
@@ -416,7 +327,7 @@ On peut compléter le tableau suivant présentant l'effectif de ces couples de l
 | numero de l'année | nombre de couples de l'année précédente | nouveau nombre de couples |
 | --- | --- | --- |
 | 0 | 0 | 0 |
-| 1 | 1 | 1 |
+| 1 | 0 | 1 |
 | 2 | 1 | 1 + 0 = 1|
 | 3 | 1 | 1 + 1 = 2|
 | 4 | 2 | 2 + 1 = 3|
@@ -468,16 +379,154 @@ def fibo(n):
 Parfois, l'algorithme récursif n'est pas le plus performant: Pour l'exemple de la suite de Fibonacci, on constate que les mêmes calculs sont répétés plusieurs fois, comme fibo(2) dans le cas présent pour N = 4):
 
 {{< img src="../images/page2/fibo.png" caption="pile d'appels pour la suite de fibonacci recursive" >}}
+
+
+# Application 2: recherche du PGCD
+*La méthode de recherche du PGCD utilise aussi une suite récurente d'ordre 2: On calcule l'un de ses termes à l’aide des deux termes précédents.*
+
+## Problème  
+Etant donné deux entiers naturels n et m, calculer leur pgcd (plus grand commun diviseur)
+
+## algorithme d'Euclide 
+Euclide propose l’algorithme suivant:
+
+1. Calculez le reste r dans la division de a par b
+2. Si r est nul alors le pgcd est b
+3. Sinon recommencer l’étape 1 avec a = b et b = r
+
+
+{{< img src="../images/page2/euclide.png" >}}
+> Exemple d’exécution : a = 32, b = 12 :
+
+– 32 = (2 x 12) + 8
+
+– 12 = (1 x 8) + 4
+
+– 8 = (2 x 4) + 0
+
+On a donc pgcd(32, 12) = 4
+
+La page dédiée sur [wikipedia](https://fr.wikipedia.org/wiki/Algorithme_d%27Euclide) propose une illustration géométrique de cette méthode. *Un couple d'entiers est vu comme un rectangle, dont le PGCD est la longueur du côté du plus grand carré permettant de carreler entièrement ce rectangle:*
+
+{{< img src="../images/page2/euclide2.png" caption="Explication géométrique de l'algorithme d'Euclide sur les entiers 21 et 15. - source wikipedia" >}}
+
+### Algorithme PGCD itératif
+```python
+def euclide(a,b):
+    """
+    a et b sont des entiers, a > b
+    euclide retourne un entier qui est le PGCD de a et b
+    """
+    r = a % b
+    while r>0 :
+        a = b
+        b = r
+        r = a % b
+    return b
+```
+
+<div class="preuve">
+  <div class="entete">
+    Prouver l'algorithme itératif
+  </div>
+  <div class="demo">
+    <ol>
+      <li>Terminaison : on utilise une boucle non bornée avec y qui est le convergent. On affecte à y le reste de la division par y (c'est donc inferieur à y). y décroit ainsi jusqu'à 0, ce qui est la condition de fin de la boucle.</li>
+      <li>Correction : Tout diviseur commun de a et b divise aussi r = a - bq, et réciproquement tout diviseur commun de b et r divise aussi a = bq + r. Donc le calcul du PGCD de a et b se ramène à celui du PGCD de b et r. <br>l'invariant de boucle, c'est donc :<br>
+      euclide(a,b) = euclide(b, a modulo b)<br>
+      C'est ce qui est réalisé par la fonction, puisque l'on a comme valeurs pour les couples (x,y) successivement : <br>
+      (a,b)<br>
+      (b, a mod b)<br>
+      (a mod b, (a mod b) mod (a mod b))...<br>
+      (* , 0)<br>
+    </li>
+  </ol>
+</div>
+</div>
+
+### algorithme recursif
+Le PGCD d'Euclide calcule une suite définie par une récurence à 2 termes:
+
+$r_0 = a$
+
+$r_1 = b$
+
+$r_2 = r_0 \\% ~r_1$
+
+$r_{n+1} = r_{n-1} \\% r_n$
+
+```python
+def PGCD(a,b):
+  """
+  PGCD : entier correspondant au plus grand diviseur commun de a par b
+  a et b : entiers tels que a > b
+  """
+  if b == 0 : return a
+  else:
+    r = a % b
+    return PGCD(b,r)
+```
+
+
+<div class="preuve">
+  <div class="entete">
+    Complexité
+  </div>
+  <div class="demo">
+On prouve par récurrence que le cas le pire (c'est à dire celui où le nombre d'itérations à exécuter est le plus grand), est celui où a et b sont des termes consécutifs de la <strong>suite de Fibonacci</strong>. Cela revient à montrer que  deux termes successifs de la suite de Fibonacci sont premiers entre eux.
+(si leur plus grand diviseur commun est 1)
+
+<ul><li>La propriété est vraie pour n = 1 : f<sub>2</sub> et f<sub>1</sub> sont premiers entre eux.</li>
+<li>Supposons que f<sub>n</sub> et f<sub>n-1</sub> soient premiers entre eux :<br>
+Soit d le PGCD de fn et fn+1, alors d divise f<sub>n+1</sub>– f<sub>n</sub>.<br>
+d est à la fois diviseur de f<sub>n+1</sub> et f<sub>n</sub><br>
+Or : (suite de Fibonacci)<br>
+$$f_{n+1} = f_n + f_{n-1}$$
+Donc : 
+$$f_{n-1} = f_{n+1} - f_n$$
+Il faut alors que f<sub>n-1</sub>, f<sub>n+1</sub> et f<sub>n</sub> aient un même diviseur, d. Or le diviseur commun de f<sub>n-1</sub> et f<sub>n</sub> est 1, donc d = 1.
+</li>
+</ul>
+Dans ce <strong>pire</strong> cas, la complexité de l'algorithme est alors O(log<sub>10</sub> b). C'est proportionnel au nombre de divisions euclidiennes réalisées.
+</div>
+</div>
+
 # Suite du cours
 Aller à la [page 2](../page22/) du cours.
 
 La récursivité intervient aussi dans de nombreux problèmes où elle s’impose comme la méthode la plus adaptée, pour ne pas dire la seule. Un exemple historique est celui des tours de Hanoi. Un jeu inventé par Edouard Lucas, vers 1880. Son traitement sur ordinateur a fait sensation, grâce à la simplicité de son script récursif...
 
 # Exercices
-## Ex 1 : longueur d'une liste
+## Ex 1 : 
+On place un capital exprimé en euros égal à $w_0 = 1500$ avec un taux d'intérêt égal à 4,5% par an et on note $w_n$ le capital obtenu au bout de n années.
+ 
+1. Exprimer $w_n$ en fonction de $w_{n-1}$.
+2. Ecrire le script récursif d'une fonction `capital` qui calcule le montant du capital à l'année `n`. Cette fonction aura pour paramètres `n` et `t`, le taux d'interêt.
+3. Calculer grâce à cette fonction la valeur du capital au bout de 10 ans.
+4. Au bout de combien d'années le capital initial aura-t-il doublé ?
+
+*Exercice adapté de la page [bibmath.net](https://www.bibmath.net/ressources/index.php?action=affiche&quoi=bde/analyse/suitesseries/suitenum_rec&type=fexo)*
+
+## Ex 2 : Dessin recursif
+Soit la relation de recurence suivante:
+$$u_{n+1} = \tfrac{8u_n}{9} + \tfrac{1}{9}$$
+Le premier terme de la suite est $u_0 = 0$
+
+### Script python
+Ecrire en python le script de la fonction recursive correspondante, qui calcule au rang `n` le nombre $u_n$. Appeler cette fonction  `f`.
+### Application géométrique
+On considère un carré de côté 1. On le partage en 9 carrés égaux, et on colorie le carré central. Puis, pour chaque carré non-colorié, on réitère le procédé. On note $u_n$ l'aire coloriée après l'étape `n`. La suite $u_n$ est $u_{n+1} = \tfrac{8u_n}{9} + \tfrac{1}{9}$
+
+Quelle est la limite de la suite $u_n$?
+
+*Exercice adapté de la page [bibmath.net](https://www.bibmath.net/ressources/index.php?action=affiche&quoi=bde/analyse/suitesseries/suitenum_rec&type=fexo)*
+
+## Ex 3 : longueur d'une liste
  
 
 ### algorithme itératif : 
+La fonction suivante calcule la longueur d'une chaine de caractères `seq` passée en argument.
+
 ```python
 def len_iterative(seq): 
     """
@@ -489,17 +538,20 @@ def len_iterative(seq):
     return count
 ```
 
-#### réaliser la preuve de cet algorithme. 
+Réaliser la preuve de cet algorithme. 
 
 ### algorithme récursif
+a. Montrer que la relation de récurence $u_{n+1} = 1 + u_n$ permet de compter de 1 en 1.
 
-#### Ecrire le script python de l'algorithme récursif
+b. Soit la chaine de caractères `s = "abcd"`. On veut supprimer le premier caractère de `s` à l'aide d'un *slice* python. Quelle est l'instruction python correspondante?
 
-*Aide pour l'écriture de l'algorithme recursif :* la fonction récursive s'appelera `len_recursive`, et aura aussi pour argument `seq`. Si on veut passer en argument la liste `seq` de laquelle on retire le premier élément, on fait : `len_recursive(seq[1:])`. Il faudra alors s'inspirer de la relation de récurence suivante : $$u_{n+1} = 1 + u_n$$ lors de l'appel recursif.
+c. Ecrire le script python de l'algorithme récursif
+
+*Aide pour l'écriture de l'algorithme recursif :* la fonction récursive s'appelera `len_recursive`, et aura pour argument `seq`. Si on veut passer en argument la liste `seq` de laquelle on retire le premier élément, on fait : `len_recursive(seq[1:])`. Il faudra alors s'inspirer de la relation de récurence suivante lors de l'appel recursif: $$u_{n+1} = 1 + u_n$$
 
 
 
-## Ex 2 : Exponentiation
+## Ex 4 : Exponentiation
 Etudions l'exponentiation à travers deux exemples.
 ```python
 def exp1(n,x) : 
@@ -528,7 +580,7 @@ def exp2(n,x):
 2. Pour la fonction `exp2` : Soit $u_n$ le nombre de produits nécessaires pour calculer une puissance n-ième. Quelle est la relation de récurrence vérifiée par $u_{n+1}$ ? $$u_{n+1} = u_n + ...$$
 3. En déduire la complexité pour chacune de ces 2 fonctions.
 
-## Ex 3: dichotomie recursif
+## Ex 5: dichotomie recursif
 la méthode de dichotomie pour calculer la racine d’une fonction. Soit une fonction f : R → R continue, dont on sait qu’elle a une racine et une seule sur un intervalle [a, b]. On cherche une valeur approchée de cette racine. voir figure ci-dessous 
 
 {{< img src="../images/page2/racine.png" caption="principe de la dichotomie" >}}

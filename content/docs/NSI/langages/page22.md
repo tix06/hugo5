@@ -1,11 +1,28 @@
 ---
 Title: autres domaines recursivite
 ---
+
+Le cours comprend:
+
+* une partie 1: Introduction à la recursivité {{< a link="../page2" caption="Recursivité et fonction récurente" >}}
+* une partie 2:{{< a link="../page22" caption="Suite du cours sur la recursivité" >}}
+* une{{< a link="../page6/" caption="page d'exercices" >}}
+
+Dans la 1ere partie, nous avons vu que la récursivité repose sur la capacité d'une fonction à s'appeler elle-même, de façon répétitive, jusqu'à ce qu'une certaine condition soit satisfaite. A chaque appel récursif, les paramètres de l'appel sont modifiés.
+
+Cette méthode est utilisée surtout parce qu'elle facilite la résolution de problème liés à des relations de récurence (partie 1).
+
 Dans cette **deuxieme partie du cours sur la recursivité**, nous allons étudier plus en detail la manière de definir la partie héredité d'un problème.
 
 La question à laquelle on cherchera à repondre:
 
 * supposons que le problème est/sera résolu pour *le rang (n-1)*, comment utiliser le resultat du rang (n-1) pour resoudre le *rang n*?
+
+La récursivité sert alors à imiter la manière dont l'être humain résoudrait certains problèmes. L'idée est d'arriver à comprendre comment il est possible de créer un sous-programme récursif en prévoyant les paramètres.
+
+La fonction va exécuter une tâche, puis s'appeler elle-même, de façon répétitive jusqu'à la réalisation d'une condition particulière. C'est la condition d'arrêt. Les appels succéssifs sont alors restés actifs. Ils débouclent l'un après l'autre jusqu'à ce que le premier appel se termine finalement.
+
+La terminaison de cette série d'appels récursifs repose donc sur la convergence des paramètres de la fonction vers cette condition d'arrêt.
 
 # Application de la recursivité: les tours de Hanoï
 ## Principe
