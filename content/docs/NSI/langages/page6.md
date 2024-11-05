@@ -135,6 +135,76 @@ Le milieu est constitué de la chaine retournée par l'appel recursif de la fonc
 
 {{< vitta 63677ac691291 >}}
 
+L'editeur Vittascience peut présenter des problèmes. Choisir alors un IDE local sur votre machine.
+
+# Exercice 6: algorithme d'Euclide 
+Euclide propose l’algorithme suivant:
+
+1. Calculez le reste r dans la division de a par b
+2. Si r est nul alors le pgcd est b
+3. Sinon recommencer l’étape 1 avec a = b et b = r
+
+
+{{< img src="../images/page2/euclide.png" >}}
+> Exemple d’exécution : a = 32, b = 12 :
+
+– 32 = (2 x 12) + 8
+
+– 12 = (1 x 8) + 4
+
+– 8 = (2 x 4) + 0
+
+On a donc pgcd(32, 12) = 4
+
+La page dédiée sur [wikipedia](https://fr.wikipedia.org/wiki/Algorithme_d%27Euclide) propose une illustration géométrique de cette méthode. *Un couple d'entiers est vu comme un rectangle, dont le PGCD est la longueur du côté du plus grand carré permettant de carreler entièrement ce rectangle:*
+
+{{< img src="../images/page2/euclide2.png" caption="Explication géométrique de l'algorithme d'Euclide sur les entiers 21 et 15. - source wikipedia" >}}
+
+```python
+def euclide(a,b):
+    """
+    a et b sont des entiers, a > b
+    euclide retourne un entier qui est le PGCD de a et b
+    """
+    r = a % b
+    while r>0 :
+        a = b
+        b = r
+        r = a % b
+    return b
+```
+
+1. Tester l'algorithme itératif avec un couple de valeurs de votre choix.
+
+Le PGCD d'Euclide calcule une suite définie par une récurence à 2 termes:
+
+$r_0 = a$
+
+$r_1 = b$
+
+$r_2 = r_0 \\% ~r_1$
+
+$r_{n+1} = r_{n-1} \\% r_n$
+
+```python
+def PGCD(a,b):
+  """
+  PGCD : entier correspondant au plus grand diviseur commun de a par b
+  a et b : entiers tels que a > b
+  b correspond à r_n, a correspond à r_{n-1}, r à r_{n+1}
+  return:
+  -------
+  appel recursif avec b et r
+  """
+  if b == 0 : return a
+  else:
+    r = .. % ..
+    return PGCD(...,...)
+```
+
+2. Compléter la fonction recursive du calcul du PGCD et vérifier son (bon) fonctionnement.
+
+
 
 [RETOUR au cours sur la recursivité](../page2/)
 # Ressources
