@@ -95,9 +95,9 @@ Vous pouvez repasser à un affichage en base 10 (bouton "OPTION"->"signed")
 
 > On peut ralentir la simulation avec `<<`. Et avancer le programme Pas à Pas (STEP). 
 
-* **Q4a.** Quelle instruction, chargée depuis la mémoire, va déclencher l'opération d'addition?
+* **Q4a.** Quelle instruction en assembleur, va déclencher l'opération d'addition? Quel composant de l'ordinateur charge cette instruction et commande son execution?
 
-* **Q4b.** Quel est le code binaire (en *langage machine*) pour l'opération d'addition? Quelle est l'*instruction en assembleur* correspondante?
+* **Q4b.** Quel est le code binaire (*langage machine*) pour l'opération d'addition? Quelle est le code hexadecimal correspondant?
 
 * **Q5.** Quelle partie du processeur réalise l'addition? A partir de quels registres? Ou place t-il le résultat (quel registre)?
 
@@ -135,7 +135,7 @@ Le programme suivant affecte une valeur dans un registre, puis la copie dans la 
 
 
 ```
-      MOV R0, #fe
+      MOV R0, #254
       STR R0, 55
       HALT
 ```
@@ -144,7 +144,7 @@ Le programme suivant affecte une valeur dans un registre, puis la copie dans la 
 
 L'assembleur a fait son travail, il a converti les 3 lignes de notre programme en instructions machines, la première instruction machine est stockée à l'adresse mémoire 000 (elle correspond à "MOV R0,#254" en assembleur).
 
-**Q8.** Vérifier que 254 (base 10) = fe (base 16).
+**Q8.** Vérifier que 254 (base 10) = fe (base 16). (Rappels: f <=> 15 et a un poids de 16, e <=> 14 et a le poids de 1)
 
 **Q9.** Combien de lignes fait le programme? Quelles sont les adresses dans la RAM des instructions (donner la somme colonne + ligne)?
 
@@ -186,11 +186,16 @@ y:    18
 
 
 ## Suite du TP
-{{< img src="/images/video.png" link="https://www.youtube.com/watch?app=desktop&v=hOvSJbqBdMo" caption="Video MOOC NSI - de python à l'assembleur" >}}
+
 
 * s'il vous reste du temps, faire les question *à faire vous même 5 et 6* du TP [qkzk](https://qkzk.xyz/docs/nsi/cours_premiere/architecture/5_aqa/6_assembleur_aqa_intro/) 
 
-* La séance 2: programmes plus évolués en assembleur: [Lien](/docs/NSI_1/architecture/page5/)
+*On utilisera le bouton INFO sous le simulateur pour prendre connaissance des instructions utiles.
+
+* La séance 2: programmes plus évolués en assembleur: [Lien](/)
+
+{{< img src="/images/video.png" link="https://www.youtube.com/watch?app=desktop&v=hOvSJbqBdMo" caption="Video MOOC NSI - de python à l'assembleur" >}}
+
 # Liens
 * interstices [- modèle d'architecture Von Neumann](https://interstices.info/le-modele-darchitecture-de-von-neumann/)
 * wikipedia: [Von Neumann](https://fr.wikipedia.org/wiki/Architecture_de_von_Neumann)
