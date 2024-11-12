@@ -84,3 +84,70 @@ def rechercheDicho (elem, liste):
     m = (deb+fin)//2
   return False 
 ```
+
+# Sujet Métropole Sept 2 2021 Exercice 4
+Cet exercice porte sur la programmation en général et la récursivité en particulier.
+
+On s’intéresse dans cet exercice à un algorithme de mélange des éléments d’une liste.
+
+1. Pour la suite, il sera utile de disposer d'une fonction echange qui permet d'échanger dans une liste lst les éléments d'indice `i1` et `i2`.
+Expliquer pourquoi le code Python ci-dessous ne réalise pas cet échange et en proposer une modification.
+
+```python
+def echange(lst, i1, i2):
+ lst[i2] = lst[i1]
+ lst[i1] = lst[i2]
+```
+
+2. La documentation du module random de Python fournit les informations ci-dessous concernant la fonction `randint(a,b)` :
+
+```
+Renvoie un entier aléatoire N tel que a <= N <= b. 
+```
+
+Parmi les valeurs ci-dessous, quelles sont celles qui peuvent être renvoyées par l'appel `randint(0, 10)` ?
+
+```
+0   1   3.5   9   10  11
+```
+
+3. Le mélange de Fischer Yates est un algorithme permettant de permuter
+aléatoirement les éléments d'une liste. On donne ci-dessous une mise en œuvre récursive de cet algorithme en Python. 
+
+```python
+from random import randint
+
+def melange(lst, ind):
+  print(lst)
+  if ind > 0:
+    j = randint(0, ind)
+    echange(lst, ind, j)
+    melange(lst, ind-1) 
+```
+
+a. Expliquer pourquoi la fonction melange se termine toujours.
+
+b. Lors de l’appel de la fonction melange, la valeur du paramètre `ind` doit être égale au plus grand indice possible de la liste `lst`.
+
+Pour une liste de longueur `n`, quel est le nombre d'appels récursifs de la fonction melange effectués, sans compter l’appel initial ?
+
+c. On considère le script ci-dessous :
+
+```python
+lst = [v for v in range(5)]
+melange(lst, 4)
+```
+
+On suppose que les valeurs successivement renvoyées par la fonction
+`randint` sont 2, 1, 2 et 0.
+
+Les deux premiers affichages produits par l'instruction `print(lst)` de la fonction melange sont :
+
+```python
+[0, 1, 2, 3, 4]
+[0, 1, 4, 3, 2]
+```
+
+Donner les affichages suivants produits par la fonction melange.
+
+d. Proposer une version itérative du mélange de Fischer Yates. 
