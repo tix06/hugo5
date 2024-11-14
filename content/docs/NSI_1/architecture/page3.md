@@ -2,7 +2,7 @@
 Title: assembleur
 ---
 
-*Séquence composée de 3 parties:*
+*Séquence composée de 3 Travaux pratiques:*
 
 * TP1 Composer son ordinateur à partir d'un site commercial: [Lien](/docs/NSI_1/architecture/page5/)
 * TP2: Comment fonctionne un processeur? [Lien](/docs/NSI_1/architecture/page51/)
@@ -15,11 +15,15 @@ Title: assembleur
 # Le langage *assembleur*
 Le langage assembleur est, en programmation informatique, le langage de plus bas niveau qui représente le langage machine sous une forme lisible par un humain. ([wiki](https://fr.wikipedia.org/wiki/Assembleur))
 
+<!--
 Le premier programme assembleur a été écrit par Nathaniel Rochester pour l'IBM 701 (le premier ordinateur commercialisé par IBM) en 1954.
 
 {{< img src="../images/archi6.png" link="https://fr.wikipedia.org/wiki/Assembleur" caption="exemple de programme assembleur pour  le microprocessor Motorola 6800 8-bit  - source : " >}}
+-->
 
-Pour échanger des données avec la mémoire, le processeur transfert l'état d'un registre dans une case mémoire (STR) ou l'état d'une case mémoire dans un registre (LDR). On rappelle que la mémoire contient à la fois les instructions et les données.
+L'assembleur oblige à programmer la *gestion des mémoires*:
+
+Pour échanger des données avec la mémoire, le processeur transfert l'état d'un registre dans une case mémoire (STR) ou l'état d'une case mémoire dans un registre (LDR). On rappelle que la mémoire contient à la fois les instructions et les données. Mais les *calculs* du processeur se font sur les *registres*. Il faut donc prévoir de charger les valeurs de la RAM vers les registres avant de faire une opération.
 
 D'ailleurs, une instruction machine est une chaine binaire composée de 2 parties:
 
@@ -30,8 +34,7 @@ D'ailleurs, une instruction machine est une chaine binaire composée de 2 partie
 * Lancer le simulateur
 {{< img src="../images/ARM.png" link="https://www.peterhigginson.co.uk/AQA/" caption="clic droit > ouvrir dans un nouvel onglet pour lancer le simulateur ARM" >}}
 
-* Explications en video
-{{< img src="/images/video.png" link="https://www.youtube.com/watch?v=mhpwogkbtDU&t=17s" caption="Explications (video) sur le simulateur ARM -" >}}
+
 
 ## Les 3 familles d'instructions machine
 Ce sont les instructions:
@@ -73,7 +76,7 @@ Le programme suivant affecte une valeur dans un registre, puis la copie dans la 
 
 **question d:** Si l'on suppose que la complexité temporelle est égale au nombre de fois qu'il faut appuyer sur le bouton *STEP* pour arriver à la dernière ligne du programme: Quelle est la compléxité de ce programme?
 
-#### Exemple 2: échange de valeurs
+#### Exemple 2: Programme mystère
 Dans un programme en assembleur, il sera plus facile de manipuler des variables que des adresses mémoires.
 
 ```
@@ -91,13 +94,13 @@ y:    18
 
 > Copier-coller le script, *assembler*.
 
-**question a**: Vérifier que 23 (base 10) = 12 (base 16), et que 18 (base 10) = 12 (base 16).
+**question a**: Vérifier que 23 (base 10) = 17 (base 16), et que 18 (base 10) = 12 (base 16).
 
 **question b**: Combien de lignes fait le programme? Quelles sont les adresses dans la RAM des instructions (donner la somme colonne + ligne)? Quelles sont les adresses RAM des données?
 
 > Dérouler le programme à vitesse réduite.
 
-**question c**: Interpréter les lignes 0 à 4 du programme (donner une explication en langage naturel).
+**question c**: Interpréter les lignes 0 à 4 du programme (donner une explication en langage naturel). Que fait le programme mystère?
 
 ### Arithmétique
 Ce sont les opérations courantes (addition, soustraction, multiplication par 2, division par 2). Elles se font depuis un registre, vers un autre registre.
@@ -131,9 +134,29 @@ L'un de ces registres est le *Program Counter*, PC. Celui-ci repère l'état cou
       HALT
 ```
 
-**question a:** Ce programme, permet-il d'additionner $123 + (-145)$? Pourquoi?
+**question a:** Ce programme, permet-il d'additionner des nombres relatifs, comme par exemple: $123 + (-145)$? Quelle est alors la représentation binaire de $-145$?
 
-**question b:** Créer un programme qui multiplie par 2 le nombre saisi par l'utilisateur (avec LSL), affiche le résultat, et le stocke dans la RAM. (ou dans une variable).
+**question b:** Recopier sur votre cahier le script correspondant en python:
+
+```python
+x = int(input('entrer la valeur de x'))
+y = int(input('entrer la valeur de y'))
+x = x + y
+print(x)
+```
+
+**question c:** Compléter le programme assembleur qui multiplie par 2 le nombre saisi par l'utilisateur (avec LSL), affiche le résultat, et le stocke dans la RAM à l'emplacement 10.
+
+```
+     INP R0,2
+     LSL R0, R0, ...
+     OUT R0, 4
+     STR ..., ...
+
+```
+
+
+**question d:** Ecrire dans votre cahier le script correspondant en python.
 
 ### Rupture de séquence
 Les ruptures de séquence utilisent des étiquettes, à définir dans le programme. Le programme va alors s'executer normalement, ligne après ligne, sauf si un branchement l'amène à une ligne, portant une etiquette.
@@ -150,6 +173,13 @@ CMP R1, R2
 BGT label
 ```
 
+**plus petit que:** On utilise une combinaison de 2 lignes pour effectuer le test *si R1 < R2 aller à la ligne label*:
+
+```
+CMP R1, R2
+BLT label
+```
+
 **est egal à:** On utilise une combinaison de 2 lignes pour effectuer le test *si R1 == R2 aller à la ligne label*:
 
 ```
@@ -164,7 +194,38 @@ La liste complète des instructions se trouve à la page INFO accessible depuis 
 
 
 
-#### Exemple 4 boucle infinie
+#### Exemple 4 max: programme qui retourne le plus grand des 2 nombres saisis par l'utilisateur
+*Ce programme peut être directement chargé depuis le bouton SELECT du simulateur.*
+
+```
+0     INP R0,2
+1     INP R1,2
+2     CMP R1,R0
+3     BGT HIGHER
+4     OUT R0,4
+5     B DONE
+HIGHER:
+6     OUT R1,4
+DONE:
+7     HALT
+      // Input two numbers and output the higher
+```
+
+Dans ce 2eme exemple, si R1 est supérieur à R0 (test à la ligne 2), alors le programme effectue un *branchement conditionnel* à la ligne 3 (BGT est le branchement pour Greater Than). 
+
+Si R1 > R0, alors le programme passe directement de la ligne 3... à celle dont l'etiquette est HIGHER, donc à la ligne 6.
+
+Sinon il passe à la ligne 4 (OUT R0,4), ce qui est le cours naturel de lecture du programme, ligne après ligne. Le branchement à la ligne suivante, B DONE le renvoie à la ligne d'etiquette DONE. Ce qui evite d'executer OUT R1,4 qui est réservé au branchement HIGHER.
+
+*Remarque: on peut choisir n'importe quelle nom pour l'etiquette que l'on met dans le programme: HIGHER, TEST, DONE, ... peu importe.*
+
+**question a:** qu'est ce qui est affiché si l'on saisit la valeur 18 pour R0 et 9 pour R1? Puis 10 pour R0 et 20 pour R1?
+
+**question b:** à quoi sert la ligne 6 `B DONE`? Que se passerait-il si cette ligne n'y était pas, et que l'on saisit la valeur 18 pour R0 et 9 pour R1?
+
+**question c:** Ecrire dans votre cahier le script correspondant en python.
+
+#### Exemple 5: boucle infinie
 Le programme s'execute de la manière suivante: ligne 0 (affectation de la valeur 16 au registre R0), puis ligne 1 (on definit une etiquette `boucle`), puis ligne 2 (addition R0+1), puis ligne 3, ligne 4, ...
 
 ```
@@ -187,31 +248,11 @@ BGT break
 
 L'étiquette `break` devra alors être placée après celle `B boucle` afin de pouvoir poursuivre le programme.
 
-**question b:** Ré-écrire le script précédent afin de sortir de la boucle lorsque R0 stocke une vameur supérieure à 20.
+**question b:** Ré-écrire le script précédent afin de sortir de la boucle lorsque R0 stocke une valeur supérieure à 20.
 
-#### Exemple 5 max: programme qui retourne le plus grand des 2 nombres saisis par l'utilisateur
 
-```
-      INP R0,2
-      INP R1,2
-      CMP R1,R0
-      BGT HIGHER
-      OUT R0,4
-      B DONE
-HIGHER:
-      OUT R1,4
-DONE:
-      HALT
-      // Input two numbers and output the higher
-```
 
-Dans ce 2eme exemple, si R1 est supérieur à R0 (test à la ligne 3), alors le programme effectue un *branchement conditionnel* à la ligne 4 (BGT est le branchement pour Greater Than). Il execute à ligne 4 l'appel de la fonction HIGHER), sinon il passe à la ligne 5 (OUT R0,4).
-
-**question a:** qu'est ce qui est affiché si l'on saisit la valeur 18 pour R0 et 9 pour R1? Puis 10 pour R0 et 20 pour R1?
-**question b:** à quoi sert la ligne 6 `B DONE`? Que se passerait-il si cette ligne n'y était pas, et que l'on saisit la valeur 18 pour R0 et 9 pour R1?
-
-# Travail pratique: Assembleur
-Utiliser le{{< a link="https://www.peterhigginson.co.uk/AQA/" caption="simulateur" >}}
+<!--
 ## Opérations simples
 **1.** **Prog 1**. Il s'agit d'obtenir le nombre 84 à partir des nombres 50,25,8,7,3 et 1 avec les opérations : addition et soustraction uniquement.
 
@@ -234,14 +275,16 @@ Tester le programme en le déroulant pas à pas (appuis successifs sur le bouton
 **2.** **Prog 2**. Obtenir 84 à partir de 90,25,8,7,3 et 1 avec les opérations : addition et soustraction uniquement.
 
 **3.** **Prog 3**. Obtenir 128, en partant de la valeur 1 stockée dans R0. Utilisez les  instructions de multiplication par 2 du langage.
-
+-->
 ## Programmer avec des boucles
-**1.** Cliquer sur SELECT et choisir le programme `max` en assembleur qui affiche le plus grand de deux entiers entrés au clavier, le comprendre et l'exécuter (Bien comprendre les instructions B, CMP et BGT voir le manuel)
 
-**2.** **Prog 4**. Ecrire en assembleur un programme utilisant des fonctions parmis LSL, LSR, B et BNE qui affiche 1 si le nombre est pair , 0 sinon. (BNE: Branchement si Not Equal).
 
-## Calculer 1+2+3...+n où n est entré au clavier:
-**1.** Compléter le programme en assembleur ci-dessous pour résoudre le problème puis essayer avec n = 3 en mode pas à pas
+
+
+
+### Prog 1: Calculer 1+2+3...+n où n est entré au clavier: 
+Compléter le programme en assembleur ci-dessous pour résoudre le problème puis essayer avec n = 3 en mode pas à pas.
+
 Exécuter avec RUN en vitesse maximale pour n = 10
 
 ```
@@ -257,7 +300,56 @@ OUT R2,4
 HALT
 ```
 
-**2.** Estimer le nombre d'opérations significatives effectuées pour n = 10. Combien d'opérations significatives seraient réalisées pour n = 100?
+**questions prog 1.** 
+
+* Estimer le nombre d'opérations significatives effectuées pour n = 10.
+* Estimer le nombre d'opérations significatives qui seraient réalisées pour n = 100.
+* Ecrire dans votre cahier le script correspondant en python.
+
+### Prog 2: boucle while
+Ecrire le programme assembleur équivalent:
+
+```python
+x = 0
+while x < 3:
+      x = x + 1
+print(x)
+```
+
+A la fin du programme, la variable `x` doit être égale à 3.
+
+*Astuce:* Le `while` est suivi d'une condition d'execution (x<3). Ici, en assembleur, on utilise plutôt une condition d'arrêt.
+
+Ainsi, l'instruction python `while x<3` sera écrite à l'aide de plusieurs lignes en assembleur:
+
+```
+CMP R0,#3
+BEQ sortieboucle
+...
+B revenirwhile
+```
+
+**questions prog 2.** 
+
+* Quelle est la condition d'arrêt correspondante?
+* Ecrire dans votre cahier le script complet en assembleur.
+
+### Prog 3: Pair/Impair
+Ecrire en assembleur un programme utilisant des fonctions parmi LSL, LSR, B et BNE qui affiche 1 si le nombre est pair , 0 sinon. (BNE: Branchement si Not Equal).
+
+```python
+n = int(input('entrer un nombre'))
+x = n//2
+x = n * 2
+if n == x:
+      print(1)
+else:
+      print(0)
+```
+
+**question prog 3.** 
+
+* Ecrire dans votre cahier le script complet en assembleur.
 
 <!--
 # Compléments et corrections
@@ -325,6 +417,10 @@ Par exemple, pour la séquence précédente, les codes **0 et 7** correspondent 
 
 Pour construire une boucle ou un test avec ces nouvelles instructions, il faut tout d'abord trouver une façon de traduire la condition du test ou la condition d'arrêt de la boucle par un test d'égalité à zéro.
 -->
+
+# Tuto: simulateur
+* Explications en video
+{{< img src="/images/video.png" link="https://www.youtube.com/watch?v=mhpwogkbtDU&t=17s" caption="Explications (video) sur le simulateur ARM -" >}}
 
 
 # Liens

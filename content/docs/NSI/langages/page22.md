@@ -24,6 +24,119 @@ La fonction va exécuter une tâche, puis s'appeler elle-même, de façon répé
 
 La terminaison de cette série d'appels récursifs repose donc sur la convergence des paramètres de la fonction vers cette condition d'arrêt.
 
+# Partie 2: Recursivité, problèmes avec sous-problemes interdependants
+## Définitions autour d'un algorithme récursif
+### Base et hérédité
+L'algorithme récursif comprend 2 parties importantes: 
+
+- La **Base** : c'est le cas pour lequel le problème se resoud immediatement. Par exemple: dans le script `ajoute2`: le problème se resoud immediatement pour N == 0.
+
+```python
+if N==0 : 
+    return 0
+```
+
+- **L'Hérédité**  : Dans la partie *hérédité:* il doit forcement y avoir un appel recursif, c'est à dire que la fonction s'auto-appelle, avec un paramètre plus "petit". Par exemple: `return 2 + ajoute2(N-1)`.
+
+
+Ainsi, dans le cas général, la fonction récursive s'écrit:
+
+```python
+def fonction_recursive(param):
+  if <cas de base> : 
+    return value
+  else:
+    # instructions
+    fonction_recursive(f(param))
+```
+
+### return ou pas return
+
+* soit on calcule une valeur, alors il faut placer `return` dans la partie *hérédité*
+* soit la fonction ne sert pas à calculer, ou bien, à modifier une variable non mutable par effet de bord: pas de `return` dans la partie *hérédité*
+
+*Exemple: correction de l'exercice sur les dessins recursifs*
+
+*Turtle* doit dessiner un carré puis pivoter, selon la série d'instructions suivante. La condition d'execution est: `largeur >= 20`:
+
+* dessiner un carré avec la fonction carre et le paramètre largeur.
+* avancer de 1/3×largeur
+* tourner de 26.565 degrés
+* reduire la largeur d’un facteur 0.745: largeur = largeur * 0.745
+
+```python
+def spirale_carre(largeur):
+    if largeur < 20:
+        return
+    else: 
+        carre(largeur)
+        t.forward(largeur//3)
+        t.left(26.565)
+        spirale_carre(largeur * 0.745)
+```
+
+*Pas de `return` dans la partie hérédité.*
+
+
+# Analyse mathématique: Preuve et correction
+**Généralités:**
+Alan Turing  (1912 – 1954) énonce ainsi son principe d'indéciablité de la terminaison d'un algorithme(1936): *L’indecidabilite c’est l’impossibilité absolue et définitivement démontrée de résoudre par un procédé général de calcul un problème donné.*
+
+La **terminaison**, ainsi que la **preuve de correction**,  ou bien la **complexité** doivent être prouvées par des arguments mathématiques.
+
+## Cas d'un algorithme non recursif
+
+### terminaison
+La preuve de correction consiste à rechercher un convergent. Et prouver que ce convergent finit par atteindre la condition d'arrêt.
+
+### preuve de correction / validité : 
+La preuve de correction consiste à rechercher un invariant de boucle pour démontrer sa (non) variation selon un argument de recurence. Sinon, énoncer simplement, en langage mathematique, les instructions utilisées en langage informatique et finir en montrant que l'invariant de boucle ou bien le resultat obtenu repond bien à la specification de l'algorithme.
+
+* *Exemple 1 :* faire la preuve de correction pour l'algo du calcul de la somme , de la moyenne.
+* *Exemple 2:* prouver la terminaison de l'algo de recherche sequentielle (avec boucle while).
+
+
+
+## Dans le cas d'un algo recursif
+**Preuve de correction et de terminaison pour un algo récursif**. 
+
+La méthode est différente car l'algo ne présente pas convergent, ni d'invariant de boucle. 
+
+Le raisonnement consiste à vérifier qu’une propriété est vraie pour une valeur
+entière initiale puis à prouver que la propriété est héréditaire. Une propriété est héréditaire si la véracité pour un entier n quelconque entraîne la véracité pour l’entier suivant n+1. C’est le principe d’une échelle: si on peut atteindre le premier barreau et si on peut passer d’un barreau quelconque au barreau suivant, alors on peut monter jusqu’en haut de l’échelle.
+
+La demonstration utilise justement 2 parties, qui correspondent à la Base et à l'Héredité:
+
+Prenons l'exemple de la demonstration: preuve, terminaison, complexité pour la fonction recursive FACTORIELLE:
+
+### Teminaison 
+
+* **cas de base**: si n=0, fact(0) fait un test et renvoie 1, sans appel recursif.
+
+**Hypothèse de récurrence**: supposons que fact(n) termine après `n` appels recursifs. Montrons que fact(n+1) termine après (n+1) appels recursifs.
+
+fact(n+1) fait un test `n+1>0` donc on passe au `else` puis on retourne `(n+1)*fact(n)`. on appelle donc `fact(n)` qui termine apres `n` appels recursifs. Finallement `fact(n+1)` termine après `(n+1)` appels recursifs.
+
+ ### Preuve de correction
+ 
+ par un raisonnement par recurrence, montrons que fact(n) = n ! :
+
+* **Base**: pour n = 0 : fact(n) = fact(0) = 1 = 0! (OK)
+
+* **Heredité**: si vrai pour n, alors $fact(n) = n!$.
+
+Démontrons que $fact(n+1) = (n+1)!$: `fact(n+1)` retourne $(n+1)*fact(n)$.
+
+Donc $fact(n+1) = (n+1)*fact(n)$. Par hypothèse de récurence, $fact(n) = n!$ donc $fact(n+1) = (n+1)*n! = (n+1)!$. Ce qu'il fallait démontrer.
+
+### Complexité
+
+Calcul de la complexité : Soit T(n) le nombre d'opérations fondamentales. Pour une fonction récurrente, c'est le nombre de résolution de la fonction de récurence.
+On a T(n) = T(n-1) + 1 donc T(n) = n
+
+
+
+
 # Application de la recursivité: les tours de Hanoï
 ## Principe
 On considère trois tiges plantées dans une base. Au départ, sur la première tige sont enfilées N disques de plus en plus étroits. Le but du jeu est de transférer les N disques sur la troisième tige en conservant la configuration initiale.
@@ -152,6 +265,7 @@ Dans «Inception», Nolan voulait explorer l’idée de personnes partageant un 
 Lien vers le TP: [dessins recursifs](/docs/NSI/algorithmes/page10/) 
 
 # Liens
+* Cours de Serge Bayes [lycee Eucalyptus](https://mathematice.fr/fichiers/nsi2/chap01d.pdf)
 * *Approfondir :* voir la page [https://fr.wikipedia.org/wiki/Algorithme_récursif](https://fr.wikipedia.org/wiki/Algorithme_récursif)
 
 * un bon exemple de l'exercice des permutations: les menus [pascal.ortiz.free.fr](http://pascal.ortiz.free.fr/contents/python/recursivite/recursivite.html)
