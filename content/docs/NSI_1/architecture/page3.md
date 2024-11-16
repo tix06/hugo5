@@ -163,7 +163,7 @@ Les ruptures de séquence utilisent des étiquettes, à définir dans le program
 
 * HALT: arrêt du programme
 
-* `CMP Ri, Rj`: effectue la comparaison entre Ri et lRj. Attention, cette instruction ne traite pas le résultat de la comparaison! C'est le rôle de la commande suivante.
+* `CMP Ri, Rj`: effectue la comparaison entre Ri et Rj. Attention, cette instruction ne traite pas le résultat de la comparaison! C'est le rôle de la commande suivante.
 * B ou BGT, ... sont les opérations de branchement 
 
 **plus grand que:** On utilise une combinaison de 2 lignes pour effectuer le test *si R1 > R2 aller à la ligne label*:
