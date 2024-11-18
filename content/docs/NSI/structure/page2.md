@@ -205,7 +205,9 @@ Voir le cours sur la [recursivité](/docs/NSI/langages/page2/)
 
 <!--<iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f9d36caf37c6&mode=code"></iframe>-->
 
+<!--
 {{< vitta 5f9d36caf37c >}} 
+-->
 
 ## Exercice 2 : lever des exceptions
 Certaines des fonctions que vous avez écrites vont lever des exceptions dans le cas où la pile est vide.
@@ -259,6 +261,72 @@ Exemple : `1 2 + 4 * 3 +`
 La liste L contient les caractères de l'expression POSTFIXE à calculer.
 
 ### Questions
+On donne le script python à compléter:
+
+```python
+L = [7, 8, '-', 6, '*', 10, 3, '+', '*']
+
+def depile(Liste):
+    """retire le dernier item de la liste et le renvoie
+    la liste étant copiée par référence, celle ci 
+    est automatiquement modifiée
+    """
+    # à completer #
+
+# exercice 1
+L = ['a',1,'b',2,'c',3,'d',4]
+
+def Pile():
+    return []
+
+def est_vide(pile):
+    return pile == []
+
+def depile(pile):
+    assert pile != [], 'impossible de depiler : pile vide'
+    return pile.pop()
+
+def empile(a,pile):
+    pile.append(a)
+
+def sommet(pile):
+    assert pile != [], 'la pile n_a pas de sommet : pile vide'
+    return pile[-1]
+
+
+
+def add(x,y):
+    # à completer #
+
+def soust(x,y):
+    # à completer #
+
+def multip(x,y):
+    # à completer #
+
+dicoP = {'+' : add,
+        '-' : soust,
+        '*' : multip
+}
+
+
+def evalNPI(L):
+    """evalue l'expression postfixe de type 
+    notation polonaise inversee
+    :Params:
+    L : list of str and int: liste contenant les caracteres et les nombres entiers
+    :Returns:
+    p[0]: int, le resultat de l'evaluation de L, seul element restant de la pile p
+    :variables:
+    p : list of int: les entiers stockés pour leur evaluation
+    :Exemple:
+    >>> evalNPI([7, 8, '-', 6, '*', 10, 3, '+', '*'])
+    -78
+    """
+    p=[]    
+    # à completer #
+    return p[0]
+```
 
 1. Compléter les fonctions `add`, `soust`, et `multip` qui doivent additionner, soustraire, et multiplier les arguments x et y.
 2. Testez vos fonctions à l'aide du tableau associatif: Executer en console l'instruction: `dicoP['-'](3,4)` qui doit renvoyer ... -1
@@ -270,9 +338,11 @@ La liste L contient les caractères de l'expression POSTFIXE à calculer.
     * empiler la valeur calculée dans la pile `p`
 * retourner la valeur finale stockée dans `p`
 
+<!--
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f9d305edd765&mode=code"></iframe>
 
 {{< vitta 5f9d305edd765 >}}
+-->
 
 ### Variante utilisant les fonctions lambda
 On peut racourcir l'écriture du script en utilisant des fonctions lambda. Elles utilisent des paramètres pour calculer une valeur de retour, comme une fonction. Elles ne peuvent contenir qu'une expression.
