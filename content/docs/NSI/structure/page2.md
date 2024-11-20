@@ -14,8 +14,9 @@ Title : structures lineaires
 
 # Structure linéaire : La Pile
 ## Les structures de données
-<p class="definition">Definition: Une <b>structure de données</b> est une manière de stocker, d’accéder à, et de manipuler des données (comme les types list ou dict de Python).</p>
-<p class="definition">Definition: Un <b>type abstrait</b> décrit essentiellement une interface, indépendamment du  langage de programmation.</p>
+*Definition:* Une *structure de données* est une manière de stocker, d’accéder à, et de manipuler des données (comme les types list ou dict de Python).
+
+*Definition:* Un *type abstrait* décrit essentiellement une interface, indépendamment du  langage de programmation.
 
 ## Un premier exemple
 La pile est une manière de ranger les données.
@@ -85,7 +86,8 @@ Les méthodes (= fonctions) disponibles pour cette structure sont :
 </ul>
 
 
-### Implémenter un pile en Python
+### Implémenter un pile en Python en langage natif
+
 Le type *List* en Python possède déjà toutes les méthodes d'une pile :
 
 ```python
@@ -98,20 +100,22 @@ pile[-1]            # lire l'element au sommet de la pile
 
 Lorsque l'on fait référence à une structure de données de type *pile* en traduisant un algorithme en Python, il faudra se contenter de ces 5 instructions.
 
-### Interface ou implémentation ?
+### Créer une nouvelle Interface
 
 
 Les types abstraits, comme les piles, sont définis par leur **interface** (comment  on s’en sert) plutôt que par leur **implémentation** (comment ils fonctionnent). Ils permettent d’étudier des algorithmes indépendamment  du langage utilisé.  
 
-<p class="definition">Definition: L’<b>interface</b> de la structure de données décrit de quelle manière on peut la  manipuler, par exemple en utilisant `append` pour le type list ou `get` pour le type  dict.</p>
-<p class="definition">Definition: L’<b>implémentation</b> de la structure de données, contient le code de  ces méthodes (comment fait Python). Il n’est pas nécessaire de connaître l’implémentation pour manipuler la structure de données. Il faut connaitre l'interface.</p>
+Rappels: 
+
+* L’*interface* de la structure de données décrit de quelle manière on peut la  manipuler, par exemple en utilisant `append` pour le type list ou `get` pour le type  dict.
+
+* L’*implémentation* de la structure de données, contient le code de  ces méthodes (comment fait Python). Il n’est pas nécessaire de connaître l’implémentation pour manipuler la structure de données. 
  
 
- 
 On verra ici deux manières d'implémenter la *pile*.
 
 
-### Créer ses propres fonctions
+### Implémentation fonctionnelle
 Pour traduire un algorithme utilisant cette structure *pile*, il peut être préférable de définir des instructions portant les noms de ces 5 instructions:
 
 ```python
@@ -134,7 +138,7 @@ def sommet(pile):
   # à completer
 ```
 
-### Définir sa propre pile (construction d'un objet de type pile)
+### Implémentation en Programmation Objet
 On peut créer un type (= une **classe**) `Pile` personnelle en Python. 
 
 Les méthodes (fonctions) déclarées précédemment sont alors associées à l'objet `Pile`. L'appel d'une méthode se fait à l'aide de l'instruction : 
@@ -196,317 +200,7 @@ Voir le cours sur la [recursivité](/docs/NSI/langages/page2/)
 -->
 
 # Exercices sur les piles
-## Exercice 1 : implementer une pile
-1. Programmer les fonctions qui implémentent la *pile*: `Pile`,`est_vide`,`empile`,`depile`,`sommet`. (editeur python en fin d'exerice)
-2. Tester votre implémentation pour resoudre l'exercice suivant: (utiliser l'editeur python):
-* Soit une liste L = ["a",1,"b",2,"c",3,"d",4]
-* Parcourir les éléments de la liste L avec une boucle bornée
-  * empiler tous les nombres entiers dans une pile `p`.
-
-<!--<iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f9d36caf37c6&mode=code"></iframe>-->
-
-<!--
-{{< vitta 5f9d36caf37c >}} 
--->
-
-## Exercice 2 : lever des exceptions
-Certaines des fonctions que vous avez écrites vont lever des exceptions dans le cas où la pile est vide.
-
-1. Pour ces fonctions, ajouter des instructions pour lever les exceptions dans le cas où la pile est vide. (utiliser l'editeur python de l'exercice 1)
-2. Tester vos fonctions avec une pile vide.
-
-
-## Exercice 3 : déverser une pile
-### Méthode itérative
-Dans l'editeur de l'exercice 1:
-
-Ecrire une fonction `deversepile` qui déverse une pile `p1` dans une pile `p2`.
-
-Cette fonction sera utilisée de la manière suivante : On utilise une pile intermédaire `p3` : 
-
-```python
-p1,p2,p3=Pile(),Pile(),Pile()
-deversepile(p1,p3)
-deversepile(p3,p2)
-```
-
-Les fonctions que vous pourrez utiliser pour les piles seront celles définies dans l'exercice 1 : `Pile,est_vide,empile,depile,sommet`.
-
-### Visualiser sur Pythontutor
-Ouvrir l'editeur pythontutor et executer le script pas à pas. 
-
-{{< img src="../images/pythontutor2.png" link="https://pythontutor.com/render.html#code=def%20deverse%28p_1,p_2%29%3A%0A%20%20%20%20while%20p_1%20!%3D%20%5B%5D%3A%0A%20%20%20%20%20%20%20%20p_2.append%28p_1.pop%28%29%29%0A%0Ap1,p2%20%3D%20%5B%5D,%5B%5D%0Ap1%20%3D%20%5B1,2,3,4%5D%0Adeverse%28p1,p2%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" caption="cliquer pour ouvrir sur pythontutor" >}}
-
-*Remarquez-vous?*
-
-* le dépilement retourne l'élément au sommet de `p1`, tout en supprimant ce sommet
-* les éléments se rangent en sens inverse dans `p2` avec l'empilement
-* la fonction ne retourne rien. Les listes `p1` et `p2` sont modifiées par effet de bord, dans la fonction.
-
-
-
-## Exercice 4 : Evaluation d'une opération en notation polonaise inversée
-### Principe 
-la notation polonaise inversée permet d'écrire une opération sans utiliser de parenthèses. Il faut alors écrire les 2 opérandes avant l'opérateur. L'opérateur se trouve à droite des 2 opérandes.
-
-En parcourant l'expression de gauche à droite, chaque fois que l'on rencontre un opérateur, on remonte vers la gauche pour rechercher les 2 opérandes et on remplace les 3 termes (2 operandes et 1 opérateur) par le resultat de l'opération.
-
-On peut utiliser une pile pour réaliser la séquence de calculs.
-
-Exemple : `1 2 + 4 * 3 +`
-
-{{< img src="../images/npi.png" >}}
-
-{{< img src="../images/video_NPI.png" alt="video notation polonaise inversée" link="https://www.youtube.com/watch?v=Ak8I7o-rXKg" caption="Arnaud Bodin : Calculatrice polonaise - les piles" >}}
-La liste L contient les caractères de l'expression POSTFIXE à calculer.
-
-### Questions
-On donne le script python à compléter:
-
-```python
-L = [7, 8, '-', 6, '*', 10, 3, '+', '*']
-
-def depile(Liste):
-    """retire le dernier item de la liste et le renvoie
-    la liste étant copiée par référence, celle ci 
-    est automatiquement modifiée
-    """
-    # à completer #
-
-# exercice 1
-L = ['a',1,'b',2,'c',3,'d',4]
-
-def Pile():
-    return []
-
-def est_vide(pile):
-    return pile == []
-
-def depile(pile):
-    assert pile != [], 'impossible de depiler : pile vide'
-    return pile.pop()
-
-def empile(a,pile):
-    pile.append(a)
-
-def sommet(pile):
-    assert pile != [], 'la pile n_a pas de sommet : pile vide'
-    return pile[-1]
-
-
-
-def add(x,y):
-    # à completer #
-
-def soust(x,y):
-    # à completer #
-
-def multip(x,y):
-    # à completer #
-
-dicoP = {'+' : add,
-        '-' : soust,
-        '*' : multip
-}
-
-
-def evalNPI(L):
-    """evalue l'expression postfixe de type 
-    notation polonaise inversee
-    :Params:
-    L : list of str and int: liste contenant les caracteres et les nombres entiers
-    :Returns:
-    p[0]: int, le resultat de l'evaluation de L, seul element restant de la pile p
-    :variables:
-    p : list of int: les entiers stockés pour leur evaluation
-    :Exemple:
-    >>> evalNPI([7, 8, '-', 6, '*', 10, 3, '+', '*'])
-    -78
-    """
-    p=[]    
-    # à completer #
-    return p[0]
-```
-
-1. Compléter les fonctions `add`, `soust`, et `multip` qui doivent additionner, soustraire, et multiplier les arguments x et y.
-2. Testez vos fonctions à l'aide du tableau associatif: Executer en console l'instruction: `dicoP['-'](3,4)` qui doit renvoyer ... -1
-3. Compléter la fonction evalNPI: Dans une boucle bornée qui parcourt tous les éléments de la liste L: `for a in L:`
-
-* si `a` est un entier: empiler a dans une liste `p` qui sera utilisée comme une *pile*.
-* si `a` est un opérateur présent dans le tableau associatif `dicoP`:
-    * depiler `p` deux fois et stocker les valeurs dans les opérandes x et y. 
-    * empiler la valeur calculée dans la pile `p`
-* retourner la valeur finale stockée dans `p`
-
-<!--
-<iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f9d305edd765&mode=code"></iframe>
-
-{{< vitta 5f9d305edd765 >}}
--->
-
-### Variante utilisant les fonctions lambda
-On peut racourcir l'écriture du script en utilisant des fonctions lambda. Elles utilisent des paramètres pour calculer une valeur de retour, comme une fonction. Elles ne peuvent contenir qu'une expression.
-
-On les déclare de la manière suivante:
-
-```python
-lambda arguments: expression
-```
-
-*Exemple 1:*
-
-```python  
-sum = lambda a,b : a+b
-```
-
-Ces fonctions peuvent ne pas être nommées. On les place alors dans une liste, ou un dictionnaire.
-
-
-```python
-dico = {'+' : lambda x,y : x+y,
-        '-' : lambda x,y : x-y,
-        '*' : lambda x,y : x*y
-        }
-```
-
-On calcule alors avec cette fonction en faisant: `dico[a](3,4)` par exemple:
-
-*Exemple 2:*
-
-```python
-a = '+'
-if a == '+':
-    r = dico[a](3,4)
-    print(r)
-# affiche 7
-```
-
-L'interêt des fonctions *lambda* est surtout de **rendre le script plus lisible**. Cela donne une autre option d'écriture.
-
-## Exercice 5: Reduction d'une chaine de caractères
-Enoncé à la{{< a link="/docs/NSI/structure/page22/" caption="page suivante" >}}
-
-# Correction des exercices
-## Exercice 1
-
-```python
-# exercice 1
-L = ['a',1,'b',2,'c',3,'d',4]
-
-def Pile():
-    return []
-
-def est_vide(pile):
-    return pile == []
-
-def depile(pile):
-    assert pile != [], 'impossible de depiler : pile vide'
-    return pile.pop()
-
-def empile(a,pile):
-    pile.append(a)
-
-def sommet(pile):
-    assert pile != [], 'la pile n_a pas de sommet : pile vide'
-    return pile[-1]
-
-
-
-p = Pile()
-for a in L:
-    if isinstance(a,int):
-        empile(a,p)
-print(p)
-```
-
-
-
-## Exercice 2
-Les modifications ont été faites directement dans le corrigé de l'exercice 1.
-
-Tester le script suivant à la suite de celui de l'exercice 1:
-
-```python
-# exercice 2
-p2 = Pile()
-depile(p2)
-```
-
-<!--
-
-## Exercice 3
-Ajouter la fonction `deversePile` suivante à la suite de celles de l'exercice 1. (Les fonctions `est_vide`, `depile` et `empile` doivent être définies)
-
-
-```python
-# exercice 3
-def deversePile(p1,p2):
-    while not(est_vide(p1)):
-        a = depile(p1)
-        empile(a,p2)
-    return p2
-```
-
-## Exercice 4
-Il faut commencer par définir le dictionaire `dicoP` ainsi que les différentes fonctions des opérations:
-
-```python
-def add(x,y):
-    return x+y
-
-def soust(x,y):
-    return x-y
-
-def multip(x,y):
-    return x*y
-
-dicoP = {'+' : add,
-        '-' : soust,
-        '*' : multip
-}
-```
-
-On peut tester une opération à l'aide de `dicoP`:
-
-```python
->>> dicoP['-'](3,4)
--1
-```
-
-Puis on programme la fonction `evalNPI`.
-
-On donne une autre version (plus avancée) de la fonction `evalNPI` utilisant des fonctions lambda, ce qui raccourcit le script:
-
-```python
-def evalNPI(L):
-    dico = {'+' : lambda x,y : x+y,
-            '-' : lambda x,y : x-y,
-            '*' : lambda x,y : x*y
-    }
-    p=[]    
-    for a in L:
-        if a in dico:
-            deuxieme = depile(p)
-            premier = depile(p)
-            r = dico[a](premier,deuxieme)
-            empile(r,p)
-        elif isinstance(a,int) : 
-            empile(a,p)
-    return p
-
-evalNPI(L)
-```
-
-> A vous de jouer: Ecrire la liste d'instructions relatives au calcul de g, puis utiliser votre calculatrice en notation polonaise inversée pour résoudre:
-
-> $$g = (3+6)*7 - (10-24)*4$$
-
-
-
-<i>Aide: rappelez vous que l'instruction ne contient pas de parenthèses, alors il faudra bien respecter l'ordre des opérations à realiser, de gauche à droite. Le dernier caractère à saisir sera alors le symbole **-**. Relire la video si vous en avez besoin (énoncé de l'Ex 4).</i>
-
-
--->
+voir la page [exercices](../page22)
 
 
 

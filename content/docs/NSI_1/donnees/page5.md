@@ -39,6 +39,8 @@ On peut représenter ce script avec des modules à assembler:
   * La fonction `range(n)` renvoie la liste des entiers de 0 à n-1. C’est un principe général en informatique, on commence toujours à compter à partir de 0, et il faut donc s’arrêter à **n-1 pour effectuer n fois** la boucle.
   * Pour chaque itération, le variant `i` prend une nouvelle valeur de l'ensemble `{0,1,2,... n-1}`, et peut être utilisé dans le bloc d'instructions. 
   * On peut choisir n'importe quel nom pour le variant, pas seulement `i`.
+  * Contrairement à la boucle non bornée `while`, le programmeur ne s’occupe pas de faire varier i à chaque itération. Cela ce fait tout seul.
+
 
 ### Boucle bornée et non bornée
 Pour la boucle bornée `for`, il n'est pas necessaire d'ajouter une instruction dans le bloc pour que le variant change de valeur à chaque itération. Cela se fait tout seul, à chaque fois que le programme revient sur l'instruction `for`.
@@ -59,9 +61,9 @@ for i in range(3):
 
 
 
-*Remarque:* la fonction `range(3)` va créer une liste itérable constituée des valeurs 0, 1, 2. Ce sont les valeurs prises successivement par le variant `i` dans `for i in range(3)`
+*Remarque: la fonction `range(3)` va créer une liste itérable constituée des valeurs 0, 1, 2. Ce sont les valeurs prises successivement par le variant `i` dans `for i in range(3)`*
 
-* *Exemple 2*: Ce variant peut être utiliser pour une formule arithmétique, à l'intérieur de la boucle:
+* *Exemple 2*: Ce variant peut être utilisé pour une formule arithmétique, à l'intérieur de la boucle:
 
 ```python
 for i in range(3):
@@ -73,19 +75,53 @@ for i in range(3):
 5
 ```
 
+
 ## Exercices:
-*Pour chacun des exercices, on pourra s'aider de briques à assembler pour représenter le programme.*
+1. **Sélection des valeurs paires**
 
-1. Programmez une boucle bornée qui affiche (fonction `print`) les 5 premières valeurs de la table de 7 ($7 \times 1 = 7...$). 
+```python
+for i in range(4):
+    if i % 2 == 0:
+        print(i)
 
-Remplir ensuite le tableau de suivi des valeurs:
+Le programme affiche les valeurs:
+0
+2
+```
 
-| itération n° | i | x |
-| --- | --- | --- |
-| 1  | 0  | ...  |
-| ...  | ...  | ...  |
+> Construire le programme équivalent, utilisant l’instruction while, à l'aide de blocs python:
 
-2. Ecrire un programme qui demande les notes obtenues aux 3 contrôles de NSI. Et lorsque la note renseignée est inférieure à 10, affiche le message: "Peut mieux faire".
+{{< img src="../images/bloc4.png" caption="blocs python à compléter" >}}
+
+2. **Table de 7**
+
+a. Réaliser un programme qui affiche (fonction `print`) les 4 premières valeurs de la table de 7 (avec `for` puis `while`)
+
+b. Compléter le tableau:
+
+{{< img src="../images/tableau1.png" caption="**Sur document-reponse**" >}}
+
+3. **Division euclidienne**
+
+*On rappelle que l'utilisation d'une boucle bornée `for` nécessite de connaitre le nombre d'itérations (`for .. in range(n)`). Si ce nombre d'itérations n'est pas connu, il faudra utiliser une boucle `while`*.
+
+Le quotient de la division de a par b est égal au nombre de fois N qu'il faut soustraire b à a jusqu'à ce que l'on ait a < b.
+
+a. D'après cet énoncé, va t-on utiliser une boucle bornée, ou bien un boucle non bornée?
+
+b. Compléter le script de la division euclidienne de a par b
+
+```python
+a = int(input('entrer la valeur de a :'))
+b = int(input('entrer la valeur de b :'))
+N = 0
+...
+...
+...
+print(a)
+``` 
+
+c. Quel est le quotient entier de la division de 2024 par 7?
 
 # Les fonctions en python
 ## Généralités
@@ -117,6 +153,8 @@ Pour créer une fonction, il faut la definir avec le mot clé `def`, suivi du no
 ### Return
 La fonction peut retourner une valeur. Celle-ci est alors mise après le mot clé `return`.
 
+*Exemple:* 
+
 ```python
 def salut():
   """Accueillir tout le monde"""
@@ -130,7 +168,7 @@ salut()
 # retourne (et affiche) 'bonjour tout le monde'
 ```
 
-Souvent, cette donnée retournée doit être affectée à une variable:
+Souvent, cette donnée retournée doit être *affectée à une variable*:
 
 ```python
 message = salut()
@@ -141,21 +179,21 @@ print(message)
 ## Travaux pratiques: fonction sans paramètre
 Un cours sur les fonctions se trouve à la page suivante: [Lien](/docs/python/pages/fonctions/page2/)
 
-* Ecrire une fonction appelée `etoiles` en python qui écrit une série de 5 symboles `*`, séparés chacun par un espace:
+* *Question a*: Ecrire une fonction appelée `etoiles` en python qui écrit une série de 5 symboles `*`, séparés chacun par un espace:
 
 ```
 * * * * * 
 ```
 
-* Appeler la fonction: faire suivre le nom de la fonction par des parenthèses `()`: 
+> Appeler (exécuter) la fonction: faire suivre le nom de la fonction par des parenthèses `()`: 
 
 ```
-etoiles()
+> etoiles()
 ```
 
 Pour afficher la ligne, faire: `print(etoiles())`
 
-* Appeler alors 5 fois cette fonction pour afficher l'image suivante:
+> utiliser une **boucle bornée** pour répéter 5 fois l'appel de la fonction et afficher l'image suivante:
 
 ```
 * * * * * 
@@ -165,10 +203,9 @@ Pour afficher la ligne, faire: `print(etoiles())`
 * * * * * 
 ```
 
-*Astuce: avez-vous pensé à utiliser une **boucle bornée** pour répéter 5 fois l'appel de la fonction?*
 
 
-**Sur document-reponse:** Ecrire le script utilisé
+* *Question b*:  **Sur document-reponse:** Recopier le script utilisé
 
 ## Fonction avec paramètres
 ### Principe
@@ -193,7 +230,9 @@ bonjour John
 bonjour Paul
 bonjour Ringo
 bonjour George
-```  
+``` 
+
+**ex1:** Recopier le script sur votre *feuille réponse*. 
 
 *Attention, lors de l'appel de la fonction, il devra y avoir autant d'arguments que de paramètres définis (donc un seul pour ce dernier exemple).* 
 
@@ -202,7 +241,7 @@ On cherche à realiser des figures en à partir de caractères, comme vu dans le
 
 
 
-**ex1** Utilisez la fonction `etoiles` pour que celle-ci utilise un paramètre **(nb)**. Ce paramètre definit le nombre d'espaces entre les 2 symboles `*` de la ligne. La ligne n'affiche que 2 symboles `*`. 
+**ex2:** Utilisez la fonction `etoiles` pour que celle-ci utilise un paramètre **(nb)**. Ce paramètre definit le nombre d'espaces entre les 2 symboles `*` de la ligne. La ligne n'affiche que 2 symboles `*`. 
 
 Par exemple, `etoiles(5)` retourne `*     *` avec 5 espaces:
 
@@ -211,7 +250,7 @@ def etoiles(nb):
     return '*' + nb*' ' + '*'
 ``` 
 
-**ex2** afficher la figure suivante (un seul espace à chaque ligne entre 2 etoiles)?
+**ex3:** afficher la figure suivante (un seul espace à chaque ligne entre 2 etoiles)?
 
 ```python
 for i in range(..):
@@ -226,7 +265,7 @@ for i in range(..):
 
 
 
-**ex3** Vous appelerez ensuite cette fonction avec des arguments judicieusement choisis, afin de dessiner les figures suivantes:
+**ex4:** Vous appelerez ensuite cette fonction avec des arguments judicieusement choisis, afin de dessiner les figures suivantes:
 
 figure 1:
 
@@ -268,7 +307,7 @@ figure 3:
 
 *Astuce: avez vous fait en sorte d'utiliser au maximum des boucles bornées avec un variant de boucle?*
 
-**ex3:** modifier la fonction ainsi que le programme pour afficher maintenant un sapin de Noel:
+**ex5:** modifier la fonction ainsi que le programme pour afficher maintenant un sapin de Noel:
 
 ```
       **
@@ -355,6 +394,8 @@ def angleRefraction(i1,n1,n2):
 > Compléter les pointillés `...` 
 
 > Tester votre fonction: avec un angle d'incidence de 30°, des indices de refraction n1=1 et n2=1.5, on doit avoir r = 19.47°.
+
+**ex 7**: Recopier le script de la fonction `angleRefraction`, ainsi que l'instruction utilisée pour résoudre l'exercice.
 
 # Compléments
 * Un cours sur les fonctions se trouve à la page suivante: [Lien](/docs/python/pages/fonctions/page2/)
