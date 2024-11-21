@@ -260,13 +260,13 @@ if a == '+':
 
 L'interêt des fonctions *lambda* est surtout de **rendre le script plus lisible**. Cela donne une autre option d'écriture.
 
-# Exercice 5: Reduction d'une chaine de caractères
+# Exercice 5 (Projet): Reduction d'une chaine de caractères
 Enoncé à la{{< a link="/docs/NSI/structure/page22/" caption="page suivante" >}}
 
 
-# Suite des exercices sur les Piles
 
-On utilisera pour le TD suivant l'implementation d'un pile avec les definitions suivantes, comme vues dans les corrections des exercices 1 à 4, page des{{< a link="../page2/" caption="structures linéaires (Piles)" >}}
+On utilisera pour cet exercice l'implementation d'un pile avec les definitions suivantes:
+
 ```python
 def Pile():
     return []
@@ -286,7 +286,7 @@ def sommet(pile):
     return pile[-1]
 ```
 
-# Exercice 5: Reduction d'une chaine de caractères
+
 ## Enoncé difficile
 Certains jeux comme par exemple *Candie Crush* reposent sur l'*élimination de motifs adjacents*. Je vous propose ici d'utiliser une chaine de caractères dans laquelle les motifs vont être éliminé de la manière suivante:
 
