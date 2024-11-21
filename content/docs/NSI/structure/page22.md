@@ -261,10 +261,6 @@ if a == '+':
 L'interêt des fonctions *lambda* est surtout de **rendre le script plus lisible**. Cela donne une autre option d'écriture.
 
 # Exercice 5 (Projet): Reduction d'une chaine de caractères
-Enoncé à la{{< a link="/docs/NSI/structure/page22/" caption="page suivante" >}}
-
-
-
 On utilisera pour cet exercice l'implementation d'un pile avec les definitions suivantes:
 
 ```python
@@ -287,16 +283,52 @@ def sommet(pile):
 ```
 
 
-## Enoncé difficile
+## Enoncé basique
 Certains jeux comme par exemple *Candie Crush* reposent sur l'*élimination de motifs adjacents*. Je vous propose ici d'utiliser une chaine de caractères dans laquelle les motifs vont être éliminé de la manière suivante:
 
-{{< img src="../images/reduction.PNG" caption="méthode de reduction avec une chaine contenant" >}}
+
 ![méthode de reduction](../images/reduction.PNG)
 
 > Programmez la fonction `reduction` qui va permettre de réaliser ceci.
 
 *On se limitera aux caractères 'a', 'A', 'b', 'B', 'c', 'C', 'd', 'D' pour cette chaine.*
 
+> Testez votre fonction avec les arguments suivants:
+
+```
+reduction(['d','D','a','A','a'])
+-> ['d','D','a']
+reduction(['d','a','a','b','A','a','A','a'])
+-> ['d','a','a','b']
+reduction(['d','a','c','a','A','a','A','a','C'])
+-> ?
+reduction(['B','a','A','c','A','a','A','a','C','b'])
+-> ?
+```
+
+## Enoncé difficile
+On modifie maintenant la règle du jeu: les motifs peuvent être réduits par groupe de 2, comme précédemment, mais aussi par groupe de 3 si ceux-ci présentent une  alternance minuscule-majuscule-minuscule ou bien majuscule-minuscule-majuscule:
+
+```
+reduction(['b','D','a','A','a'])
+-> ['b','D']
+reduction(['d','D','a','A','a'])
+-> ['d','D'] puis []
+reduction(['b', 'D', 'a','a','A','a'])
+-> ['b','D','a']
+```
+
+Par contre, il n'y aura pas de reduction lorsque la séquence ne présente pas d'alternance:
+
+```
+> reduction(['d','a','a','b','A','a','A','a'])
+['d','a','a','b']
+```
+
+
+
+
+<!--
 ## Enoncé progressif
 On va chercher un solution qui ressemble à celle de la notation polonaise inversée, utilisant une Pile.
 
@@ -386,7 +418,7 @@ def simplifier(s):
     for c in s:
         ...
 ```
-
+-->
 <!--
 # Correction des exercices
 ## Exercice 1
