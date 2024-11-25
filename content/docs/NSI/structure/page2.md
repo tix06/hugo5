@@ -77,13 +77,13 @@ Dans d'autres cas, il faudra utiliser une autre structure de données, comme par
 Une <b>Pile</b> est une structure de données <b>linéaire</b> (les données sont rangées sur un ligne ou une colonne). Le dernier élément entré sera aussi le premier à sortir (<b>L</b>ast <b>I</b>n <b>F</b>irst <b>O</b>ut : LIFO).
 
 Les méthodes (= fonctions) disponibles pour cette structure sont : 
-  <ul>
-  <li> <b>construction</b> (d'une pile vide)</li>
-  <li> <b>test</b> d'une pile <b>vide</b> (renvoie `True` si la pile est vide)</li>
-  <li> ajout d'un élément (<b>empiler</b> = `push`), mis au sommet de la pile</li>
-  <li> retire le premier élément de la pile, celui au sommet (<b>dépiler</b> = pop) si la pile est non vide et renvoie cet élément.</li>
-  <li> lire le sommet de la pile.</li>
-</ul>
+
+* construction (d'une pile vide)
+* test d'une pile vide (renvoie `True` si la pile est vide)
+* ajout d'un élément (empiler = `push`), mis au sommet de la pile
+* retire le premier élément de la pile, celui au sommet (dépiler = pop) si la pile est non vide et renvoie cet élément.
+* lire le sommet de la pile
+
 
 
 ### Implémenter un pile en Python en langage natif
