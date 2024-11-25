@@ -12,6 +12,11 @@ Title : autres structures lineaires
 * {{< a link="../page21/" caption="FILES et LISTE" >}}
 * {{< a link="/docs/NSI/structure/page3/" caption="Programmation orientée objets" >}}
 
+*Et plusieurs notebooks:*
+
+* Piles, Files, exercices issus de la banque de sujets d'EP: [Lien capytale.fr](https://capytale2.ac-paris.fr/web/c/0a47-1458602)
+* Listes chainées sur [capytale2.ac-paris.fr](https://capytale2.ac-paris.fr/web/c/e3b8-4712390)
+
 # Structures de données: rappels
 Les piles, files et listes sont des structures de données **linéaires**. Ce sont des types **abstraits**.
 
@@ -30,10 +35,27 @@ Une file (queue ou FIFO pour first in, first out) est une collection d’objets 
 
 C'est une structure de données utilisée en informatique pour par exemple gérer la file d'attente lors de la gestion des impressions.
 
-## Implémentations en python
-L'implementation d'une File est imparfaite avec une liste en python pour l'opération de *defiler*. On peut utiliser l'instruction `file.pop(0)`. Le problème est que celle-ci ne s'effectue pas en temps constant.
+{{< img src="../images/file_ex.png" caption="exemple de gestion d'une file d'attente" >}}
 
-La bibliothèque standard possède toutefois un module nommé `collections`  qui contient quelques structures de données supplémentaires, dont le type `deque`, qui est une implémentation de file:
+## Implémentations en python natif
+L'implementation d'une File est imparfaite avec une liste en python pour l'opération de *defiler*. On peut utiliser l'instruction `file.pop(0)`:
+
+```python
+> F = []
+> F.append(1)
+> F.append(2)
+> F.append(3)
+> print(F)
+[1,2,3]
+> F.pop(0)
+> print(F)
+[2,3]
+```
+
+Le problème est que celle-ci ne s'effectue pas en temps constant.
+
+## Implémentation avec l'extension `deque`
+La *bibliothèque standard* possède toutefois un module nommé `collections`  qui contient quelques structures de données supplémentaires, dont le type `deque`, qui est une implémentation de file:
 
 ```python
 from collection import deque
@@ -156,16 +178,34 @@ Un autre avantage est la possibilité de faire pointer le dernier élément sur 
 
 
 # Exercices
+
+Editeur sur [capytale2.ac-paris.fr](https://capytale2.ac-paris.fr/web/c/e3b8-4712390)
+
 ## Exercice 1: Créer une liste chainée
 **1.** Completer le script ci-dessous pour créer une liste chainée appelée `ma_liste` qui contiendra la éléments suivants:
 
 `'Premier', 'Troisieme'`, `'Quatrieme'`
 
-Vous devrez créer les maillons `M1`, `M2`, `M3` et renseigner leur contenu `M.val`.
+Vous devrez créer les maillons `M1`, `M2`, `M3` et renseigner leur contenu `M.val`:
 
+```python
+class Maillon:
+  def __init__(self):
+    self.val = None
+    self.suiv = None
+    
+class Liste:
+  def __init__(self):
+    self.tete = None
+
+# a compléter
+```
+
+<!--
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5faa722d44d4d&mode=code"></iframe>
 
 {{< vitta 5faa722d44d4d >}}
+-->
 
 **2.** Tester dans la console les instructions suivantes:
 
@@ -231,6 +271,24 @@ La fonction doit renvoyer une chaine de caractères fabriquée de la manière su
 Compléter après le return: 
 
 ```python
+class Maillon:
+  def __init__(self):
+    self.val = None
+    self.suiv = None
+    
+class Liste:
+  def __init__(self):
+    self.tete = None
+    
+L = Liste()
+M1, M2, M3 = Maillon(), Maillon(), Maillon()
+M1.suiv = M2
+M2.suiv = M3
+M1.val = 'A'
+M2.val = 'C'
+M3.val = 'D'
+L.tete = M1
+
 def affiche(M):
     if M.suiv is None:
         return M.val  # affiche la valeur de queue
@@ -241,10 +299,11 @@ def affiche(M):
 
 
 
-
+<!--
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5faa752e1c9a3&mode=code"></iframe>
 
 {{< vitta 5faa752e1c9a3 >}}
+-->
 
 **3.** Comment appeler cette fonction afin qu'elle affiche TOUS les éléments de la liste L, du premier (*tête*) au dernier? Tester avec la liste **ACD** décrite dans le cours.
 

@@ -2,6 +2,8 @@
 Title: fonctions en python
 ---
 
+fiche reponse: [Lien vers pdf](/pdf/NSI_1/python2_TP_boucle_et_fct.pdf)
+
 # Boucles bornées en Python
 ## Definition
 Une **boucle bornée**  est un système d’instructions qui permet de répéter un certain nombre de fois toute une série d’opérations.
