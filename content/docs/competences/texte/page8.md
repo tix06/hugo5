@@ -98,6 +98,8 @@ Les instructions de style, en langage CSS, vont déclarer:
 * la propriété que l'on veut styliser
 * la valeur que l'on veut mettre pour cette propriété
 
+Vous pouvez consulter le tuto à l'adresse suivante: [MDN Mozilla: le CSS](https://developer.mozilla.org/fr/docs/Learn/Getting_started_with_the_web/CSS_basics)
+
 **Question d:**: Ecrire une règle CSS complète en identifiant: le *sélecteur, la propriété, la valeur*.
 
 ## Police, coloration, alignement
@@ -145,7 +147,7 @@ On reviendra sur le tutoriel [developper.mozilla](https://developer.mozilla.org/
 
 {{< img src="../images/css1.png" >}}
 
-**Question e:**: faire un tableau avec 3 colonnes: *nom de la propriété*, *effet de style*, *exemple*. Mettre dans ce tableau au moins 3 propriétés prévues pour styliser le texte, et 3 propriétés pour styliser le container de ce texte.
+**Question e:** faire un tableau avec 3 colonnes: *nom de la propriété*, *effet de style*, *exemple de valeur*. Mettre dans ce tableau au moins 3 propriétés prévues pour styliser le texte, et 3 propriétés pour styliser le container de ce texte.
 
 ## Positionnement des éléments
 Les éléments `section` se placent naturellement l'un sous l'autre. Ce qui donne, pour la page avec 2 éléments `section`:
