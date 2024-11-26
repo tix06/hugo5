@@ -92,7 +92,7 @@ carre(5)
 # retourne 25
 ``` 
 
-*Lors de la déclaration de la fonction, le seul paramètre attendu s'appelera `x`* *Puis lors de l'appel de la fonction `carre`, l'argument choisi est 5. A l'interieur de la fonction, `x` vaut 5.*
+*Lors de la déclaration de la fonction, le seul paramètre attendu s'appelera `x`. Puis lors de l'appel de la fonction `carre`, l'argument choisi est 5. A l'interieur de la fonction, `x` vaut 5.*
 
 {{< img src="../images/def_carre.png" caption="illustration du passage d'argument lors de l'appel de la fonction" >}}
 
@@ -102,7 +102,7 @@ Observez comme la *fonction Python* avec paramètre ressemble à la déclaration
 
 ```
 # en math
-f(x) = 10*x + 20
+f(x) = 10 * x + 20
 ```
 
 On peut calculer f(x) pour toute valeur de x en remplaçant x dans $10\times x + 20$ par sa valeur. Par exemple, $f(1) = 10\times 1 + 20 = 30$
@@ -110,7 +110,7 @@ On peut calculer f(x) pour toute valeur de x en remplaçant x dans $10\times x +
 ```
 # en python
 def f(x):
-  return 10*x + 20
+  return 10 * x + 20
 ```
 
 En python, on appelle cette fonction avec la valeur  $x=1$ en écrivant:
@@ -123,7 +123,7 @@ f(1)
 Le `return` correspond au signe `=` en langage mathématique.
 
 ### Plusieurs paramètres
-Lors de l'*appel de la fonction*, le ou les arguments passés doivent correspondre aus paramètres attendus. Ils doivent être placés dans l'ordre.
+Lors de l'*appel de la fonction*, le ou les arguments passés doivent correspondre aus paramètres attendus. Ils doivent être placés *dans l'ordre*.
 
 * *Exemple 3*: fonction qui calcule la surface d'un rectangle lorsque l'on divise chacun de ses côtés par un même coefficient `c`. On aura besoin de la longueur de ses côtés `x` et `y` (les 2 premiers paramètres de la fonction). Mais aussi de la valeur `c`:
 
@@ -137,23 +137,34 @@ def calcul_surface(x,y,c):
 # 20 sera place en premier argument
 # 30 sera place en 2e argument
 # 1.5 sera placé au niveau du 3e argument
+
 calcul_surface(20,30,1.5)
-# retourne 266.66..7
+# retourne 266.667
 ```
 
-# Editeur Python
-Utiliser un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
+# Importer des fonctions
+On peut étendre les fonctions du langage en important des fonctions. Celle-ci sont natives, elles font partie du langage python, mais ne sont pas chargées au démarrage.
 
-<div>
-<py-repl id="my-repl" auto-generate="true"></py-repl>
-</div>
+L'un des modules très utile est, par exemple, le module `math`. Celui-ci contient de nombreuses fonctions. Pour importer celle qui transforme le angles de degrés en radians, il faut ajouter la ligne suivante au debut du programme:
+
+```python
+from math import radians
+```
+
+Puis, pour l'utiliser, et transformer 45° en radians, on écrira plus loin dans le programme:
+
+```python
+angle = radians(45)
+print(angle)
+```
+
 
 # TP
 ## Ex 1: fonction sans paramètre
 La fonction suivante va retourner un dessin réalisé à partir de symboles ascii du clavier:
 
-```python
-def figure():
+```
+def figure_petit_chat():
   fig = "^---^"
   print(fig)
   fig = "_00_"
@@ -163,7 +174,15 @@ def figure():
 ```
 
 * Saisir le script dans une cellule python et executer.
-* Dans une nouvelle cellule python: appeler la fonction. Ecrire: `figure()`
+* Dans une nouvelle cellule/interpreteur python: appeler la fonction. Ecrire: `figure_petit_chat()`
+
+```python
+>>> figure_petit_chat()
+^---^
+_00_
+|-=-|
+```
+
 
 *La plupart du temps, on evitera d'utiliser la fonction `print` à l'intérieur d'une fonction. Sauf cas particulier comme ci-dessus.*
 
@@ -178,7 +197,9 @@ def dessine():
   return dessin
 ```
 
-* **Question a:** Tester la fonction du 2e script. Comment a-t-on evité d'utiliser `print` dans cette fonction?
+* **Question a:** Executer la fonction du 2e script: `>>> print(dessine())` 
+
+Quel est le motif dessiné? Pourquoi?
 
 ## Ex 2: fonction avec paramètre
 
@@ -201,10 +222,10 @@ salut("George")
 bonjour George
 ```  
 
-* **Question b:** Citer un avantage d'utiliser une fonction plutôt qu'une serie d'instructions pour afficher *bonjour* de manière personalisée.
+* **Question b:** Citer l'un des avantages d'utiliser une fonction. (répétition)
 
 ## Ex 3: fonction pour calculer
-1. Écrire une fonction cube qui retourne le `cube` de son argument.
+1. Écrire une fonction `cube` qui retourne le `cube` de son argument: `x**3`
 2. Écrire une fonction `volumeSphere` qui calcule le volume d’une sphère de rayon r fourni en argument et qui utilise la fonction cube.
 
 *Donnée:*
@@ -212,6 +233,16 @@ bonjour George
 $$V = \tfrac{4}{3}\times\pi\times R^3$$
 
 3. Calculer le volume en $cm^3$ d'une sphere de rayon 10cm (à l'aide de la fonction `volumeSphere`)
+
+## Ex 4: Importer des fonctions
+Importer les fonctions `degrees` et `radians` du module `math` et completer le tableau:
+
+| angle degrés | angle radians |
+|--- |--- |
+| 45 |    |
+| 35 |    |
+|    | 0.657 |
+|    | 0.1 |
 
 ## Travaux pratiques
 * Le TP sur les boucles bornées, et les fonctions avec et sans paramètres: [Lien](/docs/NSI_1/donnees/page5/)

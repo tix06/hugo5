@@ -31,6 +31,24 @@ salut()
 # retourne (et affiche) 'bonjour tout le monde'
 ```
 
+## Fonction python et fonction mathématique
+On peut programmer une fonction pour qu’elle retourne la valeur y = f(x)
+Exemple: soit la fonction mathématique f : x -> $3\times 2+2$
+
+Le script python correspondant sera:
+
+```python
+def f(x):
+    return 3*x**2+2
+```
+
+Pour exécuter la fonction avec x=5, on fait: f(5)
+
+Et cela retourne … $3\times25+2$, soit 77
+
+Le *return* a le statut de signe `=`
+
+
 ## Docstring
 Il est d'usage dans les *bonnes* pratiques d'ajouter une chaine de documentation, à la première ligne de la fonction : le *Docstring*.
 
@@ -67,10 +85,20 @@ salut('Brendon')
 # retourne (affiche) 'Salut Brendon'
 ```
 
-## Variable interne
+## Portée des variables internes
 Lors de l'exécution de la fonction, la valeur `Brendon` est affectée à la variable `nom` : `nom = 'Brendon'`.
 
-Seulement, la variable `nom` est une variable interne à la fonction, et n'existe que dans celle-ci. Elle n'est pas définie en dehors.
+Seulement, la variable `nom` est une **variable interne** à la fonction, et n'existe que dans celle-ci. Elle n'est pas définie en dehors.
+
+```python
+>>> salut('Brendon')
+'Salut Brendon'
+>>> nom
+NameError: name 'nom' is not defined
+```
+
+La portée des paramètres et des variables déclarées dans la fonction est limitée à la fonction elle-même. Ce sont des variables **locales**.
+
 
 ## Arguments positionnés
 
@@ -112,7 +140,35 @@ servir_cafe('Jean',2)
 ```
 
 # Importer des fonctions
+## Portée des fonctions
+*Placer ses fonctions dans un fichier séparé:*
+
+Une fonction peut être placée dans un autre fichier. On a alors:
+
+* un fichier principal (le programme main)
+* un ou plusieurs fichiers annexes (modules)
+
+Ces fonctions ne deviennent accessibles que si on les **importe**.
+
 > Utiliser le mot clé `import` pour importer un module et accéder à toutes ou partie de ses fonctions.
+
+Le programme principal doit alors faire référence aux modules.
+On utilise l’une des 3 manières proposées ci-dessous:
+
+```python
+import module
+from module import *
+import module as alias
+```
+
+Il est préconisé de ne charger que les fonctions utiles du module:
+
+```python
+from module import fonction
+```
+
+
+
 
 La manière avec laquelle on utilise la fonction dépend de l'import du module.
 
@@ -127,6 +183,12 @@ Les exemples suivants sont issus du cours [https://www.courspython.com/modules.h
 |  `from puissance import carre as ca`| u = ca(a) | import d'une fonction d’un module et on lui donne un alias |
 | `import package1.module1`| u = package1.module1.carre(a) | import d'une partie du package (le dossier) |
 
+
+# Conclusion
+
+Une fonction est un morceau de code qui porte un nom et qui s’exécute lorsqu’on l’appelle. L’avantage est d’avoir un code plus court, lisible, mais aussi d’encapsuler les variables et de limiter leur portée à celle de la fonction.
+
+Dans un projet plus grand, les fonctions peuvent être mises dans des modules (des fichiers séparés). On doit alors les importer pour avoir une extension du langage. Certains modules très utiles: math, turtle, random, …
 
 # Flash cards
 [Lien](/docs/python/pages/fonctions/ex1/)

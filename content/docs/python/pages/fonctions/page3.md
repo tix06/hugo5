@@ -6,6 +6,10 @@ Le module Turtle ![](../images/t1.png) permet d’avoir un environnement simple 
 
 La [page suivante](https://perso.limsi.fr/pointal/_media/python:turtle:turtleref.pdf) présente un aide-mémoire avec les principales instructions.
 
+Il est conseillé d'avoir bien lu et traité les exemples des pages:
+
+* [TP boucles et fonctions](/docs/NSI_1/donnees/page5/)
+* [Cours sur les fonctions](../page2)
 
 # Premier tracé
 Se rendre sur l'editeur en ligne: [https://pythonandturtle.com/turtle](https://pythonandturtle.com/turtle)
@@ -44,14 +48,16 @@ Un script Python devra suivre une certaine structure pour la position de l'impor
 Le programme principal finira par `turtle.done()`, ce qui execute le tracé.
 
 ### 1. Modifier la fonction `carre`: utiliser une boucle bornée
-Modifier pour avoir un script qui utilise le moins de lignes possibles pour cette fonction. Utiliser une boucle `for`.
+Modifier pour avoir un script qui utilise le *moins de lignes possibles* pour cette fonction. (éviter les répétitions `t.left + t.forward`)
+
+Utiliser pour cela une [boucle bornée](/docs/NSI_1/donnees/page5/) `for`.
 
 **question 1.:** recopier le script de votre fonction
 
 ### 2. Une variante du programme: dessiner un rectangle
 Definir et utiliser une fonction `rectangle` pour tracer un rectangle. On définira une nouvelle variable `longueur` qui sera utile comme paramètre de la fonction. 
 
-La valeur de cette variable sera introduite par une fonction `input`, comme pour `largeur`.
+La valeur de cette variable sera introduite par une fonction `input`, comme dans le script précédent.
 
 **question 2.:** recopier le script de votre fonction
 
@@ -63,7 +69,7 @@ Dans un carré de côté 100, on trace un carré dont les sommets sont situés a
 
 Effacer les instructions de la partie *Programme principal*.
 
-On utilisera une boucle non bornée avec le variant `largeur`. La condition d'execution pourrait être par exemple, `largeur>20`:
+On utilisera une [boucle non bornée](/docs/python/pages/conditions/page2_D/) `while` avec le **variant** `largeur`. La condition d'execution pourrait être par exemple, `largeur>20`:
 
 ```python
 while largeur > 20:
@@ -89,7 +95,7 @@ Ajouter une fonction `spirale` qui devra reproduire une figure sur le modèle de
 * La fonction utilisera un paramètres: la `longueur` du segment initial
 * le nombre d'itérations `N` voulues
 
-Dans la fonction  `spirale`: utiliser une boucle pour executer un certain nombre de traits.
+Dans la fonction  `spirale`: utiliser une boucle (`for` ou `while`) pour executer un certain nombre de traits.
 
 **question 3.2.:** recopier le script de votre fonction
 
