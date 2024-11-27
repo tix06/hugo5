@@ -11,10 +11,13 @@ Il est conseillé d'avoir bien lu et traité les exemples des pages:
 * [TP boucles et fonctions](/docs/NSI_1/donnees/page5/)
 * [Cours sur les fonctions](../page2)
 
-# Premier tracé
-Se rendre sur l'editeur en ligne: [https://pythonandturtle.com/turtle](https://pythonandturtle.com/turtle)
+# Premiers tracés
+**Script initial**
+Ces exemples utilisent une *boucle bornée* pour *répéter* des consignes (`for .. in range`)
 
-Copier-coller le script ci-dessous. Executer et analyser celui-ci.
+Se rendre sur le notebook [Turtle](https://capytale2.ac-paris.fr/web/c/04df-2206914)
+
+> Dans une nouvelle cellule: *Copier-coller* le script ci-dessous. *Executer et analyser* celui-ci.
 
 ```python
 import turtle
@@ -47,27 +50,51 @@ Un script Python devra suivre une certaine structure pour la position de l'impor
 
 Le programme principal finira par `turtle.done()`, ce qui execute le tracé.
 
-### 1. Modifier la fonction `carre`: utiliser une boucle bornée
-Modifier pour avoir un script qui utilise le *moins de lignes possibles* pour cette fonction. (éviter les répétitions `t.left + t.forward`)
+## Modifier la fonction `carre`: utiliser une boucle bornée
+> Modifier pour avoir un script qui utilise le *moins de lignes possibles* pour cette fonction. (Rassembler les instructions `t.left + t.forward` dans une boucle)
 
 Utiliser pour cela une [boucle bornée](/docs/NSI_1/donnees/page5/) `for`.
 
-**question 1.:** recopier le script de votre fonction
+**question 1:** recopier le script de votre fonction
 
-### 2. Une variante du programme: dessiner un rectangle
-Definir et utiliser une fonction `rectangle` pour tracer un rectangle. On définira une nouvelle variable `longueur` qui sera utile comme paramètre de la fonction. 
+## Une variante du programme: dessiner un rectangle
+> Definir et utiliser une fonction `rectangle` pour tracer un rectangle. On définira une nouvelle variable `longueur` qui sera utile comme paramètre de la fonction. 
 
 La valeur de cette variable sera introduite par une fonction `input`, comme dans le script précédent.
 
-**question 2.:** recopier le script de votre fonction
+**question 2:** recopier le script de votre fonction
 
-# 3. Dessiner des spirales
-## 3.1. Avec des carrés emboités
+## Dessiner des rectangles
+> Reproduire, à l'aide de votre fonction, le dessin ci-dessous. Celui-ci forme 3 rectangles colorés de dimension $80x100$.
+
+{{< img src="../images/t6.png" caption="rectangles côte à côte" >}}
+
+**question 3:** recopier le script de votre programme (ne pas préciser les `import` et les definitions de fonctions)
+
+# Utiliser un variant de boucle
+On utilisera maintenant la valeur de `i` dans l'instruction `for i in range(N):`
+
+Pour dessiner la figure suivante, on utilisera une *boucle bornée*, qui répète plusieurs fois le bloc de code:
+
+* calculer la valeur de x
+* dessiner un carré de largeur x
+* lever le stylo
+* avancer jusqu'à la prochaine position.
+
+{{< img src="../images/t7.png" >}}
+
+La valeur du paramètre x, dans la fonction `carre(x)`, dependra du variant `i`. 
+
+> Ecrire un programme qui réalise ce dessin, à partir d'une fonction mathématique $x = a.i + b$
+
+**question 4:** recopier le script de votre programme.
+
+# Dessiner des spirales
+## Avec des carrés emboités
 Dans un carré de côté 100, on trace un carré dont les sommets sont situés au tiers des côtés du carré initial, et on répète *indéfiniment* l’opération.
 
 {{< img src="../images/t5.png" >}}
 
-Effacer les instructions de la partie *Programme principal*.
 
 On utilisera une [boucle non bornée](/docs/python/pages/conditions/page2_D/) `while` avec le **variant** `largeur`. La condition d'execution pourrait être par exemple, `largeur>20`:
 
@@ -83,12 +110,10 @@ A chaque itération:
 * tourner de 26.565 degrés
 * reduire la largeur d'un facteur 0.745: `largeur = largeur * 0.745`
 
-**question 3.1.:** recopier le script de votre programme principal
+**question 5:** recopier le script de votre programme principal
 
-## 3.2. Avec des segments
-Effacer les instructions de la partie *Programme principal*.
-
-Ajouter une fonction `spirale` qui devra reproduire une figure sur le modèle de la suivante:
+## Avec des segments
+Ecrire une fonction `spirale` qui devra reproduire une figure sur le modèle de la suivante:
 
 {{< img src="../images/t4.png" >}}
 
@@ -97,6 +122,7 @@ Ajouter une fonction `spirale` qui devra reproduire une figure sur le modèle de
 
 Dans la fonction  `spirale`: utiliser une boucle (`for` ou `while`) pour executer un certain nombre de traits.
 
-**question 3.2.:** recopier le script de votre fonction
+**question 6:** recopier le script de votre fonction
 
-
+# Liens
+* Editeur en ligne: [https://pythonandturtle.com/turtle](https://pythonandturtle.com/turtle)
