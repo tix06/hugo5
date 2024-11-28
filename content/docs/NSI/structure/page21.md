@@ -291,7 +291,7 @@ L.tete = M1
 
 def affiche(M):
     if M.suiv is None:
-        return M.val  # affiche la valeur de queue
+        return str(M.val)  # affiche la valeur de queue
     else:
 
     .....
@@ -308,21 +308,29 @@ def affiche(M):
 **3.** Comment appeler cette fonction afin qu'elle affiche TOUS les éléments de la liste L, du premier (*tête*) au dernier? Tester avec la liste **ACD** décrite dans le cours.
 
 ## Exercice 3: Insertion d'un élément
-On souhaite maintenant modifier la séquence de `ma_liste` créée dans l'exercice 1. On va insérer un élément de valeur `Deuxieme` à la 2<sup>e</sup> position.
 
 {{< img src="../images/listeC2.png" alt="insertion liste chainée" caption="insertion dans une liste" >}}
+
+Soit la liste chainée `L`: 'A' => 'C' => 'D'
+
+On souhaite maintenant modifier la séquence de `L` créée dans l'exercice 2. On va insérer un élément de valeur `B` à la $2^e$ position:
+
+A => B => C => D
+
+
 Ajouter dans votre programme les instructions qui permettront de:
  
-**1.** Créer un nouveau maillon `M4`.
+**1.** Créer un nouveau maillon `M2`.
 
-**2.** Affecter 'Deuxieme' comme valeur à `M4`.
+**2.** Affecter 'B' comme valeur à `M2`.
 
-**3.** Modifier le lien `M4.suiv` pour que celui-ci pointe vers le 3<sup>e</sup> élément de `ma_liste`.
+**3.** Modifier le lien `M2.suiv` pour que celui-ci pointe vers le 3<sup>e</sup> élément de `ma_liste`. 
 
-**4.** Modifier le lien `ma_liste.tete.suiv` pour recréer la liste chainée.
+**4.** Modifier le lien `L.tete.suiv` pour recréer la liste chainée. (ou bien celui de `M1`, ce qui revient à la même chose).
 
-**5.** Utiliser la fonction `affiche` pour afficher les éléments de `ma_liste`.
+**5.** Utiliser la fonction `affiche` pour afficher les éléments de `L`.
 
+**6.** Que se passerait-il avec cette fonction `affiche` si on mettait `M4.suiv = M1`? (liste chainée circulaire).
 
 # Correction des exercices
 ## Exercice 1
@@ -377,7 +385,7 @@ Pour le script recursif:
 
 def affiche(M):
     if M.suiv is None:
-        return M.val
+        return str(M.val)
     else:
         return str(M.val) + '=>' + affiche(M.suiv)
 
