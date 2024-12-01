@@ -35,8 +35,14 @@ Par exemple, la page `html` que vous consultez, fait partie du domaine *allophys
 
 [https://allophysique.com/docs/snt_2nde/pages/page4/web/index.html](/docs/snt_2nde/pages/page4/web/index.html)
 
+Cette URL est construite en 3 parties distinctes:
+
+{{< img src="../images/internet1_img.png" caption="nom de domaine / chemin / ressource" >}}
+
 
 {{< img src="../images/url.png" >}}
+
+
 
 # Le modèle client-serveur
 
