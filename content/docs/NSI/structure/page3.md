@@ -319,15 +319,50 @@ On peut, par exemple, accéder à la description de carte1 à l'aide de la méth
 
 -->
 
-# Exercices
-## Exercice 1: Jeu de cartes des 7 familles : Les cartes
-On définit une classe `Sept_Familles` dont le contenu est défini dans le docstring (voir dans la fenêtre de l'editeur).
+# Exercice: Jeu de cartes des 7 familles
+Lien vers le notebook: [CAPYTALE](https://capytale2.ac-paris.fr/web/c/f567-4829551)
+## Les cartes
+On donne la declaration de la classe `Sept_Familles`
 
-* Question 1: Compléter la classe `Sept_Familles` avec la méthode `get_Attributs`. 
+```python
+class Sept_Familles:
+    """
+    NAME
+        Sept_Familles
+    DESCRIPTION
+        constructeur pour les cartes du jeu
+    PARAMETERS
+        famille (str): nom de la famille
+            choix parmi ('Jongleurs','Acrobates','Dresseurs','...')
+        membre_famille(str): membre de la famille 
+            choix parmi ('Grand-père','Grand-mère','Pére','Mère','Fils','Fille')
+    FUNCTIONS
+        get_Attributs
+    """
+    def __init__(self,famille,qui):
+        self.famille = famille
+        self.membre_famille = qui
+```
 
+**Question 1**: créer (instancier) l'objet `carte1` de la famille des *Jongleurs*, le *Grand-père*.
+
+**Question 2**: Compléter la classe Sept_Familles avec la fonction `get_Attributs`. Cette fonction ne prend pas d'autre paramètre que `self`.
 Celle-ci devra retourner un tuple constitué des 2 attributs de classe.
 
-* Question 2: Testez alors votre classe. Définir les *objets-cartes* suivantes:
+Exemple d'utilisation dans le programme:
+
+```
+>>> carte1.get_attribut()
+('Jongleurs','Grand-père')
+```
+
+**Question 3**: Consulter le *Docstring*  de la classe:
+
+```
+>>> help(Sept_Familles)
+```
+
+**Question 4**: Définir les objets-cartes suivantes:
 
 ```
 carte1 = Sept_Familles('Jongleurs','Grand-père')
@@ -336,30 +371,26 @@ carte3 = Sept_Familles('Musiciens','Père')
 carte4 = Sept_Familles('Musiciens','Fille')
 ```
 
-Puis tester les méthodes de classe:
+Puis tester la méthode de classe:
 
 ```
->>> carte1.get_Attributs()
+>>> carte2.get_Attributs()
 ```
 
-* Ajouter les autres membres de l'une des familles (carte5, carte6,...). *Une famille est constituée de Grand-père, Grand-mère, Père, Mère, Fils, Fille.*
+Ajouter les autres membres de l’une des familles (carte5, carte6,…). Une famille est constituée de Grand-père, Grand-mère, Père, Mère, Fils, Fille.
 
-
-* Question 4: Ajouter la méthode `__repr__` qui permettra de décrire la carte: 
+**Question 5**: Ajouter la méthode `__repr__` qui permettra de décrire la carte:
 
 Exemple de message attendu:
+
 ```
 >>> print(carte1)
 La carte est de la famille des Jongleurs. C'est le Grand-père.
 ```
 
-*Testez votre fonction pour quelques unes des cartes.*
+Testez votre fonction pour quelques unes des cartes.
 
-<iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5fbff48972f3c&mode=code"></iframe>
-
-{{< vitta 5fbff48972f3c >}}
-
-## Exercice 2: Jeu de cartes des 7 familles: Les joueurs
+## Classe joueur
 Le joueur est un objet qui possède, pour attributs, les cartes qu'il a en main.
 
 Chaque joueur est une instance de la classe `Joueur`, et sera construit avec `joueur1 = Joueur(carte1,...)`
@@ -375,41 +406,69 @@ for i in args:
 
 La fonction `__init__` aura alors pour arguments `self` (qui est obligatoire), et `*args`. On y definit une liste vide, `self.C`, et on y ajoute des tuples constitués des attributs pour chacune des cartes du joueur. Cette fonction est donnée dans l'editeur, plus bas...
 
-* Question 1: Ecrire une méthode de classe `get_cartes` qui retourne la liste `self.C`, afin de pouvoir accéder à la liste des cartes du joueur.
+**Question 1**: Dans la classe `Joueur`: Ecrire une méthode de classe `get_cartes` qui retourne la liste `self.C`, afin de pouvoir accéder à la liste des cartes du joueur.
+
+```python
+class Joueur:
+    def __init__(self,*args):
+        self.C = []
+        for i in args:
+            self.C.append(i.get_Attributs())
+    
+    # à compléter
 
 
-* Question 2: Créer l'objet `joueur1`. Celui-ci devra posséder les cartes `carte1` et `carte2` définies plus haut. 
+carte1 = Sept_Familles('Jongleurs','Grand-père')
+carte2 = Sept_Familles('Jongleurs','Fille')
+carte3 = Sept_Familles('Musiciens','Père')
+carte4 = Sept_Familles('Musiciens','Fille')
+```
 
-Tester alors la méthode : `joueur1.get_cartes()` pour afficher la liste.
+**Question 2**: Créer l’objet `joueur1`. Celui-ci devra posséder les cartes `carte1` et `carte2` définies plus haut: `joueur1 = Joueur(carte1,carte2)`
 
-* Question 3: Créer une méthode de classe `__repr__` pour afficher cette liste dans un message, comme par exemple:
+Tester alors la méthode : joueur1.get_cartes() pour afficher la liste.
+
+**Question 3**: Créer une méthode de classe `__repr__` pour afficher cette liste dans un message, comme par exemple:
 
 ```
 >>> print(joueur1)
 le joueur possède les cartes : [('Jongleurs', 'Grand-père'), ('Jongleurs', 'Fille')]
+``` 
+
+**Question 4**: On souhaite maintenant avoir une interaction plus poussée avec le `Joueur`, selon les règles du jeu. 
+
+L’idée est de créer une méthode `possede` qui prend en paramètre un tupple `(famille,membre_famille)`, et qui retourne un booleen selon la main du joueur, comme par exemple:
+
+```
+>>> joueur1.possede(('Jongleurs','Fils'))
+False
+>>> joueur1.possede(('Jongleurs','Fille'))
+True
+>>> joueur1.possede(carte1.getAttributs())
+True
 ```
 
-* Question 4: On souhaite maintenant avoir une interaction plus poussée avec le Joueur, selon les règles du jeu. L'idée est de créer une méthode `demande` qui prend en paramètre un tupple (`famille`,`qui`), et qui retourne un message selon la main du joueur, comme par exemple:
+**Question 5**: Quelles fonctionnalités du jeu reste t-il à programmer pour avoir un jeu complet?
+
+**Question 6**: (mini projet) Programmer l’une de ces fonctionnalités.
+
+On pourra par exemple programmer une fonction `demande` de la classe `Joueur` telle que:
 
 ```
->>> joueur1.demande(('Jongleurs','Fils'))
+>>> joueur1 = Joueur(carte1,carte2)
+>>> print(joueur1)
+le joueur possède les cartes : [('Jongleurs', 'Grand-père'), ('Jongleurs', 'Fille')]
+>>> joueur2.demande(joueur1,('Jongleurs','Grand-père'))
+le joueur a la carte
+>>> joueur2.demande(joueur1,('Jongleurs','Grand-mère'))
 pioche
->>> joueur1.demande(('Jongleurs','Fille'))
-Le joueur a la carte
->>> joueur1.demande(carte1.getAttributs())
-Le joueur a la carte
+>>> joueur2.demande(joueur1,carte2.get_Attributs())
+le joueur a la carte
 ```
 
-* Question 5: Quelles fonctionnalités du jeu reste t-il à programmer pour avoir un jeu *complet*? 
 
-* Question 6: *(mini projet)* Programmer l'une de ces fonctionnalités.
-
-<iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5fbffcb7b75fa&mode=code"></iframe>
-
-
-{{< vitta 5fbffcb7b75fa >}}
-
-Correction des exercices: [Lien](../page32)
+# Liens
+**Correction de l'exercice** sur le jeu des `Sept_Familles`: [Lien](../page32)
 
 
 <!--
@@ -424,7 +483,8 @@ On rappelle qu'une liste chaînée est une structure linéaire, constituée de c
 
 -->
 
-# La suite en TP
+**La suite en TP**
+
 * TP sur trajectoires de projectiles: [Lien](../page31/) 
 * TP sur la programmation d'un jeu de Dominos: [Lien](../page33/). *(Sans interface graphique)*
 

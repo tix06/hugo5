@@ -53,8 +53,14 @@ def get_cartes(self):
 def __repr__(self):
   return "le joueur possède les cartes : {}".format(self.C)
   
-def demande(self,carte):
+def possede(self,carte):
   if carte in self.C:
+    return True
+  else:
+    return False
+
+def demande(self,joueur,carte):
+  if # a completer:
     return "le joueur a la carte"
   else:
     return "pioche"
@@ -66,10 +72,10 @@ Puis tester en console:
 >>> joueur1 = Joueur(carte1,carte2)
 >>> print(joueur1)
 le joueur possède les cartes : [('Jongleurs', 'Grand-père'), ('Jongleurs', 'Fille')]
->>> joueur1.demande(('Jongleurs','Grand-père'))
+>>> joueur2.demande(joueur1,('Jongleurs','Grand-père'))
 le joueur a la carte
->>> joueur1.demande(('Jongleurs','Grand-mère'))
+>>> joueur2.demande(joueur1,('Jongleurs','Grand-mère'))
 pioche
->>> joueur1.demande(carte2.get_Attributs())
+>>> joueur2.demande(joueur1,carte2.get_Attributs())
 le joueur a la carte
 ```
