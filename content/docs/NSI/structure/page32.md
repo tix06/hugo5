@@ -60,7 +60,7 @@ def possede(self,carte):
     return False
 
 def demande(self,joueur,carte):
-  if # a completer:
+  if joueur.possede(carte):
     return "le joueur a la carte"
   else:
     return "pioche"

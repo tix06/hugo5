@@ -43,3 +43,9 @@ On utilisera l'editeur [Python + Turtle](https://pythonandturtle.com/turtle/) co
 
 # Notes
 TP inspiré d'un exercice du Hachette Education NSI, Terminale.
+
+**La suite en TP**
+
+* TP Jeu des 7 familles: [Lien](../page34/) *(Sans interface graphique)*
+* TP sur trajectoires de projectiles: [Lien](../page31/) 
+* TP sur la programmation d'un jeu de Dominos: [Lien](../page33/). *(Sans interface graphique)*

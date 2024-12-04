@@ -2,6 +2,8 @@
 Title: Jeu de dominos
 ---
 
+**Editeur**: Notebook sur [CAPYTALE](https://capytale2.ac-paris.fr/web/c/e3a0-4866533)
+
 # jeu de Dominos et POO - version classique
 Le jeu de *Dominos* est un jeu très simple, ou, pour gagner, il faut être le premier joueur à avoir posé tous ses dominos.
 Une fois le premier domino placé sur la table, le joueur suivant doit à son tour poser un domino ayant le même nombre de points sur au moins un côté du domino précédemment posé.
@@ -17,6 +19,11 @@ La disposition importe peu: il faut que la chaine reste ouverte.
 
 
 {{< img src="../images/domino2.png" caption="Exemple de disposition juste (à gauche) et fausse (à droite)" >}}
+
+Dans cette simulation de jeu, on supposera: 
+
+* que le joueur joue seul
+* et qu'il est possible d'insérer un Domino en l'intercalant entre 2 Dominos déjà posés, à condition qu'il s'agisse d'un Domino double. (1:1) par exemple peut être posé entre (5:1) et (1:6)
 
 On utilise la définition de classes suivantes:
 
@@ -225,4 +232,10 @@ puis les différents tests des méthodes de Partie:
 >>> partie1.poser(D11)
 ```
 -->
+
+**La suite en TP**
+
+* TP Jeu des 7 familles: [Lien](../page34/) *(Sans interface graphique)*
+* TP sur trajectoires de projectiles: [Lien](../page31/) 
+* TP sur la programmation d'un jeu de Dominos: [Lien](../page33/). *(Sans interface graphique)*
 
