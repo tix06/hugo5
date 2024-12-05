@@ -88,7 +88,14 @@ Dans la rubrique Il était une fois… ma thèse, Mathilde Boltenhagen,  doctora
 
 [https://www.cscience.ca/2020/12/22/un-code-pour-connaitre-lempreinte-ecologique-de-lia/](https://www.cscience.ca/2020/12/22/un-code-pour-connaitre-lempreinte-ecologique-de-lia/)
 
-## [Dossier sur l'intelligence artificielle](/posts/python/data_analyse/)
+## [Prix Nobel de Physique 2024 sur les reseaux de neurones](https://culturesciencesphysique.ens-lyon.fr/actualites/prix-nobel-de-physique-2024)
+Le prix Nobel de physique 2024 a été attribué mardi 8 octobre à : John J. Hopfield (américain) et Geoffrey E. Hinton (canado-britanique), pour leurs contributions exceptionnelles dans le domaine de la science des réseaux neuronaux et de l'intelligence artificielle. Voir ici le dossier sur [culturesciencesphysiques](https://culturesciencesphysique.ens-lyon.fr/actualites/prix-nobel-de-physique-2024) avec:
+
+* L'intelligence artificielle, c'est quoi ? - Une explication pour les physiciens,
+* Introduction à l’apprentissage profond (deep learning) de l'intelligence artificielle,
+* Intelligence artificielle et jeu de Nim - Fonctionnement de l'apprentissage par renforcement
+
+## [Dossier et notebook sur l'intelligence artificielle](/posts/python/data_analyse/)
 fiche et liens sur le thème de l'IA.
 
 [allophysique.com > Posts](/posts/python/data_analyse/)
