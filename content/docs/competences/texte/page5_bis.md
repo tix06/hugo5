@@ -111,16 +111,17 @@ Où les `...` signifient le contenu.
 Il s'agit du texte: `Article issu de la page (consultée le 01 dec 2023) Démocratie Athénienne sur wikipedia.org: https://fr.wikipedia.org/wiki/D%C3%A9mocratie_ath%C3%A9nienne`
 
 * Identifier l'URL de redirection (l'adresse du lien): `https:/ ... dates-cle/`
-* Identifier la cible du lien (le mot sur lequel vous devez cliquer): *histoire du plastique*
-* Remplacer le texte non formaté par le mélange de texte et de balises suivant:
+* Identifier la cible du lien (le mot sur lequel vous devez cliquer): *Démocratie Athénienne sur wikipedia.org*
+* Remplacer ce texte par le script suivant:
 
 ```html
 Article issu de la page (consultée le 01 dec 2023) <a href="https://fr.wikipedia.org/wiki/D%C3%A9mocratie_ath%C3%A9nienne">Démocratie Athénienne sur wikipedia.org</a>
 ```
 
-> **Rappelez-vous**: Dans les instructions de la balise `<a>`:
-* où se place la cible du lien (le texte à cliquer)?
-* où se place l'adresse du lien?
+> **A savoir**: Dans les instructions de la balise `<a>`:
+* la balise `<a>` possède un attribut `href`, à l'intérieur même de la balise: `<a href="">`
+* l'URL se place entre les guillemets devant l'attribut `href`
+* la cible du lien (le texte à cliquer) se place entre la balise ouvrante `<a>` et fermante `</a>`
 
 
 > **Navigateur:** Recharger la page (CTRL + r). Que remarquez vous? Le lien est-ils actif lorsque l'on clique dessus?

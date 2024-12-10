@@ -20,6 +20,8 @@ Il est demandé:
 * le code du programme devra être correctement commenté et lisible.
 * Sur votre cahier de laboratoire: vous expliquerez quel a été votre rôle personnel dans la séance: Les choix que vous avez fait, les explications que vous voulez ajouter.
 
+*Il se peut que l'editeur Spyder présente des problèmes avec la librairie TKinter. Le fichier dominos_projet.py peut ne pas s'executer. Choisir alors un autre editeur.*
+
 # Travail à réaliser
 ## Dans la classe `Partie`
 ### étape 1
@@ -56,7 +58,28 @@ class Partie:
 Compléter les fonctions `ajouter_fin`, et `RAZ`à partir des informations contenues dans le script.
 
 ### étape 2
-Ajouter une méthode de classe dans `Partie` que l'on appelera `pose_correcte`: celle-ci devra renvoyer True si le domino posé respecte la règle du jeu, à savoir que les nombres adjacents des 2 dominos sont identiques. Sinon, la fonction retourne False.
+Dans la classe `Partie`: Comléter la méthode de classe `pose_correcte`: celle-ci devra renvoyer True si le domino posé respecte la règle du jeu, à savoir que les nombres adjacents des 2 dominos sont identiques. Sinon, la fonction retourne False.
+
+### étape 3: testez vos fonctions de la classe `Partie`
+Dans le programme principal `if __name__ == '__main__':`:
+
+Après la déclaration `app = Game(partie1)`, ajouter les lignes suivantes:
+
+```python
+    # ajouts
+    D2 = Domino(4,3)
+    print(partie1.pose_correcte(4)) # verifie si la pose 2:4 => 4:3 est OK
+    partie1.ajouter_fin(D2) # ajoute le nouveau Domino D2
+    print(partie1) # affiche le jeu dans la console
+    app.dessine() # dessine le jeu dans la fenêtre TKinter
+```
+
+Si tout se passe bien, vous devriez obtenir:
+
+```
+True
+2:4  => 4:3
+```
 
 ## Dans la classe `Game` 
 ### étape 1
@@ -114,11 +137,11 @@ class Game(Tk):
 * Au repère à completer (1):
 Completer la fonction `ajouter_fin` avec pour paramètre le nouveau Domino à poser.
 
-Il faut créer un nouvelle instance de Domino avec pour attributs `int(s[0])` et `int(s[1])`. 
+Il faut créer un nouvelle instance de Domino avec pour attributs `int(s[0])` et `int(s[1])`, ce qui signifie `Domino(int(s[0]),int(s[1]))`
 
 
 * Au repère à completer (2):
-self.dir prend la valeur de `str(s[2][0]`, c'est à dire le premier caractère de `s[2]`.
+self.dir prend la valeur de `str(s[2][0])`, c'est à dire le premier caractère de `s[2]`.
 
 
 ### étape 2
