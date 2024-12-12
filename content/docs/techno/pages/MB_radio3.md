@@ -96,7 +96,7 @@ l = len(messages)
 i = (i + 1) % l
 ```
 
-4. Analyse du programme: Décrire le programme avec un diagramme d'activités.
+4. Analyse du programme: Décrire le programme avec un [diagramme d'activités](/pdf/SNT/diagramme_activite.pdf) (exemple à la page 4).
 
 5. Ce programme, comment devrait-il fonctionner? Quel-s problème-s voyez-vous lorsque plusieurs cartes microbits fonctionnent de concert, avec ce même programme?
 
@@ -113,7 +113,7 @@ i = (i + 1) % l
 ## Programmation orientée objet
 On souhaite effacer du programme les variables globales. Les variables  seront regroupées comme attributs de la classe `Communication_radio`. On ajoutera à cette classe les méthodes qui serviront à rendre le script plus concis.
 
-Voici le script que vous allez utiliser:
+Voici le script que vous allez utiliser: **Créer un nouveau fichier, coller ce nouveau script et complétez le pour qu'il soit fonctionnel.**
 
 ```python
 from microbit import *
@@ -160,12 +160,14 @@ while True:
       display.scroll(stringData)
 ```
 
-## Réseau privé
-> But: Reduire à 2 cartes sur un même réseau. Puis envoyer un message privé, ou bien des messages de reaction de type LIKE/ UNLIKE.
 
-{{< img src="../images/vitta_init12.png" >}}
+
+
+
 
 **Question:** quelles sont les différentes méthodes que vous pouvez envisager pour que la communication entre 2 cartes microbit reste confidentielle?
+
+{{< img src="../images/vitta_init12.png" >}}
 
 > Poursuivre cette séance avec les 2 projets suivants.
 
