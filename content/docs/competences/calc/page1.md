@@ -91,32 +91,36 @@ On devrait obtenir maintenant le tableau suivant:
 C'est là l'une des fonctions magiques du logiciel. Observez les paramètres de chacune des fonctions reproduites. Pour le *devoir 2*, vous devriez voir `=MOYENNE(C6:C8)`. Le logiciel a adapté la mise en forme, dans la nouvelle colonne, à partir de celle adjacente!
 
 ### Ecrire une formule
-La formule non coefficientée, pour l'élève 1 s'écrira:
+* La formule non coefficientée, pour l'élève 1 s'écrira:
 
-$$= (B6+C6+D6+E6) * 20 / (B5+C5+D5+E5)$$
+$$= (B6/B5+C6/C5+D6/D5+E6/E5) * 20 / 4$$
 
-Il s'agit de la somme de ses notes, divisée par la somme de la ligne *note sur:*. Le tout, multiplié par 20. 
+Il s'agit de la somme de ses notes, divisée par la somme de la ligne *"note sur:"* , Le tout, multiplié par 20. 
 
 
 > Pour calculer la moyenne de l'élève 1, après ses 4 devoirs: Dans quelle cellule va t-on placer la formule?
 
-* Saisir cette formule dans la cellule la plus adaptée. Puis modifier le format de cellule pour arrondir à 2 chiffres après la virgule.
+> Saisir cette formule dans la cellule la plus adaptée. Puis modifier le format de cellule pour arrondir à 2 chiffres après la virgule.
 
 > On souhaite *reproduire la mise en forme* afin de calculer la moyenne pour les autres élèves. Comment va-t-on s'y prendre?
+
 
 * Reproduire la mise en forme du calcul de moyenne pour chaque élève. Les résultats vous paraissent-ils cohérents? D'où cela peut-il provenir?
 
 Nous allons corriger ce problème dans le paragraphe suivant...
 
 ### Références relatives ou absolues
-Le problème précédent vient de la manière avec laquelle nous avons écrit les coordonnées de cellules. Le calcul doit être reproduit pour chaque élève, mais avec des coordonnées pour les valeurs *note sur:* qui doivent rester fixes. Pour cela, à la place d'écrire $$(B5+C5+D5+E5)$$ dans la formule de calcul pour l'élève 1, nous allons écrire: $$($B$5+$C$5+$D$5+$E$5)$$
+Le problème précédent vient de la manière avec laquelle nous avons écrit les coordonnées de cellules. Le calcul doit être reproduit pour chaque élève, mais avec des coordonnées pour les valeurs *note sur:* qui doivent rester fixes. Pour cela, à la place d'écrire $= (B6/B5+C6/C5...$ dans la formule de calcul pour l'élève 1, nous allons écrire: `= (B6/B$5+C6/C$5...` 
 
-Cela ne change rien au calcul de la moyenne de l'élève 1. Par contre, si vous faites une *reproduction de la mise en forme* pour les autres élèves, leur moyenne est cette fois-ci correctement calculée.
+Cela ne change rien au calcul de la moyenne de l'élève 1. Par contre, si vous faites une *reproduction de la mise en forme* pour les autres élèves, leur moyenne est cette fois-ci correctement calculée: *La copie de la formule ne modifie pas la reference de cellule de la ligne 5.*
 
 ## Finir le tableau
 Il vous reste maintenant:
 
-* à tenir compte des coefficients pour chaque matière. Cela va vous obliger à modifier la formule de calcul de moyenne par élève.
+* à tenir compte des coefficients pour chaque matière. Cela va vous obliger à modifier la formule de calcul de moyenne par élève:
+
+`= (B6/B$5*B$4+C6/C$5*C$4+D6/..*..+E6/..*..) * 20 / (B$4+C$4+D$4+E$4)`
+
 * à ajouter le calcul de la moyenne de la classe pour le trimestre (semestre).
 
 ## Complément sur les références absolues
