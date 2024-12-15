@@ -40,6 +40,7 @@ On peut entrer dans une page directement en saisissant son URL.
 > Ensuite, il y a l'entrée par un moteur de recherche.
 
 ## Trouver une page: moteurs de recherche
+### Principe
 Avant l'usage généralisé des moteurs de recherche, les sites étaient référencés par dans des **annuaires web**: répertoire web, annuaire Internet ou répertoire Internet est un site web proposant une liste classée de sites Web.
 
 Le classement se fait typiquement dans une arborescence de catégories, censée couvrir tout ou partie des centres d'intérêt des visiteurs. 
@@ -57,17 +58,31 @@ Les moteurs de recherche – Mediaprovence (juin 2019)
 https://www.youtube.com/watch?v=Y8l4hKNQOEY
 
 {{< img src="../images/moteur_R_fonc.png" alt="moteurs de recherche : fonctionement" link="https://www.youtube.com/watch?v=pMywV9ZLS4M" caption="video: Fonctionnement du moteur de recherche – FenetresurWordpress" >}}
-Un moteur de recherche, c’est une entreprise, qui doit faire des profits.
-Ses revenus viennent des annonceurs (sites commerçants) qui sont mis en avant par des  publicités ciblées. C’est un mode de référencement payant, par opposition à celui naturel, réalisé à partir des contenus redactionnels (SEO).
-Les moteurs de recherche mettent en avant une expérience plus personnalisée de l’internaute. Et ils ont besoin pour cela de récupérer vos données.
+### Activité
+Créer un index à partir de mots clés, relevés dans les différents textes de Raymond Queneau: Exercices de style.
 
-{{< img src="../images/moteur_R_financ.png" alt="moteurs de recherche : fonctionement" link="https://www.youtube.com/watch?v=Y8l4hKNQOEY" caption="video: Les moteurs de recherche – Mediaprovence (juin 2019)" >}}
-{{< img src="https://www.1ere-position.fr/wp-content/uploads/2017/10/moteurs-recherche-alternatifs-google-seo-1ere-position.jpg" alt=" target=" link="https://www.1ere-position.fr/blog/10-meilleurs-moteurs-de-recherche-alternatifs-google/" caption="Article: des moteurs de recherche alternatifs à Google" >}}
+* Lecture des textes: [Raymond Queneau - Exercices de style](/pdf/SNT/internet1_moteur_recherche.pdf)
+* Analyse des résultats: [Lien vers pdf](/pdf/SNT/MR_analyse_resultats.pdf)
+
+*Activité inspirée du document sur : [imo.universite-paris-saclay.fr](https://www.imo.universite-paris-saclay.fr/~pierre.pansu/explosion_continue_en_classe.html)*
+
+### Moteur de recherche et IA générative
+*Textes, sons, vidéos, code informatique et informations sur des objets du quotidien : avec l'intelligence artificielle développée par OpenAI, Google ou encore Perplexity, nous ne chercherons bientôt plus de la même manière sur Internet. Mais attention, face à des hallucinations assénées avec un aplomb confondant et un coût écologique qui peut facilement déraper, mieux vaut ne pas plonger à corps perdu dans l'IA générative. Guide de survie en temps d'accélération technologique.*
+
+
+{{< img src="../images/MR_IA.png" alt=" target=" link="https://www.youtube.com/watch?v=8oYp48VRLEk" caption="Les surprises à venir des moteurs de recherche - FRANCE 24" >}}
 
 
 # sécurité et confidentialité
+## Moteurs de recherche et problème de confidentialité
+Un moteur de recherche, c’est une entreprise, qui doit faire des profits.
+Ses revenus viennent des annonceurs (sites commerçants) qui sont mis en avant par des  publicités ciblées. C’est un mode de référencement payant, par opposition à celui naturel, réalisé à partir des contenus redactionnels (SEO).
+Les moteurs de recherche mettent en avant une expérience *plus personnalisée* de l’internaute. Et ils ont besoin pour cela de *récupérer vos données*.
+
+{{< img src="../images/moteur_R_financ.png" alt="moteurs de recherche : fonctionement" link="https://www.youtube.com/watch?v=Y8l4hKNQOEY" caption="video: Les moteurs de recherche – Mediaprovence (juin 2019)" >}}
+## Limiter ses traces numériques: solutions
 Ce que le moteur de recherche appelle des données échangées (entre services de la même entreprise), sont vos données personnelles.
-Votre identité, vos contacts, la durée desappels, date, titres de vidéos, musiques consultées, historique des coord GPS, adresse IP, données des capteurs de l’appareil, requete lors des recherches, historique de navigation… 
+Votre identité, vos contacts, la durée des appels, date, titres de vidéos, musiques consultées, historique des coord GPS, adresse IP, données des capteurs de l’appareil, requete lors des recherches, historique de navigation… 
 
 Pour limiter ses traces sur le Web, et reduire cette collecte de données qui vous concernent, vous pouvez:
 
@@ -76,14 +91,25 @@ Pour limiter ses traces sur le Web, et reduire cette collecte de données qui vo
 * et Vie privée : blocage de contenus : toujours, afin de bloquer les contenus tiers qui peuvent ralentir la navigation ou distraire.
 
 # Impacts sur les pratiques humaines
+* Aspects positifs: liberté d'information, d'opinion
 
-* Le web permet à chacun de publier des informations sans contrôle préalable par une autorité. Cette revolution democratique amène la présence de fausses nouvelles (fake news) et le besoin de verification. Libération (désintox) et Le Monde (le blog des decodeurs) possèdent des espaces dédiés à la pratique, dédiant des journalistes à cette seule tâche.
-* Wikipedia est un exemple d'encyclopedie libre et participative, où des centaines d'internautes publient et relisent et effectuent des milliers de changement par heure.
-* Le web et le droit d'auteur, licences creatice commun
-* Les traces laissées de manière voulue ou non lors de sa navigation
+	* Le web permet à chacun de publier des informations sans contrôle préalable par une autorité. Cette revolution democratique amène la présence de fausses nouvelles (fake news) et le besoin de verification. Libération (désintox) et Le Monde (le blog des decodeurs) possèdent des espaces dédiés à la pratique, dédiant des journalistes à cette seule tâche.
+	* Wikipedia est un exemple d'encyclopedie libre et participative, où des centaines d'internautes publient et relisent et effectuent des milliers de changement par heure.
+
+* aspects négatifs: 
+	* Le web et le droit d'auteur: besoin de protection grâce à des licences (creatice commun)
+	* Les traces laissées de manière voulue ou non lors de sa navigation
+	* la surveillance des individus sur le web
 
 {{< img src="../images/bigdata.png" alt="bigdataiswatchingyou" >}}
+
 D’où l’importance d’un cadre juridique permettant de protéger les usagers, préoccupation à laquelle répond le règlement général sur la protection des données (RGPD).
+
+* Cout environnemental
+	* Selon Google, toute requête sur son moteur de recherche consomme autant d'énergie qu'une ampoule de 60 watts qu'on allume pendant 17 secondes. Soit, en moyenne, une émission de 0,7 gramme de CO2.
+	* 1 mail simple émet 4 g CO2. 1 mail avec pièce jointe émet 35 gCO2, soit près de 10 fois plus !
+	* Pour une requête sur ChatGpt : Une courte conversation (quelques interactions) avec le dernier modèle de ChatGPT émet environ 270g d'équivalent CO2 (eqCO2), soit près d'une tonne de CO2 par an pour dix échanges par jour.
+
 
 
 # Exercice

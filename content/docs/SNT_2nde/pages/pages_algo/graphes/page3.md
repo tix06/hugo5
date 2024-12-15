@@ -64,6 +64,7 @@ Pour Euler, une solution est une liste comportant exactement une lettre de plus 
 * Constater alors que la liste-solution n'existe pas.
 
 Euler propose ensuite une règle pour répondre au problème général de promenades sur des ponts :
+
 *Un parcours eulérien est possible si, et seulement si, deux régions au plus ont un nombre impair de ponts y conduisant. Si deux régions ont un nombre impair de ponts y conduisant, le parcours commencera par l’une de ces deux régions.*
 
 ## Où sont les graphes?

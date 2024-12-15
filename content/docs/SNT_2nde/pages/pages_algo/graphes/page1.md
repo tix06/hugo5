@@ -1,7 +1,10 @@
 ---
 Title : Graphes
 ---
-* voir aussi: [histoire des Graphes: parcours Eulérien](/docs/SNT_2nde/pages/pages_algo/graphes/page3/)
+* voir aussi: 
+* Histoire des Graphes: [parcours Eulérien](../page3/)
+* Cours de [Term NSI](/docs/NSI/structure/page5/)
+* Algorithme de [Dijkstra](../page4)
 
 # Introduction : Une soirée entre amis
 Imaginez une soirée entre amis à laquelle vous êtes invité : vous connaissez une partie des convives (Paul et Kévin), mais d'autres vous sont inconnus (Lisa, Oriane et Felix). Ils ont été invités, c'est qu'il y a certainement une relation de connaissance entre eux. Comme c'est Paul qui invite, il connait certainement tout le monde à sa soirée.
