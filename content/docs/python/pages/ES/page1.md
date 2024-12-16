@@ -68,8 +68,31 @@ if prix < 10000:
   print('Ok, je le prends.')
 ```
 
-# Lire/écrire dans un fichier
-## Lire le contenu d'un fichier
+# Lire le contenu d'un fichier
+## Repertoire courant
+Selon l'IDE python choisi, vous pouvez avoir des difficultés pour ouvrir un fichier. L'interpreteur peut considérer que le repertoire courant n'est pas celui du fichier en cours d'execution, et ne trouve pas votre fichier data, qui se trouve dans le même dossier.
+
+Pour resoudre ce problème, vous pouvez ajouter les lignes suivantes:
+
+```python
+import os
+
+dir_path = os.path.dirname(os.path.abspath(__file__))
+print('init:',dir_path)
+
+os.chdir(dir_path)
+#sys.path.append(dir_path)
+print('after:',os.getcwd())
+print('conten:t',os.listdir())
+```
+
+Le module `os` apporte les fonctions:
+
+* `chdir`: changer de repertoire courant pour le chemin utilisé par l'interpreteur
+* `getcwd`: chemin du repertoire courant
+* `listdir`: contenu du repertoire courant
+
+## Fichier txt
 On utilise la fonction `open` de la librairie standart en python:
 
 La fonction `open` crée donc un fichier. Elle renvoie un objet de la classeTextIoWrapper. Par la suite, nous allons utiliser des méthodes de cette classe pour interagir avec le fichier.
@@ -93,35 +116,7 @@ Le mot-clé `with` permet de créer un "context manager" (gestionnaire de contex
 
 Plus d'informations : [https://python.sdv.univ-paris-diderot.fr/07_fichiers/](https://python.sdv.univ-paris-diderot.fr/07_fichiers/)
 
-## Ecrire dans un fichier
 
-```python
-animaux2 = ["poisson", "abeille", "chat"]
-with open("zoo2.txt", "w") as filout:
-    for animal in animaux2:
-         filout.write(animal)
-```
-
-à la ligne 2 : ouverture du fichier `zoo2.txt` en mode écriture, avec le caractère `w pour write.`
-
-Si nous ouvrons le fichier zoo2.txt avec un éditeur de texte, voici ce que nous obtenons :
-
-`poissonabeillechat`
-
-Ce n'est pas exactement le résultat attendu. Le script peut être amélioré en utilisant une écriture formatée, comme vu plus haut, à la dernière ligne du script : 
-
-```python
-         filout.write("{}\n".format(animal))
-```
-Ce qui donne maintenant, à l'ouverture du fichier : 
-
-```
-poisson
-abeille
-chat
-```
-
-Exemple issu de la page [python.sdv.univ-paris-diderot.fr/07_fichiers](https://python.sdv.univ-paris-diderot.fr/07_fichiers/#72-ecriture-dans-un-fichier)
 
 ## Caractères speciaux
 Certains caractères sont fort utiles lors de l’écriture de fichiers texte afin d’organiser les données. Le symbole ; est très utilisé comme séparateur de colonnes pour une matrice, on utilise également le passage à la ligne ou la tabulation. Comme ce ne sont pas des caractères « visibles », ils ont des codes :
@@ -202,12 +197,98 @@ with open('ficher.csv', 'r') as file:
 ```python
 x = []
 y = []
-for i in range(1,len(table[1:])-1):
+for i in range(1,len(table[1:])):
     x.append(float(table[i][0]))
     y.append(float(table[i][1]))
 ```
 
+# Ecrire dans un fichier
+## Texte non structuré
+```python
+animaux2 = ["poisson", "abeille", "chat"]
+with open("zoo2.txt", "w") as filout:
+    for animal in animaux2:
+         filout.write(animal)
+```
 
+à la ligne 2 : ouverture du fichier `zoo2.txt` en mode écriture, avec le caractère `w pour write.`
+
+Si nous ouvrons le fichier zoo2.txt avec un éditeur de texte, voici ce que nous obtenons :
+
+`poissonabeillechat`
+
+Ce n'est pas exactement le résultat attendu. Le script peut être amélioré en utilisant une écriture formatée, comme vu plus haut, à la dernière ligne du script : 
+
+```python
+         filout.write("{}\n".format(animal))
+```
+Ce qui donne maintenant, à l'ouverture du fichier : 
+
+```
+poisson
+abeille
+chat
+```
+
+Exemple issu de la page [python.sdv.univ-paris-diderot.fr/07_fichiers](https://python.sdv.univ-paris-diderot.fr/07_fichiers/#72-ecriture-dans-un-fichier)
+
+## Tableau de données
+* convertir les données en chaine de caractère formatée:
+
+
+```python
+descripteurs = ['courant','tension','puissance']
+datas = [[0.100,2.00,0.200],[0.200,4.00,0.400]]
+tab = ""
+for title in descripteurs:
+    # ajout des descripteurs en tete du tableau
+    tab = tab + title + ','
+for i in range(len(datas)):
+    # saut de ligne
+    tab = tab + '\n'
+    for j in range(len(datas[0])):
+        tab = tab + datas[i][j] + ','
+```
+
+
+* exporter avec une extension *csv*
+
+```python
+with open("fichier_datas.csv", "w") as filout:
+    filout.write(tab)
+```
+
+## Exporter des données (sauvegarde)
+Il peut être utile de sauvegarder des données en cours de travail, comportant des paramètres que l'on veut retrouver lors d'une prochaine session de travail. 
+
+Utiliser le module `pickle` pour écrire, puis lire une structure de donnée python, comme un dictionnaire ou une liste:
+
+```python
+import pickle
+```
+
+*Exemple:*
+
+```python
+dico = {'b10' : 479.01,
+        'b11' : 479.19,
+        'b20' : 479.89,
+        'b21' : 479.91}
+```
+
+* Ecriture:
+
+```python
+with open(fichier_export,'wb') as f1:
+    pickle.dump(dico,f1)
+```
+
+* Lecture:
+
+```python
+with open('sauvegarde','rb') as f2:
+    dico = pickle.load(f2)
+```
 
 # Liens
 * Voir cours sur le formatage des sorties : [Lien python.org](https://docs.python.org/fr/3/tutorial/inputoutput.html)
