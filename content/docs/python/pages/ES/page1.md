@@ -183,5 +183,31 @@ terminale;495;480;420;435;435;
 ;;;;;;
 ```
 
+## Fichier csv
+Le module csv permet de reduire d'une ligne l'import des données (choisir le bon *delimiter*):
+
+```python
+import csv
+table = []
+with open('ficher.csv', 'r') as file:
+    reader = csv.reader(file, delimiter=',')
+    for row in reader:
+        table.append(row)
+```
+
+* Souvent, la première ligne ne concerne que l'en-tête (descripteurs). 
+* Le reste des données, numériques doivent être converties en *float*
+* Supposons que les données contiennent les valeur de x pour la première colonne, et y la deuxième colonne:
+
+```python
+x = []
+y = []
+for i in range(1,len(table[1:])-1):
+    x.append(float(table[i][0]))
+    y.append(float(table[i][1]))
+```
+
+
+
 # Liens
 * Voir cours sur le formatage des sorties : [Lien python.org](https://docs.python.org/fr/3/tutorial/inputoutput.html)
