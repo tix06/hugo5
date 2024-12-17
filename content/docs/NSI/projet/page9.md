@@ -20,7 +20,9 @@ Année 2024-2025
 * Données de l’étoile (naine M)
   * Température : 3551 ± 74 K
   * Rayon : 0.37 ± 0.01 Rsun (Rayon solaire)
-  * Masse : 0.36 ± 0.02 Msun (Masse solaire) Luminosité : 0.020 ± 0.001 Lsun (Luminosité solaire) Distance : 22.48 ± 0.01 parsec
+  * Masse : 0.36 ± 0.02 Msun (Masse solaire) 
+  * Luminosité : 0.020 ± 0.001 Lsun (Luminosité solaire) 
+  * Distance : 22.48 ± 0.01 parsec
 
 * Liens de téléchargement
 	* [planète 1](/scripts/astro/donnees-astep2024/TOI-270/TOI-270.01/TIC259377017-01_20240513_ASTEP-ANTARCTICA_R_measurements.csv)
@@ -36,9 +38,11 @@ Système avec possiblement 3 planètes. Seule la 2ème a été détectée par AS
 * Données de l’étoile (typesolaire)
 	* Température : 6461 ± 133 K
 	* Rayon : 1.33 ± 0.06 Rsun (Rayon solaire)
-	* Masse : 1.31 ± 0.21 Msun (Masse solaire) Luminosité : 2.78 ± 0.12 Lsun (Luminosité solaire) Distance : 113.8 ± 0.3 parsec
+	* Masse : 1.31 ± 0.21 Msun (Masse solaire) 
+	* Luminosité : 2.78 ± 0.12 Lsun (Luminosité solaire) 
+	* Distance : 113.8 ± 0.3 parsec
 
-Lien de téléchargement: [TIC350618622-01_20240319_ASTEP-ANTARCTICA_R_measurements.csv](/scripts/astro/donnees-astep2024/TOI-201/TIC350618622-01_20240319_ASTEP-ANTARCTICA_R_measurements.csv)
+Lien de téléchargement: [Planète 2](/scripts/astro/donnees-astep2024/TOI-201/TIC350618622-01_20240319_ASTEP-ANTARCTICA_R_measurements.csv)
 
 
 # Documents utiles
