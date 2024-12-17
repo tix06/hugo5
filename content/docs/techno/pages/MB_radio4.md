@@ -110,7 +110,7 @@ Vous allez mettre 4 cartes microbits dans un même réseau (Réglage dans l'inst
 
 Utiliser maintenant l'interface Python sur [Vittascience.com](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience) pour réaliser les modifications.
 
-
+### Etape 1
 A partir du [programme initial](/scripts/radio_microbit/script_poo.py), apporter les modifications pour:
 
 * envoyer un message avec un numero d'identification à 2 chiffres. Ce numero doit être le même pour les cartes microbits du micro-reseau, et doit rester secret. 
@@ -180,6 +180,13 @@ while True:
 
 ```
 
+### Etape 2
+Modifier le programme pour accepter les message d'un **groupe** d'amis ayant plusieurs numeros distincts d'identification. Il faudra:
+
+* modifier l'attribut `nombre` pour qu'il ait le type `list`.
+* et modifier les instructions où l'on interragit avec `nombre`
+
+# Aide
 Solution partielle: [projet2_0_authentifier_POO.py](/scripts/radio_microbit/projet2_0_authentifier_POO.py)
 
 <!--
