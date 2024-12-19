@@ -51,4 +51,5 @@ Lien de téléchargement: [Planète 2](/scripts/astro/donnees-astep2024/TOI-201/
 * Sauvegarder une liste/dictionnaire dans un fichier: [python - entrées/sorties, module pickle](/docs/python/pages/ES/page1/)
 * Tracer un graphique avec matplolib: [matplotlib.pyplot](/docs/python/pages/traitement/page1/)
 * Lissage de courbe bruitée: [tuto moyenne glissante](/docs/NSI/structure/page11/)
+* Regression linéaire: [tuto](/docs/python/pages/traitement/page2/)
 
