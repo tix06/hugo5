@@ -3,7 +3,11 @@ Title: de Writer a HTML
 ---
 
 # docx, odt, txt et html: différents documents textuels
-Les fichiers aux extensions docx, odt, txt et html permettent d'écrire et présenter du texte. Pour afficher le texte de manière structurée, il faut lui ajouter des *métadonnées*. Cela se fait d'une manière très speciale avec le html, ce que nous allons voir ici.
+Les fichiers aux extensions docx, odt, txt et html permettent d'écrire et présenter du texte. La structure du document se fait à l'aide de boutons d'options proposés par le logiciel. Le rendu visuel de la page est présenté par le logiciel au fur et à mesure de sa construction.
+
+Pour la creation d'une page web, c'est différent. On utilise un editeur HTML, comme notepad++. Pour afficher la page, il faudra retrouver la page à l'aide de l'explorateur, sur votre disque dur, et l'ouvrir avec un 2e outil, le navigateur.
+
+Dans l'editeur, pour structurer le contenu textuel, il faut lui ajouter des *métadonnées*. Cela se fait d'une manière très speciale avec le html, ce que nous allons voir ici.
 
 ## Le HTML : Document pour le Web
 Un document pour le Web est constitué d’un ou plusieurs fichiers de type texte, avec un format qui précise le contenu (en langage HTML), et le style (en langage CSS). Il est prévu pour être ouvert avec un **navigateur**.
@@ -165,4 +169,19 @@ p {
 }
 </style>
 ```
+
+# Ajouter une deuxième page
+Votre site web va être constitué de 2 pages, sur le recyclage des plastiques. Le contenu textuel se trouve dans ce fichier: [recyclage_plastiques.txt](/pdf/competences/recyclage_plastiques.txt)
+
+Le texte est extrait de la ressource: [rapport du sénat sur le traitement des plastiques](https://www.senat.fr/fileadmin/Office_et_delegations/OPECST/Notes_scientifiques/OPECST_note39.pdf)
+
+* Créer une 2e page HTML à partir de ce contenu
+* Créer un lien depuis la page 1 vers la page 2, puis de la page 2 vers la page 1.
+
+Cette fois-ci, vous allez créer des *liens internes* (entre documents d'un même site internet). Vous allez utiliser des *adresses relatives* entre les pages. Deux possibilités:
+
+* Supposons que  `page1.html` et `page2.html` sont dans le **même dossier**: Pour créer un lien de la page 1 vers la page 2, la balise lien s'écrira: `<a href="page2.html">Lien vers la page 2</a>`
+* Si les `page1.html` et `page2.html` ne **sont pas dans** le même dossier, il faudra utiliser le chemin relatif: `<a href="chemin/page2.html">Lien vers la page 2</a>`
+
+Chemin relatif: explication [ici](https://www.alsacreations.com/astuce/lire/78-quelle-est-la-diffrence-entre-les-chemins-relatifs-et-absolus.html)
 
