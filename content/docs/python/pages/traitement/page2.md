@@ -16,7 +16,7 @@ La lecture des données d'un fichier *csv* se fait avec la méthode vue dans le 
 ```python
 import csv
 table = []
-with open('ficher.csv', 'r') as file:
+with open('fichier.csv', 'r') as file:
     reader = csv.reader(file, delimiter=',')
     for row in reader:
         table.append(row)

@@ -7,7 +7,8 @@ Ce cours comporte plusieurs pages:
 * [introduction aux graphes](/docs/SNT_2nde/pages/pages_algo/graphes/page1/)
 * [cours sur les graphes. Term NSI](/docs/NSI/structure/page5/)
 * [algorithmes de parcours des graphes](/docs/SNT_2nde/pages/pages_algo/graphes/page2/)
-* [TP sur les algorithmes de parcours des graphes](/docs/NSI/structure/page6/)
+* [TP sur l'implementation en python des graphes](/docs/NSI/structure/page6/)
+* [TP sur les algorithmes de parcours des graphes (app en ligne)](/docs/NSI/structure/page61/)
 * [algorithme de Dijkstra](/docs/SNT_2nde/pages/pages_algo/graphes/page4/)
 * [Protocoles de routage](/docs/NSI/architecture/page3/)
 * [Arbres](/docs/NSI/structure/page4/)
@@ -66,7 +67,7 @@ $$\tfrac{N \times (N-1)}{2}$$
 
 * La **densité** D d'un graphe est une indication générale de sa connectivité et indique s'il y a beaucoup ou peu d'arêtes. C'est le rapport entre le nombre d'arêtes existantes et leur nombre possible:
 
-$$D = \tfrac{A}{N \times (N-1)}$$
+$$D = \tfrac{2.A}{N \times (N-1)}$$
 
 Le graphe est *creux* si sa densité est proche de zero, et *dense* si elle se rapproche de 1.
 

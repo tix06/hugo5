@@ -2,6 +2,15 @@
 Title: algorithme de Dijkstra
 ---
 
+* [introduction aux graphes](/docs/SNT_2nde/pages/pages_algo/graphes/page1/)
+* [cours sur les graphes. Term NSI](/docs/NSI/structure/page5/)
+* [algorithmes de parcours des graphes](/docs/SNT_2nde/pages/pages_algo/graphes/page2/)
+* [TP sur l'implementation en python des graphes](/docs/NSI/structure/page6/)
+* [TP sur les algorithmes de parcours des graphes (app en ligne)](/docs/NSI/structure/page61/)
+* [algorithme de Dijkstra](/docs/SNT_2nde/pages/pages_algo/graphes/page4/)
+* [Protocoles de routage](/docs/NSI/architecture/page3/)
+* [Arbres](/docs/NSI/structure/page4/)
+
 # Graphe pondéré : Algorithme de Dijkstra
 On va voir une variante, plus complexe, de l'algorithme BFS : l'algorithme de **Dijkstra**. Cet algorithme permettra de calculer toutes les distances entre un sommet de départ r et les autres sommets, mais cette fois ci, ce graphe est *pondéré*.
 
