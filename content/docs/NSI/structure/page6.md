@@ -14,8 +14,22 @@ Title: TP implementation python graphes
 
 
 # Traitement des graphes en Python
-## Dessiner le graphe avec la librairie networkx
-Dans un notebook python, saisir les lignes:
+## Implémenter le graphe avec la librairie networkx
+Dans un [notebook python/capytale](https://capytale2.ac-paris.fr/web/c/1b0b-2960109), executer les scripts suivants et repondre aux questions.
+
+**Rappel:**
+
+* Anglais: *Node*; Français: Sommet (noeud)
+* Anglais: *Edge*; Français: Arête
+
+Avec la librairie *networkx*, le graphe `G` est un objet de la classe `nx.Graph`
+
+Il se manipule avec l'attribut `nodes` et les méthodes de classe `add_node`, et `add_edge`.
+
+Voici un exemple de graphe avec 4 noeuds, numérotés de 0 à 3:
+
+
+{{< img src="../images/g5.png" >}}
 
 ```python
 import matplotlib.pyplot as plt
@@ -24,9 +38,9 @@ from numpy import array
 G = nx.Graph()
 # definition des noeuds
 G.add_node(0,label='A',col='white')
-G.add_node(1,label='B',col='white')
-G.add_node(2,label='C',col='white')
-G.add_node(3,label='D',col='white')
+G.add_node(1,label='B',col='blue')
+G.add_node(2,label='C',col='yellow')
+G.add_node(3,label='D',col='red')
 
 # definition des aretes
 G.add_edge(0,1)
@@ -34,41 +48,41 @@ G.add_edge(0,2)
 G.add_edge(2,3)
 ```
 
-**Rappel:**
+### structures de données
+Pour faciliter l'interaction avec les données du graphe, on créé de nouvelles structures de données:
 
-* Anglais: *Node*; Français: Sommet (noeud)
-* Anglais: *Edge*; Français: Arête
-
-Puis, dans une nouvelle cellule, ajouter les 3 parties suivantes:
-
-* Dessin des sommets
+* `pos`, utile pour le tracé
+* `edge_color`: list
+* `colorNodes`: list
+* `label_nodes`: dict
 
 ```python
 # calcul des positions pour repartir les sommets du graphe
 pos = nx.spring_layout(G)  
-
-# dessin des sommets
-L = list(G.nodes(data='col'))
-colorNodes = [node[1] for node in L]
-nx.draw_networkx_nodes(G, pos, node_size=700,node_color=colorNodes,alpha=0.9)
+# sommets et couleur des sommets
+L = list(G.nodes())
+edge_color = list(G.nodes(data='col'))
+colorNodes = [node[1] for node in edge_color]
+# Afficher les etiquettes: labels
+labels_nodes={node:label for node,label in G.nodes(data='label')}
 ```
 
-* Afficher les étiquettes
+**Question a:** Explorer chacune des séquences `L`, `edge_color`, `colorNodes` et `labels_nodes` et recopier leur valeur.
+
+
+
+### Déssiner
+Le script suivant va dessiner le graphe à partir de l'objet `G`.
 
 ```python
+# nodes
+plt.clf()
+nx.draw_networkx_nodes(G, pos, node_size=700,node_color=colorNodes,alpha=0.9)
 # labels
-labels_nodes={node:label for node,label in G.nodes(data='label')}
-
 nx.draw_networkx_labels(G, pos, labels=labels_nodes, \
                         font_size=20, \
                         font_color='black', \
                         font_family='sans-serif')
-
-```
-
-* Dessiner les arêtes
-
-```python
 # edges
 nx.draw_networkx_edges(G, pos)
 
@@ -76,11 +90,73 @@ plt.axis('off')
 plt.show()
 ```
 
-> **Q.b:** Modifier maintenant la déclaration du graphe (cellule 1) pour dessiner le graphe suivant:
+{{< img src="../images/g5.png" >}}
+
+**Question b**: interpreter la figure obtenue. Celle-ci était elle prévisible d'après les informations données pour implémenter le graphe?
+
+**Question c:** Modifier maintenant la déclaration du graphe (cellule 1) pour dessiner le graphe suivant: 
 
 {{< img src="../images/g3.png" >}}
 
-## Interragir avec les attributs du graphe
+### Interragir avec les attributs du graphe
+**Question d:** On créé une liste d'adjacence à partir de l'instruction suivante:
+
+```
+liste_adjacence = [list(nx.neighbors(G,edge)) for edge in L]
+```
+
+* Expliquer/commenter: comment est écrite cette instruction
+
+**Question e:** Compléter le script pour obtenir le dictionnaire représentant ce graphe: (voir compléments sur la page enoncé)
+
+```python
+D = {}
+for node in ...:
+    D[node] = ...
+print (D)
+```
+ 
+*affiche:*
+
+```
+{0: [1, 2, 4],
+ 1: [0, 4],
+ 2: [0, 4, 3],
+ 3: [4, 2, 5],
+ 4: [0, 1, 2, 3, 5],
+ 5: [4, 3]}
+ ```
+
+ **Question f:** Créer une fonction `degre_max` qui retourne un tuple constitué du noeud de plus haut degré, et de la valeur de plus haut degré dans le graphe. Cette fonction prend pour unique paramètre le dictionnaire `D` défini plus haut.
+
+```python
+def degre_max(D):
+    ...
+```
+
+**Question g:** L'instruction suivante génère un affichage des caractéristiques du graphe. 
+
+```
+for node in list(G.nodes()):
+    print(node,'->',list(nx.neighbors(G,node)),G.nodes(data='col')[node])
+```
+
+```
+0 -> [1, 2] white
+1 -> [0] blue
+2 -> [0, 3] yellow
+3 -> [2] red
+```
+
+Obtenez le même affichage, mais cette fois en utilisant les séquences construites plus haut: `L`, `edge_color`, `colorNodes`, `labels_nodes` et `D`.
+
+```python
+for node in L:
+    print(node,'->',...,...
+```
+
+# Compléments
+## Caractéristiques du graphe - librairie networkx
 L'objet *graphe* `G` possède des méthodes de type *Getter* et *Setter*. Nous allons explorer celles-ci.
 
 ### Fonctions utiles de `networkx`
@@ -112,7 +188,7 @@ for node in list(G.nodes()):
     print(node,'->',list(nx.neighbors(G,node)),G.nodes(data='col')[node])
 ```
 
-> **Q.c:** Compléter le script pour obtenir le dictionnaire représentant ce graphe:
+> **Q.a:** Compléter le script pour obtenir le dictionnaire représentant ce graphe:
 
 ```python
 D = {}
@@ -142,11 +218,11 @@ color = nx.get_node_attributes(G, "col")
 print('color',color)
 ```
 
-> **Q.d:** Quel est le format de données retourné par `get_node_attributes`?
+> **Q.b:** Quel est le format de données retourné par `get_node_attributes`?
 
-> **Q.e:** Afficher la seule couleur du sommet 0, en modifiant cette instruction.
+> **Q.c:** Afficher la seule couleur du sommet 0, en modifiant cette instruction.
 
-> **Q.f:** Obtenir l'information des attributs *label* à l'aide d'une instruction similaire.
+> **Q.d:** Obtenir l'information des attributs *label* à l'aide d'une instruction similaire.
 
 ### Setter
 La documentation de la fonction se trouve [ici: networkx.org/documentation](https://networkx.org/documentation/stable/reference/generated/networkx.classes.function.set_node_attributes.html)
@@ -159,9 +235,9 @@ color = nx.get_node_attributes(G, "col")
 print('color',color)
 ```
 
-> **Q.f:** Que remarque t-on? Pourquoi?
+> **Q.e:** Que remarque t-on? Pourquoi?
 
-# Algorithmes de parcours de graphes
+## Algorithmes de parcours de graphes
 Pour une description illustrée de ces 2 parcours dans un graphe, on pourra consulter la page [suivante sur le site allophysique.com](/docs/SNT_2nde/pages/pages_algo/graphes/page2/).
 
 La page [suivante du site marcarea.com](https://marcarea.com/weblog/2019/02/17/parcours-de-graphes-en-python) propose plusieurs implémentations pour les parcours en *largeur* et en *profondeur* d'un graphe.
