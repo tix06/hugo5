@@ -49,16 +49,28 @@ Aujourd'hui, ils ont perdu de l'interêt face à la facilité d'utilisation des 
 
 {{< img src="../images/yahoo-annuaire.png" caption="dernière page de l'annuaire Yahoo avant sa fermeture en 2014" >}}
 
-> Un moteur de recherche: Logiciel qui dispose d'une indexation des pages internet. L'indexation est un traitement qui consiste à analyser des pages pour y detecter des mots clés utilisés fréquemment par les internautes.
+> Un moteur de recherche: Logiciel qui dispose d'une indexation des pages internet. Son fonctionnement repose sur plusieurs étapes, qui sont executées en continu:
+
+* La **collecte automatique** d'informations, par des robots d'exploration (*Crawlers*), qui parcourent le reseau hypertexte du web.
+* Le **référencement**: un traitement qui consiste à analyser des pages pour y detecter des mots clés utilisés fréquemment par les internautes. L'**indexation**, est la manière dont le moteur de recherche organise ces informations. Il va créer une table de mise en correspondance mot-clé <=> URL de la page.
+
+> L'internaute va utiliser l'interface du moteur de recherche pour faire une recherche par mots-clés:
+
+
+* Traitement de la requête: Les mots clés sont comparés avec ceux référencés et le moteur de recherche construit une liste ordonnée, un classement établi grâce à un calcul selon un algorithme. C’est un classement par degré de pertinence.
+* Le moteur de recherche va retourner une liste ordonnée de liens en rapport avec les mots clés proposés par l'internaute.
 
 L'utilisateur va alors cliquer sur le lien de son choix parmi les propositions du moteur de recherche. Et se retrouver sur la page proposée, sans avoir à connaitre et mémoriser son URL.
+
+{{< img src="../images/web_MR.png" caption="fonctionnement d'un moteur de recherche" >}}
 
 
 Les moteurs de recherche – Mediaprovence (juin 2019)
 https://www.youtube.com/watch?v=Y8l4hKNQOEY
 
 {{< img src="../images/moteur_R_fonc.png" alt="moteurs de recherche : fonctionement" link="https://www.youtube.com/watch?v=pMywV9ZLS4M" caption="video: Fonctionnement du moteur de recherche – FenetresurWordpress" >}}
-### Activité
+
+### Activité 1 - simuler un moteur de recherche
 Créer un index à partir de mots clés, relevés dans les différents textes de Raymond Queneau: Exercices de style.
 
 * Lecture des textes: [Raymond Queneau - Exercices de style](/pdf/SNT/internet1_moteur_recherche.pdf)
@@ -66,17 +78,56 @@ Créer un index à partir de mots clés, relevés dans les différents textes de
 
 *Activité inspirée du document sur : [imo.universite-paris-saclay.fr](https://www.imo.universite-paris-saclay.fr/~pierre.pansu/explosion_continue_en_classe.html)*
 
-### Moteur de recherche et IA générative
-*Textes, sons, vidéos, code informatique et informations sur des objets du quotidien : avec l'intelligence artificielle développée par OpenAI, Google ou encore Perplexity, nous ne chercherons bientôt plus de la même manière sur Internet. Mais attention, face à des hallucinations assénées avec un aplomb confondant et un coût écologique qui peut facilement déraper, mieux vaut ne pas plonger à corps perdu dans l'IA générative. Guide de survie en temps d'accélération technologique.*
+### Activité 2 - recherche documentaire
+a)	Comment fait un moteur de recherche pour trouver des milliards de pages du Web ?
 
+b)	Comment fait le moteur de recherche pour faire un classement entre ces pages ? Qu’est-ce que le SEO (Search engine optimisation)
 
+c)	Quand vous avez cinq à six mille ordinateurs qui travaillent pour vous, il est certain
+que plusieurs tomberont en panne chaque jour. Comment un moteur de recherche fait-il pour ne jamais s’arrêter ?
+
+d)	Pour fabriquer un index, il faut lire toutes les pages qu’il index sur le Web. Le moteur
+de recherche n’a pas fini de les lire que certaines pages ont déjà changé et qu’il lui faudrait les relire. Et découvrir de nouvelles pages... Comment se tenir au courant des « nouveautés » du Web ?
+
+e)	On fait des fautes d’orthographe. Comment un moteur de recherche peut-il répondre aux questions quand les textes et les questions contiennent des fautes ?
+
+f)	Moteur de recherche et IA générative : Les moteurs de recherche évoluent et proposent maintenant de nouvelles expériences. Quelle est la différence entre un moteur de recherche, comme Google, et une application de génération de texte à base d’IA comme Chat GPT ?
+
+*Questions inspirées du document sur : [imo.universite-paris-saclay.fr](https://www.imo.universite-paris-saclay.fr/~pierre.pansu/explosion_continue_en_classe.html)*
+
+## Moteur de recherche et IA générative
 {{< img src="../images/MR_IA.png" alt=" target=" link="https://www.youtube.com/watch?v=8oYp48VRLEk" caption="Les surprises à venir des moteurs de recherche - FRANCE 24" >}}
 
+
+Textes, sons, vidéos, code informatique et informations sur des objets du quotidien : avec l’intelligence artificielle développée par OpenAI, Google ou encore Perplexity, nous ne chercherons bientôt plus de la même manière sur Internet. 
+
+ChatGPT, conçu par le groupe OpenAI, est un *Logiciel de Traitement automatique du langage naturel*. Il repose sur un modèle d’apprentissage automatique et une architecture de réseau neuronal.
+
+OpenAI a dû former le modèle à travers une quantité importante de données pour que le système puisse interagir de manière naturelle avec un interlocuteur humain. (lecture de livres, de blogs, etc…). Depuis, il procède à une optimisation de l’apprentissage via une couche supplémentaire de formation utilisant la RLHF ou Reinforcement Learning from Human Feedback. 
+
+ChatGPT va servir à générer des textes de niveau humain, des traductions, mais aussi d’autres contenus : images, videos, constructions à partir modèles physiques (sequences et repliement des proteines !). Il peut servir à analyser et reconnaître des formes (medecine, reconnaissance faciale…)
+
+Avec ChatGPT Search, on a l'impression de participer à une véritable conversation, en ajoutant des informations à sa requête initiale. ChatGPT comprend et se souvient du contexte. Une fois la requête lancée, il rassemble les informations provenant de différentes sources pour fournir des réponses approfondies.
+
+**Chatbot basé sur IA versus moteur de recherche**: *ChatGPT Search vs Google Search*
+
+Le type de reponse de ChatGPT va être davantage construite, comme une synthèse. Par exemple, *ChatGPT Search* peut comparer des produits côte à côte, en soulignant les avantages et les inconvénients ou même en établissant un tableau comparatif simple pour vous aider à choisir.
+
+En revanche, *Google Search* traite chaque question séparément, de sorte qu'il ne relie pas les réponses de la même manière et n'est pas prévu pour maintenir une conversation. On l’utilise plus pour obtenir des informations rapides, des informations visuelles ou des options de réservation et d'achat.
+
+**Inconvénients des Chatbot et moteurs génératifs basés sur IA**:
+
+-	Gourmand en ressources énergétiques, puissance de calcul et mémoire significatifs
+-	Temps de calcul long, rendant difficile le traitement en temps réel
+-	Absence de mise à jour en temps réel (n’a pas accès à Internet en temps réel)
+-	peut produire des réponses biaisées ou limitées.
+-	Pose des questions éthiques et juridiques, notamment en ce qui concerne l’utilisation de données protégées par le droit d’auteur et la confidentialité des informations.
 
 # sécurité et confidentialité
 ## Moteurs de recherche et problème de confidentialité
 Un moteur de recherche, c’est une entreprise, qui doit faire des profits.
 Ses revenus viennent des annonceurs (sites commerçants) qui sont mis en avant par des  publicités ciblées. C’est un mode de référencement payant, par opposition à celui naturel, réalisé à partir des contenus redactionnels (SEO).
+
 Les moteurs de recherche mettent en avant une expérience *plus personnalisée* de l’internaute. Et ils ont besoin pour cela de *récupérer vos données*.
 
 {{< img src="../images/moteur_R_financ.png" alt="moteurs de recherche : fonctionement" link="https://www.youtube.com/watch?v=Y8l4hKNQOEY" caption="video: Les moteurs de recherche – Mediaprovence (juin 2019)" >}}
@@ -112,8 +163,8 @@ D’où l’importance d’un cadre juridique permettant de protéger les usag
 
 
 
-# Exercice
-Construire une URL (Uniform Ressource Locator)
+# Exercices
+## Construire une URL (Uniform Ressource Locator)
 
 Pour accéder aux documents d’un serveur, il faut saisir une URL (une adresse) dans un navigateur.
 
@@ -129,7 +180,8 @@ Par exemple, pour atteindre fichier1.css, il faut saisir l’adresse :
 * Quelle est l’URL à saisir pour atteindre fichier4.js ?
 * Quelle est l’URL à saisir pour atteindre fichier6.html ?
 
-
+## Autres exercices
+fiche d'exercices: [lien vers le pdf](/pdf/SNT/web_ex_moteur_recherche.pdf)
 <!--
 ## Compétences
 * [Co] la difference entre internet et le web : le web correspond à la solution pour naviguer sur internet, et internet, c'est la contraction de Interconnected et Network (le maillage physique)
