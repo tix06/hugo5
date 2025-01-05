@@ -46,7 +46,6 @@ Lorsqu'un graphe non orienté est en *un seul morceau*, c'est à dire lorsqu'il 
 
 {{< img src="../images/connexe.png" alt="graphes connexe/non connexe" caption="graphes connexe/non connexe" >}}
 
-Et lorsqu'un chemin mène d'un sommet s à lui-même, on parle de **cycle**.
 
 Des **poids** peuvent être associés aux liens d'un graphe, par exemple pour représenter la distance. Il s'agit alors d'un **graphe pondéré**.
 
@@ -61,7 +60,7 @@ Et lorsqu'un chemin mène d'un sommet s à lui-même, on parle de **cycle**.
 * **Ordre**: le nombre de ses sommets
 * **taille** : le nombre de ses arêtes
 * **degré** d'un sommet **s**: nombre d'arêtes qui relient ce sommet à d'autres sommets.
-* un graphe est dit **complet** si tous ses sommets sont connectés entre eux deux-à-deux. Pour **N** sommets, cela correspond à un nombre d'arcs egal à: N * (N-1). Et si le graphe est non orienté:
+* un graphe est dit **complet** si tous ses sommets sont connectés entre eux deux-à-deux. Pour **N** sommets, cela correspond à un nombre d'arcs égal à: (graphe non orienté)
 
 $$\tfrac{N \times (N-1)}{2}$$
 
@@ -131,7 +130,7 @@ Et utilisons la matrice d'adjacence pour indiquer le plus cours chemin  d'un som
 
 Ainsi, une fois la matrice établie, nous pouvons en déduire le **diamètre** de ce graphe (*plus grande longueur entre 2 sommets du graphe*). Ici, cette distance vaut 3.
 
-*Dans un graphe plus grand, la détermination du plus chemin necessite une méthode basée sur un algorithme. Par exemple, l'algorithme [BFS](/docs/SNT_2nde/pages/pages_algo/graphes/page2/) ou bien l'agorithme de [Dijkstra](/docs/SNT_2nde/pages/pages_algo/graphes/page4/)*.
+*Dans un graphe plus grand, la détermination du plus court chemin entre 2 sommets necessite une méthode basée sur un algorithme. Par exemple, l'algorithme [BFS](/docs/SNT_2nde/pages/pages_algo/graphes/page2/) ou bien l'agorithme de [Dijkstra](/docs/SNT_2nde/pages/pages_algo/graphes/page4/)*.
 
 ### Graphe avec étiquette
 On utilisera un *dictionnaire* comme structure de données. Les clés étant les étiquettes des sommets, et les valeurs, la liste des sommets adjacents:
