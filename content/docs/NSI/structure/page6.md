@@ -71,7 +71,7 @@ labels_nodes={node:label for node,label in G.nodes(data='label')}
 
 
 
-### Déssiner
+### Dessiner
 Le script suivant va dessiner le graphe à partir de l'objet `G`.
 
 ```python
@@ -102,12 +102,12 @@ plt.show()
 **Question d:** On créé une liste d'adjacence à partir de l'instruction suivante:
 
 ```
-liste_adjacence = [list(nx.neighbors(G,edge)) for edge in L]
+liste_adjacence = [list(nx.neighbors(G,node)) for node in L]
 ```
 
 * Expliquer/commenter: comment est écrite cette instruction
 
-**Question e:** Compléter le script pour obtenir le dictionnaire représentant ce graphe: (voir compléments sur la page enoncé)
+**Question e:** Compléter le script pour obtenir le dictionnaire représentant ce graphe: 
 
 ```python
 D = {}
