@@ -378,7 +378,7 @@ print(visited)
 # Liens
 * Documentation de [python networkx](https://networkx.org)
 * Programmes python pour le parcours [en largeur et en profondeur d'un graphe](https://marcarea.com/weblog/2019/02/17/parcours-de-graphes-en-python)
-* La sociologie structurale, appelée maintenant analyse de réseaux a développé une grande panoplie de métriques pour caractériser les réseaux sociaux... [Mémoire de maitrise par FRANCK GOUDJO](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiZoKiDmZyEAxUfQ6QEHZ5kBawQFnoECBcQAQ&url=https%3A%2F%2Farchipel.uqam.ca%2F3672%2F1%2FM11510.pdf&usg=AOvVaw0GqGUBx-QWUzPAEfpdhgfv&opi=89978449) sur la Réalisation d'un outil de simulation de réseaux sociaux 
+
 
 
 
