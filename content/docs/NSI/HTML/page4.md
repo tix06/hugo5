@@ -80,8 +80,14 @@ Jusqu'aux murailles de Pékin.
   
 Vous pourrez également ajouter un lien textuel vers la biographie de l'auteur.
 
-# Autre page
-Vous avez tout loisir pour le contenu de la 3<sup>e</sup> page du site.
+# Uniformiser les styles
+Vous avez probablement écrit les règles de style directement dans la page HTML, entre balises `<style>`. Le problème avec cette pratique, est que votre site manque d'uniformité graphique. La bonne méthode est d'utiliser une feuille de style externe:
+
+* [Déclarez dans l'en-tête](https://developer.mozilla.org/fr/docs/Web/HTML/Element/link) le lien vers votre feuille de style avec la balise `<link>`:
+
+`<link href="chemin_vers_fichier/style.css" rel="stylesheet" />`
+
+* Mettez vos règles CSS dans un fichier externe appelé `style.css`
 
 
 
