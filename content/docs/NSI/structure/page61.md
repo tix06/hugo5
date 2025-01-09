@@ -109,7 +109,7 @@ D = {1: [6,14]
      2: [1,6,16]}
 ```
 
-**Q.d**: Compléter le dictionnaire des sommets adjacents d'après les règles énoncées pour les transvasements. *Chercher un peu, puis voir la [Solution](../page62) si vous êtes bloqués.*
+**Q.e**: Compléter le dictionnaire des sommets adjacents d'après les règles énoncées pour les transvasements. *Chercher un peu, puis voir la [Solution](../page62) si vous êtes bloqués.*
 
 Le script suivant permet d'établir la matrice d'adjacence à partir du dictionnaire D:
 
@@ -146,7 +146,7 @@ Vous pouvez alors **copier** la matrice et créer un nouveau graphe à partir de
 
 Utiliser alors l'algorithme de recherche de chemins (*Find all path*) pour trouver le chemin depuis AB = 0,0 jusqu'à AB = 4,3. Sélectionner le plus court chemin pour résoudre ainsi le problème.
 
-**Q.e**: Représenter ce parcours sur votre diagramme (sur feuille). Recopier le chemin parcouru (1=>...=>...). Décrire les étapes au niveau des volumes (différents état): (0,0) => (6,0) => ...
+**Q.f**: Représenter ce parcours sur votre diagramme (sur feuille). Recopier le chemin parcouru (1=>...=>...). Décrire les étapes au niveau des volumes (différents état): (0,0) => (6,0) => ...
 
 
 ## Problème à 3 bidons, 8L, 5L, 3L
