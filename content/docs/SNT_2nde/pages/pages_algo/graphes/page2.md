@@ -12,7 +12,78 @@ Ce cours comporte plusieurs pages:
 * [Protocoles de routage](/docs/NSI/architecture/page3/)
 * [Arbres](/docs/NSI/structure/page4/)
 
-# algorithmes de parcours d'un graphe en largeur
+# Parcourir un graphe pour trouver TOUS les chemins
+## Principe
+Le parcours d'un graphe va donner une liste de sommets visités, dans un certain ordre. Cet ordre va dépendre de l'algorithme employé: Pour des parcours de type *largeur* ou *profondeur*, on suppose que l'on peut *revenir sur ses pas*. La liste de sommets ne représente pas un *chemin*.
+
+On appelera *chemin* une suite continue de sommets dans le graphe, sans retour en arrière, c'est à dire sans revenir vers un sommet déjà visité.
+
+## Algorithme récursif
+Pour un graphe `G`, le problème s'énonce de la manière suivante: 
+
+Pour un sommet de départ `A`, créer un nouveau *chemin* pour chaque sommet adjacent à `A` de la manière suivante:
+
+* Commencer le chemin avec la liste de sommets `[A]`
+* Si le sommet adjacent est un nouveau sommet, n'appartenant pas déjà un `chemin`.
+    * ajouter le nouveau sommet adjacent au `chemin`, par exemple `[A,B]`
+    * ajouter ce `chemin` à la liste des chemins
+    * continuer avec cette même méthode depuis le sommet adjacent (appel recursif avec le sommet adjacent comme nouveau départ, et placer `chemin` en paramètre)
+
+A la fin, retourner la liste des chemins.
+
+*Illustration*:
+
+{{< img src="../images/chemin0.png" caption="départ du sommet A" >}}
+
+{{< img src="../images/chemin1.png" caption="poursuite du chemin vers B" >}}
+
+*Script*:
+
+```python
+def parcours(G, depart,lst_chemins, chemin = []):
+    if chemin == []:
+        chemin = [depart]
+    #print(lst_chemins)
+    for sommet in G[depart]:
+        if sommet not in chemin:
+            lst_chemins.append(chemin + [sommet])
+            parcours(G, sommet, lst_chemins, chemin + [sommet])
+    return lst_chemins
+```
+
+*Graphe: implémentation à l'aide d'un dictionnaire de listes d'adjacence*
+
+```python
+G = {'A':['B','F'],
+    'B':['A','C','D','G'],
+    'C':['B','D','E'],
+    'D':['B','I'],
+    'E':['C','I'],
+    'F':['A','G','H'],
+    'G':['B','F'],
+    'H':['F','I'],
+    'I':['D','E','H']}
+```
+
+*Exemple*:
+
+```python
+> lst_chemins = []
+> parcours(D,1,lst_chemins)
+[['A', 'B'],
+ ['A', 'B', 'C'],
+ ['A', 'B', 'C', 'D'],
+ ['A', 'B', 'C', 'D', 'I'],
+ ['A', 'B', 'C', 'D', 'I', 'E'],
+ ['A', 'B', 'C', 'D', 'I', 'H'],
+ ['A', 'B', 'C', 'D', 'I', 'H', 'F'],
+ ['A', 'B', 'C', 'D', 'I', 'H', 'F', 'G'],
+ ['A', 'B', 'C', 'E'],
+ ...
+ ... ]
+```
+
+# Parcours d'un graphe en largeur
 * Algorithme : voir définition en bas de page[^1]
 * Graphe : voir définitions à la page [Graphes](../page1/index.html)
 

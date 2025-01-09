@@ -76,7 +76,8 @@ Je roulerais au clair matin,
 Je roulerais de ville en ville
 Jusqu'aux murailles de Pékin.
 ``` 
-*Connseil: Utiliser la balise `<pre>` pour conserver les retours à la ligne du poëme.*
+
+*Conseil: Utiliser la balise `<pre>` pour conserver les retours à la ligne du poëme.*
   
 Vous pourrez également ajouter un lien textuel vers la biographie de l'auteur.
 
