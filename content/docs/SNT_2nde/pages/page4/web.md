@@ -99,7 +99,7 @@ f)	Moteur de recherche et IA générative : Les moteurs de recherche évoluent e
 {{< img src="../images/MR_IA.png" alt=" target=" link="https://www.youtube.com/watch?v=8oYp48VRLEk" caption="Les surprises à venir des moteurs de recherche - FRANCE 24" >}}
 
 
-Textes, sons, vidéos, code informatique et informations sur des objets du quotidien : avec l’intelligence artificielle développée par OpenAI, Google ou encore Perplexity, nous ne chercherons bientôt plus de la même manière sur Internet. 
+Les firmes OpenAI, Google ou encore Perplexity vont modifier notre manière de rechercher sur Internet. 
 
 ChatGPT, conçu par le groupe OpenAI, est un *Logiciel de Traitement automatique du langage naturel*. Il repose sur un modèle d’apprentissage automatique et une architecture de réseau neuronal.
 
@@ -107,9 +107,11 @@ OpenAI a dû former le modèle à travers une quantité importante de données p
 
 ChatGPT va servir à générer des textes de niveau humain, des traductions, mais aussi d’autres contenus : images, videos, constructions à partir modèles physiques (sequences et repliement des proteines !). Il peut servir à analyser et reconnaître des formes (medecine, reconnaissance faciale…)
 
-Avec ChatGPT Search, on a l'impression de participer à une véritable conversation, en ajoutant des informations à sa requête initiale. ChatGPT comprend et se souvient du contexte. Une fois la requête lancée, il rassemble les informations provenant de différentes sources pour fournir des réponses approfondies.
+L'interface du logiciel est très différente de celle d'un moteur de recherche: Avec ChatGPT Search, on a l'impression de participer à une véritable conversation, en ajoutant des informations à sa requête initiale. ChatGPT comprend et se souvient du contexte. Une fois la requête lancée, il rassemble les informations provenant de différentes sources pour fournir des réponses approfondies, et générer un texte ou un média.
 
-**Chatbot basé sur IA versus moteur de recherche**: *ChatGPT Search vs Google Search*
+Ces logiciels génératifs de texte ou image peuvent aussi répondre à une recherche sur le net, mais ils se distinguent des moteurs de recherche:
+
+**Chatbot versus moteur de recherche**: *ChatGPT Search vs Google Search*
 
 Le type de reponse de ChatGPT va être davantage construite, comme une synthèse. Par exemple, *ChatGPT Search* peut comparer des produits côte à côte, en soulignant les avantages et les inconvénients ou même en établissant un tableau comparatif simple pour vous aider à choisir.
 
