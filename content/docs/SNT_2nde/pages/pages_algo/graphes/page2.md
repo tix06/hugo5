@@ -14,9 +14,11 @@ Ce cours comporte plusieurs pages:
 
 # Parcourir un graphe pour trouver TOUS les chemins
 ## Principe
-Le parcours d'un graphe va donner une liste de sommets visités, dans un certain ordre. Cet ordre va dépendre de l'algorithme employé: Pour des parcours de type *largeur* ou *profondeur*, on suppose que l'on peut *revenir sur ses pas*. La liste de sommets ne représente pas un *chemin*.
+Le parcours d'un graphe va donner une liste d'arcs ou de sommets visités, dans un certain ordre. 
 
-On appelera *chemin* une suite continue de sommets dans le graphe, sans retour en arrière, c'est à dire sans revenir vers un sommet déjà visité.
+Cet ordre va dépendre de l'algorithme employé: Pour des parcours de type *largeur* ou *profondeur*, on suppose que l'on peut *revenir sur ses pas*. La liste de sommets ne représente pas un *chemin*.
+
+On appelera *chemin* une suite continue de sommets (ou d'arcs) consécutifs dans le graphe, sans retour en arrière, c'est à dire sans revenir vers un sommet déjà visité.
 
 ## Algorithme récursif
 Pour un graphe `G`, le problème s'énonce de la manière suivante: 
@@ -43,7 +45,6 @@ A la fin, retourner la liste des chemins.
 def parcours(G, depart,lst_chemins, chemin = []):
     if chemin == []:
         chemin = [depart]
-    #print(lst_chemins)
     for sommet in G[depart]:
         if sommet not in chemin:
             lst_chemins.append(chemin + [sommet])

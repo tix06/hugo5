@@ -42,6 +42,8 @@ Représenter chacun des 2 graphes suivants, l'un après l'autre, et chercher la 
 
 # Problèmes des vases à transvasement
 ## Die Hard III
+Une partie de l'exercice utilise le notebook sur [Capytale](https://capytale2.ac-paris.fr/web/c/759e-5222738)
+
 Dans le film Die Hard III, Mc Clane (Bruce Willis) et Zeus (Samuel L. Jackson) doivent résoudre un problème de transvasement pour éviter une explosion...
 
 L'idée est de conserver **exactement 4L** dans l'un des bidons. On dispose au départ de 2 bidons vides, l'un de 5L, l'autre de 3L. Ils n'ont pas de graduation. On peut les vider complètement, eventuellement l'un dans l'autre.
@@ -73,7 +75,7 @@ tab = {1: (0,0),
        8: (5,2)}
 ```
 
-**Q.d**: Compléter le dictionnaire `tab` des états 1 à 16 du diagramme. *Chercher un peu, puis voir la [Solution](../page62) si vous êtes bloqués.*
+**Q.d**: Compléter sur [Capytale](https://capytale2.ac-paris.fr/web/c/759e-5222738) le dictionnaire `tab` des états 1 à 16 du diagramme. *Chercher un peu, puis voir la [Solution](../page62) si vous êtes bloqués.*
 
 
 **Les arêtes du graphe:** Les transvasements 
@@ -105,13 +107,13 @@ Depuis le sommet 2, on peut:
 * aller à 16 en vidant A dans B, jusqu'à ce que B soit plein.
 
 ```python
-D = {1: [6,14]
+G = {1: [6,14]
      2: [1,6,16]}
 ```
 
-**Q.e**: Compléter le dictionnaire des sommets adjacents d'après les règles énoncées pour les transvasements. *Chercher un peu, puis voir la [Solution](../page62) si vous êtes bloqués.*
+**Q.e**: Compléter le dictionnaire G des sommets adjacents d'après les règles énoncées pour les transvasements. *Chercher un peu, puis voir la [Solution](../page62) si vous êtes bloqués.*
 
-Le script suivant permet d'établir la matrice d'adjacence à partir du dictionnaire D:
+Le script suivant permet d'établir la matrice d'adjacence à partir du dictionnaire D placé en paramètre:
 
 ```python
 def matrice(D):

@@ -60,6 +60,9 @@ Et lorsqu'un chemin mène d'un sommet s à lui-même, on parle de **cycle**.
 * **Ordre**: le nombre de ses sommets
 * **taille** : le nombre de ses arêtes
 * **degré** d'un sommet **s**: nombre d'arêtes qui relient ce sommet à d'autres sommets.
+
+Pour un *graphe orienté*, le **degré** d'un sommet est le nombre d'arcs qui sont **dirigés vers** ce sommet.
+
 * un graphe est dit **complet** si tous ses sommets sont connectés entre eux deux-à-deux. Pour **N** sommets, cela correspond à un nombre d'arcs égal à: (graphe non orienté)
 
 $$\tfrac{N \times (N-1)}{2}$$
