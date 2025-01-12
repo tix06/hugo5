@@ -40,6 +40,7 @@ Pour la mise en forme de la page, il est fortement suggéré de lire:
 
 * la page sur le `display` des éléments HTML: [CSS positionnement et display](https://developer.mozilla.org/fr/docs/Web/CSS/Layout_cookbook/Split_Navigation)
 * la page sur les *bonnes pratiques* à propos de l'usage des *labels*: [MDN](https://developer.mozilla.org/fr/docs/Web/HTML/Element/Label)
+* La page du site sur le positionnement des label, et input: [Lien vers la page](/docs/NSI/CSS/page2/)
 
 Un formulaire peut posséder plusieurs éléments comme: 
 

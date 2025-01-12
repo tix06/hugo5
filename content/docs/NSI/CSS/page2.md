@@ -89,7 +89,7 @@ Voici le code HTML et CSS utilisé :
   font-size:0.8em;
 }
 </style>
- ```
+```
 
 
 **Remarque :**
@@ -137,9 +137,12 @@ Le display de `a` va être conservé en `inline`.
 </style>
 
 
-```css
-<ul >
-	<li{{< a link="#" caption="" >}}	<li{{< a link="#" caption="" >}}	<li{{< a link="#" caption="" >}}</ul>
+```html
+<ul>
+	<li><a href="page1.html">Lien1</a></li>
+	<li><a href="page2.html">Lien2</a></li>
+	<li><a href="page3.html">Lien3</a></li>
+</ul>
 
 <style>
 li {
@@ -147,6 +150,7 @@ li {
 	list-style: none; 
 	margin: 1px;
 }
+</style>
 ```
 
 
@@ -187,7 +191,7 @@ c'est le résultat attendu : l'étiquette *label* se met côte à côte avec l'�
 {{< img src="../images/formulaire-inline-block.png" alt="display : inline-block" caption="label avec display : inline-block" >}}
 Le code CSS correspondant : 
 
-```css
+```html
 <form name="my_form" action="#result" method="post">
 	<p> <label for="nom">Nom</label> <input type="text" id="nom"> </p>
 	<p> <label for="email">E-mail</label> <input type="e-mail" id="email"> </p>
@@ -286,7 +290,7 @@ Le code complet est donné en bas de document, avec l'exemple du *Holy Grail*
 	</div>	
 </div>
 
-```css
+```html
 <style>
 .conteneur {
 	background-color:#ccc;
