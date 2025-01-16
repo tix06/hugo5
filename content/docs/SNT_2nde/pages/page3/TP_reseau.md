@@ -72,7 +72,7 @@ Votre système devrait ressembler à l'image suivante:
 {{< img src="../images/reseauSansrouteur.png" alt="systeme de 2 sous-reseaux sans routeur" caption="systeme de 2 sous-reseaux sans routeur" >}}
 * Tester alors la commande `ping` depuis la machine M1 vers celle M6 du 2e sous-reseau. 
 
-> **Qu.1c:**: La machine M6 est-elle accessible depuis M1? Pourquoi?
+> **Qu.2a:**: La machine M6 est-elle accessible depuis M1? Pourquoi?
 <!--
 Vous constatez que l'accès à M6 n'est pas possible. En effet, votre système doit disposer d'un routeur, une machine capable de faire interface entre 2 reseaux...
 -->
@@ -109,9 +109,9 @@ Vous constatez que l'accès à M6 n'est pas possible. En effet, votre système d
   * Même travail pour M4, M5, M6: renseigner la passerelle **192.168.2.254**
   * refaire le cablage
 
-> **Qu.1d:** Pourquoi le routeur de votre système informatique possède t-il 2 adresses IP?
+> **Qu.2b:** Pourquoi le routeur de votre système informatique possède t-il 2 adresses IP?
 
-> **Qu.1e:** Démarrer le système et tester alors la commande `ping` de M1 vers M6, puis de M6 vers M1. Que constatez-vous? Pourquoi?
+> **Qu.2c:** Démarrer le système et tester alors la commande `ping` de M1 vers M6, puis de M6 vers M1. Que constatez-vous? Pourquoi?
 
 
 
@@ -131,7 +131,7 @@ Lancer la simulation
 3. Faire: `traceroute` suivi de l'adresse IP de la machine 15
 4. Repérer alors quels sont les routeurs par lesquels circulent les données entre ces 2 ordinateurs. 
 
-> **Qu.2a.** Est-ce que le nombre de sauts effectués vous semble cohérent?
+> **Qu.3a.** Est-ce que le nombre de sauts effectués vous semble cohérent?
 
 
 Toujours en mode *simulation*:
@@ -160,12 +160,15 @@ Toujours en mode *simulation*:
 * test en local:
   * ouvrir le webbrowser. Dans la barre d'adresse, saisir `http://localhost`. 
 
-> **Qu.2b.**: Voyez vous votre page? Expliquer alors ce signifie l'adresse *localhost*.
+> **Qu.3b.**: Voyez vous votre page? Expliquer alors ce signifie l'adresse *localhost*.
 
 {{< img src="../images/localhost.png" >}}
   * Aller sur l'application webserver: Les informations affichées devraient montrer l'entête HTTP avec la requête reçue (méthode GET, ...), l'entête de la reponse (HTTP/1.1 200 OK), ainsi que le script HTML téléchargé.
 
 {{< img src="../images/protocoleHTTP.png" >}}
+
+> **Qu.3c.**: S'agit-il d'informations de la couche 4 (Application), 3 (Transport), 2 (reseau), ou 1 (accès au reseau)? voir ici les rappels de cours de [1ere NSI](http:/docs/SNT_2nde/pages/page3/modele_OSI/)
+
 ## Communication client-serveur
 * Ajouter à l'ordinateur n°1 le logiciel : *Navigateur Web*
 * Lancer le *Navigateur web*
@@ -176,7 +179,7 @@ Toujours en mode *simulation*:
 * **Côté serveur**
 Comme pour la connexion en localhost: Lire les informations de la fenêtre de l'application Webserver: 
 
-> **Qu.2c**: Quelles informations ont changé?
+> **Qu.3d**: Quelles informations ont changé?
 
 ## Protocole TCP
 * **Côté client** 
@@ -186,12 +189,20 @@ Faire un clic droit sur la *machine M1*. Choisir *show data exchange*
 Dérouler alors *trames échangées jusqu'à arriver à celles de protocole TCP*
 
 {{< img src="../images/trame_tcp.png" >}}
-> **Qu.2d:** Dans la série de *trames TCP*:
->  * L'adresse source et celle destination, sont-elles toujours les mêmes? Ou y-a-t-il un alternance?
->  * Observer le détail de la première trame: vous avez accès aux informations de la couche liaison (2), reseau (3), ainsi que la couche transport (4): identifier les informations pour chacune de ces couches: IP et TTL pour la couche 3, SEQ et ACK pour la couche 4...
+> **Qu.3e:** Dans la série de *trames TCP*:
+>  * L'adresse source et celle destination, sont-elles toujours les mêmes? Ou y-a-t-il une alternance?
+>  * Observer le détail de la première trame (ci-dessous): vous avez accès aux informations de la couche liaison (2), reseau (3), ainsi que la couche transport (4): identifier les informations pour chacune de ces couches: les informations pour chacune de ces couches: adresses mac (couche 1), IP et TTL pour la couche 2, SEQ et ACK pour la couche 3... *rappels de [1ere NSI](http:/docs/SNT_2nde/pages/page3/modele_OSI/)*
 >  * Ces informations, évoluent-elles d'une trame à l'autre?
 
-{{< img src="../images/detail_tcp_ip.png" >}}
+{{< img src="../images/detail_tcp_ip.png" caption="detail de la premiere trame" >}}
+
+## Protocole IP
+Le document suivant présente la disposition des données dans un *datagramme*. Ce sont les informations transmises au niveau de la couche 2 du modèle OSI. ([explications sur openclassrooms.com](https://openclassrooms.com/fr/courses/2340511-maitrisez-vos-applications-et-reseaux-tcp-ip/2927999-detaillez-len-tete-ip))
+
+{{< img src="../images/OSI5.png" caption="datagramme" >}}
+
+> **Qu.3f:** Quels sont les renseignements fournis sur l'image de la question *3e* (détail de la première trame) que l'on retrouve des les champs du datagramme?
+
 # TP Filius 4: Serveur DNS
 Quitter la simulation précédente et ouvrir ce [nouveau](../images/TP4_DNS.fls) fichier.
 
@@ -214,7 +225,11 @@ Puis, à partir de l'une des machines du reseau, comme par exemple M1, vous alle
 
 {{< img src="../images/adressesymbolique.png" caption="navigation avec adresse symbolique" >}}
 
-> **Qu.2e**: Expliquer quel est le principe du protocole DNS.
+> **Qu.4a**: Expliquer quel est le principe du protocole DNS.
+
+Le protocole DNS est vulnérable, et peut faire l'objet d'un *piratage*: voir explications ici: [site cloudfare.com](https://www.cloudflare.com/fr-fr/learning/security/global-dns-hijacking-threat/)
+
+> **Qu.4b**: Comment peut-on utiliser la simulation réalisée sur Filius pour réaliser le scénario d'un piratage de DNS? Quelles sont les différentes étapes à suivre sur le logiciel Filius? *(il n'est pas demandé de réaliser ces manipulations)*
 
 # Compléments théoriques sur les adresses des machines
 
@@ -222,7 +237,7 @@ On pourra consulter la video sur les [adresses IP et masques de sous-reseau]( ht
 
 
 ## Adresse IP
-
+### IPv4
 L'adresse IP(**Internet Protocol**) identifie un périphérique à l'intérieur d'un réseau. A l'intérieur de ce réseau elle est unique.
 
 Une adresse (IPv4) est constituée de 4 nombres binaire de 8 bits chacuns (32 bits), comme par exemple:
@@ -247,7 +262,7 @@ L'adresse possède 2 parties:
 * une autre partie identifie le reseau
 
 
-
+### Masque de sous-reseau
 **Masque de sous-reseau**: c'est une serie de valeurs avec des 255 ou 0, ou autre sur le(s) dernier(s) octet(s).
 
 La valeur correspondante binaire début donc par une série de 1, marquant les positions relatives à l'adresse reseau dans l'adresse IP.
@@ -263,6 +278,17 @@ $1111 1111.1111 1111. 1111 1111. 0000 0000$
 Que l'on peut aussi écrire:
 
 $255.255.255.0$
+
+### Machines appartenant à un même reseau
+**Definition: Deux machines sont sur le même réseau si et seulement si, la partie réseau de leur adresse IP est identique.**
+
+Les derniers caractères `/24` correspondent au **masque de sous-reseau**. Ils signifient que le reseau contenant la machine a une adresse codée sur les 24 premiers bits (192.168.0). Et que les 8 derniers bits constituent l'adresse de la machine dans ce reseau (il s'agit donc du **.1** final). 
+
+### IPv6
+Pour la norme IPv6, ce nombre est sur 128 bits, soit 16 octets.
+
+*Exemple d'adresse IPv6 exprimée en hexadécimal (32 caractères):* `2001:0db8:3c4d:0015:0000:0000:1a2f:1a2b` 
+
 
 ## classes d'adresse IP
 
@@ -287,11 +313,16 @@ Une adresse MAC est codée en hexadécimal, sur 6 octets (cf cours sur l'hexadé
 
 => Ouvrir l'invite de commande windows et entrer la commande `ipconfig /all`. identifier l'adresse MAC de votre ordinateur.
 
+# Suite
+* Lien vers le [TP2: routage avec Filius](../TP_reseau_term)
+* La suite du cours de Term NSI: [table de routage, protocole de routage](/docs/NSI/architecture/page3/)
 
 # Liens
 
 * Vidéo de prise en main du logiciel{{< a link="https://www.youtube.com/watch?v=nzuRSOwdF5I" caption="Filius 1 (David Roche)" >}}
 * video [Ping et traceroute utility](https://www.youtube.com/watch?v=vJV-GBZ6PeM)
+* detailler une trame: [openclassroom](https://openclassrooms.com/fr/courses/2340511-maitrisez-vos-applications-et-reseaux-tcp-ip/2927999-detaillez-len-tete-ip)
+* detail trame [pixies informatique au lycée](https://pixees.fr/informatiquelycee/n_site/isn_modele_tcpip.html)
 
 
 

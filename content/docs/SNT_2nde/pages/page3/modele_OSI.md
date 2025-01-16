@@ -29,7 +29,7 @@ Selon le degré de description, on parle plutôt du modèle TCP/IP en 4 couches.
 {{< img src="../images/OSI3.png" caption="illustration du TCP/IP" >}}
 *image issue de la chaine [youtube - Cookie connecté]((https://www.youtube.com/watch?v=26jazyc7VNk))*
 
-> *Quelles applications pour quelle couche?:
+> *Quelles applications pour quelle couche?:*
 
 Les 2 schémas ci-contre illustrent le découpage couche-application.
 

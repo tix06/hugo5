@@ -2,7 +2,7 @@
 Title: dataframes
 ---
 
-# Traitement de données en astrophysique
+# Traitement de données d'observation en astrophysique
 ## Importer les données et librairies utiles
 
 ```python
@@ -161,6 +161,11 @@ Pandas va permettre de lire et de modifier des tableaux (DataFrames). Chaque col
 
 *source*: [python-simple.com](http://www.python-simple.com/python-pandas/creation-series.php)
 
+
+# Analyse de données issues d'une BDD
+* [liste des objets](https://cdsarc.cds.unistra.fr/viz-bin/VizieR-3?-source=+J%2FApJ%2F728%2F117%2Ftablea1&-from=nav&-nav=cat%3AJ%2FApJ%2F728%2F117%26tab%3A%7BJ%2FApJ%2F728%2F117%2Ftablea1%7D%26key%3Asource%3DJ%2FApJ%2F728%2F117%26HTTPPRM%3A%26%26-ref%3DVIZ67868ba83bb18f%26-oc.form%3Dsexa%26-c.r%3D++2%26-c.geom%3Dr%26-order%3DI%26-out%3DKOI%26-out%3DKIC%26-out%3DKp%26-out%3DRad%26-out%3DEpoch%26-out%3DPer%26-out%3DTeff%26-out%3Dlog%28g%29%26-out%3DR*%26-out%3DSimbad%26-ignore%3DSimbad%3D*%26Simbad%3DSimbad%26-out%3D_RA%26-out%3D_DE%26-file%3D-c%26-meta.ucd%3D2%26-meta%3D1%26-meta.foot%3D1%26-usenav%3D1%26-bmark%3DPOST%26-out.max%3D50%26-out.form%3DHTML+Table%26-c.eq%3DJ2000%26-c.u%3Darcmin%26)
+* [table complète](https://cdsarc.cds.unistra.fr/viz-bin/VizieR-4)
+* [page SQL](http://tapvizier.cds.unistra.fr/adql/?%20J/ApJ/728/117/tablea1)
 
 
 

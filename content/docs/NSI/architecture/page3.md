@@ -22,12 +22,14 @@ Le reseau internet repose sur :
 
 Le reseau internet est un reseau qui connecte entre eux des reseaux, à l'echelle mondiale. Voir lien vers la page [Reseaux de seconde SNT pour revisions](/docs/SNT_2nde/pages/page3/circulation/)
 
-## Le datagramme 
+## Le datagramme: les informations échangées 
 Dans le modèle TCP/IP, les ordinateurs peuvent établir et réaliser une communication selon plusieurs couches, qui cloisonnent les logiciels et technologies utilisées. D'après la norme, les couches vont de la plus haute (couche 7: l'utilisateur) à la plus basse (couche 1: support physique).
 
 Lorsque vous envoyez une requête ou un fichier à une machine distante, les logiciels installés vont fabriquer des trames de 1500 octets, dont le datagramme contient les données utiles pour la transmission (dont l'adresse IP du destinataire et de l'emetteur), et les informations à transmettre, le tout sous format binaire.
 
-Durant le *trajet* à travers les couches logicielles *7:application*, *4:transport*, *3:internet* et *2:hôte-réseau* , le datagramme subira des modifications et chaque couche rajoutera ce qu'elle voudra: 
+Souvent, les informations à transmettre occupent un poids trop important pour être placées dans une trame de 1500 octets. Il faudra alors plus d'une trame pour envoyer les différents *paquets*, qui devront être reconstruits à l'arrivée.
+
+Durant le *trajet* à travers les différentes couches du modèle OSI, *4:application*, *3:transport*, *2:internet* et *1: hôte-réseau* , le datagramme subira des modifications et chaque couche rajoutera ce qu'elle voudra: 
 
 * La couche *4:transport* va ajouter les informations utiles pour contrôler l'arrivée l'ordre des paquets envoyés: résolu par le protocole TCP.
 * La couche *3:internet* va ajouter les informations utiles pour interconnecter les réseaux: résolu par le protocole IP.
@@ -45,10 +47,13 @@ La machine distante, qui reçoit cette trame, va alors repondre immédiatement e
 {{< img src="../images/TCP.png" alt="principe de l" caption="principe de l'emission - reception d'une trame sur internet" >}}
 
 
-{{< img src="../images/TCP2.png" alt="envoi d" caption="envoi d'un accusé de reception" >}}
-*[compléments et rappels de 1ere NSI: Lien](/docs/SNT_2nde/pages/page3/modele_OSI/)*
+{{< img src="../images/TCP2.png" caption="envoi d'un accusé de reception" >}}
 
-### Les machines
+* *[compléments et rappels de 1ere NSI: Lien](/docs/SNT_2nde/pages/page3/modele_OSI/)*
+* *Voir aussi: Le cours sur openclassrooms.com, [detailler une trame](https://openclassrooms.com/fr/courses/2340511-maitrisez-vos-applications-et-reseaux-tcp-ip/2927999-detaillez-len-tete-ip)*
+
+
+## Les machines
 Les machines reliées dans le réseau internet peuvent être:
 
 * un ordinateur  (machine hôte)
@@ -56,14 +61,17 @@ Les machines reliées dans le réseau internet peuvent être:
 * un commutateur (switch) : mis en reseau de manière centralisée, n'a pas d'adresse IP, agit au niveau de la couche 2, connecte les machines dans le sous-reseau, sert à envoyer les trames au destinataire direct, ne possède pas d'adresse IP.
 * routeur : transporte les paquets même s'ils ne lui sont pas adressés directement, choisit la meilleure route, joint plusieurs réseaux, agit au niveau de la couche 3.
 
-Un routeur possède plusieurs cartes réseaux. Sur le modèle suivant, il y a 3 ports ethernet, ainsi qu'une antenne wifi. Ce qui fait 4 cartes reseau:
+Un routeur possède plusieurs cartes réseaux. Chacune de ces cartes réseau est liée à une *interface*, possédant une *adresse IP*, en rapport avec le *sous-reseau* auquel l'*interface est reliée*.
+
+Sur le routeur suivant, il y a 3 ports ethernet, ainsi qu'une antenne wifi. Ce qui fait 4 cartes reseau:
 
 
 {{< img src="../images/routeur1.png" caption="routeur de la marque Siretta" >}}
 
+> *On suppose qu'une carte reseau propose une seule interface (une porte vers le sous-reseau directement relié), et possède donc une seule adresse IP.* 
+
 ## Adresse IP
 Dans le reseau internet, les reseaux et les machines sont identifiés par un numéro unique, l'adresse IP. Pour être exact, ce sont les cartes reseaux des machines qui possèdent une adresse IP.
-
 
 Pour plus de précisions sur l'adressage IP ainsi que le masque de sous-reseau, voir la {{< a link="https://www.youtube.com/watch?v=RnpSaDSSjR4" caption="video sur IP et masque sous-reseau (L. Guerin)" >}}:
 
@@ -133,7 +141,6 @@ La table de routage du routeur 1 est alors:
 | 0.0.0.0 | 192.168.1.253 |
 | 10.0.0.0/24 | 192.168.0.253 |
 
-*Exercices:*
 
 **Exercice 1:** Donner les tables de routage des autres routeurs de ce système informatique n°1
 
@@ -236,9 +243,9 @@ Selon l'agorithme de routage utilisé, le coût correspondra:
 ## Videos présentées dans cette page
 
 * Video (Youtube): [reseaux, adresses IP et masques de sous-reseaux](https://www.youtube.com/watch?v=RnpSaDSSjR4)
-* Video (Youtube): [Mooc de l'INT (institut des Mines Télécom)](https://www.youtube.com/watch?v=kzablGaqUXM)
-* Video (Youtube): [Mooc de l'INT (institut des Mines Télécom)](https://www.youtube.com/watch?v=-utHPKREZV8)
+
 ## Autres documents
+* cours complet sur les tables de routage, et les algorithmes de routage: [dlatreyte.github.io](https://dlatreyte.github.io/terminales-nsi/chap-11/5-routage/)
 * cours complet de niveau term NSI sur les reseaux autonomes: [infoforall](https://www.infoforall.fr/act/archi/procole-de-routage-dynamique-rip/)
 * autres exercices sur les algo de routage [http://www.netlab.tkk.fi/opetus/s38121/s01/Exercises/solution3.pdf](http://www.netlab.tkk.fi/opetus/s38121/s01/Exercises/solution3.pdf) et [https://www.netlab.tkk.fi/opetus/s38122/s00/Exercises/Exercise-3.pdf](https://www.netlab.tkk.fi/opetus/s38122/s00/Exercises/Exercise-3.pdf)
 
