@@ -26,7 +26,9 @@ Chaque modification du reseau va entrainer un temps d'echange entre les routeurs
 
 * Voir le cours en detail sur [dlatreyte.github.io](https://dlatreyte.github.io/terminales-nsi/chap-11/5-routage/)
 
-# protocoles de routage
+# protocoles de routages dynamiques
+Les routeurs vont s’adapter à un réseau qui évolue au cours du temps (ajout ou suppression de routes, panne d’un routeur, etc..). Pour cela les routeurs se transmettent des informations pour qu’ils puissent mettre à jour leur table de routage. 
+
 ## Activité
 Pour chacune des videos, au cours de leur visionnage, prendre en notes pour repondre aux questions suivantes:
 
@@ -55,18 +57,27 @@ Pour chacune des videos, au cours de leur visionnage, prendre en notes pour repo
 
 Un *vecteur de distance* est une donnée constituée de *(adresse du reseau, nombre de sauts)*
 
+Un *vecteur de distance* est une donnée constituée de *(adresse du reseau, nombre de sauts)*
+
 **Coût associé au chemin:** Le nombre de sauts (routeurs traversés)
 
 **Exemple de protocole:** Routing Information Protocol, RIP (basé sur l'algorithme de Bellman et Ford)
 
-**Mise à jour de la table de routage:** Les routeurs envoient leur table de routage (complète ou non), aux routeurs voisins. Lorsque le routeur reçoit la table de routage du voisin, il met à jour sa table à partir de ces informations: pour chaque vecteur de distance donné par le routeur voisin, il incrémente la valeur du nombre de sauts d'une unité, et compare avec sa table:
+**Mise à jour de la table de routage:** Les routeurs *envoient leur table de routage* (complète ou non), aux routeurs voisins de façon *périodique*. Lorsque le routeur reçoit la table de routage du voisin, il met à jour sa table à partir de ces informations: pour chaque vecteur de distance donné par le routeur voisin, il incrémente la valeur du nombre de sauts d'une unité, et compare avec sa table:
 
 * Si le coût est inférieur à celui de sa propre table, ou s'il s'agit d'une nouvelle adresse, il remet celle-ci à jour en considérant ce nouveau chemin.
 * Si le coût de l'une de ses entrées dans la table semble augmenter, il peut aussi s'agir d'une modification du reseau (panne, route coupée...). Il met à jour le nouveau coût pour son vecteur de distance.
 
 Ainsi, les informations vont circuler de proche en proche, très rapidement. Le routeur ne connait pas la route précise pour atteindre une adresse dans le reseau, mais la passerelle à prendre pour optimiser le coût du chemin (distance, ou métrique la plus petite).
 
-L'inconvenient de cette méthode est qu'il peut survenir des problèmes de convergence des données en cas de coupure d'une route sur le reseau (voir video).
+**L'inconvenient** de cette méthode est qu'il peut survenir des *problèmes de convergence* des données en cas de coupure d'une route sur le reseau (boucles, voir video). Le *temps* de convergence, même sans ce problème de boucle est relativement *long*. D'autant plus que le reseau est grand.
+
+**Protocole RIP**: (Routing Information Protocol). Issu des travaux de Bellman-Ford (publiés en 1956 et 1958), il a été développé par l’université de Californie. Il est utilisé initialement pour ARPAnet, ce qui en fait son grand succès. 
+
+* RIP utilise une métrique à nombre de sauts (hop en anglais, correspond au nombre de routeurs à traverser pour arriver à destination). Le nombre de sauts est limité à 15. 
+* Chaque routeur envoie sa table de routage à ses voisins toutes les 30 secondes. 
+* Si une route n’est pas actualisée pendant 180s, elle est supprimée de la table
+
 
 
 ## Routage à états de liens
@@ -77,11 +88,22 @@ L'inconvenient de cette méthode est qu'il peut survenir des problèmes de conve
 
 **Exemple de protocole:** Open Shortest Path First, OSPF: algorithme à état de liaison, basé sur la recherche du plus court chemin ([Dijkstra](/docs/SNT_2nde/pages/pages_algo/graphes/page4/)).
 
-**Mise à jour de la table de routage:** Le routeur envoie des petits messages, de type *bonjour* dans le reseau, et mesure la durée de reponse. Il établit ainsi une table avec, pour chaque adresse la mention d'une métrique qui depend du debit de chaque liaison. La métrique est obtenue en additionnant les coûts de chaque liaison.
+**Mise à jour de la table de routage:** Le routeur envoie des petits messages, de type *bonjour* dans le reseau, et mesure la durée de reponse. Il construit un paquet spécial contenant les informations qu’il vient de découvrir, avant de la diffuser à tous les autres routeurs. Il établit ainsi une table avec, pour chaque adresse la mention d'une métrique qui depend du debit de chaque liaison, et déduit le plus court chemin vers chaque destination à partir de l'algorithme de Dijkstra. La métrique est obtenue en additionnant les coûts de chaque liaison.
 
-> Exercice n°3 du [sujet de baccalaureat Metropole 2022](/docs/NSI/bac/page6/#bac-2022-metropole1-exercice-3): représentations binaires et protocoles de routage. (RIP, OSPF), minimiser le nombre de routeurs à traverser pour une requête.
+**Avantages:**
+
+* Plus de problème de boucle puisque la mise à jour des routeurs se fait simultanément. 
+* En théorie, pas de limitation de la taille du réseau.
+
+**Inconvénient** : Les tables de routage croissent avec le nombre de routeurs dans un réseau. Ce qui nécessite plus de mémoire au sein des routeurs et plus de temps pour explorer les tables.
 
 
+
+> Exercice n°3 du [sujet de baccalaureat Metropole-2 2022](/docs/NSI/bac/page6/#bac-2022-metropole1-exercice-3): représentations binaires et protocoles de routage. (RIP, OSPF), minimiser le nombre de routeurs à traverser pour une requête.
+
+> Exercice n°3 du [sujet de baccalaureat Metropole-2 2023](https://eduscol.education.fr/document/47927/download): réseau Arpanet
+
+> Exercice n°2 du [Centres etrangers J1 2024](https://pixees.fr/informatiquelycee/term/suj_bac/2024/sujet_05.pdf): reseaux, adresses IP, ...
 
 # Débit
 Le debit est la vitesse à laquelle sont échangées les données, expimée en bits/s (ou kb/s, Mb/s...). Le débit se définit par le rapport du nombre de données circulant (en bits), par la durée (s).
@@ -113,8 +135,6 @@ $$cout = \tfrac{10^8}{debit}$$
 voir complements sur [developpez.com](https://inetdoc.developpez.com/tutoriels/routage-dynamique-protocole-ospf/)
 
 ## Fiche de synthèse
-Lire et repondre aux questions du document sur les algorithmes de routage.
-
 Document issu du site [https://pgdg.frama.io/tnsi/ ](https://pgdg.frama.io/tnsi/).
 
 {{< img src="../images/routage_pdf.png" link="/pdf/NSI/routage.pdf"  caption="site pgdg.frama.io, auteurs Eric ROUGIER / Paul GODARD" >}} 

@@ -4,6 +4,8 @@ title: reseaux
 
 {{< img src="../images/video_internet.png" link="https://www.lumni.fr/video/creation-d-internet-de-la-premiere-connexion-au-reseau-mondial#containerType=folder&containerSlug=internet-les-origines-du-web" caption="video sur l'emergence du reseau internet - Lumni" >}}
 
+{{< img src="../images/video_internet_2.png" link="https://youtu.be/9UMvyfT4V_Y?si=Zmow35HcXlXAGxRS" caption="Comment fonctionne internet - Youtube" >}}
+
 # Faire communiquer des ordinateurs
 Une première idée naïve : tout usage du numérique met des machines en connexion, et qui échangent des données.
 

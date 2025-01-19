@@ -116,4 +116,5 @@ Seule la machine de destination va acceder au contenu.
 * {{< a link="../securite/index.html" caption="Sécurité des communications (1ere NSI)" >}}
 * {{< a link="../TP_reseau/index.html" caption="TP simulation d'un reseau avec Filius" >}}
 * [TP Filius et cours sur les protocoles, GLasius](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/)
+* Protocole DNS, cours de NSI sur [infoforall.fr](https://www.infoforall.fr/act/snt/protocole-dns/)
 

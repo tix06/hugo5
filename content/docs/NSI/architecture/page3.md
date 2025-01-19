@@ -106,7 +106,7 @@ Il est alors plus commode d'écrire l'equivalent décimal pour chacun des bits:
 Pour la norme IPv6, ce nombre est sur 128 bits, soit 16 octets.
 *Exemple d'adresse IPv6 exprimée en hexadécimal (32 caractères):* `2001:0db8:3c4d:0015:0000:0000:1a2f:1a2b` 
 
-
+**Exercices sur les adressages IP**:
 
 > Voir l'exercice n°4 du sujet de Baccalaureat: centres etrangers 2021: [étude d'un reseau informatique](https://eduscol.education.fr/document/33073/download)
 
@@ -142,29 +142,6 @@ La table de routage du routeur 1 est alors:
 | 10.0.0.0/24 | 192.168.0.253 |
 
 
-**Exercice 1:** Donner les tables de routage des autres routeurs de ce système informatique n°1
-
-**Exercice 2:** Recopier et completer les tables de routage des routeurs du système informatique suivant:
-
-
-{{< img src="../images/routage3.png" alt="système n°2" caption="système informatique n°2" >}}
-Routeur 1
-
-| reseau à rejoindre | passerelle (*Gateway*) |
-|--- | --- |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-
-Routeur 2
-
-| reseau à rejoindre | passerelle (*Gateway*) |
-|--- | --- |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
 
 
 > Voir l'exercice n°1 du sujet de Baccalaureat: Metropole Sept 2021: [Architecture de reseau d'ordinateurs, table de routage](https://eduscol.education.fr/document/32917/download)
@@ -208,31 +185,7 @@ Et celle des différentes machines
 | routeur 4 côté reseau 3 | 165.124.42.254 | R4 |
 | routeur 4 côté internet| 192.168.4.1 | R4 |
 
-Pour constituer un graphe de ce système informatique, on ne représentera pas le détail des sous-reseaux LAN. Les routeurs et les switchs seront les sommets du graphe. Leurs liaisons les arêtes. Les étiquettes des arêtes sont les coûts. (voir plus loin)
-
-
-
-{{< img src="../images/fig50.png" alt="modelisation par graphe" caption="modelisation par graphe" >}}
-Supposons que la machine 192.168.0.101 du sous-reseau 192.168.1.0 souhaite communiquer avec une autre machine sur *internet*.
-
-Dans le reseau de cette machine, tous les ordinateurs hôtes sont reliés au switch *S0*. Ce switch *voit* le routeur **R1** à l'adresse IP de sa carte reseau *côté S0*, soit 192.168.0.1
-
-Les switch et routeurs seront appelés S0, S1, S2, S3, R2, R3, R4 pour simplifer. Leur identifiant est celui de leur reseau (switch) ou de leur carte reseau (routeur):
-
-* S1 : 192.168.1.0
-* R2 : 192.168.1.2
-* etc... (voir tableau)
-
-Cela permet de recréer la carte globale du reseau, mais cette fois, avec les adresses IP des machines.
-
-## Les coûts (poids des arêtes)
-
-Selon l'agorithme de routage utilisé, le coût correspondra: 
-
-* soit à la distance mesurée en nombre de sauts sur les routeurs intermédiaires (algorithme à vecteur de distance RIP)
-* soit une valeur calculée à partir du nombre de sauts, mais aussi du débit (voir plus loin avec l'algorithme à état de liaison OSPF)
-
-
+[exercice complet ici](/pdf/NSI/sd4_internet.pdf)
 
 
 

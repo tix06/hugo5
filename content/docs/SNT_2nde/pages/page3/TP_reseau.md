@@ -210,7 +210,7 @@ Dérouler alors *trames échangées jusqu'à arriver à celles de protocole TCP*
 {{< img src="../images/trame_tcp.png" >}}
 > **Qu.3g:** Dans la série de *trames TCP*:
 >  * L'adresse source et celle destination, sont-elles toujours les mêmes? Ou y-a-t-il une alternance?
->  * Observer le détail de la première trame (ci-dessous): vous avez accès aux informations de la couche liaison (2), reseau (3), ainsi que la couche transport (4): identifier les informations pour chacune de ces couches: les informations pour chacune de ces couches: adresses mac (couche 1), IP et TTL pour la couche 2, SEQ et ACK pour la couche 3... *rappels de [1ere NSI](http:/docs/SNT_2nde/pages/page3/modele_OSI/)*
+>  * Observer le détail de la première trame (ci-dessous): vous avez accès aux informations de la couche liaison (2), reseau (3), ainsi que la couche transport (4): identifier les informations pour chacune de ces couches: les informations pour chacune de ces couches: adresses mac (couche 1), IP et TTL pour la couche 2, SEQ et ACK pour la couche 3... *rappels de [1ere NSI](/docs/SNT_2nde/pages/page3/modele_OSI/)*
 >  * Ces informations, évoluent-elles d'une trame à l'autre?
 
 {{< img src="../images/detail_tcp_ip.png" caption="detail de la premiere trame" >}}
