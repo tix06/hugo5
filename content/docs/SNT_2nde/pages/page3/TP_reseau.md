@@ -124,6 +124,8 @@ On utilisera pour la suite un système informatique constitué de nombreux sous-
 * cliquer sur le fichier pour ouvrir avec *Filius*
 
 ## Premier contact avec le système
+> **Qu.3a.** Représenter sur votre feuille le reseau en ne dessinant que les ordinateurs n°1 et n°15, ainsi que tous les routeurs.
+
 Lancer la simulation 
 
 1. Prendre connaissance de l'adresse IP de l'ordinateur n°15
@@ -131,7 +133,7 @@ Lancer la simulation
 3. Faire: `traceroute` suivi de l'adresse IP de la machine 15
 4. Repérer alors quels sont les routeurs par lesquels circulent les données entre ces 2 ordinateurs. 
 
-> **Qu.3a.** Est-ce que le nombre de sauts effectués vous semble cohérent?
+> **Qu.3b.** Est-ce que le nombre de sauts effectués vous semble cohérent?
 
 ## Table de routage
 Revenir en *mode edition* (marteau) : cliquer sur le routeur A
@@ -141,13 +143,13 @@ Aller dans l’onglet *table de routage*:
 
 {{< img src="../images/filius_routage_2.png" caption="table de routage du routeur A" >}}
 
-> **Q3b** : cartes reseaux du routeur:
+> **Q3c** : cartes reseaux du routeur:
 > * Hormis l’interface 127.0.0.1 : Combien d’interface possède le routeur ?
 > * Quels sont les 3 réseaux auquel ce routeur est *directement* relié ? Donner leur adresse IP.
 
 On souhaite ajouter l’information suivante à la table de routage : Pour atteindre le réseau 172.12.0.0, il faut passer par la passerelle 192.168.7.2 via l’interface 192.168.7.1
 
-> **Q3c** : nouvelle entrée dans la table:
+> **Q3d** : nouvelle entrée dans la table:
 > * Comment faudrait-il compléter la table de routage ? Renseigner la ligne entière.
 > * Quelle est la différence entre l’adresse de passerelle et l’adresse de l’interface ? A quoi se rapportent chacune d’entre elles ?
 
@@ -179,14 +181,14 @@ En mode *simulation*:
 * test en local:
   * ouvrir le webbrowser. Dans la barre d'adresse, saisir `http://localhost`. 
 
-> **Qu.3d.**: Voyez vous votre page? Expliquer alors ce signifie l'adresse *localhost*.
+> **Qu.3e.**: Voyez vous votre page? Expliquer alors ce signifie l'adresse *localhost*.
 
 {{< img src="../images/localhost.png" >}}
   * Aller sur l'application webserver: Les informations affichées devraient montrer l'entête HTTP avec la requête reçue (méthode GET, ...), l'entête de la reponse (HTTP/1.1 200 OK), ainsi que le script HTML téléchargé.
 
 {{< img src="../images/protocoleHTTP.png" >}}
 
-> **Qu.3e.**: S'agit-il d'informations de la couche 4 (Application), 3 (Transport), 2 (reseau), ou 1 (accès au reseau)? voir ici les rappels de cours de [1ere NSI](http:/docs/SNT_2nde/pages/page3/modele_OSI/)
+> **Qu.3f.**: S'agit-il d'informations de la couche 4 (Application), 3 (Transport), 2 (reseau), ou 1 (accès au reseau)? voir ici les rappels de cours de [1ere NSI](http:/docs/SNT_2nde/pages/page3/modele_OSI/)
 
 ## Communication client-serveur
 * Ajouter à l'ordinateur n°1 le logiciel : *Navigateur Web*
@@ -198,7 +200,7 @@ En mode *simulation*:
 * **Côté serveur**
 Comme pour la connexion en localhost: Lire les informations de la fenêtre de l'application Webserver: 
 
-> **Qu.3f**: Quelles informations ont changé sur la fenêtre de l'application webserver?
+> **Qu.3g**: Quelles informations ont changé sur la fenêtre de l'application webserver?
 
 ## Protocole TCP
 * **Côté client** 
@@ -208,7 +210,7 @@ Faire un clic droit sur la *machine M1*. Choisir *show data exchange*
 Dérouler alors *trames échangées jusqu'à arriver à celles de protocole TCP*
 
 {{< img src="../images/trame_tcp.png" >}}
-> **Qu.3g:** Dans la série de *trames TCP*:
+> **Qu.3h:** Dans la série de *trames TCP*:
 >  * L'adresse source et celle destination, sont-elles toujours les mêmes? Ou y-a-t-il une alternance?
 >  * Observer le détail de la première trame (ci-dessous): vous avez accès aux informations de la couche liaison (2), reseau (3), ainsi que la couche transport (4): identifier les informations pour chacune de ces couches: les informations pour chacune de ces couches: adresses mac (couche 1), IP et TTL pour la couche 2, SEQ et ACK pour la couche 3... *rappels de [1ere NSI](/docs/SNT_2nde/pages/page3/modele_OSI/)*
 >  * Ces informations, évoluent-elles d'une trame à l'autre?
@@ -220,7 +222,7 @@ Le document suivant présente la disposition des données dans un *datagramme*. 
 
 {{< img src="../images/OSI5.png" caption="datagramme" >}}
 
-> **Qu.3h:** Quels sont les renseignements fournis sur l'image de la question *3e* (détail de la première trame) que l'on retrouve des les champs du datagramme?
+> **Qu.3i:** Quels sont les renseignements fournis sur l'image de la question *3e* (détail de la première trame) que l'on retrouve des les champs du datagramme?
 
 # TP Filius 4: Serveur DNS
 Quitter la simulation précédente et ouvrir le nouveau reseau filius. Choisir, selon le temps qu'il vous reste:
