@@ -31,19 +31,29 @@ De plus, il faudra mémoriser le sommet parent d'un sommet visité. Ce sommet pa
 
 ## algorithme
 
-On part du sommet r : 
+**Structures de données**
 
-> 
-1. On visite tous les noeuds fils de `r`. Pour chaque sommet adjacent `u`: On note la distance qui sépare `r` de `u` selon la longueur de l'arête. Et on note le sommet parent. On ajoute chaque sommet dans la liste `L`.
-2. On trie la liste `L` par ordre de distance à `r`croissante.
-3. On colore en rouge le sommet `r` lorsque tous les sommets adjacents ont été visités. Et on retire `r` de la liste.
-4. On passe au sommet `v` pour poursuivre l'exploration : le premier à gauche dans la liste (celui le plus proche de `r`).
-5. On visite tous les sommets voisins de `v`. On les ajoute dans la liste L.
-6. Pour chaque voisin `w` du sommet `v` : si dist<sub>G</sub>(r,w) < dist<sub>G</sub>(r,v) + dist<sub>G</sub>(v,w), c'est que le sommet `w` a déjà été visité, et que le chemin déjà trouvé est plus court que le chemin actuel. On ne fait rien.
-7. si dist<sub>G</sub>(r,w) > dist<sub>G</sub>(r,v) + dist<sub>G</sub>(v,w), c'est que le sommet `w` a peut être été visité, mais que le chemin actuel est le plus court. On note alors la nouvelle valeur de la distance : dist<sub>G</sub>(r,w) = dist<sub>G</sub>(r,v) + dist<sub>G</sub>(v,w). Et on note que le parent du sommet `w` est `v`. C'est actuellement le meilleur chemin.
-8. Puis, lorsque tous les voisins de `v` ont été visités, on revient au point 2 pour `v` (trier la liste L, coloration en rouge,...).
+* un graphe G
+* un tableau T comportant autant de lignes et de colonnes que le graphe comporte de sommets.
+* une liste L pour établir l’ordre de visite des sommets
 
-Ce qui change par rapport à l'algorithme précédent, c'est surtout le nouveau choix de sommet à visiter lors du parcours du graphe : lorsque tous les noeuds fils d'un sommet ont été visités, et que l'on a mémorisé leur distance au sommet de départ, on choisi d'explorer le **sommet le plus proche**, celui **le plus à gauche** dans la liste L.
+**Algorithme**
+
+On part du sommet r :
+
+1. On colore r en rouge, preuve que l’on a (ou que l’on va…) visité-er tous ses sommets adjacents. Pour chaque sommet adjacent u: On note la distance qui sépare r de u selon la longueur de l’arête. 
+2. On ajoute cette information (longueur r-u) au tableau T dans la ligne du sommet parent, le sommet r
+3. On ajoute chaque sommet u dans la liste L avec la mention de la distance à r (u, distance)
+4. On trie la liste L par ordre de distance à r croissante. 
+5. On choisit comme nouveau sommet de depart v, celui qui a la plus petite distance dans le tableau T. On colore v en rouge. On retire v de la liste L
+6. On visite tous les sommets w voisins de v. On les ajoute dans la liste L. On indique pour distance la somme distG(r,v) + distG(v,w)
+7. Pour chaque voisin w du sommet v : 
+si distG(r,w) < distG(r,v) + distG(v,w), c’est que le sommet w a déjà été visité, et que le chemin déjà trouvé est plus court que le chemin actuel. On ne fait rien.
+si distG(r,w) > distG(r,v) + distG(v,w), c’est que le sommet w a peut être été visité, mais que le chemin actuel est le plus court. On note alors la nouvelle valeur de la distance dans le tableau T, dans la ligne v, colonne w: distG(r,w) = distG(r,v) + distG(v,w). C’est actuellement le meilleur chemin.
+8. Puis, lorsque tous les voisins de v ont été visités, on revient au point 4 pour v (trier la liste L, coloration en rouge,…).
+
+
+Ce qui change par rapport à l'algorithme BFS, c'est le choix du nouveau sommet à visiter lors du parcours du graphe : lorsque tous les sommets adjacents ont été visités, et que l'on a mémorisé leur distance au sommet de départ, on choisit d'explorer le **sommet le plus proche** du sommet de depart, celui **le plus à gauche** dans la liste L.
 
 Il faut donc trier cette liste à la fin de chaque exploration.
 

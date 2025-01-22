@@ -57,7 +57,6 @@ Pour chacune des videos, au cours de leur visionnage, prendre en notes pour repo
 
 Un *vecteur de distance* est une donnée constituée de *(adresse du reseau, nombre de sauts)*
 
-Un *vecteur de distance* est une donnée constituée de *(adresse du reseau, nombre de sauts)*
 
 **Coût associé au chemin:** Le nombre de sauts (routeurs traversés)
 
@@ -134,10 +133,7 @@ $$cout = \tfrac{10^8}{debit}$$
 
 voir complements sur [developpez.com](https://inetdoc.developpez.com/tutoriels/routage-dynamique-protocole-ospf/)
 
-## Fiche de synthèse
-Document issu du site [https://pgdg.frama.io/tnsi/ ](https://pgdg.frama.io/tnsi/).
-
-{{< img src="../images/routage_pdf.png" link="/pdf/NSI/routage.pdf"  caption="site pgdg.frama.io, auteurs Eric ROUGIER / Paul GODARD" >}} 
+ 
 
 # Liens
 ## Videos présentées dans cette page
@@ -150,5 +146,6 @@ Document issu du site [https://pgdg.frama.io/tnsi/ ](https://pgdg.frama.io/tnsi/
 * cours de term NSI très complet sur l'architecture machine et reseau. Auteurs Eric ROUGIER / Paul GODARD : [https://pgdg.frama.io/tnsi/](https://pgdg.frama.io/tnsi/)
 * Document d'accompagnement du pdf, cours de DUT [rt.bethune.free.fr](http://rt.bethune.free.fr/iut-gtr2/Cours/R4/cours/R4_Cours2_Routage_ip_6parpage.pdf)
 * cours complet de niveau term NSI sur les reseaux autonomes: [infoforall](https://www.infoforall.fr/act/archi/procole-de-routage-dynamique-rip/)
+* Comparatif RIP/OSPF: [cisco](https://cisco.goffinet.org/ccna/ospf/introduction-au-protocole-routage-dynamique-ospf/)
 * autres exercices sur les algo de routage [http://www.netlab.tkk.fi/opetus/s38121/s01/Exercises/solution3.pdf](http://www.netlab.tkk.fi/opetus/s38121/s01/Exercises/solution3.pdf) et [https://www.netlab.tkk.fi/opetus/s38122/s00/Exercises/Exercise-3.pdf](https://www.netlab.tkk.fi/opetus/s38122/s00/Exercises/Exercise-3.pdf)
 

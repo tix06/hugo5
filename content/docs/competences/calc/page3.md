@@ -10,7 +10,7 @@ L'année 2023 a vu une féminisation des lauréats au prix Nobel. Mais depuis sa
 
 {{< img src="../images/femmesnobel_0.png" caption="Prix Nobel : une féminisation à tout petit pas - TV5 Monde" >}}
 
-Narges Mohammadi, Claudia Goldin, Anne L'Huillier, Katalin Karikó. Quatre noms de femmes s'ajoutent cette année à la liste des "Nobélisé•es".
+Narges Mohammadi, Claudia Goldin, Anne L'Huillier, Katalin Karikó. Quatre noms de femmes s'ajoutent en 2023 à la liste des "Nobélisé-es". Un seul en 2024, Han Kang, prix nobel de littérature.
 
 ## Fichier de données
 Selon la version Excel installée:
@@ -72,7 +72,7 @@ Nous allons maintenant créer un nouveau tableau pour rassembler des statistique
 
 
 
-Dans une partie libre de la feuille, créer le tableau suivants:
+Dans une partie libre de la feuille, créer le tableau suivant:
 
 {{< img src="../images/tab-stats.png" >}}
 

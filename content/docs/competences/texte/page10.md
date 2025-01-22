@@ -2,8 +2,8 @@
 Title: utiliser un CMS
 ---
 
-# Utiliser un CMS
-Un système de gestion de contenu ou SGC (content management system ou CMS en anglais) est un programme informatique permettant de **créer un site internet**, un **blog** ou encore un **site de vente** en ligne. Les fonctionnalités d'un SGC sont nombreuses. Il permet entre autres de **travailler à plusieurs** sur un même document ; de séparer les opérations de gestion de la **forme et du contenu** ; de structurer le contenu (FAQ, documents, blogues, forums, etc.) ; de hiérarchiser les **utilisateurs** et de leur attribuer des **permissions** (anonyme, administrateur, contributeur, etc.).
+# Publier un site, utiliser un CMS
+Un système de gestion de contenu ou SGC (content management system ou **CMS** en anglais) est un programme informatique permettant de **créer un site internet**, un **blog** ou encore un **site de vente** en ligne. Les fonctionnalités d'un SGC sont nombreuses. Il permet entre autres de **travailler à plusieurs** sur un même document ; de séparer les opérations de gestion de la **forme et du contenu** ; de structurer le contenu (FAQ, documents, blogues, forums, etc.) ; de hiérarchiser les **utilisateurs** et de leur attribuer des **permissions** (anonyme, administrateur, contributeur, etc.).
 
 Certains CMS proposent d'**héberger** et de mettre le site en ligne. Il vous fournit alors l'**URL** pour consulter le site.
 
@@ -23,35 +23,48 @@ Au démarrage: aller sur **Créer un site**
 
 Suivre ensuite les étapes de création:
 
-* donner un nom au site en fonction du thème que vous allez choisir.
+* donner un nom à votre site *(pour créer un compte, il faut aussi créer un site personnel, celui-ci ne sera pas utilisé)*
 * renseigner votre e-mail
-* après vérification de votre email, votre espace en ligne est créé. Finir les étapes de création de compte.
+* après vérification de votre email, votre espace en ligne est créé. 
 
 ## Rejoindre un site collaboratif
-La page [d'accueil](http://site-demo-2-3.e-monsite.com/) contient:
+La page d'accueil du [groupe 1](http://site-demo-2-3.e-monsite.com/), ou celle du [groupe 2](https://physique-2-3.e-monsite.com) contient:
 
 * un bandeau de navigation (partie supérieure)
-* un contenu de page (images, articles, ...)
-* un formulaire de connexion ou de création de compte **pour les membres**. Attention, il s'agit ici des membres de votre **communauté**, auxquels vous donnez les droits de publier de manière non anonyme. Ces membres n'auront **PAS** les **droits administrateurs**.
-* un formulaire de commentaires de type *blog*.
-Le professeur va vous permettre d'editer le site colaboratif de la classe. 
+* une page vers les articles du Blog
+* un formulaire de contact
 
 **Pour le groupe 1**: Celui-ci se trouve à la page 1 du site: [http://site-demo-2-3.e-monsite.com/](http://site-demo-2-3.e-monsite.com/)
 
 {{< img src="../images/cms11.png" link="http://site-demo-2-3.e-monsite.com/" >}}
 
-**Pour le groupe 2:** Celui-ci se trouve à la page 1 du site: [http://site-demo-3-4.e-monsite.com/](http://site-demo-3-4.e-monsite.com/)
+**Pour le groupe 2:** Celui-ci se trouve à la page 1 du site: [http://site-demo-3-4.e-monsite.com/](https://physique-2-3.e-monsite.com)
 
 {{< img src="../images/cms19.png" link="http://site-demo-3-4.e-monsite.com/" >}}
 
-* Aller dans le formulaire *commentaire* de la *page 1* du [site du groupe 1](http://site-demo-2-3.e-monsite.com/) ou bien du [site du groupe 2](http://site-demo-3-4.e-monsite.com/).
-* Renseigner votre nom, votre email et votre site internet dans la partie *commentaire* de la page.
+* Aller dans le formulaire de *Contact* du site et renseigner les champs obligatoires:
+	* Renseigner votre nom, 
+	* votre email (celui qui a servi à l'inscription sur *e-monsite.com*)
 
-Cette derniere étape va permettre à l'administrateur du site de vous ajouter comme *administrateur*.
+Cette derniere étape va permettre à l'*administrateur* du site de vous ajouter comme *webmaster*.
 
-Vous trouverez alors la liste des différents sites dont vous êtes adiministrateur depuis le menu du tableau de bord.
+Vous trouverez alors la liste des différents sites dont vous êtes *administrateur* ou *webmaster* depuis le menu du tableau de bord.
 
 {{< img src="../images/cms4.png" >}}
+
+## Ajouter/modifier un article du Blog
+Depuis le tableau de bord du *manager*, aller dans le menu *Blog* et choisir *Tableau de bord*.
+
+{{< img src="../images/cms22.png" >}}
+
+Vous pouvez alors, soit:
+
+* (1) modifier l'un des articles existants
+* (2) créer un nouvel article
+
+{{< img src="../images/cms23.png" >}}
+
+Pour rédiger un article de Blog, l'interface proposée est la même que pour rediger une page. Voir ci-dessous.
 
 ## Ajouter/Modifier une page
 Depuis le tableau de bord. Menu *Pages*, choisir *Gérer les pages*.
