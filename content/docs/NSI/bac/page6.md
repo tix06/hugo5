@@ -227,16 +227,16 @@ On donne cette fois le tableau constitué à partir de l'algorithme de Dijkstra,
 
 * le colonnes représentent les sommets à atteindre
 * les lignes sont les sommets de départ
-* On renseigne dans les cases la distance cumulée depuis le noeud **F**, jusqu'au noeud de la colonne, en passant par le noeud adjacent de la ligne. Par exemple, **I** peut être atteint en venant du noeud **H** avec une longueur de 15.
+* On renseigne dans les cases la distance cumulée depuis le noeud **F**, jusqu'au noeud de la colonne, en passant par le noeud adjacent de la ligne. Par exemple, **I** peut être atteint en venant du noeud **K** avec une longueur de 13.
 
 |  | G | H | I | J | K | L |
 | --- | --- |--- |--- |--- |--- |--- |
 | F |   | 5 |   |   |   |   |
 | G |   |   |   |   |   |   |
-| H |   |   | 15| 6 |   |   |
+| H |   |   | | 6 |   |   |
 | I |   |   |   |   |   |   |
 | J | 8 |   |   |   | 8 | 11|
-| K |   |   |   |   |   |   |
+| K |   |   |  13 |   |   |   |
 | L |   |   |   |   |   |   |
 
 B. Représenter le graphe des chemins pour explorer depuis **F** les autres noeuds, en suivant le chemin *le plus court*. 
