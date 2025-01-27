@@ -39,8 +39,8 @@ Soit la planète TOI 270-01 du système TOI 270:
 R_star = Rsol * 0.37
 M_star = Msol * 0.36
 # Observables sur la courbe de transit
-delta = 0.0044
-tau = 4600
+delta = 0.0044 # sans unité
+tau = 4600     # s
 ```
 
 ### Rayon planete a partir de delta
@@ -91,7 +91,10 @@ print("{:3.0f} j, {:3.0f} h, {:3.0f} min {:3.2f} s".format(jours,h,m,s))
 ```
 
 ## Présenter les résultats: Dataframe
-Les données relatives à la planète sont mises dans une liste l'ordre `'planete','etoile','M_star','R_star','delta','tau','date_debut_transit'`
+### Importer les données d'une liste ou d'un dictionnaire python
+Les données relatives à la planète sont mises dans une liste dont l'ordre pourrait être par exemple:
+
+`'planete','etoile','M_star','R_star','delta','tau','date_debut_transit'`
 
 Par exemple, ci-dessous, dans la liste `planete1`: *(la date de debut de transit est sous forme annee,mois,jour,heure)*
 
@@ -147,6 +150,26 @@ pd.concat([df1,df2],ignore_index = True)
 * le premier paramètre de la fonction doit être un itérable: tooujours mettre la ligne entre `[]`
 * Les tableaux concaténés peuvent avoir des nombres de colonnes différents. La valeur placée dans le tableau est alors `NaN`. Cette valeur peut être modifiée par la suite.
 * le paramètre `ignore_index = True` permet de recréer une numérotation de l'index et eviter les doublons. Dans l'exemple proposé ici, cela permet d'eviter d'avoir 2 lignes avec l'index 0.
+
+### Importer les données depuis un fichier csv
+Les informations des planètes peuvent aussi être saisies dans un tableur. *Attention à bien utiliser des points comme séparateur décimal*.
+
+{{< img src="../images/tab_excel.png" caption="tableau rempli à l'aide d'un tableur" >}}
+
+Exporter (ou enregistrer) en format *csv*.
+
+On peut vérifier en ouvrant le fichier *csv* que les données sont mises dans un format particulier (séparation à l'aide d'un point virgule...)
+{{< img src="../images/tab_csv.png" caption="fichier csv" >}}
+
+L'import depuis pandas se fait alors de la manière suivante: *(rien de plus simple)*
+
+```python
+df = pd.read_csv('exoplanetes.csv',sep=';')
+df
+```
+
+{{< img src="../images/df5.png" >}}
+
 
 # Voir aussi: Les bases avec pandas
 Pandas va permettre de lire et de modifier des tableaux (DataFrames). Chaque colonne de ton DataFrame sera appelée « descripteur ». 
