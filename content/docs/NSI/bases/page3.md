@@ -35,7 +35,13 @@ Il faudra organiser ces données et utiliser un langage spécifique pour acceder
 
 > **Question:** Mais alors, qu'est ce qui différencie la base de donnée d'un simple fichier stocké sur serveur?
 
-> *Réponse:* l'utilisation d'un simple fichier (par exemple de type tableur) va entrainer une certaine lourdeur lors de l'accès aux données, un manque de sécurité, une absence de contrôle de concurence d'accès. Ces problèmes amènent à utiliser un SGBD...
+> *Réponse:* l'utilisation d'un simple fichier (par exemple de type tableur) va entrainer:
+
+> * *une certaine lourdeur lors de l'accès aux données*,
+> * *un manque de sécurité,*
+> * *une absence de contrôle de concurence d'accès.*
+
+Ces problèmes amènent à utiliser un SGBD...
 
 **Définition:** Le **Système de Gestion de Bases de Données (SGBD)** est un logiciel qui a pour rôle de gérer les informations stockées dans une base de données, et leur accès. 
 

@@ -60,12 +60,13 @@ Avec un tableau simple, comme ceux manipulés par un tableur, on peut avoir la r
 
 Une **relation** est donc une table. Cette table possède un *en-tête*, constitué des attributs *Titre, Annee, NomMES, PrenomMES, AnneeNaiss*. La table contient des *n-uplets*, comme par exemple: *Hana-bi, 1997, Kitano, Takeshi, 1947*.
 
-Cette table respecte **2 règles importantes** pour la création et la modification d'une base de données:
+Cette table respecte **3 règles importantes** pour la création et la modification d'une base de données:
 
 
 
 * chaque entrée (ligne ou n-uplet) du tableau renseigne bien tous les attributs, et respecte bien le *domaine* de cet attribut (voir plus loin).
 * la table ne contient pas deux n-uplets identiques.
+* chaque entrée possède un identifiant unique, souvent placé dans la *première* colonne.
 
 **Q1.** On voudrait insérer les lignes suivantes dans la table. Laquelle de ces lignes présenterait une **anomalie d'insertion**?
 

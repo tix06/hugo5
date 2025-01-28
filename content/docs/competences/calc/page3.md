@@ -121,3 +121,17 @@ On peut s'aider du tutoriel suivant pour l'affichage d'un histogramme.
 {{< img src="../images/graph1.png" link="https://www.youtube.com/watch?v=JNl-H6VRz6U" caption="Excel - 1 Basique - Cours Graphique" >}}
 
 {{< img src="../images/nobels_histo.png" caption="exemple d'histogramme réalisé sur des valeurs fictives" >}}
+
+# Base de données
+
+
+Telecharger la base de données sous format SQL: [nobels.sql](/scripts/BDD/nobels.sql).
+
+Ouvrir dans un nouvel onglet le gestionnaire de bases de données [sqliteonline.com](https://sqliteonline.com/).
+
+Depuis le menu du logiciel, faire (+) dans le coin gauche et *import*. Importer alors le fichier SQL.
+
+Tester alors dans l'editeur les commandes SQL correspondant aux *requêtes* que vous avez réalisées depuis le tableurs. 
+
+Voir [tutos 1](https://sql.sh/cours/order-by), et [tutos 2](https://sql.sh/cours/where) en ligne.
+
