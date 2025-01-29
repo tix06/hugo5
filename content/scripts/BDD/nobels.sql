@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS "nobels" (
 	"name"	TEXT,
 	"gender"	TEXT,
 	"category"	TEXT,
-	"Field4"	INTEGER
+	"year"	INTEGER
 );
 INSERT INTO "nobels" VALUES ('André Paul Guillaume Gide','male','Literature',1947);
 INSERT INTO "nobels" VALUES ('Arthur Ashkin','male','Physics',2018);

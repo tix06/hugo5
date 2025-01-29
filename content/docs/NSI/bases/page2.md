@@ -4,20 +4,24 @@ Title : BDR
 
 *Plan du cours*:
 
-**La structuration des données:**
-
-* Généralités sur les [SGBD: page 1](../page3/)
-* TD sur le [modele relationnel: page 2](../page1/)
-* TD sur le modele relationnel, [entité-relation: page 3](../page2/)
-* TP sur la creation d'une [BDD cinéma](/docs/NSI/bases/page2/), utilisant un SGBD (Base de LibreOffice)
-* TP sur la gestion d'une base de données de romans de sciences fiction, utilisant [SQLite Browser : page 4](../page6)
-
 **Le langage de requêtes:**
+* TP tableur sur les prix Nobels. Opérations de recherche, filtre et tri sur une table: [Lien](/docs/competences/calc/page3)
+* Cours langage SQL et TD sur une base de données de prenoms: [Lien](/docs/NSI/bases/page7/)
 
-* TD en ligne sur une base de données de prenoms: [Lien] (https://e-nsi.forge.aeif.fr/exercices_bdd/31_prenoms/prenoms/)"> vers le site e-nsi.forge.aeif.fr
-* TP sur le langage SQL avec des requetes sur une base de données d'[exoplanetes: bas de la page 5](../page4)
-* TP sur le langage SQL avec **plusieurs tables** et jointures: une [enquete de police: page 5](../page4)
+**La structuration des données:**
+* Bases de données, règles pour construire une BDD en plusieurs tables, TP sur la creation d'une BDD cinéma (Base de Libre Office): [Lien](/docs/NSI/bases/page2/)
+* Problèmes d'intégrité, modele entité-relation (2): [Lien](../page1/) et [exercices](/pdf/NSI/bdd1_eleve.pdf)
+* SGBD, gestion de l'accès concurentiel, [Lien](../page3/)
+
+**Travaux pratiques**
+* TP sur la gestion d'une base de données de romans de sciences fiction, utilisant [SQLite Browser](../page6)
+* TP sur le langage SQL avec des requetes sur une base de données. Différents thèmes sont proposés : [Lien](../page4)
+	* enquete de police
+	* villes du monde
+	* séries Netflix
+	* exoplanètes
 * TP sur la creation d'un serveur avec gestion d'un formulaire [en python/SQL: page 6](../page5/)
+
 
 # Bases de données relationnelles
 Une **base de données** est une *collection de données* qui vont être partagées entre plusieurs services, serveurs, utilisateurs.
@@ -336,6 +340,3 @@ Cette association peut être représentée à l'aide d'une **clé etrangère**, 
 
 *Remarque:* *la clé d’une association* (binaire) entre une entité E1 et une entité E2 est le couple constitué de la clé e1 de E1 et de la clé e2 de E2.
 
-# Suite du cours
-* complement sur les jointures en plus simple: [sqlpro.developpez.com](https://sqlpro.developpez.com/cours/sqlaz/jointures/)
-* contraintes en bdd: [cours en pdf, Frédéric Brouard, alias SQLpro ](https://www.sqlspot.com/sites/sqlspot.com/IMG/pdf/BasesDeDonneesRelationnellesEtContraintesSQL.pdf)

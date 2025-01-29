@@ -125,13 +125,13 @@ On peut s'aider du tutoriel suivant pour l'affichage d'un histogramme.
 # Base de données
 
 
-Telecharger la base de données sous format SQL: [nobels.sql](/scripts/BDD/nobels.sql).
+1. Telecharger la base de données sous format SQL: [nobels.sql](/scripts/BDD/nobels.sql).
 
-Ouvrir dans un nouvel onglet le gestionnaire de bases de données [sqliteonline.com](https://sqliteonline.com/).
+2. Ouvrir dans un nouvel onglet le gestionnaire de bases de données [sqliteonline.com](https://sqliteonline.com/).
 
-Depuis le menu du logiciel, faire (+) dans le coin gauche et *import*. Importer alors le fichier SQL.
+3. Depuis le menu du logiciel, faire (+) dans le coin gauche et *import*. Importer alors le fichier SQL.
 
-Tester alors dans l'editeur les commandes SQL correspondant aux *requêtes* que vous avez réalisées depuis le tableurs. 
+4. Tester alors dans l'editeur les commandes SQL correspondant aux *requêtes* que vous avez réalisées depuis le tableur. 
 
-Voir [tutos 1](https://sql.sh/cours/order-by), et [tutos 2](https://sql.sh/cours/where) en ligne.
+Voir [cours SQL](/docs/NSI/bases/page7) en ligne.
 
