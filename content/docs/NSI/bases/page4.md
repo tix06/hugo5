@@ -27,7 +27,9 @@ Title : SQL
 
 ([cours en ligne](../page7), ou [version en pdf](/pdf/NSI/bdd2-e.pdf))
 
-> Traiter au choix l'un des sujets suivants
+> Traiter au choix l'un des sujets suivants. Au démarrage, représenter le schéma de la database comme sur l'exemple suivant. Puis répondre aux questions.
+
+{{< img src="../images/bdd_films.png" caption="schema de la base de données films" >}}
 
 
 ## Pays, villes et langues parlées
@@ -35,7 +37,7 @@ Exercice sur le langage SQL rédigés par N. Revéret sur [forge.apps.education.
 ## Base de données Netflix
 Exercice sur le langage SQL rédigés par N. Revéret sur [forge.apps.education.fr](https://exercices-bdd-aa801f.forge.apps.education.fr/52_netflix/netflix/)
 
-{{< img src="../images/bdd_films.png" caption="schema de la base de données films" >}}
+
 ## Murder Party à SQL City
 
 {{< img src="../images/clue-illustration.png" link="https://replit.com/@ToniScullion1/Silver-TASK-2-SQL-Murder-Mystery" caption="retrouvez le meurtrier grâce aux bases de données de la police" >}}

@@ -261,6 +261,33 @@ Le protocole DNS est vulnérable, et peut faire l'objet d'un *piratage*: voir ex
 
 Correction: [corrigé du reseau filius DNS](../images/TP4_DNS_c.fls)
 
+# DNS et configuration de votre poste informatique
+1. Constituer une table de correspondance entre nom de domaine et adresse ip sur le site https://www.my-ip-finder.fr  et choisir l’onglet DNS lookup :
+
+| Adresse symbolique | Adresse IP v4 | IP v6 |
+|--- |--- |--- |
+| musee-orsay.fr  |  |   |  
+| olympics.com   |   |   | 
+|  onisep.fr   |   |    |
+
+> Recopier et compléter cette table
+
+2.Utiliser les commandes *windows*
+
+Voir tutoriel [ici](https://windows.developpez.com/cours/ligne-commande/?page=tcp-ip-et-outils-reseau)
+
+Copier les commandes une à une dans un fichier d'extension *.bat* et executer le fichier.
+
+On peut rediriger la sortie de chacune des commandes dans un fichier *.txt*
+
+```
+ipconfig /all >R1.txt
+traceroute  x  >>R1.txt
+```
+
+a. Avec `ipconfig`, retrouver l'adresse du serveur DNS utilisé
+b. Avec `traceroute`, combien de sauts sont necessaires pour joindre `musee-orsay.fr`?
+
 # Compléments théoriques sur les adresses des machines
 
 On pourra consulter la video sur les [adresses IP et masques de sous-reseau]( https://www.youtube.com/watch?v=RnpSaDSSjR4)
@@ -353,6 +380,8 @@ Une adresse MAC est codée en hexadécimal, sur 6 octets (cf cours sur l'hexadé
 * video [Ping et traceroute utility](https://www.youtube.com/watch?v=vJV-GBZ6PeM)
 * detailler une trame: [openclassroom](https://openclassrooms.com/fr/courses/2340511-maitrisez-vos-applications-et-reseaux-tcp-ip/2927999-detaillez-len-tete-ip)
 * detail trame [pixies informatique au lycée](https://pixees.fr/informatiquelycee/n_site/isn_modele_tcpip.html)
+* Traceroute expliqué et autres commandes batch: [it-connect.fr](https://www.it-connect.fr/quest-ce-que-le-traceroute/)
+* Créé ton propre fichier batch: [ionos.fr](https://www.ionos.fr/digitalguide/serveur/outils/creer-un-fichier-batch/#:~:text=Un%20fichier%20batch%20(fichier%20Bat,d'environnement%20d'ex%C3%A9cution.)
 
 
 
