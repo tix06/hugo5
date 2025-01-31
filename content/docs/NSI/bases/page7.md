@@ -13,6 +13,7 @@ Title: sql
 * SGBD, gestion de l'accès concurentiel, [Lien](../page3/)
 
 **Travaux pratiques**
+* TP requêtes sur une table de prenoms: [Lien](../page8)
 * TP sur la gestion d'une base de données de romans de sciences fiction, utilisant [SQLite Browser](../page6)
 * TP sur le langage SQL avec des requetes sur une base de données. Différents thèmes sont proposés : [Lien](../page4)
 	* enquete de police
@@ -47,12 +48,12 @@ Créons la table:
 | Toto | 210 | 4 | 6 | NULL |
 
 ```SQL
-CREATE TABLE IF NOT EXISTS "Table_notes" (
-	"Nom_eleve"		TEXT PRIMARY KEY,
-	"Classe" INTEGER,
-	"Math"		REAL,
-	"Anglais		REAL,
-	"Info"		REAL);
+CREATE TABLE IF NOT EXISTS Table_notes (
+	Nom_eleve		TEXT PRIMARY KEY,
+	Classe INTEGER,
+	Math		REAL,
+	Anglais		REAL,
+	Info		REAL);
 ```
 
 CREATE TABLE va permettre d'indiquer le schéma d'une relation, avec ses **Attributs** et **Domaines**. Les types (ou domaines) les plus courants sont parmi: 
@@ -65,11 +66,12 @@ CREATE TABLE va permettre d'indiquer le schéma d'une relation, avec ses **Attri
 
 On peut ajouter des contraintes (`constraints`) en paramètre : PK (Primary Key), UNIQUE (dans une colonne, les valeurs doivent être uniques à chaque ligne), AUTOINCREMENT, NOT NULL (doit comprendre une valeur), DEFAULT 'Not Applicable' (la valeur mise par défaut si vide).
 
-```
-id INTEGER PRIMARY KEY, 
+```SQL
+CREATE TABLE etat_civil (
+   id INTEGER PRIMARY KEY, 
    name TEXT UNIQUE,
    date_of_birth TEXT NOT NULL,
-   date_of_death TEXT DEFAULT 'Not Applicable'
+   date_of_death TEXT DEFAULT 'Not Applicable';)
 ```
 
 
@@ -216,6 +218,8 @@ GROUP BY s'utilise avec des **agrégats**.
 SELECT SUM(note) FROM romans GROUP BY id_auteur
 ```
 
+> Exercice: Ecrire une requête qui calcule la moyenne des notes obtenues par écrivain sur la table Romans.
+
 ## `ORDER BY <colonne> ASC [DESC]` 
 Trions les lignes par ordre croissant des notes en math:
 
@@ -227,7 +231,9 @@ ORDER BY Math ASC;
 
 Sinon par ordre descendant: `ORDER BY Math DESC`
 
-> Exercice: Représenter le tableau retourné par cette requête.
+> Exercice: Représenter le tableau retourné par la requête écrite en exemple.
+
+> Exercice: Ecrire une requête qui calcule la moyenne des notes obtenues par écrivain sur la table Romans et qui classe ces auteurs par ordre de note moyenne décroissante.
 
 *Remarque:* On peut aussi rajouter une *clause* sur le nombre de lignes retournées avec `LIMIT <nombre>` Très pratiques pour de grandes tables.
 
@@ -310,31 +316,3 @@ FROM orders, customers
 WHERE orders.customer_id = customers.customer_id;
 ```
 
-# TP sur la table des prenoms
-## Importer la table
-Aller sur la page des fichiers des prenoms de l'état civil: [Lien](https://www.insee.fr/fr/statistiques/7633685)
-
-**Télécharger** le fichier en format *csv* (2Mo) dans l'onglet TELECHARGEMENT.
-
-La description de la table se trouve dans l'onglet DICTIONNAIRE DES VARIABLES.
-
-**Importer** le fichier depuis le gestionnaire de base de données de votre ordinateur, ou bien celui en ligne [sqliteonline.com](https://sqliteonline.com/)
-
-**Afficher** les premières lignes de la table afin de prendre connaissance des étiquettes des colonnes:
-
-```sql
-SELECT * FROM nom_table LIMIT 100;
-```
-
-
-**Modifier** (`ALTER TABLE RENAME`) le nom de la table ainsi que celui des colonnes pour avoir les noms suivants:
-
-| nom table | colonne 1 | colonne 2 | colonne 3 |
-| --- | --- | --- | --- |
-| naissances | sexe | prenom | annee | nombre |
-
-## Travail
-voir fiche [question-reponses](/pdf/NSI/bdd2_fiche_reponse_prenoms.pdf)
-
-# Liens
-* memento SQL sur [forge.apps.education.fr](https://exercices-bdd-aa801f.forge.apps.education.fr/memento_sql/)

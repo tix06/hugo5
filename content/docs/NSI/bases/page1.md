@@ -14,6 +14,7 @@ Title : modele
 * SGBD, gestion de l'accès concurentiel, [Lien](../page3/)
 
 **Travaux pratiques**
+* TP requêtes sur une table de prenoms: [Lien](../page8)
 * TP sur la gestion d'une base de données de romans de sciences fiction, utilisant [SQLite Browser](../page6)
 * TP sur le langage SQL avec des requetes sur une base de données. Différents thèmes sont proposés : [Lien](../page4)
 	* enquete de police
