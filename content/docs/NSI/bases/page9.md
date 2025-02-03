@@ -45,7 +45,34 @@ Il reste maintenant à renseigner les données pour chacune des tables. Commence
 
 {{< img src="../images/base13.png" caption="renseigner les données" >}}
 
+| **id_rea** | **nom** | **prenom** | **annee_naissance** |
+| --- |--- | --- |--- |
+| 1 | Kitano | Takeshi | 1947 |
+| 2 | Burton | Tim | 1958 |
+| 3 | Tarantino | Quentin | 1963 |
+| 4 | Tati | Jacques | 1907 |
+| 5 | Hitchcock | Alfred | 1899 |
+| 6 | Almodovar | Pedro | 1949 |
+| 7 | Kitamura |  Ryûhei |  1969 |
+
 {{< img src="../images/base11.png" caption="puis ouvrir la table films" >}}
+
+| **id_film** | **titre** | **date** | **id_rea** |
+|--- |--- | --- | --- |
+| 1 | Hana-bi | 1997 |  |
+| 2 | Big fish | 2003 |  |
+| 3 | Edward aux mains d'argent | 1990 |  |
+| 4 | Sonatine | 1993 |  |
+| 5 | Pulp Fiction | 1995 |  |
+| 6 | Play Time | 1967 |  |
+| 7 | Vertigo | 1958 |  |
+| 8 | Psychose | 1960 |  |
+| 9 | Parle avec elle | 2002 |  |
+| 10 | Mon oncle | 1958 |  |
+| 11 | Volver | 2006 |  |
+| 12 |  Reservoir Dogs | 1992 |  |
+| 13 |  Alive | 2003  |  |
+| 14 |  Godzilla: Final Wars | 2004 |
 
 {{< img src="../images/base12.png" caption="renseigner les données" >}}
 
@@ -92,42 +119,49 @@ Executer.
 > Questions: Quelles requêtes SQL permettent d'afficher:
 
 1. toute la table `films`
-2. tous les attributs du film dont le réalisateur est le n°1
-3. le titre du film, le nom et prenom du realisateur pour `id_rea` egal à 2 et date > 1993
-4. tous les titres des films sortis après 1970 mais avant 2002
+2. tous les attributs du-des film-s dont le réalisateur est le 1er de la table `realisateur`
+3. tous les titres des films sortis après 1970 mais avant 2002
+4. le titre du film, le nom et prenom du realisateur pour `id_rea` egal à 2 et date > 1993
 5. tous les noms des auteurs de films qui ont sorti des films après 1960, mais pas Jacques Tati.
+6. l’année de naissance du réalisateur de Reservoir Dogs ?
 
 ## SQLite Browser
-* Le logiciel SQLite Browser se trouve sur le lecteur L:. Faites une recherche pour trouver le fichier executable.
-* Si vous ne le trouvez pas, une version portable peut être téléchargée ici: [sqlitebrowser.org](https://sqlitebrowser.org/dl/)
+* une version portable du logiciel peut être téléchargée ici: [sqlitebrowser.org](https://sqlitebrowser.org/dl/)
 * Notice:{{< a link="http://prof.math.free.fr/mgtmn/tp/bdd_pres_dbb_sqlite.pdf" caption="Consulter la notice" >}}
 
 
 
-1. Dans SQLite Browser, commencer par créer une nouvelle Base de Données (en mémoire).
-2. Créer table: créer *Films*((**`ID_film, INT`**),(Title,TEXT),(Date,int),(`ID_rea`,INT)) puis *Realisateurs*((**`ID_rea`, INT**), (`last_name`,TEXT), (`first_name`, TEXT))
-3. Compléter chacune des tables avec au minimum 4 nouvelles entrées. Bien renseigner les valeurs de la clé secondaire `ID_rea` correspondante dans la table *Films*.
-4. Tester alors les instructions SQL suivantes... Recopier ensuite l'instruction et expliquer dans chaque cas ce qui est renvoyé:
+La table en version sqlite se trouvi ici: [films.db](/scipts/BDD/films_de_zero.db)
 
-* requête 1: `SELECT * FROM Films`
-* requête 2: `SELECT Title FROM Films`
-* requête 3: 
+1. Tester alors les instructions SQL suivantes... Recopier ensuite l'instruction et expliquer dans chaque cas ce qui est renvoyé:
 
-```
-SELECT * FROM Films
+* requête 1: `SELECT * FROM films`
+* requête 2: 
+
+```SQL
+SELECT * FROM films
 where ID_rea=1
 ```
 
-* requête 4:
+* requête 3:
 
 ```
-SELECT * FROM Films
+SELECT * FROM films
 where ID_rea=1 or Date>2003
 ```
 
-* requête 5:
+* requête 4: Deux possibiltés:
 
+```SQL
+select first_name,last_name, titre, date from realisateurs, films 
+where films.id_rea = 2 and films.id_rea = realisateurs.id_rea
 ```
-SELECT * FROM Films
-inner join Realisateurs on Films.ID_rea = Realisateurs.ID_rea
+
+ou bien, en précisant la jointure avec `INNER JOIN`
+
+```SQL
+SELECT titre, first_name, last_name FROM films
+inner join realisateurs on films.id_rea = realisateurs.id_rea
+where film.id_rea = 2;
 ```
+
