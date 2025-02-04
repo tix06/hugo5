@@ -45,7 +45,9 @@ En colorant les différentes parties du script Python, on peut mettre en corresp
 {{< img src="../images/vitta_init9.png" >}}
 
 * Soit utiliser le bouton *téléverser*. Le programme se charge alors automatiquement dans la carte microbit
-* soit le bouton de téléchargement. C'est l'ordinateur qui charge alors le programme généré (l'extension est `.hex`). Il faudra le deplacer sur la carte microbit à l'aide de l'explorateur.
+* soit le bouton de téléchargement. C'est l'ordinateur qui charge alors le programme généré (l'extension est `.hex`). Il faudra le deplacer sur la carte microbit à l'aide de l'explorateur:
+
+{{< img src="../images/televerser.png" >}}
 
 
 > Ajouter une instruction conditionnelle (si le bouton A est préssé, alors...)
@@ -136,9 +138,9 @@ display.show(led_image)
 
 L'image est alors générée par la ligne `led_image = Image('00000:00000:00000:00000:00000')`. L'instruction `display.show(led_image)` va afficher cette image sur la carte microbit.
 
-Remplacer les 2 images du programme précédent par 2 blocs comme celui-ci. 
+> Remplacer les 2 images du programme précédent (smiley happy/sad). Placer vos propres dessins, réalisés à partir de la matrice.
 
-Pour dessiner l'image, il faut cliquer dans les cellules (pixels). Le bloc suivant affiche un **Y** sur la carte microbit.
+Pour dessiner l'image, il faut cliquer dans les cellules de la matrice(pixels). Le bloc suivant affiche un **Y** sur la carte microbit.
 
 {{< img src="../images/vitta_init14.png" >}}
 
