@@ -13,6 +13,10 @@ Les editeurs CMS les plus connus aujourd'hui sont [Wordpress](https://fr.wordpre
 
 Nous nous interesserons pour cette séance au CMS [e-monsite.fr](https://www.e-monsite.com)
 
+*Il faudra créer une page avec un texte rédigé de manière personnelle, ajouter une ou plusieurs illustrations, et mentionner les liens vers les sites qui ont servi de référence.*
+
+*Le thème choisi est libre, mais doit avoir un but pédagogique, c'est à dire, illustrer un élément du programme scolaire, ou bien préparer une sortie, une discussion, un débat en classe.*
+
 # Le CMS e-monsite.fr
 ## D'abors, créer un compte
 Au démarrage: aller sur **Créer un site**
