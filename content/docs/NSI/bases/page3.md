@@ -10,7 +10,7 @@ Title : SGBD
 
 **La structuration des données:**
 * Bases de données, règles pour construire une BDD en plusieurs tables, TP sur la creation d'une BDD cinéma (Base de Libre Office): [Lien](/docs/NSI/bases/page2/)
-* Problèmes d'intégrité, modele entité-relation (2): [Lien](../page1/) et [exercices](/pdf/NSI/bdd1_eleve.pdf)
+* Problèmes d'intégrité, modele entité-relation (2): [Lien](../page1/), cours [pdf](/pdf/NSI/bdd1_prof.pdf) et [exercices](/pdf/NSI/bdd1_eleve.pdf)
 * SGBD, gestion de l'accès concurentiel, [Lien](../page3/)
 
 **Travaux pratiques**
