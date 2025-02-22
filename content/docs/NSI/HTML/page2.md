@@ -3,6 +3,9 @@ Title: protocole HTTP
 ---
 
 # Le protocole HTTP
+
+{{< img src="../images/youtube_http.png" link="https://www.youtube.com/watch?v=WGdOWtKL5nA" caption="HTTP - chaine Cookie connecté" >}}
+
 ## Des requêtes HTTP jusqu'à la page Web
 HTTP est un protocole de la **couche Application** selon le modèle de communication entre machines **OSI** (sera développé plus tard). 
 
@@ -36,6 +39,11 @@ Plus de détails: [voir page du site IONOS](https://www.ionos.fr/digitalguide/he
 Ce protocole HTTP contrôle la façon dont le client formule ses demandes et la façon dont le serveur y répond, et connaît **différentes méthodes de requête**: GET, POST, HEAD, OPTIONS, TRACE, ou autres méthodes spécifiques.
 
 # Méthodes HTTP
+HTTP est un protocole de la couche Application pour lequel le client et le serveur communiquent grâce aux *en-têtes*.
+
+* Pour la requête, c'est dans l'*en-tête* que la demande est formulée.
+* Pour la reponse, le serveur ajoute un *en-tête*, utile pour le protocole.
+
 ## GET
 c'est la méthode HTTP qui est **la plus utilisée** pour **demander une ressource**, par exemple un fichier HTML, au serveur Web. Dans le navigateur, on fait cette demande grâce à une URL (*uniform ressource locator*)
 
@@ -86,7 +94,7 @@ Il se produit alors plusieurs étapes avant l'affichage de la page par le naviga
 
 * (1): saisie de l'URL dans la barre d'adresse (ou activation d'un *lien* depuis la page web)
 
-le navigateur se connecte au serveur du site `ma_meteo.fr` puis lui envoie la **requête HTTP** suivante:
+le navigateur établit une connexion TCP avec le serveur du site `ma_meteo.fr` puis lui envoie la **requête HTTP** suivante:
 
 ```
 GET /search?ville=Nice&UTC=12
@@ -327,7 +335,8 @@ c2l0ZUNvZGU9ZGFjcGJybDR0byZ2aXNpdG9yQ29kZT1mMnBvbGJucXRhNTU5b3YwJnN0YXJ0T2ZWaXNp
 
 *Pour l'outil de developpement du navigateur, on pourra s'aider de la page [MDN Web Docs: Détails des requêtes réseau](https://developer.mozilla.org/fr/docs/Tools/Network_Monitor/request_details)*
 
-
+# Liens
+voir aussi: [MDN Flux HTTP](https://developer.mozilla.org/fr/docs/Web/HTTP/Session)
 
 
 

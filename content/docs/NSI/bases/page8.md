@@ -117,3 +117,4 @@ SELECT SUM(nombre) FROM GROUP BY ORDER BY DESC LIMIT
 # Liens
 * memento SQL sur [forge.apps.education.fr](https://exercices-bdd-aa801f.forge.apps.education.fr/memento_sql/)
 * l'exercice sur les prenoms est inspiré du site [forge.apps.education.fr](https://exercices-bdd-aa801f.forge.apps.education.fr/)
+* autres themes sur [forge.apps.education.fr](https://forge.apps.education.fr/gbecker/terminale-nsi/-/blob/9b29abe61b7b7aef253f99a863c8d047924b4d02/Theme2_base_de_donnees/02_langage-sql-exercices.md) (disquaire)
