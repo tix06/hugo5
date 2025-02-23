@@ -5,17 +5,51 @@ bookShowToc: false
 
 # Langage informatique
 ## Langage humain et langage machine
+Dans la vidéo suivante, on voit que le langage utilisé pour les machines est un *langage structuré*, *non ambigü*, comme on l'utiliserait pour *commander un robot*. Ces instructions passent alors par un *interpréteur*, qui traduit celui-ci en langage machine et en *binaire*.
+
 {{< img src="../images/langage1.png" link="https://youtu.be/2UqIJlVQE7o?feature=shared" caption="francetv.fr" >}}
 
-Le langage permet aussi de communiquer avec les machines. 
+Le langage permet de communiquer avec les machines, mais d'une *manière différente* du langage utilisé par les *humains*. 
 
 Les langages créés par l’homme pour communiquer avec les ordinateurs sont des langages *artificiels*. Ils doivent être *formalisés et non ambigus* pour pouvoir être interprétés par une machine.
 
-Les langages informatiques sont tous équivalents: si un problème est suscpetible d'être résolu par un langage, alors tous les langages informatiques le peuvent.
+Les langages informatiques sont tous équivalents: si un problème est susceptible d'être résolu par un langage, alors tous les langages informatiques le peuvent.
 
 Pour des raisons de commodité, nous aborderons les langages par le *langage naturel*, en essayant de le formuler de la manière la plus proche d'un langage informatique, tout en rendant sa lecture facile. Nous verrons aussi une manière de l'écrire sous forme d'*algorigramme* (un langage visuel), mettant en evidence la structure. Puis plus tard, nous aborderons le *langage Python*, afin de réaliser des *programmes*.
 
 ## Langage algorithmique
+L'*interpreteur* va comprendre un petit nombre d'*instructions* et *symboles*, et un petit nombre de *combinaisons* entre ces symboles.
+
+### Mémoire de l'ordinateur
+Pour enregistrer un programme en mémoire, l'interpréteur va repérer les *identificateurs de valeur*, les *opérateurs*, les *instructions*. Tout cela va être traduit en binaire, mis dans la même mémoire, mais avec des statuts différents: 
+
+Comme les identificateurs de valeur pointent vers des *données qui peuvent varier*, on les appelera des *variables*. Ce sont par exemple les données de vente de différents commerçants, les points de vie, la position sur une grille, ... Tout ce qui peut *évoluer pendant l'execution* du programme, et que l'on appelle généralement des données.
+
+{{< img src="../images/cadre_tab.png" caption="TP Excel sur les ventes de fruits" >}}
+
+*Dans une feuille du tableur Excel, les cellules contiennent des étiquettes (données textuelles), des données numériques, ou des instructions de calcul sur ces données. Tout ceci est dans une CASE, un peu comme le rangement des éléments d'un programme dans la mémoire de la machine.*
+
+*Dans un programme, les données sont repérées par un nom plutôt que par des coordonnées de classeur.*
+
+*exemple 1: `r = 12/2`*
+
+l'instruction contient: une variable valeur `r`, un OPERATEUR de valeur `=` (affectation), un OPERATEUR de valeur `/` (division), un entier de valeur `12`, un entier de valeur `2`.
+
+*Execution:* `12/2 -> 6 -> r`
+
+* lors de l'execution, la machine va d'abord évaluer 12/2, qui vaudra 6, puis affecter cette valeur à la variable `r`.
+
+*exemple 2: `l = 2 * 3.14 * r`*
+
+* l'instruction contient: une variable valeur `l`, un OPERATEUR de valeur `=` (affectation), une variable de valeur `r`, un OPERATEUR de valeur `*` (multiplication), un entier de valeur `2`, un REEL de valeur `3.14`.
+
+* si cette instruction est executée après la première, on aura:
+
+`r -> 6 -> 2 * 3.14 * r -> 37.68 -> l`
+
+Donc `l` vaudra 37.68
+
+### Structure du langage
 Tout langage informatique doit être structuré autour de séquences d'instructions, de branchements conditionnels et de boucles, permettant les répétitions. En utilisant un langage visuel, un algorigramme, cela donne:
 
 {{< img src="../images/langage4.png" caption="séquence d'instructions" >}}
@@ -71,8 +105,14 @@ Ici, le données seront:
 | google.fr | 142.250.201.3 |
 | facebook.fr | 157.240.196.17 |
 
+Et ce que l'on attend du programme, c'est qu'il fournisse l'adresse IP correspondant au nom de domaine.
+
 > Question 2a: Pour acceder à la page musee-orsay.fr depuis notre machine M01. Quelle sera l’adresse IP
 utilisée par le navigateur ? Pourquoi ?
+
+*Réponse: 141.61.122.100*
+
+{{< img src="../images/langage6.png" >}}
 
 > Question 2b: On souhaite accéder maintenant à la page google.fr sur notre machine M01. Quelle sera
 l’adresse IP utilisée par le navigateur ? Pourquoi ?
@@ -108,7 +148,7 @@ FIN
 On utilisera les fonctions `diminuer_TTL`, `supprimer_datagramme` et `faire_circuler_datagramme`
 
 {{< img src="../images/langage5.png" caption="reseaux connectés au routeur 1" >}}
-> **Programme 2:** Ecrire le programme de la fonction `faire_circuler_datagramme`. Cette fonction devra lire l'adresse IP du reseau de destination. Cette information est ecrite dans le datagramme. Puis choisir l'interface Y correspondant à cette adresse IP. Et enfin, envoyer le datagramme par l'interface Y.
+> **Programme 2:** L’administrateur réseau va paramétrer les routeurs pour que ceux-ci assurent la circulation des données. Ecrire le programme de la fonction `faire_circuler_datagramme`. Cette fonction devra lire l'adresse IP du reseau de destination. Cette information est ecrite dans le datagramme. Puis choisir l'interface Y correspondant à cette adresse IP. Et enfin, envoyer le datagramme par l'interface Y.
 
 On utilisera les fonctions `lire_IP`, `choisir_interface`, et `envoyer`.
 
