@@ -1,0 +1,135 @@
+---
+Title: sql et python
+---
+
+# base de données exoplanetes.db
+## Principe
+Nous allons utiliser un **script Python** pour nous connecter à la base de données `exoplanetes.db` et tester quelques requêtes en langage SQLite.
+
+Nous utiliserons la librairie `sqlite3` de Python.
+
+Il est conseillé d'utiliser l'IDE Spyder pour editer et interpréter les scripts écrits en Python.
+
+La base de données doit être téléchargée ici : [exoplanetes.db](/scripts/BDD/exoplanetes.db)
+
+{{< img src="../images/exoplanets.png" caption="extrait de la base de données" >}}
+
+## Script de base
+
+```python
+import sqlite3
+
+try:
+    conn = sqlite3.connect('exoplanetes.db')
+    cur = conn.cursor()
+    print("Base de données crée et correctement connectée à SQLite")
+
+    sql = "SELECT sqlite_version();"
+    cur.execute(sql)
+    res = cur.fetchall()
+    print("La version de SQLite est: ", res)
+    
+
+
+except sqlite3.Error as error:
+    print("Erreur lors de la connexion à SQLite", error)
+
+
+cur.close()
+conn.close()
+print("La connexion SQLite est fermée")
+``` 
+
+Rappel: Le mécanisme `try ... except` est détaillé à la page [mise au point d'un programme Python](/docs/NSI/langages/page5/#gestion-des-exceptions-try-except)
+
+Voici la traduction de ce script en langage naturel:
+
+```python
+essayer:
+  connexion a la base de donnees exoplanetes.db
+  creation d un curseur SQL
+  Afficher ("Base de données cree et correctement connectee à SQLite")
+  executer la requete SQL "SELECT sqlite_version();"
+  affecter le resultat de la requête dans la variable res
+
+si une erreur survient:
+  Afficher ("La version de SQLite est: ", sqlite3.Error)
+
+sinon:
+  # autres requetes SQL
+
+fermeture du curseur
+fermeture de la connexion
+Afficher ("La connexion SQLite est fermée")
+```
+
+## Explorer la base de données
+* L'instruction suivante permet d'explorer la base de données:
+
+`"PRAGMA table_info(planetes_es);"`
+
+> **Q1.** Ajouter cette requête à votre script python pour afficher les attributs de la table `planetes_es` de la base de données `exoplanetes.db`
+
+* Voici un extrait de la reponse à cette requête:
+
+```
+[(0, '_name', 'VARCHAR(38)', 1, None, 1), (1, 'planet_status', 'VARCHAR(9)', 1, None, 0), (2, 'mass', 'NUMERIC(19, 14)', 0, None, 0), (3, 'radius', 'NUMERIC(19, 14)', 0, None, 0), ...]
+```
+
+> **Q2.** Quel est l'attribut du nom des planetes de cette table?
+
+
+> **Q3.** Ecrire une instruction en python qui affiche uniquement la liste des attributs. Mettre cette liste dans une liste nommée `L`
+
+```
+['_name',
+ 'planet_status',
+ 'mass',
+ 'radius',
+ 'orbital_period',
+ 'semi_major_axis',
+ 'eccentricity',
+ 'discovered',
+ 'detection_type',
+ 'molecules',
+ 'star_name',
+ 'star_distance',
+ 'star_mass',
+ 'star_radius',
+ 'star_sp_type',
+ 'star_age',
+ 'star_teff',
+ 'star_magnetic_field']
+ ```
+
+On peut améliorer la présentation des résultats, et mettre la table retournée dans un dataframe. On utilise alors la liste `L` des attributs (question précédente):
+
+```python
+# Toutes les données relatives aux étoiles dont le nom commence par Kepler-89
+import numpy as np
+import pandas as pd
+sql = "select * from planetes_es where _name like 'Kepler-89%'"
+cur.execute(sql)
+res = cur.fetchall()
+df = pd.DataFrame(res,columns=L)
+df
+```
+
+{{< img src="../images/exop_kepler.png" >}}
+
+> **Q4.** Tester quelques unes des requêtes sur cette base. Par exemple:
+
+1. Toutes les données relatives à l'étoile *Kepler-89 b*
+2. Tous les noms des planètes dont la masse est plus de 10 fois supérieure à celle de Jupiter (Indiquer quelles sont ces planètes dans l'extrait de la table)
+3. Les planètes ainsi que le nom de l'étoile hôte, dont l'étoile est située à moins de 40 pc de la Terre.
+4. Les noms des 20 étoiles les plus proches de la Terre où des planètes ont été détectées.
+5. Nombre total de planètes dans la table `(utiliser COUNT(*))`
+6. Nombre total d'étoiles dans la table (utiliser `COUNT(DISTINCT ... )`)
+7. Table des planètes qui n'ont été détectées ni par "Radial Velocity", ni par "Primary Transit" 
+8. Le nombre de planètes qui n'ont été détectées ni par "Radial Velocity", ni par "Primary Transit"
+9. Moyenne des distances entre le Soleil et les différentes étoiles de la table (utiliser `AVG`). *Attention à ne compter qu'une seule fois chacune des étoiles.*
+10. Table des planètes où le type de l'étoile est G ... (utiliser `LIKE "G%"`)
+11. Nom des planètes et distances au soleil, où de l'eau a été détectée (utiliser `LIKE`)
+
+
+

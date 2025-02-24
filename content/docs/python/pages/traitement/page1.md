@@ -23,26 +23,31 @@ from matplotlib.widgets import Cursor
 * l'autre de type `plot` (points reliés entre eux)
 
 ```python
+%matplotlib qt
 plt.clf()
 axes = plt.gca()
-plt.scatter(x,y,color='silver',marker='.',label='titre courbe 1')
+plt.scatter(x_gli,signal_lissage,color='silver',marker='.',label='luminosité')
 #plt.grid(True,which='both')
 #plt.legend(loc='best')
 #plt.title('moyenne glissante')
 
 
-plt.plot(x_gli,signal_lissage,color='red',label='titre courbe 2')
+plt.plot(x_gli,Y_fit,color='red',label='courbe fit')
 #plt.grid(True,which='both')
 #plt.legend(loc='best')
 cursor = Cursor(axes, useblit=True, color='red', linewidth=2)
-# cursor non implémenté sous jupyter notebook
 plt.show()
 ```
 
 **lignes optionnelles:**
 
+* `%matplotlib qt` va détacher le graphique du flux du notebook, et permettre d'utiliser le curseur (fenêtre graphique `qt`)
 * La fonction `gca` permet de gérer les axes et curseur.
 * La fonction `clf` permet d'effacer la figure courante et de remettre les réglages graphiques à zero.
 * `grid` pour afficher une grille
+* `legend` pour ajouter un encadré avec la légende (les labels)
+
+{{< img src="../images/qt_graph.png" >}}
+
 
 

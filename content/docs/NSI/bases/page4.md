@@ -84,6 +84,8 @@ Il est conseillé d'utiliser l'IDE Spyder pour editer et interpréter les script
 
 La base de données doit être téléchargée ici : [exoplanetes.db](/scripts/BDD/exoplanetes.db)
 
+{{< img src="../images/exoplanets.png" caption="extrait de la base de données" >}}
+
 ## Script de base
 
 ```python
@@ -110,46 +112,4 @@ conn.close()
 print("La connexion SQLite est fermée")
 ``` 
 
-Rappel: Le mécanisme `try ... except` est détaillé à la page [mise au point d'un programme Python](/docs/NSI/langages/page5/#gestion-des-exceptions-try-except)
-
-Voici la traduction de ce script en langage naturel:
-
-```python
-essayer:
-  connexion a la base de donnees exoplanetes.db
-  creation d un curseur SQL
-  Afficher ("Base de données cree et correctement connectee à SQLite")
-  executer la requete SQL "SELECT sqlite_version();"
-  affecter le resultat de la requête dans la variable res
-
-si une erreur survient:
-  Afficher ("La version de SQLite est: ", sqlite3.Error)
-
-sinon:
-  # autres requetes SQL
-
-fermeture du curseur
-fermeture de la connexion
-Afficher ("La connexion SQLite est fermée")
-```
-
-## Explorer la base de données
-* L'instruction suivante permet d'explorer la base de données:
-
-`"PRAGMA table_info(planetes_es);"`
-
-> **Q1.** Ajouter cette requête à votre script python pour afficher les attributs de la table `planetes_es` de la base de données `exoplanetes.db`
-
-* Voici un extrait de la reponse à cette requête:
-
-```
-[(0, '_name', 'VARCHAR(38)', 1, None, 1), (1, 'planet_status', 'VARCHAR(9)', 1, None, 0), (2, 'mass', 'NUMERIC(19, 14)', 0, None, 0), (3, 'radius', 'NUMERIC(19, 14)', 0, None, 0), ...]
-```
-
-> **Q2.** Quel est l'attribut du nom des planetes de cette table?
-
-
-> **Q3.** Tester quelques unes des requêtes sur cette base, vues en TD (BDD2 - exercices). Utiliser pour cela un mécanisme de contrôle des erreurs de type `try .. except`, afin d'afficher les erreurs SQL dans la console de l'IDE.
-
-
-
+**La suite du TP à la page: [python et BDD](/docs/python/pages/traitement/page3)**

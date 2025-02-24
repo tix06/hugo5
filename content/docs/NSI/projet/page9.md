@@ -53,6 +53,8 @@ Lien de téléchargement: [Planète 2](/scripts/astro/donnees-astep2024/TOI-201/
 * Lissage de courbe bruitée: [tuto moyenne glissante](/docs/NSI/structure/page11/)
 * Regression linéaire: [tuto](/docs/python/pages/traitement/page2/)
 
+
 # Traitement de données en table - Pandas Dataframe
-[Lien vers la page du site](../page10)
+* Manipulation de dataframe: [tuto](../page10)
+* Base de données et python: [tuto](/docs/python/pages/traitement/page3)
 

@@ -161,7 +161,7 @@ IP = lire_IP(datagramme)
 
 Y = choisir_interface(IP)
 
-envoyer(datagramme,IP)
+envoyer(datagramme,Y)
 ```
 
 > Question 5a: Un datagramme passe par le routeur 1 et contient les informations suivantes: `TTL = 2, IP_destination = 10.0.0.0`. Que fait le routeur? Que valent les 2 informations après le passage du routeur?

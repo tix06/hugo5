@@ -137,7 +137,7 @@ df2
 
 *Remarque: On peut ajouter plusieurs planètes dans la liste, avec par exemple: `pd.DataFrame([planete1,planete2,...])`*
 
-On peut alors ajouter les 2 *Dataframes* dans un nouveau tableau. Il s'agit d'une opération de *concaténation*:
+On peut alors ajouter les 2 *Dataframes* dans un nouveau tableau. Il s'agit d'une opération de **concaténation**:
 
 ```python
 pd.concat([df1,df2],ignore_index = True)
@@ -147,9 +147,47 @@ pd.concat([df1,df2],ignore_index = True)
 
 *Remarques:*
 
-* le premier paramètre de la fonction doit être un itérable: tooujours mettre la ligne entre `[]`
+* le premier paramètre de la fonction doit être un itérable: toujours mettre la ligne entre `[]`
 * Les tableaux concaténés peuvent avoir des nombres de colonnes différents. La valeur placée dans le tableau est alors `NaN`. Cette valeur peut être modifiée par la suite.
 * le paramètre `ignore_index = True` permet de recréer une numérotation de l'index et eviter les doublons. Dans l'exemple proposé ici, cela permet d'eviter d'avoir 2 lignes avec l'index 0.
+
+### fusioner des tableaux aux etiquettes différentes
+Les tableaux doivent avoir les **mêmes etiquettes** de colonne si on veut ajouter leur ligne l'une sous l'autre. Dans le cas contraire, il faudra **renommer** les colonnes.
+
+*utile après l'import d'une base de données/sql*
+
+```python
+D = {
+    'planete':'TOI 270-01',
+    'etoile': 'TOI 270'
+    }
+df_new_line = pd.DataFrame.from_dict([D])
+df_new_line
+```
+
+{{< img src="../images/df6.png" >}}
+
+```python
+df_new_line_2 = pd.DataFrame([{'_name':'TOI 270-02','star_name':'TOI 270'}])
+df_new_line_2
+```
+
+{{< img src="../images/df7.png" >}}
+
+
+```python
+df_new_line_2 = df_new_line_2.rename(columns={'_name': 'planete','star_name':'etoile'})
+df_new_line_2
+```
+
+{{< img src="../images/df8.png" >}}
+
+```python
+df = pd.concat([df_new_line,df_new_line_2],ignore_index=True)
+df
+```
+
+{{< img src="../images/df9.png" >}}
 
 ### Importer les données depuis un fichier csv
 Les informations des planètes peuvent aussi être saisies dans un tableur. *Attention à bien utiliser des points comme séparateur décimal*.
@@ -171,9 +209,34 @@ df
 {{< img src="../images/df5.png" >}}
 
 
-# Voir aussi: Les bases avec pandas
-Pandas va permettre de lire et de modifier des tableaux (DataFrames). Chaque colonne de ton DataFrame sera appelée « descripteur ». 
+# Voir aussi
+## Les bases avec pandas
+Pandas va permettre de lire et de modifier des tableaux (DataFrames). Chaque colonne de ton DataFrame sera appelée « descripteur ». La manipulation d'un dataframe peut ressembler à celle d'une base de données (voir SQL).
 
+*Exemple:* La table suivante est issu de l'import d'une base de données d'exoplanètes:
+
+{{< img src="../images/df10.png" >}}
+
+### langage de requête
+**projection**: reduire le nombre de colonnes (equivalent de `select` en sql)
+
+```python
+df[['_name','mass']]
+df
+```
+
+{{< img src="../images/df11.png" >}}
+
+**selection**: lignes (équivalent de `where` en sql)
+
+```python
+df[df['mass']>=1]
+```
+
+{{< img src="../images/df12.png" >}}
+
+
+### autres types de créations de df
 * Création d'une série: une série est un vecteur de valeurs d'une variable (en général valeurs pour différents individus) :
 `s = pandas.Series([1, 2, 5, 7])` : série numérique entière.
 
@@ -185,7 +248,9 @@ Pandas va permettre de lire et de modifier des tableaux (DataFrames). Chaque col
 *source*: [python-simple.com](http://www.python-simple.com/python-pandas/creation-series.php)
 
 
-# Analyse de données issues d'une BDD
+## base de données d'exoplanetes et python
+* [Lien vers le TP](/docs/python/pages/traitement/page3)
+## Analyse de données issues de la BDD `unistra.fr`
 * [liste des objets](https://cdsarc.cds.unistra.fr/viz-bin/VizieR-3?-source=+J%2FApJ%2F728%2F117%2Ftablea1&-from=nav&-nav=cat%3AJ%2FApJ%2F728%2F117%26tab%3A%7BJ%2FApJ%2F728%2F117%2Ftablea1%7D%26key%3Asource%3DJ%2FApJ%2F728%2F117%26HTTPPRM%3A%26%26-ref%3DVIZ67868ba83bb18f%26-oc.form%3Dsexa%26-c.r%3D++2%26-c.geom%3Dr%26-order%3DI%26-out%3DKOI%26-out%3DKIC%26-out%3DKp%26-out%3DRad%26-out%3DEpoch%26-out%3DPer%26-out%3DTeff%26-out%3Dlog%28g%29%26-out%3DR*%26-out%3DSimbad%26-ignore%3DSimbad%3D*%26Simbad%3DSimbad%26-out%3D_RA%26-out%3D_DE%26-file%3D-c%26-meta.ucd%3D2%26-meta%3D1%26-meta.foot%3D1%26-usenav%3D1%26-bmark%3DPOST%26-out.max%3D50%26-out.form%3DHTML+Table%26-c.eq%3DJ2000%26-c.u%3Darcmin%26)
 * [table complète](https://cdsarc.cds.unistra.fr/viz-bin/VizieR-4)
 * [page SQL](http://tapvizier.cds.unistra.fr/adql/?%20J/ApJ/728/117/tablea1)
