@@ -117,7 +117,37 @@ df
 
 {{< img src="../images/exop_kepler.png" >}}
 
-> **Q4.** Tester quelques unes des requêtes sur cette base. Par exemple:
+Et pour obtenir une *vue* avec certaines colonnes:
+
+```python
+sql = "select _name,mass,radius from planetes_es"
+cur.execute(sql)
+res = cur.fetchall()
+df = pd.DataFrame(res,columns=['_name','mass','radius'])
+df
+```
+
+{{< img src="../images/df1.png" >}}
+
+On peut souhaiter éliminer les lignes pour lesquelles les renseignements ne sont pas complets (lignes avec `Nan`):
+
+```python
+df.dropna(how='any', inplace=True)
+```
+
+Et ajouter des colonnes au *dataframe*, comme par exemple le calcul de la masse volumique de la planète:
+
+```python
+df['rho']=df['mass']/ ... ? ...
+df
+```
+
+{{< img src="../images/df2.png" >}}
+
+
+> **Q4.** Cette base est-elle bien modélisée, respecte t-elle bien les contraintes d'intégrité vues en cours? Pq?
+
+> **Q5.** Tester quelques unes des requêtes sur cette base. Par exemple:
 
 1. Toutes les données relatives à l'étoile *Kepler-89 b*
 2. Tous les noms des planètes dont la masse est plus de 10 fois supérieure à celle de Jupiter (Indiquer quelles sont ces planètes dans l'extrait de la table)
@@ -131,5 +161,24 @@ df
 10. Table des planètes où le type de l'étoile est G ... (utiliser `LIKE "G%"`)
 11. Nom des planètes et distances au soleil, où de l'eau a été détectée (utiliser `LIKE`)
 
+## Graphiques
+La recherche de dépendances entre grandeurs se fera avec un graphique. On peut chercher par exemple la dépendance masse volumique <-> rayon:
 
+```python
+%matplotlib qt
+plt.clf()
+axes = plt.gca()
+x = df['radius']
+y = df['rho']
+z = df['_name']
+plt.scatter(x,y,color='silver',marker='.',label='Rho')
+
+# ajout d'une etiquette
+for x, y, z in zip(x, y, z):
+    axes.text(x, y, f"({z})", fontsize=8)
+cursor = Cursor(axes, useblit=True, color='red', linewidth=2)
+plt.show()
+```
+
+{{< img src="../images/df3.png" >}}
 

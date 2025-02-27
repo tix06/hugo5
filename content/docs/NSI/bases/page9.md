@@ -121,7 +121,7 @@ Executer.
 1. toute la table `films`
 2. tous les attributs du-des film-s dont le réalisateur est le 1er de la table `realisateur`
 3. tous les titres des films sortis après 1970 mais avant 2002
-4. le titre du film, le nom et prenom du realisateur pour `id_rea` egal à 2 et date > 1993
+4. le titre du film, la date de sortie le nom du realisateur pour `id_rea` egal à 2
 5. tous les noms des auteurs de films qui ont sorti des films après 1960, mais pas Jacques Tati.
 6. l’année de naissance du réalisateur de Reservoir Dogs ?
 
@@ -153,15 +153,15 @@ where ID_rea=1 or Date>2003
 * requête 4: Deux possibiltés:
 
 ```SQL
-select first_name,last_name, titre, date from realisateurs, films 
+select titre, date, last_name from realisateurs, films 
 where films.id_rea = 2 and films.id_rea = realisateurs.id_rea
 ```
 
 ou bien, en précisant la jointure avec `INNER JOIN`
 
 ```SQL
-SELECT titre, first_name, last_name FROM films
-inner join realisateurs on films.id_rea = realisateurs.id_rea
-where film.id_rea = 2;
+SELECT titre, date, realisateurs.last_name  FROM films
+INNER JOIN realisateurs on films.id_rea = realisateurs.id_rea
+where films.id_rea = 2;
 ```
 

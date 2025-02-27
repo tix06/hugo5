@@ -113,6 +113,11 @@ SELECT SUM(nombre) FROM GROUP BY ORDER BY DESC LIMIT
 12. Quels sont les 10 prénoms les plus donnés en France au cours du XX-ème siècle ?
 `SELECT SUM(nombre) FROM GROUP BY ORDER BY DESC LIMIT` 
 
+# Autres travaux pratiques SQL
+## Table unique
+Exercice sur les nouilles japonaises. Interface en ligne par N. Revéret sur [forge.apps.education.fr](https://exercices-bdd-aa801f.forge.apps.education.fr/32_ramens/ramens/)
+## Pays, villes et langues parlées, plusieurs tables
+Exercice sur le langage SQL rédigés par N. Revéret sur [forge.apps.education.fr](https://exercices-bdd-aa801f.forge.apps.education.fr/41_films/films/). Interface en ligne.
 
 # Liens
 * memento SQL sur [forge.apps.education.fr](https://exercices-bdd-aa801f.forge.apps.education.fr/memento_sql/)

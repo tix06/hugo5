@@ -27,13 +27,25 @@ Title : SQL
 
 ([cours en ligne](../page7), ou [version en pdf](/pdf/NSI/bdd2-e.pdf))
 
-> Traiter au choix l'un des sujets suivants. Au démarrage, représenter le schéma de la database comme sur l'exemple suivant. Puis répondre aux questions.
+> Traiter au choix l'un des sujets suivants. Au démarrage, représenter le schéma relationnel de la database. Puis répondre aux questions.
+
+*Exemple:* Pour la base de données ci-dessous, le schéma relationnel est:
+
+rôle((#*idFilm*,int),(*#idActeur*,int),(nomRole,varchar))
+
+films(**idFilm**,int),(titre,varchar),(annee,int),(idRealisateur,int),(resume,text),(codePays,varchar))
+
+notes((*#idFilm*,int),(*#email*,varchar),(nom,varchar),(prenom,varchar),(*#codePays*,varchar))
+
+pays((**code**,varchar),(nom,varchar),(langue,varchar))
+
+artistes((**idArtiste**,int),(nom,varchar),(prenom,varchar),(anneeNaiss,int))
 
 {{< img src="../images/bdd_films.png" caption="schema de la base de données films" >}}
 
 
 ## Pays, villes et langues parlées
-Exercice sur le langage SQL rédigés par N. Revéret sur [forge.apps.education.fr](https://exercices-bdd-aa801f.forge.apps.education.fr/51_world/world/)
+Exercice sur le langage SQL rédigés par N. Revéret sur [forge.apps.education.fr](https://exercices-bdd-aa801f.forge.apps.education.fr/51_world/world/). Interface en ligne.
 ## Base de données Netflix
 Exercice sur le langage SQL rédigés par N. Revéret sur [forge.apps.education.fr](https://exercices-bdd-aa801f.forge.apps.education.fr/52_netflix/netflix/)
 
@@ -43,7 +55,7 @@ Exercice sur le langage SQL rédigés par N. Revéret sur [forge.apps.education.
 {{< img src="../images/clue-illustration.png" link="https://replit.com/@ToniScullion1/Silver-TASK-2-SQL-Murder-Mystery" caption="retrouvez le meurtrier grâce aux bases de données de la police" >}}
 * Pour le **TP guidé**: Aller à la ressource sur {{< a link="https://mystery.knightlab.com/walkthrough.html" caption="mystery.knightlab.com" >}} et suivre les instructions.
 
-* Le fichier *sql-murder-mystery.db*: peut être télechargé pour une utilisation en *[local](/scripts/BDD/sql-murder-mystery.db* avec dbBrowserSQLite. Le projet peut être directement consulté sur {{< a link="https://github.com/NUKnightLab/sql-mysteries" caption="Github" >}}.
+* Le fichier *sql-murder-mystery.db*: peut être télechargé pour une utilisation en *[local](/scripts/BDD/sql-murder-mystery.db)* avec dbBrowserSQLite. Le projet peut être directement consulté sur {{< a link="https://github.com/NUKnightLab/sql-mysteries" caption="Github" >}}.
 
 * Pensez à **prendre des notes** au fur et à mesure de votre avancée dans l'enquête.
 
