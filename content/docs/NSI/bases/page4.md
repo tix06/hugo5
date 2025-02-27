@@ -27,9 +27,9 @@ Title : SQL
 
 ([cours en ligne](../page7), ou [version en pdf](/pdf/NSI/bdd2-e.pdf))
 
-> Traiter au choix l'un des sujets suivants. Au démarrage, représenter le schéma relationnel de la database. Puis répondre aux questions.
+> Traiter **au choix** l'un des sujets suivants. Au démarrage, **représenter le schéma** relationnel de la database. Répondre aux questions. Puis **créer par vous** même **5 nouvelles questions** sur la base de données, auxquelles vous répondrez avec l'instruction SQL correspondante. Mettez vos reponses dans un fichier `base.txt` que vous placerez à la racine de votre dossier `devoirs/tixidor`
 
-*Exemple:* Pour la base de données ci-dessous, le schéma relationnel est:
+*Exemple:* Pour la base de données ci-dessous, le *schéma relationnel* est:
 
 rôle((#*idFilm*,int),(*#idActeur*,int),(nomRole,varchar))
 
@@ -43,6 +43,7 @@ artistes((**idArtiste**,int),(nom,varchar),(prenom,varchar),(anneeNaiss,int))
 
 {{< img src="../images/bdd_films.png" caption="schema de la base de données films" >}}
 
+On peut imaginer comme question sur cette base de données: *Quel est l'acteur qui a joué dans les films qui ont obtenu les meilleurs notes?*
 
 ## Pays, villes et langues parlées
 Exercice sur le langage SQL rédigés par N. Revéret sur [forge.apps.education.fr](https://exercices-bdd-aa801f.forge.apps.education.fr/51_world/world/). Interface en ligne.

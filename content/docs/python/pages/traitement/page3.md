@@ -102,7 +102,7 @@ Afficher ("La connexion SQLite est fermée")
  'star_magnetic_field']
  ```
 
-On peut améliorer la présentation des résultats, et mettre la table retournée dans un dataframe. On utilise alors la liste `L` des attributs (question précédente):
+On peut **améliorer la présentation** des résultats, et mettre la table retournée dans un **dataframe**. On utilise alors la liste `L` des attributs (question précédente). Voir tuto [dataframe](/docs/NSI/projet/page10/)
 
 ```python
 # Toutes les données relatives aux étoiles dont le nom commence par Kepler-89
