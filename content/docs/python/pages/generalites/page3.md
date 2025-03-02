@@ -49,20 +49,129 @@ l'instruction contient: une variable valeur `r`, un OPERATEUR de valeur `=` (aff
 
 Donc `l` vaudra 37.68
 
+### Les opérations de base
+Un langage informatique permet de réaliser des opérations sur des valeurs. L'écriture de ces opétations peut différer de ce que l'on écrit avec la calculatrice. Voici la liste de quelques opérateurs en *Python*:
+
+
+
+| opérateur | rôle | équivalent  sur une calculatrice |
+|--- |--- |--- |
+| + | addition | $1 + 99$ |
+| - | soustraction | $99 - 1$ |
+| * | multiplication | $10 \times 10$ |
+| / | division | $\tfrac{1}{3}$|
+| // | division entière | pas d'équivalent |
+| % | reste de la division | pas d'équivalent |
+| ** | exposant | $2^{4}$ |
+| e | puissance de 10 (pour l'écriture en notation scientifique) | $1.2E-3$ ou $1.2\times 10^{-3}$ |
+
+**variables:** Les opérations portent aussi sur des variables: ce sont des valeurs associées à une etiquette (un nom), qui peuvent varier au cours du programme. On utilise le symbole `=` pour affectation.
+
+*Exemple 1: séquence d'instructions*
+
+```python
+x = 12 + 10
+# x vaut 12
+y = 2**3
+# y vaut 8
+z = x + y
+# z vaut 30
+```
+
+Lors de l'execution, l'interpreteur *commence* par *evaluer* le résultat de l'opération, *puis* affecte le resultat à la variable:
+
+```python
+pv = 22
+pv = pv - 3
+# pv vaut 19
+``` 
+
+
+
 ### Structure du langage
 Tout langage informatique doit être structuré autour de séquences d'instructions, de branchements conditionnels et de boucles, permettant les répétitions. En utilisant un langage visuel, un algorigramme, cela donne:
 
 {{< img src="../images/langage4.png" caption="séquence d'instructions" >}}
 
+*En langage python:*
+
+```
+instruction1
+instruction2
+instruction3
+```
+
 {{< img src="../images/langage2.png" caption="branchement conditionnel" >}}
 
+*En langage python:*
+
+```python
+if test == True:
+	instruction1
+else:
+	instruction2
+```
+
 {{< img src="../images/langage3.png" caption="boucle, répétition" >}}
+
+*En langage python:*
+
+```python
+while test == True:
+	instruction1
+instruction2
+```
 
 > *Questions:* 
 
 > * Pour établir une recette de cuisine, quelle est la structure à privilégier: séquence d'instructions, branchement, boucle?
 > * Pour décider si je dois prendre un parapluie avant de sortir, quelle structure algorithmique vais-je privilégier?
 > * Pour faire des crêpes à partir de la pâte liquide dans le bol (il faut verser une louche de liquide dans la poele), quelle structure privilégier?
+
+### Fonctions
+Soit le programme qui dicte les ordres pour préparer de la pâte à crêpes (liquide). On peut supposer que la structure de base est un ensemble d'instructions qui definissent la méthode de préparation générale. Puis que l'on repètera ce bout de code chaque fois que l'on a des crêpes à réaliser. 
+
+Appelons cette fonction: `preparer_pate_a_crepe()`
+
+Dans cette fonction, il y aura plusieurs instructions, comme:
+
+```
+FONCTION preparer_pate_a_crepe(ingredient)
+prendre un bol
+casser un oeuf
+verser du lait
+ajouter ingrédient
+mélanger
+laisser reposer
+FIN
+```
+
+Cette fonction pourrait avoir un argument: `sucre` ou `sel`, selon si l'on veut réaliser des crêpes sucrées ou salées.
+
+La fonction prendra alors un *paramètre*, c'est une variable d'entrée qui permet de personnaliser l'execution de la fonction. Appelons ce *paramètre* `ingrédient`.
+
+La fonction est alors spécifiée (écrite de manière générale) par: `preparer_pate_a_crepe(ingrédient)`
+
+On peut supposer qu'il existe egalement une fonction `preparer_une_crepe()`
+
+```
+FONCTION preparer_une_crepe()
+faire chauffer la poele
+verser une louche de pate à crepe dans une poele
+faire cuire la pate sur les 2 faces
+retirer la crepe de la poele
+FIN
+```
+
+Le programme complet est alors:
+
+```
+preparer_pate_a_crepe(sucre)
+tant qu'il reste de la pate à crepe:
+  preparer_une_crepe()
+```
+
+[exercices sur les structures](/pdf/SNT/algo_structures_langage.pdf)
 
 ## Exemples
 à travers quelques exemples, nous allons définir le *problème*, puis étudier la *réponse* à ce problème à l'aide d'un *langage naturel algorithmique*.

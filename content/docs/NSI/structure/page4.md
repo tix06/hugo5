@@ -22,13 +22,21 @@ Chaque noeud peut être étiqueté  par une information.
 
 Un arbre est donc un cas particulier des graphes. Voir la [page suivante sur les graphes](/docs/NSI/structure/page5/)
 
+On parle de *descendants* pour les noeuds *fils*.
+
 Des **exemples** d'arbres:
 
 * l'*arbre généalogique* est un bon exemple. Le vocabulaire sur la structure des arbres s'inspire d'ailleurs de la génélogie (père-fils).
-* L'arbre représentant les sytèmes de dossiers sur ordinateur (dossiers et sous-dossiers puis fichiers).
-* *arbre lexicographique* : représente un ensemble de mots, comme un dictionnaire, où chaque noeud est une lettre. Les prefixes communs à plusieurs mots n'apparaissent qu'une seule fois dans l'arbre:
 
-{{< img src="../images/arbre1.png" alt="arbre lexicographique" caption="Retrouver le mot PILE" >}}
+{{< img src="../images/family_tree.png" caption="family tree sur freepik.com/genealogie" >}}
+
+*Les noeuds sont ...les couples*.
+
+* L'arbre représentant les sytèmes de dossiers sur ordinateur (dossiers et sous-dossiers puis fichiers)Ci-dessous l'arborescence de fichiers dans un *raspberry-Pi*:
+
+{{< img src="../images/arborescence_linux.jpg" caption="arborescence linux" >}}
+
+
 * arbre représentant des expressions arithmétiques
 
 {{< img src="../images/arbre2.png" alt="expression arithmetique" caption="Retrouver l'expression arithmetique correspondante" >}}
@@ -59,6 +67,10 @@ Les arbres sont très utilisés en informatique, d'abord parce que les données 
 * **Arbre binaire équilibré:** pour chaque noeud interne, les sous-arbres gauche et droit ont une même hauteur (ou qui diffère d'une unité).
 * **Arbre binaire complet:** tous les niveaux de l’arbre sont remplis.
 
+La **taille** d'un arbre binaire peut alors se déduire de la formule, qui prend la profondeur `p` en paramètre:
+
+$$T = \sum_{0}^{n-1} 2^p = 2^n-1$$
+
 {{< img src="../images/arbre4.png" alt="sous arbres droit et gauche" caption="definition recursive des arbres binaires" >}}
 {{< img src="../images/arbre_complet.png" alt="arbre complet" caption="arbre complet" >}}
 # Implémenter en python
@@ -79,7 +91,7 @@ Le petit arbre suivant peut être représenté par `['r'`,['a',None,None],['b',N
 {{< img src="../images/arbre8.png" caption="petit arbre de taille 3" >}}
 Avec l'arbre de taille 9 donné en exemple:
 
-`arbre9 = [8,[3,..,..],[10,..,..]]`
+`arbre9 = [3,[...,..,..],[...,..,..]]`
 
 > Question: compléter cette liste.
 
@@ -134,7 +146,7 @@ L'**ordre** sur les noeuds dans lequel la méthode est appelée doit être fixé
 
 L'algorithme opère alors un **traitement** sur chacune des clés de l'arbre, dans un ordre choisi. Ici, on cherche à *Afficher la clef*.
 
-Mais on peut remplacer cette instruction par un traitement sur les valeurs.
+Mais on peut remplacer cette instruction par un traitement sur les valeurs: ajouter 1 pour compter les clés par exemple.
 
 ## Parcours postfixe
 
@@ -164,6 +176,29 @@ ParcoursInfixe ( Arbre binaire T de racine r )
 ```
 
 {{< img src="../images/arbre10.png" caption="exemples de parcours" >}}
+
+## Parcours en largeur
+Les trois algorithmes vus plus haut s'apparent à une exploration de type *parcours en profondeur*. C'est la position de l'instruction de *traitement* qui amène les différences entre ces 3 parcours.
+
+Un arbre est un *graphe*. On peut donc lui appliquer l'algorithme de **parcours en largeur** vu dans une leçon précédente.
+
+*Rappel:*
+
+```python
+from collections import deque
+
+def BFS_ite(d,s,visited=[], queue=deque()):
+        queue.append(s)
+        while queue:
+            v = queue.popleft()
+            if v not in visited:
+                visited.append(v)
+                unvisited = [n for n in d[v] if n not in visited]
+                queue.extend(unvisited)
+                print(queue)
+        return visited
+```
+
 # Travaux pratiques
 ## Sur Capytale
 => [Lien vers le notebook](https://capytale2.ac-paris.fr/web/c/5799-3034742)
