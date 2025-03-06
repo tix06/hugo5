@@ -198,10 +198,10 @@ def BFS_ite(d,s,visited=[], queue=deque()):
                 print(queue)
         return visited
 ```
-
+t
 # Travaux pratiques
 ## Sur Capytale
-=> [Lien vers le notebook](https://capytale2.ac-paris.fr/web/c/5799-3034742)
+=> [Lien vers le notebook](https://capytale2.ac-paris.fr/web/c/a443-5846248)
 
 ## Sur Google Colab
 * telecharger le fichier module [hierarchyP](/pdf/NSI/hierarchyP.py) (faire un clic droit et *enregistrer sous...*)
