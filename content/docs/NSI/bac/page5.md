@@ -2,6 +2,80 @@
 Title: bac BDD SQL
 ---
 
+# Bac 2024 Amerique du Nord: Exercice 3
+Cet exercice porte sur le langage SQL et les bases de données.
+Un pharmacien nouvellement installé décide de créer son propre système de gestion
+des médicaments qu’il délivre à ses clients.
+Pour sa base de données relationnelle, il a déjà élaboré la première relation à l’aide
+des données indiquées sur les cartes vitales de ses deux premiers clients :
+
+```
+client (id_client : INT,
+nom_client : VARCHAR(30),
+prenom_client : VARCHAR(30), 
+num_secu_sociale : VARCHAR(15))
+```
+
+{{< img src="../images/page5_medoc1.png" >}}
+
+
+1. Écrire le résultat de l’exécution de la requête SQL suivante :
+
+```sql
+SELECT nom_client, prenom_client
+FROM client
+ORDER BY nom_client;
+```
+
+Pour écrire la relation `medicament`, il doit utiliser les informations fournies par la notice
+des médicaments. En voici une ci-dessous :
+
+{{< img src="../images/page5_medoc2.png" caption="Informations extraites de la notice du médicament Paracétamol 1 gramme CP." >}}
+
+
+La relation `medicament` suivante a été obtenue à l’aide de ces notices :
+
+```
+medicament (id_medic : INT,
+  nom_medic : VARCHAR(30),
+  categorie : VARCHAR(20),
+  conditionnement : INT,
+  quantite : INT, prix : FLOAT)
+```
+
+La table des médicaments de son officine est présentée ci-dessous.
+
+{{< img src="../images/page5_medoc3.png" >}}
+
+2. Écrire une requête SQL permettant d’afficher les noms de tous les médicaments
+dont le prix est strictement inférieur à 3 euros.
+Madame Martin présente au pharmacien une nouvelle ordonnance :
+
+{{< img src="../images/page5_medoc4.png" caption="Ordonnance de Madame Sophie Martin." >}}
+
+
+Il saisit les informations de cette ordonnance dans la relation `ordonnance`, chaque médicament prescrit correspondant à un enregistrement dans la table ci-dessous.
+
+{{< img src="../images/page5_medoc5.png" >}}
+
+3. Ecrire une requête SQL permettant d’ajouter les informations de la carte vitale
+de sa troisième cliente présentée ci-dessous :
+
+{{< img src="../images/page5_medoc6.png" caption="Ordonnance de Madame Sophie Martin." caption="Image de la carte vitale extraite de la page wikipédia" >}}
+
+
+4. Donner les attributs qui doivent être déclarés comme clés étrangères de la
+relation `ordonnance` et en préciser l’utilité.
+5. Indiquer, pour les lignes 7 et 8 de la table `ordonnance`, le nombre de boites prescrites.
+6. Écrire la requête SQL mettant à jour la quantité du médicament Acide
+ascorbique en stock dans l’officine du pharmacien suite au passage de Madame
+Martin.
+7. Calculer le coût total des médicaments fournis à Madame Martin (on ne
+demande pas d’écrire une requête ici, mais de calculer le coût total en justifiant
+le calcul).
+8. Écrire la requête SQL permettant d’afficher le nom du médicament pour
+l’ordonnance ayant l’`id_ordo` numéro 6.
+
 # Bac 2022 Polynesie: Exercice 3
 *Cet exercice traite du thème « base de données », et principalement du modèle
 relationnel et du langage SQL.*

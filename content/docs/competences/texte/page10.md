@@ -32,7 +32,7 @@ Suivre ensuite les étapes de création:
 * après vérification de votre email, votre espace en ligne est créé. 
 
 ## Rejoindre un site collaboratif
-La page d'accueil du [groupe 1](http://site-demo-2-3.e-monsite.com/), ou celle du [groupe 2](https://physique-2-3.e-monsite.com) contient:
+La page d'accueil du [groupe 1](http://site-demo-2-3.e-monsite.com/), ou celle du [groupe 2](https://blog-ecole.e-monsite.com/) contient:
 
 * un bandeau de navigation (partie supérieure)
 * une page vers les articles du Blog
@@ -42,9 +42,9 @@ La page d'accueil du [groupe 1](http://site-demo-2-3.e-monsite.com/), ou celle d
 
 {{< img src="../images/cms11.png" link="http://site-demo-2-3.e-monsite.com/" >}}
 
-**Pour le groupe 2:** Celui-ci se trouve à la page 1 du site: [http://site-demo-3-4.e-monsite.com/](https://physique-2-3.e-monsite.com)
+**Pour le groupe 2:** Celui-ci se trouve à la page 1 du site: [https://blog-ecole.e-monsite.com/](https://blog-ecole.e-monsite.com/)
 
-{{< img src="../images/cms19.png" link="http://site-demo-3-4.e-monsite.com/" >}}
+{{< img src="../images/cms19.png" link="https://blog-ecole.e-monsite.com/" >}}
 
 * Aller dans le formulaire de *Contact* du site et renseigner les champs obligatoires:
 	* Renseigner votre nom, 
