@@ -2,6 +2,10 @@
 Title: reseaux sociaux
 ---
 
+{{< img src="../images/BlackMirror.png" link="https://youtu.be/NQHhPfpoLL0?feature=shared&t=390" caption="Black Mirror - Chute Libre S03EP01 commenté" >}}
+
+*"La Mythocritique transhumanisme dans NoseDive (S3E1 - Black Mirror)". Intervention proposée dans le cadre du 11ème Colloque International "Beyond Humanism", à l'Université Catholique de Lille, le 12 juillet 2019.*
+
 # Definition d'un reseau social
 ## Ca sert à...
 Les reseaux sociaux sont des applications qui servent à créer des « communautés ». Il permettent aux usagers d’utiliser un compte public ou privé. 
