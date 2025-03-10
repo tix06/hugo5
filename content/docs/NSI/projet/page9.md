@@ -55,6 +55,6 @@ Lien de téléchargement: [Planète 2](/scripts/astro/donnees-astep2024/TOI-201/
 
 
 # Traitement de données en table - Pandas Dataframe
-* Manipulation de dataframe: [tuto](../page10)
-* Base de données et python: [tuto](/docs/python/pages/traitement/page3)
+* Données en dataframe: [tuto](../page10)
+* Base de données SQL et python: [tuto](/docs/python/pages/traitement/page3)
 

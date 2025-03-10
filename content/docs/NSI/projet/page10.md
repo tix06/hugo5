@@ -2,6 +2,8 @@
 Title: dataframes
 ---
 
+
+
 # Traitement de données d'observation en astrophysique
 ## Importer les données et librairies utiles
 
@@ -90,9 +92,65 @@ print("{:3.0f} j, {:3.0f} h, {:3.0f} min {:3.2f} s".format(jours,h,m,s))
 2 j,  11 h,  22 min 43.12 s
 ```
 
-## Présenter les résultats: Dataframe
+# Les bases avec pandas: présenter les données, calculer sur des colonnes
+Pandas va permettre de lire et de modifier des tableaux (DataFrames). Chaque colonne de ton DataFrame sera appelée « descripteur ». La manipulation d'un dataframe peut ressembler à celle d'une base de données (voir SQL).
+
+*Exemple:* La table suivante est issu de l'import d'une base de données d'exoplanètes:
+
+{{< img src="../images/df10.png" >}}
+
+## Présenter les résultats: CSV => Dataframe
+**Importer les données depuis un fichier csv**
+
+Les informations des planètes peuvent être saisies dans un tableur. *Attention à bien utiliser des points comme séparateur décimal*.
+
+{{< img src="../images/tab_excel.png" caption="tableau rempli à l'aide d'un tableur" >}}
+
+**Exporter** (ou enregistrer) en format *csv*.
+
+On peut vérifier en ouvrant le fichier *csv* que les données sont mises dans un format particulier (séparation à l'aide d'un point virgule...)
+{{< img src="../images/tab_csv.png" caption="fichier csv" >}}
+
+**L'import depuis pandas** se fait alors de la manière suivante: *(rien de plus simple)*
+
+```python
+df = pd.read_csv('exoplanetes.csv',sep=';')
+df
+```
+
+{{< img src="../images/df5.png" >}}
+
+**Ajouter les colonnes utiles aux calculs**
+
+un dataframe se comporte comme un *dictionnaire* dont les clefs sont les noms des colonnes et les valeurs sont des séries:
+
+```python
+G = 6.67e-11
+R_Jup = 71e6 
+M_Jup = 6.9911e7
+df['tau']=(df['fin_transit']-df['debut_transit'])*24*3600
+df['delta']=1-df['lum_min']
+
+df['M_star']=7.158780e+29 # pour TOI-270
+df['R_star']=257512600.0  # pour TOI-270
+df['R_p']= np.sqrt(df['delta']) * df['R_star']
+df['radius']=df['R_p']/R_Jup # pour exprimer en R_Jup
+# vitesse planete : V_p = 2*R_star/tau
+df['V_p']= 2*df['R_star']/df['tau']
+# rayon orbital : r = G*M_star/V_p**2
+df['r_orb']= G * df['M_star']/df['V_p']**2
+# periode revolution: T = 2*np.pi*r/V_p
+df['T'] = 2*np.pi*df['r_orb']/df['V_p'] # en s
+df['T_jours'] = df['T']/(24*3600)  # en jours terrestres
+df
+```
+
+{{< img src="../images/df13.png" >}}
+
+
+## Autres méthodes (compléments)
 ### Importer les données d'une liste ou d'un dictionnaire python
-Les données relatives à la planète sont mises dans une liste dont l'ordre pourrait être par exemple:
+Les données relatives à la planète peuvent être mises dans une liste dont l'ordre pourrait être par exemple:
 
 `'planete','etoile','M_star','R_star','delta','tau','date_debut_transit'`
 
@@ -151,7 +209,7 @@ pd.concat([df1,df2],ignore_index = True)
 * Les tableaux concaténés peuvent avoir des nombres de colonnes différents. La valeur placée dans le tableau est alors `NaN`. Cette valeur peut être modifiée par la suite.
 * le paramètre `ignore_index = True` permet de recréer une numérotation de l'index et eviter les doublons. Dans l'exemple proposé ici, cela permet d'eviter d'avoir 2 lignes avec l'index 0.
 
-### fusioner des tableaux aux etiquettes différentes
+## fusionner des tableaux aux etiquettes différentes
 Les tableaux doivent avoir les **mêmes etiquettes** de colonne si on veut ajouter leur ligne l'une sous l'autre. Dans le cas contraire, il faudra **renommer** les colonnes.
 
 *utile après l'import d'une base de données/sql*
@@ -189,36 +247,11 @@ df
 
 {{< img src="../images/df9.png" >}}
 
-### Importer les données depuis un fichier csv
-Les informations des planètes peuvent aussi être saisies dans un tableur. *Attention à bien utiliser des points comme séparateur décimal*.
-
-{{< img src="../images/tab_excel.png" caption="tableau rempli à l'aide d'un tableur" >}}
-
-Exporter (ou enregistrer) en format *csv*.
-
-On peut vérifier en ouvrant le fichier *csv* que les données sont mises dans un format particulier (séparation à l'aide d'un point virgule...)
-{{< img src="../images/tab_csv.png" caption="fichier csv" >}}
-
-L'import depuis pandas se fait alors de la manière suivante: *(rien de plus simple)*
-
-```python
-df = pd.read_csv('exoplanetes.csv',sep=';')
-df
-```
-
-{{< img src="../images/df5.png" >}}
 
 
-# Voir aussi
-## Les bases avec pandas
-Pandas va permettre de lire et de modifier des tableaux (DataFrames). Chaque colonne de ton DataFrame sera appelée « descripteur ». La manipulation d'un dataframe peut ressembler à celle d'une base de données (voir SQL).
 
-*Exemple:* La table suivante est issu de l'import d'une base de données d'exoplanètes:
-
-{{< img src="../images/df10.png" >}}
-
-### langage de requête
-**projection**: reduire le nombre de colonnes (equivalent de `select` en sql)
+## langage de requête
+**projection (SELECT en sql)**: reduire le nombre de colonnes (equivalent de `select` en sql)
 
 ```python
 df[['_name','mass']]
@@ -227,7 +260,7 @@ df
 
 {{< img src="../images/df11.png" >}}
 
-**selection**: lignes (équivalent de `where` en sql)
+**selection (WHERE en sql)**: lignes (équivalent de `where` en sql)
 
 ```python
 df[df['mass']>=1]
@@ -235,14 +268,21 @@ df[df['mass']>=1]
 
 {{< img src="../images/df12.png" >}}
 
+**recherche d'un motif (LIKE en sql)**:
+
+```python
+# Equivalent de LIKE en SQL
+df0[df0['_name'].str.startswith('TOI-270')]
+df0
+```
+
+{{< img src="../images/df17.png" >}}
 
 ### autres types de créations de df
 * Création d'une série: une série est un vecteur de valeurs d'une variable (en général valeurs pour différents individus) :
 `s = pandas.Series([1, 2, 5, 7])` : série numérique entière.
 
-* Création d'un dataframe : un dataframe se comporte comme un dictionnaire dont les clefs sont les noms des colonnes et les valeurs sont des séries.
-
-* Création d'un dataframe à partir d'un dictionnaire:on peut aussi donner un dictionnaire dont les clefs seront les index plutôt que les colonnes :
+* Création d'un dataframe à partir d'un dictionnaire: on peut aussi donner un dictionnaire dont les clefs seront les index plutôt que les colonnes :
 
 
 *source*: [python-simple.com](http://www.python-simple.com/python-pandas/creation-series.php)

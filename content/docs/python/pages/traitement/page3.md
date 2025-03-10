@@ -8,7 +8,7 @@ Nous allons utiliser un **script Python** pour nous connecter à la base de donn
 
 Nous utiliserons la librairie `sqlite3` de Python.
 
-Il est conseillé d'utiliser l'IDE Spyder pour editer et interpréter les scripts écrits en Python.
+Il est conseillé d'utiliser l'IDE *Spyder*, ou bien *Jupyter Notebook* pour editer et interpréter les scripts écrits en Python.
 
 La base de données doit être téléchargée ici : [exoplanetes.db](/scripts/BDD/exoplanetes.db)
 
@@ -135,10 +135,12 @@ On peut souhaiter éliminer les lignes pour lesquelles les renseignements ne son
 df.dropna(how='any', inplace=True)
 ```
 
-Et ajouter des colonnes au *dataframe*, comme par exemple le calcul de la masse volumique de la planète:
+Et ajouter des colonnes au *dataframe*, comme par exemple le calcul de la masse volumique de la planète: *(attention, les valeurs de la table sont referencées à celles de Jupiter)*
 
 ```python
-df['rho']=df['mass']/ ... ? ...
+R_Jup = 71e6 
+M_Jup = 1.898e27
+df['rho']=df['mass']*M_Jup/(4/3*np.pi*(df['radius']*R_Jup)**3)
 df
 ```
 
@@ -161,7 +163,7 @@ df
 10. Table des planètes où le type de l'étoile est G ... (utiliser `LIKE "G%"`)
 11. Nom des planètes et distances au soleil, où de l'eau a été détectée (utiliser `LIKE`)
 
-## Graphiques
+## Graphique
 La recherche de dépendances entre grandeurs se fera avec un graphique. On peut chercher par exemple la dépendance masse volumique <-> rayon:
 
 ```python
@@ -182,3 +184,80 @@ plt.show()
 
 {{< img src="../images/df3.png" >}}
 
+## Superposer les données. 
+Commencer par selectionner et nettoyer les données issues de la base de données:
+
+```python
+# BDD - Toutes exoplanetes
+sql = "PRAGMA table_info(planetes_es);"
+cur.execute(sql)
+res = cur.fetchall()
+L = [ligne[1] for ligne in res]
+sql = "select * from planetes_es"
+cur.execute(sql)
+res = cur.fetchall()
+df0 = pd.DataFrame(res,columns=L) # table entiere
+df0 = df0[['_name','orbital_period','radius']] # projection sur les colonnes utiles
+df0.dropna(how='any', inplace=True) # retirer les lignes avec datas non renseignées
+df0
+```
+
+{{< img src="../images/df14.png" >}}
+
+**importer et traiter les données issues des observations**
+Cette partie est détaillée à la page [données en dataframe](/docs/NSI/projet/page10/)
+
+```python
+df = pd.read_csv('donnees_planetes.txt',sep=';')
+G = 6.67e-11
+R_Jup = 71e6 
+M_Jup = 6.9911e7
+df['tau']=(df['fin_transit']-df['debut_transit'])*24*3600
+df['delta']=1-df['lum_min']
+
+df['M_star']=7.158780e+29
+df['R_star']=257512600.0
+df['R_p']= np.sqrt(df['delta']) * df['R_star']
+df['radius']=df['R_p']/R_Jup
+# vitesse planete : V_p = 2*R_star/tau
+df['V_p']= 2*df['R_star']/df['tau']
+# rayon orbital : r = G*M_star/V_p**2
+df['r_orb']= G * df['M_star']/df['V_p']**2
+# periode revolution: T = 2*np.pi*r/V_p
+df['T'] = 2*np.pi*df['r_orb']/df['V_p']
+df['T_jours'] = df['T']/(24*3600)
+df
+```
+
+{{< img src="../images/df16.png" >}}
+
+**Tracer les 2 nuages de points**
+
+```python
+%matplotlib qt
+plt.clf()
+axes = plt.gca()
+"""nuage de points df0 issu de la BDD
+"""
+x = df0['radius']
+y = df0['orbital_period']
+z = df0['_name']
+plt.scatter(x,y,color='silver',marker='.',alpha=0.5)
+
+
+   
+"""nuage de points df issu des observations
+"""
+x_p = df['radius']
+y_p = df['T_jours']
+z_p = df['planete']
+
+plt.scatter(x_p,y_p,color='red',marker='o',label='Rho')
+for x, y, z in zip(x_p, y_p, z_p):
+    axes.text(x, y, f"({z})", fontsize=8)
+
+cursor = Cursor(axes, useblit=True, color='red', linewidth=2)
+plt.show()
+```
+
+{{< img src="../images/df15.png" >}}
