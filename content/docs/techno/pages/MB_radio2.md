@@ -16,7 +16,7 @@ La carte microbit possède une antenne radio, ce qui lui permet d'emettre et de 
 
 * Brancher la carte microbit sur l'un des ports USB de l'ordinateur. La carte est alors visible depuis l'explorateur comme une nouvelle mémoire flash.
 
-# Réseau social, public
+# Réseau privé, public
 ## Programmation du script initial
 > Créer pas à pas le programme suivant à l'aide de l'[Editeur microbit](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience) sur Vittascience.com
 
@@ -125,12 +125,11 @@ while True:
 
 {{< img src="../images/radio_13.png" caption="discussion" >}}
 
-### Premier programme utilisant un notebook python
+### Compléments théoriques: index modulo avec `%`
 Cette fois, le nombre de messages possibles est supérieur au nombre de boutons (3 messages pour 2 boutons).
 
 Nous allons utiliser une **liste** de messages. Pour acceder à un element de cette liste, nous allons utiliser un **index**.
 
-Dans un notebook (Atrium > Capytale) ou bien [basthon.fr/](https://notebook.basthon.fr/), saisir les lignes suivantes:
 
 ```python
 # declaration de la liste
@@ -152,6 +151,10 @@ On peut utiliser un index numérique pour parcourir tous les éléments de la li
 ```python
 for i in range(len(L)):
   print(i,L[i])
+# affiche:
+0 mon message a envoyer
+1 LIKE
+2 UNLIKE
 ``` 
 
 Là aussi, avec un variant de boucle `i` qui depasse 2, cela va générer une erreur:
@@ -159,7 +162,11 @@ Là aussi, avec un variant de boucle `i` qui depasse 2, cela va générer une er
 ```python
 for i in range(10):
   print(i,L[i])
-# erreur
+# affiche:
+0 mon message a envoyer
+1 LIKE
+2 UNLIKE
+# IndexError
 ``` 
 
 Pour eviter de depasser l'index maximum de la liste, utiliser l'opérateur *modulo*:
@@ -168,7 +175,20 @@ Pour eviter de depasser l'index maximum de la liste, utiliser l'opérateur *modu
 for i in range(10):
   j = i % 3
   print(i,j,L[j])
+# affiche
+0 0  mon message a envoyer
+1 1  LIKE
+2 2  UNLIKE
+3 0  mon message a envoyer
+4 1  LIKE
+5 2  UNLIKE
+6 0  mon message a envoyer
+7 1  LIKE
+8 2  UNLIKE
+9 0  mon message a envoyer
 ``` 
+
+On a alors une selection **periodique** des éléments de liste.
 
 ### Programmation de la carte microbit
 Utiliser maintenant l'interface Python sur [Vittascience.com](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience) pour réaliser les modifications.
@@ -207,7 +227,7 @@ if button_a.is_pressed():
   utime.sleep(0.2)
 ```
 
-Les 2 autre instructions servent à effacer l'écran `display.clear()`, et à placer un délai d'attente `utime.sleep(0.2)`, necessaire pour eviter de nombreux appuis prolongés sur le bouton.
+Les 2 autres instructions servent à effacer l'écran `display.clear()`, et à placer un délai d'attente `utime.sleep(0.2)`, necessaire pour eviter de nombreux appuis prolongés sur le bouton.
 
 
 
@@ -238,7 +258,7 @@ Lorsqu'un message est reçu:
 * **elif**, sinon si c'est 'unlike', on affiche un smiley triste
 * **else**, sinon, c'est un message textuel, on l'affiche avec `display.scroll(stringData)`
 
-> Poursuivre cette séance avec les 2 projets suivants.
+> Vous avez reussi à échanger des messages avec votre binôme? Poursuivre cette séance avec les 2 projets suivants.
 
 ## Projet 1: Auteurs authentifiés
 > But: Utiliser une règle d'authentification entre 2 cartes de votre réseau privé.
@@ -272,7 +292,7 @@ Python offre une multitude de possibilités pour travailler avec des chaînes de
 
 
 
-### Premier programme utilisant un notebook python
+### Rappels: Comment parser une chaine?
 Dans un notebook (Atrium > Capytale) ou bien [basthon.fr/](https://notebook.basthon.fr/), saisir les lignes suivantes:
 
 * Composer le message:
@@ -284,7 +304,7 @@ message = str(n) + "_" + texte
 print(message)
 ```
 
-* Parser le message:
+* Parser le message avec un *Slice*:
 
 Il faudra tranformer la chaine `"1_la feve est dans la 3e part"` en 2 chaines: `"1"` et `"la feve est dans la 3e part"`.
 
@@ -292,15 +312,25 @@ Il faudra tranformer la chaine `"1_la feve est dans la 3e part"` en 2 chaines: `
 message = "1_la feve est dans la 3e part"
 n = message[0]
 # selection du 1er caractere
-print(n)
+print(n) # affiche: 1
 message = message[2:]
 # slice du 3e caractere au dernier
-print(message)
+print(message) # affiche: la feve est dans la 3e part
 # on a extrait le numero au debut du message, et reduit le message
 print("la carte n°",n," vous informe que\n", message)
 ```
 
-> Adapter maintenant ce programme pour traiter un message dont l'identifiant numérique est composé de **2 chiffres**. Quelle instruction faut-il écrire pour stocker cet identifiant dans n? Et pour réduire le message (enlever le numero n et le symbole `'_'`).
+* Ou bien, parser le message avec la méthode de chaine `split`:
+
+```python
+message = "1_la feve est dans la 3e part"
+L = message.split('_')
+# L vaut ['1','la feve est dans la 3e part']
+n = L[0]
+message = L[1]
+```
+
+> Pour traiter un message dont l'identifiant numérique est composé de **2 chiffres**: Quelle méthode vaut-il mieux privilegier?
 
 
 ### Programmation de la carte microbit
