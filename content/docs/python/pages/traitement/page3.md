@@ -163,8 +163,8 @@ df
 10. Table des planètes où le type de l'étoile est G ... (utiliser `LIKE "G%"`)
 11. Nom des planètes et distances au soleil, où de l'eau a été détectée (utiliser `LIKE`)
 
-## Graphique
-La recherche de dépendances entre grandeurs se fera avec un graphique. On peut chercher par exemple la dépendance masse volumique <-> rayon:
+# Etude graphique
+La recherche de dépendances entre grandeurs se fera en traçant un graphique, avec différents essais pour les axes x,y: On peut chercher par exemple la *dépendance* masse volumique <-> rayon:
 
 ```python
 %matplotlib qt
@@ -184,7 +184,7 @@ plt.show()
 
 {{< img src="../images/df3.png" >}}
 
-## Superposer les données. 
+## Superposer les données des exoplanètes découvertes par TOI-270 avec la BDD
 Commencer par selectionner et nettoyer les données issues de la base de données:
 
 ```python
@@ -261,3 +261,98 @@ plt.show()
 ```
 
 {{< img src="../images/df15.png" >}}
+
+## Utiliser une librairie de traitement de données python
+*Seaborn Python* est une bibliothèque (un ensemble de modules) de visualisation de données en Python. 
+
+*Principe:*
+
+* on commence par créer une matrice de correlation à partir des colonnes de la table (*dataframe*). Chaque ligne/colonne est constituée d'une étiquette du tableau. : fonction `corr`
+* puis on affiche cette matrice, en superposant des couleurs: fonction `heatmap`
+
+```python
+import matplotlib.pyplot as plt
+import seaborn as sns
+dataset = df0 # dataframe de l'import de la bdd des planètes
+corr = dataset.corr()
+sns.heatmap(corr,cmap='coolwarm',annot=True,linewidth=0.9)
+plt.show()
+```
+
+{{< img src="../images/seaborn.png" caption="seaborn - matrice de correlation sur les colonnes du dataset" >}}
+
+On voit que les grandeurs `radius` et `orbital_period` ne présentent pas de correlation (0.076), le maximum étant 1:
+
+```python
+>>> corr['orbital_period']['radius']
+0.076
+```
+
+> Travail: le script ci-dessous permet de visualiser plusieurs graphiques sur la même sortie. Adapter le script pour sélectionner les grandeurs correlées. 
+
+```python
+plt.figure(figsize=(12, 8))
+plt.subplot(221)
+
+x = 'semi_major_axis'
+y = 'orbital_period'
+plt.scatter(dataset[x],dataset[y], marker="o", s=25)
+plt.xlabel(x)
+plt.ylabel(y)
+plt.title(
+    "Comp. 1: {} vs {} (test corr = {})".format(x,y,round(corr[x][y],3))
+    
+)
+plt.xticks(())
+plt.yticks(())
+#plt.legend(loc="best")
+
+
+plt.subplot(224)
+x = 'semi_major_axis'
+y = 'orbital_period'
+plt.scatter(dataset[x],dataset[y], marker="o", s=25)
+plt.xlabel(x)
+plt.ylabel(y)
+plt.title(
+    "Comp. 1: {} vs {} (test corr = {})".format(x,y,round(corr[x][y],3))
+    
+)
+plt.xticks(())
+plt.yticks(())
+
+
+
+plt.subplot(222)
+x = 'semi_major_axis'
+y = 'orbital_period'
+plt.scatter(dataset[x],dataset[y], marker="o", s=25)
+plt.xlabel(x)
+plt.ylabel(y)
+plt.title(
+    "Comp. 1: {} vs {} (test corr = {})".format(x,y,round(corr[x][y],3))
+    
+)
+plt.xticks(())
+plt.yticks(())
+
+plt.subplot(223)
+x = 'semi_major_axis'
+y = 'orbital_period'
+plt.scatter(dataset[x],dataset[y], marker="o", s=25)
+plt.xlabel(x)
+plt.ylabel(y)
+plt.title(
+    "Comp. 1: {} vs {} (test corr = {})".format(x,y,round(corr[x][y],3))
+    
+)
+plt.xticks(())
+plt.yticks(())
+
+
+plt.show()
+```
+
+{{< img src="../images/seaborn1.png" >}}
+
+

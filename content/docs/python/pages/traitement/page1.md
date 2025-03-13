@@ -2,7 +2,7 @@
 Title: graphique
 ---
 
-# Tracé de graphiques
+# Tracé de graphiques avec curseur
 La documentation complète de `matplotlib.pyplot`: [Lien](https://matplotlib.org/stable/api/pyplot_summary.html)
 
 **module**: D'abord importer le module:

@@ -106,7 +106,7 @@ while True:
 
 * Quel est le rôle de la variable `stringData`? *(Que contient-elle?)*
 
-3. Analyse du programme: Décrire le programme avec un diagramme d'activités.
+3. Analyse du programme: Décrire le programme avec un [diagramme d'activité](/pdf/NSI_1/diagramme_activite2.pdf).
 
 3. Ce programme, comment devrait-il fonctionner? Quel-s problème-s voyez-vous lorsque plusieurs cartes microbits fonctionnent de concert, avec ce même programme?
 
@@ -349,7 +349,7 @@ A partir du programme initial, apporter les modifications pour:
 
 {{< img src="../images/vitta_init111.png" >}}
 
-> Décrire le programme avec un diagramme d'état.
+> Décrire le programme avec un [diagramme d'activité](/pdf/NSI_1/diagramme_activite2.pdf).
 
 ## Projet 2: Chiffrement
 > But: réaliser une communication privée dans un reseau public.

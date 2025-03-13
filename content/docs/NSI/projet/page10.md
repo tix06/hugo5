@@ -99,19 +99,22 @@ Pandas va permettre de lire et de modifier des tableaux (DataFrames). Chaque col
 
 {{< img src="../images/df10.png" >}}
 
+Cette table fera l'objet d'une étude spécifique: [ici](/docs/python/pages/traitement/page3/)
+
 ## Présenter les résultats: CSV => Dataframe
 **Importer les données depuis un fichier csv**
 
-Les informations des planètes peuvent être saisies dans un tableur. *Attention à bien utiliser des points comme séparateur décimal*.
+* Les [courbes de transit](/docs/NSI/projet/page9/) vont permettre de mesurer les valeurs de profondeur de transit $\delta$ et de durée de transit $\tau$. 
+* Ces valeurs seront reportées dans un fichier *csv* avec les autres informations sur les planètes et leur étoile. Utiliser un tableur. *Attention à bien utiliser des points comme séparateur décimal*.
 
 {{< img src="../images/tab_excel.png" caption="tableau rempli à l'aide d'un tableur" >}}
 
-**Exporter** (ou enregistrer) en format *csv*.
+* **Exporter** (ou enregistrer) en format *csv*.
 
 On peut vérifier en ouvrant le fichier *csv* que les données sont mises dans un format particulier (séparation à l'aide d'un point virgule...)
 {{< img src="../images/tab_csv.png" caption="fichier csv" >}}
 
-**L'import depuis pandas** se fait alors de la manière suivante: *(rien de plus simple)*
+* **L'import depuis pandas** se fait alors de la manière suivante: *(rien de plus simple)*
 
 ```python
 df = pd.read_csv('exoplanetes.csv',sep=';')
