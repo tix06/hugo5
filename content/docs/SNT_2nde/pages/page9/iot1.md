@@ -2,7 +2,7 @@
 Title: IOT
 ---
 
-# Robot: Mythe et réalité
+# Robot ou ordinateur
 
 {{< img src="../images/atlas_frontview.jpeg" caption="Atlas (2013), robot androïde de Boston Dynamics. Wikipedia." >}}
 
@@ -24,20 +24,29 @@ Les robots ne sont pas de simples automates: ils ont la capacité de s'adapter �
 
 {{< img src="../images/wiki_robots.png" caption="Diversité des robots actuels. Wikipedia." >}}
 
+**Definition**: Un robot est une machine possédant un processeur, une mémoire, des interfaces d’entrée et de sortie, et qui capable d’exécuter des programmes. C’est aussi la définition d’un ordinateur. La différence se situe avec la nature des capteurs et actionneurs que possède le robot, ce qui lui donne une action autonome, en temps réel et remplace souvent une activité humaine.
+
+On distingue parmi les extensions de la machine-robot, celles qui sont commandées (**ACTIONNEURS**) de celles qui numérisent une grandeur physique (**CAPTEURS**)
+
+C’est alors un **programme**, écrit en *langage informatique*, qui va *traiter les données* et *commander* la machine-robot, lui donnant un comportement *autonome*, en *temps réel*.
+
+Son comportement peut aussi être commandé par une autre machine, dans un système informatique disttribué.
+
+# Description d’un système automatisé
+Le système automatisé comprend les sous-parties du robot, les interfaces, les machines utiles pour le traitement, les sources d’énergie.
+
+Par exemple: caméra, moteur, relais électrodynamique, batterie, lampes, roues, antenne radio, écran, ordinateur serveur, client, commutateur, …
 
 
-# Informatique des objets
 
+## Premier exemple: robots agricoles
+Comment le robot s’inscrit-il dans un système informatique complet?
 
-
-## Premier exemple: robots agricoles et voitures autonomes
-Ces robots ont en commun qu'ils:
-
-* utilisent la reconnaissance de formes et de couleurs
-* analysent, déclenchent une action en rapport avec cette mesure
-* utilisent une source d'énergie adaptée, qui les rend autonome
-* communiquent sur le reseau (internet)
-* echangent avec un logiciel (IHM)
+* il utilise la reconnaissance de formes et de couleurs
+* analyse, déclenche une action en rapport avec cette mesure
+* Utilise une source d'énergie adaptée, qui les rend autonome
+* communique sur le reseau (internet)
+* echange avec un logiciel (IHM)
 
 {{< img src="../images/robot2.png" link="https://www.youtube.com/watch?v=HIpelnM1NBE&list=PLTvT0yWRovX-at4Dmg9kej99798ndCPrR&index=1"  caption="Exemple 1" >}}
 
@@ -45,25 +54,54 @@ Ces robots ont en commun qu'ils:
 
 {{< img src="../images/robot4.png" link="https://www.youtube.com/watch?v=3xL8Db60YUk&list=PLTvT0yWRovX-at4Dmg9kej99798ndCPrR&index=12"  caption="Exemple 3" >}}
 
+## voitures autonomes
 En test à San Francisco actuellement, les taxis autonomes.
 
 {{< img src="../images/robot6.GIF" caption="Jaguar électriques I-PACE Waymo One: taxi autonome" >}}
 
+On peut représenter les sous-parties de ce système informatique avec les chaines d’information et d’énergie.
+
+## Chaine d’information et chaine d’énergie 
+
+{{< img src="../images/syst_embarque.png" link="/pdf/SNT/syst_embarque.pdf"  caption="Chaine d'information et chaine d'énergie, structure des systèmes" >}}
+
+### Chaine d’information
+La chaine d’informations permet de transmettre entre différentes parties et traiter les données au niveau d’une machine.
+
+*Décrire la chaine d’information* revient à placer les verbes ACQUERIR, TRAITER LES DONNEES, COMMUNIQUER dans un diagramme d’activité:
+
+Camera -> ACQUERIR (images) -> TRAITER LES DONNEES (microcontroleur) -> COMMUNIQUER (antenne radio, interface de communication) -> stockage et traitement (serveur)
+ou bien :
+Camera -> ACQUERIR (images) -> TRAITER LES DONNEES (microcontroleur) -> COMMUNIQUER -> actionneur
+
+### Chaine d’énergie
+La chaine d’énergie montre l’utilisation des différents capteurs et actionneurs, et la nature du travail (mécanique, électrique, lumineux) qui est mis en jeu.
+
+*Décrire la chaine d’information* revient à placer les verbes ALIMENTER, DISTRIBUER, CONVERTIR TRANSMETTRE dans un diagramme d’activité:
+
+
+Les robots et microcontrôleurs doivent souvent avoir une alimentation autonome, qui doit durer le plus longtemps possible. Il faut alors optimiser leur consommation électrique.
+
+
+### Bilan: robot ou objet connecté
+La diversité de machines, et leur interaction, montre que le *robot* fait partie d'une plus grande famille d'objets, dont l'enjeu dépasse aujourd'hui le simple fait d'agir de manière autonome. Ce sont aussi et surtout des *objets connectés*, en reseau.
+
 On parlera plus d'*objets connectés* que de *robots*.
 
-## Robot ou objet connecté
+# Informatique et internet des objets
 {{< img src="../images/robot0.png" link="https://www.youtube.com/watch?v=DOECi_ZKaYI"  caption="Video du mooc SNT sur IOT" >}} 
 
 > A partir de la video: citer un ou des *capteurs*, *actionneurs*, un exemple de *programme*. Qu'est-ce qu'un objet connecté?
 
-Cette diversité de machines montre que le *robot* fait partie d'une plus grande famille d'objets, dont l'enjeu dépasse aujourd'hui le simple fait d'agir de manière autonome. Le système est souvent distribué entre un objet informatique susceptible d'agir de manière autonome, et d'une plateforme sur internet. Ce sont des *objets connectés*, en reseau.
+
+
 
 ## Constitution d'un objet connecté
 Un objet connecté a une **fonction**: il est prévu pour réaliser certaines **tâches** en rapport avec la **mission** qu'il doit accomplir.
 
 Un objet connecté est muni de:
 
-* Capteur: transfomation d'une mesure physique en un signal électrique.
+* Capteur: transformation d'une mesure physique en un signal électrique.
 * Actionneur: transformation d'un signal electrique en un moyen physique
 * Processeur: pour un traitement local des données, plus ou moins complexe
 * Source d'énergie: adaptée à la fonction
@@ -71,7 +109,7 @@ Un objet connecté est muni de:
 
 Enfin, l'objet peut disposer également d'une IHM (interface homme-machine), souvent par l'intermédiaire d'une application.
 
-{{< img src="../images/syst_embarque.png" link="/pdf/SNT/syst_embarque.pdf"  caption="Chaine d'information et chaine d'énergie, structure des systèmes" >}}
+
 
 ## Définition d'un objet connecté
 *Définitions d’un objet connecté et de l'Internet des Objets (IdO), ou Internet of Things (IOT):*
@@ -110,10 +148,15 @@ La collecte des données en temps réel offre beaucoup de potentiel:
 Par ailleurs, l’Internet des objets vise à relever différents challenges majeurs actuels et futurs. [page eurotechconseil.com](https://www.eurotechconseil.com/blog/definition-internet-des-objets/):
 
 * Les smart-cities: pilotent le flux de circulation ou les illuminations en temps réel en fonction de l’heure de la journée. Une telle avancée technologique permet de régler certains des problèmes de saturation des centres-villes et de la pollution par la lumière, et de réduire les émissions de CO2.
-
 * transports publics: plusieurs capteurs existent pour diffuser des informations précieuses ainsi que pour réguler la circulation et renseigner les passagers en temps réel.
+* Dans les secteurs industriel et agricoles, l’idO augmente la productivité: surveillance des cultures et analyse du sol, arrosage intelligent, suivi distant de cheptel.
+* Aquaculture: station météo sous-marine avec surveillance de la qualité des eaux, détection de la pollution ou de contamination.
+* Domotique: thermostat intelligent, électroménager connecté, alarme connectée, pilotage de l’éclairage, des stores…
+* Santé: paire de lunette connectée pour une personne en situation d’handicap, peut fournir des informations sur les lieux alentour, bracelet connecté pour les personnes sourdes (envoi d’une impulsion selon l’activité ou les messages perçus), mesure du rythme cardiaque
+* Loisirs: balises GPS de géolocalisation de randonneurs, drones pour filmer
+defense: drones de combat
 
-* Dans les secteurs industriel et agricoles, l’idO augmente la productivité.
+Il peut donc exister autant d’objets connectés qu’il existe d’activités humaines.
 
 ## Un objet connecté dans le reseau internet
 ### modèle Client-serveur
@@ -170,7 +213,10 @@ L'antenne reçoit un signal électrique alternatif, émis à distance par le ter
 
 On trouve cette technologie dans les puces pour animaux, clés de voiture, badges d'entrée, badge pour transport en commun... [voir article sur RFID et NFC](https://sbedirect.com/fr/blog/article/comprendre-la-rfid-en-10-points.html)
 
+**Le programme et les données**: souvent, le programme n'est pas **dans l'objet**, mais **dans le serveur** prévu. L'utilisation du serveur necessite souvent de renseigner des informations personnelles lorsque l'on utilise un service connecté. Cela peut poser un problème sur la protection et l'usage de ces données.
 
+### Une obsolescence programmée
+la durée de vie de ces objets peut être écourtée indépendamment de l’usure physique de l’objet. En effet, le fonctionnement des objets connectés dépend aussi de services proposés par le fabriquant, qui peut cesser avec son activité. Ce fut le cas du lapin connecté Nabaztag lancé en 2005, qui a cessé en 2011 avec l’arrêt des serveurs de la société.
 
 
 
@@ -186,3 +232,4 @@ les vidéos de robotique virales nous conduisent à la prudence et à une analys
 * [CNIL: il-etait-une-fois-lours-connecte-mal-securise](https://www.cnil.fr/fr/infographie-il-etait-une-fois-lours-connecte-mal-securise) Le piratage massif d'un ours en peluche connecté a entrainé la fuite sur internet des informations personelles de plus de 800 000 familles. (suivi de demandes de rançons)
 * [taxis autonomes](https://frenchmorning.com/on-a-teste-voitures-autonomes-a-san-francisco-comment-ca-marche-vraiment/)
 * cartes à puce [wikipedia](https://fr.wikipedia.org/wiki/Carte_%C3%A0_puce)
+* cours [shoolmouv sur les IOT](https://www.schoolmouv.fr/cours/l-internet-des-objets-ou-iot-/fiche-de-cours)
