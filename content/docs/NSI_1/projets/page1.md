@@ -229,7 +229,8 @@ while True:
 Le format des données dans le fichier de *log* permet un traitement comme on le ferait pour un ficher *txt* ou *csv*.
 
 ## Suggestion de projets
-* Conduite autonome
+* Piloter le robot à l'aide d'une telecommande: on utilisera une 2e carte microbit pour telecommande. Les données seront transmises grâce à la fonction [radio](/docs/techno/pages/MB_radio2/)
+* Conduite autonome: le robot est capable d'avancer, et de s'arrêter seul lorsqu'il detecte un obstacle.
 * Course déclenchée par un *clap*
 * Evolution dans un labyrinthe
 * Programme d'exploration type robot aspirateur
