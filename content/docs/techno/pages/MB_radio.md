@@ -2,10 +2,10 @@
 Title: MB radio
 ---
 
-# Partie 1: Communication radio
+# Partie 1: Gestion de l'affichage
 Une présentation générale de la carte microbit se trouve à la page [suivante](../MB_init).
 
-La [fiche reponse](/pdf/SNT/diagramme_activite.pdf) pour les questions.
+La [fiche reponse](/pdf/SNT/python_MB.pdf) pour les questions.
 
 ## Prise en main de l'interface microbit sur Vittascience
 *Ce premier travail permet de découvrir l'interface Vittascience.com pour la programmation de la carte microbit. Les questions qui suivent cette manipulation vont présenter le langage Python. Aucune connaissance du langage n'est requise pour ce premier travail.*
@@ -68,17 +68,45 @@ Si on met à nouveau les blocs en correspondance avec les instructions du langag
 
 {{< img src="../images/vitta_init7.png" >}}
 
+> **Qu1.**: colorier le script sur la fiche de reponse.
+
+Les instructions en python ne sont pas alignées sur la même verticale. On dit qu'elles sont *indentées* lorsqu'elles présentent un décalage horizontal. Cette disposition est aussi visible sur l'algorithme écrit en langage *scratch* (blocs colorés).
+
+> **Qu2.**: Expliquer la signification de cette *indentation* en Python
+
 > Terminer maintenant le programme selon l'image suivante:
 
 {{< img src="../images/vitta_init5.png" >}}
 
 > Et téléverser dans la carte microbit. Comment réagit-elle lorsque vous appuyez sur le bouton A, le bouton B?
 
+> **Qu3.**: Comment la réagit la carte lorsque l'on appuie sur les 2 boutons simultanément? Cela génère t-il un bug a l'affichage? Pourquoi?
+
+> Modifier la structure conditionnelle en remplaçant la séquence: si ... si ...
+
+```python
+if button_a.is_pressed():
+  instruction1
+if button_b.is_pressed():
+  instruction2
+```
+
+> par la séquence: si ... sinon si ...
+
+```python
+if button_a.is_pressed():
+  instruction1
+elif button_b.is_pressed():
+  instruction2
+```
+
+> **Qu4.**: Cela améliore t-il le comportement de la carte lorsque l'on appuie simultanément sur les 2 boutons? Pourquoi?
+
 ### Introduction au langage Python
+Le langage python, comme tout langage informatique est un langage très *structuré*, qui utilise un petit nombre de *mots clés*, à partir desquels on construit des *instructions*.
 
-1. Recopier le script et colorier les différentes parties du script comme dans les exemples précédents. Expliquer la signification de l'indentation en Python (la marge par rapport au bord gauche de l'editeur Python).
 
-Ces couleurs indiquent la famille d'instructions. Les instructions du langage peuvent être rassemblées selon les principales familles qui sont:
+Les couleurs (programme en blocs, fenêtre de gauche) indiquent la famille d'instructions. Les instructions du langage peuvent être rassemblées selon les principales familles qui sont:
 
 - Affichage
 - Entrées/ Sorties
@@ -96,9 +124,9 @@ from microbit import *
 
 Avec la programmation par blocs sur l'interface [Vittascience.com](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience), cette ligne est ajoutée dès que vous choisissez une instruction du bloc Entrées/Sorties spécifique à la carte microbit.
 
-2. Recopier le tableau et compléter avec la description de l'instruction:
+> **Qu5.:** compléter le tableau avec la description de l'instruction:
 
-| instruction | description |
+| mot clé | description |
 |--- |--- |
 | `import` |   |
 | `display.show()` |   |
@@ -109,13 +137,18 @@ Les instructions qui terminent par des parenthèses `()` sont des *fonctions*. L
 
 Parmi ces *fonctions*, certaines doivent être écrites en plaçant un argument entre les parenthèses. Cela permet de préciser leur comportement.
 
-3. Dans le tableau précédent, quelle est LA fonction qui nécessite un argument? A quoi sert-il?
+> **Qu6.: Dans le tableau précédent, quelle est LA fonction qui nécessite un argument? A quoi sert-il?
 
 Certaines instructions vont permettre des répétitions (famille des boucles), d'autres vont executer des branchements conditionnels (famille logique). Ce sont les mots clés `while` et `if`.
 
-4. Retrouver les familles pour chacun de ces 2 mots clés.
+> **Qu7.:** Retrouver les familles pour chacun de ces 2 mots clés, `if` et `while`. Préciser: lequel va servir pour une instruction conditionnelle, executée une seule fois? Lequel sert à répéter un bloc de code (écrire dans la colonne *execution*)?
 
-5. Recopier et compléter le tableau avec la description de chacune des instructions:
+| mot clé | famille | execution |
+|--- |--- |--- |
+| if |   |   |
+| while |   |   |
+
+> **Qu8:** compléter le tableau avec la description de chacune des instructions:
 
 | instruction | description |
 |--- |--- |
@@ -124,7 +157,7 @@ Certaines instructions vont permettre des répétitions (famille des boucles), d
 
 
 
-## Complément: Dessiner son propre logo
+## Dessiner son propre logo
 Le bloc suivant permet de personnaliser l'image affichée:
 
 {{< img src="../images/vitta_init13.png" >}}
@@ -145,9 +178,11 @@ Pour dessiner l'image, il faut cliquer dans les cellules de la matrice(pixels). 
 {{< img src="../images/vitta_init14.png" >}}
 
 1. Quel est le code correspondant pour le **Y**?
-2. Dessiner vos propres images. Recopier le code Python généré pour celles-ci: `led_image = Image('...`
+2. Programmez la carte afin qu'elle montre l'animation suivante:
 
+{{< img src="../images/Y.gif" caption="rotation droite" >}}
 
+3. Recopier le code python qui est généré -> **Qu9.**
 
 
 
