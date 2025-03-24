@@ -105,7 +105,7 @@ Un objet connecté est muni de:
 * Actionneur: transformation d'un signal electrique en un moyen physique
 * Processeur: pour un traitement local des données, plus ou moins complexe
 * Source d'énergie: adaptée à la fonction
-* Moyen de communication: du codage à la transmission des données selon des protocoles standards ou dédiés.
+* **Moyen de communication**: du codage à la transmission des données selon des protocoles standards ou dédiés.
 
 Enfin, l'objet peut disposer également d'une IHM (interface homme-machine), souvent par l'intermédiaire d'une application.
 
@@ -114,7 +114,11 @@ Enfin, l'objet peut disposer également d'une IHM (interface homme-machine), sou
 ## Définition d'un objet connecté
 *Définitions d’un objet connecté et de l'Internet des Objets (IdO), ou Internet of Things (IOT):*
 
-* L'IOT (IdO), désignent l'ensemble des architectures et des systèmes destinés à assurer le fonctionnement de différents objets via une connexion internet. Ce fonctionnement peut se faire par communication entre appareils eux-mêmes, ou entre appareils et le Cloud.
+*Un objet connecté dispose de tout ou partie des caractéristiques d’un robot, mais surtout, fait partie d’un système informatique à plusieurs machines, reliées au réseau internet.*
+
+Les fonctions sont alors *reparties sur l’ensemble de ces machines*, et il peut arriver que le programme ne soit *pas dans l’objet lui-même*, mais dans une *autre machine* du système (le client, le serveur…)
+
+Enfin, grâce à la connexion internet, la communication peut se faire entre appareils eux-mêmes, ou entre appareils et le Cloud.
 
 * Les objets connectés sont donc des objets physiques connectés ayant leur propre identité
 numérique et capables de communiquer les uns avec les autres.
@@ -132,7 +136,9 @@ numérique et capables de communiquer les uns avec les autres.
 
 
 
-**A quoi servent-ils?:**
+## A quoi servent-ils?
+Un objet connecté a une **fonction**: il est prévu pour réaliser certaines **tâches** en rapport avec la **mission** qu'il doit accomplir.
+
 
 les objets connectés proposent un certain degré de commodité dans notre quotidien. Grâce à cet objet, nous pouvons gagner beaucoup de temps et parfois d’énergie. L’idO est employé dans différents domaines d’activité. 
 
@@ -189,6 +195,9 @@ Des normes de sécurité rigoureuses préconisent:
 * garantir l'intégrité des données (verification avec une fonction de hachage par exemple)
 * des mises à jours régulières des logiciels, avec des correctifs réguliers de la part du constructeur
 * une surveillance en temps réel pour détecter toute activité suspecte
+
+### Problème de confidentialité des données
+De manière générale, les objets connectés font peser des risques en matière de vie privée avec la collecte des données. La Chine a ainsi développé un système de crédit social basé sur une surveillance généralisée de sa population (caméra et capteurs). Leur comportement est noté et les incivilités sont punies par l’abaissement de la note sociale des individus. Ceux-ci ne peuvent plus par exemple acheter un billet de train s’ils ont commis une incivilité dans les transports.
 
 ### Variété des modes de communication
 La plupart des IOT sont connectés sur internet via la wifi. 
