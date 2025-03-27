@@ -262,6 +262,75 @@ B.  L’arbre passé en paramètre étant un arbre binaire de recherche, on peut
 améliorer la fonction `nb_sup` précédente afin de réduire ce nombre d’appels.
 Écrire sur la copie le code modifié de cette fonction. 
 
+
+# Bac 2023 Centres etrangers J4
+*(extrait du sujet)*
+
+Le grossiste enregistre dans la liste `sommes` les montants des commandes,
+avant réduction, que des clients ont passées dans son magasin.
+
+Par exemple : `sommes = [140, 78, 115, 94, 46, 108, 55, 53]`
+
+Il va utiliser la méthode de tri-fusion pour trier la liste sommes dans l’ordre
+croissant.
+L’algorithme du tri-fusion est naturellement décrit de façon récursive (dans toute
+la suite, on supposera pour simplifier que le nombre d’éléments de la liste est
+une puissance de 2) :
+
+- si la liste n’a qu’un ou aucun élément, elle est déjà triée,
+- sinon:
+  - on sépare la liste initiale en deux listes de même taille,
+  - on applique récursivement l’algorithme sur ces deux listes,
+  - on fusionne les deux listes triées obtenues en une seule liste triée.
+
+On trouve ci-dessous un exemple de déroulement de cet algorithme pour la liste
+`[140,78,115,94]` de 4 éléments :
+
+{{< img src="../images/page3_8.png" caption="division et tri fusion" >}}{.class width=1072 height=478px}
+
+**a.** Appliquer sur votre copie, de la même façon que dans l’exemple précédent,
+le déroulement de l’algorithme pour la liste suivante :
+`[46, 108, 55, 53]`
+
+
+
+On rappelle que l’appel `L.append(x)` ajoute l’élément x à la fin de la liste L et que
+`len(L)` renvoie la taille de la liste L.
+
+**b.** La fonction `fusion` ci-dessous renvoie une liste de valeurs triées à partir des
+deux listes `liste1` et `liste2` préalablement triées. Ecrire sur la copie l’instruction à
+placer à la ligne 4 du code de la fonction fusion : 
+
+{{< img src="../images/page3_9.png" caption="script de la fonction fusion" >}}{.class width=820 height=562px}
+
+Choisir parmi les propositions:
+
+```python
+while i1 < len(liste1) and i2 < len(liste2):
+while i1 < len(liste1) or i2 < len(liste2):
+```
+
+*Justifiez votre choix*.
+
+**c.** Recopier et compléter sur la copie la fonction récursive `tri_fusion` suivante, qui prend en paramètre une liste non triée et la renvoie sous la
+forme d’une nouvelle liste triée.
+
+On utilisera la fonction `fusion` de la question précédente.
+
+Exemple : `tri_fusion([140,115,78,94])` doit renvoyer
+ `[78,94,115,140]`
+
+Aide Python : si `L` est une liste, l’instruction `L[i:j]` renvoie la liste
+constituée des éléments de `L` indexés de `i` à `j-1`.
+Par exemple, si `L=[5,4,8,7,3]`, `L[2:4]` vaut `[8,7]`.
+
+```python
+def tri_fusion(liste):
+  if len(liste)<=1:
+    return liste
+  # a completer
+```
+
 # Bac 2021 Polynesie Exercice 1
 **Algorithmes de tri**
 

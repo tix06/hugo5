@@ -124,6 +124,8 @@ Pour faire pivoter le robot, il faudra contrôler différement chaque moteur (Dr
 
 Votre robot fait le tour entierement? Vous avez relevé le **premier défi**!
 
+> **Travail:** Recopier le script python dans un fichier `.txt`
+
 *Aide*: [detection de la ligne noire](https://fr.vittascience.com/learn/tutorial.php?id=42/maqueen-part-3-suiveur-de-ligne-avec-micro-bit)
 
 ## Avant le défi n°3: Programmer en python
@@ -131,19 +133,19 @@ D'autres fonctions du robot peuvent être exploitées pour réaliser d'autres t�
 
 * [Maqueen] Pivoter à *droite*
 
-{{< img src="../images/marq4.png" >}}
+{{< img src="../images/marq41.png" >}}
 
 * [Maqueen] Avancer d'une case
 
-{{< img src="../images/marq5.png" >}}
+{{< img src="../images/marq51.png" >}}
 
-Pour la suite, il sera parfois utile de partir du programme réalisé avec les *blocs* (Vittascience), puis d'adapter, modifier certains paramètre *à la main*, directement dans le script python.
+Pour la suite, il sera utile de partir du programme réalisé avec les *blocs* (Vittascience), puis d'adapter, modifier certains paramètre *à la main*, directement dans le script python.
 
 Vous devrez vous familiariser avec les instructions en python spécifiques au robot marqueen.
 
 > Editeur [Vittascience.com](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience). Placer l'une des commandes du robot dans le bloc "Au demarrage". Et lire le script python généré.
 
-> Téléchargez le document [maqueen.py](/scripts/robot/marqueen.py) et complétez le avec les instructions python des différents blocs.
+> **Travail:** Copiez le contenu du document [maqueen.py](/scripts/robot/marqueen.py). Coller les instructions dans votre fichier `.txt`. Et complétez le avec les instructions python des différents blocs.
 
 *Certaines commandes necessitent la declaration de fonctions, et occupent plusieurs lignes d'instructions.*
 
@@ -162,7 +164,9 @@ La longueur du deplacement dépend de la durée d'attente  `utime.sleep_ms(int(1
 
 De la même manière, il sera utile de calibrer l'angle de rotation lors de la commande de pivot à droite ou à gauche.
 
-> Créer le programme qui permet au robot de suivre le parcours proposé sur l'image plus haut.
+> **Travail:** Créer le programme qui permet au robot de suivre un chemin proposé, comme sur l'image plus haut. Utiliser une LISTE python comme structure de données pour placer les consignes de parcours (ex: `chemin = [1,1,1,2,1,1,2,1,1,3,1]`). Ce parcours doit utiliser les cases du support.
+
+> Recopier le script dans votre fichier `.txt`
 
 ## Défi 4:  Enregister des données
 L'enregistrement de données peut être utile pour calibrer les capteurs du robot.
