@@ -30,12 +30,17 @@ Dans un premier temps, explorons cette structure de données:
 
 > *A vous de jouer:* une fois l'image téléchargée, ouvrir un notebook dans le **même** dossier que l'image, puis, à partir du script précédent:
 
-> 1. créer une double boucle sur x (position en largeur qui varie de 0 à largeur//10) et sur y (position en hauteur qui varie de 0 à hauteur//10). On ne parcourt qu'une petite partie de l'image. Le pixel (0,0) est en haut sur le coin gauche.
-2. dans la boucle: stocker dans p la valeur RGB du pixel de coordonnée (x,y) de imageSource: `p=imageSource.getpixel((x,y))`
-3. afficher la valeur de p...
+> 1. Le script à compléter donné plus haut va créer une double boucle sur x (position en largeur qui varie de 0 à largeur) et sur y (position en hauteur qui varie de 0 à hauteur). Le pixel (0,0) est en haut sur le coin gauche. Copier-coller ce script
+> 2. dans la boucle: stocker dans p la valeur RGB du pixel de coordonnée (x,y) de imageSource: `p=imageSource.getpixel((x,y))`
+> 3. Vérifier le contenu des données pour quelques une des points de l'image: afficher la valeur de p si x < largeur//10 et y < hauteur //10
+
+> Laquelle des structures de données représente le mieux le format des données:
+> * `[124,90,120]`
+> * `(124,90,120)`
+> * `#7C5A78`?
 
 
-On souhaite maintenant diminuer le contraste, en divisant par 2 chacune de composantes RGB de chacun des pixels de l'image. L'image sera egalement plus sombre. On va créer cette fois une nouvelle instance de la classe `Image`, mais pour former une image completement NOIRE:
+On souhaite maintenant diminuer le contraste, en divisant par 2 chacune de composantes RGB de chacun des pixels de l'image. L'image sera egalement plus sombre. On va créer cette fois une nouvelle instance, `planPixels`, de la classe `Image`, de la même dimension que celle d'origine, pour y copier les pixels un-à-un:
 
 `planPixels=Image.new("RGB",(largeur,hauteur))`
 
@@ -50,14 +55,12 @@ planPixels=Image.new("RGB",(largeur,hauteur))
 for ...
 ```
 
-On remplira cette image avec des pixels, un par un.
+On remplira cette image avec les pixels de l'image d'origine de la manière suivante:
 
 > *A vous de jouer:* Compléter le script pour...
-
-
-1. parcourir tous les pixels de l'image, largeur * hauteur.
-2. lire la valeur RGB de chaque pixel (`getpixel`) et modifier cette valeur, en diminuant le contraste de couleur: $p = (p[0]//2,\ p[1]//2,\ p[2]//2)$
-3. puis placer ce pixel sur la nouvelle image en construction planPixels. Utiliser pour cela la methode putpixel((x,y),p) de l'objet `planPixels` où x et y sont les nouvelles coordonnées du pixel p que l'on veut dessiner.
+> 1. parcourir tous les pixels de l'image, largeur * hauteur.
+> 2. lire la valeur RGB de chaque pixel (`getpixel`) et modifier cette valeur, en diminuant le contraste de couleur: $p = (p[0]//2,\ p[1]//2,\ p[2]//2)$
+> 3. puis placer ce pixel sur la nouvelle image en construction planPixels. Utiliser pour cela la methode putpixel((x,y),p) de l'objet `planPixels` où x et y sont les nouvelles coordonnées du pixel p que l'on veut dessiner.
 
 
 # Rotation d'une image
@@ -68,13 +71,14 @@ On va cherche à écrire un script Python qui réalise la rotation d'un quart de
 > *Questions:*
 
 > 1. Quelles sont les coordonnées des points A et B avant transformation?
-2. Quelles sont les nouvelles coordonnées des points A' et B' après transformation?
-3. pour un pixel situé initialement en (x,y), quelles sont ses coodonnées (x',y') après transformation? Verifier que l'on a: $x'=-y+hauteur-1$, $y'=x$. 
-4. Ecrire le script du programme qui devra réaliser la transformation de *crabePortrait.bmp*, d'un quart de tour, dans le sens horaire.
-5. Donner la complexité de cet algorithme.
+> 2. Quelles sont les nouvelles coordonnées des points A' et B' après transformation?
+> 3. pour un pixel situé initialement en (x,y), quelles sont ses coodonnées (x',y') après transformation? (la reponse est donnée ci-dessous. Cherchez avant de la lire...)
+> 4. Ecrire le script du programme qui devra réaliser la transformation de *crabePortrait.bmp*, d'un quart de tour, dans le sens horaire.
+> 5. Donner la complexité de cet algorithme.
 
+*Réponse à la question 3: $x'=-y+hauteur-1$, $y'=x$.* 
 ## Méthode diviser pour régner
-On cherche maintenant à effectuer cette transformation, SANS utiliser de nouvelle image *planPixels* comme précédemment. Ce sera une méthode dite en O(1) du point de vue de la complexité spatiale.
+On cherche maintenant à effectuer cette transformation, SANS utiliser de nouvelle image *planPixels* comme précédemment. 
 
 On utilisera l'image suivante (carrée) pour cette méthode: **woody.jpg** 
 
@@ -91,7 +95,7 @@ def echange_pix(image,x0,y0,x1,y1):
     x0,y0: int, int: coordonnées du pixel de depart
     x1,y1: int, int: coordonnées du pixel d'arrivée
     
-    Example: echange du pixel (0,0) avec celui (120,120)
+    Exemple: echange du pixel (0,0) avec celui (120,120)
     --------
     >>> echange_pix(imageSource,0,0,120,120)
     """
@@ -200,4 +204,4 @@ img.show()
 On rappelle que l'intérêt de la méthode est surtout de ne PAS utiliser de nouvelle image *planPixels* comme précédemment. Il s'agit d'une transformation *en place*.
 
 # Liens et aides
-* En cas de difficulté, consulter la page et les videos du site: [monlyceenumerique.fr](http://www.monlyceenumerique.fr/nsi_terminale/a/a3_div_regner.php)
+* En cas de difficulté, consulter la page et les videos du site: [monlyceenumerique.fr](http://www.monlyceenumerique.fr/nsi_terminale/a/a3_div_regner.php), aller à la partie sur la rotation des images.

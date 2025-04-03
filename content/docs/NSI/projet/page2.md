@@ -69,6 +69,7 @@ vendredi 19 février 2021 à 07:32
 Fournir des explications du fonctionnement des algorithmes compréhensibles par des profanes ? Félicien Vallet s’entretient avec Clément Henin et Daniel Le Métayer, de l’équipe Inria Privatics, sur  les enjeux de l’explicabilité des algorithmes et leurs travaux de recherche sur ce sujet.
 [https://www.lemonde.fr/blog/binaire/2021/02/19/algorithmes-decisionnels-expliquer-nest-pas-justifier/](https://www.lemonde.fr/blog/binaire/2021/02/19/algorithmes-decisionnels-expliquer-nest-pas-justifier/)
 
+<!--
 ## [Le Dilemme de la Maladie](https://www.lemonde.fr/blog/binaire/2021/02/16/le-dilemne-de-la-maladie/)
 mardi 16 février 2021 à 06:30
 
@@ -76,6 +77,7 @@ Peut-on établir un lien mathématique entre le comportement des gens et la prop
 
 
 [https://www.lemonde.fr/blog/binaire/2021/02/16/le-dilemne-de-la-maladie/](https://www.lemonde.fr/blog/binaire/2021/02/16/le-dilemne-de-la-maladie/)
+-->
 
 ## [Fouiller les processus pour les améliorer](https://www.lemonde.fr/blog/binaire/2021/02/12/fouiller-les-processus-pour-les-ameliorer/)
 vendredi 12 février 2021 à 07:24
@@ -99,6 +101,20 @@ Le prix Nobel de physique 2024 a été attribué mardi 8 octobre à : John J. Ho
 fiche et liens sur le thème de l'IA.
 
 [allophysique.com > Posts](/posts/python/data_analyse/)
+
+# Algorithmes et creations artistiques
+Voir aussi: 
+
+* [résumé de cours ](https://www.studysmarter.fr/resumes/ingenierie/ingenierie-biomedicale/algorithmes-de-traitement-dimages/) sur les algorithmes de traitement d'image.
+* Tout ce que les algorithmes de traitement d’images font pour nous[ interstices](https://interstices.info/tout-ce-que-les-algorithmes-de-traitement-dimages-font-pour-nous/)
+
+## Des algorithmes dans l'art, [entretien](https://www.unilim.fr/interfaces-numeriques/4827&file=1/) avec Alizée Armet
+Alizée Armet est artiste-chercheuse, fondatrice en 2018 du groupe Neurat qui
+étudie les effets des réseaux de neurones sur l’esthétique. Se œuvres au
+croisement du digital art, du computer art et du hacking ont donné lieux à de
+nombreuses expositions internationales.
+
+[https://www.unilim.fr/interfaces-numeriques/4827&file=1/](https://www.unilim.fr/interfaces-numeriques/4827&file=1/)
 
 ## [L’algorithme, nouvelle machine à tubes. Vraiment ?](https://www.lemonde.fr/blog/binaire/2021/03/12/lalgorithme-nouvelle-machine-a-tubes-vraiment/)
 Un algorithme peut-il composer de la musique, un texte, un tableau ? C’est le sujet que traite Philippe Rigaux, professeur d’informatique au CNAM…
