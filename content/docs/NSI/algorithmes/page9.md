@@ -17,11 +17,13 @@ for x in range(largeur): # x varie de 0 à largeur - 1
     for y in range(hauteur): # x varie de 0 à hauteur - 1
       # traitement pixel (x,y)
 
-planPixels.save("crabe2.jpg")
-planPixels.show()
 ```
 
-*imageSource est une instance de la classe `Image` et possède une methode `getPixel((x,y))` qui renvoie la valeur du pixel pour l'argument (x,y)*
+*imageSource est une instance de la classe `Image` et possède une methode `getpixel((x,y))` qui renvoie la valeur du pixel pour l'argument (x,y). S'utilise de la manière suivante:*
+
+```python
+imageSource.getpixel((x,y))
+```
 
 Nous allons travailler sur l'image suivante: **crabePortrait.bmp** 
 
@@ -44,7 +46,9 @@ On souhaite maintenant diminuer le contraste, en divisant par 2 chacune de compo
 
 `planPixels=Image.new("RGB",(largeur,hauteur))`
 
-*Debut du programme:*
+On va placer les pixels de *imageSource* (lecture) dans la nouvelle image *planPixels* (écriture).
+
+*Debut du 2e programme:*
 
 ```python
 from PIL import Image
@@ -52,7 +56,13 @@ imageSource=Image.open("crabePortrait.bmp")
 largeur,hauteur=imageSource.size
 planPixels=Image.new("RGB",(largeur,hauteur))
 
-for ...
+for x ...
+  for y ...
+  # traitement pixel (x,y)
+  # a completer ...
+
+planPixels.save("crabe2.jpg")
+planPixels.show()
 ```
 
 On remplira cette image avec les pixels de l'image d'origine de la manière suivante:
@@ -60,7 +70,7 @@ On remplira cette image avec les pixels de l'image d'origine de la manière suiv
 > *A vous de jouer:* Compléter le script pour...
 > 1. parcourir tous les pixels de l'image, largeur * hauteur.
 > 2. lire la valeur RGB de chaque pixel (`getpixel`) et modifier cette valeur, en diminuant le contraste de couleur: $p = (p[0]//2,\ p[1]//2,\ p[2]//2)$
-> 3. puis placer ce pixel sur la nouvelle image en construction planPixels. Utiliser pour cela la methode putpixel((x,y),p) de l'objet `planPixels` où x et y sont les nouvelles coordonnées du pixel p que l'on veut dessiner.
+> 3. placer ce pixel sur la nouvelle image en construction planPixels. Utiliser pour cela la methode putpixel((x,y),p) de l'objet `planPixels` où x et y sont les nouvelles coordonnées du pixel p que l'on veut dessiner: `planPixels.putpixel((x,y),p)`
 
 
 # Rotation d'une image
