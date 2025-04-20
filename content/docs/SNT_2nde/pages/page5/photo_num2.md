@@ -7,10 +7,20 @@ Title: codage d'une image
 
 {{< img src="../images/grille_a.png" alt="image pixelisée monochrome" caption="image pixelisée monochrome" >}}
 
-> Comment représenter l'image de ce symbole de manière numérique?
+> Comment représenter l'image de ce symbole de manière numérique? Compléter la grille de droite avec les valeurs 0 ou 1.
 
+L'objet mathematique correspondant est une *matrice*. C'est un tableau constitué de lignes et colonnes. Le caractère **a** sera représenté par la matrice `M`:
 
+```python
+M = [[1,0,0,0,1],
+     [1,1,1,1,0],
+     [..],
+     [..],
+     [..],
+     [..]]
+```
 
+`M` est une liste de lignes, où chaque ligne est aussi une liste.
 
 ## Construire une image numérique
 On utilise des boucles simples ou imbriquées, constituées d'une seule ou plusieurs instructions pour peindre les pixels (voir activité sur le site Algorea):
@@ -57,7 +67,11 @@ P1
 ...
 ```
 
-Grâce aux métadonnées du fichier, l'ordinateur va traiter cette suite de chiffres selon une matrice de valeurs:
+Grâce aux métadonnées du fichier, les informations de format (P1, P2, ...) et de dimension (5 * 6), l'ordinateur va traiter cette suite de chiffres selon une matrice de valeurs:
+
+{{< img src="../images/png_to_python.png" caption="import des données du fichier dans un programme python. Codage des couleurs en 24 bits rgb" >}}
+
+Chaque information va coder la couleur d'un pixel (un petit carré de couleur uniforme). Une fois agrandie, l'affichage ne pourra pas proposer plus d'informations que celles contenues dans le fichier source. C'est pour cette raison que l'image apparait parfois *pixelisée*.
 
 {{< img src="../images/zlatan.jpg" alt="image pixelisée couleur" caption="image pixelisée couleur" >}}
 
@@ -93,7 +107,7 @@ Par exemple, le tableau suivant représente des valeurs allant du plus foncé au
 ```
 # fichier
 P2
-3 3
+3 2
 0 50 100 150 200 255
 # matrice
 pix = [[0,50,100],[150,200,255]]
@@ -105,7 +119,7 @@ Le codage des couleurs utilise la synthèse additive. Voir animation sur Algorea
 ```
 # fichier
 P3
-2 2
+3 2
 255 0 0 0 255 0 0 0 255 255 255 255
 # matrice
 pix = [
@@ -254,11 +268,31 @@ La **compression** d'une image c’est la réduction de la quantité d’informa
 
 {{< img src="../images/compression.png" caption="exemple de code de Huffman pour la compression d'un texte" >}}
 
+*voir explication sur [la page de hmalherbe.fr](https://hmalherbe.fr/thalesm/gestclasse/documents/Terminale_NSI/2020-2021/Evaluations/Term_NSI_Bac_Blanc_Fevrier_2021.pdf)*
+
 Le **format jpg** est un format compressé avec pertes. L'idée est de supprimer la différence de valeur des couleurs pour des pixels contigûs, aux couleurs proches.
 
 {{< img src="../images/compressionjpg.png" caption="La compression réduit la taille du fichier, mais dégrade la qualité de l’image." >}}
 
 *image issue du site [adobe.com](https://helpx.adobe.com/fr/lightroom-classic/lightroom-key-concepts/compression.html)*
+
+## Traitement d'une image sans modifier sa dimension
+On utilise la matrice d'une *image source*. On créé une matrice d'*image cible*:
+
+```python
+f1 = open('image_source.ppm','r')
+M_source = []
+for line in f1.readlines()[3:]:
+    L = line.split()
+    M_source.append(L)
+M_cible = [[0] * len(M_source[0]) for i in range(M_source)]
+```
+
+On parcourt ensuite chaque valeur de pixel de l'image source, on effectue un traitement sur ces valeurs, et on place chacune dans la matrice de l'image cible.
+
+{{< img src="../images/image_cible.png" caption="image issue du site de frederic-junier.gitlab.io" >}}
+
+Puis on construit l'image cible à partir de sa matrice.
 
 ## Transformation de la taille d'une image
 Certains logiciels permettent de reduire ou agrandir la taille d'une image (resize). Cela modifie le nombre de pixels. Cette transformation se fait en conservant les proportions de l'image (homothétie).
@@ -353,8 +387,93 @@ Lorsque l'environnement est créé : cliquer sur le notebook :
 Et répondre aux questions sur la fiche à compléter.
 -->
 
+
+# Exercices
+## Recherche du min/max
+Pour parcourir un tableau `T` à 2 dimensions, il faut 2 boucles imbriquées, la 1ere pour parcourir les lignes, et la 2e pour les colonnes.
+
+Cela donne souvent le script suivant: 
+
+*script A:*
+
+```python
+for i in range(len(T)):
+  # i est le numero de ligne
+  for j in range(len(T[0])):
+    # toutes les lignes ont la meme longueur que T[0]
+    # j est le numero de colonne
+    ... traitement sur T[i][j]
+```
+
+*script B:*
+
+```python
+for line in T:
+  for elem in line:
+    ... traitement sur elem
+```
+
+
+1. Lequel de ces scripts realise un parcours par indice? Lequel realise un parcours par élément.
+2. Utiliser l'un de ces scripts pour écrire une fonction `min_max`, qui détermine la valeur minimale et la valeur maximale parmi les données de la matrice.
+3. Ecrire une fonction `moyenne` qui retourne la moyenne des valeurs d'une matrice.
+
+## Compréhension de liste
+
+Le script suivant construit une matrice `M` de zeros:
+
+```python
+n = 4
+m = 6
+M = # a completer (1)
+for i in range(n):
+  for j in range(m):
+    line.append(0)
+  # a completer (2)  
+```
+
+1. Compléter le script
+2. Quelle est la dimension de cette matrice? Et quelles seraient les dimension de l'image correspondante (largeur/hauteur)?
+3. Simplifier le script au niveau des lignes 5 et 6, en utilisant l'instruction `[0] * n`, qui est équivalent, ici, à `[0,0,0,0]`.
+3. Ré-ecrire ce même script, en utilisant la compréhension de liste.
+
+## Créer une image à partir d'instructions
+{{< img src="../images/suisse.png" caption="drapeau suisse" >}}
+
+1. Ecrire le script qui permet de construire la matrice de ce drapeau suisse, en noir et blanc. La dimension sera de `700*500` pixels
+2. Ecrire le script qui construit la matrice du drapeau, mais cette fois, avec la couleur de fond rouge. Chaque élément de la matrice sera un tuple (R,V,B)
+
+## Traitement d'une image sans modifier sa dimension
+On souhaite transformer une image source en couleur, en une image cible en niveaux de gris. On utilise pour cela la formule de calcul de la Luminence: *(r,g,b sont les intensités des couleurs primaires 0..255)
+
+$$L = 0.299\times r + 0.587\times g + 0.114\times b$$
+
+La valeur calculée pour L sera placée comme niveau de gris dans la matrice cible.
+
+1. Ecrire le script de la fonction luminence, qui calcule la valeur de L à partir d'un tuple `(r,g,b)`
+2. Placer dans la fonction un test d'assertion sur les valeurs permises pour r,g,b. Ce test, basé sur les données d'entrée, est appelé test de *précondition*
+3. Ecrire une fonction `matrice_rgb_to_gris` qui créé une matrice de niveaux de gris (valeurs de luminence) à partir d'une matrice couleur.
+
+## Agrandissement, reduction
+On considère une image source de largeur L et de hauteur H et un entier $k > 0$ :
+
+Un *agrandissement* de coefficient `k` de l’image source est une image cible de dimensions $(k\times L,k \times H)$ dont le pixel de coordonnées $(x, y)$ prend la valeur du pixel en $(x//k, y//k)$ dans l’image source.
+
+{{< img src="../images/agrandissement.png" caption="image issue du site de frederic-junier.gitlab.io" >}}
+
+1. On considère l'image `3*3` de matrice `M = [[1,0,1],[0,1,0],[1,1,1]]`. Quelle sera la dimension de l'image cible si le coefficient `k` est égal à 2?
+2. Représenter la matrice `M_cible` avec ses valeurs calculées à partir de celles de `M`
+3. La fonction `changement_echelle` prend 2 paramètres, `M`, la matrice $(L,H)$ de l'image source, et `k`, le coefficient. Cette fonction retourne une image calculée sur les valeurs de `M`, avec une dimension $(k\times L,k \times H)$. Ecrire le script de cette fonction.
+4. Cette fonction, sert-elle aussi pour réaliser une *reduction* de la taille de l'image source? Donner un exemple.
+5. Quel défaut aura une image agrandie selon cette méthode?
+6. Quel sera le poids de l'image reduite d'un facteur k? Exprimer en fonction du poids P de l'image source.
+
+
+
 # Suite du cours
 * [Enjeux ethiques et societaux de l'image](/docs/SNT_2nde/pages/page5/photo_num4/)
 * Exercices de niveau 1ere NSI: [site de frederic-junier](https://frederic-junier.gitlab.io/parc-nsi/chapitre7/NSI-Images-Tableaux2d--2021V2.pdf)
+* sujet bac avec corrigé sur code de Huffman: [Lien vers la page de hmalherbe.fr](https://hmalherbe.fr/thalesm/gestclasse/documents/Terminale_NSI/2020-2021/Evaluations/Term_NSI_Bac_Blanc_Fevrier_2021.pdf)
+* Compléments sur code de Huffman [fiche sur le site madamasterclass.com](https://madamasterclass.com/mod/page/view.php?id=892)
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>

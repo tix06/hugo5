@@ -85,7 +85,8 @@ salut('Brendon')
 # retourne (affiche) 'Salut Brendon'
 ```
 
-## Portée des variables internes
+## Portée des variables 
+### internes
 Lors de l'exécution de la fonction, la valeur `Brendon` est affectée à la variable `nom` : `nom = 'Brendon'`.
 
 Seulement, la variable `nom` est une **variable interne** à la fonction, et n'existe que dans celle-ci. Elle n'est pas définie en dehors.
@@ -99,6 +100,12 @@ NameError: name 'nom' is not defined
 
 La portée des paramètres et des variables déclarées dans la fonction est limitée à la fonction elle-même. Ce sont des variables **locales**.
 
+### externes
+les variables déclarées dans le *main* sont accessibles à l'interieur d'une fonction. 
+
+Mais celles-ci ne sont modifiable (dans la fonction) que s'il s'agit d'un type *mutable*, comme une liste par exemple. La liste peut alors être modifiée par un *effet de bord*.
+
+Par contre, les variables du main *non mutables* ne sont pas modifiables dans la fonction.
 
 ## Arguments positionnés
 
@@ -190,7 +197,41 @@ Une fonction est un morceau de code qui porte un nom et qui s’exécute lorsqu�
 
 Dans un projet plus grand, les fonctions peuvent être mises dans des modules (des fichiers séparés). On doit alors les importer pour avoir une extension du langage. Certains modules très utiles: math, turtle, random, …
 
-# Flash cards
-[Lien](/docs/python/pages/fonctions/ex1/)
+# Lambda fonction: fonctions anonymes
+On peut avoir recours aux fonctions anonymes pour des tâches ponctuelles qui ne nécessitent pas la création d'une fonction complète.
+
+La syntaxe est la suivante:
+
+```
+lambda arguments : expression
+```
+
+Les arguments sont les paramètres de la fonction et l'expression calcule la valeur de retour. 
+
+Remarquez l'absence d'utilisation du mot-clé `return`, contrairement à une fonction classique.
+
+Exemple:
+
+```python
+>>> square = lambda x : x ** 2
+>>> square(2)
+4
+```
+
+Les fonctions *lambda* peuvent être utilisées pour trier une liste selon une clé spécifique: [doc officielle](https://docs.python.org/3/howto/sorting.html)
+
+```python
+nodes = [('A', 20), ('B', 15), ('C', 12), ('D', 10), ('E', 8), ('F', 5), ('G', 2)]
+nodes.sort(key= lambda x: x[1])
+nodes
+```
+
+résultat:
+
+```python
+[('G', 2), ('F', 5), ('E', 8), ('D', 10), ('C', 12), ('B', 15), ('A', 20)]
+```
+
+
 
 
