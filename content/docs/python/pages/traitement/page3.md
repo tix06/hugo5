@@ -355,4 +355,10 @@ plt.show()
 
 {{< img src="../images/seaborn1.png" >}}
 
+# Et maintenant...
+* Vous savez placer les nouvelles exoplanètes sur un graphique en nuage de points, au milieu des autres planètes de la base de données.
+* Vous savez sélectionner la représentation qui donnera le plus d'informations, avec des axes repérant des grandeurs correlées.
 
+Une voie d'étude serait de rechercher des *clusters* (regroupements) de planètes pour certains choix d'axes, et d'associer nos exoplanètes à celles-ci.
+
+Une autre voie possible serait d'intégrer la Terre, avec toutes ses caractéristiques connues, dans la table de la base de données. On établirait alors un coefficient, appelé Indice de Similarité avec la Terre (IST), qui permettrait de trier ces planètes selon l'IST décroissant: [Lien vers la page](../page4)
