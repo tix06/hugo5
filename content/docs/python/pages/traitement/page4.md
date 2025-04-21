@@ -105,6 +105,8 @@ dataset = dataset[['_name','planet_status','mass','radius','orbital_period','sem
 dataset[dataset['IST']>0]
 ```
 
+*L'IST a été calculé sur la seule valeur du rayon de la planete*
+
 {{< img src="../images/tab_IST.png" caption="liste ordonnée par IST decroissant" >}}
 
 Puis rechercher dans cette table nos exoplanètes de TOI:
@@ -113,8 +115,9 @@ Puis rechercher dans cette table nos exoplanètes de TOI:
 dataset[dataset['_name'].str.startswith('TOI-270')]
 ```
 
+Les extensions a-b-c sont celles des exoplanetes de la base de données. Celles avec 1-2-3 sont celles de notre étude. Ces 2 séries d'information se referent aux 3 mêmes exoplanètes.
 
 {{< img src="../images/tab_TOI_IST.png" caption="Place des TOI dans la table" >}}
 
-
+*On peut bien sûr ajouter d'autres caractéristiques des planetes pour le calcul de l'IST et les comparer à la Terre.*
 
