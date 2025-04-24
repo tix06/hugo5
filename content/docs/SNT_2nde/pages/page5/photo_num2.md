@@ -468,7 +468,7 @@ Un *agrandissement* de coefficient `k` de l’image source est une image cible d
 5. Quel défaut aura une image agrandie selon cette méthode?
 6. Quel sera le poids de l'image reduite d'un facteur k? Exprimer en fonction du poids P de l'image source.
 
-
+> Fiche d'exercices sur les images numeriques: [version pdf](/pdf/NSI/sd7_images_num.pdf)
 
 # Suite du cours
 * [Enjeux ethiques et societaux de l'image](/docs/SNT_2nde/pages/page5/photo_num4/)

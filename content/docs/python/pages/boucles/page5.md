@@ -79,32 +79,43 @@ Si vous l'ouvrez avec un editeur textuel (notepad++, ...), vous devriez obtenir 
 
 Un fichier dans lequel les lignes représentent les $eleves$. Les valeurs sont separées par des points virgules ";"
 
-# Fonctions moyenne et autres traitement sur les listes Python
-Programmez vos fonctions en python pour analyser une liste de notes:
 
-Notebook à telecharger: [tableur_vers_python.ipynb](/scripts/notebooks/tableur_vers_python.ipynb)
-
-Utiliser une distribution python en *local*.
-
-> Traiter la partie 1 du notebook
 
 # Partie 2: Tableaux python
-> 1. Commencer par traiter la feuille d'exercices sur les tableaux en python: [lien vers le pdf](/pdf/NSI_1/TP_excel_vers_python.pdf)
+## Traitement sur une liste
+Le script suivant calcule la moyenne sur une liste de notes. La première valeur de la liste est reservée pour y placer une valeur, à la fin du programme. Les notes commencent donc à partir de l'indice 1 de cette liste:
 
-Puis...
+```python
+list1 = ["",12.0,14.5,10.0,18.5]
 
-> 2. Traiter la partie 2 du notebook
-Il s'agit de la partie 2 du notebook. Vous allez placer le fichier $classe.csv$ à proximité du notebook. 
+def moyenne(L):
+    s = 0
+    for x in L:
+        s+=x
+    return s/len(L)
+    
+m = moyenne(list1[1:])
+print(m)
+```
 
-{{< img src="../images/exc16.png" >}}
+> 1. Voir l'animation sur Pythontutor: visualiser le parcours et traitement sur une liste de notes `list1`:
 
-* Vous pouvez le placer dans le même dossier que le notebook: Depuis le script python, ouvrez le alors avec l'instruction `with open('classe.csv', newline='') as csvfile:`
-* ou bien dans un sous dossier `datas`. Ouvrir alors avec `with open('datas/classe.csv', newline='') as csvfile:` 
+Lien: [pythontutor](https://pythontutor.com/render.html#code=list1%20%3D%20%5B%22%22,12.0,14.5,10.0,18.5%5D%0A%0Adef%20moyenne%28L%29%3A%0A%20%20%20%20s%20%3D%200%0A%20%20%20%20for%20x%20in%20L%3A%0A%20%20%20%20%20%20%20%20s%2B%3Dx%0A%20%20%20%20return%20s/len%28L%29%0A%20%20%20%20%0Am%20%3D%20moyenne%28list1%5B1%3A%5D%29%0Aprint%28m%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false)
+
+{{< img src="../images/pythontutor_list.png" caption="nom et valeur des variables dans pythontutor - liste" >}}
+
+> 1a. Commenter le schéma ci-dessus: que signifient les flèches? Que signifient les cases bleues et jaunes?
+
+> 1b. Pourquoi écrit-on l'instruction `m = moyenne(list1[1:])` et non `m = moyenne(list1)`?
+
+> 1c Modifier le script (faire *edit* dans pythontutor) pour que le programme place la 
+valeur `m` dans la case `list1[0]`. Noter ici l'instruction utilisée. Comment voit-on la modification dans pythontutor?
 
 
-> 3. Animation sur Pythontutor: visualiser le parcours et traitement sur une liste
+## Traitement sur une table (liste de listes)
+> 2. Animation sur Pythontutor: visualiser le parcours et traitement sur une liste
 
-Pour finir, voir l'execution du script suivant sur [Pythontutor](https://pythontutor.com/render.html#code=classe%20%3D%20%5B%5B'%5Cufeff','moyenne','note1','note2','note3','note4','note5',%0A%20%20'note6','note7','note8','note9'%5D,%0A%20%5B'eleve1',%20'12,5',%2010.0,%208.9,%209.9,%2012.3,%2011.1,%2012.3,%2013.1,%2014.5,%2020.0%5D,%0A%20%5B'eleve2',%20'',%204.2,%202.1,%2016.5,%2015.0,%2019.6,%207.5,%2010.3,%2018.8,%2017.4%5D%5D%0A%0Adef%20moyenne%28tab%29%3A%0A%20%20%20%20s%20%3D%200%0A%20%20%20%20for%20note%20in%20tab%3A%0A%20%20%20%20%20%20%20%20s%20%2B%3D%20note%0A%20%20%20%20return%20s%20/%20len%28tab%29%0A%0Aeleve%20%3D%20classe%5B2%5D%0Am%20%3D%20round%28moyenne%28eleve%5B2%3A%5D%29,2%29%0Aprint%28m%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false)
+Execution du script suivant sur [Pythontutor](https://pythontutor.com/render.html#code=classe%20%3D%20%5B%5B'%5Cufeff','moyenne','note1','note2','note3','note4','note5',%0A%20%20'note6','note7','note8','note9'%5D,%0A%20%5B'eleve1',%20'12,5',%2010.0,%208.9,%209.9,%2012.3,%2011.1,%2012.3,%2013.1,%2014.5,%2020.0%5D,%0A%20%5B'eleve2',%20'',%204.2,%202.1,%2016.5,%2015.0,%2019.6,%207.5,%2010.3,%2018.8,%2017.4%5D%5D%0A%0Adef%20moyenne%28tab%29%3A%0A%20%20%20%20s%20%3D%200%0A%20%20%20%20for%20note%20in%20tab%3A%0A%20%20%20%20%20%20%20%20s%20%2B%3D%20note%0A%20%20%20%20return%20s%20/%20len%28tab%29%0A%0Aeleve%20%3D%20classe%5B2%5D%0Am%20%3D%20round%28moyenne%28eleve%5B2%3A%5D%29,2%29%0Aprint%28%22nom%20eleve%3A%20%7B%7D%20moyenne%3A%20%7B%7D%22.format%28eleve%5B0%5D,m%29%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false)
 
 ```python
 classe = [['\ufeff','moyenne','note1','note2','note3','note4','note5',
@@ -122,4 +133,43 @@ eleve = classe[2]
 m = round(moyenne(eleve[2:]),2)
 print(m)
 ```
+
+{{< img src="../images/pythontutor_notes.png" caption="nom et valeur des variables dans pythontutor - tableau" >}}
+
+> 2a. Commenter le schéma ci-dessus: que signifient les flèches? Que signifient les cases bleues et jaunes?
+
+> 2b. Que contient la liste `eleve`? Recopier ici son contenu.
+
+> 2c. Pourquoi écrit-on l'instruction `m = moyenne(eleve[2:])` et non `m = moyenne(eleve))`?
+
+> 2d. Modifier le script pour que le programme place la valeur m dans la case `eleve[1]`. Noter ici l'instruction utilisée. Comment voit-on la modification dans pythontutor?
+
+> 2e. Modifier maintenant le programme pour calculer la moyenne de l'élève 1. Comment doit-on modifier le programme?
+
+# Prolongement
+## Traitements sur le fichier csv importé du tableur
+
+
+
+Telecharger et placer dans le même dossier: 
+
+* [tableur_vers_python.ipynb](/scripts/notebooks/tableur_vers_python.ipynb)
+* fichier [classe.csv](/scripts/notebooks/classe.csv)
+* fichier [utilitaire_notes.py](/scripts/notebooks/utilitaire_notes.py)
+
+Deux options sont possibles pour organiser votre dossier et vos fichiers:
+
+* Vous pouvez placer *classe.csv* dans le même dossier que le notebook: Depuis le script python, ouvrez le alors avec l'instruction `with open('classe.csv', newline='') as csvfile:`
+* ou bien dans un sous dossier `datas`. Ouvrir alors avec `with open('datas/classe.csv', newline='') as csvfile:` 
+
+{{< img src="../images/exc16.png" >}}
+
+Utiliser une distribution python (*jupyter notebook*) en *local*.
+
+> 1. Traiter la partie 1 du notebook
+
+> 2. Traiter la partie 2 du notebook
+
+> 3. Traiter la feuille d'exercices sur les tableaux en python: [lien vers le pdf](/pdf/NSI_1/TP_excel_vers_python.pdf)
+
 

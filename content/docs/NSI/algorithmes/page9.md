@@ -151,7 +151,9 @@ def echange_quadrant(image,x0,y0,x1,y1,n):
 * Même question pour echanger les blocs A et C.
 
 ### analyser la fonction `rotate`
-La fonction (ou plutôt *méthode*, vue qu'elle ne retourne rien), permet de faire tourner l'image d'un quart de tour par une méthode de type *diviser pour régner*.
+La fonction `rotate` permet de faire tourner l'image d'un quart de tour par une méthode de type *diviser pour régner*:
+
+> Tourner l'image d'un quart de tour, c'est permuter les 4 parties d'une image dont on a permuté l'interieur de ses 4 parties...
 
 Une fois la partie **divisée** executée (appels recursifs), lorsque les subdivisions de l'image sont constituées d'un seul pixel, les pixels sont déplacés (**règne**) à l'aide de 3 permutations successives, selon le schéma suivant:
 
@@ -185,13 +187,26 @@ def rotate(image,x0,y0,n):
         echange_quadrant(image,x0,y0,x0,y0+m,m)
 ```
 
-> *Analysez la procedure:* A l'aide de l'image suivante, que vous découperez, montrer pas à pas ce qui est réalisé par la fonction rotate.
+*Analysez la procedure:* On considère l'image de *woody*, quadrillée de la manière suivante. Cette image fait $512 \times 512$ pixels
 
+{{< img src="../images/woody0.png" caption="image d'origine" >}}
 
-{{< img src="../images/procedure.jpg" link="../images/procedure.jpg" >}}
-### efficacité de la méthode
+> 1. Lors du premier appel de la fonction: que vaut m?
 
-Pour executer cette méthode, vous écrirez le script suivant dans une nouvelle cellule:
+A la fin de la remontée, lorsque m vaut 256, l'image, si on l'affiche est celle-ci:
+
+{{< img src="../images/woody6.png" caption="image d'origine" >}}
+
+> 2. Compléter la grille avec les lettres A, B, C, D pour montrer la permutation des blocs sur le dessin.
+
+On peut suivre la construction de l'image à différents niveaux de la pile d'appels recursifs, lors de la remontée. Pour faire ceci, ajouter les instructions suivantes en fin de la fonction `rotate`:
+
+```python
+        if m > 100:
+            image.show()
+```
+
+Puis ajouter et executer les lignes suivantes:
 
 ```python
 def quart_tour(image):
@@ -206,10 +221,36 @@ img.save("woody_endroit.jpg")
 img.show()
 ```
 
-> *Tester l'efficacité de cet algorithme*
+Pour suivre la construction de l'image, nous allons placer les repères suivants sur l'image d'origine:
+
+{{< img src="../images/woody1.jpg" caption="image quadrillée" >}}
+
+> 3. Pour chacune des images suivantes:
+
+> * quel est la valeur de m lorsque l'image est affichée?
+
+> * compléter les quadrants montrant la permutation dans chaque sous-partie
+
+> * dans quel ordre ces images sont elles affichées?
+
+{{< img src="../images/woody5.png" caption="image a" >}}
+
+{{< img src="../images/woody4.png" caption="image b" >}}
+
+
+{{< img src="../images/woody2.png" caption="image c" >}}
+
+{{< img src="../images/woody3.png" caption="image d" >}}
+
+
+
+
+### efficacité de la méthode
+*Evaluons l'efficacité de cet algorithme*
 
 > * Est-il plus rapide ou plus lent que votre premier algorithme?
-* Le nombre d'opérations significatives suit une loi de recurence: $T(n) = 4 \times T(\tfrac{n}{2}) + C \times n^2$ Cela confirme t-il votre reponse à la question pécédente?
+
+> * Le nombre d'opérations significatives suit une loi de recurence: $T(n) = 4 \times T(\tfrac{n}{2}) + C \times n^2$ Cela confirme t-il votre reponse à la question pécédente?
 
 On rappelle que l'intérêt de la méthode est surtout de ne PAS utiliser de nouvelle image *planPixels* comme précédemment. Il s'agit d'une transformation *en place*.
 
