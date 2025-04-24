@@ -195,7 +195,7 @@ def rotate(image,x0,y0,n):
 
 A la fin de la remontée, lorsque m vaut 256, l'image, si on l'affiche est celle-ci:
 
-{{< img src="../images/woody6.png" caption="image d'origine" >}}
+{{< img src="../images/woody6.png" caption="image finale" >}}
 
 > 2. Compléter la grille avec les lettres A, B, C, D pour montrer la permutation des blocs sur le dessin.
 
