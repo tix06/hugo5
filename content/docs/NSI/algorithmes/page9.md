@@ -73,8 +73,7 @@ On remplira cette image avec les pixels de l'image d'origine de la manière suiv
 > 3. placer ce pixel sur la nouvelle image en construction planPixels. Utiliser pour cela la methode putpixel((x,y),p) de l'objet `planPixels` où x et y sont les nouvelles coordonnées du pixel p que l'on veut dessiner: `planPixels.putpixel((x,y),p)`
 
 
-# Rotation d'une image
-## Premier algorithme: permutation de pixels
+# Rotation d'une image: permutation de pixels
 On va cherche à écrire un script Python qui réalise la rotation d'un quart de tour dans le sens horaire, comme sur l'image ci-dessous:
 
 {{< img src="../images/rotation.png" caption="principe de la rotation horaire d'un quart de tour" >}}
@@ -87,13 +86,13 @@ On va cherche à écrire un script Python qui réalise la rotation d'un quart de
 > 5. Donner la complexité de cet algorithme.
 
 *Réponse à la question 3: $x'=-y+hauteur-1$, $y'=x$.* 
-## Méthode diviser pour régner
+# Rotation par la méthode Diviser pour Régner
 On cherche maintenant à effectuer cette transformation, SANS utiliser de nouvelle image *planPixels* comme précédemment. 
 
 On utilisera l'image suivante (carrée) pour cette méthode: **woody.jpg** 
 
 {{< img src="../images/woody.jpg" link="../images/woody.jpg" caption="image woody.jpg" >}}
-### Compléter la fonction `echange_pix` suivante
+## Compléter la fonction `echange_pix` suivante
 
 ```python
 def echange_pix(image,x0,y0,x1,y1):
@@ -111,13 +110,13 @@ def echange_pix(image,x0,y0,x1,y1):
     """
     start = image.getpixel((x0,y0))
     end = image.getpixel((x1,y1))
-    image.putpixel((x0,y0),...)
+    image.putpixel((x0,y0),end)
     image.putpixel((x1,y1),...)
 
 
 ```
 
-### Compléter la fonction `echange_quadrant` suivante
+## Compléter la fonction `echange_quadrant` suivante
 Cette fonction permet d'echanger les pixels de 2 zones carrées de même dimensions.
 
 {{< img src="../images/deplaceBloc.png" caption="exemple: echange des blocs A et B" >}}
@@ -141,7 +140,7 @@ def echange_quadrant(image,x0,y0,x1,y1,n):
     """
     for x in range(n):
         for y in range(n):
-            echange_pix(image, # à compléter
+            echange_pix(image, x0+x,...# à compléter
 
 ```
 
@@ -150,7 +149,7 @@ def echange_quadrant(image,x0,y0,x1,y1,n):
 > * On veut echanger les blocs A et D, qui font chacun 120*120 pixels. Quelle instruction faut-il écrire, utilisant la procedure `echange_quadrant`.
 * Même question pour echanger les blocs A et C.
 
-### analyser la fonction `rotate`
+## analyser la fonction `rotate`
 La fonction `rotate` permet de faire tourner l'image d'un quart de tour par une méthode de type *diviser pour régner*:
 
 > Tourner l'image d'un quart de tour, c'est permuter les 4 parties d'une image dont on a permuté l'interieur de ses 4 parties...
@@ -209,6 +208,8 @@ On peut suivre la construction de l'image à différents niveaux de la pile d'ap
 Puis ajouter et executer les lignes suivantes:
 
 ```python
+from PIL import Image
+
 def quart_tour(image):
     largeur,hauteur=image.size
     assert largeur == hauteur
@@ -245,7 +246,7 @@ Pour suivre la construction de l'image, nous allons placer les repères suivants
 
 
 
-### efficacité de la méthode
+## efficacité de la méthode
 *Evaluons l'efficacité de cet algorithme*
 
 > * Est-il plus rapide ou plus lent que votre premier algorithme?

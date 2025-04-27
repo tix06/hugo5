@@ -20,6 +20,10 @@ Par défaut, de nombreuses applications sont susceptibles de traquer vos donnée
 
 {{< img src="../images/video_espion.png" link="https://www.francetvinfo.fr/internet/telephonie/video-un-espion-dans-la-poche_4507625.html" caption="Envoyé special, Francetvinfo.fr" >}}
 
+Voici un exemple de la promesse faite à l'utilisateur: l'incrustation des recommandations en réalité augmentée...
+
+{{< img src="../images/realite_augmentee.jpg" caption="realité augmentée. fiction ou réalité?" >}}
+
 # Les cartes numériques
 Elles offrent de nombreux avantages par rapport aux cartes papier.
 ## Géoportail
@@ -71,8 +75,12 @@ Mais ici:
 Une présentation en vidéo de cet algorithme:
 
 {{< img src="../images/dijkstra.png" caption="video - Lelivrescolaire.fr" >}}
+
 # Documents
 Livre Delagrave, activité 5 page 89
+
+# Suite du cours
+[principe de la geolocalisation](../geolocaliser)
 
 
 

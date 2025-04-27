@@ -5,6 +5,17 @@ Title : geolocaliser
 # Géolocaliser
 *Prérequis:* La lumière, transport d'une information par modulation [cours de PC 2nde](/docs/PC_2nde/physique/pages/page3/)
 
+## Traquer un telephone portable
+Dans la série *Person Of Interest*, le personnage principal, *Finch*, utilise une entité numérique, la *machine* pour effectuer une surveillance globale de la population, qu'il a lui même mise en place pour les États-Unis. La série soulève de nombreuses questions quant au respect de la vie privée.
+
+{{< img src="../images/POIS2E3.png" caption="voir extrait du film S2E3 13'" >}}
+
+*Questions:* 
+
+* *Cet extrait, vous parait-il réaliste?*
+* *Dans ce passage du film, quel dispositif détermine la position de Sophia? (le film evoque une antenne, mais c'est plus probablement le mobile de Sophia)*
+* *Quel dispositif partage cette position?*
+
 ## Mesurer le temps pour determiner une distance
 Les systèmes américains GPS et européens Galiléo permettent la *géolocalisation* par satellite d'un recepteur.
 
@@ -50,6 +61,9 @@ Pour déterminer la position précise du recepteur sur Terre, il faut utiliser l
 {{< img src="../images/videoGPS.png" caption="KEZAKO: Comment fonctionne un GPS?" >}}
 
 Pour optimiser le système, les satellites de navigation circulent sur une orbite moyenne à une altitude d'environ 20000 kilomètres. Compte tenu de cette donnée et de la nécessité que le récepteur puisse en permanence avoir quatre satellites visibles au-dessus de l'horizon, un système de navigation (GPS, Galileo, Beidou, Glonass) doit comporter environ 25 satellites de navigation opérationnels pour fournir une position, quelle que soit la position de l'utilisateur à la surface de la Terre. [GNNS-wikipedia](https://fr.wikipedia.org/wiki/Syst%C3%A8me_de_positionnement_par_satellites)
+
+
+Observer les orbites de différents systèmes de satellites sur l'animation suivante: [wikipedia](https://upload.wikimedia.org/wikipedia/commons/b/b4/Comparison_satellite_navigation_orbits.svg)
 
 ## Coordonnées terrestres
 La géolocalisation est un procédé qui permet de repérer une personne, un objet, un lieu sur une carte (le plus souvent numérique) à l’aide de ses coordonnées géographiques qui sont : 
@@ -101,3 +115,6 @@ Voici une trame affichée sur votre smartphone (utilisation de l’appli nmeaGPS
 {{< img src="../images/carte.png" >}}
 # Liens
 * activité de SNT sur la synchronisation des horloges: [vittasciences.fr](https://fr.vittascience.com/learn/tutorial.php?id=253/9.-synchroniser-des-horloges)
+
+# Suite du cours
+[services de geolocalisation](../services)
