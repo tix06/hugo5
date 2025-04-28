@@ -3,7 +3,7 @@ Title: indice de similarité avec la Terre
 ---
 
 # Creation d'une table unique
-On prépare un dataframe avec les données d'exoplanètes:
+On prépare un dataframe avec les données d'exoplanètes issues d'une BDD (TOUTES les exoplanètes):
 
 ```python
 # Toutes exoplanetes
@@ -47,6 +47,20 @@ df2
 
 ## Créer un dataframe avec les exoplanètes du systeme TOI
 
+Préparer un fichier *csv* ou *txt* avec tous les résultats de vos recherches sur les planètes *observées*. 
+
+{{< img src="../images/datas_P_TOI.png" caption="données issues des observables (transits)" >}}
+
+On peut même y ajouter les données des masses apportées par le document suivant:
+
+{{< img src="../images/donnees_TOI.png" caption="données des masses pour les planetes de TOI" >}}
+
+*Rappel: les masses des exoplanetes sont souvent exprimées en `M_J`, (en masses de Jupiter). Exprimer directement ces masses en `M_J`. Cela va necessiter de realiser une convertion:*
+
+$$mass = m \times M_{Terre} / M_J$$
+
+*m: masse de l'exoplanete `TOI_x` dans le tableau precedent, exprimée en masses Terre*.
+
 ```python
 df = pd.read_csv('donnees_planetes.txt',sep=';')
 G = 6.67e-11
@@ -74,6 +88,8 @@ df_new_col = df_new_col.rename(columns={'planete':'_name',
                                         'R_star':'star_radius'})
 df_new_col
 ```
+
+Et si votre fichier contient les informations de masse des exoplanetes `TOI_x`, alors il faudra nommer la colonne `mass` pour fusionner avec le tableau de la BDD.
 
 
 {{< img src="../images/df_TOI.png" caption="table des exoplanetes du systeme TOI" >}}

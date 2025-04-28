@@ -11,14 +11,16 @@ Ce TP va permettre d'explorer la zone du lycée d'Estienne d'Orves, à Nice, gra
 Aller sur le site Geoportail.
 
 ## Plan cadastral
-* Utiliser le fond de carte *plan cadastral*
+* Utiliser le fond de carte *IGN*. Localisez vous sur le lycée H. d'Estienne d'Orves à Nice.
+
+* Ajouter maintenant un calque: aller sur le menu *CARTES* puis choisir *parcelles cadastrales*
 
 
 {{< img src="../images/geoportail.png" caption="choix d'un fond de carte" >}}
 
 > **Question a:** **retrouvez les numéros de parcelles** correspondant au lycée. 
 
-* Choisir maintenant un fond de carte: aller sur le menu *CARTES* puis choisir *IGN*
+
 
 ## Surface
 Le menu de droite permet diverses actions comme ajouter des marqueurs, mesure des distances, etc...
