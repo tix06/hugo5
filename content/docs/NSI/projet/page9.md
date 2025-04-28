@@ -29,6 +29,8 @@ Année 2024-2025
 	* [planète 2](/scripts/astro/donnees-astep2024/TOI-270/TOI-270.01/TIC259377017-01_20240622_ASTEP-ANTARCTICA_R_measurements.csv)
 	* [planète 3](/scripts/astro/donnees-astep2024/TOI-270/TOI-270.02/TIC259377017-02_20230623_ASTEP-ANTARCTICA_R_measurements.csv)
 
+{{< img src="../images/donnees_TOI.png" caption="données des masses pour les planetes de TOI_270" >}}
+
 ## TOI-201
 Système avec possiblement 3 planètes. Seule la 2ème a été détectée par ASTEP. La profondeur du transit de la planète la plus proche à l’étoile est trop faible pour être détecté par ASTEP et ce n’est pas encore sûr si la 3ème peut transiter et sa période est en train d’être déterminée.
 
