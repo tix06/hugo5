@@ -103,12 +103,14 @@ On a vu un problème identique sur la gestion concurente des accès à une même
 
 Le TP2 plus bas permet d'explorer ces notions avec le multi-threading...
 
-# TP1 en console (UNIX) ou avec l'editeur de commandes (WIN)
-## Commencer par s'approprier les bases du langage en console LINUX
-> Faire le TP au paragraphe 3 LINUX de la page [Levasseur.xyz: NSI](https://www.levavasseur.xyz/NSI_T/Archi/Archi_Processus.html#partie_3)
+# Utiliser la console Linux
+## Les bases du langage en console LINUX
+* [Fiche résumé](/pdf/NSI/archi6_Linux.pdf)
+* [TP utilisant la console UNIX](https://mcoilhac.forge.apps.education.fr/site-nsi/Linux/4_TD_commandes_linux/)
+    <li>TP utilisant la console UNIX: <a href="https://mcoilhac.forge.apps.education.fr/site-nsi/Linux/4_TD_commandes_linux/">Lien</a></li>
 
-> Tester également les commandes suivantes au cours de ce TP:
-|
+
+
 ## Les commandes d'exploration
 * `PWD`: nom du repertoire courant
 * `cd ..`: remonter au repertoire parent
@@ -139,6 +141,31 @@ Pour la liste des processus obtenue par `ps`
 * TTY : le terminal utilisé
 * TIME : temps d'occupation du processeur
 * CMD : commande qui a lancé le processus
+* STAT : statut
+
+Les status possibles
+
+* R (Running et Runnable) : en cours d'exécution. Nous verrons que cela correspond aux états PRET (Runnable) ou ELU (Running) de la partie 2.
+* S (Sleeping) : endormi. Cela correspond à l'état BLOQUE de la partie 2.
+* D (Device) : en attente d'une ressource (généralement d'entrée/sortie) (le processus ne peut pas être interrompu). Cela correspond à l'état BLOQUE de la partie 2.
+
+Les trois états terminaux FINI :
+
+* T (sTopped) : terminé et va transmettre sa réponse à son parent. On libère une partie de la mémoire mais on garde encore des informations sur son état final.
+* Z (Zombie) : processus terminé ayant répondu mais dont le parent n'a pas encore eu le temps de totalement finir la destruction.
+* X (Dead) : processus terminé et détruit (vous ne devriez jamais voir de X dans votre liste).
+On peut trouver une deuxième lettre derrière l'état : il s'agit de la priorité du processus :
+
+* `<` : Priorité haute
+* `+` : Processus au premier plan
+* `s` : Leader de session
+* `l` : multi-theads
+* `N` : Priorité basse
+* `L` : ressources verrouillées en mémoire
+
+> Voir aussi le TP au paragraphe 3 LINUX de la page [Levasseur.xyz: NSI](https://www.levavasseur.xyz/NSI_T/Archi/Archi_Processus.html#partie_3)
+
+> Et l'exercice 3 sujet 1 metropole 2021 sur la fiche d'[exercices](/pdf/NSI/archi3_processus.pdf)
 
 ## La commande `top` :
 Cette commande est l'équivalent du gestionnaire de tâches de Windows. Elle apporte donc des renseignements sur la consommation mémoire, CPU, buffer et tous les processus en cours. Son intérêt est qu'elle apporte des statistiques de consommation en temps réel.

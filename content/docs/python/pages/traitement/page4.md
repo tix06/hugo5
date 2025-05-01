@@ -2,11 +2,41 @@
 Title: indice de similarité avec la Terre
 ---
 
-# Creation d'une table unique
-On prépare un dataframe avec les données d'exoplanètes issues d'une BDD (TOUTES les exoplanètes):
+# Indice de similarité avec la Terre
+## Creation d'une table unique
+### Import librairies
+
+```pyhon
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from matplotlib.widgets import Cursor
+```
+
+
+### Import BDD
+La base de données doit être téléchargée ici : [exoplanetes.db](/scripts/BDD/exoplanetes.db)
+
+On prépare un [dataframe](/docs/NSI/projet/page10/) avec les données d'exoplanètes issues d'une BDD (TOUTES les exoplanètes):
 
 ```python
-# Toutes exoplanetes
+# Toutes exoplanetes / BDD
+import sqlite3
+
+try:
+    conn = sqlite3.connect('exoplanetes.db')
+    cur = conn.cursor()
+    print("Base de données crée et correctement connectée à SQLite")
+
+    sql = "SELECT sqlite_version();"
+    cur.execute(sql)
+    res = cur.fetchall()
+    print("La version de SQLite est: ", res)
+    
+
+
+except sqlite3.Error as error:
+    print("Erreur lors de la connexion à SQLite", error)
 sql = "PRAGMA table_info(planetes_es);"
 cur.execute(sql)
 res = cur.fetchall()
@@ -20,7 +50,7 @@ dataset
 
 {{< img src="../images/exoplanetes_bdd.png" caption="table des exoplanetes" >}}
 
-## Créer un dataframe avec les données de la Terre
+### Créer un dataframe avec les données de la Terre
 
 ```python
 R_Jup = 71e6  # m
@@ -45,51 +75,47 @@ df2 = pd.DataFrame([planete1])
 df2
 ```
 
-## Créer un dataframe avec les exoplanètes du systeme TOI
+### Créer un dataframe avec les exoplanètes du systeme TOI
 
-Préparer un fichier *csv* ou *txt* avec tous les résultats de vos recherches sur les planètes *observées*. 
+Préparer un fichier *csv* ou *txt* avec tous les résultats de vos recherches sur les planètes *observées*. Ou {{< a link="/scripts/BDD/donnees_transit_planetes.txt" caption="Telecharger" >}} un exemple de fichier. Nommez le **`donnees_transit_planetes.txt`** pour la suite.
 
-{{< img src="../images/datas_P_TOI.png" caption="données issues des observables (transits)" >}}
-
-On peut même y ajouter les données des masses apportées par le document suivant:
+Les données des masses ont été ajoutées à partir du document suivant, converties en `M_J`:
 
 {{< img src="../images/donnees_TOI.png" caption="données des masses pour les planetes de TOI" >}}
 
-*Rappel: les masses des exoplanetes sont souvent exprimées en `M_J`, (en masses de Jupiter). Exprimer directement ces masses en `M_J`. Cela va necessiter de realiser une convertion:*
+
+*Rappel: les masses des exoplanetes sont souvent exprimées en `M_J`, (en masses de Jupiter). Pour exprimer directement ces masses en `M_J`, cela va necessiter de realiser une conversion:*
 
 $$mass = m \times M_{Terre} / M_J$$
 
 *m: masse de l'exoplanete `TOI_x` dans le tableau precedent, exprimée en masses Terre*.
 
 ```python
-df = pd.read_csv('donnees_planetes.txt',sep=';')
+# creation dataframe a partir du fichier
 G = 6.67e-11
-R_Jup = 71e6 
-M_Jup = 6.9911e7
-df['tau']=(df['fin_transit']-df['debut_transit'])*24*3600
-df['delta']=1-df['lum_min']
+R_Jup = 71e6 # m
+M_Jup = 6.9911e7 # kg
+M_sol = 1.9885e30 # kg
+R_sol = 696.342e6 # m
 
-df['M_star']=7.158780e+29
-df['R_star']=257512600.0
-df['R_p']= np.sqrt(df['delta']) * df['R_star']
-df['radius']=df['R_p']/R_Jup
+df['R_star']=df['star_radius']*R_sol # m
+df['M_star']=df['star_mass']*M_sol # kg
+
+df['tau']=(df['fin_transit']-df['debut_transit'])*24*3600 # s
+df['delta']=1-df['lum_min'] # sans dim
+df['R_p']= np.sqrt(df['delta']) * df['R_star'] # m
+df['radius']=df['R_p']/R_Jup # en R_J
 # vitesse planete : V_p = 2*R_star/tau
 df['V_p']= 2*df['R_star']/df['tau']
 # rayon orbital : r = G*M_star/V_p**2
 df['r_orb']= G * df['M_star']/df['V_p']**2
 # periode revolution: T = 2*np.pi*r/V_p
 df['T'] = 2*np.pi*df['r_orb']/df['V_p']
-df['T_jours'] = df['T']/(24*3600)
-df_new_col = df[['planete','radius','T_jours','etoile','M_star','R_star']]
-df_new_col = df_new_col.rename(columns={'planete':'_name',
-                                        'T_jours':'orbital_period',
-                                        'etoile':'star_name',
-                                        'M_star':'star_mass',
-                                        'R_star':'star_radius'})
-df_new_col
+df['orbital_period'] = df['T']/(24*3600) # en jours de 24h
+df = df[['_name','radius','orbital_period','star_name','star_mass','star_radius']]
+df
 ```
 
-Et si votre fichier contient les informations de masse des exoplanetes `TOI_x`, alors il faudra nommer la colonne `mass` pour fusionner avec le tableau de la BDD.
 
 
 {{< img src="../images/df_TOI.png" caption="table des exoplanetes du systeme TOI" >}}
