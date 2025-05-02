@@ -10,7 +10,9 @@ Title: architecture 2
 
 *Cours*:
 
-* Modèle d'architecture Von Neumann: [Lien](/docs/NSI_1/architecture/page2/)
+* Histoire et modèle d'architecture Von Neumann / Harvard: [Lien](/docs/NSI_1/architecture/page1/)
+* Le fonctionnement d'un processeur: [Lien](/docs/NSI_1/architecture/page2/)
+* Langage assembleur: [Lien](/docs/NSI_1/architecture/page3/)
 
 # Qu'est ce qu'un ordinateur?
 Un ordinateur est une *machine* qui traite de *l'information*, stockée dans la *mémoire*, à l'aide du *processeur*. Les instructions de ces traitements sont aussi stockés dans la mémoire, sous forme de *programmes*.

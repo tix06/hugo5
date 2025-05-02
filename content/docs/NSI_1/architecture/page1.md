@@ -2,6 +2,18 @@
 Title: architecture 1
 ---
 
+*Séquence composée de 3 parties:*
+
+* TP1 Composer son ordinateur à partir d'un site commercial: [Lien](/docs/NSI_1/architecture/page5/)
+* TP2: Comment fonctionne un processeur? [Lien](/docs/NSI_1/architecture/page51/)
+* TP3: Programmes plus evolués, de python à l'assembleur: [Lien](/docs/NSI_1/architecture/page3/)
+
+*Cours*:
+
+* Histoire et modèle d'architecture Von Neumann / Harvard: [Lien](/docs/NSI_1/architecture/page1/)
+* Le fonctionnement d'un processeur: [Lien](/docs/NSI_1/architecture/page2/)
+* Langage assembleur: [Lien](/docs/NSI_1/architecture/page3/)
+
 # L'Histoire de l'Ordinateur
 
 En 1623 Wilhelm Schickard ou bien Blaise Pascal en 1642 créent des machines munies de rouages mécaniques pour faire des additions et des soustractions. Il ne s'agit pas encore d'ordinateurs, car celles-ci n'ont qu'une seule fonction.
@@ -90,6 +102,17 @@ Ces machines ont d'autres defauts:
 *Remarque:* l'ENIAC sera améliorée en 1948: elle intègre alors la notion d'instruction et de programme, ce qui correspond au modèle classique d'ordinateur à programme enregistré.<br>
 C'est aussi le *premier ordinateur binaire*, ne comportant plus de pièces mécaniques. (Mauchly et Eckert).<br>
 Il exécute son premier programme le 12 avril, et son premier programme de production le 17 avril. La simulation de Monté Carlo exécutée le 12 avril 1948 par l'ENIAC est la plus ancienne trace de programme enregistré connue à ce jour.
+
+## Les premiers ordinateurs fabriqués en série
+* IBM 650, le premier ordinateur fabriqué en série (1955)
+
+{{< img src="../images/ibm650.jpg" >}}
+
+Cet ordinateur n'a pas encore de transistors mais des tubes à vide.
+
+* IBM 7090, le premier ordinateur à transistors (1959)
+
+{{< img src="../images/ibm7090.png" >}}
 
 # Machines universelles
 * **1945** En tirant les conclusions de réalisations électroniques secrètes menées pendant la guerre, deux documents apparaissent et definissent ce que l'on nommera *ordinateur*, le calculateur numérique à programme enregistré. Les motivations des deux hommes sont différentes:
@@ -219,6 +242,9 @@ La figure suivante montre l'évolution du nombre de transistors pour un même é
 
 {{< img src="../images/processeur3.png" caption="illustration de la loi de Moore - source wikipedia" >}}
 
+L'image ci-dessous illustre, elle, l'evolution de la finesse de gravure
+
+{{< img src="../images/evol_transistors.png" caption="illustration de la finesse de gravure dans le temps - source eskool.gitlab.io/" >}}
 
 # Architecture Von Neumann vs Harvard
 La différence de ces architectures repose sur la gestion des mémoires pour les programmes et données:
@@ -232,15 +258,25 @@ Voir la video suivante expliquant la différence entre ces 2 architectures:
 
 L'architecture Harvard est utilisée pour les microcontrôleurs, pour lesquels le besoin de miniaturisation amène à intégrer tous les composants internes dans une même puce (onchip). Les microcontrôleurs embarquent une mémoire de type EEPROM *(electrically erasable programmable read only memory 64-256ko)*, suffisement rapide d'accès pour l'utiliser directement, et sans avoir besoin de charger le programme dans une nouvelle RAM.
 
-*source image: extrait de la video youtube:*[MOOC Arduino, chaine Paul Pinault](https://www.youtube.com/watch?v=cQjllS45ReU)
 
-{{< img src="../images/processeur7.png" caption="microcontroleur: systeme onchip" >}}
 
 La machine avec architecture Harvard peut aussi gérer une mémoire de masse (persistante) comme un disque dur, ou carte flash externe. Il s'agit alors d'une extension, utile pour augmenter la capacité de la mémoire flash interne, qui est souvent réduite.
 
 {{< img src="../images/processeur8.png" caption="architecture Harvard" >}}
 
 *Compléments sur la différence des architectures: [www.arrow.com/fr-fr/research-and-events](https://www.arrow.com/fr-fr/research-and-events/articles/mpu-v-mcu)*
+
+# Les Systeme On Chip
+Un *Circuit intégré*, c'est un circuit électronique conventionnel qui a été mis sur une plaque de silicium de quelques $cm^2$. La consommation électrique, et l'echauffement sont beaucoup inférieurs, et la qualité bien supérieure en rapport aux premieres machines qui n'en disposaient pas. Cela a permis une diminution du coût.
+
+*source image: extrait de la video youtube:*[MOOC Arduino, chaine Paul Pinault](https://www.youtube.com/watch?v=cQjllS45ReU)
+
+{{< img src="../images/processeur7.png" caption="microcontroleur: systeme onchip" >}}
+
+
+Un « système sur une puce » est un système complet embarqué sur une seule puce ("circuit intégré"), comprenant de la mémoire, un ou plusieurs microprocesseurs, des périphériques d'interface (processeur graphique GPU...), et autres composants nécessaires à la composition du SoC complet... 
+
+Voir l'excellent cours sur [https://eskool.gitlab.io/tnsi/soc/](https://eskool.gitlab.io/tnsi/soc/)
 
 # Liens et bibliographie
 * [cours sur l'architecture Von Neumann lattice.cnrs.fr](https://www.lattice.cnrs.fr/sites/itellier/poly_intro_info/informatique004.html#fig:Von%20Neumann)
