@@ -2,12 +2,15 @@
 Title: images numeriques
 ---
 
-# Images numeriques
+# Créer des images numeriques - Partie 1
 Les images numériques matricielles sont des tableaux de pixels. On peut concevoir images de *synthèse* à partir d'instructions en python (ou autre langage). Des librairies comme `PIL` permettent de manipuler les pixels comme les données d'une table.
 
 Dans cette seance, nous allons:
 
 * créer des images de synthèse
+
+{{< img src="../images/pixart1.png" >}}
+
 * modifier des images existantes.
 
 {{< img src="../images/img5.png" >}}
@@ -134,7 +137,7 @@ def rectangle(couleur,h,l) :
 			f.write(couleur+'\n')
 ######## appel fonction ############################			
 rectangle('255 0 0',largeur,hauteur)
-########### fermeture fichier ############################
+########### fermeture fichier ######################
 f.close()
 ```
 
@@ -158,7 +161,64 @@ Attention à bien modifier le nom du fichier généré. Le nommer par exemple `d
 
 {{< img src="../images/img3.png" link="../images/img3.png" caption="drapeau belge. Utiliser une boucle bornée pour créer le drapeau ligne par ligne." >}}
 
-# Lecture puis traitement des pixels de l'image
+## motifs périodiques
+> * pour chaque nouveau défi, vous allez créer un NOUVEAU fichier python.
+> * Donner un nom explicite au fichier, par exemple `pixart1.py` pour le premier défi, `pixart2.py` pour le 2e...
+
+Dans chaque nouveau fichier, vous allez écrire le script qui va créer les images suivantes, à partir des matrices de valeurs binaires, `mat`. Dans cette matrice, vous placerez les valeurs en liste (une liste par ligne), et placerez ces lignes dans la matrice `mat`. Une valeur 0 pourra coder par exemple le bleu, et la valeur 1 le rouge (l'image ne contient que 2 couleurs).
+
+* pixart1.ppm
+
+{{< img src="../images/pixart1.png" >}}
+
+```python
+from PIL import Image
+largeur=12
+hauteur=12
+
+f=open('pixart1.ppm','w') 
+
+############ entête du fichier ##################
+f.write('P3'+'\n') 
+f.write(str(largeur)+' '+str(hauteur)+'\n')
+# valeur max pour l'intensité des couleurs :
+f.write('255'+'\n')
+############### creation matrice ################
+mat = []
+for i in range(hauteur):
+    ligne = []
+    for j in range(largeur):
+        ligne.append(0)
+        ligne.append(...
+    mat.append(...
+#########  declaration de la fonction ############
+def creation_image(M,h,l) :
+    """ 
+    @param couleur: str
+    couleur est un triplet d'entiers, code RGB
+    @example: dessiner un rectangle entierement noir
+    >>> rectangle('0 0 0',largeur,hauteur)
+    """
+    for i in range(h) :
+        for j in range(l):
+            if M[i][j] == 1:
+                couleur = '255 0 0'
+            else:
+                couleur = '0 0 255'
+            f.write(couleur+'\n')
+######## appel fonction ############################	
+creation_image(mat,largeur,hauteur)		
+########### fermeture fichier ######################
+f.close()
+```
+
+* pixart2.ppm
+
+{{< img src="../images/pixart2.png" >}}
+
+Pour chacune de ces images, vous complèterez le script de la [fiche de cours](/pdf/NSI_1/python_grille.pdf).
+
+# Lecture puis traitement des pixels de l'image - Partie 2
 ## Lire les pixels de l'image
 Le module PIL permet de manipuler divers formats d'images plus ou moins complexes sans avoir à se préoccuper de la façon dont sont réellement codés ces formats.
 

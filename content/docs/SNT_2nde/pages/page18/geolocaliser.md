@@ -105,7 +105,7 @@ Sur cette trame:
 # Positionner
 Voici une trame affichée sur votre smartphone (utilisation de l’appli nmeaGPS):
 
-`$GPGGA,093642.126,4342.1254,N,00103.2814,O,1,04,3.2,200.2,M,,,,0000*0E$`
+$GPGGA,093642.126,4342.1254,N,00103.2814,O,1,04,3.2,200.2,M,,,,0000*0E$
 
 * Déterminer l'heure de réception de la trame. On précisera les heures, les minutes et les secondes.
 * Déterminer les coordonnées géographiques envoyées par la trame NMEA (DM)
