@@ -196,8 +196,8 @@ def creation_image(M,h,l) :
     """ 
     @param couleur: str
     couleur est un triplet d'entiers, code RGB
-    @example: dessiner un rectangle entierement noir
-    >>> rectangle('0 0 0',largeur,hauteur)
+    @example: dessiner un pixel entierement noir
+    >>> couleur = '0 0 0'
     """
     for i in range(h) :
         for j in range(l):
