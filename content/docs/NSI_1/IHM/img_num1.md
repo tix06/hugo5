@@ -194,7 +194,7 @@ for i in range(hauteur):
 #########  declaration de la fonction ############
 def creation_image(M,h,l) :
     """ 
-    @param couleur: str
+    @variable couleur: str
     couleur est un triplet d'entiers, code RGB
     @example: dessiner un pixel entierement noir
     >>> couleur = '0 0 0'

@@ -90,6 +90,9 @@ De nos jours, les notations équivalentes en degrés minutes décimales (DM) ou 
 | Degrés, minutes, secondes | 48°13'32.9988'' |
 
 
+
+{{< img src="/images/video.png" link="https://www.youtube.com/watch?v=Mo0IMbcg8DM" caption="Video sur les conversions DD<->DMS" >}}
+
 # Trame NMEA
 Protocole NMEA 0183 : (National Marine Electronics Association): protocole utilisé par les récepteurs GPS pour fournir la localisation sous une forme de trame normalisée facilement décodable. Ces données sont mises dans un format standard :
 
