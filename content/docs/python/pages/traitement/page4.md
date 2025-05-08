@@ -79,6 +79,19 @@ df2
 
 Préparer un fichier *csv* ou *txt* avec tous les résultats de vos recherches sur les planètes *observées*. Ou {{< a link="/scripts/BDD/donnees_transit_planetes.txt" caption="Telecharger" >}} un exemple de fichier. Nommez le **`donnees_transit_planetes.txt`** pour la suite.
 
+**Importer les données du fichier:**
+
+```python
+df = pd.read_csv('donnees_transit_planetes.txt',sep='\t')
+df
+```
+
+*Les données du fichier sont importées avec la fonction `read_csv`:*
+
+* *Le paramètre `sep` doit correspondre au caractère de séparation: `\t` pour un espace tabulation, sinon `,` ou `;` selon le logiciel tableur utilisé.*
+* *`header` est un autre paramètre optionel, pour préciser le numero de ligne qui contient les en-tête de colonne*.
+
+
 Les données des masses ont été ajoutées à partir du document suivant, converties en `M_J`:
 
 {{< img src="../images/donnees_TOI.png" caption="données des masses pour les planetes de TOI" >}}
@@ -123,7 +136,7 @@ df
 ## Concatenation des 3 tableaux
 
 ```python
-dataset = pd.concat([dataset,df2,df_new_col],ignore_index = True)
+dataset = pd.concat([dataset,df2,df],ignore_index = True)
 dataset
 ```
 
@@ -134,15 +147,13 @@ Ajout d'une colonne IST, indice de similarité avec la Terre: voir methode de ca
 
 
 ```python
-# Recuperer la valeur de M_earth et l'exprimer en M_Jup
 M_earth = float(dataset[dataset['_name']=='earth']['mass'])
-# idem avec R_earth
 R_earth = float(dataset[dataset['_name']=='earth']['radius'])
 # definir un coefficient adimentionné pour l'IST
 # et calculer pour toutes les planetes du tableau
 dataset['IST'] = 1-abs(dataset['radius']-R_earth)/(dataset['radius']+R_earth)
 # trier
-dataset.sort_values('IST', ascending=False, inplace=True)
+dataset.sort_values('IST', ascending=False, inplace=True, ignore_index=True)
 dataset = dataset[['_name','planet_status','mass','radius','orbital_period','semi_major_axis','eccentricity','IST']]
 dataset[dataset['IST']>0]
 ```
@@ -150,6 +161,8 @@ dataset[dataset['IST']>0]
 *L'IST a été calculé sur la seule valeur du rayon de la planete*
 
 {{< img src="../images/tab_IST.png" caption="liste ordonnée par IST decroissant" >}}
+
+Le tri se fait avec l'instruction `dataset.sort_values('IST', ascending=False, inplace=True)`. On choisit de numéroter les lignes de dataset après le tri.
 
 Puis rechercher dans cette table nos exoplanètes de TOI:
 

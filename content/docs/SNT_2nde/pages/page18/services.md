@@ -25,7 +25,30 @@ Voici un exemple de la promesse faite à l'utilisateur: l'incrustation des recom
 {{< img src="../images/realite_augmentee.jpg" caption="realité augmentée. fiction ou réalité?" >}}
 
 # Les cartes numériques
-Elles offrent de nombreux avantages par rapport aux cartes papier.
+Les services de cartographie numérique, comme *geoportail* ou *openstreetmap* mettent à disposition des images géoréférencées, avec plusieurs profondeur de zoom disponibles. A ces cartes sont ajoutés des repères avec des lieux d’intérêt.
+
+*Comment gère t-on la profondeur de zoom?* Pour une même zone géographique, le service stocke des tuiles: ce sont les images assemblées, centrées autour du point central, proposées à certaines échelles. Seules certaines échelles sont disponibles:
+
+{{< img src="../images/pyramide.png" caption="*Les pyramides des caches d’images du Géoportail pour le WMTS comportent 21 niveaux de zoom.*" >}}
+
+*images issue de [geoservices.ign.fr](https://geoservices.ign.fr/documentation/services/services-deprecies/images-tuilees-wmts-ogc)*
+
+
+Une carte est donc constituée:
+* d’un fond de carte constitué avec des tuiles: il s’agit d’images figurant un fragments de la carte, qui, rassemblées à la façon d’un puzzle, forment le fond de carte.
+* des calques, qui ajoutent certaines informations pour enrichir la carte (altimétrie, cadastre,…). Ils ont une transparence.
+* de POI: points of interest 
+d’un repère de coordonnées, dont la norme est Dgrés décimaux (DD).
+
+{{< img src="../images/zoom1.png" caption="détails sur geoservices.ign.fr" >}}
+
+Dans ce dernier exemple, chaque tuile est une image matricielle: elle peut être agrandie mais sans détails supplémentaires jusqu’au chargement d’une nouvelle tuile.
+Alors que les quadrillages sont toujours aussi nets: ce sont des images vectorielles ajoutées.
+
+*image issue de: [geoservices.ign.fr](https://geoservices.ign.fr/documentation/services/services-deprecies/images-tuilees-wmts-ogc)*
+
+Voir l'activité compléte ici: [Lien vers pdf](/pdf/SNT/carte_num.pdf)
+
 ## Géoportail
 Les cartes de{{< a link="https://www.geoportail.gouv.fr/carte" caption="Géoportail" >}}
 Elles permettent de zoomer, et ainsi de modifier dynamiquement l'echelle, mais aussi de mesurer une surface, créer un itinéraire, ... {{< a link="https://www.sport-nature.net/astuces-geoportail/" caption="voir ici" >}}
@@ -34,7 +57,13 @@ Elles permettent de zoomer, et ainsi de modifier dynamiquement l'echelle, mais a
 
 Les fichiers d’itinéraires sont un autre exemple de données standardisées afin de pouvoir être échangées entre applis de cartes numériques: c’est le format .GPX
 
-Voir le [TP Cartographie numerique](../tp_OSM)
+## Carte et image numérique
+[Activité sur la structure des cartes numériques](/pdf/SNT/carte_num.pdf)
+
+## Travaux pratiques
+* [TP1 Cartographie numerique, marqueurs et cadastre](../tp_OSM)
+* [TP2 itinéraire et croisière](../tp_croisiere)
+
 
 # Calcul d'initéraire
 L’ensemble des itinéraires peut être représenté à l’aide d’un graphe pondéré. Les noeuds sont des intersections, souvent des villes, croisements, points d’interêt. Les arêtes sont les routes.
@@ -76,8 +105,11 @@ Une présentation en vidéo de cet algorithme:
 
 {{< img src="../images/dijkstra.png" caption="video - Lelivrescolaire.fr" >}}
 
-# Documents
-Livre Delagrave, activité 5 page 89
+# Documents et liens
+* Livre Delagrave, activité 5 page 89
+Cartographie numérique pour débutant:  [blog](https://ig.hypotheses.org/1363)
+* HTTP request make your own map: [geoservices.ign.fr](https://geoservices.ign.fr/documentation/services/services-deprecies/images-tuilees-wmts-ogc)
+
 
 # Suite du cours
 [principe de la geolocalisation](../geolocaliser)
