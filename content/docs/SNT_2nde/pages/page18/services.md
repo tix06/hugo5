@@ -27,7 +27,7 @@ Voici un exemple de la promesse faite à l'utilisateur: l'incrustation des recom
 # Les cartes numériques
 Les services de cartographie numérique, comme *geoportail* ou *openstreetmap* mettent à disposition des images géoréférencées, avec plusieurs profondeur de zoom disponibles. A ces cartes sont ajoutés des repères avec des lieux d’intérêt.
 
-*Comment gère t-on la profondeur de zoom?* Pour une même zone géographique, le service stocke des tuiles: ce sont les images assemblées, centrées autour du point central, proposées à certaines échelles. Seules certaines échelles sont disponibles:
+*Comment gère t-on la profondeur de zoom?* Pour une même zone géographique, le service stocke des tuiles: ce sont les images assemblées, géoréférencées autour du point central, proposées à certaines échelles. Seules certaines échelles sont disponibles:
 
 {{< img src="../images/pyramide.png" caption="*Les pyramides des caches d’images du Géoportail pour le WMTS comportent 21 niveaux de zoom.*" >}}
 
@@ -40,10 +40,12 @@ Une carte est donc constituée:
 * de POI: points of interest 
 d’un repère de coordonnées, dont la norme est Dgrés décimaux (DD).
 
+*Les calques* servent à regrouper des objets, par ordre d'empilement.
+
 {{< img src="../images/zoom1.png" caption="détails sur geoservices.ign.fr" >}}
 
-Dans ce dernier exemple, chaque tuile est une image matricielle: elle peut être agrandie mais sans détails supplémentaires jusqu’au chargement d’une nouvelle tuile.
-Alors que les quadrillages sont toujours aussi nets: ce sont des images vectorielles ajoutées.
+Dans ce dernier exemple, chaque tuile est une image **[matricielle](/docs/SNT_2nde/pages/page5/photo_num1/)**: elle peut être agrandie mais sans détails supplémentaires jusqu’au chargement d’une nouvelle tuile.
+Alors que les quadrillages sont toujours aussi nets: ce sont des images **vectorielles** ajoutées.
 
 *image issue de: [geoservices.ign.fr](https://geoservices.ign.fr/documentation/services/services-deprecies/images-tuilees-wmts-ogc)*
 

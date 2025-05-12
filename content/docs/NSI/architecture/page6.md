@@ -39,7 +39,7 @@ Cet algorithme de chiffrement utilise une fonction périodique pour transformer 
 
 | a | b | c | d | e | f | g | h | i | j | k | l | m | n | o | p | q | r | s | t | u | v | w | x | y | z |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 |
+|0| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 |
 
 
 
@@ -65,13 +65,15 @@ Le chiffrement par {{< a link="https://fr.wikipedia.org/wiki/Chiffrement_par_sub
 
 $$x \rightarrow x + cle ~[26]$$
 
-Mais il peut y avoir d'autres fonctions plus complexes utilisées. Voire, même aucune fonction, mais une table de correspondance entre lettre en clair et symbole chiffré. La clé aurait alors la longueur de l'alphabet.
+La fonction utilisée est une fonction *périodique*, issue de l'arithmétique modulaire. 
+
 
 Le chiffrement par monosubstitution a été également utilisé par différentes méthodes utilisant une table.
 
 {{< img src="../images/polybe.png" caption="Carré de Polybe - le mot « bonjour » est ainsi chiffré par le carré de Polybe :12 34 33 24 34 45 42 - wikipedia" >}}
 
-Vous trouvez cette méthode de chiffrement trop simpliste? Regardez alors sa déclinaison avec le{{< a link="https://fr.wikipedia.org/wiki/Chiffre_de_Playfair" caption="chiffrement de Playfair" >}}
+
+Vous trouvez ces méthodes de chiffrement trop simpliste? Regardez alors sa déclinaison avec le{{< a link="https://fr.wikipedia.org/wiki/Chiffre_de_Playfair" caption="chiffrement de Playfair" >}}
 
 {{< img src="../images/playfair.png" link="https://www.youtube.com/watch?v=JMkGYoT3-Rw" caption="VIDEO: chiffrement de Playfair - youtube - Astuces et tutoriels" >}}
 ### Decryptage par analyse fréquentielle

@@ -62,8 +62,8 @@ Les valeurs des couleurs des pixels sont alors mises les unes à la suite des au
 ```
 P1
 5 6
-0 1 1 1 0
-0 0 0 0 1
+0 1 1 1 0 1
+0 0 0 0 1 1
 ...
 ```
 
@@ -121,10 +121,12 @@ Le codage des couleurs utilise la synthèse additive. Voir animation sur Algorea
 P3
 3 2
 255 0 0 0 255 0 0 0 255 255 255 255
+255 0 0 0 255 0
 # matrice
 pix = [
 [[255,0,0],[0,255,0]],
-[[0,0,255],[255,255,255]]
+[[0,0,255],[255,255,255]],
+[[255,0,0],[0,255,0]]
 ]
 ```
 
