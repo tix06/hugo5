@@ -31,7 +31,8 @@ Ainsi, si vous envoyez un texte chiffré sur un canal non sécurisé, le texte c
 ## Chiffrement symétrique - definition
 Le chiffrement symétrique utilise la même clé (ou la même table) pour chiffrer et déchiffrer le message. L'algorithme peut être connu par l'adversaire. Mais le secret repose sur celui de la *clé*.
 
-## Le chiffrement par décalage, ou chiffre de Caesar
+# Le chiffrement par décalage, ou chiffre de Caesar
+## Principe
 Le chiffre de César fonctionne par décalage des lettres de l'alphabet. 
 
 {{< img src="../images/Caesar3.png" caption="Chiffrement par décalage - wikipedia" >}}
@@ -42,11 +43,16 @@ Cet algorithme de chiffrement utilise une fonction périodique pour transformer 
 |0| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 |
 
 
+Le chiffrement par {{< a link="https://fr.wikipedia.org/wiki/Chiffrement_par_substitution" caption="substitution monoalphabetique" >}} utilise une fonction avec *modulo*:
+
+$$x \rightarrow x + cle ~[26]$$
+
+La fonction utilisée est une fonction *périodique*, issue de l'arithmétique modulaire. 
 
 > Compléter l'algorithme du chiffrement de César. On suppose qu'il existe une clé `c` correspondant au décalage utilisé. Le message clair est `m` et le message chiffré est `m_chiffre`
 
 ```python
-m = ""
+m_chiffre = ""
 Pour chaque lettre l du message m:
   l_chiffre = ...
   m_chiffre = ...
@@ -54,42 +60,51 @@ Pour chaque lettre l du message m:
 
 *On peut utiliser les fonctions `numero(l:str)->int` et `caractere(n:int)->str`*
 
-### Facilité du décryptage
-
 > **monosubstitution par décalage ou par substitution:** Une lettre du message clair va t-elle donner différentes lettres chiffrées, ou une seule?
+
+## Facilité du décryptage
+Pour decrypter le message, on peut tester une à une toutes les clés, jusqu'à découvrir un message intelligible:
+
+```
+m_dechiffre = ""
+pour chaque valeur i dans {0,25}:
+    pour chaque lettre l de m_chiffre:
+        l_dechiffre = ...
+        m_dechiffre = ...
+```
+
 
 > **Décryptage par FORCE BRUTE**: Combien y-a-t-il de clés possibles à essayer pour celui qui réalise le décryptage? Conclure.
 
-### Un chiffrement par substitution monoalphabetique
-Le chiffrement par {{< a link="https://fr.wikipedia.org/wiki/Chiffrement_par_substitution" caption="substitution monoalphabetique" >}} utilise une fonction avec *modulo*:
+## Substitution monoalphabetique utilisant une table
 
-$$x \rightarrow x + cle ~[26]$$
-
-La fonction utilisée est une fonction *périodique*, issue de l'arithmétique modulaire. 
 
 
 Le chiffrement par monosubstitution a été également utilisé par différentes méthodes utilisant une table.
 
 {{< img src="../images/polybe.png" caption="Carré de Polybe - le mot « bonjour » est ainsi chiffré par le carré de Polybe :12 34 33 24 34 45 42 - wikipedia" >}}
 
+Le code issu du carré de Polybe a été utilisé par les prisonniers, qui transmettaient leur message en tapant sur les murs {{< a link="https://fr.wikipedia.org/wiki/Tap_code" caption="Tap code" >}}
 
 Vous trouvez ces méthodes de chiffrement trop simpliste? Regardez alors sa déclinaison avec le{{< a link="https://fr.wikipedia.org/wiki/Chiffre_de_Playfair" caption="chiffrement de Playfair" >}}
 
 {{< img src="../images/playfair.png" link="https://www.youtube.com/watch?v=JMkGYoT3-Rw" caption="VIDEO: chiffrement de Playfair - youtube - Astuces et tutoriels" >}}
-### Decryptage par analyse fréquentielle
-Le code issu du carré de Polybe a été utilisé par les prisonniers, qui transmettaient leur message en tapant sur les murs {{< a link="https://fr.wikipedia.org/wiki/Tap_code" caption="Tap code" >}}
+
+## Decryptage par analyse fréquentielle
+
 Le **problème** avec ce type de chiffrement monoalphabetique, est qu'il est possible de repérer comment sont transformées certaines lettres à partir de l'**analyse fréquentielle** du message chiffré.
 
 On peut alors utiliser la frequence des lettres pour dechiffrer et comparer avec la frequence moyenne dans une langue. (200 caracteres suffisent). Il y a aussi tout un tas de statistique, comme les lettres uniques, doubles lettres, finales, etc... C'est un marqueur suffisant pour savoir comment le code est fait.
 
 
 {{< img src="../images/frequenceA_Z.gif" caption="frequence des lettres en français, calculée sur la lecture de plusieurs ouvrages classiques (10 millions de caracteres)" >}}
+
 Cette analyse frequentielle est plus difficile *(mais pas impossible)* dans le cas du chiffrement de Playfair, car celui-ci utilise une methode de substitution d'un groupe de 2 lettres: c'est une substitution *polyalphabetique*. Le nombre de combinaisons possibles avec 2 lettres est alors de $26^2 = 676$.
 
 
 
-### Une amélioration: Substitution polyalphabétique
-L'analyse des fréquences est moins pertinente lorsque le message a été chiffré avec un chiffrement polyalphabétique (qui tend à rendre aléatoire la fréquence des lettres).
+# Substitution polyalphabétique
+## Principe
 
 **Polyalphabetique:** Se dit d'un chiffre où un groupe de n lettres est codé par un groupe de n symboles. Le chiffrement *Playfair*, vu plus haut s'apparente à une substitution polyalphabetique, puisqu'il substitue des digrammes (groupes de 2 lettres) dans le texte d'origine.
 
@@ -101,11 +116,30 @@ On définit la clé '123' qui indique que le premier caractère sera décalé d'
 
 Le mot : WIKIPEDIA donne donc dans ce cas XKNJRHEKD.
 
-Mais si on chiffre le mot : AAAAAAAAA cela donnera BCDBCDBCD. La lettre A ne donne pas toujours la même correspondance chiffrée. Mais on peut analyser la périodicité et en déduire la longueur de la clé. La connaissance de la longueur de la clé est essentielle pour pouvoir pratiquer l'analyse frequentielle.
+Mais si on chiffre le mot : AAAAAAAAA cela donnera BCDBCDBCD. La lettre A ne donne pas toujours la même correspondance chiffrée. 
 
-Une même lettre ne donne pas toujours le même caractère chiffré, sauf si on connait la longueur de cette clé. (voir aussi le [chiffrement de Vigenère](https://fr.wikipedia.org/wiki/Chiffre_de_Vigen%C3%A8re)) qui utilise ce principe de décalage à partir d'une clé exprimée par un mot.
+**Chiffrement de Vigenère**:
 
-### La machine{{< a link="https://fr.wikipedia.org/wiki/Enigma_(machine)" caption="Enigma" >}}
+Le [chiffrement de Vigenère](https://fr.wikipedia.org/wiki/Chiffre_de_Vigen%C3%A8re#Dans_la_culture) utilise ce principe de décalage à partir d'une clé exprimée par un mot.
+
+{{< img src="../images/vigenere2.jpg" caption="image issue du site books.openedition.org" >}}
+
+C'est souvent ce type de codage qui est proposé dans la litterature et le cinema.
+
+{{< img src="../images/benj_gates.png" caption="affiche du film Benjamin Gates et le Tresor des Templiers" >}}
+
+
+
+## Décryptage
+L'analyse des fréquences est moins pertinente lorsque le message a été chiffré avec un chiffrement polyalphabétique (qui tend à rendre aléatoire la fréquence des lettres).
+
+Si on parvient à découvrir la périodicité, on peut en déduire la longueur de la clé. La connaissance de la longueur de la clé est essentielle pour pouvoir pratiquer l'analyse frequentielle: Une même lettre ne donne pas toujours le même caractère chiffré. 
+
+Le decryptage par force brute repose sur l'essai de toutes les clés possibles, par combinaison sur tous les caractères de la clé. Si celle-ci a une longueur n, cela va faire $X^n$, où X est la longueur de la clé. C'est une fonction *exponentielle*.
+
+La fonction de dechiffrage est alors executée un nombre de fois correspondant à $X^n$, dans le pire des cas. 
+
+# La machine{{< a link="https://fr.wikipedia.org/wiki/Enigma_(machine)" caption="Enigma" >}}
 {{< img src="../images/enigma.jpg" caption="Enigma: machine électromécanique portative servant au chiffrement et au déchiffrement - wikipedia" >}}
 La machine utilise des **rotors** qui sont mis en position selon une **clé**. L'alphabet est chiffré selon la position initiale de ces rotors. Ceux-ci se **décalent** lors de l'utilisation. 
 
