@@ -48,8 +48,8 @@ A l'aide d'un editeur de texte (Notepad++):
 {{< img src="../images/etape.png" >}}
 
 * Ajouter les informations manquantes: le **nom** et la **description** des lieux pour chacune des étapes:
-	* Pour retrouver le **nom** des villes, placer les **coordonnées** dans le champs de recherche de umap (attention au format numérique, qui doit être en degrés décimaux, sans préciser °N,S,E,O)
-	* pour la **description**, vous pouvez peut être copier coller une ou deux phrases du site wikipedia...
+	* Pour retrouver le **nom** des villes, placer les **coordonnées** dans le champs de recherche de umap (attention au format numérique, qui doit être en degrés décimaux, sans préciser °N,S,E,O). *Voir image ci-dessous.*
+	* pour la **description**, vous pouvez peut être copier coller une ou deux phrases trouvées sur le site [wikipedia](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal)...
 
 {{< img src="../images/loupe.png" caption="utiliser l'outil recherche du logiciel umap" >}}
 
@@ -85,7 +85,7 @@ Vous pouvez alors choisir une nouvelle icône, et sa transparence.
 Choisir: **Qui peut voir** => *Quiconque a le lien*
 
 
-* copier l'URL dans la barre du navigateur. Et partager cette adresse en collant dans votre document word ou libre Office
+* copier l'URL (celle dans la barre du navigateur). Et partager cette adresse en collant dans votre document word ou libre Office
 * coller aussi une copie d'ecran, c'est plus sûr...
 
 Bonne navigation 🚢 !
