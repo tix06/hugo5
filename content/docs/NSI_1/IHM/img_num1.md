@@ -239,7 +239,7 @@ Voici le programme minimal pour ouvrir l'image et déterminer ses dimensions:
 from PIL import Image
 
 
-imageSource=Image.open("chat.bmp")
+imageSource=Image.open("chats.bmp")
 largeur,hauteur=imageSource.size
 ```
 
