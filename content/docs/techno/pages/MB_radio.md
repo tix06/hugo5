@@ -186,11 +186,20 @@ Pour dessiner l'image, il faut cliquer dans les cellules de la matrice(pixels). 
 
 
 
-# Partie 2 : Envoyer un message par ondes radio
+# Partie 2 : Projets utilisant le module radio
+
+**Envoyer un message par ondes radio**
 La carte microbit possède une antenne radio, ce qui lui permet d'emettre et de recevoir des messages.
 
 {{< img src="../images/E_R_MB.png" caption="communication radio en reseau" >}}
 
+## Projet 1: Animation à plusieurs cartes microbit
+*Utiliser le module radio de la carte microbit pour afficher un dessin glissant sur plusieurs cartes.*
+
+Il faudra synchroniser l'animation, afin de provoquer cet effet de glissement de l'image. Par exemple, déclencher l'animation sur la carte 2 lorsque le dessin sort de la carte 1.
+
+
+## Projet 2: Communication confidentielle
 Vous allez envoyer un message dans le reseau de cartes.
 L'une de ces cartes est une *carte mystère*. Celle-ci est programmée pour repondre lorsqu'elle reçoit le message "Hello". 
 
@@ -395,6 +404,7 @@ while True:
       display.set_pixel(i%5,(i%25)//5,9)
       n_precedent = n
     elif n_precedent == n and D[n][1]>0: 
+        # gestion d'un appui prolongé
         D[n][1] -= 1
     elif n_precedent == n and D[n][1]<=0:
         D[n][1] = 3

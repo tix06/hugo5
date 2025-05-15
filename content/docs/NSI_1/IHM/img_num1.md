@@ -220,14 +220,20 @@ Pour chacune de ces images, vous complèterez le script de la [fiche de cours](/
 
 # Lecture puis traitement des pixels de l'image - Partie 2
 ## Lire les pixels de l'image
-Le module PIL permet de manipuler divers formats d'images plus ou moins complexes sans avoir à se préoccuper de la façon dont sont réellement codés ces formats.
-
-Le module PIL permet de manipuler un fichier image (reconnaissance automatique de la largeur et de la hauteur en pixels de l’image, création d’une grille de pixels, où chaque ligne de la grille correspondant à une ligne de pixels, idem pour les colonnes). 
+Dans cette activité, nous allons utiliser la fonction de lecture des couleurs des pixels d'une image. Puis transformer cette image par effet mirroir. Les chatons devront regarder à DROITE après transformation.
 
 
 {{< img src="../images/chats.bmp" link="../images/chats.bmp" caption="Image de chatons à télécharger" >}}
 
-Voici le programme minimal pour lire les pixels de l'image
+
+La fonction getpixel du module PIL.Image. Cette fonction prend en paramètres les coordonnées du pixel à lire, sous forme d'un tuple `(x,y)`. *Exemple:*
+
+```python
+>>> imageSource.getpixel((x,y))
+# retourne un tuple constitué des couleurs (R, V, B) du pixel de coordonnée (x,y)
+```
+
+Voici le programme minimal pour ouvrir l'image et déterminer ses dimensions:
 
 ```python
 from PIL import Image
@@ -235,64 +241,86 @@ from PIL import Image
 
 imageSource=Image.open("chat.bmp")
 largeur,hauteur=imageSource.size
-planPixels=Image.new("RGB",(largeur,hauteur))
 ```
 
-Les structures de données imageSource  et planPixels sont des objets qui stockent les couleurs des pixels dans un tableau. Ces objets possède les methodes `getpixel` et `putpixel` suivantes:
-
-```
->>> imageSource.getpixel((x,y))
-retourne un tuple constitué des couleurs (R, V, B) du pixel de coordonnée (x,y)
->>> planPixels.putpixel((x,y),p)
-place le tuple p de valeurs (R,V,B) sur le pixel (x,y)
-```
-
-*Remarques*: 
-* pour la fonction `putpixel`, la position (x,y) d'un pixel sur l'image varie de `(0,0)` à `(l-1,h-1)`, si `l` et `h` designent les dimensions de l'image.
-* le tuple de couleurs p: imaginons que nous voulions placer un pixel bleu, alors: 
+Pour lire les couleurs de TOUS les pixels, et appliquer une transformation, on va placer les valeurs dans une *matrice*, dans un certain ordre:
 
 ```python
-p= (0, 0, 255)
-planPixels.putpixel((x,y),p)
+mat = [[0]*largeur for i in range(hauteur)]
+for i in range(hauteur):
+    for j in range(largeur):
+        p = imageSource.getpixel((j,i))
+        # j correspond à x 
+        # et i <=> y
+        mat[i][j]=p
 ```
 
-
-## Ecrire dans un nouveau fichier
-Après lecture du fichier, on peut constituer une nouvelle image. Voici le programme complet que vous modifierez selon le traitement voulu:
+Puis placer les valeurs de la matrice dans un fichier `.ppm`, comme vu dans les activités précédentes:
 
 ```python
-### traitement d'une image ##########
-from PIL import Image
+####### ecriture du fichier pour la nouvelle image
+f=open('pixart2.ppm','w') 
 
-
-imageSource=Image.open("chats.bmp")
-largeur,hauteur=imageSource.size
-planPixels=Image.new("RGB",(largeur,hauteur))
-
-for y in range(hauteur): # y varie de 0 à hauteur - 1
-    for x in range(largeur): # x varie de 0 à largeur - 1
-        p=imageSource.getpixel((x,y)) # p est la valeur RGB du pixel
-        # la position d'un pixel sur l'image varie de (0,0) à (l-1,h-1)
-        planPixels.putpixel((x,y),p) # nouvelle image identique a la precedente
-
-planPixels.save("chatModif.jpg")
-planPixels.show()
+f.write('P3'+'\n') 
+f.write(str(largeur)+' '+str(hauteur)+'\n')
+# valeur max pour l'intensité des couleurs :
+f.write('255'+'\n')
+#########  declaration de la fonction ############
+def creation_image(M) :
+    """ 
+    @param couleur: str
+    couleur est un triplet d'entiers, code RGB
+    @example: dessiner un rectangle entierement noir
+    >>> rectangle('0 0 0',largeur,hauteur)
+    """
+    h = len(M)
+    l = len(M[0])
+    for i in range(h) :
+        for j in range(l):
+            couleur = M[i][j] # tuple
+            pixel = str(couleur[0]) + ' ' + str(couleur[1]) + ' ' + str(couleur[2])
+            f.write(pixel+'\n')
+######## appel fonction ############################	
+creation_image(mat)
+########### fermeture fichier ######################
+f.close()
 ```
 
-> Quelle opération doit on réaliser sur chacun des pixels pour que les chats regardent de l’autre côté ? Compléter le programme ci-dessus afin d'obtenir cette nouvelle image, avec des petits chats qui regardent à DROITE.
+> Comment doit-on placer les pixels dans la matrice pour que les chats regardent de l’autre côté ? Modifier le programme ci-dessus afin d'obtenir cette nouvelle image, avec des petits chats qui regardent à DROITE.
 
-# Pix-Art
+## Pix-Art
 Avec l'image d'origine suivante:
 
 {{< img src="../images/marylin_original.JPEG" link="../images/marylin_original.JPEG" caption="Marylin Monroe" >}}
 
-> Apporter les modifications necessaires pour filtrer les couleurs par zone, de manière selective. On pourra obtenir une nouvelle oeuvre insipirée de l'image suivante:
+> Apporter les modifications necessaires pour filtrer les couleurs par zone, de manière selective. On pourra obtenir une nouvelle oeuvre inspirée de l'image suivante:
 
 {{< img src="../images/img4.jpg" caption="Marylin Monroe type Pop-art" >}}
 
 *Aide:* La condition suivante permet de selectionner les pixels de la partie gauche de l'image, **et** qui ont une composante Rouge supérieure à 100:
 
 ```python
-if (x<largeur//2 & p[0] > 100) :
+if (j<largeur//2 and p[0] > 100) :
 	# traitement sur p
 ```
+
+Ce qui va donner:
+
+```python
+mat = [[0]*largeur for i in range(hauteur)]
+for i in range(hauteur):
+    for j in range(largeur):
+        p = imageSource.getpixel((j,i))
+		if (j<largeur//2 and p[0] > 100) :
+			# traitement sur p
+        mat[i][j]=p
+```
+
+*Sur une idée venue de la visite de la collection de Luigi e Peppino Agrati, Naples.*
+
+{{< img src="../images/marylin_ITA.png" caption="Extrait de l'oeuvre de Andy Warhol (1967). Marilyn." >}}
+
+Ce TP est une variante de celui proposé à l'adresse [suivante](../img_num11).
+
+# Projet - construire une image à partir de calques
+voir l'énoncé [ici](../IHM/img_num2)

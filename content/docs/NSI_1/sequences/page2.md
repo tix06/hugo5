@@ -3,6 +3,8 @@ Title: Tri et recherche
 
 ---
 
+*Pourquoi écrire des algorithmes?* Pour resoudre un problème, comme trier une liste par ordre croissant, un humain y parviendra avec de l'observation, de l'intuition. Il sera peut être difficile d'expliquer sa demarche. [Alan Türing](https://fr.wikipedia.org/wiki/Alan_Turing) (1912-1954), le père de la machine de Türing, cherche à réduire cette part d'intuition en mettant en place un algorithme, qui va guider sa machine, de manière mécanique, jusqu'à la résolution. *Les machines n'ont pas d'intuition...*.
+
 # Algorithmes de recherche et de tri
 Deux familles d'algorithmes fortement liées:
 

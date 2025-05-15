@@ -82,7 +82,7 @@ color: rgb(214, 122, 127);
 ## synthèse additive des couleurs
 Pour une image en couleur: À chaque pixel on associe 3 couleurs, le rouge, le vert et le bleu. On parle du canal rouge, du canal vert et du canal bleu d’un pixel (système RVB ou RGB en anglais).
 
-{{< img src="../images/couleurs_add.png" >}}
+{{< img src="../images/Luminosphore.jpg" caption="credit - photograpix.fr/blog" >}}
 
 La valeur de l’intensité lumineuse associée à chaque canal de chaque pixel d’une image est comprise entre 0 et 255 (256 valeurs possibles). On codera donc un pixel à l'aide d'un triplet de valeur (par exemple (247,56,98) en code décimal, ou son équivalent en hexadecimal : (f7,38,62)
 
@@ -90,7 +90,7 @@ La valeur de l’intensité lumineuse associée à chaque canal de chaque pixel 
 
 Pour la suite, vous avez le choix entre 2 options:
 
-* Soit uuvrir le lien suivant :{{< a link="http://www.proftnj.com/RGB3.htm" caption="www.proftnj.com/RGB3.htm" >}}
+* Soit ouvrir le lien suivant :{{< a link="http://www.proftnj.com/RGB3.htm" caption="www.proftnj.com/RGB3.htm" >}}
 * Soit utiliser le script HTML minimum et modifier la couleur de fond dans la proprieté `background-color: rgd();`
 
 ```html
