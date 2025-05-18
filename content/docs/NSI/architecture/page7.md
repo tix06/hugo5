@@ -88,15 +88,44 @@ En pratique, le certificat est un ensemble d'informations sur le propriétaire d
 
 ### Complément sur RSA (Grand Oral)
 
-*Lors de la confection de la clé publique `e`, le propietaire de la clé utilise la valeur de 2 entiers `p` et `q` premiers entre eux (secrets). La clé privée `d` est alors calculée comme inverse modulaire de `e` (modulo $(p-1).(q-1)$):*
+{{< img src="../images/modulo.png" link="https://www.youtube.com/watch?v=1Yv8m398Fv0&t=3s" caption="VIDEO - sciences etonnantes. L'Algorithme qui Sécurise Internet (entre autres...)" >}}
+
+*Alice veut envoyer un message à Bob*
+
+* Elle doit d'abord lui envoyer sa clé publique:
+
+Lors de la confection de la clé publique `e`, le propietaire de la clé utilise la valeur de 2 entiers `p` et `q` *premiers entre eux* (secrets). En principe, p et q sont très grands (plus de 100 chiffres). Supposons pour l'exemple p=3 et q=11.
+
+Le proprietaire calcule le *module de chiffrement* `n=p*q`. Ici, n=33. Ce calcul est très facile pour lui, alors qu'il est très difficile de trouver p et q en connaissant n. C'est sur cette difficulté que repose la robustesse de RSA.
+
+Il calcule ensuite l'*indicatrice d'Euler*: `f=(p-1)*(q-1)` et détermine l'exposant public `e` qui doit être premier avec `f`.
+
+Par exemple, ici, f=20. On peut choisir e=3,7,9,13,...
+
+La couple (e,n) sera alors la clé publique d'Alice. Choisissons (3,33).
+
+* Bob reçoit la clé. Il l'utilise pour chiffre son message. Supposons que le message est le caractère `F`, le 6e caractère de l'alphabet. `m=6`. Alors le chiffrement se fait à l'aide de la relation: $m^e [n]$
+
+En suivant l'exemple,
+$$E(m) = 6^3 [33] = 18$$
+
+Bob va alors transmettre 18, qui est le message chiffré.
+
+* Alice va alors déchiffrer le message avec sa clé privée.
+
+Elle possède pour cela une clé constituée d'un exposant privé `d` qui est calculée comme inverse modulaire de `e` (modulo $(p-1).(q-1)$):
 
 $$e.d = 1 + k\times(p-1)(q-1)$$
 
-*Pour chiffrer le caractère de valeur numérique M on fait: $M^e (mod~ n)$ et pour dechiffrer: $M^d (mod n)$ ou `n=p.q`*
+Pour dechiffrer le message M, elle fait: $M^d (mod n)$ où `n=p.q`
 
 *On exploite la propiété qui veut que $(M^e)^d = M (mod~n)$*
 
-*Or, casser la clé revient à rechercher l'inverse modulaire de `e`, ce qui est impossible sans connaitre `p` et `q`, du moins en un temps limité. Et avec les algorithmes classiques, casser la factorisation croit exponentiellement avec la longueur de la clé.*
+*Exemple:* `d=7` car $7 \times 3=21 = 20 + 1$, 7 est inverse modulaire de 3 modulo 20.
+
+On a alors: $M^d [33] = 6$, Alice retrouve le message clair envoyé par Bob.
+
+Avec les algorithmes classiques, casser la factorisation croit exponentiellement avec la longueur de la clé.
 
 # Principe d'une communication securisée HTTPS
 Lors d'une communication HTTPS: les objectifs d'authentification, authenticité et de confidentialité sont remplis. Lors du protocole de communication, les chiffrements asymétriques et symétriques sont tous 2 utilisés:
@@ -179,3 +208,4 @@ Si on appliquait cette méthode à un alphabet de 95 caractères (les caractère
 * autorité de certification [video Youtube - chaine de Yann Bidon](https://www.youtube.com/watch?v=FSq-FXx5dxU)
 * sécurisez vos données avec la cryptographie [openclassroom](https://openclassrooms.com/fr/courses/1757741-securisez-vos-donnees-avec-la-cryptographie/6031870-controlez-lintegrite-de-vos-messages#:~:text=L'int%C3%A9grit%C3%A9%20des%20donn%C3%A9es%20d%C3%A9signe,prot%C3%A9ger%20la%20confidentialit%C3%A9%20des%20donn%C3%A9es.)
 * [Principe des blockchains: rapport du sénat](http://www.senat.fr/rap/r17-584/r17-584_mono.html#toc75)
+* cours NSI sur RSA avec exercices: [ldm_terminale.](https://ldm_terminale.forge.apps.education.fr/terminale/14_Securisation/06_Chiffrements_asymetriques_1/)
