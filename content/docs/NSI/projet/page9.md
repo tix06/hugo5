@@ -59,5 +59,6 @@ Lien de téléchargement: [Planète 2](/scripts/astro/donnees-astep2024/TOI-201/
 # Traitement de données en table - Pandas Dataframe
 * Données en dataframe: [tuto](../page10)
 * Base de données SQL et python: [tuto](/docs/python/pages/traitement/page3)
-* IST: [Lien](/docs/python/pages/traitement/page4/)
+* indice similarité avec la Terre (IST): [Lien](/docs/python/pages/traitement/page4/)
+* Analyse graphique: [Lien](/docs/python/pages/traitement/page5/)
 

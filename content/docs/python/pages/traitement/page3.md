@@ -362,3 +362,5 @@ plt.show()
 Une voie d'étude serait de rechercher des *clusters* (regroupements) de planètes pour certains choix d'axes, et d'associer nos exoplanètes à celles-ci.
 
 Une autre voie possible serait d'intégrer la Terre, avec toutes ses caractéristiques connues, dans la table de la base de données. On établirait alors un coefficient, appelé Indice de Similarité avec la Terre (IST), qui permettrait de trier ces planètes selon l'IST décroissant: [Lien vers la page](../page4)
+
+[RETOUR AU MENU](/docs/NSI/projet/page9)

@@ -176,3 +176,13 @@ Les extensions a-b-c sont celles des exoplanetes de la base de données. Celles 
 
 *On peut bien sûr ajouter d'autres caractéristiques des planetes pour le calcul de l'IST et les comparer à la Terre.*
 
+> Sauvegardez votre dataframe dans un fichier .csv
+
+Vous pourrez alors poursuivre vos traitements, sans avoir à executer tout le notebook.
+
+```python
+dataset.to_csv('dataset.csv', index=False)
+```
+
+[RETOUR AU MENU](/docs/NSI/projet/page9)
+

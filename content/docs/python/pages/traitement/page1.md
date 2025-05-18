@@ -50,4 +50,4 @@ plt.show()
 {{< img src="../images/qt_graph.png" >}}
 
 
-
+[RETOUR AU MENU](/docs/NSI/projet/page9)

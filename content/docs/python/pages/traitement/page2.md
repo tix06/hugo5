@@ -127,5 +127,5 @@ La fin du relevé montre une nouvelle tendance haussière. C'est sur cette derni
 
 > Utiliser la courbe de regression linéaire pour faire une prediction: quel sera le jour où la valeur de l'actif sera le même que lors de son précédent ATH?
 
-
+[RETOUR AU MENU](/docs/NSI/projet/page9)
 
