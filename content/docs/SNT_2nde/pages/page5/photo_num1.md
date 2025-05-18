@@ -23,7 +23,7 @@ Les valeurs des couleurs des pixels sont alors mises les unes à la suite des au
 
 ```
 P1
-5 6
+6 5
 0 1 1 1 0
 0 0 0 0 1
 ...
@@ -57,8 +57,8 @@ Le codage des couleurs utilise la synthèse additive. Voir animation sur Algorea
 # fichier
 P3
 3 2
-255 0 0 0 255 0 0 0 255 255 255 255
-255 0 0 0 255 0
+255 0 0 0 255 0 0 0 255 
+255 255 255 255 0 0 0 255 0
 ```
 
 Les valeurs sont codées sur 3 octets (R V B de valeurs 0-255 0-255 0-255). Il y a 3 octets par pixels. 

@@ -61,13 +61,13 @@ Les valeurs des couleurs des pixels sont alors mises les unes à la suite des au
 
 ```
 P1
-5 6
+6 5
 0 1 1 1 0 1
 0 0 0 0 1 1
 ...
 ```
 
-Grâce aux métadonnées du fichier, les informations de format (P1, P2, ...) et de dimension (5 * 6), l'ordinateur va traiter cette suite de chiffres selon une matrice de valeurs:
+Grâce aux métadonnées du fichier, les informations de format (P1, P2, ...) et de dimension (6 * 5), l'ordinateur va traiter cette suite de chiffres selon une matrice de valeurs:
 
 {{< img src="../images/png_to_python.png" caption="import des données du fichier dans un programme python. Codage des couleurs en 24 bits rgb" >}}
 
@@ -119,7 +119,7 @@ Le codage des couleurs utilise la synthèse additive. Voir animation sur Algorea
 ```
 # fichier
 P3
-3 2
+2 3
 255 0 0 0 255 0 0 0 255 255 255 255
 255 0 0 0 255 0
 # matrice

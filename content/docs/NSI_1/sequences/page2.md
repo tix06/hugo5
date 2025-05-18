@@ -49,6 +49,8 @@ True
 False
 ```
 
+* [Jouer à ce jeu: (0-100)](../page5)
+* [Jouer à ce jeu: (0-1000)](../page4)
 
 ## Recherche dichotomique
 Pour l'aider, vous l'aidez à chacun de ses essais en déclarant PLUS (le nombre que vous avez en tête est plus grand), ou MOINS (plus petit).
