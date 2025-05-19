@@ -5,7 +5,9 @@ Title : calculer sur un algorithme
 # Calculabilité
 Dans le chapitre précédent, sur la complexité, l’objet d’étude principal etait l’algorithme. On en a fait une mesure de son efficacité: un algorithme est plus efficace s'il est plus rapide (donc de classe de complexité plus faible).
 
-En calculabilité, le problème devient l’objet central.
+En calculabilité, le **problème** devient l’**objet central**.
+
+{{< img src="../images/Entscheidungsproblem.png" link="https://www.youtube.com/watch?v=Zci9m08HQws" caption="Le Problème de Décision - Voyages au pays des maths | ARTE" >}}
 
 On a souvent l'impression que pour chaque problème on peut trouver un algorithme de solution. Ce n'est pas le cas : pour des nombreux probèmes naturels et intéressants il n’existe pas d’algorithme. Ces problèmes sont non calculables. Cette notion a évolué dans l'histoire de l'informatique au cours des étapes suivantes:
 
@@ -31,7 +33,7 @@ Paradoxalement, on sait que certaines de ces propositions *indécidables* sont *
 
 {{< img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/1925_kurt_gödel.png" link="https://fr.wikipedia.org/wiki/Kurt_Gödel" caption="Kurt Gödel (1906 – 1978)" >}}
 **Alan Turing** (1912 – 1954) et{{< a link="https://fr.wikipedia.org/wiki/Alonzo_Church" caption="" >}}
-Turing cherche s'il n'y aurait pas au moins une procédure mécanique pour trouver quelles sont les propositions que l'on peut effectivement déduire d'un système d'axiomes, c'est à dire de décider de leur vérité (équivalent du problème de décision). Il part du principe que ce qu'un humain peut déduire est équivament à ce qu'une machine peut déduire. Ainsi, il suffit de décrire convenablement une machine idéale pour préciser ce qu'est une procédure systématique. Cette machine idéale sera la *machine de Turing*. Il montre, par un raisonnement logique que cette machine ne peut pas démontrer toutes les propositions d'un système d'axiomes (*indécidabilité*).
+Turing cherche s'il n'y aurait pas au moins une procédure mécanique pour trouver quelles sont les propositions que l'on peut effectivement déduire d'un système d'axiomes, c'est à dire de décider de leur vérité (équivalent du problème de décision). Il part du principe que ce qu'un humain peut déduire est équivalent à ce qu'une machine peut déduire. Ainsi, il suffit de décrire convenablement une machine idéale pour préciser ce qu'est une procédure systématique. Cette machine idéale sera la *machine de Turing*. Il montre, par un raisonnement logique que cette machine ne peut pas démontrer toutes les propositions d'un système d'axiomes (*indécidabilité*).
 
 {{< img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Alan_Turing_Aged_16.jpg/440px-Alan_Turing_Aged_16.jpg" link="https://fr.wikipedia.org/wiki/Alan_Turing" caption="Alan Turing (1912 – 1954)" >}}
 # Définitions
@@ -174,7 +176,7 @@ Il faut montrer que si les appels internes à l'algorithme font ce qu'on attend 
 
 - Un Problème: Ensemble *Nom + Données d'entrée + Question*
 - Pour la suite: Problème = Fonction
-- L’ensemble des algorithmes, donc des fonctions calculables, est dénombrable.
+- L’ensemble des algorithmes, donc des fonctions calculables, est dénombrable. Un algorithme est une approche étape par étape pour résoudre un problème.
 - L’ensemble des fonctions est indénombrable, donc il existe des fonctions incalculables.
 - Calculable: il existe une fonction f programmable dans un langage courant (python)
 - Calculable = Décidable: un problème *calculable* peut être traduit en un problème équivalent *décidable*. La différence est que, pour un problème *calculable*, on doit calculer une image f(x), alors que pour un problème *décidable*, la fonction retourne une valeur booléenne (True,False). Le problème est exprimé différemment.
