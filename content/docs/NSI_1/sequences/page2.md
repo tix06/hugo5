@@ -52,6 +52,8 @@ False
 * [Jouer à ce jeu: (0-100)](../page5)
 * [Jouer à ce jeu: (0-1000)](../page4)
 
+-> {{< a link="/pdf/NSI_1/algo1_exercices.pdf" caption=" fiche de TD à compléter" >}}
+
 ## Recherche dichotomique
 Pour l'aider, vous l'aidez à chacun de ses essais en déclarant PLUS (le nombre que vous avez en tête est plus grand), ou MOINS (plus petit).
 
@@ -371,12 +373,14 @@ La complexité est *linéaire* dans le meilleur des cas (liste déjà triée), m
 Pour le tri par séléction, le nombre d'opérations est constant, et egal à $b.N^2$. La complexité est *quadratique*.
 
 # Documents
-*{{< a link="/pdf/NSI/Algorithmiques2-algos_tri-cours.pdf" caption=" fiche de TD à compléter" >}}
+
+* [Activité: deux algorithmes de tri](/pdf/NSI/algos_tri_simples.pdf))
 
 *{{< a link="/pdf/NSI/algorithmes2_recherche_tri.pdf" caption="fiche d'exercices" >}}
 # Liens
 * cours et animations sur la [page du site Lyceum](https://www.lyceum.fr/1g/nsi/8-algorithmique/2-algorithmes-de-tri). La complexité y est traitée de manière experimentale.
 * Eduscol: Preuve de l'algorithme de recherche dichotomique [detail en pdf](https://eduscol.education.fr/document/30064/download)
+* TD avec interface python en ligne: [mcoilhac.forge.apps.education.fr](https://mcoilhac.forge.apps.education.fr/site-nsi/tris/3_insertion/)
 
 
 
