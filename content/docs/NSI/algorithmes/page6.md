@@ -346,8 +346,8 @@ Nous allons chercher à adapter l'algorithme du rendu de monnaie:
 |Objets | 1 | 2 | 3  | 4 |
 | --- | --- | --- | --- | --- |
 | valeur | 7 | 4 | 3.1 | 1 |
-|poids (kg) | 14 |11| 9 |3.5|
-|ratio val/poids | 0.5  | 0.36  |  0.34 | 0.29  |
+|poids (kg) | 17 |11| 9 |3.5|
+|ratio val/poids | 0.41 | 0.36  |  0.34 | 0.29  |
 
 # Le problème du voyageur du commerce
 ## énoncé du problème
