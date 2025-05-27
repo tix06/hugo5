@@ -326,15 +326,6 @@ Voir l'article et l'animation sur [Interstices](https://interstices.info/le-prob
 |--- |--- |
 | [Nbre de piece, [pieces de 1, pieces de 2, pieces de 5, ...]] | [Gains cumulés, [articles 1, articles 2, articles 3, ...]] |
 
-*Algorithme:*
-
-| rendu de monnaie | sac à dos |
-|--- |--- |
-| Pour toute valeur de montant i jusqu'à x | Pour tout poids i jusqu'à W |
-| Pour tout montant de piece de la caisse | Pour tout objet (vi, pi) du tresor |
-| **Test 1**: le montant de la piece est-il < i? | **Test 1**: Le poids de l'objet est-il < i? |
-| **Test 2**: Si j'ajoute la piece pour rendre la monnaie, le nombre de pieces rendues sera-t-il inférieur à celui stocké pour i? (le reste de la somme à rendre a deja été calculé precedemment) | **Test 2**: Si je prend l'objet, le montant total rapporté est-il supérieur à la valeur stockée pour i? |
-| Si oui: rendre la piece | Si oui: prendre l'objet |
 
 
 *Exemple*:
@@ -355,6 +346,15 @@ La *stratégie*, sur le modèle du rendu de monnaie sera la suivante:
 ### Algorithme de type glouton
 Nous allons chercher à adapter ici aussi l'algorithme glouton du rendu de monnaie:
 
+*Algorithme:*
+
+| rendu de monnaie | sac à dos |
+|--- |--- |
+| Pour toute valeur de montant i jusqu'à x | Pour tout poids i jusqu'à W |
+| Pour tout montant de piece de la caisse | Pour tout objet (vi, pi) du tresor |
+| **Test 1**: le montant de la piece est-il < i? | **Test 1**: Le poids de l'objet est-il < i? |
+| **Test 2**: Si j'ajoute la piece pour rendre la monnaie, le nombre de pieces rendues sera-t-il inférieur à celui stocké pour i? (le reste de la somme à rendre a deja été calculé precedemment) | **Test 2**: Si je prend l'objet, le montant total rapporté est-il supérieur à la valeur stockée pour i? |
+| Si oui: rendre la piece | Si oui: prendre l'objet |
 
 
 Cela reviendra à remplir le tableau suivant, de manière ascendante:
