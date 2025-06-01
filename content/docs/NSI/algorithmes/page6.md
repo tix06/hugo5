@@ -127,46 +127,14 @@ L'algorithme non recursif, avec mémoïzation est plus efficace.
 
 
 # Problèmes de décision et *algorithmes gloutons*
+**Un algorithme glouton** est un algorithme qui suit le principe de réaliser, *étape par étape*, un *choix optimum local*, afin d'obtenir un résultat *optimum global*.
+
 ## Le problème du rendu de monnaie 
 Le problème du rendu de monnaie est un problème d'algorithmique. Il s'énonce de la façon suivante : étant donné un système de monnaie (pièces et billets), comment **rendre une somme donnée de façon optimale**, c'est-à-dire avec le **nombre minimal** de pièces et billets ?
 
 Par exemple, la meilleure façon de rendre 7 euros est de rendre un billet de cinq et une pièce de deux, même si d'autres façons existent (rendre 7 pièces de un euro, par exemple).
 
 {{< img src="../images/caisse.png" alt="caisse rendu monnaie" link="https://pixabay.com/users/conmongt-1226108/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2048569" caption="Image by conmongt-pixabay" >}}
-### algorithme naif
-Ce problème est traité d'une manière différente de ce que l'on a vu en [1ere NSI](/docs/NSI_1/algo/page3/). Supposons que l'on dispose d'une fonction recursive, qui pour chaque piece de la caisse fait le choix suivant:
-
-* soit la piece est inférieure à la monnaie à rendre: alors on soustrait la piece à la somme à rendre et on appelle la fonction de manière récursive avec cette même caisse, et la nouvelle somme à rendre.
-* soit la piece est supérieure à la somme à rendre. on retire la piece de la caisse. Et on appelle de manière récursive la fonction avec la nouvelle caisse, et la même somme.
-
-La condition de base sera: la liste de pieces est vide.
-
-On utilisera une liste `rendu` pour placer les pieces rendues.
-
-```python
-def rendre_monnaie(somme,pieces,rendu):
-    if pieces == []:
-        return rendu
-    if pieces[-1]<=somme:
-        rendu.append(pieces[-1])
-        return rendre_monnaie(somme-pieces[-1],pieces,rendu)
-    else:
-        pieces.pop()
-        return rendre_monnaie(somme,pieces,rendu)
-
-rendre_monnaie(49,[1,2,5,10,20,50,100],[])
-# affiche 
-# [20, 20, 5, 2, 2]
-```
-
-
-
-**Un système monétaire non canonique:** 
-
-> 1. Que renvoie la fonction pour rendre 53 pences avec le [système imperial](https://fr.wikipedia.org/wiki/Shilling_britannique) où pieces = [240,60,30,24,12,6,3,1] ? 
-> 2. Le rendu est-il optimal avec cette méthode? Ou bien existe t-il une autre façon de rendre la monnaie, avec moins de pieces?
-
-> 3. Représenter une partie de l'arbre des combinaisons possibles pour rendre un montant égal à 15, en choisissant une à une chaque piece de la caisse `[1, 7, 9]`. Quel est le choix optimal? 
 
 **Voir l'animation sur le site** [mpechaud.fr](https://mpechaud.fr/scripts/recursivite/recursivite.html#:~:text=Rendu%20de%20Monnaie%20(diviser%20pour%20r%C3%A9gner),-On%20se%20donne&text=On%20peut%20utiliser%20la%20strat%C3%A9gie,utilis%C3%A9es%2C%20class%C3%A9e%20par%20valeurs%20d%C3%A9croissantes.&text=Si%20s%3D0%2C%20afficher%20l.&text=On%20appelle%20alors%20cet%20algorithme%20en%20partant%20de%20la%20liste%20l%20vide.)
 
@@ -182,7 +150,7 @@ On utilise alors d'autres stratégies, qui donneront parfois une solution, parfo
 Le problème du rendu de monnaie est *NP-difficile* relativement au nombre de pièce et billet du système monétaire considéré. (voir annexe).
 
 ### Algorithme exhaustif
-Une autre méthode pourrait être d'envisager TOUTES les combinaisons. On pourrait alors imaginer que l'on commence par rendre la monnaie avec une des pieces de la caisse (pas forcément la plus haute), puis on choisit une autre piece possible (egale ou moins haute), ... Jusqu'à ce que la somme à rendre soit nulle. On envisage ainsi toutes les combinaisons possibles, ce qui, avec une valeur élevée de la somme à rendre, et un grand nombre de pieces dans la caisse, va donner un très grand nombre de combinaisons. On selectionne enfin la meilleure des solutions (celle optimale).
+Une première méthode, SANS stratégie, pourrait être d'envisager TOUTES les combinaisons. On pourrait alors imaginer que l'on commence par rendre la monnaie avec une des pieces de la caisse (pas forcément la plus haute), puis on choisit une autre piece possible (egale ou moins haute), ... Jusqu'à ce que la somme à rendre soit nulle. On envisage ainsi toutes les combinaisons possibles, ce qui, avec une valeur élevée de la somme à rendre, et un grand nombre de pieces dans la caisse, va donner un très grand nombre de combinaisons. On selectionne enfin la meilleure des solutions (celle optimale).
 
 
 Par exemple, pour rendre 7 euros, voici toutes les combinaisons possibles (la solution optimale étant la première):
@@ -274,6 +242,45 @@ rendu(21,[20,10,5,2,1])
  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]
 ```
 
+### heuristique glouton
+Le problème est traité de cette manière en [1ere NSI](/docs/NSI_1/algo/page3/):
+
+ Supposons que l'on dispose d'une fonction recursive, qui pour chaque piece de la caisse fait le choix suivant:
+
+* soit la piece est inférieure à la monnaie à rendre: alors on soustrait la piece à la somme à rendre et on appelle la fonction de manière récursive avec cette même caisse, et la nouvelle somme à rendre.
+* soit la piece est supérieure à la somme à rendre. on retire la piece de la caisse. Et on appelle de manière récursive la fonction avec la nouvelle caisse, et la même somme.
+
+La condition de base sera: la liste de pieces est vide.
+
+On utilisera une liste `rendu` pour placer les pieces rendues.
+
+```python
+def rendre_monnaie(somme,pieces,rendu):
+    if pieces == []:
+        return rendu
+    if pieces[-1]<=somme:
+        rendu.append(pieces[-1])
+        return rendre_monnaie(somme-pieces[-1],pieces,rendu)
+    else:
+        pieces.pop()
+        return rendre_monnaie(somme,pieces,rendu)
+
+rendre_monnaie(49,[1,2,5,10,20,50,100],[])
+# affiche 
+# [20, 20, 5, 2, 2]
+```
+
+
+
+**Un système monétaire non canonique:** 
+
+> 1. Que renvoie la fonction pour rendre 53 pences avec le [système imperial](https://fr.wikipedia.org/wiki/Shilling_britannique) où pieces = [240,60,30,24,12,6,3,1] ? 
+> 2. Le rendu est-il optimal avec cette méthode? Ou bien existe t-il une autre façon de rendre la monnaie, avec moins de pieces?
+
+> 3. Représenter une partie de l'arbre des combinaisons possibles pour rendre un montant égal à 15, en choisissant une à une chaque piece de la caisse `[1, 7, 9]`. Quel est le choix optimal? 
+
+*Conclusion:* Suivant le système de pièces, l'algorithme glouton est optimal ou pas. Dans le système de pièces européen (en centimes : 1, 2, 5, 10, 20, 50, 100, 200), où l'algorithme glouton donne la somme suivante pour 37 : 20+10+5+2, on peut montrer que l'algorithme glouton donne toujours une solution optimale. [wikipedia](https://fr.wikipedia.org/wiki/Algorithme_glouton)
+
 ### algorithme de type glouton
 
 On cherche à créer une liste de rendu de monnaie pour chaque montant de 0 à x. On aura une approche ASCENDANTE: on commence par déterminer la manière de rendre la somme la plus petite somme à rendre, puis une somme juste supérieure, etc... Chaque fois, la somme rendu le sera de manière optimale.
@@ -320,6 +327,8 @@ Un problème très similaire est celui du sac-à-dos. Supposons que vous découv
 Voir l'article et l'animation sur [Interstices](https://interstices.info/le-probleme-du-sac-a-dos/)
 
 ### Adapter la stratégie du rendu de monnaie
+**Heuristique gloutonne**
+
 *Structure de données:*
 
 | rendu de monnaie | sac à dos |
