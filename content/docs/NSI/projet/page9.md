@@ -47,18 +47,21 @@ Système avec possiblement 3 planètes. Seule la 2ème a été détectée par AS
 Lien de téléchargement: [Planète 2](/scripts/astro/donnees-astep2024/TOI-201/TIC350618622-01_20240319_ASTEP-ANTARCTICA_R_measurements.csv)
 
 
-# Analyser la courbe de transit
+# Tutoriels
 * Lire les données d'un fichier *csv*: [python - entrées/sorties - lire csv](/docs/python/pages/ES/page1/)
 * Ecrire des données (table) dans un fichier: [python - entrées/sorties - ecrire](/docs/python/pages/ES/page1/)
 * Sauvegarder une liste/dictionnaire dans un fichier: [python - entrées/sorties, module pickle](/docs/python/pages/ES/page1/)
 * Tracer un graphique avec matplolib: [matplotlib.pyplot](/docs/python/pages/traitement/page1/)
 * Lissage de courbe bruitée: [tuto moyenne glissante](/docs/NSI/structure/page11/)
 * Regression linéaire: [tuto](/docs/python/pages/traitement/page2/)
+* Pandas dataframe: [tuto]()
 
 
-# Traitement de données en table - Pandas Dataframe
-* Données en dataframe: [tuto](../page10)
-* Base de données SQL et python: [tuto](/docs/python/pages/traitement/page3)
-* indice similarité avec la Terre (IST): [Lien](/docs/python/pages/traitement/page4/)
-* Analyse graphique: [Lien](/docs/python/pages/traitement/page5/)
+# Etapes du projet
+1. Analyser la courbe de transit: [Lien](../page13)
+2. Calculatrice python et synthèse des résultats à l'aide dans un tableur: [Lien](../page10)
+3. Traitement de données en table - Pandas Dataframe: [Lien](../page12)
+4. Base de données SQL et python: [tuto](/docs/python/pages/traitement/page3)
+5. indice similarité avec la Terre (IST): [Lien](/docs/python/pages/traitement/page4/)
+6. Analyse graphique: [Lien](/docs/python/pages/traitement/page5/)
 
