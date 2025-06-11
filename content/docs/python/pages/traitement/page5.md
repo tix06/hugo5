@@ -2,7 +2,7 @@
 Title: analyse graphique
 ---
 
-# Analyse graphique
+# Etape 6: Analyse graphique
 Utiliser le tableau de données des planètes: {{< a link="/scripts/astro/dataset.csv" caption="dataset.csv" >}}
 
 > Importer les librairies et les datas:

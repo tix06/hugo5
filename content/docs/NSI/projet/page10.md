@@ -4,7 +4,7 @@ Title: dataframes
 
 
 
-# Traitement de données d'observation en astrophysique
+# Etape 2: Traitement de données d'observation en astrophysique
 ## Importer les données et librairies utiles
 
 > Dans une cellule d'un *notebook*, copier-coller les lignes suivantes:
@@ -130,9 +130,10 @@ df
 {{< img src="../images/df5.png" >}}
 
 # Suite 
-La [suite](../page12) va demander un apprentissage d'une nouvelle structure de données: le *dataframe*. Cela représente plusieurs avantages:
+> La [suite (étape 3)](../page12) va demander un apprentissage d'une nouvelle structure de données: le *dataframe*. Cela représente plusieurs avantages:
 
 * la visualisation des données en table dans un notebook python,
 * la manipulation des données (creation de nouvelles colonnes calculées, projection, selection, ...) qui est similaire au travail déjà vu sur les tables (SQL). Le langage diffère, mais l'esprit est le même.
 * L'utilisation des librairies de traitement de données est facilitée (seaborn, ...)
 
+[retour vers la page de présentation](../page9)

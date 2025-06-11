@@ -2,7 +2,7 @@
 Title: sql et python
 ---
 
-# base de données exoplanetes.db
+# Etape 4: Base de données exoplanetes.db
 ## Principe
 Nous allons utiliser un **script Python** pour nous connecter à la base de données `exoplanetes.db` et tester quelques requêtes en langage SQLite.
 
@@ -361,6 +361,6 @@ plt.show()
 
 Une voie d'étude serait de rechercher des *clusters* (regroupements) de planètes pour certains choix d'axes, et d'associer nos exoplanètes à celles-ci.
 
-Une autre voie possible serait d'intégrer la Terre, avec toutes ses caractéristiques connues, dans la table de la base de données. On établirait alors un coefficient, appelé Indice de Similarité avec la Terre (IST), qui permettrait de trier ces planètes selon l'IST décroissant: [Lien vers la page](../page4)
+Une autre voie possible serait d'intégrer la Terre, avec toutes ses caractéristiques connues, dans la table de la base de données. On établirait alors un coefficient, appelé Indice de Similarité avec la Terre (IST), qui permettrait de trier ces planètes selon l'IST décroissant: [Lien vers l'étape 5](../page4)
 
 [RETOUR AU MENU](/docs/NSI/projet/page9)

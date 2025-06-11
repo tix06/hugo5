@@ -2,7 +2,7 @@
 Title: indice de similarité avec la Terre
 ---
 
-# Indice de similarité avec la Terre
+# Etape 5: Indice de similarité avec la Terre
 ## Creation d'une table unique
 ### Import librairies
 
@@ -184,5 +184,6 @@ Vous pourrez alors poursuivre vos traitements, sans avoir à executer tout le no
 dataset.to_csv('dataset.csv', index=False)
 ```
 
-[RETOUR AU MENU](/docs/NSI/projet/page9)
+* Lien vers l'[étape 6](../page5)
+* [RETOUR AU MENU](/docs/NSI/projet/page9)
 
