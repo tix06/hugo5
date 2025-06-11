@@ -193,6 +193,7 @@ df0
 
 {{< img src="../images/df17.png" >}}
 
+<!--
 ### autres types de créations de df
 * Création d'une série: une série est un vecteur de valeurs d'une variable (en général valeurs pour différents individus) :
 `s = pandas.Series([1, 2, 5, 7])` : série numérique entière.
@@ -201,7 +202,7 @@ df0
 
 
 *source*: [python-simple.com](http://www.python-simple.com/python-pandas/creation-series.php)
-
+-->
 
 ## base de données d'exoplanetes et python
 * [Lien vers l'étape 4](/docs/python/pages/traitement/page3)
