@@ -23,9 +23,15 @@ df
 ## Utiliser une librairie de traitement de données python
 *Seaborn Python* est une bibliothèque (un ensemble de modules) de visualisation de données en Python. 
 
+*Pandas dataframe.corr()* est une fonction qui calcule les correlations de paires à partir des *séries* (valeurs des colonnes) du dataframe.
+
+La méthode de calcul est proposée [ici](https://datatab.net/tutorial/pearson-correlation)
+
+{{< img src="../images/Equation_Pearson_Correlation.png" link="https://datatab.net/tutorial/pearson-correlation" caption="credit - datatab.net" >}}
+
 *Principe:*
 
-* on commence par créer une matrice de correlation à partir des colonnes de la table (*dataframe*). Chaque ligne/colonne est constituée d'une étiquette du tableau. : fonction `corr`
+* on commence par créer une matrice de correlation à partir des colonnes de la table (*dataframe*). Aux intersections ligne/colonne on donne le résultat de la correlation entre les 2 séries (fonction `corr`)
 * puis on affiche cette matrice, en superposant des couleurs: fonction `heatmap`
 
 ```python
@@ -43,10 +49,26 @@ On voit par exemple que les grandeurs `radius` et `orbital_period` ne présenten
 0.076
 ```
 
-## Choix des axes du graphique
-On montre ici un exemple à partir d'un mauvais choix de grandeur: 'orbital_period','radius'.
+On peut aussi utiliser la méthode `pandas.plotting` qui donne les nuages de point en miniature:
 
-Il vaudra mieux choisir des axes avec des données correlées.
+```python
+from pandas.plotting import scatter_matrix
+import matplotlib.pyplot as plt
+scatter_matrix(df,figsize=(8,8))
+plt.show()
+```
+
+{{< img src="../images/sklearn_corr.png" >}}
+
+*Rq:* Les diagonales affichent les histogrammes pour les données de la série.
+
+On a vu [ici](../page3) une autre manière de partager la fenêtre graphique en plusieurs graphiques:
+
+
+{{< img src="../images/subplot.png" >}}
+
+## Choix des axes du graphique
+Choisir des axes avec des données correlées.
 
 > Pour commencer, filter les données pour les planètes à mettre en evidence: la Terre, ainsi que celles de TOI:
 
@@ -87,13 +109,16 @@ cursor = Cursor(axes, useblit=True, color='red', linewidth=2)
 plt.show()
 ```
 
-{{< img src="../images/exemple_graphique.png" caption="" >}}
+{{< img src="../images/exemple_graphique.png" caption="orbital_period vs radius" >}}
+
+
+
+
+
 
 ## à vous de jouer
 Faire un choix d'axes pertinent, afin de trouver des clusters d'exoplanètes et les comparer avec nos planètes d'étude.
 
-*Facultatif: en bas de la [page](/docs/python/pages/traitement/page3/), on montre une technique pour afficher plusieurs graphiques sur la même image.*
 
-{{< img src="../images/seaborn1.png" >}}
 
 [RETOUR AU MENU](/docs/NSI/projet/page9)

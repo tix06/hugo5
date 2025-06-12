@@ -262,31 +262,7 @@ plt.show()
 
 {{< img src="../images/df15.png" >}}
 
-## Utiliser une librairie de traitement de données python
-*Seaborn Python* est une bibliothèque (un ensemble de modules) de visualisation de données en Python. 
-
-*Principe:*
-
-* on commence par créer une matrice de correlation à partir des colonnes de la table (*dataframe*). Chaque ligne/colonne est constituée d'une étiquette du tableau. : fonction `corr`
-* puis on affiche cette matrice, en superposant des couleurs: fonction `heatmap`
-
-```python
-import matplotlib.pyplot as plt
-import seaborn as sns
-dataset = df0 # dataframe de l'import de la bdd des planètes
-corr = dataset.corr()
-sns.heatmap(corr,cmap='coolwarm',annot=True,linewidth=0.9)
-plt.show()
-```
-
-{{< img src="../images/seaborn.png" caption="seaborn - matrice de correlation sur les colonnes du dataset" >}}
-
-On voit que les grandeurs `radius` et `orbital_period` ne présentent pas de correlation (0.076), le maximum étant 1:
-
-```python
->>> corr['orbital_period']['radius']
-0.076
-```
+## Partager la fenêtre graphique en plusieurs graphiques
 
 > Travail: le script ci-dessous permet de visualiser plusieurs graphiques sur la même sortie. Adapter le script pour sélectionner les grandeurs correlées. 
 
@@ -357,7 +333,7 @@ plt.show()
 
 # Et maintenant...
 * Vous savez placer les nouvelles exoplanètes sur un graphique en nuage de points, au milieu des autres planètes de la base de données.
-* Vous savez sélectionner la représentation qui donnera le plus d'informations, avec des axes repérant des grandeurs correlées.
+* Vous savez sélectionner la représentation qui donnera le plus d'informations.
 
 Une voie d'étude serait de rechercher des *clusters* (regroupements) de planètes pour certains choix d'axes, et d'associer nos exoplanètes à celles-ci.
 

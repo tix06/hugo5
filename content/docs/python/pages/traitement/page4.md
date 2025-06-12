@@ -184,6 +184,6 @@ Vous pourrez alors poursuivre vos traitements, sans avoir à executer tout le no
 dataset.to_csv('dataset.csv', index=False)
 ```
 
-* Lien vers l'[étape 6](../page5)
+* Lien vers l'[étape 6](../page5): Etude graphique
 * [RETOUR AU MENU](/docs/NSI/projet/page9)
 
