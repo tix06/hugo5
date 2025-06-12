@@ -4,6 +4,8 @@ headless: false
 
 - [**Accueil**]({{< relref "/" >}})
 
+- [**Projet ASTEP**]({{< relref "/docs/NSI/projet/page9" >}})
+
 - [**SNT secondes**]({{< relref "/docs/SNT_2nde/SNT_index" >}})
 - [**NSI 1ere**]({{< relref "/docs/NSI_1/NSI_index" >}}) 
 - [**NSI Term**]({{< relref "/docs/NSI/NSI_index" >}})  
