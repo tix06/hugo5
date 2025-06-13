@@ -165,8 +165,8 @@ df
 
 
 
-## langage de requête
-**projection (SELECT en sql)**: reduire le nombre de colonnes (equivalent de `select` en sql)
+## Langage de requête
+**Projection (SELECT en sql)**: reduire le nombre de colonnes (equivalent de `select` en sql)
 
 ```python
 df[['_name','mass']]
@@ -175,7 +175,7 @@ df
 
 {{< img src="../images/df11.png" >}}
 
-**selection selon un critère (WHERE =,>, ... en sql)**: lignes (équivalent de `where` en sql)
+**Selection selon un critère (WHERE =,>, ... en sql)**: lignes (équivalent de `where` en sql)
 
 ```python
 df[df['mass']>=1]
@@ -183,7 +183,7 @@ df[df['mass']>=1]
 
 {{< img src="../images/df12.png" >}}
 
-**selection à partir d'une liste de noms, comme en SQL: WHERE .. IN ( valeur1, valeur2, ... )**
+**Selection à partir d'une liste de noms, comme en SQL: WHERE .. IN ( valeur1, valeur2, ... )**
 
 
 ```python
@@ -191,14 +191,22 @@ names = ['TOI-270 d','TOI-270 b','TOI-270 c']
 df_p = df[df['_name'].isin(names)]
 ```
 
-**recherche d'un motif (LIKE en sql)**:
+**Recherche d'un motif, equiv SQL de LIKE 'motif%'**:
 
 ```python
 # Equivalent de LIKE en SQL
-df0[df0['_name'].str.startswith('TOI-270')]
+df[df['_name'].str.startswith('TOI-270')]
 ```
 
 {{< img src="../images/df17.png" >}}
+
+**Trier le dataframe selon une colonne, par ordre decroissant, equiv SQL de ORDER BY ... DESC**
+
+```python
+df.sort_values('mass', ascending=False, inplace=True, ignore_index=True)
+```
+
+{{< img src="../images/df18.png" >}}
 
 <!--
 ### autres types de créations de df
