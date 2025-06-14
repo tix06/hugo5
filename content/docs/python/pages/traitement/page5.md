@@ -65,7 +65,7 @@ plt.show()
 On a vu [ici](../page3) une autre manière de partager la fenêtre graphique en plusieurs graphiques:
 
 
-{{< img src="../images/subplot.png" >}}
+{{< img src="../images/seaborn3.png" >}}
 
 ## Choix des axes du graphique
 Choisir des axes avec des données correlées.
@@ -86,7 +86,7 @@ df_p
 %matplotlib qt
 plt.clf()
 axes = plt.gca()
-"""nuage de points df0 issu de la BDD
+"""nuage de points df issu de la BDD
 """
 x = df['radius']
 y = df['orbital_period']
@@ -95,7 +95,7 @@ plt.scatter(x,y,color='silver',marker='.',alpha=0.5)
 
 
    
-"""nuage de points df issu des observations
+"""nuage de points df_p issu des observations
 """
 x_p = df_p['radius']
 y_p = df_p['orbital_period']
@@ -104,12 +104,13 @@ z_p = df_p['_name']
 plt.scatter(x_p,y_p,color='red',marker='o',label='Rho')
 for x, y, z in zip(x_p, y_p, z_p):
     axes.text(x, y, f"({z})", fontsize=8)
-
+plt.xscale('log')
+plt.yscale('log')
 cursor = Cursor(axes, useblit=True, color='red', linewidth=2)
 plt.show()
 ```
 
-{{< img src="../images/exemple_graphique.png" caption="orbital_period vs radius" >}}
+{{< img src="../images/exemple_graphique.png" caption="orbital_period vs radius en echelle log" >}}
 
 
 
