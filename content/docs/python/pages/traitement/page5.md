@@ -49,6 +49,7 @@ On voit par exemple que les grandeurs `radius` et `orbital_period` ne présenten
 0.076
 ```
 
+## Rechercher des *clusters* de planètes
 On peut aussi utiliser la méthode `pandas.plotting` qui donne les nuages de point en miniature:
 
 ```python
@@ -62,12 +63,12 @@ plt.show()
 
 *Rq:* Les diagonales affichent les histogrammes pour les données de la série.
 
-On a vu [ici](../page3) une autre manière de partager la fenêtre graphique en plusieurs graphiques:
+On a vu [ici](../page3) une autre manière de partager la fenêtre en plusieurs graphiques, et mettre les axes en *echelle logarithmique*:
 
 
 {{< img src="../images/seaborn3.png" >}}
 
-## Choix des axes du graphique
+## Placer nos planètes étudiées
 Choisir des axes avec des données correlées.
 
 > Pour commencer, filter les données pour les planètes à mettre en evidence: la Terre, ainsi que celles de TOI:
