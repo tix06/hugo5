@@ -122,5 +122,6 @@ plt.show()
 Faire un choix d'axes pertinent, afin de trouver des clusters d'exoplanètes et les comparer avec nos planètes d'étude.
 
 
-
-[RETOUR AU MENU](/docs/NSI/projet/page9)
+# Suite
+* Analyse, segmentation des données en clusters et previsions avec le module `scikit-learn`: [étape 7](../page6)
+* [RETOUR AU MENU](/docs/NSI/projet/page9)

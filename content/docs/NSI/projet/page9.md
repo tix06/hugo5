@@ -64,4 +64,5 @@ Lien de téléchargement: [Planète 2](/scripts/astro/donnees-astep2024/TOI-201/
 4. Base de données SQL et python: [tuto](/docs/python/pages/traitement/page3)
 5. indice similarité avec la Terre (IST): [Lien](/docs/python/pages/traitement/page4/)
 6. Analyse graphique: [Lien](/docs/python/pages/traitement/page5/)
+7. Utiliser scikit-learn pour predire la classe des exoplanètes: [Lien](/docs/python/pages/traitement/page6/)
 
