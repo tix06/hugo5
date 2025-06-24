@@ -83,4 +83,31 @@ Ces observations peuvent suggérer une règle de la forme : « Si un client ac
 
 On cherche alors à générer des règles du type : *si A alors D* avec, pour chacune, un pourcentage de confiance. Par exemple, cette règle apparaissant ici apparaissant dans 40% des achats, on considère que le pourcentage de confiance est égal à 40%. Ces regles d'association vont constituer des **classes**. Ces *classes* étant à priori inconnues, il s'agit alors d'un système d'*apprentissage non supervisé*.
 
+# Travaux pratiques
+## Joueurs de NBA: Kmeans
+Regression linéaire et recherche des plus proches voisins: [Lien](/docs/NSI_1/algo/page1/)
 
+## Projet Exoplanètes: Kmeans
+[Lien](/docs/python/pages/traitement/page6/) vers la dernière étape du projet.
+
+## Reseau de neurones: Vittasciences
+* Page d'accueil: [Lien](https://fr.vittascience.com/ia/)
+* Tuto [video1](https://fr.vittascience.com/support/videos/player?id=EDtvcOl_PhA)
+* Tuto [video2](https://fr.vittascience.com/ia/)
+
+1. Choisir: Detection d'images. Entrainer le modèle avec plusieurs catégories. Uploader des images et les placer dans les catégories (exemple pierre/feuille/ciseaux)
+
+{{< img src="../images/pfc1.png" >}}
+
+2. Utiliser alors une image de la caméra ou bien uploadée pour prédire la classe
+
+3. Cliquer sur le bouton *python*. Le modèle sera alors sauvegardé dans le navigateur. Un script minimal s'affiche alors dans l'IDE python. Modifier le script
+
+{{< img src="../images/pfc2.png" >}}
+
+4. Choisir une image à uploader pour prediction de la classe.
+
+{{< img src="../images/ciseaux.png" >}}
+
+5. Lire la classe dans la console
+{{< img src="../images/pfc3.png" >}}

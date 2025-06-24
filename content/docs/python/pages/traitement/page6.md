@@ -28,7 +28,7 @@ Les classes des astres ne sont pas renseignés dans la table *dataset.csv*. Pour
 
 {{< img src="../images/cluster2.png" caption="radius - mass en echelle log. Données issues du fichier dataset.csv" >}}
 
-Le principe de la recherche de cluster par scikit-learn peut être testé avec le script minimum ci-dessous:
+Le principe de la recherche de cluster par scikit-learn utilise la fonction [kmeans](https://scikit-learn.org/stable/modules/clustering.html#k-means) de recherche de plus proches voisins. Elle peut être testé avec le script minimum ci-dessous:
 
 ```python
 import numpy as np
@@ -58,6 +58,8 @@ plt.show()
 ```
 
 {{< img src="../images/cluster1.png" caption="exemple de resultat donné par la recherche de clusters (données aléatoires)" >}}
+
+La fonction [kmeans](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) utilise l'algorithme de *[LLoyd](https://fr.wikipedia.org/wiki/Algorithme_de_Lloyd-Max)*. La recherche d'un centre de cluster (centroïd) pourrait se faire par recherche exhaustive, mais alors, la complexité serait très importante et le temps de calcul rapidement divergent avec le nombre de points. Dans cet algorithme, la recherche est basée sur un *algorithme glouton*. Celui-ci va chercher à minimiser une grandeur appelée *inertie*, qui est calculée comme la distance du centroïd à ses voisins. Enfin, les points sont segmentés en plusieurs clusters, tels que la variance est à peu près identique pour le calcul de l'inertie.
 
 ## Données de la table *dataset.csv*
 Comme dans l'activité précédente: importer les données de la table:
@@ -142,6 +144,10 @@ valeurs,comptes
 # ------------------------------
 ```
 
+* classe **0**: couleur **violette** = les étoiles
+* classe **1**: couleur **verte** = planètes telluriques
+* classe **2**: couleur **jaune** = planète gazeuses
+
 ## Superposer les exoplanètes de TOI_270 et celles de la Terre
 
 Selection des planètes TOI_270 ainsi que la Terre dans la table *dataset.csv:*
@@ -190,7 +196,7 @@ array([2], dtype=int32)
 
 **Jupiter** est de **classe 2** (cluster jaune)
 
-### Planètes du tebleau reduit `x_p, y_p`
+### Planètes du tableau reduit `x_p, y_p`
 ```python
 Liste = []
 for i,j,k in zip(x_p,y_p,z_p):
