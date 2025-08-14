@@ -163,7 +163,26 @@ df
 {{< img src="../images/df9.png" >}}
 
 
+## Reduire le dataframe: iloc
+Le dataframe se manipule comme un numpy.array avec `iloc`:
 
+On place alors les bornes des indices de lignes, puis de colonnes pour reduire le dataframe:
+
+$$df.iloc[ligne\\_debut:ligne\\_fin+1,colonne\\_debut:colonne\\_fin+1]$$
+
+
+
+Par exemple, pour reduire le df aux lignes 0 à 9, et en prenant toutes les colonnes:
+
+```python
+df.iloc[0:10, :]
+```
+
+Pour reduire le dataframe aux colonnes 2 et 4, en prenant toutes les lignes:
+
+```python
+df.iloc[:, [2,4]]
+```
 
 ## Langage de requête
 **Projection (SELECT en sql)**: reduire le nombre de colonnes (equivalent de `select` en sql)
