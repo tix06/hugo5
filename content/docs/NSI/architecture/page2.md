@@ -270,3 +270,4 @@ Un terminal est un programme qui permet d'interagir avec le systeme d'exploitati
 * [(multi)threading](https://fr.wikipedia.org/wiki/Thread_(informatique))
 * [multiprocessing or multithreading](https://timber.io/blog/multiprocessing-vs-multithreading-in-python-what-you-need-to-know/)
 * Guide complet sur la propriété et les groupes de fichiers Linux: [linux-console.net](https://fr.linux-console.net/?p=12841)
+* Bref historique (fiche) de l'evolution des ordinateur et des systemes d'exploitation: [courstechinfo.be](https://courstechinfo.be/Techno/Historique2.pdf)

@@ -140,3 +140,4 @@ Enfin, l'UAL possède deux sorties, R qui est le résultat de l'opération, et D
 
 * architecture von Neumann [wikipedia](https://fr.wikipedia.org/wiki/Architecture_de_von_Neumann)
 * UAL et multiplexeur [wikipedia](https://fr.m.wikipedia.org/wiki/Unit%C3%A9_arithm%C3%A9tique_et_logique)
+* Bref historique (fiche) de l'evolution des ordinateur et des systemes d'exploitation: [courstechinfo.be](https://courstechinfo.be/Techno/Historique2.pdf)

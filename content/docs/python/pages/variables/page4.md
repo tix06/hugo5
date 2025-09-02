@@ -133,6 +133,41 @@ Les opérations possibles sur une variable dépendent de son type.
 * Pour les variables de type nombre **int** et **float**, on peut utiliser les opérateurs `+,-,*,/,**,//,%`
 * Pour les variables de type **str** on peut aussi utiliser les opérateurs `+,*` mais le résultat est différent (opérateurs de concaténation).
 
+**5. Variables et paramètres d'une fonction**
+Les variables déclarées avec la fonction, entre parenthèse sont appelées *paramètres*. Le schéma suivant illustre l'affectation des valeurs des variables `a = x` et `b = y` lors de l'appel de la fonction `additionne(x, y)`:
+
+{{< img src="../images/variables_fonction.png" >}}
+
+
+# Visualiseur python
+Le site [pythontutor](https://pythontutor.com/render.html#code=x%20%3D%2010%0Ay%20%3D%2014%0Ax%20%3D%20x%20%2B%202%0Aprint%28x%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false) permet de visualiser le contenu des variables et leur espace de nom.
+
+*exemple 1*:
+
+```python
+x = 10
+y = 14
+x = x + 2
+print(x)
+```
+
+Cliquer sur *next* pour dérouler le script pas à pas.
+
+{{< img src="../images/pythontutor0.png" link="https://pythontutor.com/render.html#code=x%20%3D%2010%0Ay%20%3D%2014%0Ax%20%3D%20x%20%2B%202%0Aprint%28x%29&cumulative=false&curInstr=4&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false" caption="exemple de représentation avec 2 variables x et y dans le main" >}}
+
+*exemple 2*:
+
+```python
+x = 10
+y = 14
+
+def additionne(a,b):
+  return a + b
+
+additionne(x,y)
+```
+
+{{< img src="../images/pythontutor6.png" link="https://pythontutor.com/render.html#code=x%20%3D%2010%0Ay%20%3D%2014%0A%0Adef%20additionne%28a,b%29%3A%0A%20%20return%20a%20%2B%20b%0A%0Aadditionne%28x,y%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false" caption="exemple avec appel d'une fonction" >}}
 
 # Editeur Python
 Ouvrir dans *winpython > python QTConsole*
@@ -309,6 +344,8 @@ $$Ec = \tfrac{1}{2}m.v^2$$
 
 *L'expression formatée a été vue dans le cours sur les [variables et opérateur](/docs/python/pages/generalites/page2/), partie "chaines de caractères" et consiste à utiliser la méthode de chaine `"caracteres {}".format(x)`*
 
+* **Question l:** créer une fonction `Ec` qui prend pour paramètres `m` et `v` et retourne le resultat de $Ec = \tfrac{1}{2}m.v^2$. Appeler cette fonction avec les valeurs 100kg et $20m.s^{-1}$
+
 # Portfolio
 * Comment se nomment *en python* les 4 types primitifs que l'on a vus lors de ces premieres séances?
 * Le changement de type entre variables se fait grace aux fonctions `str`, 'float', `int`, et `bool`
@@ -321,7 +358,17 @@ $$Ec = \tfrac{1}{2}m.v^2$$
 * Comment échange t-on la valeur de 2 variables `a` et `b`?
 * Pourquoi l'instruction: `print("aujourd'hui j'ai "+ 18 +"ans")` ne fonctionne t-elle pas? Corriger cette expression (donner 2 moyens).
 * Donner un exemple d'utilisation d'une expression formatée pour écrire le résultat du calcul de la force de gravitation $F=G\times m_1 \times m_2/d^2$, à partir des différentes variables.
-* Quel sera le type associé à F si l'on réalise le calcul?
+* Quel sera le type associé à `F` si l'on réalise le calcul?
+* Comment définir une fonction `F_gravitation` pour réaliser le calcul de `F`?
+* Comment utiliser cette fonction pour calculer la force de gravitation Terre-Lune?
+
+$M_T = 5.972\times 10^{24}kg$, 
+
+$M_L = 7.348\times 10^{22}kg$, 
+
+$d = 3.844\times 10^{8}m$, 
+
+$G = 6.67\times 10^{-11}SI$
 
 # Liens
 * [TP1 sur les opérations et types de base](../../generalites/page2)

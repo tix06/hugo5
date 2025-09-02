@@ -1,5 +1,8 @@
 connecté au **github hugo5**
 
+# Pour la barre de menus laterale
+tout est paramétré dans theme/book
+
 # Ajouter une ligne de navigation dans la baniere
 
 Il faut encore ajouter les liens de nav des autres classes puis les rubriques
