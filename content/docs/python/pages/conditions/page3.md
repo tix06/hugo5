@@ -167,10 +167,15 @@ Voici un exemple d'execution d'une fonction à partir du shell.
 
 Son execution cesse lorsqu'elle arrive à l'instruction `return`. Le programme reprend alors son cours.
 
-> Créer une fonction que vous nommerez IMC à partir de votre script de l'exercice 4. Testez la dans le shell de votre editeur.
+* **Question f:** IMC à l'aide d'une fonction: 
+Créer une fonction que vous nommerez `IMC` à partir de votre script de l'exercice 4. Testez la dans le shell de votre editeur.
 
 # Portfolio
-* Ecrire les fonctions pour chacun des programmes, pour remplacer les scripts: `parite`, `est_divisible`, `compare_2_nombres`, `compare_3_nombres`.
+* Rappeler ce qu'est une structure conditionnelle avec alternative (elif).
+* Dans une structure conditionnelle avec alternative, tous les cas sont-ils toujours examinés par le programme? Expliquez.
+* Expliquer la différence entre une variable (déclarée dans le *main*), et un paramètre (déclaré avec une fonction). Définir leur *portée*
+* Dans une fonction, quel est le rôle du mot-clé `return`?
+* Ecrire ou recopier les fonctions pour les scripts: `parite`, `est_divisible`, `compare_2_nombres`, `IMC`.
 * Compléter le tableau suivant avec le nom et les paramètres que vous avez choisis pour les fonctions précédentes.
 
 | nom de la fonction | paramètre-s | valeur de retour |
