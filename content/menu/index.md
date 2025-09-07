@@ -27,7 +27,7 @@ headless: false
 
 - [**Techno**]({{< relref "/docs/techno/index_microcontroleurs" >}})
 
-- [**Competences numeriques**]({{< relref "/docs/competences/comp_index" >}}) 
+- [**PPPE informatique**]({{< relref "/docs/competences/comp_index" >}}) 
 
 - [**Posts**]({{< relref "/posts" >}})
 - [**Contact**]({{< relref "/docs/contact/simple-contact-form.html" >}})  
