@@ -4,26 +4,27 @@ bookShowToc: false
 ---
 
 
-# Editeur Python
-Au choix:
+# Les structures conditionnelles
+## Editeur Python
+Pour tester les scripts python, vous pouvez:
 
-* Utiliser un **notebook**. 
+* Soit utiliser un **notebook**. (*Atrium>Capytale*)
 
 {{< img src="/images/notebook.png" >}}
 
 Dans une même cellule: Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
 
-* Utiliser l'editeur Pyzo:
+* Soit utiliser l'editeur Pyzo:
 
 Mettre `##` avant chaque script pour créer une *cellule*. Executer la cellule et passer à la suivante avec *MAJ+CTRL+ENTREE*.
 
-* Utiliser l'editeur Spyder:
+* Soit utiliser l'editeur Spyder:
 
 Mettre `#%%` avant chaque script pour créer une *cellule*. Executer la cellule et passer à la suivante avec *MAJ+ENTREE*.
 
 {{< img src="../images/cell.png" >}}
   
-# Conditions et boucles non bornées
+# Structures conditionnelles simples et avec alternative
 ## Conditions
 **1. Définition :** Une *instruction conditionnelle* vérifie si une certaine condition est vraie avant d'executer son code : 
 
@@ -38,6 +39,8 @@ if instruction_conditionnelle :
 if prix_essence > 1.8:
   print('Trop cher')
 ```
+
+*Remarquer que l'instruction `if .. condition ..:` finit par 2 points `:`, et que la ligne suivante est **indentée***
 
 **2. Les blocs du programme**
 En Python, on utilise l'indentation (le retrait de la ligne) pour rendre compte des blocs de code.
@@ -104,7 +107,7 @@ print('En degrés absolus T = ' + str(kelvin))
 
 **Autre exemple**:
 
-*Un boulanger désire un programme qui demande à l'utilisateur le nombre de baguettes qu'il désire, qui calcule le prix total (sachant qu'une baguette coûte 1.10 €) et qui affiche le prix que l'utilisateur doit payer.*
+*Un boulanger veut créer un programme qui demande à l'utilisateur le nombre de baguettes qu'il désire, qui calcule le prix total (sachant qu'une baguette coûte 1.10 €) et qui affiche le prix que l'utilisateur doit payer.*
 
 
 
@@ -114,7 +117,7 @@ prix = nombre * 1.1
 print("Vous avez à payer",prix,"euros.")
 ```
 
-> Testez ce programme. Quel message d'erreur obtenez-vous ?
+> **Question a**: Testez ce programme. Quel message d'erreur obtenez-vous ?
 
 
 
@@ -126,14 +129,14 @@ prix = nombre * 1.1
 print("Vous avez à payer",prix,"euros.")
 ```
 
-> Quelle est la différence avec le code précédent de cet exemple ?
+> **Question b**: Quelle est la différence avec le code précédent de cet exemple ?
 
-## Boucles non bornées
+# Boucles non bornées: `while`
 **1. Definition:** Une *boucle non bornée* permet de répéter un élément de code un nombre à priori inconnu de fois.
 
 On écrit l'instruction:  `while <condition d execution>:`
 
-Le bloc de code est indenté sous cette première ligne:
+Le bloc de code est *indenté* sous cette première ligne:
 
 ```python
 while <condition d execution>:
@@ -210,7 +213,7 @@ A chaque fois que la condition `choix_joueur != N_aleatoire` est `True`, c'est �
 
 Lorsque les valeurs `choix_joueur` et `N_aleatoire` sont identiques, le programme passe à la ligne `print('Bravo vous avez gagné')` 
 
-> A votre avis: à quoi sert la 3e ligne `choix_joueur = 100`?
+> **Question c:** A votre avis: à quoi sert la 3e ligne `choix_joueur = 100`?
 
 > Testez ce programme. Modifiez la condition d'arrêt de la boucle pour que l'on puisse sortir du jeu lorsque l'on saisit la valeur 0. Cela doit arrêter la partie.
 
@@ -241,6 +244,7 @@ Ce petit script, lorsqu'il est executé, renvoie toujours `True` quel que soit l
 * Quelle est l'instruction conditionnelle avec *alternative* en python? `if .. else` ou bien `if .. elif .. else`?
 * Quelle est l'instruction conditionnelle avec *différents cas*? `if .. else` ou bien `if .. elif .. else`?
 * Quelle instruction génère une boucle infinie avec `while`?
+* Boucle non bornée: pourquoi faut-il initialiser la variable `i` avant d'écrire `while i <= 3:`?
 * Boucle non bornée: Comment **réaliser un compteur simple**, utlisant une boucle bornée, avec une condition d'arrêt lorsque la variable atteint la valeur 10? Ecrire le script complet. Votre programme doit être fonctionnel.
 * Compléter la phrase: Le quotient d'une division euclidienne de a par b (`a//b`) est égal au nombre de fois qu'il faut executer `a = a ... b` pour que l'on obtienne `a ... b`. 
 * Dans quel cas peut-on faire l'économie d'un opérateur lors de l'écriture d'une opération logique?

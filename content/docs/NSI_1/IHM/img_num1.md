@@ -323,4 +323,4 @@ for i in range(hauteur):
 Ce TP est une variante de celui proposé à l'adresse [suivante](../img_num11).
 
 # Projet - construire une image à partir de calques
-voir l'énoncé [ici](../IHM/img_num2)
+voir l'énoncé [ici](../img_num2)
