@@ -76,8 +76,8 @@ else :
 
 *Rappelez vous:*
 
-* `elif` est toujours suivi d'une condition
-* `else` n'est pas suivi d'une condition. C'est l'alternative, dont le bloc est executé lorsqu'aucune des conditions precedentes n'est *vraie*.
+* `elif` est **toujours** suivi d'une condition
+* `else` n'est **pas** suivi d'une condition. C'est l'alternative, dont le bloc est executé lorsqu'aucune des conditions precedentes n'est *vraie*.
 
 ## Condition sur une valeur entrée (`INPUT`)
 La fonction `input` permet d'ouvrir une boite de dialogue, d'attendre la saisie, et de récupérer une information donnée par l'utilisateur.
@@ -236,7 +236,29 @@ Ce petit script, lorsqu'il est executé, renvoie toujours `True` quel que soit l
 * 0     # zero
 * None  # le type Rien
 
-**A savoir:** dans certains cas, on peut faire l'économie de l'opérateur logique. Dans l'instruction conditionnelle `if n`, la condition vaut `True` dès que `n` est différent de `0` ou de `None`.
+**A savoir:** dans certains cas, on peut *faire l'économie* de l'*opérateur logique*. Dans l'instruction conditionnelle `if n`, la condition vaut `True` dès que `n` est différent de `0` ou de `None`, ou bien n vaut `True`.
+
+Ainsi, les scripts suivants sont équivalents
+
+```python
+# script 1
+# sortir = True ou bien sortir = False
+if sortir:
+  print('Vous pouvez sortir')
+
+if sortir==True:
+  print('Vous pouvez sortir')
+```
+
+```python
+# script 2
+# n est un entier
+if n != 0:
+  print('n est different de 0')
+
+if n:
+  print('n est different de 0')
+```
 
 # Portfolio
 * Quelle est l'instruction python qui génère une *sortie*? Donner un exemple.
@@ -246,8 +268,8 @@ Ce petit script, lorsqu'il est executé, renvoie toujours `True` quel que soit l
 * Quelle instruction génère une boucle infinie avec `while`?
 * Boucle non bornée: pourquoi faut-il initialiser la variable `i` avant d'écrire `while i <= 3:`?
 * Boucle non bornée: Comment **réaliser un compteur simple**, utlisant une boucle bornée, avec une condition d'arrêt lorsque la variable atteint la valeur 10? Ecrire le script complet. Votre programme doit être fonctionnel.
-* Compléter la phrase: Le quotient d'une division euclidienne de a par b (`a//b`) est égal au nombre de fois qu'il faut executer `a = a ... b` pour que l'on obtienne `a ... b`. 
-* Dans quel cas peut-on faire l'économie d'un opérateur lors de l'écriture d'une opération logique?
+* Compléter la phrase: Le quotient d'une division euclidienne de a par b (`a//b`) est égal au nombre de fois qu'il faut executer `a = a - b` pour que l'on obtienne `a ... b`. 
+* Dans quel cas peut-on faire l'économie d'un opérateur lors de l'écriture d'une opération logique? (voir paragraphe sur 0 et None)
 
 <!--
 * *Algorithme essentiel*: Ecrire le script complet du calcul de **la division euclidienne** entre 2 entiers `a` et `b`. Le programme affiche le quotient et le reste de la division de `a` par `b`. *Vous devrez initialiser les variables a et b avec des valeurs*. Vous ne pouvez utiliser que l'opérateur soustraction `-`.

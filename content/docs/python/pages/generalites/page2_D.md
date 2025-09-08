@@ -21,7 +21,7 @@ bookShowToc: false
 Ouvrir dans *winpython > python QTConsole*
 
 
-{{< img src="/images/qtconsole.png" >}}
+{{< img src="../images/qtconsole_b.png" >}}
 
 # Les nombres entiers et décimaux
 **Un entier**: C'est un **nombre** qui n'a pas de point décimal. 
@@ -35,13 +35,14 @@ Ouvrir dans *winpython > python QTConsole*
 Les grands nombres peuvent être exprimés avec l'opérateur `e` (*puissance de 10*): `12e3` est une autre manière d'écrire 12000.
 
 
+En langage python, ces données sont représentées par des *entiers* (**int**: integer), ou par des nombres à virgule flottante (**float**)
 
-
+On peut tester la nature d'une donnée avec la fonction `type` en python. Par exemple `type(6.02)` donne `float`
 
 ## Les opérations de base
 Un langage informatique permet de réaliser des opérations sur des valeurs. L'écriture de ces opétations peut différer de ce que l'on écrit avec la calculatrice. Voici la liste des opérateurs en Python:
 
-
+{{< img src="../images/qtconsole_b.png" >}}
 
 | opérateur | rôle | équivalent  sur une calculatrice |
 |--- |--- |--- |
@@ -50,7 +51,7 @@ Un langage informatique permet de réaliser des opérations sur des valeurs. L'�
 | * | multiplication | $10 \times 10$ |
 | / | division | $\tfrac{1}{3}$|
 | // | division entière | pas d'équivalent |
-| % | reste de la division | pas d'équivalent |
+| % | reste de la division entière | pas d'équivalent |
 | ** | exposant | $2^{4}$ |
 | e | puissance de 10 (pour l'écriture en notation scientifique) | $1.2E-3$ ou $1.2\times 10^{-3}$ |
 
@@ -65,6 +66,7 @@ Un langage informatique permet de réaliser des opérations sur des valeurs. L'�
 | + | 12 + 10 |
 | * | 12 * 0.1 |
 | / | 12 / 10 |
+| / | 0.3 / 3 |
 | // | 12 // 10 |
 | % | 4 % 2 |
 | % | 5 % 2 |
@@ -79,9 +81,14 @@ Un langage informatique permet de réaliser des opérations sur des valeurs. L'�
 | % | 5%3 |
 
 
-* **Question a:** Quel est le rôle pour chacun de ces opérateurs? Que donne `N%2` pour N pair; pour N impair?
-* **Question b:** Calculer à l'aide de la console le résultat de: $11,27 + \tfrac{9.10^{21}}{10^4}$. Ecrivez sur votre cahier l'expression utilisée en python pour effectuer ce calcul, ainsi que le résultat, exprimé en langage mathématique.
-* **Question c:** Quel est le signe utilisé comme séparateur décimal en python?
+* **Question a:** Quel est le rôle des opérateurs `*, //, %, **, e`? 
+* **Question b:** Que donne `N%2` si `N` est divisible par 2? (`N` pair)
+
+* **Question c:** Calculer à l'aide de la console le résultat de: $11,27 + \tfrac{9.10^{21}}{10^4}$. Ecrivez sur votre cahier l'expression utilisée en python pour effectuer ce calcul, ainsi que le résultat, exprimé en langage mathématique.
+
+*Aide:* $11,27$ => $11.27$ en python, et $9.10^{21}$ => $9e21$ 
+
+
 * **Question d:** Quel opérateur est prioritaire entre `/` et `+`? *Comme par exemple dans le calcul `2*(50/2+3)`*
 
 # Chaines de caractère
@@ -110,30 +117,29 @@ Bonjour
 *`>` est indiqué pour exprimer la différence entre (votre) l'entrée et la sortie.*
 
 
-* Certains caractères spéciaux ne sont pas affichés, mais permettent la mise en forme: 
-
-Par exemple, les caractères `\n`:
-
-```
-> print('je disais, "être ou ne pas être,\n telle est la question"')
-je disais, "être ou ne pas être,
-telle est la question"
-```
-
 *Remarquez l'utilisation de guillemets doubles DANS la chaine de caractères. C'est pour cette raison que l'on utilise des guillemets simples pour définir la chaine de caractères.*
 
 * Affichage multiple: On peut afficher plusieurs chaines de caractères ou combiner avec des nombres en séparant ceux-ci par une virgule, dans la fonction `print`
 
 
-```
+```python
 > print("Pour le systeme m = ", 100, " le Poids est P = m.g = ", 100*9.8, "N")
 Pour le systeme m = 100 le Poids est P = m.g = 9800N
 ```
 
-* **Question e:** Ecrire une instruction python, utilisant la fonction `print` avec plusieurs arguments: une ou plusieurs chaines de caractères, un ou plusieurs nombres.
+* **Question e:** Ecrire l'instruction python, utilisant la fonction `print`, avec plusieurs arguments, pour générer la sortie suivante *(compléter)*:
 
+```python
+> print('Le record du monde en marathon',...)
+Le record du monde en marathon représente une moyenne 
+de 20.9 kmh sur 42.195km, soit une allure de 2 min 52 
+par kilomètre 
+```
+
+*Astuce:* Mettre les 2 caractères `\n` dans la chaine de caractères pour retourner à la ligne.
 
 ## Opérations sur les chaines de caractères
+### Opérateurs `+` et `*`
 Les opérateurs `+` et `*` fonctionnent avec les chaines de caractère.
 
 > à tester dans l'éditeur Python:
@@ -147,17 +153,22 @@ Les opérateurs `+` et `*` fonctionnent avec les chaines de caractère.
 | `+,*,()` | (&quot;bonjour&quot; + &quot; &quot;) * 10 |
 
 
-* **Question f:** expliquer ce que réalisent chacun de ces opérateurs.
+* **Question f:** expliquer ce que réalisent chacun des opérateurs, `+` et `*`
 
+### Addition entier + chaine
 On ne peut pas ajouter des chaines de caractères à des nombres...
 
 ```python
-print("bonjour tous les " + 2)
+> "bonjour tous les " + 2
+...
+TypeError...
 ```
 
 Une erreur est alors retournée dans la console.
 
 * **Question g:** Relever ce message d'erreur (la fin du Traceback à partir de *TypeError...*)
+
+
 
 # Relations d'ordre
 ## Opérateurs `!=, ==, >, <, >=, <=`
@@ -165,9 +176,9 @@ Une erreur est alors retournée dans la console.
 Les opérations d'ordre sont toujours évaluées à `True` ou `False`.
 
 ```python
-> 12 > 3
+> 12>3
 True
-> 3 > 12
+> 3>12
 False
 ```
 
@@ -180,7 +191,6 @@ True
 True
 ```
 
-*Dans ce dernier exemple, la division `24/2` donne `12.0`, qui est alors codé en un nombre **réel**, ce qui n'est pas égal à l'**entier** `12`*
 
 *Résumé*
 
@@ -193,7 +203,8 @@ True
 | >= | l'ordre supérieur ou égal |
 | <= | l'ordre inférieur ou égal |
 
-*Remarque:* Le test de l'égalité n'est pas adapté pour les nombres réels. Seulement pour les nombres entiers. Ainsi, en Python, l'opération `0.1*3 == 0.3` renvoie ... `False`!
+
+
 
 > à vous de jouer... testez chacune des expressions
 
@@ -205,33 +216,48 @@ True
 | `==` et nombres réels| `0.1 == 0.3/3` |
 | `>,+,/,*,()` | `(50/2+3) > 12.5*2` |
 
+*Remarque:* Le test de l'égalité n'est pas adapté pour les nombres réels. Seulement pour les nombres entiers. Ainsi, en Python, l'opération `0.1*3 == 0.3` renvoie ... `False`!
+
 ### Relation d'ordre sur les caractères
 On peut réaliser les opérations de comparaison `>, <, ==, !=`sur les chaines. Et aussi le test d'appartenance `in, not in`. Ces opérations retournent un booléen.
 
 * comparaison d'ordre: `"A" < "B"` vaut `True`, `"Ab" < "A"` vaut `False`.
 * d'égalité: `"HA" == "ha"` vaut False
 
+
+
+* **Question h:** que valent chacune des opérations: 
+  * `"A" == "a"` 
+  * `"Ab" < "Ac"`
+  * `"Ab" > "A"`
+  * `"Books" > "Money"` 
+
+
 L'opérateur `in` permet de tester si une suite de caractères se trouve dans un chaine:
 
 * `"ou" in "jour"` vaut `True` 
 *  `"ou" not in "jour"` vaut False
 
-* **Question h:** que valent chacune des opérations: 
-  * `"A" == "a"` 
-  * `"Ab" > "Ac"`
-  * `"Ab" > "A"`
-  * `"Books" > "Money"` 
+* **Question i:** que valent chacune des opérations: 
   * `"Bo" in "Books"`
   * `"Bk" in "Books"`
 
 
-
 # Les valeurs logiques
-Une valeur logique c'est `True` ou `False`. Il n'y a donc que 2 valeurs possibles. On peut les combiner dans des formules logiques avec les opérateurs `not`, `and`, `or`.
+Une valeur logique c'est `True` ou `False`. Il n'y a donc que 2 valeurs possibles. 
 
-Une opération de comparaison, utilisant les signes  `==`, '!=', `>`, `>=`, `<`, `<=` retourne un booléen `True` ou `False.
+Une opération de comparaison, utilisant les signes  `==`, '!=', `>`, `>=`, `<`, `<=`, ou d'appartenance (`in`) retourne TOUJOURS un booléen `True` ou `False.
 
-*Expressions possibles*: `0 == 0, 8+1 == 3 * 3, 13 >= a, ...`
+*Expressions possibles*: `0 == 0, 8+1 == 3 * 3, 13 >= 0, ...`
+
+On peut les combiner dans des formules logiques avec les opérateurs `not`, `and`, `or`.
+
+* **Question j:** que valent chacune des opérations: 
+  * `12>3 and 3>1`
+  * `12>3 and 1==0`
+  * `12>3 or 1==0`
+
+<!--
 
 A quoi servent les booléens? Ils permettent un branchement dans un algorithme (voir plus loin les structures conditionnelles): 
 
@@ -287,11 +313,13 @@ True
 
 * **Question j:** Que vaut `not True and False`? Et `not (True and False)`? Pourquoi?
 
+-->
+
 # Portfolio
-* Quels types de données avez-vous vus dans ce chapitre?
-* Que vaut le nombre suivant: `123e3` 
+* Quels sont les 4 types simples en python que vous avez vus dans ce chapitre? (int: entier, float: flottant, ...)
+* Que vaut le nombre suivant, en notation mathématique: `123e3` 
 * Pour les entiers, donner un exemple d'utilisation de l'opérateur `//` et de l'opérateur `%`
-* Que donne `x%2` si `x` est pair? Si `x` est impair?
+* Que donne `x%2` si `x` est divisible par 2 (x est pair)? 
 * Quel résultat obtient-on avec `0.1 == 0.3/3`? Expliquer.
 * On saisit l'instruction suivante en python
 
@@ -306,22 +334,8 @@ Expliquer le message d'erreur obtenu.
 * Pour les chaines de caractères, on appelle concaténation l'addition sur 2 chaines ou plus. Quel est l'opérateur qui réalise ceci?
 * Que donne l'expression: &quot;Aïe&quot; * 3
 * Donner un exemple d'utilisation du mot clé `in`
-* Donner un exemple de comparaison d'ordre lexicographique entre chaines de caractères.
-* Soit l'opération logique ci-contre:
-
-`S and not P`
-
-`S` peut prendre l'une des 2 valeurs logiques `True` ou `False`. De même que `P`.
-
-Evaluer cette expression pour chaque combinaison de valeurs pour `S` et `P`. Par exemple, pour `S = True` et `P = True`, cette expression devient `True and not True`, qui est alors evaluée à `False`.
-
-> Résumer dans un tableau.
-
-* Donner la valeur de S et de P pour représenter l'information suivante:
-
-> le temps est ensoleillée (S) et il n'y a pas de pluie (P)
-
-* Donner alors la valeur retournée par l'opération logique `S and not P`
+* Donner un exemple de comparaison d'ordre lexicographique entre chaines de 2 caractères.
+* Pourquoi   `12>3 and 1==0` vaut `True`, alors que `12>3 or 1==0` vaut `False`?
 
 
 # Liens

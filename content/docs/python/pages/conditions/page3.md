@@ -108,7 +108,7 @@ if a > b:
 ...
 ```
 
-* **Question d:** Traduire en langage naturel la double condition pour laquelle `a` est le plus grand: *si ... ... ... alors si ... ... ... alors ...*
+* **Question d:** Traduire en langage naturel la double condition pour laquelle `a` est le plus grand: *si a est supérieur à b alors si ... ... ... alors ...*
 
 ## Ex 4: IMC
 L'Indice de Masse Corporelle (IMC) est un indicateur chiffré utilisé en médecine. L'IMC d'une personne est donné par la formule:
@@ -151,7 +151,7 @@ else:
 
 ```python
 def entrer_en_discotheque(age):
-  if age >18:
+  if age >=18:
       return 'Vous pouvez entrer'
   else:
       return 'Desole, ca ne va pas etre possible'
@@ -159,7 +159,11 @@ def entrer_en_discotheque(age):
 
 Lorsque vous executez le programme, ... il ne se passe rien. Vous avez seulement *chargé* la fonction.
 
-Il faut appeler la fonction pour que celle-ci soit executée. 
+Il faut appeler la fonction pour que celle-ci soit executée, par exemple avec:
+
+```python
+entrer_en_discotheque(18)
+```
 
 Voici un exemple d'execution d'une fonction à partir du shell. 
 
@@ -171,7 +175,7 @@ Son execution cesse lorsqu'elle arrive à l'instruction `return`. Le programme r
 Créer une fonction que vous nommerez `IMC` à partir de votre script de l'exercice 4. Testez la dans le shell de votre editeur.
 
 # Portfolio
-* Rappeler ce qu'est une structure conditionnelle avec alternative (elif).
+* Rappeler comment s'écrit une structure conditionnelle avec alternative (if ... elif ... else). Placer les conditions, indentations, et les `:`
 * Dans une structure conditionnelle avec alternative, tous les cas sont-ils toujours examinés par le programme? Expliquez.
 * Expliquer la différence entre une variable (déclarée dans le *main*), et un paramètre (déclaré avec une fonction). Définir leur *portée*
 * Dans une fonction, quel est le rôle du mot-clé `return`?

@@ -16,7 +16,7 @@ Selectionner ensuite l'emplacement des données (ne pas prendre la première col
 
 {{< img src="../images/tableau_effectif_selec.png" >}}
 
-Dans le menu INSERTIO (1), choisir HISTOGRAMME 2D(2). Prendre le premier histogramme proposé (en haut à gauche).
+Dans le menu INSERTION (1), choisir HISTOGRAMME 2D(2). Prendre le premier histogramme proposé (en haut à gauche).
 
 {{< img src="../images/tab_eff_histo.png" >}}
 

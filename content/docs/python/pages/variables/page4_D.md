@@ -2,67 +2,7 @@
 Title: variables
 ---
 
-# Introduction: le rôle clé des variables 
-Les exemples suivants montrent le rôle crucial des variables dans les algorithmes...
-
-## Compteur de passages
-Un dispositif numérique, équipé d'un capteur, compteur le nombre de passage par une porte. 
-
-
-{{< img src="../images/detecteur.jpg" caption="detecteur de passage à capteur infra rouge" >}}
-
-L'algorithme utilisé comporte 3 parties:
-
-* initialisation de la variable
-* boucle avec condition d'execution
-* modification de la variable
-
-Il utilise la fonction: `coupure_faisceau`
-
-Et la variable: `i` nombre de passages detectés
-
-```
-i = 0
-repeter indefiniment:
-  {
-  si coupure_faisceau_lumiere():
-    {
-    i = i + 1
-    fin si
-    }
-  fin repeter
-  }
-```
-
-## Point neutre Terre-Lune
-Dans l’un de ses célèbres romans intitulé De la Terre à la Lune, Jules Verne (1828-1905) relate les aventures de trois héros ayant pris place à l’intérieur d’un énorme projectile qu’un gigantesque canon, baptisé Colombiad, propulse en direction de la Lune. Lors de ce périple, Jules Verne fait allusion à un point neutre, situé à une distance d = 350 000 km du centre de la Terre où les forces
-gravitationnelles exercées par la Terre et la Lune sur le projectile se compensent.
-
-
-
-{{< img src="../images/terre_lune.png" caption="point neutre sur la droite Terre-Lune" >}}
-
-L'algorithme utilisé comporte 3 parties:
-
-* phase d'initialisation de la variable
-* boucle avec condition d'execution
-* modification de la variable
-
-Il utilise les fonctions: `F1` force de gravitation de la Terre, `F2` force de gravitation de la Lune
-
-Et la variable: `d` distance à la surface de la Terre
-
-```
-d = 0
-repeter tant que F1 (d) > F2(d):
-  {
-  d = d + 1
-  fin repeter
-  }
-afficher d
-```
-
-
+introduction: à quoi servent les variables: [Lien](../page5_D)
 
 # Variables
 **1. Definition:** Une variable sert à stocker une valeur, qui peut être un nombre, une chaine de caractère, ou autres. Une variable est identifiée par un nom, et pointe vers un espace mémoire.
@@ -87,38 +27,31 @@ Exemples de noms de variables:
 
 L'idée est de choisir un nom assez explicite, et d'éviter d'utiliser trop souvent x, y, a, b, c, ...
 
-**3. Affectation** On **affecte** une valeur à une variable en utilisant l'opérateur `=`.
+**3. Affectation**: On **affecte** une valeur à une variable en utilisant l'opérateur `=`.
 
 Par exemple, pour *affecter* la valeur 5 à la variable x, on fait:
 
 ```python
-x = 5
+> x = 5
 ```
 
-Pour vérifier la valeur d'une variable, il suffit d'écrire celle-ci:
+Pour vérifier la valeur d'une variable, il suffit:
 
-* soit toute seule dans une cellule du notebook
+* Soit d'écrire celle-ci: (souvenez-vous: ne pas écrire `>`, juste `x`)
+
 
 ```python
-x
+> x
 # retourne 
 5
 ``` 
 
-* soit à la *dernière ligne* de la cellule du notebook:
+
+* Soit, avec la fonction `print` (ne pas mettre de guillemets)
 
 ```python
-x = 5
-x
-# retourne 
-5
-```
-
-* Soit avec la fonction `print` (ne pas mettre de guillemets)
-
-```python
-x=5
-print(x)
+> x=5
+> print(x)
 # retourne 
 5
 ``` 
@@ -126,8 +59,8 @@ print(x)
 On peut modifier la valeur d'une variable existante. On peut méme lui affecter le résultat d'une opération:
 
 ```python
-x = 12/2
-x
+> x = 12/2
+> x
 # retourne
 6.0
 ```
@@ -138,8 +71,8 @@ x
 Et utiliser la valeur de cette même variable pour l'opération:
 
 ```python
-x = x + 1
-x
+> x = x + 1
+> x
 # retourne
 7.0
 ```
@@ -147,10 +80,11 @@ x
 Pour vérifier le type d'une variable, utiliser la fonction `type`
 
 ```python
-type(x)
-float
+> type(x)
+<class float>
 ```
 
+<!--
 **Affectation multiple:** On peut affecter une valeur à plusieurs variables en une seule ligne, ce qui amèliore la lecture d'un script:
 
 ```python
@@ -163,6 +97,7 @@ peut être remplacé par:
 ```python
 a, b = 1, 2
 ```
+-->
 
 **4. Opérations sur les variables**
 Une variable a un **TYPE** qui est défini lors de l'affectation. Python s'adapte lorsque vous faites une affectation et choisit le type correspondant.
@@ -179,7 +114,7 @@ Les opérations possibles sur une variable dépendent de son type.
 Ouvrir dans *winpython > python QTConsole*
 
 
-{{< img src="/images/qtconsole.png" >}}
+{{< img src="../../generalites/images/qtconsole_b.png" >}}
 
 <div>
 <py-repl id="my-repl" auto-generate="true"></py-repl>
@@ -193,9 +128,9 @@ Ouvrir dans *winpython > python QTConsole*
 Incrémenter une variable...
 
 ```python
-age = 0
-age = age + 1
-age
+> age = 0
+> age = age + 1
+> age
 ```
 
 * **Question a:** quelle est la valeur de `age` à la fin du script? 
@@ -206,11 +141,13 @@ Le programme suivant permet de connaitre en quelle année un enfant, qui a 12 an
 ```python
 age = 12
 annee = 2022
-annee = annee + 17 - age
+annee_naissance = annee - age
+annee = annee_naissance + 17
 annee
 ```
 
 * **Question b:** en quelle année aura-t-il 17 ans?
+* **Question c:** Quelles sont les valeurs successives prises par `annee` au fur et à mesure de l'execution de ces quelques lignes?
 
 ### Script 3
 On veut réaliser les opérations suivantes: on veut *doubler* `nombre`, puis *soustraire* 10 au resultat, le *mettre au carré*, puis soustraire 5:
@@ -223,7 +160,7 @@ nombre=nombre**2
 nombre=nombre-5
 ```
 
-* **Question c:** Quel est le résultat (c'est à dire la valeur finale de `nombre`) pour une valeur de depart `nombre = 5`?
+* **Question d:** Quel est le résultat (c'est à dire la valeur finale de `nombre`) pour une valeur de depart `nombre = 5`?
 
 <!--
 ### Script 4
@@ -246,14 +183,24 @@ Ne pas utiliser de nouvelles variables pour les résultats intermédiaires. Seul
 On veut mettre la valeur de `a` dans `b` et celle de `b` dans `a`. Le problème est que lorsque l'on fait...
 
 ```python
+a,b = 10,20
 b = a
 a = b
+print(a,b)
 ```
 
 ... on se retrouve avec les mêmes valeurs pour `b` et pour `a`. Il n'y a pas eu d'echange. L'idée est d'utiliser une troisième variable, `c` pour stocker la valeur de `b`, puis de l'affecter à `a`
 
 
-* **Question d:** Ecrire la série d'instructions correspondantes. Puis vérifier qu'il y a bien eu échange entre les variables.
+* **Question e:** Compléter la série d'instructions pour permuter `a` et `b`. Puis vérifier qu'il y a bien eu échange entre les variables:
+
+```python
+a,b = 10,20
+c = a
+a = b
+.. = ..
+print(a,b)
+```
 
 ## Opérations sur les chaines de caractères
 
@@ -268,9 +215,17 @@ message = debut + milieu + fin
 message
 ```
 
-* **Question e:** Ecrire un nouveau script qui construit le message suivant: `Ho Ho Ho Ho Ho Ho Ho Ho Ho Ho`, où le nombre de `Ho` est stocké dans une variable N. 
+* **Question f:** Ecrire un nouveau script qui construit le message suivant: `Ho Ho Ho`.
 
 *Astuce: utiliser l'opérateur* `*`
+
+* **Question g:** Compléter ce nouveau script pour construire le message suivant: `Ho Ho Ho Ho Ho Ho Ho Ho Ho Ho`. Le nombre de `Ho` sera stocké dans une variable N.
+
+```python
+N = ...
+message = "Ho" * ...
+message
+```
 
 ### Script 6
 Associer des valeurs numériques et des chaines de caractères
@@ -282,14 +237,11 @@ message = "mon nom est " + nom + ", et j'ai " + age + " ans"
 message
 ```
 
-* **Question f:** Le script s'execute t-il, ou bien renvoie-t-il une erreur? Quelle erreur le cas écheant?
-* **Question g:** Modifier l'avant derniere ligne par: `message = "mon nom est " + nom + ", et j'ai " + str(age) + " ans"`. Le script fonctionne t-il? Que renvoie t-il?
+* **Question h:** Le script s'execute t-il, ou bien renvoie-t-il une erreur? Quelle erreur?
+* **Question i:** Modifier l'avant derniere ligne par: `message = "mon nom est " + nom + ", et j'ai " + str(age) + " ans"`. Le script fonctionne t-il? Expliquez.
 
 *Remarque:* La fonction `str` va tranformer la valeur numerique `age` en une chaine de caractères (les caractères "2" et "1").
-
-*Tester également l'instruction:* `print("mon nom est ",nom ," et j'ai ",age, "ans")`
-
-* **Question h:** A quoi sert la fonction `str`? 
+ 
 
 ### Script 7
 Afficher avec la fonction `print`
@@ -301,7 +253,8 @@ c = a % b
 print('le reste de la division de ' + str(a) + ' par ' + ...)
 ```
 
-* **Question i:** Completer la derniere ligne du script pour afficher la phrase suivante: `Le reste de la division de 45 par 26 est egal a 19` Vous ne devrez pas écrire les chiffres 45, 26 et 19 dans le message. Seulement utiliser les variables, ou une opération sur ces variables.
+* **Question j:** Completer la derniere ligne du script pour afficher la phrase suivante: `Le reste de la division de 45 par 26 est egal a 19` Vous ne devez pas écrire les chiffres 45, 26 et 19 dans le message. Seulement utiliser les variables, ou une opération sur ces variables.
+
 <!--
 Une autre méthode pour construire une chaine de caractères est d'utiliser la fonction `format`:
 
@@ -338,16 +291,18 @@ m = str(a)
 type(m)
 ```
 
-* **Question j1:** Compléter le tableau:
+* **Question j:** Compléter le tableau:
 
 | x= |  type(x) |
 | --- | --- |
 | 45 |  |
 | 45%26 | | 
 | 45/26 |  | 
-| 45//26 |  | 
+| 45//26 |  |
+| 6e3 |  | 
 | str(45) |  |
 
+<!--
 Pour connaitre l'emplacement de la valeur d'une variable, dans la mémoire de la machine, utiliser la fonction `id`:
 
 ```python
@@ -360,7 +315,7 @@ print(id(b))
 
 
 * **Question j2:** L'emplacement en mémoire du 45 (c'est à dire de la valeur associée à `a`), est il le même que le 26 (valeur de  `b`)? 
-
+-->
 ### Script 8
 Calculer en physique
 
@@ -376,15 +331,14 @@ $$Ec = \tfrac{1}{2}m.v^2$$
 * **Question l:** Construire une chaine de caractères précisant que vous affichez l'energie cinetique, avec les valeurs de m et v, et le résultat du calcul de l'énergie cinétique. Recopier ici cette instruction en python. Utiliser les variables m, v et Ec.
 
 # Portfolio
-* Comment se nomment *en python* les 4 types primitifs que l'on a vus lors de ces premieres séances?
 * Le changement de type entre variables se fait grace aux fonctions `str`, `float`, `int`, et `bool`
   * Comment transformer la chaine "12" en une valeur entière égale à 12? "12" => 12
   * Comment réaliser l'opération inverse? 12 => "12"
   * Comment transformer la chaine "12" en un nombre flottant? "12" => 12.0
-* Qu'est-ce qu'une affectation multiple, en une seule ligne d'instruction?
+
 * Comment échange t-on la valeur de 2 variables `a` et `b`?
-* Pourquoi l'instruction: `print("aujourd'hui j'ai "+ 18 +"ans")` ne fonctionne t-elle pas? Corriger cette expression.
-* Quel est le type pour le résultat d'une division simple? D'une division avec 2 barres `//`? De l'opérateur modulo `%`?
+* Comment construire une chaine de caractères avec N répétitions du seul motif `ABC`?
+* Quel est le *type python* pour le résultat d'une division simple? D'une division avec 2 barres `//`? Pour  l'opérateur modulo `%`?
 
 
 # Liens

@@ -3,6 +3,7 @@ Title: recherche de correlations
 ---
 
 # Recherche de corrélations
+## Principe
 La recherche de correlations entre valeur d'un tableau consiste à identifier des colonnes qui semblent être interdépendantes.
 
 On doit commencer par rassembler les données dans une même table, où les réponses d'une même personne sont rassemblées dans une même ligne.
@@ -25,3 +26,12 @@ La corrélation peut montrer un regroupement de points
 Cela peut être aussi un alignement sur une droite, ou une courbe.
 
 {{< img src="../images/corre_regre.png" caption="source: appendre le machine learning en une semaine, G. Saint-Cirgue" >}}
+
+## En pratique
+A l'aide du logiciel Excel:
+* importer les données à partir des fonctionnalités du logiciel *(faites-vous aider par le professeur)*.
+* (1): selectionner les 2 colonnes de données. Celles-ci doivent être côte à côte dans le tableau, sinon, déplacer les colonnes.
+* (2): menu INSERTION
+* (3): choisir graphique > nuage de points
+
+*Analyser et conclure*
