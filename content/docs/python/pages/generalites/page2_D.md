@@ -256,6 +256,7 @@ On peut les combiner dans des formules logiques avec les opérateurs `not`, `and
   * `12>3 and 3>1`
   * `12>3 and 1==0`
   * `12>3 or 1==0`
+  * `12<3 or 1==0`
 
 <!--
 
@@ -335,7 +336,7 @@ Expliquer le message d'erreur obtenu.
 * Que donne l'expression: &quot;Aïe&quot; * 3
 * Donner un exemple d'utilisation du mot clé `in`
 * Donner un exemple de comparaison d'ordre lexicographique entre chaines de 2 caractères.
-* Pourquoi   `12>3 and 1==0` vaut `True`, alors que `12>3 or 1==0` vaut `False`?
+* Pourquoi   `12>3 and 1==0` vaut `True`, alors que `12>3 or 1!=0` vaut `False`?
 
 
 # Liens
