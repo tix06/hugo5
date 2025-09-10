@@ -34,18 +34,21 @@ Vous pouvez visualiser les étapes de mise en oeuvre de ce programme en utilisan
 
 
 
-* **Question a:** Que vaut la variable `a` à la fin du script? Quelle variable stocke le reste de la division? Quel est le quotient de la division entière de 20 par 6?
+* **Question a:** Que vaut la variable `a` à la fin du script? Quelle variable stocke le reste de la division? Quelle variable stocke le quotient de la division entière?
 
-> Adapter maintenant le programme pour afficher le *quotient* de la division euclidienne, mais aussi le *reste*. Utiliser une expression formatée avec la fonction `print`.
+> Adapter maintenant le programme pour afficher le *quotient* de la division euclidienne, mais aussi le *reste*. Utiliser une expression formatée avec la fonction `print`: `print("quotient: {}, reste: {}".format(...,...))`
 
 * **Question b:** Recopier le script de cette expression formatée sur votre feuille.
+
 
 ## Ex 2: fonction division_euclidienne
 Créer une fonction `division_euclidienne` à partir de l'exercice 1. Cette fonction devra retourner l'expression formatée.
 
 ```python
 def division_euclidienne(a,b):
-  ...
+  N = 0
+  while a .. b:
+    ...
   return 'quotient: {}, reste: {}'.format(...,...)
 ```
 
@@ -70,6 +73,7 @@ while <condition d execution>:
 
 * **Question c:** Recopiez le script sur votre feuille de réponse. Quelle est la valeur approchée de $\sqrt {13}$?
 -->
+
 ## Ex 3: compte epargne
 Un étudiant ouvre un compte epargne et dépose la somme de 10 euros. Ce compte est remunéré à hauteur de 2% par an. Il oublie complètement l'existance de ce compte. Au bout de combien d'années aura t-il doublé la somme?
 
@@ -77,6 +81,7 @@ Un étudiant ouvre un compte epargne et dépose la somme de 10 euros. Ce compte 
 
 ```python
 somme = 10
+somme_arrivee = ...
 annee = 0
 while somme <= ...:
   ...
@@ -86,9 +91,8 @@ while somme <= ...:
 
 * **Question d:** Quel nombre **x** d'années se sont écoulées? La somme a t-elle exactement doublé au bout de ces **x** années? 
 
-* **Question e:** Le programme finira-t-il **toujours**, quelle que soit la valeur de départ pour `somme`? Argumentez.
 
-* **Question f:** Créer une fonction à partir de ce script. Testez la dans le *shell* (pyzo).
+* **Question e:** Créer une fonction `compte_epargne` à partir de ce script. Cette fonction prendra pour unique paramètre: `somme`, la somme de départ.
 
 ## Ex 4: tirage aleatoire
 Le programme suivant utilise la fonction `randint`, qui effectue le tirage aleatoire d'une valeur comprise entre 2 bornes:
@@ -154,13 +158,23 @@ Lorsque l'on écrit une boucle bornée, le programme comporte 3 phases:
 * une instruction *`while <condition d execution>`*
 * un *bloc* qui sera répété dans la boucle tant que la condition est Vraie. Le bloc doit contenir une instruction qui modifie la valeur de la variable, et la rapproche de la *condition d'arrêt*.
 
-> Définir chacun des termes:
+> Définir chacun de ces termes à l'aide d'un des exemples precedents:
 
 * *initialisation de la variable*
 * *condition d'execution*
 * *bloc d'instructions*
 * *condition d'arrêt*
 
+* Quelle est la condition d'arrêt pour les exemples suivants:
+
+```python
+# ex 1
+while a!=0:
+# ex 2
+while a>b:
+# ex 3
+while a>0 and b>0:
+```
 
 # Liens
 * [TP1 sur les opérations et types de base](../../generalites/page2)

@@ -30,6 +30,7 @@ Puis tester chacune des propositions suivantes:
 |--- |--- |
 | `s[0]` |  |
 | `s[1]` |   |
+| `s[-1]` |   |
 | `s[2] = "jeudi"` |   |
 | `s[4] = "samedi"` |  erreur de type: ... ... |
 
@@ -37,6 +38,8 @@ Puis tester chacune des propositions suivantes:
 * **Question a1:** Comment modifie-t-on la liste `['lundi', 'mardi',  'mercredi']` pour obtenir `['lundi', 'mardi',  'jeudi']`?
 
 * **Question a2:** Pourquoi l'instruction `s[4] = "samedi"` génère t-elle une erreur?
+
+* **Question a3:** Quel est l'indice du dernier élément d'une liste? (*on ne connait pas le nombre total*)
 
 
 ### Slice: découpage d'une liste à partir des indices
@@ -59,9 +62,9 @@ Tester les propositions:
 | `s[0:-2]`|   |
 | `s[:-3]`|   |
 
-* **Question b:** Que retourne la proposition `s[1:]`? Découpe t-elle la liste à partir du premier élément, du 2e élément, ou bien retourne t-elle la liste entière?
+* **Question b:** Que retourne la proposition `s[1:]`? Découpe t-elle la liste après le premier élément, le 2e élément, ou bien retourne t-elle la liste entière?
 
-## Ex 2: Opérations sur les éléments de listes
+## Ex 2: Opérations sur les éléments et sur les listes
 ### Modifier une valeur (opérateur +)
 Saisir le script suivant:
 
@@ -74,15 +77,16 @@ t[2]  = t[2] + 5
 
 
 
-### Modifier une valeur (opérateur -)
-Saisir le script suivant:
+### Coller 2 listes (opérateur +)
+Saisir le script suivant, ou bien voir son execution sur [pythontutor](https://pythontutor.com/render.html#code=l1%20%3D%20%5B1,2,3%5D%0Al2%20%3D%20%5B4,5,6%5D%0Al1%20%3D%20l1%20%2B%20l2&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false)
 
 ```python
-t = [10,6,1,12,15]
-r = t[3]  - t[1]
+l1 = [1,2,3]
+l2 = [4,5,6]
+l1 = l1 + l2
 ```
 
-* **Question d:** Que vaut r à la fin du script?
+* **Question d:** Que vaut l1 à la fin du script?
 
 ## Ex 3: Méthodes de listes
 Dans une cellule, saisir la ligne suivante:
@@ -107,7 +111,9 @@ Puis tester chacune des propositions suivantes:
 
 * **Question e1:** Pourquoi la valeur renvoyée par `len(s)` évolue t-elle au cours de l'exercice?
 
-* **Question e2:** Que contient la liste `s` à la fin de cette série d'instructions?
+* **Question e2:** Quel est le rôle de chacune de ces méthodes (`len`, `pop`, `extend`). 
+
+* **Question e3:** Laquelle de ces méthodes peut-on utiliser pour réaliser l'opération `l1 = l1 + l2` comme dans l'exercice précédent? Ecrire l'instruction équivalente.
 
 ## Ex 4: chaine de caractere comme une liste
 * script 1
@@ -134,9 +140,17 @@ fin = [2,2]
 debut + fin
 ```
 
-* **Question f:** pour chacun des scripts précédents, que réalise l'opération `+`? Y-a-t-il une ressemblance entre:
+* **Question f:** Y-a-t-il une ressemblance entre:
   *  l'opérateur `+`appliqué à une chaine de caractères
   *  l'opérateur `+` appliqué à une liste?
+
+* script 4: transformer un str en une liste
+
+```python
+phrase = "une phrase assez longue"
+L = list(phrase)
+```
+
 
 ## Ex 5: utiliser l'indice (liste) ou une clé (dictionnaire)
 ### indice
@@ -144,32 +158,34 @@ debut + fin
 
 
 ```python
-n = 3
 semaine = ['Lundi', 'Mardi','Mercredi','Jeudi','vendredi','samedi','dimanche']
-print(...)
+for n in range(len(semaine)):
+  print(semaine[...])
 ```
+
+
 
 ### clés d'un dictionnaire
 Même exercice, mais cette fois-ci avec un dictionnaire. 
 
-> Compléter l'instruction `print(...)` 
+Pour parcourir les clés du dictionnaire `semaine`, on utilise une boucle `for` avec l'iterable `semaine.keys()`
 
 ```python
-n = 3
 semaine = {1:'Lundi',2:'Mardi',3:'Mercredi',4:'Jeudi',5:'vendredi',6:'samedi',7:'dimanche'}
-print(...)
-```
-
-* **Question g:** Comparer vos 2 réponses. Y-a-t-il des ressemblances?
-
-On donne maintenant le script du parcours des clés du dictionnaire:
-
-```python
 for i in semaine.keys():
   print(i)
 ```
 
-> Adapter ce programme pour afficher cette fois les *valeurs* du dictionnaire `semaine`. (2 méthodes possibles, l'une utilisant `D[i]`, l'autre utilisant l'itérable `D.values()` dans la boucle `for`).
+> Compléter l'instruction `print(...)` pour afficher chaque jour de la semaine:
+
+```python
+semaine = {1:'Lundi',2:'Mardi',3:'Mercredi',4:'Jeudi',5:'vendredi',6:'samedi',7:'dimanche'}
+for n in semaine.keys():
+  print(semaine[...])
+```
+
+* **Question g:** Comparer vos 2 réponses. Y-a-t-il des ressemblances?
+
 
 ## Ex 6: Liste de listes
 On définit une liste appelée `matrice`
@@ -214,25 +230,31 @@ tictactoe = [['O', 'O',  'O'],
 
 ## Ex 7: Algorithme sur une liste
 ### Parcours de liste
-Soit la liste L suivante:
+Commençons par créer une liste L de la manière suivante:
 
 ```python
-L = ["a","b","d","e","f"]
+> L = list('abdef')
+> print(L)
+["a","b","d","e","f"]
 ```
 
 On peut parcourir la liste `L` grâce à ses indices, avec `range`
 
 ```python
+# script 1
 for i in range(len(L)):
   print(L[i])
 ```
 
-* **Question k1:** Quelle est la différence avec le parcours par élément de `L`, à partir du script suivant? Le variant `i` prend-il les mêmes valeurs?
-
 ```python
+# script 2
 for i in L:
   print(i)
 ```
+
+* **Question k1:** L'un de ces scipts est un parcours par *indice*, l'autre par *élément*: Retrouver parmi les 2 scripts lequel est un parcours par *indice*. Le variant `i` prend-il les mêmes valeurs?
+
+
 
 ### Traitement des valeurs de la liste
 Cette liste ne contient pas de `"c"`. Vous allez le rajouter en procédant à un décalage des valeurs de la liste.
@@ -244,7 +266,7 @@ Cette liste ne contient pas de `"c"`. Vous allez le rajouter en procédant à un
 
 > Ecrire et tester le programme.
 
-* **Question k2:** à quoi sert l'étape 1 de cet algorithme?
+* **Question k2:** Recopier votre script une fois que celui-ci est fonctionnel.
 
 ## Ex 8: tracer un graphique
 On donne les listes de relevés du temps et de la vitesse pour un mobile. 
@@ -271,15 +293,22 @@ plt.ylabel('...')
 plt.show()
 ```
 
-* **Question l1:** Expliquer le rôle de la première ligne.
-* **Question l2:** Expliquer le rôle des fonctions `clf`, `grid`, `xlabel` et `show`.
+
+* **Question l:** Expliquer le rôle des fonctions `clf`, `grid`, `xlabel` et `show`.
 
 # Portfolio
-* Quelle instruction `for` permet de parcourir les éléments d'une liste, et créé un itérable à partir de ces éléments?
-* Quelle instruction `for` permet de parcourir les indices des éléments d'une liste, et créé un itérable à partir de ces indices?
+* Quel est l'indice du premier élément de liste? Du dernier?
+* Quelles sont les méthodes de liste, et quel est leur rôle?
+* Comment atteindre le 3e élément d'une liste `L`?
+* Soit la liste `L = [['a','b'],['c','d']]`. Comment atteindre l'élément 'c', premier élément de la 2e sous-liste?
+* Comment parcourt-on une liste par *élément*, à l'aide d'une boucle `for`? Et comment parcourt-on par *indice*?
+* Qu'est ce qu'un VARIANT de boucle?
 * Quelle instruction `for` permet de parcourir les clés d'un dictionnaire?
+Comment atteindre la valeur d'un dictionnaire `D`, associé à la clé `7`?
 * Comment note t-on le slice sur une liste `L`, pour ne conserver que les éléments du rang 1 jusqu'à l'avant dernier rang?
 * Quelle instruction permet de déplacer une valeur du rang i au rang i+1 dans une liste `L`?
+* Quelle librairie python permet de tracer des graphiques?
+* Quelle instruction permet de tracer un nuage de point avec la liste X en abscisses et Y en ordonnée?
 
 # Liens
 * activité sur les copies par valeur et par reference: [pythontutor](/docs/python/pages/variables/page3/)
