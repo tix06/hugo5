@@ -3,7 +3,7 @@ Title: pygame les bases
 ---
 
 # Pygame
-
+Pygame est un module python qui offre des outils permettant de créer des jeux. C'est un programme *libre*, et *opensource*.
 
 # Le jeu Pong SOLO
 Dans cette première partie, nous allons nous familiariser avec l'environnement de developpement et la programmation de type *evenementielle*, en *temps réel*. Dans ce type de programmation, il faudra afficher et mettre à jour l'image en fonction des actions du joueur, et lire régulièrement les états des touches du clavier pour detecter les appuis par le joueur.
@@ -71,7 +71,7 @@ Pour dessiner un rectangle de 16 pixels en largeur sur 128 en hauteur, il faudra
 
 Le repère (x,y) de la fenêtre graphique a pour origine (0,0) le coin supérieur gauche. L'axe croissant des **x** est dirigé vers la *droite*, et celui des **y** vers le *bas*.
 
-Ainsi, pour positionner un rectangle blanc de dimension 4 x 24 à la position (115,56), la fonction s'écrirait `pygame.draw.rect(fenetre,(255,255,255),(115,56,4,24))`.
+Ainsi, pour positionner un rectangle blanc de dimension 4 x 24 à la position A(115,56), la fonction s'écrirait `pygame.draw.rect(fenetre,(255,255,255),(115,56,4,24))`.
 
 {{< img src="../img/pyx2.png" caption="position du coin superieur gauche du rectangle en (115,56)" >}} 
 
@@ -114,10 +114,9 @@ from pygame.locals import *
 from random import randint
 
 pygame.init()
-pygame.key.set_repeat(1,20)
+pygame.key.set_repeat(1,20) # gestion appui prolongé
 fenetre = pygame.display.set_mode((512,512))
 fenetre.fill([0, 0, 0])
-couleur = (45, 170, 250)
 
 r1_y = 232
 largeur = 16
@@ -141,76 +140,19 @@ while continuer :
     pygame.time.wait(10)
 
 pygame.quit()
-
 ```
 
 
 
 ## Que reste t-il à faire?
-1. Si vous executez votre programme, vous voyez votre raquette disparaitre par le bord supérieur de la fenêtre. Il faudra rajouter une condition pour modifier `r1_y` si `r1_y >0`. Sinon ne rien faire.
+1. Si vous executez votre programme, vous pouvez voir votre raquette disparaitre par le bord supérieur de la fenêtre. Il faudra rajouter une condition pour modifier `r1_y` si `r1_y >0`. Sinon ne rien faire.
 2. Et si l'on veut faire descendre cette raquette? Utiliser alors `if event.key == K_DOWN:` et programmer le deplacement vers le bas. Ici aussi, ajouter une condition sur `r1_y` pour que la raquette ne disparaisse pas par le bord inférieur...
 
-> Enfin, lorsque tout fonctionne, vous allez vous interesser au programme de la balle rebondissante. 
+> Enfin, lorsque tout fonctionne, vous allez vous interesser au programme de la balle rebondissante: [suite du TP](../pygame_pong_balle)
 
 
-# Programme final
-
-```python
-import pygame
-from pygame.locals import *
-from random import randint
-
-pygame.init()
-pygame.key.set_repeat(1,20)
-fenetre = pygame.display.set_mode((512,512))
-fenetre.fill([0, 0, 0])
-couleur = (45, 170, 250)
-
-r1_y = 232
-largeur = 16
-hauteur = 128
-r_balle = 16
-xb = 50
-yb = 256 + randint(0,100)-50
-vx = 2 + randint(0,2)
-vy = 2
-
-
-continuer = True
-
-def rebond(xb,yb,vx,vy):
-    if xb+vx > 512 or xb+vx<0:
-        vx = -vx
-    if yb+vy > 512 or yb+vy<0:
-        vy = -vy
-    xb+=vx
-    yb+=vy
-    return xb,yb,vx,vy
-
-while continuer :
-    for event in pygame.event.get():
-        if event.type == QUIT:
-            continuer = False
-        if event.type == KEYDOWN:
-            if event.key == K_UP:
-                r1_y = r1_y - 8
-                #fenetre.fill([0,0,0])
-            else: 
-                r1_y += 8
-    
-    #fenetre.fill([0, 0, 0])
-    xb,yb,vx,vy = rebond(xb,yb,vx,vy)
-    
-    fenetre.fill([0,0,0])
-    pygame.draw.rect(fenetre,(255,255,255),(450,r1_y,largeur,hauteur))
-    pygame.draw.circle(fenetre, couleur, (xb, yb), r_balle)
-    pygame.display.update()
-    pygame.time.wait(10)
-
-pygame.quit()
-
-```
 
 # Liens
-* site de [François Laustriat](https://nsi1.frama.io/ressources/pyxel/)
-* La liste des fonctions de contrôle des touches du clavier: [pyxelstudio le pdf resumé](https://clogique.fr/nsi/premiere/fil_rouge/documentation-pyxel-2023.pdf)
+* site [zonensi](https://www.zonensi.fr/Miscellanees/Pygame/Base_pygame/#creation-dune-fenetre-graphique-et-boucle-devenements)
+* site de [Gilles Glassius](https://glassus.github.io/terminale_nsi/T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
+* Pygame: [Documentation officielle](https://www.pygame.org/docs/ref/pygame.html)
