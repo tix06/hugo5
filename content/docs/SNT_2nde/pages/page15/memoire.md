@@ -18,6 +18,14 @@ Le stockage des bits s’est fait autrefois sur support papier (avec/sans trou):
 
 {{< img src="../images/carte.png" link="https://fr.wikipedia.org/wiki/Codage_des_caract%C3%A8res_sur_carte_perfor%C3%A9e" caption="carte perforée IBM - source wikipedia" >}}
 
+{{<img src="../images/ibm.png" caption="source - courstechinfo.be/Techno/Historique2.html" >}}
+*Une machine comme l’IBM 1401 lisait les cartes (a) pour en recopier le code sur une bande magnétique (b). Un gros calculateur lisait cette bande (c), exécutait les jobs (d) puis transcrivait les résultats sur une autre bande (e) postposant ainsi l’impression des résultats (impression off-line) faite ensuite par un ordinateur plus léger (f).*
+
+On devine en quoi les machines ont grandement evolué: aujourd’hui, le processeur gère tout seul l’accès aux données et aux programmes. Il n’y a plus besoin d’un personnel humain…
+
+Mais alors, comment représenter et organiser les données sur un support (mémoire) pour qu’elles soient accessibles (lecture/ecriture) par le processeur ?
+
+
 Aujourd’hui, le support mémoire est constitué de milliards de transistors, possédant 2 niveaux de tension : **5V** ou **0V**.
 
 C’est donc le transistor qui permet la représentation d’un bit de donnée, en ajustant la tension électrique au niveau **haut** ou au niveau **bas**.

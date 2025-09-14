@@ -53,14 +53,15 @@ Les programmes python avec le module `pygame` ont toujours à peu près la même
 * Ajouter ensuite `pygame.init()` pour initialiser les modules importés... et terminer le programme par `pygame.quit()` pour quitter la fenêtre pygame.
 * l'instruction `fenetre = pygame.display.set_mode((512,512))` va créer une fenêtre graphique.
 
-* La boucle `while continuer:`, c'est ici que l'on va mettre les instructions du jeu. 
+* La boucle `while continuer:` c'est ici que l'on va mettre les instructions du jeu. Le booléen `continuer` va permettre de gérer la fin de l'execution du programme lorsque l'on ferme la fenêtre avec 
+`if event.type == QUIT: continuer = False`
 * Il s'agit d'une programmation de type evenementielle: il faut tester à chaque nouvelle itération dans la boucle `while` quelle est la touche sur laquelle le joueur a appuyé, et modifier le décors en conséquence.
 
 Pour dessiner un rectangle de 16 pixels en largeur sur 128 en hauteur, il faudra utiliser la fonction `pygame.draw.rect`. Les 3 paramètres de la fonction sont:
 
 * le nom donné à la fenêtre pygame: `fenetre`
 * un tuple constitué des 3 valeurs en code (rouge,vert,bleu): `(255,255,255)`
-* un tuple constitué des coordonnées x,y du coin supérieur gauche du rectangle, sa largeur et sa hauteur: `(450,r1_y,largeur,hauteur)`
+* un tuple constitué de **4 valeurs**: les coordonnées x,y du coin supérieur gauche du rectangle, sa largeur et sa hauteur: `(450,r1_y,largeur,hauteur)`
 
 
 
@@ -83,15 +84,18 @@ On veut deplacer l'objet à l'aide des touches du clavier UP et DOWN (flèches v
 
 Il faudra appliquer les modifications suivantes:
 
-* placer la coordonnée $y_A$ du rectangle dans une variable. Appelons celle-ci `r1_y` par exemple.
+Rappelez vous que la coordonnée $y_A$ du rectangle est stockée dans une variable: `r1_y`. La valeur de cette variable est déclarée au debut du programme. Notez que pour l'instant, la raquette reste fixe, et qu'elle n'est pas contrôlable.
 
-La valeur de cette variable sera déclarée au debut du programme.
+Pour lire les touches du clavier, il faut contrôler les *evenements*, c'est à dire les interactions (clavier, souris). 
 
-Notez que pour l'instant, la raquette reste fixe, et qu'elle n'est pas contrôlable.
+Pour vérifier si une touche du *clavier a été enfoncée*, on place l'instruction `event.type == KEYDOWN` dans le programme:
 
-Pour lire les touches du clavier, il faut utiliser la fonction `pyxel.btn`, et préciser en paramètre la touche que l'on veut observer. Par exemple, pour lire l'état de la touche UP, ce sera `pyxel.btn(pyxel.KEY_UP)`
+```python
+for event in pygame.event.get():
+    if event.type == KEYDOWN:
+```
 
-Cette fonction retourne un booléen (`True/False`), que l'on va placer dans une instruction conditionnelle:
+Et enfin, pour savoir si cette touche était la flèche de direction vers le haut, c'est `event.key == K_UP`
 
 ```python
 if event.type == KEYDOWN:
@@ -101,7 +105,7 @@ if event.type == KEYDOWN:
 
 > Comment traduire en python: déplacer vers le haut?
 
-Il faudra modifier la valeur de la variable `r1_y`... Pour déplacer la raquette de 2 pixels vers le haut, choisir la bonne proposition parmi les 2 suivantes:
+Il faudra modifier la valeur de la variable `r1_y`... Pour déplacer la raquette de 8 pixels vers le haut, choisir la bonne proposition parmi les 2 suivantes:
 
 * `r1_y = r1_y + 8`
 * `r1_y = r1_y - 8`

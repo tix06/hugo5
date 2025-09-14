@@ -184,7 +184,33 @@ for n in semaine.keys():
   print(semaine[...])
 ```
 
-* **Question g:** Comparer vos 2 réponses. Y-a-t-il des ressemblances?
+* **Question g:** Comparer vos 2 réponses. Y-a-t-il des ressemblances? Votre réponse doit contenir les mots *rang* (liste) et *clé* (dictionnaire)
+
+
+### Clé de type str
+Un dictionnaire accepte aussi des chaines de caractère pour clé. Exemple:
+
+```python
+D = {"John":"+33620200202", "Doe":"+33640400404"}
+print(D["John"])
+print(D["Doe"])
+```
+
+### Traiter les éléments d'un dictionnaire
+Compléter le programme. A chaque itération, vous devrez:
+
+* lire le jour de la semaine associé à la clé `n`
+* ajouter le jour dans une liste `L`
+
+
+```python
+L = []
+semaine = {1:'Lundi',2:'Mardi',3:'Mercredi',4:'Jeudi',5:'vendredi',6:'samedi',7:'dimanche'}
+for n in semaine.keys():
+  jour = semaine[...]
+  L.append(...)
+print(L)
+```
 
 
 ## Ex 6: Liste de listes
@@ -284,30 +310,43 @@ v = [5.2,4.8,4.41,4.02,3.63,3.23,2.84]
 
 ```python
 import matplotlib.pyplot as plt
+plt.scatter(...
+plt.show()
+```
+
+* La fonction `scatter` propose de nombreuses options, qui valent `None` par defaut. Utiliser la [documentation officielle](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html) et choisir une valeur pour l'un de ces paramètres optionnels (forme du point, couleur, ...)
+
+* Ajouter les fonctions `clf, grid, xlabel et ylabel` pour personnaliser votre graphique:
+
+```python
+import matplotlib.pyplot as plt
 
 plt.clf()
 plt.grid()
 plt.scatter(...
 plt.xlabel('temps(min)')
-plt.ylabel('...')
+plt.ylabel('vitesse (m/s)')
 plt.show()
 ```
 
 
-* **Question l:** Expliquer le rôle des fonctions `clf`, `grid`, `xlabel` et `show`.
+* **Question l:** Expliquer le rôle de chacune de ces fonctions: `clf`, `grid`, `xlabel` et `show`.
 
 # Portfolio
 * Quel est l'indice du premier élément de liste? Du dernier?
-* Quelles sont les méthodes de liste, et quel est leur rôle?
-* Comment atteindre le 3e élément d'une liste `L`?
+* Comment atteindre l'élément de rang 6 dans la liste `L`? (Pour lire sa valeur; pour modifier sa valeur)?
+* Quelle instruction permet de déplacer une valeur du rang i au rang i+1 dans une liste `L`?
+* Comment note t-on le slice sur une liste `L`, pour ne conserver que les éléments du rang 1 jusqu'à l'avant dernier rang?
+* Quelles sont les différentes méthodes de liste, et quel est leur rôle? Exemples.
 * Soit la liste `L = [['a','b'],['c','d']]`. Comment atteindre l'élément 'c', premier élément de la 2e sous-liste?
-* Comment parcourt-on une liste par *élément*, à l'aide d'une boucle `for`? Et comment parcourt-on par *indice*?
-* Qu'est ce qu'un VARIANT de boucle?
+* Comment parcourt-on une liste par *élément*, à l'aide d'une boucle `for`? Et comment parcourt-on par *indice*? Exemples.
+* Qu'est ce qu'un VARIANT de boucle? (préciser à l'aide des exemples précédents)
 * Quelle instruction `for` permet de parcourir les clés d'un dictionnaire?
 Comment atteindre la valeur d'un dictionnaire `D`, associé à la clé `7`?
-* Comment note t-on le slice sur une liste `L`, pour ne conserver que les éléments du rang 1 jusqu'à l'avant dernier rang?
-* Quelle instruction permet de déplacer une valeur du rang i au rang i+1 dans une liste `L`?
-* Quelle librairie python permet de tracer des graphiques?
+* Les clés d'un dictionnaire sont-elles forcement des clés numériques? Ou bien peut-on aussi placer des clés de types *string*? Exemple.
+* Comment placer toutes les valeurs d'un dictionnaire dans une liste `L` (voir ex 5)?
+
+* Quelle librairie python permet de tracer des graphiques? Quel module?
 * Quelle instruction permet de tracer un nuage de point avec la liste X en abscisses et Y en ordonnée?
 
 # Liens

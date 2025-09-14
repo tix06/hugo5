@@ -49,3 +49,7 @@ let link = baniere.querySelectorAll("h2")
 for(i=0;i<link.length;i++){
     link[i].parentNode.removeChild(link[i])} // on retire chaque lien
 ```
+
+# notes
+cours sur l'adressage, les memoires, etc.. (super bien)
+https://wcours.gel.ulaval.ca/GIF1001/old/h23/cours/8.%20Memoire%20et%20bus.pdf
