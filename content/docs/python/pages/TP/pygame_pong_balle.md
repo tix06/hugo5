@@ -19,6 +19,7 @@ Pour ajouter de la variété dans le jeu, la balle pourrait apparaitre à une po
 Ces variables seront initialisées avec les valeurs suivantes (*ajuster au besoin, et selon la difficulté voulue*):
 
 ```python
+from random import randint
 r_balle = 16
 xb = 50
 yb = 256 + randint(0,100)-50
@@ -33,6 +34,7 @@ Pour dessiner la balle, utilisons la fonction `draw.circle`:
 pygame.draw.circle(fenetre, couleur, (xb, yb), r_balle)
 ```
 
+<!--
 Cette ligne est à placer avant le rafraichissement de la page: `pygame.display.update()`
 
 A ce niveau, votre programme devrait ressembler à ceci:
@@ -79,6 +81,8 @@ while continuer :
 pygame.quit()
 
 ```
+-->
+
 
 ## Deplacer la balle
 La balle se deplace en modifiant `xb` et `yb` à chaque itération (boucle `while`). Il faudra ajouter la vitesse à chacune de coordonnées:
@@ -113,7 +117,7 @@ while continuer:
 
 ```
 
-
+<!--
 # Programme final
 
 ```python
@@ -163,10 +167,13 @@ while continuer :
 pygame.quit()
 
 ```
+-->
 
 ## Que reste t-il à faire?
 * Les rebonds sur la raquette
 * La gestion du score et de la fin de la partie
+
+Pour l'écriture de texte dans la fenêtre pygame, consulter la page suivante sur [stackoverflow](https://stackoverflow.com/questions/20842801/how-to-display-text-in-pygame)
 
 ## Retour sur la page 1
 [Lien vers le debut du projet](../pygame_pong) 
