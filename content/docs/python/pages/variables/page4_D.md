@@ -271,6 +271,7 @@ print(type(a//b))
 Les variables utilisées pour construire la chaine de caractère se placent au niveau des `{ }` et sont énoncées dans l'ordre, dans la fonction `format`.
 -->
 
+## Variables de quel type?
 Nous avons vu qu'une chaine de caractère pouvait être construite comme une association de plusieurs chaines de caractères. Une chaine de caractères est de type *string* (ou `str`) en python.
 
 Pour connaitre le type d'une variable, on utilise la fonction `type`
@@ -289,6 +290,8 @@ d = a / b
 type(d)
 m = str(a)
 type(m)
+compare = (45%26 == 19)
+type(compare)
 ```
 
 * **Question j:** Compléter le tableau:
@@ -301,6 +304,9 @@ type(m)
 | 45//26 |  |
 | 6e3 |  | 
 | str(45) |  |
+| compare = (45%26 == 19) |   |
+
+Dans le dernier cas, on place le résultat d'une comparaison dans une variable. Une comparaison utilise toujours l'un des symboles: `>, >=, <, <=, ==, !=`. Le résultat est soit `True`, soit `False`. Le type est booléen (`bool` en langage python).
 
 <!--
 Pour connaitre l'emplacement de la valeur d'une variable, dans la mémoire de la machine, utiliser la fonction `id`:
@@ -331,14 +337,17 @@ $$Ec = \tfrac{1}{2}m.v^2$$
 * **Question l:** Construire une chaine de caractères précisant que vous affichez l'energie cinetique, avec les valeurs de m et v, et le résultat du calcul de l'énergie cinétique. Recopier ici cette instruction en python. Utiliser les variables m, v et Ec.
 
 # Portfolio
+* Quels sont les 4 *types* simples que vous avez vus dans ce TP?
 * Le changement de type entre variables se fait grace aux fonctions `str`, `float`, `int`, et `bool`
-  * Comment transformer la chaine "12" en une valeur entière égale à 12? "12" => 12
+  * Comment transformer la chaine "12" en une valeur entière égale à 12? *(on veut "12" => 12)*. 
+  Faut-il utiliser `str(12)`, ou bien `int("12")`?
   * Comment réaliser l'opération inverse? 12 => "12"
   * Comment transformer la chaine "12" en un nombre flottant? "12" => 12.0
 
 * Comment échange t-on la valeur de 2 variables `a` et `b`?
 * Comment construire une chaine de caractères avec N répétitions du seul motif `ABC`?
-* Quel est le *type python* pour le résultat d'une division simple? D'une division avec 2 barres `//`? Pour  l'opérateur modulo `%`?
+* Quel est le *type python* pour le résultat d'une division simple? D'une division avec 2 barres `//`? Pour  l'opérateur modulo `%`? Pour une expression logique avec l'opérateur `==`?
+* On veut placer la valeur $3\times 10^8$km/s dans la varaible `v`. Quelle instruction python faut-il écrire?
 
 
 # Liens

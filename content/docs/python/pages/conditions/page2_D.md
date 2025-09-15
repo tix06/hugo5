@@ -13,11 +13,11 @@ Au choix:
 
 Dans une même cellule: Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
 
-* Utiliser l'editeur Pyzo:
+* Utiliser l'editeur **Pyzo**:
 
 Mettre `##` avant chaque script pour créer une *cellule*. Executer la cellule et passer à la suivante avec *MAJ+CTRL+ENTREE*.
 
-* Utiliser l'editeur Spyder:
+* Utiliser l'editeur **Spyder**:
 
 Mettre `#%%` avant chaque script pour créer une *cellule*. Executer la cellule et passer à la suivante avec *MAJ+ENTREE*.
 
@@ -158,17 +158,22 @@ Souvent, il sera nécessaire de commencer le programme par initier une variable 
 
 *Exemple 1: Réaliser un compteur*
 
+> Tester le programme suivant:
+
 ```python
 print("Donner les prénoms des 3 neveux de Donald Duck")
 i = 1
 while i <= 3:
-  nom = input("neveu n°"+str(i)+": ")
+  nom = input("Donner le nom du neveu n°"+str(i)+": ")
   i = i + 1
 print("c'est fini")
 ```
 
 * à la première itération, i vaut 0, donc la condition `i <= 3` est évaluée à `True` et le bloc est executé. l'utilisateur est invité à entrer le premier nom, (*il va certainement entrer Riri*), et i finit avec la valeur 1 (`i = i + 1`)
+* Entrer ensuite les noms *Fifi* et *Loulou*.
 * La boucle se poursuit jusqu'à ce que i soit égal à 4. Alors `i <= 3` est évaluée à `False` et le programme poursuit APRES la boucle, avec la dernière instruction: affiche `"c'est fini"`
+
+> Vérifier dans la console: afficher le contenu de `nom`. Vous devriez avoir `Loulou`. Et la valeur du compteur `i`. (4)
 
 *Exemple 2: Soustractions multiples* 
 
