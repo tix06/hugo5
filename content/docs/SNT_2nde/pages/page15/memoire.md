@@ -19,6 +19,7 @@ Le stockage des bits s’est fait autrefois sur support papier (avec/sans trou):
 {{< img src="../images/carte.png" link="https://fr.wikipedia.org/wiki/Codage_des_caract%C3%A8res_sur_carte_perfor%C3%A9e" caption="carte perforée IBM - source wikipedia" >}}
 
 {{<img src="../images/ibm.png" caption="source - courstechinfo.be/Techno/Historique2.html" >}}
+
 *Une machine comme l’IBM 1401 lisait les cartes (a) pour en recopier le code sur une bande magnétique (b). Un gros calculateur lisait cette bande (c), exécutait les jobs (d) puis transcrivait les résultats sur une autre bande (e) postposant ainsi l’impression des résultats (impression off-line) faite ensuite par un ordinateur plus léger (f).*
 
 On devine en quoi les machines ont grandement evolué: aujourd’hui, le processeur gère tout seul l’accès aux données et aux programmes. Il n’y a plus besoin d’un personnel humain…
@@ -38,7 +39,9 @@ Le nombre de transistors sur une puce électronique devrait être doublé tous l
 
 La figure suivante montre l'évolution du nombre de transistors pour un même élement de surface:
 
-{{< img src="../images/mem-moore.png" link="https://fr.wikipedia.org/wiki/Loi_de_Moore" caption="illustration de la loi de Moore - source wikipedia" >}}
+{{< img src="../images/mem-moore.png" caption="illustration de la loi de Moore - source wikipedia" >}}
+
+[Lien page wikipedia](https://fr.wikipedia.org/wiki/Loi_de_Moore)
 
 # Coder et manipuler de plus grandes valeurs
 Les transistors sont gravés sur circuits intégrés, ce qui a permi d'atteindre des fortes densités par unité de surface. La finesse de gravure est actuellement de 10 nm environ (Intel).
@@ -52,8 +55,12 @@ Ce sont des nombres, des caractères, des mots, des images, des sons, des bruits
 La quantité de mémoire, même importante, n’est pas infinie dans une machine. C’est pourquoi on doit reserver un certain nombre de bit à chaque donnée, et ce nombre doit être ajusté au mieux.
 
 
+<!--
 {{< img src="../images/mem-bits.png" caption="Le transistor: un composant électronique à 2 états" >}}
+-->
+
 Pour coder une information qui peut prendre plus de 2 valeurs, il faudra utiliser plusieurs *bits*. Ceux-ci sont souvent rassemblés par 8, formant un mot-octet. Celui-ci peut prendre 256 valeurs.
+
 
 # Stocker de manière durable: Disque dur
 Le disque dur utilise des pistes magnétiques sur un plateau pour écrire et lire avec une tête magnétique.
@@ -68,6 +75,8 @@ Dès l’invention de l’informatique, les ordinateurs ont pu manipuler des tex
 {{< img src="../images/ascii.png" link="https://www.lookuptables.com/text/ascii-table" caption="table ascii, source: lookuptable.com" >}}
 Avec la taille des mémoires, et les performances des machines qui ont progressé, il a été possible de coder des données de plus en plus complexes. Il a fallu trouver un moyen de structurer ces données, c’est à dire de les mettre en forme et en lien dans un format approprié.
 
-# Sources
+# Sources et compléménts
 * Image du disque dur: [Par I, Surachit, CC BY-SA 3.0](https://commons.wikimedia.org/w/index.php?curid=2537310)
+* Cours Licence sur les mémoires [de Jean-Michel Richer](https://leria-info.univ-angers.fr/~jeanmichel.richer/ensl3i_crs4.php)
+* Fonctionnement d'un ordinateur: [wikibooks](https://fr.wikibooks.org/wiki/Fonctionnement_d%27un_ordinateur/La_carte_m%C3%A8re,_chipset_et_BIOS)
 

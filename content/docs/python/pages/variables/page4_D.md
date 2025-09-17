@@ -337,7 +337,7 @@ $$Ec = \tfrac{1}{2}m.v^2$$
 * **Question l:** Construire une chaine de caractères précisant que vous affichez l'energie cinetique, avec les valeurs de m et v, et le résultat du calcul de l'énergie cinétique. Recopier ici cette instruction en python. Utiliser les variables m, v et Ec.
 
 # Portfolio
-* Quels sont les 4 *types* simples que vous avez vus dans ce TP?
+* Quels sont les 4 *types* simples en python que vous avez vus dans ce TP?
 * Le changement de type entre variables se fait grace aux fonctions `str`, `float`, `int`, et `bool`
   * Comment transformer la chaine "12" en une valeur entière égale à 12? *(on veut "12" => 12)*. 
   Faut-il utiliser `str(12)`, ou bien `int("12")`?
@@ -347,7 +347,7 @@ $$Ec = \tfrac{1}{2}m.v^2$$
 * Comment échange t-on la valeur de 2 variables `a` et `b`?
 * Comment construire une chaine de caractères avec N répétitions du seul motif `ABC`?
 * Quel est le *type python* pour le résultat d'une division simple? D'une division avec 2 barres `//`? Pour  l'opérateur modulo `%`? Pour une expression logique avec l'opérateur `==`?
-* On veut placer la valeur $3\times 10^8$km/s dans la varaible `v`. Quelle instruction python faut-il écrire?
+* On veut placer la valeur $3\times 10^8$km/s dans la variable `v`. Quelle instruction python faut-il écrire?
 
 
 # Liens
