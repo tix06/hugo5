@@ -54,7 +54,7 @@ print('b = {}, a = {}'.format(b,a))
 
 **Question c:** Que valent `a` et `b` après l'execution du programme? 
 
-**Question d:** La copie `b = a`, est-elle une copie par valeur ou par reference?
+**Question d:** La copie `b = a`, est-elle une copie par *valeur* (2 objets différents) ou par *reference* (2 objet identiques)?
 
 
 
@@ -78,7 +78,7 @@ print(resultat)
 
 > Tester ce script avec l'editeur de Pythontutor.
 
-**Question e:** Et resumer les étapes observées lors du déroulement du script.
+**Question e:** `x` et `z`, sont-ils 2 objets identiques?
 
 
 ## Objets mutables : copie par référence
@@ -99,7 +99,7 @@ mafonction(L1)
 
 > tester le script avec pythontutor
 
-**Question f:** Et resumer les étapes observées lors du déroulement du script.
+**Question f:** `L1` et `L2`, sont-ils 2 objets identiques? La copie est-elle réalisée par valeur ou bien par *référence*?
 
 
 # Conclusion : objets mutables et non mutables
@@ -128,7 +128,7 @@ print(coordonnees_init)
 
 **Question g:** Les nouvelles coordonnées sont stockées dans la Liste `deplacement`. Comment évoluent les coordonnées dans les 2 listes? La liste de coordonnées d'origine est-elle modifiée par le script?
 
-> Ajouter maintenant le script de la fonction2 
+> Tester maintenant le script de la fonction2 
 
 ```python
 def fonction2():
@@ -159,7 +159,7 @@ print(fonction3())
 print(coordonnees_init)
 ```
 
-**Question i:** Cette fois, `deplacement` est-il une copie par valeur ou par reference de `coordonnees_init`? Précisez ce qu'est une copie par *valeur*.
+**Question i:** Cette fois, `deplacement` est-il une copie par *valeur* ou par *reference* de `coordonnees_init`? Précisez ce qu'est une copie par *valeur*.
 
 
 # Dictionnaires
@@ -224,11 +224,10 @@ print(g1.supplements,g2.supplements)
 Pour le script suivant:
 
 ```python
-a = 1
-b = a
 L1 = [1,2,3]
 L2 = L1
 L3 = list(L1)
+
 def ma_fonction(L):
     L = L + [4]
 
@@ -238,7 +237,6 @@ ma_fonction(L1)
 Reproduire sommairement le schéma de la structure de données telle qu'elle serait représentée dans Pythontutor, à la fin de ce script.
 
 # Liens
-* activité sur les copies par valeur et par reference: [pythontutor](/docs/python/pages/variables/page3/)
 * TP5 [listes, indices, méthodes](/docs/python/pages/boucles/page3/)
 * TP6 [boucles et parcours de liste](../../boucles/page4)
 
