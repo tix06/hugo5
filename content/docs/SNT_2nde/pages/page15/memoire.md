@@ -35,6 +35,10 @@ C’est donc le transistor qui permet la représentation d’un bit de donnée, 
 *Un transistor est un morceau de conducteur, dont la conductivité est contrôlée par sa troisième broche/borne. - Source: [Fonctionnement d'un ordinateur/Les transistors et portes logiques](https://fr.wikibooks.org/wiki/Fonctionnement_d%27un_ordinateur/Les_transistors_et_portes_logiques)* 
 
 # Loi de Moore
+voir la presentation:
+
+{{< img src="/pdf/NSI_1/C1_presentation_machines.png" link="/pdf/NSI_1/C1_presentation_perf_machines.pdf" >}}
+
 Le nombre de transistors sur une puce électronique devrait être doublé tous les 2 ans, pour le même prix de fabrication. Les transistors deviennent donc de plus en plus petits.
 
 La figure suivante montre l'évolution du nombre de transistors pour un même élement de surface:
@@ -42,6 +46,12 @@ La figure suivante montre l'évolution du nombre de transistors pour un même é
 {{< img src="../images/mem-moore.png" caption="illustration de la loi de Moore - source wikipedia" >}}
 
 [Lien page wikipedia](https://fr.wikipedia.org/wiki/Loi_de_Moore)
+
+Cette miniaturisation a un effet sur d'autres caracteristiques. Voir l'article ci-dessous.
+
+{{< img src="../images/Moore_law_2.png" caption="evolution des caracteristiques des machines - source wikibooks" >}}
+
+[Lien page wikibooks](https://fr.wikibooks.org/wiki/Fonctionnement_d%27un_ordinateur/La_loi_de_Moore_et_les_tendances_technologiques)
 
 # Coder et manipuler de plus grandes valeurs
 Les transistors sont gravés sur circuits intégrés, ce qui a permi d'atteindre des fortes densités par unité de surface. La finesse de gravure est actuellement de 10 nm environ (Intel).
@@ -63,7 +73,9 @@ Pour coder une information qui peut prendre plus de 2 valeurs, il faudra utilise
 
 
 # Stocker de manière durable: Disque dur
-Le disque dur utilise des pistes magnétiques sur un plateau pour écrire et lire avec une tête magnétique.
+Les mémoires se partagent en 2 familles: Les mémoires volatiles, comme la RAM: les données stockées vont s'éffacer lorsque l'on coupe l'alimentation de la machine. Et les mémoire persistantes, pour lesquelles les données ne s'effacent pas lors de la mise hors tension.
+
+Le disque dur est du 2e type. Il utilise des pistes magnétiques sur un plateau pour écrire et lire avec une tête magnétique.
 
 {{< img src="../images/Harddrive.svg" link="https://fr.wikipedia.org/wiki/Disque_dur" caption="disque dur - Wikipedia" >}}
 
