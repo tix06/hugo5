@@ -32,23 +32,28 @@ Nord;Jérome;Raisins;7580;;
 
 > Copiez ces données et collez les dans un fichier à l'aide de *Notepad* (du menu Programmes > accessoires de l'ordinateur).
 
-> Sauvegardez le fichier dans *vos documents* en écrivant entre guillemets le nom du fichier `"fruits.csv"`
-Les guillemets vous permettent de choisir l'extension du fichier et de remplacer celle par defaut choisie par le bloc note (`.txt`).
+> Sauvegardez le fichier dans *vos documents*:
+> * Soit en le nommant: `fruits.txt`
+> * Soit en écrivant entre guillemets le nom du fichier `"fruits.csv"`
+Les guillemets vous permettent de choisir l'extension du fichier et de remplacer celle par defaut choisie par le bloc note (`.txt`)
 
-**Question a:** A partir de vos connaissances, ou bien après une petite recherche sur le *net*, que contient un fichier `.txt`? Les données y-sont-elles mises dans un format special (structuré)? 
+**Question a:** A partir de vos connaissances, ou bien après une petite recherche sur le *net* que contient un fichier `.txt`? Les données y-sont-elles mises dans un format special (structuré)? 
 
 **Question b:** Même question, mais cette fois pour les fichiers `.csv`. Précisez, pour les données de votre fichier *fuits.csv*, si les données sont séparées, et si oui, quel est le caractère séparateur?
 
 # Présenter les données à l'aide d'un tableur
-> Démarrer le logiciel Excel (un tableur de la suite bureautique microsoft). 
+> Démarrer le logiciel Excel (un tableur de la suite bureautique microsoft).
 
-> Choisir le bandeau **Données**. Chercher ensuite le bouton *importer un fichier texte ou csv*. Ouvir le fichier *fruits.csv*.
+Pour ouvrir le fichier, il y a 2 possibilités (selon la version du logiciel)
 
-{{< img src="../images/gimp1.png" caption="importer un fichier csv depuis le bandeau Données" >}}
+> * Soit Fichier > Ouvrir
+> * Soit a partir du bandeau **Données**. Chercher ensuite le bouton *importer un fichier texte ou csv*. Puis selectionner le fichier.
 
-A l'ouverture, il vous sera demandé de préciser l'encodage et les caractères de séparation des données.
+{{< img src="../images/gimp1.png" caption="Exemple d'import d'un fichier .csv depuis le bandeau Données" >}}
 
-Choisir l'encodage des données, en utf-8. Cela permetra d'afficher aussi les caractères accentués:
+A l'ouverture, il vous sera demandé de préciser le séparateur des données (`,` ou bien `;`), puis l'encodage et les caractères.
+
+Pour l'encodage des données, choisir **utf-8**. Cela permetra d'afficher aussi les caractères accentués:
 
 {{< img src="../images/gimp2.png" caption="à gauche, les caractères accentués ne sont pas gérés. à droite, en utf-8, les caractères accentués sont pris en charge." >}}
 
@@ -107,6 +112,7 @@ Il apparait alors des listes de choix au dessus des descripteurs du tableau. Pou
 * Sur le filtre appliqué à la première colonne (étiquette: Région), choisir **Est**.
 
 {{< img src="../images/filtrer.png" caption="menu permettant la sélection par Région" >}}
+
 ## Filtrer selon un 2e critère
 * Sur le filtre appliqué à la troisième colonne (étiquette: Produits), choisir **Pommes**.
 
@@ -123,14 +129,6 @@ Pour revenir au tableau initial, rappuyer sur Filtre dans le bandeau d'Excel.
 
 Cela retire tous les filtres. 
 
-### Format numérique
-Commencer par définir une plage de valeurs numériques. Lors de l'import des données, le format des cellules est souvent incompatible avec les fonctions de calcul. 
-
-> Sélectionner toutes les valeurs numériques du tableau. 
-
-{{< img src="../images/gimp4.png" >}}
-
-> Dans le bandeau **Données**, choisir: **Convertir**. Et faire suivant, plusieurs fois, sans changer les options proposées. Les cellules sont maintenant en format NOMBRE.
 
 ### Fonction somme
 Vous allez maintenant programmer une fonction de calcul sur le tableau: La fonction *SOMME*.
@@ -142,7 +140,7 @@ Voici un lien vers le [tuto de microsoft office.](https://support.microsoft.com/
 * puis faire une **sélection étendue** de toutes les valeurs de la colonne. 
 * Valider avec la touche *Entrer*
 
-**Question g:** Quel est le resultat du calcul?
+**Question g:** Quel est le resultat du calcul? *Si le resultat est égal à zero, veuillez modifier le format comme expliqué en bas de page (Compléments), puis recommencer.*
 
 **Question h:** Cliquer dans la case. Recopier la formule du calcul généré par le logiciel.
 
@@ -168,6 +166,18 @@ On a alors le nombre de Pommes vendues dans toute la France.
 Un logiciel tableur (Excel, Calc, Number) permet de présenter les données à l'utilisateur en tableau, mais apporte aussi des **fonctions de traitement**. Ce sont les mêmes fonctions que l'on peut programmer avec un langage de traitement sur une Base de Données (SQL).
 
 **Question j:** Quelles sont les *fonctions de traitement*que vous avez utilisées lors de ce TP? Donner leur nom.
+
+# Compléments: Format numérique
+ Lors de l'import des données, le format des cellules est parfois incompatible avec les fonctions de calcul. 
+
+ Il faut alors définir une plage de valeurs numériques.
+
+> Sélectionner toutes les valeurs numériques du tableau. 
+
+{{< img src="../images/gimp4.png" >}}
+
+> Dans le bandeau **Données**, choisir: **Convertir**. Et faire suivant, plusieurs fois, sans changer les options proposées. Les cellules sont maintenant en format NOMBRE.
+
 
 # Document
 Fiche reponse à {{< a link="/pdf/SNT/C21_TP_Excel.pdf" caption="télecharger / remplir" >}}
