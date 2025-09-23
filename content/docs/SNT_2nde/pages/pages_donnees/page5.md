@@ -32,39 +32,43 @@ Nord;Jérome;Raisins;7580;;
 
 > Copiez ces données et collez les dans un fichier à l'aide de *Notepad* (du menu Programmes > accessoires de l'ordinateur).
 
-> Sauvegardez le fichier dans *vos documents*:
-> * Soit en le nommant: `fruits.txt`
+> Sauvegardez le fichier dans votre *dossier* **documents** en le nommant: `fruits.txt`, ou bien `"fruits.csv"`
+
+<!--
 > * Soit en écrivant entre guillemets le nom du fichier `"fruits.csv"`
 Les guillemets vous permettent de choisir l'extension du fichier et de remplacer celle par defaut choisie par le bloc note (`.txt`)
+-->
 
 **Question a:** A partir de vos connaissances, ou bien après une petite recherche sur le *net* que contient un fichier `.txt`? Les données y-sont-elles mises dans un format special (structuré)? 
 
-**Question b:** Même question, mais cette fois pour les fichiers `.csv`. Précisez, pour les données de votre fichier *fuits.csv*, si les données sont séparées, et si oui, quel est le caractère séparateur?
+**Question b:** Même question, mais cette fois pour les fichiers `.csv`. 
 
 # Présenter les données à l'aide d'un tableur
 > Démarrer le logiciel Excel (un tableur de la suite bureautique microsoft).
 
-Pour ouvrir le fichier, il y a 2 possibilités (selon la version du logiciel)
+**Une fois le logiciel Excel démarré**, ouvrir le fichier `fruits.txt`
 
-> * Soit Fichier > Ouvrir
-> * Soit a partir du bandeau **Données**. Chercher ensuite le bouton *importer un fichier texte ou csv*. Puis selectionner le fichier.
+<!--
+L'ouverture du fichier peut aussi se faire à partir du bandeau **Données**: Chercher ensuite le bouton *importer un fichier texte ou csv*. Puis selectionner le fichier.
 
 {{< img src="../images/gimp1.png" caption="Exemple d'import d'un fichier .csv depuis le bandeau Données" >}}
+-->
 
 A l'ouverture, il vous sera demandé de préciser le séparateur des données (`,` ou bien `;`), puis l'encodage et les caractères.
 
-Pour l'encodage des données, choisir **utf-8**. Cela permetra d'afficher aussi les caractères accentués:
-
-{{< img src="../images/gimp2.png" caption="à gauche, les caractères accentués ne sont pas gérés. à droite, en utf-8, les caractères accentués sont pris en charge." >}}
-
-Le paramètre *semicolon* (point virgule) précise le caractère séparateur.
-
-Dans une version plus ancienne du logiciel Excel, la boite de dialogue peut différer:
+Selon la version du logiciel Excel, la boite de dialogue peut différer:
 
 {{< img src="../images/excel_import1.png" caption="le format n'a pas été correctement renseigné" >}}
 
+Le paramètre *semicolon* (point virgule) précise le caractère séparateur.
+
 {{< img src="../images/excel_import2.png" caption="le format a été correctement renseigné" >}}
 
+Dans une version plus recente, la boite de dialogue peut ressembler à celle-ci:
+
+{{< img src="../images/gimp2.png" caption="à gauche, les caractères accentués ne sont pas gérés. à droite, en utf-8, les caractères accentués sont pris en charge." >}}
+
+Pour l'encodage des données, choisir **utf-8**. Cela permetra d'afficher aussi les caractères accentués.
 
 
 Le logiciel Excel sert à PRESENTER les données. C'est à dire à reconstruire le tableau. Le visuel peut être important pour lire les informations contenues. 
