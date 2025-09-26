@@ -399,6 +399,8 @@ Please enter a number: 2
 ### Fonctionnel: avec un Doctest
 Le doctest est un module qui recherche dans le prototypage (docstring) de la fonction ce qui pourrait s'apparenter à des tests sur la fonction.
 
+On écrit alors **une simulation d'un essai** directement dans le docstring, en écrivant de manière explicite les 3 chevrons. Ainsi que la valeur attendue pour des arguments choisis. (voir le paragraphe précédent)
+
 Comme par exemple:
 
 ```
@@ -406,10 +408,9 @@ Comme par exemple:
 6
 ```
 
+Cette information sera placée dans le docstring de la fonction, et servira à anticiper des erreurs commises lors de la programmation.
 
-On écrit alors une simulation d'un essai directement dans le docstring, en écrivant de manière explicite les 3 chevrons. Ainsi que la valeur attendue pour des arguments choisis. (voir le paragraphe précédent)
-
-Pour réaliser des tests sur la fonction, on ajoutera alors à la suite du script les lignes suivantes:
+Pour **déclencher les tests** sur la fonction, on ajoutera alors à la suite du script les lignes suivantes:
 
 ```python
 if __name__ == "__main__":
@@ -419,11 +420,29 @@ if __name__ == "__main__":
 Supposons que l'on ait fait une erreur dans la fonction `a_rect` sur la valeur calculée, et que l'on ait écrit:
 
 ```python
+    # a = long * larg
     a = long * long
     return a
 ```
 
-alors la console affichera, à l'execution du programme:
+*Exemple complet*:
+
+```python
+def aire(larg,long):
+    """
+    >>> a_rect(2,3)
+    6
+    """
+    # a = long * larg
+    a = long * long
+    return a
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
+```
+
+Lorsque l'on execute le fichier, la console affichera:
 
 ```
 Failed example:
