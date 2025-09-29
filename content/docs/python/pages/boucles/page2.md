@@ -5,10 +5,53 @@ bookShowToc: false
 
 
   
-# Listes et boucles bornées
+# Chaines de caractères, Listes et Boucles bornées
+## Chaines de caractères
+**1. Definition:** Une chaine de caractère est une séquence ordonnée de caractères, mis entre guillements  (simples `'` ou doubles `"`). C'est le type `str` en python. Pour en savoir plus sur les chaines, on pourra consulter la page: [google dev: chaines](https://developers.google.com/edu/python/strings?hl=fr)
+
+On accède à un élément d'une chaine grace à sa position, appelée *indice*. Le premier élément a pour indice zero. 
+
+```python
+> voyelles = 'eio'
+> voyelles[0]
+e
+> voyelles[1]
+i
+> voyelle[2]
+o
+> voyelles[-1]
+o # le dernier element de la liste
+> voyelles
+'eio'
+```
+
+Un indice négatif permet d'identifier les éléments à partir de la fin: -1 pour le dernier caractère, -2 pour l'avant dernier, ...
+
+Illustration avec la chaine de caractères *Hello*:
+
+{{< img src="../images/hello.png" caption="exemple avec les rangs des caractères du mot Hello" link="https://developers.google.com/edu/python/strings?hl=fr" >}}
+
+**2. Modifier une chaine**
+Contrairement aux listes, il n'est pas possible de modifier un caractère dans une chaine:
+
+```python
+> voyelles = 'eio'
+> voyelles[2] = 'y'
+TypeError: 'str' object does not support item assignment
+```
+
+**3. Une fonction utile aux chaines: `len`**
+La fonction `len` va retourner la longueur de la chaine de caractères.
+
+```python
+> chaine = 'abc'
+> len(chaine)
+3
+```
+
 ## Listes
 **1. Definition:** Une **liste** est une collection ordonnée d'objets.
-Une **liste** est entourée de **crochets** `[ ]`
+Une **liste** est entourée de **crochets** `[ ]`. C'est le type `list` en python. Pour en savoir plus sur les listes, on pourra consulter la page: [google dev: listes](https://developers.google.com/edu/python/lists?hl=fr)
 
 On accède à un élément d'une liste grace à sa position, appelée *indice*. Le premier élément a pour indice zero. 
 
@@ -58,7 +101,18 @@ voyelles
 # affiche ["e","i","o","u"]
 ```
 
-**3. Autres méthodes de liste TRES utiles**
+L'écriture de la méthode `append` se fait avec une notation pointée: `liste.append(x)`, où `x` est la valeur à ajouter à la fin de `liste`.
+
+**3. Une fonction utile aux listes: `len`**
+La fonction `len` va retourner la longueur de la liste.
+
+```python
+> L = ['a','b','c']
+> len(L)
+3
+```
+
+**4. Autres méthodes de liste TRES utiles**
 
 > Retirer un élément de liste: méthode `pop`
 
@@ -78,7 +132,9 @@ len(voyelles)
 # car la liste contient 4 éléments
 ```
 
-**4. Liste de listes** 
+
+
+**5. Liste de listes** 
 Les éléments contenus peuvent aussi être une liste:
 
 ```python

@@ -18,17 +18,13 @@ Cette version du programme n'utilise pas les `sequences` comme les listes python
 L'interface se passe dans la console python.
 
 ## Principes retenus pour le jeu
-L'ordinateur tire 4 couleurs parmis Jaune, Orange, Cyan, Rouge, Vert. Ces pions colorés sont les variables `o1`, `o2`, `o3`, `o4`. On y stocke un unique caractère, parmis ('J','O','C','R','V')
+* L'ordinateur tire 4 couleurs parmis Jaune, Orange, Cyan, Rouge, Vert. Ces pions colorés sont les variables `o1`, `o2`, `o3`, `o4`. On y stocke un unique caractère, parmis ('J','O','C','R','V')
 
-Le joueur doit proposer sa sequence de 4 couleurs. 
+* Le joueur doit proposer sa sequence de 4 couleurs. Sa première reponse est placée dans la variable `j1`, puis la 2e dans `j2`, etc... Le joueur proposera par exemple 'J', puis 'O', puis 'C', puis 'R' pour Jaune, Orange, Cyan, Rouge.
 
-Sa première reponse est placée dans la variable `j1`, puis la 2e dans `j2`, etc...
+* Si la couleur du pion est trouvée, le score Noir N augmente de 1.
 
-Le joueur proposera par exemple 'J', puis 'O', puis 'C', puis 'R' pour Jaune, Orange, Cyan, Rouge.
-
-Si la couleur du pion est trouvée, le score Noir N augmente de 1.
-
-Si l'une des couleurs est trouvée mais n'est pas à la bonne place, c'est le score blanc B qui augmente.
+* Si l'une des couleurs est trouvée mais n'est pas à la bonne place, c'est le score blanc B qui augmente.
 
 ## Commençons par les variables globales du jeu
 Importer la fonction `random.choice`. Puis utiliser cette fonction pour réaliser le tirage aléatoire d'un caractère parmis `('J','O','C','R','V')`, que l'on placera dans la variable `o1`.
@@ -69,6 +65,27 @@ Si l'une de ces conditions n'est plus réalisée, alors on sort de la boucle car
 j1 = input("entrer la couleur du pion 1 (JOCRV): ")
 ```
 
+A cette étape du projet, votre script devrait ressembler à ceci:
+
+```python
+from random import choice
+o1 = choice(('J','O','C','R','V'))
+o2 = ...
+...
+...
+sequence = o1+o2+...
+# print(sequence)
+essais = ...
+N = ...
+while essais ... 12 and N ... 4:
+    j1 = input("entrer la couleur du pion 1 (JOCRV): ")
+    j2 = ...
+    ...
+    ...
+```
+
+Il faudra ensuite initialiser les variables `N` et `B` à zero, puis écrire une série de tests:
+
 > Tester pour chaque couleur donnée par le joueur, si celle-ci est bien en correspondance avec le pion de l'ordinateur, à la même place. Par exemple, `j1` est il egal à `o1`: Augmenter alors `N` d'une unité.
 
 > Si le test est negatif, tester alors si la couleur proposée par le joueur est présent dans la `sequence`, mais occupe une autre position:
@@ -91,9 +108,9 @@ Le joueur pourrait donner sa sequence de couleurs en une seule fois, à l'aide d
 
 Pour comparer chaque couleur, avec chaque pion de l'ordinateur, à la même position: il faut alors atteindre l'une des lettres du mot "JJOV", et la comparer à la lettre du même rang, dans la sequence de l'ordinateur.
 
-Cela necessite d'utiliser un *index* pour parcourir le mot du joueur. Et une *boucle bornée* `for` pour faire evoluer le rang.
+Cela necessite d'utiliser un *[index](/docs/python/pages/boucles/page2/)* pour parcourir le mot du joueur. Et une *[boucle bornée](/docs/NSI_1/donnees/page5/)* `for` pour faire evoluer le rang.
 
-On trouvera des précisions sur ces notions au [TP4 python: boucles for](/docs/NSI_1/donnees/page5/)
+On trouvera des précisions sur ces notions au [TP4 python: boucles for](/docs/NSI_1/donnees/page5/), ainsi qu'au cours sur les [séquences](/docs/python/pages/boucles/page2/).
 
 
 
