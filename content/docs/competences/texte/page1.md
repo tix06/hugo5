@@ -37,10 +37,12 @@ Il est nécessaire de séparer le travail de la forme du document de celui du co
 # TP2 - Mettre en forme un document
 On s'aidera du tutoriel pour **LibreOffice Writer** à l'adresse suivante: {{< img src="/images/video.png" link="https://www.youtube.com/watch?v=ekh2Q1DU8Mw" caption="Youtube - LibreOffice Writer 1/11 : Mettre en forme le style principal " >}}
 
+Vous pouvez aussi consulter le cours de PPPE1: [utilisation basique de Writer](../page7).
+
 ## Document .odt > LibreOffice Writer
 Le {{< a link="/pdf/competences/exercice_les_plastiques.odt" caption="document suivant" >}} ne présente aucune mise en forme pour son contenu.
 
-> Téléchargez ce document et modifiez le pour le présenter avec le *Style* du **mémoire - sciencespo-lille.eu**:
+> Téléchargez ce document et modifiez le pour le présenter avec un *Style* inspiré du **mémoire - sciencespo-lille.eu**:
 
 * Créer des éléments particuliers dans le texte: ajouter un Titre, un Sous-titre, des Chapitres de niveau 1, 2...
 * Modifier les Styles
@@ -83,7 +85,7 @@ La table des matières correspond à une liste complète des parties et des sous
 A l'ouverture d'un nouveau document, les *Styles* sont remis à ceux d'origine. Pour retrouver ceux que vous avez déjà définis, il faut charger les *Styles* à partir de votre ancien document: {{< a link="https://help.libreoffice.org/latest/fr/text/swriter/guide/load_styles.html?DbPAR=WRITER" caption="Voir ici les explications" >}}.
 
 # Correcteur orthographique
-l’extension [Grammalecte](https://grammalecte.net/#download) est un excellent correcteur grammatical et typographique qui vous permettra d’améliorer grandement la qualité de votre compte-rendu(fautes d’orthographe, formes grammaticales, insertion d’espaces insécables...).
+Le logiciel Writer comprend un correcteur grammatical et d'orthographe. On peut aussi en ajouter un (par ex. l’extension [Grammalecte](https://grammalecte.net/#download). Utilisez le, il vous permettra d’améliorer grandement la qualité de votre compte-rendu(fautes d’orthographe, formes grammaticales, insertion d’espaces insécables...).
 
 # Liens
 * Guide pour rediger un memoire de recherche - [https://www.sciencespo-lille.eu/](https://www.sciencespo-lille.eu/sites/default/files/guide_preparer_et_rediger_un_memoire_de_recherche.pdf)

@@ -17,15 +17,29 @@ bookShowToc: false
 
 
 # TP6: Boucles bornées et parcours d'une liste
-<!--
-## Ex 1: Parcours d'une liste
+
+## Ex preliminaire: Parcours d'une liste
+On pourra consulter le cours complet à l'adresse [python>boucles_bases](/docs/python/pages/boucles/page2/) et [python>boucles_avancé](/docs/python/pages/boucles/page1/)
+
+Une boucle bornée utilise le mot `for`. La structure suit le schéma suivant:
+
+```
+for variant in iterable:
+    # traitement sur le variant
+```
+
+L'*itérable* est un ensemble de valeurs prises successivement par le *variant*. A chaque *itération*, le variant passe à la valeur suivante.
+
+Cet itérable peut être une liste, ou une sequence de nombre entiers (`range(n)`, `range(len(L))`, ...)
+
+On souhaite afficher les valeurs de l'iterable avec la fonction `print`. On donne les 2 scripts suivants:
 
 * script 1
 
 ```python
 L = [1, 10, 100, 1000]
-for i in L:
-  print(i)
+for x in L:
+  print(x)
 ```
 * script 2
 
@@ -34,9 +48,13 @@ L = [1, 10, 100, 1000]
 for i in range(len(L)):
   print(i)
 ```
-* **Question a:** Lequel des 2 scripts précédents affiche `1 10 100 1000`? Lequel des 2 affiche `0 1 2 3`? Expliquez.
+* **Question:** Lequel des 2 scripts précédents affiche `1 10 100 1000`? Lequel des 2 affiche `0 1 2 3`? Préciser dans chaque cas:
 
--->
+  * quel est le variant
+  * quel est l'itérable
+  * quelles sont les valeurs successives prises par le variant
+
+
 ## Ex 1: table de 3
 On peut créer une liste VIDE, en faisant `L = []`, puis lui ajouter des valeurs. C'est ce qui doit être réalisé par ce programme.
 
@@ -134,7 +152,25 @@ for elem in T:
 
 {{< img src="../images/tuple2.png" caption="en orange: ensemble des itérables" >}}
 
-> Ecrire un programme qui parcourt les éléments de `T`, et affiche le caractère lu à la première position: 
+Ainsi, avec le programme suivant:
+
+```python
+T = (("A",1),("B",2),("C",3))
+for elem in T:
+  print(elem)
+```
+
+On affiche:
+
+```
+("A",1)
+("B",2)
+("C",3)
+```
+
+
+
+> A vous de jouer: Ecrire un programme qui parcourt les éléments de `T`, et affiche le caractère lu à la première position: 
 
 ```
 "A"
@@ -142,6 +178,7 @@ for elem in T:
 "C"
 ```
 
+*On utilisera la même boucle `for` que dans l'exemple précédent.*
 
 ### Dictionnaire
 On souhaite construire un dictionnaire python `D` à partir du tuple `T`.

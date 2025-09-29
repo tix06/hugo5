@@ -30,7 +30,7 @@ On peut représenter ce script avec des modules à assembler:
 
 {{< img src="../images/bloc1.png" caption="analogie avec des briques de construction du programme" >}}
 
-## Remarques
+## Remarque
 ### Construction de la boucle bornée
   * Le bloc d'instruction sera executé n fois. Celui-ci peut contenir une ou plusieurs instructions, du moment qu'elles sont bien positionnées dans le bloc.
   * En *Python*, le **bloc** est identifié par une **indentation**: un retrait par rapport au bord gauche, comprenant 2 espaces (ou 4).
@@ -43,8 +43,47 @@ On peut représenter ce script avec des modules à assembler:
   * On peut choisir n'importe quel nom pour le variant, pas seulement `i`.
   * Contrairement à la boucle non bornée `while`, le programmeur ne s’occupe pas de faire varier i à chaque itération. Cela ce fait tout seul.
 
+## Boucle bornée et séquence
+L'instruction utilisant le mot-clé `for` suit la construction suivante:
 
-### Boucle bornée et non bornée
+```
+for variant in iterable:
+    # bloc de code à repeter
+```
+
+Ce que l'on appelle *iterable*, c'est un ensemble de valeurs que prend successivement le *variant*.
+
+* Exemple 1: utiliser la fonction `range` 
+
+**iterable = `range(5)`**
+
+Dans ce premier cas, le variant prend successivement le valeurs de l'ensemble `{0,1,2,3,4}`. Le variant vaut 0 lors le premiere itération, puis 1 à la deuxieme, etc ...
+
+```python
+for i in range(3):
+    print(i)
+# affiche
+0
+1
+2
+```
+
+* Exemple 2: utiliser une séquence
+
+**iterable = `"abc"`**
+
+Dans ce deuxieme cas, le variant prend successivement le valeurs de l'ensemble `{"a","b","c"}`. Le variant vaut "a" lors le premiere itération, puis "b" à la deuxieme, etc ...
+
+```python
+for i in "abc":
+    print(i)
+# affiche
+"a"
+"b"
+"c"
+```
+
+# Boucle bornée et non bornée
 Pour la boucle bornée `for`, il n'est pas necessaire d'ajouter une instruction dans le bloc pour que le variant change de valeur à chaque itération. Cela se fait tout seul, à chaque fois que le programme revient sur l'instruction `for`.
 
 {{< img src="../images/bloc3.png" caption="modification du variant i à chaque itération" >}}
