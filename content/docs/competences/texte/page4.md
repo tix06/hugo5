@@ -6,8 +6,8 @@ bookShowToc: false
 # Travail collaboratif 
 Document reponse: 
 
-* [framapad du groupe A](https://mypads2.framapad.org/mypads/?/mypads/group/ppe1-xj380s96i/pad/view/rgpd-a-wg381s95n)
-* [framapad du groupe B](https://mypads2.framapad.org/mypads/?/mypads/group/ppe1-xj380s96i/pad/view/rgpd-b-i338ds93d)
+* [framapad du groupe A](https://mypads2.framapad.org/mypads/?/mypads/group/pad-pppe-x81hev98e/pad/view/rgpd-groupe-1-0q1hfv9t1)
+* [framapad du groupe B](https://mypads2.framapad.org/mypads/?/mypads/group/pad-pppe-x81hev98e/pad/view/rgpd-groupe-2-w51hgv95t)
 
 Le *framapad* est un document avec editeur en ligne de la societé de logiciels libre *Framasoft*.
 

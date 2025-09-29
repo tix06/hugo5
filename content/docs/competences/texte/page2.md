@@ -16,9 +16,11 @@ Télecharger le document LibreOffice Writer et suivre les consignes.
 
 {{< img src="../images/odt.png" link="/pdf/competences/DocumentRéponse.odt"  caption="Document à compléter" >}} 
 
-Compléter le document et le sauvegarder en ajoutant son nom au titre.
+Compléter le document et le sauvegarder dans votre dossier IACA: Documents/devoirs/tixidor. Conserver l'extension `.odt`
 
-Par exemple: `DocumentRéponse_Deuf_John.odt`
+Par exemple: `DocumentRéponse.odt`
 
 # LibreOffice Writer
+*Attention: l'utilisation avancée de Writer est assez différente de Word.*
+
 * Video expliquant les bases du logiciel: {{< a link="https://www.youtube.com/watch?v=xOIVw7Kq2yo" caption="Le Blog du Prof TIM" >}}
