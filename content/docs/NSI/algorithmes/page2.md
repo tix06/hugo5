@@ -84,7 +84,9 @@ Il existe une catégorie de problèmes que l'on appelle : *problèmes de décisi
 <br>
 Ou bien : P est décidable s’il existe un algorithme qui pour chaque x dit “OUI” ou “NON” à la question : “Est-ce que P(x) est vrai ?”.
 <br>
-Tous les problèmes mathématiques (voir plus haut) peuvent être énoncés comme des problèmes de décision: Pour les problèmes 1 et 2 vus auparavent, on peut les énoncer sous la forme:
+Tous les problèmes mathématiques (voir plus haut) peuvent être énoncés comme des problèmes de décision: [voir page wikipedia.](https://fr.wikipedia.org/wiki/Th%C3%A9orie_de_la_complexit%C3%A9_(informatique_th%C3%A9orique)), avec le Passage de problème d'optimisation à problème de décision.
+
+Pour les problèmes 1 et 2 vus auparavent, on peut les énoncer sous la forme:
 
 * Problème 1 
 * Donnée : Un nombre entier positif n en base 2. 
