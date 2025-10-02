@@ -53,3 +53,6 @@ for(i=0;i<link.length;i++){
 # notes
 cours sur l'adressage, les memoires, etc.. (super bien)
 https://wcours.gel.ulaval.ca/GIF1001/old/h23/cours/8.%20Memoire%20et%20bus.pdf
+
+TP QR-code guadeloupe
+https://pedagogie.ac-guadeloupe.fr/enrichissez_vos_productions_avec_codes_qr_0?language_content_entity=fr
