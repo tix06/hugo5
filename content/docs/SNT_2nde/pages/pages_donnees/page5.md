@@ -110,6 +110,8 @@ Si la feuille de calcul ne présente pas de filtres en tête de colonnes:
 
 * Dans le bandeau *Données*, choisir Filtrer (entonoir).
 
+{{< img src="../images/filter.png" >}}
+
 Il apparait alors des listes de choix au dessus des descripteurs du tableau. Pour filtrer selon l'un des descripteurs, cliquer sur l'une de ces listes de choix:
 
 {{< img src="../images/excel2.png" >}}
@@ -171,7 +173,8 @@ Un logiciel tableur (Excel, Calc, Number) permet de présenter les données à l
 
 **Question j:** Quelles sont les *fonctions de traitement*que vous avez utilisées lors de ce TP? Donner leur nom.
 
-# Compléments: Format numérique
+# Compléments
+## Format numérique
  Lors de l'import des données, le format des cellules est parfois incompatible avec les fonctions de calcul. 
 
  Il faut alors définir une plage de valeurs numériques.
@@ -183,8 +186,9 @@ Un logiciel tableur (Excel, Calc, Number) permet de présenter les données à l
 > Dans le bandeau **Données**, choisir: **Convertir**. Et faire suivant, plusieurs fois, sans changer les options proposées. Les cellules sont maintenant en format NOMBRE.
 
 
-# Document
+## Document
 Fiche reponse à {{< a link="/pdf/SNT/C21_TP_Excel.pdf" caption="télecharger / remplir" >}}
 
-
+# Suite
+Traitement de données sur Excel à partir d'un fichier de data.gouv: [Lien](../page11)
 

@@ -40,13 +40,22 @@ Dans un document HTML, on pourra tout de même afficher correctement ces caract�
 * soit utiliser une *entité* HTML, c'est à dire une combinaison de symboles connus par le navigateur comme par exemple: `&eacute;` pour la lettre `é`
 * soit choisir un encodage UNICODE ou utf-8
 
+Les normes suivantes vont proposer des formats qui vont:
+
+-	être compatibles avec l’ASCII 7 bits, pour faire évoluer le web tout en restant retro-compatible avec la plus ancienne et la plus internationale des normes
+-	permettre l’encodage de TOUS les caractères existants ou à venir
+
+
 ## Unicode
-Le répertoire Unicode peut contenir *plus d'un million de caractères*. 
-Le code UNICODE permet donc de représenter *tous les caractères* spécifiques aux différentes langues. Il s'agit d'un encodage avec une nombre fixe de chiffres binaires, comme ASCII, mais plus étendu. Il est d'ailleurs compatible avec les codes ASCII, les caractères latins étant représentés par les mêmes nombres. Mais avec plus de chiffres.
+Le répertoire Unicode se décline en utf-8, utf-16 et utf-32, qui sont de largeur variable ou fixe (pour utf32) 
+Le code UNICODE permet de représenter tous les caractères spécifiques aux différentes langues.
 
-L'*inconvenient* de l'Unicode est qu'il va générer des fichiers de *poids important* (poids compté en kilo octets). Bien plus lourd que l'encodage ASCII. Alors que bien souvent, la plupart des caractères utilisés pour un document texte sont ceux de l'alphabet ASCII, avec quelques caractères spéciaux.
+Cette gigantesque table est divisée en 17 plans (de 0 à 16) de deux octets chacun, soit 65 536 points de code par plan (65 536 x 17 = 1 114 112). Ces plans permettent de désigner facilement des groupes de caractères. Le premier plan, appelé Basic Multinlingual Plane (BMP), ou Plan Multinlingue de Base, regroupe les 65k caractères les plus courants. Les plans 1 à 16 sont appelés plans supplémentaires.
 
-## Code utf-8
+L’inconvenient des encodages à largeur fixe est qu’ils vont générer des fichiers de poids important (poids compté en kilo octets). Bien plus lourd que l’encodage ASCII. Alors que bien souvent, la plupart des caractères utilisés pour un document texte sont ceux de l’alphabet ASCII, avec quelques caractères spéciaux.
+
+
+## Code à largeur variable utf-8 et utf-16
 Cet encodage utilise l'ASCII, sauf pour les caractères spéciaux. La *longueur* du nombre binaire est alors *variable*. Un caractère peut nécessiter 8, 16 bits, ou plus. Une information dans le code numérique va préciser cette longueur (correspond à un caractère spécial comme le Ã). Cela va permettre d'afficher tous les caractères, comme pour l'Unicode, mais en plus, cela génère un fichier dont le poids sera inférieur.
 
 Chaque caractère dont le point de code est supérieur à 127 (0x7F) (caractère non ASCII) se code sur 2 à 4 octets:
