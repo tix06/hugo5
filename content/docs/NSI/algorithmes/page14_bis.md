@@ -187,7 +187,29 @@ def recherche_dicho_mot():
 
 **2.** L'algorithme de recherche dichotomique ne fonctionne que pour des listes sans accents. Tester la fonction avec les seules listes `ods4.txt` et `pli07.txt`. 
 
-**3.** Comparer le nouveau tableau de valeurs `T = [[len(mots1), r1], [len(mots2),r2], [0,0]]` avec le précédent. Conclure.
+**3.** On peut améliorer l'étude de la recherche dichotomique en ajoutant un compteur du nombre d'itérations à l'interieur de la fonction. Ce compteur sera incrémenté à chaque itération (`while`). La fonction devra retourner cette fois un tuple constitué de (-1, i) ou bien de (milieu, i) selon si l'on trouve le mot.
+
+Le nouveau programme de calcul de temps et du nombre d'itérations moyen est alors:
+
+```python
+T = []
+
+# appel de la fonction recherche_mot et ajouter le temps
+# a la liste T
+for i in range(100):
+    t0 = time.time()
+    _,nb_cycles = recherche_dicho_mot(mots)
+    t1 = time.time()
+    T.append([t1-t0,nb_cycles])
+T = np.array(T)
+r1 = np.mean(T[:,0])
+r2 = np.mean(T[:,1])
+print('temps moyen',r1,'nbe iter',r2)
+```
+
+**Comparer le nombre d'itérations moyen avec la fonction log binaire: $np.log2(len(mots))$**
+
+**4.** Comparer le nouveau tableau de valeurs `T = [[len(mots1), r1], [len(mots2),r2], [0,0]]` avec le précédent. Conclure.
 
 # Tracé de représentations graphiques pour quelques fonctions
 

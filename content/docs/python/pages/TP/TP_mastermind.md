@@ -91,11 +91,15 @@ Il faudra ensuite initialiser les variables `N` et `B` à zero, puis écrire une
 > Si le test est negatif, tester alors si la couleur proposée par le joueur est présent dans la `sequence`, mais occupe une autre position:
 
 ```python
-if/elif j1 in sequence:
+if j1 == o1:
+    # instruction
+elif j1 in sequence:
     # instruction
 ```
 
 Cette fois, ce sera la variable `B` (pour Blanc), qui augmente d'une unité.
+
+*Rq: Lorsque le joueur propose plusieurs fois la même couleur, le test `j1 in sequence` peut donner de fausses detections. Ce qui surevalue la valeur de `B`. Pour resoudre ce problème, il faudra utiliser des listes python pour mettre en correspondance les choix joueur et choix ordinateur. Pour ce premier TP, nous allons ignorer ce problème.*
 
 > Afficher ensuite B et N dans la console, augmenter le nombre d'essais d'une unité, et recommencer la boucle while
 
@@ -108,11 +112,24 @@ Le joueur pourrait donner sa sequence de couleurs en une seule fois, à l'aide d
 
 Pour comparer chaque couleur, avec chaque pion de l'ordinateur, à la même position: il faut alors atteindre l'une des lettres du mot "JJOV", et la comparer à la lettre du même rang, dans la sequence de l'ordinateur.
 
+Lorsque les pions sont en correspondance, il faudra utiliser une liste de correspondance pour marquer les positions deja evaluées.
+
+*Exemple:*
+
+```python
+ordinateur = ['J','O','C','V']
+joueur = ['J','J','O','O']
+```
+
+* **Gestion des pions noirs:** Lorsque l'on evalue la correspondance de `joueur[0]`, on trouve que `joueur[0] == ordinateur[0]`. On modifie alors la liste de correspondance de la manière suivante: `['X','O','C','V']`, et on poursuit avec `joueur[1] == ordinateur[1]`...
+
+* **Gestion des pions blancs:** Après la gestion des pions noirs, on recherche les occurences entre `joueur[i]` et `correspond[j]` avec i different de j. A chaque nouvelle occurence, on place 'X' dans `correspond[j]`, pour ne pas le compter plusieurs fois.
+
 Cela necessite d'utiliser un *[index](/docs/python/pages/boucles/page2/)* pour parcourir le mot du joueur. Et une *[boucle bornée](/docs/NSI_1/donnees/page5/)* `for` pour faire evoluer le rang.
 
 On trouvera des précisions sur ces notions au [TP4 python: boucles for](/docs/NSI_1/donnees/page5/), ainsi qu'au cours sur les [séquences](/docs/python/pages/boucles/page2/).
 
-
+> [Solution](../TP_mastermind_soluce)
 
 
 
