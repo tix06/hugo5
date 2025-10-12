@@ -3,22 +3,28 @@ Title: de Writer a HTML
 ---
 
 # docx, odt, txt et html: différents documents textuels
-Les fichiers aux extensions docx, odt, txt et html permettent d'écrire et présenter du texte. La structure du document se fait à l'aide de boutons d'options proposés par le logiciel. Le rendu visuel de la page est présenté par le logiciel au fur et à mesure de sa construction.
+Les fichiers aux extensions docx et odt permettent d'écrire et présenter du texte. La structure du document se fait à l'aide de boutons d'options proposés par le logiciel. Le rendu visuel de la page est présenté par le logiciel au fur et à mesure de sa construction.
 
-Pour la creation d'une page web, c'est différent. On utilise un editeur HTML, comme notepad++. Pour afficher la page, il faudra retrouver la page à l'aide de l'explorateur, sur votre disque dur, et l'ouvrir avec un 2e outil, le navigateur.
+{{< img src="../images/word.png" >}}
 
-Dans l'editeur, pour structurer le contenu textuel, il faut lui ajouter des *métadonnées*. Cela se fait d'une manière très speciale avec le html, ce que nous allons voir ici.
+Pour la creation d'une page web, c'est différent. On utilise un editeur HTML, comme notepad++. 
+
+Dans l'editeur, pour structurer le contenu textuel, il n'y a pas de *boutons* pour choisir les *propriétés des éléments*. Il faut ajouter DANS LE DOCUMENT des *métadonnées*. Cela se fait d'une manière très speciale avec le html, à l'aide de BALISES. C'est ce que nous allons voir ici.
+
+{{< img src="../images/balises.png" >}}
+
+Pour afficher la page, il faudra retrouver la page à l'aide de l'explorateur, sur votre disque dur, et l'ouvrir avec un 2e outil, le navigateur.
+
+{{< img src="../images/navigateurs.png" >}}
 
 ## Le HTML : Document pour le Web
-Un document pour le Web est constitué d’un ou plusieurs fichiers de type texte, avec un format qui précise le contenu (en langage HTML), et le style (en langage CSS). Il est prévu pour être ouvert avec un **navigateur**.
+Un document pour le Web est constitué d’un ou plusieurs fichiers de type texte. Le fichier aura pour extension `.html`. Un fichier `.html` doit être ouvert avec un **navigateur**.
 
-La manière avec laquelle vous allez construire ce document suit les même étapes que la rédaction d’un document textuel. Mais ici, les instructions de **mise en page** seront ajoutées au **contenu**, dans le même fichier. Ce fichier aura pour extension **.html**
+La manière avec laquelle vous allez construire ce document suit les même étapes que la rédaction d’un document textuel. Mais ici, les instructions de **mise en page** seront ajoutées au **contenu**, dans le même fichier.
 
-Le HTML s'occupe de la **structure du document**, grâce à des **balises** qui intègrent le **contenu**.
+Le langage HTML s'occupe de la **structure du document**, grâce à des **balises** qui intègrent le **contenu**.
 
 ## Format de document
-Le contenu doit être mis dans un document avec l'extension `.html`.
-
 > **A vous de jouer:** Télecharger et ouvrir le document textuel sur {{< a link="/pdf/competences/plastiques.txt" caption="les plastiques" >}} avec le logiciel *Writer*. Copiez l'ensemble du texte (CTRL + a, CTRL + c)
 
 > **Dans un editeur de texte**: Rechercher parmi les logiciels installés: **Bloc notes, Notepad**, ou mieux, **Notepad++** (ajoute la coloration syntaxique): coller le texte. Sauvegarder dans vos *Documents* avec le nom `plastiques.html`
@@ -59,7 +65,7 @@ Plusieurs siècles av. J.C, les hommes utilisaient déjà ...
 > **Navigateur:** 
 > * Recharger la page (CTRL + r). Que remarquez vous?
 > * Dans le fichier *html*. Remplacer `<meta charset="utf-8">` par `<meta charset="us-ascii">`. Recharger la page. Que remarquez vous? Lequel des 2 encodages, *us-ascii* ou *utf-8* est le plus adapté pour présenter les caractères. 
-> * Choisir le bon encodage
+> * Sélectionner le bon encodage pour la suite de votre travail.
 
 
 ## Définir des éléments dans la page

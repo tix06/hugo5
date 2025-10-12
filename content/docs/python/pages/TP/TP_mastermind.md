@@ -118,6 +118,9 @@ Lorsque les pions sont en correspondance, il faudra utiliser une liste de corres
 
 ```python
 ordinateur = ['J','O','C','V']
+# on copie la liste ordinateur dans une nouvelle liste
+# ordinateur -> correspondance
+correspondance = ['J','O','C','V']
 joueur = ['J','J','O','O']
 ```
 
@@ -129,7 +132,8 @@ Cela necessite d'utiliser un *[index](/docs/python/pages/boucles/page2/)* pour p
 
 On trouvera des précisions sur ces notions au [TP4 python: boucles for](/docs/NSI_1/donnees/page5/), ainsi qu'au cours sur les [séquences](/docs/python/pages/boucles/page2/).
 
+<!--
 > [Solution](../TP_mastermind_soluce)
-
+-->
 
 

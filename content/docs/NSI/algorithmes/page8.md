@@ -56,7 +56,7 @@ Pour cet algorithme, trier, c’est déplacer des éléments, et y insérer l’
 
 ```python
 def tri_insertion(L):
-    for j in range(len(L)):
+    for j in range(1,len(L)):
         temp = L[j]
         i = j
         while i>0 and L[i-1]>temp:
