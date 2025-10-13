@@ -2,7 +2,7 @@
 Title: fonctions python NSI1_1
 ---
 
-### fonctions programmées
+# Fonctions programmées
 Les fonctions permettent de rendre le script plus efficace, plus facile à lire et à vérifier. Un bonne pratique est de faire régulierement du *remaniement* de son code : C'est à dire ré-écrire les parties du programme qui *fonctionnent* et les mettre dans une fonction ou un module. Cela evite aussi les répétitions. On remplace alors le code par un appel à une fonction.
 
 
@@ -11,7 +11,7 @@ Les fonctions permettent de rendre le script plus efficace, plus facile à lire 
 
 Pour créer une fonction, il faut la definir avec le mot clé `def`, suivi du nom de la fonction, d'une paire de parenthèses suivies de `:`.
 
-### Return
+## Return
 La fonction peut retourner une valeur. Celle-ci est alors mise après le mot clé `return`.
 
 *Exemple:* 
@@ -37,7 +37,8 @@ print(message)
 # affiche: bonjour tout le monde
 ```
 
-## Travaux pratiques: fonction sans paramètre
+# Travaux pratiques 
+## fonction sans paramètre
 Un cours sur les fonctions se trouve à la page suivante: [Lien](/docs/python/pages/fonctions/page2/)
 
 * *Question a*: Ecrire une fonction appelée `etoiles` en python qui écrit une série de 5 symboles `*`, séparés chacun par un espace:
@@ -97,7 +98,7 @@ bonjour George
 
 *Attention, lors de l'appel de la fonction, il devra y avoir autant d'arguments que de paramètres définis (donc un seul pour ce dernier exemple).* 
 
-### TP: ASCII-art
+## TP: ASCII-art
 On cherche à realiser des figures en à partir de caractères, comme vu dans le paragraphe precedent.
 
 
