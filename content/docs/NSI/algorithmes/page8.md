@@ -63,7 +63,6 @@ def tri_insertion(L):
             L[i]=L[i-1]
             i-=1
         L[i]=temp
-    return L
 ```
 
 ## Preuve de correction
@@ -151,19 +150,14 @@ Sur un tableau de n éléments (numérotés de 0 à n-1), le principe du tri par
 4. Une fois arrivée au bout de la liste: si la carte marquée est différente de la carte selectionnée (donc inférieure), on *permute* les 2 cartes.
 
 ```python
-def select(T,debut) :
-    indiceDuMin=debut # (1)
-    for k in range(debut+1,len(T)) : # (2)
-        if T[k]< T[indiceDuMin] : 
-            indiceDuMin=k # (3)
-    if indiceDuMin !=debut : # (4)
-        T[debut],T[indiceDuMin]=T[indiceDuMin],T[debut]
-
-        
 def tri_selection(T):
     for j in range(0,len(T)-1) :
-        select(T,j)
-    return T
+        indiceDuMin = j # (1)
+        for k in range(j+1,len(T)) : # (2)
+            if T[k]< T[indiceDuMin] : 
+                indiceDuMin=k # (3)
+        if indiceDuMin != j : # (4)
+            T[j],T[indiceDuMin]=T[indiceDuMin],T[j]
 ```
 
 ## Tri par selection du plus grand élément

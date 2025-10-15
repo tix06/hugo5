@@ -83,8 +83,9 @@ ou peut-être:
 
 > Explorer pour définir l'ordre dans lequel sont classés les élus. 
 
+<!--
 **Question 2:** Les élus du *Gers*, occupent-ils les premiers rangs? Et si oui, jusqu'à quel rang? Ecrire un script python qui recherche cette information.
-
+-->
 
 ## Fonction recherche
 > Ecrire une fonction `recherche` qui *recherche* le premier élu dans un departement donné. La fonction *recherche* aura pour seul argument la variable textuelle `dpt` correspondant au departement recherché.
@@ -98,7 +99,9 @@ Par exemple:
 363891
 ```
 
-**Question 3:** Donner le script de cette fonction.
+**Question 2:** Pourquoi la fonction retourne t-elle un entier (par exemple 363891)?
+
+**Question 3:** Quelle est le numero de ligne du dernier élu du departement 06 (utiliser la fonction `recherche`)?
 
 ## Fonction pariteHF
 > Ecrire une fonction *pariteHF* qui compte le nombre d'élus Hommes et le nombre d'élues Femmes pour un departement donné. La fonction renvoie alors le couple de valeurs H/F.
