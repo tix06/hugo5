@@ -5,34 +5,46 @@ Title: tri à partir d'une cle
 # Partie 1: Appliquer un algorithme de tri
 Nous allons appliquer les 2 algorithmes de tri (insertion et selection) sur des listes non ordonnées.
 
-## Trier une petite liste
-* Reprendre pour cette première partie le TP de [recherche dans un dictionnaire de mots](/docs/NSI/algorithmes/page14_bis/).
-* Ajouter au script python les **fonctions de tri** vues dans le cours: [Lien](/docs/NSI/algorithmes/page8/)
+## Mélanger un liste de mots
+* (1) Reprendre pour cette première partie le TP de [recherche dans un dictionnaire de mots](/docs/NSI/algorithmes/page14_bis/).
+* (2) Ajouter au script python les **fonctions de tri** vues dans le cours: [Lien vers le cours](/docs/NSI/algorithmes/page8/)
+* (3) importer une liste de mots d'un dictionnaire non accentué. Appler cette liste `mots`.
+* (4) mélanger la liste de mots avec la fonction `random.shuffle` (voir exemple plus bas)
+* (5) réduire cette liste à seulement 10000 mots: `mots = mots[:10000]`
+* (6) copier cette liste de mots (faire une copie **par valeur**): `mots_melanges = mots.copy()`
 
-* Utiliser la fonction `shuffle` du module `random` pour mélanger la liste... avant de la trier:
+
+*Aide*: 
+
+La fonction `shuffle` du module `random` permet de mélanger en place les éléments d'une liste. *Exemple:*
 
 ```python
 import random
 L = [3, 4, 6, 8, 10, 20]
 random.shuffle(L)
 print(L)
-tri_selection(L)
-#tri_insertion(L)
-print(L)
+# exemple d'affichage
+[6, 3, 20, 10, 8, 4]
 ```
 
 ## Fonction `est_triee`
-Programmer une fonction `est_triee` qui vérifie si la liste est bien triée. Cette fonction sera utile pour contrôler que la fonction  `tri` effectue bien le tri demandé, sans avoir à parcourir celle-ci après traitement.
+* (7) Programmer une fonction `est_triee` qui vérifie si la liste est bien triée. Cette fonction sera utile pour contrôler que la fonction  de tri effectue bien le tri demandé, sans avoir à parcourir celle-ci après traitement.
 
 Utiliser la base suivante pour la fonction: (et compléter):
 
 ```python
 def est_triee(L):
-	triee = True
 	for i in range(1,len(L)):
 		if ...:
-			...
-	return triee
+			return False
+	return ...
+```
+
+* (8) Utiliser cette fonction pour vérifier que la liste `mots` est mélangée:
+
+```python
+> est_triee(mots)
+False
 ```
 
 ## Dictionnaire de mots
@@ -40,11 +52,8 @@ Vous allez tester maintenant vos fonctions de tri sur la liste [dictionnaire-de-
 
 * **Question 1:** Comparer le temps mis par chacune des 2 fonctions (faire plusieurs essais).
 
-**Remarque importante**: Si vous voulez comparer 2 algorithmes de tri en place, sur la même liste, il faudra faire une copie par valeur de la liste mélangée. Le tri par insertion puis par selection doit être realisé sur la MEME liste si vous voulez comparer les durées de traitement:
+**Remarque importante**: Si vous voulez comparer 2 algorithmes de tri en place, sur la même liste, il faudra faire une copie par valeur de la liste mélangée. Le tri par insertion puis par selection doit être realisé sur la MEME liste si vous voulez comparer les durées de traitement.
 
-```python
-L2 = L1.copy()
-```
 
 On *rappelle* que la mesure du temps peut être réalisée de la manière suivante:
 
@@ -52,13 +61,11 @@ On *rappelle* que la mesure du temps peut être réalisée de la manière suivan
 
 ```python
 start_time = time.time()
-L1 = tri_insertion(L1)
+tri_insertion(mots)
 stop_time = time.time()
 interval1 = stop_time - start_time
 ```
 
-
-> Comparer le temps mis pour trier la même liste, mais à partir des 2 algorithmes proposés.
 
 # Partie 2: TP tri à partir d'une clé
 On peut réaliser un tri à l'aide d'une **clé**. Les objets (les lignes d'un fichier *csv*) contiennent ainsi des valeurs sur plusieurs colonnes. On peut choisir l'une de ces colonnes pour réaliser le tri.

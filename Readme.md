@@ -56,3 +56,13 @@ https://wcours.gel.ulaval.ca/GIF1001/old/h23/cours/8.%20Memoire%20et%20bus.pdf
 
 TP QR-code guadeloupe
 https://pedagogie.ac-guadeloupe.fr/enrichissez_vos_productions_avec_codes_qr_0?language_content_entity=fr
+
+**SNT Resaux**: metrique pour calculer la viralité d'une information à travers les reseaux: https://jai-un-pote-dans-la.com/top-14-metrics-social-media-mesurer-2022/
+
+L'idée dans ce cours serait:
+
+* definir le nombre de branches dans un arbre (followers)
+* l'engagement des followers à relayer l'information: joue sur le nombre de branches à selectionner, mais aussi le temps moyen re repost
+* calculer le temps pour atteindre 20 000 personnes avec une information sensationnelle
+* le temps avec la contre verité, cette fois non complotiste
+

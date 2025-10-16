@@ -167,13 +167,14 @@ Dans cette variante du tri par selection, la liste est triée depuis le plus gra
 On modifie pour cela la fonction `select`: on remplace les instructions `ndiceDuMin=debut` et `T[k]< T[indiceDuMin]` afin de rechercher la valeur max et non celle min.
 
 ```python
-def select(T,debut) :
-    indiceDuMax=debut
-    for k in range(debut+1,len(T)) :
-        if T[k]> T[indiceDuMax] :
-            indiceDuMax=k
-    if indiceDuMax !=debut :
-        T[debut],T[indiceDuMax]=T[indiceDuMax],T[debut]
+def tri_selection_plus_grand(T) :
+    for j in range(0,len(T)-1) :
+        indiceDuMax = j # (1)
+        for k in range(j+1,len(T)) : # (2)
+            if T[k] > T[indiceDuMax] : 
+                indiceDuMax=k # (3)
+        if indiceDuMax != j : # (4)
+            T[j],T[indiceDuMax]=T[indiceDuMax],T[j]
 ```
 
 ### Exemple
