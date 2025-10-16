@@ -47,10 +47,10 @@ def est_triee(L):
 False
 ```
 
-## Dictionnaire de mots
+## Trier le dictionnaire de mots
 Vous allez tester maintenant vos fonctions de tri sur la liste [dictionnaire-de-mots](/docs/NSI/algorithmes/page14_bis/), une fois celle-ci mélangée.
 
-* **Question 1:** Comparer le temps mis par chacune des 2 fonctions (faire plusieurs essais).
+* **Question 1:** Mesurer le temps mis pour trier la liste de mots à l'aide du tri par insertion. (faire plusieurs essais).
 
 **Remarque importante**: Si vous voulez comparer 2 algorithmes de tri en place, sur la même liste, il faudra faire une copie par valeur de la liste mélangée. Le tri par insertion puis par selection doit être realisé sur la MEME liste si vous voulez comparer les durées de traitement.
 
@@ -65,6 +65,8 @@ tri_insertion(mots)
 stop_time = time.time()
 interval1 = stop_time - start_time
 ```
+
+* **Question 2:** Mesurer le temps mis pour trier la liste de mots à l'aide du tri par selection. (faire plusieurs essais). Comparer le temps mis par les 2 algorithmes de tri
 
 
 # Partie 2: TP tri à partir d'une clé
