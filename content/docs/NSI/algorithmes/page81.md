@@ -8,7 +8,7 @@ Nous allons appliquer les 2 algorithmes de tri (insertion et selection) sur des 
 ## Mélanger un liste de mots
 * (1) Reprendre pour cette première partie le TP de [recherche dans un dictionnaire de mots](/docs/NSI/algorithmes/page14_bis/).
 * (2) Ajouter au script python les **fonctions de tri** vues dans le cours: [Lien vers le cours](/docs/NSI/algorithmes/page8/)
-* (3) importer une liste de mots d'un dictionnaire non accentué. Appler cette liste `mots`.
+* (3) importer une liste de mots d'un dictionnaire non accentué. Appeler cette liste `mots`.
 * (4) mélanger la liste de mots avec la fonction `random.shuffle` (voir exemple plus bas)
 * (5) réduire cette liste à seulement 10000 mots: `mots = mots[:10000]`
 * (6) copier cette liste de mots (faire une copie **par valeur**): `mots_melanges = mots.copy()`
@@ -48,11 +48,37 @@ False
 ```
 
 ## Trier le dictionnaire de mots
+Votre script devrait avoir l'allure suivante: (les fonctions dont à compléter)
+
+```python
+import random
+import time
+
+def est_triee(L):
+    pass
+
+def tri_insertion(L):
+    pass
+
+def tri selection(L):
+    pass
+
+mots = []
+# Lecture du fichier txt et remplissage de la liste
+with open(...) as f:
+    for mot in f.read().splitlines():
+        mots.append(mot)
+
+mots = mots[:10000]
+random.shuffle(...)
+mots_melanges = ... .copy()
+```
+
 Vous allez tester maintenant vos fonctions de tri sur la liste [dictionnaire-de-mots](/docs/NSI/algorithmes/page14_bis/), une fois celle-ci mélangée.
 
 * **Question 1:** Mesurer le temps mis pour trier la liste de mots à l'aide du tri par insertion. (faire plusieurs essais).
 
-**Remarque importante**: Si vous voulez comparer 2 algorithmes de tri en place, sur la même liste, il faudra faire une copie par valeur de la liste mélangée. Le tri par insertion puis par selection doit être realisé sur la MEME liste si vous voulez comparer les durées de traitement.
+**Remarque**: Si vous voulez comparer 2 algorithmes de tri en place, sur la même liste, il faudra faire une copie par valeur de la liste mélangée. Le tri par insertion puis par selection doit être realisé sur la MEME liste si vous voulez comparer les durées de traitement.
 
 
 On *rappelle* que la mesure du temps peut être réalisée de la manière suivante:
