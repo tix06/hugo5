@@ -6,7 +6,7 @@ Title: tri à partir d'une cle
 Nous allons appliquer les 2 algorithmes de tri (insertion et selection) sur des listes non ordonnées.
 
 ## Mélanger un liste de mots
-* (1) Reprendre pour cette première partie le TP de [recherche dans un dictionnaire de mots](/docs/NSI/algorithmes/page14_bis/).
+* (1) Reprendre pour cette première partie le dossier du TP de [recherche dans un dictionnaire de mots](/docs/NSI/algorithmes/page14_bis/). Ouvrir un nouveau fichier python dans ce même dossier. Placer l'import des librairies `random` et `time` à l'ouverture de ce fichier (premières lignes).
 * (2) Ajouter au script python les **fonctions de tri** vues dans le cours: [Lien vers le cours](/docs/NSI/algorithmes/page8/)
 * (3) importer une liste de mots d'un dictionnaire non accentué. Appeler cette liste `mots`.
 * (4) mélanger la liste de mots avec la fonction `random.shuffle` (voir exemple plus bas)
@@ -19,10 +19,10 @@ Nous allons appliquer les 2 algorithmes de tri (insertion et selection) sur des 
 La fonction `shuffle` du module `random` permet de mélanger en place les éléments d'une liste. *Exemple:*
 
 ```python
-import random
-L = [3, 4, 6, 8, 10, 20]
-random.shuffle(L)
-print(L)
+> import random
+> L = [3, 4, 6, 8, 10, 20]
+> random.shuffle(L)
+> L
 # exemple d'affichage
 [6, 3, 20, 10, 8, 4]
 ```

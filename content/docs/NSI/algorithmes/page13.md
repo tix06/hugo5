@@ -43,23 +43,17 @@ Une fois la liste des élus importée dans une liste python:
 
 > Dans votre editeur python, explorer la liste table pour qu'elle affiche les informations sur la longueur, sur les premiers élus.
 
-Si vous choisissez le bon caractère de séparation des données, vous devriez obtenir quelque chose d'approchant (la mise à jour est régulière, et les données peuvent différer):
+Si vous choisissez le **bon caractère de séparation** des données, vous devriez obtenir quelque chose d'approchant (la mise à jour est régulière, et les données peuvent différer):
 
 ```python
 > len(table)
 490805
 > table[1]
-['32',
- 'Gers',
- '',
- '',
- '32249',
- 'Mauvezin',
- 'MASAROTTI',
- 'Sylvie',
- 'F',
- ...
+['32', 'Gers','','','32249','Mauvezin','MASAROTTI',
+ 'Sylvie','F', ...]
 ```
+
+*Chaque élément de `table` est constitué d'une liste, avace chaque valeur séparée par une virgule `,`
 
 Si par contre, vous identifiez mal le caractère de séparation, vous allez obtenir quelque chose comme cela:
 
