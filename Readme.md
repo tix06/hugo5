@@ -50,12 +50,24 @@ for(i=0;i<link.length;i++){
     link[i].parentNode.removeChild(link[i])} // on retire chaque lien
 ```
 
-# notes
+# notes sur le traitement de données
 cours sur l'adressage, les memoires, etc.. (super bien)
 https://wcours.gel.ulaval.ca/GIF1001/old/h23/cours/8.%20Memoire%20et%20bus.pdf
 
-TP QR-code guadeloupe
-https://pedagogie.ac-guadeloupe.fr/enrichissez_vos_productions_avec_codes_qr_0?language_content_entity=fr
+**traitement de données en tables - NSI term**: 
+* données propres: 
+https://help.tableau.com/current/pro/desktop/fr-fr/data_structure_for_analysis.htm
+
+**traitement de données en table - NSI_1** site blaise pascal, avec selection par comprehension de liste puis pandas:
+https://info.blaisepascal.fr/nsi-traitement-des-donnees-en-tables/
+page equivalente sur pixees: https://pixees.fr/informatiquelycee/sec/s6_2.html
+
+**données structurées en SNT**
+* cours bien clair sur https://www.cours.jlrichter.fr/lycee/snt-sciences-numeriques-et-technologie/2snt-d-les-donnees-structurees-et-leur-traitement/
+* voir dans le dossier SNT données sur le bureau (correction des activités du nathan)
+* maxicours: https://www.maxicours.com/se/cours/le-traitement-des-donnees-structurees/
+
+Lien avec le cours precedent: La granulation des données est important pour la représentation en mémoire des données. Par exemple, la longueur choisie pour chaque valeur dans la RAM dépend du type de donnée.
 
 **SNT Resaux**: metrique pour calculer la viralité d'une information à travers les reseaux: https://jai-un-pote-dans-la.com/top-14-metrics-social-media-mesurer-2022/
 
@@ -66,3 +78,7 @@ L'idée dans ce cours serait:
 * calculer le temps pour atteindre 20 000 personnes avec une information sensationnelle
 * le temps avec la contre verité, cette fois non complotiste
 
+sur l'idee du **snt nathan**, determiner les liens entre personnages de **GOT** pour savoir qui est finalement le personnage principal (graphe): le dossier SNT données sur le bureau (correction des activités du nathan)
+
+# notes sur le pg de NSI architecture
+voir le cours NSI_1 de [jlrichter.fr](https://www.cours.jlrichter.fr/lycee/1e-nsi/architecture-materielle-et-systemes-dexploitation/) = bonne synthèse, assez proche mais plus organisé que ce que je fais.

@@ -12,22 +12,35 @@ Le cours comprend:
 ## Principe 
 Un algorithme récursif est un algorithme qui fait appel à lui-même dans le corps de sa propre définition. Ce principe est aussi appelé : *de l'autoréférence*. (traité dans la partie *autres applications* de la [page 2 du cours](../page22/)).
 
+
+
 Cependant, cette premiere definition pourrait faire penser qu'une fonction récursive va s'appeler indéfiniment, et créer sans arrêt les mêmes figures, ou les mêmes traitements. 
 
-{{< img src="../images/page2/script_recur1.png" >}}
+{{< img src="../images/page2/script_recur11.png" >}}
+
+
 
 Ce n'est pas tout à fait cela.
 
 Pour une fonction récursive, il y a plus que de la simple autoréférence:
 
-* Il y a transmission de valeurs entre 2 étapes de la pile d'appels recursifs. Une valeur va remonter d'un niveau $n$ vers le niveau $n-1$ qui l'a appelé.
-{{< img src="../images/page2/script_recur3.png" >}}
+* Il y a transmission de valeurs entre 2 étapes de la pile d'appels recursifs. 
+
+{{< img src="../images/page2/script_recur22.png" >}}
+
+* Une valeur va remonter d'un niveau $n$ vers le niveau $n-1$ qui l'a appelé.
+
+{{< img src="../images/page2/script_recur44.png" >}}
+
+
 
 * On remonte la pile d'appels parce que la fonction contient une condition de fin (appelée *condition de base*).
 
-{{< img src="../images/page2/script_recur2.png" >}}
+{{< img src="../images/page2/script_recur33.png" >}}
 
 * enfin, les traitements ne sont pas tous identiques parce les arguments de la fonction changent à chaque nouvel appel recursif.
+
+
 
 <!--
 Les questions à se poser pour élaborer l'algorithme : 
@@ -56,14 +69,27 @@ def ajoute2_iter(N):
 *Résultat*
 
 ```
->>> ajoute2_iter(10)
-20
+>>> ajoute2_iter(4)
+8
 ```
 
 ### Algorithme récursif
-*Rappel de math:* Une suite est une succession ordonnée d’éléments pris dans un ensemble donné.
+*Rappel de math:* Une suite est une succession ordonnée d’éléments, comme par exemple 1, 2, 4, 8, 16. On s'interesse ici à une suite en définissant un terme à l’aide du terme précédent. (suite *récurente*)
 
-On a la **relation de récurence** sur les éléments de la suite $u_n$:
+{{< img src="../images/page2/suite_recur.png" caption="exemple de duite recursive, exprimée en langage mathématique" >}}
+
+(a) Pour calculer le terme de rang n d'une suite, on définit un cas de base, un démarrage avec le premier terme de la suite:
+
+$$u_0 = 0$$
+
+Dans la fonction, ce demarrage vient avec le système d'instructions:
+
+```
+  if N==0 : 
+        return 0
+```
+
+(b) Puis vient la **relation de récurence** sur les éléments de la suite $u_n$:
 
 $$u_{n+1} = 2 + u_n$$
 
@@ -72,8 +98,13 @@ ou encore:
 $$u_{n} = 2 + u_{n-1}$$
 
 
-On va adapter cette dernière relation dans l'appel de la fonction:
+On va adapter cette dernière relation dans l'appel de la fonction: `return 2 + ajoute2(N-1)`
 
+<!--
+(c) Lorsque l'on calcule le terme d'une suite, au rang n, on prévoit une **terminaison**: ce qui marquera la fin de la progression dans le calcul des termes de la suite. Pour traduire cela dans la fonction récursive, il y aura plusieurs éléments à considérer: l'énoncé du cas de base, et la convergence du paramètre dans l'appel récursif. (voir plus bas).
+-->
+
+Le script entier est alors:
 
 ```python
 def ajoute2(N):
@@ -87,9 +118,42 @@ def ajoute2(N):
 *Résultat*
 
 ```
->>> ajoute2(10)
-20
+>>> ajoute2(4)
+8
 ```
+
+### Une pile d'appels
+
+```
+ajoute2(4) = 2 + ajoute2(3)
+    ajoute2(3) = 2 + ajoute2(2)
+        ajoute2(2) = 2 + ajoute2(1)
+            ajoute2(1) = 2 + ajoute2(0)
+                ajoute2(0) = 0
+```
+
+Cette succession d'appels peut se resumer par une pile d'appels, où les éléments sont mis de bas en haut, les uns après les autres lors des appels recursifs successifs:
+
+```
+| ajoute2(0) |
+| ajoute2(1) |
+| ajoute2(2) |
+| ajoute2(3) |
+| ajoute2(4) |
+```
+
+Puis, après le `return 0`, la valeur 0 est retournée à `ajoute2(1) = 2 + 0`, qui retourne 2.
+La valeur 2 est retournée à `ajoute2(2)`. Au cours de cette descente dans la pile, les éléments sont traités de haut en bas. 
+
+```
+| ajoute2(0) |
+| ajoute2(1) |      | ajoute2(1) |
+| ajoute2(2) |  ->  | ajoute2(2) |  -> ...
+| ajoute2(3) |      | ajoute2(3) |
+| ajoute2(4) |      | ajoute2(4) |
+```
+
+A la fin, `ajoute2(4) = 2 + 2 + 2 + 2 + 0 = 8`
 
 ## Principe d'un algorithme récursif
 
@@ -106,7 +170,7 @@ dans le script `ajoute2`: le problème se resoud immediatement pour N == 0).
 
 - **L'Hérédité**  : calcul à partir de paramètres plus "petits" : `return 2 + ajoute2(N-1)`. 
 
-Une définition plus générale serait que, **pour l'hérédité, il y a un appel recursif avec un argument qui se rapproche plus de la condition de base.**
+Une définition plus générale serait que, **pour l'hérédité, il y a un appel recursif avec un argument qui se rapproche plus de la condition de base.** (pour la *terminaison*).
 
 ```
 def fonction_recursive(param):
@@ -117,7 +181,7 @@ def fonction_recursive(param):
     fonction_recursive(f(param))
 ```
  
-*Remarque:* Une instruction conditionnelle est incluse dans le corps de la fonction pour forcer la fonction à retourner sans que l’appel de récurence soit exécuté (La **Base**). Sans cela, le programme pourrait tourner en boucle...
+*Remarque:* Une instruction conditionnelle est incluse dans le corps de la fonction pour forcer la fonction à **retourner** *sans que l’appel de récurence* soit exécuté (La **Base**). Sans cela, le programme pourrait tourner en boucle...
 
 ## Comparatif itératif - récursif
 Une grande partie des problèmes peut se résoudre avec une implémentation récursive, comme avec une implémentation itérative. L'une ou l'autre peut paraître plus ou moins naturelle suivant le problème, ou suivant les habitudes du programmeur.
@@ -151,49 +215,18 @@ def fact(n):
 ```
 
 
-<!--
-<div class="preuve">
-  <div class="entete">
-    Prouver l'algorithme itératif
-  </div>
-  <div class="demo">
-    <ol>
-      <li>terminaison : l'algorithme consiste en une boucle qui execute n itérations. Le <strong>convergent</strong> n-i decroit strictement à chaque itération et on sort de la boucle quand il vaut 0.</li>
+a. terminaison : l'algorithme consiste en une boucle qui execute n itérations. 
 
-      Chaque iteration contient un nombre fini d'opérations élémentaires : 1 mutiplication et 1 affectation. Donc il termine après 2n+1 operations.
-      <li>correction (ou validité) : 
-      On prouve par recurrence sur le nombre d'iterations qu'apres la ieme iteration de la boucle for : res=i!</li>
+* Le *convergent* n-i decroit strictement à chaque itération et on sort de la boucle quand il vaut 0.
+* Chaque iteration contient un nombre fini d'opérations élémentaires : 1 mutiplication et 1 affectation. Donc il termine après 2n+1 operations.
 
-      Preuve par récurrence : après la 1ere itération, res = 1  ! (OK)<br>
+b. correction : On prouve par recurrence sur le nombre d'iterations qu'apres la ieme iteration de la boucle for : res=i! **Preuve par récurrence :**
 
-      Hypothèse de récurrence : (H.R.) supposons qu'après la ieme itération, res=i ! Montrons qu'après la (i+1)ieme iteration, res=(i+1)! :
-
-      avant la (i+1)e iteration, res = i ! 
-
-      La (i+1)e iteration multiplie res par i+1, donc après la (i+1)e iteration, $$res= i! \times (i+1) = (i+1)!$$
-
-      Après n iterations, res contient n ! donc le resultat est celui attendu.
-    </ol>
-  </div>
-</div>
--->
-
-**terminaison**: l'algorithme consiste en une boucle qui execute n itérations. Le **convergent** `n-i` decroit strictement à chaque itération et on sort de la boucle quand il vaut 0.
-
-Chaque iteration contient un nombre fini d'opérations élémentaires : 1 mutiplication et 1 affectation. Donc il termine après 2n+1 operations.
-
-**correction (ou validité)**: 
-On prouve par recurrence sur le nombre d'iterations qu'apres la ieme iteration de la boucle for : res=i!
-
-**Preuve par récurrence**: après la 1ere itération, res = 1  ! (OK)
-
-Hypothèse de récurrence : (H.R.) supposons qu'après la ieme itération, res=i ! Montrons qu'après la (i+1)ieme iteration, res=(i+1)! :
-
-avant la (i+1)e iteration, res = i ! 
-
-La (i+1)e iteration multiplie res par i+1, donc après la (i+1)e iteration, $$res= i! \times (i+1) = (i+1)!$$
-
-Après n iterations, res contient n ! donc le resultat est celui attendu.
+* après la 1ere itération, res = 1  ! (OK)
+* Hypothèse de récurrence : (H.R.) supposons qu'après la ieme itération, res=i ! Montrons qu'après la (i+1)ieme iteration, res=(i+1)! :
+* avant la (i+1)e iteration, res = i ! 
+* La (i+1)e iteration multiplie res par i+1, donc après la (i+1)e iteration, $res= i! \times (i+1) = (i+1)!$
+* Après n iterations, res contient n ! donc le resultat est celui attendu.
 
 ### Programme recursif
 On a la **relation de récurence** suivante: 
@@ -264,20 +297,20 @@ Retour de la valeur 24
 
 Dans le cas d'un algo recursif, pas de convergent ni d'invariant de boucle. On prouve par recurrence sur n.
 
-**Teminaison**: si n=0, fact(0) fait un test et renvoie 1, sans appel recursif.
 
-**Hypothèse de récurrence**: fact(n) termine après n appels recursifs. Montrons que fact(n+1) termine après (n+1) appels recursifs.
+a. **Teminaison**: si n=0, fact(0) fait un test et renvoie 1, sans appel recursif.
 
-fact(n+1) fait un test n+1>0 donc on passe au `else` puis on appelle fact(n) par recurrence qui termine apres n appels recursifs. Finallement fact(n+1) termine après (n+1) appels recursifs.
+**Hypothèse de récurrence**: fact(n) termine après n appels recursifs. Montrons que fact(n+1) termine après (n+1) appels recursifs:
 
- **correction**: par recurrence fact(n) = n ! :
+* fact(n+1) fait un test n+1>0 donc on passe au `else` puis on appelle fact(n) par recurrence qui termine apres n appels recursifs. Finallement fact(n+1) termine après (n+1) appels recursifs.
 
-pour n = 0 : fact(n) = fact(0) = 1 = 0! (OK)
+b. **correction**: par recurrence fact(n) = n ! :
 
-si vrai pour n, alors $fact(n+1) = (n+1)*fact(n)$ et par hyp H.R., $fact(n) = n!$ donc $(n+1)*n! = (n+1)!$ (OK)
+* pour n = 0 : fact(n) = fact(0) = 1 = 0! (OK)
+* si vrai pour n, alors $fact(n+1) = (n+1)*fact(n)$ et par hyp H.R., $fact(n) = n!$ donc $(n+1)*n! = (n+1)!$ (OK)
 
 ### Complexité
-Calcul de la complexité : Soit T(n) le nombre d'opérations fondamentales. Pour une fonction récurrente, c'est le nombre de résolution de la fonction de récurence.<br>
+Calcul de la complexité : Soit T(n) le nombre d'opérations fondamentales. Pour une fonction récurrente, c'est le nombre de résolution de la fonction de récurence.
 On a T(n) = T(n-1) + 1 donc T(n) = n
 
 # Analyser un algorithme récursif
@@ -287,7 +320,7 @@ Alan Turing  (1912 – 1954) énonce ainsi son principe d'indéciablité de la t
 La terminaison, ainsi que la correction ou la complexité doivent être prouvées par des arguments mathématiques.
 
 - terminaison : recherche du convergent
-- correction / validité : recherche de l'invariant de boucle pour démontrer sa variation selon un argument de recurence
+- correction / validité : recherche de l'invariant de boucle pour démontrer sa (non) variation selon un argument de recurence
 - puis finir en montrant que l'invariant de boucle ou bien le resultat obtenu repond bien à la specification de l'algorithme
 
 ## Complexité d'un algorithme recursif
@@ -425,6 +458,7 @@ def euclide(a,b):
     return b
 ```
 
+<!--
 <div class="preuve">
   <div class="entete">
     Prouver l'algorithme itératif
@@ -443,6 +477,9 @@ def euclide(a,b):
   </ol>
 </div>
 </div>
+-->
+
+
 
 ### algorithme recursif
 Le PGCD d'Euclide calcule une suite définie par une récurence à 2 termes:
@@ -467,7 +504,7 @@ def PGCD(a,b):
     return PGCD(b,r)
 ```
 
-
+<!--
 <div class="preuve">
   <div class="entete">
     Complexité
@@ -490,6 +527,7 @@ Il faut alors que f<sub>n-1</sub>, f<sub>n+1</sub> et f<sub>n</sub> aient un mê
 Dans ce <strong>pire</strong> cas, la complexité de l'algorithme est alors O(log<sub>10</sub> b). C'est proportionnel au nombre de divisions euclidiennes réalisées.
 </div>
 </div>
+-->
 
 # Suite du cours
 Aller à la [page 2](../page22/) du cours.
@@ -645,5 +683,6 @@ Cela renvoie un nouveau tableau avec l’élément inséré.
 * article sur les tours de Hanoi [http://accromath.uqam.ca/2016/02/les-tours-de-hanoi-et-la-base-trois/](http://accromath.uqam.ca/2016/02/les-tours-de-hanoi-et-la-base-trois/)
 * algorithmes recursifs : [https://fr.wikipedia.org/wiki/Algorithme_récursif](https://fr.wikipedia.org/wiki/Algorithme_récursif)
 * calcul de complexité de Fibonacci recursif et programmation dynamique: [univ-mlv.fr](http://igm.univ-mlv.fr/~nicaud/poly/IR2_progdyn.pdf)
+* autre site NSI: [eskool.gitlab.io](https://eskool.gitlab.io/tnsi/algorithmique/recursivite/)
 
 

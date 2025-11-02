@@ -26,7 +26,7 @@ import os
 from random import choice
 import time
 import numpy as np
-os.chdir('U://Documents/scripts_python/dictionnaire_de_mots')
+# os.chdir('U://Documents/scripts_python/dictionnaire_de_mots')
 ```
 
 La dernière ligne règle le problème de dossier courant pour la lecture de fichiers texte avec la fonction `open`. Il faudra adapter le chemin de `os.chdir` en fonction de votre installation.

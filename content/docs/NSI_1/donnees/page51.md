@@ -55,6 +55,15 @@ Un cours sur les fonctions se trouve à la page suivante: [Lien](/docs/python/pa
 
 Pour afficher la ligne, faire: `print(etoiles())`
 
+> Solution (ne pas regarder trop vite)
+
+```python
+def etoiles():
+    return '* * * * *'
+
+print(etoiles())
+```
+
 > utiliser une **boucle bornée** pour répéter 5 fois l'appel de la fonction et afficher l'image suivante:
 
 ```
@@ -65,13 +74,19 @@ Pour afficher la ligne, faire: `print(etoiles())`
 * * * * * 
 ```
 
+> Solution (ne pas regarder trop vite)
+
+```python
+for i in range(5):
+   print(etoiles()) 
+```
 
 
-* *Question b*:  **Sur document-reponse:** Recopier le script utilisé
+* *Question b*:  Recopier le script utilisé.
 
 ## Fonction avec paramètres
 ### Principe
-Souvent, la fonction calcule sur un ou plusieurs paramètres qui lui sont passés lors de l'appel de la fonction.
+Souvent, la fonction traite ou calcule sur un ou plusieurs paramètres qui lui sont passés lors de l'appel de la fonction.
 
 Pour prévoir ceci, il faudra définir un ou plusieurs paramètres lors de la constuction de la fonction.
 
@@ -83,9 +98,26 @@ def salut(nom):
   return 'bonjour '+ nom
 ```
 
-> Tester cette fonction avec les prenoms successifs de John, Paul, Ringo et George.
+> Appeler cette fonction en plaçant le prenom 'John' entre les parenthèses: 
 
-Vous devrez afficher en console:
+```python
+def salut(nom):
+  return 'bonjour '+ nom
+
+print(salut(John))
+```
+
+Vous devriez obtenir: *bonjour John*
+
+> Utiliser cette fonction avec les prenoms de la liste `Beatles = ['John', 'Paul', 'Ringo', 'George']`
+
+```python
+Beatles = ['John', 'Paul', 'Ringo', 'George'] 
+for name in Beatles:
+    ...
+```
+
+Vous devriez obtenir l'affichage:
 
 ```
 bonjour John
@@ -94,25 +126,84 @@ bonjour Ringo
 bonjour George
 ``` 
 
-**ex1:** Recopier le script sur votre *feuille réponse*. 
+*question c.* Recopier le script sur votre *feuille réponse*. 
 
-*Attention, lors de l'appel de la fonction, il devra y avoir autant d'arguments que de paramètres définis (donc un seul pour ce dernier exemple).* 
 
 ## TP: ASCII-art
-On cherche à realiser des figures en à partir de caractères, comme vu dans le paragraphe precedent.
+L'Ascii art consiste à représenter un dessin ou une image uniquement en utilisant des caractères ascii. La page suivante montre des créations artistiques par rubrique: [asciiart.eu](https://www.asciiart.eu/)
 
+On cherche à realiser des figures à partir de caractères `*` ou `@`.
 
+**ex1:** Ecrire le script d'une fonction que vous appelerez `ligne`, qui prend comme paramètre un entier `n`, et retourne une ligne de `n` caractères `@`.
 
-**ex2:** Utilisez la fonction `etoiles` pour que celle-ci utilise un paramètre **(nb)**. Ce paramètre definit le nombre d'espaces entre les 2 symboles `*` de la ligne. La ligne n'affiche que 2 symboles `*`. 
+*Exemple:*
+
+```python
+> ligne(5)
+@@@@@
+```
+
+**ex2:** Utilisez votre fonction `ligne`, et appelez celle-ci dans une boucle bornée pour créer l'image suivante:
+
+```python
+for i in range(...):
+    print(ligne(...))
+# affiche
+@@@@@
+@@@@@
+@@@@@
+@@@@@
+@@@@@
+```
+
+**ex3:** Créez une fonction `carre` à partir du script précédent. Cette fonction devra créer un carré de `@` de la dimension `n` (paramètre). Cette fonction n'aura pas de valeur de *retour* (pas de return), les affichage seront produits par la fonction `print`
+
+```python
+def carre(n):
+    for ... : 
+        print(ligne(...))
+
+> carre(5)
+# affiche
+@@@@@
+@@@@@
+@@@@@
+@@@@@
+@@@@@
+```
+
+**ex4:** Utiliser la fonction `carre` pour créer l'affichage suivant:
+
+```
+@
+
+@@
+@@
+
+@@@
+@@@
+@@@
+
+@@@@
+@@@@
+@@@@
+@@@@
+```
+
+**ex5:** Modifiez la fonction `etoiles` (ci-dessous) pour que celle-ci utilise un paramètre **(nb)**. Ce paramètre definit le nombre d'espaces entre les 2 symboles `*` de la ligne. La ligne n'affiche que 2 symboles `*`. 
 
 Par exemple, `etoiles(5)` retourne `*     *` avec 5 espaces:
 
 ```python
 def etoiles(nb):
-    return '*' + nb*' ' + '*'
+    return '*' + ... + '*'
+
+print(etoiles(5))
+# affiche
+*     *
 ``` 
 
-**ex3:** afficher la figure suivante (un seul espace à chaque ligne entre 2 etoiles)?
+**ex6:** afficher la figure suivante (un seul espace à chaque ligne entre 2 etoiles)
 
 ```python
 for i in range(..):
@@ -127,7 +218,7 @@ for i in range(..):
 
 
 
-**ex4:** Vous appelerez ensuite cette fonction avec des arguments judicieusement choisis, afin de dessiner les figures suivantes:
+**ex7:** Vous appelerez ensuite cette fonction avec des arguments judicieusement choisis, afin de dessiner les figures suivantes:
 
 figure 1:
 
@@ -169,7 +260,7 @@ figure 3:
 
 *Astuce: avez vous fait en sorte d'utiliser au maximum des boucles bornées avec un variant de boucle?*
 
-**ex5:** modifier la fonction ainsi que le programme pour afficher maintenant un sapin de Noel:
+**ex8:** modifier la fonction ainsi que le programme pour afficher maintenant un sapin de Noel:
 
 ```
       **
@@ -181,133 +272,55 @@ figure 3:
       **
 ```
 
-# Fonctions utiles pour calculer
-## Loi de Descartes
-On propose de programmer les fonctions qui seront utiles pour aider au calcul de l'angle de refraction **r** lors de la traversée d'un rayon à la surface d'un dioptre.
-
-L'angle **r** est donné par la relation:
-
-$$n_1\times sin(i_1) = n_2\times sin(i_2)$$
-
-Où **i** est l'angle d'incidence, n<sub>1</sub> et n<sub>2</sub> sont les indices de refraction des milieux traversés.
-
-{{< img src="../images/descartes.png" caption="schema de la refraction sur diotre plan" >}}
-## Fonction  degrès - radians
-Python manipule les angles en radians pour les fonctions trigonometriques.
-
-Commençont par programmer la fonction qui transforme les angles de degrès en radians:
+**ex 9:** (a) Afficher une image à partir d'une Liste. Compléter le script:
 
 ```python
-def fonc1(angle):
-    radian = angle * 3.14/180
-    return radian
+L1 = [' ^___^','" o o "', '===X===','   "  ']
+for l in L1:
+    print(...
 ```
 
-On peut alors tester la fonction:
+(b) Afficher une image à partir d'une liste de listes de caractères.
 
 ```python
->>> fonc1(90)
-...
+L2 = [[' ', '^', '_', '_', '_', '^'], ['"', ' ', 'o', ' ', 'o', ' ', '"'], ['=', '=', '=', 'X', '=', '=', '='], [' ', ' ', ' ', '"', ' ', ' ']]
+
+for l in L2:
+    s = ''
+    for c in l:
+        s += ...
+    print(...
 ```
 
-Le résultat manque de précision à cause de la valeur utilisée pour PI. Il faut alors importer le module `math` pour avoir la valeur precise de PI 
 
-> Importer ce module. Et afficher en console la valeur de PI:
+**ex 10:** Quelle est l'image cachée dans cette matrice?
 
 ```python
-import math
-math.pi
+M = [['20', '2F', '5C', '5F', '2F', '5C', '20'],
+     ['28', '20', '2E', '20', '2E', '20', '29'],
+     ['3D', '5C', '5F', '76', '5F', '2F', '3D']]
 ```
 
-Puis modifier la fonction `fonc1` en `fonc2`:
+*Solution partielle:*
 
 ```python
-def fonc1(angle):
-    radian = angle * math.pi/180
+for l in M:
+    s = ''
+    for r in l:
+        s += ...
+    print(...
 ```
 
-## Fonctions `sin` et `asin` du module math
-Le module `math` apporte aussi les fonctions trigonométriques `sin` et son inverse `asin`. 
+*Rappels:* 
+
+* *Conversion valeur hexa -> decimal: utiliser `int(valeur,16)`*
+* *Conversion decimal -> ascii: utiliser `chr`*
 
 
-> Tester ces fonctions pour quelques valeurs:
+# Liens et sources
+* notebook du site [clogique](https://clogique.fr/nsi/notebook/?from=/nsi/premiere/td_tp/TP_Art_Ascii.ipynb#Exercice-7)
 
-* `math.sin(1.57)`
+# Suite
+## Projet transformer image -> ASCII: [Lien](../page53)
+## Utiliser des fonctions pour calculer: [Lien](../page52)
 
-* `math.sin(math.pi/2)`
-
-* `math.asin(1)`
-
-
-## Fonction à plusieurs paramètres
-On cherche maintenant à écrire la fonction qui permettra de calculer l'angle **r** selon la relation:
-
-$$r = asin(\tfrac{n_1\times sin(i_1)}{n_2})$$
-
-On definira une fonction appelée `angleRefraction`, qui aura cette fois 3 parametres `i1, n1, n2`. Ces 3 paramètres seront écrits entre parenthèses, séparés par une virgule:
-
-```python
-def angleRefraction(i1,n1,n2):
-    radian = fonc1(i1)
-    r = math.asin(...           ...)
-    return r * 180 / math.pi
-```
-
-> Compléter les pointillés `...` 
-
-> Tester votre fonction: avec un angle d'incidence de 30°, des indices de refraction n1=1 et n2=1.5, on doit avoir r = 19.47°.
-
-**ex 7**: Recopier le script de la fonction `angleRefraction`, ainsi que l'instruction utilisée pour résoudre l'exercice.
-
-# Compléments
-* Un cours sur les fonctions se trouve à la page suivante: [Lien](/docs/python/pages/fonctions/page2/)
-
-<!--
-# Fonctions utiles pour la représentation des nombres en binaire
-## Inversion de bits
-On veut créer une fonction `inverse_bits` qui fait le complement à 1 de la chaine de bits passée en argument.
-
-La boucle bornée `for` peut aussi servir à parcourir une chaine de caractères. Le variant de boucle prend alors successivement la valeur de chacun des caractères.
-
-On utilise N comme paramètre qui devra contenir une chaine de caractères binaires (des 0 et des 1, entre guillemets, comme par ex '11000001').
-
-On definit dans la fonction une variable interne `inverse`, qui stocke les bits au fur et à mesure de l'écriture de la sequence inversée.
-
-Voici le debut de la fonction:
-
-```python
-def inverse_bits(N):
-    inverse = ''
-    for bit in N:
-        if bit == '0':
-```
-
-**ex1.** Compléter cette fonction. Tester alors celle-ci pour vérifier son bon fonctionnement.
-
-## Complément à 2
-**ex2.** Programmer la fonction qui réalise le complément à 2 d'un nombre entier signé. Tester alors cette fonction à partir des résultats donnés pour quelques entiers signés à partir du site [http://www.binaryconvert.com](http://www.binaryconvert.com/index.html)
-
-# Mini projet: jeu du shifumi
-## version de niveau intermediaire
-Créer en console un jeu du Shifumi (Pierre-Feuille-Ciseaux)
-
-* Le jeu questionne le joueur pour connaitre son choix (`input en console`)
-* le joueur rentre une valeur de 0 à 2 selon son choix
-* l'ordinateur tire au hasard une valeur entre 0 et 2
-* Le programme evalue lequel des deux, joueur ou ordinateur remporte la manche.
-
-On pourra ajouter un compteur et permettre au joueur de jouer plusieurs parties d'affilée.
-
-* Au fur et à mesure de votre avancée dans le projet, vous devrez tenir à jour un fichier `readme.txt` expliquant les tâches effectuées.
-
-## version du projet difficile
-
-* Telecharger le dossier à l'adresse: [/scripts/TP3_fonctions_shifumi.zip](/scripts/TP3_fonctions_shifumi.zip)
-
-* Completer le script du fichier `shifumi_gameplay.py` afin de proposer un jeu complet contre l'ordinateur, avec affichage du score.
-
-* Remarquer que la sequence Pierre-Feuille-Ciseaux-Pierre suit un ordre que l'on peut modéliser à l'aide de la fonction modulo (`//`).
-
-* Au fur et à mesure de votre avancée dans le projet, vous devrez tenir à jour un fichier `readme.txt` expliquant les tâches effectuées.
-
--->
