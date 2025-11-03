@@ -479,7 +479,21 @@ def euclide(a,b):
 </div>
 -->
 
+**Preuve de l'algorithme itératif**
 
+a. Terminaison : on utilise une boucle non bornée avec y qui est le convergent. On affecte à y le reste de la division par y (c'est donc inferieur à y). y décroit ainsi jusqu'à 0, ce qui est la condition de fin de la boucle.
+
+b. Correction : Tout diviseur commun de a et b divise aussi r = a - bq, et réciproquement tout diviseur commun de b et r divise aussi a = bq + r. Donc le calcul du PGCD de a et b se ramène à celui du PGCD de b et r.
+l'invariant de boucle, c'est donc : euclide(a,b) = euclide(b, a modulo b)
+
+C'est ce qui est réalisé par la fonction, puisque l'on a comme valeurs pour les couples (x,y) successivement :
+
+```
+      (a,b)
+      (b, a mod b)
+      (a mod b, (a mod b) mod (a mod b))...
+      (* , 0)
+```
 
 ### algorithme recursif
 Le PGCD d'Euclide calcule une suite définie par une récurence à 2 termes:
