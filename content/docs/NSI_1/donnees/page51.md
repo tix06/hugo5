@@ -9,9 +9,11 @@ Les fonctions permettent de rendre le script plus efficace, plus facile à lire 
 
 > *Définition :* Une fonction est un bloc de code auquel on donne un nom en vue de le reutiliser. L'appel de son nom exécute tout le bloc de code que cette fonction contient.
 
-Pour créer une fonction, il faut la definir avec le mot clé `def`, suivi du nom de la fonction, d'une paire de parenthèses suivies de `:`.
 
-## Return
+## système def + return
+Pour créer une fonction, il faut la definir avec le mot clé **`def`**, suivi du nom de la fonction, d'une paire de parenthèses suivies de `:`.
+
+
 La fonction peut retourner une valeur. Celle-ci est alors mise après le mot clé `return`.
 
 *Exemple:* 
@@ -22,19 +24,25 @@ def salut():
   return 'bonjour tout le monde'
 ```
 
+## appeler la fonction
 On appelle cette fonction à l'aide de son nom, suivi des parenthèses : 
 
 ```python
 salut()
-# retourne (et affiche) 'bonjour tout le monde'
+# retourne (et affiche) 
+'bonjour tout le monde'
 ```
 
+APPELLER = EXECUTER LA FONCTION
+
+## placer la valeur retournée dans une variable
 Souvent, cette donnée retournée doit être *affectée à une variable*:
 
 ```python
 message = salut()
 print(message)
-# affiche: bonjour tout le monde
+# affiche: 
+bonjour tout le monde
 ```
 
 # Travaux pratiques 
@@ -53,7 +61,11 @@ Un cours sur les fonctions se trouve à la page suivante: [Lien](/docs/python/pa
 > etoiles()
 ```
 
-Pour afficher la ligne, faire: `print(etoiles())`
+Pour afficher la ligne, on peut placer l'instruction suivante dans le programme: 
+
+```python
+print(etoiles())
+```
 
 > Solution (ne pas regarder trop vite)
 
@@ -104,11 +116,12 @@ def salut(nom):
 def salut(nom):
   return 'bonjour '+ nom
 
-print(salut(John))
+print(salut("John"))
 ```
 
 Vous devriez obtenir: *bonjour John*
 
+### traitement automatisé avec une boucle `for`
 > Utiliser cette fonction avec les prenoms de la liste `Beatles = ['John', 'Paul', 'Ringo', 'George']`
 
 ```python
@@ -128,6 +141,13 @@ bonjour George
 
 *question c.* Recopier le script sur votre *feuille réponse*. 
 
+> Solution (ne pas regarder trop vite)
+
+```python
+Beatles = ['John', 'Paul', 'Ringo', 'George'] 
+for name in Beatles:
+    print(salut(name))
+```
 
 ## TP: ASCII-art
 L'Ascii art consiste à représenter un dessin ou une image uniquement en utilisant des caractères ascii. La page suivante montre des créations artistiques par rubrique: [asciiart.eu](https://www.asciiart.eu/)
@@ -139,6 +159,9 @@ On cherche à realiser des figures à partir de caractères `*` ou `@`.
 *Exemple:*
 
 ```python
+def ligne(n):
+    return '@' * ...
+
 > ligne(5)
 @@@@@
 ```
@@ -174,7 +197,12 @@ def carre(n):
 
 **ex4:** Utiliser la fonction `carre` pour créer l'affichage suivant:
 
-```
+```python
+for i in range (...):
+    carre(...)
+    print()
+
+# affiche
 @
 
 @@
