@@ -9,13 +9,34 @@ bookShowToc: false
 
 La fonction récursive impair accepte un paramètre, N, entier positif. A chaque appel récursif, la fonction s'appelle elle-même avec l'argument N-2.
 
-La condition de base est que N == 1 au bout d'un certain nombre d'appels.
+1. La condition de base est que N == 1 au bout d'un certain nombre d'appels.
 
 > Completez le script de cette fonction. 
 
+<!--
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f87256293a25&mode=code"></iframe>
 
 {{< vitta 5f87256293a25 >}}
+-->
+
+```python
+def impair(N):
+    """retourne True si N est impair
+    Param:
+    N: int positif
+    Exemple:
+    >>> impair(5)
+    True
+    >>> impair(4)
+    False
+    >>> assert impair(4) == False
+    >>> assert impair(5) == True
+    """
+```
+
+2. Cette condition de base est-elle suffisante ou bien faut-il en ajouter une autre? Complétez votre script.
+
+> Une fois que vous obtenez les bons résultats aux tests, recopiez le script sur votre cahier d'exercices.
 
 # Ex 2: Suite de Fibonacci
 On définit la suite (f<sub>n</sub>) des nombres de Fibonacci par :
@@ -25,6 +46,9 @@ $$\left\\{\begin{matrix}\begin{align}f\_0 & =0\\\f\_1 & =1\\\f\_{n+1} & =f\_{n}+
 def fibo(n):
     """
     algo recursif
+    Exemple:
+    >>> assert fibo(1) == 1
+    >>> assert fibo(10) == 55
     """
     if (n==0) : return 0
     if (n==1) : return 1
@@ -33,25 +57,36 @@ def fibo(n):
 
 
 1. Compléter la dernière ligne de la fonction `fibo` avec les bons arguments
-2. Ajouter quelques lignes au script pour afficher tous les nombres de la suite de Fibonacci, du rang 0 au rang n=10.
+2. Ajouter quelques lignes au script pour placer dans une liste `L` tous les nombres de la suite de Fibonacci, du rang 0 au rang n=10 (inclus).
 
 
+<!--
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f8726ff0f497&mode=code"></iframe>
 
 {{< vitta 5f8726ff0f497 >}}
+-->
+
+> Une fois que vous obtenez les bons résultats aux tests, recopiez le script sur votre cahier d'exercices.
 
 # Ex 3: Les tours de Hanoï
 Le problème des tours de Hanoi est présenté en détails dans le cours sur la recursivité [ici](/docs/NSI/langages/page22/#application-les-tours-de-hanoï)
 
 
-1. Dans l'editeur plus bas: Executer le script. Puis aller dans la console et tester l'exemple proposé dans le prototypage de la fonction.
-2. Tester egalement avec 4 disques. Noter chaque fois le nombre de deplacements effectués.
+1. Dans l'editeur ci-dessous: Executer le script. Puis aller dans la console et tester l'exemple proposé dans le prototypage de la fonction.
+
+> Représenter dans votre cahier d'exercice les différents déplacements. S'aider du schéma:
+
+{{< img src="../images/page2/hanoi_3p.png" >}}
+
+2. Tester egalement avec 4 disques. Noter le nombre de deplacements effectués pour N=1 à 4.
 
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f8727ed29a8a&mode=code"></iframe>
 
 {{< vitta 5f8727ed29a8a >}}
 
-*3.* Proposez une loi de recurence entre le nombre de déplacements T(N) pour N disques, et le nombre de déplacements T(N-1) pour N-1 disques.
+*3.* Proposez une loi de recurence entre le nombre de déplacements T(N) pour N disques, et le nombre de déplacements T(N-1) pour N-1 disques. 
+
+> Cette loi, est-elle prévisible à partir de l'énoncé de la solution (pour déplacer N disques du piquet 1 à 3, il faut deplacer N-1 disques de 1 à 2, puis ...).
 
 *Aide: on pourra consulter la page [accromath](https://accromath.uqam.ca/2016/02/les-tours-de-hanoi-et-la-base-trois/).*
 
@@ -65,77 +100,74 @@ il s'agit d'écrire une fonction recursive nombre_r(lettre, phrase) qui renvoit 
 
     * sinon, on adapte la formule de recurence : $u_n = u_{n-1}$
 
-> Compléter le script et testez votre fonction avec, par exemple les arguments: `u` et `lustucru`.
+> Compléter le script et testez votre fonction avec, par exemple les arguments: `u` et `lustucru`
 
+```python
+def nombre_r(lettre, phrase):
+    """
+    Exemples:
+    >>> assert nombre_r('a','lustucru') == 0
+    >>> assert nombre_r('u','lustucru') == 3
+    """
+    if len(phrase)==0: # si la phrase est vide
+        return 0
+    # SINON
+    if phrase[0]==lettre:
+```
+
+<!--
 <iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=5f872924a7977&mode=code"></iframe>
 
 {{< vitta 5f872924a7977 >}}
+-->
+
+> Une fois que vous obtenez les bons résultats aux tests, recopiez le script sur votre cahier d'exercices.
 
 # Ex 5: Retournement d'une liste
-La fonction suivante realise un retournement d'une chaine de caractères:
+La fonction suivante realise un retournement d'une chaine de caractères. 
+
+
+
 
 ```python
 def reverse_iterative(seq): 
     """
     Return the reverse of a string 
-    use insert(index, elem) -- inserts the element at the given index, shifting elements to the right.
     Example:
     >>> reverse_iterative('abcd')
     dcba
+    >>> assert reverse_iterative('abacab') = 'bacaba'
     """
-    reversed_seq = []
-    for i in range(len(seq)):
-        reversed_seq.insert(0, seq[i])
+    reversed_seq = ""
+    for i in range(1,len(seq)+1):
+        reversed_seq = reversed_seq + seq[-i] 
     return reversed_seq
 ```
 
-On peut tester cette fonction dans l'editeur ci-dessous : 
 
+1. Programmer et tester la fonction itérative.
+2. Compléter le script de la fonction `reverse_recur`. S'aider du schéma suivant:
 
-```python
-seq = 'abcd'
-reverse_iterative(seq)
-# affiche
-# ['d', 'c', 'b', 'a']
+```
+f('abc') = f('bc') + 'a'
+         = f('c') + 'b' + 'a'
+         = f('') + 'c' + 'b' + 'a'
+         = 'cba'
 ```
 
-*Aide pour l'écriture de l'algorithme récursif :* 
-
-* le paramètre est la chaine s
-* pour un caractère au rang `i`, on le permute avec le caractère au rang b: b prend la valeur de l'index `len(s) - i - 1`, c'est à dire le symétrique de la position i dans la chaine. 
-
-Par exemple, i = 0 => a est l'index du premier caractère et b celui du dernier caractère.
-
-{{< img src="../images/page6/reverse.png" >}}
-**La condition de base:** On traite le retournement des caractères aux extremités d'une chaine dont la taille diminue au fur et à mesure des appels recursifs. 
-
-* si la longueur de chaine est un nombre impair: Au moment où la longueur de chaine est égale à 1: Le dernier caractère non retourné est au milieu de la chaine. On renvoie ce dernier caractère: `return s`
-
-* si la longueur de chaine est un nombre pair: Au moment où la longueur de chaine est nulle, on termine l'execution de la fonction en renvoyant `s` qui vaut `''`.
-
-
-dans tous les cas, on pourra exprimer cette condition de base avec:
+*Fonction recursive, script à compléter*:
 
 ```python
- if len(s) <= 1:
-        return s
+def reverse_recur(seq):
+    """
+    >>> assert reverse_iterative('abacab') = 'bacaba'
+    """
+    if seq == "":
+        return ""
+    return ...
 ```
 
-La deuxième étape (la partie heredité) consiste à appeler de manière récursive la fonction après avoir permuté les caractères aux extremités: `return s[m] + milieu + s[0]`
-
-Le milieu est constitué de la chaine retournée par l'appel recursif de la fonction avec pour paramètre le mot privé de ses 2 extremités.
-
-
-> Dans l'editeur ci-dessous:
-
-1. Tester la fonction itérative: `reverse_iterative('abcd')
-2. Compléter le script de la fonction `reverse_recur` 
-
-<iframe width='100%' height='500' allowfullscreen frameborder='0' style='border:1px #d6d6d6 solid;' src="https://fr.vittascience.com/python/?link=63677ac691291&mode=code"></iframe>
-
-{{< vitta 63677ac691291 >}}
-
-L'editeur Vittascience peut présenter des problèmes. Choisir alors un IDE local sur votre machine.
+> Une fois que vous obtenez les bons résultats aux tests, recopiez le script sur votre cahier d'exercices.
 
 # Exercice 6: algorithme d'Euclide 
 Euclide propose l’algorithme suivant:
