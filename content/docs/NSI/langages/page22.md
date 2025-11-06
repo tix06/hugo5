@@ -100,8 +100,6 @@ La preuve de correction consiste à rechercher un invariant de boucle pour démo
 ## Dans le cas d'un algo recursif
 **Preuve de correction et de terminaison pour un algo récursif**. 
 
-La méthode est différente car l'algo ne présente pas convergent, ni d'invariant de boucle. 
-
 Le raisonnement consiste à vérifier qu’une propriété est vraie pour une valeur
 entière initiale puis à prouver que la propriété est héréditaire. Une propriété est héréditaire si la véracité pour un entier n quelconque entraîne la véracité pour l’entier suivant n+1. C’est le principe d’une échelle: si on peut atteindre le premier barreau et si on peut passer d’un barreau quelconque au barreau suivant, alors on peut monter jusqu’en haut de l’échelle.
 

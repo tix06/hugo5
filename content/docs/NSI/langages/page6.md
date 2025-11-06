@@ -227,6 +227,11 @@ def PGCD(a,b):
   return:
   -------
   appel recursif avec b et r
+  -------
+  Exemples:
+  >>> PGCD(28,12)
+  4
+  >>> assert PGCD(24,18) == 6
   """
   if b == 0 : return a
   else:
@@ -234,7 +239,9 @@ def PGCD(a,b):
     return PGCD(...,...)
 ```
 
-2. Compléter la fonction recursive du calcul du PGCD et vérifier son (bon) fonctionnement.
+2. Compléter la fonction recursive du calcul du PGCD
+
+> vérifier son (bon) fonctionnement grâce aux tests proposés dans le docstring.
 
 
 
