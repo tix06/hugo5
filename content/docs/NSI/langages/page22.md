@@ -6,7 +6,9 @@ Le cours comprend:
 
 * une partie 1: Introduction à la recursivité {{< a link="../page2" caption="Recursivité et fonction récurente" >}}
 * une partie 2:{{< a link="../page22" caption="Suite du cours sur la recursivité" >}}
-* une{{< a link="../page6/" caption="page d'exercices" >}}
+* une{{< a link="/pdf/NSI/lang3_recur_exos.pdf" caption="page d'exercices. pdf." >}}
+* Un TP1 avec les exercices classiques sur la recursivité: [Lien](../page6)
+* Un TP2 avec le tracé de dessins recursifs (Turtle): [Lien](/docs/NSI/algorithmes/page10_bis/)
 
 Dans la 1ere partie, nous avons vu que la récursivité repose sur la capacité d'une fonction à s'appeler elle-même, de façon répétitive, jusqu'à ce qu'une certaine condition soit satisfaite. A chaque appel récursif, les paramètres de l'appel sont modifiés.
 

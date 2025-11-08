@@ -2,6 +2,15 @@
 Title : programmation objet
 ---
 
+Cette séquence comprend:
+
+* un cours sur la POO: [Lien](../page3)
+* une fiche d'exercices: [pdf](/pdf/NSI/POO_exercices.pdf)
+* des énoncés de bac: [Lien](/docs/NSI/NSI_sujets/#exos5)
+* TP Jeu des 7 familles: [Lien](../page34/) *(Sans interface graphique)*
+* TP sur trajectoires de projectiles: [Lien](../page31/) 
+* TP sur la programmation d'un jeu de Dominos: [Lien](../page33/). *(Sans interface graphique)*
+
 # Programmation objet
 
 ## Principe
