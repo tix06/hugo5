@@ -56,11 +56,11 @@ L’inconvenient des encodages à largeur fixe est qu’ils vont générer des f
 
 
 ## Code à largeur variable utf-8 et utf-16
-Cet encodage utilise l'ASCII, sauf pour les caractères spéciaux. La *longueur* du nombre binaire est alors *variable*. Un caractère peut nécessiter 8, 16 bits, ou plus. Une information dans le code numérique va préciser cette longueur (correspond à un caractère spécial comme le Ã). Cela va permettre d'afficher tous les caractères, comme pour l'Unicode, mais en plus, cela génère un fichier dont le poids sera inférieur.
+* Cet encodage utilise l'ASCII pour les caractères dont le point de code est inférieur ou égal à 127.
 
-Chaque caractère dont le point de code est supérieur à 127 (0x7F) (caractère non ASCII) se code sur 2 à 4 octets:
+* Chaque caractère dont le point de code est supérieur à 127 (0x7F) (caractère non ASCII) se code sur 2 à 4 octets.
 
-* Codage des caractères utf-8 sur un à plusieurs octets. 
+La *longueur* du nombre binaire est alors *variable*. Un caractère peut nécessiter 8, 16 bits, ou plus. Une information dans le code numérique va préciser cette longueur (correspond à un caractère spécial comme le Ã). Cela va permettre d'afficher tous les caractères. Cela génère un fichier dont le poids sera inférieur à l'utf-32. 
 
 {{< img src="../images/utf8.png" caption="image issue de wikipedia utf8" >}}
 

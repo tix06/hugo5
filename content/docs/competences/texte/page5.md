@@ -2,7 +2,8 @@
 Title: de Writer a HTML
 ---
 
-# docx, odt, txt et html: différents documents textuels
+# Découverte du langage HTML
+## docx, odt, txt et html: différents documents textuels
 Les fichiers aux extensions docx et odt permettent d'écrire et présenter du texte. La structure du document se fait à l'aide de boutons d'options proposés par le logiciel. Le rendu visuel de la page est présenté par le logiciel au fur et à mesure de sa construction.
 
 {{< img src="../images/word.png" >}}
@@ -54,6 +55,7 @@ On va résoudre certains de ces problèmes en déclarant le format d'encodage de
 Le plastique, une « antiquité » !
 Plusieurs siècles av. J.C, les hommes utilisaient déjà ...
 ```
+
 
 * Ajouter aussi les lignes suivantes en FIN de document:
 

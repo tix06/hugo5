@@ -13,15 +13,25 @@ Le code ASCII définit la correspondance entre symboles et nombres jusqu'au nomb
 Cette longueur de 7 bits est suffisante pour repésenter de manière unique chaque caractère latin.
 Le problème de l'encodage ASCII est qu'il ne permet pas de représenter assez de caractères pour les besoins des différentes langues. Le e accent aigû **é** sera ainsi représenté par 16 chiffres binaires, et son affichage en format ASCII donnera **Ã©**. 
 
-Dans un document HTML, on pourra tout de même afficher correctement ces caractères, mais il faudra utiliser une *entité* HTML, c'est à dire une combinaison de symboles connus par le navigateur comme par exemple: `&eacute;` pour la lettre `é`.
+Dans un document HTML, on pourra tout de même afficher correctement ces caractères, mais il faudra utiliser une *entité* HTML, c'est à dire une combinaison de symboles connus par le navigateur comme par exemple: `&eacute;` pour la lettre `é`. Ou, mieux, utiliser l'encodage utf-8.
 
 ## Unicode
-Le code UNICODE permet de représenter tous les caractères spécifiques aux différentes langues. Il s'agit d'un encodage avec une nombre fixe de chiffres binaires, comme ASCII, mais plus étendu. Il est d'ailleurs compatible avec les codes ASCII, les caractères latins étant représentés par les mêmes nombres. Mais avec plus de chiffres.
+Le répertoire Unicode se décline en utf-8, utf-16 et utf-32, qui sont de largeur variable ou fixe (pour utf32) 
+Le code UNICODE permet de représenter tous les caractères spécifiques aux différentes langues.
 
-L'inconvenient de l'Unicode est qu'il va générer des fichiers de poids important (poids compté en kilo octets). Bien plus lourd que l'encodage ASCII. Alors que bien souvent, la plupart des caractères utilisés pour un document texte sont ceux de l'alphabet ASCII, avec quelques caractères spéciaux.
 
-## Code utf-8
-Cet encodage utilise l'ASCII, sauf pour les caractères spéciaux. La longueur du nombre binaire est alors variable. Un caractère peut nécessiter 8, 16 bits, ou plus. Une information dans le code numérique va préciser cette longueur (correspond à un caractère spécial comme le Ã). Cela va permettre d'afficher tous les caractères, comme pour l'Unicode, mais en plus, cela génère un fichier dont le poids sera inférieur.
+
+L’inconvenient des encodages à largeur fixe (utf-32) est qu’ils vont générer des fichiers de poids important (poids compté en kilo octets). Bien plus lourd que l’encodage ASCII. Alors que bien souvent, la plupart des caractères utilisés pour un document texte sont ceux de l’alphabet ASCII, avec quelques caractères spéciaux.
+
+
+## Code à largeur variable utf-8 et utf-16
+* Cet encodage utilise l'ASCII pour les caractères dont le point de code est inférieur ou égal à 127.
+
+* Chaque caractère dont le point de code est supérieur à 127 (0x7F) (caractère non ASCII) se code sur 2 à 4 octets.
+
+La *longueur* du nombre binaire est alors *variable*. Un caractère peut nécessiter 8, 16 bits, ou plus. Une information dans le code numérique va préciser cette longueur (correspond à un caractère spécial comme le Ã). Cela va permettre d'afficher tous les caractères. Cela génère un fichier dont le poids sera inférieur à l'utf-32.
+
+
 
 # Activité: Définir le bon encodage en HTML
 Utiliser le logiciel Notepad++ ou tout autre éditeur de script. Créer un nouveau fichier et commencer par l'entête suivant:
