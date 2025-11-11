@@ -194,4 +194,5 @@ fiche d'exercices: [lien vers le pdf](/pdf/SNT/web_ex_moteur_recherche.pdf)
 -->
 
 # Liens
-[article binaire blog le Monde : Le www a 30 ans](http://binaire.blog.lemonde.fr/2019/04/26/le-world-wide-web-il-y-a-trente-ans/)
+* [article binaire blog le Monde : Le www a 30 ans](http://binaire.blog.lemonde.fr/2019/04/26/le-world-wide-web-il-y-a-trente-ans/)
+* TP moteurs de recherche: [la-martiniere-diderot.ac-lyon](https://portail.lyc-la-martiniere-diderot.ac-lyon.fr/srv20/co/AA2_Requetes.html)
