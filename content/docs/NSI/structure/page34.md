@@ -134,9 +134,33 @@ True
 
 **Question 5**: Quelles fonctionnalités du jeu reste t-il à programmer pour avoir un jeu complet?
 
-**Question 6**: (mini projet) Programmer l’une de ces fonctionnalités.
+**Question 4:** On souhaite maintenant avoir une interaction plus poussée avec le `Joueur`, selon les règles du jeu. 
 
-On pourra par exemple programmer une fonction `demande` de la classe `Joueur` telle que:
+L’idée est de créer une méthode `possede` qui prend en paramètre un tupple `(famille,membre_famille)`, et qui retourne un booleen selon la main du joueur, comme par exemple:
+
+```
+>>> joueur1.possede(('Jongleurs','Fils'))
+False
+>>> joueur1.possede(('Jongleurs','Fille'))
+True
+>>> joueur1.possede(carte1.getAttributs())
+True
+```
+
+**Question 5:** Quelles fonctionnalités du jeu reste t-il à programmer pour avoir un jeu complet?
+
+**Question 6:** **(mini projet)** Programmer tout ou partie de ces fonctionnalités.
+
+* Exemple 1: programmer une fonction `donne`, de la classe `Joueur` qui retire la carte de la liste du joeur. On pourra utiliser la méthode de liste `remove`, qui supprime un élément X de la liste:
+
+```python
+>>> L = ['a','b','c']
+>>> L.remove('b')
+>>> L
+['a','c']
+```
+
+* Exemple 2: programmer une fonction `demande` de la classe `Joueur` telle que:
 
 ```
 >>> joueur1 = Joueur(carte1,carte2)
@@ -150,11 +174,14 @@ pioche
 le joueur a la carte
 ```
 
+Lorsque le joueur a la carte, il la donne au joueur qui la lui demande. Elle est retirée de son jeu et s'ajoute au jeu de l'adversaire.
+
+
 
 # Liens
-<!--
+
 **Correction de l'exercice** sur le jeu des `Sept_Familles`: [Lien](../page32)
--->
+
 **La suite en TP**
 
 * TP Jeu des 7 familles: [Lien](../page34/) *(Sans interface graphique)*
