@@ -3,7 +3,7 @@ Title: TP 7 Familles
 ---
 
 # Exercice: Jeu de cartes des 7 familles
-Lien vers le notebook: [CAPYTALE](https://capytale2.ac-paris.fr/web/c/cf14-7917160)
+Lien vers le notebook: [CAPYTALE](https://capytale2.ac-paris.fr/web/c/d57c-8003286)
 
 ## Les cartes
 On donne la declaration de la classe `Sept_Familles`
