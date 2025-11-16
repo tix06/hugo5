@@ -95,9 +95,36 @@ Le module `os` apporte les fonctions:
 ## Fichier txt
 On utilise la fonction `open` de la librairie standart en python:
 
-La fonction `open` crée donc un fichier. Elle renvoie un objet de la classeTextIoWrapper. Par la suite, nous allons utiliser des méthodes de cette classe pour interagir avec le fichier.
+La fonction `open` crée donc un fichier. Elle renvoie un objet de la classeTextIoWrapper. Par la suite, nous allons utiliser des méthodes de cette classe pour interagir avec le fichier. Il existe 2 méthode pour utiliser `open`:
 
-*Exemple de programme : lit un fichier .txt et créé une liste mots*
+
+* méthode 1: fonctions `open` et  `close`. On créé un objet qui sert à importer le fichier. Choisir un nom quelconque, pour l'exemple qui suit ce sera `file`. On utilise la fonction `open` avec pour paramètres, le nom du fichier (son chemin), suivi du caractère 'r' (pour `read`, ouverture du fichier en *lecture*).
+
+On peut alors récuperer le contenu textuel du fichier à l'aide de la méthode `read`. Dans l'exemple ci-dessous, on place le texte du fichier dans la variable `texte`. 
+
+On peut traiter cette variable comme on le souhaite, l'afficher en entier (`print(texte)`), ou parcourir et traiter les caractères les uns après les autres (`for c in texte: ...`)
+
+Penser alors à fermer le fichier de lecture: `file.close()`
+
+```python
+file = open('exemple.txt','r')
+texte = file.read()
+file.close()
+print(texte)
+```
+
+* méthode 2: système d'instructions `with` + `open`
+
+Le programme suivant est équivalent à celui de la méthode 1. Avec le mot clé `with`, les instructions de lecture du fichier sont mis dans un bloc, et donc indentées. A la sortie de ce bloc, le fichier est automatiquement *fermé*, ce qui fait l'economie de l'instruction `close`, et evite les oublis...
+
+```python
+with open('exemple.txt', 'r') as file:
+    texte = file.read()
+print(texte)
+``` 
+
+ 
+*Exemple de programme : lire un fichier .txt avec un seul mot par ligne, et créer une liste mots*
 
 ```python
 # initialisation de la liste vide
@@ -203,7 +230,32 @@ for i in range(1,len(table[1:])):
 ```
 
 # Ecrire dans un fichier
-## Texte non structuré
+* méthode 1: fonctions `open` et  `close`. On créé un objet qui sert à désigner le fichier. Choisir un nom quelconque, pour l'exemple qui suit ce sera `fileout`. On utilise la fonction `open` avec pour paramètres, le nom du fichier (son chemin), suivi du caractère 'w' (pour `write`, ouverture du fichier en *écriture*).
+
+On peut alors placer du texte dans le fichier à l'aide de la méthode `write`: `fileout.write("...")`
+
+Penser alors à fermer le fichier de lecture: `fileout.close()`
+
+```python
+fileout = open('exemple.txt','w')
+fileout.write("Je sais ta passion, et suis ravi de voir\nQue tous ses mouvements cèdent à ton devoir ;")
+fileout.close()
+```
+
+*On peut alors vérifier le fichier et son contenu en parcourant le dossier avec l'explorateur windows*.
+
+* méthode 2: système d'instructions `with` + `open`
+
+Le programme suivant est équivalent à celui de la méthode 1. Avec le mot clé `with`, les instructions de d'écriture dans le fichier sont mis dans un bloc, et donc indentées. A la sortie de ce bloc, le fichier est automatiquement *fermé*, ce qui fait l'economie de l'instruction `close`, et evite les oublis...
+
+```python
+with open('exemple.txt','w') as fileout:
+    fileout.write("Je sais ta passion, et suis ravi de voir\nQue tous ses mouvements cèdent à ton devoir ;")
+   
+```
+
+*Exemple avec une liste => fichier*
+
 ```python
 animaux2 = ["poisson", "abeille", "chat"]
 with open("zoo2.txt", "w") as filout:

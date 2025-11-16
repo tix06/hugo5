@@ -349,6 +349,7 @@ for l in M:
 * notebook du site [clogique](https://clogique.fr/nsi/notebook/?from=/nsi/premiere/td_tp/TP_Art_Ascii.ipynb#Exercice-7)
 
 # Suite
-## Projet transformer image -> ASCII: [Lien](../page53)
-## Utiliser des fonctions pour calculer: [Lien](../page52)
+### Lecture - eciture dans un fichier: [Lien](../page54)
+### Projet transformer image -> ASCII: [Lien](../page53)
+### Utiliser des fonctions pour calculer: [Lien](../page52)
 
