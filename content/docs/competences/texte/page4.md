@@ -3,14 +3,13 @@ Title: protection donnees personnelles
 bookShowToc: false
 ---
 
-# Travail collaboratif 
+# TP - Travail collaboratif sur la protection des données
 Document reponse: 
 
-<!--
-* [framapad du groupe A](https://mypads2.framapad.org/mypads/?/mypads/group/pad-pppe-x81hev98e/pad/view/rgpd-groupe-1-0q1hfv9t1)
--->
 
-* [framapad du groupe B](https://mypads2.framapad.org/mypads/?/mypads/group/pad-pppe-x81hev98e/pad/view/rgpd-groupe-2-w51hgv95t)
+* [framapad du groupe A](https://mypads2.framapad.org/mypads/?/mypads/group/pad-pppe-x81hev98e/pad/view/rgpd-groupe-1-0q1hfv9t1)
+
+
 
 Le *framapad* est un document avec editeur en ligne de la societé de logiciels libre *Framasoft*.
 
