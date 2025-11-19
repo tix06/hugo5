@@ -3,6 +3,17 @@ Title : types abstraits
 bookShowToc: false
 ---
 
+*Ce cours comporte 2 chapitres prérequis:*
+
+* Cours sur les{{< a link="/docs/NSI/structure/page1/" caption="types abstraits" >}} et les tableaux statiques.
+* {{< a link="/docs/NSI/structure/page3/" caption="Programmation orientée objets" >}}
+
+*Et plusieurs parties:*
+
+* les types abstraits: [Lien](../page1)
+* les Piles: une structure linéaire: [Lien](../page2)
+* exercices en ligne (TP) sur les Piles: [Lien](../page22)
+* autres structures linéaires: [Lien](../page21)
 
 # Types abstraits
 
