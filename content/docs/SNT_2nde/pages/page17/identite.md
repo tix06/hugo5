@@ -26,10 +26,11 @@ Ce sont:
 * ordonance médicale, clichés radiographiques, ...
 * L'enregistrement de la voix de clients ou salariés par un dispositif informatique
 * images de personnes physiques captées par un système de vidéosurveillance
+* les conversations (par le microphone)
 * le patrimoine d'un propriétaire
 * ...
 
-Même des données supposées anonymes peuvent nous identifier car il existe souvent une clé de correspondance qui peut nous identifier.
+Même des données supposées *anonymes* peuvent nous identifier car il existe souvent une *clé de correspondance* qui peut nous identifier.
 
 # Identité numérique
 L'identité est construite à partir de *données à caractère personnel.*
@@ -43,10 +44,22 @@ L'identité est construite à partir de *données à caractère personnel.*
 (voir activité p 16 du livre SNT)
 
 * directement: à partir d'un formulaire à remplir
-* indirectement: par recoupement de plusieurs informations (publications, enregistrement par des dispositifs matériels, camera ou autre...)
+* indirectement: dans les metadonnées des photos de ma galerie, à partir du gps de mon tel, de mon activité sur le net, de mes amis sur le net, de mon profil social sur les reseaux, ...
+
+Par recoupement de plusieurs informations (publications, enregistrement par des dispositifs matériels, camera ou autre...), un algorithme peut déduire quelles sont mes préférences en terme de:
+
+* religion
+* sexualité
+* politique
 
 
+Lorsque l'on installe une application, un logiciel, un driver pour un objet connecté, on est souvent obligé d'accepter le contrat sur les Conditions Générales d'Utilisation (CGU).
 
+{{< img src="../images/cgu1.png" >}}
+
+De même, pour accéder à la plupart des sites d'information, on est obligé d'accepter en grande partie les cookies du site, qui vont enregistrer et partager certaines de nos données.
+
+{{< img src="../images/cgu2.png" >}}
 
 <!--
 # Interconnecter les données administratives
@@ -193,6 +206,7 @@ Il s'agit d'un exemple de données personnelles indirectement nominatives. Celle
 
 {{< img src="/images/video.png" link="https://youtu.be/fTXvU1aBhSw?si=ncgEK1OqL-Jk8y7I" caption="Données personnelles, Google vous suit à la trace - FranceTV info" >}}
 
+*Il existe cependant quelques gestes et attitudes qui peuvent limiter nos traces numériques, ainsi que la confidentialité des données que l'on échange.*
 
 # Compléments et activités
 * TP protection des données (SNT): [Lien](../TP_prot_donnees)
