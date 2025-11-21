@@ -30,4 +30,4 @@ Votre code devra donc :
 
 # Liens et sources
 * notebook du site [clogique](https://clogique.fr/nsi/notebook/?from=/nsi/premiere/td_tp/TP_Art_Ascii.ipynb#Exercice-7)
-* [correction](../page541) du Projet ascii-art
+* [correction](../page531) du Projet ascii-art

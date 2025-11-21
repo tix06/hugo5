@@ -211,3 +211,4 @@ Il s'agit d'un exemple de données personnelles indirectement nominatives. Celle
 # Compléments et activités
 * TP protection des données (SNT): [Lien](../TP_prot_donnees)
 * Activité complète (PPPE): [competences numeriques > protection des données](/docs/competences/texte/page4/)
+* Article [caminteresse](https://www.caminteresse.fr/societe/qui-exploite-nos-donnees-personnelles-1197308/): qui exploite nos données?

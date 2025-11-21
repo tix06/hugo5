@@ -301,10 +301,12 @@ reduction(['d','D','a','A','a'])
 reduction(['d','a','a','b','A','a','A','a'])
 -> ['d','a','a','b']
 reduction(['d','a','c','a','A','a','A','a','C'])
--> ?
+-> ['d', 'a', 'a', 'b']
 reduction(['B','a','A','c','A','a','A','a','C','b'])
--> ?
+-> []
 ```
+
+[correction](../page23)
 
 ## Enoncé difficile
 On modifie maintenant la règle du jeu: les motifs peuvent être réduits par groupe de 2, comme précédemment, mais aussi par groupe de 3 si ceux-ci présentent une  alternance minuscule-majuscule-minuscule ou bien majuscule-minuscule-majuscule:

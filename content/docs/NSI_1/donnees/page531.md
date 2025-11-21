@@ -10,7 +10,6 @@ from PIL import Image
 from display_image import *
 
 ascii_char = ' .:-=+*#%@'
-len(ascii_char)
 
 with Image.open("Marylin-original.jpg") as image:
     image = image.resize((500,500))
