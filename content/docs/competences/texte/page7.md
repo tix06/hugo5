@@ -3,8 +3,7 @@ Title: writer mise en page
 ---
 
 # Document texte
-* [framapad du groupe A](https://mypads2.framapad.org/mypads/?/mypads/group/ppe1-xj380s96i/pad/view/rgpd-a-wg381s95n)
-* [framapad du groupe B](https://mypads2.framapad.org/mypads/?/mypads/group/ppe1-xj380s96i/pad/view/rgpd-b-i338ds93d)
+* [framapad du groupe A](https://mypads2.framapad.org/mypads/?/mypads/group/pad-pppe-x81hev98e/pad/view/rgpd-groupe-1-0q1hfv9t1)
 
 # Le logiciel Writer de traitement de texte
 Writer est l'un des logiciels de la suite bureautique LibreOffice.

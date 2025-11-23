@@ -68,7 +68,7 @@ Le contenu de la page se trouve entre les balise `<body>` et `</body>`.  La bali
 
 **Question a:**  Sauvegarder le document avec le nom: `marignan.html` Puis ouvrir le document avec le navigateur. Que constatez-vous? Pourquoi?
 
-Ajouter mantenant la partie suivante au contenu de la page (à placer avant la balise de fermeture `</body>`:
+Ajouter maintenant une DEUXIEME section avec la partie suivante: (à placer avant la balise de fermeture `</body>`:
 
 ```html
 <section>
@@ -89,6 +89,10 @@ Vous allez maintenant modifier l'information sur l'encodage en remplaçant la ba
 **Question c:** Recharger le document dans le navigateur. Que constatez-vous? Pourquoi?
 
 # introduction au CSS
+Vous avez découvert le *langage HTML (Hypertext Markup Langage)* dans le TP précédent. Celui-ci gère la **structure ET le contenu** du document. La mise en forme dépend alors de votre navigateur, à partir des règles de mise en page standart qu'il va appliquer.
+
+Mais pour maitriser et personnaliser cette mise en forme, il faut utiliser un langage prévu pour **gérer les *styles***. C'est le langage *CSS (Cascading Style Sheet)*.
+
 Les instructions de style se mettent entre les balises `<style>`. Ces balises seront placées après la fermeture `</head>` et avant l'ouverture du contenu `<body>`
 
 ```html
@@ -151,7 +155,7 @@ Les règles peuvent permettre de
 * mettre une couleur de fond
 * dessiner une bordure
 
-On reviendra sur le tutoriel [developper.mozilla](https://developer.mozilla.org/fr/docs/Learn/Getting_started_with_the_web/CSS_basics) pour voir un exemple d'application de ces règles.
+Suivre maintenant le tutoriel [developper.mozilla](https://developer.mozilla.org/fr/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content#css_cest_avant_tout_des_bo%C3%AEtes) pour voir un exemple d'application de ces règles.
 
 > travaux pratiques: écrire les règles de style CSS qui vont permettre d'obtenir la mise en forme suivante:
 
@@ -180,6 +184,9 @@ display: flex;
 **Question f:**: Ecrire la règle complète que vous avez utilisée.
 
 *Approfondir: [developper.mozilla](https://developer.mozilla.org/fr/docs/Learn/CSS/CSS_layout/Flexbox)*
+
+## Agencer les éléments
+Vous savez maintenant positionner les éléments dans le flux vertical, horizontal, mettre une image dans un container sans que celle-ci déborde, et utiliser des règles CSS pour personnaliser les styles. Vous pouvez peut-être, s'il vous reste du temps, revenir sur le [TP précédent](../page51) et personnaliser l'affichage de votre page...
 
 
 

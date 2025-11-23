@@ -52,7 +52,7 @@ Le code UNICODE permet de représenter tous les caractères spécifiques aux dif
 
 Cette gigantesque table est divisée en 17 plans (de 0 à 16) de deux octets chacun, soit 65 536 points de code par plan (65 536 x 17 = 1 114 112). Ces plans permettent de désigner facilement des groupes de caractères. Le premier plan, appelé Basic Multinlingual Plane (BMP), ou Plan Multinlingue de Base, regroupe les 65k caractères les plus courants. Les plans 1 à 16 sont appelés plans supplémentaires.
 
-L’inconvenient des encodages à largeur fixe est qu’ils vont générer des fichiers de poids important (poids compté en kilo octets). Bien plus lourd que l’encodage ASCII. Alors que bien souvent, la plupart des caractères utilisés pour un document texte sont ceux de l’alphabet ASCII, avec quelques caractères spéciaux.
+L’inconvenient des encodages à largeur fixe (utf-32) est qu’ils vont générer des fichiers de poids important (poids compté en kilo octets). Bien plus lourd que l’encodage ASCII. Alors que bien souvent, la plupart des caractères utilisés pour un document texte sont ceux de l’alphabet ASCII, avec quelques caractères spéciaux.
 
 
 ## Code à largeur variable utf-8 et utf-16

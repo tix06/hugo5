@@ -16,12 +16,16 @@ Le problème de l'encodage ASCII est qu'il ne permet pas de représenter assez d
 Dans un document HTML, on pourra tout de même afficher correctement ces caractères, mais il faudra utiliser une *entité* HTML, c'est à dire une combinaison de symboles connus par le navigateur comme par exemple: `&eacute;` pour la lettre `é`.
 
 ## Unicode
-Le code UNICODE permet de représenter tous les caractères spécifiques aux différentes langues. Il s'agit d'un encodage avec une nombre fixe de chiffres binaires, comme ASCII, mais plus étendu. Il est d'ailleurs compatible avec les codes ASCII, les caractères latins étant représentés par les mêmes nombres. Mais avec plus de chiffres.
+L'UNICODE est une format d'encodage qui permet de représenter **tous les caractères** des différentes langues. Il est compatible avec les codes ASCII, les caractères latins étant représentés par les mêmes codes binaires. Les autres caractères vont s'ajouter avec des codes plus longs.
 
-L'inconvenient de l'Unicode est qu'il va générer des fichiers de poids important (poids compté en kilo octets). Bien plus lourd que l'encodage ASCII. Alors que bien souvent, la plupart des caractères utilisés pour un document texte sont ceux de l'alphabet ASCII, avec quelques caractères spéciaux.
+L'Unicode se décline en utf-8, utf-16 et utf-32.
 
-## Code utf-8
-Cet encodage utilise l'ASCII, sauf pour les caractères spéciaux. La longueur du nombre binaire est alors variable. Un caractère peut nécessiter 8, 16 bits, ou plus. Une information dans le code numérique va préciser cette longueur (correspond à un caractère spécial comme le Ã). Cela va permettre d'afficher tous les caractères, comme pour l'Unicode, mais en plus, cela génère un fichier dont le poids sera inférieur.
+L'utf-32 est un encodage des caractères avec une longueur fixe de 32 bits. Cela fait beaucoup de types de caractères différents. (plus de 4 milliards).
+
+L’inconvenient d'un encodage à largeur fixe (utf-32) est qu’il va générer des fichiers de poids plus important, inutilement dans la plupart des cas. Alors que bien souvent, la plupart des caractères utilisés pour un document texte sont ceux de l’alphabet ASCII, avec quelques caractères spéciaux.
+
+Pour l'utf-8 et l'utf-16, le code est de longueur variables, de 2 à 4 octets (16 à 32 bits).
+
 
 # Activité: Définir le bon encodage en HTML
 Utiliser le logiciel Notepad++ ou tout autre éditeur de script. Créer un nouveau fichier et commencer par l'entête suivant:
