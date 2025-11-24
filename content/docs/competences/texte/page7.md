@@ -45,7 +45,9 @@ Vous allez identifier ou ajouter ces différents éléments éléments au docume
 * Numéroter les sous-titres (Menu Outils> Numérotation des chapitres).
 * Insérer une image
 * Ajouter une bibliographie ou une sitographie
+<!--
 * Charger et tester une nouvelle feuille de styles
+-->
 * ... et s'il vous reste du temps, commencer à voir comment personnaliser les styles: Lien vers la page [utilisation avancée de Writer](../page3/)
 
 
@@ -88,6 +90,7 @@ Dans la fenêtre, choisir l'onglet *numérotation* et paramétrer pour démarrer
 
 Voir pour plus de détails les explications ici: [pdf de lyceedupaysdesoule.fr](http://www.lyceedupaysdesoule.fr/ressources/libreoffice/libreoffice_writer_6_numerotation_titres.pdf)
 
+<!--
 ## Charger et utiliser une nouvelle feuille de style
 Pour l'activité qui va suivre, **faites une copie de votre document**, afin de **conserver une copie** de votre travail.
 
@@ -120,9 +123,9 @@ Il faut la charger dans vos *templates* existants. Utilisez par exemple la feuil
 
 ### Utiliser une feuille de style:
 Pour afficher les styles sous Libre Office : Choisissez dans la barre des menus (en haut): `Styles > Charger les styles`. Puis retrouver la feuille de style dans les catégories proposées. Ouvrir. Cela devrait appliquer les styles à votre page, et écraser ceux existants.
-
+-->
 # Ajouter une sitographie
-Vous allez ajouter 3 à 6 liens qui vous ont été utiles pour la rédaction du contenu.
+Vous allez ajouter 3 à 6 liens qui ont été utiles pour la rédaction du contenu.
 
 Une référence bibliographique doit indiquer toutes les informations indispensables à l’identification d’un document ou d’un texte, et ce, qu’il soit accessible en version papier ou en ligne. Le format de la référence varie légèrement selon le document. *Essayez de vous y conformer.*
 
