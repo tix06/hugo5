@@ -60,7 +60,9 @@ L’inconvenient des encodages à largeur fixe (utf-32) est qu’ils vont géné
 
 * Chaque caractère dont le point de code est supérieur à 127 (0x7F) (caractère non ASCII) se code sur 2 à 4 octets.
 
-La *longueur* du nombre binaire est alors *variable*. Un caractère peut nécessiter 8, 16 bits, ou plus. Une information dans le code numérique va préciser cette longueur (correspond à un caractère spécial comme le Ã). Cela va permettre d'afficher tous les caractères. Cela génère un fichier dont le poids sera inférieur à l'utf-32. 
+La *longueur* du nombre binaire est alors *variable*. Un caractère peut nécessiter 8 (ascii), 16 bits, ou plus (jusqu'à 32). Une information dans le code numérique va préciser cette longueur (correspond à un caractère spécial comme le Ã). Cela va permettre d'afficher tous les caractères. Cela génère un fichier dont le poids sera inférieur à l'utf-32. 
+
+Pour le système d'exploitation Windows, l'encodage par defaut est l'utf-16. MacOs utilise un encodage utf-8.
 
 {{< img src="../images/utf8.png" caption="image issue de wikipedia utf8" >}}
 
