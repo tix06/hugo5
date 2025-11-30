@@ -350,3 +350,7 @@ for valeur in ligne:
 - **N'oubliez pas** : les indices commencent à 0 en Python !
 
 [COURS python sur les tableaux](/docs/python/pages/boucles/page2/)
+
+**Suite en projet:**
+
+[Liste des projets](../page551)

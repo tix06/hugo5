@@ -43,15 +43,12 @@ L'identité est construite à partir de *données à caractère personnel.*
 # Comment sont collectées nos données personnelles
 (voir activité p 16 du livre SNT)
 
-* directement: à partir d'un formulaire à remplir
-* indirectement: dans les metadonnées des photos de ma galerie, à partir du gps de mon tel, de mon activité sur le net, de mes amis sur le net, de mon profil social sur les reseaux, ...
+Les données nous concernant peuvent être cédées de manière: 
 
-Par recoupement de plusieurs informations (publications, enregistrement par des dispositifs matériels, camera ou autre...), un algorithme peut déduire quelles sont mes préférences en terme de:
+* **volontaires**, directement: à partir d'un formulaire à remplir
+* **involontaires**, indirectement: dans les metadonnées des photos de ma galerie, à partir du gps de mon tel, de mon activité sur le net, de mes amis sur le net, de mon profil social sur les reseaux, ...
 
-* religion
-* sexualité
-* politique
-
+Pour utiliser des services sur le net, on doit en contrepartie donner son accord pour partager certaines de nos données.
 
 Lorsque l'on installe une application, un logiciel, un driver pour un objet connecté, on est souvent obligé d'accepter le contrat sur les Conditions Générales d'Utilisation (CGU).
 
@@ -61,19 +58,15 @@ De même, pour accéder à la plupart des sites d'information, on est obligé d'
 
 {{< img src="../images/cgu2.png" >}}
 
+Les données nous concernant peuvent aussi être cédées de manière: 
+
+* **héritée**: c'est lorsque ce sont d'autres personnes qui parlent de nous, ou publient des photos de nous, sur le net.
+
+Pour résumer:
+
+{{< img src="../images/CNIL0.png" caption="extrait d'une affiche sur le site de la CNIL" >}}
+
 <!--
-# Interconnecter les données administratives
-{{< img src="../images/safari2.png" link="https://sites.ina.fr/cnil/focus/chapitre/2/medias" caption="Projet SAFARI - source INE - video" >}}
-**1974** Un projet de dispositif administratif pensait interconnecter toutes les données des citoyens dans un même fichier. Chaque citoyen serait alors identifié par son numéro de securité sociale. Le projet SAFARI *("système automatisé pour les fichiers administratifs et le répertoire des individus")*. On aurait alors pu avoir toutes les informations relative à cet individu (santé, fiscalité, biens, origine, ...). Une mise en fiche de la population. Ceci est contraire à la loi de protection des libertés.
-
-{{< img src="../images/safari.jpeg" caption="Scandale ! Le 21 mars 1974, le journal Le Monde révèle l’existence d’un projet de Raymond Marcellin, alors ministre de l’Intérieur du gouvernement Messmer." >}}
-Qu'adviendrait-il de l'usage d'un tel outil dans le futur si notre pays était administré par un regime moins démocratique? La constitution insouciante d'un tel outil sous un regime démocratique, en temps de paix et prosperité pourrait être qualifié de complicité de crime contre l'humanité s'il était utilisé dans un régime moins soucieux des libertés des personnes (il y a eu des exemple avec le gouvernement de Vichy pendant l'occupation, 40 ans plus tôt).
-
-**1978** Création de la CNIL. Commission Nationale Informatique et Libertés.<br>
-Proposition de la loi *informatique et libertés*: Proteger les Français du fichage administratif et policier. Les échanges entre administrations doivent alors se limiter au strict nécessaire.
-
-**2004** nouvelle loi informatique et liberté à l'echelle européenne.
-
 # La CNIL
 La CNIL est avant tout chargée de veiller à la protection des données personnelles.
 
@@ -87,6 +80,16 @@ Le but de cette commission est avant tout de veiller au bon usage et à la prote
 # Traitement des données
 ## Definition
 il s'agit de toute opération effectuée de manière automatisée appliqué à des données à caractère personnel.
+
+Par recoupement de plusieurs informations (publications, enregistrement par des dispositifs matériels, camera ou autre...), un algorithme peut déduire des informations sur ma personnalité, quelles sont mes préférences en terme de:
+
+* religion
+* sexualité
+* politique
+
+Un ordinateur, ou bien une personne qui a accès à certaines données *indirectes* qui me concernent, peut retrouver mon identité.
+
+{{< img src="../images/vecna.png" link="https://youtu.be/k74OrOTkCuQ" caption="extrait de l'Ep2 S04, recherche dans la base de données d'une boutique de location de films" >}}
 
 ## Enjeux pour l'usager
 Aujourd'hui, l'aspiration des individus, en termes de protection de leur vie privée est de pouvoir utiliser les services technologiques d'internet, de s'exposer personnellement (reseaux sociaux), tout en cédant une partie acceptable de leurs données personnelles. Cette part cédée doit rester raisonnable et être négociée par contrat avec les opérateurs économiques.
@@ -195,8 +198,14 @@ Il est essentiel de connaitre les risques et d'adopter une attitude modérée lo
 Alessandro Acquisti is a Professor of Information Technology and Public Policy at the Heinz College, Carnegie Mellon University. His research combines economics, decision research, and data mining to investigate the role of privacy in a digital society. His studies have spearheaded the economic analysis of privacy, the application of behavioral economics to the understanding of consumer privacy valuations and decision-making, and the investigation of privacy and personal disclosures in online social networks.
 -->
 
-# Vie privée
-Conserver des secrets sur sa vie privée est relativement difficile lorsque l'on s'expose sur internet. Il est souhaitable d'avoir un compte privé sur les réseaux sociaux, et de diffuser le moins d'informations possibles. Mais les algorithmes utilisés par les réseaux sociaux vont chercher à déduire des informations à partir d'indices:
+# Vie privée et traces numériques, persistance sur le net
+Comme vos données sont personnelles, elles vous concernent et vous devez en avoir la maitrise.
+
+Conserver des secrets sur sa vie privée est relativement difficile lorsque l'on s'expose sur internet. 
+
+Le format numérique des données va faciliter leur *échange, leur multiplication*, ... et leur *persistance* sur le web.
+
+Il est souhaitable d'avoir un compte privé sur les réseaux sociaux, et de diffuser le moins d'informations possibles. Mais les algorithmes utilisés par les réseaux sociaux vont chercher à déduire des informations à partir d'indices:
 
 ## Votre activité sur les reseaux sociaux
 Les personnes que vous suivez, les pages que vous *likez*, ... sont autant d'informations pour établir votre profil par recoupement d'information.
@@ -208,7 +217,79 @@ Il s'agit d'un exemple de données personnelles indirectement nominatives. Celle
 
 *Il existe cependant quelques gestes et attitudes qui peuvent limiter nos traces numériques, ainsi que la confidentialité des données que l'on échange.*
 
+# Questions-reponses
+{{< img src="../images/pizza.png" caption="une entreprise peut-elle être tenue responsable du vol des données de ses clients?" >}}
+
+
+Q/R issu du site [europe-consommateurs.eu](https://www.europe-consommateurs.eu/achats-internet/protection-des-donnees-personnelles.html)
+Lorsque vous acceptez la collecte, transfert, sauvegarde, utilisation de vos données par un professionnel:
+
+> Doit-on vous informer de l'utilisation qui est faite de vos données ?
+
+Oui. Vous avez le droit de savoir si vos données sont collectées, transférées, sauvegardées, modifiées...
+
+Vous devez également être informé, entre autres, :
+
+* de l'identité du responsable de la collecte de vos données.
+* des finalités de cette collecte.
+* des destinataires de vos données.
+* de la durée de conservation de vos données.
+* de votre droit d’introduire une réclamation auprès d’une autorité de contrôle. 
+
+> Les entreprises américaines comme Uber ou Amazon, ..., doivent-elles se conformer au RGPD?
+
+Oui car le RGPD est un texte de loi qui protège les citoyens européens (pour leurs données personnelles), même ci ceux-ci utilisent des services proposés par des entreprises hors UE, dès lors qu'elles ciblent des usagers européens.
+
+> Comment protéger mes données lors d’un achat en ligne ?
+
+Assurez-vous que vous payez votre commande sur un site utilisant une connexion sécurisée. L'adresse du site doit commencer par « https:// » et un cadenas fermé doit apparaitre.
+
+Pour éviter le piratage de vos données bancaires, vous pouvez privilégier l’utilisation d’une carte bancaire à usage unique.
+
+> Un site marchand européen a-t-il le droit de garder mes coordonnées bancaires pour faciliter mes futurs achats ?
+
+Oui mais seulement si vous y avez consenti expressément en cochant une case. Accepter simplement les conditions générales de vente ou passer par une case pré-cochée ne suffit pas.
+
+Vous pouvez à tout moment contacter le professionnel afin de demander la suppression de vos données bancaires.
+
+> Comment protéger mes données sur les réseaux sociaux ?
+
+Pour protéger votre vie privée, paramétrez l’accès à vos photos et à votre profil. Vérifiez régulièrement le paramétrage de confidentialité de votre compte.
+
+Evitez de répondre aux questions de géolocalisation si cela n’est pas indispensable. Surtout, ne répondez pas aux messages adressés par des individus que vous ne connaissez pas.
+
+Laissez également le strict minimum concernant vos coordonnées et évitez d’y détailler votre vie privée, pour rester à l’abri de personnes malintentionnées.
+
+> Un réseau social basé en Europe refuse de me donner accès à mes données personnelles. Vers qui dois-je me retourner ?
+
+Si vous résidez en France, vous pouvez adresser une plainte à la Commission Nationale Informatique et Libertés (CNIL) en cas de violation de vos droits. La CNIL se chargera d’en informer l’autorité chef de file. Il s'agit de l’autorité nationale de protection des données personnelles du pays dans lequel le professionnel/le réseau social est établi.
+
+> Je n'utilise plus mon compte sur un réseau social, mes données sont-elles supprimées ?
+
+Non pas automatiquement.  Ce n’est pas parce que vous ne vous êtes pas connecté à votre compte sur un réseau social depuis plusieurs années qu'il a supprimé vos données personnelles et ne les exploite plus. Renseignez-vous bien quant au devenir du compte que vous n’utilisez plus sur un réseau social.
+
+Les autorités de protection des données personnelles dans l’Union européenne recommandent aux différents réseaux sociaux de supprimer les comptes restés inactifs pendant une certaine période mais ces recommandations ne sont pas toujours respectées. 
+
+Veillez donc à supprimer votre compte. 
+
+> Mon enfant de 14 ans peut-il s’inscrire seul et confier ses données à un réseau social ou un jeu en ligne ?
+
+Pas sans votre consentement car la majorité numérique en France est à 15 ans. En Europe, le RGPD a laissé le soin à chaque pays de fixer sa « majorité numérique » qui doit être entre 13 et 16 ans. 
+
+> Peut-on m'imposer de recevoir des publicités pour valider ma participation à un jeu concours ?
+
+Non. Aucune jeu concours ne peut conditionner votre participation au fait que vous acceptiez de recevoir une prospection commerciale, ou de communiquer vos coordonnées à des partenaires de l’organisateur du jeu. Vous devez pouvoir participer au jeu concours de manière libre. De la même manière, l’organisateur du jeu ne peut prévoir de vous accorder des chances supplémentaires au tirage au sort du jeu concours à condition que vous acceptiez de recevoir une prospection commerciale.
+
+Les informations recueillies ne peuvent être utilisées que dans le cadre du jeu et de la remise du lot en cas de gain, sauf si vous avez consenti à recevoir de la prospection.
+
+> Le site Internet du restaurant-livreur de pizza, sur lequel vous avez renseigné des données personnelles est  victime de hacking. Est-ce grave ? Doit-il informer ses clients ? Est-il responsable de l’usage qui sera fait de ces données ?
+
+Vous pouvez contactez la CNIL et [cybermalveillance.gouv.fr](cybermalveillance.gouv.fr), même si en principe l’entreprise doit effectuer la démarche. Demandez à l’entreprise des informations détaillées sur l’incident : date et contexte exact, origine de l’attaque, quelles données le hacker a-t-il exactement dérobées (identité, coordonnées, informations financières, numéro de sécurité sociale...) ? Quels documents a-t-il récupérés (copie de la carte d’identité, des fiches de salaires, justificatifs bancaires….) ? Est-ce que l'entreprise victime a bien fait une déclaration à la CNIL ? Réagissez à temps, afin d'anticiper une potentielle usurpation d'identité via les données volées !
+
 # Compléments et activités
 * TP protection des données (SNT): [Lien](../TP_prot_donnees)
 * Activité complète (PPPE): [competences numeriques > protection des données](/docs/competences/texte/page4/)
 * Article [caminteresse](https://www.caminteresse.fr/societe/qui-exploite-nos-donnees-personnelles-1197308/): qui exploite nos données?
+
+# Autres sites academiques
+* [referentiel de competences attendues](https://nuage03.apps.education.fr/index.php/s/WCppL6fjZ8FdADs?dir=/&editing=false&openfile=true)

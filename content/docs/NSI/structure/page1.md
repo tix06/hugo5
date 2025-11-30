@@ -55,9 +55,8 @@ L = ("Univ",("Term",("1ere",("2nde", ()))))
 
 La liste chainée L contient 2 éléments `(tete, queue)` et `queue` est elle-même une liste chainée, contenant aussi `(tete, queue)`. Le dernier élément: `(tete, ())`. 
 
-On utilisera par exemple une liste chainée lorsqu'il y a une filiation, une chronologie entre les éléments.
+On utilisera par exemple une liste chainée lorsqu'il y a une filiation entre les éléments, et surtout, lorsque l'on doit souvent INSERER ou SUPPRIMER des éléments qui ne sont pas forcement à la fin de la liste.
 
-{{< img src="../images/history.png" caption="L'historique permet au navigateur de" >}}
 ## L'interface d'une liste chainée
 L'*interface* fournit certaines fonctions.
 
@@ -109,10 +108,76 @@ L'**interface** d'une liste chainée doit aussi proposer **l'insertion d'un él�
 Nous verrons d'autres implémentations pour ce type abstrait.
 
 *Attention: les listes chaînées et les Listes Python sont différentes, il ne s'agit pas des mêmes objets.*
-# Tableaux
-Les tableaux se comportent de manière très similaire aux listes, sauf que les types d'objets qui y sont stockés sont limités. (Array)
 
-Un tableau peut être représenté en Python par un tuple contenant 2 éléments: 
+# Tableaux, choix d'une structure de données native en python
+Les **tableaux statiques** sont des structures de données de taille fixe, où chaque donnée est du même type. C'est comme ceci que sont représentées les collections dans des langages comme C, Java, Ocaml, ...
+
+La taille du tableau est fixe à sa création : on ne peut pas l’agrandir ou le réduire sans en recréer un nouveau. 
+
+
+Un tableau peut être représenté en Python à l'aide d'une liste (type list), un tuple (type tuple), ou bien une matrice numpy (numpy.array).
+
+
+## List python
+Les tableaux en python sont implémentés par le type `list`, qui est en réalité un **tableau dynamique**: leur taille est variable, et les éléments stockés peuvent être de types différents (idem pour Javascript). Pour utiliser le type `list` en tant que tableau statique, on s'interdira les aspects dynamiques.
+
+1. Création
+
+On rappelle que, pour créer une liste python, on peut utiliser les techniques suivantes:
+
+* création par extension: en listant les éléments du tableau: `T = [1,2,3]`
+* par concaténation: On peut utiliser une somme d'éléments à l'aide des opérateurs `+` et `*`, par exemple: `T = [0] * 100`
+* par compréhension: on s'appuie sur un itérateur (fonction génératrice), exemple: `T = [i for i in range(ord('A'), ord('Z')+1]`, ou `T = [x**2 for x in range(1,11)]`
+* par ajout dans une table vide (append)
+* à l'aide de la fonction `list`: `codes = list(range(ord('A'), ord('Z')+1)`, `T = list('bonjour')`
+
+2. Manipuler
+On accède à un élément d'un tableau à l'aide d'un indice, qui peut être positif: `T[1]` est le deuxière élément par exemple, `T[0]` étant le premier. Ou bien à l'aide d'un entier négatif, ce qui fait que `T[len(T)-1]` est le même que `T[-1]`
+
+3. Parcourir
+
+* Le plus simple est de parcourir directement **par élément**
+
+```python
+for elem in L:
+  print(elem)
+```
+
+* parcourir **par indice**:
+
+Très utile si on veut modifier les valeurs lors du parcours:
+
+```python
+for i in range(len(T)):
+  T[i] += 1
+```
+
+ou bien lorsque l'on veut parcourir 2 tableaux à la fois:
+
+```python
+prenoms = ['Agnes','Kev','Sam']
+age = [34,28,21]
+for i in range(len(prenoms)):
+  print("prenom: {}, age:{}".format(prenoms[i],age[i]))
+```
+
+
+
+## numpy.array
+En Python, les tableaux fixes peuvent être implémentés via la classe `array` du module `numpy`.
+
+La dimension est fixée à la construction. Les indices commencent à 0. 
+
+```python
+import numpy as np
+t = np.array([1, 2, 3, 4])
+print(t[1])  # Affiche 2
+```
+
+Pour des tableaux à plusieurs dimensions: On peut accéder aux éléments d’un array A en utilisant la syntaxe  `A[i, j]` , où  i  et  j  sont respectivement le numéro de ligne et le numéro de colonne de l’élément au sein du tableau. L’opérateur :  permet de sélectionner plusieurs éléments, voire tout une ligne ou colonne.
+
+## Tuple
+Pour un tuple, celui-ci contiendra 2 données:
 
 * la liste des valeurs, de dimension fixe. On mettra `None` pour les valeurs non renseignés.
 * la valeur de la taille de la liste.
@@ -127,7 +192,7 @@ T = ([6, 7, 8, None, None], 5)
 C'est alors un objet qui est:
 
 * **statique**: sa taille ne varie pas une fois celui-ci créé 
-* **non mutable**: mais avec un élément qui est lui *mutable*: 
+* **non mutable**: mais avec un élément qui lui, peut être *mutable*: 
 
 On ne peut pas modifier `T[0]` ou `T[1]`. Ce sont les éléments d'un tuple.
 
@@ -146,6 +211,38 @@ On peut représenter cet ensemble de notes par le tableau:
 T = ([6, 7, 8, None, None], 5)
 ```
 
+**Petits rappels** sur le tuples:
+
+* Construction par extension:
+
+```python
+fruits = ('pommes','oranges')
+```
+
+* Construction par concaténation:
+
+```python
+t = ()
+t = t + (1,) # ne pas oublier , sinon cela génère une list
+t = t + (2,)
+print(t)
+(1,2)
+```
+
+* Construction par compréhension:
+
+```python
+carres = tuple(x**2 for x in range(1,11))
+# ne pas oublier de mettre tuple au debut
+```
+
+* avec la fonction `list`:
+
+```python
+codes = list(range(ord('A'),ord('Z')+1))
+lettres_bonjour = list('bonjour')
+```
+
 ## L'interface d'un tableau
 | fonctions qui implémentent un tableau T (Array) | nom |
 | --- | --- |
@@ -153,6 +250,39 @@ T = ([6, 7, 8, None, None], 5)
 | demander l'élément au rang i | `element(T,i)` |
 | remplacer l'élément au rang i par e | `remplacer(T,i,e)` |
 
+## Tableaux multidimentionnels
+
+```python
+hugo = [21, 1400, 0]
+richard = [54, 2800, 2]
+emilie = [27, 3700, 3]
+tableau = [hugo, richard, emilie]
+```
+
+Alors, pour accéder à l'un des éléments, on fait: `tableau[ligne i][colonne j]`:
+
+**List et tuple**
+
+```python
+>>> tableau[0][1] # correspond à la 2e (j=1) note de hugo (i=0)
+1400 
+```
+
+**Array**
+
+```python
+>>> tab1 = np.array([[1, 2],
+    [3, 4],
+    [5, 6]])
+# tab1 est un array de 3 lignes et 2 colonnes
+>>> tab2 = np.array([[1, 2, 3],
+    [4, 5, 6]])
+# tab2 est un array de 2 lignes et 3 colonnes
+>>> np.ones((3, 5))
+# un tableau de 3x5 rempli de 1
+>>> np.zeros((4, 4))
+# un tableau de 4 lignes et de 4 colonnes contenant que des 0
+```
 
 ## Tableaux dynamiques et tableaux statiques
 Les tableaux vus ci-dessus sont des tableaux *statiques*: leur taille ne peut pas être modifiée. Dans le cas où l'on ait besoin d'agrandir le tableau, il faut le copier dans un nouveau tableau, plus grand.
@@ -161,13 +291,7 @@ Python implémente naturellement un autre type de tableau, que l'on appelera *dy
 
 
 
-# La liste python dynamique (type list)
-Le type `list` python est dynamique. Il peut lui aussi implémenter une Liste chainée ou bien un Tableau. 
 
-Pour un Tableau, si on l'implémente avec le type `list`, la taille de celui-ci ne devra pas être modifiée à la fin du traitement.
-
-# Editeur Python
-* Utiliser un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
 
 # Exercices sur les listes
 On propose l'**implémentation** suivante pour les listes chainées:
