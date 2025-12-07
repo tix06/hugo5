@@ -238,4 +238,5 @@ puis les différents tests des méthodes de Partie:
 * TP Jeu des 7 familles: [Lien](../page34/) *(Sans interface graphique)*
 * TP sur trajectoires de projectiles: [Lien](../page31/) 
 * TP sur la programmation d'un jeu de Dominos: [Lien](../page33/). *(Sans interface graphique)*
+* TP (projet) jeu de Dominos avec interface graphique: [Lien](/docs/NSI/projet/page4/)
 

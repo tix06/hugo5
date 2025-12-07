@@ -19,7 +19,7 @@ def affiche(grille):
         print()
 ```
 
-**Exemple 1: Afficher la grille**
+**Exemple: Afficher la grille**
 
 ```python
 morpion = [
@@ -47,18 +47,18 @@ Prévoir ensuite le prochain coup à partir des informations fournies, et créez
 ## Compteur du nombre de caractères identiques
 Lire et tester le programme suivant:
 
-**Exemple 2: Compte le nombre de X dans une ligne, colonne ou diagonale**
+**Exemple: Compte le nombre de X dans une ligne, colonne ou diagonale**
 
 
 
 ```python
 # Vérifier si la ligne 0 contient trois symboles identiques
-indices_X = [0,0,0]
-indices_Y = [0,1,2]
+liste_X = [0,0,0]
+liste_Y = [0,1,2]
 compteur = 0
-for i in range(len(indices_X)):
-    x = indices_X[i]
-    y = indices_Y[i]
+for i in range(len(liste_X)):
+    x = liste_X[i]
+    y = liste_Y[i]
     if morpion[x][y] == 'X':
         compteur +=1
 print("il y a ", compteur, "cases X dans la ligne 0")
@@ -66,13 +66,15 @@ print("il y a ", compteur, "cases X dans la ligne 0")
 
 Dans la boucle `for`, l'indice i varie de 0 à 2.
 
-Pour `i=0`, `x` a pour valeur `indices_X[0]` et `y` a pour valeur `indices_Y[0]`. Le couple x,y vaut alors 0,0. On utilise ces coordonnées pour relever le symbole de la case `morpion[0][0]`. C'est un `X`. On augmente alors le compteur d'une unité (on compte les `X`).
+Pour `i=0`, `x` a pour valeur `liste_X[0] -> 0` et `y` a pour valeur `liste_Y[0] -> 0`. Le couple x,y vaut alors 0,0. 
+
+On utilise ces coordonnées pour relever le symbole de la case `morpion[0][0]`. C'est un `X`. On augmente alors le compteur d'une unité (on compte les `X`).
 
 On continue dans la boucle `for` avec les cases 0,1 puis 0,2.
 
-> Etape 1: Créer une fonction `compteur` qui prend une `grille`, un caractère `car`, une liste `indices_X` et une liste `indices_Y` en paramètres. Cette fonction devra retourner le nombre de fois que ce caractère `car` apparait.
+> Etape 1: Créer une fonction `compteur` qui prend une `grille`, un caractère `car`, une liste `liste_X` et une liste `liste_Y` en paramètres. Cette fonction devra retourner le nombre de fois que ce caractère `car` apparait.
 
-**Exemple 3: utiliser la fonction compteur**
+**Exemple: utiliser la fonction compteur**
 
 ```python
 # Etape 1
@@ -85,13 +87,16 @@ morpion = [
 def compteur(grille,car,liste_X,liste_Y):
 	compteur = 0
 	for i in range(len(indices_X)):
-		# à completer
+		# à completer (plusieurs lignes sont necessaires)
 	return compteur
 
 compteur(morpion,'X',[0,0,0],[0,1,2])
 # retourne:
 2
 ```
+
+{{< img src="../images/compteur.png" caption="premiere étape de la boucle for" >}}
+
 
 La fonction retourne 2: à la premiere ligne, il y a bien 2 caractères 'X'.
 
@@ -111,7 +116,7 @@ print(L)
 ## Victoire
 > Etape 3: Créer une fonction `victoire`, qui prend une grille de morpion en paramètre, ainsi qu'un caractère `car` (qui vaut X ou O), et vérifie si la condition de victoire est réalisée pour le joueur X ou O. La fonction retournera un booléen True/False.
 
-**Exemple 4: Victoire des X**
+**Exemple: Victoire des X**
 
 ```python
 # Etape 3
@@ -122,7 +127,11 @@ morpion = [
 ]
 
 def victoire(grille,car):
+	b1 = compteur(grille, car, [0,0,0],[0,1,2])
+	b2 = compteur(grille, car, [1,1,1],[0,1,2])
 	# a completer
+	b8 = compteur(grille, ...)
+	return b1 == 3 or ...
 
 victoire(morpion,'X')
 # retourne:
@@ -132,10 +141,10 @@ victoire(morpion,'O')
 False
 ```
 
-## Detection case vide
+## Detection case vide [niveau Term NSI]
 > Etape 4: Ecrire une fonction `cherche_car(grille,car,liste_X,liste_Y)` qui verifie si les cases de coordonnées `(liste_X[0], liste_Y[0]), (liste_X[1], liste_Y[1]), (liste_X[2], liste_Y[2])` contiennent au moins un symbole `car`, et retourne les coordonnées de la première case contenant le caractère `car`.
 
-**Exemple 5: recherche d'un espace ' ' dans la ligne 2**
+**Exemple: recherche d'un espace ' ' dans la ligne 2**
 
 ```python
 # Etape 4
@@ -157,9 +166,12 @@ cherche_car(morpion,' ',[2,2,2],[0,1,2])
 (2,0)
 ```
 
-La fonction retourne (1,2), car à la case de coordonnées x=1, y=2, il y a un symbole `' '`.
+La fonction retourne (2,0), car à la case de coordonnées `[2][0]`, il y a un symbole `' '`.
 
-**Exemple 5: recherche du premier espace ' ' dans tout la grille**
+
+{{< img src="../images/cherche_car.png" caption="recherche d'un caractère espace ' ' dans la dernière ligne" >}}
+
+**Exemple: recherche du premier espace ' ' dans tout la grille**
 
 ```python
 morpion = [
@@ -173,7 +185,10 @@ cherche_car(grille,' ',[0,0,0,1,1,1,2,2,2],
 (1,2)
 ```
 
-## Stratégie de l'ordinateur
+Lorsque l'on recherche un caractère dans TOUTE la grille, il y a 9 coordonnées à renseigner pour chacune des listes.
+
+
+## Stratégie de l'ordinateur [Niveau Term NSI]
 > Etape 5: créer une fonction `jeu_de_defense`, qui prend pour paramètre `grille`, et `car_attaquant`, qui vaudra 'X' ou 'O'.
 
 Cette fonction va permettre de programmer le jeu complet, pour jouer contre l'ordinateur.
@@ -186,14 +201,34 @@ Enfin, si aucune des lignes, colonnes, diagonale ne correspond à ces 2 conditio
 
 ```python
 def jeu_de_defense(grille,car_attaquant):
+
     if compteur(grille,car_attaquant,
                 [0,0,0],[0,1,2]) == 2 and cherche_car(grille,' ',
                 [0,0,0],[0,1,2]) != None:
         # jouer dans une case vide de la ligne 0
         jouer_case = cherche_car(grille,' ',
                 [0,0,0],[0,1,2])
-        ...
-       return jouer_case
+    elif compteur(grille,car_attaquant,
+                [1,1,1],[0,1,2]) == 2 and cherche_car(grille,' ',
+                [1,1,1],[0,1,2]) != None:
+        # jouer dans une case vide de la ligne 1
+        jouer_case = cherche_car(grille,' ',
+                [1,1,1],[0,1,2])
+    elif (...)
+    (...)
+    
+    elif compteur(grille,car_attaquant,
+                [0,1,2],[0,0,0]) == 2 and cherche_car(grille,' ',
+                [0,1,2],[0,0,0]) != None:
+        # jouer dans une case vide de la colonne 0
+        jouer_case = cherche_car(grille,' ',
+                [0,1,2],[0,0,0])
+    (...)
+	else:
+		# la premiere case vide possible
+        jouer_case = cherche_car(grille,' ',[0,0,0,1,1,1,2,2,2],
+                                  [0,1,2,0,1,2,0,1,2])
+    return jouer_case
 ```
 
 Pour élaborer une stratégie plus avancée de l'ordinateur, on pourra consulter la page dédiée: site [tictactoe.com](https://tictactoefree.com/fr/astuces/comment-gagner-au-morpion-si-vous-jouez-en-second)
@@ -212,22 +247,38 @@ while not victoire(morpion,'X') and not victoire(morpion,'O') and not Fin_de_par
 	...
 ```
 
-* Puis, si le joueur 'X' n'est pas vainqueur, determiner les coordonnées que l'ordinateur devra jouer (fonction `jeu_de_defense`).
+*Puis...*
 
-* Afficher la grille modifiée après ce tour de jeu, et determiner s'il y a un vainqueur.
+* Afficher la grille.
+* Si le joueur 'X' n'est pas vainqueur, demander à l'adversaire où il veut jouer.
+* Le joueur 'O' est-il gagnant?
+* Afficher la grille modifiée après ce tour de jeu
+* Recommencer s'il n'y a pas de vainqueur.
 
 
 **Pour les élèves de Terminale:**
 
+* Adapter le programme pour jouer contre l'ORDINATEUR. (utiliser la fonction `jeu_de_defense` pour prevoir la case dans laquelle il devra jouer). 
 * Organisez au mieux votre script.
-* Prévoir et anticiper toutes les erreurs possibles de saisie du joueur, tous les defauts possibles qui peuvent survenir dans la partie (plus de O que de X, erreurs avec les coordonnées saisies, terminaison de la boucle while, ...). On pourra ajouter des structures conditionnelles supplémentaires, ou bien des tests d'assertion, ou autres mécanismes.
-* Utiliser une structure de données *Piles* pour permettre un retour en arriere (le joueur efface ses coups précédents).
+* Prévoir et anticiper toutes les erreurs possibles de saisie du joueur, tous les defauts possibles qui peuvent survenir dans la partie (plus de O que de X, erreurs avec les coordonnées saisies, terminaison de la boucle while, ...). On pourra ajouter des structures conditionnelles supplémentaires, ou bien des tests d'**assert**ion, ou autres mécanismes. (**try.. except**, **raise**,...)
+* Utiliser une structure de données **Pile** pour permettre un retour en arriere (le joueur efface ses coups précédents).
 
 
-# Projet 2: jeu du Sudoku
+# Projet 2: jeu du Sudoku [Term NSI]
 Le jeu du Sudoku est une jeu de reflexion utilisant une grille (9x9).
 
 Le but du jeu appelé Sudoku, est de remplir la grille avec une série de chiffres tous différents, qui ne se trouvent jamais plus d'une fois sur une même ligne, dans une même colonne ou dans une même région (également appelée « bloc », « groupe », « secteur » ou « sous-grille »).
+
+Vous allez proposer une grille au joueur, partiellement remplie.
+
+A chaque tour de jeu:
+
+* Demander au joueur les coordonnées de jeu dans la grille, ainsi que le chiffre à placer. Le joueur ne peut joueur que dans une case contenant déjà un zero, pas une autre valeur.
+* Si le joueur choisit un chiffre et un emplacement qui génèrent un *doublon*, alors informez du problème rencontré.
+* Demandez lui s'il valide son choix (on modifie alors la grille), ou s'il ne veut pas valider (on laisse le zero).
+* Vérifier si la grille est gagnante.
+* Demander au joueur s'il continue la partie, ou s'il veut revenir en arrière (on remet les zeros aux emplacements modifiés, en remontant selon une PILE).
+* On recommence avec un nouveau tour de jeu.
 
 Vous allez programmer les fonctions qui vont vérifier, à chaque essai du joueur, si les chiffres placés (autres que 0) sont tous différents:
 
