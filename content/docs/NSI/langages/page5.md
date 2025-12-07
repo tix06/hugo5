@@ -619,8 +619,10 @@ Les valeurs du temps peuvent générer des erreurs mathématiques (temps égaux 
 > Utiliser un mécanisme de prevention des erreurs et testez votre programme.
 
 
+<!--
 # Flash cards
 [Lien vers les flash cards](/docs/NSI/langages/ex1/)
+-->
 
 # Sources
 * [python.developpez.com](https://python.developpez.com/tutoriels/apprendre-programmation-python/notions-avancees/?page=gestion-d-erreurs)

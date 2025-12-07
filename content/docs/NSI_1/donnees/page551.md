@@ -216,7 +216,7 @@ def jeu_de_defense(grille,car_attaquant):
                 [1,1,1],[0,1,2])
     elif (...)
     (...)
-    
+
     elif compteur(grille,car_attaquant,
                 [0,1,2],[0,0,0]) == 2 and cherche_car(grille,' ',
                 [0,1,2],[0,0,0]) != None:
@@ -259,8 +259,8 @@ while not victoire(morpion,'X') and not victoire(morpion,'O') and not Fin_de_par
 **Pour les élèves de Terminale:**
 
 * Adapter le programme pour jouer contre l'ORDINATEUR. (utiliser la fonction `jeu_de_defense` pour prevoir la case dans laquelle il devra jouer). 
-* Organisez au mieux votre script.
-* Prévoir et anticiper toutes les erreurs possibles de saisie du joueur, tous les defauts possibles qui peuvent survenir dans la partie (plus de O que de X, erreurs avec les coordonnées saisies, terminaison de la boucle while, ...). On pourra ajouter des structures conditionnelles supplémentaires, ou bien des tests d'**assert**ion, ou autres mécanismes. (**try.. except**, **raise**,...)
+* Organisez au mieux votre script. Commentez vos fonctions.
+* Prévoir et anticiper toutes les erreurs possibles de saisie du joueur, tous les defauts possibles qui peuvent survenir dans la partie (plus de O que de X, erreurs avec les coordonnées saisies, terminaison de la boucle while, ...). On pourra ajouter des structures conditionnelles supplémentaires, ou bien des tests d'**assert**ion, ou autres mécanismes. (**try.. except**, **raise**,...): Voir cours sur la mise au poin d'un programme: [python avancé](/docs/NSI/langages/page5/)
 * Utiliser une structure de données **Pile** pour permettre un retour en arriere (le joueur efface ses coups précédents).
 
 
@@ -294,4 +294,9 @@ Le joueur aura la possibilité de **revenir en arrière** (un ou plusieurs coups
 
 Il est fortement recommandé d'utiliser les fonctions de l'exercice 3.2, vues à la [page des exercices](../page55) sur les tableaux.
 
+**Pour les élèves de Terminale:**
+
+* Organisez au mieux votre script. Commentez vos fonctions.
+* Prévoir et anticiper toutes les erreurs possibles de saisie du joueur, tous les defauts possibles qui peuvent survenir dans la partie (plus de O que de X, erreurs avec les coordonnées saisies, terminaison de la boucle while, ...). On pourra ajouter des structures conditionnelles supplémentaires, ou bien des tests d'**assert**ion, ou autres mécanismes. (**try.. except**, **raise**,...): Voir cours sur la mise au poin d'un programme: [python avancé](/docs/NSI/langages/page5/)
+* Utiliser une structure de données **Pile** pour permettre un retour en arriere (le joueur efface ses coups précédents).
 
