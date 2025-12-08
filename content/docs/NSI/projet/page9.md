@@ -3,6 +3,12 @@ Title: Recherche Exoplanetes
 ---
 
 # Recherche d'exoplanètes
+Proposition de systèmes planétaires pour l'année 2025-2026:
+
+*Dossier complet: [donnees-EducASTEP-2025_2026.zip](/scripts/astro/donnees-EducASTEP-2025_2026.zip)*
+
+
+<!--
 
 Proposition de systèmes planétaires qui seront observés avec ASTEP
 Année 2024-2025
@@ -45,7 +51,7 @@ Système avec possiblement 3 planètes. Seule la 2ème a été détectée par AS
 	* Distance : 113.8 ± 0.3 parsec
 
 Lien de téléchargement: [Planète 2](/scripts/astro/donnees-astep2024/TOI-201/TIC350618622-01_20240319_ASTEP-ANTARCTICA_R_measurements.csv)
-
+-->
 
 # Tutoriels
 * Lire les données d'un fichier *csv*: [python - entrées/sorties - lire csv](/docs/python/pages/ES/page1/)

@@ -3,6 +3,11 @@ Title: analyse de la courbe de transit
 ---
 
 # Etape 1: Courbe de transit
+## Outil de navigation: explorateur Python
+Utiliser le fichier source suivant: [astep_2025_v0.py](/scripts/astro/astep_2025_v0.py)
+
+Ouvrir et executer le fichier avec un IDE python quelconque. Pour le tracé de graphiques, il est recommandé d'utiliser *IDLE (Python GUI)* de la distribution Winpython.
+
 ## Ouverture du fichier csv
 Pour chacun des fichiers de données, ouvrir une nouvelle cellule du notebook et adapter le script suivant:
 
@@ -37,6 +42,57 @@ Les données utiles occupent les colonnes 0 (BJD) et 1 (FLUX) de la table. Les v
 
 Le programme suivant réalise une moyenne glissante (**courbe rouge**): pour chaque indice i, on fait une moyenne du FLUX sur une fenêtre de 100 points, centrés sur l'indice i. `y[i-50:i+50]`
 
+> Compléter le script aux point (1), (2), (3):
+
+```python
+import matplotlib.pyplot as plt
+from matplotlib.widgets import Cursor
+
+def moyenne(signal):
+    """fonction qui calcule la moyenne 
+    sur les donnees de la liste signal
+    """
+    s = 0
+    # à completer
+    return s / b
+
+
+
+def lissage(L,largeur):
+    signal_filtre = L.copy()
+    for i in range(largeur//2,len(L)-largeur//2):
+        signal = L[...:...]
+        # on fait un slice
+        # signal est le petit tableau de dimension egale à largeur
+        # dont on fait la moyenne glissante
+        # puis on stocke dans signal_filtre
+        signal_filtre[i] = moyenne(...)
+    return signal_filtre
+
+x = [] # colonne 0 de la table = BJD
+y = [] # colonne 1 de la table = FLUX
+
+# (1) import des valeurs de x et y à partir du fichier en ouverture
+
+# (2) utilisation des fonction lissage
+
+plt.clf()
+axes = plt.gca()
+plt.scatter(x,y,color='silver',marker='.',label='luminosité')
+plt.grid(True,which='both')
+plt.legend(loc='best')
+plt.title('luminosité transit')
+
+# (3) tracé de la courbe de lissage
+plt.plot(...,..., color='red',label='moyenne glissante')
+plt.grid(True,which='both')
+plt.legend(loc='best')
+cursor = Cursor(axes, useblit=True, color='red', linewidth=2)
+
+plt.show()
+```
+
+<!--
 ```python
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Cursor
@@ -88,6 +144,7 @@ cursor = Cursor(axes, useblit=True, color='red', linewidth=2)
 
 plt.show()
 ```
+-->
 
 On peut alors utiliser les fonctions de la fenêtre graphique pour relever les coordonnées *à la main* des intersections des courbes:
 
@@ -101,6 +158,7 @@ Avec l'*option 2*:
 |--- | --- | --- | --- | --- |
 | `TOI 270-1` | `7.2` | à definir | `1-0.991` | à definir |
 
+<!--
 ## Modélisation par segments (en option)
 Un autre option pour lire les valeurs des intersections sur la courbe de FLUX est de réaliser une modélisation du nuage de points par segments:
 
@@ -162,7 +220,7 @@ cursor = Cursor(axes, useblit=True, color='red', linewidth=2)
 # cursor non implémenté sous jupyter notebook
 plt.show()
 ```
-
+-->
 
 # Suite
 * Lien vers l'[etape 2](../page10/): Notebook python utilisé comme calculatrice.
