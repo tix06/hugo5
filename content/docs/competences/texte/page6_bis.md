@@ -21,7 +21,6 @@ En utilisant l'article Wikipédia sur la
   - `Titre 1` pour chacune des **périodes** de l'histoire de l'informatique:
 
   **Périodes:**
-
     - «Les prémices de l'informatique»
     - «L'époque des pionniers»
     - «Les débuts de la micro-informatique»
@@ -38,14 +37,24 @@ Il est nécessaire de séparer l'écriture du contenu du document (Partie 1) de 
 
 *Une fois ce premier travail réalisé, vous allez styliser le document, et améliorer sa forme.*
 
-<!--
+
 # Partie 2: mise en forme du document
 Pour être lisible, un texte doit comporter une certaine hiérarchie.
+
+Au début, votre document peut ressembler à ceci:
+
+{{< img src="../images/exemple0.png" caption="Le document initial" >}}
+
+Télécharger le document à l'adresse suivante: [Document](/pdf/SNT/recherche_info.odt)
 
 ## Définir les éléments, structurer le document
 Utiliser des niveaux de titres pour structurer votre document (Titre1, Titre2, Titre3...).
 
+<!--
 {{< img src="../images/exemple0.png" link="/pdf/SNT/recherche_info.odt" caption="Le document initial" >}}
+-->
+
+
 
 * Choisir *Titre 1* pour le titre principal
 * Choisir *Titre 2* pour chacune des phases de l'histoire de l'informatique: *Les prémices de l'informatique*, ...
@@ -111,7 +120,7 @@ Le but est alors de retrouver la bonne Propriété.
 
 {{< img src="../images/text7.png" >}}
 
--->
+
 ## Tuto (video): mise en forme du document
 
 On pourra s'aider des tutoriels pour LibreOffice Writer à l'adresse suivante: {{< a link="https://www.youtube.com/watch?v=ekh2Q1DU8Mw" caption="Youtube - LibreOffice Writer 1/11 : Mettre en forme le style principal " >}}

@@ -19,7 +19,6 @@ En utilisant l'article Wikipédia sur la
   
   - `Titre principal` pour le titre du document: «Chronologie de l'informatique»
   - `Titre 1` pour chacune des phases de l'histoire de l'informatique:
-    - «Les prémices de l'informatique»
     - «L'époque des pionniers»
     - «Les débuts de la micro-informatique»
     - «L'ère d'Internet et du World Wide Web»
