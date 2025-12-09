@@ -85,10 +85,15 @@ morpion = [
 ]
 
 def compteur(grille,car,liste_X,liste_Y):
-	compteur = 0
+	c = 0
 	for i in range(len(liste_X)):
-		# à completer (plusieurs lignes sont necessaires)
-	return compteur
+			# à completer 
+			x = ...
+			y = ...
+			if grille[][]...
+				c = c + ...
+		
+	return c
 
 compteur(morpion,'X',[0,0,0],[0,1,2])
 # retourne:
