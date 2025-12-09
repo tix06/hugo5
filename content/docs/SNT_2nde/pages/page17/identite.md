@@ -287,6 +287,7 @@ Les informations recueillies ne peuvent être utilisées que dans le cadre du je
 Vous pouvez contactez la CNIL et [cybermalveillance.gouv.fr](cybermalveillance.gouv.fr), même si en principe l’entreprise doit effectuer la démarche. Demandez à l’entreprise des informations détaillées sur l’incident : date et contexte exact, origine de l’attaque, quelles données le hacker a-t-il exactement dérobées (identité, coordonnées, informations financières, numéro de sécurité sociale...) ? Quels documents a-t-il récupérés (copie de la carte d’identité, des fiches de salaires, justificatifs bancaires….) ? Est-ce que l'entreprise victime a bien fait une déclaration à la CNIL ? Réagissez à temps, afin d'anticiper une potentielle usurpation d'identité via les données volées !
 
 # Compléments et activités
+* Se proteger de la collecte des données (videos/TD): [Lien](../proteger)
 * TP protection des données (SNT): [Lien](../TP_prot_donnees)
 * Activité complète (PPPE): [competences numeriques > protection des données](/docs/competences/texte/page4/)
 * Article [caminteresse](https://www.caminteresse.fr/societe/qui-exploite-nos-donnees-personnelles-1197308/): qui exploite nos données?
