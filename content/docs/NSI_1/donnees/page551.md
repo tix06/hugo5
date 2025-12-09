@@ -86,7 +86,7 @@ morpion = [
 
 def compteur(grille,car,liste_X,liste_Y):
 	compteur = 0
-	for i in range(len(indices_X)):
+	for i in range(len(liste_X)):
 		# à completer (plusieurs lignes sont necessaires)
 	return compteur
 
