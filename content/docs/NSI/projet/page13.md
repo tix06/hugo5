@@ -4,7 +4,30 @@ Title: analyse de la courbe de transit
 
 # Etape 1: Courbe de transit
 ## Outil de navigation: explorateur Python
-Utiliser le fichier source suivant: [astep_2025_v0.py](/scripts/astro/astep_2025_v0.py)
+On souhaite créer un outil de navigation qui permettra de se deplacer dans l'arborescence des dossiers et fichiers. Cela permettra de selectionner le-s fichier-s à traiter depuis la console python, sans modifier le code du programme.
+
+*Exemple*:
+
+{{< img src="../images/demo.GIF" >}}
+
+On pourra au choix:
+
+* Utiliser, ou s'inspirer du fichier source suivant: [astep_2025_v0.py](/scripts/astro/astep_2025_v0.py)
+* Programmer cette partie du programme de manière itérative (avec boucle while)
+* Programmer cette partie à l'aide d'un algorithme récursif (niveau Term NSI)
+
+Les fonctions python qui permettent de naviguer entre dossiers et fichiers font partie du module `os.path`, dont la documentation officielle est ici: [doc python](https://docs.python.org/3/library/os.path.html)
+
+On utilisera principalement:
+
+* `os.getcwd()`: str, le dossier courant
+* `os.path.abspath()`: retourne le chemin absolu du dossier courant
+* `os.chdir(d)`: change de dossier pour aller au dossier d
+* `os.chdir('..')`: remonte d'un niveau
+* `os.listdir()` ou `os.listdir(d)` : retourne la liste des fichiers et dossiers du dossier courant ou bien du dossier d
+* `os.path.isdir(f)`: booléen True si `f` est un dossier
+* `os.path.isfile(f)`: True si f est un fichier
+* `f.endswith('.csv')`: True si l'extension de f est .csv
 
 Ouvrir et executer le fichier avec un IDE python quelconque. Pour le tracé de graphiques, il est recommandé d'utiliser *IDLE (Python GUI)* de la distribution Winpython.
 
