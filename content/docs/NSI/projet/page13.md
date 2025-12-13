@@ -65,7 +65,7 @@ Les données utiles occupent les colonnes 0 (BJD) et 1 (FLUX) de la table. Les v
 
 Le programme suivant réalise une moyenne glissante (**courbe rouge**): pour chaque indice i, on fait une moyenne du FLUX sur une fenêtre de 100 points, centrés sur l'indice i. `y[i-50:i+50]`
 
-> Compléter le script aux point (1), (2), (3):
+> Compléter la fonction [lissage](/docs/NSI/structure/page11/), ainsi que le script aux points (1), (2), (3):
 
 ```python
 import matplotlib.pyplot as plt
@@ -88,7 +88,7 @@ def lissage(L,largeur):
         # on fait un slice
         # signal est le petit tableau de dimension egale à largeur
         # dont on fait la moyenne glissante
-        # puis on stocke dans signal_filtre
+        # puis on place cette valeur moyenne dans signal_filtre, au rang i
         signal_filtre[i] = moyenne(...)
     return signal_filtre
 

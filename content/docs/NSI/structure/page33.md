@@ -6,7 +6,7 @@ Title: Jeu de dominos
 
 # jeu de Dominos et POO - version classique
 Le jeu de *Dominos* est un jeu très simple, ou, pour gagner, il faut être le premier joueur à avoir posé tous ses dominos.
-Une fois le premier domino placé sur la table, le joueur suivant doit à son tour poser un domino ayant le même nombre de points sur au moins un côté du domino précédemment posé.
+Une fois le premier domino placé sur la table, le joueur suivant doit à son tour poser un domino ayant le même nombre de points sur au moins un côté du domino précédemment posé. Voir la règle du jeu [ici](https://www.agoralude.com/blog/la-regle-du-jeu-de-dominos-n33)
 
 Un domino est constitué de côtés, droite/gauche ou haut/bas selon comment la pièce sera disposée.
 

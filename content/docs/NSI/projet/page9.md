@@ -54,6 +54,7 @@ Lien de téléchargement: [Planète 2](/scripts/astro/donnees-astep2024/TOI-201/
 -->
 
 # Tutoriels
+* Explorateur de dossiers/fichiers en ligne de commande (python): [TP de term](/docs/NSI/architecture/page11/)
 * Lire les données d'un fichier *csv*: [python - entrées/sorties - lire csv](/docs/python/pages/ES/page1/)
 * Ecrire des données (table) dans un fichier: [python - entrées/sorties - ecrire](/docs/python/pages/ES/page1/)
 * Sauvegarder une liste/dictionnaire dans un fichier: [python - entrées/sorties, module pickle](/docs/python/pages/ES/page1/)
@@ -64,7 +65,7 @@ Lien de téléchargement: [Planète 2](/scripts/astro/donnees-astep2024/TOI-201/
 
 
 # Etapes du projet
-1. Analyser la courbe de transit: [Lien](../page13)
+1. Créer un explorateur de dossiers/fichiers et analyser la courbe de transit: [Lien](../page13)
 2. Calculatrice python et synthèse des résultats à l'aide dans un tableur: [Lien](../page10)
 3. Traitement de données en table - Pandas Dataframe: [Lien](../page12)
 4. Base de données SQL et python: [tuto](/docs/python/pages/traitement/page3)
