@@ -316,3 +316,6 @@ Un terminal est un programme qui permet d'interagir avec le systeme d'exploitati
 ## Editeur de texte et IDE
 * Editeur de texte : C'est un programme conçu pour ecrire et modifier du code. La plupart des editeurs offrent des fonctions pour faciliter l'edition (coloration syntaxique) : notepad++, sublime text, Vim, Atom, Geany...
 * IDE : c'est un editeur de texte doté de fonctionnalités de gestion de projet. Pour developper en python, c'est par exemple PyCharm, Spyder, Visual studio...
+
+# Liens
+* TP-cours sur les systemes de fichiers et python: [info-blaisepascal](https://info.blaisepascal.fr/nsi-python-les-fichiers/)
