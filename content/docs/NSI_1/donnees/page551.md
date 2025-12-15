@@ -160,9 +160,9 @@ morpion = [
 ]
 
 def cherche_car(grille,car,liste_X,liste_Y):
-	for i in range(len(liste_x)):
-        x = liste_x[..
-        y = liste_y[..
+	for i in range(len(liste_X)):
+        x = liste_X[..
+        y = liste_Y[..
         if grille[..][..] == ...:
             return x,y
 
@@ -202,7 +202,9 @@ Pour chacune des lignes, puis pour chacune des colonnes, et enfin chaque diagona
 
 Si la ligne contient 2 caractères 'X' (fonction `compteur`, et que la ligne contient un espace (`cherche_car` ne retourne pas `None`), alors retourner les coordonnées x,y retournées par la fonction `cherche_car`.
 
-Enfin, si aucune des lignes, colonnes, diagonale ne correspond à ces 2 conditions, retourner la premiers case vide trouvée dans la grille.
+Sinon, retourner `None`
+
+
 
 ```python
 def jeu_de_defense(grille,car_attaquant):
@@ -230,10 +232,30 @@ def jeu_de_defense(grille,car_attaquant):
                 [0,1,2],[0,0,0])
     (...)
 	else:
-		# la premiere case vide possible
-        jouer_case = cherche_car(grille,' ',[0,0,0,1,1,1,2,2,2],
-                                  [0,1,2,0,1,2,0,1,2])
+		jouer_case = None
     return jouer_case
+```
+
+Pour appeler la fonction, et bloquer l'adversaire 'X', faire:
+
+```python
+if jeu_de_defense(morpion,'X') == None:
+    x,y = cherche_car(grille,' ',[0,0,0,1,1,1,2,2,2],
+                                  [0,1,2,0,1,2,0,1,2])
+else: 
+    x,y = jeu_de_defense(morpion,'X')
+```
+
+Ainsi, si aucune des lignes, colonnes, diagonale ne correspond ne contient deux caratères 'X' alignés, retourner la premiers case vide trouvée dans la grille: ce sera l'emplacement où l'ordinateur 'O' peut jouer.
+
+L'ordinateur peut alors jouer:
+
+```python
+def jouer(grille,car,x,y):
+    grille[x][y] = car
+    
+jouer(morpion,'O',x,y)
+affiche(morpion)
 ```
 
 Pour élaborer une stratégie plus avancée de l'ordinateur, on pourra consulter la page dédiée: site [tictactoe.com](https://tictactoefree.com/fr/astuces/comment-gagner-au-morpion-si-vous-jouez-en-second)
@@ -241,7 +263,8 @@ Pour élaborer une stratégie plus avancée de l'ordinateur, on pourra consulter
 {{< img src="../images/morpion.png" link="https://tictactoefree.com/fr/astuces/comment-gagner-au-morpion-si-vous-jouez-en-second" caption="site TICTACTOEFREE.COM" >}}
 
 ## Interface joueur
-> Etape 6: Vous allez maintenant programmer l'interface du joueur, en lui demandant les coordonnées x,y où il placera son pion `'X'`. La grille de morpion devra être modifiée en fonction de son choix, à condition que la case contienne bien ' '.
+Pour cette deuxième phase du projet, vous pourrez télécharger le script python contenant toutes les fonctions nécéssaires: [telecharger](/scripts/morpion.py)
+> Vous allez maintenant programmer l'interface du joueur, en lui demandant les coordonnées x,y où il placera son pion `'X'`. La grille de morpion devra être modifiée en fonction de son choix, à condition que la case contienne bien ' '.
 
 ```python
 # Etape 6
