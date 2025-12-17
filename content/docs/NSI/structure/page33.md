@@ -122,8 +122,7 @@ print(partie1)
 **Qu g.** Ajouter une méthode de classe `poser` qui pose un domino à la suite du dernier domino posé dans la partie, à condition que celui-ci soit bien en correspondance. La fonction va alors retourner l'état de la partie (si le nouveau domino peut être posé), ou bien un message signifiant que la pose est interdite. Tester votre methode de classe `poser` en choisissant un domino correct, puis un domino non correct.
 
 # Corrections
-*à venir*
-<!--
+
 ## Jeu de dominos *classique*
 
 ```python
@@ -231,7 +230,7 @@ puis les différents tests des méthodes de Partie:
 >>> partie1.poser(D10)
 >>> partie1.poser(D11)
 ```
--->
+
 
 **La suite en TP**
 

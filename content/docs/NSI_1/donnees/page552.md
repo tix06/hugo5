@@ -1,6 +1,8 @@
 ---
-Title: Projets utilisant les tableaux python
+Title: Projets utilisant les tableaux python (TNSI)
 ---
+
+
 
 # Projet 1: jeu du Morpion
 Le jeu du Morpion est un jeu de réflexion se pratiquant à deux joueurs au tour par tour et dont le but est de créer le premier un alignement sur une grille (3x3).
@@ -146,45 +148,13 @@ victoire(morpion,'O')
 False
 ```
 
-
-
-## Interface joueurs
-> Etape 4: Vous allez maintenant programmer l'interface  joueurs, en demandant alternativement, à chacun d'entre eux les coordonnées x,y pour placer son pion: 'X' puis 'O', puis 'X', puis 'O', ...
-
-```python
-# Etape 4
-Fin_de_partie = False
-while not victoire(morpion,'X') and not victoire(morpion,'O') and not Fin_de_partie:
-    afficher(morpion)
-    print('Joueur X:')
-    x = int(input("jouer à la ligne (0,1,2), 3=Fin: "))
-    y = int(..)
-    ...
-```
-
-*Puis...*
-
-* Si le joueur 'X' n'est pas vainqueur, demander à l'adversaire où il veut jouer.
-* Le joueur 'O' est-il gagnant?
-* Afficher la grille modifiée après ce tour de jeu
-* Recommencer s'il n'y a pas de vainqueur.
-
-
-# Phase 2: Comment jouer contre l'ordinateur?
-> Dans cette phase du projet, nous allons remplacer les choix du joueur 'O' par ceux de l'ordinateur. Ce sera lui qui essaiera de vous bloquer lorsque vous avez deux pions 'X' alignés, et que vous risquez de gagner à la partie suivante.
-
-Nous aurons besoin de 2 nouvelles fonctions:
-
-* `cherche_car`: fonction qui recherche la première case vide dans un ensemble de cases du morpion, et retourne les coordonnées x,y de cette case
-* `jeu_de_defense`: qui retourne les coordonnées x,y de la case qui doit bloquer le joueur (si celui-ci a une ligne avec deux 'X' et peut gagner au prochain tour)
-
-## Detection case vide 
-> Etape 1: Ecrire une fonction `cherche_car(grille,car,liste_X,liste_Y)` qui verifie si les cases de coordonnées `(liste_X[0], liste_Y[0]), (liste_X[1], liste_Y[1]), (liste_X[2], liste_Y[2])` contiennent au moins un symbole `car`, et retourne les coordonnées de la première case contenant le caractère `car`.
+## Detection case vide [niveau Term NSI]
+> Etape 4: Ecrire une fonction `cherche_car(grille,car,liste_X,liste_Y)` qui verifie si les cases de coordonnées `(liste_X[0], liste_Y[0]), (liste_X[1], liste_Y[1]), (liste_X[2], liste_Y[2])` contiennent au moins un symbole `car`, et retourne les coordonnées de la première case contenant le caractère `car`.
 
 **Exemple: recherche d'un espace ' ' dans la ligne 2**
 
 ```python
-# Etape 1
+# Etape 4
 morpion = [
     ['X', 'O', 'X'],
     ['O', 'X', ' '],
@@ -192,7 +162,7 @@ morpion = [
 ]
 
 def cherche_car(grille,car,liste_X,liste_Y):
-    for i in range(len(liste_X)):
+	for i in range(len(liste_X)):
         x = liste_X[..
         y = liste_Y[..
         if grille[..][..] == ...:
@@ -224,7 +194,9 @@ cherche_car(grille,' ',[0,0,0,1,1,1,2,2,2],
 
 Lorsque l'on recherche un caractère dans TOUTE la grille, il y a 9 coordonnées à renseigner pour chacune des listes.
 
-> Etape 2: créer une fonction `jeu_de_defense`, qui prend pour paramètre `grille`, et `car_attaquant`, qui vaudra 'X' ou 'O'.
+
+## Stratégie de l'ordinateur [Niveau Term NSI]
+> Etape 5: créer une fonction `jeu_de_defense`, qui prend pour paramètre `grille`, et `car_attaquant`, qui vaudra 'X' ou 'O'.
 
 Cette fonction va permettre de programmer le jeu complet, pour jouer contre l'ordinateur.
 
@@ -283,29 +255,71 @@ L'ordinateur peut alors jouer:
 ```python
 def jouer(grille,car,x,y):
     grille[x][y] = car
-
+    
 jouer(morpion,'O',x,y)
 affiche(morpion)
 ```
-
-## Jouer contre l'ordinateur
-Pour cette dernière phase du projet, vous pourrez télécharger le script python contenant toutes les fonctions nécéssaires: [telecharger](/scripts/morpion.py)
 
 Pour élaborer une stratégie plus avancée de l'ordinateur, on pourra consulter la page dédiée: site [tictactoe.com](https://tictactoefree.com/fr/astuces/comment-gagner-au-morpion-si-vous-jouez-en-second)
 
 {{< img src="../images/morpion.png" link="https://tictactoefree.com/fr/astuces/comment-gagner-au-morpion-si-vous-jouez-en-second" caption="site TICTACTOEFREE.COM" >}}
 
+## Interface joueur
+Pour cette deuxième phase du projet, vous pourrez télécharger le script python contenant toutes les fonctions nécéssaires: [telecharger](/scripts/morpion.py)
+
+> Vous allez maintenant programmer l'interface du joueur, en lui demandant les coordonnées x,y où il placera son pion `'X'`. La grille de morpion devra être modifiée en fonction de son choix, à condition que la case contienne bien ' '.
+
+```python
+# Etape 6
+Fin_de_partie = False
+while not victoire(morpion,'X') and not victoire(morpion,'O') and not Fin_de_partie:
+	affiche(morpion)
+	x = int(input("jouer à la ligne (0,1,2), 3=Fin :"))
+	y = int(..)
+	...
+```
 
 
 
-
-* pour jouer contre l'ORDINATEUR. (utiliser la fonction `jeu_de_defense` pour prevoir la case dans laquelle il devra jouer). 
+* Pour jouer contre l'ORDINATEUR. (utiliser la fonction `jeu_de_defense` pour prevoir la case dans laquelle il devra jouer). 
 * Organisez au mieux votre script. Commentez vos fonctions.
-
-**Pour les élèves de Terminale:**
-
 * Prévoir et anticiper toutes les erreurs possibles de saisie du joueur, tous les defauts possibles qui peuvent survenir dans la partie (plus de O que de X, erreurs avec les coordonnées saisies, terminaison de la boucle while, ...). On pourra ajouter des structures conditionnelles supplémentaires, ou bien des tests d'**assert**ion, ou autres mécanismes. (**try.. except**, **raise**,...): Voir cours sur la mise au poin d'un programme: [python avancé](/docs/NSI/langages/page5/)
 * Utiliser une structure de données **Pile** pour permettre un retour en arriere (le joueur efface ses coups précédents).
 
 
+# Projet 2: jeu du Sudoku [Term NSI]
+Le jeu du Sudoku est une jeu de reflexion utilisant une grille (9x9).
+
+Le but du jeu appelé Sudoku, est de remplir la grille avec une série de chiffres tous différents, qui ne se trouvent jamais plus d'une fois sur une même ligne, dans une même colonne ou dans une même région (également appelée « bloc », « groupe », « secteur » ou « sous-grille »).
+
+Vous allez proposer une grille au joueur, partiellement remplie.
+
+A chaque tour de jeu:
+
+* Demander au joueur les coordonnées de jeu dans la grille, ainsi que le chiffre à placer. Le joueur ne peut joueur que dans une case contenant déjà un zero, pas une autre valeur.
+* Si le joueur choisit un chiffre et un emplacement qui génèrent un *doublon*, alors informez du problème rencontré.
+* Demandez lui s'il valide son choix (on modifie alors la grille), ou s'il ne veut pas valider (on laisse le zero).
+* Vérifier si la grille est gagnante.
+* Demander au joueur s'il continue la partie, ou s'il veut revenir en arrière (on remet les zeros aux emplacements modifiés, en remontant selon une PILE).
+* On recommence avec un nouveau tour de jeu.
+
+Vous allez programmer les fonctions qui vont vérifier, à chaque essai du joueur, si les chiffres placés (autres que 0) sont tous différents:
+
+* dans les différentes lignes: fonction `check_lignes`
+* dans les différentes colonnes: fonction `check_col`
+* et dans les différentes regions (blocs 3x3): `check_blocs`
+
+Vous devrez aussi programmer une fonction qui verifie si la grille est entièrement, et correctement remplie: `check_victoire`
+
+Le joueur aura la possibilité de **revenir en arrière** (un ou plusieurs coups), et poursuivre la partie.
+
+{{< img src="../images/grille_s1.png" caption="exemple de grille et solution" >}}
+
+Il est fortement recommandé d'utiliser les fonctions de l'exercice 3.2, vues à la [page des exercices](../page55) sur les tableaux.
+
+**Pour les élèves de Terminale:**
+
+* Organisez au mieux votre script. Commentez vos fonctions.
+* Prévoir et anticiper toutes les erreurs possibles de saisie du joueur, tous les defauts possibles qui peuvent survenir dans la partie (plus de O que de X, erreurs avec les coordonnées saisies, terminaison de la boucle while, ...). On pourra ajouter des structures conditionnelles supplémentaires, ou bien des tests d'**assert**ion, ou autres mécanismes. (**try.. except**, **raise**,...): Voir cours sur la mise au poin d'un programme: [python avancé](/docs/NSI/langages/page5/)
+* Utiliser une structure de données **Pile** pour permettre un retour en arriere (le joueur efface ses coups précédents).
 

@@ -92,14 +92,14 @@ def jeu_de_defense(grille,car_attaquant):
         jouer_case = cherche_car(grille,' ',
                 [2,1,0],[0,1,2])
     else:
-        joueur_case = None
+        jouer_case = None
     return jouer_case
 
 # si jeu_de_defense retourne None:
 # la premiere case vide possible
 
 if jeu_de_defense(morpion,'X') == None:
-    x,y = cherche_car(grille,' ',[0,0,0,1,1,1,2,2,2],
+    x,y = cherche_car(morpion,' ',[0,0,0,1,1,1,2,2,2],
                                   [0,1,2,0,1,2,0,1,2])
 else: 
     x,y = jeu_de_defense(morpion,'X')

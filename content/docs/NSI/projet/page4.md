@@ -58,7 +58,7 @@ class Partie:
 Compléter les fonctions `ajouter_fin`, et `RAZ`à partir des informations contenues dans le script.
 
 ### étape 2
-Dans la classe `Partie`: Comléter la méthode de classe `pose_correcte`: celle-ci devra renvoyer True si le domino posé respecte la règle du jeu, à savoir que les nombres adjacents des 2 dominos sont identiques. Sinon, la fonction retourne False.
+Dans la classe `Partie`: Compléter la méthode de classe `pose_correcte`: celle-ci devra renvoyer True si le domino posé respecte la règle du jeu, à savoir que les nombres adjacents des 2 dominos sont identiques. Sinon, la fonction retourne False.
 
 ### étape 3: testez vos fonctions de la classe `Partie`
 Dans le programme principal `if __name__ == '__main__':`:
@@ -146,4 +146,17 @@ self.dir prend la valeur de `str(s[2][0])`, c'est à dire le premier caractère 
 
 ### étape 2
 Modifier la méthode de classe `readtext`de la classe `Game` pour tenir compte de la méthode `pose_correcte` de `Partie`: si la pose est correcte, et que la méthode `self.partie.pose_correcte()` retourne `True`, alors poser le domino sur la table de jeu. Sinon, demander de jouer un autre domino.
+
+# Suite du projet
+La suite dependra de l'objectif visé.
+
+Le jeu de Dominos se joue avec un ensemble de 28 dominos:
+
+{{< img src="../images/dominos28.png" >}}
+
+Le jeu peut démarrer avec un certain nombre de dominos affectés au joueur, ainsi qu'une *pioche* avec les dominos restants.
+
+Une extension du jeu pourrait permettre à 2 joueurs de jouer à tour de rôle. Cette extension du projet est plus complexe, car elle demande de programmer les objets de la fenêtre TKinter.
+
+
 
