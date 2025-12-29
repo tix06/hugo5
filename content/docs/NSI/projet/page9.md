@@ -5,7 +5,7 @@ Title: Recherche Exoplanetes
 # Recherche d'exoplanètes
 Proposition de systèmes planétaires pour l'année 2025-2026:
 
-*Dossier complet: [donnees-EducASTEP-2025_2026.zip](/scripts/astro/donnees-EducASTEP-2025_2026.zip)*
+*Dossier complet:* [donnees-EducASTEP-2025_2026.zip]()<!--[donnees-EducASTEP-2025_2026.zip](/scripts/astro/donnees-EducASTEP-2025_2026.zip)*-->
 
 
 <!--
