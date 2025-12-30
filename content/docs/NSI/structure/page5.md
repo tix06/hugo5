@@ -86,7 +86,10 @@ Le graphe est *creux* si sa densité est proche de zero, et *dense* si elle se r
 
 
 ## Implémentations
-Plusieurs modes de représentation sont possibles pour stocker des graphes: matrices d'adjacence, listes des voisins, des successeurs ou des prédécesseurs.
+Plusieurs modes de représentation sont possibles pour stocker des graphes: matrices d'adjacence, listes des voisins, des successeurs ou des prédécesseurs. On peut les classer en 2 catégories:
+
+* Les représentations matricielles
+* Les représentations sous forme de liste chainée
 
 ### Liste de voisins et matrice d'adjacence
 #### **Liste de voisins**
@@ -94,6 +97,8 @@ Un exemple simple présente ici un graphe créé à partir d'une liste de voisin
 [[1, 2], [0, 2, 3], [0, 1, 3], [1, 2]] 
 
 La première sous-liste correspond aux liens que forme le sommet 0. Ici, c'est donc avec les sommets 1 et 2.
+
+C'est aussi la représentation d'une *liste chainée*.
 
 #### **Liste d'adjacence**
 Cette liste L peut aussi être mise sous forme d'une matrice M:
@@ -144,7 +149,7 @@ D = {'a': [ 'b', 'c'], 'b': [ 'a', 'c', 'd'], 'c': [ 'a', 'b', 'd'], 'd' : [ 'b'
 {{< img src="../images/fig52.png" alt="graphe correspondant au dictionnaire D" caption="graphe correspondant au dictionnaire D" >}}
 > *Question:* Représenter la matrice d'adjacence équivalente.
 
-### Liste de successeurs
+### Liste (chainée) de successeurs
 Cette représentation est particulièrement adaptée aux *graphes orientés*.
 
 {{< img src="../images/fig55.png" alt="graphe orienté" caption="graphe orienté" >}}
@@ -180,7 +185,7 @@ S1 = Sommet(1)
 S0 = Sommet(0,1,2)
 ```
 
-### Liste de predecesseurs
+### Liste (chainée) de predecesseurs
 Il peut être necessaire d'établir aussi, pour chaque sommet, une liste de predecesseurs:
 
 
