@@ -82,3 +82,15 @@ sur l'idee du **snt nathan**, determiner les liens entre personnages de **GOT** 
 
 # notes sur le pg de NSI architecture
 voir le cours NSI_1 de [jlrichter.fr](https://www.cours.jlrichter.fr/lycee/1e-nsi/architecture-materielle-et-systemes-dexploitation/) = bonne synthèse, assez proche mais plus organisé que ce que je fais.
+
+# defis autour de la cybersecurité: NSI_1
+bon cours et surtout de bonnes idées pour les chalenges en python:
+
+https://cours-nsi.forge.apps.education.fr/premiere/ChallengesProgrammation.html
+
+Dans ce même cours:
+
+6. Partie 6 : IHM et Web
+6.1. Web statique
+6.2. Web interactif
+6.3. Web dynamique
