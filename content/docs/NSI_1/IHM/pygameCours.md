@@ -328,6 +328,7 @@ screen.blit(image_fond, (0, 0))  # (0, 0) = position en haut à gauche
 ```
 
 **Note importante** : Le système de coordonnées dans Pygame :
+
 ```
 (0, 0) ──────► X (largeur)
   │
@@ -436,7 +437,7 @@ door = pygame.image.load("datas/images/door1.png")
 rect = door.get_rect()
 # Position de rect dans la fenetre graphique (centré)
 rect.center = w//2, h//2
-# Dessiner
+# Dessiner l'objet à la même position que le calque
 screen.blit(door, rect)
 ```
 
@@ -533,7 +534,7 @@ screen.blit(texte_surface, (50, 500))  # Position du texte
 
 {{< img src="../images/pg10.png" >}}
 
-**Exercice:** Ecrire un programme qui affiche le 2 lignes comme ci-dessus.
+**Exercice:** Ecrire un programme qui affiche les 2 lignes comme ci-dessus.
 
 ### Detecter l'appui sur une touche du clavier
 Pour detecter l'appui sur la touche `"h"` du clavier, on utilisera la séquence d'instruction suivantes:
@@ -726,4 +727,5 @@ quit()
 ---
 
 # Suite
-Le TP Escape Game: [Lien](../pygame)
+* Le TP Escape Game: [Lien](../pygame)
+* Les dictionnaires python et leur application pour le projet Escape Game: [Lien](../pygame_dict)
