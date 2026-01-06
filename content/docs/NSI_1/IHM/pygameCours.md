@@ -384,9 +384,14 @@ quit()
 
 * **placer une image rectangle (porte)**
 
+Pour cet exemple, télécharger les images:
+
+* [door1.png](../images/door1.png)
+* [door2.png](../images/door2.png)
+
 ```python
 # Chargement image
-door = pygame.image.load("datas/images/door1.png")
+door = pygame.image.load("door1.png")
 # Dessiner
 screen.blit(door, (170, 140))
 ```
