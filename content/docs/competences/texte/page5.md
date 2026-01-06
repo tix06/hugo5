@@ -26,7 +26,7 @@ La manière avec laquelle vous allez construire ce document suit les même étap
 Le langage HTML s'occupe de la **structure du document**, grâce à des **balises** qui intègrent le **contenu**.
 
 ## Format de document
-> **A vous de jouer:** Télecharger et ouvrir le document textuel sur {{< a link="/pdf/competences/plastiques.txt" caption="les plastiques" >}} avec le logiciel *Writer*. Copiez l'ensemble du texte (CTRL + a, CTRL + c)
+> **A vous de jouer:** Télecharger et ouvrir le document textuel sur {{< a link="/pdf/competences/plastiques.txt" caption="les plastiques" >}}. Copiez l'ensemble du texte (CTRL + a, CTRL + c)
 
 > **Dans un editeur de texte**: Rechercher parmi les logiciels installés: **Bloc notes, Notepad**, ou mieux, **Notepad++** (ajoute la coloration syntaxique): coller le texte. Sauvegarder dans vos *Documents* avec le nom `plastiques.html`
 
