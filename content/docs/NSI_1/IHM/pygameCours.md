@@ -269,7 +269,7 @@ pygame.display.flip()
 ```
 Met à jour tout l'écran avec ce qui a été dessiné. Sans cette ligne, rien ne s'affichera !
 
-### Exemple complet : Fenêtre avec changement de couleur au clic
+### Exemple complet n°1: Fenêtre avec changement de couleur au clic
 
 ```python
 import pygame
@@ -356,11 +356,10 @@ pygame.draw.rect(screen, RED, (170, 140, 60, 120))
 
 
 
-*Exemple complet*
+**Exemple complet* n°2*
 
 ```python
 import pygame
-from pygame.locals import *
  
 RED = (255, 0, 0)
 pygame.init()
@@ -398,7 +397,33 @@ screen.blit(door, (170, 140))
 
 {{< img src="../images/pg3.png" >}}
 
+**Exemple complet n°3**
+
+```python
+import pygame
+
+pygame.init()
+h,w = 400,400
+screen = pygame.display.set_mode((w, h))
+# Chargement image
+door = pygame.image.load("door1.png")
+# Dessiner
+screen.blit(door, (170, 140))
+stop = False
+
+while not stop:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            stop = True
+
+    pygame.display.flip()
+ 
+pygame.quit()
+quit()
+```
+
 ### Détecter un clic sur une zone précise
+**cliquer:**
 
 ```python
 # Dans la boucle d'événements
@@ -409,6 +434,50 @@ if event.type == pygame.MOUSEBUTTONDOWN:
     # Zone de l'objet : x entre 100 et 200, y entre 150 et 250
     if 100 <= x <= 200 and 150 <= y <= 250:
         print("Vous avez cliqué sur l'objet !")
+```
+
+**relacher:**
+
+```python
+# Dans la boucle d'événements
+if event.type == pygame.MOUSEBUTTONUP:
+    x, y = event.pos  # Position du clic
+    
+    # Vérifier si le clic est dans une zone rectangulaire
+    # Zone de l'objet : x entre 100 et 200, y entre 150 et 250
+    if 100 <= x <= 200 and 150 <= y <= 250:
+        print("Vous avez relaché le bouton !")
+```
+
+**Exemple complet n°4**
+
+```python
+import pygame
+ 
+RED = (255, 0, 0)
+BLUE =(0,0,255)
+pygame.init()
+h,w = 400,400
+screen = pygame.display.set_mode((w, h))
+pygame.draw.rect(screen, RED, (170, 140, 60, 120))
+stop = False
+
+while not stop:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            stop = True
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            x, y = event.pos
+            if 170 <= x <= 230 and 140 <= y <= 260:
+                print("Vous avez cliqué sur l'objet !")
+        if event.type == pygame.MOUSEBUTTONUP:
+            x, y = event.pos
+            if 170 <= x <= 230 and 140 <= y <= 260:
+                print("Vous avez relaché le bouton !")      
+    pygame.display.flip()
+ 
+pygame.quit()
+quit()
 ```
 
 **Exercice 1:** Créer un programme complet qui permet de changer la couleur de la porte lorsque l'on clique sur celle-ci (et que l'on maintient appuyé), mais qui remet la première couleur lorsque l'on relâche le bouton:
