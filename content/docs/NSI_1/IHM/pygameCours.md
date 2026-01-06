@@ -523,7 +523,7 @@ if event.type == pygame.MOUSEBUTTONDOWN:
 		print("l'objet a ete cliqué")
 ```
 
-*Exemple complet:*
+**Exemple complet n°5:**
 
 ```python
 import pygame
