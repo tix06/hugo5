@@ -376,7 +376,6 @@ while not stop:
     pygame.display.flip()
  
 pygame.quit()
-quit()
 ```
 
 {{< img src="../images/pg1.png" >}}
@@ -477,7 +476,6 @@ while not stop:
     pygame.display.flip()
  
 pygame.quit()
-quit()
 ```
 
 **Exercice 1:** Créer un programme complet qui permet de changer la couleur de la porte lorsque l'on clique sur celle-ci (et que l'on maintient appuyé), mais qui remet la première couleur lorsque l'on relâche le bouton:
@@ -550,7 +548,6 @@ while not stop:
     pygame.display.flip()
  
 pygame.quit()
-quit()
 ```
 
 **Exercice 1:** On dispose de 2 images d'une même porte, aux contours différents. Créer un programme complet qui permet de changer l'image de la porte lorsque l'on clique sur celle-ci (et que l'on maintient appuyé), mais qui remet la première image lorsque l'on relâche le bouton:
@@ -589,7 +586,7 @@ screen.blit(texte_surface, (0,0))  # Position du texte
 								   # en haut à gauche
 ```
 
-*Exemple complet:*
+*au final:*
 
 ```python
 screen.fill(255,255,255)
@@ -597,6 +594,31 @@ font = pygame.font.Font(None, 36)  # None = police par défaut, 36 = taille
 texte = "Bienvenue dans la salle mystérieuse"
 texte_surface = font.render(texte, True, (0,0,0))  # True = antialiasing
 screen.blit(texte_surface, (50, 500))  # Position du texte
+```
+
+**Exemple complet n°6:**
+
+```python
+import pygame
+
+pygame.init()
+h,w = 400,400
+screen = pygame.display.set_mode((w, h))
+screen.fill(255,255,255)
+font = pygame.font.Font(None, 36) 
+texte = "Bienvenue dans la salle mystérieuse"
+texte_surface = font.render(texte, True, (0,0,0)) 
+screen.blit(texte_surface, (50, 500)) 
+stop = False
+
+while not stop:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            stop = True
+            
+    pygame.display.flip()
+ 
+pygame.quit()
 ```
 
 {{< img src="../images/pg9.png" >}}
