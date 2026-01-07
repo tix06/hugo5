@@ -264,6 +264,8 @@ Pour élaborer une stratégie plus avancée de l'ordinateur, on pourra consulter
 
 {{< img src="../images/morpion.png" link="https://tictactoefree.com/fr/astuces/comment-gagner-au-morpion-si-vous-jouez-en-second" caption="site TICTACTOEFREE.COM" >}}
 
+Une ouverture possible sur la suite du programme de terminale peut aussi vous amener à consulter l'algorithme du **minimax**: [page wikipedia](https://fr.wikipedia.org/wiki/Algorithme_minimax#:~:text=L'algorithme%20minimax%20(aussi%20appel%C3%A9,dans%20le%20pire%20des%20cas).&text=Seule%20une%20fraction%20de%20l'arbre%20est%20alors%20explor%C3%A9e.)
+
 ## Interface joueur
 Pour cette deuxième phase du projet, vous pourrez télécharger le script python contenant toutes les fonctions nécéssaires: [telecharger](/scripts/morpion.py)
 
@@ -322,4 +324,5 @@ Il est fortement recommandé d'utiliser les fonctions de l'exercice 3.2, vues à
 * Organisez au mieux votre script. Commentez vos fonctions.
 * Prévoir et anticiper toutes les erreurs possibles de saisie du joueur, tous les defauts possibles qui peuvent survenir dans la partie (plus de O que de X, erreurs avec les coordonnées saisies, terminaison de la boucle while, ...). On pourra ajouter des structures conditionnelles supplémentaires, ou bien des tests d'**assert**ion, ou autres mécanismes. (**try.. except**, **raise**,...): Voir cours sur la mise au poin d'un programme: [python avancé](/docs/NSI/langages/page5/)
 * Utiliser une structure de données **Pile** pour permettre un retour en arriere (le joueur efface ses coups précédents).
+* Algorithme du **minimax**: [page wikipedia](https://fr.wikipedia.org/wiki/Algorithme_minimax#:~:text=L'algorithme%20minimax%20(aussi%20appel%C3%A9,dans%20le%20pire%20des%20cas).&text=Seule%20une%20fraction%20de%20l'arbre%20est%20alors%20explor%C3%A9e.)
 

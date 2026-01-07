@@ -127,12 +127,16 @@ print (D)
  5: [4, 3]}
  ```
 
+ *astuce: prévoir un parcours par indice `for node in range(len(liste_adjacence))`*
+
  **Question f:** Créer une fonction `degre_max` qui retourne un tuple constitué du noeud de plus haut degré, et de la valeur de plus haut degré dans le graphe. Cette fonction prend pour unique paramètre le dictionnaire `D` défini plus haut.
 
 ```python
 def degre_max(D):
     ...
 ```
+
+*astuce: rappelez vous l'algorithme de recherche du max dans une liste, puis adaptez ce script pour le dictionnaire D. Ici, la valeur qui doit être maximale, c'est `len(D[node])`, où `node` est une clé du dictionnaire `D`*
 
 **Question g:** L'instruction suivante génère un affichage des caractéristiques du graphe. 
 
