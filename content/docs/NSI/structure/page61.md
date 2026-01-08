@@ -7,6 +7,7 @@ Title: TP algorithme parcours graphes
 * [algorithmes de parcours des graphes](/docs/SNT_2nde/pages/pages_algo/graphes/page2/)
 * [TP sur l'implementation en python des graphes](/docs/NSI/structure/page6/)
 * [TP sur les algorithmes de parcours des graphes (app en ligne)](/docs/NSI/structure/page61/)
+* [TP 2 sur la coloration d'un graphe](/docs/NSI/structure/page63/)
 * [algorithme de Dijkstra](/docs/SNT_2nde/pages/pages_algo/graphes/page4/)
 * [Protocoles de routage](/docs/NSI/architecture/page3/)
 * [Arbres](/docs/NSI/structure/page4/)
