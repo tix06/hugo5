@@ -12,7 +12,7 @@ Ce cours comporte plusieurs pages:
 * [Protocoles de routage](/docs/NSI/architecture/page3/)
 * [Arbres](/docs/NSI/structure/page4/)
 
-# Parcourir un graphe pour trouver TOUS les chemins
+# Parcourir un graphe
 ## Principe
 Le parcours d'un graphe va donner une liste d'arcs ou de sommets visités, dans un certain ordre. 
 
@@ -20,76 +20,9 @@ Cet ordre va dépendre de l'algorithme employé: Pour des parcours de type *larg
 
 On appelera *chemin* une suite continue de sommets (ou d'arcs) consécutifs dans le graphe, sans retour en arrière, c'est à dire sans revenir vers un sommet déjà visité.
 
-## Algorithme récursif
-Pour un graphe `G`, le problème s'énonce de la manière suivante: 
 
-Pour un sommet de départ `A`, créer un nouveau *chemin* pour chaque sommet adjacent à `A` de la manière suivante:
-
-* Commencer le chemin avec la liste de sommets `[A]`
-* Si le sommet adjacent est un nouveau sommet, n'appartenant pas déjà un `chemin`.
-    * ajouter le nouveau sommet adjacent au `chemin`, par exemple `[A,B]`
-    * ajouter ce `chemin` à la liste des chemins
-    * continuer avec cette même méthode depuis le sommet adjacent (appel recursif avec le sommet adjacent comme nouveau départ, et placer `chemin` en paramètre)
-
-A la fin, retourner la liste des chemins.
-
-*Illustration*:
-
-{{< img src="../images/chemin0.png" caption="départ du sommet A" >}}
-
-{{< img src="../images/chemin1.png" caption="poursuite du chemin vers B" >}}
-
-*Script*:
-
-```python
-def parcours(G, depart,lst_chemins, chemin = []):
-    if chemin == []:
-        chemin = [depart]
-    for sommet in G[depart]:
-        if sommet not in chemin:
-            lst_chemins.append(chemin + [sommet])
-            parcours(G, sommet, lst_chemins, chemin + [sommet])
-    return lst_chemins
-```
-
-*Graphe: implémentation à l'aide d'un dictionnaire de listes d'adjacence*
-
-```python
-G = {'A':['B','F'],
-    'B':['A','C','D','G'],
-    'C':['B','E'],
-    'D':['B','I'],
-    'E':['C','I'],
-    'F':['A','G','H'],
-    'G':['B','F','I'],
-    'H':['F','I'],
-    'I':['D','E','G','H']}
-```
-
-*Exemple*:
-
-```python
-> lst_chemins = []
-> parcours(D,1,lst_chemins)
-[['A', 'B'],
- ['A', 'B', 'C'],
- ['A', 'B', 'C', 'E'],
- ['A', 'B', 'C', 'E', 'I'],
- ['A', 'B', 'C', 'E', 'I', 'D'],
- ['A', 'B', 'C', 'E', 'I', 'G'],
- ['A', 'B', 'C', 'E', 'I', 'G', 'F'],
- ['A', 'B', 'C', 'E', 'I', 'G', 'F', 'H'],
- ['A', 'B', 'C', 'E', 'I', 'H'],
- ['A', 'B', 'C', 'E', 'I', 'H', 'F'],
- ['A', 'B', 'C', 'E', 'I', 'H', 'F', 'G'],
- ['A', 'B', 'D'],
- ['A', 'B', 'D', 'I'],
- ['A', 'B', 'D', 'I', 'E'],
- ...
- ... ]
-```
-
-# Parcours d'un graphe en largeur
+# Parcours d'un graphe en largeur BFS
+* **Principe:** BFS (Breadth-First Search): Il s'agit d'une exploration du graphe G, de proche en proche, en explorant tous les chemins, depuis la distance de longueur 1 du sommet, puis la distance 2, ...
 * Algorithme : voir définition en bas de page[^1]
 * Graphe : voir définitions à la page [Graphes](../page1/index.html)
 
@@ -100,7 +33,7 @@ Voici le programme python de parcours en largeur d'un graphe:
 ```python
 from collections import deque
 
-def BFS_ite(d,s,visited=[], queue=deque()):
+def BFS(d,s,visited=[], queue=deque()):
         queue.append(s)
         while queue:
             v = queue.popleft()
@@ -121,7 +54,7 @@ Pour le graphe exemple suivant (Graphe 1), la distance du sommet A au sommet J, 
 $$dist_G(A,J)=4$$.
 
 {{< img src="../images/fig20.png" alt="graphe illustratif" caption="Graphe 1 : exemple" >}}
-> Calculons toutes les distances dans ce graphe : **L'algorithme de parcours en largeur (Breath First Search BFS)**
+> Calculons toutes les distances dans ce graphe : **L'algorithme de parcours en largeur (Breadth-First Search BFS)**
 
 **Principe :**
 Pour déterminer la longueur de tous les chemins du graphe, il va falloir le parcourir. Lors du parcours, certains sommets seront colorés, pour nous rappeler qu'ils ont été parcouru (rouge), ou en cours de parcours (vert).
@@ -195,7 +128,12 @@ On poursuivra l'exploration par le sommet H, suivant dans la liste. Ce qui perme
 A la fin du traitement, on peut représenter à l'aide d'un *arbre* tous les chemins issus de l'exploration du graphe : 
 
 {{< img src="../images/fig23.png" alt="arbre parcours BFS" caption="arbre du parcours BFS" >}}
-Pour réaliser cet arbre, il faudra remonter chaque étape du parcours du graphe le parent du sommet visité. Ainsi, il aura faudra se rappeler que le sommet D a pour parent le noeud B (D est marqué dans le tableau dont l'entrée est B). Et le sommet B a lui même pour parent le sommet E. Ainsi, en remontant le chemin, on sait que le chemin de E à D passe par B : E => B => D.
+
+
+Pour réaliser cet arbre, il y aura 2 méthodes:
+
+* Soit la construction d'un tableau des sommets visités au fur et à mesure de l'exploration (*vu plus haut*)
+* Soit remonter chaque étape du parcours du graphe le parent du sommet visité. (voir *[fiche d'exercices](/pdf/NSI/sd4_exercices.pdf)*). Ainsi, il aura faudra se rappeler que le sommet D a pour parent le noeud B (D est marqué dans le tableau dont l'entrée est B). Et le sommet B a lui même pour parent le sommet E. Ainsi, en remontant le chemin, on sait que le chemin de E à D passe par B : E => B => D.
 
 ### Pour aller plus loin (term NSI)
 * Consulter la page du *parcours en largeur* sur [wikipedia](https://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_largeur)
@@ -282,6 +220,77 @@ Le parcours d'un graphe en profondeur s'apparente à un algorithme de type *reto
 
 * Dans un jeu d'echec, lorsque l'on joue contre l'ordinateur, une option permet de *revenir en arrière*. On peut revenir *un coup* en arrière et prendre une meilleure option. L'ordinateur construit un graphe au fur et à mesure du jeu avec les coups joués ainsi que la configuration du jeu, afin de permettre ce backtracking.
 * Lorsque l'on joue à un jeu de labyrinthe : Si on arrive dans une impasse, on adopte là aussi un algorithme de type *retour sur trace*. On revient jusqu'au noeud parent (le croisement précédent) afin d'explorer une nouvelle voie. Et si toutes ces voies sont sans issues, on remonte encore d'un niveau (le croisement précédent encore celui ci).
+
+## Parcourir un graphe pour trouver TOUS les chemins
+*Il s'agit d'une variante du parcours en profondeur.*
+
+Pour un graphe `G`, le problème s'énonce de la manière suivante: 
+
+Pour un sommet de départ `A`, créer un nouveau *chemin* pour chaque sommet adjacent à `A` de la manière suivante:
+
+* Commencer le chemin avec la liste de sommets `[A]`
+* Si le sommet adjacent est un nouveau sommet, n'appartenant pas déjà un `chemin`.
+    * ajouter le nouveau sommet adjacent au `chemin`, par exemple `[A,B]`
+    * ajouter ce `chemin` à la liste des chemins
+    * continuer avec cette même méthode depuis le sommet adjacent (appel recursif avec le sommet adjacent comme nouveau départ, et placer `chemin` en paramètre)
+
+A la fin, retourner la liste des chemins.
+
+*Illustration*:
+
+{{< img src="../images/chemin0.png" caption="départ du sommet A" >}}
+
+{{< img src="../images/chemin1.png" caption="poursuite du chemin vers B" >}}
+
+*Script*:
+
+```python
+def parcours(G, depart,lst_chemins, chemin = []):
+    if chemin == []:
+        chemin = [depart]
+    for sommet in G[depart]:
+        if sommet not in chemin:
+            lst_chemins.append(chemin + [sommet])
+            parcours(G, sommet, lst_chemins, chemin + [sommet])
+    return lst_chemins
+```
+
+*Graphe: implémentation à l'aide d'un dictionnaire de listes d'adjacence*
+
+```python
+G = {'A':['B','F'],
+    'B':['A','C','D','G'],
+    'C':['B','E'],
+    'D':['B','I'],
+    'E':['C','I'],
+    'F':['A','G','H'],
+    'G':['B','F','I'],
+    'H':['F','I'],
+    'I':['D','E','G','H']}
+```
+
+*Exemple*:
+
+```python
+> lst_chemins = []
+> parcours(D,1,lst_chemins)
+[['A', 'B'],
+ ['A', 'B', 'C'],
+ ['A', 'B', 'C', 'E'],
+ ['A', 'B', 'C', 'E', 'I'],
+ ['A', 'B', 'C', 'E', 'I', 'D'],
+ ['A', 'B', 'C', 'E', 'I', 'G'],
+ ['A', 'B', 'C', 'E', 'I', 'G', 'F'],
+ ['A', 'B', 'C', 'E', 'I', 'G', 'F', 'H'],
+ ['A', 'B', 'C', 'E', 'I', 'H'],
+ ['A', 'B', 'C', 'E', 'I', 'H', 'F'],
+ ['A', 'B', 'C', 'E', 'I', 'H', 'F', 'G'],
+ ['A', 'B', 'D'],
+ ['A', 'B', 'D', 'I'],
+ ['A', 'B', 'D', 'I', 'E'],
+ ...
+ ... ]
+```
 
 # Liens
 * Animation sur le parcours d'un graphe [http://mpechaud.fr/scripts/parcours/index.html](http://mpechaud.fr/scripts/parcours/index.html)

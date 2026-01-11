@@ -55,7 +55,7 @@ Pour chacune des videos, au cours de leur visionnage, prendre en notes pour repo
 ## Routage à vecteur de distance
 {{< img src="../images/routage_RIP.png"  caption="exemple de table de routage à vecteur de distance" >}}
 
-Un *vecteur de distance* est une donnée constituée de *(adresse du reseau, nombre de sauts)*
+Un *vecteur de distance* est une donnée constituée de *(adresse du reseau, nombre de sauts, gateway)*
 
 
 **Coût associé au chemin:** Le nombre de sauts (routeurs traversés)
@@ -69,7 +69,10 @@ Un *vecteur de distance* est une donnée constituée de *(adresse du reseau, nom
 
 Ainsi, les informations vont circuler de proche en proche, très rapidement. Le routeur ne connait pas la route précise pour atteindre une adresse dans le reseau, mais la passerelle à prendre pour optimiser le coût du chemin (distance, ou métrique la plus petite).
 
-**L'inconvenient** de cette méthode est qu'il peut survenir des *problèmes de convergence* des données en cas de coupure d'une route sur le reseau (boucles, voir video). Le *temps* de convergence, même sans ce problème de boucle est relativement *long*. D'autant plus que le reseau est grand.
+**Inconvenients** de cette méthode:
+
+*	il peut survenir des *problèmes de convergence* des données en cas de coupure d'une route sur le reseau (boucles, voir video). Le *temps* de convergence, même sans ce problème de boucle est relativement *long*. D'autant plus que le reseau est grand.
+* Il peut y avoir des itinéraires qui **bouclent** (voir video plus haut).
 
 **Protocole RIP**: (Routing Information Protocol). Issu des travaux de Bellman-Ford (publiés en 1956 et 1958), il a été développé par l’université de Californie. Il est utilisé initialement pour ARPAnet, ce qui en fait son grand succès. 
 
@@ -87,7 +90,7 @@ Ainsi, les informations vont circuler de proche en proche, très rapidement. Le 
 
 **Exemple de protocole:** Open Shortest Path First, OSPF: algorithme à état de liaison, basé sur la recherche du plus court chemin ([Dijkstra](/docs/SNT_2nde/pages/pages_algo/graphes/page4/)).
 
-**Mise à jour de la table de routage:** Le routeur envoie des petits messages, de type *bonjour* dans le reseau, et mesure la durée de reponse. Il construit un paquet spécial contenant les informations qu’il vient de découvrir, avant de la diffuser à tous les autres routeurs. Il établit ainsi une table avec, pour chaque adresse la mention d'une métrique qui depend du debit de chaque liaison, et déduit le plus court chemin vers chaque destination à partir de l'algorithme de Dijkstra. La métrique est obtenue en additionnant les coûts de chaque liaison.
+**Mise à jour de la table de routage:** Le routeur envoie des petits messages, de type *bonjour* dans le reseau, et mesure la durée de reponse. Il construit un paquet spécial contenant les informations qu’il vient de découvrir, avant de la diffuser à tous les autres routeurs. Il établit ainsi une table avec, pour chaque adresse la mention d'une métrique qui depend du debit de chaque liaison, et déduit le plus court chemin vers chaque destination à partir de l'algorithme de Dijkstra. La **métrique** est obtenue en **additionnant les coûts de chaque liaison**.
 
 **Avantages:**
 
@@ -104,7 +107,7 @@ Ainsi, les informations vont circuler de proche en proche, très rapidement. Le 
 
 > Exercice n°2 du [Centres etrangers J1 2024](https://pixees.fr/informatiquelycee/term/suj_bac/2024/sujet_05.pdf): reseaux, adresses IP, ...
 
-# Débit
+## Débit
 Le debit est la vitesse à laquelle sont échangées les données, expimée en bits/s (ou kb/s, Mb/s...). Le débit se définit par le rapport du nombre de données circulant (en bits), par la durée (s).
 
 $$D = \tfrac{N}{s}$$
@@ -143,9 +146,8 @@ voir complements sur [developpez.com](https://inetdoc.developpez.com/tutoriels/r
 * Video (Youtube): [Mooc de l'INT (institut des Mines Télécom)](https://www.youtube.com/watch?v=-utHPKREZV8)
 ## Autres documents
 * Page inspirée du cours de [dlatreyte.github.io](https://dlatreyte.github.io/terminales-nsi/chap-11/5-routage/)
-* cours de term NSI très complet sur l'architecture machine et reseau. Auteurs Eric ROUGIER / Paul GODARD : [https://pgdg.frama.io/tnsi/](https://pgdg.frama.io/tnsi/)
-* Document d'accompagnement du pdf, cours de DUT [rt.bethune.free.fr](http://rt.bethune.free.fr/iut-gtr2/Cours/R4/cours/R4_Cours2_Routage_ip_6parpage.pdf)
 * cours complet de niveau term NSI sur les reseaux autonomes: [infoforall](https://www.infoforall.fr/act/archi/procole-de-routage-dynamique-rip/)
 * Comparatif RIP/OSPF: [cisco](https://cisco.goffinet.org/ccna/ospf/introduction-au-protocole-routage-dynamique-ospf/)
 * autres exercices sur les algo de routage [http://www.netlab.tkk.fi/opetus/s38121/s01/Exercises/solution3.pdf](http://www.netlab.tkk.fi/opetus/s38121/s01/Exercises/solution3.pdf) et [https://www.netlab.tkk.fi/opetus/s38122/s00/Exercises/Exercise-3.pdf](https://www.netlab.tkk.fi/opetus/s38122/s00/Exercises/Exercise-3.pdf)
+* Très bon document illustré sur l'algorithme de Bellman Ford: [ressources.aunege.fr](http://ressources.aunege.fr/nuxeo/site/esupversions/2b1c56b6-109d-488a-94a3-3ea525f8beef/cours/l4/l4.pdf)
 
