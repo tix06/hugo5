@@ -85,7 +85,7 @@ quit()
 
 Vous pouvez aussi laisser cours à votre imagination, et dessiner vos propres images.
 
-## Conseils pour votre projet de TP (lecture 5 min)
+## Conseils pour votre projet de TP (lecture 10 min)
 
 ### Architecture recommandée pour votre escape game
 
@@ -96,6 +96,17 @@ Votre jeu devrait comporter ces éléments :
 3. **Zone de texte** : Affichage des descriptions et dialogues en bas de l'écran
 4. **Touches de commande** : Actions possibles (examiner, utiliser, inventaire, obtenir de l'aide, etc.)
 5. **Système d'état** : Gérer ce qui a été fait ou trouvé
+
+### Définir un scénario à l'aide de diagrammes
+Dans les zones 1 et 2, placer les variables utiles au jeu. Placer les différents textes à afficher.
+
+{{< img src="../images/zone3.png" >}}
+
+Dans la zone 3, prevoir les interactions avec les différents objets, ainsi que la modification des variables:
+
+{{< img src="../images/zone1.png" caption="Prévoir diagramme par objet ou par touche appuyée" >}}
+
+Dans la zone 5, prévoir l'affichage du texte, ou le nouveau placement des objets/images.
 
 ### Conseils de programmation
 
@@ -109,12 +120,20 @@ def afficher_texte(message):
     texte = font.render(message, True, (255, 255, 255))
     screen.blit(texte, (50, 500))
 
+
+```
+
+<!--
+Pour les élèves de term:
+
+```python
 def verifier_clic_objets(pos_souris):
     for objet in objets:
         if objet["rect"].collidepoint(pos_souris):
             return objet
     return None
 ```
+-->
 
 <!--
 **Utilisez des dictionnaires pour vos objets**
