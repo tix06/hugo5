@@ -80,7 +80,6 @@ while running:
 # FERMETURE PROPRE
 # ============================================
 pygame.quit()
-quit()
 ```
 
 Vous pouvez aussi laisser cours à votre imagination, et dessiner vos propres images.
@@ -114,6 +113,7 @@ Dans la zone 5, prévoir l'affichage du texte, ou le nouveau placement des objet
 
 ```python
 def afficher_fond():
+    screen.fill((0,0,0))
     screen.blit(fond, (0, 0))
 
 def afficher_texte(message):
