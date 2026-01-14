@@ -142,17 +142,21 @@ Pour réaliser cet arbre, il y aura 2 méthodes:
 * Application de l'algorithme **BFS** au parcours dans un **labyrinthe**:
 
 {{< img src="../images/maze1.png" alt="maze BFS" link="https://youtu.be/vf817b882Uw" caption="video: Maze Pathfinder - Breadth First Search (BFS)" >}}
+
 # Parcours d'un graphe en profondeur (DFS)
+**Principe:** L'exploration DFS (Depth-First Search) retourne une liste de sommets, parcourus en plongeant dans la profondeur du graphe. Le prochain sommet visité est un des successeurs du sommet courant, avec un retour en arrière lorsque'il n'y a pas de nouveau successeur, ou bien lorsque celui-ci a deja été visité.
+
 Voici les 2 programmes python de parcours en profondeur d'un graphe:
 
 * récursif:
 
 ```python
-def DFS(d,s,visited=[]):
+def DFS(d,s,visited=None):
+    if visited==None:visited=[]
     visited.append(s)
     for v in d[s]:
         if v not in visited:
-            DFS(d,v)
+            DFS(d,v,visited)
     return visited
 ```
 
