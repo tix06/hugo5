@@ -180,7 +180,7 @@ def inverse(L):
 Soit un graphe G = (V,E) et r un sommet de G, point de départ de l'exploration.
 Le parcours en profondeur du graphe va permettre de visiter tous les noeuds du graphe, mais selon un chemin où l'on plonge dans la profondeur du graphe. Le prochain sommet visité sera un sommet fils non encore visité.
 
-A chaque étape, c'est à dire à chaque arête suivie, il faudra mémoriser le parent du nouveau sommet visité. Cela permettra de revenir en arrière. On utilisera pour cela une structure de PILE. On reviendra en arrière en *dépilant* le dernier sommet de la liste.
+A chaque étape, c'est à dire à chaque arête suivie, il faudra **mémoriser le parent** du nouveau sommet visité. (une fois celui-ci placé dans la liste des sommets *parcourus*, pas *découverts*). Cela permettra de revenir en arrière. On utilisera pour cela une structure de PILE. On reviendra en arrière en *dépilant* le dernier sommet de la liste.
 
 Lorsque le chemin mène à une impasse, (il n'y a plus de sommet fils non visité), lorsque l'on est sur un bord du graphe, alors on *remonte* d'un niveau, vers un sommet parent, *avant de poursuivre* l'exploration.
 
@@ -219,7 +219,7 @@ Le schéma suivant illustre le parcours réalisé à partir des arêtes emprunt�
 Le parcours d'un graphe en profondeur s'apparente à un algorithme de type *retour sur trace*, ou *backtracking*. C'est le comportement de joueur que l'on a lorsque l'on a droit à un nouvelle chance : 
 
 * Dans un jeu d'echec, lorsque l'on joue contre l'ordinateur, une option permet de *revenir en arrière*. On peut revenir *un coup* en arrière et prendre une meilleure option. L'ordinateur construit un graphe au fur et à mesure du jeu avec les coups joués ainsi que la configuration du jeu, afin de permettre ce backtracking.
-* Lorsque l'on joue à un jeu de labyrinthe : Si on arrive dans une impasse, on adopte là aussi un algorithme de type *retour sur trace*. On revient jusqu'au noeud parent (le croisement précédent) afin d'explorer une nouvelle voie. Et si toutes ces voies sont sans issues, on remonte encore d'un niveau (le croisement précédent encore celui ci).
+* Lorsque l'on joue à un jeu de labyrinthe [(illustration site zestedesavoir)](https://zestedesavoir.com/tutoriels/681/a-la-decouverte-des-algorithmes-de-graphe/727_bases-de-la-theorie-des-graphes/3353_parcourir-un-graphe/): Si on arrive dans une impasse, on adopte là aussi un algorithme de type *retour sur trace*. On revient jusqu'au noeud parent (le croisement précédent) afin d'explorer une nouvelle voie. Et si toutes ces voies sont sans issues, on remonte encore d'un niveau (le croisement précédent encore celui ci).
 
 ## Parcourir un graphe pour trouver TOUS les chemins
 *Il s'agit d'une variante du parcours en profondeur.*
