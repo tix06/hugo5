@@ -3,6 +3,8 @@ title : HTML CSS
 bookShowToc: false
 ---
 
+{{< img src="../images/web_evolution.png" link="https://youtu.be/XYTwYmOjqQs?si=Gocy9dPHaZCJM26F" caption="video - evolution des pages web 1990-2019" >}}
+
 # Document Web: HTML
 ## Contenu et Structure
 Le contenu des documents Web est rédigé en langage HTML (acronyme de Hypertext Markup Language). HTML est un langage interprété (par le navigateur). C'est un langage de description qui gère le contenu (le texte et les images), en ajoutant des éléments de structure, comme par exemple:
