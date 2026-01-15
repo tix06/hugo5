@@ -124,7 +124,9 @@ On utilisera pour la suite un système informatique constitué de nombreux sous-
 * cliquer sur le fichier pour ouvrir avec *Filius*
 
 ## Premier contact avec le système
-> **Qu.3a.** Représenter sur votre feuille le reseau en ne dessinant que les ordinateurs n°1 et n°15, ainsi que tous les routeurs.
+> **Qu.3a.** Représenter sur votre feuille le reseau en ne dessinant que les ordinateurs n°1 et n°15, ainsi que tous les routeurs. Indiquer la référence des différents reseaux (compléter le schéma)
+
+{{< img src="../images/gros_reseau.png" >}}
 
 Lancer la simulation 
 
@@ -147,10 +149,13 @@ Aller dans l’onglet *table de routage*:
 > * Hormis l’interface 127.0.0.1 : Combien d’interface possède le routeur ?
 > * Quels sont les 3 réseaux auquel ce routeur est *directement* relié ? Donner leur adresse IP.
 
-On souhaite ajouter l’information suivante à la table de routage : Pour atteindre le réseau 172.12.0.0, il faut passer par la passerelle 192.168.7.2 via l’interface 192.168.7.1
+On souhaite ajouter l’information suivante: Depuis la machine M1, du reseau 192.168.1.1, on souhaite atteindre une machine du reseau 172.12.0.0. L'interface du routeur est 192.168.1.254 dans le reseau 192.168.1.0. 
+
+
 
 > **Q3d** : nouvelle entrée dans la table:
-> * Comment faudrait-il compléter la table de routage ? Renseigner la ligne entière.
+> * Quelle sera l'adresse passerelle depuis la machine M1?
+> * Quelle sera l'adresse de l'interface (table routage du routeur)?
 > * Quelle est la différence entre l’adresse de passerelle et l’adresse de l’interface ? A quoi se rapportent chacune d’entre elles ?
 
 
