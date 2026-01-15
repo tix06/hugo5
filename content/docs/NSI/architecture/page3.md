@@ -142,7 +142,7 @@ La table de routage du routeur 1 est alors:
 | 10.0.0.0/24 | 192.168.0.253 |
 
 
-
+*Remarque:* La table de routage du logiciel Filius donne également l'adresse 127.0.0.0/ 255.255.255.255. Cette adresse est réservé pour le bouclage, c'est-à-dire l'auto-adresse d'un hôte, également connue sous le nom d'adresse localhost. Cette adresse IP de bouclage est entièrement gérée par et dans le système d'exploitation et ne renvoie pas vers un port du routeur.
 
 > Voir l'exercice n°1 du sujet de Baccalaureat: Metropole Sept 2021: [Architecture de reseau d'ordinateurs, table de routage](https://eduscol.education.fr/document/32917/download)
 
