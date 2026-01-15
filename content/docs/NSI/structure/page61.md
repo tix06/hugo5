@@ -108,15 +108,20 @@ Depuis le sommet 2, on peut:
 * aller à 16 en vidant A dans B, jusqu'à ce que B soit plein.
 
 ```python
-G = {1: [6,14]
+D = {1: [6,14]
      2: [1,6,16]}
 ```
 
-**Q.e**: Compléter le dictionnaire G des sommets adjacents d'après les règles énoncées pour les transvasements. *Chercher un peu, puis voir la [Solution](../page62) si vous êtes bloqués.*
+**Q.e**: Compléter le dictionnaire D des sommets adjacents d'après les règles énoncées pour les transvasements. *Chercher un peu, puis voir la [Solution](../page62) si vous êtes bloqués.*
 
 Le script suivant permet d'établir la matrice d'adjacence à partir du dictionnaire D placé en paramètre:
 
 ```python
+D = {1: [6,14]
+     2: [1,6,16]
+     ...
+     }
+
 def matrice(D):
     cles = list(D.keys())
     n = len(cles)
@@ -130,6 +135,8 @@ def matrice(D):
                 line.append(0)
         M.append(line)
     return M
+
+>>> M = matrice(D)
 ```
 
 Et la fonction suivante, d'afficher la matrice sous un format compatible avec le logiciel [graphonline.ru](https://graphonline.ru/fr/)
@@ -142,7 +149,8 @@ def affiche(M):
             matrice_texte += str(elem)+ ','
         matrice_texte += '\n'
     print(matrice_texte)
-affiche(M)
+
+>>> affiche(M)
 ```
 
 Vous pouvez alors **copier** la matrice et créer un nouveau graphe à partir de celle-ci dans [graphonline.ru](https://graphonline.ru/fr/), faire **Graph > Adjacency Matrix** puis **coller**.
