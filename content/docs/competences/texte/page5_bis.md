@@ -160,6 +160,24 @@ On choisira une image libre d'être diffusée, comme par exemple celle sur le si
 <figcaption>Plate-forme de la Pnyx d'où parle l'orateur public. En arrière-plan, l'Acropole. (wikipedia)</figcaption>
 ```
 
+## Modifier la structure du document
+Pour placer l'image à droite du pragraphe, on va utiliser un container (`div`) qui va englober les 2 éléments à placer côte à côte:
+
+**Placer la balise `<div style="display:flex;">`** avant le paragraphe:
+
+```html
+<div style="display:flex">
+<p class="gauche">L'agora devient le centre social ...
+le cœur de la démocratie.</p>
+```
+
+Et **fermer** la balise `</div>` après l'objet `figure`:
+
+```html
+<figcaption>Plate-forme de la Pnyx ... (wikipedia)</figcaption>
+</figure>
+</div>
+```
 
 
 # Modifier les styles des éléments
@@ -173,8 +191,8 @@ Les instructions de style vont modifier les paramètres par défaut du navigateu
 <style>
 .titre{font-family: Papyrus, Herculanum, Party LET, Curlz MT, Harrington, fantasy;color: blue;font-size: 40px;text-align: center;}
 main {width: 80%;margin: 50px;background-color: hsla(0,70%,50%,0.3);padding: 0 20px 20px 20px;border: 5px solid black;}
-.gauche{display: inline-block;width:50%;float:left;}
-figure{display: inline-block;width:30%;float:right;}
+.gauche{width:50%;}
+figure{width:30%;}
 img{width:100%;}
 figcaption{font-size: 0.8em;font-style: italic;}
 a:visited{color: #0000ff;}
