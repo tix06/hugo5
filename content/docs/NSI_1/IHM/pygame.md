@@ -7,6 +7,7 @@ Title: IHM et Pygame
 * Cours sur l'IHM: [Lien](../pygameCours)
 
 # Escape Game en langage python-pygame
+## Script initial
 Un Escape Game est un jeu vidéo où il est question de s’échapper d’une pièce dans laquelle un joueur est enfermé. Pour cela, il fallait découvrir des éléments cachés dans le décor afin de trouver une clé qui permettrait au joueur de s’échapper de la pièce. 
 
 Vous allez créer votre jeu à l'aide du module [Pygame](../pygameCours), en langage python.
@@ -15,7 +16,7 @@ Voici un exemple de ce qu'il est possile de réaliser:
 
 {{< img src="../images/pg11.png" >}}
 
-Les images qui servent à l'exemple sont à télécharger depuis le dossier [source](../images/images_datas.zip).
+Les **images** qui servent à l'exemple sont à **télécharger** depuis le dossier [source](../images/images_datas.zip).
 
 Nous partirons du script initial suivant:
 
@@ -82,9 +83,34 @@ while running:
 pygame.quit()
 ```
 
+## Ajouter d'autres objets
 Vous pouvez aussi laisser cours à votre imagination, et dessiner vos propres images.
 
-## Conseils pour votre projet de TP (lecture 10 min)
+Par exemple, si vous voulez ajouter une clé, voici l'image en format *png* (transparence du fond):
+
+{{< img src="../images/cle.png" link="../images/cle.png" >}}
+
+Ajouter alors les instructions pour créer une surface et reduire sa taille (ZONE 1)
+
+```python
+cle = pygame.image.load("datas/images/cle.png")
+cle = pygame.transform.scale(cle, (60,27))
+```
+
+Pour créer un calque sur l'objet:
+
+```python
+rect2 = cle.get_rect()
+rect2.center = 80,115
+```
+
+Pour afficher l'image:
+
+```python
+screen.blit(cle,rect2)
+```
+
+## Conseils pour votre projet de TP
 
 ### Architecture recommandée pour votre escape game
 
@@ -93,19 +119,10 @@ Votre jeu devrait comporter ces éléments :
 1. **Image de fond** : Un décor de salle (chambre, bureau, etc.)
 2. **Objets interactifs** : Zones cliquables sur l'image (porte, livres, tableau, bouton de la télévision, etc.)
 3. **Zone de texte** : Affichage des descriptions et dialogues en bas de l'écran
-4. **Touches de commande** : Actions possibles (examiner, utiliser, inventaire, obtenir de l'aide, etc.)
-5. **Système d'état** : Gérer ce qui a été fait ou trouvé
+4. **Touches de commande ou clic sur un objet** : Actions possibles (examiner, utiliser, inventaire, obtenir de l'aide, etc.)
+5. **Système d'état** : Gérer ce qui a été fait ou trouvé: utiliser un dictionnaire pour chacun des objets (voir plus bas). Et modifier, lorsque l'on clique sur l'objet, les variables d'état de l'objet. Par exemple: `cle["ramasse"] = True`, ou `cle["visible"] = False` *(voir plus bas)*
 
-### Définir un scénario à l'aide de diagrammes
-Dans les zones 1 et 2, placer les variables utiles au jeu. Placer les différents textes à afficher.
 
-{{< img src="../images/zone3.png" >}}
-
-Dans la zone 3, prevoir les interactions avec les différents objets, ainsi que la modification des variables:
-
-{{< img src="../images/zone1.png" caption="Prévoir diagramme par objet ou par touche appuyée" >}}
-
-Dans la zone 5, prévoir l'affichage du texte, ou le nouveau placement des objets/images.
 
 ### Conseils de programmation
 
@@ -118,9 +135,7 @@ def afficher_fond():
 
 def afficher_texte(message):
     texte = font.render(message, True, (255, 255, 255))
-    screen.blit(texte, (50, 500))
-
-
+    screen.blit(texte, (0, 300))
 ```
 
 <!--
@@ -135,30 +150,58 @@ def verifier_clic_objets(pos_souris):
 ```
 -->
 
-<!--
-**Utilisez des dictionnaires pour vos objets**
+
+**Utilisez des dictionnaires pour vos objets**. 
+
+Vous limiterez ainsi l'emploi de trop nombreuses variables:
+
 ```python
-objets = [
-    {
+porte = {
         "nom": "porte",
-        "rect": pygame.Rect(300, 200, 150, 300),
-        "description": "Une lourde porte en bois",
-        "verrouille": True
-    },
-    {
+        "image": door1,
+        "x": 650,
+        "y": 150,
+        "largeur": 100,
+        "hauteur": 200,
+        "rect": rect1,
+        "visible": True,
+        "verrouille": True,
+        "description": "Une porte en bois"
+        }
+cle =   {
         "nom": "clé",
-        "rect": pygame.Rect(100, 400, 30, 15),
-        "description": "Une petite clé dorée",
-        "ramassé": False
-    }
-]
+        "image": cle,
+        "x": rect3.center[0],
+        "y": rect3.center[1],
+        "largeur": 60,
+        "hauteur": 27,
+        "rect": rect3,
+        "visible": False,
+        "ramasse": False,
+        "description": "Une clé dorée"
+        }
+...
 ```
--->
+
+**Définir un scénario à l'aide de diagrammes**
+
+Dans les zones 1 et 2, placer les variables utiles au jeu. Placer les différents textes à afficher.
+
+{{< img src="../images/zone3.png" >}}
+
+Dans la zone 3, prevoir les interactions avec les différents objets, ainsi que la modification des variables:
+
+{{< img src="../images/zone1.png" caption="Prévoir diagramme par objet ou par touche appuyée" >}}
+
+Dans la zone 5, prévoir l'affichage du texte, ou le nouveau placement des objets/images.
+
+Si vous utilisez un dictionnaire vous pouvez remplacer les variables `L`, `P`, `M` par exemple par `lampe["actionner"] = True/False`, `porte["verouille"] = True/False`, et `miroir["regarder"] = True/False`. Ce qui presente l'avantage d'être plus clair.
+
 
 ## Questions à se poser avant de commencer le TP
 
 1. Quel est le scénario de mon escape game ?
-2. Quels objets seront cliquables ?
+2. Quels objets ou quelles zones de l'image seront cliquables ?
 3. Quelles actions le joueur pourra-t-il faire ?
 4. Comment savoir si le joueur a gagné ?
 5. De quelles images ai-je besoin ?
