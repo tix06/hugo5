@@ -59,7 +59,7 @@ On s'aidera de la video de présentation{{< a link="https://www.youtube.com/watc
 
 On cherche maintenant à créer un système de 2 sous-réseaux locaux. Ces reseaux auront pour adresses: 198.168.0.0 et 192.168.2.0
 
-*C'est à dire que toutes les machines du réseau 198.168.0.0 auront en commun les 3 octets 198.168.0 et toutes les machines du reseau 198.168.1.0 auront en commun les octets 198.168.1.* 
+*C'est à dire que toutes les machines du réseau 198.168.0.0 auront en commun les 3 octets 198.168.0 et toutes les machines du reseau 198.168.2.0 auront en commun les octets 198.168.2.* 
 
 * Le sous-réseau 192.168.2.0 comportera un switch et 3 ordinateurs M4, M5 et M6. Ces machines auront pour adresses IP:
   * 192.168.2.1
@@ -156,7 +156,8 @@ On souhaite ajouter l’information suivante: Depuis la machine M1, du reseau 19
 > **Q3d** : nouvelle entrée dans la table:
 > * Quelle sera l'adresse passerelle depuis la machine M1?
 > * Quelle sera l'adresse de l'interface (table routage du routeur)?
-> * Quelle est la différence entre l’adresse de passerelle et l’adresse de l’interface ? A quoi se rapportent chacune d’entre elles ?
+
+*Remarque: il existe une différence entre l’adresse de passerelle et l’adresse de l’interface, qui sera expliquée avec le [cours de terminale](../TP_reseau_term/)* 
 
 
 ## Serveur web
