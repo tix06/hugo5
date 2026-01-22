@@ -33,13 +33,13 @@ Dans les 2 cas (méthode 1 ou 2): Bien sélectionner:
 Puis **Enregistrer** le fichier au format **xls** (ou **xlsx**) dans le même répertoire.
 Maintenant que nous sommes sur un fichier en format tableur, nous pouvons utiliser les fonctionnalités avancées de ce type de logiciel.
 
-## Rechercher et remplacer
+## Rechercher et remplacer: (facultatif)
 
 Commencer par franciser le fichier en utilisant les noms des descripteurs et des [prix en français](https://fr.wikipedia.org/wiki/Prix_Nobel#Disciplines_r%C3%A9compens%C3%A9es) (Physics
 -> Physique...). Pour cela utiliser la fonction Rechercher et
 Remplacer(`Menu Edition> Rechercher et Remplacer`)
   
-### Filtrage des données
+## Filtrage des données
 * Selectionner toutes les colonnes du tableau
 
 {{< img src="../images/nobels1.png" >}}
@@ -56,7 +56,7 @@ Remplacer(`Menu Edition> Rechercher et Remplacer`)
 
 > **Qu 2d.** Bilan: Quelle est la différence entre FILTRER et TRIER des données? Expliquer le rôle de chacune de ces fonctions en utilisant l'exemple de la Qu 2a. Rechercher le nom des instructions correspondante en langage SQL sur une base de données: [Lien 1: order by](https://sql.sh/cours/order-by), [Lien 2: where](https://sql.sh/cours/where)
 
-### Nouveau tableau statistique
+## Nouveau tableau statistique
 
 Nous allons maintenant créer un nouveau tableau pour rassembler des statistiques sur le genre des prix Nobel.
 
@@ -78,7 +78,7 @@ Dans une partie libre de la feuille, créer le tableau suivant:
 
 
 
-#### Nombre de femmes prix nobel Chimie
+### Nombre de femmes prix nobel Chimie
 Dans la cellule **Chimie** -> **femme**, écrire `=` puis `NB.SI.ENS(`
 
 La fonction `NB.SI.ENS` applique des critères aux cellules de plusieurs plages et compte le nombre de fois où tous les critères sont remplis.
@@ -100,10 +100,10 @@ Ainsi, pour savoir combien de "femme"-s ont obtenu le prix Nobel de Chimie, il y
 
 $$=NB.SI.ENS(B2:B1000;"female";C2:C1000;"Chemistry")$$
 
-#### Compléter le tableau
+### Compléter le tableau
 Pour chacune des cases des colonnes `femme` et `homme`, saisir les formules qui donnent les nombre de *femmes* et d'*hommes* pour chaque catégorie de prix Nobel. Utiliser la fonction `=NB.SI.ENS()`
 
-## Totaux
+### Totaux
 Dans les colonnes totaux (dernière colonne et dernière ligne), appliquer la fonction `SOMME` pour ajouter les valeurs sur une même ligne, ou sur une même colonne. [support microsoft](https://support.microsoft.com/fr-fr/office/somme-somme-fonction-043e1c7d-7726-4e80-8f32-07b23e057f89#:~:text=La%20fonction%20SUM%20ajoute%20des,des%20cellules%20A2%20%C3%A0%20A10.)
 
 Il est aussi possible d'utiliser une formule utilisant des opérateurs mathématiques (`+, -, /, *`) sur les cellules: `= A1 + A2` par exemple, pour additionner les valeurs des cellules `A1` et `A2`. 
@@ -112,7 +112,7 @@ Il est aussi possible d'utiliser une formule utilisant des opérateurs mathémat
 
 **Qu 3b.** Calculer dans une cellule de la feuille Excel, la proportion de *femmes* parmi les nobélisés (pourcentage). Donner le résultat, ainsi que la formule utilisée.
 
-### Graphique
+## Graphique
 
 Sélectionner les données calculées du nouveau tableau de statistiques pour créer un histogramme résumant les données.
 
