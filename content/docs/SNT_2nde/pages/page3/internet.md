@@ -9,7 +9,9 @@ Auparavant, le particulier s'équipait d'un ordinateur pour faire du traitement 
 Maintenant, c'est l'accès à internet qui est recherché, pour : 
 
 - avoir accès à des informations distantes
-- communication entre personnes (voir plus loin)
+- s'informer, ou rechercher de l'information
+- apprendre, se former
+- communiquer entre personnes 
 - divertissements interactifs (jeux, musique, vidéo à la carte)
 - commerce électronique (auquel participent même les institutions financières, mais aussi des services de braderie en ligne, entre particuliers, de consommateur à consommateur
 - commande d'un taxi ou d'un repas, avec suivi en temps réel du délai d'attente
@@ -20,7 +22,7 @@ Maintenant, c'est l'accès à internet qui est recherché, pour :
 ## Quel est votre terminal ?
 On entend par *terminal*, l'appareil que vous utilisez pour utiliser les services fournis par internet. Progressivement, l'ordinateur a reculé et a été remplacé par les smartphones, tablettes, assistant vocal ou montre connectées pour la plupart de ces services.
 
-{{< img src="../images/equipement.png" alt="equipement numerique" caption="equipement le plus utilisé pour se connecter à internet" >}}
+{{< img src="../images/equipement.png" alt="equipement numerique" caption="equipement le plus utilisé pour se connecter à internet en 2019" >}}
 
 ## une utilisation nomade
 Il y a une convergence des usages que l'on fait avec un ordinateur et un smartphone. Sauf qu'avec le smartphone, le reseau sans fil est un moyen d'avoir un bureau mobile.
@@ -33,21 +35,35 @@ La géolocalisation offre de nombreuses possibilités, comme le conseil des rest
 
 Mais les activités principales liées à l'utilisation d'un smartphone restent la consultation de page à l'aide d'un navigateur, et l'utilisation de messageries ou des réseaux sociaux : 
 
-{{< img src="../images/sondage1.png" alt="usage numerique" caption="Proportion de la population qui utilise leur téléphone mobile pour ..." >}}
+{{< img src="../images/sondage1.png" alt="usage numerique en 2019" caption="Proportion de la population qui utilise leur téléphone mobile pour ..." >}}
 # La communication par internet
 **Des formes de communication interpersonnelles :**  (entre 2 personnes ou plus)
 
+- Le mail a été la première manière de s'envoyer des messages, et reste aujourd'hui la forme la plus utilisée dans le milieu professionnel.
 - Il y a eu au démarrage un fort engouement des adolescents pour *la messagerie instantanée* (inspiré du programme talk de Unix); les *chat rooms*, salles de conversation autorisant un groupe de personnes à taper des messages visibles par tous. (sorte de bavardage). Les formes de communication ne s'y limitent d'ailleurs pas au texte, mais il y a des photos ou de courtes vidéos qui peuvent aussi y être *partagées*.
 - Les *forums de discussion* : où la communication ne fonctionne pas en temps réel, mais permet de poster un message que tous les membres peuvent lire
-- le *peer to peer* : communication entre systèmes homolgues (pairs) : différents du modèle client-serveur. Les utilisateurs forment un groupe indéfini. L'échange se fait sur pied d'egalité et les rôles client-serveur ne sont pas assignés de façon fixe. Chaque utilisateur maintient sa propre base de données ainsi qu'une liste des autres personnes dans le voisinage participant au système. Jeux en réseau, courrier électronique sont d'autres exemples de peer to peer.
+- les applications de *messagerie instantanée*, avec la possible création de groupes
+- les applications de *réseaux sociaux*, qui diffèrent des forums par une communication plus immédiate et éphemère, mais aussi des messageries instantanée par la possibilité de naviguer sur le net, se focaliser sur certains types de médias (photo, video), de s'abonner à certains comptes, ...
+- le *peer to peer* : communication entre systèmes homologues (pairs) : différents du modèle client-serveur. Les utilisateurs forment un groupe indéfini. L'échange se fait sur pied d'egalité et les rôles client-serveur ne sont pas assignés de façon fixe. Chaque utilisateur maintient sa propre base de données ainsi qu'une liste des autres personnes dans le voisinage participant au système. Jeux en réseau, courrier électronique sont d'autres exemples de peer to peer.
 - téléphonie, visiophonie, radio via internet.
 
 
 <a href="https://fr.statista.com/statistiques/491792/france-reseaux-sociaux-messageries-instantanees-penetration/" rel="nofollow"><img src="https://fr.statista.com/graphique/1/491792/france-reseaux-sociaux-messageries-instantanees-penetration.jpg" alt="Statistique: Classement des réseaux sociaux et messageries instantanées ayant le plus fort taux de pénétration en France en 2018 | Statista" style="width: 100%; height: auto !important; max-width:1000px;-ms-interpolation-mode: bicubic;"/></a><br />Trouver plus de statistiques sur {{< a link="https://fr.statista.com/statistiques/491792/france-reseaux-sociaux-messageries-instantanees-penetration/" caption="" >}}
-# Les données qui circulent sur internet
 
-## Doit-on se protéger du contenu diffusé sur internet ?
-### Aspects societaux, politiques et moraux
+
+# La recherche d'informations sur le net
+La recherche d'information passe le plus souvent par:
+
+- un moteur de recherche généraliste
+- un moteur de recherche spécialisé
+- un assistant LLM
+
+Ces notions seront developpées dans un autre [chapitre](/docs/SNT_2nde/pages/page4/web/).
+
+# Les informations qui circulent sur internet
+
+
+## Aspects societaux, politiques et moraux
 
 Sur des reseaux avec des sujets aux thematiques techniques, les échanges entre personnes ne génèrent pas de problemes.
 
@@ -78,7 +94,7 @@ Une autre source de désaccord, liée à l'utilisation du contenu des messages s
 </figure>
 {{< img src="../images/maitriser.png" alt="maitriser ses données" link="https://www.cnil.fr/fr/maitriser-mes-donnees" >}}
 
-### fausses informations
+## fausses informations
 Les reseaux permettent d'envoyer des messages anonymes. On peut ainsi dénoncer quelqu'un sans risquer de represailles. Mais, heureusement, dans une societé democratique, une accusation ne fait pas preuve et toute personne a le droit d'être confronté à son accusateur.
 
 Internet permet la diffusion d'informations de manière *virale* : 
@@ -92,7 +108,7 @@ Internet permet la diffusion d'informations de manière *virale* :
 > Important : Toujours vérifier une information. Quelle est sa source ? Quelle est la qualité du média ou de la personne qui la diffuse ?
 
 *{{< a link="https://www.lemonde.fr/verification/" caption="Le Décodex du journal en ligne Le Monde" >}}*{{< a link="https://www.lumni.fr/programme/data-science-vs-fake" caption="Le site Lumni" >}}
-### Des problèmes de sécurité
+## Des problèmes de sécurité
 L'internet c'est aussi aussi des problemes de securité, avec de nombreuses données non chiffrées, ce qui ouvre la possibilté à de nombreux méfaits : 
 
 - recevoir du courrier electronique non sollicité (spam). Notre adresse est revendue à des sociétés qui s'adonnent au marketing sauvage.
@@ -118,14 +134,21 @@ Ensuite, on vous demande:
 
 Il existe heureusement des recours, au cas où cette mésaventure vous arrive, mais cela vous aura porté préjudice. Le mieux est de toujours adopter une posture de doute lorsqu'un tel mail vous parvient...
 
-### La diffusion d'ouvrages artistiques
+## La diffusion libre d'ouvrages artistiques
 
 L'utilisation d'un service de téléchargement ou de streaming illégal entraine la violation des droits d'auteur avec la transmission de musique et video numerique.
 
 L'objet étant numérique, cela ne constitue pas à proprement parler d'un vol lorsque l'on s'en procure une copie. On peut d'ailleurs en réaliser un nombre illimité de copies numériques. Un fichier musical, une vidéo, une image ou un livre numérique constituent des biens non *rivaux*. Mais l'existance de *droits d'auteurs* empêche normalement la libre diffusion de l'oeuvre, et les personnes qui pratiquent cet échange enfreignent la loi.
 
-### Le coût énergétique d'utilisation d'internet
+## Le coût énergétique de l'utilisation d'internet
 Un [article interessant du CNRS](https://lejournal.cnrs.fr/articles/numerique-le-grand-gachis-energetique) montre que l'usage de services dits *dématérialisés* n'est pas sans conséquences au niveau de la consommation énergétique. 
+
+# Etre présent sur le web
+**Faut-il créer son site web ou être présent sur les reseaux sociaux?**
+
+Les deux:
+
+La bonne pratique est de [créer du contenu sur votre site](/docs/SNT_2nde/pages/page4/web1/) ou page web et ensuite de le diffuser sur les réseaux sociaux. En effet, la communication sur les réseaux sociaux est éphémère. Si votre tweet ou votre post n’est pas vu au moment de sa publication, ce contenu sera perdu tandis que le contenu sur votre site internet restera et contribuera au [bon référencement](/docs/SNT_2nde/pages/page4/web/) naturel de celui-ci.
 
 # Aspects techniques : fonctionnement d'internet
 
@@ -166,7 +189,7 @@ Voir la page [fonctionnement d'internet, prococoles](/docs/SNT_2nde/pages/page3/
 * {{< a link="https://www.economie.gouv.fr/files/files/directions_services/cge/barometre-numerique-2019.pdf" caption="Etude : le baromètre du numérique 2019" >}}
 * {{< a link="https://www.lemonde.fr/verification/" caption="Le Décodex du journal en ligne Le Monde" >}}
 * {{< a link="https://www.lumni.fr/programme/data-science-vs-fake" caption="data sciences vs fake news sur la chaine Lumni" >}}
-* {{< a link="https://fr.statista.com" caption="Site avec visuels sur des enquetes statisiques : Statista.com" >}}
+* {{< a link="https://fr.statista.com" caption="Site avec visuels sur des enquetes statistiques : Statista.com" >}}
 * {{< a link="https://www.cnil.fr/fr" caption="La CNIL :" >}}* conglomérat de réseaux (interstice.info) : [https://interstices.info/internet-le-conglomerat-des-reseaux/](https://interstices.info/internet-le-conglomerat-des-reseaux/)
 * Le web :[https://isn-icn-ljm.pagesperso-orange.fr/web/co/module_WEB.html](https://isn-icn-ljm.pagesperso-orange.fr/web/co/module_WEB.html)
 * article du CNRS, [Numérique : le grand gâchis énergétique](https://lejournal.cnrs.fr/articles/numerique-le-grand-gachis-energetique)

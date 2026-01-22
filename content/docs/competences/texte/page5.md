@@ -51,7 +51,7 @@ On va résoudre certains de ces problèmes en déclarant le format d'encodage de
 	<title>page principale</title>
 </head>
 <body>
-
+<section>
 Le plastique, une « antiquité » !
 Plusieurs siècles av. J.C, les hommes utilisaient déjà ...
 ```
@@ -60,6 +60,7 @@ Plusieurs siècles av. J.C, les hommes utilisaient déjà ...
 * Ajouter aussi les lignes suivantes en FIN de document:
 
 ```html
+</section>
 </body>
 </html>
 ```

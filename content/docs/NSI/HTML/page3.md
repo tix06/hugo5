@@ -3,7 +3,17 @@ Title : HTML theorie
 ---
 
 # Les langages web
-## des langages interprétés
+## Une conception similaire à l'edition d'un document Word
+On utilise des logiciels d'edition, comme Word, Writer, ou Page, pour créer des documents qui seront le plus souvent imprimés (ou mis dans un format pdf).
+
+L'edition va consister à placer du contenu, le structurer, le mettre en forme. Et pour réaliser ceci, la bonne pratique, c'est justement de séparer ces 3 moments, tout en utilisant le même logiciel.
+
+{{< img src="../images/contenu_structure.png" link="https://youtu.be/BqY3_6egjuI?si=RxR-cx2_wM8AyTHr" caption="video - youtube" >}}
+
+
+Avec les langages web, HTML et CSS, on edite le document pour le web avec cette même pratique: en séparant les moments (et donc le code) prévus pour ajouter la structure, et ceux prévus pour gérer le style du document.
+
+## Des langages interprétés: rôle du navigateur
 
 HTML : HyperTextMarkup Langage; CSS : Cascading StyleSheets; Javascript sont des langages interprétés par le navigateur, côté client. Ces 3 langages, en combinaison, vont permettre de créer des *sites internet*.
 
