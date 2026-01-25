@@ -2,7 +2,7 @@
 Title: introduction à CSS
 ---
 
-* Travail pratique sur le langage CSS: [Lien vers le TP](/docs/SNT_2nde/pages/page4/web6/)
+* Voir travail pratique sur le langage CSS
 
 # Bases en css
 les fondamentaux du css: cascade et héritage: [MDN](https://developer.mozilla.org/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
@@ -220,9 +220,6 @@ On peut ajouter une déclaration CSS dans le début du fichier. Par exemple pour
 
 
 
-# TP sur le langage CSS
-[Lien vers le TP](/docs/SNT_2nde/pages/page4/web6/)
-
-
 # Liens
 * complements sur les listes [developer.mozilla.org](https://developer.mozilla.org/fr/docs/Web/CSS/list-style)
+* [exemple de TP css](/docs/SNT_2nde/pages/page4/web6/)

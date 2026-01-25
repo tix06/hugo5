@@ -5,7 +5,6 @@ Title: html et design web
 # Encodage des caracteres et header en html
 Dans un fichier, les données sont écrites en binaire. Même les caractères sont exprimés sous forme numérique. Il existe plusieurs tables de correspondance lettre - chiffre. La plus ancienne est celle appelée ASCII. Mais la plus utile sera celle *utf-8*.
 
-*Pour approfondir: page https://sebsauvage.net/comprendre/ascii/*
 
 ## Code ASCII
 Le code ASCII définit la correspondance entre symboles et nombres jusqu'au nombre 127. Les caractères sont représentés par une série de 7 chiffres, en binaire. Les mots ont alors une longueur multiple de 7 chiffres binaires, puisque chaque lettre a une longueur fixe. 
@@ -221,4 +220,7 @@ Vous allez assembler ces connaissances pour concevoir une page comme celle donn�
 
 {{< img src="../images/css10.png" caption="Page complète, avec styles" >}}
 
+# Approfondir
+* cours: les bases en CSS: [Lien](/docs/NSI/CSS/page1/)
+* compléments: [positionnement en CSS](/docs/NSI/CSS/page2/)
 

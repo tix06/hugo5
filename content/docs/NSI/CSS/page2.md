@@ -366,86 +366,14 @@ Exemple de code html, css respectant la mise en page du saint graal, et de mani�
 
 **Exemple :** Vous pourrez voir ici l'effet *responsive* en réduisant ou augmentant la largeur de la fenêtre.
 
-<main role="main" class="demo">
-<h1>Une mise en page <i>responsive</i> sur trois colonnes.</h1>
 
-<header class="demoHeader">HEADER</header>
-<div class="demoMain">TOP/CENTER<br>(ex: main content)</div>
-<div class="demoA">MIDDLE/LEFT<br>(ex: menu)</div>
-<div class="demoB">BOTTOM/RIGHT<br>(ex: aside)</div>
-<footer class="demoFooter">FOOTER
-<nav>
-	<h2>Menu.</h2>
-	<ul>
-		<li class="maliste"{{< a link="fr" caption="" >}}		<li class="maliste"{{< a link="fr" caption="" >}}		<li class="maliste"{{< a link="fr" caption="" >}}	</ul>
-</nav>
-</footer>
-
-</main>
-
-<footer>
-
-
-</footer>
-
-<style type="text/css">
-/*** 3 Columns ***/
-.demo * {
-	box-sizing: border-box;
-	text-align: center;
-}
-.demo div {
-	height: 12em;
-}
-.demoHeader,
-.demoFooter {
-	background: #aaa;
-}
-/*****
-Colors
-*****/
-.demoMain {
-	background: #ddd;
-}
-.demoA {
-	background: #abc;
-}
-.demoB {
-	background: #def;
-}
-
-.maliste {
-	display: inline;
-	list-style: none; 
-	margin: 0.2;
-}
-/*********************
-Media queries examples
-**********************/
-@media screen and (min-width: 800px), handheld and (min-width: 800px) {
-.demo div {
-	display: inline-block;
-	width: 33.33%;
-}
-.demoA {
-	float: left;
-}
-.demoB {
-	float: right;
-}
-}
-	</style>
-	
-**Code complet :**
-
-
-```css
+```html
 <!doctype html>
 <head>
-<meta charset="UTF-8" />
-<title>Une mise en page responsive sur trois colonnes</title>
+	<meta charset="UTF-8" />
+	<title>Une mise en page responsive sur trois colonnes</title>
 	
-<style type="text/css">
+	<style type="text/css">
 /*** 3 Columns ***/
 .demo * {
 	box-sizing: border-box;
@@ -491,9 +419,8 @@ Media queries examples
 	float: right;
 }
 }
-</style>
+	</style>
 </head>
-
 <body>
 <main role="main" class="demo">
 <h1>Une mise en page <i>responsive</i> sur trois colonnes.</h1>
@@ -506,7 +433,10 @@ Media queries examples
 <nav>
 	<h2>Menu.</h2>
 	<ul>
-		<li{{< a link="fr" caption="" >}}		<li{{< a link="fr" caption="" >}}		<li{{< a link="fr" caption="" >}}	</ul>
+		<li><a hreflang="fr" href="/lab/">lab</a></li>
+		<li><a hreflang="fr" href="/">accueil</a></li>
+		<li><a class="contact" hreflang="fr" href="/contact">contact</a></li>
+	</ul>
 </nav>
 </footer>
 
@@ -520,6 +450,7 @@ Media queries examples
 </html>
 ```
 
+<!--
 <div class="essentiel">
   <p class="entete">
     L'essentiel à retenir
@@ -557,6 +488,7 @@ Media queries examples
     </ul>
   </div>
 </div>
+-->
 
 # Liens
 * [https://developer.mozilla.org/fr/docs/Web/CSS/display](https://developer.mozilla.org/fr/docs/Web/CSS/display)
@@ -569,6 +501,7 @@ Media queries examples
 
 * Best practices: optimiser le chargement des pages:  [github.com/cnumr/best-practices](https://github.com/cnumr/best-practices/blob/main/chapters/BP_037_fr.md)
 
+* Tutos, tester et jouer avec flexbox: [believemy.com](https://believemy.com/fr/r/le-guide-complet-sur-flexbox-css)
 
 
 
