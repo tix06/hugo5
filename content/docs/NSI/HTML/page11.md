@@ -2,11 +2,12 @@
 Title: html et design web
 ---
 
-# Encodage des caracteres et header en html
+# Design d'une page Web
+## Rappels sur l'encodage des caracteres et header en html
 Dans un fichier, les données sont écrites en binaire. Même les caractères sont exprimés sous forme numérique. Il existe plusieurs tables de correspondance lettre - chiffre. La plus ancienne est celle appelée ASCII. Mais la plus utile sera celle *utf-8*.
 
 
-## Code ASCII
+### Code ASCII
 Le code ASCII définit la correspondance entre symboles et nombres jusqu'au nombre 127. Les caractères sont représentés par une série de 7 chiffres, en binaire. Les mots ont alors une longueur multiple de 7 chiffres binaires, puisque chaque lettre a une longueur fixe. 
 
 Cette longueur de 7 bits est suffisante pour repésenter de manière unique chaque caractère latin.
@@ -14,7 +15,7 @@ Le problème de l'encodage ASCII est qu'il ne permet pas de représenter assez d
 
 Dans un document HTML, on pourra tout de même afficher correctement ces caractères, mais il faudra utiliser une *entité* HTML, c'est à dire une combinaison de symboles connus par le navigateur comme par exemple: `&eacute;` pour la lettre `é`.
 
-## Unicode
+### Unicode
 L'UNICODE est une format d'encodage qui permet de représenter **tous les caractères** des différentes langues. Il est compatible avec les codes ASCII, les caractères latins étant représentés par les mêmes codes binaires. Les autres caractères vont s'ajouter avec des codes plus longs.
 
 L'Unicode se décline en utf-8, utf-16 et utf-32.
@@ -263,7 +264,16 @@ body -|
                                                                        |-figure
 ```
 
-*Aide:* 
+Analyser la structure de la page:
+
+{{< img src="../images/marignan4.png" >}}
+
+> Question 1:
+> * Quels sont les éléments correspondants à chacune de ces boites?
+> * Quel est l'élément directement parent des boites 2 et 3?
+> * Quel est le parent qui contient l'ensemble de ces boites? (mais qui n'est pas `body`)?
+
+*Aide pour le code CSS:* 
 
 * Pour centrer l'élément `main`, qui est le fils direct de `body`, placer les règles css suivantes:
 
@@ -303,10 +313,11 @@ header {
 ## Outil d'exploration du navigateur
 Ouvrir l'outil d'exploration (inspecteur). 
 
-> Relever les règles CSS qui sont appliquées à `.colonnes`. Faire un tableau en 3 colonnes repondant aux questions suivantes:
+> Question 2: Relever les règles CSS qui sont appliquées à `.colonnes`. Faire un tableau en 3 colonnes repondant aux questions suivantes:
 > * Quelles règles lui sont directement appliquées, 
 > * quelles règles sont héritées (et de quel élément vient cet héritage), 
 > * quelles règles ne sont pas appliquées.
+
 
 
 # Approfondir

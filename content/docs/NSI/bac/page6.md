@@ -247,6 +247,43 @@ D. Quel est le chemin le plus court pour aller de F à G?
 
 E. Même question, mais cette fois pour aller de H à K.
 
+# bac 2024 metropole1 exercice 2
+Cet exercice traite de protocoles de routage, de sécurité des communications et de
+base de données relationnelle.
+Une agence de voyage propose des croisières en bateau. Chaque croisière a un nom
+unique et passe par quatre escales correspondant à des villes qui ont elles aussi des noms différents.
+Pour gérer les réservations de ses clients, l’agence utilise une base de données. 
+
+**Partie A**
+
+L’agence de voyage possède deux bureaux distincts.
+Elle passe par un prestataire de service qui héberge sa base de données et utilise un système de gestion de base de données relationnelle.
+Vous trouverez ci-après un schéma du réseau entre les deux bureaux de l’agence de
+voyage et le prestataire.
+On peut y voir les différents routeurs (nommés de A à I) ainsi que le coût des liaisons entre eux.
+
+{{< img src="../images/page6_9.png" caption="Topologie du réseau" >}}
+
+1. Donner deux services rendus par un système de gestion de bases de données
+relationnelles.
+
+Le protocole RIP (Routing Information Protocol) est un protocole de routage qui
+minimise le nombre de routeurs par lesquels les paquets transitent.
+
+Le protocole OSPF (Open Shortest Path First) est un protocole de routage qui
+minimise le coût du transit des paquets. Ce coût s'evalue grâce à la loi:
+
+$$cout = \tfrac{18^8}{Debit}$$
+
+2. Donner la route suivie par une requête issue du bureau numéro 1 jusqu’au
+prestataire si on utilise le protocole RIP.
+3. Le debit d'une liaison, utilisé pour le calcul du coût, s'exprime en bits par seconde. Donner une définition de ce qu'est le *débit*
+4. Calculer le coût pour une liaison de débit 100 Mb par s. *(fast ethernet)*
+5. Donner les deux routes que pourrait suivre une requête issue du bureau numéro
+2 jusqu’au prestataire si on utilise le protocole OSPF. Donner le coût de chaque
+route.
+
+
 # bac 2021 candidat libre exercice 3
 La commande UNIX `ps` présente un cliché instantané des processus en cours d’exécution.
 
