@@ -218,9 +218,98 @@ Vous savez maintenant positionner les éléments dans le flux vertical, horizont
 
 Vous allez assembler ces connaissances pour concevoir une page comme celle donnée ci-dessous:
 
-{{< img src="../images/css10.png" caption="Page complète, avec styles" >}}
+{{< img src="../images/css10.png" caption="Page complète, avec paragraphes, image et colonnes" >}}
+
+## Placer un bandeau de navigation
+Vous allez ajouter un bandeau à gauche de `section` pour naviguer entre les différentes pages de votre dossier.
+
+On peut utiliser une nouvelle balise *container* qui s'appelera `aside`. Il faudra placer cette balise, ainsi que celle appelée `section` dans un container parent, par exemple `div class="principale">`.
+
+L'élément `aside` contiendra les liens vers les différentes pages HTML de votre projet:
+
+```html
+  <aside>
+    <ul>
+      <li><a href="/">page 1</a></li>
+      <li><a href="/">page 2</a></li>
+      <li><a href="/">page 3</a></li>
+    </ul>
+  </aside>
+```
+
+Les 2 éléments `aside` et `section` vont alors se placer côte à côte avec la règle CSS:
+
+```css
+.principale {
+  display: flex;
+}
+```
+
+{{< img src="../images/marignan3.png" caption="page complète avec bandeau de navigation" >}}
+
+La structure du document devrait être alors:
+
+```
+body -|
+      |-main-|-header
+             |-div class="principale"-|
+                                      |-aside
+                                      |-section-|
+                                                |-h3
+                                                |-p
+                                                |-p
+                                                |-div class="colonnes"-|
+                                                                       |-p
+                                                                       |-figure
+```
+
+*Aide:* 
+
+* Pour centrer l'élément `main`, qui est le fils direct de `body`, placer les règles css suivantes:
+
+```css
+body{
+  display:flex;
+  justify-content: center;
+  color: #4e5140;
+  text-align:justify;
+}
+main{
+  width: 80%;
+}
+```
+
+* Pour le bandeau supérieur, il s'agit de l'élément `header`, pour lequel il faudra ajouter:
+
+```css
+header {
+  border-radius: 15px 15px 0 0;
+  background-color: #e35f10;
+  margin: 0;
+  border:solid 0.5px;
+  text-align:center;
+}
+```
+
+* Pour les 2 containers `div`, ajouter la règle suivante:
+
+```css
+.principal, .colonnes {
+  display:flex;
+}
+```
+
+
+## Outil d'exploration du navigateur
+Ouvrir l'outil d'exploration (inspecteur). 
+
+> Relever les règles CSS qui sont appliquées à `.colonnes`. Faire un tableau en 3 colonnes repondant aux questions suivantes:
+> * Quelles règles lui sont directement appliquées, 
+> * quelles règles sont héritées (et de quel élément vient cet héritage), 
+> * quelles règles ne sont pas appliquées.
+
 
 # Approfondir
 * cours: les bases en CSS: [Lien](/docs/NSI/CSS/page1/)
-* compléments: [positionnement en CSS](/docs/NSI/CSS/page2/)
+* compléments: [positionnement en CSS](/docs/NSI/CSS/page2/) avec display inline block
 

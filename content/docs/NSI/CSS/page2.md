@@ -28,7 +28,8 @@ Il est donc inutile pour un élément block de définir une largeur ou de lui do
 
 {{< img src="../images/block.jpg" alt="display : block" caption="display : block" >}}
 ### Exemple utilisant le display block
-Les boites de texte *l'essentiel à retenir* pour ce site utilisent de éléments `div` ou `p` qui s'empilent grâce à leur display `block`. 
+{{< img src="../images/a_retenir.png" caption="éléments de display block" >}}
+Tous les éléments de cet exemple, `div`, `p`, `ul`, `li` s'empilent grâce à leur display `block`, valeur par defaut. 
 
 <div class="essentiel">
   <p class="entete">
@@ -93,7 +94,9 @@ Voici le code HTML et CSS utilisé :
 
 
 **Remarque :**
-Pour mettre côte à côte des éléments de display `block`, il faudra utiliser la propriété `inline` et eventuellement `float` (voir plus loin).
+Pour mettre côte à côte des éléments de display `block`, il faudra utiliser la règle `display:inline` et eventuellement `float` (voir plus loin).
+
+{{< img src="../images/inline.png" caption="disposition des éléments de liste en inline" >}}
 
 ## Éléments de niveau Inline
 Exemples d'éléments inline : `a`, `span`
@@ -265,30 +268,7 @@ Le code complet est donné en bas de document, avec l'exemple du *Holy Grail*
 
 * Pour l'élément fils, `bloc` : centrer celui-ci avec les règles : `display: inline-block;`, et `vertical-align: center;`
 
-<style>
-.conteneur {
-	background-color:#ccc;
-	width:400px;
-	height:200px;
-	line-height:200px;
-	text-align:center; /* centrage horizontal */ }
 
-	.bloc {
-	width:100px; /* largeur du bloc */
-	padding:10px; /* aération interne du bloc */
-	border:1px solid #fff;
-	vertical-align:middle;
-	display:inline-block;
-	line-height:1.2; /* on rétablit le line-height */
-	text-align:left; /* ... et l'alignement du texte */ }
-	</style>
-
-<div class="conteneur">
-	<div class="bloc">
-		<h3>Kikoo !</h3>
-		<p>Lorem ipsum [...]</p>
-	</div>	
-</div>
 
 ```html
 <style>
@@ -316,6 +296,28 @@ Le code complet est donné en bas de document, avec l'exemple du *Holy Grail*
 	</div>	
 </div>
 ``` 
+
+{{< img src="../images/kikoo.png" >}}
+
+
+## Display: flex
+Noter qu'il est possible d'utiliser la règle `display:flex`. Ce qui a egalement pour rôle de modifier le flux de l'affichage des éléments fils. Cette technique, plus simple, sera traitée en TP: [positionnement des objets](/docs/NSI/HTML/page11/).
+
+Un exemple de positionnement avec éléments placés côte à côte:
+
+{{< img src="/docs/NSI/HTML/images/marignan3.png" caption="page complète avec bandeau de navigation, utilisant display:flex" >}}
+
+Noter que la règle `display:flex` peut aussi faciliter le centrage d'un élément par rapport à son parent. Le script CSS ci-dessous montre la simplicité de la méthode, comparée à celle utilisant le `display: inline-block` vue plus haut:
+
+```css
+.conteneur {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+```
+
+Cette propriété va placer l'élément fils centré par rapport au parent, sans que celle-ci soit héritée, ce qui présente un gros avantage (il n'est plus necessaire de rétablir l'alignement gauche par defaut du fils).
 
 # Position
 
