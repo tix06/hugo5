@@ -6,7 +6,7 @@ Title : BDR
 
 **Le langage de requêtes:**
 * TP tableur sur les prix Nobels. Opérations de recherche, filtre et tri sur une table: [Lien](/docs/competences/calc/page3)
-* Cours langage SQL et TD sur une base de données de prenoms: [Lien](/docs/NSI/bases/page7/)
+* Cours langage SQL et TD sur une base de données de prenoms: [Lien](/docs/NSI/bases/page7/), exercices: [pdf](/pdf/NSI/BDD2_exercices_sql_nsi.pdf)
 
 **La structuration des données:**
 * Bases de données, règles pour construire une BDD en plusieurs tables, TP sur la creation d'une BDD cinéma (Base de Libre Office): [Lien](/docs/NSI/bases/page2/)

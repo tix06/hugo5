@@ -5,7 +5,7 @@ Title: sql
 
 **Le langage de requêtes:**
 * TP tableur sur les prix Nobels. Opérations de recherche, filtre et tri sur une table: [Lien](/docs/competences/calc/page3)
-* Cours langage SQL et TD sur une base de données de prenoms: [Lien](/docs/NSI/bases/page7/)
+* Cours langage SQL et TD sur une base de données de prenoms: [Lien](/docs/NSI/bases/page7/), exercices: [pdf](/pdf/NSI/BDD2_exercices_sql_nsi.pdf)
 
 **La structuration des données:**
 * Bases de données, règles pour construire une BDD en plusieurs tables, TP sur la creation d'une BDD cinéma (Base de Libre Office): [Lien](/docs/NSI/bases/page2/)
@@ -170,6 +170,9 @@ Et limiter le nombre de lignes à 10 par exemple:
 SELECT * FROM Table_notes LIMIT 10
 ```
 
+## `SELECT DISTINCT <attributs> FROM nom_table` 
+L'ajout du mot-clé DISTINCT, ne va retourner qu'une seule fois les lignes pour chaque valeur d'une colonne donnée. Il n'y aura pas de doublon, seule la première occurence est retournée.
+
 ## `WHERE <condition>`
 La clause WHERE permet de SELECTIONNER des lignes à partir de conditions dans les requêtes, mais aussi de realiser des JOINTURES (voir plus loin)
 
@@ -236,6 +239,21 @@ Sinon par ordre descendant: `ORDER BY Math DESC`
 > Exercice: Ecrire une requête qui calcule la moyenne des notes obtenues par écrivain sur la table Romans et qui classe ces auteurs par ordre de note moyenne décroissante.
 
 *Remarque:* On peut aussi rajouter une *clause* sur le nombre de lignes retournées avec `LIMIT <nombre>` Très pratiques pour de grandes tables.
+
+## 'GROUP BY ... HAVING`
+La clause HAVING permet d'effectuer une selection sur des valeurs issues de regroupements.
+
+Par exemple, on ne pourra pas écrire:
+
+```sql
+select count(*) from UEFA group by pays where count(*)>18
+```
+
+mais: 
+
+```sql
+select count(*) from UEFA group by pays having count(*)>18
+```
 
 ## `WHERE <colonne> LIKE <motif>` et `WHERE <colonne> IN <tuple>`
 ### LIKE

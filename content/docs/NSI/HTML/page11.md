@@ -313,12 +313,14 @@ header {
 ## Outil d'exploration du navigateur
 Ouvrir l'outil d'exploration (inspecteur). 
 
-> Question 2: Relever les règles CSS qui sont appliquées à `.colonnes`. Faire un tableau en 3 colonnes repondant aux questions suivantes:
+> Question 2: Relever les règles CSS qui sont appliquées au paragraphe de la boite 4 (voir plus haut). Faire un tableau en 3 colonnes repondant aux questions suivantes:
 > * Quelles règles lui sont directement appliquées, 
 > * quelles règles sont héritées (et de quel élément vient cet héritage), 
 > * quelles règles ne sont pas appliquées.
 
+Puis repondez à la question:
 
+> Question 3: Même travail, mais cette fois pour les lien `<a>` de ce même paragraphe.
 
 # Approfondir
 * cours: les bases en CSS: [Lien](/docs/NSI/CSS/page1/)
