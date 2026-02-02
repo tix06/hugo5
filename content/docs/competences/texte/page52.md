@@ -2,7 +2,7 @@
 Title: mon film prefere
 ---
 
-# Créez votre page web
+# Créer une page web
 Le but de cet exercice est de réaliser une page HTML de présentation de *votre film préféré*. Cette page sera simple. On pourra piocher les informations de votre film sur des bases de données en ligne de films telles que IMDb, AlloCiné, Wikipédia...
 
 L'objectif est de réaliser une page qui pourrait présenter les informations comme ceci:
@@ -27,6 +27,9 @@ Dans un premier temps :
 	<meta charset="utf-8">
 	<title>page principale</title>
 </head>
+<style>
+	/* placer ici vos déclarations CSS*/
+</style>
 <body>
 <!-- le contenu de votre page web. 
 Ceci est un commentaire et peut être effacé.
@@ -95,13 +98,24 @@ Le document contiendra les éléments suivants:
 
 > Méthode: Utilisez les balises `<p> ... </p>` pour placer des informations dans un paragraphe (par exemple pour le résumé)
 
-### Ajouter une image
+### Créer des liens hypertextes
+On l'a vu précédemment, les liens hypertextes sont la base du Web. Voyons comment réaliser ces liens avec du HTML. Un lien permet simplement de se déplacer vers une autre page HTML.
+
+`<a>` désigne une ancre, c'est-à-dire un lien vers une cible de destination. Cette balise entoure généralement un mot (une image, un paragraphe, un titre, ...) qui devient le texte 'support du lien' hypertexte.
+
+La syntaxe est :
+
+`<a href="adresse_du_lien_hypertexte">support_du_lien</a>`
+
+Dans la partie Sources des informations et médias, ajouter le ou les site·s où vous avez pris vos informations et l'affiche en créant un lien vers le ou les site·s en question.
+
+## Ajouter une image
 
 * Depuis un site web, télécharger le fichier image du film en faisant un clic-droit dessus Enregistrer l'image sous... Enregistrez ce fichier dans le dossier images crée précédemment.
 
 * Nommez cette image affiche.jpg, ou affiche.png ou encore affiche.webp selon le format initial du fichier image.
 
-Pour ajouter une image dans une page HTML, il faut utiliser la balise `<img src="chemin vers l'image"/>`. 
+Pour ajouter une image dans une page HTML, il faut utiliser la balise `<img src="image/affiche.png"/>`. 
 
 `chemin vers l'image` est le chemin à fournir à partir du fichier HTML. Si l'image se trouve dans le dossier `images`, et qu'elle s'appelle `affiche.png`, le chemin est `images/affiche.png`
 
@@ -109,37 +123,73 @@ Pour ajouter une image dans une page HTML, il faut utiliser la balise `<img src=
 
 * Ajoutez l'affiche à votre page web en ajoutant la ligne de code HTML adéquate. 
 
-* Si votre affiche est trop grande, on peut demander au navigateur de réduire sa largeur en pixels (width) ou sa hauteur en pixels (height). On ajoute alors de nouveaux *attributs* à la balise `img` de la manière suivante: `<img src="chemin vers l'image" width="taille en pixels" />`
+* Si votre affiche est trop grande, on peut demander au navigateur de réduire sa largeur en pixels (propriété CSS `style="width:50%;"`).
 
-## Créer des liens hypertextes
-Dans la partie Sources des informations et médias, ajouter le ou les site·s où vous avez pris vos informations et l'affiche en créant un lien vers le ou les site·s en question.
+On ajoute une déclaration CSS pour les éléments `img` de la manière suivante:
 
-## Intégrer du contenu distant
-On peut intégrer du contenu issu d'un autre site, grâce à une balise `iframe`. Nous allons intégrer la bande-annonce, la vidéo donc, à notre page.
+* Entre les balise `<style> ... </style>` du debut du document, ajouter la déclaration:
 
-Ce n'est pas plus compliqué qu'un simple copier-coller. Prenons l'exemple du site Youtube, il suffit de cliquer sur le bouton *Partager* puis *Intégrer*, sélectionner le code qui commence par `<iframe>` et le coller sous notre titre bande-annonce.
+```css
+img {width: 300px;}
+```
 
-Attention, bien cocher la case : Activer le mode confidentialité avancé.
+
+
+## Lien vers une bande d'annonces
+Nous allons ajouter une image, qui, lorsqu'elle est cliquée, envoie vers la page de la bande d'anonce.
+
+* Rechercher le lien vers la bande d'annonce (Youtube)
+* Télécharger l'image ci-dessous, [player.png](../images/player.png), ou bien concevoir votre propre image à partir de [celle-ci](../images/play.png)
+
+{{< img src="../images/player.png" link="../images/player.png" >}}
+
+* Placer l'image dans une balise *lien* `<a>`
 
 Le code ressemble à cela :
 
-`<iframe width="560" height="315" src="https://www.youtube.com/...></iframe>`
+```html
+<a href="lien_vers_la_video"><img src="lien_vers_image"></a>
+```
 
-Vous remarquerez que l'on peut jouer sur la taille de la vidéo affichée et quelques paramètres, toujours en anglais.
-
-*Note: si le navigateur bloque votre `iframe`, placer une image avec un lien vers la page d'origine du média (cliquer pour changer de page et voir la video)*.
-
-
- 
 
 ## Règles css
-Vous trouverez de nombreuses références sur les styles sur [cette page](https://portail.lyc-la-martiniere-diderot.ac-lyon.fr/srv1/html/cours_html_css_nsi/exo_css_nsi/css_couleurs.html), ou bien celui-ci très complet: [MDN Mozilla](https://developer.mozilla.org/fr/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)
+Et si je veux mettre un peu de couleurs ? Le *style* d'un document est apporté par le langage `CSS`
+
+Ok, le rendu précédent n'est pas très fun, c'est le rendu par défaut des différentes balises ; on va donc ajouter des instructions de *styles* à notre page afin de la personnaliser à notre goût. 
+
+Voici un exemple: copiez le code ci-dessous. Placez le à la fermeture de la balise `</head>` et avant l'ouverture par la balise `<body>`
+
+```
+<style>
+body {	background-color: pink;	}
+
+h1 { color: blue; }
+
+h2 { font-variant: small-caps;
+		color: green;
+		}
+</style>
+```
+
+Vous devriez obtenir quelque chose approchant...
+
+{{< img src="../images/jeu1.png" >}}
+
+Vous pouvez ausi definir des *containers* et deplacer certains éléments comme vu dans la [TP1, la démocratie athénienne](/docs/competences/texte/page5_bis/) ou bien celui-ci: [TP1 bis la bataille de Marignan](/docs/competences/texte/page8/)
+
+
+{{< img src="../images/jeu2.png" >}}
 
 # Pour aller plus loin...
 Associez votre page à celles déjà réalisées ([TP1](/docs/competences/texte/page5/), [TP2](/docs/NSI/HTML/page11/)), afin de créer un site Web complet.
+
+{{< img src="../images/marignan3.png" link="/docs/NSI/HTML/page11/" >}}
 
 * Organisez votre code et vos fichiers et sous-dossiers du projet.
 * Essayez autant que possible d'avoir une présentation homogène pour toutes les pages de votre site.
 * Utiliser une feuille de style pour rassembler toutes les déclarations CSS du site.
 * Ajouter une page pour personnaliser encore plus votre site (vous aimez les voyages, la lecture, la peinture, les jeux videos...), partagez vos goûts ou vos connaissances.
+
+
+Vous trouverez de nombreuses références sur les styles sur Internet mais le plus simple sera d'utiliser [cette page](https://portail.lyc-la-martiniere-diderot.ac-lyon.fr/srv1/html/cours_html_css_nsi/exo_css_nsi/css_couleurs.html), ou bien celui-ci très complet: [MDN Mozilla](https://developer.mozilla.org/fr/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)
 
