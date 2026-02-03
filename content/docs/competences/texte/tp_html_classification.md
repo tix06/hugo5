@@ -21,6 +21,7 @@ Title: classif vivant
 | `<figcaption>` | Légende d'image | `<figcaption>Texte</figcaption>` |
 | `<div>` | Container / bloc | `<div>...</div>` |
 | `<blockquote>` | Citation | `<blockquote>...</blockquote>` |
+| `<strong>` | groupe de mots en gras | `<strong>...</strong>` |
 
 ### Principales règles CSS utiles
 
@@ -46,14 +47,15 @@ Title: classif vivant
 	<meta charset="utf-8">
 	<title>Titre de la page</title>
 </head>
-<body>
-<main>
-	<!-- Votre contenu ici -->
-</main>
-
 <style>
 	/* Vos règles CSS ici */
 </style>
+<body>
+	<main>
+	<!-- Votre contenu ici -->
+	</main>
+
+
 </body>
 </html>
 ```

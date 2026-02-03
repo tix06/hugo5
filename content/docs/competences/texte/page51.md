@@ -2,7 +2,7 @@
 Title: mon film prefere
 ---
 
-# Créer une page web
+# Créer une page web sur votre film préféré
 Le but de cet exercice est de réaliser une page HTML de présentation de *votre film préféré*. Cette page sera simple. On pourra piocher les informations de votre film sur des bases de données en ligne de films telles que IMDb, AlloCiné, Wikipédia...
 
 L'objectif est de réaliser une page qui pourrait présenter les informations comme ceci:
@@ -111,21 +111,28 @@ Dans la partie Sources des informations et médias, ajouter le ou les site·s o�
 
 ## Ajouter une image
 
-* Depuis un site web, télécharger le fichier image du film en faisant un clic-droit dessus Enregistrer l'image sous... Enregistrez ce fichier dans le dossier images crée précédemment.
+**(1)** Depuis un site web, télécharger le fichier image du film en faisant un clic-droit dessus Enregistrer l'image sous... Enregistrez ce fichier dans le dossier images crée précédemment.
 
-* Nommez cette image affiche.jpg, ou affiche.png ou encore affiche.webp selon le format initial du fichier image.
+**(2)** Nommez cette image affiche.jpg, ou affiche.png ou encore affiche.webp selon le format initial du fichier image.
 
-Pour ajouter une image dans une page HTML, il faut utiliser la balise `<img src="image/affiche.png"/>`. 
+Pour ajouter une image dans une page HTML, il faut utiliser la balise 
 
-`chemin vers l'image` est le chemin à fournir à partir du fichier HTML. Si l'image se trouve dans le dossier `images`, et qu'elle s'appelle `affiche.png`, le chemin est `images/affiche.png`
+```html
+<img src="image/affiche.png"/>
+```
 
-*Remarque : si le fichier affiche.jpg avait été enregistré dans le dossier `pages`, à côté de page1.html, on aurait mis la ligne de code suivante : `<img src="affiche.jpg"/>`
+*chemin vers l'image* est le chemin à fournir à partir du fichier HTML:
 
-* Ajoutez l'affiche à votre page web en ajoutant la ligne de code HTML adéquate. 
+* si le fichier affiche.png est enregistré dans le dossier `pages`, à côté de page1.html, on met la ligne de code suivante : `<img src="affiche.png"/>`
+* Si l'image se trouve dans le dossier `images`, et qu'elle s'appelle `affiche.png`, le chemin est `images/affiche.png`
 
-* Si votre affiche est trop grande, on peut demander au navigateur de réduire sa largeur en pixels (propriété CSS `style="width:50%;"`).
 
-On ajoute une déclaration CSS pour les éléments `img` de la manière suivante:
+
+**(3)** Ajoutez l'affiche à votre page web en ajoutant la balise HTML adéquate. 
+
+Si votre affiche est trop grande, on peut demander au navigateur de réduire sa largeur en pixels (propriété CSS `width:300px;`)
+
+**(4)** Ajouter une déclaration CSS pour les éléments `img` de la manière suivante:
 
 * Entre les balise `<style> ... </style>` du debut du document, ajouter la déclaration:
 
@@ -138,12 +145,13 @@ img {width: 300px;}
 ## Lien vers une bande d'annonces
 Nous allons ajouter une image, qui, lorsqu'elle est cliquée, envoie vers la page de la bande d'anonce.
 
-* Rechercher le lien vers la bande d'annonce (Youtube)
-* Télécharger l'image ci-dessous, [player.png](../images/player.png), ou bien concevoir votre propre image à partir de [celle-ci](../images/play.png)
+**(1)** Rechercher le lien vers la bande d'annonce (Youtube)
+
+**(2)** Télécharger l'image ci-dessous, [player.png](../images/player.png), ou bien concevoir votre propre image à partir de [celle-ci](../images/play.png)
 
 {{< img src="../images/player.png" link="../images/player.png" >}}
 
-* Placer l'image dans une balise *lien* `<a>`
+**(3)** Placer l'image dans une balise *lien* `<a>`
 
 Le code ressemble à cela :
 
