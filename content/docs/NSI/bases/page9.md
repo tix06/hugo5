@@ -116,41 +116,49 @@ Recopier cette requête SQL.
 
 Executer.
 
-> Questions: Quelles requêtes SQL permettent d'afficher:
+> Questions: Ecrire les requêtes SQL pour...
 
-1. toute la table `films`
-2. tous les attributs du-des film-s dont le réalisateur est le 1er de la table `realisateur`
-3. tous les titres des films sortis après 1970 mais avant 2002
-4. le titre du film, la date de sortie le nom du realisateur pour `id_rea` egal à 2
+1. Afficher toute la table `films`
+2. Corriger la date de parution du film *Vertigo* (se renseigner sur le net)
+3. Afficher tous les attributs du-des film-s dont le réalisateur est le 1er de la table `realisateurs`
+4. tous les titres des films sortis après 1970 mais avant 2002
+5. le titre du film, la date de sortie le nom du realisateur pour `id_rea` egal à 2
 5. tous les noms des auteurs de films qui ont sorti des films après 1960, mais pas Jacques Tati.
 6. l’année de naissance du réalisateur de Reservoir Dogs ?
+7. Le nombre de films du réalisateur "Hitckock"
+8. Inventer une nouvelle information à partir de cette base de donnée, necessitant une jointure entre les tables.
 
-## SQLite Browser
+## SQLite DBrowser
 * une version portable du logiciel peut être téléchargée ici: [sqlitebrowser.org](https://sqlitebrowser.org/dl/)
 * Notice:{{< a link="http://prof.math.free.fr/mgtmn/tp/bdd_pres_dbb_sqlite.pdf" caption="Consulter la notice" >}}
 
 
+> Vous pouvez aussi construire les 2 tables avec SQLite DBrowser:
+> * Commencer par construire la table realisateurs, puis celle films. Bien renseigner les clés primaires (PK) pour ces 2 tables, ainsi que la clé étrangère pour *films*
+> * ajouter les lignes à chaque table, ici aussi, en commençant par *realisateurs*
 
-La table en version sqlite se trouvi ici: [films.db](/scipts/BDD/films_de_zero.db)
 
-1. Tester alors les instructions SQL suivantes... Recopier ensuite l'instruction et expliquer dans chaque cas ce qui est renvoyé:
+
+
+# Solutions
+Tester alors les instructions SQL suivantes... Recopier ensuite l'instruction et expliquer dans chaque cas ce qui est renvoyé:
 
 * requête 1: `SELECT * FROM films`
-* requête 2: 
+* requête 3: 
 
 ```SQL
 SELECT * FROM films
 where ID_rea=1
 ```
 
-* requête 3:
+* requête 4:
 
 ```
 SELECT * FROM films
 where ID_rea=1 or Date>2003
 ```
 
-* requête 4: Deux possibiltés:
+* requête 5: Deux possibiltés:
 
 ```SQL
 select titre, date, last_name from realisateurs, films 
@@ -165,3 +173,5 @@ INNER JOIN realisateurs on films.id_rea = realisateurs.id_rea
 where films.id_rea = 2;
 ```
 
+# Compléments
+La table en version sqlite se trouve ici: [films.db](/scipts/BDD/films_de_zero.db)

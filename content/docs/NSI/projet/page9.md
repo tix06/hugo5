@@ -68,7 +68,9 @@ Lien de téléchargement: [Planète 2](/scripts/astro/donnees-astep2024/TOI-201/
 1. Créer un explorateur de dossiers/fichiers et analyser la courbe de transit: [Lien](../page13)
 2. Calculatrice python et synthèse des résultats à l'aide dans un tableur: [Lien](../page10)
 3. Traitement de données en table - Pandas Dataframe: [Lien](../page12)
-4. Base de données SQL et python: [tuto](/docs/python/pages/traitement/page3)
+4. Base de données:
+	* SQL et python: [Lien](/docs/python/pages/traitement/page31)
+	* Base de données SQL et python-pandas: [Lien](/docs/python/pages/traitement/page3)
 5. indice similarité avec la Terre (IST): [Lien](/docs/python/pages/traitement/page4/)
 6. Analyse graphique: [Lien](/docs/python/pages/traitement/page5/)
 7. Utiliser scikit-learn pour predire la classe des exoplanètes: [Lien](/docs/python/pages/traitement/page6/)
