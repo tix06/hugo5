@@ -184,3 +184,6 @@ axes.text(MJ, RJ, f"({z})", fontsize=8)
 plt.show()
 ```
 
+
+# Compléments
+* Fiche memo matplotlib et QCM: [labex.io](https://labex.io/cheatsheets/fr/matplotlib)
