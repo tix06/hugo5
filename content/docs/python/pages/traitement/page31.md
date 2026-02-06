@@ -122,8 +122,8 @@ Planète              Masse      Rayon      Étoile          Teff
 2. Tous les noms des planètes dont la masse est plus de 10 fois supérieure à celle de Jupiter (Indiquer quelles sont ces planètes dans l'extrait de la table)
 3. Les planètes ainsi que le nom de l'étoile hôte, dont l'étoile est située à moins de 40 pc de la Terre.
 4. Les noms des 20 étoiles les plus proches de la Terre où des planètes ont été détectées.
-5. Nombre total de planètes dans la table `(utiliser COUNT(*))`
-6. Nombre total d'étoiles dans la table (utiliser `COUNT(DISTINCT ... )`)
+5. Nombre total de planètes dans la table `planets` `(utiliser COUNT(*))`
+6. Nombre total d'étoiles dans la table `stars`
 7. Table des planètes qui n'ont été détectées ni par "Radial Velocity", ni par "Primary Transit" 
 8. Le nombre de planètes qui n'ont été détectées ni par "Radial Velocity", ni par "Primary Transit"
 9. Moyenne des distances entre le Soleil et les différentes étoiles de la table (utiliser `AVG`). *Attention à ne compter qu'une seule fois chacune des étoiles.*
@@ -133,12 +133,34 @@ Planète              Masse      Rayon      Étoile          Teff
 
 ## Traitement
 ### Ajouter une colonne masse volumique
-* Commencer par créer une nouvelle colonne `density` dans la table `planets`
+* Commencer par créer une nouvelle colonne `density` dans la table `planets`, et afficher les attributs de cette table:
 
 ```python
 sql1 = """
-    ALTER TABLE planets ADD COLUMN "Rho" REAL;
+    ALTER TABLE planets ADD COLUMN "density" REAL;
     """
+sql2 = """
+    PRAGMA table_info(planets);
+    """
+```
+
+* Executer le SQL:
+
+```python
+try:
+    
+    cur.execute(sql1)
+    cur.execute(sql2)
+    res = cur.fetchall()
+    print(f"{'Attribut':<20} {'Domaine':<10}")
+    print("-" * 30)
+    for row in res:
+        print(f"{row[1]:<20} {row[2]:<10}")
+    
+
+
+except sqlite3.Error as error:
+    print("Erreur lors de la connexion à SQLite", error)
 ```
 
 Les données de la table `planets` sont relative à Jupiter. On rappelle que:
@@ -158,14 +180,62 @@ On ajoutera simplement dans la colonne `density`
 
 $$density = \tfrac{mass}{radius^3}$$
 
-* Ajouter les valeurs calculées (`UPDATE SET`) pour la `density` de chaque planète.
+* Ecrire la requête sql1 (`UPDATE SET`) pour calculer la `density` de chaque planète:
+
+```python
+sql1 = """
+        UPDATE planets SET density=mass/POWER(radius,3) 
+       """
+```
+
+* Puis récuperer les valeurs de la table (sql2), et afficher par ordre decroissant de densité. Executer les 2 requêtes (*voir script complet ci-dessous*)
+
+*Rq: fonctions mathematiques en SQL [ici](https://sqlite.fr/fonctions-mathematiques/)*
+
+### Classement des planètes par densité décroissante
+Obtenir le tableau suivant avec le classement des planètes par densité décroissante:
+
+```
+Planète              Masse      Rayon      Density            
+------------------------------------------------------------
+Kepler-57 c          6.95       0.138      2644.5241987281925
+Kepler-57 b          18.86      0.195      2543.5357979736677
+Kepler-52 c          10.41      0.164      2360.0390301939897
+Kepler-59 b          2.05       0.098      2178.0890615304843
+...
+```
+
+On peut utiliser le script ci-dessous (compléter la requête SQL):
+
+```python
+try:
+    sql1 = """
+        UPDATE planets SET density=mass/POWER(radius,3) 
+       """
+    sql2= """
+        SELECT ... from planets order by ... DESC;
+    """
+    cur.execute(sql1)
+    cur.execute(sql2)
+    res = cur.fetchall()
+    print(f"{'Planète':<20} {'Masse':<10} {'Rayon':<10} {'density':<15}")
+    print("-" * 60)
+    for row in res[:10]:
+        # on limite la sortie à 10 planètes
+        print(f"{str(row[0]):<20} {str(row[1]):<10} {str(row[2]):<10} {str(row[3]):<15}")
+    
 
 
-
-*Retrouver les fonctions mathematiques en SQL [ici](https://sqlite.fr/fonctions-mathematiques/)*
+except sqlite3.Error as error:
+    print("Erreur lors de la connexion à SQLite", error)
+```
 
 # Etude graphique
-La recherche de dépendances entre grandeurs se fera en traçant un graphique, avec différents essais pour les axes x,y: On peut chercher par exemple la *dépendance* masse <-> rayon:
+La recherche de dépendances entre grandeurs se fera en traçant un graphique, avec différents essais pour les axes x,y. 
+
+On utilisera le resultat `res` de la requete precedente. C'est un tableau avec pour colonnes les nom, masse, rayon, densité.
+
+On peut chercher par exemple la *dépendance* masse <-> rayon.
 
 ```python
 import matplotlib.pyplot as plt
@@ -175,14 +245,22 @@ x = [P[1] for P in res] # mass
 y = [P[2] for P in res] # radius
 
 plt.scatter(x,y,color='silver',marker='.')
-# ajout d'une etiquette
+plt.xlabel('mass')
+plt.ylabel('radius')
+axes.set_xscale("log", base=10);
+# ajout d'un marqueur "Jupiter"
 z = "Jupiter"
 MJ, RJ = 1,1
 plt.plot(MJ,RJ,marker='o',color='red')
 axes.text(MJ, RJ, f"({z})", fontsize=8)
-
 plt.show()
 ```
+
+> Analyser chaque partie de ce script:
+> * (1) Que font les instructions: `x = [P[1] for P in res]` et `y = [P[2] for P in res]` ?
+> * (2) Comment adapter ces instructions pour tracer un graphique mass/densité?
+> * (3) Pourquoi met-on l'echelle des abscisses en logarithme: `axes.set_xscale("log", base=10)`?
+> * (4) Quelle est le meilleur choix d'axes pour représenter l'ensemble de ces exoplanètes?
 
 
 # Compléments
