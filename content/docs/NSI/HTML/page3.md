@@ -120,6 +120,7 @@ Les principales balises structurantes sont:
 * div
 * p
 * span
+* strong
 * ...
 
 Elles s'utilisent de la manière suivante:

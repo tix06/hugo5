@@ -61,6 +61,22 @@ Pour cela, nous allons utiliser des sélecteurs.
 | tab img | Plusieurs sélecteurs séparés par un espace : inclusion. Les balises img incluses dans un tableau sont concernées. Il peut exister des niveaux intermédiaires : ici il y aura probablement au moins des balises tr et td. |
 
 # Règles principales
+## Principe
+Le CSS permet d'ajouter des propriétés aux éléments (html) de la page. Par exemple, pour realiser la ligne suivante, avec une partie du texte en gras, et une partie en caractères normaux, non gras:
+
+**Acteur:** Daniel Crog
+
+On peut, soit utiliser une balise inline `<strong>` placée avant le texte (propriété `font-weight: bold`), soit une balise inline générique, et placer une instruction CSS. Ces 2 choix vont donner le même résultat:
+
+```html
+<!-- choix n°1-->
+<strong>Acteur:</strong> Daniel Crog
+<!-- choix n°2-->
+<span style="font-weight: bold">Acteur:</span> Daniel Crog
+```
+
+
+
 ## Règles appliquées aux textes
 Tutoriel complet: [developer.mozilla.org](https://developer.mozilla.org/fr/docs/Learn/CSS/Styling_text/Fundamentals)
 
@@ -93,9 +109,9 @@ En CSS, tout élément est inclus dans une boîte
 ## Rappel sur la propriété display
 
 * Les balises s'affichant en "block" (bloc) : elles prennent toute la largeur disponible et s'affichent avec un saut de ligne avant et après. On peut les dimensionner avec les propriétés `width` et `height`. Elles n'accèptent pas `vertical-align` 
-* Les balises s'affichant en "inline" (dans la ligne) : elles prennent uniquement la largeur dont elles ont besoin, sans ajouter de saut de ligne. Elles acceptent `vertical-align`, mais pas `width` et `height`.
+* Les balises s'affichant en "inline" (dans la ligne) : elles prennent uniquement la largeur utile pour leur contenu, sans ajouter de saut de ligne. Elles acceptent `vertical-align`, mais pas `width` et `height`.
 
-# CSS intermediaire
+# Approfondir
 ## héritage
 
 [Lien alsacreation]([https://www.alsacreations.com/tuto/lire/545-Comprendre-l-heritage-et-la-parente-des-styles-CSS.html](https://www.alsacreations.com/tuto/lire/545-Comprendre-l-heritage-et-la-parente-des-styles-CSS.html))
