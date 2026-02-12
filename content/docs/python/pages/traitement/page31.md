@@ -180,11 +180,12 @@ On ajoutera simplement dans la colonne `density`
 
 $$density = \tfrac{mass}{radius^3}$$
 
-* Ecrire la requête sql1 (`UPDATE SET`) pour calculer la `density` de chaque planète:
+* Ecrire la requête sql1 (`UPDATE SET`) pour calculer la `density` de chaque planète. Le calcul de $x^y$ peut necessiter l'ajout de la fonction `power` dans le langage SQL si celle-ci n'est pas implémentée (`POWER`):
 
 ```python
+conn.create_function("power", 2, lambda x, y: x**y if x != None and y!=None else None )
 sql1 = """
-        UPDATE planets SET density=mass/POWER(radius,3) 
+        UPDATE planets SET density=mass/power(radius,3) 
        """
 ```
 
@@ -208,9 +209,10 @@ Kepler-59 b          2.05       0.098      2178.0890615304843
 On peut utiliser le script ci-dessous (compléter la requête SQL):
 
 ```python
+conn.create_function("power", 2, lambda x, y: x**y if x != None and y!=None else None )
 try:
     sql1 = """
-        UPDATE planets SET density=mass/POWER(radius,3) 
+        UPDATE planets SET density=mass/power(radius,3) 
        """
     sql2= """
         SELECT ... from planets order by ... DESC;
@@ -260,8 +262,133 @@ plt.show()
 > * (1) Que font les instructions: `x = [P[1] for P in res]` et `y = [P[2] for P in res]` ?
 > * (2) Comment adapter ces instructions pour tracer un graphique mass/densité?
 > * (3) Pourquoi met-on l'echelle des abscisses en logarithme: `axes.set_xscale("log", base=10)`?
-> * (4) Quelle est le meilleur choix d'axes pour représenter l'ensemble de ces exoplanètes?
+> * (4) Compléter ce script pour placer un marqueur de couleur bleue à l'emplacement de la Terre. Ajouter l'etiquette "Terre"
 
+# Méthode KNN
+## Calcul des valeurs m et r pour la Terre
+
+```python
+R_Jup = 71e6  # m
+M_Jup = 1.898e27 # kg
+M_earth = 5.9724e24
+R_earth = 6378.137e3
+x_T = M_earth/M_Jup
+y_T = R_earth/R_Jup
+print(x_T,y_T)
+```
+
+## Visualisation
+On adoptera la visualisation des axes : x = masse (en echelle logarithmique) et y = rayon. 
+
+Pour adapter les valeurs à ce système de coordonnées, on aura besoin de la fonction suivante:
+
+```python
+def coordonnees_cercle_xlog_y(x_center, y_center, radius):
+    # Cercle adapté à l'échelle logarithmique
+    x_center_log = np.log10(x_center)
+    theta = np.linspace(0, 2*np.pi, 100)
+    # Points du cercle en coordonnées (log(x), y)
+    x_circle_log = x_center_log + radius * np.cos(theta)
+    y_circle = y_center + radius * np.sin(theta)
+    # Reconvertir x en échelle normale
+    x_circle = 10**x_circle_log
+    return x_circle, y_circle
+```
+
+Puis, pour le tracé:
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+plt.clf()
+axes = plt.gca()
+x = [P[1] for P in res] # mass
+y = [P[2] for P in res] # radius
+plt.scatter(x,y,color='silver',marker='.')
+plt.xlabel('mass')
+plt.ylabel('radius')
+axes.set_xscale("log", base=10)
+
+# ajout d'une etiquette Jupiter
+z = "Jupiter"
+MJ, RJ = 1,1
+plt.plot(MJ,RJ,marker='o',color='red')
+axes.text(MJ, RJ, f"({z})", fontsize=8)
+
+# ajout d'une etiquette Terre
+z2 = "Terre"
+plt.plot(x_T,y_T,marker='o',color='blue')
+axes.text(x_T, y_T, f"({z2})", fontsize=8)
+
+# Tracer le cercle autour de la Terre
+x_circle,y_circle = coordonnees_cercle_xlog_y(x_T,y_T,0.3)
+plt.plot(x_circle, y_circle, color='gold', linewidth=1.5)
+
+
+
+plt.show()
+```
+
+> Ajouter les instructions dans ce tracé pour tracer un autre cercle, centré autour de Jupiter.
+
+## Détermination des plus proches voisins
+### fonction `distance_knn` pour SQL
+> Copier-coller la fonction suivante dans votre programme
+
+```python
+# Distance KNN SQL
+def distance_knn_sql(x, y):
+    """
+    Calcule la distance euclidienne à la Terre dans l'espace (log(masse), rayon)
+    Compatible avec SQLite create_function
+    
+    Parameters:
+    x : masse de la planète
+    y : rayon de la planète
+    
+    Returns:
+    distance : distance euclidienne à la Terre (ou None si données manquantes)
+    """
+    if x is None or y is None or x <= 0:  # log nécessite x > 0
+        return None
+    
+    import math
+    x_log = math.log10(x)
+    x_T_log = math.log10(x_T)
+    
+    distance = math.sqrt((x_log - x_T_log)**2 + (y - y_T)**2)
+    
+    return distance
+
+# Enregistrement de la fonction dans SQLite
+conn.create_function("distance_knn", 2, distance_knn_sql)
+```
+
+### nouvelle colonne distance
+> * (1) Créer une nouvelle colonne `distance_terre` dans la table `planets`
+> * (2) Ajouter le script suivant, que vous devrez compléter et executer
+
+```python
+# Calculer la distance pour toutes les planètes
+cur.execute("""
+    UPDATE planets 
+    SET distance_terre = ... ...(mass, radius)
+""")
+
+# Puis pour sélectionner les K plus proches voisins
+K = 5
+cur.execute(f"""
+    SELECT name, mass, radius, ... ...(mass, radius) as distance
+    FROM planets
+    WHERE ... ...(mass, radius) IS NOT NULL
+    ORDER BY ...
+    LIMIT {K}
+""")
+res = cur.fetchall()
+```
+
+> Question: Quel est l'exoplanète la plus ressemblante à la Terre?
 
 # Compléments
 * Fiche memo matplotlib et QCM: [labex.io](https://labex.io/cheatsheets/fr/matplotlib)
