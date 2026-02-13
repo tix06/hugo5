@@ -2,7 +2,7 @@
 Title: TP exoplanets.db
 ---
 
-# Base de données exoplanetes.db
+# PARTIE 1: Base de données exoplanetes.db
 ## Principe
 Nous allons utiliser un **script Python** pour nous connecter à la base de données `exoplanetes.db` et tester quelques requêtes en langage SQLite.
 
@@ -76,7 +76,7 @@ star_id              INTEGER
 ```
 
 ### table `stars`
-Adapter le script précédent pour avoir les informations de la table `stars`
+> Travail: Adapter le script précédent pour avoir les informations de la table `stars`
 
 ## Selection avec jointure
 La requête suivante va donner les informations sur les premières exoplanètes de la table, ainsi que leur étoile, avec *jointure* entre les 2 tables.
@@ -102,7 +102,7 @@ except sqlite3.Error as error:
     print("Erreur lors de la connexion à SQLite", error)
 ```
 
-*Résultat:*
+> A Faire: Executer le script précédent pour obtenir...
 
 ```
 Planète              Masse      Rayon      Étoile          Teff
@@ -114,26 +114,26 @@ Planète              Masse      Rayon      Étoile          Teff
 14 Her b             None       None       14 Her          5311.0
 ```
 
-# Travail
+# PARTIE 2: Requetes diverses sur la BDD
 ## Explorer la base de données
-> Rechercher:
+> Aidez vous du script précédent, que vous modifierez pour repondre aux questions ci-dessous. Sélectionnez en au moins 4.
 
-1. Toutes les données relatives à l'étoile *Kepler-89 b*
-2. Tous les noms des planètes dont la masse est plus de 10 fois supérieure à celle de Jupiter (Indiquer quelles sont ces planètes dans l'extrait de la table)
-3. Les planètes ainsi que le nom de l'étoile hôte, dont l'étoile est située à moins de 40 pc de la Terre.
-4. Les noms des 20 étoiles les plus proches de la Terre où des planètes ont été détectées.
-5. Nombre total de planètes dans la table `planets` `(utiliser COUNT(*))`
-6. Nombre total d'étoiles dans la table `stars`
-7. Table des planètes qui n'ont été détectées ni par "Radial Velocity", ni par "Primary Transit" 
-8. Le nombre de planètes qui n'ont été détectées ni par "Radial Velocity", ni par "Primary Transit"
-9. Moyenne des distances entre le Soleil et les différentes étoiles de la table (utiliser `AVG`). *Attention à ne compter qu'une seule fois chacune des étoiles.*
-10. Table des planètes où le type de l'étoile est G ... (utiliser `LIKE "G%"`)
-11. Nom des planètes et distances au soleil, où de l'eau a été détectée (utiliser `LIKE`)
-12. Le classement des étoiles, par ordre décroissant de leur nombre de planètes. (`GROUP BY, ORDER BY`). Limiter à 10 étoiles.
+1. (table `stars`) Toutes les données relatives à l'étoile *Kepler-89 b*
+2. (table `planets`) Tous les noms des planètes dont la masse est plus de 10 fois supérieure à celle de Jupiter (Indiquer quelles sont ces planètes dans l'extrait de la table)
+3. (tables `planets` ET `stars`) Les planètes ainsi que le nom de l'étoile hôte, dont l'étoile est située à moins de 40 pc de la Terre.
+4. (tables `planets` ET `stars`) Les noms des 20 étoiles les plus proches de la Terre où des planètes ont été détectées.
+5. (table `planets`) Nombre total de planètes dans la table `planets` `(utiliser COUNT(*))`
+6. (table `stars`) Nombre total d'étoiles dans la table `stars`
+7. (table `planets`) Table des planètes qui n'ont été détectées ni par "Radial Velocity", ni par "Primary Transit" 
+8. (table `planets`) Le nombre de planètes qui n'ont été détectées ni par "Radial Velocity", ni par "Primary Transit"
+9. (table `stars`) Moyenne des distances entre le Soleil et les différentes étoiles de la table (utiliser `AVG`). *Attention à ne compter qu'une seule fois chacune des étoiles.*
+10. (tables `planets` ET `stars`) Table des planètes où le type de l'étoile est G ... (utiliser `LIKE "G%"`)
+11. (tables `planets` ET `stars`) Nom des planètes et distances au soleil, où de l'eau a été détectée (utiliser `LIKE`)
+12. (tables `planets` ET `stars`) Le classement des étoiles, par ordre décroissant de leur nombre de planètes. (`GROUP BY, ORDER BY`). Limiter à 10 étoiles.
 
 ## Traitement
 ### Ajouter une colonne masse volumique
-* Commencer par créer une nouvelle colonne `density` dans la table `planets`, et afficher les attributs de cette table:
+> Travail: Commencer par créer une nouvelle colonne `density` dans la table `planets`, et afficher les attributs de cette table:
 
 ```python
 sql1 = """
@@ -165,6 +165,7 @@ except sqlite3.Error as error:
 
 Les données de la table `planets` sont relative à Jupiter. On rappelle que:
 
+
 ```python
 RJup = 71e6      # en m
 MJup = 1.898e27  # en kg
@@ -180,7 +181,7 @@ On ajoutera simplement dans la colonne `density`
 
 $$density = \tfrac{mass}{radius^3}$$
 
-* Ecrire la requête sql1 (`UPDATE SET`) pour calculer la `density` de chaque planète. Le calcul de $x^y$ peut necessiter l'ajout de la fonction `power` dans le langage SQL si celle-ci n'est pas implémentée (`POWER`):
+> Travail: Ecrire la requête sql1 (`UPDATE SET`) pour calculer la `density` de chaque planète. Le calcul de $x^y$ peut necessiter l'ajout de la fonction `power` dans le langage SQL si celle-ci n'est pas implémentée (`POWER`):
 
 ```python
 conn.create_function("power", 2, lambda x, y: x**y if x != None and y!=None else None )
@@ -189,7 +190,7 @@ sql1 = """
        """
 ```
 
-* Puis récuperer les valeurs de la table (sql2), et afficher par ordre decroissant de densité. Executer les 2 requêtes (*voir script complet ci-dessous*)
+> Travail: Récuperer ensuite les valeurs de la table (sql2), et afficher par ordre decroissant de densité. Executer les 2 requêtes (*voir script complet ci-dessous*)
 
 *Rq: fonctions mathematiques en SQL [ici](https://sqlite.fr/fonctions-mathematiques/)*
 
@@ -232,10 +233,10 @@ except sqlite3.Error as error:
     print("Erreur lors de la connexion à SQLite", error)
 ```
 
-# Etude graphique
+## Etude graphique
 La recherche de dépendances entre grandeurs se fera en traçant un graphique, avec différents essais pour les axes x,y. 
 
-On utilisera le resultat `res` de la requete precedente. C'est un tableau avec pour colonnes les nom, masse, rayon, densité.
+**On utilisera le resultat `res` de la requete precedente**. C'est un tableau avec pour colonnes les nom, masse, rayon, densité.
 
 On peut chercher par exemple la *dépendance* masse <-> rayon.
 
@@ -264,7 +265,7 @@ plt.show()
 > * (3) Pourquoi met-on l'echelle des abscisses en logarithme: `axes.set_xscale("log", base=10)`?
 > * (4) Compléter ce script pour placer un marqueur de couleur bleue à l'emplacement de la Terre. Ajouter l'etiquette "Terre"
 
-# Méthode KNN
+# PARTIE 4: Méthode KNN
 ## Calcul des valeurs m et r pour la Terre
 
 ```python
@@ -277,8 +278,27 @@ y_T = R_earth/R_Jup
 print(x_T,y_T)
 ```
 
+Et recupération des valeurs de la table `planets`
+
+```python
+try:
+    sql= """
+        SELECT name, mass, radius from planets;
+    """
+    cur.execute(sql)
+    res = cur.fetchall()
+    print(f"{'Planète':<20} {'Masse':<10} {'Rayon':<10}")
+    print("-" * 60)
+    for row in res[:10]:
+        # on limite la sortie à 10 planètes
+        print(f"{str(row[0]):<20} {str(row[1]):<10} {str(row[2]):<10}")
+    
+except sqlite3.Error as error:
+    print("Erreur lors de la connexion à SQLite", error)
+```
+
 ## Visualisation
-On adoptera la visualisation des axes : x = masse (en echelle logarithmique) et y = rayon. 
+On adoptera la visualisation des axes : x = masse (*en echelle logarithmique*) et y = rayon. 
 
 Pour adapter les valeurs à ce système de coordonnées, on aura besoin de la fonction suivante:
 
@@ -330,11 +350,11 @@ plt.plot(x_circle, y_circle, color='gold', linewidth=1.5)
 plt.show()
 ```
 
-> Ajouter les instructions dans ce tracé pour tracer un autre cercle, centré autour de Jupiter.
+> Travail: Obtenir le graphique en nuage de points masse-rayon. Ajouter les instructions dans ce script pour tracer un autre cercle, centré autour de Jupiter.
 
 ## Détermination des plus proches voisins
 ### fonction `distance_knn` pour SQL
-> Copier-coller la fonction suivante dans votre programme
+> A Faire: Copier-coller la fonction suivante dans votre programme
 
 ```python
 # Distance KNN SQL
@@ -366,7 +386,8 @@ conn.create_function("distance_knn", 2, distance_knn_sql)
 ```
 
 ### nouvelle colonne distance
-> * (1) Créer une nouvelle colonne `distance_terre` dans la table `planets`
+> Travail:
+> * (1) Créer une nouvelle colonne `distance_terre` dans la table `planets` :`cur.execute("""ALTER TABLE ... ADD COLUMN ...""")`
 > * (2) Ajouter le script suivant, que vous devrez compléter et executer
 
 ```python
@@ -388,7 +409,9 @@ cur.execute(f"""
 res = cur.fetchall()
 ```
 
-> Question: Quel est l'exoplanète la plus ressemblante à la Terre?
+> Questions: 
+> * (1) Combien de planètes sont à l'intérieur du cercle de rayon 0.3, centré autour de la Terre?
+> * (2) Quelle est l'exoplanète la plus ressemblante à la Terre?
 
 # Compléments
 * Fiche memo matplotlib et QCM: [labex.io](https://labex.io/cheatsheets/fr/matplotlib)
