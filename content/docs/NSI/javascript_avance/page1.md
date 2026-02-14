@@ -5,7 +5,8 @@ En JavaScript, il n’existe que deux espaces de portée différents : l’esp
 
 ## let et var
 Lorsqu’on utilise la syntaxe `let` pour définir une variable à l’intérieur d’une fonction en JavaScript, la variable va avoir une portée dite « de bloc » : la variable sera accessible dans le bloc dans lequel elle a été définie et dans les blocs que le bloc contient.
-En revanche, en définissant une variable avec le mot clef `var` dans une fonction, la variable aura une portée élargie puisque cette variable sera alors accessible dans tous les blocs de la fonction. 
+
+En revanche, en définissant une variable avec le mot clef `var` dans une fonction, la variable aura une portée élargie puisque cette variable sera alors accessible dans tous les blocs de la fonction. (*utilisation non recommandée*)
 
 # Les fonctions
 
@@ -54,7 +55,9 @@ Généralement, on utilisera les fonctions anonymes lorsqu’on n’a pas beso
 On va créer une fonction anonyme de la même façon qu’une fonction classique, en utilisant le mot clef `function`, mais en omettant le nom de la fonction après.
 
 Ici, nous faisons pourtant face à un problème : comment appeler une fonction qui n’a pas de nom ?
+
 On va avoir plusieurs façons de faire en JavaScript. Pour exécuter une fonction anonyme, on va notamment pouvoir :
+
 - Enfermer le code de notre fonction dans une variable et utiliser la variable comme une fonction ;
 - Auto-invoquer notre fonction anonyme ;
 - Utiliser un évènement pour déclencher l’exécution de notre fonction.
@@ -81,70 +84,30 @@ Pour indiquer comment on veut répondre à tel évènement, on utilise des g
 
 **Testez le :**
 
-<span id="gauche">GAUCHE</span> 
-	<span id="droite">DROITE</span>
-<div id="alerte">Cliquer sur l'une des boites</div>
+```javascript
+let boiteG = document.getElementById("gauche");
+let boiteD = document.getElementById("droite");
 
-<script>
-	let boiteG = document.getElementById("gauche");
-	let boiteD = document.getElementById("droite");
-
-	/*on utilise la fonction addEventListener() qui sert
-	de gestionnaire d'evenement. Ici on demande à executer 
-	la fonction anonyme passée en 2e argument lors de 
-	l'evenement "click" sur l'une des boites GAUCHE/DROITE
-	*/
-	boiteG.addEventListener('click', function(){document.getElementById("alerte").innerHTML = 'Clic sur la boite de GAUCHE'});
-	boiteD.addEventListener('click', function(){document.getElementById("alerte").innerHTML = 'Clic sur la boite de DROITE'});
-
-</script>
-
+/*on utilise la fonction addEventListener() qui sert
+de gestionnaire d'evenement. Ici on demande à executer 
+la fonction anonyme passée en 2e argument lors de 
+l'evenement "click" sur l'une des boites GAUCHE/DROITE
+*/
+boiteG.addEventListener('click', function(){document.getElementById("alerte").innerHTML = 'Clic sur la boite de GAUCHE'});
+boiteD.addEventListener('click', function(){document.getElementById("alerte").innerHTML = 'Clic sur la boite de DROITE'});
 ```
-<!doctype html>
-<html>
-<head>
-	<title>mini programme</title>
-	<meta charset="utf-8">
-	<style>
-		span {
-			border-style: solid;
 
-		}
-		span:hover{
-			cursor: pointer;
-			background-color: #ccc;
-		}
 
-	</style>
-</head>
-<body>
-	<span id="gauche">GAUCHE</span> 
-	<span id="droite">DROITE</span>
-   <div id="alerte">Cliquer sur l'une des boites</div>
-</body>
-<script>
-	let boiteG = document.getElementById("gauche");
-	let boiteD = document.getElementById("droite");
-
-	/*on utilise la fonction addEventListener() qui sert
-	de gestionnaire d'evenement. Ici on demande à executer 
-	la fonction anonyme passée en 2e argument lors de 
-	l'evenement "click" sur l'une des boites GAUCHE/DROITE
-	*/
-	boiteG.addEventListener('click', function(){document.getElementById("alerte").innerHTML = 'Clic sur la boite de GAUCHE'});
-	boiteD.addEventListener('click', function(){document.getElementById("alerte").innerHTML = 'Clic sur la boite de DROITE'});
-</script>
-</html>
-```
 
 
 
 ## fonction de rappel (ou callback)
-En javascript, pour réaliser des appels de fonction à intervalle de temps régulier, il faut utiliser un mécanisme de callback, unique solution pour ne pas bloquer une exécution lorsque celle-ci est trop *couteuse*.
+En javascript, pour réaliser des appels de fonction à intervalle de temps régulier, il faut utiliser un mécanisme de *callback*, unique solution pour ne pas bloquer une exécution lorsque celle-ci est trop *couteuse*.
 
 Par exemple, le programme suivant devrait établir un décompte de 200 à 0, mais en réalité, celui-ci  va entrainer un blocage du système : (ne pas tester)
 
-```
+
+```html
 <html>
     <div id="bip" class="display"></div>
 <script >
@@ -158,6 +121,7 @@ Par exemple, le programme suivant devrait établir un décompte de 200 à 0, mai
 </script>
 
 ```
+
 La pile d'appel est alors : 
 
 | pile d'appel |
@@ -172,41 +136,17 @@ Une fonction de rappel (aussi appelée *callback* en anglais) est une fonction p
 On peut utiliser la méthode `setInterval` de l'objet window qui déclenche un compteur et appelle une fonction callback à intervalle de temps régulier (développé plus loin dans le paragraphe suivant).
 
 **Testez le :**
+
+
+
+
+```javascript
 <button onclick="start()">Lancer le decompte</button>
 <div id="bip" class="display"></div>
 
 <script>
-var counter = 10; // on peut mettre un nombre plus grand, mais le décompte est plus long
-var intervalId = null;
-
-function bip() {
-    counter-=1;
-    if(counter == 0) finish();
-    else {	
-        document.getElementById("bip").innerHTML = counter + " secondes restantes";
-    }
-    	
-}
-
-function start(){
-  intervalId = setInterval(bip, 500);
-}	
-
-function finish() {
-  clearInterval(intervalId);
-  document.getElementById("bip").innerHTML = "TERMINE!";	
-  counter = 10;
-}
-</script>
-
-
-```
-<button onclick="start()">Lancer le decompte</button>
-<div id="bip" class="display"></div>
-
-<script>
-var counter = 10; // on peut mettre un nombre plus grand, mais le décompte est plus long
-var intervalId = null;
+let counter = 10; // on peut mettre un nombre plus grand, mais le décompte est plus long
+let intervalId = null;
 
 function bip() {
     counter-=1;
@@ -329,8 +269,10 @@ Le problème est alors : comment détecter l'élément qui est cliqué, afin que
 
 Ce petit programme va utiliser les trois langages, HTML, CSS et JS : 
 
-HTML
-```
+
+**HTML**
+
+```HTML
 <ul class="nav">
     <li>One</li>
     <li>Two</li>
@@ -339,15 +281,17 @@ HTML
 </ul>
 ```
 
-CSS
-```
+**CSS**
+
+```css
 li.active {
     color: red;
 }
 ```
 
-JAVASCRIPT
-```
+**JAVASCRIPT**
+
+```javascript
 let selector, elems, makeActive;
 
 selector = '.nav li';
@@ -368,36 +312,8 @@ for (let i = 0; i < elems.length; i++)
 Le contenu de la fonction `makeActive` sera expliqué plus loin. En particulier le rôle du mot clé `this`.
 
 **Résultat :** (cliquer sur chacun des éléments de la liste)
-<ul class="navi">
-    <li class='liste'>One</li>
-    <li class='liste'>Two</li>
-    <li class='liste'>Three</li>
-    <li class='liste'>Four</li>
-</ul>
 
-<style>
-  .liste.active {
-    color: red;
-}
-</style>
 
-<script>
-  let selector, elems, makeActive;
-
-selector = '.navi .liste';
-
-elems = document.querySelectorAll(selector);
-
-makeActive = function () {
-    for (let i = 0; i < elems.length; i++)
-        elems[i].classList.remove('active');
-    
-    this.classList.add('active');
-};
-
-for (let i = 0; i < elems.length; i++)
-    elems[i].addEventListener('mousedown', makeActive);
-</script>
 
 # Objets
 Un objet est une entité qui peut être vue comme indépendante et qui va contenir
@@ -413,7 +329,7 @@ Par exemple, le JavaScript dispose d’une fonction nommée random() (qui appar
 ## méthode d'un objet
 Méthode d’un object = Propriété d’un object dont la valeur est la définition d’une fonction.
 
-```
+```javascript
 let user = {
   firstname : "john",
   lastname : "Doe",
@@ -433,22 +349,10 @@ user.getage = function () {
   };
 ```
 
-**Testez le :**
-<button onclick="identite('firstname')" >user.firstname</button>
-<button onclick="identite('fullname')" >user.fullname</button>
-<button onclick="identite('getage')" >user.getage</button>
-<div id="user" class="display">cliquer</div>
+<!--
+On peut ajouter la fonction et tester en console:
 
-<script>
-let user = {
-  firstname : "john",
-  lastname : "Doe",
-  age : 30,
-  fullname: function() {
-            return this.firstname + " " + this.lastname;
-  }
-};
-
+```javascript
 function identite(param){
 	if (param=="firstname"){
 	document.getElementById('user').innerHTML=user.firstname;
@@ -461,7 +365,8 @@ function identite(param){
 	document.getElementById('user').innerHTML=user.age;
 	}
 }
-</script>
+```
+-->
 
 ## Constructeur
 On souhaite maintenant créer des objets aux propriétés semblables, avec un minimum de code à répéter. On va utiliser pour cela une *fonction constructeur*.
@@ -480,7 +385,8 @@ On définit ici une fonction `Person()`  que l'on va utiliser comme constructeu
 `this` dans le constructeur n’a pas de valeur.
 La valeur de this sera l’object lui-même quand l’object sera créé. 
 Pour le dire très simplement, c’est un prête nom qui va être remplacé par le nom de l’objet actuellement utilisé lorsqu’on souhaite accéder à des membres de cet objet.
-```
+
+```javascript
 // le constructeur
 function Person(first,last,age,eyes){
   this.firstname = first;
@@ -489,50 +395,17 @@ function Person(first,last,age,eyes){
   this.eyescolor = eyes;
 }
 // construction de l'objet
-var myFather = new Person("John","Doe",50,"blue");```
+let myFather = new Person("John","Doe",50,"blue");
+
 ```
 
-**Testez le :**
-<button onclick="identite2('Person')" >Person</button>
-<button onclick="identite2('myFather')" >myFather</button>
-<button onclick="identite2('name')" >myFather.name</button>
-<button onclick="identite2('color')" >myFather.eyesColor</button>
-<div id="user2" class="display">cliquer</div>
 
-<script>
-function Person(first,last,age,eyes){
-  this.firstname = first;
-  this.lastname = last;
-  this.age = age;
-  this.eyescolor = eyes;
-}
-Person.prototype.hello = function(){
-  alert('Hello, my name is ' + this.firstname + ', I am ,' + this.age + ' years old');}
-  
-var myFather = new Person("John","Doe",50,"blue");
-var myMother = new Person("Cindi","Doe",48,"brown");
-
-function identite2(param){
-	if (param=="Person"){
-	document.getElementById('user2').innerHTML=Person;
-	}
-	if (param=="myFather"){
-	
-	document.getElementById('user2').innerHTML='Person {firstname: "John", lastname: "Doe", age: 50, eyescolor: "blue"}';
-	}
-	if (param=="name"){
-	document.getElementById('user2').innerHTML='Doe';
-	}
-	if (param=="color"){
-	document.getElementById('user2').innerHTML='blue';
-	}
-}
-</script>
 
 On pourrait ainsi créer des objets à la chaine, à l'aide d'une seule nouvelle déclaration, en ajoutant par exemple : 
+
 ```
-var myMother = new Person("Cindi","Doe",48,"brown");
-var myBrother = new Person(...
+let myMother = new Person("Cindi","Doe",48,"brown");
+let myBrother = new Person(...
 ```
 
 ## Prototypes
@@ -582,6 +455,9 @@ On va voir dans ce TP :
 On commence par créer le squelette **html** de notre mini projet. 
 
 - Dans un dossier de votre disque dur, mettre l'image *ufo.png* que vous téléchargerez avec le lien suivant: 
+
+{{< img src="../images/ufo.png" link="../images/ufo.png" >}}
+
 - dans le même dossier, à l'aide d'un éditeur de code comme par exemple notepadd++, créer un nouveau fichier et choisir une extension `.html`
 
 Mettre les lignes de code suivantes:
@@ -739,6 +615,7 @@ Vous devriez maintenant obtenir un déplacement continu de l'alien de gauche à 
 
 # Fenêtre de jeu
 
+
 <div id="game">
 	<img class = "alien0" src="../images/ufo.png">
 </div>
@@ -827,21 +704,6 @@ alien1.startAnimation(deplaceXY,20);
 
 </script>
 
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <input type="button" class="btn btn-lg" value="suite du TP : Le jeu Space Invader" onclick="window.location.href = '../../mini_projet_spaceInvader/page1/index.html'">
 
 <style>
