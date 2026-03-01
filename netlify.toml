@@ -1,2 +1,6 @@
-[hugo]
-version = "0.119.0"
+[build]
+  command = "hugo"
+  publish = "public"
+
+[context.production.environment]
+  HUGO_VERSION = "0.115.0"
