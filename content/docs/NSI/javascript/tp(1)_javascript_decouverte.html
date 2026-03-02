@@ -295,12 +295,12 @@ btnRouge.<span class="function">addEventListener</span>(<span class="string">'cl
             </div>
         </div>
 
-        <!-- SECTION CORRECTION -->
+        <!-- SECTION CORRECTION 
         <div class="section" style="background: #e7f3ff; border-left-color: #2196F3;">
             <h2>✅ Correction (à dévoiler après avoir essayé !)</h2>
             <p><em>Voir le code source de cette page (clic droit > Code source de la page) pour la correction complète</em></p>
         </div>
-    
+    -->
 
     <!-- SCRIPT POUR LES ÉLÈVES (avec des parties à compléter) -->
     <script>
@@ -361,72 +361,7 @@ btnRouge.<span class="function">addEventListener</span>(<span class="string">'cl
         
     </script>
     
-    <!-- 
-    ========================================
-    CORRECTION COMPLÈTE (CACHÉE)
-    ========================================
     
-    <script>
-        // CORRECTION EXERCICE 2, 3 et 4
-        
-        // Récupération de tous les éléments
-        const btnRouge = document.getElementById('btnRouge');
-        const btnBleu = document.getElementById('btnBleu');
-        const btnVert = document.getElementById('btnVert');
-        const curseurVitesse = document.getElementById('curseurVitesse');
-        const champTexte = document.getElementById('champTexte');
-        
-        const afficheBouton = document.getElementById('afficheBouton');
-        const afficheVitesse = document.getElementById('afficheVitesse');
-        const afficheNom = document.getElementById('afficheNom');
-        const afficheClics = document.getElementById('afficheClics');
-        
-        // Compteur global
-        let compteur = 0;
-        
-        // Fonction pour incrémenter le compteur
-        function incrementerCompteur() {
-            compteur++;
-            afficheClics.textContent = compteur;
-        }
-        
-        // Gestion du bouton rouge
-        function clicRouge() {
-            afficheBouton.textContent = 'Rouge';
-            incrementerCompteur();
-        }
-        btnRouge.addEventListener('click', clicRouge);
-        
-        // Gestion du bouton bleu
-        function clicBleu() {
-            afficheBouton.textContent = 'Bleu';
-            incrementerCompteur();
-        }
-        btnBleu.addEventListener('click', clicBleu);
-        
-        // Gestion du bouton vert
-        function clicVert() {
-            afficheBouton.textContent = 'Vert';
-            incrementerCompteur();
-        }
-        btnVert.addEventListener('click', clicVert);
-        
-        // Gestion du curseur
-        function majVitesse() {
-            const valeur = curseurVitesse.value;
-            afficheVitesse.textContent = valeur;
-        }
-        curseurVitesse.addEventListener('input', majVitesse);
-        
-        // Gestion du champ texte
-        function majNom() {
-            const nom = champTexte.value;
-            afficheNom.textContent = nom;
-        }
-        champTexte.addEventListener('input', majNom);
-    </script>
-    -->
-
     <!-- Exercice 5 -->
     <div class="section">
         <h2>Exercice 5: Super Challenge - Calculatrice</h2>
