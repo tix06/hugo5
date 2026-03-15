@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP3 - Énoncé - Animation sur tracé SVG</title>
+    <title>TP3 - Animation sur tracé SVG</title>
     <style>
         body {
             margin: 0;
@@ -14,29 +14,21 @@
         
         .instructions {
             max-width: 900px;
-            margin: 0 auto;
+            margin: 0 auto 20px auto;
             background: white;
-            padding: 30px;
+            padding: 20px;
             border-radius: 8px;
         }
         
         .instructions h1 {
             color: #3498db;
             text-align: center;
-            margin-bottom: 10px;
-        }
-        
-        .subtitle {
-            text-align: center;
-            color: #7f8c8d;
-            font-style: italic;
-            margin-bottom: 30px;
         }
         
         .etape {
             background: #ecf0f1;
-            padding: 20px;
-            margin: 20px 0;
+            padding: 15px;
+            margin: 15px 0;
             border-left: 4px solid #3498db;
             border-radius: 4px;
         }
@@ -97,36 +89,119 @@
             overflow-x: auto;
             font-family: 'Courier New', monospace;
             margin: 10px 0;
-            white-space: pre;
         }
         
-        .fichiers {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
+        /* ==========================================
+           ZONE DE TRAVAIL - ÉTAPE 1 : LE CONTENEUR
+           ========================================== */
+        
+        #main-container {
+            /* TODO ÉTAPE 1: Complétez le CSS ci-dessous */
+            width: 600px;
+            height: 600px;
+            margin: 0 auto;  /* Centre horizontalement */
+            position: relative;  /* Important pour position:absolute des enfants */
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
         }
         
-        .fichiers h3 {
-            margin-top: 0;
-            color: #856404;
+        /* ==========================================
+           ÉTAPE 2 : LES CERCLES DÉCORATIFS
+           ========================================== */
+        
+        .cercle {
+            /* TODO ÉTAPE 2: Propriétés communes aux cercles */
+            position: absolute;
+            border-radius: 50%;  /* Fait un cercle */
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* TODO ÉTAPE 2: Positionnez chaque cercle individuellement */
+        
+        #cercle1 {
+            width: 100px;
+            height: 100px;
+            top: 50px;
+            left: 50px;
+        }
+        
+        #cercle2 {
+            width: 150px;
+            height: 150px;
+            bottom: 100px;
+            right: 80px;
+        }
+        
+        #cercle3 {
+            width: 80px;
+            height: 80px;
+            top: 40%;
+            left: 60%;
+        }
+        
+        /* ==========================================
+           ÉTAPE 3 : LE SPRITE
+           ========================================== */
+        
+        #sprite {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: radial-gradient(circle, #ffeb3b 0%, #ff9800 100%);
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255, 235, 59, 0.8);
+            z-index: 10;  /* Au-dessus des cercles */
+        }
+        
+        /* SVG caché pour les calculs */
+        #hidden-svg {
+            position: absolute;
+            width: 0;
+            height: 0;
+            visibility: hidden;
+        }
+        
+        /* Contrôles */
+        .controls {
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        button {
+            margin: 5px;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background: #3498db;
+            color: white;
+            border-radius: 6px;
+        }
+        
+        button:hover {
+            background: #2980b9;
+        }
+        
+        button:disabled {
+            background: #95a5a6;
+            cursor: not-allowed;
+        }
+        
+        input[type="range"] {
+            width: 300px;
+            margin: 10px;
         }
     </style>
 </head>
 <body>
+    <!-- INSTRUCTIONS -->
     <div class="instructions">
         <h1>🎮 TP2 - Animation sur tracé SVG</h1>
-        <p class="subtitle">Énoncé du travail pratique</p>
-        
-        <div class="fichiers">
-            <h3>📁 Fichier fourni :</h3>
-            <ul>
-                
-                <li><strong><a href="tp(2)_travail.html" download="tp(2)_travail.html">tp(2)_travail.html</a></strong> : Le fichier sur lequel vous allez travailler</li>
-            </ul>
-            <p><strong>💡 Conseil :</strong> Gardez les deux fichiers ouverts en même temps (l'énoncé dans le navigateur, le fichier de travail dans votre éditeur).</p>
-        </div>
         
         <div class="etape">
             <h2>📐 ÉTAPE 1 : Créer le conteneur principal</h2>
@@ -145,14 +220,14 @@
                 <li><strong>Ouvrez le fichier avec votre éditeur HTML</strong> (Notepad++, VSCode, ou autre)</li>
                 <li><strong>Cherchez dans le code :</strong> Trouvez la section <code>&lt;style&gt;</code> puis <code>#main-container</code></li>
                 <li><strong>Lisez chaque propriété CSS</strong> et essayez de comprendre son rôle</li>
-                <li><strong>Observez le résultat :</strong> Ouvrez <code>tp2_travail.html</code> dans votre navigateur, vous devriez voir un carré violet dégradé</li>
+                <li><strong>Observez le résultat :</strong> La page est déjà ouverte dans votre navigateur, vous devriez voir un carré violet dégradé</li>
             </ol>
             
             <h3 style="color: #2980b9;">❓ QUESTIONS :</h3>
             <ol>
-                <li>Quelle est la largeur du conteneur ?</li>
-                <li>Quelle propriété permet de centrer le conteneur horizontalement ?</li>
-                <li>Pourquoi utilise-t-on <code>position: relative</code> ?</li>
+                <li>Quelle est la largeur du conteneur ? (Réponse attendue : 600px)</li>
+                <li>Quelle propriété permet de centrer le conteneur horizontalement ? (Réponse : <code>margin: 0 auto</code>)</li>
+                <li>Pourquoi utilise-t-on <code>position: relative</code> ? (Réponse : Pour que les enfants en <code>position: absolute</code> se positionnent par rapport à ce conteneur)</li>
             </ol>
             
             <p><strong>✅ Validation :</strong> Vous devriez voir un carré violet dégradé de 600×600px centré dans la page.</p>
@@ -178,19 +253,22 @@
             
             <h3 style="color: #2980b9;">❓ QUESTIONS :</h3>
             <ol>
-                <li>Quelle propriété CSS transforme un carré en cercle ?</li>
-                <li>Que signifie <code>rgba(255, 255, 255, 0.2)</code> ?</li>
-                <li>À quoi servent <code>top</code> et <code>left</code> ?</li>
-                <li>Où se positionne <code>#cercle1</code> ?</li>
+                <li>Quelle propriété CSS transforme un carré en cercle ? (Réponse : <code>border-radius: 50%</code>)</li>
+                <li>Que signifie <code>rgba(255, 255, 255, 0.2)</code> ? (Réponse : Blanc avec 20% d'opacité)</li>
+                <li>À quoi servent <code>top</code> et <code>left</code> ? (Réponse : Positionner l'élément depuis le haut et la gauche du parent)</li>
+                <li>Où se positionne <code>#cercle1</code> ? (Réponse : 50px du haut, 50px de la gauche)</li>
             </ol>
             
             <h3 style="color: #27ae60;">🎯 EXERCICE PRATIQUE :</h3>
-            <p><strong>Ajoutez un 4ème cercle :</strong> de diametre 120px, centré en x=300,y=200.</p>
+            <p><strong>Ajoutez un 4ème cercle :</strong></p>
             <ol>
-                <li>Ajoutez dans le HTML : <i>(et compléter)</i> <code>&lt;div class="cercle" id="...."&gt;&lt;/div&gt;</code></li>
-                <li>Ajoutez dans le CSS: <i>(et compléter)</i> 
+                <li>Ajoutez dans le HTML : <code>&lt;div class="cercle" id="cercle4"&gt;&lt;/div&gt;</code> (après cercle3)</li>
+                <li>Ajoutez dans le CSS (après #cercle3) :
                     <div class="code-block">#cercle4 {
-                    ...
+    width: 120px;
+    height: 120px;
+    top: 200px;
+    left: 300px;
 }</div>
                 </li>
                 <li>Rafraîchissez la page (F5) et vérifiez qu'un 4ème cercle apparaît</li>
@@ -247,36 +325,36 @@ right: 80px;    /* 80px depuis la droite */</div>
             <h3 style="color: #2980b9;">❓ QUESTIONS DE COMPRÉHENSION :</h3>
             <ol>
                 <li><strong>Que fait <code>path.getTotalLength()</code> ?</strong><br>
-                    </li>
+                    Réponse attendue : Calcule la longueur totale du chemin SVG</li>
                 
                 <li><strong>Que fait <code>path.getPointAtLength(distance)</code> ?</strong><br>
-                    </li>
+                    Réponse attendue : Retourne les coordonnées (x, y) à une distance donnée sur le chemin</li>
                 
                 <li><strong>Pourquoi divise-t-on <code>point.x</code> par <code>svgWidth</code> ?</strong><br>
-                    </li>
+                    Réponse attendue : Pour convertir en pourcentage (normaliser entre 0 et 1)</li>
                 
                 <li><strong>Pourquoi multiplie-t-on ensuite par 600 ?</strong><br>
-                    </li>
+                    Réponse attendue : Pour adapter au conteneur qui fait 600px de large</li>
                 
                 <li><strong>Que représente la variable <code>progress</code> ?</strong><br>
-                    </li>
+                    Réponse attendue : La position sur le chemin, de 0 (début) à 1 (fin)</li>
                 
-                <li><strong>Que se passe-t-il quand <code>progress</code> atteint 1 ?</strong><br></li>
-                <li><strong>Quelle fonction gère le déplacement du sprite? Comment?</strong></li>
+                <li><strong>Que se passe-t-il quand <code>progress</code> atteint 1 ?</strong><br>
+                    Réponse attendue : On le remet à 0 pour recommencer l'animation en boucle</li>
             </ol>
             
             <h3 style="color: #8e44ad;">🔍 COMMENT ÇA MARCHE :</h3>
             <p><strong>La conversion des coordonnées en 3 étapes :</strong></p>
-            <div class="code-block">// ÉTAPE 1 : Coordonnées SVG (système du viewBox)
-point.x = 150  (dans le système 0-300)
-point.y = 100  (dans le système 0-269)
+            <div class="code-block">// ÉTAPE 1 : Coordonnées SVG (système du viewBox)<br>
+point.x = 150  (dans le système 0-300)<br>
+point.y = 100  (dans le système 0-269)<br>
 
-// ÉTAPE 2 : Conversion en pourcentage
-percentX = 150 / 300 = 0.5   (50%)
-percentY = 100 / 269 = 0.37  (37%)
+// ÉTAPE 2 : Conversion en pourcentage<br>
+percentX = 150 / 300 = 0.5   (50%)<br>
+percentY = 100 / 269 = 0.37  (37%)<br>
 
-// ÉTAPE 3 : Conversion en pixels du conteneur
-x = 0.5 × 600 = 300px    (50% de 600px)
+// ÉTAPE 3 : Conversion en pixels du conteneur<br>
+x = 0.5 × 600 = 300px    (50% de 600px)<br>
 y = 0.37 × 600 = 222px   (37% de 600px)</div>
             
             <h3 style="color: #27ae60;">🎯 EXERCICE DE TEST :</h3>
@@ -319,7 +397,6 @@ y = 0.37 × 600 = 222px   (37% de 600px)</div>
                         <li>Appuyez sur la touche <strong>B</strong></li>
                         <li>OU cliquez sur l'icône "Chemins" dans la boîte à outils</li>
                     </ul>
-                    <img src="images/svg1.png">
                 </li>
                 <li><strong>Dessiner votre tracé</strong>
                     <ul>
@@ -328,7 +405,6 @@ y = 0.37 × 600 = 222px   (37% de 600px)</div>
                         <li><em>Conseil :</em> Restez dans l'image, ne sortez pas des bords</li>
                         <li><em>Optionnel :</em> Clic droit sur le dernier point → "Fermer le chemin" pour faire une boucle fermée</li>
                     </ul>
-                    <img src="images/svg2.png" style="width:100%">
                 </li>
                 <li><strong>Exporter en SVG</strong>
                     <ul>
@@ -396,8 +472,8 @@ y = 0.37 × 600 = 222px   (37% de 600px)</div>
                     <ul>
                         <li>Si votre viewBox GIMP était <code>300 300</code>, pas de changement</li>
                         <li>Si c'était différent (ex: <code>400 400</code>), modifiez dans le JavaScript :
-                            <div class="code-block">// Cherchez ces lignes et modifiez :
-const svgWidth = 400;   // au lieu de 300
+                            <div class="code-block">// Cherchez ces lignes et modifiez :<br>
+const svgWidth = 400;   // au lieu de 300<br>
 const svgHeight = 400;  // au lieu de 269</div>
                         </li>
                     </ul>
@@ -416,13 +492,13 @@ const svgHeight = 400;  // au lieu de 269</div>
             <h3 style="color: #2980b9;">❓ QUESTIONS :</h3>
             <ol>
                 <li><strong>Où est définie la trajectoire du sprite ?</strong><br>
-                    </li>
+                    Réponse : Dans l'attribut <code>d</code> de la balise <code>&lt;path&gt;</code></li>
                 
                 <li><strong>Pourquoi doit-on adapter <code>svgWidth</code> et <code>svgHeight</code> ?</strong><br>
-                    </li>
+                    Réponse : Pour que la conversion de coordonnées corresponde aux dimensions du viewBox de notre SVG GIMP</li>
                 
                 <li><strong>Que se passe-t-il si on oublie de commenter l'ancien SVG ?</strong><br>
-                    </li>
+                    Réponse : Il y aura deux <code>id="monChemin"</code>, ce qui crée un conflit</li>
             </ol>
             
             <h3 style="color: #27ae60;">🎯 DÉFI BONUS (pour les rapides) :</h3>
@@ -442,20 +518,204 @@ const svgHeight = 400;  // au lieu de 269</div>
                 <li><strong>Le tracé SVG est vide dans GIMP :</strong> Assurez-vous d'avoir bien utilisé l'outil "Chemins" (touche B) et non le pinceau</li>
             </ul>
         </div>
+    </div>
+
+    <!-- ZONE DE TRAVAIL -->
+    <div id="main-container">
+        <!-- ÉTAPE 2 : Les cercles décoratifs -->
+        <div class="cercle" id="cercle1"></div>
+        <div class="cercle" id="cercle2"></div>
+        <div class="cercle" id="cercle3"></div>
         
-        <div class="etape" style="background: #d4edda; border-left-color: #28a745;">
-            <h2>🎉 Félicitations !</h2>
-            <p>Si vous avez terminé toutes les étapes, vous maîtrisez maintenant :</p>
-            <ul>
-                <li>✅ Le positionnement CSS avec <code>position: relative</code> et <code>absolute</code></li>
-                <li>✅ La manipulation des coordonnées SVG</li>
-                <li>✅ La conversion de systèmes de coordonnées</li>
-                <li>✅ L'animation avec <code>requestAnimationFrame()</code></li>
-                <li>✅ L'utilisation de GIMP pour créer des tracés vectoriels</li>
-                <li>✅ L'intégration SVG dans une page web</li>
-            </ul>
-            <p><strong>Prochaines étapes possibles :</strong> Ajouter des collisions, créer plusieurs sprites, modifier la couleur selon la position, ajouter des sons...</p>
+        <!-- ÉTAPE 3 : Le sprite -->
+        <div id="sprite"></div>
+    </div>
+    
+    <!-- SVG caché pour les calculs -->
+    <!-- ÉTAPE 3 : Trajectoire elliptique -->
+    <svg id="hidden-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 269">
+        <path id="monChemin"
+              d="M 150,50 
+                 C 220,50 270,100 270,150 
+                 C 270,200 220,220 150,220 
+                 C 80,220 30,200 30,150 
+                 C 30,100 80,50 150,50 Z" />
+    </svg>
+    
+    <!-- ÉTAPE 4 : Votre SVG personnalisé (à remplacer) -->
+    <!--
+    <svg id="hidden-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 269">
+        <path id="monChemin"
+              d="COLLEZ_ICI_VOTRE_PATH_DEPUIS_GIMP" />
+    </svg>
+    -->
+    
+    <!-- Contrôles -->
+    <div class="controls">
+        <div>
+            <button id="playBtn">▶ Démarrer</button>
+            <button id="pauseBtn" disabled>⏸ Pause</button>
+            <button id="resetBtn">↺ Recommencer</button>
+        </div>
+        <div>
+            <label>Vitesse: 
+                <input type="range" id="speedRange" min="0.5" max="5" step="0.5" value="1">
+                <span id="speedValue">1x</span>
+            </label>
+        </div>
+        <div style="margin-top: 10px; color: #7f8c8d;">
+            Position: <span id="position">0</span>% | 
+            Coordonnées: x=<span id="coordX">0</span>, y=<span id="coordY">0</span>
         </div>
     </div>
+
+    <!-- ==========================================
+         ÉTAPE 3 : SCRIPT JAVASCRIPT
+         ========================================== -->
+    <script>
+        /* 
+        TODO ÉTAPE 3 : Décommentez tout le code ci-dessous
+        (Retirez cette ligne et la dernière ligne avec les étoiles)
+        */
+        
+        // ===== 1. RÉCUPÉRATION DES ÉLÉMENTS =====
+        
+        const path = document.getElementById('monChemin');
+        const sprite = document.getElementById('sprite');
+        const container = document.getElementById('main-container');
+        
+        const playBtn = document.getElementById('playBtn');
+        const pauseBtn = document.getElementById('pauseBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const speedRange = document.getElementById('speedRange');
+        const speedValue = document.getElementById('speedValue');
+        
+        const positionDisplay = document.getElementById('position');
+        const coordXDisplay = document.getElementById('coordX');
+        const coordYDisplay = document.getElementById('coordY');
+        
+        
+        // ===== 2. VARIABLES D'ANIMATION =====
+        
+        let isPlaying = false;      // L'animation est-elle en cours ?
+        let progress = 0;           // Progression sur le chemin (0 à 1)
+        let speed = 1;              // Vitesse (multiplicateur)
+        let animationId = null;     // ID de l'animation
+        
+        
+        // ===== 3. CALCULS PRÉLIMINAIRES =====
+        
+        // Longueur totale du chemin SVG
+        const pathLength = path.getTotalLength();
+        console.log("Longueur du chemin:", pathLength);
+        
+        // Dimensions du viewBox SVG (système de coordonnées source)
+        const svg = document.getElementById('hidden-svg');
+        const viewBox = svg.viewBox.baseVal;
+        const svgWidth = viewBox.width;   // 300
+        const svgHeight = viewBox.height; // 269
+        
+        console.log("ViewBox SVG:", svgWidth, "×", svgHeight);
+        
+        // Dimensions du conteneur (toujours 600×600)
+        const containerWidth = 600;
+        const containerHeight = 600;
+        
+        
+        // ===== 4. FONCTION PRINCIPALE : MISE À JOUR DE LA POSITION =====
+        
+        function updateSpritePosition(progress) {
+            // 4.1 Calculer la distance le long du chemin
+            const distance = progress * pathLength;
+            
+            // 4.2 Obtenir les coordonnées SVG à cette distance
+            const point = path.getPointAtLength(distance);
+            
+            // 4.3 Convertir en pourcentage (normalisation)
+            const percentX = point.x / svgWidth;
+            const percentY = point.y / svgHeight;
+            
+            // 4.4 Convertir en pixels dans le conteneur
+            const x = percentX * containerWidth;
+            const y = percentY * containerHeight;
+            
+            // 4.5 Positionner le sprite
+            sprite.style.left = x + 'px';
+            sprite.style.top = y + 'px';
+            
+            // 4.6 Mettre à jour les affichages
+            positionDisplay.textContent = Math.round(progress * 100);
+            coordXDisplay.textContent = Math.round(x);
+            coordYDisplay.textContent = Math.round(y);
+        }
+        
+        
+        // ===== 5. BOUCLE D'ANIMATION =====
+        
+        function animate() {
+            // Si on a appuyé sur pause, arrêter
+            if (!isPlaying) return;
+            
+            // Avancer sur le chemin
+            progress += 0.001 * speed;
+            
+            // Si on arrive à la fin, recommencer
+            if (progress >= 1) {
+                progress = 0;
+            }
+            
+            // Mettre à jour la position
+            updateSpritePosition(progress);
+            
+            // Demander la prochaine frame
+            animationId = requestAnimationFrame(animate);
+        }
+        
+        
+        // ===== 6. GESTION DES BOUTONS =====
+        
+        // Bouton Play
+        playBtn.addEventListener('click', function() {
+            isPlaying = true;
+            playBtn.disabled = true;
+            pauseBtn.disabled = false;
+            animate();
+        });
+        
+        // Bouton Pause
+        pauseBtn.addEventListener('click', function() {
+            isPlaying = false;
+            playBtn.disabled = false;
+            pauseBtn.disabled = true;
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+            }
+        });
+        
+        // Bouton Reset
+        resetBtn.addEventListener('click', function() {
+            progress = 0;
+            updateSpritePosition(progress);
+            if (isPlaying) {
+                pauseBtn.click();
+            }
+        });
+        
+        // Curseur de vitesse
+        speedRange.addEventListener('input', function() {
+            speed = parseFloat(speedRange.value);
+            speedValue.textContent = speed + 'x';
+        });
+        
+        
+        // ===== 7. INITIALISATION =====
+        
+        // Placer le sprite au début du chemin
+        updateSpritePosition(0);
+        
+        /*
+        FIN DU CODE À DÉCOMMENTER
+        */
+    </script>
 </body>
 </html>
