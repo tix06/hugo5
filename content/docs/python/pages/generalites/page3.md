@@ -49,7 +49,63 @@ l'instruction contient: une variable valeur `r`, un OPERATEUR de valeur `=` (aff
 
 Donc `l` vaudra 37.68
 
-### Les opérations de base
+### Types de variables
+Maintenant que nous connaissons les variables, interessons nous à leur type. On peut mémoriser plusieurs genre d'informations dans un programme. En python, ces types sont:
+
+* Les types simples: numériques, booléens, chaines
+* Les types construits: listes, dictionnaires (liste associative)
+
+Les types numériques se déclinent en types entiers (int) et flottants (float). Les chaines de caractères (str) sont mises entre guillemets doubles "", ou simples ''.
+
+*Résumé*
+
+| type | python | exemples |
+|--- |--- |--- |
+| integer | int| 12 |
+| float | float | 3.14 |
+| string | str| "rappel", 'hello' |
+| liste | list | [1,2,3] |
+| dictionnaire | dict | {'nom':'John','age':32} |
+
+Les opérations donnent des résultats différents selon le type de variable. 
+
+*Exemple*:
+
+```python
+> 12 + 12
+24
+> 'bon' + 'jour'
+'bonjour'
+> "12" + "12"
+"1212"
+```
+
+Par contre, il n'est pas possible d'ajouter des valeurs de type numerique et chaine avec un `+`:
+
+```python
+>>> 12 + '12'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+```
+
+### Affichage avec des types multiples
+Les *f-strings* sont l'une des fonctionnalités les plus élégantes de Python moderne. Plutôt que de jongler avec des + et des str() à répétition, on écrit directement ce qu'on veut dire — le code devient aussi lisible qu'une phrase. Un simple f" au début, des accolades autour de tes variables, et Python s'occupe du reste. C'est le genre de détail qui fait qu'on aime écrire du code.
+
+Les f-strings rendent le code bien plus lisible. Compare ces deux façons d'afficher la même chose :
+
+```python
+# Avec str() et +
+print("L'album " + titre + " dure " + str(duree) + " minutes.")
+
+# Avec un f-string
+print(f"L'album {titre} dure {duree} minutes.")
+```
+
+Le résultat est identique, mais la deuxième version se lit presque comme du français. Il suffit de faire précéder la chaîne d'un f, puis de placer chaque variable entre accolades {} —> Python la remplace automatiquement par sa valeur, quel que soit son type.
+
+
+### Les opérations de base (types numériques)
 Un langage informatique permet de réaliser des opérations sur des valeurs. L'écriture de ces opétations peut différer de ce que l'on écrit avec la calculatrice. Voici la liste de quelques opérateurs en *Python*:
 
 
