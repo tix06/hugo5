@@ -131,7 +131,10 @@ const bandeau = document.createElement('div')
 
 3. Insère le **en haut** de la page (avant tout autre élément)
 
-*Indication :* fait une recherche sur la méthode `prepend(), qui s'utilisera ici avec `document.body.prepend()`.
+*Indications :* 
+
+* fait une recherche sur la méthode `prepend(), qui s'utilisera ici avec `document.body.prepend()`.
+* Une méthode plus générale est d'utiliser `Node.appendChild()` qui ajoute un nœud à la fin de la liste des enfants d'un nœud parent spécifié.
 
 ---
 

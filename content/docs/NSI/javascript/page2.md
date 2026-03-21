@@ -36,7 +36,7 @@ Plusieurs ligne */
 
 Les indentations, comme en python ne sont pas obligatoires pour structurer le code, mais fortement conseillées pour permettre une meilleure lisibilité.
 
-# Les 3 Data types de bases et le type array
+# Les 3 Data types de bases
 ## Les 3 types simples  
 Pour déclarer une variable, on utilise le mot clé : `let` (ou bien `var`, mais qui n’est plus préconisé par le w3c)
 
@@ -55,31 +55,31 @@ b.  Convertir en nombre flottant : `parseFloat()`
 c.  Tester si la valeur est NaN (not a number) : `isNaN()`
 d.  Convertir en chaine de caractère : `string(variable)` avec un 'S' majuscule.
 
-## Le type Array
+# Les tableaux: type Array
 Les tableaux, array, sont des collections d’objets, mis et ordonnés dans une variable unique. On accède à chaque élément du tableau avec son rang. Cette structure de données est assez proche de la liste que l’on a vu en python.
 
-### Déclarer un tableau vide : 2 manières :
+## Déclarer un tableau vide : 2 manières :
 `let tab = new Array() ;`
 
 `let tab = [] ;`
 
-### initialiser un tableau :
+## initialiser un tableau :
 Pour déclarer et affecter directement des éléments, on fait :
 
 `let fruits = ["Apple","Orange", "Pear"]`
 
-### accéder à un élément du tableau :
+## accéder à un élément du tableau :
 (on peut tester ces exemples avec la console)
 
 ```javascript
-alert( fruits[0]) ; // "Apple"
-alert( fruit[1]) ;  //...
-alert( fruit[2]) ;  // ..
+console.log( fruits[0]) ; // "Apple"
+console.log( fruit[1]) ;  //...
+console.log( fruit[2]) ;  // ..
 ````
 
 
 
-### méthodes associées aux tableaux :
+## méthodes associées aux tableaux :
 dimension du tableau (nombre d’éléments)
 
 ```javascript
@@ -88,7 +88,7 @@ tab.length ; // affiche 3
 ````
 
 
-### retirer un élément de la fin du tableau
+## retirer un élément de la fin du tableau
 On utilise l'instruction `array.pop()`
 
 ```javascript
@@ -98,7 +98,7 @@ console.log(tab) ; // affiche ["Apple ", "Orange "]
 
 
 
-### ajouter un élément à la fin
+## ajouter un élément à la fin
 On utilise l'instruction `array.push(nouvel_element)`
 
 
@@ -107,8 +107,36 @@ tab.push("Plum ") ;
 console.log(tab) ; // affiche ["Apple", "Orange ", "Plum "]
 ```
 
+# Les objets: Type Object
+Un objet est un ensemble de propriétés et une propriété est une association entre un nom (aussi appelé clé) et une valeur. C'est l'équivalent des *dictionnaires* python.
 
+On peut définir une propriété en lui affectant une valeur. Ainsi, si on crée un objet maVoiture et qu'on lui donne les propriétés fabricant, modèle, et année :
 
+```javascript
+let maVoiture = new Object();
+maVoiture.fabricant = "Ford";
+maVoiture.modele = "Mustang";
+maVoiture.annee = 1969;
+```
+
+On peut aussi définir ou accéder à des propriétés JavaScript en utilisant une notation avec les crochets:
+
+```javascript
+let maVoiture = new Object();
+maVoiture["fabricant"] = "Ford";
+maVoiture["modèle"] = "Mustang";
+maVoiture["année"] = 1969;
+```
+
+L'exemple précédent peut également s'écrire avec la syntaxe littérale pour initialiser les objets:
+
+```javascript
+let maVoiture = {
+  make: "Ford",
+  model: "Mustang",
+  year: 1969,
+};
+```
 
 # Opérations
 ## opérateurs de base
@@ -209,17 +237,36 @@ for (let i =0; i<=10; i++){
 }
 ```
 
-### Parcourir les éléments d’un tableau : 2 manières
-En utilisant la méthode `fruits.lenght` : 
+### Parcourir les éléments d’un tableau ou d'un objet: 2 manières
+* En utilisant la méthode `fruits.lenght` : 
 
 ```javascript
-for (let i =0; i&ltfruits.length; i++){
+for (let i =0; i<=fruits.length; i++){
 	console.log(fruits[i]);}
 // affiche
 Apple
 Orange
 Plum
 ```
+
+* En utilisant `for...of`:
+
+```javascript
+const object1 = {
+  a: "somestring",
+  b: 42,
+  c: false,
+};
+
+console.log(Object.keys(object1));
+// Expected output: Array ["a", "b", "c"]
+for (const i of Object.keys(object1) ) {console.log(i,object1[i])};
+// Affiche:
+> "a" "somestring"
+> "b" 42
+> "c" false
+```
+
 
 
 
@@ -245,6 +292,8 @@ while (i<3) {
 La grande différence avec une boucle bornée, c’est que l’instruction qui modifie la variable i est DANS le bloc de code. Si celle-ci est mal écrite, la boucle risque d’être exécutée indéfiniment (à éviter bien sûr).
 
 
-# Concepts avancés et Jeu d'arcade en javascript
-[Page 3](../../javascript_avance/page1)
+# Liens
+* parcours `for` pour les éléments d'un objet: [MDN mozilla](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
+
+* Concepts avancés et Jeu d'arcade en javascript (hors programme): [Page 3](../../javascript_avance/page1)
 
