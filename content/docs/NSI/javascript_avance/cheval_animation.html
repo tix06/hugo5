@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cheval au galop — 1NSI</title>
+  <style>
+    /* ── Mise en page ───────────────────────────────────────── */
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(180deg, #87CEEB 0%, #b0e0f5 55%, #8FBC8F 55%, #6a9a5a 100%);
+      font-family: Georgia, serif;
+    }
+
+    h1 {
+      position: absolute;
+      top: 20px;
+      color: #2c3e50;
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      opacity: 0.7;
+    }
+
+    /* ── Image du cheval ────────────────────────────────────── */
+    #cheval {
+      width: 300px;
+      image-rendering: pixelated; /* conserve le style pixel-art si applicable */
+      /* Ombre légère pour intégrer le cheval dans le décor */
+      filter: drop-shadow(4px 8px 6px rgba(0,0,0,0.3));
+    }
+
+    /* ── Panneau d'information pédagogique ──────────────────── */
+    #info {
+      position: absolute;
+      bottom: 20px;
+      background: rgba(255,255,255,0.75);
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px 18px;
+      font-size: 0.82rem;
+      color: #333;
+      max-width: 420px;
+      text-align: center;
+      line-height: 1.6;
+    }
+    #info code {
+      background: #eee;
+      padding: 1px 4px;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
+    #compteur {
+      font-weight: bold;
+      color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Animation — Cheval au galop</h1>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       L'unique élément <img> : JavaScript change son attribut src
+  ════════════════════════════════════════════════════════════ -->
+  <img id="cheval" src="cheval_0.png" alt="Cheval au galop">
+
+  <!-- Panneau pédagogique affiché en bas de page -->
+  <div id="info">
+    Frame affichée : <span id="compteur">0</span> / 7 &nbsp;|&nbsp;
+    Formule : <code>index = (index + 1) % frames.length</code>
+  </div>
+
+  <script>
+    // ── 1. Tableau des références d'images (fictives) ─────────
+    /*const frames = [
+      "images/cheval_0.png",   // phase appui
+      "images/cheval_1.png",   // envol avant
+      "images/cheval_2.png",   // suspension
+      "images/cheval_3.png",   // réception
+      "images/cheval_4.png",   // poussée arrière
+      "images/cheval_5.png",   // rassemblement
+      "images/cheval_6.png",   // extension
+      "images/cheval_7.png"    // retour appui
+    ];*/
+    const frames = [
+      "images/cheval_0.png",   // phase appui
+      "images/cheval_1.png",   // envol avant
+      "images/cheval_2.png",   // suspension
+      "images/cheval_3.png",   // réception
+      "images/cheval_4.png",   
+    ];
+    // ── 2. Variables d'état ───────────────────────────────────
+    const img      = document.getElementById("cheval");
+    const compteur = document.getElementById("compteur");
+
+    let index    = 0;   // indice courant dans le tableau
+    let tick     = 0;   // compteur d'appels à requestAnimationFrame
+
+    const VITESSE = 8;  // changer de frame toutes les 8 images-écran
+                        // (~60/8 ≈ 7-8 frames par seconde)
+
+    // ── 3. Fonction d'animation ───────────────────────────────
+    function animer() {
+      tick++;
+
+      // On ne change de frame que tous les VITESSE appels
+      if (tick % VITESSE === 0) {
+        img.src = frames[index];           // mise à jour de l'image
+
+        // Affichage pédagogique
+        compteur.textContent = index;
+
+        // Modulo : on repart à 0 quand on atteint la fin du tableau
+        index = (index + 1) % frames.length;
+      }
+
+      // Relance la boucle avant le prochain affichage écran
+      requestAnimationFrame(animer);
+    }
+
+    // ── 4. Démarrage de l'animation ───────────────────────────
+    requestAnimationFrame(animer);
+  </script>
+
+</body>
+</html>

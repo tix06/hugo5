@@ -105,7 +105,7 @@ boiteD.addEventListener('click', function(){document.getElementById("alerte").in
 ## fonction de rappel (ou callback)
 En javascript, pour réaliser des appels de fonction à intervalle de temps régulier, il faut utiliser un mécanisme de *callback*, unique solution pour ne pas bloquer une exécution lorsque celle-ci est trop *couteuse*.
 
-Par exemple, le programme suivant devrait établir un décompte de 200 à 0, mais en réalité, celui-ci  va entrainer un blocage du système : (**ne pas tester**)
+Par exemple, le programme suivant devrait établir un décompte de 200 à 0, mais en réalité, celui-ci  va entrainer un **blocage du système** : (**ne pas tester**)
 
 
 ```html
@@ -114,11 +114,9 @@ Par exemple, le programme suivant devrait établir un décompte de 200 à 0, mai
 <script >
      function bip () {
          document.getElementById("bip").innerHTML = counter + " secondes restantes";
-     }
-     
-     for (var i = 2000; i >0; i--) {
          bip();
      }
+     bip()
 </script>
 
 ```
@@ -227,6 +225,9 @@ function iteration(chrono) {
 
 requestAnimationFrame(iteration);
 ```
+
+**Complément:** Animation avec un cheval au galop: [tuto](../page3)
+
 
 # Manipuler les éléments de la page
 ## accéder à un élément à l'aide d'un sélecteur
