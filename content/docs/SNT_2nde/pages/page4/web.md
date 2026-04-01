@@ -20,7 +20,8 @@ Le bon fonctionnement du www nécessite le respect de normes et de formats de fi
 
 Le World Wide Web Consortium, abrégé par le sigle W3C, est un organisme de standardisation à but non lucratif, fondé en octobre 1994 chargé de promouvoir la compatibilité des technologies du World Wide Web telles que HTML, CSS, JS, ...
 
-{{< img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/W3C®_Icon.svg/440px-W3C®_Icon.svg.png" alt="W3C®_Icon" link="https://fr.wikipedia.org/wiki/World_Wide_Web_Consortium" caption="W3C: un organisme qui définit les standarts du web" >}}
+*W3C: un organisme qui définit les standarts du web*
+
 > Le web fonctionne avec : le **[protocole HTTP](#le-protocole-http)** (HyperText Transfert Protocol), les **[URL](#adresse-d-une-page-web-url)** (Uniform Resource Locator) et le langage de description **[HTML](/docs/SNT_2nde/pages/page4/web1/)** (HyperText Markup Language).
 
 La *lecture et l’usage des hyperliens* d’une page html nécessite d’utiliser un **[navigateur](/docs/SNT_2nde/pages/page4/web/#l-usage-d-un-navigateur)**.
@@ -64,8 +65,11 @@ L'utilisateur va alors cliquer sur le lien de son choix parmi les propositions d
 
 {{< img src="../images/web_MR.png" caption="fonctionnement d'un moteur de recherche" >}}
 
+> [Mooc SNT](https://youtu.be/GqD6AiaRo3U?si=ieBHqzmUO-hS73xZ&t=180): internet et le web: 3'00 et plus (moteurs de recherche)
 
-Les moteurs de recherche – Mediaprovence (juin 2019)
+{{< img src="/images/video.png" alt="moteurs de recherche : fonctionement" link="https://youtu.be/GqD6AiaRo3U?si=ieBHqzmUO-hS73xZ&t=180" caption="video: Mooc SNT internet et le Web + moteur recherche" >}}
+
+> Les moteurs de recherche – Mediaprovence (juin 2019)
 https://www.youtube.com/watch?v=Y8l4hKNQOEY
 
 {{< img src="../images/moteur_R_fonc.png" alt="moteurs de recherche : fonctionement" link="https://www.youtube.com/watch?v=pMywV9ZLS4M" caption="video: Fonctionnement du moteur de recherche – FenetresurWordpress" >}}
