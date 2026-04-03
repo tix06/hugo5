@@ -10,7 +10,7 @@ L'adresse IP (**Internet Protocol**) identifie un périphérique à l'intérieur
 
 Les outils utilisés en simulation ne fonctionnent pas tous en mode réel, à partir de votre propre ordinateur du lycée, à cause de restrictions nécessaires pour des problèmes de sécurité.
 
-# TP Filius 1 : faire communiquer 2 ordinateurs
+# TP Filius 1 : faire communiquer 2 ordinateurs *(durée indicative: 10 min)*
 Lancer le logiciel **Filius**.
 
 On réalise un premier réseau simple de 2 ordinateurs reliés par une seule ligne.
@@ -55,7 +55,7 @@ On s'aidera de la video de présentation{{< a link="https://www.youtube.com/watc
 
 > **Qu.1b**: Pourquoi a-t-on besoin d'un *switch* dans un réseau à 3 ordinateurs?
 
-# TP Filius 2 : créer un reseau de type lycée
+# TP Filius 2 : créer un reseau de type lycée *(durée indicative: 20 min)*
 
 On cherche maintenant à créer un système de 2 sous-réseaux locaux. Ces reseaux auront pour adresses: 198.168.0.0 et 192.168.2.0
 
@@ -117,38 +117,46 @@ Vous constatez que l'accès à M6 n'est pas possible. En effet, votre système d
 
 *En cas de difficultés: on pourra consulter la{{< a link="https://www.youtube.com/watch?v=xyK6ThdQeR0" caption="video Filius 2 de David Roche" >}}*
 
-# TP Filius 3 : système avec ordinateur serveur
+# TP Filius 3 : système avec routage *(durée indicative: 20 min)*
 On utilisera pour la suite un système informatique constitué de nombreux sous-reseaux:
 
 * télécharger le fichier [filius_sim_reseau.fls](../images/filius_sim_reseau.fls)
 * cliquer sur le fichier pour ouvrir avec *Filius*
 
-## Premier contact avec le système
-> **Qu.3a.** Représenter sur votre feuille le reseau en ne dessinant que les ordinateurs n°1 et n°15, ainsi que tous les routeurs. Indiquer la référence des différents reseaux (compléter le schéma)
-
 {{< img src="../images/gros_reseau.png" >}}
+
+## Premier contact avec le système
+> **Qu.3a.** Représenter sur votre feuille le reseau en ne dessinant que les ordinateurs n°1 et n°15, ainsi que tous les routeurs traversé (plus court schemin entre M1 et M15). 
+
+
+{{< img src="../images/reseau_simple.png" >}}
+
+> **Qu.3b.** Indiquer sur le schéma, pour chaque routeur, l'adresse passerelle que le message de M1 vers M15 va emprunter.
 
 Lancer la simulation 
 
 1. Prendre connaissance de l'adresse IP de l'ordinateur n°15
 2. Depuis l'ordinateur n°1: Lancer le logiciel *Ligne de commande*
 3. Faire: `traceroute` suivi de l'adresse IP de la machine 15
-4. Repérer alors quels sont les routeurs par lesquels circulent les données entre ces 2 ordinateurs. 
+4. Repérer alors quels sont les adresses passerelles empruntées par les données entre ces 2 ordinateurs. 
 
-> **Qu.3b.** Est-ce que le nombre de sauts effectués vous semble cohérent?
+> **Qu.3c.** Quel est le nombre de sauts entre M1 et M15? Est-ce que le nombre de sauts effectués vous semble cohérent?
+
+> **Qu.3d.** S'agit-il des mêmes adresses passerelles lorsque la machine M15 envoie un message à M1? Vérifiez le par une expérience.
 
 ## Table de routage
 Revenir en *mode edition* (marteau) : cliquer sur le routeur A
 Dans l’onglet *général* : *décocher* l’option : *routage automatique*
 
-Aller dans l’onglet *table de routage*:
+Aller dans l’onglet *table de routage (forwarding table)*:
 
 {{< img src="../images/filius_routage_2.png" caption="table de routage du routeur A" >}}
 
-> **Q3c** : cartes reseaux du routeur:
-> * Hormis l’interface 127.0.0.1 : Combien d’interface possède le routeur ?
+> **Q3e** : cartes reseaux du routeur:
+> * Hormis l’interface 127.0.0.1 : Combien d’interfaces différentes possède le routeur? (colonne NIC, next interface connection)
 > * Quels sont les 3 réseaux auquel ce routeur est *directement* relié ? Donner leur adresse IP.
 
+<!--
 On souhaite ajouter l’information suivante: Depuis la machine M1, du reseau 192.168.1.1, on souhaite atteindre une machine du reseau 172.12.0.0. L'interface du routeur est 192.168.1.254 dans le reseau 192.168.1.0. 
 
 
@@ -159,8 +167,11 @@ On souhaite ajouter l’information suivante: Depuis la machine M1, du reseau 19
 
 *Remarque: il existe une différence entre l’adresse de passerelle et l’adresse de l’interface, qui sera expliquée avec le [cours de terminale](../TP_reseau_term/)* 
 
+-->
+# Serveur web 
+## TP n°4: *(optionnel)* Créer une page web *(durée indicative: 30 min)*
+**si vous n'avez pas le temps, passez cette étape** et rendez vous directement au chapitre **communication client-serveur**
 
-## Serveur web
 En mode *simulation*:
 
 * Ajouter à l'ordinateur n°15 les logiciels: 
@@ -187,64 +198,50 @@ En mode *simulation*:
 * test en local:
   * ouvrir le webbrowser. Dans la barre d'adresse, saisir `http://localhost`. 
 
-> **Qu.3e.**: Voyez vous votre page? Expliquer alors ce signifie l'adresse *localhost*.
+> **Qu.4a.**: Voyez vous votre page? Expliquer alors ce signifie l'adresse *localhost*.
 
 {{< img src="../images/localhost.png" >}}
   * Aller sur l'application webserver: Les informations affichées devraient montrer l'entête HTTP avec la requête reçue (méthode GET, ...), l'entête de la reponse (HTTP/1.1 200 OK), ainsi que le script HTML téléchargé.
 
 {{< img src="../images/protocoleHTTP.png" >}}
 
-> **Qu.3f.**: S'agit-il d'informations de la couche 4 (Application), 3 (Transport), 2 (reseau), ou 1 (accès au reseau)? voir ici les rappels de cours de [1ere NSI](http:/docs/SNT_2nde/pages/page3/modele_OSI/)
+> **Qu.4b.**: Recopier l'entête sur votre feuille. S'agit-il d'informations de la couche 4 (Application), 3 (Transport), 2 (reseau), ou 1 (accès au reseau)? voir ici les rappels de cours de [1ere NSI](http:/docs/SNT_2nde/pages/page3/modele_OSI/)
 
-## Communication client-serveur
 * Ajouter à l'ordinateur n°1 le logiciel : *Navigateur Web*
 * Lancer le *Navigateur web*
 * Dans la barre d'adresse, completer `http://` avec l'adresse IP de l'ordinateur n°15 et cliquer sur *Afficher*
 * Si la page ne se charge pas la première fois, fermer et rouvrir le serveur du poste 15, ainsi que le Navigateur Web côté client.
 
-## protocole HTTP
-* **Côté serveur**
 Comme pour la connexion en localhost: Lire les informations de la fenêtre de l'application Webserver: 
 
-> **Qu.3g**: Quelles informations ont changé sur la fenêtre de l'application webserver?
+> **Qu.4c**: Quelles informations ont changé sur la fenêtre de l'application webserver?
 
-## Protocole TCP
-* **Côté client** 
-Faire un clic droit sur la *machine M1*. Choisir *show data exchange*
+## TP n°5: Communication client-serveur *(durée indicative: 10 min)*
+Quitter la simulation précédente et ouvrir le nouveau reseau filius. Choisir le [fichier](../images/TP4_DNS.fls)
 
-{{< img src="../images/menu_client.png" >}}
-Dérouler alors *trames échangées jusqu'à arriver à celles de protocole TCP*
+Le reseau contient maintenant **2 serveurs** (192.168.5.3 et 192.168.4.3).
 
-{{< img src="../images/trame_tcp.png" >}}
-> **Qu.3h:** Dans la série de *trames TCP*:
->  * L'adresse source et celle destination, sont-elles toujours les mêmes? Ou y-a-t-il une alternance?
->  * Observer le détail de la première trame (ci-dessous): vous avez accès aux informations de la couche liaison (2), reseau (3), ainsi que la couche transport (4): identifier les informations pour chacune de ces couches: les informations pour chacune de ces couches: adresses mac (couche 1), IP et TTL pour la couche 2, SEQ et ACK pour la couche 3... *rappels de [1ere NSI](/docs/SNT_2nde/pages/page3/modele_OSI/)*
->  * Ces informations, évoluent-elles d'une trame à l'autre?
+* Sur les ordinateurs `192.168.5.3` et `192.168.4.3`, lancer le logiciel *Webserveur*. Laisser celui-ci ouvert.
+* Sur l'ordinateur client M1, ouvrir le navigateur. Saisir comme adresse `http://192.168.5.3`. Vous devriez obtenir une page web *(en allemand...)*
+* Sur le serveur `192.168.5.3`, la fenêtre de son logiciel devrait montrer la requête reçue, et la reponse transmise. 
 
-{{< img src="../images/detail_tcp_ip.png" caption="detail de la premiere trame" >}}
+> **Qu.5a**: d'où vient la page affichée par le navigateur de la machine M1? Recopiez sur votre feuille l'en-tête HTTP affichée par le logiciel serveur. (pas le contenu html de la page).
 
-## Protocole IP
-Le document suivant présente la disposition des données dans un *datagramme*. Ce sont les informations transmises au niveau de la couche 2 du modèle OSI. ([explications sur openclassrooms.com](https://openclassrooms.com/fr/courses/2340511-maitrisez-vos-applications-et-reseaux-tcp-ip/2927999-detaillez-len-tete-ip))
+> **Qu.5b**: Même question, mais cette fois à partir d'une connexion sur le serveur `192.168.4.3`
 
-{{< img src="../images/OSI5.png" caption="datagramme" >}}
 
-> **Qu.3i:** Quels sont les renseignements fournis sur l'image de la question *3e* (détail de la première trame) que l'on retrouve des les champs du datagramme?
+# TP n°6: Serveur DNS *(durée indicative: 20 min)*
+Quitter la précédente simulation et ouvrir le fichier avec [les tables DNS](../images/TP4_DNS_c.fls)
 
-# TP Filius 4: Serveur DNS
-Quitter la simulation précédente et ouvrir le nouveau reseau filius. Choisir, selon le temps qu'il vous reste:
-
-* le [fichier avec les tables DNS](../images/TP4_DNS.fls) à compléter
-* le fichier [corrigé AVEC les tables DNS](../images/TP4_DNS_c.fls) ainsi que les pages web des serveurs déjà fournies.
-
-Le reseau contient maintenant 2 serveurs (192.168.5.3 et 192.168.4.3) ainsi que 2 serveur DNS.
+Le reseau contient maintenant 2 serveurs (192.168.5.3 et 192.168.4.3) ainsi que **2 serveur DNS**.
 
 Le BON serveur DNS a pour adresse 192.168.6.1
 
-* En mode *construction*, vous pouvez vérifier que cette adresse DNS a bien été renseignée pour chacun des ordinateurs.
+> **Qu.6a** En mode *construction*, relever l'adresse DNS renseignée pour tous les ordinateurs
 
 * En *mode simulation* : vous allez commencer par **démarrer** chacun des serveurs.
 
-Vérifier que la table pour la resolution par le serveur DNS 192.168.6.1 est remplie comme indiqué ci-dessous. (sinon, complétez la)
+Vérifier que la table pour la resolution par le serveur DNS 192.168.6.1 est remplie comme indiqué ci-dessous. (sinon, complétez la).
 
 | IP | adresse symbolique |
 | --- | --- |
@@ -257,15 +254,14 @@ Puis, à partir de l'une des machines du reseau, comme par exemple M1, vous alle
 
 {{< img src="../images/adressesymbolique.png" caption="navigation avec adresse symbolique" >}}
 
-> **Qu.4a**: Expliquer quel est le principe du protocole DNS.
+> **Qu.6b**: Expliquer quel est le principe du protocole DNS.
 
 Le protocole DNS est vulnérable, et peut faire l'objet d'un *piratage*: voir explications ici: [site cloudfare.com](https://www.cloudflare.com/fr-fr/learning/security/global-dns-hijacking-threat/)
 
-> **Qu.4b**: Quelle est la table du serveur DNS pirate ?
+> **Qu.6c**: Quelle est la table du serveur DNS pirate ?
 
-> **Qu.4c**: Comment peut-on utiliser la simulation réalisée sur Filius pour réaliser le scénario d'un piratage de DNS? Quelles sont les différentes étapes à suivre sur le logiciel Filius?
+> **Qu.6d**: Comment peut-on utiliser la simulation réalisée sur Filius pour réaliser le scénario d'un piratage de DNS? Quelles sont les différentes étapes à suivre sur le logiciel Filius?
 
-Correction: [corrigé du reseau filius DNS](../images/TP4_DNS_c.fls)
 
 # DNS et configuration de votre poste informatique
 1. Constituer une table de correspondance entre nom de domaine et adresse ip sur le site https://www.my-ip-finder.fr  et choisir l’onglet DNS lookup :
@@ -293,6 +289,30 @@ traceroute  x  >>R1.txt
 
 a. Avec `ipconfig`, retrouver l'adresse du serveur DNS utilisé
 b. Avec `traceroute`, combien de sauts sont necessaires pour joindre `musee-orsay.fr`?
+
+# Protocoles des couches 3 et 2
+## Protocole TCP (optionnel)
+* **Côté client** 
+Faire un clic droit sur la *machine M1*. Choisir *show data exchange*
+
+{{< img src="../images/menu_client.png" >}}
+Dérouler alors *trames échangées jusqu'à arriver à celles de protocole TCP*
+
+{{< img src="../images/trame_tcp.png" >}}
+> **Qu.4f:** Dans la série de *trames TCP*:
+>  * L'adresse source et celle destination, sont-elles toujours les mêmes? Ou y-a-t-il une alternance?
+>  * Observer le détail de la première trame (ci-dessous): vous avez accès aux informations de la couche liaison (2), reseau (3), ainsi que la couche transport (4): identifier les informations pour chacune de ces couches: les informations pour chacune de ces couches: adresses mac (couche 1), IP et TTL pour la couche 2, SEQ et ACK pour la couche 3... *rappels de [1ere NSI](/docs/SNT_2nde/pages/page3/modele_OSI/)*
+>  * Ces informations, évoluent-elles d'une trame à l'autre?
+
+{{< img src="../images/detail_tcp_ip.png" caption="detail de la premiere trame" >}}
+
+## Protocole IP
+Le document suivant présente la disposition des données dans un *datagramme*. Ce sont les informations transmises au niveau de la couche 2 du modèle OSI. ([explications sur openclassrooms.com](https://openclassrooms.com/fr/courses/2340511-maitrisez-vos-applications-et-reseaux-tcp-ip/2927999-detaillez-len-tete-ip))
+
+{{< img src="../images/OSI5.png" caption="datagramme" >}}
+
+> **Qu.4g:** Quels sont les renseignements fournis sur l'image de la question *4f* (détail de la première trame) que l'on retrouve des les champs du datagramme?
+
 
 # Compléments théoriques sur les adresses des machines
 
