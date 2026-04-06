@@ -217,7 +217,7 @@ Comme pour la connexion en localhost: Lire les informations de la fenêtre de l'
 > **Qu.4c**: Quelles informations ont changé sur la fenêtre de l'application webserver?
 
 ## TP n°5: Communication client-serveur *(durée indicative: 10 min)*
-Quitter la simulation précédente et ouvrir le nouveau reseau filius. Choisir le [fichier](../images/TP4_DNS.fls)
+Quitter la simulation précédente et ouvrir le nouveau reseau filius. Télécharger et ouvrir le [fichier](../images/TP4_DNS.fls)
 
 Le reseau contient maintenant **2 serveurs** (192.168.5.3 et 192.168.4.3).
 
