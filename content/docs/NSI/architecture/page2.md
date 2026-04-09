@@ -104,9 +104,82 @@ On a vu un problème identique sur la gestion concurente des accès à une même
 Le TP2 plus bas permet d'explorer ces notions avec le multi-threading...
 
 
-
+<!--
 # TP2 multi-treading et Python
 [Lien vers le TP](../page8): parallélisme en Python
+-->
+
+# TP Terminal Linux et gestion des processus
+## TP 1: les bases du terminal Linux
+Voir l'énoncé du TP à l'adresse suivante: [TP NSI](https://mcoilhac.forge.apps.education.fr/site-nsi/Linux/4_TD_commandes_linux/)
+
+* explorateur en ligne de commande
+* utilisateurs, groupes, droits
+
+## TP 2: processus
+Pour ce TP, utiliser le [terminal Linux](https://chinginfo.fr/chapitre/dossier/weblinux?user=wTdiYseOJu&cpu=asm&n=1&relayURL=wss%3A%2F%2Frelay.widgetry.org%2F&refresh=okok) du TP 1.
+
+> 1. Créer un nouveau fichier `test.sh`
+
+```bash
+$ touch test.sh
+$ nano test.sh
+```
+
+> 2. Editer le fichier à l'aide de l'editeur nano
+
+```bash
+#!/bin/sh
+echo Hello World
+```
+
+* CTRL X puis Y puis valider le nom du fichier pour sortir
+
+> 3. Executer le fichier
+
+```bash
+$ test.sh
+```
+
+Il faudra peut-être modifier les droits en execution pour ce fichier:
+
+```bash
+# chmod u+rx test.sh
+```
+
+> 4. Modifier le fichier et créer une boucle infinie
+
+Modifier le script `test.sh` avec les commandes suivantes:
+
+```bash
+#!/bin/sh
+while true
+do
+	sleep 1
+done
+```
+
+et executer le script en mode détaché:
+
+```bash
+$ test.sh &
+```
+
+> 5. vérifier alors les processus actifs avec la commande `top`
+
+* Relever les valeurs du PID et du PPID du programme qui boucle en tâche de fond: `test.sh`
+* Sortir de `top`: `q`
+
+> 6. Tuer le programme
+
+```bash
+$ kill {PID}
+```
+
+> 7. Vérifier que le processus est bien *Dead*...
+
+
+
 
 # Liens
 * ce cours est inspiré de [David Roche, sit Pixees term NSI](https://pixees.fr/informatiquelycee/n_site/nsi_term_archi_proc.html) partagé sous licence CC0
