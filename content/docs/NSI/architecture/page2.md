@@ -143,9 +143,19 @@ $ test.sh
 
 Il faudra peut-être modifier les droits en execution pour ce fichier:
 
+* Vérifier que vous avez les droits en *execution* sur le fichier:
+
+```bash
+$ ls -l
+```
+
+Vous devriez avoir *x* pour les droits d'execution sur ce fichier en tant que *user*. Sinon, saisir la commande suivante:
+
 ```bash
 # chmod u+rx test.sh
 ```
+
+... et contrôlez que vous avez ajouté *x* à *user* (et même *r*). Puis executer le fichier.
 
 > 4. Modifier le fichier et créer une boucle infinie
 
