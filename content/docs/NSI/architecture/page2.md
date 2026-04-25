@@ -101,7 +101,7 @@ Ils peuvent aussi causer de multiples problèmes (accès concurent, interblocage
 
 On a vu un problème identique sur la gestion concurente des accès à une même ressource sur le chapitre sur les SGBD.
 
-Le TP2 plus bas permet d'explorer ces notions avec le multi-threading...
+
 
 
 <!--

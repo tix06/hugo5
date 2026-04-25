@@ -7,7 +7,7 @@ Title: protocole HTTP
 {{< img src="../images/youtube_http.png" link="https://www.youtube.com/watch?v=WGdOWtKL5nA" caption="HTTP - chaine Cookie connecté" >}}
 
 ## Des requêtes HTTP jusqu'à la page Web
-HTTP est un protocole de la **couche Application** selon le modèle de communication entre machines **OSI** (sera développé plus tard). 
+HTTP est un protocole de la **couche Application** selon le modèle de communication entre machines **OSI** (développé dans [ce cours](/docs/SNT_2nde/pages/page3/modele_OSI/)). 
 
 
 C'est le protocole qui permet de récupérer des ressources telles que des documents HTML. Il est à la base de **tout échange de données** sur le **Web**. C'est un protocole de type **client-serveur**, ce qui signifie que les requêtes sont initiées par le destinataire (qui est généralement un **navigateur web**). 
@@ -23,7 +23,7 @@ Le navigateur web assemble alors ces ressources pour présenter un document comp
 
 Pour obtenir ces fragments de page, le navigateur web envoie des messages  qui sont appelés des *requêtes* et les messages renvoyés par le serveur sont appelés *réponses*.
 
-Entre une requête et la réponse se trouve de nombreuses entités qu'on désignera de façon générique sous le terme proxies. Celles-ci exécutent différentes opérations et agissent comme passerelles ou comme caches par exemple.
+Entre une requête et la réponse se trouvent de nombreuses entités qu'on désignera de façon générique sous le terme proxies. Celles-ci exécutent différentes opérations et agissent comme passerelles ou comme caches par exemple.
 
 En réalité, il y a plus d'un ordinateur entre un navigateur et le serveur qui traite la requête : il y a les routeurs, les modems et bien plus. Grâce à la *construction en couche du Web*, ces intermédiaires sont cachés dans les couches réseau et transport. HTTP, lui, est bâti sur la couche applicative. 
 
@@ -64,7 +64,7 @@ GET /test.html
 Le serveur renvoie alors le fichier `test.html`.
 
 ### Déroulé d'une requête HTTP par la méthode GET
-Des paramètres d’URL qui peuvent être ajoutés à l’URL s'appelent *chaine query*
+Des paramètres d’URL qui peuvent être ajoutés à l’URL s'appelent *chaine query*, ou [chaine de requête](https://fr.wikipedia.org/wiki/Chaîne_de_requête).
 
 
 Une URL valide est alors **construite de la manière suivante:**
@@ -277,6 +277,46 @@ Les cookies ont un domaine qui leur est associé. Si ce domaine est le même que
 
 Pour plus de détails, voir la page: [Quel est le cadre juridique applicable?](https://www.cnil.fr/fr/cookies-et-traceurs-que-dit-la-loi#:~:text=Tant%20que%20la%20personne%20n,ajouter%20aux%20finalit%C3%A9s%20initialement%20pr%C3%A9vues.)
 
+# HTTPS
+**HTTPS : les en-têtes sont-elles chiffrées ?**
+
+Oui, avec HTTPS, les en-têtes HTTP sont bien chiffrées — et c'est un point souvent mal compris!
+Ce qu'il se passe réellement:
+
+* HTTPS = HTTP + TLS (Transport Layer Security)
+* Le chiffrement TLS s'applique à tout le contenu HTTP, c'est-à-dire :
+
+✅ Les en-têtes (headers) — Host, Cookie, Authorization, User-Agent…
+
+✅ Le corps de la requête (body)
+
+✅ Les en-têtes de réponse du serveur — Set-Cookie, Content-Type…
+
+✅ Le corps de la réponse
+
+Ce qui reste visible (non chiffré)
+Même en HTTPS, quelques informations transitent en clair :
+
+| Élément | Visible ? Pourquoi |
+|--- |--- |--- |
+| Adresse IP du serveur | ✅ Oui| Nécessaire pour le routage réseau|
+| Port (443)| ✅ Oui | Idem |
+| Nom de domaine (SNI)|⚠️ Souvent oui| Échangé pendant la négociation TLS pour choisir le bon certificat|
+| URL complète / chemin| ❌ Non | Chiffré| 
+| En-têtes HTTP| ❌ Non| Chiffrés|
+
+*SNI (Server Name Indication) : lors de la poignée de main TLS (handshake), le client indique le nom de domaine cible. Cette information est traditionnellement en clair, bien que la technologie ECH (Encrypted Client Hello) commence à chiffrer cela aussi.*
+
+*On peut souvent deviner le domaine (via le SNI ou l'IP), mais pas la page précise visitée (l'URL complète, les cookies, les paramètres…).*
+
+*Schéma simplifié*
+
+```
+[Couche réseau]   IP source / IP destination  →  visible
+[Couche TLS]      Handshake TLS (certificat)  →  partiellement visible
+[Couche HTTP]     En-têtes + Corps            →  chiffré ✅
+```
+
 
 
 # Travaux Pratiques: 
@@ -336,7 +376,10 @@ c2l0ZUNvZGU9ZGFjcGJybDR0byZ2aXNpdG9yQ29kZT1mMnBvbGJucXRhNTU5b3YwJnN0YXJ0T2ZWaXNp
 *Pour l'outil de developpement du navigateur, on pourra s'aider de la page [MDN Web Docs: Détails des requêtes réseau](https://developer.mozilla.org/fr/docs/Tools/Network_Monitor/request_details)*
 
 # Liens
-voir aussi: [MDN Flux HTTP](https://developer.mozilla.org/fr/docs/Web/HTTP/Session)
+* voir aussi: [MDN Flux HTTP](https://developer.mozilla.org/fr/docs/Web/HTTP/Session)
+* Vol de cookies et détournement de session: [kaspersky.fr](https://www.kaspersky.fr/blog/types-of-cookie-files-and-how-to-protect-them/23140/)
+
+*...Dans le cas du protocole HTTP, les fichiers cookies sont transmis en texte clair dans les en-têtes des requêtes HTTP, ce qui signifie qu’ils ne sont pas chiffrés. Un acteur malveillant (reseau wifi public) peut alors facilement intercepter le trafic entre vous et le site Internet sur lequel vous vous trouvez, et en extraire les cookies...*
 
 
 

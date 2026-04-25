@@ -157,7 +157,7 @@ John Von Neumann fait référence de manière explicite à ce concept lorsqu'il 
 > Un ordinateur se définit comme une instance matérielle, concrète, d'une Machine de Turing Universelle
 
 ### Calculabilité
-Si un problème (proposition, fonction), que l'on peut *énoncer sous forme mathématique*, peut être résolu par une machine de Tûring, alors celui-ci est *calculable*. Il doit exister un *nombre fini d'instructions* pour résooudre ce problème.
+Si un problème (proposition, fonction), que l'on peut *énoncer sous forme mathématique*, peut être résolu par une machine de Tûring, alors celui-ci est *calculable*. Il doit exister un *nombre fini d'instructions* pour résoudre ce problème.
 
 ### Comparer des programmes
 Il devrait être possible de comparer des programmes en construction en évaluant le nombre de *pas* de calcul qui serait nécessaire. Tûring fait émerger la notion de *compléxité*.
@@ -276,7 +276,9 @@ Un *Circuit intégré*, c'est un circuit électronique conventionnel qui a été
 
 Un « système sur une puce » est un système complet embarqué sur une seule puce ("circuit intégré"), comprenant de la mémoire, un ou plusieurs microprocesseurs, des périphériques d'interface (processeur graphique GPU...), et autres composants nécessaires à la composition du SoC complet... 
 
-Voir l'excellent cours sur [https://eskool.gitlab.io/tnsi/soc/](https://eskool.gitlab.io/tnsi/soc/)
+> Ces systèmes permettent de réduire l'encombrement, la consommation d'énergie (courants faibles), et de diminuer le coût de production (gros volumes de fabrication). L'inconvenient principal est qu'il est n'est pas possible de modifier soi-même ses composants, et de l'upgrader.
+
+*Voir l'excellent cours sur [https://eskool.gitlab.io/tnsi/soc/](https://eskool.gitlab.io/tnsi/soc/)*
 
 # Liens et bibliographie
 * [cours sur l'architecture Von Neumann lattice.cnrs.fr](https://www.lattice.cnrs.fr/sites/itellier/poly_intro_info/informatique004.html#fig:Von%20Neumann)
