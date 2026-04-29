@@ -2,8 +2,9 @@
 title: reseaux
 ---
 
+<!--
 {{< img src="../images/video_internet.png" link="https://www.lumni.fr/video/creation-d-internet-de-la-premiere-connexion-au-reseau-mondial#containerType=folder&containerSlug=internet-les-origines-du-web" caption="video sur l'emergence du reseau internet - Lumni" >}}
-
+-->
 {{< img src="../images/video_internet_2.png" link="https://youtu.be/9UMvyfT4V_Y?si=Zmow35HcXlXAGxRS" caption="Comment fonctionne internet - Youtube" >}}
 
 # Faire communiquer des ordinateurs
@@ -159,12 +160,19 @@ $$1703:01b8:43c4:85a3:0000:0000:a213:bba7$$
 Leur nombre est d'environ 10^29 fois plus important que pour les adresses IPv4.
 
 ## DNS, IP et URL
-* Lorsque l'on veut atteindre un ordinateur serveur depuis notre navigateur, possédant une adresse IP publique, on pourrait la saisir dans la barre d'adresse. [^5]
+Lorsque l'on demande un service sur internet, on ne saisit pas `http://adresse IP` mais `http://URL de la page` depuis la barre du navigateur. Il y a alors plusieurs étapes avant d'obtenir une ressource du serveur:
 
+1. Le navigateur demande l'adresse IP correspondant au domaine mentionné dans l'URL. Il demande ce service à un serveur DNS. 
+
+{{< img src="../images/DNS.png" alt="DNS" caption="le DNS: un enorme repertoire contenant les adr IP" >}}
+
+2. Le navigateur se présente alors au serveur, qu'il arrive à joindre grace à son adresse IP.
+3. Une fois la connection établie, le navigateur envoie sa requête, qui est souvent la demande d'une page internet.
+4. Le serveur lui repond en lui envoyant la ressource demandée.
 
 {{< img src="../images/http.gif" alt="protocole HTTP" caption="modèle client-serveur" >}}
 
-* En pratique, la ressource n'est pas envoyée en entier par le serveur, mais par petits morceaux. Cela rend l'utilisation d'internet plus efficace. (voir aussi le cours sur{{< a link="/docs/SNT_2nde/pages/page3/modele_OSI/" caption="le modele OSI et le protocole TCP" >}})
+> En pratique, la ressource n'est pas envoyée en entier par le serveur, mais par petits morceaux. Cela rend l'utilisation d'internet plus efficace. (voir aussi le cours sur{{< a link="/docs/SNT_2nde/pages/page3/modele_OSI/" caption="le modele OSI et le protocole TCP" >}})
 
 **le protocole IP:** c'est lui qui permet de se connecter à un autre ordinateur. Il gère l'adressage.
 
@@ -184,4 +192,4 @@ Leur nombre est d'environ 10^29 fois plus important que pour les adresses IPv4.
 
 [^4]: Système distribué: Les ordinateurs du reseau ont un couplage faible, et communiquent par echange de messages de manière asynchrone. La difficulté de mise en oeuvre d'un algorithme sur un système distribué, est que l'on n'a pas connaissance de l'état global du système (routage sur internet).
 
-[^5]: En réalité, on ne saisit pas `http://adresse IP` mais `http://URL de la page` depuis la barre du navigateur. Celui-ci remplace l'URL de la page par l'adresse IP correspondante, après consultation du serveur DNS.
+
