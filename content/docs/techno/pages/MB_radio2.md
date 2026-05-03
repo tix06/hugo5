@@ -58,6 +58,12 @@ Puis les instructions pour le comportement de la carte selon le message reçu:
 
 {{< img src="../images/radio10.png" >}}
 
+
+
+> A. Téléverser et tester le programme. 
+
+> B. Compléter le code python obtenu:
+
 ```python
 from microbit import *
 import radio
@@ -67,25 +73,23 @@ radio.on()
 radio.config(channel = 7, power = 6, length = 32, group=0)
 print('Bonjour !' + "")
 
-while True:
+while ...:
   if button_a.is_pressed():
-    radio.send('1')
+    ...
   if button_b.is_pressed():
-    radio.send('2')
+    ...
   stringData = radio.receive()
   if stringData:
     if stringData == '1':
-      display.show(Image.HAPPY)
+      display.show(...
       utime.sleep(0.015)
       display.clear()
     elif stringData == '2':
-      display.show(Image.SAD)
+      display.show(...
       utime.sleep(0.015)
       display.clear()
 
 ```
-
-> Téléverser et tester le programme. 
 
 1. Quel est la signification de chacune des instructions suivantes?
 
@@ -112,6 +116,8 @@ while True:
 
 {{< img src="../images/vitta_init8.png" >}}
 
+> Pour communiquer à 2 cartes microbit, dans un reseau privé, vous pouvez choisir votre valeur pour `radio.config(group=0)`, comme par exemple `radio.config(group=1)`, ... (maximum 255).
+
 4. Choisir le-s terme-s adapté-s parmi les mots suivants: il s'agit d'un problème de...
 
 * intégrité
@@ -120,7 +126,7 @@ while True:
 
 
 
-## Projet: Générateur de messages
+## Projet 1: Générateur de messages
 > But: On améliore le dispositif pour faire une selection parmi plusieurs messages (au moins 3). Les messages peuvent être des textes brefs, ou bien des messages de reaction de type LIKE/ UNLIKE.
 
 {{< img src="../images/radio_13.png" caption="discussion" >}}
@@ -128,7 +134,7 @@ while True:
 ### Compléments théoriques: index modulo avec `%`
 Cette fois, le nombre de messages possibles est supérieur au nombre de boutons (3 messages pour 2 boutons).
 
-Nous allons utiliser une **liste** de messages. Pour acceder à un element de cette liste, nous allons utiliser un **index**.
+Nous allons utiliser une **liste** de messages. Pour acceder à un element de cette liste, nous allons utiliser un **index**. *Exemple:*
 
 
 ```python
@@ -146,7 +152,7 @@ print(L[2])
 print(L[3])
 ```
 
-On peut utiliser un index numérique pour parcourir tous les éléments de la liste. Tester dans une nouvelle cellule du notebook:
+On peut utiliser un index numérique pour parcourir tous les éléments de la liste. *Exemple:*
 
 ```python
 for i in range(len(L)):
@@ -217,7 +223,7 @@ if button_b.is_pressed():
   radio.send(L[i])
 ```
 
-* *[En option] Ajout d'un repère visuel*: On peut ajouter un repère visuel pour la selection du message. On éclaire alors la diode de la première ligne (`y=0`), dont la position `x` correspond à l'index `x=i`. Cela donne: `display.set_pixel(i,0,9)`
+* *[En option] Ajout d'un repère visuel*: On peut ajouter un repère visuel pour la selection du message. On éclaire alors la diode de la *première ligne* (`y=0`), dont la position `x` correspond à l'index `x=i`. Cela donne: `display.set_pixel(i,0,9)`
 
 ```python
 if button_a.is_pressed():
@@ -260,7 +266,7 @@ Lorsqu'un message est reçu:
 
 > Vous avez reussi à échanger des messages avec votre binôme? Poursuivre cette séance avec les 2 projets suivants.
 
-## Projet 1: Auteurs authentifiés
+## Projet 2: Auteurs authentifiés
 > But: Utiliser une règle d'authentification entre 2 cartes de votre réseau privé.
 
 Votre reseau privé n'est pas à l'abris d'un utilisateur non invité. Vous souhaiteriez alors savoir de QUI vient le message reçu. 
@@ -281,12 +287,10 @@ la carte n°1 enverra:
 "1_le lundi ne mange pas a la cantine"
 ```
 
-Le programme recepteur pourra, au choix:
+Le programme recepteur pourra afficher la chaine de caractère entière, renseignant à la fois le numéro de la carte emettrice ET le message.
 
-* Afficher la chaine de caractère entière, renseignant à la fois le numéro de la carte emettrice ET le message.
-* ou n'afficher que les messages provenant de la carte n°1 (ou autre).
 
-Dans ce 2e cas: Pour les recepteurs du message, il faudra alors PARSER cette chaine. *Parser* signifie: *diviser une chaîne de caractères en une liste ordonnée de sous-chaînes*.
+Pour lire le numéro au début du message, il faudra PARSER la chaine reçue. *Parser* signifie: *diviser une chaîne de caractères en une liste ordonnée de sous-chaînes*.
 
 Python offre une multitude de possibilités pour travailler avec des chaînes de caractères (strings): voir [page du cours python sur les variables et string](/docs/python/pages/variables/page1/) 
 
@@ -320,7 +324,7 @@ print(message) # affiche: la feve est dans la 3e part
 print("la carte n°",n," vous informe que\n", message)
 ```
 
-* Ou bien, parser le message avec la méthode de chaine `split`:
+* Ou **mieux**, parser le message avec la méthode de chaine `split`:
 
 ```python
 message = "1_la feve est dans la 3e part"
@@ -336,22 +340,68 @@ message = L[1]
 ### Programmation de la carte microbit
 > Adapter le programme pour permettre une communication avec un auteur *authentifié* dans un reseau à plusieurs cartes. 
 
-Vous allez mettre 4 cartes microbits dans un même réseau (Réglage dans l'instruction `radio.config(channel = 7, power = 6, length = 32, group=0)`). Choisir le même *channel* et le **même** *group* pour **4 cartes microbit.**
+{{< img src="../images/vitta_init111.png" >}}
+
+Vous allez mettre *2 cartes microbits ou plus* dans un même réseau privé (Réglage dans l'instruction `radio.config(channel = 7, power = 6, length = 32, group=0)`). Choisir le même *channel* et le **même** *group* pour les cartes microbit du même **groupe**.
 
 
-
-Utiliser maintenant l'interface Python sur [Vittascience.com](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience) pour réaliser les modifications.
+Utiliser l'interface Python sur [Vittascience.com](https://fr.vittascience.com/microbit/?mode=mixed&console=bottom&toolbox=vittascience).
 
 A partir du programme initial, apporter les modifications pour:
 
-* envoyer un message avec un numero d'identification à 2 chiffres. Ce numero doit être le même pour une paire de cartes microbits du reseau, et doit rester secret.
-* afficher tout message qui commence par cet identifiant, pas les autres messages reçus. Il faudra utiliser une instruction conditionnelle sur le numéro de carte pour afficher (ou non) le message.
+1. Choisir un numero pour votre groupe privé que vous placerez dans `groupe_prive`. Modifiez votre `message` à envoyer.
+2. Ecrire une fonction `parse` qui prend en paramètre une chaine de caractère `message`, et un caractère de separation `sep`. Cette fonction doit retourner une liste `L` constituée de 2 éléments: `L[0]` contient le numero du groupe et `L[1]` le message placé après le caractère de séparation. 
+3. Ajouter à votre script la fonction `test_parse()` qui teste le bon fonctionnement de la fonction `parse`:
 
-{{< img src="../images/vitta_init111.png" >}}
+```python
+def test_parse():
+  assert parse("1_les carrotes sont cuites","_") == ["1","les carrotes sont cuites"]
+  assert parse("1_2_3","_") == ["1","2"]
+```
 
-> Décrire le programme avec un [diagramme d'activité](/pdf/NSI_1/diagramme_activite2.pdf).
+Ajouter aussi l'appel de la fonction `parse_test()` dans le corps de votre programme.
 
-## Projet 2: Chiffrement
+4. Lorsque l'on appuie sur le bouton `b`: envoyer un message avec un numero d'identification à 2 chiffres. Ce numero doit être le même pour toutes les cartes microbits du même reseau privé. Le message sera mis en forme avec `str(groupe_prive) + "_" + message`
+5. `parser` et afficher tout message qui commence par le bon identifiant, pas les autres messages reçus. Il faudra utiliser une instruction conditionnelle sur le numéro de carte pour afficher (ou non) le message.
+
+*Votre script devrait avoir les instructions suivantes:*
+
+```python
+from microbit import *
+import radio
+import utime
+
+groupe_prive = ...
+radio.on()
+radio.config(channel = 7, power = 6, length = 32, group=groupe_prive)
+message = "message a personnaliser" # personnalisez votre message
+
+def parse(message,sep):
+  """retourne une liste constituée de 2 elements
+  decoupe de la chaine message autour du caractere sep
+  """
+  pass
+
+def test_parse():
+  assert parse("1_les carrotes sont cuites","_") == ["1","les carrotes sont cuites"]
+  assert parse("1_2_3","_") == ["1","2"]
+
+test_parse()
+
+while True:
+  if button_b.is_pressed():
+    radio.send(...
+  stringData = radio.receive()
+  if stringData:
+    ...
+```
+
+
+
+
+> Tester le bon fonctionnement de votre programme dans un reseau contenant plusieurs cartes microbits. Décrivez le reseau (nombre de cartes microbit de chaque groupe et numeros de ces groupes).
+
+## Projet 3: Chiffrement
 > But: réaliser une communication privée dans un reseau public.
 
 ### Premier programme utilisant un notebook python
@@ -405,6 +455,46 @@ Assurez vous à l'aide de quelques tests, que la fonction donne de bons résulta
 `radio.config(channel=7)`: Configure la fréquence d'émission : la valeur est un numéro entre 0 et 83
 
 `radio.config(group=0)`:  Configure le groupe : au sein d'une même adresse, 256 groupes numérotés de 0 à 255 peuvent cohabiter`
+
+*programme de base pour faire communiquer 2 cartes microbit:*
+
+```python
+from microbit import *
+import radio
+import utime
+
+radio.on()
+radio.config(channel = 7, power = 6, length = 32, group=0)
+print('Bonjour !' + "")
+
+while True:
+  if button_a.is_pressed():
+    radio.send('1')
+  if button_b.is_pressed():
+    radio.send('2')
+  stringData = radio.receive()
+  if stringData:
+    if stringData == '1':
+      display.show(Image.HAPPY)
+      utime.sleep(0.015)
+      display.clear()
+    elif stringData == '2':
+      display.show(Image.SAD)
+      utime.sleep(0.015)
+      display.clear()
+
+```
+
+# Le reseau *mesh*
+
+
+{{< img src="../images/mesh.png" >}}
+
+D'après un article du Monde (02/05/2026)
+
+> Comment pourrait-on réaliser un reseau *mesh* pour la ville de Nice? Expliquer ce qu'il faudrait utiliser en terme de matériel, de noeuds du reseau, ainsi qu'en terme de logiciels, pour assurer l'intégrité et la confidentialité.
+
+{{< img src="../images/nice.png" >}}
 
 # Liens
 * Introduction au module radio (TP Lucioles): [microbit-micropython.readthedocs.io](https://microbit-micropython.readthedocs.io/fr/latest/tutorials/radio.html)

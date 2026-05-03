@@ -381,6 +381,8 @@ c2l0ZUNvZGU9ZGFjcGJybDR0byZ2aXNpdG9yQ29kZT1mMnBvbGJucXRhNTU5b3YwJnN0YXJ0T2ZWaXNp
 
 *...Dans le cas du protocole HTTP, les fichiers cookies sont transmis en texte clair dans les en-têtes des requêtes HTTP, ce qui signifie qu’ils ne sont pas chiffrés. Un acteur malveillant (reseau wifi public) peut alors facilement intercepter le trafic entre vous et le site Internet sur lequel vous vous trouvez, et en extraire les cookies...*
 
+* Peut-on utiliser cette technique pour bypasser le proxy du lycée? [video youtube de 2015](https://www.youtube.com/watch?v=aCsYrC_OavA) => Non à cause des hebergements mutualisés, et de l'identification par l'en-tête *host*, necessaire pour la phase de présentation (https)
+
 
 
 

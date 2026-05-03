@@ -386,7 +386,7 @@ On souhaite chiffrer un message (par exemple une chaîne de caractères) à l’
 # Liens
 * Suite du cours: [chiffrement asymétrique](../page7)
 
-## Documentation, sitographie
+# Documentation, sitographie
 * Chiffrement : notre antisèche pour l'expliquer à vos parents [article de NextImpact](https://www.nextinpact.com/article/24930/99777-chiffrement-notre-antiseche-pour-expliquer-a-vos-parents)
 * chiffrement de Vigenère: [wikipedia](https://fr.wikipedia.org/wiki/Chiffre_de_Vigen%C3%A8re)
 * Interstices : [coder et decoder. La machine Enigma](https://interstices.info/turing-a-lassaut-denigma/)
