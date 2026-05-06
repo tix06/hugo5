@@ -106,9 +106,30 @@ Une bonne pratique est de lire les noms de domaines dans la barre d’adresse af
 
 {{< img src="../images/phishing.png" >}}
 
+On pourra consulter la video suivante:
+
+{{< img src="../images/phishing_video.png" link="https://www.youtube.com/watch?v=iRf375BUIww" caption="phishing et noms de domaine - arsen.co" >}}
+
+## Naviguer en https
+https est la version securisée pour l’echange de données sur internet. Lorsque vous demandez à charger une page sur internet (on dit que vous demandez une ressource), les etapes sont les suivantes :
+
+-	Resolution DNS
+-	Contact avec le serveur grace à l’adresse IP et le nom de domaine du site internet
+-	Echange des clés de chiffrement
+-	*Le client demande la page web*
+-	*Le serveur lui retourne la page*
+-	*Le client envoie des données*
+-	*Le serveur traite les données*
+-	…
+
+*En italique : les echanges chiffrés.*
+
+**Risque (faible)**: si le flux de données est capturé: il est possible de connaitre le nom de domaine consulté, mais pas le contenu ni l'adresse de la page consultée sur le site.
+
+<!--
 ## Attaque par dénis de service
 DDoS : consiste à rendre un serveur incapable de répondre à des requêtes. En général, se fait en inondant de requêtes, le serveur n’est alors plus capable de répondre.
-
+-->
 ## Censure sur internet
 **Blocage DNS**
 
@@ -122,7 +143,7 @@ Fonctionnement du site: envoi de l’URL sur l’un de ses serveurs hebergés da
 
 {{< img src="../images/censure3.png" caption="exemple de blocages" >}}
 
-Ce blocage est facilement contournable en utilisant un serveur DNS alternatif.
+Ce blocage est **facilement contournable** en utilisant un serveur DNS alternatif.
 
 **Blocage par adresse IP**
 
@@ -132,4 +153,17 @@ Dans de nombreux pays, les FAI sont contraints par leur gouvernement d'effectuer
 
 Néanmoins, dans le cas d’un tel blocage, il existe des solutions, comme d’avoir recours à un tunnel chiffré, tel qu’un VPN.
 
+## Utiliser un VPN
+Le VPN assure un tunnel pour acheminer les données, chiffrées dès que la connexion est établie.
+La procédure est la suivante:
+
+-	Connection au serveur VPN
+-	*Resolution DNS pour le site demandé*
+-	*Contact avec le serveur..*
+-	*Echange des clés*
+-	 *;;;*
+
+*En italique : les echanges chiffrés.*
+
+La connexion au VPN ajoute une securité supplémentaire, avec un 2e chiffrement, et l’effacement du nom de domaine consulté.
 
