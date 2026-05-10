@@ -135,7 +135,7 @@ L'analyse des fréquences est moins pertinente lorsque le message a été chiffr
 
 Si on parvient à découvrir la périodicité, on peut en déduire la longueur de la clé. La connaissance de la longueur de la clé est essentielle pour pouvoir pratiquer l'analyse frequentielle: Une même lettre ne donne pas toujours le même caractère chiffré. 
 
-Le decryptage par force brute repose sur l'essai de toutes les clés possibles, par combinaison sur tous les caractères de la clé. Si celle-ci a une longueur n, cela va faire $X^n$, où X est la longueur de la clé. C'est une fonction *exponentielle*.
+Le decryptage par force brute repose sur l'essai de toutes les clés possibles, par combinaison sur tous les caractères de la clé. Si celle-ci a une longueur n, cela va faire $X^n$, où X est la longueur de l'alphabet. C'est une fonction *exponentielle*.
 
 La fonction de dechiffrage est alors executée un nombre de fois correspondant à $X^n$, dans le pire des cas. 
 

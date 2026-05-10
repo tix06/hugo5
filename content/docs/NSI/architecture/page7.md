@@ -66,7 +66,7 @@ Cet échange n'est réellement sécurisé qu'à la condition que la clé publiqu
 
 **Authentification**:
 
-`Bob : D = chiffrement(signature,Bob_private_key), signature => Alice` 
+`Bob : D = chiffrement(signature,Bob_private_key) => Alice` 
 
 Puis pour *Alice*:
 

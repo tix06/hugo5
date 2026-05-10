@@ -1,5 +1,5 @@
 ---
-Title: TP1 listes
+Title: TP1 listes NSI_1
 bookShowToc: false
 ---
 
@@ -10,12 +10,26 @@ bookShowToc: false
 * [page 2: types construits: list, tuple, dict](/docs/python/pages/variables/page2/)
 
 **Editeur Python**
+Au choix, utilisez:
 
-* Utiliser un **notebook**. Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
+* un **notebook**. 
+
+{{< img src="/images/notebook.png" >}}
+
+Dans une même **cellule**: Saisir une ou plusieurs lignes de code Python, puis appuyer simultanement sur *Majuscule(Shift)* + *Entrée* pour **executer le code**.
+
+* l'editeur **Pyzo**:
+
+Mettre **`##`** avant chaque script pour créer une *cellule*. Executer la cellule et passer à la suivante avec *MAJ+CTRL+ENTREE*.
+
+* l'editeur **Spyder**:
+
+Mettre **`#%%`** avant chaque script pour créer une *cellule*. Executer la cellule et passer à la suivante avec *MAJ+ENTREE*.
+
+{{< img src="/images/cell.png" >}}
 
 
-
-# TP5 Listes
+# TP5 Listes (NSI_1)
 ## Ex 1: Elements d'une liste
 ### Utiliser un indice
 Dans une cellule, saisir la ligne suivante:
@@ -48,6 +62,8 @@ s = ['lundi', 'mardi',  'mercredi']
 * **Question a3:** Pourquoi l'instruction `s[4] = "samedi"` génère t-elle une erreur?
 
 
+
+
 ### Slice: découpage d'une liste à partir des indices
 Pour découper une liste, on utilise le séparateur `:` entre les indices de début et fin de liste.
 
@@ -72,7 +88,7 @@ s = ['lundi', 'mardi',  'mercredi', 'jeudi', 'vendredi']
 
 ## Ex 2: Opérations sur les éléments et sur les listes
 ### Modifier une valeur (opérateurs `+-/*`)
-Saisir le script suivant:
+> Saisir le script suivant:
 
 ```python
 t = [2, 8,  9,  2]
@@ -84,7 +100,7 @@ t[2]  = t[2] + 5
 
 
 ### Coller 2 listes (opérateur +)
-Saisir le script suivant, ou bien voir son execution sur [pythontutor](https://pythontutor.com/render.html#code=l1%20%3D%20%5B1,2,3%5D%0Al2%20%3D%20%5B4,5,6%5D%0Al1%20%3D%20l1%20%2B%20l2&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false)
+> Saisir le script suivant, ou bien voir son execution sur [pythontutor](https://pythontutor.com/render.html#code=l1%20%3D%20%5B1,2,3%5D%0Al2%20%3D%20%5B4,5,6%5D%0Al1%20%3D%20l1%20%2B%20l2&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false)
 
 ```python
 l1 = [1,2,3]
@@ -105,7 +121,7 @@ print(l2)
 
 * **Question d2:** Que fait l'opération `* 3` sur une liste? 
 
-# Ex 3: Méthodes de listes
+## Ex 3: Méthodes de listes
 ### Ajouter, retirer, étendre une liste
 > Dans une cellule, saisir la ligne suivante:
 
@@ -154,6 +170,7 @@ print(s)
 
 
 ## Ex 4: chaine de caractere comme une liste
+### Des opérations similaires aux listes python
 * script 1
 
 ```python
@@ -288,8 +305,7 @@ print(D)
 
 
 
-
-
+<!--
 ## Ex 6: Liste de listes
 On définit une liste appelée `matrice`
 
@@ -328,7 +344,7 @@ tictactoe = [['O', 'O',  'O'],
 ```
 *(la liste peut être écrite sur une même ligne ou avec un retour à la ligne pour chaque élément comme vu ici)*
 
-* **Question j:** Quelles instructions faut-il écrire pour obtenir une diagonale de 'X'? Utiliser des instructions comme `tictactoe[...][...] = 'X'`
+* **Question j:** Quel ensemble d'instructions faut-il écrire pour obtenir une diagonale de 'X'? Utiliser des instructions comme `tictactoe[...][...] = 'X'`
 
 
 ## Ex 7: Algorithme sur une liste
@@ -408,6 +424,7 @@ plt.show()
 
 
 * **Question l:** Expliquer le rôle de chacune de ces fonctions: `clf`, `grid`, `xlabel` et `show`.
+-->
 
 # Portfolio
 * Quel est l'indice du premier élément de liste? Du dernier?
@@ -423,8 +440,10 @@ Comment atteindre la valeur d'un dictionnaire `D`, associé à la clé `7`?
 * Les clés d'un dictionnaire sont-elles forcement des clés numériques? Ou bien peut-on aussi placer des clés de types *string*? Exemple.
 * Comment placer toutes les valeurs d'un dictionnaire dans une liste `L` (voir ex 5)?
 
+<!--
 * Quelle librairie python permet de tracer des graphiques? Quel module?
 * Quelle instruction permet de tracer un nuage de point avec la liste X en abscisses et Y en ordonnée?
+* -->
 
 # Liens
 * activité sur les copies par valeur et par reference: [pythontutor](/docs/python/pages/variables/page3/)
