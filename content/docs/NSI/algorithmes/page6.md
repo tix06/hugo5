@@ -281,41 +281,97 @@ rendre_monnaie(49,[1,2,5,10,20,50,100],[])
 
 *Conclusion:* Suivant le système de pièces, l'algorithme glouton est optimal ou pas. Dans le système de pièces européen (en centimes : 1, 2, 5, 10, 20, 50, 100, 200), où l'algorithme glouton donne la somme suivante pour 37 : 20+10+5+2, on peut montrer que l'algorithme glouton donne toujours une solution optimale. [wikipedia](https://fr.wikipedia.org/wiki/Algorithme_glouton)
 
-### algorithme de type glouton
+# Algorithme glouton vs programmation dynamique
 
-On cherche à créer une liste de rendu de monnaie pour chaque montant de 0 à x. On aura une approche ASCENDANTE: on commence par déterminer la manière de rendre la somme la plus petite somme à rendre, puis une somme juste supérieure, etc... Chaque fois, la somme rendu le sera de manière optimale.
+Un algorithme **glouton** fait un choix local immédiat et irrévocable à chaque étape, sans revenir en arrière. Pour le rendu de monnaie, il prendrait systématiquement la plus grande pièce possible. C'est simple et rapide, mais pas toujours optimal.
 
-Pour rendre x, il faut au moins une pièce, à prendre parmi n pieces possibles. Une fois choisie cette pièce, la somme restante inférieure strictement à x, donc on sait la rendre de façon optimale. Il suffit donc d'essayer les n possibilités. Et de faire un choix parmi les solutions trouvées: celle qui rend le moins de pieces.
+> **Exemple :** rendre 15 avec {1, 7, 9} → le glouton prend 9, puis 6 × 1 = **7 pièces**.
 
-Exemple: Rendre 15 avec des pieces de {1, 7, 9}. Ce type de caisse ne donnerait pas le résultat optimum avec le précédent algorithme. Ici, cela peut-être réalisé avec un algorithme *glouton*, comme le montre le tableau ci-dessous:
+La **programmation dynamique** construit au contraire un tableau de solutions optimales pour tous les sous-problèmes, en s'appuyant à chaque étape sur les résultats déjà calculés. Elle garantit l'optimum.
 
-| montant à rendre | rendu |
-| --- | --- |
-| 15 | 3 pieces avec **[1,1],[7,2],[9,0]** (Bon) ou 7 avec [1,6],[7,0],[9,1] |
-| 14 | 2 pieces avec **[1,0],[7,2],[9,0]** (Bon) ou 6 avec [1,5],[7,0],[9,1] |
-| 13 | 7 pieces avec [1,6],[7,1],[9,0] ou 5 avec **[1,4],[7,0],[9,1]** (Bon) |
-| 12 | [1,5],[7,1],[9,0] ou **[1,3],[7,0],[9,1]** (Bon) |
-| 11 | [1,4],[7,1],[9,0] ou **[1,2],[7,0],[9,1]** (Bon) |
-| 10 | [1,3],[7,1],[9,0] ou **[1,1],[7,0],[9,1]** (Bon) |
-| 9 | [1,2],[7,1],[9,0] ou **[1,0],[7,0],[9,1]** (Bon) |
-| 8 | [1,1],[7,1],[9,0] |
-| 7 | [1,0],[7,1],[9,0] |
-| 6 | [1,6],[7,0],[9,0] |
-| 5 | [1,5],[7,0],[9,0] |
-| 4 | [1,4],[7,0],[9,0] |
-| 3 | [1,3],[7,0],[9,0] |
-| 2 | [1,2],[7,0],[9,0] |
-| 1 | [1,1],[7,0],[9,0] |
+---
 
-L'algorithme remplit le tableau depuis la valeur 1 jusqu'à 15.
+## Algorithme de programmation dynamique — rendu de monnaie
 
-Le tableau montre les choix que réalise l'algorithme.
+On cherche à rendre un montant `x` avec un minimum de pièces, choisies parmi `n` valeurs possibles.
+
+**Approche ascendante :** on construit une table de solutions optimales pour tous les montants de 0 à `x`. On commence par les petits montants, puis on monte progressivement. Chaque montant est rendu de manière optimale en s'appuyant sur les résultats déjà calculés.
+
+**Principe :** pour rendre le montant `w`, il faut au moins une pièce, à choisir parmi les `n` pièces disponibles. Une fois cette pièce choisie de valeur `p`, le montant restant `w - p` est strictement inférieur à `w` — on sait donc déjà le rendre de façon optimale (c'est déjà dans le tableau). Il suffit d'essayer les `n` possibilités et de retenir celle qui minimise le nombre total de pièces :
+
+$$dp[w] = \min_{p \in \text{pièces},\ p \leq w} \left( dp[w - p] + 1 \right)$$
+
+---
+
+## Exemple : rendre 15 avec des pièces de {1, 7, 9}
+
+### Remplissage du tableau ligne par ligne
+
+`dp[i][w]` = nombre minimum de pièces pour rendre exactement `w` avec les `i` premiers types de pièces. ∞ signifie "impossible".
+
+**Ligne 0 — sans pièce :**
+- `dp[0][0]` = 0 : rendre 0€ ne nécessite aucune pièce
+- `dp[0][w]` = ∞ pour tout `w > 0` : impossible de rendre quoi que ce soit sans pièce
+
+**Ligne 1 — pièces disponibles : {1} :**
+- `dp[1][w]` = `w` pour tout `w` : il faut exactement `w` pièces de 1€
+
+**Ligne 2 — pièces disponibles : {1, 7} :**
+- Pour `w < 7` : la pièce de 7€ est inutilisable → on recopie la ligne 1
+- Pour `w ≥ 7` : on compare "ne pas prendre la pièce de 7€" (`dp[1][w]`) et "la prendre" (`dp[2][w-7] + 1`) :
+  - `w = 7` : min(7, dp[2][0]+1) = min(7, 1) = **1**
+  - `w = 8` : min(8, dp[2][1]+1) = min(8, 2) = **2**
+  - `w = 9` : min(9, dp[2][2]+1) = min(9, 3) = **3**
+  - `w = 10` : min(10, dp[2][3]+1) = min(10, 4) = **4**
+  - `w = 11` : min(11, dp[2][4]+1) = min(11, 5) = **5**
+  - `w = 12` : min(12, dp[2][5]+1) = min(12, 6) = **6**
+  - `w = 13` : min(13, dp[2][6]+1) = min(13, 7) = **7**
+  - `w = 14` : min(14, dp[2][7]+1) = min(14, 2) = **2**
+  - `w = 15` : min(15, dp[2][8]+1) = min(15, 3) = **3**
+
+> Note : quand on "prend" la pièce de 7€, on consulte `dp[2][w-7]` (et non `dp[1][w-7]`), car on peut réutiliser la même pièce autant de fois qu'on veut.
+
+**Ligne 3 — pièces disponibles : {1, 7, 9} :**
+- Pour `w < 9` : la pièce de 9€ est inutilisable → on recopie la ligne 2
+- Pour `w ≥ 9` : on compare "ne pas prendre la pièce de 9€" (`dp[2][w]`) et "la prendre" (`dp[3][w-9] + 1`) :
+  - `w = 9` : min(dp[2][9], dp[3][0]+1) = min(3, 1) = **1**
+  - `w = 10` : min(dp[2][10], dp[3][1]+1) = min(4, 2) = **2**
+  - `w = 11` : min(dp[2][11], dp[3][2]+1) = min(5, 3) = **3**
+  - `w = 12` : min(dp[2][12], dp[3][3]+1) = min(6, 4) = **4**
+  - `w = 13` : min(dp[2][13], dp[3][4]+1) = min(7, 5) = **5**
+  - `w = 14` : min(dp[2][14], dp[3][5]+1) = min(2, 6) = **2**
+  - `w = 15` : min(dp[2][15], dp[3][6]+1) = min(3, 7) = **3**
+
+### Tableau complet
+
+| | w=0 | w=1 | w=2 | w=3 | w=4 | w=5 | w=6 | w=7 | w=8 | w=9 | w=10 | w=11 | w=12 | w=13 | w=14 | w=15 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| sans pièce | 0 | ∞ | ∞ | ∞ | ∞ | ∞ | ∞ | ∞ | ∞ | ∞ | ∞ | ∞ | ∞ | ∞ | ∞ | ∞ |
+| + pièce 1€ | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
+| + pièce 7€ | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 2 | 3 |
+| + pièce 9€ | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 1 | 2 | **1** | 2 | 3 | 4 | 5 | **2** | **3** |
+
+La réponse se lit dans la dernière case : `dp[3][15]` = **3 pièces** (7 + 7 + 1).
+
+---
+
+### Complexité
 
 > Comment cet algorithme parvient-il à reduire le nombre de combinaisons pour rendre la monnaie?
 
+Le tableau comporte `n × W` cases (ici 3 × 15 = 45), chacune calculée en temps constant. La complexité est donc **O(n · W)** — à comparer avec la méthode exhaustive en **O(2ⁿ)** :
+
+| n | W | O(n · W) | O(2ⁿ) |
+|---|---|---|---|
+| 10 | 100 | 1 000 | 1 024 |
+| 30 | 500 | 15 000 | ≈ 10⁹ |
+| 100 | 500 | 50 000 | ≈ 10³⁰ |
+
+Pour des instances réalistes, la programmation dynamique est **des milliards de fois plus rapide** que la recherche exhaustive.
+
 **Remarques:** 
 
-* Ce problème est [NP-complet](https://fr.wikipedia.org/wiki/Probl%C3%A8me_NP-complet) dans le cas général, c'est-à-dire difficile à résoudre. Cependant pour certains systèmes de monnaie dits canoniques, l'[algorithme glouton](https://fr.wikipedia.org/wiki/Algorithme_glouton) est optimal.
+* La subtilité importante : `O(n·W)` ressemble à du polynomial, mais W peut être très grand. Si les poids sont exprimés en grammes et que le sac fait 100 kg, W = 100 000. C'est pour ça que le sac à dos reste un problème dit [NP-complet](https://fr.wikipedia.org/wiki/Probl%C3%A8me_NP-complet) dans le cas général, c'est-à-dire difficile à résoudre. Cependant pour certains systèmes de monnaie dits canoniques, l'[algorithme glouton](https://fr.wikipedia.org/wiki/Algorithme_glouton) est optimal.
 * Regarder aussi: le probleme de l'allocation des ressources pour un systeme d'exploitation: [l'algorithme du banquier](https://fr.wikipedia.org/wiki/Algorithme_du_banquier)
 
 
