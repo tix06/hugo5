@@ -275,7 +275,7 @@ print(L)
 L = ['nom','Alice','classe','Premiere','activité','Judo']
 D = {}
 for i in range(len(L)):
-  if L[...] % 2 == ...:
+  if ... % 2 == ...:
     cle = L[...]
   else:
     valeur = L[...]
