@@ -15,7 +15,7 @@ On a souvent l'impression que pour chaque problème on peut trouver un algorithm
 
 **Charles Babbage** (1791 – 1871), professeur à Cambridge, construit la machine différentielle et la machine analytique. La dernière peut être considérée comme précurseur des ordinateurs modernes, consistant d’une unité de contrôle, une unité de calcul, une mémoire, ainsi que l’entrée-sortie.
 
-{{< img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Charles_Babbage_-_1860.jpg/440px-Charles_Babbage_-_1860.jpg" link="https://fr.wikipedia.org/wiki/Charles_Babbage" caption="Charles Babbage (1791 – 1871)" >}}
+{{< img src="../images/Charles_Babbage.jpg" caption="Charles Babbage (1791 – 1871) - wikipedia" >}}
 **Ada Lovelace** (1815 – 1852) travaille avec Babbage et préconise l’utilisation de la machine analytique pour la résolution de problèmes mathématiques. C'est le premier langage informatique, énoncé avant même l'existance d'une machine. Elle est considérée comme premier programmeur du monde.
 
 {{< img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Ada_lovelace.jpg" link="https://fr.wikipedia.org/wiki/Ada_Lovelace" caption="Ada Lovelace (1815 – 1852)" >}}
@@ -37,10 +37,10 @@ Paradoxalement, on sait que certaines de ces propositions *indécidables* sont *
 **Alan Turing** (1912 – 1954) et{{< a link="https://fr.wikipedia.org/wiki/Alonzo_Church" caption="" >}}
 Turing cherche s'il n'y aurait pas au moins une procédure mécanique pour trouver quelles sont les propositions que l'on peut effectivement déduire d'un système d'axiomes, c'est à dire de décider de leur vérité (équivalent du problème de décision). Il part du principe que ce qu'un humain peut déduire est équivalent à ce qu'une machine peut déduire. Ainsi, il suffit de décrire convenablement une machine idéale pour préciser ce qu'est une procédure systématique. Cette machine idéale sera la *machine de Turing*. Il montre, par un raisonnement logique que cette machine ne peut pas démontrer toutes les propositions d'un système d'axiomes (*indécidabilité*).
 
-{{< img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Alan_Turing_Aged_16.jpg/440px-Alan_Turing_Aged_16.jpg" link="https://fr.wikipedia.org/wiki/Alan_Turing" caption="Alan Turing (1912 – 1954)" >}}
+{{< img src="../images/Alan_Turing.jpg" caption="Alan Turing (1912 – 1954) - wikipedia" >}}
 # Définitions
 ## Qu'est ce qu'un problème?
-Informatiquement, l’appellation problème sera synonyme de fonction. Un problème est caractérisé par:
+Informatiquement, *problème* sera synonyme de *fonction*. Un problème est caractérisé par:
 
 * Le nom du problème
 * des données d'entrée, que l'on appelle instance du problème.
@@ -48,17 +48,26 @@ Informatiquement, l’appellation problème sera synonyme de fonction. Un probl
 
 Rq : Ne pas confondre problème et algorithme le résolvant. Il peut y avoir plusieurs algorithmes qui resolvent le même problème (calculent la même fonction).
 
-Problème 1 <br> 
-Donnée : Un ensemble d'entiers naturels<br> 
-Question : Déterminer les nombres pairs de cet ensemble.
+Les problèmes s'énoncent de la manière la plus *générale possible*. On peut les désigner comme des *classes*, possédant de multiples *instances* (celles pour lesquelles on place des valeurs à la place des varaibles).
 
-Problème 2  <br> 
-Donnée : Un ensemble d'entiers naturels<br> 
-Question : Déterminer les nombres premiers de cet ensemble.
+> Problème 1 
 
-Problème 3 <br> 
-Donnée : Un programme C.<br> 
-Question : Le programme est-il syntaxiquement correct ?
+* Donnée : Un ensemble N d'entiers naturels<br> 
+* Question : Déterminer les nombres pairs dans cet ensemble.
+
+*Instance 1: Quels sont les nombres pairs dans l'ensemble `[1,2,3,4]`?*
+
+> Problème 2  
+
+* Donnée : Un ensemble N d'entiers naturels<br> 
+* Question : Déterminer les nombres premiers de cet ensemble.
+
+*Instance 2: Le nombre 137 est-il premier?*
+
+> Problème 3 
+
+* Donnée : Un programme C.
+* Question : Le programme est-il syntaxiquement correct ?
 
 Ce dernier exemple de problème suggère qu'un **algorithme** est une
 **donnée** comme une autre. En effet, le **script** qui traduit l'algorithme est écrit dans un **langage**. Et la machine va le lire et l'interpréter à l'aide d'un autre programme. Pour ce programme, le script est une donnée (**interpréteurs, compilateurs**). 
@@ -88,24 +97,24 @@ Tous les problèmes mathématiques (voir plus haut) peuvent être énoncés comm
 
 Pour les problèmes 1 et 2 vus auparavent, on peut les énoncer sous la forme:
 
-* Problème 1 
+* **instance du Problème 1**
 * Donnée : Un nombre entier positif n en base 2. 
 * Question : n est-il pair?
 
 *autre exemple:* 
 
-* **Problème 2**  
+* **instance du Problème 2**  
 * Donnée : Un nombre entier positif n en base 10. 
 * Question : n est-il premier?
 
-Le problème 2 est énoncé comme un problème de décision.
+Les problèmes 1 et 2 sont énoncés comme un problème de décision.
 
 En conséquence, le problème de la décision, c’est-à-dire la recherche d’une procédure qui indique dans chaque contexte, et au bout d’un temps fini, si une propriété est vraie ou fausse, est équivalent à la construction d’un algorithme qui calcule pour chaque fonction f et pour chaque argument x de f, la valeur y telle que y = f(x). Autrement dit, le problème de la **décision est équivalent au problème du calcul**.
 
 ### décidables ou indécidables?
 Les fonctions, ou propriétés bien énoncées[^1] en langages mathématique sont-elles toutes décidables? La reponse est : Non, il n'existe pas de telle méthode, comme cela a été démontré en 1931 par **Kurt Gödel** (voir plus haut).
 
-**L'indecidabilite** c'est l'impossibilité absolue et définitivement démontrée de résoudre par un procédé général de calcul un problème donné.
+**L'indecidabilité** c'est l'impossibilité absolue et définitivement démontrée de résoudre par un procédé général de calcul un problème donné.
 
 Imaginons qu'il  existe des programmes qui calculent si un programme *termine*. Ces programmes prendraient une fonction A comme paramètre, et une donnée x d'entrée de cette fonction. 
 
@@ -116,8 +125,8 @@ Si A s’arrête sur l’entrée x, le programme *termine* peut renvoyer `True
 
 > Exemple de problème non décidable : 
 
-* Problème<br> 
-* Donnée : Un programme C.<br> 
+* Problème
+* Donnée : Un programme C.
 * Question : Le programme s’arrête-t-il toujours ?
 
 
@@ -172,7 +181,7 @@ def somme(L):
 Le script contient une boucle bornée. La variable k augmente d'une unité à chaque itération. De k=0 jusqu'à len(L)-1. La boucle s'arrêtera lorsque k atteindra len(L) -1, ce qui arrivera forcement.
 
 ### correction
-On considère l'invariant de boucle énoncé ainsi : "pour un indice k, s est égal à la somme de L[:k]". C'est à dire à:<br>
+On considère l'invariant de boucle énoncé ainsi : "pour un indice k, s est égal à la somme de L[:k]". C'est à dire à:
 
 L[0] + L[1] + L[2] + ... + L[k-1]<br>
 
