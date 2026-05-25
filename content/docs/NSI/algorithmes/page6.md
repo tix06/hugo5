@@ -408,8 +408,8 @@ La *stratégie*, sur le modèle du rendu de monnaie sera la suivante:
 * classer les objets dans l'ordre décroissant de leur taux de valeur (taux de valeur = valeur / masse). Ainsi le premier élément de la liste sera celui ayant le meilleur rapport valeur/masse.
 * on prend le premier élément de la liste, puis le deuxième, etc., tant que le sac peut encore les contenir.
 
-### Algorithme de type glouton
-Nous allons chercher à adapter ici aussi l'algorithme glouton du rendu de monnaie:
+### Algorithme de type programmation dynamique
+Nous allons chercher à adapter ici aussi l'algorithme vu pour le rendu de monnaie:
 
 *Algorithme:*
 
@@ -537,11 +537,18 @@ Par exemple, pour la suite de Fibonacci, ou le triangle de Pascal, les coefficie
 
 **Algorithmes gloutons**
 
-Un algorithme glouton dépend du problème que l'on cherche à resoudre. Il n'y a pas d'algorithme glouton universel. Il permet de trouver une solution à un problème d'optimalité. Il part du principe que l'on peut trouver une solution approchante pour un problème NP-complet, en utilisant une stratégie et en faisant des choix. Chacun de ces choix semble être le **meilleur sur le moment**.
+Un algorithme glouton dépend du problème que l'on cherche à resoudre. Il n'y a pas d'algorithme glouton universel. Il permet de trouver une solution à un problème d'optimalité. Il part du principe que l'on peut trouver une solution approchante pour un problème NP-complet, en utilisant une stratégie et en faisant des choix. Chacun de ces choix semble être le **meilleur sur le moment**. 
 
-Cette stratégie peut être par exemple: 
+Les choix realisés sont:
 
-* pour le *rendu de monnaie*: de commencer par résoudre le problème d'optimalité pour rendre de plus petites sommes. Puis, on utilise cette solution pour rendre une partie des sommes plus importantes.
+* rendre la piece de monnaie la plus grande possible, d'abord.
+* prendre l'objet de plus grand ration prix/poids, d'abord.
+
+**Programmation dynamique**
+
+Il s'agit maintenant d'une stratégie ascendante, utilisant des résultats optimum, établis pour de plus petit cas, afin de resoudre de plus gros.
+
+* pour le *rendu de monnaie*: commencer par résoudre le problème d'optimalité pour rendre de plus petites sommes. Puis, on utilise cette solution pour rendre une partie des sommes plus importantes.
 
 * pour le *problème du sac à dos*: de commencer par remplir un sac de plus petite contenance. Puis, on utilise ce résultat pour compléter de plus gros sacs.
 
@@ -661,10 +668,10 @@ essais
 {1: 6, 10: 0, 15: 1}
 ``` 
 
-### algo naïf recursif
+### algo glouton recursif
 (non donné)
 
-### algorithme glouton
+### algorithme en programmation dynamique
 ```python
 import copy
 def renduMonnaieProgDyn(x,c) :
