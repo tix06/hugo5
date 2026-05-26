@@ -197,7 +197,67 @@ table = [{'IDC' : 27, 'NOM': 'Ritta', 'AGE': 19, 'ACTIVITE: 'Danse'},
 ### Table mise dans un Dataframe
 Cette partie sera developpée en TP.
 
-## Opérations sur les tables
+## Insertion dans une table
+On suppose que la table a été importée dans une **liste de dictionnaires**. Le traitement affectera TOUTES les lignes de la table.
+
+### Calculer une moyenne
+* parcourir tous les elements de liste
+* ce sont des dictionnaires: selectionner la valeur associée à la clé
+* faire la somme et diviser par le nombre d'éléments de la liste. (le nombre de dictionnaires)
+* appel de la fonction avec le tableau
+
+```python
+tableau = [{'IDC' : 27, 'NOM': 'Ritta', 'AGE': 19, 'ACTIVITE: 'Danse'},
+         {'IDC' : 19, 'NOM': 'Blaise', 'AGE': 29, 'ACTIVITE: 'Cinema'},
+         {'IDC' : 11, 'NOM': 'Dede', 'AGE': 59, 'ACTIVITE: 'Nature'}
+         ]
+
+def moyenne(L,cle):
+  """calcule la moyenne des valeurs associées à clé
+  params:
+  L: list of dict
+  cle: str, la clé commune à chaque dictionnaire, les valeurs associées 
+  sont soit int soit float
+  """
+  s = 0
+  for elem in L:
+    s += elem[cle]
+  return s / len(L)
+
+> moyenne(tableau,'AGE')
+35.666667
+```
+
+### Ajouter une valeur calculée
+On peut souhaiter ajouter la différence avec la moyenne des âges, pour chaque élément du tableau. Il faudra:
+
+* calculer la moyenne des âges (fonction `moyenne`)
+* parcourir les dictionnaires du tableau
+* lire la valeur associée à `âge`
+* `valeur = moyenne(L,'AGE') - elem['AGE']` 
+* ajouter le couple `'DIFFERENCE': valeur` pour chaque element du tableau
+
+```python
+tableau = [{'IDC' : 27, 'NOM': 'Ritta', 'AGE': 19, 'ACTIVITE: 'Danse'},
+         {'IDC' : 19, 'NOM': 'Blaise', 'AGE': 29, 'ACTIVITE: 'Cinema'},
+         {'IDC' : 11, 'NOM': 'Dede', 'AGE': 59, 'ACTIVITE: 'Nature'}
+         ]
+
+def ajoute_moyenne(L):
+  for elem in L:
+    age = L['AGE']
+    valeur = moyenne(L,'AGE') - elem['AGE']
+    elem['DIFFERENCE'] = valeur
+
+> ajoute_moyenne(tableau)
+> print(tableau)
+[{'IDC' : 27, 'NOM': 'Ritta', 'AGE': 19, 'ACTIVITE: 'Danse', 'DIFFERENCE': -16.6667},
+ {'IDC' : 19, 'NOM': 'Blaise', 'AGE': 29, 'ACTIVITE: 'Cinema' 'DIFFERENCE': -6.6667},
+ {'IDC' : 11, 'NOM': 'Dede', 'AGE': 59, 'ACTIVITE: 'Nature', 'DIFFERENCE': 23.3333}
+]
+```
+
+## Opérations sur les tables: selection, projection, jointure
 Ces opérations vont créer une nouvelle table.
 ### Selection
 **Definition:** Selectionner revient à extraire les lignes d'une table qui satisfont un critère. Pour réaliser une selection, on utilise une fonction `test` qui prend en paramètre une ligne de la table et retourne un booléen:
