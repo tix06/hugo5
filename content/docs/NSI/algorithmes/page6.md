@@ -162,6 +162,11 @@ Par exemple, pour rendre 7 euros, voici toutes les combinaisons possibles (la so
 * 2 + 1 + 1 + 1 + 1 + 1
 * 1 + 1 + 1 + 1 + 1 + 1 + 1
 
+On peut représenter cette recherche de solutions à l'aide d'un arbre: La racine est la somme à rendre. On descend dans l'arbre en faisant des choix, ce qui diminue la somme. Lorsque l'on arrive sur une feuille avec 0, c'est que l'on a trouvé une solution. La solution otimale est donnée ici en rendant 4 pieces de 7 (trajectoire presque verticale de 28 à 0):
+
+{{< img src="../images/Rendu_monnaie.svg" caption="wikipedia - Problème_du_rendu_de_monnaie" >}}
+
+> 1. Représenter, comme sur l'image ci-dessus, une partie de l'arbre des combinaisons pour rendre un montant égal à 15, en choisissant une à une chaque piece de la caisse `[1, 7, 9]`. Quelle est la trajectoire dans cet arbre selon la méthode *gloutonne*? Quel est le choix optimal? 
 Un programme python exprimerait le rendu sous forme de liste:
 
 ```python
@@ -245,7 +250,9 @@ rendu(21,[20,10,5,2,1])
 ### heuristique glouton
 Le problème est traité de cette manière en [1ere NSI](/docs/NSI_1/algo/page3/):
 
- Supposons que l'on dispose d'une fonction recursive, qui pour chaque piece de la caisse fait le choix suivant:
+Une caisse contient un nombre suffisant de pieces pour rendre la monnaie. Cette caisse est représentée par une liste triée en ordre croissant, et sera parcourue de la piece de valeur la plus élevée vers la moins élevée.
+
+Supposons que l'on dispose d'une fonction recursive, qui pour chaque piece de la caisse fait le choix suivant:
 
 * soit la piece est inférieure à la monnaie à rendre: alors on soustrait la piece à la somme à rendre et on appelle la fonction de manière récursive avec cette même caisse, et la nouvelle somme à rendre.
 * soit la piece est supérieure à la somme à rendre. on retire la piece de la caisse. Et on appelle de manière récursive la fonction avec la nouvelle caisse, et la même somme.
@@ -277,7 +284,7 @@ rendre_monnaie(49,[1,2,5,10,20,50,100],[])
 > 1. Que renvoie la fonction pour rendre 53 pences avec le [système imperial](https://fr.wikipedia.org/wiki/Shilling_britannique) où pieces = [240,60,30,24,12,6,3,1] ? 
 > 2. Le rendu est-il optimal avec cette méthode? Ou bien existe t-il une autre façon de rendre la monnaie, avec moins de pieces?
 
-> 3. Représenter une partie de l'arbre des combinaisons possibles pour rendre un montant égal à 15, en choisissant une à une chaque piece de la caisse `[1, 7, 9]`. Quel est le choix optimal? 
+
 
 *Conclusion:* Suivant le système de pièces, l'algorithme glouton est optimal ou pas. Dans le système de pièces européen (en centimes : 1, 2, 5, 10, 20, 50, 100, 200), où l'algorithme glouton donne la somme suivante pour 37 : 20+10+5+2, on peut montrer que l'algorithme glouton donne toujours une solution optimale. [wikipedia](https://fr.wikipedia.org/wiki/Algorithme_glouton)
 
