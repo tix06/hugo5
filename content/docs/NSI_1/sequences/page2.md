@@ -12,7 +12,30 @@ Deux familles d'algorithmes fortement liées:
  
 *Algorithmes de tri: la recherche dichotomique sur une table déjà triée va être beaucoup plus efficace que la recherche sequentielle sur une table non triée* 
 
+## Les 2 méthodes de recherche
+* **Cas n°1:** données non triées
+
+*Enoncé*: Supposons que notre liste contienne des valeurs (des cartes) issues d'un paquet mélangé (non *triées*). On cherche dans cette liste la carte du 2 de pique. On part de la carte la plus à gauche, et on remonte la liste vers la droite jusqu'à trouver cette carte (ou ne rien trouver si elle n'est pas dans la liste). La fonction de recherche retournera l'indice i si celle-ci est trouvée, -1 sinon. Il s'agit d'une recherche **séquentielle**.
+
+{{< img src="../images/recherche11.png" >}}
+
+{{< img src="../images/recherche2.png" >}}
+
+{{< img src="../images/recherche3.png" >}}
+
+* **Cas n°2:** données triées
+
+*Enoncé*: Supposons cette fois que la liste contient cartes triées dans un ordre croissant. On cherche le 2 de carreau. On commence par la valeur (carte) du milieu de la liste. Si la carte du milieu de la liste est supérieure à cette carte, on réduit la liste à sa moitié gauche, et on prend à nouveau l'indice du milieu... On procède ainsi, par elimination de la moitié gauche ou droite de la liste jusqu'à trouver la carte (ou ne pas trouver si celle-ci n'y est pas, et que l'on a reduit le paquet à une seule carte). Il s'agit d'une recherche **dichotomique**.
+
+{{< img src="../images/recherche4.png" >}}
+
+{{< img src="../images/recherche5.png" >}}
+
+{{< img src="../images/recherche6.png" >}}
+
 ## Recherche séquentielle
+**Autre exemple**
+
 Imaginez un jeu où votre adversaire doit deviner le nombre que vous avez en tête.
 
 {{< img src="../images/recherche1.png" >}}
