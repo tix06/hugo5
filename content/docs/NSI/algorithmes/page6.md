@@ -167,6 +167,7 @@ On peut représenter cette recherche de solutions à l'aide d'un arbre: La racin
 {{< img src="../images/Rendu_monnaie.svg" caption="wikipedia - Problème_du_rendu_de_monnaie" >}}
 
 > 1. Représenter, comme sur l'image ci-dessus, une partie de l'arbre des combinaisons pour rendre un montant égal à 15, en choisissant une à une chaque piece de la caisse `[1, 7, 9]`. Quelle est la trajectoire dans cet arbre selon la méthode *gloutonne*? Quel est le choix optimal? 
+
 Un programme python exprimerait le rendu sous forme de liste:
 
 ```python
@@ -281,7 +282,7 @@ rendre_monnaie(49,[1,2,5,10,20,50,100],[])
 
 **Un système monétaire non canonique:** 
 
-> 1. Que renvoie la fonction pour rendre 53 pences avec le [système imperial](https://fr.wikipedia.org/wiki/Shilling_britannique) où pieces = [240,60,30,24,12,6,3,1] ? 
+> 1. Que renvoie la fonction pour rendre 53 pences avec le [système imperial](https://fr.wikipedia.org/wiki/Shilling_britannique) où `pieces = [240,60,30,24,12,6,3,1]` ? 
 > 2. Le rendu est-il optimal avec cette méthode? Ou bien existe t-il une autre façon de rendre la monnaie, avec moins de pieces?
 
 
