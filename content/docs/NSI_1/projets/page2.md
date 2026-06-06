@@ -38,6 +38,8 @@ print(w['weather'][0]['main'],'-',w['weather'][0]['description'])
 print()
 ```
 
+Un exemple de clé, que vous pouvez utiliser *provisoirement*, avant de créer la votre: `02cbe3cb547ddf63a866b3b9679daffe`
+
 *Prolongement:* Pour obtenir les prévisions sur plusieurs jours, utiliser la requete:
 
 ```python
