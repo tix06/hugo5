@@ -473,7 +473,7 @@ Mais une illustration plus concrête est celle par exemple du problème de la to
 {{< img src="../images/tournee.png" caption="tournée du candidat à la presidentielle" >}}
 On voit que la recherche d'une solution en comparant tous les tours qu'il est mathématiquement possible de faire n'est pas raisonnable. La complexité est trop importante.
 
-## Exemple
+## Exemple: solution gloutonne
 Un voyageur cherche un itinéraire passant par toutes les villes du tableau, et qui minimise la distance totale parcourue. Les villes peuvent être visitées dans n'importe quel ordre mais aucune ne doit être négligée, et le visiteur doit revenir à la fin à sa ville de départ.
 
 Le voyageur part de Nancy et souhaite visiter Metz, Paris, Reims et Troyes, avant de retourner à Nancy.
@@ -494,7 +494,7 @@ Voici un tableau donnant les distances kilométriques entre chacune des ces vill
 4. Que dire de la solution gloutonne ?
 
 
-## algorithme de recherche locale k-opt
+## Méthode itérative d'amélioration: algorithme de recherche locale k-opt
 L'algorithme k-opt est un algorithme de recherche locale proposé par Georges A. Croes en 19581 pour résoudre le problème du voyageur de commerce en améliorant une solution initiale. On représente le tour par un graphe connexe.
 
 à chaque étape, on supprime deux arêtes de la solution courante et on reconnecte les deux tours ainsi formés. Cette méthode permet, entre autres, d'améliorer le coût des solutions en supprimant les arêtes sécantes lorsque l'inégalité triangulaire est respectée (voir figure ci-contre). Sur le schéma de droite, la route {a, b, e, d, c, f, g} est changée en {a, b, c, d, e, f, g} en inversant l'ordre de visite des villes e et c. Il n'est toutefois pas certain que la solution trouvée soit également optimale lorsque l'on additionne ces morceaux de tours.. [source: wikipedia: 2-opt](https://fr.wikipedia.org/wiki/2-opt).
@@ -504,33 +504,6 @@ L'algorithme k-opt est un algorithme de recherche locale proposé par Georges A.
 {{< img src="../images/2-opt.png" alt="algorithme 2-opt TSP" link="https://commons.wikimedia.org/w/index.php?curid=8044684" caption="" >}}
 
 # Résumé. L'essentiel à retenir
-<!--
-<div class="essentiel">
- <div class="entete">
-  L'essentiel à retenir
- </div>
- <div class="resume">
-  <h3>Programmation dynamique</h3>
-  L'idée de la programmation dynamique, c'est de <b>gagner en efficacité</b>. On cherche à reduire la complexité temporelle et spatiale.<br>
-  Par exemple, pour la suite de Fibonacci, ou le triangle de Pascal, les coefficients de la suite ou du triangle sont calculés à partir des précédents, ceux de rang inférieur. En stockant ces valeurs dans une liste, on peut les réutiliser sans les calculer à nouveau.
-  <h3>Algorithmes gloutons</h3>
-  Un algorithme glouton dépend du problème que l'on cherche à resoudre. Il n'y a pas d'algorithme glouton universel. Il permet de trouver une solution à un problème d'optimalité. Il part du principe que l'on peut trouver une solution approchante pour un problème NP-complet, en utilisant une stratégie et en faisant des choix. Chacun de ces <b>choix semble être le meilleur sur le moment</b><br>
-  Cette stratégie peut être par exemple: 
-  <ul>
-    <li>pour le rendu de monnaie: de commencer par résoudre le problème d'optimalité pour rendre de plus petites sommes. Puis, on utilise cette solution pour rendre une partie des sommes plus importantes.</li>
-    <li>pour le problème du sac à dos: de commencer par remplir un sac de plus petite contenance. Puis, on utilise ce résultat pour compléter de plus gros sacs.</li>
-</ul>
-On fait des <b>choix à chaque étape</b>, mais selon une stratégie bien définie, et qui <b>ne change plus</b>, en esperant que la somme des solutions intermédiaires va donner finalement une solution optimale. Mais on n'en est pas sûr. Et on ne revient pas en arrière.
-<h3>Algorithme avec recherche locale</h3>
-Pour le problème du TSP (Traveling salesman problem, ou problème du voyageur du commerce), on peut utiliser un algorithme de <i>recherche locale</i>, comme le <i>k-opt</i>. Celui-ci va cette fois remettre en doute les choix précédents.
-<br>
-Les étapes et leurs liens peuvent être représentés par un graphe connexe.
-L'un des algorithmes existant pour la resolution, le 2-opt, va rechercher un minimum local pour un morceau de tour constitué de quelques noeuds. L'algorithme procède par permutation des arêtes entre noeuds. Et il conserve le morceau de tour de plus courte distance.<br>
-Il s'agit d'une succession de choix qui determine la solution. Là aussi, il s'agit d'un <i>algorithme glouton</i>.
-</div>
-</div>
--->
-
 
 **Programmation dynamique**
 
@@ -570,8 +543,9 @@ Les étapes et leurs liens peuvent être représentés par un graphe connexe.
 
 L'un des algorithmes existant pour la resolution, le 2-opt, va rechercher un minimum local pour un morceau de tour constitué de quelques noeuds. L'algorithme procède par permutation des arêtes entre noeuds. Et il conserve le morceau de tour de plus courte distance.
 
-Il s'agit d'une succession de choix qui determine la solution. Là aussi, il s'agit d'un algorithme glouton.
+Il s'agit d'une succession de choix qui determine la solution. 
 
+Le k-opt est une *méthode itérative d'amélioration*. Elle est souvent utilisée après une phase constructive (qui peut être gloutonne) pour affiner le résultat. le k-opt s'arrête quand il ne peut plus améliorer la solution immédiate, mais cela ne garantit pas que c'est la meilleure solution absolue. (illustre la notion d'**optimum local** vs **optimum global**)
 
 # Complexité
 ## Rappels
